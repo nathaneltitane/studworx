@@ -1,6 +1,4 @@
-.TH STUDWORX 1 "30 October 2026"
-.\" NAME should be all caps, SECTION should be 1-8, maybe w/ subsection
-.\" other params are allowed: see man(7), man(1)
+.TH STUDWORX 1 "31 October 2026"
 .SH NAME
 StudWorx \- LDraw / LEGO\(rg model builder
 .SH SYNOPSIS
@@ -9,6 +7,9 @@ StudWorx \- LDraw / LEGO\(rg model builder
 \fIStudWorx \fR is a CAD program for creating virtual LEGO\(rg models. It
 has an easy to use interface and includes thousands of different
 parts in its library.
+.PP
+\fIINFILE\fR can be an LDraw model (.ldr, .mpd or .dat), or a LeoCAD
+project (.lcd), which is read only and saved as LDraw.
 
 .SH OPTIONS
 Below is a summary of all of the options that \fIStudWorx\fR
@@ -19,7 +20,7 @@ indicate that an option takes an optional parameter.
 
 .TP
 .B infile
-Loads the project file \fIinfile\fR
+Loads the model file \fIinfile\fR
 
 .TP
 \fB\-l \fIpath\fR, \fB\-\-libpath \fIpath
@@ -44,6 +45,8 @@ by \fIext\fR and exits. If outfile is not given then the program will
 use a name based on \fIinfile\fR. The file format is selected by \fIext\fR
 and can be png, jpg, bmp or gif, with one still GIF for each step (if \fIext\fR
 is not present then the default preferences format will be used).
+When a range of steps is saved, each picture gets its step number added
+to the name, as in \fIoutfile1.png\fR.
 
 .TP
 \fB\-w \fIwidth\fR, \fB\-\-width \fIwidth
@@ -58,7 +61,7 @@ Sets the height of the picture to \fIheight\fR.
 .TP
 \fB\-f \fItime\fR, \fB\-\-from \fItime
 .br
-Start saving pictures at the step \fItime\fR. Steps start at 1.
+Start saving pictures at the step \fItime\fR. Steps start at 1 and end at 255.
 
 .TP
 \fB\-t \fItime\fR, \fB\-\-to \fItime
@@ -108,7 +111,7 @@ transparency, and GIF edges are hard; other formats are saved opaque with a warn
 
 .TP
 .BI "\-\-fov " degrees
-Set the vertical field of view used to render images.
+Set the vertical field of view used to render images, under 180 degrees.
 
 .TP
 .BI "\-\-zplanes " near " " far
@@ -197,19 +200,22 @@ Disable high contrast edge color for dark color parts.
 High contrast edge color for dark color parts.
 
 .TP
-\fB\-aec,\ \fB\-\-automate\-edge\-color
+\fB\-aec\fR,\ \fB\-\-automate\-edge\-color
 .br
-Enable automatically adjusted edge colors.
+Enable automatically adjusted edge colors. The high contrast stud cylinder
+and edge color options are ignored while it is set.
 
 .TP
 \fB\-cc \fIfloat\fR,\ \fB\-\-color\-contrast\ \fIfloat
 .br
-Set the color contrast value, between 0.0 and 1.0.
+Set the color contrast value, between 0.0 and 1.0. Needs automated edge
+colors, from \fB\-aec\fR or Preferences.
 
 .TP
 \fB\-ldv \fIfloat\fR,\ \fB\-\-light\-dark\-value\ \fIfloat
 .br
-Set the value to indicate a light or dark color.
+Set the value, between 0.0 and 1.0, that tells light colors from dark ones.
+Needs automated edge colors, from \fB\-aec\fR or Preferences.
 
 .TP
 \fB\-obj \fR[\fIoutfile.obj\fR],\ \fB\-\-export\-wavefront \fR[\fIoutfile.obj\fR]
@@ -225,6 +231,15 @@ Exports the model to 3DS format.
 \fB\-dae \fR[\fIoutfile.dae\fR],\ \fB\-\-export\-collada \fR[\fIoutfile.dae\fR]
 .br
 Exports the model to COLLADA DAE format. Transparent colors are written with opaque="A_ONE" while Mark COLLADA Transparency is on in Preferences.
+
+.TP
+\fB\-kmz \fR[\fIoutfile.kmz\fR],\ \fB\-\-export\-kmz \fR[\fIoutfile.kmz\fR]
+.br
+Exports the model to KMZ format.
+
+.TP
+.B \-\-kmz\-all\-parts
+Keep hidden geometry and parts in KMZ exports.
 
 .TP
 \fB\-csv \fR[\fIoutfile.csv\fR],\ \fB\-\-export\-csv \fR[\fIoutfile.csv\fR]
@@ -306,12 +321,14 @@ When neither ``DISPLAY'' nor ``WAYLAND_DISPLAY'' is set, the save and export
 options run without a display through the eglfs platform and EGL on the DRM
 device, with software rendering when the GPU is in use by another session.
 Set ``QT_QPA_PLATFORM'' to choose another platform.
+.PP
+``LDRAWDIR'' is also searched for the LGEO library used by POV-Ray renders.
 
 .SH EXAMPLES
 .PP
- $ studworx car.lcd \-i car.png \-w 640 \-h 480
+ $ studworx car.ldr \-i car.png \-w 640 \-h 480
 .PP
-This will start StudWorx, load the file "car.lcd," create a png called
+This will start StudWorx, load the file "car.ldr", create a png called
 "car.png" with a resolution of 640x480 and exit when done.
 
 .SH FILES
@@ -321,13 +338,21 @@ User preferences file
 .TP
 .I ~/.local/share/StudWorx/StudWorx/complete.zip
 Parts library downloaded on the first start
+.TP
+.I ~/.local/share/StudWorx/StudWorx/lgeo
+LGEO library used by POV-Ray renders
+
+.SH SEE ALSO
+https://studworx.app, with the Image, Meta and Help sections covering
+picture settings, LDraw meta commands and every What's This entry.
 
 .SH BUGS
 If you find any bugs please report them at https://github.com/nathaneltitane/studworx/issues
 
 .SH AUTHOR
 \fIStudWorx \fRis based on LeoCAD, written by Leonardo Zide <leozide@gmail.com>.
-You can visit the StudWorx homepage at https://github.com/nathaneltitane/studworx/
+You can visit the StudWorx homepage at https://studworx.app and its
+source at https://github.com/nathaneltitane/studworx/
 
 Part connections come from the LDCad shadow library by Roland Melkert,
 https://github.com/RolandMelkert/LDCadShadowLibrary, made for LDCad,
