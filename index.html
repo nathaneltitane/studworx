@@ -1105,7 +1105,7 @@ details code {
 		<svg class="icon big" aria-hidden="true"><use href="#i-console"/></svg>
 		<h2>INTERFACE // MENUS, TOOLBARS AND HELP</h2>
 	</header>
-	<p class="lead">StudWorx is built from standard Qt widgets: panels, dialogs and windows follow your system style and light or dark theme, and only the model views draw with OpenGL. Menus are grouped by task, every icon and cursor is drawn in code so it stays sharp at any size, and every dialog and panel explains itself.</p>
+	<p class="lead">StudWorx is built from standard Qt widgets: <a href="#panels">panels</a>, dialogs and windows follow your system style and light or dark theme, and only the model <a href="#views">views</a> draw with OpenGL. Menus are grouped by task, every icon and cursor is drawn in code so it stays sharp at any size, and every dialog and panel explains itself.</p>
 	<figure class="wide">
 		<button class="shot" data-full="documentation/images/interface-main-window.png" aria-label="Enlarge The main window with the model view, Parts, Colors, Properties and Timeline panels">
 			<img src="documentation/images/interface-main-window.png" alt="The main window with the model view, Parts, Colors, Properties and Timeline panels" width="3840" height="2131" loading="lazy">
@@ -1113,7 +1113,7 @@ details code {
 		<figcaption>The main window with the model view, Parts, Colors, Properties and Timeline panels</figcaption>
 	</figure>
 	<ul class="points">
-		<li><b>Menus by task.</b> File, Edit, View, Part, Steps, Models and Help, with clean labels and a unique mnemonic in each menu. The View menu holds the Toolbars, Viewpoints, Cutaway, Cameras, Projection and Shading submenus.</li>
+		<li><b>Menus by task.</b> File, Edit, View, Part, <a href="#steps">Steps</a>, <a href="#models">Models</a> and <a href="#help">Help</a>, with clean labels and a unique mnemonic in each menu. The View menu holds the Toolbars, Viewpoints, Cutaway, Cameras, Projection and Shading submenus.</li>
 		<li><b>Options menus.</b> The gear button on the model view and on every panel opens the settings that belong to it: grids, preview, parts and colors.</li>
 		<li><b>Toolbars.</b> Standard, Tools and Time toolbars. Move and rotate cursors show the axis they work on.</li>
 		<li><b>Tabs, splits and status bar.</b> Open several models in tabs, split the view, go Full Screen, and read the view orientation, projection and focus position in the status bar. Right click the status bar to show or hide each segment.</li>
@@ -1235,7 +1235,7 @@ details code {
 		<svg class="icon big" aria-hidden="true"><use href="#i-grey"/></svg>
 		<h2>FILES // OPEN, IMPORT, EXPORT AND PRINT</h2>
 	</header>
-	<p class="lead">Models are plain LDraw text files in LeoCAD&#x27;s format, so they open in either program. StudWorx reads and writes them, imports from other tools, exports to 3D and parts list formats, and prints the current view.</p>
+	<p class="lead"><a href="#models">Models</a> are plain LDraw text files in LeoCAD&#x27;s format, so they open in either program. StudWorx reads and writes them, imports from other tools, exports to 3D and parts list formats, and prints the current view.</p>
 	<ul class="points">
 		<li><b>LDraw models.</b> .ldr, .mpd and .dat files, with New, Open, Merge, Save, Save As, Reload and the four most recent files. Watch for File Changes reloads a model edited in another program.</li>
 		<li><b>Import.</b> LEGO® Digital Designer models and official set inventories. Set inventories use your own free Rebrickable API key, asked for once.</li>
@@ -1258,7 +1258,7 @@ details code {
 			<button class="shot" data-full="documentation/images/save-model-image.png" aria-label="Enlarge Still image: background, steps, framing, size and file">
 				<img src="documentation/images/save-model-image.png" alt="Still image: background, steps, framing, size and file" width="1426" height="1218" loading="lazy">
 			</button>
-			<figcaption>Still image: background, steps, framing, size and file</figcaption>
+			<figcaption>Still image: background, <a href="#steps">steps</a>, framing, size and file</figcaption>
 		</figure>
 		<figure>
 			<button class="shot" data-full="documentation/images/save-model-image-gif.png" aria-label="Enlarge Animated GIF turntable">
@@ -1268,12 +1268,12 @@ details code {
 		</figure>
 	</div>
 	<ul class="points">
-		<li><b>Background.</b> View Color saves the view background opaque. Transparent leaves it empty so the model can be placed over other images. Only PNG and GIF files keep transparency.</li>
+		<li><b>Background.</b> View Color saves the view background opaque. Transparent leaves it empty so the model can be placed over other images. Only PNG and GIF <a href="#files">files</a> keep transparency.</li>
 		<li><b>Steps.</b> Current Step, All Steps or a Range. Saving several still steps writes one numbered file per step: model.png becomes model01.png, model02.png and so on. The arrows under the preview look through the steps first.</li>
 		<li><b>Framing.</b> Current View saves what the model view shows. Fit Model moves the camera back until every part fits, at every turntable angle. Fit Each Step fits every step on its own parts. Margin keeps 0 to 50 percent of empty space around the model.</li>
 		<li><b>Center and Bounds.</b> Turntables turn around the World Origin, the Model Origin or the Model Center. Bounds measures the fit on the Whole Model, so every step lines up, or on the Shown Steps only.</li>
 		<li><b>Size.</b> Ratio presets from 1:1 Square through 5:4, 4:3, 3:2 and 16:10 to 16:9 and 21:9, Free, or the shape of the View. Width and Height go up to 32768 pixels, in Landscape or Portrait.</li>
-		<li><b>File.</b> The extension sets the format: .png, .jpg, .bmp, or .gif for animations. Turning Animated GIF on or off switches the extension for you.</li>
+		<li><b>File.</b> Type the path or choose it with the ... button. The extension sets the format: .png, .jpg, .bmp, or .gif for animations. Turning Animated GIF on or off switches the extension for you.</li>
 	</ul>
 	<h3>Animated GIF</h3>
 	<p>Check Animated GIF to save one looping GIF. The preview plays it live with a play and pause button, and Motion chooses what moves.</p>
@@ -1294,11 +1294,11 @@ details code {
 		</table>
 	</div>
 	<ul class="points">
-		<li><b>Turntable.</b> The model turns around the X, Y or Z axis through the Framing center. Full Turn makes seamless revolutions, Angle swings between two angles and back. Turns sets 1 to 10 revolutions per loop, Frames the images in one turn, Frame Rate how many are shown each second. Fit Model keeps one steady zoom through the whole turn.</li>
-		<li><b>Steps.</b> Each chosen step becomes one frame, without turning, for short animated instructions. At 2 fps every step shows for half a second.</li>
-		<li><b>Next Step.</b> The model keeps turning while the build moves on every few Turns or Seconds, through the chosen steps. Frames stay per turn, so the turning speed is the same however many steps there are.</li>
+		<li><b>Turntable.</b> The model turns around the X, Y or Z axis through the Framing center. Full Turn makes seamless revolutions, Angle swings between two angles, measured from the current view, and back. Turns sets 1 to 10 revolutions per loop, Frames the images in one turn, Frame Rate how many are shown each second. Fit Model keeps one steady zoom through the whole turn.</li>
+		<li><b>Steps.</b> Each chosen step becomes one frame, without turning, for short animated <a href="#instructions">instructions</a>. At 2 fps every step shows for half a second.</li>
+		<li><b>Next Step.</b> The model keeps turning while the build moves on every 1 to 10 Turns or every 0.1 to 60 Seconds, through the chosen steps, and the loop ends on the last one. Turns then shows the total, steps × turns per step. Frames stay per turn, so the turning speed is the same however many steps there are.</li>
 		<li><b>Hold Last.</b> Keeps the finished model on screen for 0 to 10 seconds before a loop through the steps restarts.</li>
-		<li><b>Duration.</b> Shows how long one loop plays, from the frames, the frame rate and the hold.</li>
+		<li><b>Duration.</b> Shows how long one loop plays: turns × frames ÷ frame rate for a turntable, steps ÷ frame rate + hold for steps, and the frames of every step ÷ frame rate + hold with Next Step. Six steps, one turn each, at 24 frames per turn and 12 fps with a one second hold make 144 frames playing for 13 seconds.</li>
 	</ul>
 	<div class="gallery two">
 		<figure>
@@ -1334,7 +1334,25 @@ details code {
 			<figcaption>Next Step, six steps, one turn each</figcaption>
 		</figure>
 	</div>
-	<p class="more"><a href="https://github.com/nathaneltitane/studworx/blob/main/documentation/save-model-image.md">Read the full Save Model Image guide ›</a></p>
+	<h3>Settings and command line</h3>
+	<p>The dialog keeps its settings in the [Settings] group of ~/.config/StudWorx/StudWorx.conf, saved when you click Save. Still images can also be saved without opening a window with --image and the options in man studworx, including --transparent; animations are saved from the dialog.</p>
+	<div class="table">
+		<table>
+			<thead>
+				<tr><th>Key</th><th>Setting</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>ImageWidth, ImageHeight, ImageRatio</td><td>Size</td></tr>
+				<tr><td>ImageExtension</td><td>File format</td></tr>
+				<tr><td>ImageSteps, ImageTransparent</td><td>Steps and Background</td></tr>
+				<tr><td>ImageMotion, ImageAxis, ImageFullTurn, ImageAngleStart, ImageAngleEnd</td><td>Motion and turn</td></tr>
+				<tr><td>ImageTurns, ImageFrames, ImageFrameRate</td><td>Turns, Frames, Frame Rate</td></tr>
+				<tr><td>ImageNextStep, ImageNextStepTurns, ImageNextStepSeconds</td><td>Next Step</td></tr>
+				<tr><td>ImageHoldLast</td><td>Hold Last</td></tr>
+				<tr><td>ImageFit, ImageCenter, ImageMargin, ImageFitScope</td><td>Framing</td></tr>
+			</tbody>
+		</table>
+	</div>
 </section>
 
 <section id="rendering" class="section reveal">
@@ -1351,7 +1369,7 @@ details code {
 	</figure>
 	<ul class="points">
 		<li><b>POV-Ray.</b> Found on its own in the PATH, Flatpak or Snap and checked for version 3.7. LGEO high detail parts are found beside the parts library or downloaded on request, with a Parts choice between LDraw and LGEO.</li>
-		<li><b>Blender.</b> Render with the Blender LDraw add-on, or Open in Blender to keep working on the scene there. The add-on settings live in Preferences.</li>
+		<li><b>Blender.</b> Render with the Blender LDraw add-on, or Open in Blender to keep working on the scene there. The add-on settings live in <a href="#preferences">Preferences</a>.</li>
 		<li><b>Lighting styles.</b> Standard, Studio, Matte and Toon, from the View menu or the command line with --lighting.</li>
 		<li><b>Shading.</b> Wireframe, flat shading, default lights, edge lines, conditional lines and mesh level of detail.</li>
 		<li><b>Studs.</b> Plain, logo, high contrast and other stud styles, with automated edge colors.</li>
@@ -1391,7 +1409,7 @@ details code {
 		<svg class="icon big" aria-hidden="true"><use href="#i-color"/></svg>
 		<h2>MODELING // PARTS, SELECTION AND TRANSFORMS</h2>
 	</header>
-	<p class="lead">Pick a part in the Parts panel, drop it in the model view, then move, rotate, paint and group it. Snapping keeps everything on the LDraw grid, and selection tools find the parts you need in large models.</p>
+	<p class="lead">Pick a part in the Parts panel, drop it in the model view, then move, rotate, paint and group it. Snapping keeps everything on the LDraw grid, and selection tools find the parts you need in large <a href="#models">models</a>.</p>
 	<ul class="points">
 		<li><b>Parts.</b> Insert, delete, duplicate, paint, hide and group parts, with the first part placed at the origin as an option.</li>
 		<li><b>Insert colors.</b> Insert with the current color, the selected part's color or the last inserted color, or lock the Parts panel to one color.</li>
@@ -1505,12 +1523,12 @@ details code {
 		<svg class="icon big" aria-hidden="true"><use href="#i-yellow"/></svg>
 		<h2>STEPS // BUILD ORDER AND TIMELINE</h2>
 	</header>
-	<p class="lead">Every part belongs to a building step. Steps drive the model view, the instructions and the animated GIFs.</p>
+	<p class="lead">Every part belongs to a building step. Steps drive the model view, the <a href="#instructions">instructions</a> and the animated GIFs.</p>
 	<ul class="points">
 		<li><b>Steps menu.</b> Go to the first, previous, next or last step, and insert or remove steps.</li>
 		<li><b>Timeline.</b> Shows the step each part is added in and removed in. An empty removal step reads Never. Drag parts between steps or reorder them.</li>
 		<li><b>Move and paste.</b> Move the selection to the current, previous or next step, and paste with its steps.</li>
-		<li><b>Step views.</b> MLCad ROTSTEP step views are shown, edited and followed in the Timeline.</li>
+		<li><b>Step <a href="#views">views</a>.</b> MLCad ROTSTEP step views are shown, edited and followed in the Timeline.</li>
 		<li><b>Emphasis.</b> Fade Previous Steps and Highlight New Parts in the model view and the instructions.</li>
 	</ul>
 	<div class="gallery natural">
@@ -1546,7 +1564,7 @@ details code {
 		<li><b>Colors.</b> Collapsible solid, translucent and special color groups with square color tiles.</li>
 		<li><b>Properties.</b> Compact position, rotation and transform rows and a spanning color swatch. Lights and cameras get named rows with units.</li>
 		<li><b>Minifigure Builder.</b> Build a minifigure from templates and add several variations to the model.</li>
-		<li><b>Preview.</b> Parts and models in a square viewport, with Keep Last Selection.</li>
+		<li><b>Preview.</b> Parts and <a href="#models">models</a> in a square viewport, with Keep Last Selection.</li>
 		<li><b>Terminal.</b> An embedded terminal sized to whole rows and columns, with Open Model Folder.</li>
 	</ul>
 	<div class="gallery natural">
@@ -1588,7 +1606,7 @@ details code {
 		<svg class="icon big" aria-hidden="true"><use href="#i-blue"/></svg>
 		<h2>INSTRUCTIONS // PAGES READY TO PRINT</h2>
 	</header>
-	<p class="lead">File &gt; Instructions lays the steps out on pages with a cover, parts lists and a bill of materials. Every page element can be styled and placed, and everything is saved in the model file as !SW INSTRUCTION meta commands.</p>
+	<p class="lead">File &gt; Instructions lays the <a href="#steps">steps</a> out on pages with a cover, parts lists and a bill of materials. Every page element can be styled and placed, and everything is saved in the model file as !SW INSTRUCTION <a href="#meta">meta</a> commands.</p>
 	<div class="gallery three">
 		<figure>
 			<button class="shot" data-full="documentation/images/instructions-page-cover.png" aria-label="Enlarge Cover page">
@@ -1705,9 +1723,9 @@ details code {
 	</header>
 	<p class="lead">Eight pages with lined up label and control columns. Value boxes show their maximum and bring any typed number into range, and every slider shows its value.</p>
 	<ul class="points">
-		<li><b>General.</b> Reference paths, the author of new models, and the parts library, LGEO and POV-Ray locations.</li>
-		<li><b>Rendering and Views.</b> Rendering quality, the Blender add-on settings, and the Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups.</li>
-		<li><b>Colors and Instructions.</b> Interface and view colors, edge contrast, and the default instruction page settings.</li>
+		<li><b>General.</b> Reference paths, the author of new <a href="#models">models</a>, and the parts library, LGEO and POV-Ray locations.</li>
+		<li><b><a href="#rendering">Rendering</a> and <a href="#views">Views</a>.</b> Rendering quality, the Blender add-on settings, and the Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups.</li>
+		<li><b>Colors and <a href="#instructions">Instructions</a>.</b> <a href="#interface">Interface</a> and view colors, edge contrast, and the default instruction page settings.</li>
 		<li><b>Categories.</b> Part categories turned on and off with a checkbox, edited, imported and exported.</li>
 		<li><b>Keyboard and Mouse.</b> Shortcuts recorded by clicking, importable and exportable.</li>
 		<li><b>From LeoCAD.</b> Settings, part palettes and minifigure templates are copied from LeoCAD on the first start.</li>
@@ -1775,25 +1793,28 @@ details code {
 <section id="meta" class="section reveal">
 	<header class="section-head">
 		<svg class="icon big" aria-hidden="true"><use href="#i-edge"/></svg>
-		<h2>META COMMANDS // EVERY LDRAW LINE IT HANDLES</h2>
+		<h2>META COMMANDS // LDRAW LINE HANDLING</h2>
 	</header>
 	<p class="lead">Every meta command StudWorx reads, writes or keeps: the official LDraw ones, its own !SW commands, LeoCAD commands it migrates, and the commands of MLCad, LPub, LSynth, L3P, LDLite and Blender.</p>
-	<p>Meta commands are line type 0 lines of an LDraw file, written as <code>0 &lt;COMMAND&gt; &lt;parameters&gt;</code> with the command in capitals (<a href="https://www.ldraw.org/article/218.html">LDraw File Format</a>). New official commands start with <code>!</code>, unofficial ones should start with <code>!</code> too and be based on the name of the program that defines them, so StudWorx writes its own commands under the <code>!SW</code> marker.</p>
-	<p>This list holds every meta command StudWorx handles, sorted by tool or context, official ones first. The handling column reads:</p>
-	<div class="table">
-		<table>
-			<thead>
-				<tr><th>Handling</th><th>Meaning</th></tr>
-			</thead>
-			<tbody>
-				<tr><td>Read</td><td>interpreted when a model or the parts library is loaded</td></tr>
-				<tr><td>Write</td><td>written when a model is saved</td></tr>
-				<tr><td>Keep</td><td>not interpreted, saved back unchanged at its place in the model</td></tr>
-				<tr><td>Ignore</td><td>skipped when the parts library is loaded</td></tr>
-			</tbody>
-		</table>
-	</div>
-	<details open>
+	<details>
+		<summary>About meta commands</summary>
+		<p>Meta commands are line type 0 lines of an LDraw file, written as <code>0 &lt;COMMAND&gt; &lt;parameters&gt;</code> with the command in capitals (<a href="https://www.ldraw.org/article/218.html">LDraw File Format</a>). New official commands start with <code>!</code>, unofficial ones should start with <code>!</code> too and be based on the name of the program that defines them, so StudWorx writes its own commands under the <code>!SW</code> marker.</p>
+		<p>This list holds every meta command StudWorx handles, sorted by tool or context, official ones first. The handling column reads:</p>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Handling</th><th>Meaning</th></tr>
+				</thead>
+				<tbody>
+					<tr><td>Read</td><td>interpreted when a model or the parts library is loaded</td></tr>
+					<tr><td>Write</td><td>written when a model is saved</td></tr>
+					<tr><td>Keep</td><td>not interpreted, saved back unchanged at its place in the model</td></tr>
+					<tr><td>Ignore</td><td>skipped when the parts library is loaded</td></tr>
+				</tbody>
+			</table>
+		</div>
+	</details>
+	<details>
 		<summary>LDraw Official</summary>
 		<h3 id="meta-file-format">File Format</h3>
 		<p>From the <a href="https://www.ldraw.org/article/218.html">LDraw File Format</a>.</p>
@@ -1847,13 +1868,13 @@ details code {
 				<tbody>
 					<tr><td><code>0 FILE &lt;file name&gt;</code></td><td>Read, Write</td><td>starts a submodel</td></tr>
 					<tr><td><code>0 NOFILE</code></td><td>Read</td><td>ends a submodel</td></tr>
-					<tr><td><code>0 !DATA &lt;file name&gt;</code></td><td>Read, Write</td><td>starts an embedded file, such as a texture image</td></tr>
+					<tr><td><code>0 !DATA &lt;file name&gt;</code></td><td>Read, Write</td><td>starts an embedded file, such as a texture <a href="#image">image</a></td></tr>
 					<tr><td><code>0 !: &lt;data&gt;</code></td><td>Read, Write</td><td>base64 line of an embedded file</td></tr>
 				</tbody>
 			</table>
 		</div>
 		<h3 id="meta-colours">Colours</h3>
-		<p>From the <a href="https://www.ldraw.org/article/299.html">Colour Definition Language Extension</a>, read from <code>LDConfig.ldr</code> and models.</p>
+		<p>From the <a href="https://www.ldraw.org/article/299.html">Colour Definition Language Extension</a>, read from <code>LDConfig.ldr</code> and <a href="#models">models</a>.</p>
 		<div class="table">
 			<table>
 				<thead>
@@ -2016,7 +2037,7 @@ details code {
 			</table>
 		</div>
 		<h3 id="meta-instruction">Instruction</h3>
-		<p>Instructions settings, written in the main model header. Models are quoted file names, <code>-</code> for none. Steps are <code>STEP &lt;model&gt; &lt;step&gt;</code>, pages <code>&lt;STEPS|COVER|BILL_OF_MATERIALS|BLANK&gt; &lt;model&gt; &lt;step&gt; &lt;rank&gt;</code> and page elements <code>&lt;element&gt; &lt;model&gt; &lt;step&gt;</code>, with the element <code>NONE</code>, <code>STEP_NUMBER</code>, <code>PARTS_LIST</code>, <code>COVER_TITLE</code>, <code>COVER_AUTHOR</code>, <code>BILL_OF_MATERIALS</code>, <code>STEP_IMAGE</code>, <code>COVER_IMAGE</code>, <code>PAGE_NUMBER</code>, <code>NOTICE</code> or <code>POINTER</code>. Values are <code>TRUE</code>/<code>FALSE</code>, numbers, <code>#RRGGBBAA</code> colors or text to the end of the line, with <code>\\</code>, <code>\&quot;</code> and <code>\n</code> escaped.</p>
+		<p><a href="#instructions">Instructions</a> settings, written in the main model header. Models are quoted file names, <code>-</code> for none. <a href="#steps">Steps</a> are <code>STEP &lt;model&gt; &lt;step&gt;</code>, pages <code>&lt;STEPS|COVER|BILL_OF_MATERIALS|BLANK&gt; &lt;model&gt; &lt;step&gt; &lt;rank&gt;</code> and page elements <code>&lt;element&gt; &lt;model&gt; &lt;step&gt;</code>, with the element <code>NONE</code>, <code>STEP_NUMBER</code>, <code>PARTS_LIST</code>, <code>COVER_TITLE</code>, <code>COVER_AUTHOR</code>, <code>BILL_OF_MATERIALS</code>, <code>STEP_IMAGE</code>, <code>COVER_IMAGE</code>, <code>PAGE_NUMBER</code>, <code>NOTICE</code> or <code>POINTER</code>. Values are <code>TRUE</code>/<code>FALSE</code>, numbers, <code>#RRGGBBAA</code> colors or text to the end of the line, with <code>\\</code>, <code>\&quot;</code> and <code>\n</code> escaped.</p>
 		<div class="table">
 			<table>
 				<thead>
@@ -2183,7 +2204,7 @@ details code {
 	</details>
 	<details>
 		<summary>Blender</summary>
-		<p>The Blender LDraw import add-on handles these commands when its options in Preferences ask for it. The step StudWorx hands to Blender is written with LeoCAD meta commands, the form the add-on reads cameras, lights and groups from.</p>
+		<p>The Blender LDraw import add-on handles these commands when its options in <a href="#preferences">Preferences</a> ask for it. The step StudWorx hands to Blender is written with LeoCAD meta commands, the form the add-on reads cameras, lights and groups from.</p>
 		<div class="table">
 			<table>
 				<thead>
@@ -2203,7 +2224,6 @@ details code {
 			</table>
 		</div>
 	</details>
-	<p class="more"><a href="https://github.com/nathaneltitane/studworx/blob/main/documentation/commands-meta.md">Read the meta command list ›</a></p>
 </section>
 
 <section id="help" class="section reveal">
@@ -2242,7 +2262,7 @@ details code {
 	<p class="more"><a href="https://github.com/nathaneltitane/studworx/releases/latest">Download the latest release ›</a></p>
 	<ul class="points">
 		<li><b>Linux.</b> The .deb and .rpm packages install to /opt/studworx. The AppImage runs from anywhere after chmod +x. Tested on Debian 12 and 13, Ubuntu 22.04 and 24.04, Rocky Linux 9, Fedora and openSUSE Tumbleweed.</li>
-		<li><b>macOS.</b> The disk image is not notarized: on the first start, right click StudWorx and choose Open.</li>
+		<li><b>macOS.</b> The disk <a href="#image">image</a> is not notarized: on the first start, right click StudWorx and choose Open.</li>
 		<li><b>Prepare.</b> To build, install a C++ compiler, Qt 5 (widgets, OpenGL, print support, network, xml and concurrent modules) and zlib development packages. KDE Frameworks KParts and Konsole add the terminal panel, KIO the file manager thumbnails.</li>
 	</ul>
 	<pre><code>git clone https://github.com/nathaneltitane/studworx
@@ -2253,7 +2273,7 @@ make -j"$(nproc)"</code></pre>
 	<pre><code>git clone https://github.com/nathaneltitane/studworx
 studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 	<ul class="points">
-		<li><b>Run.</b> Start StudWorx and let it download the LDraw parts library on the first start, or point Preferences to one or set STUDWORX_LIBRARY. Set Preferences > Part Connections to an LDCad shadow library folder to select connected parts.</li>
+		<li><b>Run.</b> Start StudWorx and let it download the LDraw parts library on the first start, or point <a href="#preferences">Preferences</a> to one or set STUDWORX_LIBRARY. Set Preferences > Part Connections to an LDCad shadow library folder to select connected parts.</li>
 		<li><b>Package.</b> Run packaging/deb.sh, packaging/rpm.sh or packaging/appimage.sh, with an optional build directory.</li>
 	</ul>
 </section>
@@ -2267,14 +2287,14 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 	<details open>
 		<summary>2026-10-30</summary>
 		<ul>
-			<li>Interface: built from standard Qt widgets throughout, panels, dialogs and windows follow the system style and theme, only the model views draw with OpenGL</li>
-			<li>Save Model Image: live preview of the saved image with step arrows, ratio presets from square to widescreen with Landscape and Portrait, a transparent background for PNG and GIF files, Save and Cancel in the File box and help from the title bar What&#x27;s This button</li>
+			<li><a href="#interface">Interface</a>: built from standard Qt widgets throughout, <a href="#panels">panels</a>, dialogs and windows follow the system style and theme, only the model <a href="#views">views</a> draw with OpenGL</li>
+			<li>Save Model <a href="#image">Image</a>: live preview of the saved image with step arrows, ratio presets from square to widescreen with Landscape and Portrait, a transparent background for PNG and GIF <a href="#files">files</a>, Save and Cancel in the File box and <a href="#help">help</a> from the title bar What&#x27;s This button</li>
 			<li>Animated GIF: turntable animations from Save Model Image, one or more full turns or back and forth swings around the X, Y or Z axis, with frames per turn, a frame rate and the duration shown, played live in the preview</li>
-			<li>Animated steps: Steps plays the build one step per frame, Next Step moves on every few turns or seconds while the model turns, and Hold Last keeps the finished model on screen before the loop restarts, see the <a href="https://github.com/nathaneltitane/studworx/blob/main/documentation/save-model-image.md">Save Model Image guide</a></li>
+			<li>Animated <a href="#steps">steps</a>: Steps plays the build one step per frame, Next Step moves on every few turns or seconds while the model turns, and Hold Last keeps the finished model on screen before the loop restarts, see <a href="https://studworx.app/#image">Image on the site</a></li>
 			<li>Image framing: Fit Model and Fit Each Step keep every part inside the image with an adjustable margin, turntables keep one steady zoom through the whole turn around the World Origin, Model Origin or Model Center, and View Color backgrounds now save opaque</li>
 			<li>Print: File &gt; Print prints the current model view through the system print dialog, with a Preview button where the dialog allows it</li>
-			<li>File menu: grouped by task, Print after Save As, Image beside Instructions and Render instead of under Export</li>
-			<li>Preferences: Custom Paths is now Reference Paths</li>
+			<li>File menu: grouped by task, Print after Save As, Image beside <a href="#instructions">Instructions</a> and Render instead of under Export</li>
+			<li><a href="#preferences">Preferences</a>: Custom Paths is now Reference Paths</li>
 			<li>Preferences: new Export group with Mark COLLADA Transparency, on by default, writes <code>opaque=&quot;A_ONE&quot;</code> on transparent colors so viewers that skip the COLLADA default show transparent parts translucent without an l2cu pass</li>
 			<li>Rotate tool: dragging empty space with a mouse shortcut orbits, pans or zooms the view again instead of being taken as a rotation handle (LeoCAD #1073)</li>
 			<li>Translucent colors: Parts list icons, transparent images and instruction steps keep translucent parts their true color instead of darkened by the background, and transparent decals blend over their part color (LeoCAD #938)</li>
@@ -2291,7 +2311,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<li>File managers: LDraw model files show a thumbnail of the model, from a KDE thumbnail plugin or the desktop thumbnailer, rendered with the new <code>--transparent</code> command line option</li>
 			<li>Select Connected Parts: selects every part joined to the selection, with the connection shapes of the <a href="https://github.com/RolandMelkert/LDCadShadowLibrary">LDCad shadow library</a> by Roland Melkert, set and turned on or off under Preferences › Part Connections</li>
 			<li>Parts library: no longer bundled, the first start offers to download the official LDraw <code>complete.zip</code> into the data folder or to choose an existing archive</li>
-			<li>Install: <code>tools/studworx-install</code> builds and installs StudWorx without a package, with thumbnails, file types and associations, <code>~/.local</code> needs no superuser rights, run it again after <code>git pull</code> to update</li>
+			<li><a href="#install">Install</a>: <code>tools/studworx-install</code> builds and installs StudWorx without a package, with thumbnails, file types and associations, <code>~/.local</code> needs no superuser rights, run it again after <code>git pull</code> to update</li>
 			<li>Instructions: step images outline the parts new to each step and fade the earlier ones, set by Fade Previous Steps and Highlight New Parts in the Document settings, their colors kept 85% to 95% opaque</li>
 			<li>Instructions: every page element stays within the page margins, page numbers included, and Page Setup margins are limited to the room the page size leaves</li>
 			<li>Value boxes: the maximum shows after the value (6 / 32 studs), any number can be typed and is brought into range once applied</li>
@@ -2309,7 +2329,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<li>Cutaway: faces lined with a light shade, its color and alpha set in Preferences, the alpha reads 0 to 1 over 95% to 85% transparency so the shade never disappears</li>
 			<li>Cutaway: cut parts show solid surfaces in their own color where the cut passes through them, like a sawn brick instead of a hollow shell</li>
 			<li>Projection: new model views and tabs open with the last chosen projection, set in Preferences to change only the active view or all model views at once</li>
-			<li>Instructions: Model Projection in the Document settings renders the step and cover models in perspective or orthographic, whatever the model view shows</li>
+			<li>Instructions: Model Projection in the Document settings renders the step and cover <a href="#models">models</a> in perspective or orthographic, whatever the model view shows</li>
 			<li>Turntable: after an idle time the model turns full screen in perspective around the X, Y or Z axis set in Preferences on the background color, any input ends it</li>
 			<li>Preferences: Views page grouped into Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder without repeating View or Preview, every slider shows its value on its left and reaches the right edge</li>
 			<li>Preferences: units inside their boxes and named by the count (1 stud, 6 studs), turntable idle and turn durations in seconds, grid line spacing in a spin box</li>
@@ -2325,7 +2345,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<li>Instructions: padding, margin, border and background for every page element, the background fills the whole box</li>
 			<li>Instructions: notices, free text added to any page with a right-click</li>
 			<li>Instructions: pointers from an element border to a part, step, notice or other element - eight anchors or the nearest, line or callout wedge, arrowhead or dot tip</li>
-			<li>Instructions: settings, page layouts, notices and pointers saved in the model file as <code>!SW INSTRUCTION</code> meta commands</li>
+			<li>Instructions: settings, page layouts, notices and pointers saved in the model file as <code>!SW INSTRUCTION</code> <a href="#meta">meta</a> commands</li>
 			<li>View cube: the view sphere is now a cube with chamfered edges and corners - click any of its 6 faces, 12 edges or 8 corners for that view, with sharper labels</li>
 			<li>Sizes: view cube, axis icon and part thumbnails each come in Extra Small to Extra Large on a 16px baseline - view cube and axis icon 48 to 192, thumbnails 32 to 128, with older saved sizes moved to the nearest one</li>
 			<li>Axis icon: its own Preferences group with size, location, X, Y and Z labels, optional negative axes in their own duller colors set under Colors, and a chamfered view cube wireframe around the axis whose alpha reads 0 to 1 over the same range as the cutaway shade, the icon keeps the same clearance from the view edges as the view cube at each size with the labels kept inside it</li>
@@ -2357,7 +2377,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 		<summary>2026-10-26</summary>
 		<ul>
 			<li>LeoCAD+ is now StudWorx, its own project built on <a href="https://github.com/leozide/leocad">LeoCAD</a></li>
-			<li>Code split into modules: application, core, library, rendering, input_output and interface</li>
+			<li>Code split into modules: application, core, library, <a href="#rendering">rendering</a>, input_output and interface</li>
 			<li>Settings, part palettes and minifigure templates are copied from LeoCAD on the first start</li>
 			<li>Models keep LeoCAD&#x27;s file format and open in either program</li>
 			<li>Set inventories use your own free Rebrickable API key, asked for once</li>
