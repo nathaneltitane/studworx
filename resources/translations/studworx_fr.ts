@@ -4843,7 +4843,7 @@ Le format du fichier n&apos;est pas reconnu.</translation>
         <translation type="obsolete">StudWorx</translation>
     </message>
     <message>
-        <location filename="../../source/input_output/sw_bricklink.cpp" line="74"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="74"/>
         <source>Could not open file &apos;%1&apos; for writing.</source>
         <translation type="unfinished">N’a pas pu ouvrir le fichier « %1 » en écriture.</translation>
     </message>
@@ -11477,7 +11477,7 @@ Download one from %1 and pass it with --libpath.</source>
 <context>
     <name>swHttpManager</name>
     <message>
-        <location filename="../../source/input_output/sw_http.cpp" line="109"/>
+        <location filename="../../source/transput/sw_http.cpp" line="109"/>
         <source>Cancel</source>
         <translation type="unfinished">Annuler</translation>
     </message>
@@ -12218,22 +12218,22 @@ Download one from %1 and pass it with --libpath.</source>
         <translation type="obsolete">Couleur de la bordure&#xa0;:</translation>
     </message>
     <message>
-        <location filename="../../source/input_output/sw_instructions.cpp" line="41"/>
+        <location filename="../../source/transput/sw_instructions.cpp" line="41"/>
         <source>px</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/input_output/sw_instructions.cpp" line="44"/>
+        <location filename="../../source/transput/sw_instructions.cpp" line="44"/>
         <source>mm</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/input_output/sw_instructions.cpp" line="47"/>
+        <location filename="../../source/transput/sw_instructions.cpp" line="47"/>
         <source>cm</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/input_output/sw_instructions.cpp" line="50"/>
+        <location filename="../../source/transput/sw_instructions.cpp" line="50"/>
         <source>in</source>
         <translation type="unfinished"></translation>
     </message>

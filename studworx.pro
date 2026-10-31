@@ -184,7 +184,7 @@ include(source/application/application.pri)
 include(source/core/core.pri)
 include(source/library/library.pri)
 include(source/rendering/rendering.pri)
-include(source/input_output/input_output.pri)
+include(source/transput/transput.pri)
 include(source/interface/interface.pri)
 
 OTHER_FILES +=
