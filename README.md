@@ -43,7 +43,7 @@ Every feature, menu and panel is shown on [studworx.app](https://studworx.app) -
 
 ### Credits:
 
-StudWorx is based on [LeoCAD](https://github.com/leozide/leocad) by Leonardo Zide and its contributors - see 'documentation/CREDITS.txt'.
+StudWorx is based on [LeoCAD](https://github.com/leozide/leocad) by Leonardo Zide and its contributors - see [CREDITS](CREDITS.md).
 
 Part connections come from the [LDCad shadow library](https://github.com/RolandMelkert/LDCadShadowLibrary) by Roland Melkert, made for [LDCad](https://www.melkert.net/LDCad) and released under the Creative Commons Attribution-ShareAlike 4.0 license - it is not bundled with StudWorx.
 

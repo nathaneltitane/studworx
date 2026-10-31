@@ -36,7 +36,7 @@ package() {
   mkdir -p ${pkgdir}/usr/share/studworx
   install -m 755 build/release/studworx ${pkgdir}/usr/bin
   install -m 644 README.md               ${pkgdir}/usr/share/studworx/README.md
-  install -m 644 documentation/CREDITS.txt ${pkgdir}/usr/share/studworx/CREDITS.txt
+  install -m 644 CREDITS.md              ${pkgdir}/usr/share/studworx/CREDITS.md
   install -m 644 LICENSE.md              ${pkgdir}/usr/share/studworx/LICENSE.md
   mkdir -p ${pkgdir}/usr/share/mime/packages/
   mkdir -p ${pkgdir}/usr/share/applications/
