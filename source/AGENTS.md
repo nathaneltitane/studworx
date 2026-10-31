@@ -13,7 +13,7 @@
 - Prefer explicit `lock()` and `unlock()` over an extra scope with `QMutexLocker` for short, straight-line critical sections that must end before the following code. Keep `QMutexLocker` for early returns, waits, or nontrivial control flow.
 - Preserve existing blank lines when editing code. Prefer blank lines between declarations and following logic, and between distinct logical steps; do not remove user-added blank lines without a specific reason.
 - When adding a parameter to an existing function, update every call site explicitly instead of adding a default argument to preserve old calls.
-- List new file meta commands in `references/command-meta.md`, and add their object to `gCommandMetaObjects`.
+- List new file meta commands in `documentation/commands-meta.md`, and add their object to `gCommandMetaObjects`.
 
 # Commit Messages
 
@@ -25,7 +25,7 @@
 # Releases
 
 - The version is the release date. Move it with `tools/studworx-version-update`, and write the new README notice, the release notes come from it.
-- Enable `tools/hooks/pre-push` with `git config core.hooksPath tools/hooks`. Once a version is released, a later push of code changes to main bumps it to the day's date, with a notice written by `claude -p`.
+- Enable `hooks/pre-push` with `git config core.hooksPath hooks`. Once a version is released, a later push of code changes to main bumps it to the day's date, with a notice written by `claude -p`.
 
 # Dialog help and translations
 

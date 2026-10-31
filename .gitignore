@@ -38,5 +38,6 @@ appdir
 studworx-windows*.exe
 *.snap
 /tools/studworx-site-update
-/tools/site/
+/tools/studworx-social-update
+/site/
 /logo/

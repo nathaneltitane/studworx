@@ -1765,6 +1765,440 @@ details code {
 	</div>
 </section>
 
+<section id="meta" class="section reveal">
+	<header class="section-head">
+		<svg class="icon big" aria-hidden="true"><use href="#i-edge"/></svg>
+		<h2>META COMMANDS // EVERY LDRAW LINE IT HANDLES</h2>
+	</header>
+	<p class="lead">Every meta command StudWorx reads, writes or keeps: the official LDraw ones, its own !SW commands, LeoCAD commands it migrates, and the commands of MLCad, LPub, LSynth, L3P, LDLite and Blender.</p>
+	<p>Meta commands are line type 0 lines of an LDraw file, written as <code>0 &lt;COMMAND&gt; &lt;parameters&gt;</code> with the command in capitals (<a href="https://www.ldraw.org/article/218.html">LDraw File Format</a>). New official commands start with <code>!</code>, unofficial ones should start with <code>!</code> too and be based on the name of the program that defines them, so StudWorx writes its own commands under the <code>!SW</code> marker.</p>
+	<p>This list holds every meta command StudWorx handles, sorted by tool or context, official ones first. The handling column reads:</p>
+	<div class="table">
+		<table>
+			<thead>
+				<tr><th>Handling</th><th>Meaning</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>Read</td><td>interpreted when a model or the parts library is loaded</td></tr>
+				<tr><td>Write</td><td>written when a model is saved</td></tr>
+				<tr><td>Keep</td><td>not interpreted, saved back unchanged at its place in the model</td></tr>
+				<tr><td>Ignore</td><td>skipped when the parts library is loaded</td></tr>
+			</tbody>
+		</table>
+	</div>
+	<details open>
+		<summary>LDraw Official</summary>
+		<h3 id="meta-file-format">File Format</h3>
+		<p>From the <a href="https://www.ldraw.org/article/218.html">LDraw File Format</a>.</p>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 // &lt;comment&gt;</code></td><td>Keep</td><td>comment, the bare <code>0 &lt;comment&gt;</code> form is deprecated</td></tr>
+					<tr><td><code>0 STEP</code></td><td>Read, Write</td><td>ends a building step</td></tr>
+					<tr><td><code>0 WRITE &lt;message&gt;</code></td><td>Keep</td><td>message shown when the line is reached</td></tr>
+					<tr><td><code>0 PRINT &lt;message&gt;</code></td><td>Keep</td><td>same as <code>WRITE</code></td></tr>
+					<tr><td><code>0 CLEAR</code></td><td>Keep</td><td>clears the screen in viewers</td></tr>
+					<tr><td><code>0 PAUSE</code></td><td>Keep</td><td>pauses viewers until a key press</td></tr>
+					<tr><td><code>0 SAVE</code></td><td>Keep</td><td>saves the screen in viewers</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<h3 id="meta-header">Header</h3>
+		<p>From the <a href="https://www.ldraw.org/article/398.html">File Header Specification</a>.</p>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 &lt;description&gt;</code></td><td>Read, Write</td><td>first line of a model, its description</td></tr>
+					<tr><td><code>0 Name: &lt;file name&gt;</code></td><td>Read, Write</td><td>model file name</td></tr>
+					<tr><td><code>0 Author: &lt;name&gt;</code></td><td>Read, Write</td><td>model author</td></tr>
+					<tr><td><code>0 !LDRAW_ORG &lt;type&gt; &lt;update&gt;</code></td><td>Keep</td><td>official library part type</td></tr>
+					<tr><td><code>0 !LICENSE &lt;license&gt;</code></td><td>Keep</td><td>file license</td></tr>
+					<tr><td><code>0 !HELP &lt;text&gt;</code></td><td>Keep</td><td>usage notes</td></tr>
+					<tr><td><code>0 BFC CERTIFY &lt;CW|CCW&gt;</code></td><td>Read</td><td>see <a href="#meta-back-face-culling">Back Face Culling</a></td></tr>
+					<tr><td><code>0 !CATEGORY &lt;category&gt;</code></td><td>Keep</td><td>part category</td></tr>
+					<tr><td><code>0 !KEYWORDS &lt;words&gt;</code></td><td>Keep</td><td>part search words</td></tr>
+					<tr><td><code>0 !CMDLINE &lt;options&gt;</code></td><td>Keep</td><td>viewer command line options</td></tr>
+					<tr><td><code>0 !PREVIEW &lt;color&gt; &lt;matrix&gt;</code></td><td>Keep</td><td>part preview orientation</td></tr>
+					<tr><td><code>0 !HISTORY &lt;date&gt; &lt;author&gt; &lt;text&gt;</code></td><td>Keep</td><td>file change history</td></tr>
+					<tr><td><code>0 ~Moved to &lt;file&gt;</code></td><td>Keep</td><td>moved part description</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<h3 id="meta-multi-part-documents">Multi-Part Documents</h3>
+		<p>From the <a href="https://www.ldraw.org/article/47.html">MPD Language Extension</a>.</p>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 FILE &lt;file name&gt;</code></td><td>Read, Write</td><td>starts a submodel</td></tr>
+					<tr><td><code>0 NOFILE</code></td><td>Read</td><td>ends a submodel</td></tr>
+					<tr><td><code>0 !DATA &lt;file name&gt;</code></td><td>Read, Write</td><td>starts an embedded file, such as a texture image</td></tr>
+					<tr><td><code>0 !: &lt;data&gt;</code></td><td>Read, Write</td><td>base64 line of an embedded file</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<h3 id="meta-colours">Colours</h3>
+		<p>From the <a href="https://www.ldraw.org/article/299.html">Colour Definition Language Extension</a>, read from <code>LDConfig.ldr</code> and models.</p>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 !COLOUR &lt;name&gt; CODE &lt;code&gt; VALUE &lt;#RRGGBB&gt; EDGE &lt;#RRGGBB|code&gt;</code></td><td>Read</td><td>color definition</td></tr>
+					<tr><td><code>ALPHA &lt;0-255&gt;</code></td><td>Read</td><td>transparency</td></tr>
+					<tr><td><code>LUMINANCE &lt;0-255&gt;</code></td><td>Read</td><td>glow</td></tr>
+					<tr><td><code>CHROME</code>, <code>PEARLESCENT</code>, <code>RUBBER</code>, <code>MATTE_METALLIC</code>, <code>METAL</code></td><td>Read</td><td>finish</td></tr>
+					<tr><td><code>MATERIAL &lt;GLITTER|SPECKLE&gt; ...</code></td><td>Read</td><td>material parameters</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<h3 id="meta-texture-mapping">Texture Mapping</h3>
+		<p>From the <a href="https://www.ldraw.org/texmap-spec.html">Texture Mapping Language Extension</a>, read from parts.</p>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 !TEXMAP START &lt;method&gt; &lt;parameters&gt; &lt;image&gt; [GLOSSMAP &lt;image&gt;]</code></td><td>Read</td><td>maps a texture on the following lines</td></tr>
+					<tr><td><code>0 !TEXMAP NEXT &lt;method&gt; &lt;parameters&gt; &lt;image&gt; [GLOSSMAP &lt;image&gt;]</code></td><td>Read</td><td>maps a texture on the next line only</td></tr>
+					<tr><td><code>PLANAR</code>, <code>CYLINDRICAL</code>, <code>SPHERICAL</code></td><td>Read</td><td>projection method</td></tr>
+					<tr><td><code>0 !TEXMAP FALLBACK</code></td><td>Read</td><td>starts the geometry used without texture support</td></tr>
+					<tr><td><code>0 !TEXMAP END</code></td><td>Read</td><td>ends the mapping</td></tr>
+					<tr><td><code>0 !: &lt;line&gt;</code></td><td>Read</td><td>textured geometry line inside a mapping</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<h3 id="meta-back-face-culling">Back Face Culling</h3>
+		<p>From the <a href="https://www.ldraw.org/article/415.html">BFC Language Extension</a>, read from parts.</p>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 BFC CW</code>, <code>0 BFC CCW</code></td><td>Read</td><td>winding of the following polygons</td></tr>
+					<tr><td><code>0 BFC INVERTNEXT</code></td><td>Read</td><td>inverts the winding of the next subfile</td></tr>
+					<tr><td><code>0 BFC CERTIFY &lt;CW|CCW&gt;</code></td><td>Read</td><td>certifies the file, with its winding</td></tr>
+					<tr><td><code>0 BFC NOCERTIFY</code>, <code>0 BFC CLIP</code>, <code>0 BFC NOCLIP</code></td><td>Ignore</td><td>culling is not switched per file</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<h3 id="meta-avatars">Avatars</h3>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 !AVATAR CATEGORY &quot;&lt;category&gt;&quot;</code></td><td>Keep</td><td>avatar parts, see <a href="https://www.ldraw.org/article/346.html">Avatar Library</a></td></tr>
+				</tbody>
+			</table>
+		</div>
+	</details>
+	<details>
+		<summary>StudWorx</summary>
+		<p>StudWorx commands take the form <code>0 !SW &lt;PROPERTY&gt; &lt;OBJECT&gt; &lt;arguments&gt;</code>. An animated property writes one <code>&lt;PROPERTY&gt;_KEY</code> line per key, with the step before the values, as in <code>0 !SW POSITION_KEY CAMERA 3 0 -80 40</code>. Matrices are written as 9 numbers of a 3 by 3 rotation, positions and vectors as 3 numbers.</p>
+		<h3 id="meta-part">Part</h3>
+		<p>Written after the type 1 line of the part they apply to.</p>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 !SW STEP_HIDE PART &lt;step&gt;</code></td><td>Read, Write</td><td>step that hides the part</td></tr>
+					<tr><td><code>0 !SW HIDDEN PART</code></td><td>Read, Write</td><td>part hidden in the editor</td></tr>
+					<tr><td><code>0 !SW PIVOT PART &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;matrix&gt;</code></td><td>Read, Write</td><td>custom pivot point</td></tr>
+					<tr><td><code>0 !SW POSITION_KEY PART &lt;step&gt; &lt;x&gt; &lt;y&gt; &lt;z&gt;</code></td><td>Read, Write</td><td>animated position</td></tr>
+					<tr><td><code>0 !SW ORIENTATION_KEY PART &lt;step&gt; &lt;matrix&gt;</code></td><td>Read, Write</td><td>animated orientation</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<h3 id="meta-camera">Camera</h3>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 !SW FOV CAMERA &lt;degrees&gt; ZNEAR &lt;near&gt; ZFAR &lt;far&gt;</code></td><td>Read, Write</td><td>field of view and clipping planes</td></tr>
+					<tr><td><code>0 !SW POSITION CAMERA &lt;x&gt; &lt;y&gt; &lt;z&gt;</code></td><td>Read, Write</td><td>camera position, <code>POSITION_KEY</code> when animated</td></tr>
+					<tr><td><code>0 !SW TARGET_POSITION CAMERA &lt;x&gt; &lt;y&gt; &lt;z&gt;</code></td><td>Read, Write</td><td>target position, <code>TARGET_POSITION_KEY</code> when animated</td></tr>
+					<tr><td><code>0 !SW UP_VECTOR CAMERA &lt;x&gt; &lt;y&gt; &lt;z&gt;</code></td><td>Read, Write</td><td>up direction, <code>UP_VECTOR_KEY</code> when animated</td></tr>
+					<tr><td><code>0 !SW HIDDEN CAMERA</code></td><td>Read, Write</td><td>camera hidden in the editor</td></tr>
+					<tr><td><code>0 !SW ORTHOGRAPHIC CAMERA</code></td><td>Read, Write</td><td>orthographic projection</td></tr>
+					<tr><td><code>0 !SW LABEL CAMERA &lt;name&gt;</code></td><td>Read, Write</td><td>camera name, ends the camera</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<h3 id="meta-light">Light</h3>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 !SW SHADOWLESS LIGHT</code></td><td>Read, Write</td><td>light casts no shadows</td></tr>
+					<tr><td><code>0 !SW POSITION LIGHT &lt;x&gt; &lt;y&gt; &lt;z&gt;</code></td><td>Read, Write</td><td>light position</td></tr>
+					<tr><td><code>0 !SW ORIENTATION LIGHT &lt;matrix&gt;</code></td><td>Read, Write</td><td>light direction</td></tr>
+					<tr><td><code>0 !SW COLOR_RGB LIGHT &lt;red&gt; &lt;green&gt; &lt;blue&gt;</code></td><td>Read, Write</td><td>light color, 0 to 1</td></tr>
+					<tr><td><code>0 !SW BLENDER_RADIUS LIGHT &lt;size&gt;</code></td><td>Read, Write</td><td>Blender point and spot radius</td></tr>
+					<tr><td><code>0 !SW BLENDER_ANGLE LIGHT &lt;degrees&gt;</code></td><td>Read, Write</td><td>Blender sun angle</td></tr>
+					<tr><td><code>0 !SW BLENDER_POWER LIGHT &lt;watts&gt;</code></td><td>Read, Write</td><td>Blender power</td></tr>
+					<tr><td><code>0 !SW AREA_SIZE_X LIGHT &lt;size&gt;</code></td><td>Read, Write</td><td>area width</td></tr>
+					<tr><td><code>0 !SW AREA_SIZE_Y LIGHT &lt;size&gt;</code></td><td>Read, Write</td><td>area height</td></tr>
+					<tr><td><code>0 !SW POVRAY_POWER LIGHT &lt;power&gt;</code></td><td>Read, Write</td><td>POV-Ray power</td></tr>
+					<tr><td><code>0 !SW POVRAY_FADE_DISTANCE LIGHT &lt;distance&gt;</code></td><td>Read, Write</td><td>POV-Ray fade distance</td></tr>
+					<tr><td><code>0 !SW POVRAY_FADE_POWER LIGHT &lt;power&gt;</code></td><td>Read, Write</td><td>POV-Ray fade power</td></tr>
+					<tr><td><code>0 !SW SPOT_CONE_ANGLE LIGHT &lt;degrees&gt;</code></td><td>Read, Write</td><td>spot cone</td></tr>
+					<tr><td><code>0 !SW SPOT_PENUMBRA_ANGLE LIGHT &lt;degrees&gt;</code></td><td>Read, Write</td><td>spot penumbra</td></tr>
+					<tr><td><code>0 !SW POVRAY_SPOT_TIGHTNESS LIGHT &lt;tightness&gt;</code></td><td>Read, Write</td><td>POV-Ray spot tightness</td></tr>
+					<tr><td><code>0 !SW AREA_SHAPE LIGHT &lt;RECTANGLE|SQUARE|DISK|ELLIPSE&gt;</code></td><td>Read, Write</td><td>area shape</td></tr>
+					<tr><td><code>0 !SW POVRAY_AREA_GRID_X LIGHT &lt;count&gt;</code></td><td>Read, Write</td><td>POV-Ray area grid columns</td></tr>
+					<tr><td><code>0 !SW POVRAY_AREA_GRID_Y LIGHT &lt;count&gt;</code></td><td>Read, Write</td><td>POV-Ray area grid rows</td></tr>
+					<tr><td><code>0 !SW TYPE LIGHT &lt;POINT|SPOT|DIRECTIONAL|AREA&gt;</code></td><td>Read, Write</td><td>light type</td></tr>
+					<tr><td><code>0 !SW LABEL LIGHT &lt;name&gt;</code></td><td>Read, Write</td><td>light name, ends the light</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<p>Each light property takes the <code>_KEY</code> form when animated.</p>
+		<h3 id="meta-model">Model</h3>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 !SW COMMENT MODEL &lt;text&gt;</code></td><td>Read, Write</td><td>model comment, one line each</td></tr>
+					<tr><td><code>0 !SW AUTHOR MODEL &lt;name&gt;</code></td><td>Read</td><td>author, written as <code>0 Author:</code></td></tr>
+					<tr><td><code>0 !SW DESCRIPTION MODEL &lt;text&gt;</code></td><td>Read</td><td>description, written as the first line</td></tr>
+					<tr><td><code>0 !SW ASSET_SOURCE MODEL &lt;base64 path&gt;</code></td><td>Read, Write</td><td>folder searched for embedded file sources</td></tr>
+					<tr><td><code>0 !SW ASSET_SOURCE_PRIORITY MODEL SOURCE</code></td><td>Read, Write</td><td>search the asset sources before the model folder</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<h3 id="meta-pov-ray">POV-Ray</h3>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 !SW HEADER_FILE_INCLUDE POV_RAY &lt;path&gt;</code></td><td>Read, Write</td><td>file included before the scene</td></tr>
+					<tr><td><code>0 !SW FOOTER_FILE_INCLUDE POV_RAY &lt;path&gt;</code></td><td>Read, Write</td><td>file included after the scene</td></tr>
+					<tr><td><code>0 !SW FLOOR_AXIS POV_RAY &lt;0|1|2&gt;</code></td><td>Read, Write</td><td>floor axis, x, y or z</td></tr>
+					<tr><td><code>0 !SW FLOOR_COLOR_RGB POV_RAY &lt;red&gt; &lt;green&gt; &lt;blue&gt;</code></td><td>Read, Write</td><td>floor color</td></tr>
+					<tr><td><code>0 !SW FLOOR_AMBIENT POV_RAY &lt;value&gt;</code></td><td>Read, Write</td><td>floor ambient</td></tr>
+					<tr><td><code>0 !SW FLOOR_DIFFUSE POV_RAY &lt;value&gt;</code></td><td>Read, Write</td><td>floor diffuse</td></tr>
+					<tr><td><code>0 !SW EXCLUDE_FLOOR POV_RAY</code></td><td>Read, Write</td><td>no floor</td></tr>
+					<tr><td><code>0 !SW EXCLUDE_BACKGROUND POV_RAY</code></td><td>Read, Write</td><td>no background</td></tr>
+					<tr><td><code>0 !SW NO_REFLECTION POV_RAY</code></td><td>Read, Write</td><td>no reflections</td></tr>
+					<tr><td><code>0 !SW NO_SHADOWS POV_RAY</code></td><td>Read, Write</td><td>no shadows</td></tr>
+					<tr><td><code>0 !SW USE_LGEO POV_RAY</code></td><td>Read, Write</td><td>use the LGEO library</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<h3 id="meta-instruction">Instruction</h3>
+		<p>Instructions settings, written in the main model header. Models are quoted file names, <code>-</code> for none. Steps are <code>STEP &lt;model&gt; &lt;step&gt;</code>, pages <code>&lt;STEPS|COVER|BILL_OF_MATERIALS|BLANK&gt; &lt;model&gt; &lt;step&gt; &lt;rank&gt;</code> and page elements <code>&lt;element&gt; &lt;model&gt; &lt;step&gt;</code>, with the element <code>NONE</code>, <code>STEP_NUMBER</code>, <code>PARTS_LIST</code>, <code>COVER_TITLE</code>, <code>COVER_AUTHOR</code>, <code>BILL_OF_MATERIALS</code>, <code>STEP_IMAGE</code>, <code>COVER_IMAGE</code>, <code>PAGE_NUMBER</code>, <code>NOTICE</code> or <code>POINTER</code>. Values are <code>TRUE</code>/<code>FALSE</code>, numbers, <code>#RRGGBBAA</code> colors or text to the end of the line, with <code>\\</code>, <code>\&quot;</code> and <code>\n</code> escaped.</p>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 !SW PROPERTY INSTRUCTION &lt;name&gt; &lt;value&gt;</code></td><td>Read, Write</td><td>document property, such as <code>STEP_NUMBER_BORDER_WIDTH 3</code></td></tr>
+					<tr><td><code>0 !SW PAGE_PROPERTY INSTRUCTION STEP &lt;model&gt; &lt;step&gt; &lt;name&gt; &lt;value&gt;</code></td><td>Read, Write</td><td>property of the page starting at the step</td></tr>
+					<tr><td><code>0 !SW STEPS_PER_PAGE INSTRUCTION &lt;rows&gt; &lt;columns&gt;</code></td><td>Read, Write</td><td>steps per page</td></tr>
+					<tr><td><code>0 !SW PAGE_STEPS_PER_PAGE INSTRUCTION STEP &lt;model&gt; &lt;step&gt; &lt;rows&gt; &lt;columns&gt;</code></td><td>Read, Write</td><td>steps per page from the step on</td></tr>
+					<tr><td><code>0 !SW BLANK_PAGE INSTRUCTION STEP &lt;model&gt; &lt;step&gt;</code></td><td>Read, Write</td><td>blank page before the step</td></tr>
+					<tr><td><code>0 !SW OFFSET INSTRUCTION &lt;element&gt; &lt;model&gt; &lt;step&gt; &lt;x&gt; &lt;y&gt;</code></td><td>Read, Write</td><td>element moved from its place</td></tr>
+					<tr><td><code>0 !SW LOCK INSTRUCTION &lt;element&gt; &lt;model&gt; &lt;step&gt; &lt;x&gt; &lt;y&gt;</code></td><td>Read, Write</td><td>element locked at a position</td></tr>
+					<tr><td><code>0 !SW NOTICE INSTRUCTION &lt;id&gt; PAGE &lt;page&gt; POSITION &lt;x&gt; &lt;y&gt; TEXT &lt;text&gt;</code></td><td>Read, Write</td><td>notice on a page</td></tr>
+					<tr><td><code>0 !SW POINTER INSTRUCTION &lt;id&gt; PAGE &lt;page&gt; SOURCE &lt;element&gt; ANCHOR &lt;AUTO|0-7&gt; STYLE &lt;DEFAULT|LINE|WEDGE&gt; TIP &lt;DEFAULT|ARROWHEAD|DOT&gt; TARGET &lt;POINT|ELEMENT|PART&gt; &lt;element&gt; PART &lt;index&gt; POSITION &lt;x&gt; &lt;y&gt;</code></td><td>Read, Write</td><td>pointer from an element border to a point, element or part</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<h3 id="meta-group">Group</h3>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 !SW BEGIN GROUP &lt;name&gt;</code></td><td>Read, Write</td><td>starts a group, groups nest</td></tr>
+					<tr><td><code>0 !SW END GROUP</code></td><td>Read, Write</td><td>ends the innermost group</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<h3 id="meta-synthesized-path">Synthesized Path</h3>
+		<p>Flexible parts such as hoses and cables, built from control points.</p>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 !SW BEGIN SYNTH_PATH</code></td><td>Read, Write</td><td>starts the control points of the next part</td></tr>
+					<tr><td><code>0 !SW CONTROL_POINT SYNTH_PATH &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;matrix&gt; &lt;scale&gt;</code></td><td>Read, Write</td><td>control point</td></tr>
+					<tr><td><code>0 !SW END SYNTH_PATH</code></td><td>Read, Write</td><td>ends the control points</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<h3 id="meta-clipboard">Clipboard</h3>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 !SW PROJECT CLIPBOARD &lt;uuid&gt;</code></td><td>Read, Write</td><td>source project of copied parts, clipboard only</td></tr>
+				</tbody>
+			</table>
+		</div>
+	</details>
+	<details>
+		<summary>LeoCAD</summary>
+		<p>LeoCAD commands take the form <code>0 !LEOCAD &lt;OBJECT&gt; &lt;PROPERTY&gt; &lt;arguments&gt;</code>. They are read as the matching StudWorx commands. A model opened with them asks to migrate, a migrated model is saved with StudWorx commands and a kept model is saved with LeoCAD commands.</p>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>LeoCAD</th><th>StudWorx</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 !LEOCAD PIECE &lt;PROPERTY&gt;</code></td><td><code>0 !SW &lt;PROPERTY&gt; PART</code></td></tr>
+					<tr><td><code>0 !LEOCAD &lt;OBJECT&gt; ROTATION</code>, <code>ROTATION_KEY</code></td><td><code>0 !SW ORIENTATION &lt;OBJECT&gt;</code>, <code>ORIENTATION_KEY</code></td></tr>
+					<tr><td><code>0 !LEOCAD LIGHT COLOR</code>, <code>COLOR_KEY</code></td><td><code>0 !SW COLOR_RGB LIGHT</code>, <code>COLOR_RGB_KEY</code></td></tr>
+					<tr><td><code>0 !LEOCAD &lt;OBJECT&gt; NAME &lt;name&gt;</code></td><td><code>0 !SW LABEL &lt;OBJECT&gt; &lt;name&gt;</code></td></tr>
+					<tr><td><code>0 !LEOCAD CAMERA HIDDEN ORTHOGRAPHIC NAME &lt;name&gt;</code></td><td><code>0 !SW HIDDEN CAMERA</code>, <code>0 !SW ORTHOGRAPHIC CAMERA</code>, <code>0 !SW LABEL CAMERA &lt;name&gt;</code></td></tr>
+					<tr><td><code>0 !LEOCAD LIGHT TYPE &lt;type&gt; NAME &lt;name&gt;</code></td><td><code>0 !SW TYPE LIGHT &lt;type&gt;</code>, <code>0 !SW LABEL LIGHT &lt;name&gt;</code></td></tr>
+					<tr><td><code>0 !LEOCAD POV_RAY HEADER_INCLUDE_FILE</code>, <code>FOOTER_INCLUDE_FILE</code></td><td><code>0 !SW HEADER_FILE_INCLUDE POV_RAY</code>, <code>FOOTER_FILE_INCLUDE</code></td></tr>
+					<tr><td><code>0 !LEOCAD SYNTH BEGIN</code>, <code>CONTROL_POINT</code>, <code>END</code></td><td><code>0 !SW BEGIN SYNTH_PATH</code>, <code>CONTROL_POINT</code>, <code>END</code></td></tr>
+					<tr><td><code>0 !LEOCAD GROUP BEGIN &lt;name&gt;</code>, <code>END</code></td><td><code>0 !SW BEGIN GROUP &lt;name&gt;</code>, <code>END</code></td></tr>
+				</tbody>
+			</table>
+		</div>
+		<p>Every other LeoCAD property keeps its name, as in <code>0 !LEOCAD PIECE PIVOT</code> read as <code>0 !SW PIVOT PART</code>.</p>
+	</details>
+	<details>
+		<summary>MLCad</summary>
+		<p>From the <a href="https://wiki.ldraw.org/wiki/List_of_Known_Unofficial_META_Commands">list of known unofficial meta commands</a>.</p>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 ROTSTEP &lt;x&gt; &lt;y&gt; &lt;z&gt; [REL|ABS|ADD]</code></td><td>Read, Write</td><td>ends a step and sets its view rotation</td></tr>
+					<tr><td><code>0 ROTSTEP END</code></td><td>Read, Write</td><td>ends a step and resets the view rotation</td></tr>
+					<tr><td><code>0 BACKGROUND &lt;image&gt;</code></td><td>Keep</td><td>step background</td></tr>
+					<tr><td><code>0 BUFEXCHG &lt;A-H&gt; &lt;STORE|RETRIEVE&gt;</code></td><td>Keep</td><td>buffer exchange</td></tr>
+					<tr><td><code>0 GHOST &lt;line&gt;</code></td><td>Keep</td><td>ghosted line</td></tr>
+					<tr><td><code>0 GROUP &lt;count&gt; &lt;name&gt;</code></td><td>Keep</td><td>MLCad group</td></tr>
+					<tr><td><code>0 MLCAD BTG &lt;name&gt;</code></td><td>Keep</td><td>belongs to group</td></tr>
+					<tr><td><code>0 MLCAD HIDE &lt;line&gt;</code></td><td>Keep</td><td>hidden line</td></tr>
+					<tr><td><code>0 MLCAD SKIP_BEGIN</code>, <code>0 MLCAD SKIP_END</code></td><td>Keep</td><td>skipped lines</td></tr>
+					<tr><td><code>0 MLCAD ARROW_BEGIN</code>, <code>0 MLCAD ARROW_END</code></td><td>Keep</td><td>arrows</td></tr>
+					<tr><td><code>0 ROTATION CENTER</code>, <code>CONFIG</code>, <code>AXLE</code></td><td>Keep</td><td>rotation centers</td></tr>
+					<tr><td><code>0 MLCAD SPRING</code>, <code>FLEXHOSE</code>, <code>RUBBER_BELT</code></td><td>Keep</td><td>generated flexible parts</td></tr>
+				</tbody>
+			</table>
+		</div>
+	</details>
+	<details>
+		<summary>LPub</summary>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 !LPUB &lt;command&gt;</code>, <code>0 LPUB &lt;command&gt;</code></td><td>Keep</td><td>instruction layout, parts lists, callouts and placement</td></tr>
+				</tbody>
+			</table>
+		</div>
+	</details>
+	<details>
+		<summary>LSynth</summary>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 SYNTH BEGIN &lt;type&gt; &lt;color&gt;</code></td><td>Keep</td><td>starts a synthesized part</td></tr>
+					<tr><td><code>0 SYNTH END</code></td><td>Keep</td><td>ends a synthesized part</td></tr>
+					<tr><td><code>0 SYNTH INSIDE</code>, <code>OUTSIDE</code>, <code>CROSS</code></td><td>Keep</td><td>constraint side</td></tr>
+					<tr><td><code>0 SYNTH SHOW</code>, <code>HIDE</code></td><td>Keep</td><td>constraint visibility</td></tr>
+					<tr><td><code>0 SYNTHESIZED BEGIN</code>, <code>0 SYNTHESIZED END</code></td><td>Keep</td><td>generated lines</td></tr>
+				</tbody>
+			</table>
+		</div>
+		<p>The StudWorx <code>SYNTH_PATH</code> object is named apart from these commands, which describe a different format.</p>
+	</details>
+	<details>
+		<summary>L3P</summary>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 L3P IFPOV</code>, <code>IFNOTPOV</code>, <code>ELSEPOV</code>, <code>ENDPOV</code></td><td>Keep</td><td>POV-Ray only and non POV-Ray lines</td></tr>
+				</tbody>
+			</table>
+		</div>
+	</details>
+	<details>
+		<summary>LDLite</summary>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Handling</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 COLOR</code>, <code>0 COLOUR</code>, <code>0 COLORNAME</code>, <code>0 COLOURNAME</code></td><td>Keep</td><td>color definitions</td></tr>
+					<tr><td><code>0 TRANSLATE</code>, <code>0 ROTATE</code>, <code>0 SCALE</code>, <code>0 TRANSFORM</code>, <code>0 MATRIX</code></td><td>Keep</td><td>transformations</td></tr>
+					<tr><td><code>0 POINT</code></td><td>Keep</td><td>point</td></tr>
+					<tr><td><code>0 CMDLINE</code></td><td>Keep</td><td>command line options</td></tr>
+				</tbody>
+			</table>
+		</div>
+	</details>
+	<details>
+		<summary>Blender</summary>
+		<p>The Blender LDraw import add-on handles these commands when its options in Preferences ask for it. The step StudWorx hands to Blender is written with LeoCAD meta commands, the form the add-on reads cameras, lights and groups from.</p>
+		<div class="table">
+			<table>
+				<thead>
+					<tr><th>Command</th><th>Option</th><th>Use</th></tr>
+				</thead>
+				<tbody>
+					<tr><td><code>0 BFC</code></td><td>BFC</td><td>back face culling</td></tr>
+					<tr><td><code>0 CLEAR</code></td><td>CLEAR Command</td><td>hides earlier parts in the timeline</td></tr>
+					<tr><td><code>0 !LEOCAD GROUP</code>, <code>0 GROUP</code></td><td>GROUP Command</td><td>collections from groups</td></tr>
+					<tr><td><code>0 !LEOCAD CAMERA</code></td><td>Import Cameras</td><td>cameras</td></tr>
+					<tr><td><code>0 !LEOCAD LIGHT</code></td><td>Import Lights</td><td>lights</td></tr>
+					<tr><td><code>0 PRINT</code>, <code>0 WRITE</code></td><td>PRINT/WRITE Command</td><td>messages printed to the console</td></tr>
+					<tr><td><code>0 STEP</code></td><td>STEP Command, STEP Groups</td><td>timeline keys and step collections</td></tr>
+					<tr><td><code>0 !TEXMAP</code>, <code>0 !DATA</code></td><td>TEXMAP and DATA Command</td><td>textures</td></tr>
+					<tr><td><code>0 PAUSE</code>, <code>0 SAVE</code></td><td>PAUSE Command, SAVE Command</td><td>not implemented</td></tr>
+				</tbody>
+			</table>
+		</div>
+	</details>
+	<p class="more"><a href="https://github.com/nathaneltitane/studworx/blob/main/documentation/commands-meta.md">Read the meta command list ›</a></p>
+</section>
+
 <section id="help" class="section reveal">
 	<header class="section-head">
 		<svg class="icon big" aria-hidden="true"><use href="#i-purple"/></svg>
@@ -1961,6 +2395,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<a class="nav-button" href="#instructions"><svg class="icon" aria-hidden="true"><use href="#i-blue"/></svg><span class="label">Instructions</span></a>
 			<a class="nav-button" href="#models"><svg class="icon" aria-hidden="true"><use href="#i-green"/></svg><span class="label">Models</span></a>
 			<a class="nav-button" href="#preferences"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg><span class="label">Preferences</span></a>
+			<a class="nav-button" href="#meta"><svg class="icon" aria-hidden="true"><use href="#i-edge"/></svg><span class="label">Meta</span></a>
 			<a class="nav-button" href="#help"><svg class="icon" aria-hidden="true"><use href="#i-purple"/></svg><span class="label">Help</span></a>
 			<a class="nav-button" href="#install"><svg class="icon" aria-hidden="true"><use href="#i-orange"/></svg><span class="label">Install</span></a>
 			<a class="nav-button" href="#news"><svg class="icon" aria-hidden="true"><use href="#i-fuschia"/></svg><span class="label">News</span></a>

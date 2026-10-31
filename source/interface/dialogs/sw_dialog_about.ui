@@ -27,7 +27,7 @@
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="../../../studworx.qrc">:/resources/studworx.png</pixmap>
+          <pixmap resource="../../../resources/studworx.qrc">:/resources/studworx.png</pixmap>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -142,7 +142,7 @@ POV-Ray renders can use the LGEO part library by Lutz Uhlmann.</string>
   </layout>
  </widget>
  <resources>
-  <include location="../../studworx.qrc"/>
+  <include location="../../../resources/studworx.qrc"/>
  </resources>
  <connections>
   <connection>

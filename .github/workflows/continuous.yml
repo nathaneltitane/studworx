@@ -43,21 +43,21 @@ jobs:
         make install INSTALL_ROOT=$PWD/AppDir
     - name: Generate test Makefile
       run: |
-        mkdir -p build/tests
-        cd build/tests
-        qmake ../../tests/tests.pro CONFIG+=release CONFIG-=debug
+        mkdir -p build/testing
+        cd build/testing
+        qmake ../../testing/testing.pro CONFIG+=release CONFIG-=debug
     - name: Build tests
-      working-directory: build/tests
+      working-directory: build/testing
       run: make -j ${{ steps.cpu-cores.outputs.count }}
     - name: Run tests
-      working-directory: build/tests
+      working-directory: build/testing
       run: make check TESTARGS="-o test-results.xml,junitxml -o -,txt"
     - name: Upload test results
       if: always()
       uses: actions/upload-artifact@v7
       with:
         name: test-results-linux-${{ steps.version.outputs.text }}-x64
-        path: build/tests/test-results.xml
+        path: build/testing/test-results.xml
         if-no-files-found: ignore
 
   build-deb:
@@ -200,21 +200,21 @@ jobs:
       run: make -j ${{ steps.cpu-cores.outputs.count }}
     - name: Generate test Makefile
       run: |
-        mkdir -p build/tests
-        cd build/tests
-        qmake ../../tests/tests.pro CONFIG+=release CONFIG-=debug
+        mkdir -p build/testing
+        cd build/testing
+        qmake ../../testing/testing.pro CONFIG+=release CONFIG-=debug
     - name: Build tests
-      working-directory: build/tests
+      working-directory: build/testing
       run: make -j ${{ steps.cpu-cores.outputs.count }}
     - name: Run tests
-      working-directory: build/tests
+      working-directory: build/testing
       run: make check TESTARGS="-o test-results.xml,junitxml -o -,txt"
     - name: Upload test results
       if: always()
       uses: actions/upload-artifact@v7
       with:
         name: test-results-macos-${{ steps.version.outputs.text }}-arm64
-        path: build/tests/test-results.xml
+        path: build/testing/test-results.xml
         if-no-files-found: ignore
     - name: Build package
       working-directory: build/release
@@ -284,21 +284,21 @@ jobs:
         if not exist build\release\povconsole32-sse2.exe exit /b 1
     - name: Generate test Makefile
       run: |
-        mkdir build\tests
-        cd build\tests
-        qmake ..\..\tests\tests.pro -spec win32-msvc CONFIG+=release CONFIG-=debug CONFIG-=debug_and_release
+        mkdir build\testing
+        cd build\testing
+        qmake ..\..\testing\testing.pro -spec win32-msvc CONFIG+=release CONFIG-=debug CONFIG-=debug_and_release
     - name: Build tests
-      working-directory: build/tests
+      working-directory: build/testing
       run: nmake /NOLOGO
     - name: Run tests
-      working-directory: build/tests
+      working-directory: build/testing
       run: nmake /NOLOGO check "TESTARGS=-o test-results.xml,junitxml -o -,txt"
     - name: Upload test results
       if: always()
       uses: actions/upload-artifact@v7
       with:
         name: test-results-windows-${{ steps.version.outputs.text }}-x64
-        path: build/tests/test-results.xml
+        path: build/testing/test-results.xml
         if-no-files-found: ignore
     - name: Build package
       shell: bash

@@ -39,7 +39,7 @@ VERSION_RC = $$num_add($$member(VERSION_PARTS, 0), 0),$$num_add($$member(VERSION
 
 win32 {
 	DEFINES += NOMINMAX
-	ICON_FILE = $$PWD/resources/studworx.ico
+	ICON_FILE = $$PWD/resources/icons/windows/studworx.ico
 
 	# the resource file carries the release date as its version text
 	version_rc.input = $$PWD/platform/studworx.rc.in
@@ -160,10 +160,10 @@ unix:!macx {
 }
 
 macx {
-	ICON = resources/studworx.icns
+	ICON = resources/icons/macos/studworx.icns
 	QMAKE_INFO_PLIST = platform/Info.plist
 
-	document_icon.files += $$_PRO_FILE_PWD_/resources/studworx_document.icns
+	document_icon.files += $$_PRO_FILE_PWD_/resources/icons/macos/studworx_document.icns
 	document_icon.path = Contents/Resources
 	QMAKE_BUNDLE_DATA += document_icon
 
@@ -188,7 +188,7 @@ include(source/input_output/input_output.pri)
 include(source/interface/interface.pri)
 
 OTHER_FILES +=
-RESOURCES += studworx.qrc resources/interface/stylesheet/stylesheet.qrc
+RESOURCES += resources/studworx.qrc resources/interface/stylesheet/stylesheet.qrc
 
 !win32 {
 	TRANSLATIONS = resources/translations/studworx_cs.ts resources/translations/studworx_de.ts resources/translations/studworx_en.ts resources/translations/studworx_es.ts resources/translations/studworx_fr.ts resources/translations/studworx_pt.ts resources/translations/studworx_ru.ts resources/translations/studworx_uk.ts resources/translations/studworx_zh_CN.ts resources/translations/studworx_zh_TW.ts

@@ -84,7 +84,7 @@ then
 	mkdir -p "${directory_build}/thumbnailer"
 	cd "${directory_build}/thumbnailer"
 
-	qmake "${directory_source}/thumbnailer/thumbnailer.pro" \
+	qmake "${directory_source}/source/thumbnailer/thumbnailer.pro" \
 		CONFIG+=release CONFIG-=debug \
 		BIN_DIR="${directory_prefix}/bin"
 

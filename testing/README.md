@@ -24,9 +24,9 @@ headers as the application, plus Qt Test, and supports Qt 5 and Qt 6.
 From the repository root, with the intended Qt installation's `qmake` on PATH:
 
 ```sh
-mkdir -p build/tests
-cd build/tests
-qmake ../../tests/tests.pro CONFIG+=release CONFIG-=debug
+mkdir -p build/testing
+cd build/testing
+qmake ../../testing/testing.pro CONFIG+=release CONFIG-=debug
 make -j
 make check
 ```
@@ -53,7 +53,7 @@ make check TESTARGS="-o test-results.xml,junitxml -o -,txt"
 
 1. Declare a named `void` function under `private slots` in `sw_tests.h`.
 2. Define it in the relevant test source file as `void swTests::FunctionName()`.
-3. If adding a new source file, list it in `tests.pro`.
+3. If adding a new source file, list it in `testing.pro`.
 
 Use `QVERIFY`, `QCOMPARE`, or other Qt Test checks so assertions remain active in
 release builds and failures identify the function and source line. Each test
@@ -62,7 +62,7 @@ fixed seeds for randomized tests; include the seed and iteration in failures.
 Tests should call production code directly.
 
 Application-level tests needing more source files should declare those sources
-and dependencies in `tests.pro`; shared source lists can move into `.pri` files
+and dependencies in `testing.pro`; shared source lists can move into `.pri` files
 when needed. Keep application startup and packaging out of the test target.
 
 ## GitHub CI
@@ -77,9 +77,9 @@ The Windows job uses `nmake` and a single release configuration. To reproduce it
 commands in an x64 MSVC developer command prompt with Qt on PATH:
 
 ```bat
-mkdir build\tests
-cd build\tests
-qmake ..\..\tests\tests.pro -spec win32-msvc CONFIG+=release CONFIG-=debug CONFIG-=debug_and_release
+mkdir build\testing
+cd build\testing
+qmake ..\..\testing\testing.pro -spec win32-msvc CONFIG+=release CONFIG-=debug CONFIG-=debug_and_release
 nmake /NOLOGO
 nmake /NOLOGO check "TESTARGS=-o test-results.xml,junitxml -o -,txt"
 ```

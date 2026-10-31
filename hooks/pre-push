@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # bump the release date version when main gets code changes after its release
-# enable with: git config core.hooksPath tools/hooks
+# enable with: git config core.hooksPath hooks
 
 set -e
 
