@@ -361,6 +361,7 @@ table {
 
 th, td {
 	text-align: left;
+	vertical-align: top;
 	padding: 10px 15px;
 	border-bottom: 1px solid #eeeeee;
 	white-space: nowrap;
@@ -384,12 +385,12 @@ pre {
 
 /* scrollbars kept clear of the corner radii */
 
-.table::-webkit-scrollbar, pre::-webkit-scrollbar {
+html::-webkit-scrollbar, .table::-webkit-scrollbar, pre::-webkit-scrollbar {
 	width: 6px;
 	height: 6px;
 }
 
-.table::-webkit-scrollbar-track, pre::-webkit-scrollbar-track {
+html::-webkit-scrollbar-track, .table::-webkit-scrollbar-track, pre::-webkit-scrollbar-track {
 	background: transparent;
 }
 
@@ -401,17 +402,17 @@ pre {
 	margin: 20px 0;
 }
 
-.table::-webkit-scrollbar-thumb, pre::-webkit-scrollbar-thumb {
+html::-webkit-scrollbar-thumb, .table::-webkit-scrollbar-thumb, pre::-webkit-scrollbar-thumb {
 	background: #bbbbbb;
 	border-radius: 3px;
 }
 
-.table::-webkit-scrollbar-thumb:hover, pre::-webkit-scrollbar-thumb:hover {
+html::-webkit-scrollbar-thumb:hover, .table::-webkit-scrollbar-thumb:hover, pre::-webkit-scrollbar-thumb:hover {
 	background: #666666;
 }
 
 @supports not selector(::-webkit-scrollbar) {
-	.table, pre {
+	html, .table, pre {
 		scrollbar-width: thin;
 		scrollbar-color: #bbbbbb transparent;
 	}
