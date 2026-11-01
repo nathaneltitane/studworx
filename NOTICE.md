@@ -1,6 +1,15 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-10-31</summary>
+
+  - Interface: close, undock and filter clear buttons are drawn to match the theme, and the custom theme draws its own tree lines and expand arrows
+  - Site: new Meta section covering the LDraw meta commands StudWorx reads and writes, see [Meta on the site](https://studworx.app/#meta)
+  - Manual page: covers LeoCAD '.lcd' projects opening read only, step numbers in saved image names, the step and field of view limits, the LGEO library and studworx.app
+
+  </details>
+
+  <details>
   <summary>2026-10-30</summary>
 
   - Interface: built from standard Qt widgets throughout, panels, dialogs and windows follow the system style and theme, only the model views draw with OpenGL
