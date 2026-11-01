@@ -218,7 +218,15 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 
 <!-- video -->
 
-[A Flex Path hose seated between two bricks, reshaped by its control points](resources/videos/modeling-flex-path.mp4)
+[A Flex Path hose follows its end point as it moves, then seats back on its brick](resources/videos/studworx-flex-01.mp4)
+
+<!-- video -->
+
+[A hose end seated on a newly placed brick, the path bending to reach it](resources/videos/studworx-flex-02.mp4)
+
+<!-- video -->
+
+[A hose seated on the side of a brick, following it as the bricks move](resources/videos/studworx-flex-03.mp4)
 
 ## Tools
 
