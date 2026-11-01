@@ -8,6 +8,7 @@ set -e
 directory_script="${BASH_SOURCE[0]%/*}"
 
 # run from its own directory
+
 if [ "${directory_script}" = "${BASH_SOURCE[0]}" ]
 then
 	directory_script="."

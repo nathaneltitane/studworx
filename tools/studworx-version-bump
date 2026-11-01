@@ -12,11 +12,12 @@ cd "${directory_source}"
 name_remote="${1}"
 
 # only a push of the current main to main is bumped
+
 state_main=0
 
-while read -r ref_local sha_local ref_remote sha_remote
+while read -r reference_local hash_local reference_remote hash_remote
 do
-	if [ "${ref_remote}" = "refs/heads/main" ] && [ "${ref_local}" = "refs/heads/main" ] && [ "${sha_local}" = "$(git rev-parse HEAD)" ]
+	if [ "${reference_remote}" = "refs/heads/main" ] && [ "${reference_local}" = "refs/heads/main" ] && [ "${hash_local}" = "$(git rev-parse HEAD)" ]
 	then
 		state_main=1
 	fi
@@ -39,6 +40,7 @@ done < source/application/sw_global.h
 printf -v version_today "%(%Y-%m-%d)T" -1
 
 # a version is bumped once its release exists and only on a later day
+
 if [ -z "${version_old}" ] || [[ ! ${version_today} > ${version_old} ]]
 then
 	exit 0
@@ -46,6 +48,7 @@ fi
 
 # the release tag is read from the remote, local tags may be missing or stale
 # an annotated tag lists its commit last
+
 mapfile -t lines_release < <(git ls-remote "${name_remote}" "refs/tags/${version_old}" "refs/tags/${version_old}^{}" || true)
 
 if [ "${#lines_release[@]}" = 0 ]
@@ -53,17 +56,18 @@ then
 	exit 0
 fi
 
-sha_release="${lines_release[-1]%%[[:space:]]*}"
+hash_release="${lines_release[-1]%%[[:space:]]*}"
 
-if [ -z "${sha_release}" ] || [ -z "$(git cat-file -t "${sha_release}" 2> /dev/null)" ]
+if [ -z "${hash_release}" ] || [ -z "$(git cat-file -t "${hash_release}" 2> /dev/null)" ]
 then
 	exit 0
 fi
 
 # code changes only, documentation and tools do not make a release
+
 paths_code=(source resources ':!resources/translations' ':!resources/documentation' ':!resources/images' platform '*.pro' '*.pri')
 
-if [ -z "$(git diff --name-only "${sha_release}" HEAD -- "${paths_code[@]}")" ]
+if [ -z "$(git diff --name-only "${hash_release}" HEAD -- "${paths_code[@]}")" ]
 then
 	exit 0
 fi
@@ -75,6 +79,7 @@ then
 fi
 
 # the last notice shows the style of the new one
+
 lines_example=()
 state_notice=0
 
@@ -97,7 +102,7 @@ done < NOTICE.md
 printf "%s\n" "version ${version_old} is released and code changed since, writing the ${version_today} notice"
 
 prompt_notice="Write the release notice for StudWorx version ${version_today}, covering the changes since version ${version_old}.
-Read them with git log and git diff ${sha_release} HEAD, user facing changes only.
+Read them with git log and git diff ${hash_release} HEAD, user facing changes only.
 Answer with 2 to 8 lines and nothing else, each line starting with '- ', short and plain, no final period, written like these lines of the previous notice:
 $(printf "%s\n" "${lines_example[@]}")
 Always write LEGO® for the brand, and part, never piece.
@@ -116,6 +121,7 @@ do
 done <<< "${text_notice}"
 
 # changes nobody sees make no release
+
 if [ "${#lines_notice[@]}" = 0 ] && [[ ${text_notice} == *NONE* ]]
 then
 	printf "%s\n" "no user facing changes, version stays ${version_old}"
@@ -131,6 +137,7 @@ fi
 tools/studworx-version-update "${version_today}" > /dev/null
 
 # the notice lines go under the new summary
+
 mapfile -t lines_file < NOTICE.md
 lines_result=()
 state_insert=0
@@ -153,6 +160,7 @@ git commit --quiet --all --message "Code & Features Update"
 printf "%s\n" "version ${version_today}:" "${lines_notice[@]}"
 
 # the bump commit goes out instead of the original push
+
 git push --no-verify "${name_remote}" main
 
 printf "%s\n" "pushed with the version bump, the original push is cancelled"

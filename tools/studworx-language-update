@@ -8,6 +8,7 @@ set -e
 directory_script="${BASH_SOURCE[0]%/*}"
 
 # run from its own directory
+
 if [ "${directory_script}" = "${BASH_SOURCE[0]}" ]
 then
 	directory_script="."
@@ -31,6 +32,7 @@ do
 	fi
 
 	# english keeps plural forms only
+
 	if [ "${file_catalog##*/}" = "studworx_en.ts" ]
 	then
 		"${tool_update}" -pluralonly studworx.pro -ts "${file_catalog}"
