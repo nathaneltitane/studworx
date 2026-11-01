@@ -2088,8 +2088,8 @@ void swApplication::ShowPreferencesDialog()
 	Options.POVRayPath = swGetProfileString(SW_PROFILE_POVRAY_PATH);
 	Options.LGEOPath = swGetProfileString(SW_PROFILE_POVRAY_LGEO_PATH);
 	Options.DefaultAuthorName = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_NAME);
-	Options.DefaultAuthorAddress = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_ADDRESS);
 	Options.DefaultAuthorEmail = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_EMAIL);
+	Options.DefaultAuthorComment = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_COMMENT);
 	Options.DefaultAuthorSplitter = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_SPLITTER);
 	Options.Language = swGetProfileString(SW_PROFILE_LANGUAGE);
 	Options.Instructions.Load();
@@ -2161,8 +2161,8 @@ void swApplication::ShowPreferencesDialog()
 		gMainWindow->GetPreviewWidget()->UpdateSquareViewport();
 
 	swSetProfileString(SW_PROFILE_DEFAULT_AUTHOR_NAME, Options.DefaultAuthorName);
-	swSetProfileString(SW_PROFILE_DEFAULT_AUTHOR_ADDRESS, Options.DefaultAuthorAddress);
 	swSetProfileString(SW_PROFILE_DEFAULT_AUTHOR_EMAIL, Options.DefaultAuthorEmail);
+	swSetProfileString(SW_PROFILE_DEFAULT_AUTHOR_COMMENT, Options.DefaultAuthorComment);
 	swSetProfileString(SW_PROFILE_DEFAULT_AUTHOR_SPLITTER, Options.DefaultAuthorSplitter);
 	swSetProfileString(SW_PROFILE_PARTS_LIBRARY, Options.LibraryPath);
 	swSetProfileString(SW_PROFILE_UNOFFICIAL_LIBRARY, Options.UnofficialLibraryPath);

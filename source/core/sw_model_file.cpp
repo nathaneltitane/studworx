@@ -34,7 +34,7 @@ static bool swIsMetaCommand(const QString& Token)
 
 void swModelProperties::LoadDefaults()
 {
-	mAuthor = CombineAuthor(swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_NAME), swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_ADDRESS), swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_EMAIL), swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_SPLITTER));
+	mAuthor = CombineAuthor(swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_NAME), swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_EMAIL), swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_COMMENT), swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_SPLITTER));
 	mAmbientColor = swVector3FromColor(swGetProfileUnsignedInteger(SW_PROFILE_DEFAULT_AMBIENT_COLOR));
 }
 
@@ -43,11 +43,11 @@ void swModelProperties::SaveDefaults()
 	swSetProfileUnsignedInteger(SW_PROFILE_DEFAULT_AMBIENT_COLOR, swColorFromVector3(mAmbientColor));
 }
 
-QString swModelProperties::CombineAuthor(const QString& Name, const QString& Address, const QString& Email, const QString& Splitter)
+QString swModelProperties::CombineAuthor(const QString& Name, const QString& Email, const QString& Comment, const QString& Splitter)
 {
 	QStringList Parts;
 
-	for (const QString& Part : { Name, Address, Email })
+	for (const QString& Part : { Name, Email, Comment })
 	{
 		const QString Trimmed = Part.trimmed();
 

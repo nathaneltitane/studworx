@@ -42,8 +42,8 @@ struct swPreferencesDialogOptions
 	QString POVRayPath;
 	QString LGEOPath;
 	QString DefaultAuthorName;
-	QString DefaultAuthorAddress;
 	QString DefaultAuthorEmail;
+	QString DefaultAuthorComment;
 	QString DefaultAuthorSplitter;
 	QString Language;
 

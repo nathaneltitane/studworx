@@ -302,8 +302,8 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->povrayExecutableBrowse, &QPushButton::clicked, this, &swPreferencesDialog::PovrayExecutableBrowseClicked);
 	connect(ui->lgeoPathBrowse, &QPushButton::clicked, this, &swPreferencesDialog::LgeoPathBrowseClicked);
 	connect(ui->AuthorName, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
-	connect(ui->AuthorAddress, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
 	connect(ui->AuthorEmail, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
+	connect(ui->AuthorComment, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
 	connect(ui->AuthorSplitter, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
 	connect(ui->ColorTheme, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &swPreferencesDialog::ColorThemeCurrentIndexChanged);
 	connect(ui->AutomateEdgeColor, &QCheckBox::toggled, this, &swPreferencesDialog::AutomateEdgeColorToggled);
@@ -407,8 +407,8 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->povrayExecutable->setText(mOptions->POVRayPath);
 	ui->lgeoPath->setText(mOptions->LGEOPath);
 	ui->AuthorName->setText(mOptions->DefaultAuthorName);
-	ui->AuthorAddress->setText(mOptions->DefaultAuthorAddress);
 	ui->AuthorEmail->setText(mOptions->DefaultAuthorEmail);
+	ui->AuthorComment->setText(mOptions->DefaultAuthorComment);
 	ui->AuthorSplitter->setText(mOptions->DefaultAuthorSplitter);
 	AuthorChanged();
 
@@ -749,8 +749,8 @@ void swPreferencesDialog::accept()
 	mOptions->POVRayPath = ui->povrayExecutable->text();
 	mOptions->LGEOPath = ui->lgeoPath->text();
 	mOptions->DefaultAuthorName = ui->AuthorName->text();
-	mOptions->DefaultAuthorAddress = ui->AuthorAddress->text();
 	mOptions->DefaultAuthorEmail = ui->AuthorEmail->text();
+	mOptions->DefaultAuthorComment = ui->AuthorComment->text();
 	mOptions->DefaultAuthorSplitter = ui->AuthorSplitter->text();
 	mOptions->Preferences.mMouseSensitivity = ui->mouseSensitivity->value();
 	mOptions->Preferences.mColorTheme = static_cast<swColorTheme>(ui->ColorTheme->currentIndex());
@@ -970,7 +970,7 @@ void swPreferencesDialog::LgeoPathBrowseClicked()
 
 void swPreferencesDialog::AuthorChanged()
 {
-	ui->AuthorPreview->setText(swModelProperties::CombineAuthor(ui->AuthorName->text(), ui->AuthorAddress->text(), ui->AuthorEmail->text(), ui->AuthorSplitter->text()));
+	ui->AuthorPreview->setText(swModelProperties::CombineAuthor(ui->AuthorName->text(), ui->AuthorEmail->text(), ui->AuthorComment->text(), ui->AuthorSplitter->text()));
 }
 
 void swPreferencesDialog::ColorThemeCurrentIndexChanged(int Index)

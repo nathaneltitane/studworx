@@ -20371,11 +20371,6 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <source>Author</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Model</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20795,52 +20790,12 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <source>&lt;p&gt;&lt;b&gt;Files&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The author of new models is built from its name, address and email, joined by the splitter. Empty parts are left out, and the Author field shows the result. For example, Jane Doe, janedoe and jane@example.com joined by &amp;quot; | &amp;quot; give Jane Doe | janedoe | jane@example.com.&lt;/p&gt;&lt;p&gt;The author of an open model is changed in its properties.&lt;/p&gt;&lt;p&gt;The other options control how model files are opened and reloaded.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Set the name credited as the author of new models.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Author Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <source>Set an address added to the author of new models, such as a website or user name.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <source>Author Address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <source>Set an email address added to the author of new models.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <source>Author Email</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <source>Set the text placed between the parts of the author, spaces included.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <source>Author Splitter</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <source>Shows the author written into new models.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -20861,6 +20816,51 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>All parts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Files&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The author of new models is built from its name, email address and comment, joined by the author line splitter. Empty parts are left out, and the Author Line field shows the result. For example, Jane Doe, jane@example.com and All rights reserved joined by &amp;quot; | &amp;quot; give Jane Doe | jane@example.com | All rights reserved.&lt;/p&gt;&lt;p&gt;The author of an open model is changed in its properties.&lt;/p&gt;&lt;p&gt;The other options control how model files are opened and reloaded.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Set a comment added to the author of new models, such as All rights reserved.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Author Comment</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Set the email address added to the author of new models.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Author Email Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Set the text placed between the parts of the author line, spaces included.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Author Line Splitter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Shows the author line written into new models.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Author Line</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

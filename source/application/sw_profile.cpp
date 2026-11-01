@@ -213,8 +213,8 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "StudStyle", static_cast<int>(swStudStyle::Plain)),                                                // SW_PROFILE_STUD_STYLE
 
 	swProfileEntry("Defaults", "Author", "Author"),                                            // SW_PROFILE_DEFAULT_AUTHOR_NAME
-	swProfileEntry("Defaults", "AuthorAddress", ""),                                           // SW_PROFILE_DEFAULT_AUTHOR_ADDRESS
 	swProfileEntry("Defaults", "AuthorEmail", ""),                                             // SW_PROFILE_DEFAULT_AUTHOR_EMAIL
+	swProfileEntry("Defaults", "AuthorComment", ""),                                           // SW_PROFILE_DEFAULT_AUTHOR_COMMENT
 	swProfileEntry("Defaults", "AuthorSplitter", " | "),                                       // SW_PROFILE_DEFAULT_AUTHOR_SPLITTER
 	swProfileEntry("Defaults", "AmbientColor", SW_RGB(75, 75, 75)),                            // SW_PROFILE_DEFAULT_AMBIENT_COLOR
 
