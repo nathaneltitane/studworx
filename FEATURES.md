@@ -1,6 +1,6 @@
 # Features
 
-Every StudWorx feature, by area. `tools/studworx-site-update` builds the feature sections of [studworx.app](https://studworx.app) from this file. Each `##` section starts with a comment that sets its page id, icon and heading, and its first paragraph is the lead. A `<!-- gallery class -->` comment turns the images below it into one gallery, and the title of a single image sets its figure class.
+Every StudWorx feature, by area. `tools/studworx-site-update` builds the feature sections of [studworx.app](https://studworx.app) from this file. Each `##` section starts with a comment that sets its page id, icon and heading, and its first paragraph is the lead. A `<!-- gallery class -->` comment turns the images below it into one gallery, and the title of a single image sets its figure class. A `<!-- video -->` comment turns the link below it into a looping video, with the link text as its caption.
 
 ## Interface
 
@@ -214,10 +214,11 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 
 ![The Find and Replace bar](resources/images/modeling-find-replace.png "wide plain")
 
-<!-- gallery two -->
+![The Array dialog](resources/images/modeling-array.png "wide plain")
 
-![Array](resources/images/modeling-array.png)
-![A Flex Path hose with its control points](resources/images/modeling-flex-path.png)
+<!-- video -->
+
+[A Flex Path hose seated between two bricks, reshaped by its control points](resources/videos/modeling-flex-path.mp4)
 
 ## Tools
 

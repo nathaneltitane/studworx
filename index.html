@@ -311,6 +311,18 @@
 				transform: scale(1.02);
 			}
 
+			figure.video {
+				margin: 25px 0;
+			}
+
+			figure.video video {
+				display: block;
+				width: 100%;
+				height: auto;
+				border-radius: 20px;
+				background: #1b1e22;
+			}
+
 			figcaption {
 				padding: 5px 5px 0 5px;
 				font-size: 12px;
@@ -1608,23 +1620,18 @@
 				<figcaption>The Find and Replace bar</figcaption>
 			</figure>
 
-			<div class="gallery two">
-				<figure>
-					<button class="shot" data-full="resources/images/modeling-array.png" aria-label="Enlarge Array">
-						<img src="resources/images/modeling-array.png" alt="Array" width="1022" height="216" loading="lazy">
-					</button>
+			<figure class="wide plain">
+				<button class="shot" data-full="resources/images/modeling-array.png" aria-label="Enlarge The Array dialog">
+					<img src="resources/images/modeling-array.png" alt="The Array dialog" width="1022" height="216" loading="lazy">
+				</button>
 
-					<figcaption>Array</figcaption>
-				</figure>
+				<figcaption>The Array dialog</figcaption>
+			</figure>
 
-				<figure>
-					<button class="shot" data-full="resources/images/modeling-flex-path.png" aria-label="Enlarge A Flex Path hose with its control points">
-						<img src="resources/images/modeling-flex-path.png" alt="A Flex Path hose with its control points" width="3140" height="2010" loading="lazy">
-					</button>
-
-					<figcaption>A Flex Path hose with its control points</figcaption>
-				</figure>
-			</div>
+			<figure class="video">
+				<video src="resources/videos/modeling-flex-path.mp4" aria-label="A Flex Path hose seated between two bricks, reshaped by its control points" width="1920" height="1066" autoplay muted loop playsinline controls preload="metadata"></video>
+				<figcaption>A Flex Path hose seated between two bricks, reshaped by its control points</figcaption>
+			</figure>
 		</section>
 
 		<section id="tools" class="section reveal">
