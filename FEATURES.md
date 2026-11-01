@@ -216,10 +216,16 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 
 ![The Array dialog](resources/images/modeling-array.png "wide plain")
 
-<!-- gallery three -->
+<!-- video -->
 
 [A Flex Path hose follows its end point as it moves, then seats back on its brick](resources/videos/studworx-flex-01.mp4)
+
+<!-- video -->
+
 [A hose end seated on a newly placed brick, the path bending to reach it](resources/videos/studworx-flex-02.mp4)
+
+<!-- video -->
+
 [A hose seated on the side of a brick, following it as the bricks move](resources/videos/studworx-flex-03.mp4)
 
 ## Tools
