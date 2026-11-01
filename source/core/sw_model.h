@@ -171,6 +171,7 @@ class swModelProperties
 public:
 	void LoadDefaults();
 	void SaveDefaults();
+	static QString CombineAuthor(const QString& Name, const QString& Address, const QString& Email, const QString& Splitter);
 
 	bool operator==(const swModelProperties& Properties) const
 	{

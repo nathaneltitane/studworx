@@ -2040,7 +2040,7 @@
 			<p class="lead">Eight pages with lined up label and control columns. Value boxes show their maximum and bring any typed number into range, and every slider shows its value.</p>
 
 			<ul class="points">
-				<li><b>General.</b> Reference paths, the author of new <a href="#models">models</a>, and the parts library, LGEO and POV-Ray locations.</li>
+				<li><b>General.</b> Reference paths, the author of new <a href="#models">models</a> built from a name, address and email joined by a splitter with a preview of the result, and the parts library, LGEO and POV-Ray locations.</li>
 				<li><b>Startup and <a href="#files">files</a>.</b> Open the most recent file, restore the tab layout, load all parts before showing a model, watch for file changes and migrate LeoCAD models automatically.</li>
 				<li><b><a href="#rendering">Rendering</a> and <a href="#views">Views</a>.</b> Rendering quality, the Blender add-on settings, and the Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups.</li>
 				<li><b>Colors and <a href="#instructions">Instructions</a>.</b> <a href="#interface">Interface</a> and view colors, edge contrast, and the default instruction page settings.</li>
@@ -2645,7 +2645,7 @@
 				<h2>HELP // EVERY WHAT&#x27;S THIS ENTRY</h2>
 			</header>
 
-			<p class="lead">The same help the app shows from Help &gt; What&#x27;s This?, the title bar question mark or F1: 458 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
+			<p class="lead">The same help the app shows from Help &gt; What&#x27;s This?, the title bar question mark or F1: 459 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
 			<div class="tools-help">
 				<input id="search-help" type="search" placeholder="Search help" aria-label="Search help">
@@ -2909,6 +2909,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Part Palettes","title":"Import Palette","paragraphs":["Open Import Set Inventory to search for a set and download its inventory. The new palette uses the set description as its name.","The palette stores part IDs; inventory colors and quantities are not stored. An internet connection is required."]},
 				{"group":"Preferences","title":"Preferences","paragraphs":["Configure the application, display, colors, part categories, and keyboard and mouse shortcuts. Choose OK to save the changes or Cancel to discard edits in Preferences. Language and antialiasing changes, and clearing the parts library, require restarting StudWorx.","Export buttons write files immediately. Blender add-on settings have their own Apply action and can configure Blender before you close Preferences."]},
 				{"group":"Preferences","title":"General Preferences","paragraphs":["Set application behavior and custom library, configuration, and renderer paths. Leave optional configuration paths empty to use the built-in settings."]},
+				{"group":"Preferences","title":"Files","paragraphs":["The author of new models is built from its name, address and email, joined by the splitter. Empty parts are left out, and the Author field shows the result. For example, Jane Doe, janedoe and jane@example.com joined by \" | \" give Jane Doe | janedoe | jane@example.com.","The author of an open model is changed in its properties.","The other options control how model files are opened and reloaded."]},
 				{"group":"Preferences","title":"Rendering Preferences","paragraphs":["Control shading, stud geometry, selection appearance, edges, and step effects. Some options are unavailable when the graphics system does not support them."]},
 				{"group":"Preferences","title":"Highlight Style","paragraphs":["Choose how selected parts and parts added in the current step are highlighted in the viewport. Outline uses fading outlines in the selection, focus, or new-part highlight color. Selected parts also receive a faint fill over obscured portions. Tint and Edges uses tinted faces and colored edges for selection, and colored edges for new parts.","New-part highlighting requires Highlight New Parts. Wireframe views, image exports, and systems without outline support use Tint and Edges."]},
 				{"group":"Preferences","title":"Blender Add-on Settings","paragraphs":["Open the separate Blender configuration dialog. Its Apply action saves its settings independently of Preferences, and choosing an executable or importer can configure Blender immediately."]},

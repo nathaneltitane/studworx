@@ -1,5 +1,6 @@
 #include "sw_global.h"
 #include "sw_dialog_preferences.h"
+#include "sw_model.h"
 #include "ui_sw_dialog_preferences.h"
 #include "sw_window_utilities.h"
 #include "sw_library.h"
@@ -300,6 +301,10 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->MinifigureBuilderSettingsBrowseButton, &QPushButton::clicked, this, &swPreferencesDialog::MinifigureBuilderSettingsBrowseButtonClicked);
 	connect(ui->povrayExecutableBrowse, &QPushButton::clicked, this, &swPreferencesDialog::PovrayExecutableBrowseClicked);
 	connect(ui->lgeoPathBrowse, &QPushButton::clicked, this, &swPreferencesDialog::LgeoPathBrowseClicked);
+	connect(ui->AuthorName, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
+	connect(ui->AuthorAddress, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
+	connect(ui->AuthorEmail, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
+	connect(ui->AuthorSplitter, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
 	connect(ui->ColorTheme, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &swPreferencesDialog::ColorThemeCurrentIndexChanged);
 	connect(ui->AutomateEdgeColor, &QCheckBox::toggled, this, &swPreferencesDialog::AutomateEdgeColorToggled);
 	connect(ui->EdgeContrastSlider, &QSlider::valueChanged, this, &swPreferencesDialog::EdgeColorSliderValueChanged);
@@ -401,7 +406,11 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->MinifigureBuilderSettingsEdit->setText(mOptions->MinifigureBuilderSettingsPath);
 	ui->povrayExecutable->setText(mOptions->POVRayPath);
 	ui->lgeoPath->setText(mOptions->LGEOPath);
-	ui->authorName->setText(mOptions->DefaultAuthor);
+	ui->AuthorName->setText(mOptions->DefaultAuthorName);
+	ui->AuthorAddress->setText(mOptions->DefaultAuthorAddress);
+	ui->AuthorEmail->setText(mOptions->DefaultAuthorEmail);
+	ui->AuthorSplitter->setText(mOptions->DefaultAuthorSplitter);
+	AuthorChanged();
 
 	connect(ui->mouseSensitivity, &QSlider::valueChanged, ui->MouseSensitivityLabel, [this](int Value)
 	{
@@ -739,7 +748,10 @@ void swPreferencesDialog::accept()
 	mOptions->ColorConfigPath = ui->ColorConfigEdit->text();
 	mOptions->POVRayPath = ui->povrayExecutable->text();
 	mOptions->LGEOPath = ui->lgeoPath->text();
-	mOptions->DefaultAuthor = ui->authorName->text();
+	mOptions->DefaultAuthorName = ui->AuthorName->text();
+	mOptions->DefaultAuthorAddress = ui->AuthorAddress->text();
+	mOptions->DefaultAuthorEmail = ui->AuthorEmail->text();
+	mOptions->DefaultAuthorSplitter = ui->AuthorSplitter->text();
 	mOptions->Preferences.mMouseSensitivity = ui->mouseSensitivity->value();
 	mOptions->Preferences.mColorTheme = static_cast<swColorTheme>(ui->ColorTheme->currentIndex());
 	mOptions->Preferences.mAutomateEdgeColor = ui->AutomateEdgeColor->isChecked();
@@ -954,6 +966,11 @@ void swPreferencesDialog::LgeoPathBrowseClicked()
 
 	if (!Result.isEmpty())
 		ui->lgeoPath->setText(QDir::toNativeSeparators(Result));
+}
+
+void swPreferencesDialog::AuthorChanged()
+{
+	ui->AuthorPreview->setText(swModelProperties::CombineAuthor(ui->AuthorName->text(), ui->AuthorAddress->text(), ui->AuthorEmail->text(), ui->AuthorSplitter->text()));
 }
 
 void swPreferencesDialog::ColorThemeCurrentIndexChanged(int Index)

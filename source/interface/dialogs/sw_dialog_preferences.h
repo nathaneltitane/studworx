@@ -41,7 +41,10 @@ struct swPreferencesDialogOptions
 	QString MinifigureBuilderSettingsPath;
 	QString POVRayPath;
 	QString LGEOPath;
-	QString DefaultAuthor;
+	QString DefaultAuthorName;
+	QString DefaultAuthorAddress;
+	QString DefaultAuthorEmail;
+	QString DefaultAuthorSplitter;
 	QString Language;
 
 	swInstructionsPreferences Instructions;
@@ -99,6 +102,7 @@ private slots:
 	void MinifigureBuilderSettingsBrowseButtonClicked();
 	void PovrayExecutableBrowseClicked();
 	void LgeoPathBrowseClicked();
+	void AuthorChanged();
 	void ColorThemeCurrentIndexChanged(int Index);
 	void ColorButtonClicked();
 	void AutomateEdgeColor();

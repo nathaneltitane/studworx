@@ -34,13 +34,28 @@ static bool swIsMetaCommand(const QString& Token)
 
 void swModelProperties::LoadDefaults()
 {
-	mAuthor = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_NAME);
+	mAuthor = CombineAuthor(swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_NAME), swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_ADDRESS), swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_EMAIL), swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_SPLITTER));
 	mAmbientColor = swVector3FromColor(swGetProfileUnsignedInteger(SW_PROFILE_DEFAULT_AMBIENT_COLOR));
 }
 
 void swModelProperties::SaveDefaults()
 {
 	swSetProfileUnsignedInteger(SW_PROFILE_DEFAULT_AMBIENT_COLOR, swColorFromVector3(mAmbientColor));
+}
+
+QString swModelProperties::CombineAuthor(const QString& Name, const QString& Address, const QString& Email, const QString& Splitter)
+{
+	QStringList Parts;
+
+	for (const QString& Part : { Name, Address, Email })
+	{
+		const QString Trimmed = Part.trimmed();
+
+		if (!Trimmed.isEmpty())
+			Parts.append(Trimmed);
+	}
+
+	return Parts.join(Splitter);
 }
 
 void swModelProperties::SaveLDraw(QTextStream& Stream) const

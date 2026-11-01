@@ -383,7 +383,7 @@ Large builds split into submodels that you can edit on their own or in place, in
 
 Eight pages with lined up label and control columns. Value boxes show their maximum and bring any typed number into range, and every slider shows its value.
 
-- **General.** Reference paths, the author of new models, and the parts library, LGEO and POV-Ray locations.
+- **General.** Reference paths, the author of new models built from a name, address and email joined by a splitter with a preview of the result, and the parts library, LGEO and POV-Ray locations.
 - **Startup and files.** Open the most recent file, restore the tab layout, load all parts before showing a model, watch for file changes and migrate LeoCAD models automatically.
 - **Rendering and Views.** Rendering quality, the Blender add-on settings, and the Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups.
 - **Colors and Instructions.** Interface and view colors, edge contrast, and the default instruction page settings.

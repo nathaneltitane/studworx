@@ -425,34 +425,132 @@
        </item>
        <item row="3" column="0" colspan="2">
         <widget class="QGroupBox" name="FilesGroup">
+         <property name="whatsThis">
+          <string>&lt;p&gt;&lt;b&gt;Files&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The author of new models is built from its name, address and email, joined by the splitter. Empty parts are left out, and the Author field shows the result. For example, Jane Doe, janedoe and jane@example.com joined by &amp;quot; | &amp;quot; give Jane Doe | janedoe | jane@example.com.&lt;/p&gt;&lt;p&gt;The author of an open model is changed in its properties.&lt;/p&gt;&lt;p&gt;The other options control how model files are opened and reloaded.&lt;/p&gt;</string>
+         </property>
          <property name="title">
           <string>Files</string>
          </property>
          <layout class="QGridLayout" name="FilesLayout">
           <item row="0" column="0">
-           <widget class="QLabel" name="label_4">
+           <widget class="QLabel" name="AuthorNameLabel">
             <property name="toolTip">
-             <string>Set the author name used for new models.</string>
+             <string>Set the name credited as the author of new models.</string>
+            </property>
+            <property name="text">
+             <string>Author Name</string>
+            </property>
+            <property name="buddy">
+             <cstring>AuthorName</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="AuthorName">
+            <property name="accessibleName">
+             <string>Author Name</string>
+            </property>
+            <property name="toolTip">
+             <string>Set the name credited as the author of new models.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="AuthorAddressLabel">
+            <property name="toolTip">
+             <string>Set an address added to the author of new models, such as a website or user name.</string>
+            </property>
+            <property name="text">
+             <string>Author Address</string>
+            </property>
+            <property name="buddy">
+             <cstring>AuthorAddress</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="AuthorAddress">
+            <property name="accessibleName">
+             <string>Author Address</string>
+            </property>
+            <property name="toolTip">
+             <string>Set an address added to the author of new models, such as a website or user name.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="AuthorEmailLabel">
+            <property name="toolTip">
+             <string>Set an email address added to the author of new models.</string>
+            </property>
+            <property name="text">
+             <string>Author Email</string>
+            </property>
+            <property name="buddy">
+             <cstring>AuthorEmail</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLineEdit" name="AuthorEmail">
+            <property name="accessibleName">
+             <string>Author Email</string>
+            </property>
+            <property name="toolTip">
+             <string>Set an email address added to the author of new models.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="AuthorSplitterLabel">
+            <property name="toolTip">
+             <string>Set the text placed between the parts of the author, spaces included.</string>
+            </property>
+            <property name="text">
+             <string>Author Splitter</string>
+            </property>
+            <property name="buddy">
+             <cstring>AuthorSplitter</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QLineEdit" name="AuthorSplitter">
+            <property name="accessibleName">
+             <string>Author Splitter</string>
+            </property>
+            <property name="toolTip">
+             <string>Set the text placed between the parts of the author, spaces included.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="AuthorPreviewLabel">
+            <property name="toolTip">
+             <string>Shows the author written into new models.</string>
             </property>
             <property name="text">
              <string>Author</string>
             </property>
             <property name="buddy">
-             <cstring>authorName</cstring>
+             <cstring>AuthorPreview</cstring>
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
-           <widget class="QLineEdit" name="authorName">
+          <item row="4" column="1">
+           <widget class="QLineEdit" name="AuthorPreview">
             <property name="accessibleName">
              <string>Author</string>
             </property>
             <property name="toolTip">
-             <string>Set the author name used for new models.</string>
+             <string>Shows the author written into new models.</string>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
-          <item row="1" column="0" colspan="2">
+          <item row="5" column="0" colspan="2">
            <widget class="QCheckBox" name="WatchFileChanges">
             <property name="toolTip">
              <string>Ask to reload the model when its file is changed by another application. Use File &gt; Reload to reload it manually.</string>
@@ -462,7 +560,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="0" colspan="2">
+          <item row="6" column="0" colspan="2">
            <widget class="QCheckBox" name="LoadPartsBeforeShowing">
             <property name="toolTip">
              <string>Wait until every part of a model is loaded before showing it, instead of showing parts as they load.</string>
@@ -472,7 +570,7 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="0" colspan="2">
+          <item row="7" column="0" colspan="2">
            <widget class="QCheckBox" name="MigrateMetaCommands">
             <property name="toolTip">
              <string>Convert the LeoCAD meta commands of opened models to StudWorx meta commands without asking. Migrated models are no longer read fully by LeoCAD.</string>
@@ -4173,7 +4271,11 @@
   <tabstop>Language</tabstop>
   <tabstop>autoLoadMostRecent</tabstop>
   <tabstop>RestoreTabLayout</tabstop>
-  <tabstop>authorName</tabstop>
+  <tabstop>AuthorName</tabstop>
+  <tabstop>AuthorAddress</tabstop>
+  <tabstop>AuthorEmail</tabstop>
+  <tabstop>AuthorSplitter</tabstop>
+  <tabstop>AuthorPreview</tabstop>
   <tabstop>WatchFileChanges</tabstop>
   <tabstop>LoadPartsBeforeShowing</tabstop>
   <tabstop>MigrateMetaCommands</tabstop>

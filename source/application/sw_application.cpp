@@ -2087,7 +2087,10 @@ void swApplication::ShowPreferencesDialog()
 	Options.ColorConfigPath = swGetProfileString(SW_PROFILE_COLOR_CONFIGURATION);
 	Options.POVRayPath = swGetProfileString(SW_PROFILE_POVRAY_PATH);
 	Options.LGEOPath = swGetProfileString(SW_PROFILE_POVRAY_LGEO_PATH);
-	Options.DefaultAuthor = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_NAME);
+	Options.DefaultAuthorName = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_NAME);
+	Options.DefaultAuthorAddress = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_ADDRESS);
+	Options.DefaultAuthorEmail = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_EMAIL);
+	Options.DefaultAuthorSplitter = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_SPLITTER);
 	Options.Language = swGetProfileString(SW_PROFILE_LANGUAGE);
 	Options.Instructions.Load();
 
@@ -2157,7 +2160,10 @@ void swApplication::ShowPreferencesDialog()
 	if (gMainWindow && gMainWindow->GetPreviewWidget())
 		gMainWindow->GetPreviewWidget()->UpdateSquareViewport();
 
-	swSetProfileString(SW_PROFILE_DEFAULT_AUTHOR_NAME, Options.DefaultAuthor);
+	swSetProfileString(SW_PROFILE_DEFAULT_AUTHOR_NAME, Options.DefaultAuthorName);
+	swSetProfileString(SW_PROFILE_DEFAULT_AUTHOR_ADDRESS, Options.DefaultAuthorAddress);
+	swSetProfileString(SW_PROFILE_DEFAULT_AUTHOR_EMAIL, Options.DefaultAuthorEmail);
+	swSetProfileString(SW_PROFILE_DEFAULT_AUTHOR_SPLITTER, Options.DefaultAuthorSplitter);
 	swSetProfileString(SW_PROFILE_PARTS_LIBRARY, Options.LibraryPath);
 	swSetProfileString(SW_PROFILE_UNOFFICIAL_LIBRARY, Options.UnofficialLibraryPath);
 	swSetProfileString(SW_PROFILE_SHADOW_LIBRARY, Options.ShadowLibraryPath);
