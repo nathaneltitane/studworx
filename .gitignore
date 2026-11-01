@@ -17,6 +17,7 @@
 *.dat
 *.mpd
 !/resources/data/*.ldr
+!/resources/samples/*.ldr
 *.dae
 *.3ds
 *.obj

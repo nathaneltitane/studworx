@@ -37,4 +37,5 @@ cp -a %{sw_root}/. %{buildroot}/
 %{_datadir}/thumbnailers/studworx.thumbnailer
 %{?sw_thumbnailer}
 %{_datadir}/doc/studworx
+%{_datadir}/studworx/samples
 %{_mandir}/man1/studworx.1*

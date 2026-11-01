@@ -73,7 +73,8 @@ qmake "${directory_source}/studworx.pro" \
 	DESKTOP_DIR=/usr/share/applications \
 	MIME_DIR=/usr/share/mime/packages \
 	APPDATA_DIR=/usr/share/metainfo \
-	THUMBNAILER_DIR=/usr/share/thumbnailers
+	THUMBNAILER_DIR=/usr/share/thumbnailers \
+	SAMPLES_DIR=/usr/share/studworx/samples
 
 make -j "$(nproc)"
 make install INSTALL_ROOT="${directory_package}"

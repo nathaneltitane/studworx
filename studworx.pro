@@ -121,6 +121,7 @@ unix:!macx {
 	isEmpty(MIME_DIR):MIME_DIR = $$INSTALL_PREFIX/share/mime/packages
 	isEmpty(APPDATA_DIR):APPDATA_DIR = $$INSTALL_PREFIX/share/metainfo
 	isEmpty(THUMBNAILER_DIR):THUMBNAILER_DIR = $$INSTALL_PREFIX/share/thumbnailers
+	isEmpty(SAMPLES_DIR):SAMPLES_DIR = $$INSTALL_PREFIX/share/studworx/samples
 
 	target.path = $$BIN_DIR
 	docs.path = $$DOCS_DIR
@@ -145,8 +146,11 @@ unix:!macx {
 	appdata.files = resources/packaging/common/io.github.nathaneltitane.StudWorx.appdata.xml
 	thumbnailer.path = $$THUMBNAILER_DIR
 	thumbnailer.files = platform/studworx.thumbnailer
+	samples.path = $$SAMPLES_DIR
+	samples.files += resources/samples/sample-flex.ldr
+	samples.files += resources/samples/sample-minifig.ldr
 
-	INSTALLS += target docs man desktop icons mime appdata thumbnailer
+	INSTALLS += target docs man desktop icons mime appdata thumbnailer samples
 
 	# find the bundled qt libraries first
 	!isEmpty(BUNDLE_LIBRARIES) {
@@ -166,6 +170,11 @@ macx {
 	document_icon.files += $$_PRO_FILE_PWD_/resources/icons/macos/studworx_document.icns
 	document_icon.path = Contents/Resources
 	QMAKE_BUNDLE_DATA += document_icon
+
+	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-flex.ldr
+	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-minifig.ldr
+	samples.path = Contents/Resources/samples
+	QMAKE_BUNDLE_DATA += samples
 
 	# povray is bundled only when present
 	exists($$_PRO_FILE_PWD_/povray) {
