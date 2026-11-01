@@ -1,6 +1,14 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-01</summary>
+
+  - Site: the Modeling section has a looping video of a Flex Path hose seated between two bricks and reshaped by its control points, see [Modeling on the site](https://studworx.app/#modeling)
+  - Site: the Array dialog screenshot is now shown full width
+
+  </details>
+
+  <details>
   <summary>2026-10-31</summary>
 
   - Interface: close, undock and filter clear buttons are drawn to match the theme, and the custom theme draws its own tree lines and expand arrows
