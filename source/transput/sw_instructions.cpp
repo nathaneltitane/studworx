@@ -127,6 +127,7 @@ swInstructions::swInstructions(Project* Project)
 	mElementMarginColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_ALPHA);
 	mElementPaddingColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_ALPHA);
 	mElementAnchorColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_ALPHA);
+	mRulerPointerColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR, SW_PROFILE_INSTRUCTIONS_RULER_POINTER_ALPHA);
 
 	SetDefaultProperties();
 	mDefaultProperties = mStepProperties;
@@ -932,13 +933,15 @@ void swInstructions::UpdateColors()
 	const QColor ElementMarginColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_ALPHA);
 	const QColor ElementPaddingColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_ALPHA);
 	const QColor ElementAnchorColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_ALPHA);
+	const QColor RulerPointerColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR, SW_PROFILE_INSTRUCTIONS_RULER_POINTER_ALPHA);
 
-	if (mElementMarginColor == ElementMarginColor && mElementPaddingColor == ElementPaddingColor && mElementAnchorColor == ElementAnchorColor)
+	if (mElementMarginColor == ElementMarginColor && mElementPaddingColor == ElementPaddingColor && mElementAnchorColor == ElementAnchorColor && mRulerPointerColor == RulerPointerColor)
 		return;
 
 	mElementMarginColor = ElementMarginColor;
 	mElementPaddingColor = ElementPaddingColor;
 	mElementAnchorColor = ElementAnchorColor;
+	mRulerPointerColor = RulerPointerColor;
 
 	emit GridChanged();
 }

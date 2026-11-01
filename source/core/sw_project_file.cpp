@@ -634,7 +634,7 @@ swResult<void> Project::Save(const QString& FileName)
 
 bool Project::Save(QTextStream& Stream) const
 {
-	const bool MPD = mModels.size() > 1 || !mEmbeddedData.empty();
+	const bool MPD = IsMultiPart();
 	std::set<const swModel*> WrittenModels;
 	std::set<const swEmbeddedData*> WrittenData;
 	std::vector<const swModel*> OriginalOrder;

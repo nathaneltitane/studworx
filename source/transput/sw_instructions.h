@@ -552,6 +552,11 @@ public:
 		return mElementAnchorColor;
 	}
 
+	QColor GetRulerPointerColor() const
+	{
+		return mRulerPointerColor;
+	}
+
 	// Rulers measure in page units.
 	swInstructionsPageUnits GetRulerUnits() const;
 
@@ -639,6 +644,7 @@ protected:
 	QColor mElementMarginColor;
 	QColor mElementPaddingColor;
 	QColor mElementAnchorColor;
+	QColor mRulerPointerColor;
 	int mNextNoticeId = 1;
 	int mNextPointerId = 1;
 

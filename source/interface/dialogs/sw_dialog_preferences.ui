@@ -3635,7 +3635,7 @@
        <item row="7" column="0">
         <widget class="QGroupBox" name="InstructionsColorsGroup">
          <property name="whatsThis">
-          <string>&lt;p&gt;&lt;b&gt;Instructions&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Colors of the element inspector of the instructions page, drawn like the box model of a web browser inspector: the margin fill around each element, the padding fill inside its border, and markers at its anchors, the corners, edge centers and center that placement aligns to. Each color has an alpha from 0, transparent, to 1, opaque.&lt;/p&gt;&lt;p&gt;Show or hide each overlay with Show Element Margins, Show Element Padding and Show Element Anchors in the Instructions preferences or the Options menu of the Instructions window. The overlays show on screen only and are never printed.&lt;/p&gt;</string>
+          <string>&lt;p&gt;&lt;b&gt;Instructions&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Colors of the element inspector of the instructions page, drawn like the box model of a web browser inspector: the margin fill around each element, the padding fill inside its border, and markers at its anchors, the corners, edge centers and center that placement aligns to. The Ruler Pointer color fills the arrows that follow the pointer on the rulers. Each color has an alpha from 0, transparent, to 1, opaque.&lt;/p&gt;&lt;p&gt;Show or hide each overlay with Show Element Margins, Show Element Padding and Show Element Anchors in the Instructions preferences or the Options menu of the Instructions window. The overlays show on screen only and are never printed.&lt;/p&gt;</string>
          </property>
          <property name="title">
           <string>Instructions</string>
@@ -3827,6 +3827,70 @@
            <widget class="QLabel" name="ElementAnchorAlphaValueLabel">
             <property name="toolTip">
              <string>Choose how opaque the anchor markers of each element on the instructions page are, from 0 to 1.</string>
+            </property>
+            <property name="text">
+             <string notr="true">1.00</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="RulerPointerColorLabel">
+            <property name="toolTip">
+             <string>Choose the fill color of the ruler arrows that follow the pointer on the instructions page.</string>
+            </property>
+            <property name="buddy">
+             <cstring>RulerPointerColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Ruler Pointer</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QToolButton" name="RulerPointerColorButton">
+            <property name="accessibleName">
+             <string>Ruler Pointer Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the fill color of the ruler arrows that follow the pointer on the instructions page.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QSlider" name="RulerPointerAlphaSlider">
+            <property name="accessibleName">
+             <string>Ruler Pointer Alpha</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose how opaque the ruler arrows that follow the pointer on the instructions page are, from 0 to 1.</string>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimum">
+             <number>0</number>
+            </property>
+            <property name="maximum">
+             <number>100</number>
+            </property>
+            <property name="pageStep">
+             <number>10</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="3">
+           <widget class="QLabel" name="RulerPointerAlphaValueLabel">
+            <property name="toolTip">
+             <string>Choose how opaque the ruler arrows that follow the pointer on the instructions page are, from 0 to 1.</string>
             </property>
             <property name="text">
              <string notr="true">1.00</string>
@@ -4588,6 +4652,8 @@
   <tabstop>ElementPaddingAlphaSlider</tabstop>
   <tabstop>ElementAnchorColorButton</tabstop>
   <tabstop>ElementAnchorAlphaSlider</tabstop>
+  <tabstop>RulerPointerColorButton</tabstop>
+  <tabstop>RulerPointerAlphaSlider</tabstop>
   <tabstop>categoriesTree</tabstop>
   <tabstop>partsTree</tabstop>
   <tabstop>importCategories</tabstop>

@@ -184,6 +184,11 @@ public:
 		return mEmbeddedData;
 	}
 
+	bool IsMultiPart() const
+	{
+		return mModels.size() > 1 || !mEmbeddedData.empty();
+	}
+
 	const std::map<QString, std::shared_ptr<const swEmbeddedData>>& GetEmbeddedDataLookup() const
 	{
 		return mEmbeddedDataIndex;

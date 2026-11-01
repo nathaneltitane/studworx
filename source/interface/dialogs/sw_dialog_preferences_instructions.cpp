@@ -24,9 +24,11 @@ void swInstructionsPreferences::Load()
 	ElementMarginColor = swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR);
 	ElementPaddingColor = swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR);
 	ElementAnchorColor = swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR);
+	RulerPointerColor = swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR);
 	ElementMarginAlpha = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_ALPHA);
 	ElementPaddingAlpha = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_ALPHA);
 	ElementAnchorAlpha = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_ALPHA);
+	RulerPointerAlpha = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_RULER_POINTER_ALPHA);
 	GridPrimaryColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_PRIMARY_COLOR));
 	GridSecondaryColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_SECONDARY_COLOR));
 	MarginColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_MARGIN_COLOR));
@@ -60,9 +62,11 @@ void swInstructionsPreferences::Save() const
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR, ElementMarginColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR, ElementPaddingColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR, ElementAnchorColor);
+	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR, RulerPointerColor);
 	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_ALPHA, ElementMarginAlpha);
 	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_ALPHA, ElementPaddingAlpha);
 	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_ALPHA, ElementAnchorAlpha);
+	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_RULER_POINTER_ALPHA, RulerPointerAlpha);
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_PRIMARY_COLOR, swRGBAFromQColor(GridPrimaryColor));
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_SECONDARY_COLOR, swRGBAFromQColor(GridSecondaryColor));
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_MARGIN_COLOR, swRGBAFromQColor(MarginColor));

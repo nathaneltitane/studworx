@@ -319,6 +319,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->ElementMarginAlphaSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::ElementAlphaChanged);
 	connect(ui->ElementPaddingAlphaSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::ElementAlphaChanged);
 	connect(ui->ElementAnchorAlphaSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::ElementAlphaChanged);
+	connect(ui->RulerPointerAlphaSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::ElementAlphaChanged);
 	connect(ui->AxisIconCubeOutlineAlphaSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::AxisIconCubeOutlineAlphaChanged);
 	connect(ui->AxisIconCubeOutlineCheckBox, &QCheckBox::toggled, this, [this]() { AxisIconSizeComboCurrentIndexChanged(ui->AxisIconSizeCombo->currentIndex()); });
 
@@ -371,6 +372,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->ElementMarginColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->ElementPaddingColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->ElementAnchorColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
+	connect(ui->RulerPointerColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->FadeStepsColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->HighlightNewPartsColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->gridStudColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
@@ -536,6 +538,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->ElementMarginAlphaSlider->setValue(mOptions->Instructions.ElementMarginAlpha);
 	ui->ElementPaddingAlphaSlider->setValue(mOptions->Instructions.ElementPaddingAlpha);
 	ui->ElementAnchorAlphaSlider->setValue(mOptions->Instructions.ElementAnchorAlpha);
+	ui->RulerPointerAlphaSlider->setValue(mOptions->Instructions.RulerPointerAlpha);
 	ElementAlphaChanged();
 	ui->TurntableIdleDurationSpinBox->SetReference(ui->TurntableIdleDurationSpinBox->suffix());
 	ui->TurntableIdleDurationSpinBox->setValue(mOptions->Preferences.mTurntableIdleDuration);
@@ -662,6 +665,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	SetButtonPixmap(mOptions->Instructions.ElementMarginColor | SW_RGBA(0, 0, 0, 255), ui->ElementMarginColorButton);
 	SetButtonPixmap(mOptions->Instructions.ElementPaddingColor | SW_RGBA(0, 0, 0, 255), ui->ElementPaddingColorButton);
 	SetButtonPixmap(mOptions->Instructions.ElementAnchorColor | SW_RGBA(0, 0, 0, 255), ui->ElementAnchorColorButton);
+	SetButtonPixmap(mOptions->Instructions.RulerPointerColor | SW_RGBA(0, 0, 0, 255), ui->RulerPointerColorButton);
 	SetButtonPixmap(mOptions->Preferences.mActiveViewColor, ui->ActiveViewColorButton);
 	SetButtonPixmap(mOptions->Preferences.mInactiveViewColor, ui->InactiveViewColorButton);
 	SetButtonPixmap(mOptions->Preferences.mFadeStepsColor, ui->FadeStepsColor);
@@ -888,6 +892,7 @@ void swPreferencesDialog::accept()
 	Instructions.ElementMarginAlpha = ui->ElementMarginAlphaSlider->value();
 	Instructions.ElementPaddingAlpha = ui->ElementPaddingAlphaSlider->value();
 	Instructions.ElementAnchorAlpha = ui->ElementAnchorAlphaSlider->value();
+	Instructions.RulerPointerAlpha = ui->RulerPointerAlphaSlider->value();
 	Instructions.EditorHighlight = mInstructionsEditorHighlight->isChecked();
 	Instructions.EditorNumbers = mInstructionsEditorNumbers->isChecked();
 	Instructions.EditorWrap = mInstructionsEditorWrap->isChecked();
@@ -1059,6 +1064,11 @@ void swPreferencesDialog::ColorButtonClicked()
 	{
 		Color = &mOptions->Instructions.ElementAnchorColor;
 		Title = tr("Select Element Anchor Color");
+	}
+	else if (Button == ui->RulerPointerColorButton)
+	{
+		Color = &mOptions->Instructions.RulerPointerColor;
+		Title = tr("Select Ruler Pointer Color");
 	}
 	else if (Button == ui->ActiveViewColorButton)
 	{
@@ -1248,12 +1258,13 @@ void swPreferencesDialog::AxisIconCubeOutlineAlphaChanged()
 	ui->AxisIconCubeOutlineAlphaValueLabel->setText(locale().toString(ui->AxisIconCubeOutlineAlphaSlider->value() / 100.0, 'f', 2));
 }
 
-// use to show the element overlay alphas
+// use to show the instructions overlay alphas
 void swPreferencesDialog::ElementAlphaChanged()
 {
 	ui->ElementMarginAlphaValueLabel->setText(locale().toString(ui->ElementMarginAlphaSlider->value() / 100.0, 'f', 2));
 	ui->ElementPaddingAlphaValueLabel->setText(locale().toString(ui->ElementPaddingAlphaSlider->value() / 100.0, 'f', 2));
 	ui->ElementAnchorAlphaValueLabel->setText(locale().toString(ui->ElementAnchorAlphaSlider->value() / 100.0, 'f', 2));
+	ui->RulerPointerAlphaValueLabel->setText(locale().toString(ui->RulerPointerAlphaSlider->value() / 100.0, 'f', 2));
 }
 
 // use to show the cutaway shade alpha

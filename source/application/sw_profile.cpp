@@ -297,6 +297,8 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Instructions", "ElementPaddingAlpha", 55),                                 // SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_ALPHA
 	swProfileEntry("Instructions", "ElementAnchorColor", SW_RGB(214, 51, 160)),                // SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR
 	swProfileEntry("Instructions", "ElementAnchorAlpha", 100),                                 // SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_ALPHA
+	swProfileEntry("Instructions", "RulerPointerColor", SW_RGB(230, 40, 40)),                  // SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR
+	swProfileEntry("Instructions", "RulerPointerAlpha", 100),                                  // SW_PROFILE_INSTRUCTIONS_RULER_POINTER_ALPHA
 	swProfileEntry("InstructionsDefaults", "PageWidth", 1008.0f),                              // SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_WIDTH
 	swProfileEntry("InstructionsDefaults", "PageHeight", 612.0f),                              // SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_HEIGHT
 	swProfileEntry("InstructionsDefaults", "MarginLeft", 36.0f),                               // SW_PROFILE_INSTRUCTIONS_DEFAULT_MARGIN_LEFT

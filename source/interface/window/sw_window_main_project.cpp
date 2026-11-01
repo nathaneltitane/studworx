@@ -410,12 +410,36 @@ bool swMainWindow::SaveProject(const QString& FileName)
 		if (SaveFileName.isEmpty())
 			SaveFileName = QFileInfo(QDir(swGetProfileString(SW_PROFILE_PROJECTS_PATH)), Project->GetTitle()).absoluteFilePath();
 
-		QString Filter = (Project->GetModels().size() > 1) ? tr("Supported Files (*.mpd);;All Files (*.*)") : tr("Supported Files (*.ldr *.dat *.mpd);;All Files (*.*)");
+		const bool MultiPart = Project->IsMultiPart();
+		const QString DefaultSuffix = MultiPart ? QLatin1String("mpd") : QLatin1String("ldr");
+		QString Filter = MultiPart ? tr("Supported Files (*.mpd);;All Files (*.*)") : tr("Supported Files (*.ldr *.dat *.mpd);;All Files (*.*)");
 
-		SaveFileName = QFileDialog::getSaveFileName(this, tr("Save Model"), SaveFileName, Filter);
+		QFileDialog Dialog(this, tr("Save Model"), SaveFileName, Filter);
+		Dialog.setAcceptMode(QFileDialog::AcceptSave);
+		Dialog.setFileMode(QFileDialog::AnyFile);
+		Dialog.setDefaultSuffix(DefaultSuffix);
 
-		if (SaveFileName.isEmpty())
+		if (Dialog.exec() != QDialog::Accepted || Dialog.selectedFiles().isEmpty())
 			return false;
+
+		const QString SelectedFileName = Dialog.selectedFiles().first();
+		const QFileInfo SelectedFileInfo(SelectedFileName);
+		const QString Suffix = SelectedFileInfo.suffix().toLower();
+
+		SaveFileName = SelectedFileName;
+
+		if (Suffix.isEmpty())
+			SaveFileName += QLatin1Char('.') + DefaultSuffix;
+		else if (MultiPart && (Suffix == QLatin1String("ldr") || Suffix == QLatin1String("dat")))
+			SaveFileName = SelectedFileInfo.absoluteDir().absoluteFilePath(SelectedFileInfo.completeBaseName() + QLatin1String(".mpd"));
+
+		if (SaveFileName != SelectedFileName && QFileInfo::exists(SaveFileName))
+		{
+			const QString Question = tr("'%1' already exists. Replace it?").arg(QFileInfo(SaveFileName).fileName());
+
+			if (QMessageBox::question(this, tr("Save Model"), Question, QMessageBox::Yes | QMessageBox::No) != QMessageBox::Yes)
+				return false;
+		}
 
 		swSetProfileString(SW_PROFILE_PROJECTS_PATH, QFileInfo(SaveFileName).absolutePath());
 	}

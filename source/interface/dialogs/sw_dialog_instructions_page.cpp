@@ -2047,7 +2047,7 @@ void swInstructionsRulerWidget::paintEvent(QPaintEvent* Event)
 
 	// arrow pointing at the pointer
 	const qreal PointerPixels = MapLength(Horizontal ? PointerPosition->x() : PointerPosition->y());
-	const qreal ArrowSize = Thickness * 0.35;
+	const qreal ArrowSize = Thickness * 0.4;
 	QPolygonF Arrow;
 
 	if (Horizontal)
@@ -2056,8 +2056,12 @@ void swInstructionsRulerWidget::paintEvent(QPaintEvent* Event)
 		Arrow << QPointF(Thickness, PointerPixels) << QPointF(Thickness - ArrowSize * 1.4, PointerPixels - ArrowSize) << QPointF(Thickness - ArrowSize * 1.4, PointerPixels + ArrowSize);
 
 	Painter.setRenderHint(QPainter::Antialiasing, true);
-	Painter.setPen(QPen(palette().color(QPalette::Base), 1.0));
-	Painter.setBrush(palette().highlight());
+	const QColor PointerColor = Instructions->GetRulerPointerColor();
+	QColor OutlineColor = PointerColor.lightnessF() > 0.5 ? QColor(Qt::black) : QColor(Qt::white);
+	OutlineColor.setAlpha(PointerColor.alpha());
+
+	Painter.setPen(QPen(OutlineColor, 1.0));
+	Painter.setBrush(PointerColor);
 	Painter.drawPolygon(Arrow);
 }
 
