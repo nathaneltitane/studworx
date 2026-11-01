@@ -101,6 +101,10 @@ void swInstructionsDialog::SaveLayout()
 void swInstructionsDialog::UpdateOptions()
 {
 	mInstructions->SetShowMargins(swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_MARGINS) != 0);
+	mInstructions->SetShowElementMargins(swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_MARGINS) != 0);
+	mInstructions->SetShowElementPadding(swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_PADDING) != 0);
+	mInstructions->SetShowElementAnchors(swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_ANCHORS) != 0);
+	mInstructions->SetShowRulers(swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_RULERS) != 0);
 	mInstructions->UpdateColors();
 	mEditorWidget->UpdateOptions();
 }

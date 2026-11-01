@@ -342,6 +342,8 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 - **Step images.** Parts new to each step are outlined and the earlier ones fade.
 - **Placement.** Place, drag and lock every page element within the page margins, on a snapping page grid.
 - **Elements.** Page numbers, colors, fonts, padding, margin, border and background for every page element, plus notices and pointers to emphasize parts and steps.
+- **Rulers.** Horizontal and vertical rulers measure the page in the page units, or the document units when they are in use, with the page and its margins shaded and an arrow on each ruler that follows the pointer. Show Rulers turns them on and off.
+- **Element inspector.** Like the box model of a web browser inspector, Show Element Margins and Show Element Padding fill the margin around and the padding inside every page element, and Show Element Anchors marks its corners, edge centers and center. Each overlay has its own color and alpha in the Colors preferences, and none of them is printed.
 - **Print and Editor.** A built-in Print panel, and an Editor panel to read and edit the model file text.
 
 ![The Instructions window](resources/images/instructions-window.png "wide")
@@ -386,8 +388,8 @@ Eight pages with lined up label and control columns. Value boxes show their maxi
 - **General.** Reference paths, the author of new models built from a name, email address and comment, such as All rights reserved, joined by the author line splitter and previewed as the author line, and the parts library, LGEO and POV-Ray locations.
 - **Startup and files.** Open the most recent file, restore the tab layout, load all parts before showing a model, watch for file changes and migrate LeoCAD models automatically.
 - **Rendering and Views.** Rendering quality, the Blender add-on settings, and the Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups.
-- **Colors and Instructions.** Interface and view colors, edge contrast, and the default instruction page settings.
-- **View colors.** Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, flex paths, the view cube and every axis.
+- **Colors and Instructions.** Interface and view colors, edge contrast, the default instruction page settings, and the rulers and element inspector overlays of the instructions page.
+- **View colors.** Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, flex paths, the view cube, every axis, and the element margin, padding and anchor overlays of the instructions page, each with an alpha slider.
 - **Categories.** Part categories turned on and off with a checkbox, edited, imported and exported.
 - **Keyboard and Mouse.** Shortcuts recorded by clicking, importable and exportable.
 - **Shortcut filters.** Filter commands and tools by name or shortcut, give each two shortcuts, and reset them to the defaults.

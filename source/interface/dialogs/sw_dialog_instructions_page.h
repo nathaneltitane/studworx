@@ -33,6 +33,9 @@ public:
 
 	// The border width.
 	virtual qreal GetBorderWidth() const = 0;
+
+	// The margin, border and padding.
+	virtual const swInstructionsBoxStyle& GetBoxStyle() const = 0;
 };
 
 // The box around page elements.
@@ -51,7 +54,7 @@ public:
 		mBoxStyle = BoxStyle;
 	}
 
-	const swInstructionsBoxStyle& GetBoxStyle() const
+	const swInstructionsBoxStyle& GetBoxStyle() const override
 	{
 		return mBoxStyle;
 	}
@@ -391,6 +394,28 @@ protected:
 	bool mDraggingTip = false;
 };
 
+class swInstructionsPageWidget;
+
+// Rulers along the page.
+class swInstructionsRulerWidget : public QWidget
+{
+	Q_OBJECT
+
+public:
+	swInstructionsRulerWidget(swInstructionsPageWidget* PageWidget, Qt::Orientation Orientation);
+
+	// The ruler width across.
+	static int GetThickness(const QWidget* Widget);
+
+protected:
+	void paintEvent(QPaintEvent* Event) override;
+	static qreal GetMajorStep(qreal PixelsPerUnit, qreal MinimumSpacing);
+	static int GetSubdivisions(swInstructionsPageUnits Units, qreal MajorSpacing);
+
+	swInstructionsPageWidget* mPageWidget;
+	Qt::Orientation mOrientation;
+};
+
 class swInstructionsPageWidget : public QGraphicsView
 {
 	Q_OBJECT
@@ -399,6 +424,17 @@ public:
 	swInstructionsPageWidget(QWidget* Parent, swInstructions* Instructions, swInstructionsPropertiesWidget* PropertiesWidget, swInstructionsPlacementWidget* PlacementWidget);
 
 	void SetCurrentPage(const swInstructionsPage* Page);
+
+	swInstructions* GetInstructions() const
+	{
+		return mInstructions;
+	}
+
+	// The pointer on the page.
+	const std::optional<QPointF>& GetPointerPosition() const
+	{
+		return mPointerPosition;
+	}
 
 protected:
 	void SelectElement(const swInstructionsElementKey& Key);
@@ -409,6 +445,11 @@ protected:
 	void mouseMoveEvent(QMouseEvent* Event) override;
 	void contextMenuEvent(QContextMenuEvent* Event) override;
 	void drawForeground(QPainter* Painter, const QRectF& Rect) override;
+	void scrollContentsBy(int DeltaX, int DeltaY) override;
+	bool viewportEvent(QEvent* Event) override;
+	void DrawGrid(QPainter* Painter, const QRectF& Rect);
+	void DrawElementBoxes(QPainter* Painter);
+	void UpdateRulers();
 	void FitPage();
 
 protected slots:
@@ -424,6 +465,10 @@ protected:
 	std::optional<swInstructionsElementKey> mPendingSelection;
 	std::vector<swInstructionsElementKey> mSelectionOrder;
 	bool mRebuildingPage = false;
+	swInstructionsRulerWidget* mHorizontalRuler = nullptr;
+	swInstructionsRulerWidget* mVerticalRuler = nullptr;
+	QLabel* mRulerCorner = nullptr;
+	std::optional<QPointF> mPointerPosition;
 };
 
 class swInstructionsPageListWidget : public QDockWidget

@@ -17,6 +17,16 @@ void swInstructionsPreferences::Load()
 	GridWithinMargins = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_GRID_WITHIN_MARGINS) != 0;
 	NewModelDefaults = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_NEW_MODEL_DEFAULTS) != 0;
 	ShowMargins = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_MARGINS) != 0;
+	ShowRulers = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_RULERS) != 0;
+	ShowElementMargins = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_MARGINS) != 0;
+	ShowElementPadding = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_PADDING) != 0;
+	ShowElementAnchors = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_ANCHORS) != 0;
+	ElementMarginColor = swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR);
+	ElementPaddingColor = swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR);
+	ElementAnchorColor = swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR);
+	ElementMarginAlpha = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_ALPHA);
+	ElementPaddingAlpha = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_ALPHA);
+	ElementAnchorAlpha = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_ALPHA);
 	GridPrimaryColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_PRIMARY_COLOR));
 	GridSecondaryColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_SECONDARY_COLOR));
 	MarginColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_MARGIN_COLOR));
@@ -43,6 +53,16 @@ void swInstructionsPreferences::Save() const
 	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_GRID_WITHIN_MARGINS, GridWithinMargins);
 	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_NEW_MODEL_DEFAULTS, NewModelDefaults);
 	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_MARGINS, ShowMargins);
+	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_RULERS, ShowRulers);
+	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_MARGINS, ShowElementMargins);
+	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_PADDING, ShowElementPadding);
+	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_ANCHORS, ShowElementAnchors);
+	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR, ElementMarginColor);
+	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR, ElementPaddingColor);
+	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR, ElementAnchorColor);
+	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_ALPHA, ElementMarginAlpha);
+	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_ALPHA, ElementPaddingAlpha);
+	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_ALPHA, ElementAnchorAlpha);
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_PRIMARY_COLOR, swRGBAFromQColor(GridPrimaryColor));
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_SECONDARY_COLOR, swRGBAFromQColor(GridSecondaryColor));
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_MARGIN_COLOR, swRGBAFromQColor(MarginColor));
@@ -137,6 +157,14 @@ void swPreferencesDialog::CreateInstructionsTab()
 
 	mInstructionsShowMargins = CreateCheckBox(WindowGroup, tr("Show Margins"), tr("Outline the page margins on screen, they are never printed."), Instructions.ShowMargins);
 	WindowLayout->addRow(mInstructionsShowMargins);
+	mInstructionsShowRulers = CreateCheckBox(WindowGroup, tr("Show Rulers"), tr("Show rulers in the page units along the page, their arrows follow the pointer."), Instructions.ShowRulers);
+	WindowLayout->addRow(mInstructionsShowRulers);
+	mInstructionsShowElementMargins = CreateCheckBox(WindowGroup, tr("Show Element Margins"), tr("Fill the margins around each element on screen with the element margin color, they are never printed."), Instructions.ShowElementMargins);
+	WindowLayout->addRow(mInstructionsShowElementMargins);
+	mInstructionsShowElementPadding = CreateCheckBox(WindowGroup, tr("Show Element Padding"), tr("Fill the padding inside the border of each element on screen with the element padding color, it is never printed."), Instructions.ShowElementPadding);
+	WindowLayout->addRow(mInstructionsShowElementPadding);
+	mInstructionsShowElementAnchors = CreateCheckBox(WindowGroup, tr("Show Element Anchors"), tr("Mark the corners, edge centers and center of each element on screen, they are never printed."), Instructions.ShowElementAnchors);
+	WindowLayout->addRow(mInstructionsShowElementAnchors);
 
 	// line colors keep transparency
 	auto CreateColorButton = [this, WindowLayout, WindowGroup](const QString& Name, const QString& ToolTip, QColor* Color)

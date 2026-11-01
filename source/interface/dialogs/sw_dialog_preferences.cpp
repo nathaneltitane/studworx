@@ -316,6 +316,9 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->ConditionalLinesCheckBox, &QCheckBox::toggled, this, &swPreferencesDialog::ConditionalLinesCheckBoxToggled);
 	connect(ui->LineWidthSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::LineWidthSliderValueChanged);
 	connect(ui->CutawayShadeAlphaSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::CutawayShadeAlphaChanged);
+	connect(ui->ElementMarginAlphaSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::ElementAlphaChanged);
+	connect(ui->ElementPaddingAlphaSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::ElementAlphaChanged);
+	connect(ui->ElementAnchorAlphaSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::ElementAlphaChanged);
 	connect(ui->AxisIconCubeOutlineAlphaSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::AxisIconCubeOutlineAlphaChanged);
 	connect(ui->AxisIconCubeOutlineCheckBox, &QCheckBox::toggled, this, [this]() { AxisIconSizeComboCurrentIndexChanged(ui->AxisIconSizeCombo->currentIndex()); });
 
@@ -365,6 +368,9 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->MarqueeFillColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->OverlayColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->CutawayShadeColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
+	connect(ui->ElementMarginColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
+	connect(ui->ElementPaddingColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
+	connect(ui->ElementAnchorColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->FadeStepsColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->HighlightNewPartsColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->gridStudColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
@@ -527,6 +533,10 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	UpdateStudSuffix(ui->CutawaySizeSpinBox);
 	ui->CutawayShadeAlphaSlider->setValue(mOptions->Preferences.mCutawayShadeAlpha);
 	CutawayShadeAlphaChanged();
+	ui->ElementMarginAlphaSlider->setValue(mOptions->Instructions.ElementMarginAlpha);
+	ui->ElementPaddingAlphaSlider->setValue(mOptions->Instructions.ElementPaddingAlpha);
+	ui->ElementAnchorAlphaSlider->setValue(mOptions->Instructions.ElementAnchorAlpha);
+	ElementAlphaChanged();
 	ui->TurntableIdleDurationSpinBox->SetReference(ui->TurntableIdleDurationSpinBox->suffix());
 	ui->TurntableIdleDurationSpinBox->setValue(mOptions->Preferences.mTurntableIdleDuration);
 	ui->TurntableTurnTimeSpinBox->SetReference(ui->TurntableTurnTimeSpinBox->suffix());
@@ -649,6 +659,9 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	SetButtonPixmap(mOptions->Preferences.mMarqueeFillColor, ui->MarqueeFillColorButton);
 	SetButtonPixmap(mOptions->Preferences.mOverlayColor, ui->OverlayColorButton);
 	SetButtonPixmap(mOptions->Preferences.mCutawayShadeColor | SW_RGBA(0, 0, 0, 255), ui->CutawayShadeColorButton);
+	SetButtonPixmap(mOptions->Instructions.ElementMarginColor | SW_RGBA(0, 0, 0, 255), ui->ElementMarginColorButton);
+	SetButtonPixmap(mOptions->Instructions.ElementPaddingColor | SW_RGBA(0, 0, 0, 255), ui->ElementPaddingColorButton);
+	SetButtonPixmap(mOptions->Instructions.ElementAnchorColor | SW_RGBA(0, 0, 0, 255), ui->ElementAnchorColorButton);
 	SetButtonPixmap(mOptions->Preferences.mActiveViewColor, ui->ActiveViewColorButton);
 	SetButtonPixmap(mOptions->Preferences.mInactiveViewColor, ui->InactiveViewColorButton);
 	SetButtonPixmap(mOptions->Preferences.mFadeStepsColor, ui->FadeStepsColor);
@@ -868,6 +881,13 @@ void swPreferencesDialog::accept()
 	Instructions.GridWithinMargins = mInstructionsGridScope->currentIndex() == 0;
 	Instructions.NewModelDefaults = mInstructionsNewModelDefaults->isChecked();
 	Instructions.ShowMargins = mInstructionsShowMargins->isChecked();
+	Instructions.ShowRulers = mInstructionsShowRulers->isChecked();
+	Instructions.ShowElementMargins = mInstructionsShowElementMargins->isChecked();
+	Instructions.ShowElementPadding = mInstructionsShowElementPadding->isChecked();
+	Instructions.ShowElementAnchors = mInstructionsShowElementAnchors->isChecked();
+	Instructions.ElementMarginAlpha = ui->ElementMarginAlphaSlider->value();
+	Instructions.ElementPaddingAlpha = ui->ElementPaddingAlphaSlider->value();
+	Instructions.ElementAnchorAlpha = ui->ElementAnchorAlphaSlider->value();
 	Instructions.EditorHighlight = mInstructionsEditorHighlight->isChecked();
 	Instructions.EditorNumbers = mInstructionsEditorNumbers->isChecked();
 	Instructions.EditorWrap = mInstructionsEditorWrap->isChecked();
@@ -1024,6 +1044,21 @@ void swPreferencesDialog::ColorButtonClicked()
 	{
 		Color = &mOptions->Preferences.mCutawayShadeColor;
 		Title = tr("Select Cutaway Shade Color");
+	}
+	else if (Button == ui->ElementMarginColorButton)
+	{
+		Color = &mOptions->Instructions.ElementMarginColor;
+		Title = tr("Select Element Margin Color");
+	}
+	else if (Button == ui->ElementPaddingColorButton)
+	{
+		Color = &mOptions->Instructions.ElementPaddingColor;
+		Title = tr("Select Element Padding Color");
+	}
+	else if (Button == ui->ElementAnchorColorButton)
+	{
+		Color = &mOptions->Instructions.ElementAnchorColor;
+		Title = tr("Select Element Anchor Color");
 	}
 	else if (Button == ui->ActiveViewColorButton)
 	{
@@ -1211,6 +1246,14 @@ void swPreferencesDialog::UpdateStudSuffix(QSpinBox* SpinBox)
 void swPreferencesDialog::AxisIconCubeOutlineAlphaChanged()
 {
 	ui->AxisIconCubeOutlineAlphaValueLabel->setText(locale().toString(ui->AxisIconCubeOutlineAlphaSlider->value() / 100.0, 'f', 2));
+}
+
+// use to show the element overlay alphas
+void swPreferencesDialog::ElementAlphaChanged()
+{
+	ui->ElementMarginAlphaValueLabel->setText(locale().toString(ui->ElementMarginAlphaSlider->value() / 100.0, 'f', 2));
+	ui->ElementPaddingAlphaValueLabel->setText(locale().toString(ui->ElementPaddingAlphaSlider->value() / 100.0, 'f', 2));
+	ui->ElementAnchorAlphaValueLabel->setText(locale().toString(ui->ElementAnchorAlphaSlider->value() / 100.0, 'f', 2));
 }
 
 // use to show the cutaway shade alpha

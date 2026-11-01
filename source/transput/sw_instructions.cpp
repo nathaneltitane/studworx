@@ -120,6 +120,13 @@ swInstructions::swInstructions(Project* Project)
 	mGridPrimaryColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_PRIMARY_COLOR));
 	mGridSecondaryColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_SECONDARY_COLOR));
 	mMarginColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_MARGIN_COLOR));
+	mShowElementMargins = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_MARGINS) != 0;
+	mShowElementPadding = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_PADDING) != 0;
+	mShowElementAnchors = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_ANCHORS) != 0;
+	mShowRulers = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_RULERS) != 0;
+	mElementMarginColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_ALPHA);
+	mElementPaddingColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_ALPHA);
+	mElementAnchorColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_ALPHA);
 
 	SetDefaultProperties();
 	mDefaultProperties = mStepProperties;
@@ -920,6 +927,29 @@ void swInstructions::UpdateColors()
 	SetGridPrimaryColor(swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_PRIMARY_COLOR)));
 	SetGridSecondaryColor(swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_SECONDARY_COLOR)));
 	SetMarginColor(swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_MARGIN_COLOR)));
+
+	// element colors come from the colors preferences
+	const QColor ElementMarginColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_ALPHA);
+	const QColor ElementPaddingColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_ALPHA);
+	const QColor ElementAnchorColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_ALPHA);
+
+	if (mElementMarginColor == ElementMarginColor && mElementPaddingColor == ElementPaddingColor && mElementAnchorColor == ElementAnchorColor)
+		return;
+
+	mElementMarginColor = ElementMarginColor;
+	mElementPaddingColor = ElementPaddingColor;
+	mElementAnchorColor = ElementAnchorColor;
+
+	emit GridChanged();
+}
+
+// use to combine a color with its alpha percentage
+QColor swInstructions::GetProfileOverlayColor(SW_PROFILE_KEY ColorKey, SW_PROFILE_KEY AlphaKey)
+{
+	QColor Color = swQColorFromRGBA(swGetProfileUnsignedInteger(ColorKey));
+	Color.setAlphaF(qBound(0, swGetProfileInteger(AlphaKey), 100) / 100.0);
+
+	return Color;
 }
 
 void swInstructions::SetGridWithinMargins(bool WithinMargins)
@@ -944,6 +974,38 @@ void swInstructions::SetShowMargins(bool ShowMargins)
 	emit GridChanged();
 }
 
+void swInstructions::SetShowElementMargins(bool ShowElementMargins)
+{
+	SetShowOption(mShowElementMargins, ShowElementMargins, SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_MARGINS);
+}
+
+void swInstructions::SetShowElementPadding(bool ShowElementPadding)
+{
+	SetShowOption(mShowElementPadding, ShowElementPadding, SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_PADDING);
+}
+
+void swInstructions::SetShowElementAnchors(bool ShowElementAnchors)
+{
+	SetShowOption(mShowElementAnchors, ShowElementAnchors, SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_ANCHORS);
+}
+
+void swInstructions::SetShowRulers(bool ShowRulers)
+{
+	SetShowOption(mShowRulers, ShowRulers, SW_PROFILE_INSTRUCTIONS_SHOW_RULERS);
+}
+
+// use to store a screen option
+void swInstructions::SetShowOption(bool& Option, bool Value, SW_PROFILE_KEY Key)
+{
+	if (Option == Value)
+		return;
+
+	Option = Value;
+	swSetProfileInteger(Key, Option);
+
+	emit GridChanged();
+}
+
 QRectF swInstructions::GetGridRect() const
 {
 	if (mGridWithinMargins)
@@ -960,6 +1022,16 @@ swInstructionsPageUnits swInstructions::GetPageUnits() const
 		return swInstructionsPageUnits::Inches;
 
 	return static_cast<swInstructionsPageUnits>(Units);
+}
+
+swInstructionsPageUnits swInstructions::GetRulerUnits() const
+{
+	const std::optional<swInstructionsPageUnits> DocumentUnits = GetDocumentUnits();
+
+	if (DocumentUnits)
+		return *DocumentUnits;
+
+	return GetPageUnits();
 }
 
 std::optional<swInstructionsPageUnits> swInstructions::GetDocumentUnits() const

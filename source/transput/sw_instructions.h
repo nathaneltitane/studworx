@@ -1,6 +1,7 @@
 #pragma once
 
 #include "sw_math.h"
+#include "sw_profile.h"
 
 enum class swInstructionsPageUnits
 {
@@ -515,6 +516,45 @@ public:
 		return mMarginColor;
 	}
 
+	// The element boxes show on screen only.
+	bool IsElementMarginsShown() const
+	{
+		return mShowElementMargins;
+	}
+
+	bool IsElementPaddingShown() const
+	{
+		return mShowElementPadding;
+	}
+
+	bool IsElementAnchorsShown() const
+	{
+		return mShowElementAnchors;
+	}
+
+	bool IsRulersShown() const
+	{
+		return mShowRulers;
+	}
+
+	QColor GetElementMarginColor() const
+	{
+		return mElementMarginColor;
+	}
+
+	QColor GetElementPaddingColor() const
+	{
+		return mElementPaddingColor;
+	}
+
+	QColor GetElementAnchorColor() const
+	{
+		return mElementAnchorColor;
+	}
+
+	// Rulers measure in page units.
+	swInstructionsPageUnits GetRulerUnits() const;
+
 
 	// Lengths use the margin units.
 	swInstructionsPageUnits GetPageUnits() const;
@@ -532,6 +572,10 @@ public:
 	void UpdateColors();
 	void SetGridWithinMargins(bool WithinMargins);
 	void SetShowMargins(bool ShowMargins);
+	void SetShowElementMargins(bool ShowElementMargins);
+	void SetShowElementPadding(bool ShowElementPadding);
+	void SetShowElementAnchors(bool ShowElementAnchors);
+	void SetShowRulers(bool ShowRulers);
 
 //protected:
 	std::vector<swInstructionsPage> mPages;
@@ -575,17 +619,26 @@ protected:
 	bool GetStepPageIndex(swModel* Model, swStep Step, size_t& PageIndex) const;
 	void EmitPagePropertyChanged(swInstructionsPropertyType Type);
 	void SetDefaultProperty(swInstructionsPropertyType Type, const QVariant& Value);
+	void SetShowOption(bool& Option, bool Value, SW_PROFILE_KEY Key);
+	static QColor GetProfileOverlayColor(SW_PROFILE_KEY ColorKey, SW_PROFILE_KEY AlphaKey);
 
 	Project* mProject = nullptr;
 	bool mShowGrid = true;
 	bool mSnapToGrid = true;
 	bool mGridWithinMargins = true;
 	bool mShowMargins = true;
+	bool mShowElementMargins = false;
+	bool mShowElementPadding = false;
+	bool mShowElementAnchors = false;
+	bool mShowRulers = true;
 	float mGridSize = 72.0f;
 	int mGridDivisions = 8;
 	QColor mGridPrimaryColor;
 	QColor mGridSecondaryColor;
 	QColor mMarginColor;
+	QColor mElementMarginColor;
+	QColor mElementPaddingColor;
+	QColor mElementAnchorColor;
 	int mNextNoticeId = 1;
 	int mNextPointerId = 1;
 

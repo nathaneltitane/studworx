@@ -909,10 +909,27 @@ swInstructionsPageWidget::swInstructionsPageWidget(QWidget* Parent, swInstructio
 	connect(Scene, &QGraphicsScene::selectionChanged, this, &swInstructionsPageWidget::SelectionChanged);
 	connect(mPlacementWidget, &swInstructionsPlacementWidget::AlignSelection, this, &swInstructionsPageWidget::AlignSelection);
 
+	// rulers follow the pointer
+	viewport()->setMouseTracking(true);
+
+	mHorizontalRuler = new swInstructionsRulerWidget(this, Qt::Horizontal);
+	mVerticalRuler = new swInstructionsRulerWidget(this, Qt::Vertical);
+
+	mRulerCorner = new QLabel(this);
+	mRulerCorner->setAlignment(Qt::AlignCenter);
+	mRulerCorner->setAutoFillBackground(true);
+	mRulerCorner->setToolTip(tr("Units of the rulers, the page units or the document units when they are in use."));
+
 	connect(mInstructions, &swInstructions::GridChanged, this, [this]()
 	{
+		UpdateRulers();
 		viewport()->update();
 	});
+
+	connect(mInstructions, &swInstructions::UnitsChanged, this, &swInstructionsPageWidget::UpdateRulers);
+	connect(mInstructions, &swInstructions::PageSetupChanged, this, &swInstructionsPageWidget::UpdateRulers);
+
+	UpdateRulers();
 }
 
 void swInstructionsPageWidget::StepSettingsChanged(swModel* Model, swStep Step)
@@ -1427,6 +1444,14 @@ void swInstructionsPageWidget::mouseMoveEvent(QMouseEvent* Event)
 {
 	QGraphicsView::mouseMoveEvent(Event);
 
+	mPointerPosition = mapToScene(Event->pos());
+
+	if (mInstructions->IsRulersShown())
+	{
+		mHorizontalRuler->update();
+		mVerticalRuler->update();
+	}
+
 	if (mDragItems.empty())
 		return;
 
@@ -1661,10 +1686,15 @@ void swInstructionsPageWidget::drawForeground(QPainter* Painter, const QRectF& R
 		Painter->restore();
 	}
 
-	if (!mInstructions->IsGridShown())
-		return;
+	if (mInstructions->IsGridShown())
+		DrawGrid(Painter, Rect);
 
-	// draw the grid on screen
+	DrawElementBoxes(Painter);
+}
+
+// use to draw the grid on screen
+void swInstructionsPageWidget::DrawGrid(QPainter* Painter, const QRectF& Rect)
+{
 	const QRectF GridRect = mInstructions->GetGridRect();
 	const QRectF PageRect = GridRect.intersected(Rect);
 	const int Divisions = mInstructions->GetGridDivisions();
@@ -1707,10 +1737,149 @@ void swInstructionsPageWidget::drawForeground(QPainter* Painter, const QRectF& R
 	Painter->restore();
 }
 
+// use to inspect the element boxes like a web browser
+void swInstructionsPageWidget::DrawElementBoxes(QPainter* Painter)
+{
+	const bool ShowMargins = mInstructions->IsElementMarginsShown();
+	const bool ShowPadding = mInstructions->IsElementPaddingShown();
+	const bool ShowAnchors = mInstructions->IsElementAnchorsShown();
+
+	if (!ShowMargins && !ShowPadding && !ShowAnchors)
+		return;
+
+	const QColor MarginColor = mInstructions->GetElementMarginColor();
+	const QColor PaddingColor = mInstructions->GetElementPaddingColor();
+	const QColor AnchorColor = mInstructions->GetElementAnchorColor();
+	const QTransform ViewTransform = Painter->transform();
+	const QList<QGraphicsItem*> Items = scene()->items(Qt::AscendingOrder);
+	std::vector<QPointF> AnchorPoints;
+
+	Painter->save();
+	Painter->setPen(Qt::NoPen);
+
+	for (const QGraphicsItem* Item : Items)
+	{
+		const swInstructionsBoxBase* BoxItem = dynamic_cast<const swInstructionsBoxBase*>(Item);
+
+		if (!BoxItem || !Item->isVisible())
+			continue;
+
+		const QRectF BoxRect = Item->boundingRect();
+
+		if (BoxRect.isEmpty())
+			continue;
+
+		// box model rectangles from the outside in
+		const swInstructionsBoxStyle& BoxStyle = BoxItem->GetBoxStyle();
+		const QRectF BorderRect = BoxRect.adjusted(BoxStyle.Margin, BoxStyle.Margin, -BoxStyle.Margin, -BoxStyle.Margin);
+		const QRectF PaddingRect = BorderRect.adjusted(BoxStyle.BorderWidth, BoxStyle.BorderWidth, -BoxStyle.BorderWidth, -BoxStyle.BorderWidth);
+		const QRectF ContentRect = PaddingRect.adjusted(BoxStyle.Padding, BoxStyle.Padding, -BoxStyle.Padding, -BoxStyle.Padding);
+		const QTransform ItemTransform = Item->sceneTransform();
+
+		if (ShowMargins && BoxStyle.Margin > 0.0 && MarginColor.alpha())
+		{
+			QPainterPath MarginPath;
+			MarginPath.setFillRule(Qt::OddEvenFill);
+			MarginPath.addRect(BoxRect);
+			MarginPath.addRect(BorderRect);
+
+			Painter->fillPath(ItemTransform.map(MarginPath), MarginColor);
+		}
+
+		if (ShowPadding && BoxStyle.Padding > 0.0 && PaddingColor.alpha())
+		{
+			QPainterPath PaddingPath;
+			PaddingPath.setFillRule(Qt::OddEvenFill);
+			PaddingPath.addRect(PaddingRect);
+			PaddingPath.addRect(ContentRect);
+
+			Painter->fillPath(ItemTransform.map(PaddingPath), PaddingColor);
+		}
+
+		if (!ShowAnchors)
+			continue;
+
+		// corners, edge centers and center
+		const QPointF Center = BorderRect.center();
+		const QPointF Points[] =
+		{
+			BorderRect.topLeft(), QPointF(Center.x(), BorderRect.top()), BorderRect.topRight(),
+			QPointF(BorderRect.left(), Center.y()), Center, QPointF(BorderRect.right(), Center.y()),
+			BorderRect.bottomLeft(), QPointF(Center.x(), BorderRect.bottom()), BorderRect.bottomRight()
+		};
+
+		for (const QPointF& Point : Points)
+			AnchorPoints.push_back(ViewTransform.map(ItemTransform.map(Point)));
+	}
+
+	// markers keep their size at any zoom
+	if (!AnchorPoints.empty() && AnchorColor.alpha())
+	{
+		const qreal Size = qMax(5.0, fontMetrics().height() / 3.0);
+		QColor OutlineColor(Qt::white);
+		OutlineColor.setAlpha(AnchorColor.alpha());
+
+		Painter->resetTransform();
+		Painter->setRenderHint(QPainter::Antialiasing, true);
+		Painter->setPen(QPen(OutlineColor, 1.0));
+		Painter->setBrush(AnchorColor);
+
+		for (const QPointF& Point : AnchorPoints)
+			Painter->drawRect(QRectF(Point.x() - Size / 2.0, Point.y() - Size / 2.0, Size, Size));
+	}
+
+	Painter->restore();
+}
+
 void swInstructionsPageWidget::resizeEvent(QResizeEvent* Event)
 {
 	QGraphicsView::resizeEvent(Event);
 	FitPage();
+	UpdateRulers();
+}
+
+void swInstructionsPageWidget::scrollContentsBy(int DeltaX, int DeltaY)
+{
+	QGraphicsView::scrollContentsBy(DeltaX, DeltaY);
+	UpdateRulers();
+}
+
+bool swInstructionsPageWidget::viewportEvent(QEvent* Event)
+{
+	// the ruler arrows leave with the pointer
+	if (Event->type() == QEvent::Leave && mPointerPosition)
+	{
+		mPointerPosition.reset();
+		UpdateRulers();
+	}
+
+	return QGraphicsView::viewportEvent(Event);
+}
+
+// use to place the rulers around the page
+void swInstructionsPageWidget::UpdateRulers()
+{
+	const bool ShowRulers = mInstructions->IsRulersShown();
+	const int Thickness = ShowRulers ? swInstructionsRulerWidget::GetThickness(this) : 0;
+
+	setViewportMargins(Thickness, Thickness, 0, 0);
+
+	mHorizontalRuler->setVisible(ShowRulers);
+	mVerticalRuler->setVisible(ShowRulers);
+	mRulerCorner->setVisible(ShowRulers);
+
+	if (!ShowRulers)
+		return;
+
+	const QRect ViewportRect = viewport()->geometry();
+
+	mHorizontalRuler->setGeometry(ViewportRect.left(), ViewportRect.top() - Thickness, ViewportRect.width(), Thickness);
+	mVerticalRuler->setGeometry(ViewportRect.left() - Thickness, ViewportRect.top(), Thickness, ViewportRect.height());
+	mRulerCorner->setGeometry(ViewportRect.left() - Thickness, ViewportRect.top() - Thickness, Thickness, Thickness);
+	mRulerCorner->setText(swGetPageUnitSuffix(mInstructions->GetRulerUnits()));
+
+	mHorizontalRuler->update();
+	mVerticalRuler->update();
 }
 
 void swInstructionsPageWidget::FitPage()
@@ -1718,6 +1887,178 @@ void swInstructionsPageWidget::FitPage()
 	// show the whole page
 	if (mPage)
 		fitInView(sceneRect().adjusted(-10.0, -10.0, 10.0, 10.0), Qt::KeepAspectRatio);
+
+	UpdateRulers();
+}
+
+swInstructionsRulerWidget::swInstructionsRulerWidget(swInstructionsPageWidget* PageWidget, Qt::Orientation Orientation)
+	: QWidget(PageWidget), mPageWidget(PageWidget), mOrientation(Orientation)
+{
+	setAutoFillBackground(false);
+
+	if (Orientation == Qt::Horizontal)
+	{
+		setAccessibleName(tr("Horizontal Ruler"));
+		setToolTip(tr("Horizontal position on the page in the page units, the arrow follows the pointer."));
+	}
+	else
+	{
+		setAccessibleName(tr("Vertical Ruler"));
+		setToolTip(tr("Vertical position on the page in the page units, the arrow follows the pointer."));
+	}
+}
+
+int swInstructionsRulerWidget::GetThickness(const QWidget* Widget)
+{
+	return Widget->fontMetrics().height() + 8;
+}
+
+// use to pick a labeled step at least the spacing apart
+qreal swInstructionsRulerWidget::GetMajorStep(qreal PixelsPerUnit, qreal MinimumSpacing)
+{
+	const qreal Steps[] = { 0.1, 0.25, 0.5, 1.0, 2.0, 5.0, 10.0, 25.0, 50.0, 100.0, 250.0, 500.0, 1000.0, 2500.0, 5000.0, 10000.0 };
+
+	for (const qreal Step : Steps)
+		if (Step * PixelsPerUnit >= MinimumSpacing)
+			return Step;
+
+	return Steps[std::size(Steps) - 1];
+}
+
+// use to split a step into readable ticks
+int swInstructionsRulerWidget::GetSubdivisions(swInstructionsPageUnits Units, qreal MajorSpacing)
+{
+	const std::vector<int> InchDivisions = { 16, 8, 4, 2 };
+	const std::vector<int> MetricDivisions = { 10, 5, 2 };
+	const std::vector<int>& Divisions = Units == swInstructionsPageUnits::Inches ? InchDivisions : MetricDivisions;
+
+	for (const int Division : Divisions)
+		if (MajorSpacing / Division >= 5.0)
+			return Division;
+
+	return 1;
+}
+
+void swInstructionsRulerWidget::paintEvent(QPaintEvent* Event)
+{
+	Q_UNUSED(Event);
+
+	QPainter Painter(this);
+	Painter.fillRect(rect(), palette().window());
+
+	const bool Horizontal = mOrientation == Qt::Horizontal;
+	const int Length = Horizontal ? width() : height();
+	const int Thickness = Horizontal ? height() : width();
+	const swInstructions* Instructions = mPageWidget->GetInstructions();
+	const swInstructionsPageSetup& PageSetup = Instructions->mPageSetup;
+	const QTransform ViewTransform = mPageWidget->viewportTransform();
+	const qreal Scale = Horizontal ? ViewTransform.m11() : ViewTransform.m22();
+	const qreal Offset = Horizontal ? ViewTransform.dx() : ViewTransform.dy();
+
+	if (Scale <= 0.0)
+		return;
+
+	// page and margin spans
+	auto MapLength = [Scale, Offset](qreal Points)
+	{
+		return Points * Scale + Offset;
+	};
+
+	auto FillSpan = [&Painter, Horizontal, Thickness](qreal Start, qreal End, const QBrush& Brush)
+	{
+		if (Horizontal)
+			Painter.fillRect(QRectF(Start, 0.0, End - Start, Thickness), Brush);
+		else
+			Painter.fillRect(QRectF(0.0, Start, Thickness, End - Start), Brush);
+	};
+
+	const qreal PageLength = Horizontal ? PageSetup.Width : PageSetup.Height;
+	const qreal MarginStart = Horizontal ? PageSetup.MarginLeft : PageSetup.MarginTop;
+	const qreal MarginEnd = Horizontal ? PageSetup.MarginRight : PageSetup.MarginBottom;
+
+	FillSpan(MapLength(0.0), MapLength(PageLength), palette().alternateBase());
+	FillSpan(MapLength(MarginStart), MapLength(PageLength - MarginEnd), palette().base());
+
+	// ticks in page units from the page corner
+	const swInstructionsPageUnits Units = Instructions->GetRulerUnits();
+	const qreal UnitScale = swGetPageUnitScale(Units);
+	const qreal PixelsPerUnit = UnitScale * Scale;
+	const qreal MinimumSpacing = fontMetrics().horizontalAdvance(QLatin1String("0000")) + 8.0;
+	const qreal MajorStep = GetMajorStep(PixelsPerUnit, MinimumSpacing);
+	const int Subdivisions = GetSubdivisions(Units, MajorStep * PixelsPerUnit);
+	const qreal MinorStep = MajorStep / Subdivisions;
+	const qreal StartUnits = (0.0 - Offset) / PixelsPerUnit;
+	const qreal EndUnits = (Length - Offset) / PixelsPerUnit;
+	const qint64 FirstTick = static_cast<qint64>(std::floor(StartUnits / MinorStep)) - 1;
+	const qint64 LastTick = static_cast<qint64>(std::ceil(EndUnits / MinorStep)) + 1;
+
+	QColor TickColor = palette().color(QPalette::WindowText);
+	Painter.setPen(QPen(TickColor, 0.0));
+	Painter.setFont(font());
+
+	for (qint64 Tick = FirstTick; Tick <= LastTick; Tick++)
+	{
+		const qreal Position = std::round(Tick * MinorStep * PixelsPerUnit + Offset) + 0.5;
+		const bool Major = Tick % Subdivisions == 0;
+		const bool Half = Subdivisions % 2 == 0 && Tick % (Subdivisions / 2) == 0;
+		qreal TickLength = Thickness * 0.2;
+
+		if (Major)
+			TickLength = Thickness;
+		else if (Half)
+			TickLength = Thickness * 0.4;
+
+		if (Horizontal)
+			Painter.drawLine(QPointF(Position, Thickness - TickLength), QPointF(Position, Thickness));
+		else
+			Painter.drawLine(QPointF(Thickness - TickLength, Position), QPointF(Thickness, Position));
+
+		if (!Major)
+			continue;
+
+		const QString Label = locale().toString(Tick * MinorStep, 'g', 6);
+
+		if (Horizontal)
+		{
+			Painter.drawText(QPointF(Position + 3.0, fontMetrics().ascent() + 1.0), Label);
+		}
+		else
+		{
+			Painter.save();
+			Painter.translate(fontMetrics().ascent() + 1.0, Position - 3.0);
+			Painter.rotate(-90.0);
+			Painter.drawText(QPointF(0.0, 0.0), Label);
+			Painter.restore();
+		}
+	}
+
+	// edge facing the page
+	Painter.setPen(QPen(palette().color(QPalette::Mid), 0.0));
+
+	if (Horizontal)
+		Painter.drawLine(QPointF(0.0, Thickness - 0.5), QPointF(Length, Thickness - 0.5));
+	else
+		Painter.drawLine(QPointF(Thickness - 0.5, 0.0), QPointF(Thickness - 0.5, Length));
+
+	const std::optional<QPointF>& PointerPosition = mPageWidget->GetPointerPosition();
+
+	if (!PointerPosition)
+		return;
+
+	// arrow pointing at the pointer
+	const qreal PointerPixels = MapLength(Horizontal ? PointerPosition->x() : PointerPosition->y());
+	const qreal ArrowSize = Thickness * 0.35;
+	QPolygonF Arrow;
+
+	if (Horizontal)
+		Arrow << QPointF(PointerPixels, Thickness) << QPointF(PointerPixels - ArrowSize, Thickness - ArrowSize * 1.4) << QPointF(PointerPixels + ArrowSize, Thickness - ArrowSize * 1.4);
+	else
+		Arrow << QPointF(Thickness, PointerPixels) << QPointF(Thickness - ArrowSize * 1.4, PointerPixels - ArrowSize) << QPointF(Thickness - ArrowSize * 1.4, PointerPixels + ArrowSize);
+
+	Painter.setRenderHint(QPainter::Antialiasing, true);
+	Painter.setPen(QPen(palette().color(QPalette::Base), 1.0));
+	Painter.setBrush(palette().highlight());
+	Painter.drawPolygon(Arrow);
 }
 
 swInstructionsPageListWidget::swInstructionsPageListWidget(QWidget* Parent, swInstructions* Instructions)

@@ -166,6 +166,45 @@ swInstructionsPropertiesWidget::swInstructionsPropertiesWidget(QWidget* Parent, 
 	ShowMarginsAction->setChecked(mInstructions->IsMarginsShown());
 	connect(ShowMarginsAction, &QAction::toggled, mInstructions, &swInstructions::SetShowMargins);
 
+	// inspect the element boxes on screen
+	using swShownGetter = bool (swInstructions::*)() const;
+	using swShownSetter = void (swInstructions::*)(bool);
+
+	struct swShowOption
+	{
+		QString Text;
+		QString ToolTip;
+		swShownGetter Getter;
+		swShownSetter Setter;
+	};
+
+	const swShowOption ShowOptions[] =
+	{
+		{ tr("Show Rulers"), tr("Show rulers in the page units along the page, their arrows follow the pointer"), &swInstructions::IsRulersShown, &swInstructions::SetShowRulers },
+		{ tr("Show Element Margins"), tr("Fill the margins around each element on screen, they are never printed"), &swInstructions::IsElementMarginsShown, &swInstructions::SetShowElementMargins },
+		{ tr("Show Element Padding"), tr("Fill the padding inside the border of each element on screen, it is never printed"), &swInstructions::IsElementPaddingShown, &swInstructions::SetShowElementPadding },
+		{ tr("Show Element Anchors"), tr("Mark the corners, edge centers and center of each element on screen, they are never printed"), &swInstructions::IsElementAnchorsShown, &swInstructions::SetShowElementAnchors }
+	};
+
+	std::vector<std::pair<QAction*, swShownGetter>> ShowActions;
+
+	for (const swShowOption& ShowOption : ShowOptions)
+	{
+		QAction* Action = OptionsMenu->addAction(ShowOption.Text);
+		Action->setToolTip(ShowOption.ToolTip);
+		Action->setCheckable(true);
+		Action->setChecked((mInstructions->*ShowOption.Getter)());
+
+		const swShownSetter Setter = ShowOption.Setter;
+
+		connect(Action, &QAction::toggled, mInstructions, [this, Setter](bool Checked)
+		{
+			(mInstructions->*Setter)(Checked);
+		});
+
+		ShowActions.emplace_back(Action, ShowOption.Getter);
+	}
+
 	OptionsMenu->addSeparator();
 
 	// document units replace value units
@@ -201,7 +240,7 @@ swInstructionsPropertiesWidget::swInstructionsPropertiesWidget(QWidget* Parent, 
 		mInstructions->SetDefaultInt(swInstructionsPropertyType::DocumentUnits, Action->data().toInt());
 	});
 
-	connect(OptionsMenu, &QMenu::aboutToShow, this, [this, ShowMarginsAction, DocumentUnitsAction, DocumentUnitsMenu, DocumentUnitsGroup]()
+	connect(OptionsMenu, &QMenu::aboutToShow, this, [this, ShowMarginsAction, ShowActions, DocumentUnitsAction, DocumentUnitsMenu, DocumentUnitsGroup]()
 	{
 		const bool UseDocumentUnits = mInstructions->GetBoolProperty(swInstructionsPropertyType::UseDocumentUnits, nullptr, 0);
 		const int Units = mInstructions->GetIntProperty(swInstructionsPropertyType::DocumentUnits, nullptr, 0);
@@ -209,6 +248,13 @@ swInstructionsPropertiesWidget::swInstructionsPropertiesWidget(QWidget* Parent, 
 		QSignalBlocker MarginsBlocker(ShowMarginsAction);
 
 		ShowMarginsAction->setChecked(mInstructions->IsMarginsShown());
+
+		for (const std::pair<QAction*, swShownGetter>& ShowAction : ShowActions)
+		{
+			QSignalBlocker ShowBlocker(ShowAction.first);
+			ShowAction.first->setChecked((mInstructions->*ShowAction.second)());
+		}
+
 		DocumentUnitsAction->setChecked(UseDocumentUnits);
 		DocumentUnitsMenu->setEnabled(UseDocumentUnits);
 

@@ -18,6 +18,16 @@ struct swInstructionsPreferences
 	bool GridWithinMargins;
 	bool NewModelDefaults;
 	bool ShowMargins;
+	bool ShowRulers;
+	bool ShowElementMargins;
+	bool ShowElementPadding;
+	bool ShowElementAnchors;
+	quint32 ElementMarginColor;
+	quint32 ElementPaddingColor;
+	quint32 ElementAnchorColor;
+	int ElementMarginAlpha;
+	int ElementPaddingAlpha;
+	int ElementAnchorAlpha;
 	QColor GridPrimaryColor;
 	QColor GridSecondaryColor;
 	QColor MarginColor;
@@ -116,6 +126,7 @@ private slots:
 	void LineWidthSliderValueChanged();
 	void AxisIconCubeOutlineAlphaChanged();
 	void CutawayShadeAlphaChanged();
+	void ElementAlphaChanged();
 	void RenderTargetChanged();
 	void MeshLODSliderValueChanged();
 	void FadeStepsToggled();
@@ -174,6 +185,10 @@ private:
 	QToolButton* mInstructionsMarginColor = nullptr;
 	QCheckBox* mInstructionsNewModelDefaults = nullptr;
 	QCheckBox* mInstructionsShowMargins = nullptr;
+	QCheckBox* mInstructionsShowRulers = nullptr;
+	QCheckBox* mInstructionsShowElementMargins = nullptr;
+	QCheckBox* mInstructionsShowElementPadding = nullptr;
+	QCheckBox* mInstructionsShowElementAnchors = nullptr;
 	QCheckBox* mInstructionsEditorHighlight = nullptr;
 	QCheckBox* mInstructionsEditorNumbers = nullptr;
 	QCheckBox* mInstructionsEditorWrap = nullptr;

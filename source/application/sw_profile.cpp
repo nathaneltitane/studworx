@@ -287,6 +287,16 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Instructions", "GridPrimaryColor", SW_RGBA(61, 174, 233, 110)),            // SW_PROFILE_INSTRUCTIONS_GRID_PRIMARY_COLOR
 	swProfileEntry("Instructions", "GridSecondaryColor", SW_RGBA(61, 174, 233, 40)),           // SW_PROFILE_INSTRUCTIONS_GRID_SECONDARY_COLOR
 	swProfileEntry("Instructions", "MarginColor", SW_RGBA(61, 174, 233, 160)),                 // SW_PROFILE_INSTRUCTIONS_MARGIN_COLOR
+	swProfileEntry("Instructions", "ShowElementMargins", 0),                                   // SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_MARGINS
+	swProfileEntry("Instructions", "ShowElementPadding", 0),                                   // SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_PADDING
+	swProfileEntry("Instructions", "ShowElementAnchors", 0),                                   // SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_ANCHORS
+	swProfileEntry("Instructions", "ShowRulers", 1),                                           // SW_PROFILE_INSTRUCTIONS_SHOW_RULERS
+	swProfileEntry("Instructions", "ElementMarginColor", SW_RGB(246, 178, 107)),               // SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR
+	swProfileEntry("Instructions", "ElementMarginAlpha", 66),                                  // SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_ALPHA
+	swProfileEntry("Instructions", "ElementPaddingColor", SW_RGB(147, 196, 125)),              // SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR
+	swProfileEntry("Instructions", "ElementPaddingAlpha", 55),                                 // SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_ALPHA
+	swProfileEntry("Instructions", "ElementAnchorColor", SW_RGB(214, 51, 160)),                // SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR
+	swProfileEntry("Instructions", "ElementAnchorAlpha", 100),                                 // SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_ALPHA
 	swProfileEntry("InstructionsDefaults", "PageWidth", 1008.0f),                              // SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_WIDTH
 	swProfileEntry("InstructionsDefaults", "PageHeight", 612.0f),                              // SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_HEIGHT
 	swProfileEntry("InstructionsDefaults", "MarginLeft", 36.0f),                               // SW_PROFILE_INSTRUCTIONS_DEFAULT_MARGIN_LEFT

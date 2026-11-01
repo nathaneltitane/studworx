@@ -1924,6 +1924,8 @@
 				<li><b>Step images.</b> Parts new to each step are outlined and the earlier ones fade.</li>
 				<li><b>Placement.</b> Place, drag and lock every page element within the page margins, on a snapping page grid.</li>
 				<li><b>Elements.</b> Page numbers, colors, fonts, padding, margin, border and background for every page element, plus notices and pointers to emphasize parts and steps.</li>
+				<li><b>Rulers.</b> Horizontal and vertical rulers measure the page in the page units, or the document units when they are in use, with the page and its margins shaded and an arrow on each ruler that follows the pointer. Show Rulers turns them on and off.</li>
+				<li><b>Element inspector.</b> Like the box model of a web browser inspector, Show Element Margins and Show Element Padding fill the margin around and the padding inside every page element, and Show Element Anchors marks its corners, edge centers and center. Each overlay has its own color and alpha in the Colors <a href="#preferences">preferences</a>, and none of them is printed.</li>
 				<li><b>Print and Editor.</b> A built-in Print panel, and an Editor panel to read and edit the model file text.</li>
 			</ul>
 
@@ -2043,8 +2045,8 @@
 				<li><b>General.</b> Reference paths, the author of new <a href="#models">models</a> built from a name, email address and comment, such as All rights reserved, joined by the author line splitter and previewed as the author line, and the parts library, LGEO and POV-Ray locations.</li>
 				<li><b>Startup and <a href="#files">files</a>.</b> Open the most recent file, restore the tab layout, load all parts before showing a model, watch for file changes and migrate LeoCAD models automatically.</li>
 				<li><b><a href="#rendering">Rendering</a> and <a href="#views">Views</a>.</b> Rendering quality, the Blender add-on settings, and the Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups.</li>
-				<li><b>Colors and <a href="#instructions">Instructions</a>.</b> <a href="#interface">Interface</a> and view colors, edge contrast, and the default instruction page settings.</li>
-				<li><b>View colors.</b> Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, flex paths, the view cube and every axis.</li>
+				<li><b>Colors and <a href="#instructions">Instructions</a>.</b> <a href="#interface">Interface</a> and view colors, edge contrast, the default instruction page settings, and the rulers and element inspector overlays of the instructions page.</li>
+				<li><b>View colors.</b> Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, flex paths, the view cube, every axis, and the element margin, padding and anchor overlays of the instructions page, each with an alpha slider.</li>
 				<li><b>Categories.</b> Part categories turned on and off with a checkbox, edited, imported and exported.</li>
 				<li><b>Keyboard and Mouse.</b> Shortcuts recorded by clicking, importable and exportable.</li>
 				<li><b>Shortcut filters.</b> Filter commands and tools by name or shortcut, give each two shortcuts, and reset them to the defaults.</li>
@@ -2645,7 +2647,7 @@
 				<h2>HELP // EVERY WHAT&#x27;S THIS ENTRY</h2>
 			</header>
 
-			<p class="lead">The same help the app shows from Help &gt; What&#x27;s This?, the title bar question mark or F1: 459 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
+			<p class="lead">The same help the app shows from Help &gt; What&#x27;s This?, the title bar question mark or F1: 460 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
 			<div class="tools-help">
 				<input id="search-help" type="search" placeholder="Search help" aria-label="Search help">
@@ -2915,6 +2917,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Preferences","title":"Blender Add-on Settings","paragraphs":["Open the separate Blender configuration dialog. Its Apply action saves its settings independently of Preferences, and choosing an executable or importer can configure Blender immediately."]},
 				{"group":"Preferences","title":"View Preferences","paragraphs":["Choose navigation aids for model views and the preview, the cutaway size and shade, the idle turntable, and the base grid. Locations select the corner where each navigation aid appears."]},
 				{"group":"Preferences","title":"Display Colors","paragraphs":["Choose colors for the background, objects, grid, and interface. These settings control the display; they do not change the LDraw colors assigned to model parts."]},
+				{"group":"Preferences","title":"Instructions","paragraphs":["Colors of the element inspector of the instructions page, drawn like the box model of a web browser inspector: the margin fill around each element, the padding fill inside its border, and markers at its anchors, the corners, edge centers and center that placement aligns to. Each color has an alpha from 0, transparent, to 1, opaque.","Show or hide each overlay with Show Element Margins, Show Element Padding and Show Element Anchors in the Instructions preferences or the Options menu of the Instructions window. The overlays show on screen only and are never printed."]},
 				{"group":"Preferences","title":"Part Categories","paragraphs":["Create, edit, reorder, or import categories for the part browser. The right-hand list shows parts matching the selected category. Imported and edited categories are saved when you choose OK in Preferences; Export writes the current list immediately."]},
 				{"group":"Preferences","title":"Keyboard Shortcuts","paragraphs":["Select a command, click Key Sequence, press the desired key combination, then choose Assign. Remove clears the selected command's shortcut. Import replaces the shortcut list; Export writes the current list immediately. Choose OK in Preferences to save changes."]},
 				{"group":"Preferences","title":"Key Sequence","paragraphs":["Click here and press the key combination you want to assign. Function keys, including F1, are recorded as shortcut candidates in this field. Use the Help button for guidance. Assign asks before replacing a shortcut already used by another command."]},
