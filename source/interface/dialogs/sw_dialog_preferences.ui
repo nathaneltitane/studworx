@@ -4303,7 +4303,7 @@
   <tabstop>mouseSensitivity</tabstop>
  </tabstops>
  <resources>
-  <include location="../../../resources/studworx.qrc"/>
+  <include location="../../../resources/build/studworx.qrc"/>
  </resources>
  <connections>
   <connection>

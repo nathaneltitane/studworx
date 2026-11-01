@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # build a studworx windows installer from a release build, run in git bash after nmake
-# usage: packaging/windows.sh [build directory]
+# usage: resources/packaging/windows/windows.sh [build directory]
 
 set -e
 
@@ -13,7 +13,7 @@ then
 	directory_script="."
 fi
 
-directory_source="$(cd "${directory_script}/.." && pwd)"
+directory_source="$(cd "${directory_script}/../../.." && pwd)"
 directory_build="${1:-${directory_source}/build/windows}"
 
 # version from the release date
@@ -68,7 +68,7 @@ do
 done < <(find "${directory_package}" -mindepth 1 -depth)
 
 # build the installer
-cp "${directory_source}/packaging/studworx.nsi" "${directory_build}/"
+cp "${directory_source}/resources/packaging/windows/studworx.nsi" "${directory_build}/"
 
 file_package="${directory_build}/studworx-windows-${package_version}-x64.exe"
 

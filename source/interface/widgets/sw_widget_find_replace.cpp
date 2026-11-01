@@ -34,7 +34,7 @@ swFindReplaceWidget::swFindReplaceWidget(QWidget* Parent, swModel* Model, bool R
 	// close button first
 	QToolButton* CloseButton = new QToolButton(this);
 	CloseButton->setAutoRaise(false);
-	CloseButton->setIcon(QIcon(":/stylesheet/close.svg"));
+	CloseButton->setIcon(swCreatePaintedIcon(swPaintedIcon::Close));
 	CloseButton->setToolTip(tr("Close"));
 	CloseButton->setFocusPolicy(Qt::NoFocus);
 	CloseButton->setFixedSize(ButtonHeight, ButtonHeight);

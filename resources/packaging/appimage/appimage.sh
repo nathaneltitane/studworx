@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # build a studworx appimage that carries its own qt libraries
-# usage: packaging/appimage.sh [build directory]
+# usage: resources/packaging/appimage/appimage.sh [build directory]
 
 set -e
 
@@ -13,16 +13,16 @@ then
 	directory_script="."
 fi
 
-directory_source="$(cd "${directory_script}/.." && pwd)"
+directory_source="$(cd "${directory_script}/../../.." && pwd)"
 directory_build="${1:-${directory_source}/build/appimage}"
 
 package_architecture="$(uname -m)"
 
-source "${directory_source}/packaging/bundle.sh"
+source "${directory_source}/resources/packaging/common/bundle.sh"
 
 # lay out the appdir root readable and enterable by every user
 chmod 755 "${directory_package}"
-cp "${directory_source}/packaging/AppRun" "${directory_package}/AppRun"
+cp "${directory_source}/resources/packaging/appimage/AppRun" "${directory_package}/AppRun"
 chmod 755 "${directory_package}/AppRun"
 cp "${directory_source}/platform/studworx.desktop" "${directory_package}/studworx.desktop"
 cp "${directory_source}/resources/icons/256x256/apps/studworx.png" "${directory_package}/studworx.png"

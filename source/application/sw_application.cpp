@@ -366,7 +366,7 @@ void swApplication::UpdateStyle()
 		if (!Style)
 			return;
 
-		QApplication::setStyle(new swInterfaceStyle(Style));
+		QApplication::setStyle(new swInterfaceStyle(Style, true));
 
 		QPalette Palette = QApplication::palette();
 

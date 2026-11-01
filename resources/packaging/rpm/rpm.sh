@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # build a studworx rpm that carries its own qt libraries
-# usage: packaging/rpm.sh [build directory]
+# usage: resources/packaging/rpm/rpm.sh [build directory]
 
 set -e
 
@@ -13,7 +13,7 @@ then
 	directory_script="."
 fi
 
-directory_source="$(cd "${directory_script}/.." && pwd)"
+directory_source="$(cd "${directory_script}/../../.." && pwd)"
 directory_build="${1:-${directory_source}/build/rpm}"
 
 package_architecture="$(uname -m)"
@@ -26,7 +26,7 @@ then
 	PATH="${directory_qt}:${PATH}"
 fi
 
-source "${directory_source}/packaging/bundle.sh"
+source "${directory_source}/resources/packaging/common/bundle.sh"
 
 # bundled libraries are not required from the system
 list_bundled=()
@@ -54,7 +54,7 @@ fi
 directory_rpm="${directory_build}/rpmbuild"
 mkdir -p "${directory_rpm}"
 
-rpmbuild -bb "${directory_source}/packaging/studworx.spec" \
+rpmbuild -bb "${directory_source}/resources/packaging/rpm/studworx.spec" \
 	--define "_topdir ${directory_rpm}" \
 	--define "sw_version ${package_version//-/}" \
 	--define "sw_root ${directory_package}" \

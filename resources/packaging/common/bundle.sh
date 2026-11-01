@@ -11,7 +11,7 @@ then
 	directory_script="."
 fi
 
-directory_source="$(cd "${directory_script}/.." && pwd)"
+directory_source="$(cd "${directory_script}/../../.." && pwd)"
 directory_prefix="/opt/studworx"
 
 # version from the release date

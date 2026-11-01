@@ -48,7 +48,7 @@ swViewWidget::swViewWidget(QWidget* Parent, swView* View)
 
 		// close button first
 		QToolButton* CameraCloseButton = new QToolButton(mCameraBar);
-		CameraCloseButton->setIcon(QIcon(":/stylesheet/close.svg"));
+		CameraCloseButton->setIcon(swCreatePaintedIcon(swPaintedIcon::Close));
 		CameraCloseButton->setAccessibleName(tr("Free Camera"));
 		CameraCloseButton->setToolTip(tr("Stop looking through this camera."));
 		CameraCloseButton->setAutoRaise(false);
@@ -80,7 +80,7 @@ swViewWidget::swViewWidget(QWidget* Parent, swView* View)
 
 		// close button first
 		mEndEditingButton = new QToolButton(mModelEditingBar);
-		mEndEditingButton->setIcon(QIcon(":/stylesheet/close.svg"));
+		mEndEditingButton->setIcon(swCreatePaintedIcon(swPaintedIcon::Close));
 		mEndEditingButton->setAccessibleName(tr("End Editing"));
 		mEndEditingButton->setToolTip(tr("Return to editing the tab's model."));
 		mEndEditingButton->setAutoRaise(false);

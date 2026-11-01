@@ -126,7 +126,7 @@ unix:!macx {
 	docs.path = $$DOCS_DIR
 	docs.files = README.md LICENSE.md CREDITS.md
 	man.path = $$MAN_DIR
-	man.files = documentation/studworx.1
+	man.files = resources/documentation/studworx.1
 	desktop.path = $$DESKTOP_DIR
 	desktop.files = platform/studworx.desktop
 	icons.path = $$ICON_DIR/hicolor
@@ -142,7 +142,7 @@ unix:!macx {
 	mime.path = $$MIME_DIR
 	mime.files = platform/studworx.xml
 	appdata.path = $$APPDATA_DIR
-	appdata.files = packaging/io.github.nathaneltitane.StudWorx.appdata.xml
+	appdata.files = resources/packaging/common/io.github.nathaneltitane.StudWorx.appdata.xml
 	thumbnailer.path = $$THUMBNAILER_DIR
 	thumbnailer.files = platform/studworx.thumbnailer
 
@@ -188,7 +188,7 @@ include(source/transput/transput.pri)
 include(source/interface/interface.pri)
 
 OTHER_FILES +=
-RESOURCES += resources/studworx.qrc resources/interface/stylesheet/stylesheet.qrc
+RESOURCES += resources/build/studworx.qrc resources/build/stylesheet.qrc
 
 !win32 {
 	TRANSLATIONS = resources/translations/studworx_cs.ts resources/translations/studworx_de.ts resources/translations/studworx_en.ts resources/translations/studworx_es.ts resources/translations/studworx_fr.ts resources/translations/studworx_pt.ts resources/translations/studworx_ru.ts resources/translations/studworx_uk.ts resources/translations/studworx_zh_CN.ts resources/translations/studworx_zh_TW.ts

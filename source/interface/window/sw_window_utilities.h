@@ -50,13 +50,20 @@ protected:
 class swInterfaceStyle : public QProxyStyle
 {
 public:
-	explicit swInterfaceStyle(QStyle* Style)
-		: QProxyStyle(Style)
+	explicit swInterfaceStyle(QStyle* Style, bool Custom = false)
+		: QProxyStyle(Style), mCustom(Custom)
 	{
 	}
 
 	void drawControl(ControlElement Element, const QStyleOption* Option, QPainter* Painter, const QWidget* Widget) const override;
 	QSize sizeFromContents(ContentsType Type, const QStyleOption* Option, const QSize& Size, const QWidget* Widget) const override;
+	void drawPrimitive(PrimitiveElement Element, const QStyleOption* Option, QPainter* Painter, const QWidget* Widget) const override;
+	QIcon standardIcon(StandardPixmap Pixmap, const QStyleOption* Option, const QWidget* Widget) const override;
+
+protected:
+	void drawBranch(const QStyleOption* Option, QPainter* Painter) const;
+
+	bool mCustom;
 };
 
 // Fits a floating panel to its contents.
@@ -167,6 +174,8 @@ enum class swPaintedIcon
 	CursorRotateY,
 	BadgeAdd,
 	BadgeRemove,
+	Close,
+	Undock,
 	Count
 };
 

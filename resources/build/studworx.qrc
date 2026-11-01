@@ -1,0 +1,45 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file alias="studworx.png">../icons/64x64/apps/studworx.png</file>
+        <file alias="data/studlogo1.zip">../data/studlogo1.zip</file>
+        <file alias="data/studlogo2.zip">../data/studlogo2.zip</file>
+        <file alias="data/studlogo3.zip">../data/studlogo3.zip</file>
+        <file alias="data/studlogo4.zip">../data/studlogo4.zip</file>
+        <file alias="data/studlogo5.zip">../data/studlogo5.zip</file>
+        <file alias="data/studslegostyle1.zip">../data/studslegostyle1.zip</file>
+        <file alias="data/studslegostyle2.zip">../data/studslegostyle2.zip</file>
+        <file alias="data/ldconfig.ldr">../data/ldconfig.ldr</file>
+        <file alias="data/minifig.ini">../data/minifig.ini</file>
+        <file alias="data/ldraw.xml">../data/ldraw.xml</file>
+        <file alias="data/ldraw2bl.txt">../data/ldraw2bl.txt</file>
+        <file alias="data/traintrack.json">../data/traintrack.json</file>
+        <file alias="translations/studworx_cs.qm">../translations/studworx_cs.qm</file>
+        <file alias="translations/studworx_de.qm">../translations/studworx_de.qm</file>
+        <file alias="translations/studworx_en.qm">../translations/studworx_en.qm</file>
+        <file alias="translations/studworx_es.qm">../translations/studworx_es.qm</file>
+        <file alias="translations/studworx_fr.qm">../translations/studworx_fr.qm</file>
+        <file alias="translations/studworx_pt.qm">../translations/studworx_pt.qm</file>
+        <file alias="translations/studworx_ru.qm">../translations/studworx_ru.qm</file>
+        <file alias="translations/studworx_uk.qm">../translations/studworx_uk.qm</file>
+        <file alias="translations/studworx_zh_CN.qm">../translations/studworx_zh_CN.qm</file>
+        <file alias="translations/studworx_zh_TW.qm">../translations/studworx_zh_TW.qm</file>
+        <file alias="shaders/fakelit_color_ps.glsl">../shaders/fakelit_color_ps.glsl</file>
+        <file alias="shaders/fakelit_color_vs.glsl">../shaders/fakelit_color_vs.glsl</file>
+        <file alias="shaders/fakelit_texture_decal_ps.glsl">../shaders/fakelit_texture_decal_ps.glsl</file>
+        <file alias="shaders/fakelit_texture_decal_vs.glsl">../shaders/fakelit_texture_decal_vs.glsl</file>
+        <file alias="shaders/outline_composite_ps.glsl">../shaders/outline_composite_ps.glsl</file>
+        <file alias="shaders/unlit_color_conditional_ps.glsl">../shaders/unlit_color_conditional_ps.glsl</file>
+        <file alias="shaders/unlit_color_conditional_vs.glsl">../shaders/unlit_color_conditional_vs.glsl</file>
+        <file alias="shaders/unlit_color_ps.glsl">../shaders/unlit_color_ps.glsl</file>
+        <file alias="shaders/unlit_color_vs.glsl">../shaders/unlit_color_vs.glsl</file>
+        <file alias="shaders/unlit_texture_decal_ps.glsl">../shaders/unlit_texture_decal_ps.glsl</file>
+        <file alias="shaders/unlit_texture_decal_vs.glsl">../shaders/unlit_texture_decal_vs.glsl</file>
+        <file alias="shaders/unlit_texture_modulate_ps.glsl">../shaders/unlit_texture_modulate_ps.glsl</file>
+        <file alias="shaders/unlit_texture_modulate_vs.glsl">../shaders/unlit_texture_modulate_vs.glsl</file>
+        <file alias="shaders/text_sdf_ps.glsl">../shaders/text_sdf_ps.glsl</file>
+        <file alias="shaders/unlit_vertex_color_ps.glsl">../shaders/unlit_vertex_color_ps.glsl</file>
+        <file alias="shaders/unlit_vertex_color_vs.glsl">../shaders/unlit_vertex_color_vs.glsl</file>
+        <file alias="shaders/unlit_view_cube_ps.glsl">../shaders/unlit_view_cube_ps.glsl</file>
+        <file alias="shaders/unlit_view_cube_vs.glsl">../shaders/unlit_view_cube_vs.glsl</file>
+    </qresource>
+</RCC>

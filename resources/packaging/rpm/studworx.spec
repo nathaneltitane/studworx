@@ -1,4 +1,4 @@
-# packages the tree staged by packaging/rpm.sh, which defines sw_version sw_root and sw_bundled
+# packages the tree staged by resources/packaging/rpm/rpm.sh, which defines sw_version sw_root and sw_bundled
 
 %global debug_package %{nil}
 %global _build_id_links none

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # build a studworx deb that carries its own qt libraries
-# usage: packaging/deb.sh [build directory]
+# usage: resources/packaging/deb/deb.sh [build directory]
 
 set -e
 
@@ -13,12 +13,12 @@ then
 	directory_script="."
 fi
 
-directory_source="$(cd "${directory_script}/.." && pwd)"
+directory_source="$(cd "${directory_script}/../../.." && pwd)"
 directory_build="${1:-${directory_source}/build/deb}"
 
 package_architecture="$(dpkg --print-architecture)"
 
-source "${directory_source}/packaging/bundle.sh"
+source "${directory_source}/resources/packaging/common/bundle.sh"
 
 # depend on the system libraries the package links, the bundled ones resolve to the package itself
 directory_shlibs="$(mktemp -d "${directory_build}/shlibs.XXXXXX")"

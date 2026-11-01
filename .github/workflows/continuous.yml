@@ -83,7 +83,7 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y qtbase5-dev qttools5-dev-tools libqt5opengl5-dev libqt5svg5 qt5-image-formats-plugins zlib1g-dev
     - name: Build package
-      run: packaging/deb.sh build/deb
+      run: resources/packaging/deb/deb.sh build/deb
     - name: Test package
       run: |
         for image in debian:12 debian:13 ubuntu:22.04 ubuntu:24.04
@@ -116,7 +116,7 @@ jobs:
         echo "text=${BASH_REMATCH[1]}" >> "$GITHUB_OUTPUT"
     - name: Build package
       run: |
-        docker run --rm -v "$PWD:/src" rockylinux:9 bash -c 'dnf install -y -q epel-release && dnf install -y -q qt5-qtbase-devel qt5-linguist qt5-qtsvg qt5-qtimageformats gcc-c++ make rpm-build zlib-devel findutils && bash /src/packaging/rpm.sh /src/build/rpm'
+        docker run --rm -v "$PWD:/src" rockylinux:9 bash -c 'dnf install -y -q epel-release && dnf install -y -q qt5-qtbase-devel qt5-linguist qt5-qtsvg qt5-qtimageformats gcc-c++ make rpm-build zlib-devel findutils && bash /src/resources/packaging/rpm/rpm.sh /src/build/rpm'
         sudo chown -R "$(id -u):$(id -g)" build
     - name: Test package
       run: |
@@ -154,7 +154,7 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y qtbase5-dev qttools5-dev-tools libqt5opengl5-dev libqt5svg5 qt5-image-formats-plugins zlib1g-dev
     - name: Build package
-      run: packaging/appimage.sh build/appimage
+      run: resources/packaging/appimage/appimage.sh build/appimage
     - name: Test package
       run: |
         docker run --rm -v "$PWD/build/appimage:/appimage" debian:12 sh -c 'apt-get update -qq && apt-get install -y -qq libgl1 libegl1 libfontconfig1 libglib2.0-0 libdbus-1-3 libcups2 > /dev/null && cd /tmp && /appimage/studworx-*.appimage --appimage-extract > /dev/null && QT_QPA_PLATFORM=offscreen squashfs-root/AppRun --version'
@@ -302,7 +302,7 @@ jobs:
         if-no-files-found: ignore
     - name: Build package
       shell: bash
-      run: packaging/windows.sh build/windows
+      run: resources/packaging/windows/windows.sh build/windows
     - name: Upload package
       uses: actions/upload-artifact@v7
       with:

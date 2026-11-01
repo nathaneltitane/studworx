@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # bump the release date version when main gets code changes after its release
-# enable with: git config core.hooksPath hooks
+# enable as the pre-push hook with: ln -s ../../tools/studworx-version-bump .git/hooks/pre-push
 
 set -e
 
@@ -61,7 +61,7 @@ then
 fi
 
 # code changes only, documentation and tools do not make a release
-paths_code=(source resources ':!resources/translations' platform packaging '*.pro' '*.pri')
+paths_code=(source resources ':!resources/translations' ':!resources/documentation' ':!resources/images' platform '*.pro' '*.pri')
 
 if [ -z "$(git diff --name-only "${sha_release}" HEAD -- "${paths_code[@]}")" ]
 then

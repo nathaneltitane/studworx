@@ -156,6 +156,116 @@ QSize swInterfaceStyle::sizeFromContents(ContentsType Type, const QStyleOption* 
 	return Result;
 }
 
+void swInterfaceStyle::drawPrimitive(PrimitiveElement Element, const QStyleOption* Option, QPainter* Painter, const QWidget* Widget) const
+{
+	// custom theme draws its own tree branches, system styles keep theirs
+	if (Element == PE_IndicatorBranch && mCustom)
+	{
+		drawBranch(Option, Painter);
+		return;
+	}
+
+	if (Element != PE_IndicatorTabClose)
+	{
+		QProxyStyle::drawPrimitive(Element, Option, Painter, Widget);
+		return;
+	}
+
+	const bool Enabled = Option->state & State_Enabled;
+
+	// shade behind the cross on hover and press
+	if (Enabled && (Option->state & (State_MouseOver | State_Sunken)))
+	{
+		QColor Color = Option->palette.color(QPalette::WindowText);
+		Color.setAlpha((Option->state & State_Sunken) ? 40 : 30);
+
+		Painter->save();
+		Painter->setRenderHint(QPainter::Antialiasing);
+		Painter->setPen(Qt::NoPen);
+		Painter->setBrush(Color);
+		Painter->drawRoundedRect(Option->rect, 3, 3);
+		Painter->restore();
+	}
+
+	swCreatePaintedIcon(swPaintedIcon::Close).paint(Painter, Option->rect.adjusted(2, 2, -2, -2), Qt::AlignCenter, Enabled ? QIcon::Normal : QIcon::Disabled);
+}
+
+// use to draw tree lines, and chevrons on parent rows
+void swInterfaceStyle::drawBranch(const QStyleOption* Option, QPainter* Painter) const
+{
+	const QRect& Rect = Option->rect;
+	const QPoint Center = Rect.center();
+
+	QColor Color = Option->palette.color(QPalette::WindowText);
+	Color.setAlpha(60);
+
+	Painter->save();
+
+	if (Option->state & State_Children)
+	{
+		const qreal Size = 3.0;
+		const QPointF Middle = QRectF(Rect).center();
+		QPainterPath Path;
+
+		if (Option->state & State_Open)
+		{
+			Path.moveTo(Middle + QPointF(-Size, -Size / 2.0));
+			Path.lineTo(Middle + QPointF(0.0, Size / 2.0));
+			Path.lineTo(Middle + QPointF(Size, -Size / 2.0));
+		}
+		else
+		{
+			const qreal Direction = Option->direction == Qt::RightToLeft ? -1.0 : 1.0;
+
+			Path.moveTo(Middle + QPointF(-Size / 2.0 * Direction, -Size));
+			Path.lineTo(Middle + QPointF(Size / 2.0 * Direction, 0.0));
+			Path.lineTo(Middle + QPointF(-Size / 2.0 * Direction, Size));
+		}
+
+		Painter->setRenderHint(QPainter::Antialiasing);
+		Painter->strokePath(Path, QPen(Color, 2.0, Qt::SolidLine, Qt::FlatCap, Qt::MiterJoin));
+	}
+	else
+	{
+		Painter->setPen(Color);
+
+		// rows with following siblings carry the line through
+		if (Option->state & State_Sibling)
+			Painter->drawLine(Center.x(), Rect.top(), Center.x(), Rect.bottom());
+
+		if (Option->state & State_Item)
+		{
+			if (!(Option->state & State_Sibling))
+				Painter->drawLine(Center.x(), Rect.top(), Center.x(), Center.y());
+
+			if (Option->direction == Qt::RightToLeft)
+				Painter->drawLine(Rect.left(), Center.y(), Center.x(), Center.y());
+			else
+				Painter->drawLine(Center.x(), Center.y(), Rect.right(), Center.y());
+		}
+	}
+
+	Painter->restore();
+}
+
+QIcon swInterfaceStyle::standardIcon(StandardPixmap Pixmap, const QStyleOption* Option, const QWidget* Widget) const
+{
+	switch (Pixmap)
+	{
+	case SP_TitleBarCloseButton:
+	case SP_DockWidgetCloseButton:
+		return swCreatePaintedIcon(swPaintedIcon::Close);
+
+	case SP_TitleBarNormalButton:
+		return swCreatePaintedIcon(swPaintedIcon::Undock);
+
+	default:
+		break;
+	}
+
+	return QProxyStyle::standardIcon(Pixmap, Option, Widget);
+}
+
 bool swInterfaceFitFilter::eventFilter(QObject* Object, QEvent* Event)
 {
 	if (!Object->isWidgetType())
@@ -1668,6 +1778,16 @@ static void swDrawPaintedIcon(QPainter* Painter, swPaintedIcon Icon, const QSize
 
 	case swPaintedIcon::BadgeRemove:
 		Draw.Stroke(swCreateIconLine({ { 4, 12 }, { 20, 12 } }), 4);
+		break;
+
+	case swPaintedIcon::Close:
+		Draw.Stroke(swCreateIconLine({ { 6, 6 }, { 18, 18 } }));
+		Draw.Stroke(swCreateIconLine({ { 18, 6 }, { 6, 18 } }));
+		break;
+
+	case swPaintedIcon::Undock:
+		Draw.Stroke(swCreateIconRect(4, 9, 15, 20, 1));
+		Draw.Stroke(swCreateIconLine({ { 9, 9 }, { 9, 4 }, { 20, 4 }, { 20, 15 }, { 15, 15 } }));
 		break;
 	}
 

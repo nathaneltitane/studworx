@@ -1414,7 +1414,7 @@ void swPartSelectionWidget::FilterCategoriesChanged(const QString& Text)
 	{
 		if (!Text.isEmpty())
 		{
-			mFilterCategoriesAction = mFilterCategoriesWidget->addAction(QIcon(":/stylesheet/close.svg"), QLineEdit::TrailingPosition);
+			mFilterCategoriesAction = mFilterCategoriesWidget->addAction(swCreatePaintedIcon(swPaintedIcon::Close), QLineEdit::TrailingPosition);
 			connect(mFilterCategoriesAction, &QAction::triggered, this, &swPartSelectionWidget::FilterCategoriesTriggered);
 		}
 	}
@@ -1448,7 +1448,7 @@ void swPartSelectionWidget::FilterChanged(const QString& Text)
 	{
 		if (!Text.isEmpty())
 		{
-			mFilterAction = mFilterWidget->addAction(QIcon(":/stylesheet/close.svg"), QLineEdit::TrailingPosition);
+			mFilterAction = mFilterWidget->addAction(swCreatePaintedIcon(swPaintedIcon::Close), QLineEdit::TrailingPosition);
 			connect(mFilterAction, &QAction::triggered, this, &swPartSelectionWidget::FilterTriggered);
 		}
 	}

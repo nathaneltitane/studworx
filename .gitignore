@@ -33,7 +33,7 @@ studworx_plugin_import.cpp
 studworx_resource.*
 povray
 uic_wrapper.bat
-/packaging/*.exe
+/resources/packaging/windows/*.exe
 appdir
 studworx-windows*.exe
 *.snap
