@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # open the translation catalogs in qt linguist
+
 # usage: tools/studworx-language-edit [language]
 
 set -e

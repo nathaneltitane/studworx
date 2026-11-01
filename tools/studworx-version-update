@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # move the release date version to a new date, today by default
+
 # usage: tools/studworx-version-update [yyyy-mm-dd]
 
 set -e
