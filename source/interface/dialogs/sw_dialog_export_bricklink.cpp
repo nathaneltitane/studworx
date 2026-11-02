@@ -79,14 +79,14 @@ swBrickLinkExportDialog::swBrickLinkExportDialog(QWidget* Parent)
 	// keep the rows together at the top of the minimum dialog size
 	MainLayout->addStretch(1);
 
-	QDialogButtonBox* ButtonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
+	QDialogButtonBox* ButtonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
 	ButtonBox->button(QDialogButtonBox::Ok)->setText(tr("Export..."));
 	MainLayout->addWidget(ButtonBox);
 
 	connect(ButtonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
 	connect(ButtonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
-	swSetupDialogHelp(this, ButtonBox);
+	swSetupDialogHelp(this);
 }
 
 swBrickLinkOptions swBrickLinkExportDialog::GetOptions() const
@@ -110,15 +110,15 @@ QString swChooseBrickLinkMappingFile(QWidget* Parent, const QString& FileName)
 }
 
 // use to build or refresh a mapping file
-bool swUpdateBrickLinkMappingFile(QWidget* Parent, const QString& FileName, bool ShowSummary)
+bool swUpdateBrickLinkMappingFile(QWidget* Parent, const QString& FileName, bool ShowSummary, const QString& ApiKey)
 {
 	const QString Title = QCoreApplication::translate("swBrickLinkExportDialog", "Update BrickLink Mapping");
-	const QString ApiKey = swRequestRebrickableApiKey(Parent, QCoreApplication::translate("swBrickLinkExportDialog", "BrickLink part numbers and colors are downloaded from Rebrickable."));
+	const QString Key = !ApiKey.isEmpty() ? ApiKey : swRequestRebrickableApiKey(Parent, QCoreApplication::translate("swBrickLinkExportDialog", "BrickLink part numbers and colors are downloaded from Rebrickable."));
 
-	if (ApiKey.isEmpty())
+	if (Key.isEmpty())
 		return false;
 
-	const swResult<int> Result = swUpdateBrickLinkMapping(Parent, FileName, ApiKey);
+	const swResult<int> Result = swUpdateBrickLinkMapping(Parent, FileName, Key);
 
 	if (!Result)
 	{

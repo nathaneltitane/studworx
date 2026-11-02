@@ -99,7 +99,7 @@ swViewWidget::swViewWidget(QWidget* Parent, swView* View)
 			mView->SetTopSubmodelActive();
 		});
 
-		swSetupWidgetHelp(mModelEditingBar, nullptr);
+		swSetupWidgetHelp(mModelEditingBar);
 		UpdateModelEditingPath();
 	}
 }

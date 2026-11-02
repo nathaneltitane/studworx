@@ -30,6 +30,7 @@ static const QString swBrickLinkMappingKeyColors = QStringLiteral("Colors");
 
 // wanted lists are numbers or the address of their bricklink page
 static const QString swBrickLinkUploadUrl = QStringLiteral("https://www.bricklink.com/v2/wanted/upload.page");
+static const QString swRebrickableApiKeyUrl = QStringLiteral("https://rebrickable.com/api/");
 static const QRegularExpression swBrickLinkWantedListNumber(QStringLiteral("^\\d*$"));
 static const QRegularExpression swBrickLinkWantedListUrl(QStringLiteral("^https?://"), QRegularExpression::CaseInsensitiveOption);
 static const QRegularExpression swBrickLinkWantedListUrlId(QStringLiteral("[?&]wantedMoreID=(\\d+)"), QRegularExpression::CaseInsensitiveOption);
@@ -64,6 +65,23 @@ std::optional<QString> swParseBrickLinkWantedListId(const QString& Text)
 QString swGetBrickLinkUploadUrl()
 {
 	return swBrickLinkUploadUrl;
+}
+
+QString swGetRebrickableApiKeyUrl()
+{
+	return swRebrickableApiKeyUrl;
+}
+
+QString swGetRebrickableKeyRejectedMessage()
+{
+	return QObject::tr("Rebrickable rejected the API key, so it was cleared. Enter a new one when asked, or under Preferences > General > Online Services.");
+}
+
+// use to drop a stored key that was turned down
+void swForgetRebrickableApiKey(const QString& ApiKey)
+{
+	if (swGetProfileString(SW_PROFILE_REBRICKABLE_API_KEY) == ApiKey)
+		swSetProfileString(SW_PROFILE_REBRICKABLE_API_KEY, QString());
 }
 
 void swSetBrickLinkOptions(const swBrickLinkOptions& Options)
@@ -306,7 +324,11 @@ static swResult<QJsonObject> swDownloadRebrickablePage(QProgressDialog& Progress
 
 		// a rejected key does not improve on retry
 		if (Status == 401 || Status == 403)
-			return swUnexpected(QObject::tr("Rebrickable rejected the API key. Check the key in your account settings at rebrickable.com."));
+		{
+			swForgetRebrickableApiKey(QUrlQuery(QUrl(Url)).queryItemValue(QStringLiteral("key")));
+
+			return swUnexpected(swGetRebrickableKeyRejectedMessage());
+		}
 
 		if (Failed)
 			continue;

@@ -5,6 +5,8 @@
 
   - Preferences: LDraw Color Configuration, LDraw Alternate Color Configuration, Minifigure Builder Settings and BrickLink Mapping each have an Update button that downloads the latest file from library.ldraw.org, ldraw.org or Rebrickable, the minifigure part list is saved as 'minifigure.ini'
   - Preferences: the bundled color configurations and minifigure part list are used until you set your own file, a set file that went missing is asked for again at startup
+  - Preferences: a new Online Services group on the General page holds the Rebrickable API key with a Get Key button to its page, a key Rebrickable rejects is cleared so you are asked again
+  - Dialogs: the Help buttons are gone, the question mark in the title bar and F1 explain every control
   - Preferences: Colors From moved into a new Colors group on the Rendering page, the Colors page is now Interface
   - Export BrickLink: choose the condition, the wanted list and new listing notices, the choices are remembered, also as '--bricklink-condition', '--bricklink-wanted-list' and '--bricklink-notify' on the command line
   - Command line: '--kmz-geometry all' or 'visible' chooses the KMZ geometry and replaces '--kmz-all-parts'

@@ -82,7 +82,6 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 	: QDialog(Parent), mOptions(Options), mModel(Model)
 {
 	setWindowTitle(tr("Save Model Image"));
-	setWindowFlag(Qt::WindowContextHelpButtonHint, true);
 	setWhatsThis(tr("<p><b>Save Model Image</b></p><p>Save images of the active model as seen from the current view. The preview shows exactly what will be saved.</p><p>Saving one step produces one image. Saving several steps produces a separate numbered image for each step.</p>"));
 
 	mLastStep = qMax(Options->End, 1);
@@ -508,7 +507,7 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 	for (QGridLayout* GridLayout : mGridLayouts)
 		GridLayout->setColumnStretch(1, 1);
 
-	swSetupDialogHelp(this, nullptr);
+	swSetupDialogHelp(this);
 
 	// redraw once edits settle
 	mPreviewTimer = new QTimer(this);

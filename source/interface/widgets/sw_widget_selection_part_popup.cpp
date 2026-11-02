@@ -21,9 +21,9 @@ swPartSelectionPopup::swPartSelectionPopup(swPartData* InitialPart, QWidget* Par
 	connect(mPartSelectionWidget, &swPartSelectionWidget::PartPicked, this, &swPartSelectionPopup::Accept);
 	connect(mPartSelectionWidget, &swPartSelectionWidget::LayoutChanged, this, &swPartSelectionPopup::ResizeToContents, Qt::QueuedConnection);
 
-	QDialogButtonBox* ButtonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, this);
+	QDialogButtonBox* ButtonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
 	Layout->addWidget(ButtonBox);
-	swSetupWidgetHelp(this, ButtonBox);
+	swSetupWidgetHelp(this);
 
 	QObject::connect(ButtonBox, &QDialogButtonBox::accepted, this, &swPartSelectionPopup::Accept);
 	QObject::connect(ButtonBox, &QDialogButtonBox::rejected, this, &swPartSelectionPopup::Reject);

@@ -256,8 +256,7 @@ swBlenderPreferencesDialog::swBlenderPreferencesDialog(int Width, int Height, do
 	ButtonBox->addButton(mResetButton,QDialogButtonBox::ActionRole);
 	connect(mResetButton, &QPushButton::clicked, this, &swBlenderPreferencesDialog::ResetSettings);
 
-	ButtonBox->addButton(QDialogButtonBox::Help);
-	swSetupDialogHelp(this, ButtonBox);
+	swSetupDialogHelp(this);
 	ButtonBox->addButton(QDialogButtonBox::Cancel);
 	connect(ButtonBox, &QDialogButtonBox::rejected, this, &swBlenderPreferencesDialog::reject);
 
@@ -2419,10 +2418,10 @@ void swBlenderPreferences::ResetSettings()
 
 	LastButton->setChecked(true);
 
-	QDialogButtonBox ButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help,
+	QDialogButtonBox ButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel,
 							   Qt::Horizontal, Dialog);
 	Layout->addWidget(&ButtonBox);
-	swSetupDialogHelp(Dialog, &ButtonBox);
+	swSetupDialogHelp(Dialog);
 	connect(&ButtonBox, &QDialogButtonBox::accepted, Dialog, &QDialog::accept);
 	connect(&ButtonBox, &QDialogButtonBox::rejected, Dialog, &QDialog::reject);
 

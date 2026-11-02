@@ -27,6 +27,9 @@ struct swBrickLinkExport
 swBrickLinkOptions swGetBrickLinkOptions();
 std::optional<QString> swParseBrickLinkWantedListId(const QString& Text);
 QString swGetBrickLinkUploadUrl();
+QString swGetRebrickableApiKeyUrl();
+QString swGetRebrickableKeyRejectedMessage();
+void swForgetRebrickableApiKey(const QString& ApiKey);
 void swSetBrickLinkOptions(const swBrickLinkOptions& Options);
 
 QString swGetBrickLinkMappingPath();

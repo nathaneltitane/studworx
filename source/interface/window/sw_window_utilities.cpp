@@ -6,6 +6,7 @@
 #include "sw_data_part.h"
 #include "sw_string.h"
 #include "sw_profile.h"
+#include "sw_shortcuts.h"
 #include "sw_color_configuration.h"
 #include <QPrintDialog>
 
@@ -23,7 +24,7 @@ QString swRequestRebrickableApiKey(QWidget* Parent, const QString& Purpose)
 		return StoredKey;
 
 	bool Ok = false;
-	const QString Key = QInputDialog::getText(Parent, QCoreApplication::translate("swRebrickable", "Rebrickable API Key"), QCoreApplication::translate("swRebrickable", "%1\nEnter your Rebrickable API key, available for free from your account settings at rebrickable.com:").arg(Purpose), QLineEdit::Normal, QString(), &Ok).trimmed();
+	const QString Key = QInputDialog::getText(Parent, QCoreApplication::translate("swRebrickable", "Rebrickable API Key"), QCoreApplication::translate("swRebrickable", "%1\nEnter your Rebrickable API key, free from your account settings at rebrickable.com.\nIt can be modified under Preferences > General > Online Services.").arg(Purpose), QLineEdit::Normal, QString(), &Ok).trimmed();
 
 	if (!Ok || Key.isEmpty())
 		return QString();
@@ -852,7 +853,7 @@ QToolButton* swAddPanelOptionsButton(QWidget* Row, QMenu* Menu, const QString& T
 	return OptionsButton;
 }
 
-void swSetupWidgetHelp(QWidget* Root, QDialogButtonBox* ButtonBox)
+void swSetupWidgetHelp(QWidget* Root)
 {
 	const auto ShowHelp = [Root](QWidget* Widget)
 	{
@@ -862,12 +863,6 @@ void swSetupWidgetHelp(QWidget* Root, QDialogButtonBox* ButtonBox)
 		if (Widget && !Widget->whatsThis().isEmpty())
 			QWhatsThis::showText(Widget->mapToGlobal(QPoint(0, Widget->height())), Widget->whatsThis(), Widget);
 	};
-
-	if (ButtonBox)
-		QObject::connect(ButtonBox, &QDialogButtonBox::helpRequested, Root, [Root, ShowHelp]()
-		{
-			ShowHelp(Root);
-		});
 
 	QShortcut* HelpShortcut = new QShortcut(QKeySequence(Qt::Key_F1), Root);
 	HelpShortcut->setContext(Qt::WidgetWithChildrenShortcut);
@@ -886,9 +881,26 @@ void swSetupWidgetHelp(QWidget* Root, QDialogButtonBox* ButtonBox)
 	QObject::connect(HelpShortcut, &QShortcut::activatedAmbiguously, Root, HelpActivated);
 }
 
-void swSetupDialogHelp(QDialog* Dialog, QDialogButtonBox* ButtonBox)
+// use to give dialogs the title bar what's this button, f1 and the what's this shortcut
+void swSetupDialogHelp(QDialog* Dialog)
 {
-	swSetupWidgetHelp(Dialog, ButtonBox);
+	Dialog->setWindowFlag(Qt::WindowContextHelpButtonHint, true);
+
+	swSetupWidgetHelp(Dialog);
+
+	// modal dialogs block the main window shortcut
+	const QKeySequence WhatsThisKey(gKeyboardShortcuts.mShortcuts[SW_HELP_WHATS_THIS]);
+
+	if (WhatsThisKey.isEmpty())
+		return;
+
+	QShortcut* WhatsThisShortcut = new QShortcut(WhatsThisKey, Dialog);
+	WhatsThisShortcut->setContext(Qt::WindowShortcut);
+
+	QObject::connect(WhatsThisShortcut, &QShortcut::activated, Dialog, []()
+	{
+		QWhatsThis::enterWhatsThisMode();
+	});
 }
 
 QString swFormatValue(float Value, int Precision)
@@ -1190,9 +1202,9 @@ swColorDialogPopup::swColorDialogPopup(const QColor& InitialColor, bool ShowAlph
 	mColorDialog->setAccessibleName(tr("Custom Color"));
 	mColorDialog->setToolTip(tr("Choose a color or enter its component values."));
 
-	QDialogButtonBox* ButtonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel|QDialogButtonBox::Help, this);
+	QDialogButtonBox* ButtonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel, this);
 	Layout->addWidget(ButtonBox);
-	swSetupWidgetHelp(this, ButtonBox);
+	swSetupWidgetHelp(this);
 
 	QObject::connect(ButtonBox, &QDialogButtonBox::accepted, this, &swColorDialogPopup::Accept);
 	QObject::connect(ButtonBox, &QDialogButtonBox::rejected, this, &swColorDialogPopup::Reject);

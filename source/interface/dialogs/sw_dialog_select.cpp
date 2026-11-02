@@ -12,7 +12,7 @@ swSelectDialog::swSelectDialog(QWidget* Parent, swModel* Model)
 	: QDialog(Parent), ui(new Ui::swSelectDialog)
 {
 	ui->setupUi(this);
-	swSetupDialogHelp(this, ui->buttonBox);
+	swSetupDialogHelp(this);
 
 	connect(ui->selectAll, &QPushButton::clicked, this, &swSelectDialog::SelectAllClicked);
 	connect(ui->selectNone, &QPushButton::clicked, this, &swSelectDialog::SelectNoneClicked);

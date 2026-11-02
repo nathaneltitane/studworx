@@ -40,7 +40,7 @@ swInstructionsPlacementWidget::swInstructionsPlacementWidget(QWidget* Parent, sw
 {
 	setWindowTitle(tr("Placement"));
 	setWhatsThis(tr("<p><b>Placement</b></p><p>Select an element on the page to place, move or lock it. Place the selected page element on a predefined area: the step model, step number, parts list, cover model, cover title, cover author or bill of materials. Step elements are placed in the part of the page their step gets from the split, or outside the other step element. Placements apply to all pages.</p><p>Every element can also be dragged on the page, it keeps its distance from its placement. A locked element keeps its position whatever its placement and is not dragged.</p>"));
-	swSetupWidgetHelp(this, nullptr);
+	swSetupWidgetHelp(this);
 
 	QWidget* CentralWidget = new QWidget(this);
 	setWidget(CentralWidget);
@@ -469,7 +469,7 @@ swInstructionsGridWidget::swInstructionsGridWidget(QWidget* Parent, swInstructio
 {
 	setWindowTitle(tr("Grid"));
 	setWhatsThis(tr("<p><b>Grid</b></p><p>The page grid helps aligning dragged elements, it is never printed. Show it on screen, snap dragged elements to it or to the anchors of the other elements, choose its area, the size of its main unit and the fractions it is split into, and the colors of its lines and of the margins.</p>"));
-	swSetupWidgetHelp(this, nullptr);
+	swSetupWidgetHelp(this);
 
 	QWidget* CentralWidget = new QWidget(this);
 	setWidget(CentralWidget);

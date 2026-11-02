@@ -663,7 +663,7 @@ void swMainWindow::CreateToolBars()
 
 	for (QToolBar* ToolBar : { mStandardToolBar, mTimeToolBar, mToolsToolBar })
 	{
-		swSetupWidgetHelp(ToolBar, nullptr);
+		swSetupWidgetHelp(ToolBar);
 
 		for (QAction* Action : ToolBar->actions())
 		{
@@ -683,7 +683,7 @@ void swMainWindow::CreateToolBars()
 	mPartsToolBar->installEventFilter(this);
 	mPartsToolBar->setObjectName("PartsToolbar");
 	mPartsToolBar->setWhatsThis(tr("<p><b>Parts</b></p><p>Choose a category or palette and filter its parts. Selecting a part prepares it for insertion; drag it into the model view to place it. Double-click a part to open its preview. Options controls filtering, thumbnails, and list display.</p>"));
-	swSetupWidgetHelp(mPartsToolBar, nullptr);
+	swSetupWidgetHelp(mPartsToolBar);
 	mPartSelectionWidget = new swPartSelectionWidget(false, mPartsToolBar);
 	mPartsToolBar->setWidget(mPartSelectionWidget);
 	addDockWidget(Qt::RightDockWidgetArea, mPartsToolBar);
@@ -695,7 +695,7 @@ void swMainWindow::CreateToolBars()
 	mColorsToolBar = new QDockWidget(tr("Colors"), this);
 	mColorsToolBar->setObjectName("ColorsToolbar");
 	mColorsToolBar->setWhatsThis(tr("<p><b>Colors</b></p><p>Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.</p>"));
-	swSetupWidgetHelp(mColorsToolBar, nullptr);
+	swSetupWidgetHelp(mColorsToolBar);
 	mColorsToolBar->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
 
 	mColorList = new swColorList();
@@ -748,7 +748,7 @@ void swMainWindow::CreateToolBars()
 	mPropertiesToolBar = new QDockWidget(tr("Properties"), this);
 	mPropertiesToolBar->setObjectName("PropertiesToolbar");
 	mPropertiesToolBar->setWhatsThis(tr("<p><b>Properties</b></p><p>Edit properties of the focused object or selection. Available fields depend on whether you select parts, a camera, or a light. Expand a section to see its fields. Keyframe controls mark properties at the current building step.</p><p>The transform fields at the bottom apply an X/Y/Z translation or rotation using the chosen transform mode. Press Enter to apply the values.</p>"));
-	swSetupWidgetHelp(mPropertiesToolBar, nullptr);
+	swSetupWidgetHelp(mPropertiesToolBar);
 
 	QWidget* PropertiesWidget = new QWidget(mPropertiesToolBar);
 	QVBoxLayout* PropertiesLayout = new QVBoxLayout(PropertiesWidget);
@@ -854,7 +854,7 @@ void swMainWindow::CreateToolBars()
 	mTimelineToolBar = new QDockWidget(tr("Timeline"), this);
 	mTimelineToolBar->setObjectName("TimelineToolbar");
 	mTimelineToolBar->setWhatsThis(tr("<p><b>Timeline</b></p><p>Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Right-click for step insertion, removal, movement, and visibility commands.</p>"));
-	swSetupWidgetHelp(mTimelineToolBar, nullptr);
+	swSetupWidgetHelp(mTimelineToolBar);
 	mTimelineToolBar->setAcceptDrops(true);
 
 	mTimelineWidget = new swTimelineWidget(mTimelineToolBar);
@@ -875,7 +875,7 @@ void swMainWindow::CreateToolBars()
 	mMinifigureBuilderToolBar = new QDockWidget(tr("Minifigure Builder"), this);
 	mMinifigureBuilderToolBar->setObjectName("MinifigureToolbar");
 	mMinifigureBuilderToolBar->setWhatsThis(tr("<p><b>Minifigure Builder</b></p><p>Choose the parts, colors and pose of a minifigure, then add it to the current model. The panel keeps its settings so you can add several variations.</p>"));
-	swSetupWidgetHelp(mMinifigureBuilderToolBar, nullptr);
+	swSetupWidgetHelp(mMinifigureBuilderToolBar);
 	addDockWidget(Qt::RightDockWidgetArea, mMinifigureBuilderToolBar);
 	mMinifigureBuilderToolBar->hide();
 

@@ -56,7 +56,7 @@ swPageSetupDialog::swPageSetupDialog(QWidget* Parent, swInstructionsPageSetup* P
 
 	ui->setupUi(this);
 	swSetInputPrompt(this);
-	swSetupDialogHelp(this, ui->buttonBox);
+	swSetupDialogHelp(this);
 
 	const QStringList UnitNames = QStringList() << tr("Pixels") << tr("Millimeters") << tr("Centimeters") << tr("Inches");
 	ui->UnitsComboBox->addItems(UnitNames);

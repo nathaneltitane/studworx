@@ -199,9 +199,9 @@ swAutomateEdgeColorDialog::swAutomateEdgeColorDialog(QWidget* Parent, bool ShowH
 	SetupColorHelp(DarkEdgeColorEnabledBox, DarkEdgeColorButton, ResetDarkEdgeColorButton,
 		tr("Enable a custom edge color for parts below the light/dark threshold, except black parts with their own enabled override. Automated edge colors take precedence."));
 
-	QDialogButtonBox* buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Help, Qt::Horizontal, this);
+	QDialogButtonBox* buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, Qt::Horizontal, this);
 	MainLayout->addWidget(buttonBox);
-	swSetupDialogHelp(this, buttonBox);
+	swSetupDialogHelp(this);
 	QObject::connect(buttonBox, &QDialogButtonBox::accepted, this, &swAutomateEdgeColorDialog::accept);
 	QObject::connect(buttonBox, &QDialogButtonBox::rejected, this, &swAutomateEdgeColorDialog::reject);
 

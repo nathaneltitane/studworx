@@ -282,7 +282,7 @@ swPropertiesDialog::swPropertiesDialog(QWidget* Parent, swPropertiesDialogOption
 	: QDialog(Parent), mOptions(Options), ui(new Ui::swPropertiesDialog)
 {
 	ui->setupUi(this);
-	swSetupDialogHelp(this, ui->buttonBox);
+	swSetupDialogHelp(this);
 
 	setWindowTitle(tr("%1 Properties").arg(mOptions->Properties.mFileName));
 

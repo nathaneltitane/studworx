@@ -18,6 +18,6 @@ protected:
 };
 
 QString swChooseBrickLinkMappingFile(QWidget* Parent, const QString& FileName);
-bool swUpdateBrickLinkMappingFile(QWidget* Parent, const QString& FileName, bool ShowSummary);
+bool swUpdateBrickLinkMappingFile(QWidget* Parent, const QString& FileName, bool ShowSummary, const QString& ApiKey = QString());
 std::optional<swBrickLinkOptions> swRequestBrickLinkExport(QWidget* Parent);
 void swShowBrickLinkExportSummary(QWidget* Parent, const swBrickLinkExport& Export);

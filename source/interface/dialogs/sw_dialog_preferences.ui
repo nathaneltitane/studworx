@@ -438,6 +438,61 @@
         </widget>
        </item>
        <item row="1" column="0" colspan="2">
+        <widget class="QGroupBox" name="OnlineServicesGroup">
+         <property name="whatsThis">
+          <string>&lt;p&gt;&lt;b&gt;Online Services&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keys for the online services StudWorx downloads from. The Rebrickable API key updates the BrickLink mapping and searches set inventories. It is free from your account settings at rebrickable.com, Get Key opens its page.&lt;/p&gt;&lt;p&gt;Leave it empty to be asked the first time it is needed. A key Rebrickable rejects is cleared so you are asked again.&lt;/p&gt;</string>
+         </property>
+         <property name="title">
+          <string>Online Services</string>
+         </property>
+         <layout class="QFormLayout" name="OnlineServicesLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="RebrickableApiKeyLabel">
+            <property name="toolTip">
+             <string>Set your Rebrickable API key, used to update the BrickLink mapping and to search set inventories. Leave it empty to be asked when needed.</string>
+            </property>
+            <property name="text">
+             <string>Rebrickable API Key</string>
+            </property>
+            <property name="buddy">
+             <cstring>RebrickableApiKeyEdit</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <layout class="QHBoxLayout" name="RebrickableApiKeyLayout">
+            <item>
+             <widget class="QLineEdit" name="RebrickableApiKeyEdit">
+              <property name="accessibleName">
+               <string>Rebrickable API Key</string>
+              </property>
+              <property name="toolTip">
+               <string>Set your Rebrickable API key, used to update the BrickLink mapping and to search set inventories. Leave it empty to be asked when needed.</string>
+              </property>
+              <property name="placeholderText">
+               <string>Asked when needed</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="RebrickableApiKeyButton">
+              <property name="accessibleName">
+               <string>Get Rebrickable API Key</string>
+              </property>
+              <property name="toolTip">
+               <string>Open the Rebrickable API page to get a free key from your account settings.</string>
+              </property>
+              <property name="text">
+               <string>Get Key...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
         <widget class="QGroupBox" name="ApplicationGroup">
          <property name="title">
           <string>Application</string>
@@ -520,7 +575,7 @@
          </layout>
         </widget>
        </item>
-       <item row="2" column="0" colspan="2">
+       <item row="3" column="0" colspan="2">
         <widget class="QGroupBox" name="StartupGroup">
          <property name="title">
           <string>Startup</string>
@@ -549,7 +604,7 @@
          </layout>
         </widget>
        </item>
-       <item row="3" column="0" colspan="2">
+       <item row="4" column="0" colspan="2">
         <widget class="QGroupBox" name="FilesGroup">
          <property name="whatsThis">
           <string>&lt;p&gt;&lt;b&gt;Files&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The author of new models is built from its name, email address and comment, joined by the author line splitter. Empty parts are left out, and the Author Line field shows the result. For example, Jane Doe, jane@example.com and All rights reserved joined by &amp;quot; | &amp;quot; give Jane Doe | jane@example.com | All rights reserved.&lt;/p&gt;&lt;p&gt;The author of an open model is changed in its properties.&lt;/p&gt;&lt;p&gt;The other options control how model files are opened and reloaded.&lt;/p&gt;</string>
@@ -709,7 +764,7 @@
          </layout>
         </widget>
        </item>
-       <item row="4" column="0" colspan="2">
+       <item row="5" column="0" colspan="2">
         <widget class="QGroupBox" name="ExportGroup">
          <property name="title">
           <string>Export</string>
@@ -761,7 +816,7 @@
          </layout>
         </widget>
        </item>
-       <item row="5" column="0" colspan="2">
+       <item row="6" column="0" colspan="2">
         <widget class="QGroupBox" name="EditingGroup">
          <property name="title">
           <string>Editing</string>
@@ -841,7 +896,7 @@
          </layout>
         </widget>
        </item>
-       <item row="6" column="0" colspan="2">
+       <item row="7" column="0" colspan="2">
         <widget class="QGroupBox" name="FlexiblePartsGroup">
          <property name="title">
           <string>Flexible Parts</string>
@@ -4396,7 +4451,7 @@
                  <string>Key Sequence</string>
                 </property>
                 <property name="whatsThis">
-                 <string>&lt;p&gt;&lt;b&gt;Key Sequence&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Click here and press the key combination you want to assign. Function keys, including F1, are recorded as shortcut candidates in this field. Use the Help button for guidance. Assign asks before replacing a shortcut already used by another command.&lt;/p&gt;</string>
+                 <string>&lt;p&gt;&lt;b&gt;Key Sequence&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Click here and press the key combination you want to assign. Function keys, including F1, are recorded as shortcut candidates in this field. Use the What's This button in the title bar for guidance. Assign asks before replacing a shortcut already used by another command.&lt;/p&gt;</string>
                 </property>
                 <property name="toolTip">
                  <string>Press the key combination to assign, then choose Assign.</string>
@@ -4701,6 +4756,8 @@
   <tabstop>povrayExecutableBrowse</tabstop>
   <tabstop>lgeoPath</tabstop>
   <tabstop>lgeoPathBrowse</tabstop>
+  <tabstop>RebrickableApiKeyEdit</tabstop>
+  <tabstop>RebrickableApiKeyButton</tabstop>
   <tabstop>ColorTheme</tabstop>
   <tabstop>Language</tabstop>
   <tabstop>autoLoadMostRecent</tabstop>

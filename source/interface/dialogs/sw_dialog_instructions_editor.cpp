@@ -455,7 +455,7 @@ swInstructionsEditorWidget::swInstructionsEditorWidget(QWidget* Parent, Project*
 {
 	setWindowTitle(tr("Editor"));
 	setWhatsThis(tr("<p><b>Editor</b></p><p>The text of the model file as it is saved, its parts, steps and instructions. Edit it and apply to load the model from the text, the change is unsaved until the model is saved.</p>"));
-	swSetupWidgetHelp(this, nullptr);
+	swSetupWidgetHelp(this);
 
 	QWidget* CentralWidget = new QWidget(this);
 	setWidget(CentralWidget);

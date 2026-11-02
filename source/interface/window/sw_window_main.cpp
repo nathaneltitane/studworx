@@ -117,7 +117,7 @@ void swMainWindow::CreateTerminalWidget()
 	mTerminalToolBar = new QDockWidget(tr("Terminal"), this);
 	mTerminalToolBar->setObjectName("TerminalToolBar");
 	mTerminalToolBar->setWhatsThis(tr("<p><b>Terminal</b></p><p>An embedded Konsole terminal that starts in the folder of the current model.</p>"));
-	swSetupWidgetHelp(mTerminalToolBar, nullptr);
+	swSetupWidgetHelp(mTerminalToolBar);
 	mTerminalToolBar->setWidget(new swTerminalWidget(mTerminalToolBar));
 	addDockWidget(Qt::BottomDockWidgetArea, mTerminalToolBar);
 	mTerminalToolBar->hide();
@@ -192,7 +192,7 @@ void swMainWindow::CreatePreviewWidget()
 	mPreviewToolBar->setWindowTitle(tr("Preview"));
 	mPreviewToolBar->setObjectName("PreviewToolBar");
 	mPreviewToolBar->setWhatsThis(tr("<p><b>Preview</b></p><p>Inspect a part or model without placing it in the model. Double-click a part in the Parts dock to preview it. Lock Preview keeps the current preview when the source selection changes; unlock it to allow updates.</p>"));
-	swSetupWidgetHelp(mPreviewToolBar, nullptr);
+	swSetupWidgetHelp(mPreviewToolBar);
 	mPreviewToolBar->setWidget(mPreviewWidget);
 	addDockWidget(Qt::RightDockWidgetArea, mPreviewToolBar);
 

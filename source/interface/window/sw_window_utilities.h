@@ -17,8 +17,8 @@ QString swFormatDoubleLocalized(double Value, QLocale Locale, char Format, int P
 QString swFormatIntegerLocalized(qlonglong Value, QLocale Locale);
 std::optional<float> swParseFloatLocalized(const QString& Value, QLocale Locale);
 
-void swSetupDialogHelp(QDialog* Dialog, QDialogButtonBox* ButtonBox);
-void swSetupWidgetHelp(QWidget* Root, QDialogButtonBox* ButtonBox);
+void swSetupDialogHelp(QDialog* Dialog);
+void swSetupWidgetHelp(QWidget* Root);
 QString swRequestRebrickableApiKey(QWidget* Parent, const QString& Purpose);
 
 enum class swColorSource;

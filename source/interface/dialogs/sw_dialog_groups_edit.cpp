@@ -41,7 +41,7 @@ swEditGroupsDialog::swEditGroupsDialog(QWidget* Parent, const swModel* Model)
 	ui = new Ui::swEditGroupsDialog;
 
 	ui->setupUi(this);
-	swSetupDialogHelp(this, ui->buttonBox);
+	swSetupDialogHelp(this);
 
 	QPushButton* NewGroup = ui->buttonBox->addButton(tr("&New Group"), QDialogButtonBox::ActionRole);
 	NewGroup->setToolTip(tr("Create a group under the selected group or at the top level."));

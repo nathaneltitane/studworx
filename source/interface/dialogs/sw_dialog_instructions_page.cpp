@@ -2155,7 +2155,7 @@ swInstructionsPageListWidget::swInstructionsPageListWidget(QWidget* Parent, swIn
 {
 	setWindowTitle(tr("Pages"));
 	setWhatsThis(tr("<p><b>Pages</b></p><p>Select a page to show it. Right-click a page to insert or remove blank pages around it.</p>"));
-	swSetupWidgetHelp(this, nullptr);
+	swSetupWidgetHelp(this);
 
 	QWidget* CentralWidget = new QWidget(this);
 	setWidget(CentralWidget);

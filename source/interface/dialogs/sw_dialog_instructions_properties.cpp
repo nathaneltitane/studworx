@@ -138,7 +138,7 @@ swInstructionsPropertiesWidget::swInstructionsPropertiesWidget(QWidget* Parent, 
 {
 	setWindowTitle(tr("Properties"));
 	setWhatsThis(tr("<p><b>Properties</b></p><p>Edit how the instruction pages look. With nothing selected on the page every section is shown, select an element to show only its settings and its box. Right-click the page to add notices and pointers. Changes apply to all pages.</p>"));
-	swSetupWidgetHelp(this, nullptr);
+	swSetupWidgetHelp(this);
 
 	QWidget* CentralWidget = new QWidget(this);
 	setWidget(CentralWidget);

@@ -12,7 +12,7 @@ swInstructionsPrintWidget::swInstructionsPrintWidget(QWidget* Parent, swInstruct
 {
 	setWindowTitle(tr("Print"));
 	setWhatsThis(tr("<p><b>Print</b></p><p>Print the instruction pages on a printer or to a PDF file. The pages are printed on paper matching the page setup, the pages panel shows how they look.</p>"));
-	swSetupWidgetHelp(this, nullptr);
+	swSetupWidgetHelp(this);
 
 	QWidget* CentralWidget = new QWidget(this);
 	setWidget(CentralWidget);

@@ -8,7 +8,7 @@ swGroupDialog::swGroupDialog(QWidget* Parent, const QString& Name, const std::ve
     : QDialog(Parent), mGroups(Groups), ui(new Ui::swGroupDialog)
 {
 	ui->setupUi(this);
-	swSetupDialogHelp(this, ui->buttonBox);
+	swSetupDialogHelp(this);
 
 	swSetInputPrompt(this);
 

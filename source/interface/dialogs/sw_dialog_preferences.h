@@ -57,6 +57,7 @@ struct swPreferencesDialogOptions
 	QString BrickLinkMappingPath;
 	QString POVRayPath;
 	QString LGEOPath;
+	QString RebrickableApiKey;
 	QString DefaultAuthorName;
 	QString DefaultAuthorEmail;
 	QString DefaultAuthorComment;
@@ -122,6 +123,7 @@ private slots:
 	void MinifigureBuilderSettingsUpdateButtonClicked();
 	void BrickLinkMappingBrowseButtonClicked();
 	void BrickLinkMappingUpdateButtonClicked();
+	void RebrickableApiKeyButtonClicked();
 	void PovrayExecutableBrowseClicked();
 	void LgeoPathBrowseClicked();
 	void AuthorChanged();

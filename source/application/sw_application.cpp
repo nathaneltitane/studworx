@@ -2239,6 +2239,7 @@ void swApplication::ShowPreferencesDialog()
 	Options.ColorSource = swGetColorSource();
 	Options.POVRayPath = swGetProfileString(SW_PROFILE_POVRAY_PATH);
 	Options.LGEOPath = swGetProfileString(SW_PROFILE_POVRAY_LGEO_PATH);
+	Options.RebrickableApiKey = swGetProfileString(SW_PROFILE_REBRICKABLE_API_KEY);
 	Options.DefaultAuthorName = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_NAME);
 	Options.DefaultAuthorEmail = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_EMAIL);
 	Options.DefaultAuthorComment = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_COMMENT);
@@ -2328,6 +2329,7 @@ void swApplication::ShowPreferencesDialog()
 	swSetProfileString(SW_PROFILE_BRICKLINK_MAPPING, Options.BrickLinkMappingPath);
 	swSetProfileString(SW_PROFILE_POVRAY_PATH, Options.POVRayPath);
 	swSetProfileString(SW_PROFILE_POVRAY_LGEO_PATH, Options.LGEOPath);
+	swSetProfileString(SW_PROFILE_REBRICKABLE_API_KEY, Options.RebrickableApiKey.trimmed());
 	swSetProfileString(SW_PROFILE_LANGUAGE, Options.Language);
 	swSetProfileInteger(SW_PROFILE_ANTIALIASING_SAMPLES, Options.AASamples);
 	swSetProfileStudStyle(Options.StudStyle);

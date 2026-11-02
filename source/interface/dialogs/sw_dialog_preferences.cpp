@@ -274,7 +274,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	: QDialog(Parent), mOptions(Options), ui(new Ui::swPreferencesDialog)
 {
 	ui->setupUi(this);
-	swSetupDialogHelp(this, ui->buttonBox);
+	swSetupDialogHelp(this);
 
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
 	ui->povrayLabel->hide();
@@ -313,6 +313,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->BrickLinkMappingUpdateButton->setIcon(swCreatePaintedIcon(swPaintedIcon::Refresh));
 	connect(ui->povrayExecutableBrowse, &QPushButton::clicked, this, &swPreferencesDialog::PovrayExecutableBrowseClicked);
 	connect(ui->lgeoPathBrowse, &QPushButton::clicked, this, &swPreferencesDialog::LgeoPathBrowseClicked);
+	connect(ui->RebrickableApiKeyButton, &QToolButton::clicked, this, &swPreferencesDialog::RebrickableApiKeyButtonClicked);
 	connect(ui->AuthorName, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
 	connect(ui->AuthorEmail, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
 	connect(ui->AuthorComment, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
@@ -433,6 +434,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->BrickLinkMappingEdit->setText(mOptions->BrickLinkMappingPath);
 	ui->povrayExecutable->setText(mOptions->POVRayPath);
 	ui->lgeoPath->setText(mOptions->LGEOPath);
+	ui->RebrickableApiKeyEdit->setText(mOptions->RebrickableApiKey);
 	ui->AuthorName->setText(mOptions->DefaultAuthorName);
 	ui->AuthorEmail->setText(mOptions->DefaultAuthorEmail);
 	ui->AuthorComment->setText(mOptions->DefaultAuthorComment);
@@ -791,6 +793,7 @@ void swPreferencesDialog::accept()
 	mOptions->ColorSource = static_cast<swColorSource>(ui->ColorSourceCombo->currentIndex());
 	mOptions->POVRayPath = ui->povrayExecutable->text();
 	mOptions->LGEOPath = ui->lgeoPath->text();
+	mOptions->RebrickableApiKey = ui->RebrickableApiKeyEdit->text().trimmed();
 	mOptions->DefaultAuthorName = ui->AuthorName->text();
 	mOptions->DefaultAuthorEmail = ui->AuthorEmail->text();
 	mOptions->DefaultAuthorComment = ui->AuthorComment->text();
@@ -1136,7 +1139,16 @@ void swPreferencesDialog::BrickLinkMappingUpdateButtonClicked()
 		ui->BrickLinkMappingEdit->setText(FileName);
 	}
 
-	swUpdateBrickLinkMappingFile(this, FileName, true);
+	swUpdateBrickLinkMappingFile(this, FileName, true, ui->RebrickableApiKeyEdit->text().trimmed());
+
+	// show a key asked for or cleared meanwhile
+	ui->RebrickableApiKeyEdit->setText(swGetProfileString(SW_PROFILE_REBRICKABLE_API_KEY));
+}
+
+// use to open the page that hands out api keys
+void swPreferencesDialog::RebrickableApiKeyButtonClicked()
+{
+	QDesktopServices::openUrl(QUrl(swGetRebrickableApiKeyUrl()));
 }
 
 void swPreferencesDialog::PovrayExecutableBrowseClicked()

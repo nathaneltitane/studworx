@@ -19,7 +19,7 @@ swModelListDialog::swModelListDialog(QWidget* Parent, const std::vector<std::uni
 	mActiveModelItem = nullptr;
 
 	ui->setupUi(this);
-	swSetupDialogHelp(this, ui->buttonBox);
+	swSetupDialogHelp(this);
 
 	// the submodel list spans the window height
 	if (Parent)

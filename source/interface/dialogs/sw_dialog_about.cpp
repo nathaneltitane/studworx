@@ -11,7 +11,7 @@ swAboutDialog::swAboutDialog(QWidget* Parent)
 	: QDialog(Parent), ui(new Ui::swAboutDialog)
 {
 	ui->setupUi(this);
-	swSetupDialogHelp(this, ui->buttonBox);
+	swSetupDialogHelp(this);
 
 	ui->version->setText(tr("StudWorx Version %1").arg(QString::fromLatin1(SW_VERSION_TEXT)));
 

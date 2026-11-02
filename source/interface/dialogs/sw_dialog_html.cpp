@@ -8,7 +8,7 @@ swHTMLDialog::swHTMLDialog(QWidget* Parent, swHTMLExportOptions* Options)
 	: QDialog(Parent), ui(new Ui::swHTMLDialog)
 {
     ui->setupUi(this);
-	swSetupDialogHelp(this, ui->buttonBox);
+	swSetupDialogHelp(this);
 
 	connect(ui->outputFolderBrowse, &QPushButton::clicked, this, &swHTMLDialog::OutputFolderBrowseClicked);
 

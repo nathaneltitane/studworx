@@ -160,7 +160,7 @@ swRenderDialog::swRenderDialog(QWidget* Parent, swRenderDialogMode RenderDialogM
 	: QDialog(Parent), mDialogMode(RenderDialogMode), ui(new Ui::swRenderDialog)
 {
 	ui->setupUi(this);
-	swSetupDialogHelp(this, ui->buttonBox);
+	swSetupDialogHelp(this);
 
 	mWidth = swGetProfileInteger(SW_PROFILE_RENDER_WIDTH);
 	mHeight = swGetProfileInteger(SW_PROFILE_RENDER_HEIGHT);
@@ -305,7 +305,7 @@ void swRenderDialog::CreatePOVRayPanels()
 		// top and bottom panels span the window
 		Panel->setProperty("swFloatingSize", QSize(SW_RENDER_PANEL_WIDTH, 0));
 		PanelWindow->addDockWidget(Qt::RightDockWidgetArea, Panel);
-		swSetupWidgetHelp(Panel, nullptr);
+		swSetupWidgetHelp(Panel);
 
 		return Widget;
 	};
@@ -602,7 +602,7 @@ void swRenderDialog::CreatePOVRayPanels()
 	mLogEdit->setMinimumHeight(6 * QFontMetrics(mLogEdit->font()).height());
 	mLogPanel->setWidget(mLogEdit);
 
-	swSetupWidgetHelp(mLogPanel, nullptr);
+	swSetupWidgetHelp(mLogPanel);
 
 	// log and render panels span the edges
 	QDockWidget* RenderDock = qobject_cast<QDockWidget*>(RenderPanel->parentWidget());
@@ -1765,9 +1765,9 @@ void swRenderDialog::LogButtonClicked()
 
 	TextBrowser->setText(Text);
 
-	QDialogButtonBox* ButtonBox = new QDialogButtonBox(QDialogButtonBox::Close | QDialogButtonBox::Help, Qt::Horizontal, &Dialog);
+	QDialogButtonBox* ButtonBox = new QDialogButtonBox(QDialogButtonBox::Close, Qt::Horizontal, &Dialog);
 	Layout->addWidget(ButtonBox);
-	swSetupDialogHelp(&Dialog, ButtonBox);
+	swSetupDialogHelp(&Dialog);
 
 	QObject::connect(ButtonBox, &QDialogButtonBox::rejected, &Dialog, &QDialog::reject);
 	QObject::connect(ButtonBox, &QDialogButtonBox::accepted, &Dialog, &QDialog::accept);

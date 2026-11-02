@@ -1,6 +1,7 @@
 #include "sw_global.h"
 #include "sw_window_utilities.h"
 #include "sw_dialog_database_sets.h"
+#include "sw_bricklink.h"
 #include "ui_sw_dialog_database_sets.h"
 #include "sw_http.h"
 #include "sw_project.h"
@@ -11,7 +12,7 @@ swSetsDatabaseDialog::swSetsDatabaseDialog(QWidget* Parent)
     ui(new Ui::swSetsDatabaseDialog)
 {
 	ui->setupUi(this);
-	swSetupDialogHelp(this, ui->buttonBox);
+	swSetupDialogHelp(this);
 	ui->SearchEdit->installEventFilter(this);
 
 	mHttpManager = new swHttpManager(this);
@@ -190,9 +191,35 @@ void swSetsDatabaseDialog::SearchButtonClicked()
 	}
 }
 
+// use to tell a turned down key from other failures
+static bool swIsRebrickableKeyRejected(swHttpReply* Reply)
+{
+#ifndef Q_OS_WIN
+	const int Status = Reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+
+	return Status == 401 || Status == 403;
+#else
+	Q_UNUSED(Reply);
+
+	return false;
+#endif
+}
+
 void swSetsDatabaseDialog::DownloadFinished(swHttpReply* Reply)
 {
-	if (Reply == mSearchReply)
+	if ((Reply == mSearchReply || Reply == mInventoryReply) && swIsRebrickableKeyRejected(Reply))
+	{
+		swForgetRebrickableApiKey(mApiKey);
+		mApiKey.clear();
+
+		if (Reply == mSearchReply)
+			mSearchReply = nullptr;
+		else
+			mInventoryReply = nullptr;
+
+		QMessageBox::warning(this, tr("Rebrickable API Key"), swGetRebrickableKeyRejectedMessage());
+	}
+	else if (Reply == mSearchReply)
 	{
 		QTreeWidget* SetsTree = ui->SetsTree;
 		SetsTree->clear();

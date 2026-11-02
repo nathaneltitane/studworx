@@ -12,7 +12,7 @@ swArrayDialog::swArrayDialog(QWidget* Parent)
 	for (swRangeSpinBox* SpinBox : { ui->count1, ui->count2, ui->count3 })
 		SpinBox->SetReference();
 
-	swSetupDialogHelp(this, ui->buttonBox);
+	swSetupDialogHelp(this);
 	swSetInputPrompt(this);
 
 	ui->offset1x->setValidator(new QDoubleValidator(ui->offset1x));

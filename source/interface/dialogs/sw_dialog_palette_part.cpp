@@ -10,7 +10,7 @@ swPartPaletteDialog::swPartPaletteDialog(QWidget* Parent, std::vector<swPartPale
 	: QDialog(Parent), ui(new Ui::swPartPaletteDialog), mPartPalettes(PartPalettes)
 {
     ui->setupUi(this);
-	swSetupDialogHelp(this, ui->buttonBox);
+	swSetupDialogHelp(this);
 
 	connect(ui->NewButton, &QPushButton::clicked, this, &swPartPaletteDialog::NewButtonClicked);
 	connect(ui->DeleteButton, &QPushButton::clicked, this, &swPartPaletteDialog::DeleteButtonClicked);
