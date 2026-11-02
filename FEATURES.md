@@ -353,6 +353,7 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 <!-- gallery natural -->
 
 ![Properties](resources/images/instructions-panel-properties.png)
+![Properties options](resources/images/instructions-menu-options-properties.png)
 ![Grid](resources/images/instructions-panel-grid.png)
 ![Placement](resources/images/instructions-panel-placement.png)
 ![Print](resources/images/instructions-panel-print.png)
