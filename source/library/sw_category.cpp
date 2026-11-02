@@ -141,7 +141,7 @@ bool swSaveCategories(const QString& FileName, const std::vector<swLibraryCatego
 
 bool swSaveCategories(QTextStream& Stream, const std::vector<swLibraryCategory>& Categories)
 {
-	QString Format("%1=%2\r\n");
+	QString Format("%1=%2\n");
 
 	for (const swLibraryCategory& Category : Categories)
 		Stream << Format.arg(Category.Enabled ? Category.Name : '#' + Category.Name, QString::fromLatin1(Category.Keywords));

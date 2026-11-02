@@ -266,7 +266,7 @@ void swObjectProperty<T>::Save(QTextStream& Stream, const char* ObjectName, cons
 
 			swObjectPropertySaveValue(Stream, mValue);
 
-			Stream << QLatin1String("\r\n");
+			Stream << QLatin1String("\n");
 		}
 	}
 	else
@@ -277,7 +277,7 @@ void swObjectProperty<T>::Save(QTextStream& Stream, const char* ObjectName, cons
 
 			swObjectPropertySaveValue(Stream, Key.Value);
 
-			Stream << QLatin1String("\r\n");
+			Stream << QLatin1String("\n");
 		}
 	}
 }

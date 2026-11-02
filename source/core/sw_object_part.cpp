@@ -140,7 +140,7 @@ void swPart::UpdateID()
 
 void swPart::SaveLDraw(QTextStream& Stream) const
 {
-	const QLatin1String LineEnding("\r\n");
+	const QLatin1String LineEnding("\n");
 
 	if (mStepHide != SW_STEP_MAXIMUM)
 		Stream << QLatin1String("0 !SW STEP_HIDE PART ") << mStepHide << LineEnding;

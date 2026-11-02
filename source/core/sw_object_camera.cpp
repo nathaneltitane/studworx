@@ -188,7 +188,7 @@ bool swCamera::SetFarPlane(float FarPlane)
 
 void swCamera::SaveLDraw(QTextStream& Stream) const
 {
-	const QLatin1String LineEnding("\r\n");
+	const QLatin1String LineEnding("\n");
 
 	Stream << QLatin1String("0 !SW FOV CAMERA ") << m_fovy << QLatin1String(" ZNEAR ") << m_zNear << QLatin1String(" ZFAR ") << m_zFar << LineEnding;
 

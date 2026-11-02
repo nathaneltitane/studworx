@@ -60,7 +60,7 @@ QString swModelProperties::CombineAuthor(const QString& Name, const QString& Ema
 
 void swModelProperties::SaveLDraw(QTextStream& Stream) const
 {
-	const QLatin1String LineEnding("\r\n");
+	const QLatin1String LineEnding("\n");
 
 	Stream << QLatin1String("0 ") << mDescription << LineEnding;
 	Stream << QLatin1String("0 Name: ") << mModelName << LineEnding;
@@ -185,7 +185,7 @@ void swPOVRayOptions::ParseLDrawLine(QTextStream& LineStream)
 
 void swPOVRayOptions::SaveLDraw(QTextStream& Stream) const
 {
-	const QLatin1String LineEnding("\r\n");
+	const QLatin1String LineEnding("\n");
 	if (!HeaderIncludeFile.isEmpty())
 		Stream << QLatin1String("0 !SW HEADER_FILE_INCLUDE POV_RAY ") << QDir::toNativeSeparators(HeaderIncludeFile) << LineEnding;
 	if (!FooterIncludeFile.isEmpty())
@@ -215,20 +215,20 @@ static QString swGetStepEndLine(const swModelProperties& Properties, swStep Step
 	const std::map<swStep, swStepView>::const_iterator StepView = Properties.mStepViews.find(Step);
 
 	if (StepView == Properties.mStepViews.end())
-		return QLatin1String("0 STEP\r\n");
+		return QLatin1String("0 STEP\n");
 
 	if (StepView->second.Mode == swStepViewMode::End)
-		return QLatin1String("0 ROTSTEP END\r\n");
+		return QLatin1String("0 ROTSTEP END\n");
 
 	const char* Modes[] = { "REL", "ABS", "ADD" };
 	const swVector3& Angles = StepView->second.Angles;
 
-	return QString("0 ROTSTEP %1 %2 %3 %4\r\n").arg(swFormatValue(Angles.x, 2), swFormatValue(Angles.y, 2), swFormatValue(Angles.z, 2), QLatin1String(Modes[static_cast<int>(StepView->second.Mode)]));
+	return QString("0 ROTSTEP %1 %2 %3 %4\n").arg(swFormatValue(Angles.x, 2), swFormatValue(Angles.y, 2), swFormatValue(Angles.z, 2), QLatin1String(Modes[static_cast<int>(StepView->second.Mode)]));
 }
 
 void swModel::SaveLDraw(QTextStream& Stream, bool SelectedOnly, swStep LastStep) const
 {
-	const QLatin1String LineEnding("\r\n");
+	const QLatin1String LineEnding("\n");
 
 	mProperties.SaveLDraw(Stream);
 	mPOVRayOptions.SaveLDraw(Stream);
@@ -335,7 +335,7 @@ void swModel::SaveLDraw(QTextStream& Stream, bool SelectedOnly, swStep LastStep)
 					if (ParentFound == PartParents.end())
 					{
 						CurrentGroups.pop_back();
-						Stream << QLatin1String("0 !SW END GROUP\r\n");
+						Stream << QLatin1String("0 !SW END GROUP\n");
 					}
 					else
 					{
@@ -357,13 +357,13 @@ void swModel::SaveLDraw(QTextStream& Stream, bool SelectedOnly, swStep LastStep)
 			while (CurrentGroups.size())
 			{
 				CurrentGroups.pop_back();
-				Stream << QLatin1String("0 !SW END GROUP\r\n");
+				Stream << QLatin1String("0 !SW END GROUP\n");
 			}
 		}
 
 		if (Part->mPartData->GetSynthInfo())
 		{
-			Stream << QLatin1String("0 !SW BEGIN SYNTH_PATH\r\n");
+			Stream << QLatin1String("0 !SW BEGIN SYNTH_PATH\n");
 
 			const std::vector<swPartControlPoint>& ControlPoints = Part->GetControlPoints();
 			for (const swPartControlPoint& ControlPoint : ControlPoints)
@@ -386,7 +386,7 @@ void swModel::SaveLDraw(QTextStream& Stream, bool SelectedOnly, swStep LastStep)
 		Part->SaveLDraw(Stream);
 
 		if (Part->mPartData->GetSynthInfo())
-			Stream << QLatin1String("0 !SW END SYNTH_PATH\r\n");
+			Stream << QLatin1String("0 !SW END SYNTH_PATH\n");
 	}
 
 	while (!SavedStep && CurrentLine < mFileLines.size())
@@ -426,7 +426,7 @@ void swModel::SaveLDraw(QTextStream& Stream, bool SelectedOnly, swStep LastStep)
 	while (CurrentGroups.size())
 	{
 		CurrentGroups.pop_back();
-		Stream << QLatin1String("0 !SW END GROUP\r\n");
+		Stream << QLatin1String("0 !SW END GROUP\n");
 	}
 
 	for (const std::unique_ptr<swCamera>& Camera : mCameras)

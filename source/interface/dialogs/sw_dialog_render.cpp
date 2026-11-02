@@ -1272,7 +1272,7 @@ void swRenderDialog::RenderBlender()
 	if (mDialogMode == swRenderDialogMode::OpenInBlender)
 		ScriptCommand.append(QString(" > %1").arg(QDir::toNativeSeparators(GetStdOutFileName())));
 
-	const QLatin1String LineEnding("\r\n");
+	const QLatin1String LineEnding("\n");
 
 	QFile ScriptFile(QString("%1/%2").arg(QDir::tempPath(), ScriptName));
 	if (ScriptFile.open(QIODevice::WriteOnly | QIODevice::Text))

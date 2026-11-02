@@ -201,10 +201,12 @@ QByteArray Project::SerializeStoredModel(const swModel* Model, const QString& Na
 {
 	const QByteArray Current = SerializeModelText(Model, SelectedOnly, LastStep);
 	const bool Preserve = Original && !SelectedOnly && !LastStep && Current == Original->Baseline;
-	QByteArray LineEnding("\r\n");
+	QByteArray LineEnding("\n");
 
-	if (Original && Original->Raw.contains('\n') && !Original->Raw.contains("\r\n"))
-		LineEnding = "\n";
+	// keep the dos line endings of a model loaded with them
+
+	if (Original && Original->Raw.contains("\r\n"))
+		LineEnding = "\r\n";
 
 	if (Preserve && Original->ExplicitModel && Original->OriginalName == Name)
 		return Original->Raw;
@@ -237,8 +239,10 @@ QByteArray Project::SerializeStoredModel(const swModel* Model, const QString& Na
 	{
 		QByteArray Body = Current;
 
-		if (LineEnding == "\n")
-			Body.replace("\r\n", "\n");
+		Body.replace("\r\n", "\n");
+
+		if (LineEnding == "\r\n")
+			Body.replace("\n", "\r\n");
 
 		if (Original && !Original->Raw.endsWith('\n') && !Original->Raw.endsWith('\r') && Body.endsWith(LineEnding))
 			Body.chop(LineEnding.size());
@@ -666,7 +670,7 @@ bool Project::Save(QTextStream& Stream) const
 	const auto Append = [&Output](const QByteArray& Bytes, bool NewBlock)
 	{
 		if (NewBlock && !Output.isEmpty() && !Output.endsWith('\n') && !Output.endsWith('\r'))
-			Output += "\r\n";
+			Output += "\n";
 
 		Output += Bytes;
 	};
@@ -844,7 +848,7 @@ swResult<QByteArray> Project::SerializeModel(const swModel* Root, bool SelectedO
 	const auto Append = [&Output](const QByteArray& Bytes)
 	{
 		if (!Output.isEmpty() && !Output.endsWith('\n') && !Output.endsWith('\r'))
-			Output += "\r\n";
+			Output += "\n";
 
 		Output += Bytes;
 	};
@@ -869,7 +873,7 @@ swResult<QByteArray> Project::SerializeModel(const swModel* Root, bool SelectedO
 		Append(Data->RawBlock);
 
 	if (SelectedOnly)
-		Output.prepend("0 !SW PROJECT CLIPBOARD " + mClipboardIdentity.toString().toUtf8() + "\r\n");
+		Output.prepend("0 !SW PROJECT CLIPBOARD " + mClipboardIdentity.toString().toUtf8() + "\n");
 
 	return Output;
 }

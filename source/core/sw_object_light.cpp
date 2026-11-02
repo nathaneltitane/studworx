@@ -104,7 +104,7 @@ QStringList swLight::GetAreaShapeStrings()
 
 void swLight::SaveLDraw(QTextStream& Stream) const
 {
-	const QLatin1String LineEnding("\r\n");
+	const QLatin1String LineEnding("\n");
 
 	if (!mCastShadow)
 		Stream << QLatin1String("0 !SW SHADOWLESS LIGHT") << LineEnding;

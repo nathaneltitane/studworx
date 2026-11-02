@@ -20,7 +20,7 @@ using Qt::SkipEmptyParts;
 const auto SkipEmptyParts = QString::SplitBehavior::SkipEmptyParts;
 #endif
 
-const QLatin1String LineEnding("\r\n");
+const QLatin1String LineEnding("\n");
 
 #define SW_PRODUCT_NAME_STRING                 "StudWorx"
 #define SW_BLENDER_ADDON                   "ImportLDraw"

@@ -330,7 +330,7 @@ swPartBuildResult swPartsLibrary::BuildPartData(const swPartSourceSnapshot& Sour
 			const QByteArray Buffer = Line.toLatin1();
 
 			PartFile.WriteBuffer(Buffer.constData(), Buffer.size());
-			PartFile.WriteBuffer("\r\n", 2);
+			PartFile.WriteBuffer("\n", 1);
 		}
 
 		PartFile.Seek(0, SEEK_SET);
