@@ -1,6 +1,14 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-02</summary>
+
+  - Site: the author avatar in the footer is now a sharper 1024 pixel image
+  - The license is now formatted as Markdown, so it is easier to read on GitHub
+
+  </details>
+
+  <details>
   <summary>2026-11-01</summary>
 
   - Site: the Modeling section has a looping video of a Flex Path hose seated between two bricks and reshaped by its control points, see [Modeling on the site](https://studworx.app/#modeling)
