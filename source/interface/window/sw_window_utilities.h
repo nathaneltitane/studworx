@@ -112,6 +112,16 @@ protected:
 // Failed and conflicting entries share one text color.
 QColor swGetWarningTextColor();
 
+// Warning text keeps its color on selected rows.
+class swWarningItemDelegate : public QStyledItemDelegate
+{
+public:
+	using QStyledItemDelegate::QStyledItemDelegate;
+
+protected:
+	void initStyleOption(QStyleOptionViewItem* Option, const QModelIndex& Index) const override;
+};
+
 // Panel rows share a standard layout.
 QSize swGetPanelButtonSize();
 QSize swGetBrowseButtonSize();

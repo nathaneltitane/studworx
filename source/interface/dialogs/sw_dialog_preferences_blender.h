@@ -70,6 +70,7 @@ protected:
 	void ClearGroupBox(QGroupBox* GroupBox);
 	void InitPathsAndSettings();
 	void InitPathsAndSettingsMM();
+	void AlignLabelColumns();
 	bool ExtractAddon(const QString FileName, QString &Result);
 
 signals:

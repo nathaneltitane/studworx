@@ -88,7 +88,9 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 	mCurrentStep = qBound(1, Options->Start, mLastStep);
 	mPreviewStep = mCurrentStep;
 
-	QHBoxLayout* MainLayout = new QHBoxLayout(this);
+	QVBoxLayout* DialogLayout = new QVBoxLayout(this);
+	QHBoxLayout* MainLayout = new QHBoxLayout();
+	DialogLayout->addLayout(MainLayout, 1);
 
 	// preview column
 	QFrame* PreviewFrame = new QFrame(this);
@@ -141,9 +143,8 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 	QGroupBox* FileGroup = new QGroupBox(tr("File"), this);
 	FileGroup->setWhatsThis(FileHelp);
 
-	QVBoxLayout* FileLayout = new QVBoxLayout(FileGroup);
-	QHBoxLayout* PathLayout = new QHBoxLayout();
-	FileLayout->addLayout(PathLayout);
+	// path and buttons share one row along the bottom
+	QHBoxLayout* PathLayout = new QHBoxLayout(FileGroup);
 
 	mFileEdit = new QLineEdit(Options->FilePath, FileGroup);
 	mFileEdit->setToolTip(tr("Path and file name for the saved image."));
@@ -157,17 +158,12 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 	BrowseButton->setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Preferred);
 	PathLayout->addWidget(BrowseButton);
 
-	QHBoxLayout* ButtonLayout = new QHBoxLayout();
-	FileLayout->addLayout(ButtonLayout);
-
 	QPushButton* SaveButton = new QPushButton(tr("&Save"), FileGroup);
 	SaveButton->setDefault(true);
-	SaveButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
-	ButtonLayout->addWidget(SaveButton, 1);
+	PathLayout->addWidget(SaveButton);
 
 	QPushButton* CancelButton = new QPushButton(tr("Cancel"), FileGroup);
-	CancelButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
-	ButtonLayout->addWidget(CancelButton, 1);
+	PathLayout->addWidget(CancelButton);
 
 	// size group
 	QGroupBox* SizeGroup = new QGroupBox(tr("Size"), this);
@@ -215,7 +211,8 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 	SizeLayout->addWidget(mHeightSpinBox, 2, 1);
 
 	QHBoxLayout* OrientationLayout = new QHBoxLayout();
-	SizeLayout->addLayout(OrientationLayout, 3, 0, 1, 2);
+	// orientation buttons line up with the size fields
+	SizeLayout->addLayout(OrientationLayout, 3, 1);
 
 	mLandscapeButton = new QPushButton(tr("&Landscape"), SizeGroup);
 	mLandscapeButton->setCheckable(true);
@@ -495,14 +492,14 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 	mTransparentRadio = new QRadioButton(tr("&Transparent"), BackgroundGroup);
 	BackgroundLayout->addWidget(mTransparentRadio, 1, 0, 1, 2);
 
-	// background to file back to front
+	// background to size top to bottom
 	SettingsLayout->addWidget(BackgroundGroup);
 	SettingsLayout->addWidget(StepsGroup);
 	SettingsLayout->addWidget(TurntableGroup);
 	SettingsLayout->addWidget(FramingGroup);
 	SettingsLayout->addWidget(SizeGroup);
 	SettingsLayout->addStretch(1);
-	SettingsLayout->addWidget(FileGroup);
+	DialogLayout->addWidget(FileGroup);
 
 	for (QGridLayout* GridLayout : mGridLayouts)
 		GridLayout->setColumnStretch(1, 1);
@@ -621,13 +618,15 @@ void swImageDialog::showEvent(QShowEvent* Event)
 // use to size the window around the preview
 void swImageDialog::FitWindow()
 {
-	QBoxLayout* MainLayout = qobject_cast<QBoxLayout*>(layout());
+	QBoxLayout* DialogLayout = qobject_cast<QBoxLayout*>(layout());
+	QBoxLayout* MainLayout = qobject_cast<QBoxLayout*>(DialogLayout->itemAt(0)->layout());
+	QLayoutItem* FileItem = DialogLayout->itemAt(1);
 	QFrame* PreviewFrame = qobject_cast<QFrame*>(mPreview->parentWidget());
 	QBoxLayout* PreviewLayout = qobject_cast<QBoxLayout*>(PreviewFrame->layout());
 	QLayout* SettingsLayout = MainLayout->itemAt(1)->layout();
 	QLayoutItem* CaptionItem = PreviewLayout->itemAt(1);
 
-	const QMargins MainMargins = MainLayout->contentsMargins();
+	const QMargins MainMargins = DialogLayout->contentsMargins();
 	const QMargins PreviewMargins = PreviewLayout->contentsMargins();
 	const int FrameWidth = PreviewFrame->frameWidth();
 
@@ -638,12 +637,13 @@ void swImageDialog::FitWindow()
 	const double Ratio = static_cast<double>(mWidthSpinBox->value()) / qMax(mHeightSpinBox->value(), 1);
 	const int PreviewWidth = qMax(qRound(PreviewHeight * Ratio), qMax(mPreview->minimumWidth(), CaptionItem->minimumSize().width()));
 	int Width = MainMargins.left() + PreviewWidth + 2 * FrameWidth + PreviewMargins.left() + PreviewMargins.right() + MainLayout->spacing() + SettingsLayout->sizeHint().width() + MainMargins.right();
+	Width = qMax(Width, MainMargins.left() + FileItem->minimumSize().width() + MainMargins.right());
 
 	// stay on the screen
 	if (const QScreen* Screen = screen())
 		Width = qMin(Width, Screen->availableGeometry().width());
 
-	resize(Width, ColumnHeight + MainMargins.top() + MainMargins.bottom());
+	resize(Width, MainMargins.top() + ColumnHeight + DialogLayout->spacing() + FileItem->sizeHint().height() + MainMargins.bottom());
 }
 
 // use to share the label column

@@ -134,7 +134,21 @@ bool swWindowGeometryFilter::eventFilter(QObject* Object, QEvent* Event)
 		const QSize ContentSize = Window->sizeHint().expandedTo(Window->minimumSizeHint());
 		const int ProportionalWidth = qMin(4 * ContentSize.height(), 64 * Window->fontMetrics().averageCharWidth());
 
-		Window->setFixedSize(qMax(ContentSize.width(), ProportionalWidth), ContentSize.height());
+		// widen until every field shows its whole text
+		int TextOverflow = 0;
+
+		for (const QLineEdit* LineEdit : Window->findChildren<QLineEdit*>())
+		{
+			const int TextWidth = LineEdit->fontMetrics().horizontalAdvance(LineEdit->text()) + 4 * LineEdit->fontMetrics().averageCharWidth();
+			TextOverflow = qMax(TextOverflow, TextWidth - LineEdit->sizeHint().width());
+		}
+
+		int Width = qMax(ContentSize.width() + TextOverflow, ProportionalWidth);
+
+		if (const QScreen* Screen = Window->screen())
+			Width = qMin(Width, qMax(ContentSize.width(), Screen->availableGeometry().width() / 2));
+
+		Window->setFixedSize(Width, ContentSize.height());
 
 		return false;
 	}
@@ -149,6 +163,13 @@ bool swWindowGeometryFilter::eventFilter(QObject* Object, QEvent* Event)
 		return false;
 
 	Window->setProperty("swInitialGeometry", true);
+
+	// form labels start at the left edge and fields reach the right edge
+	for (QFormLayout* FormLayout : Window->findChildren<QFormLayout*>())
+	{
+		FormLayout->setLabelAlignment(Qt::AlignLeft | Qt::AlignVCenter);
+		FormLayout->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
+	}
 
 	QWidget* Parent = Window->parentWidget() ? Window->parentWidget()->window() : nullptr;
 	QScreen* Screen = Parent ? Parent->screen() : Window->screen();
@@ -646,6 +667,17 @@ bool swBlockingProgress::IsCanceled() const
 QColor swGetWarningTextColor()
 {
 	return QColor(208, 0, 0);
+}
+
+// use to keep warning text red while the row is selected
+void swWarningItemDelegate::initStyleOption(QStyleOptionViewItem* Option, const QModelIndex& Index) const
+{
+	QStyledItemDelegate::initStyleOption(Option, Index);
+
+	const QVariant Foreground = Index.data(Qt::ForegroundRole);
+
+	if (Foreground.canConvert<QBrush>() && Foreground.value<QBrush>().color() == swGetWarningTextColor())
+		Option->palette.setColor(QPalette::HighlightedText, swGetWarningTextColor());
 }
 
 QSize swGetPanelButtonSize()

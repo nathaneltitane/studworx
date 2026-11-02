@@ -102,6 +102,19 @@ swPageSetupDialog::swPageSetupDialog(QWidget* Parent, swInstructionsPageSetup* P
 	UpdatePreset();
 	UpdateOrientation();
 
+	// both groups share one label column
+	int LabelWidth = 0;
+	for (const QGridLayout* GridLayout : { ui->SizeLayout, ui->MarginsLayout })
+		for (int Row = 0; Row < GridLayout->rowCount(); Row++)
+			if (QLayoutItem* Item = GridLayout->itemAtPosition(Row, 0))
+				if (Item->widget())
+					LabelWidth = qMax(LabelWidth, Item->widget()->sizeHint().width());
+	for (QGridLayout* GridLayout : { ui->SizeLayout, ui->MarginsLayout })
+	{
+		GridLayout->setColumnMinimumWidth(0, LabelWidth);
+		GridLayout->setColumnStretch(1, 1);
+	}
+
 	connect(ui->PresetComboBox, qOverload<int>(&QComboBox::currentIndexChanged), this, &swPageSetupDialog::PresetChanged);
 	connect(ui->UnitsComboBox, qOverload<int>(&QComboBox::currentIndexChanged), this, &swPageSetupDialog::UnitsChanged);
 	connect(ui->MarginUnitsComboBox, qOverload<int>(&QComboBox::currentIndexChanged), this, &swPageSetupDialog::MarginUnitsChanged);

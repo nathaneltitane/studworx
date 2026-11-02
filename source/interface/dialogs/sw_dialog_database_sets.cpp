@@ -15,6 +15,12 @@ swSetsDatabaseDialog::swSetsDatabaseDialog(QWidget* Parent)
 	swSetupDialogHelp(this);
 	ui->SearchEdit->installEventFilter(this);
 
+	// name takes the width left by the other columns
+	QHeaderView* SetsHeader = ui->SetsTree->header();
+	SetsHeader->setStretchLastSection(false);
+	SetsHeader->setSectionResizeMode(QHeaderView::ResizeToContents);
+	SetsHeader->setSectionResizeMode(1, QHeaderView::Stretch);
+
 	mHttpManager = new swHttpManager(this);
 
 	connect(ui->SetsTree, &QTreeWidget::itemDoubleClicked, this, &swSetsDatabaseDialog::accept);
@@ -245,10 +251,6 @@ void swSetsDatabaseDialog::DownloadFinished(swHttpReply* Reply)
 
 			if (!Sets.isEmpty())
 			{
-				SetsTree->resizeColumnToContents(0);
-				SetsTree->resizeColumnToContents(1);
-				SetsTree->resizeColumnToContents(2);
-				SetsTree->resizeColumnToContents(3);
 				SetsTree->setCurrentItem(SetsTree->topLevelItem(0));
 			}
 		}

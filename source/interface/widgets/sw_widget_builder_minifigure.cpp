@@ -387,7 +387,7 @@ void swMinifigureBuilderWidget::TemplateSaveButtonClicked()
 {
 	QString CurrentName = mCurrentTemplateName;
 	bool Ok;
-	QString TemplateName = QInputDialog::getText(this, tr("Save Template"), tr("Template Name:"), QLineEdit::Normal, CurrentName, &Ok);
+	QString TemplateName = QInputDialog::getText(this, tr("Save Template"), tr("Template Name"), QLineEdit::Normal, CurrentName, &Ok);
 
 	if (!Ok)
 		return;

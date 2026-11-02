@@ -29,14 +29,14 @@
       <item row="0" column="0">
        <widget class="QLabel" name="PresetLabel">
         <property name="text">
-         <string>Preset:</string>
+         <string>Preset</string>
         </property>
         <property name="buddy">
          <cstring>PresetComboBox</cstring>
         </property>
        </widget>
       </item>
-      <item row="0" column="1" colspan="3">
+      <item row="0" column="1">
        <widget class="QComboBox" name="PresetComboBox">
         <property name="toolTip">
          <string>Choose a standard paper or screen size, or Custom to enter your own.</string>
@@ -46,7 +46,7 @@
       <item row="1" column="0">
        <widget class="QLabel" name="WidthLabel">
         <property name="text">
-         <string>Width:</string>
+         <string>Width</string>
         </property>
         <property name="buddy">
          <cstring>WidthSpinBox</cstring>
@@ -56,44 +56,44 @@
       <item row="1" column="1">
        <widget class="swRangeDoubleSpinBox" name="WidthSpinBox"/>
       </item>
-      <item row="1" column="2">
+      <item row="2" column="0">
        <widget class="QLabel" name="HeightLabel">
         <property name="text">
-         <string>Height:</string>
+         <string>Height</string>
         </property>
         <property name="buddy">
          <cstring>HeightSpinBox</cstring>
         </property>
        </widget>
       </item>
-      <item row="1" column="3">
+      <item row="2" column="1">
        <widget class="swRangeDoubleSpinBox" name="HeightSpinBox"/>
       </item>
-      <item row="2" column="0">
+      <item row="3" column="0">
        <widget class="QLabel" name="UnitsLabel">
         <property name="text">
-         <string>Units:</string>
+         <string>Units</string>
         </property>
         <property name="buddy">
          <cstring>UnitsComboBox</cstring>
         </property>
        </widget>
       </item>
-      <item row="2" column="1" colspan="3">
+      <item row="3" column="1">
        <widget class="QComboBox" name="UnitsComboBox">
         <property name="toolTip">
          <string>Units used for the page size. A pixel is 1/72 inch, one pixel of the page image. Choosing a preset selects the units that match it.</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
+      <item row="4" column="0">
        <widget class="QLabel" name="OrientationLabel">
         <property name="text">
-         <string>Orientation:</string>
+         <string>Orientation</string>
         </property>
        </widget>
       </item>
-      <item row="3" column="1" colspan="3">
+      <item row="4" column="1">
        <layout class="QHBoxLayout" name="OrientationLayout">
         <item>
          <widget class="QRadioButton" name="PortraitButton">
@@ -139,7 +139,7 @@
       <item row="0" column="0">
        <widget class="QLabel" name="LeftLabel">
         <property name="text">
-         <string>Left:</string>
+         <string>Left</string>
         </property>
         <property name="buddy">
          <cstring>LeftSpinBox</cstring>
@@ -149,56 +149,56 @@
       <item row="0" column="1">
        <widget class="swRangeDoubleSpinBox" name="LeftSpinBox"/>
       </item>
-      <item row="0" column="2">
+      <item row="1" column="0">
        <widget class="QLabel" name="RightLabel">
         <property name="text">
-         <string>Right:</string>
+         <string>Right</string>
         </property>
         <property name="buddy">
          <cstring>RightSpinBox</cstring>
         </property>
        </widget>
       </item>
-      <item row="0" column="3">
+      <item row="1" column="1">
        <widget class="swRangeDoubleSpinBox" name="RightSpinBox"/>
       </item>
-      <item row="1" column="0">
+      <item row="2" column="0">
        <widget class="QLabel" name="TopLabel">
         <property name="text">
-         <string>Top:</string>
+         <string>Top</string>
         </property>
         <property name="buddy">
          <cstring>TopSpinBox</cstring>
         </property>
        </widget>
       </item>
-      <item row="1" column="1">
+      <item row="2" column="1">
        <widget class="swRangeDoubleSpinBox" name="TopSpinBox"/>
       </item>
-      <item row="1" column="2">
+      <item row="3" column="0">
        <widget class="QLabel" name="BottomLabel">
         <property name="text">
-         <string>Bottom:</string>
+         <string>Bottom</string>
         </property>
         <property name="buddy">
          <cstring>BottomSpinBox</cstring>
         </property>
        </widget>
       </item>
-      <item row="1" column="3">
+      <item row="3" column="1">
        <widget class="swRangeDoubleSpinBox" name="BottomSpinBox"/>
       </item>
-      <item row="2" column="0">
+      <item row="4" column="0">
        <widget class="QLabel" name="MarginUnitsLabel">
         <property name="text">
-         <string>Units:</string>
+         <string>Units</string>
         </property>
         <property name="buddy">
          <cstring>MarginUnitsComboBox</cstring>
         </property>
        </widget>
       </item>
-      <item row="2" column="1" colspan="3">
+      <item row="4" column="1">
        <widget class="QComboBox" name="MarginUnitsComboBox">
         <property name="toolTip">
          <string>Units used for the margins, metric or imperial. Choosing a preset selects the units that match it.</string>

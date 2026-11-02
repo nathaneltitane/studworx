@@ -10,7 +10,26 @@ swArrayDialog::swArrayDialog(QWidget* Parent)
 
 	// the counts show their maximum
 	for (swRangeSpinBox* SpinBox : { ui->count1, ui->count2, ui->count3 })
+	{
 		SpinBox->SetReference();
+		SpinBox->setSizePolicy(QSizePolicy::Expanding, SpinBox->sizePolicy().verticalPolicy());
+	}
+
+	// every input column shares one width
+	const QList<QWidget*> Inputs = { ui->count1, ui->count2, ui->count3, ui->offset1x, ui->offset1y, ui->offset1z, ui->offset2x, ui->offset2y, ui->offset2z, ui->offset3x, ui->offset3y, ui->offset3z,
+		ui->rotation1x, ui->rotation1y, ui->rotation1z, ui->rotation2x, ui->rotation2y, ui->rotation2z, ui->rotation3x, ui->rotation3y, ui->rotation3z };
+	int InputWidth = 0;
+
+	for (const QWidget* Input : Inputs)
+		InputWidth = qMax(InputWidth, Input->sizeHint().width());
+
+	for (QWidget* Input : Inputs)
+		Input->setMinimumWidth(InputWidth);
+
+	// one count column beside three offset and rotation columns
+	ui->horizontalLayout->setStretch(0, 1);
+	ui->horizontalLayout->setStretch(1, 3);
+	ui->horizontalLayout->setStretch(2, 3);
 
 	swSetupDialogHelp(this);
 	swSetInputPrompt(this);

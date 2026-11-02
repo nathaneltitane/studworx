@@ -358,9 +358,13 @@ void swRenderDialog::CreatePOVRayPanels()
 	mPresetComboBox = new QComboBox();
 	CreateRow(PresetsPanel, tr("Preset"), mPresetComboBox, tr("Choose a preset to apply its image size, quality and scene settings."), QString());
 
-	// presets share the panel width
+	// preset buttons line up with the preset list
 	QWidget* PresetButtonRow = swCreatePanelRow(PresetsPanel);
 	PresetsPanel->layout()->addWidget(PresetButtonRow);
+
+	QLabel* PresetButtonLabel = new QLabel(PresetButtonRow);
+	Labels.append(PresetButtonLabel);
+	PresetButtonRow->layout()->addWidget(PresetButtonLabel);
 
 	auto CreatePresetButton = [PresetButtonRow](const QString& Text, const QString& ToolTip)
 	{
@@ -776,7 +780,7 @@ void swRenderDialog::SavePresetClicked()
 {
 	const QString CurrentName = mPresetComboBox->currentData().toString().isEmpty() ? QString() : mPresetComboBox->currentText();
 	bool Ok = false;
-	const QString Name = QInputDialog::getText(this, tr("Save Preset"), tr("Preset Name:"), QLineEdit::Normal, CurrentName, &Ok).trimmed().remove('|');
+	const QString Name = QInputDialog::getText(this, tr("Save Preset"), tr("Preset Name"), QLineEdit::Normal, CurrentName, &Ok).trimmed().remove('|');
 
 	if (!Ok)
 		return;

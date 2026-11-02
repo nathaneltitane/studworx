@@ -228,7 +228,7 @@ QString Project::GetNewModelName(QWidget* ParentWidget, const QString& DialogTit
 	{
 		bool Ok = false;
 
-		Name = QInputDialog::getText(ParentWidget, DialogTitle, tr("Submodel Name:"), QLineEdit::Normal, Name, &Ok);
+		Name = QInputDialog::getText(ParentWidget, DialogTitle, tr("Submodel Name"), QLineEdit::Normal, Name, &Ok);
 
 		if (!Ok)
 			return QString();

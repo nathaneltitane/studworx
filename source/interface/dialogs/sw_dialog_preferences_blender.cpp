@@ -594,6 +594,46 @@ void swBlenderPreferences::ClearGroupBox(QGroupBox* GroupBox)
 	delete GroupBoxIitem;
 }
 
+// use to share one label column across the groups
+void swBlenderPreferences::AlignLabelColumns()
+{
+	int LabelWidth = 0;
+
+	for (QGroupBox* Group : mContent->findChildren<QGroupBox*>())
+	{
+		if (QGridLayout* GridLayout = qobject_cast<QGridLayout*>(Group->layout()))
+		{
+			for (int ItemIndex = 0; ItemIndex < GridLayout->count(); ItemIndex++)
+			{
+				int Row, Column, RowSpan, ColumnSpan;
+				GridLayout->getItemPosition(ItemIndex, &Row, &Column, &RowSpan, &ColumnSpan);
+
+				if (Column == 0 && ColumnSpan == 1 && qobject_cast<QLabel*>(GridLayout->itemAt(ItemIndex)->widget()))
+					LabelWidth = qMax(LabelWidth, GridLayout->itemAt(ItemIndex)->sizeHint().width());
+			}
+		}
+		else if (QFormLayout* FormLayout = qobject_cast<QFormLayout*>(Group->layout()))
+		{
+			for (int Row = 0; Row < FormLayout->rowCount(); Row++)
+				if (QLayoutItem* Item = FormLayout->itemAt(Row, QFormLayout::LabelRole))
+					LabelWidth = qMax(LabelWidth, Item->sizeHint().width());
+		}
+	}
+
+	for (QGroupBox* Group : mContent->findChildren<QGroupBox*>())
+	{
+		if (QGridLayout* GridLayout = qobject_cast<QGridLayout*>(Group->layout()))
+			GridLayout->setColumnMinimumWidth(0, LabelWidth);
+		else if (QFormLayout* FormLayout = qobject_cast<QFormLayout*>(Group->layout()))
+		{
+			for (int Row = 0; Row < FormLayout->rowCount(); Row++)
+				if (QLayoutItem* Item = FormLayout->itemAt(Row, QFormLayout::LabelRole))
+					if (Item->widget())
+						Item->widget()->setMinimumWidth(LabelWidth);
+		}
+	}
+}
+
 void swBlenderPreferences::SetupControlHelp(QLabel* Label, QWidget* Control)
 {
 	Label->setBuddy(Control);
@@ -758,6 +798,8 @@ void swBlenderPreferences::InitPathsAndSettings()
 		mSettingsSubform = nullptr;
 
 	mSettingsBox->setEnabled(mConfigured);
+
+	AlignLabelColumns();
 }
 
 void swBlenderPreferences::InitPathsAndSettingsMM()
@@ -911,6 +953,8 @@ void swBlenderPreferences::InitPathsAndSettingsMM()
 		mSettingsSubform = nullptr;
 
 	mSettingsBox->setEnabled(mConfigured);
+
+	AlignLabelColumns();
 }
 
 void swBlenderPreferences::UpdateBlenderAddon()

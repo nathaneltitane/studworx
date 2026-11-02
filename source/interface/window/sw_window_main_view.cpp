@@ -248,31 +248,34 @@ void swMainWindow::ShowStepViewDialog()
 	QDialog Dialog(this);
 	Dialog.setWindowTitle(tr("Step %1 View").arg(Step));
 
-	QFormLayout* Layout = new QFormLayout(&Dialog);
+	QVBoxLayout* DialogLayout = new QVBoxLayout(&Dialog);
+	QFormLayout* Layout = new QFormLayout();
+	DialogLayout->addLayout(Layout);
 
 	QComboBox* ModeCombo = new QComboBox(&Dialog);
 	ModeCombo->addItems({ tr("No view change"), tr("Relative to the default view"), tr("Absolute"), tr("Added to the previous view"), tr("Back to the default view") });
 	ModeCombo->setToolTip(tr("How this step turns the view, saved as an MLCAD ROTSTEP line ending the step."));
-	Layout->addRow(tr("Rotation:"), ModeCombo);
+	Layout->addRow(tr("Rotation"), ModeCombo);
 
 	swRangeDoubleSpinBox* AngleEdits[3];
-	const QString AxisNames[3] = { tr("X:"), tr("Y:"), tr("Z:") };
+	const QString AxisNames[3] = { tr("X"), tr("Y"), tr("Z") };
 
 	for (int Axis = 0; Axis < 3; Axis++)
 	{
 		AngleEdits[Axis] = new swRangeDoubleSpinBox(&Dialog);
 		AngleEdits[Axis]->setRange(-360.0, 360.0);
 		AngleEdits[Axis]->setDecimals(2);
-		AngleEdits[Axis]->SetReference(tr(" deg."));
+		AngleEdits[Axis]->SetReference(tr("°"));
 		Layout->addRow(AxisNames[Axis], AngleEdits[Axis]);
 	}
 
 	QPushButton* CurrentViewButton = new QPushButton(tr("Use Current View"), &Dialog);
 	CurrentViewButton->setToolTip(tr("Fill in the absolute rotation that matches the current view."));
+	CurrentViewButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
 	Layout->addRow(QString(), CurrentViewButton);
 
 	QDialogButtonBox* Buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &Dialog);
-	Layout->addRow(Buttons);
+	DialogLayout->addWidget(Buttons);
 
 	auto UpdateEnabled = [ModeCombo, AngleEdits]()
 	{

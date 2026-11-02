@@ -76,7 +76,7 @@ void swPartPaletteDialog::NewButtonClicked()
 {
 	bool Ok = false;
 
-	QString Name = QInputDialog::getText(this, tr("New Part Palette"), tr("Palette Name:"), QLineEdit::Normal, QString(), &Ok);
+	QString Name = QInputDialog::getText(this, tr("New Part Palette"), tr("Palette Name"), QLineEdit::Normal, QString(), &Ok);
 
 	if (!Ok || Name.isEmpty())
 		return;
@@ -115,7 +115,7 @@ void swPartPaletteDialog::RenameButtonClicked()
 	bool Ok = false;
 
 	QString Name = SelectedItems[0]->text();
-	Name = QInputDialog::getText(this, tr("Rename Part Palette"), tr("Palette Name:"), QLineEdit::Normal, Name, &Ok);
+	Name = QInputDialog::getText(this, tr("Rename Part Palette"), tr("Palette Name"), QLineEdit::Normal, Name, &Ok);
 
 	if (!Ok || Name.isEmpty())
 		return;

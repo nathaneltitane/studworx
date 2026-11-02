@@ -30,6 +30,7 @@ static bool swIsColumnControl(QWidget* Widget)
 static void swAlignPreferencesColumns(QTabWidget* TabWidget)
 {
 	int LabelWidth = 0;
+	int SliderValueWidth = 0;
 
 	// share the label column across pages
 	for (int PageIndex = 0; PageIndex < TabWidget->count(); PageIndex++)
@@ -64,6 +65,15 @@ static void swAlignPreferencesColumns(QTabWidget* TabWidget)
 
 					if (Column == 0 && Widget && (ColumnSpan == 1 || qobject_cast<QCheckBox*>(Widget)))
 						LabelWidth = qMax(LabelWidth, GridLayout->itemAt(ItemIndex)->sizeHint().width());
+
+					// share the slider value width across pages
+					if (!qobject_cast<QSlider*>(Widget))
+						continue;
+
+					for (int ValueColumn = Column + ColumnSpan; ValueColumn < GridLayout->columnCount(); ValueColumn++)
+						if (QLayoutItem* ValueItem = GridLayout->itemAtPosition(Row, ValueColumn))
+							if (QLabel* ValueLabel = qobject_cast<QLabel*>(ValueItem->widget()))
+								SliderValueWidth = qMax(SliderValueWidth, qMax(ValueLabel->sizeHint().width(), ValueLabel->minimumWidth()));
 				}
 			}
 		}
@@ -214,7 +224,7 @@ static void swAlignPreferencesColumns(QTabWidget* TabWidget)
 
 					if (IsSlider && qobject_cast<QLabel*>(TrailingWidget))
 					{
-						TrailingWidget->setMinimumWidth(TrailingWidth);
+						TrailingWidget->setMinimumWidth(SliderValueWidth);
 						static_cast<QLabel*>(TrailingWidget)->setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
 						RowLayout->insertWidget(RowLayout->indexOf(Widget), TrailingWidget, 0, Qt::AlignLeft | Qt::AlignVCenter);
 					}
@@ -314,6 +324,24 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->povrayExecutableBrowse, &QPushButton::clicked, this, &swPreferencesDialog::PovrayExecutableBrowseClicked);
 	connect(ui->lgeoPathBrowse, &QPushButton::clicked, this, &swPreferencesDialog::LgeoPathBrowseClicked);
 	connect(ui->RebrickableApiKeyButton, &QToolButton::clicked, this, &swPreferencesDialog::RebrickableApiKeyButtonClicked);
+
+	// path fields end where the update buttons begin
+	const int UpdateButtonWidth = ui->ColorConfigUpdateButton->sizeHint().width();
+	const int ButtonSpacing = ui->ColorConfigLayout->spacing() >= 0 ? ui->ColorConfigLayout->spacing() : swGetLayoutSpacing(this, Qt::Horizontal);
+	QList<QHBoxLayout*> BrowseLayouts = { ui->horizontalLayout_3, ui->UnofficialLibraryLayout, ui->ShadowLibraryLayout, ui->horizontalLayout_10 };
+
+#if !defined(Q_OS_WIN) && !defined(Q_OS_MACOS)
+	BrowseLayouts.append(ui->povrayLayout);
+#endif
+
+	for (QHBoxLayout* BrowseLayout : BrowseLayouts)
+	{
+		QWidget* UpdateSlot = new QWidget(this);
+		UpdateSlot->setFixedSize(UpdateButtonWidth, 0);
+		BrowseLayout->addWidget(UpdateSlot);
+	}
+
+	ui->RebrickableApiKeyButton->setMinimumWidth(ui->ColorConfigBrowseButton->sizeHint().width() + ButtonSpacing + UpdateButtonWidth);
 	connect(ui->AuthorName, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
 	connect(ui->AuthorEmail, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
 	connect(ui->AuthorComment, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
@@ -742,6 +770,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 
 	UpdateCommandList();
 	new swTreeWidgetColumnStretcher(ui->commandList, 0);
+	ui->commandList->setItemDelegate(new swWarningItemDelegate(ui->commandList));
 	CommandChanged(nullptr);
 
 	UpdateMouseTree();
@@ -769,6 +798,11 @@ void swPreferencesDialog::showEvent(QShowEvent* Event)
 
 	// line up columns once shown
 	swAlignPreferencesColumns(ui->tabWidget);
+
+	// key button spans the browse and update buttons
+	const int ButtonsLeft = ui->ColorConfigBrowseButton->mapTo(this, QPoint(0, 0)).x();
+	const int ButtonsRight = ui->ColorConfigUpdateButton->mapTo(this, QPoint(ui->ColorConfigUpdateButton->width(), 0)).x();
+	ui->RebrickableApiKeyButton->setFixedWidth(ButtonsRight - ButtonsLeft);
 
 	// grow digits to the left
 	ui->MeshLODLabel->setAlignment(Qt::AlignRight | Qt::AlignVCenter);

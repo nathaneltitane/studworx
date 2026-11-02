@@ -23,6 +23,16 @@
   - Minifigure Builder: templates export as '.minifigure' files and '.minifig' files still import, settings, toolbar and category names carry over on the first start
   - Site: the author avatar in the footer is now a sharper 1024 pixel image
   - The license is now formatted as Markdown, so it is easier to read on GitHub
+  - Preferences and Timeline: commands with a shared shortcut stay red while selected, until the conflict is resolved
+  - Render: the preset buttons line up with the fields beside them
+  - Save Model Image: the file path row now runs along the bottom of the dialog
+  - Dialogs: labels sit in one column on the left without colons, fields reach the right edge instead of narrow inputs
+  - Blender Settings: every group shares one label column
+  - Array: the X, Y and Z columns are equally wide
+  - Page Setup: one field per row with a shared label column
+  - Prompts: name and value prompts widen to fit their text
+  - Find and Replace: the bar labels read Find and Replace
+  - Import Set Inventory: the Name column takes the free width, so long set names show in full
 
   </details>
 

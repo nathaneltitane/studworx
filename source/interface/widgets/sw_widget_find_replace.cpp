@@ -40,7 +40,7 @@ swFindReplaceWidget::swFindReplaceWidget(QWidget* Parent, swModel* Model, bool R
 	CloseButton->setFixedSize(ButtonHeight, ButtonHeight);
 	Layout->addWidget(CloseButton, 0, 0);
 
-	Layout->addWidget(new QLabel(tr("Find:")), 0, 1);
+	Layout->addWidget(new QLabel(tr("Find")), 0, 1);
 
 	swColorPicker* FindColorPicker = new swColorPicker(this, true);
 	FindColorPicker->setToolTip(tr("Search Color"));
@@ -96,7 +96,7 @@ swFindReplaceWidget::swFindReplaceWidget(QWidget* Parent, swModel* Model, bool R
 	connect(mFindPartComboBox, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &swFindReplaceWidget::FindActivated);
 	connect(CloseButton, &QToolButton::clicked, this, &QObject::deleteLater);
 
-	QLabel* ReplaceLabel = new QLabel(tr("Replace:"), this);
+	QLabel* ReplaceLabel = new QLabel(tr("Replace"), this);
 	Layout->addWidget(ReplaceLabel, 1, 1);
 
 	swColorPicker* ReplaceColorPicker = new swColorPicker(this, true);

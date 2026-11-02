@@ -1058,7 +1058,7 @@ void swMainWindow::SetAngleSnapIndex(int Index)
 void swMainWindow::SetCustomAngleSnap()
 {
 	bool Ok = false;
-	const double Angle = QInputDialog::getDouble(this, tr("Custom Rotation Snap"), tr("Snap angle in degrees:"), mAngleSnapCustom, 0.01, 360.0, 2, &Ok);
+	const double Angle = QInputDialog::getDouble(this, tr("Custom Rotation Snap"), tr("Snap angle in degrees"), mAngleSnapCustom, 0.01, 360.0, 2, &Ok);
 
 	if (!Ok)
 	{

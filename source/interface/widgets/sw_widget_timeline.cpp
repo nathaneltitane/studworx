@@ -20,6 +20,7 @@ swTimelineWidget::swTimelineWidget(QWidget* Parent)
 	setUniformRowHeights(true);
 	setHeaderHidden(true);
 	setContextMenuPolicy(Qt::CustomContextMenu);
+	setItemDelegate(new swWarningItemDelegate(this));
 
 	invisibleRootItem()->setFlags(invisibleRootItem()->flags() & ~Qt::ItemIsDropEnabled);
 
