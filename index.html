@@ -2702,8 +2702,23 @@
 			<ul class="points">
 				<li><b>Linux.</b> The .deb and .rpm packages install to /opt/studworx. The AppImage runs from anywhere after chmod +x. Tested on Debian 12 and 13, Ubuntu 22.04 and 24.04, Rocky Linux 9, Fedora and openSUSE Tumbleweed.</li>
 				<li><b>macOS.</b> The disk <a href="#image">image</a> is not notarized: on the first start, right click StudWorx and choose Open.</li>
-				<li><b>Prepare.</b> To build, install a C++ compiler, Qt 5 (widgets, OpenGL, print support, network, xml and concurrent modules) and zlib development packages. KDE Frameworks KParts and Konsole add the terminal panel, KIO the file manager thumbnails.</li>
+				<li><b>Prepare.</b> To build, install a C++ compiler, Qt 5 (widgets, OpenGL, print support, network, xml and concurrent modules) and zlib development packages, listed below as build requirements. The optional packages add gamepad input, the terminal panel with KDE Frameworks KParts and a KDE Frameworks 5 Konsole, and the file manager thumbnails with KIO.</li>
 			</ul>
+
+			<div class="table">
+				<table>
+					<thead>
+						<tr><th>System</th><th>Build requirements</th><th>Optional</th></tr>
+					</thead>
+
+					<tbody>
+						<tr><td>Debian, Ubuntu</td><td>g++ make qtbase5-dev qttools5-dev-tools libqt5opengl5-dev libqt5svg5 qt5-image-formats-plugins zlib1g-dev</td><td>libqt5gamepad5-dev libkf5parts-dev libkf5kio-dev</td></tr>
+						<tr><td>Fedora, Rocky Linux, RHEL</td><td>gcc-c++ make qt5-qtbase-devel qt5-linguist qt5-qtsvg qt5-qtimageformats zlib-devel</td><td>qt5-qtgamepad-devel kf5-kparts-devel kf5-kio-devel</td></tr>
+						<tr><td>openSUSE</td><td>gcc-c++ make libqt5-qtbase-devel libqt5-linguist libqt5-qtsvg libqt5-qtimageformats zlib-devel</td><td>kparts-devel kio-devel</td></tr>
+						<tr><td>Arch Linux</td><td>base-devel qt5-base qt5-tools qt5-svg qt5-imageformats zlib</td><td>qt5-gamepad kparts5 kio5</td></tr>
+					</tbody>
+				</table>
+			</div>
 
 			<pre><code>git clone https://github.com/nathaneltitane/studworx
 cd studworx
