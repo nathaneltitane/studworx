@@ -68,7 +68,7 @@ Models are plain LDraw text files in LeoCAD's format, so they open in either pro
 - **Print.** File > Print prints the current model view through the system print dialog, with a Preview button where the dialog allows it.
 - **Thumbnails.** Model thumbnails in file managers, from a KDE thumbnail plugin or the desktop thumbnailer.
 - **Parts library.** Downloaded on the first start as the official LDraw complete.zip, or chosen from an archive you already have, and reloaded from the File menu. An unofficial parts folder can be added beside it.
-- **Command line.** Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx.
+- **Command line.** Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx. [L²CU](https://l2cu.app), the LDraw Linux command line utility, drives these renders and exports for whole folders of models.
 - **Exit.** File > Exit asks to save each changed model before StudWorx closes.
 
 ### Command line

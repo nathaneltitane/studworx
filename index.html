@@ -14,6 +14,71 @@
 		<title>StudWorx - LDraw / LEGO® model builder</title>
 		<meta name="description" content="StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library, built on LeoCAD.">
 		<meta name="theme-color" content="#bbbbbb">
+		<link rel="canonical" href="https://studworx.app/">
+
+		<!-- structured data -->
+
+		<script type="application/ld+json">
+
+		{
+			"@context": "https://schema.org",
+			"@graph": [
+				{
+					"@type": "SoftwareApplication",
+					"@id": "https://studworx.app/#application",
+					"name": "StudWorx",
+					"alternateName": "StudWorx LDraw",
+					"url": "https://studworx.app/",
+					"description": "StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library, built on LeoCAD.",
+					"applicationCategory": "DesignApplication",
+					"operatingSystem": "Linux, Windows, macOS",
+					"softwareVersion": "2026-11-01",
+					"license": "https://www.gnu.org/licenses/gpl-3.0.html",
+					"downloadUrl": "https://github.com/nathaneltitane/studworx/releases/latest",
+					"image": "https://studworx.app/resources/web/social-preview.png",
+					"offers": {
+						"@type": "Offer",
+						"price": "0",
+						"priceCurrency": "USD"
+					},
+					"author": {
+						"@id": "https://studworx.app/#author"
+					},
+					"publisher": {
+						"@id": "https://mechablocks.com/#organization"
+					},
+					"sameAs": [
+						"https://github.com/nathaneltitane/studworx"
+					],
+					"isRelatedTo": [
+						{
+							"@type": "SoftwareApplication",
+							"name": "L²CU",
+							"url": "https://l2cu.app/",
+							"description": "The LDraw Linux command line utility, which renders and exports LDraw / LEGO® models with StudWorx."
+						}
+					]
+				},
+				{
+					"@type": "Person",
+					"@id": "https://studworx.app/#author",
+					"name": "Nathanel Titane",
+					"url": "https://github.com/nathaneltitane",
+					"sameAs": [
+						"https://mechablocks.com/",
+						"https://l2cu.app/"
+					]
+				},
+				{
+					"@type": "Organization",
+					"@id": "https://mechablocks.com/#organization",
+					"name": "MechaBlocks",
+					"url": "https://mechablocks.com/"
+				}
+			]
+		}
+
+		</script>
 
 		<!-- social media -->
 
@@ -1354,7 +1419,7 @@
 				<li><b>Print.</b> File &gt; Print prints the current model view through the system print dialog, with a Preview button where the dialog allows it.</li>
 				<li><b>Thumbnails.</b> Model thumbnails in file managers, from a KDE thumbnail plugin or the desktop thumbnailer.</li>
 				<li><b>Parts library.</b> Downloaded on the first start as the official LDraw complete.zip, or chosen from an archive you already have, and reloaded from the File menu. An unofficial parts folder can be added beside it.</li>
-				<li><b>Command line.</b> Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx.</li>
+				<li><b>Command line.</b> Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx. <a href="https://l2cu.app">L²CU</a>, the LDraw Linux command line utility, drives these renders and exports for whole folders of models.</li>
 				<li><b>Exit.</b> File &gt; Exit asks to save each changed model before StudWorx closes.</li>
 			</ul>
 
@@ -2866,6 +2931,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 		<div class="copyright reveal">
 			<p>StudWorx is based on <a href="https://github.com/leozide/leocad">LeoCAD</a> by Leonardo Zide and its contributors. Parts come from the <a href="https://www.ldraw.org">LDraw</a> library, part connections from the <a href="https://github.com/RolandMelkert/LDCadShadowLibrary">LDCad shadow library</a> by Roland Melkert and POV-Ray parts from the <a href="https://github.com/jncraton/lgeo">LGEO library</a> by Lutz Uhlmann, neither bundled with StudWorx.</p>
 			<p>StudWorx is free software released under the GNU General Public License version 3.</p>
+			<p>Related projects: <a href="https://l2cu.app">L²CU, the LDraw Linux command line utility</a>, renders, exports and documents LDraw models with StudWorx, and <a href="https://mechablocks.com">MechaBlocks</a> publishes custom LEGO® mecha models built with it, each with a 3D viewer and building instructions.</p>
 			<p><a href="https://github.com/nathaneltitane/studworx/issues">Submit a bug report or feature request</a> // <a href="https://mechablocks.com">MECHA // BLOCKS</a> // <a href="https://github.com/nathaneltitane">NATHANEL + TITANE</a></p>
 			<p>LEGO® is a trademark of the LEGO® Group, which does not sponsor, authorize or endorse this project.</p>
 		</div>
@@ -2895,6 +2961,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<a class="button-navigation" href="#news"><svg class="icon" aria-hidden="true"><use href="#icon-fuschia"/></svg><span class="label">News</span></a>
 					<a class="button-navigation" href="https://github.com/nathaneltitane/studworx"><svg class="icon" aria-hidden="true"><use href="#icon-black"/></svg><span class="label">GitHub</span></a>
 					<a class="button-navigation" href="https://mechablocks.com"><svg class="icon" aria-hidden="true"><use href="#icon-red"/></svg><span class="label">MechaBlocks</span></a>
+					<a class="button-navigation" href="https://l2cu.app"><svg class="icon" aria-hidden="true"><use href="#icon-grey"/></svg><span class="label">L²CU</span></a>
 					<a class="button-navigation" href="https://www.paypal.com/donate?hosted_button_id=ZW3CDCANHJCWJ"><svg class="icon" aria-hidden="true"><use href="#icon-fuschia"/></svg><span class="label">Donate</span></a>
 					<span class="end-footer" aria-hidden="true"></span>
 				</div>
