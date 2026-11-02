@@ -1,52 +1,40 @@
 # Maintainer: Peter Bartfai <pbartfai[at]stardust[dot]hu>
+
 pkgname=studworx
 pkgver=20261101
 pkgrel=1
 pkgdesc="StudWorx: LDraw / LEGO® model builder"
 url="https://github.com/nathaneltitane/studworx"
-arch=('x86_64' 'i686')
+arch=('x86_64' 'aarch64')
 license=('GPL-3.0-only')
-#Qt4.x
-depends=('qt4' 'libpng' 'libjpeg-turbo' 'mesa-libgl')
-#Qt5.x
-#depends=('qt5-base' 'qt5-tools' 'qt5-gamepad' 'libpng' 'libjpeg-turbo' 'mesa-libgl')
-makedepends=('glu' 'ca-certificates')
+depends=('qt5-base' 'qt5-svg' 'qt5-imageformats' 'zlib')
+makedepends=('base-devel' 'qt5-tools')
+
+# the optional modules are found at build time, install them before building
+
+optdepends=(
+	'qt5-gamepad: gamepad input'
+	'kparts5: terminal panel, with a KDE Frameworks 5 konsole'
+	'kio5: file manager thumbnails'
+)
+
 conflicts=()
 replaces=()
 backup=()
 source=("studworx-git.tar.gz")
 md5sums=(SKIP)
 
-build() {
-  cd ${srcdir}/studworx-git
-  if test "$CARCH" == x86_64; then
-    PLATFORM=linux-g++-64
-  else
-    PLATFORM=linux-g++-32
-  fi
-  if [ -x /usr/bin/qmake ] ; then qmake -spec $PLATFORM DISABLE_UPDATE_CHECK=1 LDRAW_LIBRARY_PATH=/usr/share/ldraw ; lrelease studworx.pro ;
-  elif [ -x /usr/bin/qmake-qt4 ] ; then qmake-qt4 -spec $PLATFORM DISABLE_UPDATE_CHECK=1 LDRAW_LIBRARY_PATH=/usr/share/ldraw ; lrelease-qt4 studworx.pro ;
-  elif [ -x /usr/bin/qmake-qt5 ] ; then qmake-qt5 -spec $PLATFORM DISABLE_UPDATE_CHECK=1 LDRAW_LIBRARY_PATH=/usr/share/ldraw ; lrelease-qt5 studworx.pro ; fi
-  make 
-}
- 
-package() {
-  cd "${srcdir}/studworx-git"
-  mkdir -p ${pkgdir}/usr/bin
-  mkdir -p ${pkgdir}/usr/share/studworx
-  install -m 755 build/release/studworx ${pkgdir}/usr/bin
-  install -m 644 README.md               ${pkgdir}/usr/share/studworx/README.md
-  install -m 644 CREDITS.md              ${pkgdir}/usr/share/studworx/CREDITS.md
-  install -m 644 LICENSE.md              ${pkgdir}/usr/share/studworx/LICENSE.md
-  mkdir -p ${pkgdir}/usr/share/mime/packages/
-  mkdir -p ${pkgdir}/usr/share/applications/
-  mkdir -p ${pkgdir}/usr/share/icons/hicolor/scalable/mimetypes
-  install -m 644 qt/studworx.xml  \
-				${pkgdir}/usr/share/mime/packages/studworx.xml
-  install -m 644 qt/studworx.desktop \
-				${pkgdir}/usr/share/applications/studworx.desktop
-  install -m 644 resources/icons/scalable/mimetypes/application-vnd.studworx.svg \
-				${pkgdir}/usr/share/icons/hicolor/scalable/mimetypes/application-vnd.studworx.svg
-  make INSTALL_ROOT="${pkgdir}" install
+build () {
+
+	cd "${srcdir}/studworx-git"
+
+	qmake studworx.pro CONFIG+=release CONFIG-=debug INSTALL_PREFIX=/usr
+	make
 }
 
+package () {
+
+	cd "${srcdir}/studworx-git"
+
+	make INSTALL_ROOT="${pkgdir}" install
+}

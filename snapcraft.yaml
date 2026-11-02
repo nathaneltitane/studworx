@@ -20,6 +20,8 @@ parts:
   studworx:
     plugin: qmake
     build-packages:
+      - g++
+      - make
       - qtbase5-dev
       - qttools5-dev-tools
       - libqt5opengl5-dev
@@ -30,5 +32,7 @@ parts:
       - libqt5concurrent5
       - libqt5printsupport5
       - libqt5xml5
+      - libqt5svg5
+      - qt5-image-formats-plugins
     source: https://github.com/nathaneltitane/studworx/archive/refs/tags/2026-11-01.tar.gz
     parse-info: [usr/share/metainfo/io.github.nathaneltitane.StudWorx.appdata.xml]
