@@ -7,6 +7,13 @@
   - Preferences: the bundled color configurations and minifigure part list are used until you set your own file, a set file that went missing is asked for again at startup
   - Preferences: a new Online Services group on the General page holds the Rebrickable API key with a Get Key button to its page, a key Rebrickable rejects is cleared so you are asked again
   - Dialogs: the Help buttons are gone, the question mark in the title bar and F1 explain every control
+  - Rotation: turning parts or pivots in angle steps lands exactly on square angles again, so later moves keep whole coordinates
+  - Preferences: commands that share a keyboard shortcut show in red, and assigning a taken shortcut asks before moving it, your shortcuts are left as they are
+  - Preferences: a new Highlight Style shows on the selection as soon as you press OK, and closing the dialog no longer pauses while settings are saved
+  - Array: the dialog has X, Y and Z column headers and numbered rows for each dimension
+  - Edge Colors and Export HTML: the dialogs are laid out in clear groups with labels to the left and controls to the right
+  - Properties: the light settings scroll without a sideways scroll bar and always keep one setting row in view
+  - Thumbnails: model thumbnails show again in file managers that use the desktop thumbnailer, without step highlight or fading, and leftovers from the old StudWorks name are removed on install
   - Preferences: Colors From moved into a new Colors group on the Rendering page, the Colors page is now Interface
   - Export BrickLink: choose the condition, the wanted list and new listing notices, the choices are remembered, also as '--bricklink-condition', '--bricklink-wanted-list' and '--bricklink-notify' on the command line
   - Command line: '--kmz-geometry all' or 'visible' chooses the KMZ geometry and replaces '--kmz-all-parts'

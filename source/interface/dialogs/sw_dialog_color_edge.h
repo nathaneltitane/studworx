@@ -28,7 +28,15 @@ protected slots:
 	void ResetColorButtonClicked();
 
 protected:
+	void showEvent(QShowEvent* Event) override;
+	void SetColorButton(QToolButton* Button, quint32 Color);
+
 	bool mAutomateEdgeColor;
+
+	QGridLayout* mEdgeSettingsLayout;
+	QGridLayout* mHighContrastColorLayout;
+	QList<QLabel*> mValueLabels;
+	QList<QToolButton*> mResetButtons;
 
 	QSlider* PartColorValueLDIndexSlider;
 	QSlider* PartEdgeContrastSlider;

@@ -330,6 +330,51 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "BrickLinkNotify", false)                                       // SW_PROFILE_BRICKLINK_NOTIFY
 };
 
+// settings shared by the open batch
+static QSettings* gProfileBatchSettings = nullptr;
+
+swProfileBatch::swProfileBatch()
+{
+	if (gProfileBatchSettings)
+		return;
+
+	mSettings = std::make_unique<QSettings>();
+	gProfileBatchSettings = mSettings.get();
+}
+
+swProfileBatch::~swProfileBatch()
+{
+	if (mSettings)
+		gProfileBatchSettings = nullptr;
+}
+
+// use to read a key through the open batch or its own settings
+static QVariant swGetProfileValue(const swProfileEntry& Entry, const QVariant& DefaultValue = QVariant())
+{
+	const QString Name = QString("%1/%2").arg(Entry.mSection, Entry.mKey);
+
+	if (gProfileBatchSettings)
+		return gProfileBatchSettings->value(Name, DefaultValue);
+
+	return QSettings().value(Name, DefaultValue);
+}
+
+// use to write a key through the open batch or its own settings
+static void swSetProfileValue(const swProfileEntry& Entry, const QVariant& Value)
+{
+	const QString Name = QString("%1/%2").arg(Entry.mSection, Entry.mKey);
+
+	if (gProfileBatchSettings)
+	{
+		gProfileBatchSettings->setValue(Name, Value);
+		return;
+	}
+
+	QSettings Settings;
+
+	Settings.setValue(Name, Value);
+}
+
 void swProfileInitialize()
 {
 	gProfileEntries[SW_PROFILE_PROJECTS_PATH].mDefault = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation);
@@ -338,9 +383,17 @@ void swProfileInitialize()
 void swRemoveProfileKey(SW_PROFILE_KEY Key)
 {
 	swProfileEntry& Entry = gProfileEntries[Key];
+	const QString Name = QString("%1/%2").arg(Entry.mSection, Entry.mKey);
+
+	if (gProfileBatchSettings)
+	{
+		gProfileBatchSettings->remove(Name);
+		return;
+	}
+
 	QSettings Settings;
 
-	Settings.remove(QString("%1/%2").arg(Entry.mSection, Entry.mKey));
+	Settings.remove(Name);
 }
 
 // use to get the default value of a key
@@ -371,7 +424,7 @@ int swGetProfileInteger(SW_PROFILE_KEY Key)
 	int* DefaultInt = std::get_if<int>(&Entry.mDefault);
 	int DefaultValue = DefaultInt ? *DefaultInt : 0;
 
-	const QVariant Stored = QSettings().value(QString("%1/%2").arg(Entry.mSection, Entry.mKey), DefaultValue);
+	const QVariant Stored = swGetProfileValue(Entry, DefaultValue);
 
 	if (Stored.userType() == QMetaType::Float || Stored.userType() == QMetaType::Double)
 		return DefaultValue;
@@ -393,7 +446,7 @@ uint swGetProfileUnsignedInteger(SW_PROFILE_KEY Key)
 	uint* DefaultUInt = std::get_if<uint>(&Entry.mDefault);
 	uint DefaultValue = DefaultUInt ? *DefaultUInt : 0;
 
-	const QVariant Stored = QSettings().value(QString("%1/%2").arg(Entry.mSection, Entry.mKey), DefaultValue);
+	const QVariant Stored = swGetProfileValue(Entry, DefaultValue);
 
 	if (Stored.userType() == QMetaType::Float || Stored.userType() == QMetaType::Double)
 		return DefaultValue;
@@ -423,7 +476,7 @@ float swGetProfileFloat(SW_PROFILE_KEY Key)
 	float DefaultValue = DefaultFloat ? *DefaultFloat : 0.0f;
 
 	bool Valid = false;
-	const float Value = QSettings().value(QString("%1/%2").arg(Entry.mSection, Entry.mKey), DefaultValue).toFloat(&Valid);
+	const float Value = swGetProfileValue(Entry, DefaultValue).toFloat(&Valid);
 
 	return Valid && std::isfinite(Value) ? Value : DefaultValue;
 }
@@ -434,7 +487,7 @@ QString swGetProfileString(SW_PROFILE_KEY Key)
 	QString* DefaultString = std::get_if<QString>(&Entry.mDefault);
 	QString DefaultValue = DefaultString ? *DefaultString : QString();
 
-	return QSettings().value(QString("%1/%2").arg(Entry.mSection, Entry.mKey), DefaultValue).toString();
+	return swGetProfileValue(Entry, DefaultValue).toString();
 }
 
 QStringList swGetProfileStringList(SW_PROFILE_KEY Key)
@@ -443,31 +496,23 @@ QStringList swGetProfileStringList(SW_PROFILE_KEY Key)
 	QStringList* DefaultStringList = std::get_if<QStringList>(&Entry.mDefault);
 	QStringList DefaultValue = DefaultStringList ? *DefaultStringList : QStringList();
 
-	return QSettings().value(QString("%1/%2").arg(Entry.mSection, Entry.mKey), DefaultValue).toStringList();
+	return swGetProfileValue(Entry, DefaultValue).toStringList();
 }
 
 QByteArray swGetProfileBuffer(SW_PROFILE_KEY Key)
 {
 	swProfileEntry& Entry = gProfileEntries[Key];
-	QSettings Settings;
-
-	return Settings.value(QString("%1/%2").arg(Entry.mSection, Entry.mKey)).toByteArray();
+	return swGetProfileValue(Entry).toByteArray();
 }
 
 void swSetProfileInteger(SW_PROFILE_KEY Key, int Value)
 {
-	swProfileEntry& Entry = gProfileEntries[Key];
-	QSettings Settings;
-
-	Settings.setValue(QString("%1/%2").arg(Entry.mSection, Entry.mKey), Value);
+	swSetProfileValue(gProfileEntries[Key], Value);
 }
 
 void swSetProfileUnsignedInteger(SW_PROFILE_KEY Key, uint Value)
 {
-	swProfileEntry& Entry = gProfileEntries[Key];
-	QSettings Settings;
-
-	Settings.setValue(QString("%1/%2").arg(Entry.mSection, Entry.mKey), Value);
+	swSetProfileValue(gProfileEntries[Key], Value);
 }
 
 void swSetProfileFloat(SW_PROFILE_KEY Key, float Value)
@@ -475,34 +520,22 @@ void swSetProfileFloat(SW_PROFILE_KEY Key, float Value)
 	if (!std::isfinite(Value))
 		return;
 
-	swProfileEntry& Entry = gProfileEntries[Key];
-	QSettings Settings;
-
-	Settings.setValue(QString("%1/%2").arg(Entry.mSection, Entry.mKey), Value);
+	swSetProfileValue(gProfileEntries[Key], Value);
 }
 
 void swSetProfileString(SW_PROFILE_KEY Key, const QString& Value)
 {
-	swProfileEntry& Entry = gProfileEntries[Key];
-	QSettings Settings;
-
-	Settings.setValue(QString("%1/%2").arg(Entry.mSection, Entry.mKey), Value);
+	swSetProfileValue(gProfileEntries[Key], Value);
 }
 
 void swSetProfileStringList(SW_PROFILE_KEY Key, const QStringList& Value)
 {
-	swProfileEntry& Entry = gProfileEntries[Key];
-	QSettings Settings;
-
-	Settings.setValue(QString("%1/%2").arg(Entry.mSection, Entry.mKey), Value);
+	swSetProfileValue(gProfileEntries[Key], Value);
 }
 
 void swSetProfileBuffer(SW_PROFILE_KEY Key, const QByteArray& Buffer)
 {
-	swProfileEntry& Entry = gProfileEntries[Key];
-	QSettings Settings;
-
-	Settings.setValue(QString("%1/%2").arg(Entry.mSection, Entry.mKey), Buffer);
+	swSetProfileValue(gProfileEntries[Key], Buffer);
 }
 
 template<typename Enum>
@@ -588,7 +621,7 @@ static Enum swReadProfileEnumeration(SW_PROFILE_KEY Key, const swProfileEnumerat
 {
 	const swProfileEntry& Entry = gProfileEntries[Key];
 	const Enum Default = static_cast<Enum>(std::get<int>(Entry.mDefault));
-	const QString Token = QSettings().value(QString("%1/%2").arg(Entry.mSection, Entry.mKey)).toString();
+	const QString Token = swGetProfileValue(Entry).toString();
 
 	for (const swProfileEnumerationValue<Enum>& Value : Values)
 	{

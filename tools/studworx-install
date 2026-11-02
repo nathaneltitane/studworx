@@ -115,6 +115,18 @@ program_set () {
 program_set "${directory_share}/applications/studworx.desktop"
 program_set "${directory_share}/thumbnailers/studworx.thumbnailer"
 
+# trash entries left by the studworks name
+
+file_legacy="thumbnailers/studworks.thumbnailer"
+
+for directory_legacy in "${directory_share}" "/usr/share"
+do
+	if [ -f "${directory_legacy}/${file_legacy}" ]
+	then
+		command_run "${directory_legacy}" gio trash "${directory_legacy}/${file_legacy}"
+	fi
+done
+
 # refresh desktop caches
 
 if [ -n "$(command -v update-mime-database)" ]

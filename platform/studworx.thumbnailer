@@ -1,4 +1,4 @@
 [Thumbnailer Entry]
 TryExec=studworx
-Exec=env QT_QPA_PLATFORM=offscreen studworx --transparent -w %s -h %s -i %o %i
+Exec=env QT_QPA_PLATFORM=offscreen studworx --transparent --no-highlight --no-fade-steps -w %s --height %s -i %o %i
 MimeType=application/x-ldraw;application/x-multi-part-ldraw;

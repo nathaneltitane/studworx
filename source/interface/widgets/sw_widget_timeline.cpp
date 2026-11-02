@@ -4,6 +4,7 @@
 #include "sw_object_part.h"
 #include "sw_data_part.h"
 #include "sw_window_main.h"
+#include "sw_window_utilities.h"
 
 swTimelineWidget::swTimelineWidget(QWidget* Parent)
 	: QTreeWidget(Parent)
@@ -250,7 +251,7 @@ void swTimelineWidget::Update(bool Clear, bool UpdateItems)
 			QColor Color = palette().text().color();
 
 			if (Part->mPartData->mState == swAssetState::Failed)
-				Color = QColor(208, 0, 0);
+				Color = swGetWarningTextColor();
 			else if (Part->IsHidden())
 				Color.setAlpha(128);
 

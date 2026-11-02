@@ -190,6 +190,7 @@ private:
 	QTreeWidgetItem* FindMouseTreeItem(int ItemIndex) const;
 	static void UpdateStudSuffix(QSpinBox* SpinBox);
 	void SetShortcutModified(QTreeWidgetItem* TreeItem, bool Modified);
+	void UpdateShortcutConflicts();
 	void CreateInstructionsTab();
 	void UpdateInstructionsPage();
 

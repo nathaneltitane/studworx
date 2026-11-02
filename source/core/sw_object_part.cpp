@@ -1256,21 +1256,10 @@ void swPart::Rotate(swStep Step, bool AddKey, const swMatrix33& RotationMatrix, 
 
 	if (Section == SW_PART_SECTION_POSITION || Section == SW_PART_SECTION_INVALID)
 	{
-		swVector3 Distance = mModelWorld.GetTranslation() - Center;
-		const swMatrix33 LocalToWorldMatrix = swMatrix33(mModelWorld);
+		const swMatrix44 Transform = swRotateAroundCenter(mModelWorld, RotationMatrix, Center, RotationFrame);
 
-		const swMatrix33 LocalToFocusMatrix = swMultiply(LocalToWorldMatrix, RotationFrame);
-		swMatrix33 NewLocalToWorldMatrix = swMultiply(LocalToFocusMatrix, RotationMatrix);
-
-		const swMatrix33 WorldToLocalMatrix = swMatrix33AffineInverse(LocalToWorldMatrix);
-
-		Distance = swMultiply(Distance, WorldToLocalMatrix);
-		Distance = swMultiply(Distance, NewLocalToWorldMatrix);
-
-		NewLocalToWorldMatrix.Orthonormalize();
-
-		SetPosition(Center + Distance, Step, AddKey);
-		SetRotation(NewLocalToWorldMatrix, Step, AddKey);
+		SetPosition(Transform.GetTranslation(), Step, AddKey);
+		SetRotation(swMatrix33(Transform), Step, AddKey);
 	}
 	else if (Section >= SW_PART_SECTION_CONTROL_POINT_FIRST)
 	{
@@ -1283,13 +1272,12 @@ void swPart::Rotate(swStep Step, bool AddKey, const swMatrix33& RotationMatrix, 
 			const swMatrix33 LocalToWorldMatrix = swMultiply(swMatrix33(Transform), PartWorldMatrix);
 
 			const swMatrix33 LocalToFocusMatrix = swMultiply(LocalToWorldMatrix, RotationFrame);
-			swMatrix33 NewLocalToWorldMatrix = swMultiply(swMultiply(LocalToFocusMatrix, RotationMatrix), swMatrix33AffineInverse(PartWorldMatrix));
+			const swMatrix33 NewLocalToWorldMatrix = swMatrix33Clean(swMultiply(swMultiply(LocalToFocusMatrix, RotationMatrix), swMatrix33AffineInverse(PartWorldMatrix)));
 
-			NewLocalToWorldMatrix.Orthonormalize();
-
-			// swing around the selection center
+			// swing around the selection center in world space
 			const swVector3 WorldPosition = swMultiply31(Transform.GetTranslation(), mModelWorld);
-			const swVector3 Distance = swMultiply(swMultiply(WorldPosition - Center, swMatrix33AffineInverse(LocalToWorldMatrix)), swMultiply(LocalToFocusMatrix, RotationMatrix));
+			const swMatrix33 RotationWorld = swMatrix33Clean(swMultiply(RotationFrame, RotationMatrix));
+			const swVector3 Distance = swMultiply(WorldPosition - Center, RotationWorld);
 			const swVector3 Position = swMultiply31(Center + Distance, swMatrix44AffineInverse(mModelWorld));
 
 			const swSynthesisInformation* SynthInfo = mPartData->GetSynthInfo();
@@ -1321,8 +1309,7 @@ void swPart::RotatePivotPoint(const swMatrix33& RotationMatrix)
 	if (!IsFocused(SW_PART_SECTION_POSITION))
 		return;
 
-	swMatrix33 NewPivotRotationMatrix = swMultiply(RotationMatrix, swMatrix33(mPivotMatrix));
-	NewPivotRotationMatrix.Orthonormalize();
+	const swMatrix33 NewPivotRotationMatrix = swMatrix33Clean(swMultiply(RotationMatrix, swMatrix33(mPivotMatrix)));
 
 	mPivotMatrix = swMatrix44(NewPivotRotationMatrix, mPivotMatrix.GetTranslation());
 	mPivotPointValid = true;

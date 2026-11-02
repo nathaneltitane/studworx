@@ -109,6 +109,9 @@ protected:
 	static swBlockingProgress* mActive;
 };
 
+// Failed and conflicting entries share one text color.
+QColor swGetWarningTextColor();
+
 // Panel rows share a standard layout.
 QSize swGetPanelButtonSize();
 QSize swGetBrowseButtonSize();

@@ -18,7 +18,7 @@ StudWorx is built from standard Qt widgets: panels, dialogs and windows follow y
 - **Split views.** Split the current view horizontally or vertically, as often as you like, remove one view, or Reset Views back to one. Each view keeps its own camera and projection, and a border marks the active one.
 - **Toolbars and panels on demand.** View > Toolbars shows or hides each toolbar and panel: Standard, Tools, Time, Parts, Colors, Properties, Timeline, Preview, Terminal and Minifigure Builder. Close Tab closes the current model tab.
 - **Undo and clipboard.** Undo and Redo every change, and Cut, Copy and Paste parts between models and tabs.
-- **Contextual help.** Choose Help > What's This? or click the question mark in a title bar, then click any control to read what it does. F1 explains the focused control, and every entry is listed in the Help index below.
+- **Contextual help.** Choose Help > What's This? or click the question mark in a title bar, then click any control to read what it does. F1 explains the focused control, Shift+F1 starts What's This inside a dialog, and every entry is listed in the Help index below.
 - **Help menu.** Home Page opens the StudWorx repository on GitHub, Report a Bug its issues, and About shows the version and system information.
 - **Ten languages.** English, French, German, Spanish, Portuguese, Czech, Ukrainian, Russian, Simplified Chinese and Traditional Chinese.
 - **Color theme.** Follow the system, or force the light or dark theme, from Preferences.
@@ -70,6 +70,20 @@ Models are plain LDraw text files in LeoCAD's format, so they open in either pro
 - **Parts library.** Downloaded on the first start as the official LDraw complete.zip, or chosen from an archive you already have, and reloaded from the File menu. An unofficial parts folder can be added beside it.
 - **Command line.** Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx. [L²CU](https://l2cu.app), the LDraw Linux command line utility, drives these renders and exports for whole folders of models.
 - **Exit.** File > Exit asks to save each changed model before StudWorx closes.
+
+<!-- gallery natural -->
+
+![Import menu](resources/images/files-menu-import.png)
+![Export menu](resources/images/files-menu-export.png)
+![Print](resources/images/files-print.png)
+![Rebrickable API key](resources/images/files-rebrickable-api-key.png)
+![Model thumbnails in Dolphin](resources/images/files-thumbnails.png)
+
+<!-- gallery three -->
+
+![Set inventory import](resources/images/files-import-set-inventory.png)
+![BrickLink export](resources/images/files-export-bricklink.png)
+![HTML export](resources/images/files-export-html.png)
 
 ### Command line
 
@@ -185,6 +199,20 @@ The model view draws fast with OpenGL in four lighting styles, and File > Render
 ![Matte](resources/images/rendering-lighting-matte.png)
 ![Toon](resources/images/rendering-lighting-toon.png)
 
+<!-- gallery natural -->
+
+![Render menu](resources/images/rendering-menu-render.png)
+![Render window](resources/images/rendering-render-window.png)
+![Blender add-on settings](resources/images/rendering-blender.png)
+![Edge colors](resources/images/rendering-edge-colors.png)
+
+<!-- gallery two -->
+
+![Outline selection](resources/images/rendering-selection-outline.png)
+![Tint selection](resources/images/rendering-selection-tint.png)
+
+![Stud styles](resources/images/rendering-studs.png "wide plain")
+
 ## Modeling
 
 <!-- modeling | color | MODELING // PARTS, SELECTION AND TRANSFORMS -->
@@ -195,7 +223,7 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 - **Insert colors.** Insert with the current color, the selected part's color or the last inserted color, or lock the Parts panel to one color.
 - **Snapping.** Move in studs, flats and bricks, rotate in degrees with a custom angle, with relative or absolute transforms and separate or shared rotation.
 - **Move snap.** Horizontal steps of 1/20 stud, 1/4 stud, 1 flat, 1/2 stud and 1, 2, 3, 4 or 8 studs, vertical steps of 1/20 stud, 1/4 stud, 1 flat, 1/2 stud, 1 stud and 1, 2, 4 or 8 bricks, or None.
-- **Rotation snap.** 1, 5, 15, 22.5, 30, 45, 60, 90 or 180 degrees, a custom angle, or None. Camera Snap orbits the view in the same steps.
+- **Rotation snap.** 1, 5, 15, 22.5, 30, 45, 60, 90 or 180 degrees, a custom angle, or None. Camera Snap orbits the view in the same steps. Turns in any step land exactly on square angles, so later moves keep whole coordinates.
 - **Transforms.** Relative Transforms move and rotate the selection around the part that has focus, Absolute Transforms in model coordinates. Rotate Separately turns each part around its own pivot, Rotate Together turns the selection as one. Each pair has a toggle shortcut.
 - **Keyboard moves.** Move and rotate the selection along +X, -X, +Y, -Y, +Z and -Z by the snap steps. Fixed Direction Keys keeps the arrow keys on the model axes instead of following the view.
 - **Selection.** Select All, None, Invert, Adjacent Parts, by Name, and by part, color or both. Select Connected Parts follows the connection shapes of the LDCad shadow library.
@@ -203,7 +231,7 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 - **Select by Name.** A checklist of every object in the model, with All, None and Invert.
 - **Part connections.** Use Part Connections turns connected part selection on and off, with the shadow library folder chosen in Preferences.
 - **Find and Replace.** A bar to find parts by part and color, step through the matches or Find All, and replace one or all, submodels included on request.
-- **Array.** Repeat the selection along one, two or three axes, with an offset and a rotation for each.
+- **Array.** Repeat the selection along one, two or three axes, with a count, an X, Y and Z offset and an X, Y and Z rotation for each.
 - **Flex Path.** Hoses, cables and other flexible parts bend along control points that stop at the part length.
 - **Control points.** Insert and remove control points, clamp a point along the path or release it to rotate freely, align it to the path once, or turn it along the X, Y or Z axis. New points can start clamped, and the spread handle shapes the curve.
 - **Groups.** Group the selection under a unique name, Ungroup, add the focused part to a group or remove it, and Edit Groups in a tree of parts and groups.
@@ -212,6 +240,25 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 - **Train track.** Rotate Train Track turns a track piece to its next connection, and Focus Next and Previous Connection choose where the next piece joins.
 - **Pivot points and keyframes.** Reset Pivot Point puts the pivot back at each part's origin, and Remove Keyframes clears the animation of the selected parts.
 - **Lights and cameras.** Lights and cameras are placed in the model and saved with it, see Tools.
+
+<!-- gallery natural -->
+
+![Move snap](resources/images/modeling-menu-move-snap.png)
+![Rotation snap](resources/images/modeling-menu-rotation-snap.png)
+![Part connections](resources/images/interface-menu-options-view-grids.png)
+![Group](resources/images/modeling-group.png)
+
+<!-- gallery two -->
+
+![Select by Name](resources/images/modeling-select-by-name.png)
+![Edit Groups](resources/images/modeling-edit-groups.png)
+
+<!-- gallery natural -->
+
+![Flex Path control points](resources/images/modeling-flex-path.png)
+![Control point menu](resources/images/modeling-menu-control-points.png)
+
+![Train track](resources/images/modeling-train-track.png "wide")
 
 ![The Find and Replace bar](resources/images/modeling-find-replace.png "wide plain")
 
@@ -243,6 +290,16 @@ The Tools toolbar sets what the mouse does in the model view. Every tool has a k
 - **Cancel Action.** Esc cancels the current mouse action, and with nothing selected removes the cutaway.
 - **Mouse.** Mouse sensitivity and a shortcut for every tool and view action, recorded in Preferences.
 
+<!-- gallery natural -->
+
+![Tools toolbar](resources/images/tools-toolbar.png)
+
+<!-- gallery natural -->
+
+![Lights and cameras](resources/images/tools-lights-cameras.png)
+![Tools menu](resources/images/tools-menu-tools.png)
+![Light properties](resources/images/tools-light-properties.png)
+
 ## Views
 
 <!-- views | plane | VIEWS // CUBE, CAMERAS, CUTAWAYS AND GRIDS -->
@@ -262,6 +319,11 @@ Look at a model from any side, see inside it without changing it, and measure it
 - **Grids.** A base grid with studs, lines and origin lines, vertical XZ and YZ height grids sized around the model, and a toggle for each axis line.
 - **Grid settings.** Line spacing, stud and line colors, and Height Grids Behind Model to keep the height grids behind the parts.
 - **Idle turntable.** The model turns full screen around the X, Y or Z axis when you leave StudWorx idle. Any input ends it. The idle time and the time for one turn are set in Preferences.
+
+<!-- gallery natural -->
+
+![Viewpoints](resources/images/interface-menu-view-viewpoints.png)
+![Grids](resources/images/interface-menu-options-view-grids.png)
 
 <!-- gallery cube -->
 
@@ -299,6 +361,7 @@ Every part belongs to a building step. Steps drive the model view, the instructi
 
 ![Steps menu](resources/images/interface-menu-steps.png)
 ![Timeline panel](resources/images/panels-timeline.png)
+![Fade and highlight](resources/images/steps-emphasis.png)
 
 ## Panels
 
@@ -324,6 +387,12 @@ Panels dock side by side in any area of the main window, with uniform headers, b
 ![Minifigure Builder](resources/images/panels-minifigure-builder.png)
 ![Colors](resources/images/panels-colors.png)
 ![Properties](resources/images/panels-properties.png)
+
+![Terminal](resources/images/panels-terminal.png "wide")
+
+<!-- gallery natural -->
+
+![Terminal folders](resources/images/panels-menu-terminal.png)
 
 ## Instructions
 
@@ -395,7 +464,7 @@ Eight pages with lined up label and control columns. Value boxes show their maxi
 - **Interface and Instructions.** Interface and view colors, edge contrast, the default instruction page settings, and the rulers and element inspector overlays of the instructions page.
 - **View colors.** Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, flex paths, the view cube, every axis, and the element margin, padding and anchor overlays and the ruler pointer arrows of the instructions page, each with an alpha slider.
 - **Categories.** Part categories turned on and off with a checkbox, edited, imported and exported.
-- **Keyboard and Mouse.** Shortcuts recorded by clicking, importable and exportable.
+- **Keyboard and Mouse.** Shortcuts recorded by clicking, importable and exportable. Commands that share a shortcut show in red, and assigning a taken shortcut asks before moving it.
 - **Shortcut filters.** Filter commands and tools by name or shortcut, give each two shortcuts, and reset them to the defaults.
 - **From LeoCAD.** Settings, part palettes and minifigure templates are copied from LeoCAD on the first start.
 
@@ -404,7 +473,7 @@ Eight pages with lined up label and control columns. Value boxes show their maxi
 ![General](resources/images/preferences-general.png)
 ![Rendering](resources/images/preferences-rendering.png)
 ![Views](resources/images/preferences-views.png)
-![Colors](resources/images/preferences-colors.png)
+![Interface](resources/images/preferences-interface.png)
 ![Instructions](resources/images/preferences-instructions.png)
 ![Categories](resources/images/preferences-categories.png)
 ![Keyboard](resources/images/preferences-keyboard.png)

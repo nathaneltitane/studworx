@@ -309,6 +309,20 @@ public:
 	std::variant<int, uint, float, QString, QStringList, QByteArray> mDefault;
 };
 
+// Profile writes share one settings file and save once when the batch ends.
+class swProfileBatch
+{
+public:
+	swProfileBatch();
+	~swProfileBatch();
+
+	swProfileBatch(const swProfileBatch&) = delete;
+	swProfileBatch& operator=(const swProfileBatch&) = delete;
+
+private:
+	std::unique_ptr<QSettings> mSettings;
+};
+
 void swProfileInitialize();
 void swRemoveProfileKey(SW_PROFILE_KEY Key);
 

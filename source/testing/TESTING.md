@@ -14,6 +14,13 @@ that translucent pixels keep their color and opaque images keep the background
 It also exports a box hiding a smaller box to KMZ, to check the archive entries,
 the model named after the archive with spaces as underscores, fixed dates, and
 that `--kmz-geometry visible` drops the hidden box while `--kmz-geometry all` keeps it.
+Rotation tests turn parts in 15, 30 and 90 degree steps around every axis, in
+the part's own frame and in model coordinates, and check that each quarter turn
+lands exactly on 0 and 1, that the turned part keeps its position and moves by
+whole steps, and that real angles are never rounded.
+A profile test writes settings inside a batch, in a temporary settings folder,
+and checks that they read back at once, that a nested batch and a removed key
+behave, and that the file is written only when the batch ends.
 
 The executable creates a `QCoreApplication`; apart from the `SW_TEST_BINARY`
 checks it does not open windows or require an OpenGL context, the parts library, or network access. It uses the same Qt

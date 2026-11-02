@@ -757,6 +757,7 @@ void swMainWindow::CreateToolBars()
 	QScrollArea* PropertiesScrollArea = new QScrollArea(PropertiesWidget);
 	PropertiesScrollArea->setFrameShape(QFrame::NoFrame);
 	PropertiesScrollArea->setWidgetResizable(true);
+	PropertiesScrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 	PropertiesLayout->addWidget(PropertiesScrollArea);
 
 	mPropertiesWidget = new swPropertiesWidget(PropertiesScrollArea);
@@ -814,7 +815,7 @@ void swMainWindow::CreateToolBars()
 		// hide empty scrolling rows
 		const bool ShowList = mPropertiesWidget->HasVisibleRows();
 		const int ListHeight = ShowList ? mPropertiesWidget->sizeHint().height() : 0;
-		const int MinimumListHeight = qMin(ListHeight, swGetPanelButtonSize().height());
+		const int MinimumListHeight = ShowList ? qMin(ListHeight, qMax(mPropertiesWidget->GetMinimumRowsHeight(), swGetPanelButtonSize().height())) : 0;
 
 		// add margins and row spacing
 		const QMargins Margins = PropertiesLayout->contentsMargins();

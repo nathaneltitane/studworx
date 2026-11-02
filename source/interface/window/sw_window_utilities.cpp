@@ -643,6 +643,11 @@ bool swBlockingProgress::IsCanceled() const
 	return mDialog && mDialog->wasCanceled();
 }
 
+QColor swGetWarningTextColor()
+{
+	return QColor(208, 0, 0);
+}
+
 QSize swGetPanelButtonSize()
 {
 	// size buttons after the gear button

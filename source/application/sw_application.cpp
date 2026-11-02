@@ -2265,6 +2265,9 @@ void swApplication::ShowPreferencesDialog()
 	if (Dialog.exec() != QDialog::Accepted)
 		return;
 
+	// save the settings file once instead of once per key
+	swProfileBatch ProfileBatch;
+
 	bool LanguageChanged = Options.Language != swGetProfileString(SW_PROFILE_LANGUAGE);
 	bool LibraryChanged = Options.LibraryPath != swGetProfileString(SW_PROFILE_PARTS_LIBRARY);
 	bool UnofficialLibraryChanged = Options.UnofficialLibraryPath != swGetProfileString(SW_PROFILE_UNOFFICIAL_LIBRARY);

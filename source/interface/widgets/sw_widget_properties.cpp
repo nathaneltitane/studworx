@@ -970,6 +970,42 @@ bool swPropertiesWidget::HasVisibleRows() const
 	return false;
 }
 
+// use to keep headers, fixed rows and one setting row shown while the rest scroll
+int swPropertiesWidget::GetMinimumRowsHeight() const
+{
+	const int Spacing = swGetLayoutSpacing(this, Qt::Vertical);
+	int Height = 0;
+	int RowHeight = 0;
+
+	for (int Index = 0; Index < mSettingsLayout->count(); Index++)
+	{
+		const QWidget* Widget = mSettingsLayout->itemAt(Index)->widget();
+
+		if (!Widget || Widget->isHidden())
+			continue;
+
+		bool Collapsible = false;
+
+		for (const PropertyWidgets& Property : mPropertyWidgets)
+			if (Property.Row == Widget && mCategoryWidgets[static_cast<int>(Property.Category)].Button)
+				Collapsible = true;
+
+		if (Collapsible)
+		{
+			RowHeight = qMax(RowHeight, Widget->sizeHint().height());
+			continue;
+		}
+
+		Height += Widget->sizeHint().height() + (Height > 0 ? Spacing : 0);
+	}
+
+	// one expanded setting row stays in view
+	if (RowHeight > 0)
+		Height += RowHeight + (Height > 0 ? Spacing : 0);
+
+	return Height;
+}
+
 bool swPropertiesWidget::eventFilter(QObject* Object, QEvent* Event)
 {
 	// fixed rows also resize the panel

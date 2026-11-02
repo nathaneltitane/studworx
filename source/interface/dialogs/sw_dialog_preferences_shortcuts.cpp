@@ -2,6 +2,7 @@
 #include "sw_dialog_preferences.h"
 #include "ui_sw_dialog_preferences.h"
 #include "sw_library.h"
+#include "sw_window_utilities.h"
 
 // mouse shortcuts read like keys
 static QString swGetMouseShortcutText(Qt::MouseButton Button, Qt::KeyboardModifiers Modifiers)
@@ -168,6 +169,8 @@ void swPreferencesDialog::UpdateCommandList()
 
 		Sections[Section]->addChild(Item);
 	}
+
+	UpdateShortcutConflicts();
 }
 
 void swPreferencesDialog::SetShortcutModified(QTreeWidgetItem* TreeItem, bool Modified)
@@ -179,6 +182,48 @@ void swPreferencesDialog::SetShortcutModified(QTreeWidgetItem* TreeItem, bool Mo
 
 	for (int Column = 1; Column < TreeItem->columnCount(); Column++)
 		TreeItem->setFont(Column, Font);
+}
+
+// use to mark commands that share a shortcut
+void swPreferencesDialog::UpdateShortcutConflicts()
+{
+	const QString (&Shortcuts)[SW_COMMAND_COUNT] = mOptions->KeyboardShortcuts.mShortcuts;
+	QHash<QString, QStringList> CommandNames;
+
+	for (uint ActionIndex = 0; ActionIndex < SW_COMMAND_COUNT; ActionIndex++)
+	{
+		const QString Shortcut = QKeySequence(Shortcuts[ActionIndex]).toString(QKeySequence::NativeText);
+
+		if (gCommands[ActionIndex].ID[0] && !Shortcut.isEmpty())
+			CommandNames[Shortcut].append(qApp->translate("Menu", gCommands[ActionIndex].MenuName).remove('&').remove(QLatin1String("...")));
+	}
+
+	std::function<void(QTreeWidgetItem*)> MarkItems = [&MarkItems, &Shortcuts, &CommandNames, this](QTreeWidgetItem* ParentItem)
+	{
+		for (int ChildIdx = 0; ChildIdx < ParentItem->childCount(); ChildIdx++)
+		{
+			QTreeWidgetItem* ChildItem = ParentItem->child(ChildIdx);
+
+			if (ChildItem->data(0, Qt::UserRole).isValid())
+			{
+				const uint ActionIndex = ChildItem->data(0, Qt::UserRole).toUInt();
+				const QString Shortcut = QKeySequence(Shortcuts[ActionIndex]).toString(QKeySequence::NativeText);
+				const QStringList Names = CommandNames.value(Shortcut);
+				const bool Conflict = Names.size() > 1;
+				const QString ToolTip = Conflict ? tr("The shortcut '%1' is shared by %2.").arg(Shortcut, Names.join(QLatin1String(", "))) : QString();
+
+				for (int Column = 0; Column < ChildItem->columnCount(); Column++)
+				{
+					ChildItem->setForeground(Column, Conflict ? QBrush(swGetWarningTextColor()) : QBrush());
+					ChildItem->setToolTip(Column, ToolTip);
+				}
+			}
+
+			MarkItems(ChildItem);
+		}
+	};
+
+	MarkItems(ui->commandList->invisibleRootItem());
 }
 
 void swPreferencesDialog::CommandChanged(QTreeWidgetItem* Current)
@@ -293,7 +338,7 @@ void swPreferencesDialog::ShortcutAssignClicked()
 				if (ExistingItem)
 				{
 					ExistingItem->setText(1, QString());
-					SetShortcutModified(ExistingItem, gCommands[ShortcutIndex].DefaultShortcut[0] != 0);
+					SetShortcutModified(ExistingItem, gCommands[ExistingIndex].DefaultShortcut[0] != 0);
 				}
 			}
 		}
@@ -303,6 +348,7 @@ void swPreferencesDialog::ShortcutAssignClicked()
 	CurrentItem->setText(1, NewShortcut);
 
 	SetShortcutModified(CurrentItem, mOptions->KeyboardShortcuts.mShortcuts[ShortcutIndex] != gCommands[ShortcutIndex].DefaultShortcut);
+	UpdateShortcutConflicts();
 
 	mOptions->KeyboardShortcutsModified = true;
 	mOptions->KeyboardShortcutsDefault = false;
@@ -330,6 +376,7 @@ void swPreferencesDialog::ShortcutsImportClicked()
 	}
 
 	mOptions->KeyboardShortcuts = Shortcuts;
+	UpdateCommandList();
 
 	mOptions->KeyboardShortcutsModified = true;
 	mOptions->KeyboardShortcutsDefault = false;

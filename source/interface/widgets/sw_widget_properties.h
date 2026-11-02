@@ -32,6 +32,7 @@ public:
 	}
 
 	bool HasVisibleRows() const;
+	int GetMinimumRowsHeight() const;
 
 signals:
 	void LayoutChanged();

@@ -54,7 +54,7 @@ KIO::ThumbnailResult swThumbnailCreator::create(const KIO::ThumbnailRequest& Req
 	Process.setProcessEnvironment(Environment);
 	Process.setProcessChannelMode(QProcess::ForwardedErrorChannel);
 	Process.setStandardOutputFile(QProcess::nullDevice());
-	Process.start(Program, { QStringLiteral("--transparent"), QStringLiteral("-w"), QString::number(Size.width()), QStringLiteral("--height"), QString::number(Size.height()), QStringLiteral("-i"), ImageName, FileName });
+	Process.start(Program, { QStringLiteral("--transparent"), QStringLiteral("--no-highlight"), QStringLiteral("--no-fade-steps"), QStringLiteral("-w"), QString::number(Size.width()), QStringLiteral("--height"), QString::number(Size.height()), QStringLiteral("-i"), ImageName, FileName });
 
 	if (!Process.waitForFinished(gThumbnailTimeout))
 	{

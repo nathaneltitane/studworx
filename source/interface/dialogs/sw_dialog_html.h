@@ -17,6 +17,9 @@ public:
 public slots:
 	void accept() override;
 
+protected:
+	void showEvent(QShowEvent* Event) override;
+
 private slots:
 	void OutputFolderBrowseClicked();
 

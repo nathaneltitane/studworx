@@ -251,6 +251,7 @@ public:
 	}
 
 	void Orthonormalize();
+	void SnapToAxisAligned();
 
 	swVector3 r[3];
 };
@@ -881,6 +882,42 @@ inline void swMatrix33::Orthonormalize()
 	r[2] = swNormalize(r[2]);
 }
 
+// use to drop rounding residue from orientations made of 0 and 1
+inline void swMatrix33::SnapToAxisAligned()
+{
+	// only whole orientations snap so angled parts keep their angles
+	constexpr float SnapTolerance = 0.000001f;
+	swMatrix33 Snapped;
+	unsigned int ColumnsUsed = 0;
+
+	for (int Row = 0; Row < 3; Row++)
+	{
+		unsigned int ColumnsRow = 0;
+
+		for (int Column = 0; Column < 3; Column++)
+		{
+			const float Value = roundf(r[Row][Column]);
+
+			if (!(fabsf(r[Row][Column] - Value) <= SnapTolerance) || fabsf(Value) > 1.0f)
+				return;
+
+			// no negative zero
+			Snapped[Row][Column] = Value == 0.0f ? 0.0f : Value;
+
+			if (Value != 0.0f)
+				ColumnsRow |= 1U << Column;
+		}
+
+		// one entry per row and per column
+		if (ColumnsRow == 0 || (ColumnsRow & (ColumnsRow - 1)) != 0 || (ColumnsUsed & ColumnsRow) != 0)
+			return;
+
+		ColumnsUsed |= ColumnsRow;
+	}
+
+	*this = Snapped;
+}
+
 inline swMatrix33 swMatrix33Identity()
 {
 	swMatrix33 m;
@@ -1000,6 +1037,27 @@ inline swMatrix33 swMatrix33AffineInverse(const swMatrix33& m)
 	Inv.r[2] = swVector3(m.r[0][2], m.r[1][2], m.r[2][2]);
 
 	return Inv;
+}
+
+// use to clean up a rotated orientation
+inline swMatrix33 swMatrix33Clean(swMatrix33 Matrix)
+{
+	Matrix.Orthonormalize();
+	Matrix.SnapToAxisAligned();
+
+	return Matrix;
+}
+
+// use to turn a transform around a center in a rotation frame
+inline swMatrix44 swRotateAroundCenter(const swMatrix44& Transform, const swMatrix33& RotationMatrix, const swVector3& Center, const swMatrix33& RotationFrame)
+{
+	const swMatrix33 Orientation = swMatrix33Clean(swMultiply(swMultiply(swMatrix33(Transform), RotationFrame), RotationMatrix));
+
+	// the offset turns in world space so no inverse adds rounding
+	const swMatrix33 RotationWorld = swMatrix33Clean(swMultiply(RotationFrame, RotationMatrix));
+	const swVector3 Offset = swMultiply(Transform.GetTranslation() - Center, RotationWorld);
+
+	return swMatrix44(Orientation, Center + Offset);
 }
 
 inline swMatrix33 swMatrix33FromEulerAngles(const swVector3& Radians)

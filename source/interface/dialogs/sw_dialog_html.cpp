@@ -29,11 +29,32 @@ swHTMLDialog::swHTMLDialog(QWidget* Parent, swHTMLExportOptions* Options)
 	ui->transparentImages->setChecked(mOptions->TransparentImages);
 	ui->singlePage->setChecked(mOptions->SinglePage);
 	ui->oneStepPerPage->setChecked(!mOptions->SinglePage);
-	ui->indexPage->setChecked(mOptions->SinglePage);
+	ui->indexPage->setChecked(mOptions->IndexPage);
 	ui->stepWidth->setText(swFormatIntegerLocalized(mOptions->StepImagesWidth, ui->stepWidth->validator()->locale()));
 	ui->stepHeight->setText(swFormatIntegerLocalized(mOptions->StepImagesHeight, ui->stepHeight->validator()->locale()));
 	ui->partsAfterEachStep->setChecked(mOptions->PartsListStep);
 	ui->partsAtTheEnd->setChecked(mOptions->PartsListEnd);
+}
+
+// use to share the label column once shown
+void swHTMLDialog::showEvent(QShowEvent* Event)
+{
+	QDialog::showEvent(Event);
+
+	const int Spacing = swGetLayoutSpacing(this, Qt::Horizontal);
+	const QList<QGridLayout*> Layouts = { qobject_cast<QGridLayout*>(ui->OutputGroup->layout()), qobject_cast<QGridLayout*>(ui->ImagesGroup->layout()) };
+	int LabelWidth = 0;
+
+	for (QGridLayout* Layout : Layouts)
+		for (int Row = 0; Row < Layout->rowCount(); Row++)
+			if (QLayoutItem* Item = Layout->itemAtPosition(Row, 0))
+				LabelWidth = qMax(LabelWidth, Item->sizeHint().width());
+
+	for (QGridLayout* Layout : Layouts)
+	{
+		Layout->setColumnMinimumWidth(0, LabelWidth + Spacing * 2);
+		Layout->setColumnStretch(1, 1);
+	}
 }
 
 swHTMLDialog::~swHTMLDialog()
