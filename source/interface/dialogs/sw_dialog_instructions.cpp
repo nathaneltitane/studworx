@@ -74,6 +74,18 @@ swInstructionsDialog::swInstructionsDialog(QWidget* Parent, Project* Project)
 	});
 	QTimer::singleShot(0, this, &swInstructionsDialog::SnapPageListDock);
 
+	// editor panel shows whole lines
+	mEditorSnapTimer = new QTimer(this);
+	mEditorSnapTimer->setSingleShot(true);
+	mEditorSnapTimer->setInterval(100);
+	connect(mEditorSnapTimer, &QTimer::timeout, this, &swInstructionsDialog::SnapEditorDock);
+
+	mEditorWidget->installEventFilter(this);
+	connect(mEditorWidget, &swInstructionsEditorWidget::SnapRequested, mEditorSnapTimer, QOverload<>::of(&QTimer::start));
+	connect(mEditorWidget, &QDockWidget::visibilityChanged, mEditorSnapTimer, QOverload<>::of(&QTimer::start));
+	connect(mEditorWidget, &QDockWidget::topLevelChanged, mEditorSnapTimer, QOverload<>::of(&QTimer::start));
+	connect(mEditorWidget, &QDockWidget::dockLocationChanged, mEditorSnapTimer, QOverload<>::of(&QTimer::start));
+
 	connect(mInstructions, &swInstructions::PageSetupChanged, this, &swInstructionsDialog::PageSetupChanged);
 	connect(mInstructions, &swInstructions::PageLayoutChanged, this, &swInstructionsDialog::PageSetupChanged);
 
@@ -168,6 +180,20 @@ bool swInstructionsDialog::eventFilter(QObject* Object, QEvent* Event)
 		QTimer::singleShot(0, this, &swInstructionsDialog::SnapPageListDock);
 	}
 
+	// snap the editor panel after a drag or a window resize
+	if (Object == mEditorWidget && Event->type() == QEvent::Resize)
+	{
+		if (QApplication::mouseButtons() != Qt::NoButton && !mEditorWidget->isFloating())
+			mEditorSnapPending = true;
+		else
+			mEditorSnapTimer->start();
+	}
+	else if (Event->type() == QEvent::MouseButtonRelease && mEditorSnapPending)
+	{
+		mEditorSnapPending = false;
+		mEditorSnapTimer->start();
+	}
+
 	return QMainWindow::eventFilter(Object, Event);
 }
 
@@ -201,6 +227,32 @@ void swInstructionsDialog::SnapPageListDock()
 		return;
 
 	resizeDocks({ mPageListWidget }, { mPageListWidget->width() + Delta }, Qt::Horizontal);
+}
+
+void swInstructionsDialog::SnapEditorDock()
+{
+	mEditorSnapPending = false;
+
+	if (mEditorWidget->isHidden())
+		return;
+
+	const int Delta = mEditorWidget->GetSnapDelta();
+
+	if (!Delta)
+		return;
+
+	if (mEditorWidget->isFloating())
+	{
+		mEditorWidget->resize(mEditorWidget->width(), mEditorWidget->height() + Delta);
+		return;
+	}
+
+	const Qt::DockWidgetArea Area = dockWidgetArea(mEditorWidget);
+
+	if (Area != Qt::TopDockWidgetArea && Area != Qt::BottomDockWidgetArea)
+		return;
+
+	resizeDocks({ mEditorWidget }, { mEditorWidget->height() + Delta }, Qt::Vertical);
 }
 
 void swInstructionsDialog::ModelChanged()

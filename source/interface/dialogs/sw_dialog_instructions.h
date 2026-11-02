@@ -35,10 +35,13 @@ protected:
 	void closeEvent(QCloseEvent* Event) override;
 	void UpdatePageList();
 	void SnapPageListDock();
+	void SnapEditorDock();
 
 	Project* mProject = nullptr;
 	bool mUpdatePending = false;
 	bool mPageListSnapPending = false;
+	bool mEditorSnapPending = false;
+	QTimer* mEditorSnapTimer = nullptr;
 
 	int mCurrentPageNumber;
 	swInstructions* mInstructions;

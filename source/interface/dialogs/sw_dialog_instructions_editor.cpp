@@ -309,6 +309,18 @@ public:
 		UpdateLineNumberWidth();
 	}
 
+	qreal GetLineHeight() const
+	{
+		// measure the laid out lines
+		const QTextBlock Block = document()->firstBlock();
+		const QTextLayout* Layout = Block.layout();
+
+		if (Block.isValid() && Layout && Layout->lineCount())
+			return blockBoundingRect(Block).height() / Layout->lineCount();
+
+		return fontMetrics().lineSpacing();
+	}
+
 protected:
 	int GetLineNumberWidth() const
 	{
@@ -819,6 +831,31 @@ void swInstructionsEditorWidget::SetWrapEnabled(bool Enabled)
 {
 	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_EDITOR_WRAP, Enabled);
 	mTextEdit->setLineWrapMode(Enabled ? QPlainTextEdit::WidgetWidth : QPlainTextEdit::NoWrap);
+	emit SnapRequested();
+}
+
+// use to fit whole lines in the text
+int swInstructionsEditorWidget::GetSnapDelta() const
+{
+	const qreal LineHeight = mTextEdit->GetLineHeight();
+
+	if (LineHeight <= 0.0)
+		return 0;
+
+	// lines start below the document margin
+	const qreal Margin = mTextEdit->document()->documentMargin();
+	const int ViewportHeight = mTextEdit->viewport()->height();
+	int Lines = qMax(1, qRound((ViewportHeight - Margin) / LineHeight));
+	int Delta = qCeil(Margin + Lines * LineHeight) - ViewportHeight;
+
+	// round up when the panel cannot shrink
+	if (height() + Delta < minimumSizeHint().height())
+	{
+		Lines++;
+		Delta = qCeil(Margin + Lines * LineHeight) - ViewportHeight;
+	}
+
+	return Delta;
 }
 
 void swInstructionsEditorWidget::SetMarkersEnabled(bool Enabled)
@@ -838,6 +875,7 @@ void swInstructionsEditorWidget::SetFindVisible(bool Visible)
 	QSignalBlocker Blocker(mFindAction);
 	mFindAction->setChecked(Visible);
 	mFindWidget->setVisible(Visible);
+	emit SnapRequested();
 
 	if (!Visible)
 	{

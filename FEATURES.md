@@ -344,7 +344,7 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 - **Elements.** Page numbers, colors, fonts, padding, margin, border and background for every page element, plus notices and pointers to emphasize parts and steps.
 - **Rulers.** Horizontal and vertical rulers measure the page in the page units, or the document units when they are in use, with the page and its margins shaded and an arrow on each ruler that follows the pointer, filled with its own color and alpha. Show Rulers turns them on and off.
 - **Element inspector.** Like the box model of a web browser inspector, Show Element Margins and Show Element Padding fill the margin around and the padding inside every page element, and Show Element Anchors marks its corners, edge centers and center. Each overlay has its own color and alpha in the Colors preferences, and none of them is printed.
-- **Print and Editor.** A built-in Print panel, and an Editor panel to read and edit the model file text.
+- **Print and Editor.** A built-in Print panel, and an Editor panel to read and edit the model file text, whose height snaps to whole lines so no line is ever cut off.
 
 ![The Instructions window](resources/images/instructions-window.png "wide")
 

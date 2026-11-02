@@ -20,6 +20,10 @@ public:
 	int GetTextPosition() const;
 	int GetTextScroll() const;
 	void SetTextPosition(int Position, int Scroll);
+	int GetSnapDelta() const;
+
+signals:
+	void SnapRequested();
 
 protected:
 	void UpdateText();
