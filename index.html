@@ -758,7 +758,7 @@
 
 			.copyright {
 				max-width: 1200px;
-				margin: 40px auto 0 auto;
+				margin: 20px auto 0 auto;
 				padding: 20px;
 				border-top: 2px solid #eeeeee;
 				font-size: 12px;
@@ -766,6 +766,17 @@
 
 			.copyright p {
 				margin: 0 0 10px 0;
+			}
+
+			.copyright p:last-child {
+				margin: 0;
+			}
+
+			/* the last section ends flush so every site keeps the same gap above the credits */
+
+			.section > :last-child,
+			.section > :last-child > :last-child {
+				margin-bottom: 0;
 			}
 
 			/* viewer */
@@ -2945,9 +2956,9 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 		<div class="copyright reveal">
 			<p>StudWorx is based on <a href="https://github.com/leozide/leocad">LeoCAD</a> by Leonardo Zide and its contributors. Parts come from the <a href="https://www.ldraw.org">LDraw</a> library, part connections from the <a href="https://github.com/RolandMelkert/LDCadShadowLibrary">LDCad shadow library</a> by Roland Melkert and POV-Ray parts from the <a href="https://github.com/jncraton/lgeo">LGEO library</a> by Lutz Uhlmann, neither bundled with StudWorx.</p>
 			<p>StudWorx is free software released under the GNU General Public License version 3.</p>
-			<p>Related projects: <a href="https://l2cu.app">L²CU, the LDraw Linux command line utility</a>, renders, exports and documents LDraw models with StudWorx, and <a href="https://mechablocks.com">MechaBlocks</a> publishes custom LEGO® mecha models built with it, each with a 3D viewer and building instructions.</p>
-			<p><a href="https://github.com/nathaneltitane/studworx/issues">Submit a bug report or feature request</a> // <a href="https://mechablocks.com">MECHA // BLOCKS</a> // <a href="https://github.com/nathaneltitane">NATHANEL + TITANE</a></p>
-			<p>LEGO® is a trademark of the LEGO® Group, which does not sponsor, authorize or endorse this project.</p>
+			<p>Related projects: <a href="https://l2cu.app">L²CU</a>, the LDraw Linux command line utility, renders, exports and documents LDraw models with StudWorx, and <a href="https://mechablocks.com">MechaBlocks</a> publishes custom LEGO® mecha models built with it, each with a 3D viewer and building instructions.</p>
+			<p><a href="https://github.com/nathaneltitane/studworx/issues">Submit a bug report or feature request</a> // <a href="https://github.com/nathaneltitane">NATHANEL + TITANE</a></p>
+			<p>Disclaimer: LEGO® is a trademark of the LEGO® Group, which does not sponsor, authorize or endorse this project.</p>
 		</div>
 
 		<nav id="footer" aria-label="Sections">
