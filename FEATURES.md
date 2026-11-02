@@ -230,7 +230,7 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 
 ## Tools
 
-<!-- tools | red | TOOLS // MOUSE, LIGHTS AND CAMERAS -->
+<!-- tools | teal | TOOLS // MOUSE, LIGHTS AND CAMERAS -->
 
 The Tools toolbar sets what the mouse does in the model view. Every tool has a keyboard shortcut, and mouse buttons with modifier keys can start any tool for one drag.
 
