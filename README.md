@@ -29,6 +29,46 @@ Every feature, menu and panel is listed in [FEATURES.md](FEATURES.md) and shown 
     - Download the Debian, Ubuntu, Fedora, openSUSE, AppImage, Windows or macOS package from the [latest release](https://github.com/nathaneltitane/studworx/releases/latest).
 
   - Build ↴
+    - Install the build requirements - a C++ compiler, Qt 5 and zlib development packages:
+
+    ```
+    # Debian, Ubuntu
+
+    sudo apt install g++ make qtbase5-dev qttools5-dev-tools libqt5opengl5-dev libqt5svg5 qt5-image-formats-plugins zlib1g-dev
+
+    # Fedora, Rocky Linux, RHEL
+
+    sudo dnf install gcc-c++ make qt5-qtbase-devel qt5-linguist qt5-qtsvg qt5-qtimageformats zlib-devel
+
+    # openSUSE
+
+    sudo zypper install gcc-c++ make libqt5-qtbase-devel libqt5-linguist libqt5-qtsvg libqt5-qtimageformats zlib-devel
+
+    # Arch Linux
+
+    sudo pacman -S base-devel qt5-base qt5-tools qt5-svg qt5-imageformats zlib
+    ```
+
+    - Optional - gamepad input, the terminal panel with KParts and a KDE Frameworks 5 Konsole, and file manager thumbnails with KIO:
+
+    ```
+    # Debian, Ubuntu
+
+    sudo apt install libqt5gamepad5-dev libkf5parts-dev libkf5kio-dev
+
+    # Fedora, Rocky Linux, RHEL
+
+    sudo dnf install qt5-qtgamepad-devel kf5-kparts-devel kf5-kio-devel
+
+    # openSUSE
+
+    sudo zypper install kparts-devel kio-devel
+
+    # Arch Linux
+
+    sudo pacman -S qt5-gamepad kparts5 kio5
+    ```
+
     - Build and install without a package - the prefix defaults to '/usr/local', '~/.local' needs no superuser rights:
 
     ```
