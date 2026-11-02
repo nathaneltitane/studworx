@@ -361,6 +361,7 @@ Every part belongs to a building step. Steps drive the model view, the instructi
 
 ![Steps menu](resources/images/interface-menu-steps.png)
 ![Timeline panel](resources/images/panels-timeline.png)
+![Step view](resources/images/steps-step-view.png)
 ![Fade and highlight](resources/images/steps-emphasis.png)
 
 ## Panels

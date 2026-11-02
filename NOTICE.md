@@ -33,6 +33,8 @@
   - Prompts: name and value prompts widen to fit their text
   - Find and Replace: the bar labels read Find and Replace
   - Import Set Inventory: the Name column takes the free width, so long set names show in full
+  - Step View: the dialog fits its fields, with labels on the left and fields to the right edge
+  - Site: the Rendering, Views, Keyboard and Mouse preference screenshots show the shared slider value column and a selected shortcut conflict in red, and the Steps section shows the Step View dialog
 
   </details>
 

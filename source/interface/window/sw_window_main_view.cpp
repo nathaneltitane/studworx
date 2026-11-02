@@ -247,6 +247,7 @@ void swMainWindow::ShowStepViewDialog()
 
 	QDialog Dialog(this);
 	Dialog.setWindowTitle(tr("Step %1 View").arg(Step));
+	swSetInputPrompt(&Dialog);
 
 	QVBoxLayout* DialogLayout = new QVBoxLayout(&Dialog);
 	QFormLayout* Layout = new QFormLayout();

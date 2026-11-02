@@ -113,6 +113,16 @@ QPoint swGetPopupPosition(const QPoint& Position, const QSize& Size, const QPoin
 	return QPoint(X, Y);
 }
 
+// use to start form labels at the left edge and grow fields to the right edge
+static void swAlignFormLayouts(QWidget* Window)
+{
+	for (QFormLayout* FormLayout : Window->findChildren<QFormLayout*>())
+	{
+		FormLayout->setLabelAlignment(Qt::AlignLeft | Qt::AlignVCenter);
+		FormLayout->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
+	}
+}
+
 bool swWindowGeometryFilter::eventFilter(QObject* Object, QEvent* Event)
 {
 	if (Event->type() != QEvent::Show || !Object->isWidgetType())
@@ -129,6 +139,7 @@ bool swWindowGeometryFilter::eventFilter(QObject* Object, QEvent* Event)
 	if (Window->property("swInputPrompt").toBool() || (InputDialog && !InputDialog->testOption(QInputDialog::UsePlainTextEditForTextInput)))
 	{
 		Window->setProperty("swInitialGeometry", true);
+		swAlignFormLayouts(Window);
 
 		// four by one up to 64 characters
 		const QSize ContentSize = Window->sizeHint().expandedTo(Window->minimumSizeHint());
@@ -163,13 +174,7 @@ bool swWindowGeometryFilter::eventFilter(QObject* Object, QEvent* Event)
 		return false;
 
 	Window->setProperty("swInitialGeometry", true);
-
-	// form labels start at the left edge and fields reach the right edge
-	for (QFormLayout* FormLayout : Window->findChildren<QFormLayout*>())
-	{
-		FormLayout->setLabelAlignment(Qt::AlignLeft | Qt::AlignVCenter);
-		FormLayout->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
-	}
+	swAlignFormLayouts(Window);
 
 	QWidget* Parent = Window->parentWidget() ? Window->parentWidget()->window() : nullptr;
 	QScreen* Screen = Parent ? Parent->screen() : Window->screen();
