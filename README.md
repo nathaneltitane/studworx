@@ -1,4 +1,4 @@
-<p align="center"><img src="https://raw.githubusercontent.com/nathaneltitane/studworx/main/studworx.svg" alt="studworx"><br><b>LDraw / LEGO® model builder</b><br>BUILD. DESIGN. CREATE.</p>
+<p align="center"><img src="https://raw.githubusercontent.com/nathaneltitane/studworx/main/resources/logo/logo-studworx.svg" alt="studworx"><br><b>LDraw / LEGO® model builder</b><br>BUILD. DESIGN. CREATE.</p>
 
 ---
 

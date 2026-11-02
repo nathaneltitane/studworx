@@ -42,5 +42,6 @@ studworx-windows*.exe
 /tools/studworx-social
 /resources/site/
 /index-social.html
-/resources/logo/
+/resources/logo/*
+!/resources/logo/logo-studworx.svg
 AGENTS.md
