@@ -498,9 +498,9 @@ swInstructionsGridWidget::swInstructionsGridWidget(QWidget* Parent, swInstructio
 	};
 
 	mShowGridButton = CreateGridButton(tr("Show Grid"), tr("Draw the page grid on screen, it is never printed."));
-	mSnapToGridButton = CreateGridButton(tr("Snap to Grid"), tr("Snap dragged elements to the page grid."));
+	mSnapToGridButton = CreateGridButton(tr("Snap to Grid"), tr("Snap dragged elements to the page grid, this turns Snap to Anchors off."));
 
-	// anchor snapping overrides the grid
+	// anchor snapping excludes the grid
 	QWidget* AnchorRow = swCreatePanelRow(CentralWidget);
 	QHBoxLayout* AnchorRowLayout = static_cast<QHBoxLayout*>(AnchorRow->layout());
 	Layout->addWidget(AnchorRow);
@@ -509,8 +509,8 @@ swInstructionsGridWidget::swInstructionsGridWidget(QWidget* Parent, swInstructio
 	mSnapToAnchorsButton->setText(tr("Snap to Anchors"));
 	mSnapToAnchorsButton->setCheckable(true);
 	mSnapToAnchorsButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
-	mSnapToAnchorsButton->setToolTip(tr("Snap dragged elements to the anchors of the page area and the other elements, ahead of the grid."));
-	mSnapToAnchorsButton->setWhatsThis(tr("<p><b>Snap to Anchors</b></p><p>While an element is dragged, its corners, edge centers and center snap to those of the page area and of the other elements when they come within a few pixels, on each axis separately. On an axis where an anchor snaps, it overrides Snap to Grid; elsewhere the grid still applies. Show Element Anchors in the Properties options shows the anchors.</p>"));
+	mSnapToAnchorsButton->setToolTip(tr("Snap dragged elements to the anchors of the page area and the other elements, this turns Snap to Grid off."));
+	mSnapToAnchorsButton->setWhatsThis(tr("<p><b>Snap to Anchors</b></p><p>While an element is dragged, its corners, edge centers and center snap to those of the page area and of the other elements when they come within a few pixels, on each axis separately. Snap to Anchors and Snap to Grid exclude each other, turning one on turns the other off. Show Element Anchors in the Properties options shows the anchors.</p>"));
 	mSnapToAnchorsButton->setAccessibleName(tr("Snap to Anchors"));
 	swSetupPanelButton(mSnapToAnchorsButton);
 	mSnapToAnchorsButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);

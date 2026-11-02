@@ -58,11 +58,8 @@ static std::array<QPointF, 9> swGetElementAnchors(const QRectF& Rect)
 }
 
 // use to snap a dragged element to the anchors of the page area and the other elements
-static QPointF swSnapAnchorPosition(const QGraphicsItem* Item, const swInstructions* Instructions, const QPointF& ScenePosition, bool& SnappedX, bool& SnappedY)
+static QPointF swSnapAnchorPosition(const QGraphicsItem* Item, const swInstructions* Instructions, const QPointF& ScenePosition)
 {
-	SnappedX = false;
-	SnappedY = false;
-
 	const swInstructionsBoxBase* Box = dynamic_cast<const swInstructionsBoxBase*>(Item);
 	const QGraphicsScene* Scene = Item->scene();
 
@@ -114,14 +111,12 @@ static QPointF swSnapAnchorPosition(const QGraphicsItem* Item, const swInstructi
 			{
 				DistanceX = qAbs(OffsetX);
 				Delta.setX(OffsetX);
-				SnappedX = true;
 			}
 
 			if (qAbs(OffsetY) < DistanceY)
 			{
 				DistanceY = qAbs(OffsetY);
 				Delta.setY(OffsetY);
-				SnappedY = true;
 			}
 		}
 	}
@@ -137,25 +132,17 @@ static QVariant swSnapItemPosition(const QGraphicsItem* Item, const swInstructio
 	const QPointF Position = Value.toPointF();
 	QPointF ScenePosition = Parent ? Parent->mapToScene(Position) : Position;
 
-	// only dragging snaps, anchors win over the grid on each axis
+	// only dragging snaps, to the anchors or to the grid
 	if (Scene && Scene->mouseGrabberItem())
 	{
-		bool SnappedX = false;
-		bool SnappedY = false;
-
 		if (Instructions->IsSnapToAnchors())
-			ScenePosition = swSnapAnchorPosition(Item, Instructions, ScenePosition, SnappedX, SnappedY);
-
-		if (Instructions->IsSnapToGrid())
+			ScenePosition = swSnapAnchorPosition(Item, Instructions, ScenePosition);
+		else if (Instructions->IsSnapToGrid())
 		{
 			const QPointF Origin = Instructions->GetGridRect().topLeft();
 			const qreal GridSize = Instructions->GetGridSnapSize();
 
-			if (!SnappedX)
-				ScenePosition.setX(Origin.x() + qRound((ScenePosition.x() - Origin.x()) / GridSize) * GridSize);
-
-			if (!SnappedY)
-				ScenePosition.setY(Origin.y() + qRound((ScenePosition.y() - Origin.y()) / GridSize) * GridSize);
+			ScenePosition = Origin + QPointF(qRound((ScenePosition.x() - Origin.x()) / GridSize) * GridSize, qRound((ScenePosition.y() - Origin.y()) / GridSize) * GridSize);
 		}
 	}
 

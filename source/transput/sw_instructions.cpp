@@ -113,7 +113,7 @@ swInstructions::swInstructions(Project* Project)
 
 	mShowGrid = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_GRID) != 0;
 	mSnapToGrid = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SNAP_TO_GRID) != 0;
-	mSnapToAnchors = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SNAP_TO_ANCHORS) != 0;
+	mSnapToAnchors = !mSnapToGrid && swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SNAP_TO_ANCHORS) != 0;
 	mGridSize = qBound(SW_GRID_SIZE_MINIMUM, swGetProfileFloat(SW_PROFILE_INSTRUCTIONS_GRID_SIZE), SW_GRID_SIZE_MAXIMUM);
 	mGridDivisions = qBound(1, swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_GRID_DIVISIONS), SW_GRID_DIVISIONS_MAXIMUM);
 	mGridWithinMargins = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_GRID_WITHIN_MARGINS) != 0;
@@ -861,6 +861,13 @@ void swInstructions::SetSnapToGrid(bool SnapToGrid)
 	mSnapToGrid = SnapToGrid;
 	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_SNAP_TO_GRID, mSnapToGrid);
 
+	// grid and anchor snapping exclude each other
+	if (mSnapToGrid && mSnapToAnchors)
+	{
+		mSnapToAnchors = false;
+		swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_SNAP_TO_ANCHORS, mSnapToAnchors);
+	}
+
 	emit GridChanged();
 }
 
@@ -871,6 +878,13 @@ void swInstructions::SetSnapToAnchors(bool SnapToAnchors)
 
 	mSnapToAnchors = SnapToAnchors;
 	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_SNAP_TO_ANCHORS, mSnapToAnchors);
+
+	// grid and anchor snapping exclude each other
+	if (mSnapToAnchors && mSnapToGrid)
+	{
+		mSnapToGrid = false;
+		swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_SNAP_TO_GRID, mSnapToGrid);
+	}
 
 	emit GridChanged();
 }

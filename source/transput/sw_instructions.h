@@ -471,7 +471,7 @@ public:
 		return mSnapToGrid;
 	}
 
-	// Anchor snapping wins over the grid.
+	// Anchor snapping and grid snapping exclude each other.
 	bool IsSnapToAnchors() const
 	{
 		return mSnapToAnchors;
@@ -637,7 +637,7 @@ protected:
 	Project* mProject = nullptr;
 	bool mShowGrid = true;
 	bool mSnapToGrid = true;
-	bool mSnapToAnchors = true;
+	bool mSnapToAnchors = false;
 	bool mGridWithinMargins = true;
 	bool mShowMargins = true;
 	bool mShowElementMargins = false;

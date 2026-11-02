@@ -5924,7 +5924,7 @@ Formát souboru není rozpoznán.</translation>
         <translation type="unfinished">%1 selhalo: %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="540"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="527"/>
         <source>Create Parts List</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">Vytvořit seznam dílků</translation>
@@ -12047,22 +12047,22 @@ Informace o tom, jak stáhnout a nainstalovat knihovnu, naleznete na adrese http
         <translation type="unfinished">Stránka %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="483"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="470"/>
         <source>%1 / %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="567"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="554"/>
         <source>Add Notice</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="567"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="554"/>
         <source>Edit Notice</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="568"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="555"/>
         <source>Notice text:</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12295,24 +12295,24 @@ Informace o tom, jak stáhnout a nainstalovat knihovnu, naleznete na adrese http
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="501"/>
-        <source>Snap dragged elements to the page grid.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="509"/>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="514"/>
         <source>Snap to Anchors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="501"/>
+        <source>Snap dragged elements to the page grid, this turns Snap to Anchors off.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="512"/>
-        <source>Snap dragged elements to the anchors of the page area and the other elements, ahead of the grid.</source>
+        <source>Snap dragged elements to the anchors of the page area and the other elements, this turns Snap to Grid off.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="513"/>
-        <source>&lt;p&gt;&lt;b&gt;Snap to Anchors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;While an element is dragged, its corners, edge centers and center snap to those of the page area and of the other elements when they come within a few pixels, on each axis separately. On an axis where an anchor snaps, it overrides Snap to Grid; elsewhere the grid still applies. Show Element Anchors in the Properties options shows the anchors.&lt;/p&gt;</source>
+        <source>&lt;p&gt;&lt;b&gt;Snap to Anchors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;While an element is dragged, its corners, edge centers and center snap to those of the page area and of the other elements when they come within a few pixels, on each axis separately. Snap to Anchors and Snap to Grid exclude each other, turning one on turns the other off. Show Element Anchors in the Properties options shows the anchors.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -12393,29 +12393,29 @@ Informace o tom, jak stáhnout a nainstalovat knihovnu, naleznete na adrese http
 <context>
     <name>swInstructionsPageListWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2169"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2179"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2156"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2166"/>
         <source>Pages</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2170"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2157"/>
         <source>&lt;p&gt;&lt;b&gt;Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a page to show it. Right-click a page to insert or remove blank pages around it.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2199"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2186"/>
         <source>Insert Blank Page Before</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2207"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2194"/>
         <source>Insert Blank Page After</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2215"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2202"/>
         <source>Remove Blank Page</source>
         <translation type="unfinished"></translation>
     </message>
@@ -12428,117 +12428,117 @@ Informace o tom, jak stáhnout a nainstalovat knihovnu, naleznete na adrese http
 <context>
     <name>swInstructionsPageWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1023"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1010"/>
         <source>Units of the rulers, the page units or the document units when they are in use.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1607"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1594"/>
         <source>Anchor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1608"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1595"/>
         <source>Top Left</source>
         <translation type="unfinished">Vlevo nahoře</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1608"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1595"/>
         <source>Top</source>
         <translation type="unfinished">Nahoře</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1608"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1595"/>
         <source>Top Right</source>
         <translation type="unfinished">Vpravo nahoře</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1608"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1595"/>
         <source>Right</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1608"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1595"/>
         <source>Bottom Right</source>
         <translation type="unfinished">Vpravo dole</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1608"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1595"/>
         <source>Bottom</source>
         <translation type="unfinished">Dole</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1608"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1595"/>
         <source>Bottom Left</source>
         <translation type="unfinished">Vlevo dole</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1608"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1595"/>
         <source>Left</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1613"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1600"/>
         <source>Automatic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1637"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1624"/>
         <source>Default</source>
         <translation type="unfinished">Výchozí</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1652"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1639"/>
         <source>Style</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1652"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1639"/>
         <source>Line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1652"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1639"/>
         <source>Callout Wedge</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1657"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1644"/>
         <source>Tip</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1657"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1644"/>
         <source>Arrowhead</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1657"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1644"/>
         <source>Dot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1664"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1651"/>
         <source>Remove Pointer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1671"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1658"/>
         <source>Add Notice...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1688"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1675"/>
         <source>Add Pointer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1700"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1687"/>
         <source>Edit Notice...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1709"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1696"/>
         <source>Remove Notice</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14070,22 +14070,22 @@ Informace o tom, jak stáhnout a nainstalovat knihovnu, naleznete na adrese http
 <context>
     <name>swInstructionsRulerWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1999"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1986"/>
         <source>Horizontal Ruler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2000"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1987"/>
         <source>Horizontal position on the page in the page units, the arrow follows the pointer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2004"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1991"/>
         <source>Vertical Ruler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2005"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1992"/>
         <source>Vertical position on the page in the page units, the arrow follows the pointer.</source>
         <translation type="unfinished"></translation>
     </message>
