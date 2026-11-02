@@ -23,7 +23,7 @@
 <context>
     <name>swInstructionsEditorWidget</name>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="783"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="795"/>
         <source>And %n more.</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -31,7 +31,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="786"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="798"/>
         <source>The text was not applied, %n line(s) are not valid LDraw syntax:</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -39,7 +39,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="941"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="979"/>
         <source>%n Replaced</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -47,7 +47,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="984"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="1022"/>
         <source>%n Matches</source>
         <translation type="unfinished">
             <numerusform></numerusform>

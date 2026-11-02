@@ -275,6 +275,7 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Instructions", "MarginUnits", 3),                                          // SW_PROFILE_INSTRUCTIONS_MARGIN_UNITS
 	swProfileEntry("Instructions", "ShowGrid", 1),                                             // SW_PROFILE_INSTRUCTIONS_SHOW_GRID
 	swProfileEntry("Instructions", "SnapToGrid", 1),                                           // SW_PROFILE_INSTRUCTIONS_SNAP_TO_GRID
+	swProfileEntry("Instructions", "SnapToAnchors", 1),                                        // SW_PROFILE_INSTRUCTIONS_SNAP_TO_ANCHORS
 	swProfileEntry("Instructions", "GridSize", 72.0f),                                         // SW_PROFILE_INSTRUCTIONS_GRID_SIZE
 	swProfileEntry("Instructions", "GridWithinMargins", 1),                                    // SW_PROFILE_INSTRUCTIONS_GRID_WITHIN_MARGINS
 	swProfileEntry("Instructions", "ShowMargins", 1),                                          // SW_PROFILE_INSTRUCTIONS_SHOW_MARGINS

@@ -468,7 +468,7 @@ swInstructionsGridWidget::swInstructionsGridWidget(QWidget* Parent, swInstructio
 	: QDockWidget(Parent), mInstructions(Instructions)
 {
 	setWindowTitle(tr("Grid"));
-	setWhatsThis(tr("<p><b>Grid</b></p><p>The page grid helps aligning dragged elements, it is never printed. Show it on screen, snap dragged elements to it, choose its area, the size of its main unit and the fractions it is split into, and the colors of its lines and of the margins.</p>"));
+	setWhatsThis(tr("<p><b>Grid</b></p><p>The page grid helps aligning dragged elements, it is never printed. Show it on screen, snap dragged elements to it or to the anchors of the other elements, choose its area, the size of its main unit and the fractions it is split into, and the colors of its lines and of the margins.</p>"));
 	swSetupWidgetHelp(this, nullptr);
 
 	QWidget* CentralWidget = new QWidget(this);
@@ -499,6 +499,22 @@ swInstructionsGridWidget::swInstructionsGridWidget(QWidget* Parent, swInstructio
 
 	mShowGridButton = CreateGridButton(tr("Show Grid"), tr("Draw the page grid on screen, it is never printed."));
 	mSnapToGridButton = CreateGridButton(tr("Snap to Grid"), tr("Snap dragged elements to the page grid."));
+
+	// anchor snapping overrides the grid
+	QWidget* AnchorRow = swCreatePanelRow(CentralWidget);
+	QHBoxLayout* AnchorRowLayout = static_cast<QHBoxLayout*>(AnchorRow->layout());
+	Layout->addWidget(AnchorRow);
+
+	mSnapToAnchorsButton = new QToolButton(AnchorRow);
+	mSnapToAnchorsButton->setText(tr("Snap to Anchors"));
+	mSnapToAnchorsButton->setCheckable(true);
+	mSnapToAnchorsButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
+	mSnapToAnchorsButton->setToolTip(tr("Snap dragged elements to the anchors of the page area and the other elements, ahead of the grid."));
+	mSnapToAnchorsButton->setWhatsThis(tr("<p><b>Snap to Anchors</b></p><p>While an element is dragged, its corners, edge centers and center snap to those of the page area and of the other elements when they come within a few pixels, on each axis separately. On an axis where an anchor snaps, it overrides Snap to Grid; elsewhere the grid still applies. Show Element Anchors in the Properties options shows the anchors.</p>"));
+	mSnapToAnchorsButton->setAccessibleName(tr("Snap to Anchors"));
+	swSetupPanelButton(mSnapToAnchorsButton);
+	mSnapToAnchorsButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+	AnchorRowLayout->addWidget(mSnapToAnchorsButton, 1);
 
 	// grid rows follow the toggles
 	QWidget* GridScopeRow = swCreatePanelRow(CentralWidget);
@@ -598,6 +614,7 @@ swInstructionsGridWidget::swInstructionsGridWidget(QWidget* Parent, swInstructio
 
 	connect(mShowGridButton, &QToolButton::toggled, mInstructions, &swInstructions::SetShowGrid);
 	connect(mSnapToGridButton, &QToolButton::toggled, mInstructions, &swInstructions::SetSnapToGrid);
+	connect(mSnapToAnchorsButton, &QToolButton::toggled, mInstructions, &swInstructions::SetSnapToAnchors);
 	connect(mGridScopeComboBox, qOverload<int>(&QComboBox::currentIndexChanged), this, [this](int Index)
 	{
 		mInstructions->SetGridWithinMargins(Index == 0);
@@ -642,12 +659,14 @@ void swInstructionsGridWidget::UpdateGrid()
 {
 	QSignalBlocker ShowBlocker(mShowGridButton);
 	QSignalBlocker SnapBlocker(mSnapToGridButton);
+	QSignalBlocker AnchorsBlocker(mSnapToAnchorsButton);
 	QSignalBlocker SizeBlocker(mGridSizeSpinBox);
 	QSignalBlocker ScopeBlocker(mGridScopeComboBox);
 	QSignalBlocker DivisionsBlocker(mGridDivisionsSpinBox);
 
 	mShowGridButton->setChecked(mInstructions->IsGridShown());
 	mSnapToGridButton->setChecked(mInstructions->IsSnapToGrid());
+	mSnapToAnchorsButton->setChecked(mInstructions->IsSnapToAnchors());
 	mGridScopeComboBox->setCurrentIndex(mInstructions->IsGridWithinMargins() ? 0 : 1);
 
 	const swInstructionsPageUnits Units = mGridSizeUnitButton->GetUnits(mInstructions);

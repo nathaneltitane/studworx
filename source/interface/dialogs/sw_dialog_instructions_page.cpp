@@ -44,6 +44,91 @@ bool swGetElementKey(const QGraphicsItem* Item, swInstructionsElementKey& Key)
 	return true;
 }
 
+// use to get the corners, edge centers and center of a rectangle
+static std::array<QPointF, 9> swGetElementAnchors(const QRectF& Rect)
+{
+	const QPointF Center = Rect.center();
+
+	return
+	{
+		Rect.topLeft(), QPointF(Center.x(), Rect.top()), Rect.topRight(),
+		QPointF(Rect.left(), Center.y()), Center, QPointF(Rect.right(), Center.y()),
+		Rect.bottomLeft(), QPointF(Center.x(), Rect.bottom()), Rect.bottomRight()
+	};
+}
+
+// use to snap a dragged element to the anchors of the page area and the other elements
+static QPointF swSnapAnchorPosition(const QGraphicsItem* Item, const swInstructions* Instructions, const QPointF& ScenePosition, bool& SnappedX, bool& SnappedY)
+{
+	SnappedX = false;
+	SnappedY = false;
+
+	const swInstructionsBoxBase* Box = dynamic_cast<const swInstructionsBoxBase*>(Item);
+	const QGraphicsScene* Scene = Item->scene();
+
+	if (!Box || !Scene || Scene->views().isEmpty())
+		return ScenePosition;
+
+	// snap within a few pixels at any zoom
+	const qreal Scale = qMax(Scene->views().front()->transform().m11(), 0.0001);
+	const qreal Tolerance = 8.0 / Scale;
+
+	// the dragged anchors at the new position
+	const QPointF Offset = ScenePosition - Item->scenePos();
+	const std::array<QPointF, 9> ItemAnchors = swGetElementAnchors(Item->mapRectToScene(Box->GetBorderRect()).translated(Offset));
+
+	std::vector<QPointF> TargetAnchors;
+	const swInstructionsPageSetup& PageSetup = Instructions->mPageSetup;
+	const QRectF AreaRect(QPointF(PageSetup.MarginLeft, PageSetup.MarginTop), QPointF(PageSetup.Width - PageSetup.MarginRight, PageSetup.Height - PageSetup.MarginBottom));
+
+	for (const QPointF& Anchor : swGetElementAnchors(AreaRect))
+		TargetAnchors.push_back(Anchor);
+
+	// elements moving along are no targets
+	const QList<QGraphicsItem*> Items = Scene->items();
+
+	for (const QGraphicsItem* Other : Items)
+	{
+		const swInstructionsBoxBase* OtherBox = dynamic_cast<const swInstructionsBoxBase*>(Other);
+
+		if (!OtherBox || Other == Item || !Other->isVisible() || Other->isSelected() || Item->isAncestorOf(Other) || Other->isAncestorOf(Item))
+			continue;
+
+		for (const QPointF& Anchor : swGetElementAnchors(Other->mapRectToScene(OtherBox->GetBorderRect())))
+			TargetAnchors.push_back(Anchor);
+	}
+
+	// nearest anchor on each axis
+	qreal DistanceX = Tolerance;
+	qreal DistanceY = Tolerance;
+	QPointF Delta;
+
+	for (const QPointF& Target : TargetAnchors)
+	{
+		for (const QPointF& Anchor : ItemAnchors)
+		{
+			const qreal OffsetX = Target.x() - Anchor.x();
+			const qreal OffsetY = Target.y() - Anchor.y();
+
+			if (qAbs(OffsetX) < DistanceX)
+			{
+				DistanceX = qAbs(OffsetX);
+				Delta.setX(OffsetX);
+				SnappedX = true;
+			}
+
+			if (qAbs(OffsetY) < DistanceY)
+			{
+				DistanceY = qAbs(OffsetY);
+				Delta.setY(OffsetY);
+				SnappedY = true;
+			}
+		}
+	}
+
+	return ScenePosition + Delta;
+}
+
 // use to snap a dragged element
 static QVariant swSnapItemPosition(const QGraphicsItem* Item, const swInstructions* Instructions, const QVariant& Value)
 {
@@ -52,13 +137,26 @@ static QVariant swSnapItemPosition(const QGraphicsItem* Item, const swInstructio
 	const QPointF Position = Value.toPointF();
 	QPointF ScenePosition = Parent ? Parent->mapToScene(Position) : Position;
 
-	// only dragging snaps
-	if (Instructions->IsSnapToGrid() && Scene && Scene->mouseGrabberItem())
+	// only dragging snaps, anchors win over the grid on each axis
+	if (Scene && Scene->mouseGrabberItem())
 	{
-		const QPointF Origin = Instructions->GetGridRect().topLeft();
-		const qreal GridSize = Instructions->GetGridSnapSize();
+		bool SnappedX = false;
+		bool SnappedY = false;
 
-		ScenePosition = Origin + QPointF(qRound((ScenePosition.x() - Origin.x()) / GridSize) * GridSize, qRound((ScenePosition.y() - Origin.y()) / GridSize) * GridSize);
+		if (Instructions->IsSnapToAnchors())
+			ScenePosition = swSnapAnchorPosition(Item, Instructions, ScenePosition, SnappedX, SnappedY);
+
+		if (Instructions->IsSnapToGrid())
+		{
+			const QPointF Origin = Instructions->GetGridRect().topLeft();
+			const qreal GridSize = Instructions->GetGridSnapSize();
+
+			if (!SnappedX)
+				ScenePosition.setX(Origin.x() + qRound((ScenePosition.x() - Origin.x()) / GridSize) * GridSize);
+
+			if (!SnappedY)
+				ScenePosition.setY(Origin.y() + qRound((ScenePosition.y() - Origin.y()) / GridSize) * GridSize);
+		}
 	}
 
 	// keep large elements at the top left margin
@@ -1804,15 +1902,7 @@ void swInstructionsPageWidget::DrawElementBoxes(QPainter* Painter)
 			continue;
 
 		// corners, edge centers and center
-		const QPointF Center = BorderRect.center();
-		const QPointF Points[] =
-		{
-			BorderRect.topLeft(), QPointF(Center.x(), BorderRect.top()), BorderRect.topRight(),
-			QPointF(BorderRect.left(), Center.y()), Center, QPointF(BorderRect.right(), Center.y()),
-			BorderRect.bottomLeft(), QPointF(Center.x(), BorderRect.bottom()), BorderRect.bottomRight()
-		};
-
-		for (const QPointF& Point : Points)
+		for (const QPointF& Point : swGetElementAnchors(BorderRect))
 			AnchorPoints.push_back(ViewTransform.map(ItemTransform.map(Point)));
 	}
 

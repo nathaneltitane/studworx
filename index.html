@@ -1922,7 +1922,7 @@
 				<li><b>Pages.</b> A cover page, a bill of materials, blank page breaks and the steps per page, set for each page.</li>
 				<li><b>Style.</b> Step dividers, the document font, the model projection, parts list counts, sort order and border, and full page backgrounds.</li>
 				<li><b>Step images.</b> Parts new to each step are outlined and the earlier ones fade.</li>
-				<li><b>Placement.</b> Place, drag and lock every page element within the page margins, on a snapping page grid.</li>
+				<li><b>Placement.</b> Place, drag and lock every page element within the page margins, on a snapping page grid. Snap to Anchors snaps the corners, edge centers and center of a dragged element to those of the page area and the other elements, and overrides the grid on each axis where an anchor snaps.</li>
 				<li><b>Elements.</b> Page numbers, colors, fonts, padding, margin, border and background for every page element, plus notices and pointers to emphasize parts and steps.</li>
 				<li><b>Rulers.</b> Horizontal and vertical rulers measure the page in the page units, or the document units when they are in use, with the page and its margins shaded and an arrow on each ruler that follows the pointer, filled with its own color and alpha. Show Rulers turns them on and off.</li>
 				<li><b>Element inspector.</b> Like the box model of a web browser inspector, Show Element Margins and Show Element Padding fill the margin around and the padding inside every page element, and Show Element Anchors marks its corners, edge centers and center. Each overlay has its own color and alpha in the Colors <a href="#preferences">preferences</a>, and none of them is printed.</li>
@@ -2663,7 +2663,7 @@
 				<h2>HELP // EVERY WHAT&#x27;S THIS ENTRY</h2>
 			</header>
 
-			<p class="lead">The same help the app shows from Help &gt; What&#x27;s This?, the title bar question mark or F1: 460 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
+			<p class="lead">The same help the app shows from Help &gt; What&#x27;s This?, the title bar question mark or F1: 461 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
 			<div class="tools-help">
 				<input id="search-help" type="search" placeholder="Search help" aria-label="Search help">
@@ -2976,7 +2976,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Instructions","title":"Editor","paragraphs":["The text of the model file as it is saved, its parts, steps and instructions. Edit it and apply to load the model from the text, the change is unsaved until the model is saved."]},
 				{"group":"Instructions","title":"Pages","paragraphs":["Select a page to show it. Right-click a page to insert or remove blank pages around it."]},
 				{"group":"Instructions","title":"Placement","paragraphs":["Select an element on the page to place, move or lock it. Place the selected page element on a predefined area: the step model, step number, parts list, cover model, cover title, cover author or bill of materials. Step elements are placed in the part of the page their step gets from the split, or outside the other step element. Placements apply to all pages.","Every element can also be dragged on the page, it keeps its distance from its placement. A locked element keeps its position whatever its placement and is not dragged."]},
-				{"group":"Instructions","title":"Grid","paragraphs":["The page grid helps aligning dragged elements, it is never printed. Show it on screen, snap dragged elements to it, choose its area, the size of its main unit and the fractions it is split into, and the colors of its lines and of the margins."]},
+				{"group":"Instructions","title":"Grid","paragraphs":["The page grid helps aligning dragged elements, it is never printed. Show it on screen, snap dragged elements to it or to the anchors of the other elements, choose its area, the size of its main unit and the fractions it is split into, and the colors of its lines and of the margins."]},
+				{"group":"Instructions","title":"Snap to Anchors","paragraphs":["While an element is dragged, its corners, edge centers and center snap to those of the page area and of the other elements when they come within a few pixels, on each axis separately. On an axis where an anchor snaps, it overrides Snap to Grid; elsewhere the grid still applies. Show Element Anchors in the Properties options shows the anchors."]},
 				{"group":"Instructions","title":"Print","paragraphs":["Print the instruction pages on a printer or to a PDF file. The pages are printed on paper matching the page setup, the pages panel shows how they look."]},
 				{"group":"Instructions","title":"Properties","paragraphs":["Edit how the instruction pages look. With nothing selected on the page every section is shown, select an element to show only its settings and its box. Right-click the page to add notices and pointers. Changes apply to all pages."]},
 				{"group":"Instructions","title":"Document","paragraphs":["One font for all text of the instructions and the projection of the step and cover models. The instructions settings, notices and pointers are saved in the model file, the page setup and grid in the preferences."]},

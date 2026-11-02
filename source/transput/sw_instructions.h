@@ -471,6 +471,12 @@ public:
 		return mSnapToGrid;
 	}
 
+	// Anchor snapping wins over the grid.
+	bool IsSnapToAnchors() const
+	{
+		return mSnapToAnchors;
+	}
+
 	float GetGridSize() const
 	{
 		return mGridSize;
@@ -569,6 +575,7 @@ public:
 
 	void SetShowGrid(bool ShowGrid);
 	void SetSnapToGrid(bool SnapToGrid);
+	void SetSnapToAnchors(bool SnapToAnchors);
 	void SetGridSize(float GridSize);
 	void SetGridDivisions(int Divisions);
 	void SetGridPrimaryColor(const QColor& Color);
@@ -630,6 +637,7 @@ protected:
 	Project* mProject = nullptr;
 	bool mShowGrid = true;
 	bool mSnapToGrid = true;
+	bool mSnapToAnchors = true;
 	bool mGridWithinMargins = true;
 	bool mShowMargins = true;
 	bool mShowElementMargins = false;

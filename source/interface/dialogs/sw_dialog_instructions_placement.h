@@ -63,6 +63,7 @@ protected:
 
 	QToolButton* mShowGridButton = nullptr;
 	QToolButton* mSnapToGridButton = nullptr;
+	QToolButton* mSnapToAnchorsButton = nullptr;
 	QDoubleSpinBox* mGridSizeSpinBox = nullptr;
 	swInstructionsUnitButton* mGridSizeUnitButton = nullptr;
 	QComboBox* mGridScopeComboBox = nullptr;

@@ -340,7 +340,7 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 - **Pages.** A cover page, a bill of materials, blank page breaks and the steps per page, set for each page.
 - **Style.** Step dividers, the document font, the model projection, parts list counts, sort order and border, and full page backgrounds.
 - **Step images.** Parts new to each step are outlined and the earlier ones fade.
-- **Placement.** Place, drag and lock every page element within the page margins, on a snapping page grid.
+- **Placement.** Place, drag and lock every page element within the page margins, on a snapping page grid. Snap to Anchors snaps the corners, edge centers and center of a dragged element to those of the page area and the other elements, and overrides the grid on each axis where an anchor snaps.
 - **Elements.** Page numbers, colors, fonts, padding, margin, border and background for every page element, plus notices and pointers to emphasize parts and steps.
 - **Rulers.** Horizontal and vertical rulers measure the page in the page units, or the document units when they are in use, with the page and its margins shaded and an arrow on each ruler that follows the pointer, filled with its own color and alpha. Show Rulers turns them on and off.
 - **Element inspector.** Like the box model of a web browser inspector, Show Element Margins and Show Element Padding fill the margin around and the padding inside every page element, and Show Element Anchors marks its corners, edge centers and center. Each overlay has its own color and alpha in the Colors preferences, and none of them is printed.
