@@ -909,6 +909,10 @@ swInstructionsPageWidget::swInstructionsPageWidget(QWidget* Parent, swInstructio
 	connect(Scene, &QGraphicsScene::selectionChanged, this, &swInstructionsPageWidget::SelectionChanged);
 	connect(mPlacementWidget, &swInstructionsPlacementWidget::AlignSelection, this, &swInstructionsPageWidget::AlignSelection);
 
+	// the page always fits, scroll bars would toggle while it refits
+	setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+	setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
 	// rulers follow the pointer
 	viewport()->setMouseTracking(true);
 
@@ -1862,7 +1866,11 @@ void swInstructionsPageWidget::UpdateRulers()
 	const bool ShowRulers = mInstructions->IsRulersShown();
 	const int Thickness = ShowRulers ? swInstructionsRulerWidget::GetThickness(this) : 0;
 
-	setViewportMargins(Thickness, Thickness, 0, 0);
+	const QMargins Margins(Thickness, Thickness, 0, 0);
+
+	// relayout only when the margins change, a relayout resizes and refits the page
+	if (viewportMargins() != Margins)
+		setViewportMargins(Margins);
 
 	mHorizontalRuler->setVisible(ShowRulers);
 	mVerticalRuler->setVisible(ShowRulers);
