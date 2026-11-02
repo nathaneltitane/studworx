@@ -32,7 +32,7 @@
 					"description": "StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library, built on LeoCAD.",
 					"applicationCategory": "DesignApplication",
 					"operatingSystem": "Linux, Windows, macOS",
-					"softwareVersion": "2026-11-01",
+					"softwareVersion": "2026-11-02",
 					"license": "https://www.gnu.org/licenses/gpl-3.0.html",
 					"downloadUrl": "https://github.com/nathaneltitane/studworx/releases/latest",
 					"image": "https://studworx.app/resources/social/social.png",
@@ -2762,10 +2762,10 @@
 		<section id="help" class="section reveal">
 			<header class="head-section">
 				<svg class="icon big" aria-hidden="true"><use href="#icon-purple"/></svg>
-				<h2>HELP // EVERY WHAT&#x27;S THIS ENTRY</h2>
+				<h2>HELP // EVERY &quot;WHAT&#x27;S THIS?&quot; ENTRY</h2>
 			</header>
 
-			<p class="lead">The same help the app shows from Help &gt; What&#x27;s This?, the title bar question mark or F1: 461 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
+			<p class="lead">The same help the app shows from Help &gt; What&#x27;s This?, the title bar question mark or F1: 462 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
 			<div class="tools-help">
 				<input id="search-help" type="search" placeholder="Search help" aria-label="Search help">
@@ -2790,11 +2790,11 @@
 					</thead>
 
 					<tbody>
-						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-01_amd64.deb / arm64.deb</td></tr>
-						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-01-x86_64.rpm / aarch64.rpm</td></tr>
-						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-01-x86_64.appimage / aarch64.appimage</td></tr>
-						<tr><td>Windows</td><td>studworx-windows-2026-11-01-x64.exe</td></tr>
-						<tr><td>macOS</td><td>studworx-macos-2026-11-01-universal.dmg</td></tr>
+						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-02_amd64.deb / arm64.deb</td></tr>
+						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-02-x86_64.rpm / aarch64.rpm</td></tr>
+						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-02-x86_64.appimage / aarch64.appimage</td></tr>
+						<tr><td>Windows</td><td>studworx-windows-2026-11-02-x64.exe</td></tr>
+						<tr><td>macOS</td><td>studworx-macos-2026-11-02-universal.dmg</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -2847,6 +2847,24 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p class="lead">The latest release notices from the StudWorx repository.</p>
 
 			<details open>
+				<summary>2026-11-02</summary>
+
+				<ul>
+					<li><a href="#preferences">Preferences</a>: LDraw Color Configuration, LDraw Alternate Color Configuration, Minifigure Builder Settings and BrickLink Mapping each have an Update button that downloads the latest file from library.ldraw.org, ldraw.org or Rebrickable, the minifigure part list is saved as <code>minifigure.ini</code></li>
+					<li>Preferences: the bundled color configurations and minifigure part list are used until you set your own file, a set file that went missing is asked for again at startup</li>
+					<li>Preferences: Colors From moved into a new Colors group on the <a href="#rendering">Rendering</a> page, the Colors page is now <a href="#interface">Interface</a></li>
+					<li>Export BrickLink: choose the condition, the wanted list and new listing notices, the choices are remembered, also as <code>--bricklink-condition</code>, <code>--bricklink-wanted-list</code> and <code>--bricklink-notify</code> on the command line</li>
+					<li>Command line: <code>--kmz-geometry all</code> or <code>visible</code> chooses the KMZ geometry and replaces <code>--kmz-all-parts</code></li>
+					<li>Command line: <code>-h</code> now shows the <a href="#help">help</a> like <code>--help</code>, the picture height is set with <code>--height</code></li>
+					<li>Command line: options follow the usual style, one letter after a single dash and full words after two, so <code>-obj</code> is now <code>--export-wavefront</code>, <code>--libpath</code> is <code>--library</code>, <code>--fov</code> is <code>--field-of-view</code>, <code>--zplanes</code> is <code>--clip-planes</code>, <code>--orthographic</code> is <code>--projection orthographic</code>, <code>--aa-samples</code> is <code>--antialiasing-samples</code>, the edge colors are <code>--edge-color</code>, <code>--edge-color-black</code>, <code>--edge-color-dark</code>, <code>--edge-color-automatic</code>, <code>--edge-contrast</code> and <code>--edge-light-dark</code> with <code>--no-</code> forms, <code>--povray-render</code> is <code>--render-povray</code>, and the help is grouped by topic</li>
+					<li>Export BrickLink: paste the address of a wanted list page instead of its number, after saving, Copy XML and Open BrickLink puts the list on the clipboard and opens the BrickLink upload page</li>
+					<li>Minifigure Builder: templates export as <code>.minifigure</code> <a href="#files">files</a> and <code>.minifig</code> files still import, settings, toolbar and category names carry over on the first start</li>
+					<li>Site: the author avatar in the footer is now a sharper 1024 pixel <a href="#image">image</a></li>
+					<li>The license is now formatted as Markdown, so it is easier to read on GitHub</li>
+				</ul>
+			</details>
+
+			<details>
 				<summary>2026-11-01</summary>
 
 				<ul>
@@ -2859,9 +2877,9 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<summary>2026-10-31</summary>
 
 				<ul>
-					<li><a href="#interface">Interface</a>: close, undock and filter clear buttons are drawn to match the theme, and the custom theme draws its own tree lines and expand arrows</li>
+					<li>Interface: close, undock and filter clear buttons are drawn to match the theme, and the custom theme draws its own tree lines and expand arrows</li>
 					<li>Site: new <a href="#meta">Meta</a> section covering the LDraw meta commands StudWorx reads and writes, see <a href="https://studworx.app/#meta">Meta on the site</a></li>
-					<li>Manual page: covers LeoCAD <code>.lcd</code> projects opening read only, step numbers in saved <a href="#image">image</a> names, the step and field of view limits, the LGEO library and studworx.app</li>
+					<li>Manual page: covers LeoCAD <code>.lcd</code> projects opening read only, step numbers in saved image names, the step and field of view limits, the LGEO library and studworx.app</li>
 				</ul>
 			</details>
 
@@ -2870,13 +2888,13 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 				<ul>
 					<li>Interface: built from standard Qt widgets throughout, <a href="#panels">panels</a>, dialogs and windows follow the system style and theme, only the model <a href="#views">views</a> draw with OpenGL</li>
-					<li>Save Model Image: live preview of the saved image with step arrows, ratio presets from square to widescreen with Landscape and Portrait, a transparent background for PNG and GIF <a href="#files">files</a>, Save and Cancel in the File box and <a href="#help">help</a> from the title bar What&#x27;s This button</li>
+					<li>Save Model Image: live preview of the saved image with step arrows, ratio presets from square to widescreen with Landscape and Portrait, a transparent background for PNG and GIF files, Save and Cancel in the File box and help from the title bar What&#x27;s This button</li>
 					<li>Animated GIF: turntable animations from Save Model Image, one or more full turns or back and forth swings around the X, Y or Z axis, with frames per turn, a frame rate and the duration shown, played live in the preview</li>
 					<li>Animated <a href="#steps">steps</a>: Steps plays the build one step per frame, Next Step moves on every few turns or seconds while the model turns, and Hold Last keeps the finished model on screen before the loop restarts, see <a href="https://studworx.app/#image">Image on the site</a></li>
 					<li>Image framing: Fit Model and Fit Each Step keep every part inside the image with an adjustable margin, turntables keep one steady zoom through the whole turn around the World Origin, Model Origin or Model Center, and View Color backgrounds now save opaque</li>
 					<li>Print: File &gt; Print prints the current model view through the system print dialog, with a Preview button where the dialog allows it</li>
 					<li>File menu: grouped by task, Print after Save As, Image beside <a href="#instructions">Instructions</a> and Render instead of under Export</li>
-					<li><a href="#preferences">Preferences</a>: Custom Paths is now Reference Paths</li>
+					<li>Preferences: Custom Paths is now Reference Paths</li>
 					<li>Preferences: new Export group with Mark COLLADA Transparency, on by default, writes <code>opaque=&quot;A_ONE&quot;</code> on transparent colors so viewers that skip the COLLADA default show transparent parts translucent without an l2cu pass</li>
 					<li>Rotate tool: dragging empty space with a mouse shortcut orbits, pans or zooms the view again instead of being taken as a rotation handle (LeoCAD #1073)</li>
 					<li>Translucent colors: Parts list icons, transparent images and instruction steps keep translucent parts their true color instead of darkened by the background, and transparent decals blend over their part color (LeoCAD #938)</li>
@@ -2941,27 +2959,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				</ul>
 			</details>
 
-			<details>
-				<summary>2026-10-27</summary>
-
-				<ul>
-					<li>Packages: .deb, .rpm and AppImage for x86_64 and arm64, Windows installer and universal macOS disk image, all with Qt and the parts library included</li>
-					<li>One release on GitHub, rebuilt from every change and tagged with its date version</li>
-					<li>Versions follow the release date everywhere: <code>studworx-2026-10-27-x86_64.rpm</code>, the About dialog and the Windows file version</li>
-					<li>Lighting styles for the default shading: Standard, Studio, Matte and Toon - also from the command line with <code>--lighting</code></li>
-					<li>Selection outline width, set in Preferences or with <code>Increase Outline Width</code> and <code>Decrease Outline Width</code></li>
-					<li>Cursors and toolbar icons drawn in code at any size, following the light or dark theme - move and rotate cursors show their axis</li>
-					<li>Instructions: place, drag and lock every page element, page grid with snapping, page numbers and colors and fonts for every element</li>
-					<li>Instructions: Print panel inside the instructions window replaces the print dialog and print preview, the window opens maximized</li>
-					<li>Preferences: label and control columns lined up on every page, mouse shortcuts recorded by clicking, mouse tools grouped like the keyboard commands</li>
-					<li>Menus: new Steps menu, Instructions and Properties in the File menu, Image under Export, Preferences at the bottom of the Edit menu</li>
-					<li>Parts panel snaps its categories to the longest name when docked on top or bottom</li>
-					<li>Terminal panel: <code>Open Model Folder</code> button</li>
-					<li>Traditional Chinese, Russian and Ukrainian added to the language choices</li>
-					<li>About dialog shows the LEGO® trademark notice</li>
-				</ul>
-			</details>
-
 			<p class="more"><a href="https://github.com/nathaneltitane/studworx/blob/main/NOTICE.md">Read every notice ›</a></p>
 		</section>
 
@@ -2972,7 +2969,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p>LEGO® is a trademark of the LEGO® Group, which does not sponsor, authorize or endorse this project.</p>
 			<div class="authorship">
 				<a class="avatar" href="https://nathaneltitane.com" aria-label="N Λ T H Λ N E L"><img src="resources/avatar/avatar-bird.png" alt="" width="64" height="64"></a>
-				<p>Version // 2026-11-01<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
+				<p>Version // 2026-11-02<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
 			</div>
 		</div>
 
@@ -3065,7 +3062,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Model Properties","title":"Model Summary","paragraphs":["Author, description, and comments are stored in the model file when you save it. Measurements show its overall size."]},
 				{"group":"Model Properties","title":"Model Measurements","paragraphs":["The dimensions of the model's bounding box are shown in centimeters, inches, and LDraw units (ldu). The values are read-only and include parts across all steps."]},
 				{"group":"Model Properties","title":"Parts","paragraphs":["The table counts parts across all steps, including parts inside submodels. The first column shows a thumbnail of each part in its most used color, and the ID column shows its number. Color columns show quantities, and totals summarize each part, each color, and the whole model. Click a column heading to sort. The thumbnail, ID and part-name columns stay visible while you scroll horizontally. Counts cannot be edited here."]},
-				{"group":"Model Properties","title":"Export BrickLink","paragraphs":["Saves the parts listed in this table as a BrickLink XML wanted list, the same format as File > Export > BrickLink. Only the model shown in this dialog and its submodels are included. After saving, Copy XML and Open BrickLink puts the list on the clipboard and opens the BrickLink upload page."]},
+				{"group":"Model Properties","title":"Export BrickLink","paragraphs":["Saves the parts listed in this table as a BrickLink XML wanted list, the same format as File > Export > BrickLink. Only the model shown in this dialog and its submodels are included."]},
 				{"group":"Model Properties","title":"Export CSV","paragraphs":["Saves the parts listed in this table as comma separated values with name, color, quantity, ID and color code, the same format as File > Export > CSV. Only the model shown in this dialog and its submodels are included."]},
 				{"group":"Render","title":"Output Image","paragraphs":["Choose where to save the rendered image and its format, such as PNG, JPEG, or BMP. The output path applies to image rendering; Open in Blender does not use it."]},
 				{"group":"Render","title":"Render Preview","paragraphs":["The preview is scaled to fit this area. Changing the dialog size does not change the output resolution; use Settings to change the image dimensions."]},
@@ -3086,6 +3083,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Preferences","title":"Edge Contrast","paragraphs":["Adjust the contrast used by automated edge colors to distinguish edges from part surfaces. The range is 0.00 to 1.00; Reset restores 0.50."]},
 				{"group":"Preferences","title":"Light/Dark Value","paragraphs":["Classify part colors by brightness to choose which parts receive the dark-part edge override. Colors below the threshold are treated as dark. A separate enabled black-part override takes priority for black parts. The range is 0.00 to 1.00; Reset restores 0.50."]},
 				{"group":"Preferences","title":"Edge Saturation","paragraphs":["Adjust the tint or shade used to calculate automated edge colors from part colors. The range is 0.00 to 1.00; Reset restores 0.50."]},
+				{"group":"Main Window","title":"Export BrickLink","paragraphs":["Saves the part list as a BrickLink XML wanted list. Part numbers and colors are translated through the BrickLink mapping file set under Preferences > General > Reference Paths.","The wanted list takes the address of its BrickLink page or its number. After saving, Copy XML and Open BrickLink puts the list on the clipboard and opens the BrickLink upload page to paste it into.","The choices are remembered for the next export."]},
 				{"group":"Groups","title":"New Group","paragraphs":["Select a group to create a subgroup inside it. If a part is selected, the new group is created beside that part. With no selection, the new group is created at the top level. Rename the new group by editing its name, then drag parts into it."]},
 				{"group":"Save Model Image","title":"Save Model Image","paragraphs":["Save images of the active model as seen from the current view. The preview shows exactly what will be saved.","Saving one step produces one image. Saving several steps produces a separate numbered image for each step."]},
 				{"group":"Save Model Image","title":"Preview","paragraphs":["Shows the image as it will be saved, using the chosen size, step and background.","When several steps are saved, use the arrows to look through them."]},
