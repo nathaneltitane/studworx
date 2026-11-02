@@ -26,7 +26,7 @@ From the repository root, with the intended Qt installation's `qmake` on PATH:
 ```sh
 mkdir -p build/testing
 cd build/testing
-qmake ../../testing/testing.pro CONFIG+=release CONFIG-=debug
+qmake ../../source/testing/testing.pro CONFIG+=release CONFIG-=debug
 make -j
 make check
 ```
@@ -79,7 +79,7 @@ commands in an x64 MSVC developer command prompt with Qt on PATH:
 ```bat
 mkdir build\testing
 cd build\testing
-qmake ..\..\testing\testing.pro -spec win32-msvc CONFIG+=release CONFIG-=debug CONFIG-=debug_and_release
+qmake ..\..\source\testing\testing.pro -spec win32-msvc CONFIG+=release CONFIG-=debug CONFIG-=debug_and_release
 nmake /NOLOGO
 nmake /NOLOGO check "TESTARGS=-o test-results.xml,junitxml -o -,txt"
 ```

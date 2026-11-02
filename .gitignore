@@ -38,8 +38,9 @@ uic_wrapper.bat
 appdir
 studworx-windows*.exe
 *.snap
-/tools/studworx-site-update
-/tools/studworx-social-update
-/site/
-/logo/
+/tools/studworx-site
+/tools/studworx-social
+/resources/site/
+/index-social.html
+/resources/logo/
 AGENTS.md

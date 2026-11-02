@@ -45,7 +45,7 @@ jobs:
       run: |
         mkdir -p build/testing
         cd build/testing
-        qmake ../../testing/testing.pro CONFIG+=release CONFIG-=debug
+        qmake ../../source/testing/testing.pro CONFIG+=release CONFIG-=debug
     - name: Build tests
       working-directory: build/testing
       run: make -j ${{ steps.cpu-cores.outputs.count }}
@@ -202,7 +202,7 @@ jobs:
       run: |
         mkdir -p build/testing
         cd build/testing
-        qmake ../../testing/testing.pro CONFIG+=release CONFIG-=debug
+        qmake ../../source/testing/testing.pro CONFIG+=release CONFIG-=debug
     - name: Build tests
       working-directory: build/testing
       run: make -j ${{ steps.cpu-cores.outputs.count }}
@@ -286,7 +286,7 @@ jobs:
       run: |
         mkdir build\testing
         cd build\testing
-        qmake ..\..\testing\testing.pro -spec win32-msvc CONFIG+=release CONFIG-=debug CONFIG-=debug_and_release
+        qmake ..\..\source\testing\testing.pro -spec win32-msvc CONFIG+=release CONFIG-=debug CONFIG-=debug_and_release
     - name: Build tests
       working-directory: build/testing
       run: nmake /NOLOGO

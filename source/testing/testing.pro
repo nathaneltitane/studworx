@@ -10,18 +10,18 @@ greaterThan(QT_MAJOR_VERSION, 5) {
 	QT += openglwidgets
 }
 
-INCLUDEPATH += ../source/application ../source/core ../source/library ../source/rendering ../source/transput ../source/interface/dialogs ../source/interface/widgets ../source/interface/window
+INCLUDEPATH += ../application ../core ../library ../rendering ../transput ../interface/dialogs ../interface/widgets ../interface/window
 
 HEADERS += \
-	../source/core/sw_connectivity.h \
-	../source/library/sw_parser_shadow.h \
+	../core/sw_connectivity.h \
+	../library/sw_parser_shadow.h \
 	sw_tests.h
 
 SOURCES += \
-	../source/core/sw_connectivity.cpp \
-	../source/core/sw_object_property.cpp \
-	../source/transput/sw_command_meta.cpp \
-	../source/library/sw_parser_shadow.cpp \
+	../core/sw_connectivity.cpp \
+	../core/sw_object_property.cpp \
+	../transput/sw_command_meta.cpp \
+	../library/sw_parser_shadow.cpp \
 	sw_command_meta_test.cpp \
 	sw_connectivity_test.cpp \
 	sw_object_history_test.cpp \
