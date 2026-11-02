@@ -23,7 +23,7 @@ indicate that an option takes an optional parameter.
 Loads the model file \fIinfile\fR
 
 .TP
-\fB\-l \fIpath\fR, \fB\-\-libpath \fIpath
+\fB\-l \fIpath\fR, \fB\-\-library \fIpath
 .br
 Set the parts library location.
 
@@ -54,7 +54,7 @@ to the name, as in \fIoutfile1.png\fR.
 Sets the width of the picture to \fIwidth\fR.
 
 .TP
-\fB\-h \fIheight\fR, \fB\-\-height \fIheight
+\fB\-\-height \fIheight
 .br
 Sets the height of the picture to \fIheight\fR.
 
@@ -79,7 +79,7 @@ Sets the active submodel to \fIsubmodel\fR.
 Sets the active camera to \fIcamera\fR.
 
 .TP
-\fB\-ss \fIid\fR,\ \fB\-\-stud\-style\ \fIid
+\fB\-\-stud\-style\ \fIid
 .br
 Set the stud style. Valid values 0=Plain, 1=Thin Lines Logo, 2=Outline Logo, 3=Sharp Top Logo, 4=Rounded Top Logo, 5=Flattened Logo, 6=High Contrast, 7=High Contrast with Logo.
 
@@ -101,8 +101,9 @@ Set the camera position, target and up vector using the \fIStudWorx\fR coordinat
 Set the camera position, target and up vector using the \fILDraw\fR coordinate system.
 
 .TP
-.B \-\-orthographic
-Use an orthographic projection.
+\fB\-\-projection \fRperspective\ |\ orthographic
+.br
+Render images with a perspective or an orthographic projection.
 
 .TP
 .B \-\-transparent
@@ -110,11 +111,11 @@ Render images with a transparent background. Only PNG and GIF files keep
 transparency, and GIF edges are hard; other formats are saved opaque with a warning.
 
 .TP
-.BI "\-\-fov " degrees
+.BI "\-\-field\-of\-view " degrees
 Set the vertical field of view used to render images, under 180 degrees.
 
 .TP
-.BI "\-\-zplanes " near " " far
+.BI "\-\-clip\-planes " near " " far
 Set the near and far clipping planes used to render images (1 <= \fInear\fR < \fIfar\fR).
 
 .TP
@@ -126,7 +127,7 @@ Render parts from prior steps faded.
 Do not render parts from prior steps faded.
 
 .TP
-.BI "\-\-fade\-steps\-color " color
+.BI "\-\-fade\-color " color
 Color to use for rendering faded parts. (#AARRGGBB where AA, RR, GG, and BB are hexadecimal values for alpha, red, green, and blue respectively.)
 
 .TP
@@ -156,115 +157,134 @@ Select the lighting style used by the default shading mode.
 Set the width of the edge lines.
 
 .TP
-.BI "\-\-aa\-samples " count
+.BI "\-\-antialiasing\-samples " count
 AntiAliasing sample size (1, 2, 4, or 8).
 
 .TP
-\fB\-nscc\fR,\ \fB\-\-disable\-stud\-cylinder\-color
+\fB\-\-no\-stud\-cylinder\-color
 .br
 Disable high contrast stud cylinder color.
 
 .TP
-\fB\-scc \fI#AARRGGBB\fR,\ \fB\-\-stud\-cylinder\-color\ \fI#AARRGGBB
+\fB\-\-stud\-cylinder\-color\ \fI#AARRGGBB
 .br
 High contrast stud cylinder color.
 
 .TP
-\fB\-nec\fR,\ \fB\-\-disable\-edge\-color
+\fB\-\-no\-edge\-color
 .br
 Disable high contrast edge color.
 
 .TP
-\fB\-ec \fI#AARRGGBB\fR,\ \fB\-\-edge\-color\ \fI#AARRGGBB
+\fB\-\-edge\-color\ \fI#AARRGGBB
 .br
 High contrast edge color.
 
 .TP
-\fB\-nbec\fR,\ \fB\-\-disable\-black\-edge\-color
+\fB\-\-no\-edge\-color\-black
 .br
 Disable high contrast edge color for black parts.
 
 .TP
-\fB\-bec \fI#AARRGGBB\fR,\ \fB\-\-black\-edge\-color\ \fI#AARRGGBB
+\fB\-\-edge\-color\-black\ \fI#AARRGGBB
 .br
 High contrast edge color for black parts.
 
 .TP
-\fB\-ndec\fR,\ \fB\-\-disable\-dark\-edge\-color
+\fB\-\-no\-edge\-color\-dark
 .br
 Disable high contrast edge color for dark color parts.
 
 .TP
-\fB\-dec \fI#AARRGGBB\fR,\ \fB\-\-dark\-edge\-color\ \fI#AARRGGBB
+\fB\-\-edge\-color\-dark\ \fI#AARRGGBB
 .br
 High contrast edge color for dark color parts.
 
 .TP
-\fB\-aec\fR,\ \fB\-\-automate\-edge\-color
+\fB\-\-edge\-color\-automatic
 .br
 Enable automatically adjusted edge colors. The high contrast stud cylinder
 and edge color options are ignored while it is set.
 
 .TP
-\fB\-cc \fIfloat\fR,\ \fB\-\-color\-contrast\ \fIfloat
+\fB\-\-edge\-contrast\ \fIfloat
 .br
-Set the color contrast value, between 0.0 and 1.0. Needs automated edge
-colors, from \fB\-aec\fR or Preferences.
+Set the edge color contrast, between 0.0 and 1.0. Needs automatic edge
+colors, from \fB\-\-edge\-color\-automatic\fR or Preferences.
 
 .TP
-\fB\-ldv \fIfloat\fR,\ \fB\-\-light\-dark\-value\ \fIfloat
+\fB\-\-edge\-light\-dark\ \fIfloat
 .br
 Set the value, between 0.0 and 1.0, that tells light colors from dark ones.
-Needs automated edge colors, from \fB\-aec\fR or Preferences.
+Needs automatic edge colors, from \fB\-\-edge\-color\-automatic\fR or Preferences.
 
 .TP
-\fB\-obj \fR[\fIoutfile.obj\fR],\ \fB\-\-export\-wavefront \fR[\fIoutfile.obj\fR]
+\fB\-\-export\-wavefront \fR[\fIoutfile.obj\fR]
 .br
 Exports the model to wavefront format.
 
 .TP
-\fB\-3ds \fR[\fIoutfile.3ds\fR],\ \fB\-\-export\-3ds \fR[\fIoutfile.3ds\fR]
+\fB\-\-export\-3ds \fR[\fIoutfile.3ds\fR]
 .br
 Exports the model to 3DS format.
 
 .TP
-\fB\-dae \fR[\fIoutfile.dae\fR],\ \fB\-\-export\-collada \fR[\fIoutfile.dae\fR]
+\fB\-\-export\-collada \fR[\fIoutfile.dae\fR]
 .br
 Exports the model to COLLADA DAE format. Transparent colors are written with opaque="A_ONE" while Mark COLLADA Transparency is on in Preferences.
 
 .TP
-\fB\-kmz \fR[\fIoutfile.kmz\fR],\ \fB\-\-export\-kmz \fR[\fIoutfile.kmz\fR]
+\fB\-\-export\-kmz \fR[\fIoutfile.kmz\fR]
 .br
 Exports the model to KMZ format.
 
 .TP
-.B \-\-kmz\-all\-parts
-Keep hidden geometry and parts in KMZ exports.
+\fB\-\-kmz\-geometry \fIall\fR|\fIvisible\fR
+.br
+Keeps every part, or flattens the model to the visible surfaces with one mesh per color, in KMZ exports.
+Without it, the KMZ Geometry preference is used.
 
 .TP
-\fB\-csv \fR[\fIoutfile.csv\fR],\ \fB\-\-export\-csv \fR[\fIoutfile.csv\fR]
+\fB\-\-export\-csv \fR[\fIoutfile.csv\fR]
 .br
 Exports the list of parts used in CSV format.
 
 .TP
-\fB\-bl \fR[\fIoutfile.xml\fR],\ \fB\-\-export\-bricklink \fR[\fIoutfile.xml\fR]
+\fB\-\-export\-bricklink \fR[\fIoutfile.xml\fR]
 .br
 Exports the list of parts used in BrickLink XML format, ready for a BrickLink wanted list.
+Part numbers and colors are translated through the BrickLink mapping file set in the preferences.
 
 .TP
-\fB\-html \fR[\fIpath\fR],\ \fB\-\-export\-html \fR[\fIpath\fR]
+\fB\-\-bricklink\-condition \fIany\fR|\fInew\fR|\fIused\fR
+.br
+Sets the condition wanted in BrickLink exports.
+
+.TP
+\fB\-\-bricklink\-wanted\-list \fIid\fR|\fIurl\fR
+.br
+Sets the BrickLink wanted list the exported parts are added to, by its number or by the address of its wanted list page.
+An address without a list number uses the main wanted list.
+
+.TP
+\fB\-\-bricklink\-notify
+.br
+Asks BrickLink to notify new listings of the exported parts.
+
+.TP
+\fB\-\-export\-html \fR[\fIpath\fR]
 .br
 Creates an HTML page for the model.
 
 .TP
-\fB\-pov \fR[\fIoutfile.pov\fR],\ \fB\-\-export\-povray \fR[\fIoutfile.pov\fR]
+\fB\-\-export\-povray \fR[\fIoutfile.pov\fR]
 .br
 Exports the model to POV-Ray format.
 
 .TP
-\fB\-\-povray\-render \fR[\fIoutfile.png\fR]
+\fB\-\-render\-povray \fR[\fIoutfile.png\fR]
 .br
-Renders the model with POV-Ray 3.7 or newer into a PNG picture, using the POV-Ray window settings with the picture width, height and transparency from \fB\-w\fR, \fB\-h\fR and \fB\-\-transparent\fR. POV-Ray is found in the Preferences path, the PATH, Flatpak or Snap.
+Renders the model with POV-Ray 3.7 or newer into a PNG picture, using the POV-Ray window settings with the picture width, height and transparency from \fB\-w\fR, \fB\-\-height\fR and \fB\-\-transparent\fR. POV-Ray is found in the Preferences path, the PATH, Flatpak or Snap.
 
 .TP
 \fB\-\-import\-settings \fIinfile.ini
@@ -311,11 +331,13 @@ Exports the part categories and exits.
 Output version information and exit.
 
 .TP
-.BR \-? ",\ " \-\-help
+.BR \-h ",\ " \-\-help
 Display a brief usage synopsis and exit.
 
 .SH ENVIRONMENT
-``STUDWORX_LIBRARY'' may be set to the path of the parts library.
+``LDRAW_DIRECTORY'' may be set to the parts library folder or archive, and
+overrides the library set in the preferences. ``LDRAWDIR'' is read when
+``LDRAW_DIRECTORY'' is not set. The same library is passed on to Blender.
 .PP
 When neither ``DISPLAY'' nor ``WAYLAND_DISPLAY'' is set, the save and export
 options run without a display through the eglfs platform and EGL on the DRM
@@ -326,7 +348,7 @@ Set ``QT_QPA_PLATFORM'' to choose another platform.
 
 .SH EXAMPLES
 .PP
- $ studworx car.ldr \-i car.png \-w 640 \-h 480
+ $ studworx car.ldr \-i car.png \-w 640 \-\-height 480
 .PP
 This will start StudWorx, load the file "car.ldr", create a png called
 "car.png" with a resolution of 640x480 and exit when done.

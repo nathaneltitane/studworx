@@ -3,6 +3,15 @@
   <details open>
   <summary>2026-11-02</summary>
 
+  - Preferences: LDraw Color Configuration, LDraw Alternate Color Configuration, Minifigure Builder Settings and BrickLink Mapping each have an Update button that downloads the latest file from library.ldraw.org, ldraw.org or Rebrickable, the minifigure part list is saved as 'minifigure.ini'
+  - Preferences: the bundled color configurations and minifigure part list are used until you set your own file, a set file that went missing is asked for again at startup
+  - Preferences: Colors From moved into a new Colors group on the Rendering page, the Colors page is now Interface
+  - Export BrickLink: choose the condition, the wanted list and new listing notices, the choices are remembered, also as '--bricklink-condition', '--bricklink-wanted-list' and '--bricklink-notify' on the command line
+  - Command line: '--kmz-geometry all' or 'visible' chooses the KMZ geometry and replaces '--kmz-all-parts'
+  - Command line: '-h' now shows the help like '--help', the picture height is set with '--height'
+  - Command line: options follow the usual style, one letter after a single dash and full words after two, so '-obj' is now '--export-wavefront', '--libpath' is '--library', '--fov' is '--field-of-view', '--zplanes' is '--clip-planes', '--orthographic' is '--projection orthographic', '--aa-samples' is '--antialiasing-samples', the edge colors are '--edge-color', '--edge-color-black', '--edge-color-dark', '--edge-color-automatic', '--edge-contrast' and '--edge-light-dark' with '--no-' forms, '--povray-render' is '--render-povray', and the help is grouped by topic
+  - Export BrickLink: paste the address of a wanted list page instead of its number, after saving, Copy XML and Open BrickLink puts the list on the clipboard and opens the BrickLink upload page
+  - Minifigure Builder: templates export as '.minifigure' files and '.minifig' files still import, settings, toolbar and category names carry over on the first start
   - Site: the author avatar in the footer is now a sharper 1024 pixel image
   - The license is now formatted as Markdown, so it is easier to read on GitHub
 

@@ -567,7 +567,7 @@ swResult<void> Project::Export3DStudio(const QString& FileName)
 	return swResult<void>();
 }
 
-swResult<void> Project::ExportBrickLink(const QString& FileName)
+swResult<swBrickLinkExport> Project::ExportBrickLink(const QString& FileName, const swBrickLinkOptions& Options)
 {
 	swPartsList PartsList;
 
@@ -582,7 +582,12 @@ swResult<void> Project::ExportBrickLink(const QString& FileName)
 	if (SaveFileName.isEmpty())
 		return swUnexpected(QString());
 
-	return swExportBrickLink(SaveFileName, PartsList);
+	const swResult<int> Lots = swExportBrickLink(SaveFileName, PartsList, Options);
+
+	if (!Lots)
+		return swUnexpected(QString(Lots.error()));
+
+	return swBrickLinkExport{ SaveFileName, Lots.value() };
 }
 
 swResult<void> Project::ExportCOLLADA(const QString& FileName)

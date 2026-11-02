@@ -5,12 +5,95 @@
 #include "sw_model.h"
 #include "sw_data_part.h"
 #include "sw_string.h"
+#include "sw_profile.h"
+#include "sw_color_configuration.h"
 #include <QPrintDialog>
 
 #ifdef Q_OS_WIN
 #include <windows.h>
 #include <TlHelp32.h>
 #endif
+
+// use to read the rebrickable key, asked for once
+QString swRequestRebrickableApiKey(QWidget* Parent, const QString& Purpose)
+{
+	const QString StoredKey = swGetProfileString(SW_PROFILE_REBRICKABLE_API_KEY);
+
+	if (!StoredKey.isEmpty())
+		return StoredKey;
+
+	bool Ok = false;
+	const QString Key = QInputDialog::getText(Parent, QCoreApplication::translate("swRebrickable", "Rebrickable API Key"), QCoreApplication::translate("swRebrickable", "%1\nEnter your Rebrickable API key, available for free from your account settings at rebrickable.com:").arg(Purpose), QLineEdit::Normal, QString(), &Ok).trimmed();
+
+	if (!Ok || Key.isEmpty())
+		return QString();
+
+	swSetProfileString(SW_PROFILE_REBRICKABLE_API_KEY, Key);
+
+	return Key;
+}
+
+// use to pick an existing or a new color configuration file
+QString swChooseColorConfigurationFile(QWidget* Parent, swColorSource Source, const QString& FileName, bool Existing)
+{
+	QString StartPath = FileName;
+
+	// suggest the official name beside the parts library
+	if (StartPath.isEmpty())
+	{
+		const QString LibraryPath = swGetPartsLibrary() ? swGetPartsLibrary()->GetLibraryPath() : swGetProfileString(SW_PROFILE_PARTS_LIBRARY);
+		const QFileInfo LibraryInfo(LibraryPath);
+		const QString LibraryFolder = LibraryInfo.isFile() ? LibraryInfo.absolutePath() : LibraryPath;
+
+		StartPath = QDir(LibraryFolder).absoluteFilePath(swGetColorConfigurationOfficialName(Source));
+	}
+
+	const QString Title = Existing ? QCoreApplication::translate("swColorConfiguration", "Choose %1").arg(swGetColorConfigurationName(Source)) : QCoreApplication::translate("swColorConfiguration", "Save %1").arg(swGetColorConfigurationName(Source));
+	const QString Filter = QCoreApplication::translate("swColorConfiguration", "LDraw Files (*.ldr);;All Files (*.*)");
+	const QString Result = Existing ? QFileDialog::getOpenFileName(Parent, Title, StartPath, Filter) : QFileDialog::getSaveFileName(Parent, Title, StartPath, Filter);
+
+	return Result.isEmpty() ? QString() : QDir::toNativeSeparators(Result);
+}
+
+// use to write the latest official file to a chosen name
+bool swUpdateColorConfigurationFile(QWidget* Parent, swColorSource Source, const QString& FileName, bool ShowSummary)
+{
+	const QString Title = QCoreApplication::translate("swColorConfiguration", "Update %1").arg(swGetColorConfigurationName(Source));
+	const swResult<void> Result = swUpdateColorConfiguration(Parent, Source, FileName);
+
+	if (!Result)
+	{
+		QMessageBox::warning(Parent, Title, Result.error());
+		return false;
+	}
+
+	if (ShowSummary)
+		QMessageBox::information(Parent, Title, QCoreApplication::translate("swColorConfiguration", "Saved the latest %1 to '%2'.").arg(swGetColorConfigurationOfficialName(Source), FileName));
+
+	return true;
+}
+
+// use to register and write a missing color configuration
+QString swEnsureColorConfigurationFile(QWidget* Parent, swColorSource Source, const QString& FileName)
+{
+	if (swColorConfigurationExists(FileName))
+		return FileName;
+
+	const QString Name = swGetColorConfigurationName(Source);
+	const QString Question = FileName.isEmpty() ?
+		QCoreApplication::translate("swColorConfiguration", "No %1 file is set. It defines the LDraw colors and their edge lines.\n\nChoose where to save it and download the latest %2 now?").arg(Name, swGetColorConfigurationOfficialName(Source)) :
+		QCoreApplication::translate("swColorConfiguration", "The %1 file '%2' was not found. It defines the LDraw colors and their edge lines.\n\nChoose where to save it and download the latest %3 now?").arg(Name, FileName, swGetColorConfigurationOfficialName(Source));
+
+	if (QMessageBox::question(Parent, Name, Question, QMessageBox::Yes | QMessageBox::Cancel, QMessageBox::Yes) != QMessageBox::Yes)
+		return QString();
+
+	const QString ChosenName = swChooseColorConfigurationFile(Parent, Source, FileName, false);
+
+	if (ChosenName.isEmpty() || !swUpdateColorConfigurationFile(Parent, Source, ChosenName, false))
+		return QString();
+
+	return ChosenName;
+}
 
 QPoint swGetPopupPosition(const QPoint& Position, const QSize& Size, const QPoint& ScreenPosition)
 {
@@ -1788,6 +1871,10 @@ static void swDrawPaintedIcon(QPainter* Painter, swPaintedIcon Icon, const QSize
 	case swPaintedIcon::Undock:
 		Draw.Stroke(swCreateIconRect(4, 9, 15, 20, 1));
 		Draw.Stroke(swCreateIconLine({ { 9, 9 }, { 9, 4 }, { 20, 4 }, { 20, 15 }, { 15, 15 } }));
+		break;
+
+	case swPaintedIcon::Refresh:
+		Draw.Stroke(swCreateIconArc(12, 12, 8, 8, -30, 290, 0, 4.5));
 		break;
 	}
 

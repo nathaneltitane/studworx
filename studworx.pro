@@ -148,7 +148,7 @@ unix:!macx {
 	thumbnailer.files = platform/studworx.thumbnailer
 	samples.path = $$SAMPLES_DIR
 	samples.files += resources/samples/sample-flex.ldr
-	samples.files += resources/samples/sample-minifig.ldr
+	samples.files += resources/samples/sample-minifigure.ldr
 
 	INSTALLS += target docs man desktop icons mime appdata thumbnailer samples
 
@@ -172,7 +172,7 @@ macx {
 	QMAKE_BUNDLE_DATA += document_icon
 
 	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-flex.ldr
-	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-minifig.ldr
+	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-minifigure.ldr
 	samples.path = Contents/Resources/samples
 	QMAKE_BUNDLE_DATA += samples
 

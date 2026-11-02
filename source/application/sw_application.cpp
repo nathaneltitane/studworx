@@ -518,9 +518,9 @@ bool swApplication::LoadPartsLibrary(const QList<QPair<QString, bool>>& LibraryP
 
 	if (!OnlyUsePaths)
 	{
-		char* PathEnvironment = getenv("STUDWORX_LIBRARY");
+		const QString PathEnvironment = GetEnvironmentLibraryPath();
 
-		if (PathEnvironment && PathEnvironment[0])
+		if (!PathEnvironment.isEmpty())
 			return mLibrary->Load(PathEnvironment, ShowProgress, false);
 
 		QString CustomPath = swGetProfileString(SW_PROFILE_PARTS_LIBRARY);
@@ -540,6 +540,27 @@ bool swApplication::LoadPartsLibrary(const QList<QPair<QString, bool>>& LibraryP
 QString swApplication::GetDownloadLibraryPath()
 {
 	return QDir::cleanPath(QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + "/complete.zip");
+}
+
+// use to read the library set in the environment
+QString swApplication::GetEnvironmentLibraryPath()
+{
+	const QString LibraryPath = qEnvironmentVariable("LDRAW_DIRECTORY");
+
+	return LibraryPath.isEmpty() ? qEnvironmentVariable("LDRAWDIR") : LibraryPath;
+}
+
+// use to name the folder of the library in use
+QString swApplication::GetLibraryDirectory()
+{
+	const QString LibraryPath = gApplication && gApplication->mLibrary ? gApplication->mLibrary->GetLibraryPath() : swGetProfileString(SW_PROFILE_PARTS_LIBRARY);
+
+	if (LibraryPath.isEmpty())
+		return QString();
+
+	const QFileInfo LibraryInfo(LibraryPath);
+
+	return LibraryInfo.isFile() ? LibraryInfo.absolutePath() : LibraryInfo.absoluteFilePath();
 }
 
 // use to download the library archive
@@ -860,7 +881,7 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			continue;
 		}
 
-		if (Option == QLatin1String("-l") || Option == QLatin1String("--libpath"))
+		if (Option == QLatin1String("-l") || Option == QLatin1String("--library"))
 		{
 			QString LibPath;
 
@@ -878,7 +899,7 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 		}
 		else if (Option == QLatin1String("-w") || Option == QLatin1String("--width"))
 			ParseInteger(Options.ImageWidth, 1, SW_MAXIMUM_IMAGE_DIMENSION);
-		else if (Option == QLatin1String("-h") || Option == QLatin1String("--height"))
+		else if (Option == QLatin1String("--height"))
 			ParseInteger(Options.ImageHeight, 1, SW_MAXIMUM_IMAGE_DIMENSION);
 		else if (Option == QLatin1String("-f") || Option == QLatin1String("--from"))
 			ParseUnsigned(Options.ImageStart, 1, SW_STEP_MAXIMUM);
@@ -941,13 +962,32 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 				}
 			}
 		}
-		else if (Option == QLatin1String("--orthographic"))
-			Options.Orthographic = true;
+		else if (Option == QLatin1String("--projection"))
+		{
+			QString ProjectionString;
+
+			if (ParseString(ProjectionString, true))
+			{
+				const QStringList ProjectionNames = { QLatin1String("perspective"), QLatin1String("orthographic") };
+				const int Projection = ProjectionNames.indexOf(ProjectionString.toLower());
+
+				if (Projection != -1)
+				{
+					Options.SetProjection = true;
+					Options.Orthographic = Projection == 1;
+				}
+				else
+				{
+					Options.StdErr += tr("Invalid parameter value specified for the '%1' option: '%2'.\n").arg(Option, ProjectionString);
+					Options.ParseOK = false;
+				}
+			}
+		}
 		else if (Option == QLatin1String("--transparent"))
 			Options.TransparentImage = true;
-		else if (Option == QLatin1String("--fov"))
+		else if (Option == QLatin1String("--field-of-view"))
 			Options.SetFoV = ParseFloat(Options.FoV, 1.0f, 180.0f);
-		else if (Option == QLatin1String("--zplanes"))
+		else if (Option == QLatin1String("--clip-planes"))
 		{
 			if ((Options.SetZPlanes = ParseFloatArray(2, Options.ZPlanes.GetFloats(), false)) && (Options.ZPlanes[0] < 1.0 || Options.ZPlanes[0] >= Options.ZPlanes[1]))
 			{
@@ -955,33 +995,33 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 				Options.ParseOK = false;
 			}
 		}
-		else if (Option == QLatin1String("-nscc") || Option == QLatin1String("--disable-stud-cylinder-color"))
+		else if (Option == QLatin1String("--no-stud-cylinder-color"))
 			Options.StudCylinderColorEnabled = false;
-		else if (Option == QLatin1String("-scc") || Option == QLatin1String("--stud-cylinder-color"))
+		else if (Option == QLatin1String("--stud-cylinder-color"))
 			ParseColor(Options.StudCylinderColor);
-		else if (Option == QLatin1String("-nec") || Option == QLatin1String("--disable-edge-color"))
+		else if (Option == QLatin1String("--no-edge-color"))
 			Options.PartEdgeColorEnabled = false;
-		else if (Option == QLatin1String("-ec") || Option == QLatin1String("--edge-color"))
+		else if (Option == QLatin1String("--edge-color"))
 			ParseColor(Options.PartEdgeColor);
-		else if (Option == QLatin1String("-nbec") || Option == QLatin1String("--disable-black-edge-color"))
+		else if (Option == QLatin1String("--no-edge-color-black"))
 			Options.BlackEdgeColorEnabled = false;
-		else if (Option == QLatin1String("-bec") || Option == QLatin1String("--black-edge-color"))
+		else if (Option == QLatin1String("--edge-color-black"))
 			ParseColor(Options.BlackEdgeColor);
-		else if (Option == QLatin1String("-ndec") || Option == QLatin1String("--disable-dark-edge-color"))
+		else if (Option == QLatin1String("--no-edge-color-dark"))
 			Options.DarkEdgeColorEnabled = false;
-		else if (Option == QLatin1String("-dec") || Option == QLatin1String("--dark-edge-color"))
+		else if (Option == QLatin1String("--edge-color-dark"))
 			ParseColor(Options.DarkEdgeColor);
-		else if (Option == QLatin1String("-aec") || Option == QLatin1String("--automate-edge-color"))
+		else if (Option == QLatin1String("--edge-color-automatic"))
 			Options.AutomateEdgeColor = true;
-		else if (Option == QLatin1String("-cc") || Option == QLatin1String("--color-contrast"))
+		else if (Option == QLatin1String("--edge-contrast"))
 			ParseFloat(Options.PartEdgeContrast, 0.0f, 1.0f);
-		else if (Option == QLatin1String("-ldv") || Option == QLatin1String("--light-dark-value"))
+		else if (Option == QLatin1String("--edge-light-dark"))
 			ParseFloat(Options.PartColorValueLDIndex, 0.0f, 1.0f);
 		else if (Option == QLatin1String("--fade-steps"))
 			Options.FadeSteps = true;
 		else if (Option == QLatin1String("--no-fade-steps"))
 			Options.FadeSteps = false;
-		else if (Option == QLatin1String("--fade-steps-color"))
+		else if (Option == QLatin1String("--fade-color"))
 		{
 			if (ParseColor(Options.FadeStepsColor))
 			{
@@ -1045,7 +1085,7 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 		}
 		else if (Option == QLatin1String("--line-width"))
 			ParseFloat(Options.LineWidth, 0.0f, 10.0f);
-		else if (Option == QLatin1String("--aa-samples"))
+		else if (Option == QLatin1String("--antialiasing-samples"))
 		{
 			if (ParseInteger(Options.AASamples, 1, 8) && Options.AASamples != 1 && Options.AASamples != 2 && Options.AASamples != 4 && Options.AASamples != 8)
 			{
@@ -1053,56 +1093,114 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 				Options.ParseOK = false;
 			}
 		}
-		else if (Option == QLatin1String("-ss") || Option == QLatin1String("--stud-style"))
+		else if (Option == QLatin1String("--stud-style"))
 		{
 			int StudStyle;
 
 			if (ParseInteger(StudStyle, 0, static_cast<int>(swStudStyle::Count) - 1))
 				Options.StudStyle = static_cast<swStudStyle>(StudStyle);
 		}
-		else if (Option == QLatin1String("-obj") || Option == QLatin1String("--export-wavefront"))
+		else if (Option == QLatin1String("--export-wavefront"))
 		{
 			Options.SaveWavefront = true;
 			ParseString(Options.SaveWavefrontName, false);
 		}
-		else if (Option == QLatin1String("-3ds") || Option == QLatin1String("--export-3ds"))
+		else if (Option == QLatin1String("--export-3ds"))
 		{
 			Options.Save3DS = true;
 			ParseString(Options.Save3DSName, false);
 		}
-		else if (Option == QLatin1String("-dae") || Option == QLatin1String("--export-collada"))
+		else if (Option == QLatin1String("--export-collada"))
 		{
 			Options.SaveCOLLADA = true;
 			ParseString(Options.SaveCOLLADAName, false);
 		}
-		else if (Option == QLatin1String("-kmz") || Option == QLatin1String("--export-kmz"))
+		else if (Option == QLatin1String("--export-kmz"))
 		{
 			Options.SaveKMZ = true;
 			ParseString(Options.SaveKMZName, false);
 		}
-		else if (Option == QLatin1String("--kmz-all-parts"))
-			Options.KMZAllParts = true;
-		else if (Option == QLatin1String("-csv") || Option == QLatin1String("--export-csv"))
+		else if (Option == QLatin1String("--kmz-geometry"))
+		{
+			QString GeometryString;
+
+			if (ParseString(GeometryString, true))
+			{
+				const QStringList GeometryNames = { QLatin1String("all"), QLatin1String("visible") };
+				const int Geometry = GeometryNames.indexOf(GeometryString.toLower());
+
+				if (Geometry != -1)
+				{
+					Options.SetKMZGeometry = true;
+					Options.KMZVisibleSurfaces = Geometry == 1;
+				}
+				else
+				{
+					Options.StdErr += tr("Invalid parameter value specified for the '%1' option: '%2'.\n").arg(Option, GeometryString);
+					Options.ParseOK = false;
+				}
+			}
+		}
+		else if (Option == QLatin1String("--export-csv"))
 		{
 			Options.SaveCSV = true;
 			ParseString(Options.SaveCSVName, false);
 		}
-		else if (Option == QLatin1String("-bl") || Option == QLatin1String("--export-bricklink"))
+		else if (Option == QLatin1String("--export-bricklink"))
 		{
 			Options.SaveBrickLink = true;
 			ParseString(Options.SaveBrickLinkName, false);
 		}
-		else if (Option == QLatin1String("-html") || Option == QLatin1String("--export-html"))
+		else if (Option == QLatin1String("--bricklink-condition"))
+		{
+			QString ConditionString;
+
+			if (ParseString(ConditionString, true))
+			{
+				const QStringList ConditionNames = { QLatin1String("any"), QLatin1String("new"), QLatin1String("used") };
+				const int Condition = ConditionNames.indexOf(ConditionString.toLower());
+
+				if (Condition != -1)
+				{
+					Options.SetBrickLinkCondition = true;
+					Options.BrickLinkCondition = Condition;
+				}
+				else
+				{
+					Options.StdErr += tr("Invalid parameter value specified for the '%1' option: '%2'.\n").arg(Option, ConditionString);
+					Options.ParseOK = false;
+				}
+			}
+		}
+		else if (Option == QLatin1String("--bricklink-wanted-list"))
+		{
+			if (ParseString(Options.BrickLinkWantedList, true))
+			{
+				if (const std::optional<QString> WantedListId = swParseBrickLinkWantedListId(Options.BrickLinkWantedList))
+				{
+					Options.BrickLinkWantedList = *WantedListId;
+					Options.SetBrickLinkWantedList = true;
+				}
+				else
+				{
+					Options.StdErr += tr("Invalid parameter value specified for the '%1' option: '%2'.\n").arg(Option, Options.BrickLinkWantedList);
+					Options.ParseOK = false;
+				}
+			}
+		}
+		else if (Option == QLatin1String("--bricklink-notify"))
+			Options.BrickLinkNotify = true;
+		else if (Option == QLatin1String("--export-html"))
 		{
 			Options.SaveHTML = true;
 			ParseString(Options.SaveHTMLName, false);
 		}
-		else if (Option == QLatin1String("-pov") || Option == QLatin1String("--export-povray"))
+		else if (Option == QLatin1String("--export-povray"))
 		{
 			Options.SavePOVRay = true;
 			ParseString(Options.SavePOVRayName, false);
 		}
-		else if (Option == QLatin1String("--povray-render"))
+		else if (Option == QLatin1String("--render-povray"))
 		{
 			Options.RenderPOVRay = true;
 			ParseString(Options.RenderPOVRayName, false);
@@ -1129,60 +1227,69 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			Options.StdOut += tr("Compiled %1\n").arg(__DATE__);
 			Options.Exit = true;
 		}
-		else if (Option == QLatin1String("-?") || Option == QLatin1String("--help"))
+		else if (Option == QLatin1String("-h") || Option == QLatin1String("--help"))
 		{
 			Options.StdOut += tr("Usage: studworx [options] [file]\n");
-			Options.StdOut += tr("  [options] can be:\n");
-			Options.StdOut += tr("  -l, --libpath <path>: Set the Parts Library location to path.\n");
+			Options.StdOut += tr("\nLibrary:\n");
+			Options.StdOut += tr("  -l, --library <path>: Set the Parts Library location to path.\n");
 			Options.StdOut += tr("  --unofficial-library <path>: Set the Unofficial Parts Library archive to path.\n");
 			Options.StdOut += tr("  --shadow-library <path>: Set the LDCad Shadow Library location to path.\n");
+			Options.StdOut += tr("\nPictures:\n");
 			Options.StdOut += tr("  -i, --image <outfile.ext>: Save a picture in the format specified by ext and exit.\n");
 			Options.StdOut += tr("  -w, --width <width>: Set the picture width.\n");
-			Options.StdOut += tr("  -h, --height <height>: Set the picture height.\n");
+			Options.StdOut += tr("  --height <height>: Set the picture height.\n");
 			Options.StdOut += tr("  -f, --from <step>: Set the first step to save pictures.\n");
 			Options.StdOut += tr("  -t, --to <step>: Set the last step to save pictures.\n");
 			Options.StdOut += tr("  -s, --submodel <submodel>: Set the active submodel.\n");
+			Options.StdOut += tr("  --transparent: Render images with a transparent background (PNG and GIF only).\n");
+			Options.StdOut += tr("\nCamera:\n");
 			Options.StdOut += tr("  -c, --camera <camera name>: Set the active camera.\n");
 			Options.StdOut += tr("  --viewpoint <viewpoint>: Set the view to one of the preset viewpoints (front, back, left, right, top, bottom, home).\n");
 			Options.StdOut += tr("  --camera-angles <latitude> <longitude>: Set the camera angles in degrees around the model.\n");
 			Options.StdOut += tr("  --camera-position <x> <y> <z> <tx> <ty> <tz> <ux> <uy> <uz>: Set the camera position, target and up vector.\n");
 			Options.StdOut += tr("  --camera-position-ldraw <x> <y> <z> <tx> <ty> <tz> <ux> <uy> <uz>: Set the camera position, target and up vector using LDraw coordinates.\n");
-			Options.StdOut += tr("  --orthographic: Render images using an orthographic projection.\n");
-			Options.StdOut += tr("  --transparent: Render images with a transparent background (PNG and GIF only).\n");
-			Options.StdOut += tr("  --fov <degrees>: Set the vertical field of view used to render images (< 180).\n");
-			Options.StdOut += tr("  --zplanes <near> <far>: Set the near and far clipping planes used to render images (1 <= <near> < <far>).\n");
-			Options.StdOut += tr("  --fade-steps: Render parts from prior steps faded.\n");
-			Options.StdOut += tr("  --no-fade-steps: Do not render parts from prior steps faded.\n");
-			Options.StdOut += tr("  --fade-steps-color <#AARRGGBB>: Rendering color for prior step parts.\n");
-			Options.StdOut += tr("  --highlight: Highlight parts in the steps they appear.\n");
-			Options.StdOut += tr("  --no-highlight: Do not highlight parts in the steps they appear.\n");
-			Options.StdOut += tr("  --highlight-color <#AARRGGBB>: Rendering color for highlighted parts.\n");
+			Options.StdOut += tr("  --projection <perspective|orthographic>: Render images with a perspective or an orthographic projection.\n");
+			Options.StdOut += tr("  --field-of-view <degrees>: Set the vertical field of view used to render images (< 180).\n");
+			Options.StdOut += tr("  --clip-planes <near> <far>: Set the near and far clipping planes used to render images (1 <= <near> < <far>).\n");
+			Options.StdOut += tr("\nRendering:\n");
 			Options.StdOut += tr("  --shading <mode>: Select shading mode for rendering (wireframe, flat, default, full).\n");
 			Options.StdOut += tr("  --lighting <style>: Select the lighting style of the default shading (standard, studio, matte, toon).\n");
 			Options.StdOut += tr("  --line-width <width>: Set the width of the edge lines.\n");
-			Options.StdOut += tr("  --aa-samples <samples>: Anti-aliasing sample size (1, 2, 4, or 8).\n");
-			Options.StdOut += tr("  -ss, --stud-style <style>: Set the stud style (0=Plain, 1=Thin Lines Logo, 2=Outline Logo, 3=Sharp Top Logo, 4=Rounded Top Logo, 5=Flattened Logo, 6=High Contrast, 7=High Contrast with Logo).\n");
-			Options.StdOut += tr("  -nscc, --disable-stud-cylinder-color: Disable high contrast stud cylinder color.\n");
-			Options.StdOut += tr("  -scc, --stud-cylinder-color <#AARRGGBB>: High contrast stud cylinder color.\n");
-			Options.StdOut += tr("  -nec, --disable-edge-color: Disable high contrast edge color.\n");
-			Options.StdOut += tr("  -ec, --edge-color <#AARRGGBB>: High contrast edge color.\n");
-			Options.StdOut += tr("  -nbec, --disable-black-edge-color: Disable high contrast edge color for black parts.\n");
-			Options.StdOut += tr("  -bec, --black-edge-color <#AARRGGBB>: High contrast edge color for black parts.\n");
-			Options.StdOut += tr("  -ndec, --disable-dark-edge-color: Disable high contrast edge color for dark color parts.\n");
-			Options.StdOut += tr("  -dec, --dark-edge-color <#AARRGGBB>: High contrast edge color for dark color parts.\n");
-			Options.StdOut += tr("  -aec, --automate-edge-color: Enable automatically adjusted edge colors.\n");
-			Options.StdOut += tr("  -cc, --color-contrast <contrast>: Color contrast value between 0.0 and 1.0.\n");
-			Options.StdOut += tr("  -ldv, --light-dark-value <value>: Light/Dark color value between 0.0 and 1.0.\n");
-			Options.StdOut += tr("  -obj, --export-wavefront <outfile.obj>: Export the model to Wavefront OBJ format.\n");
-			Options.StdOut += tr("  -3ds, --export-3ds <outfile.3ds>: Export the model to 3D Studio 3DS format.\n");
-			Options.StdOut += tr("  -dae, --export-collada <outfile.dae>: Export the model to COLLADA DAE format.\n");
-			Options.StdOut += tr("  -kmz, --export-kmz <outfile.kmz>: Export the model to KMZ format.\n");
-			Options.StdOut += tr("  --kmz-all-parts: Keep hidden geometry and parts in KMZ exports.\n");
-			Options.StdOut += tr("  -csv, --export-csv <outfile.csv>: Export the list of parts used in CSV format.\n");
-			Options.StdOut += tr("  -bl, --export-bricklink <outfile.xml>: Export the list of parts used in BrickLink XML format.\n");
-			Options.StdOut += tr("  -html, --export-html <folder>: Create an HTML page for the model.\n");
-			Options.StdOut += tr("  -pov, --export-povray <outfile.pov>: Export the model to POV-Ray format.\n");
-			Options.StdOut += tr("  --povray-render <outfile.png>: Render the model with POV-Ray using the POV-Ray window settings, the picture width and height, and the transparent background.\n");
+			Options.StdOut += tr("  --antialiasing-samples <samples>: Anti-aliasing sample size (1, 2, 4, or 8).\n");
+			Options.StdOut += tr("  --fade-steps: Render parts from prior steps faded.\n");
+			Options.StdOut += tr("  --no-fade-steps: Do not render parts from prior steps faded.\n");
+			Options.StdOut += tr("  --fade-color <#AARRGGBB>: Rendering color for prior step parts.\n");
+			Options.StdOut += tr("  --highlight: Highlight parts in the steps they appear.\n");
+			Options.StdOut += tr("  --no-highlight: Do not highlight parts in the steps they appear.\n");
+			Options.StdOut += tr("  --highlight-color <#AARRGGBB>: Rendering color for highlighted parts.\n");
+			Options.StdOut += tr("\nStuds and Edges:\n");
+			Options.StdOut += tr("  --stud-style <style>: Set the stud style (0=Plain, 1=Thin Lines Logo, 2=Outline Logo, 3=Sharp Top Logo, 4=Rounded Top Logo, 5=Flattened Logo, 6=High Contrast, 7=High Contrast with Logo).\n");
+			Options.StdOut += tr("  --stud-cylinder-color <#AARRGGBB>: High contrast stud cylinder color.\n");
+			Options.StdOut += tr("  --no-stud-cylinder-color: Disable high contrast stud cylinder color.\n");
+			Options.StdOut += tr("  --edge-color <#AARRGGBB>: High contrast edge color.\n");
+			Options.StdOut += tr("  --no-edge-color: Disable high contrast edge color.\n");
+			Options.StdOut += tr("  --edge-color-black <#AARRGGBB>: High contrast edge color for black parts.\n");
+			Options.StdOut += tr("  --no-edge-color-black: Disable high contrast edge color for black parts.\n");
+			Options.StdOut += tr("  --edge-color-dark <#AARRGGBB>: High contrast edge color for dark color parts.\n");
+			Options.StdOut += tr("  --no-edge-color-dark: Disable high contrast edge color for dark color parts.\n");
+			Options.StdOut += tr("  --edge-color-automatic: Enable automatically adjusted edge colors.\n");
+			Options.StdOut += tr("  --edge-contrast <contrast>: Edge color contrast of automatic edge colors, between 0.0 and 1.0.\n");
+			Options.StdOut += tr("  --edge-light-dark <value>: Light/Dark color value of automatic edge colors, between 0.0 and 1.0.\n");
+			Options.StdOut += tr("\nExport:\n");
+			Options.StdOut += tr("  --export-wavefront <outfile.obj>: Export the model to Wavefront OBJ format.\n");
+			Options.StdOut += tr("  --export-3ds <outfile.3ds>: Export the model to 3D Studio 3DS format.\n");
+			Options.StdOut += tr("  --export-collada <outfile.dae>: Export the model to COLLADA DAE format.\n");
+			Options.StdOut += tr("  --export-kmz <outfile.kmz>: Export the model to KMZ format.\n");
+			Options.StdOut += tr("  --kmz-geometry <all|visible>: Keep every part, or flatten to the visible surfaces with one mesh per color, in KMZ exports.\n");
+			Options.StdOut += tr("  --export-csv <outfile.csv>: Export the list of parts used in CSV format.\n");
+			Options.StdOut += tr("  --export-bricklink <outfile.xml>: Export the list of parts used as a BrickLink XML wanted list, translated through the BrickLink mapping file set in the preferences.\n");
+			Options.StdOut += tr("  --bricklink-condition <any|new|used>: Condition wanted in BrickLink exports.\n");
+			Options.StdOut += tr("  --bricklink-wanted-list <id|url>: BrickLink wanted list the exported parts are added to, by number or by the address of its page.\n");
+			Options.StdOut += tr("  --bricklink-notify: Ask BrickLink to notify new listings of the exported parts.\n");
+			Options.StdOut += tr("  --export-html <folder>: Create an HTML page for the model.\n");
+			Options.StdOut += tr("  --export-povray <outfile.pov>: Export the model to POV-Ray format.\n");
+			Options.StdOut += tr("  --render-povray <outfile.png>: Render the model with POV-Ray using the POV-Ray window settings, the picture width and height, and the transparent background.\n");
+			Options.StdOut += tr("\nSettings:\n");
 			Options.StdOut += tr("  --import-settings <infile.ini>: Import the application settings and exit.\n");
 			Options.StdOut += tr("  --export-settings <outfile.ini>: Export the application settings and exit.\n");
 			Options.StdOut += tr("  --import-keyboard-shortcuts <infile.txt>: Import the keyboard shortcuts and exit.\n");
@@ -1191,8 +1298,9 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			Options.StdOut += tr("  --export-mouse-shortcuts <outfile.txt>: Export the mouse shortcuts and exit.\n");
 			Options.StdOut += tr("  --import-categories <infile.txt>: Import the part categories and exit.\n");
 			Options.StdOut += tr("  --export-categories <outfile.txt>: Export the part categories and exit.\n");
+			Options.StdOut += tr("\nInformation:\n");
 			Options.StdOut += tr("  -v, --version: Output version information and exit.\n");
-			Options.StdOut += tr("  -?, --help: Display this help message and exit.\n");
+			Options.StdOut += tr("  -h, --help: Display this help message and exit.\n");
 			Options.StdOut += QLatin1String("\n");
 			Options.Exit = true;
 		}
@@ -1205,7 +1313,7 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 
 	if (Options.AutomateEdgeColor && swIsHighContrast(Options.StudStyle))
 	{
-		Options.StdErr += tr("High contrast stud and edge color settings are ignored when -aec or --automate-edge-color is set.\n");
+		Options.StdErr += tr("High contrast stud and edge color settings are ignored when --edge-color-automatic is set.\n");
 	}
 
 	if (!Options.AutomateEdgeColor && !Preferences.mAutomateEdgeColor)
@@ -1213,10 +1321,10 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 		QString const Message = tr("Automate edge color is required for the '%1' option but is not enabled.\n");
 
 		if (Options.PartEdgeContrast != Preferences.mPartEdgeContrast)
-			Options.StdErr += Message.arg(QString("--color-contrast %1").arg(Options.PartEdgeContrast));
+			Options.StdErr += Message.arg(QString("--edge-contrast %1").arg(Options.PartEdgeContrast));
 
 		if (Options.PartColorValueLDIndex != Preferences.mPartColorValueLDIndex)
-			Options.StdErr += Message.arg(QString("--light-dark-value %1").arg(Options.PartColorValueLDIndex));
+			Options.StdErr += Message.arg(QString("--edge-light-dark %1").arg(Options.PartColorValueLDIndex));
 	}
 
 	if (!swIsHighContrast(Options.StudStyle) && !swIsHighContrast(swGetProfileStudStyle()))
@@ -1224,28 +1332,28 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 		QString const Message = tr("High contrast stud style is required for the '%1' option but is not enabled.\n");
 
 		if (Options.StudCylinderColorEnabled != Preferences.mStudCylinderColorEnabled)
-			Options.StdErr += Message.arg(QLatin1String("--disable-stud-cylinder-color"));
+			Options.StdErr += Message.arg(QLatin1String("--no-stud-cylinder-color"));
 
 		if (Options.StudCylinderColor != Preferences.mStudCylinderColor)
 			Options.StdErr += Message.arg(QString("--stud-cylinder-color %1").arg(Options.StudCylinderColor));
 
 		if (Options.PartEdgeColorEnabled != Preferences.mPartEdgeColorEnabled)
-			Options.StdErr += Message.arg(QLatin1String("--disable-edge-color"));
+			Options.StdErr += Message.arg(QLatin1String("--no-edge-color"));
 
 		if (Options.PartEdgeColor != Preferences.mPartEdgeColor)
 			Options.StdErr += Message.arg(QString("--edge-color %1").arg(Options.PartEdgeColor));
 
 		if (Options.BlackEdgeColorEnabled != Preferences.mBlackEdgeColorEnabled)
-			Options.StdErr += Message.arg(QLatin1String("--disable-black-edge-color"));
+			Options.StdErr += Message.arg(QLatin1String("--no-edge-color-black"));
 
 		if (Options.BlackEdgeColor != Preferences.mBlackEdgeColor)
-			Options.StdErr += Message.arg(QString("--black-edge-color %1").arg(Options.BlackEdgeColor));
+			Options.StdErr += Message.arg(QString("--edge-color-black %1").arg(Options.BlackEdgeColor));
 
 		if (Options.DarkEdgeColorEnabled != Preferences.mDarkEdgeColorEnabled)
-			Options.StdErr += Message.arg(QLatin1String("--disable-dark-edge-color"));
+			Options.StdErr += Message.arg(QLatin1String("--no-edge-color-dark"));
 
 		if (Options.DarkEdgeColor != Preferences.mDarkEdgeColor)
-			Options.StdErr += Message.arg(QString("--dark-edge-color %1").arg(Options.DarkEdgeColor));
+			Options.StdErr += Message.arg(QString("--edge-color-dark %1").arg(Options.DarkEdgeColor));
 	}
 
 	if (!Options.CameraName.isEmpty())
@@ -1253,8 +1361,8 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 		if (Options.Viewpoint != swViewpoint::Count)
 			Options.StdErr += tr("--viewpoint is ignored when --camera is set.\n");
 
-		if (Options.Orthographic)
-			Options.StdErr += tr("--orthographic is ignored when --camera is set.\n");
+		if (Options.SetProjection)
+			Options.StdErr += tr("--projection is ignored when --camera is set.\n");
 
 		if (Options.SetCameraAngles)
 			Options.StdErr += tr("--camera-angles is ignored when --camera is set.\n");
@@ -1485,7 +1593,7 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 	{
 		if (!gMainWindow)
 		{
-			StdErr << tr("StudWorx could not find an LDraw parts library.\n\nDownload one from %1 and pass it with --libpath.").arg(QLatin1String(SW_LIBRARY_DOWNLOAD_URL)) << "\n";
+			StdErr << tr("StudWorx could not find an LDraw parts library.\n\nDownload one from %1 and pass it with --library.").arg(QLatin1String(SW_LIBRARY_DOWNLOAD_URL)) << "\n";
 			StdErr.flush();
 			mLibrary->LoadEmptyLibrary();
 		}
@@ -1496,6 +1604,17 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 	if (!UnofficialLibraryPath.isEmpty() && !mLibrary->HasUnofficialArchive())
 	{
 		StdErr << tr("Could not open the unofficial library archive '%1'.").arg(UnofficialLibraryPath) << "\n";
+		StdErr.flush();
+	}
+
+	const swColorSource ColorSource = swGetColorSource();
+	const QString ColorConfigurationPath = swGetColorConfigurationPath(ColorSource);
+	// an unset file uses the bundled copy so only a lost file is missing
+	const bool ColorConfigurationMissing = ColorSource != swColorSource::Library && !ColorConfigurationPath.isEmpty() && !swColorConfigurationExists(ColorConfigurationPath);
+
+	if (ColorConfigurationMissing && !gMainWindow)
+	{
+		StdErr << tr("The %1 file '%2' was not found, using the bundled copy.").arg(swGetColorConfigurationName(ColorSource), ColorConfigurationPath) << "\n";
 		StdErr.flush();
 	}
 
@@ -1931,8 +2050,8 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 				FileName += ".kmz";
 			}
 
-			if (Options.KMZAllParts)
-				mPreferences.mKMZVisibleSurfaces = false;
+			if (Options.SetKMZGeometry)
+				mPreferences.mKMZVisibleSurfaces = Options.KMZVisibleSurfaces;
 
 			swResult<void> ExportResult = mProject->ExportKMZ(FileName);
 
@@ -1991,10 +2110,24 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 			else if (Extension != QLatin1String("xml"))
 				FileName = FileName.left(FileName.length() - Extension.length() - 1) + QLatin1String(".xml");
 
-			swResult<void> ExportResult = mProject->ExportBrickLink(FileName);
+			swBrickLinkOptions BrickLinkOptions = swGetBrickLinkOptions();
+
+			if (Options.SetBrickLinkCondition)
+				BrickLinkOptions.Condition = static_cast<swBrickLinkCondition>(Options.BrickLinkCondition);
+
+			if (Options.SetBrickLinkWantedList)
+				BrickLinkOptions.WantedListId = Options.BrickLinkWantedList;
+
+			if (Options.BrickLinkNotify)
+				BrickLinkOptions.Notify = true;
+
+			swResult<swBrickLinkExport> ExportResult = mProject->ExportBrickLink(FileName, BrickLinkOptions);
 
 			if (ExportResult)
-				StdOut << tr("Saved '%1'.\n").arg(FileName);
+			{
+				const swBrickLinkExport& Export = ExportResult.value();
+				StdOut << (Export.Lots == 1 ? tr("Saved 1 lot to '%1'.\n").arg(Export.FileName) : tr("Saved %1 lots to '%2'.\n").arg(Export.Lots).arg(Export.FileName));
+			}
 			else
 			{
 				OutputFailed = true;
@@ -2045,6 +2178,22 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 
 		gMainWindow->show();
 
+		// a missing chosen color file is asked for once the window shows
+		if (ColorConfigurationMissing)
+		{
+			QTimer::singleShot(0, gMainWindow, [ColorSource, ColorConfigurationPath]()
+			{
+				const QString FileName = swEnsureColorConfigurationFile(gMainWindow, ColorSource, ColorConfigurationPath);
+
+				if (FileName.isEmpty())
+					return;
+
+				swSetColorConfigurationPath(ColorSource, FileName);
+				swGetPartsLibrary()->LoadColors();
+				swView::UpdateAllViews();
+			});
+		}
+
 #ifdef Q_OS_WIN
 #if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 		QWindowsWindowFunctions::setHasBorderInFullScreen(gMainWindow->windowHandle(), true);
@@ -2084,7 +2233,10 @@ void swApplication::ShowPreferencesDialog()
 	Options.UnofficialLibraryPath = swGetProfileString(SW_PROFILE_UNOFFICIAL_LIBRARY);
 	Options.ShadowLibraryPath = swGetProfileString(SW_PROFILE_SHADOW_LIBRARY);
 	Options.MinifigureBuilderSettingsPath = swGetProfileString(SW_PROFILE_MINIFIGURE_BUILDER_SETTINGS);
+	Options.BrickLinkMappingPath = swGetProfileString(SW_PROFILE_BRICKLINK_MAPPING);
 	Options.ColorConfigPath = swGetProfileString(SW_PROFILE_COLOR_CONFIGURATION);
+	Options.ColorConfigAlternatePath = swGetProfileString(SW_PROFILE_COLOR_CONFIGURATION_ALTERNATE);
+	Options.ColorSource = swGetColorSource();
 	Options.POVRayPath = swGetProfileString(SW_PROFILE_POVRAY_PATH);
 	Options.LGEOPath = swGetProfileString(SW_PROFILE_POVRAY_LGEO_PATH);
 	Options.DefaultAuthorName = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_NAME);
@@ -2118,6 +2270,11 @@ void swApplication::ShowPreferencesDialog()
 	bool ShadowLibraryChanged = Options.ShadowLibraryPath != swGetProfileString(SW_PROFILE_SHADOW_LIBRARY);
 	bool ShadowLibraryEnabledChanged = Options.Preferences.mShadowLibraryEnabled != mPreferences.mShadowLibraryEnabled;
 	bool ColorConfigChanged = Options.ColorConfigPath != swGetProfileString(SW_PROFILE_COLOR_CONFIGURATION);
+	ColorConfigChanged |= Options.ColorConfigAlternatePath != swGetProfileString(SW_PROFILE_COLOR_CONFIGURATION_ALTERNATE);
+	ColorConfigChanged |= Options.ColorSource != swGetColorSource();
+
+	// an updated file keeps its path but has new colors
+	ColorConfigChanged |= Options.ColorSource != swColorSource::Library;
 	bool AAChanged = CurrentAASamples != Options.AASamples;
 	bool StudStyleChanged = CurrentStudStyle != Options.StudStyle;
 	bool StudCylinderColorEnabledChanged = Options.Preferences.mStudCylinderColorEnabled != mPreferences.mStudCylinderColorEnabled;
@@ -2168,6 +2325,7 @@ void swApplication::ShowPreferencesDialog()
 	swSetProfileString(SW_PROFILE_UNOFFICIAL_LIBRARY, Options.UnofficialLibraryPath);
 	swSetProfileString(SW_PROFILE_SHADOW_LIBRARY, Options.ShadowLibraryPath);
 	swSetProfileString(SW_PROFILE_MINIFIGURE_BUILDER_SETTINGS, Options.MinifigureBuilderSettingsPath);
+	swSetProfileString(SW_PROFILE_BRICKLINK_MAPPING, Options.BrickLinkMappingPath);
 	swSetProfileString(SW_PROFILE_POVRAY_PATH, Options.POVRayPath);
 	swSetProfileString(SW_PROFILE_POVRAY_LGEO_PATH, Options.LGEOPath);
 	swSetProfileString(SW_PROFILE_LANGUAGE, Options.Language);
@@ -2181,8 +2339,7 @@ void swApplication::ShowPreferencesDialog()
 	// libraries reload while running
 	if (LibraryChanged || UnofficialLibraryChanged)
 	{
-		const char* PathEnvironment = getenv("STUDWORX_LIBRARY");
-		const bool LibraryOverridden = PathEnvironment && PathEnvironment[0];
+		const bool LibraryOverridden = !GetEnvironmentLibraryPath().isEmpty();
 
 		mLibrary->SetUnofficialArchivePath(Options.UnofficialLibraryPath);
 
@@ -2279,7 +2436,11 @@ void swApplication::ShowPreferencesDialog()
 
 	// both paths need the new config
 	if (ColorConfigChanged)
+	{
 		swSetProfileString(SW_PROFILE_COLOR_CONFIGURATION, Options.ColorConfigPath);
+		swSetProfileString(SW_PROFILE_COLOR_CONFIGURATION_ALTERNATE, Options.ColorConfigAlternatePath);
+		swSetColorSource(Options.ColorSource);
+	}
 
 	if (StudStyleChanged || StudCylinderColorEnabledChanged)
 		swGetPartsLibrary()->UpdateStudStyleAndColors(Options.StudStyle, Options.Preferences.mStudCylinderColorEnabled);

@@ -49,7 +49,7 @@ void swTests::TranslucentImagesKeepColor()
 	for (const bool Transparent : { true, false })
 	{
 		const QString FileName = Folder.filePath(Transparent ? "transparent.png" : "opaque.png");
-		QStringList Arguments = { Model.fileName(), "--shading", "flat", "--line-width", "0", "--camera-angles", "30", "45", "-w", "64", "-h", "64", "-i", FileName };
+		QStringList Arguments = { Model.fileName(), "--shading", "flat", "--line-width", "0", "--camera-angles", "30", "45", "-w", "64", "--height", "64", "-i", FileName };
 
 		if (Transparent)
 			Arguments << "--transparent";

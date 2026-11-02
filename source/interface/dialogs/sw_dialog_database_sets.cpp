@@ -30,16 +30,9 @@ bool swSetsDatabaseDialog::EnsureApiKey()
 		return true;
 
 	// set inventories come from rebrickable
-	bool Ok = false;
-	const QString Key = QInputDialog::getText(this, tr("Rebrickable API Key"), tr("Set inventories are downloaded from Rebrickable.\nEnter your Rebrickable API key, available for free from your account settings at rebrickable.com:"), QLineEdit::Normal, QString(), &Ok).trimmed();
+	mApiKey = swRequestRebrickableApiKey(this, tr("Set inventories are downloaded from Rebrickable."));
 
-	if (!Ok || Key.isEmpty())
-		return false;
-
-	mApiKey = Key;
-	swSetProfileString(SW_PROFILE_REBRICKABLE_API_KEY, mApiKey);
-
-	return true;
+	return !mApiKey.isEmpty();
 }
 
 swSetsDatabaseDialog::~swSetsDatabaseDialog()

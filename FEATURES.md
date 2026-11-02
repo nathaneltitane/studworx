@@ -61,7 +61,7 @@ Models are plain LDraw text files in LeoCAD's format, so they open in either pro
 - **Startup.** Open Most Recent File on Startup reopens the last model, Restore Tab Layout brings back its tabs and split views, and Load All Parts Before Showing waits until every part is loaded before the model appears.
 - **LeoCAD models.** Models saved by LeoCAD open as they are, and their LeoCAD meta commands are migrated to StudWorx ones, automatically when you choose so in Preferences.
 - **Import.** LEGO® Digital Designer models and official set inventories. Set inventories use your own free Rebrickable API key, asked for once, and are searched by set name or number.
-- **Export.** 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages with step images, BrickLink wanted lists and CSV parts lists.
+- **Export.** 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages with step images, BrickLink wanted lists and CSV parts lists. BrickLink exports pick the condition, the wanted list by its number or the address of its page, and new listing notices, copy the XML and open the BrickLink upload page in one step, and translate part numbers and colors through a mapping file built from the library and Rebrickable.
 - **KMZ.** Google Earth and SketchUp models, with the visible surfaces only or every part's geometry, set in Preferences.
 - **COLLADA.** Translucent colors can be marked as transparent materials for programs that read them.
 - **HTML.** One page per model or one step per page with an index, step images of any width and height with an optional transparent background, and a parts list after each step or at the end, for the current model, its submodels or all models.
@@ -77,21 +77,21 @@ studworx model.ldr opens a model. The options below work without opening a windo
 
 | Options | What they do |
 | --- | --- |
-| -l, --libpath, --unofficial-library, --shadow-library | Choose the parts, unofficial parts and LDCad shadow libraries |
-| -i, --image, -w, --width, -h, --height | Save an image of the model at a size |
+| -l, --library, --unofficial-library, --shadow-library | Choose the parts, unofficial parts and LDCad shadow libraries |
+| -i, --image, -w, --width, --height | Save an image of the model at a size |
 | -f, --from, -t, --to, -s, --submodel | Save a range of steps, or one submodel |
 | -c, --camera, --viewpoint, --camera-angles, --camera-position, --camera-position-ldraw | Choose a camera, a viewpoint or an exact camera position |
-| --orthographic, --fov, --zplanes, --transparent | Projection, field of view, clipping planes and a transparent background |
+| --projection, --field-of-view, --clip-planes, --transparent | Projection, field of view, clipping planes and a transparent background |
 | --fade-steps, --highlight, and their colors | Fade previous steps and highlight new parts |
-| --shading, --lighting, --line-width, --aa-samples | Shading mode, lighting style, edge line width and antialiasing |
-| -ss, --stud-style | One of the eight stud styles |
-| -ec, -bec, -dec, -scc, -aec, -cc, -ldv | Edge, black edge, dark edge and stud cylinder colors, automated edge colors, contrast and light to dark value |
-| -obj, -3ds, -dae, -kmz, -csv, -bl, -html, -pov | Export Wavefront, 3D Studio, COLLADA, KMZ, CSV, BrickLink, HTML and POV-Ray files |
-| --povray-render | Render with POV-Ray |
+| --shading, --lighting, --line-width, --antialiasing-samples | Shading mode, lighting style, edge line width and antialiasing |
+| --stud-style | One of the eight stud styles |
+| --edge-color, --edge-color-black, --edge-color-dark, --stud-cylinder-color, their --no- forms, --edge-color-automatic, --edge-contrast, --edge-light-dark | Edge, black edge, dark edge and stud cylinder colors, automated edge colors, contrast and light to dark value |
+| --export-wavefront, --export-3ds, --export-collada, --export-kmz, --export-csv, --export-bricklink, --export-html, --export-povray | Export Wavefront, 3D Studio, COLLADA, KMZ, CSV, BrickLink, HTML and POV-Ray files |
+| --render-povray | Render with POV-Ray |
 | --import-settings, --export-settings | Settings as an ini file |
 | --import-keyboard-shortcuts, --export-keyboard-shortcuts, --import-mouse-shortcuts, --export-mouse-shortcuts | Keyboard and mouse shortcuts |
 | --import-categories, --export-categories | Part categories |
-| -v, --version, -?, --help | Version and usage |
+| -v, --version, -h, --help | Version and usage |
 
 ## Image
 
@@ -172,6 +172,7 @@ The model view draws fast with OpenGL in four lighting styles, and File > Render
 - **Shading.** Wireframe, flat shading, default lights, edge lines, conditional lines and mesh level of detail.
 - **Mesh level of detail.** Distant parts draw with simpler meshes, from a distance set in Preferences, so large models stay smooth.
 - **Studs.** Eight stud styles: Plain, Thin Lines Logo, Outline Logo, Sharp Top Logo, Rounded Top Logo, Flattened Logo, High Contrast and High Contrast with Logo.
+- **Color configurations.** Colors come from the parts library, the LDraw color configuration or the alternate configuration with more realistic edge line colors for rendering, chosen under Rendering > Colors.
 - **Edge colors.** Automate Edge Color computes edge colors from each part color, with edge contrast, saturation and light to dark settings, or set the stud cylinder, edge, black edge and dark edge colors yourself.
 - **Separate settings.** The model view, the preview, the parts list and the Minifigure Builder each keep their own rendering settings. Each can follow the model view instead, or set its own wireframe, flat shading, default lights, edge lines, conditional lines and line width.
 - **Selection highlight.** Outline or tint and edges, with an adjustable outline width and transparency.
@@ -388,10 +389,10 @@ Large builds split into submodels that you can edit on their own or in place, in
 
 Eight pages with lined up label and control columns. Value boxes show their maximum and bring any typed number into range, and every slider shows its value.
 
-- **General.** Reference paths, the author of new models built from a name, email address and comment, such as All rights reserved, joined by the author line splitter and previewed as the author line, and the parts library, LGEO and POV-Ray locations.
+- **General.** Reference paths, where the color configurations, minifigure builder settings and BrickLink mapping update from ldraw.org and Rebrickable with one button and bundled copies are used until a file is set, the author of new models built from a name, email address and comment, such as All rights reserved, joined by the author line splitter and previewed as the author line, and the parts library, LGEO and POV-Ray locations.
 - **Startup and files.** Open the most recent file, restore the tab layout, load all parts before showing a model, watch for file changes and migrate LeoCAD models automatically.
 - **Rendering and Views.** Rendering quality, the Blender add-on settings, and the Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups.
-- **Colors and Instructions.** Interface and view colors, edge contrast, the default instruction page settings, and the rulers and element inspector overlays of the instructions page.
+- **Interface and Instructions.** Interface and view colors, edge contrast, the default instruction page settings, and the rulers and element inspector overlays of the instructions page.
 - **View colors.** Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, flex paths, the view cube, every axis, and the element margin, padding and anchor overlays and the ruler pointer arrows of the instructions page, each with an alpha slider.
 - **Categories.** Part categories turned on and off with a checkbox, edited, imported and exported.
 - **Keyboard and Mouse.** Shortcuts recorded by clicking, importable and exportable.

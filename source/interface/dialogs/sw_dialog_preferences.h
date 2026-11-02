@@ -4,6 +4,7 @@
 #include "sw_shortcuts.h"
 #include "sw_category.h"
 #include "sw_instructions.h"
+#include "sw_color_configuration.h"
 
 // The instructions preferences.
 struct swInstructionsPreferences
@@ -50,7 +51,10 @@ struct swPreferencesDialogOptions
 	QString UnofficialLibraryPath;
 	QString ShadowLibraryPath;
 	QString ColorConfigPath;
+	QString ColorConfigAlternatePath;
+	swColorSource ColorSource;
 	QString MinifigureBuilderSettingsPath;
+	QString BrickLinkMappingPath;
 	QString POVRayPath;
 	QString LGEOPath;
 	QString DefaultAuthorName;
@@ -111,7 +115,13 @@ private slots:
 	void ShadowLibraryBrowseButtonClicked();
 	void ShadowLibraryEnabledToggled(bool Checked);
 	void ColorConfigBrowseButtonClicked();
+	void ColorConfigUpdateButtonClicked();
+	void ColorConfigAlternateBrowseButtonClicked();
+	void ColorConfigAlternateUpdateButtonClicked();
 	void MinifigureBuilderSettingsBrowseButtonClicked();
+	void MinifigureBuilderSettingsUpdateButtonClicked();
+	void BrickLinkMappingBrowseButtonClicked();
+	void BrickLinkMappingUpdateButtonClicked();
 	void PovrayExecutableBrowseClicked();
 	void LgeoPathBrowseClicked();
 	void AuthorChanged();
@@ -165,6 +175,11 @@ private slots:
 private:
 	Ui::swPreferencesDialog* ui;
 
+	QLineEdit* GetColorConfigurationEdit(swColorSource Source) const;
+	QString GetMinifigureBuilderSettingsStartPath() const;
+	void BrowseColorConfiguration(swColorSource Source);
+	void UpdateColorConfiguration(swColorSource Source);
+	bool EnsureColorConfiguration();
 	void UpdateCategories();
 	void SnapCategoriesTree();
 	void UpdateCommandList();

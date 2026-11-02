@@ -1,5 +1,6 @@
 #include "sw_global.h"
 #include "sw_renderer_povray.h"
+#include "sw_application.h"
 #include "sw_dialog_render.h"
 #include "sw_file_zip.h"
 #include "sw_file.h"
@@ -220,7 +221,7 @@ QString swFindLGEOPath()
 	if (!LibraryPath.isEmpty())
 		Folders.append(QFileInfo(LibraryPath).absolutePath());
 
-	const QString LDrawPath = qEnvironmentVariable("LDRAWDIR");
+	const QString LDrawPath = swApplication::GetEnvironmentLibraryPath();
 
 	if (!LDrawPath.isEmpty())
 		Folders.append(QFileInfo(LDrawPath).absolutePath());

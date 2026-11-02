@@ -3,6 +3,7 @@
 #include "sw_application.h"
 #include "sw_types_asset.h"
 #include "sw_result.h"
+#include "sw_bricklink.h"
 
 enum class swImageBackground;
 
@@ -278,7 +279,7 @@ public:
 	swResult<swModel*> ImportClipboard(const QByteArray& FileData);
 	swResult<void> ExportModel(const QString& FileName, swModel* Model) const;
 	swResult<void> Export3DStudio(const QString& FileName);
-	swResult<void> ExportBrickLink(const QString& FileName);
+	swResult<swBrickLinkExport> ExportBrickLink(const QString& FileName, const swBrickLinkOptions& Options);
 	swResult<void> ExportCOLLADA(const QString& FileName);
 	swResult<void> ExportCSV(const QString& FileName);
 	swResult<void> ExportHTML(const swHTMLExportOptions& Options);

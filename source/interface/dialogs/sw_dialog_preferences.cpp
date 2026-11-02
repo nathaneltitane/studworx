@@ -6,6 +6,8 @@
 #include "sw_library.h"
 #include "sw_dialog_color_edge.h"
 #include "sw_dialog_preferences_blender.h"
+#include "sw_dialog_export_bricklink.h"
+#include "sw_minifigure_configuration.h"
 #include "sw_window_main.h"
 #include "sw_view_widget.h"
 #include "sw_view.h"
@@ -297,8 +299,18 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->UnofficialLibraryBrowseButton, &QPushButton::clicked, this, &swPreferencesDialog::UnofficialLibraryBrowseButtonClicked);
 	connect(ui->ShadowLibraryEnabled, &QCheckBox::toggled, this, &swPreferencesDialog::ShadowLibraryEnabledToggled);
 	connect(ui->ShadowLibraryBrowseButton, &QPushButton::clicked, this, &swPreferencesDialog::ShadowLibraryBrowseButtonClicked);
-	connect(ui->ColorConfigBrowseButton, &QPushButton::clicked, this, &swPreferencesDialog::ColorConfigBrowseButtonClicked);
+	connect(ui->ColorConfigBrowseButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorConfigBrowseButtonClicked);
+	connect(ui->ColorConfigUpdateButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorConfigUpdateButtonClicked);
+	connect(ui->ColorConfigAlternateBrowseButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorConfigAlternateBrowseButtonClicked);
+	connect(ui->ColorConfigAlternateUpdateButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorConfigAlternateUpdateButtonClicked);
+	ui->ColorConfigUpdateButton->setIcon(swCreatePaintedIcon(swPaintedIcon::Refresh));
+	ui->ColorConfigAlternateUpdateButton->setIcon(swCreatePaintedIcon(swPaintedIcon::Refresh));
 	connect(ui->MinifigureBuilderSettingsBrowseButton, &QPushButton::clicked, this, &swPreferencesDialog::MinifigureBuilderSettingsBrowseButtonClicked);
+	connect(ui->MinifigureBuilderSettingsUpdateButton, &QToolButton::clicked, this, &swPreferencesDialog::MinifigureBuilderSettingsUpdateButtonClicked);
+	ui->MinifigureBuilderSettingsUpdateButton->setIcon(swCreatePaintedIcon(swPaintedIcon::Refresh));
+	connect(ui->BrickLinkMappingBrowseButton, &QToolButton::clicked, this, &swPreferencesDialog::BrickLinkMappingBrowseButtonClicked);
+	connect(ui->BrickLinkMappingUpdateButton, &QToolButton::clicked, this, &swPreferencesDialog::BrickLinkMappingUpdateButtonClicked);
+	ui->BrickLinkMappingUpdateButton->setIcon(swCreatePaintedIcon(swPaintedIcon::Refresh));
 	connect(ui->povrayExecutableBrowse, &QPushButton::clicked, this, &swPreferencesDialog::PovrayExecutableBrowseClicked);
 	connect(ui->lgeoPathBrowse, &QPushButton::clicked, this, &swPreferencesDialog::LgeoPathBrowseClicked);
 	connect(ui->AuthorName, &QLineEdit::textChanged, this, &swPreferencesDialog::AuthorChanged);
@@ -411,7 +423,14 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->ShadowLibraryEnabled->setChecked(mOptions->Preferences.mShadowLibraryEnabled);
 	ShadowLibraryEnabledToggled(mOptions->Preferences.mShadowLibraryEnabled);
 	ui->ColorConfigEdit->setText(mOptions->ColorConfigPath);
+	ui->ColorConfigAlternateEdit->setText(mOptions->ColorConfigAlternatePath);
+
+	for (const swColorSource Source : { swColorSource::Library, swColorSource::Standard, swColorSource::Alternate })
+		ui->ColorSourceCombo->addItem(swGetColorConfigurationName(Source));
+
+	ui->ColorSourceCombo->setCurrentIndex(static_cast<int>(mOptions->ColorSource));
 	ui->MinifigureBuilderSettingsEdit->setText(mOptions->MinifigureBuilderSettingsPath);
+	ui->BrickLinkMappingEdit->setText(mOptions->BrickLinkMappingPath);
 	ui->povrayExecutable->setText(mOptions->POVRayPath);
 	ui->lgeoPath->setText(mOptions->LGEOPath);
 	ui->AuthorName->setText(mOptions->DefaultAuthorName);
@@ -755,6 +774,10 @@ void swPreferencesDialog::showEvent(QShowEvent* Event)
 
 void swPreferencesDialog::accept()
 {
+	// a chosen color file must exist before closing
+	if (!EnsureColorConfiguration())
+		return;
+
 	const int GridLineSpacing = ui->gridLineSpacing->value();
 
 	mOptions->LibraryPath = ui->partsLibrary->text();
@@ -762,7 +785,10 @@ void swPreferencesDialog::accept()
 	mOptions->ShadowLibraryPath = ui->ShadowLibraryEdit->text();
 	mOptions->Preferences.mShadowLibraryEnabled = ui->ShadowLibraryEnabled->isChecked();
 	mOptions->MinifigureBuilderSettingsPath = ui->MinifigureBuilderSettingsEdit->text();
+	mOptions->BrickLinkMappingPath = ui->BrickLinkMappingEdit->text();
 	mOptions->ColorConfigPath = ui->ColorConfigEdit->text();
+	mOptions->ColorConfigAlternatePath = ui->ColorConfigAlternateEdit->text();
+	mOptions->ColorSource = static_cast<swColorSource>(ui->ColorSourceCombo->currentIndex());
 	mOptions->POVRayPath = ui->povrayExecutable->text();
 	mOptions->LGEOPath = ui->lgeoPath->text();
 	mOptions->DefaultAuthorName = ui->AuthorName->text();
@@ -957,18 +983,160 @@ void swPreferencesDialog::BlenderAddonSettingsButtonClicked()
 
 void swPreferencesDialog::ColorConfigBrowseButtonClicked()
 {
-	QString Result = QFileDialog::getOpenFileName(this, tr("Select Color Configuration File"), ui->ColorConfigEdit->text(), tr("Settings Files (*.ldr);;All Files (*.*)"));
+	BrowseColorConfiguration(swColorSource::Standard);
+}
+
+void swPreferencesDialog::ColorConfigUpdateButtonClicked()
+{
+	UpdateColorConfiguration(swColorSource::Standard);
+}
+
+void swPreferencesDialog::ColorConfigAlternateBrowseButtonClicked()
+{
+	BrowseColorConfiguration(swColorSource::Alternate);
+}
+
+void swPreferencesDialog::ColorConfigAlternateUpdateButtonClicked()
+{
+	UpdateColorConfiguration(swColorSource::Alternate);
+}
+
+QLineEdit* swPreferencesDialog::GetColorConfigurationEdit(swColorSource Source) const
+{
+	return Source == swColorSource::Alternate ? ui->ColorConfigAlternateEdit : ui->ColorConfigEdit;
+}
+
+// use to pick an existing color file
+void swPreferencesDialog::BrowseColorConfiguration(swColorSource Source)
+{
+	QLineEdit* Edit = GetColorConfigurationEdit(Source);
+	const QString Result = swChooseColorConfigurationFile(this, Source, Edit->text().trimmed(), true);
 
 	if (!Result.isEmpty())
-		ui->ColorConfigEdit->setText(QDir::toNativeSeparators(Result));
+		Edit->setText(Result);
+}
+
+// use to save the latest official file to the named path
+void swPreferencesDialog::UpdateColorConfiguration(swColorSource Source)
+{
+	QLineEdit* Edit = GetColorConfigurationEdit(Source);
+	QString FileName = Edit->text().trimmed();
+
+	if (FileName.isEmpty())
+	{
+		FileName = swChooseColorConfigurationFile(this, Source, FileName, false);
+
+		if (FileName.isEmpty())
+			return;
+
+		Edit->setText(FileName);
+	}
+
+	swUpdateColorConfigurationFile(this, Source, FileName, true);
+}
+
+// use to prompt for the chosen color file when it is missing
+bool swPreferencesDialog::EnsureColorConfiguration()
+{
+	const swColorSource Source = static_cast<swColorSource>(ui->ColorSourceCombo->currentIndex());
+
+	if (Source == swColorSource::Library)
+		return true;
+
+	QLineEdit* Edit = GetColorConfigurationEdit(Source);
+
+	// an unset file uses the bundled copy
+	if (Edit->text().trimmed().isEmpty())
+		return true;
+
+	const QString FileName = swEnsureColorConfigurationFile(this, Source, Edit->text().trimmed());
+
+	if (FileName.isEmpty())
+	{
+		ui->tabWidget->setCurrentWidget(ui->tabRendering);
+		ui->ColorSourceCombo->setFocus();
+		return false;
+	}
+
+	Edit->setText(FileName);
+
+	return true;
+}
+
+// use to suggest minifigure.ini beside the parts library
+QString swPreferencesDialog::GetMinifigureBuilderSettingsStartPath() const
+{
+	const QString FileName = ui->MinifigureBuilderSettingsEdit->text().trimmed();
+
+	if (!FileName.isEmpty())
+		return FileName;
+
+	const QString LibraryPath = ui->partsLibrary->text().trimmed();
+	const QFileInfo LibraryInfo(LibraryPath);
+	const QString LibraryFolder = LibraryInfo.isFile() ? LibraryInfo.absolutePath() : LibraryPath;
+
+	return QDir(LibraryFolder).absoluteFilePath(swGetMinifigureConfigurationName());
 }
 
 void swPreferencesDialog::MinifigureBuilderSettingsBrowseButtonClicked()
 {
-	QString Result = QFileDialog::getOpenFileName(this, tr("Select Minifigure Builder Settings File"), ui->MinifigureBuilderSettingsEdit->text(), tr("Settings Files (*.ini);;All Files (*.*)"));
+	const QString Result = QFileDialog::getOpenFileName(this, tr("Choose Minifigure Builder Settings"), GetMinifigureBuilderSettingsStartPath(), tr("Settings Files (*.ini);;All Files (*.*)"));
 
 	if (!Result.isEmpty())
 		ui->MinifigureBuilderSettingsEdit->setText(QDir::toNativeSeparators(Result));
+}
+
+void swPreferencesDialog::MinifigureBuilderSettingsUpdateButtonClicked()
+{
+	const QString Title = tr("Update Minifigure Builder Settings");
+	QString FileName = ui->MinifigureBuilderSettingsEdit->text().trimmed();
+
+	if (FileName.isEmpty())
+	{
+		FileName = QFileDialog::getSaveFileName(this, tr("Save Minifigure Builder Settings"), GetMinifigureBuilderSettingsStartPath(), tr("Settings Files (*.ini);;All Files (*.*)"));
+
+		if (FileName.isEmpty())
+			return;
+
+		FileName = QDir::toNativeSeparators(FileName);
+		ui->MinifigureBuilderSettingsEdit->setText(FileName);
+	}
+
+	const swResult<void> Result = swUpdateMinifigureConfiguration(this, FileName);
+
+	if (!Result)
+	{
+		QMessageBox::warning(this, Title, Result.error());
+		return;
+	}
+
+	QMessageBox::information(this, Title, tr("Saved the latest minifigure builder settings to '%1'.").arg(FileName));
+}
+
+void swPreferencesDialog::BrickLinkMappingBrowseButtonClicked()
+{
+	const QString Result = QFileDialog::getOpenFileName(this, tr("Select BrickLink Mapping File"), ui->BrickLinkMappingEdit->text(), tr("Mapping Files (*.txt *.json);;All Files (*.*)"));
+
+	if (!Result.isEmpty())
+		ui->BrickLinkMappingEdit->setText(QDir::toNativeSeparators(Result));
+}
+
+// use to build or refresh the mapping file right away
+void swPreferencesDialog::BrickLinkMappingUpdateButtonClicked()
+{
+	QString FileName = ui->BrickLinkMappingEdit->text().trimmed();
+
+	if (FileName.isEmpty())
+	{
+		FileName = swChooseBrickLinkMappingFile(this, FileName);
+
+		if (FileName.isEmpty())
+			return;
+
+		ui->BrickLinkMappingEdit->setText(FileName);
+	}
+
+	swUpdateBrickLinkMappingFile(this, FileName, true);
 }
 
 void swPreferencesDialog::PovrayExecutableBrowseClicked()

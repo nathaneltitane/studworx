@@ -1448,7 +1448,7 @@
 				<li><b>Startup.</b> Open Most Recent File on Startup reopens the last model, Restore Tab Layout brings back its tabs and split <a href="#views">views</a>, and Load All Parts Before Showing waits until every part is loaded before the model appears.</li>
 				<li><b>LeoCAD models.</b> Models saved by LeoCAD open as they are, and their LeoCAD <a href="#meta">meta</a> commands are migrated to StudWorx ones, automatically when you choose so in <a href="#preferences">Preferences</a>.</li>
 				<li><b>Import.</b> LEGO® Digital Designer models and official set inventories. Set inventories use your own free Rebrickable API key, asked for once, and are searched by set name or number.</li>
-				<li><b>Export.</b> 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages with step images, BrickLink wanted lists and CSV parts lists.</li>
+				<li><b>Export.</b> 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages with step images, BrickLink wanted lists and CSV parts lists. BrickLink exports pick the condition, the wanted list by its number or the address of its page, and new listing notices, copy the XML and open the BrickLink upload page in one step, and translate part numbers and colors through a mapping file built from the library and Rebrickable.</li>
 				<li><b>KMZ.</b> Google Earth and SketchUp models, with the visible surfaces only or every part&#x27;s geometry, set in Preferences.</li>
 				<li><b>COLLADA.</b> Translucent colors can be marked as transparent materials for programs that read them.</li>
 				<li><b>HTML.</b> One page per model or one step per page with an index, step images of any width and height with an optional transparent background, and a parts list after each step or at the end, for the current model, its submodels or all models.</li>
@@ -1469,21 +1469,21 @@
 					</thead>
 
 					<tbody>
-						<tr><td>-l, --libpath, --unofficial-library, --shadow-library</td><td>Choose the parts, unofficial parts and LDCad shadow libraries</td></tr>
-						<tr><td>-i, --image, -w, --width, -h, --height</td><td>Save an <a href="#image">image</a> of the model at a size</td></tr>
+						<tr><td>-l, --library, --unofficial-library, --shadow-library</td><td>Choose the parts, unofficial parts and LDCad shadow libraries</td></tr>
+						<tr><td>-i, --image, -w, --width, --height</td><td>Save an <a href="#image">image</a> of the model at a size</td></tr>
 						<tr><td>-f, --from, -t, --to, -s, --submodel</td><td>Save a range of <a href="#steps">steps</a>, or one submodel</td></tr>
 						<tr><td>-c, --camera, --viewpoint, --camera-angles, --camera-position, --camera-position-ldraw</td><td>Choose a camera, a viewpoint or an exact camera position</td></tr>
-						<tr><td>--orthographic, --fov, --zplanes, --transparent</td><td>Projection, field of view, clipping planes and a transparent background</td></tr>
+						<tr><td>--projection, --field-of-view, --clip-planes, --transparent</td><td>Projection, field of view, clipping planes and a transparent background</td></tr>
 						<tr><td>--fade-steps, --highlight, and their colors</td><td>Fade previous steps and highlight new parts</td></tr>
-						<tr><td>--shading, --lighting, --line-width, --aa-samples</td><td>Shading mode, lighting style, edge line width and antialiasing</td></tr>
-						<tr><td>-ss, --stud-style</td><td>One of the eight stud styles</td></tr>
-						<tr><td>-ec, -bec, -dec, -scc, -aec, -cc, -ldv</td><td>Edge, black edge, dark edge and stud cylinder colors, automated edge colors, contrast and light to dark value</td></tr>
-						<tr><td>-obj, -3ds, -dae, -kmz, -csv, -bl, -html, -pov</td><td>Export Wavefront, 3D Studio, COLLADA, KMZ, CSV, BrickLink, HTML and POV-Ray files</td></tr>
-						<tr><td>--povray-render</td><td>Render with POV-Ray</td></tr>
+						<tr><td>--shading, --lighting, --line-width, --antialiasing-samples</td><td>Shading mode, lighting style, edge line width and antialiasing</td></tr>
+						<tr><td>--stud-style</td><td>One of the eight stud styles</td></tr>
+						<tr><td>--edge-color, --edge-color-black, --edge-color-dark, --stud-cylinder-color, their --no- forms, --edge-color-automatic, --edge-contrast, --edge-light-dark</td><td>Edge, black edge, dark edge and stud cylinder colors, automated edge colors, contrast and light to dark value</td></tr>
+						<tr><td>--export-wavefront, --export-3ds, --export-collada, --export-kmz, --export-csv, --export-bricklink, --export-html, --export-povray</td><td>Export Wavefront, 3D Studio, COLLADA, KMZ, CSV, BrickLink, HTML and POV-Ray files</td></tr>
+						<tr><td>--render-povray</td><td>Render with POV-Ray</td></tr>
 						<tr><td>--import-settings, --export-settings</td><td>Settings as an ini file</td></tr>
 						<tr><td>--import-keyboard-shortcuts, --export-keyboard-shortcuts, --import-mouse-shortcuts, --export-mouse-shortcuts</td><td>Keyboard and mouse shortcuts</td></tr>
 						<tr><td>--import-categories, --export-categories</td><td>Part categories</td></tr>
-						<tr><td>-v, --version, -?, --help</td><td>Version and usage</td></tr>
+						<tr><td>-v, --version, -h, --help</td><td>Version and usage</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -1644,6 +1644,7 @@
 				<li><b>Shading.</b> Wireframe, flat shading, default lights, edge lines, conditional lines and mesh level of detail.</li>
 				<li><b>Mesh level of detail.</b> Distant parts draw with simpler meshes, from a distance set in Preferences, so large <a href="#models">models</a> stay smooth.</li>
 				<li><b>Studs.</b> Eight stud styles: Plain, Thin Lines Logo, Outline Logo, Sharp Top Logo, Rounded Top Logo, Flattened Logo, High Contrast and High Contrast with Logo.</li>
+				<li><b>Color configurations.</b> Colors come from the parts library, the LDraw color configuration or the alternate configuration with more realistic edge line colors for rendering, chosen under Rendering &gt; Colors.</li>
 				<li><b>Edge colors.</b> Automate Edge Color computes edge colors from each part color, with edge contrast, saturation and light to dark settings, or set the stud cylinder, edge, black edge and dark edge colors yourself.</li>
 				<li><b>Separate settings.</b> The model view, the preview, the parts list and the Minifigure Builder each keep their own rendering settings. Each can follow the model view instead, or set its own wireframe, flat shading, default lights, edge lines, conditional lines and line width.</li>
 				<li><b>Selection highlight.</b> Outline or tint and edges, with an adjustable outline width and transparency.</li>
@@ -2159,10 +2160,10 @@
 			<p class="lead">Eight pages with lined up label and control columns. Value boxes show their maximum and bring any typed number into range, and every slider shows its value.</p>
 
 			<ul class="points">
-				<li><b>General.</b> Reference paths, the author of new <a href="#models">models</a> built from a name, email address and comment, such as All rights reserved, joined by the author line splitter and previewed as the author line, and the parts library, LGEO and POV-Ray locations.</li>
+				<li><b>General.</b> Reference paths, where the color configurations, minifigure builder settings and BrickLink mapping update from ldraw.org and Rebrickable with one button and bundled copies are used until a file is set, the author of new <a href="#models">models</a> built from a name, email address and comment, such as All rights reserved, joined by the author line splitter and previewed as the author line, and the parts library, LGEO and POV-Ray locations.</li>
 				<li><b>Startup and <a href="#files">files</a>.</b> Open the most recent file, restore the tab layout, load all parts before showing a model, watch for file changes and migrate LeoCAD models automatically.</li>
 				<li><b><a href="#rendering">Rendering</a> and <a href="#views">Views</a>.</b> Rendering quality, the Blender add-on settings, and the Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups.</li>
-				<li><b>Colors and <a href="#instructions">Instructions</a>.</b> <a href="#interface">Interface</a> and view colors, edge contrast, the default instruction page settings, and the rulers and element inspector overlays of the instructions page.</li>
+				<li><b><a href="#interface">Interface</a> and <a href="#instructions">Instructions</a>.</b> Interface and view colors, edge contrast, the default instruction page settings, and the rulers and element inspector overlays of the instructions page.</li>
 				<li><b>View colors.</b> Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, flex paths, the view cube, every axis, and the element margin, padding and anchor overlays and the ruler pointer arrows of the instructions page, each with an alpha slider.</li>
 				<li><b>Categories.</b> Part categories turned on and off with a checkbox, edited, imported and exported.</li>
 				<li><b>Keyboard and Mouse.</b> Shortcuts recorded by clicking, importable and exportable.</li>
@@ -2832,7 +2833,7 @@ make -j"$(nproc)"</code></pre>
 studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 			<ul class="points">
-				<li><b>Run.</b> Start StudWorx and let it download the LDraw parts library on the first start, or point <a href="#preferences">Preferences</a> to one or set STUDWORX_LIBRARY. Set Preferences > Part Connections to an LDCad shadow library folder to select connected parts.</li>
+				<li><b>Run.</b> Start StudWorx and let it download the LDraw parts library on the first start, or point <a href="#preferences">Preferences</a> to one or set LDRAW_DIRECTORY or LDRAWDIR. Set Preferences > Part Connections to an LDCad shadow library folder to select connected parts.</li>
 				<li><b>Package.</b> Run resources/packaging/deb/deb.sh, resources/packaging/rpm/rpm.sh or resources/packaging/appimage/appimage.sh, with an optional build directory.</li>
 			</ul>
 		</section>
@@ -3046,14 +3047,14 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Part Palettes","title":"Palette List","paragraphs":["Select a palette before using Rename, Delete, Move Up, or Move Down. The list order determines the palette order in the part browser."]},
 				{"group":"Part Palettes","title":"Delete Palette","paragraphs":["Remove the selected palette and its list of part choices. Library parts and parts already used in models are not deleted. At least one palette must remain."]},
 				{"group":"Part Palettes","title":"Import Palette","paragraphs":["Open Import Set Inventory to search for a set and download its inventory. The new palette uses the set description as its name.","The palette stores part IDs; inventory colors and quantities are not stored. An internet connection is required."]},
-				{"group":"Preferences","title":"Preferences","paragraphs":["Configure the application, display, colors, part categories, and keyboard and mouse shortcuts. Choose OK to save the changes or Cancel to discard edits in Preferences. Language and antialiasing changes, and clearing the parts library, require restarting StudWorx.","Export buttons write files immediately. Blender add-on settings have their own Apply action and can configure Blender before you close Preferences."]},
-				{"group":"Preferences","title":"General Preferences","paragraphs":["Set application behavior and custom library, configuration, and renderer paths. Leave optional configuration paths empty to use the built-in settings."]},
+				{"group":"Preferences","title":"Preferences","paragraphs":["Configure the application, rendering, views, interface, part categories, and keyboard and mouse shortcuts. Choose OK to save the changes or Cancel to discard edits in Preferences. Language and antialiasing changes, and clearing the parts library, require restarting StudWorx.","Export buttons write files immediately. Blender add-on settings have their own Apply action and can configure Blender before you close Preferences."]},
+				{"group":"Preferences","title":"General Preferences","paragraphs":["Set application behavior and custom library, configuration, and renderer paths. Bundled copies of the color, minifigure and other data files are used until you set your own."]},
 				{"group":"Preferences","title":"Files","paragraphs":["The author of new models is built from its name, email address and comment, joined by the author line splitter. Empty parts are left out, and the Author Line field shows the result. For example, Jane Doe, jane@example.com and All rights reserved joined by \" | \" give Jane Doe | jane@example.com | All rights reserved.","The author of an open model is changed in its properties.","The other options control how model files are opened and reloaded."]},
-				{"group":"Preferences","title":"Rendering Preferences","paragraphs":["Control shading, stud geometry, selection appearance, edges, and step effects. Some options are unavailable when the graphics system does not support them."]},
+				{"group":"Preferences","title":"Rendering Preferences","paragraphs":["Control shading, stud geometry, colors, selection appearance, edges, and step effects. Some options are unavailable when the graphics system does not support them."]},
 				{"group":"Preferences","title":"Highlight Style","paragraphs":["Choose how selected parts and parts added in the current step are highlighted in the viewport. Outline uses fading outlines in the selection, focus, or new-part highlight color. Selected parts also receive a faint fill over obscured portions. Tint and Edges uses tinted faces and colored edges for selection, and colored edges for new parts.","New-part highlighting requires Highlight New Parts. Wireframe views, image exports, and systems without outline support use Tint and Edges."]},
 				{"group":"Preferences","title":"Blender Add-on Settings","paragraphs":["Open the separate Blender configuration dialog. Its Apply action saves its settings independently of Preferences, and choosing an executable or importer can configure Blender immediately."]},
 				{"group":"Preferences","title":"View Preferences","paragraphs":["Choose navigation aids for model views and the preview, the cutaway size and shade, the idle turntable, and the base grid. Locations select the corner where each navigation aid appears."]},
-				{"group":"Preferences","title":"Display Colors","paragraphs":["Choose colors for the background, objects, grid, and interface. These settings control the display; they do not change the LDraw colors assigned to model parts."]},
+				{"group":"Preferences","title":"Interface Preferences","paragraphs":["Choose colors for the background, objects, grid, and interface. These settings control the display; they do not change the LDraw colors assigned to model parts."]},
 				{"group":"Preferences","title":"Instructions","paragraphs":["Colors of the element inspector of the instructions page, drawn like the box model of a web browser inspector: the margin fill around each element, the padding fill inside its border, and markers at its anchors, the corners, edge centers and center that placement aligns to. The Ruler Pointer color fills the arrows that follow the pointer on the rulers. Each color has an alpha from 0, transparent, to 1, opaque.","Show or hide each overlay with Show Element Margins, Show Element Padding and Show Element Anchors in the Instructions preferences or the Options menu of the Instructions window. The overlays show on screen only and are never printed."]},
 				{"group":"Preferences","title":"Part Categories","paragraphs":["Create, edit, reorder, or import categories for the part browser. The right-hand list shows parts matching the selected category. Imported and edited categories are saved when you choose OK in Preferences; Export writes the current list immediately."]},
 				{"group":"Preferences","title":"Keyboard Shortcuts","paragraphs":["Select a command, click Key Sequence, press the desired key combination, then choose Assign. Remove clears the selected command's shortcut. Import replaces the shortcut list; Export writes the current list immediately. Choose OK in Preferences to save changes."]},
@@ -3064,7 +3065,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Model Properties","title":"Model Summary","paragraphs":["Author, description, and comments are stored in the model file when you save it. Measurements show its overall size."]},
 				{"group":"Model Properties","title":"Model Measurements","paragraphs":["The dimensions of the model's bounding box are shown in centimeters, inches, and LDraw units (ldu). The values are read-only and include parts across all steps."]},
 				{"group":"Model Properties","title":"Parts","paragraphs":["The table counts parts across all steps, including parts inside submodels. The first column shows a thumbnail of each part in its most used color, and the ID column shows its number. Color columns show quantities, and totals summarize each part, each color, and the whole model. Click a column heading to sort. The thumbnail, ID and part-name columns stay visible while you scroll horizontally. Counts cannot be edited here."]},
-				{"group":"Model Properties","title":"Export BrickLink","paragraphs":["Saves the parts listed in this table as a BrickLink XML wanted list, the same format as File > Export > BrickLink. Only the model shown in this dialog and its submodels are included."]},
+				{"group":"Model Properties","title":"Export BrickLink","paragraphs":["Saves the parts listed in this table as a BrickLink XML wanted list, the same format as File > Export > BrickLink. Only the model shown in this dialog and its submodels are included. After saving, Copy XML and Open BrickLink puts the list on the clipboard and opens the BrickLink upload page."]},
 				{"group":"Model Properties","title":"Export CSV","paragraphs":["Saves the parts listed in this table as comma separated values with name, color, quantity, ID and color code, the same format as File > Export > CSV. Only the model shown in this dialog and its submodels are included."]},
 				{"group":"Render","title":"Output Image","paragraphs":["Choose where to save the rendered image and its format, such as PNG, JPEG, or BMP. The output path applies to image rendering; Open in Blender does not use it."]},
 				{"group":"Render","title":"Render Preview","paragraphs":["The preview is scaled to fit this area. Changing the dialog size does not change the output resolution; use Settings to change the image dimensions."]},
@@ -3078,8 +3079,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Minifigure Builder","title":"Templates","paragraphs":["Load a saved configuration of parts, colors, and angles, or save the current configuration under a name. Choosing another template replaces the current preview configuration.","Changes to the preview are not saved as a template until you use Save. Saved, deleted and imported templates are kept right away."]},
 				{"group":"Minifigure Builder","title":"Save Template","paragraphs":["Enter a name for the current parts, colors, and pose. Reusing an existing name asks before replacing that template. The Default template cannot be overwritten."]},
 				{"group":"Minifigure Builder","title":"Delete Template","paragraphs":["Remove the selected named template after confirmation. This does not remove parts from the preview or an existing model. The Default template cannot be deleted."]},
-				{"group":"Minifigure Builder","title":"Import Templates","paragraphs":["Add saved configurations from a .minifig file to the template collection. Existing template names are kept when the imported file contains the same names."]},
-				{"group":"Minifigure Builder","title":"Export Templates","paragraphs":["Write all templates to a .minifig file for backup or sharing. Export includes the entire collection, not just the selected template."]},
+				{"group":"Minifigure Builder","title":"Import Templates","paragraphs":["Add saved configurations from a .minifigure file to the template collection. Existing template names are kept when the imported file contains the same names."]},
+				{"group":"Minifigure Builder","title":"Export Templates","paragraphs":["Write all templates to a .minifigure file for backup or sharing. Export includes the entire collection, not just the selected template."]},
 				{"group":"Preferences","title":"High Contrast Edge Colors","paragraphs":["Choose custom stud and edge colors for high contrast stud styles. Enable an override with its checkbox, then choose its color. Light/Dark Value sets the threshold for dark-part edge colors. Automated edge colors take precedence over the part edge overrides.","Choose OK to return changes to Preferences, then choose OK in Preferences to keep them. Cancel discards changes in this dialog. Reset restores an individual control's default."]},
 				{"group":"Preferences","title":"Automated Edge Colors","paragraphs":["Adjust the contrast and saturation used to calculate part edge colors. Both controls range from 0.00 to 1.00. Reset restores a control to 0.50.","Choose OK to return changes to Preferences, then choose OK in Preferences to keep them. Cancel discards changes in this dialog."]},
 				{"group":"Preferences","title":"Edge Contrast","paragraphs":["Adjust the contrast used by automated edge colors to distinguish edges from part surfaces. The range is 0.00 to 1.00; Reset restores 0.50."]},

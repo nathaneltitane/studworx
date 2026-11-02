@@ -440,7 +440,7 @@ void swMinifigureBuilderWidget::TemplateDeleteButtonClicked()
 
 void swMinifigureBuilderWidget::TemplateImportButtonClicked()
 {
-	QString FileName = QFileDialog::getOpenFileName(this, tr("Import Templates"), "", tr("Minifigure Template Files (*.minifig);;All Files (*.*)"));
+	QString FileName = QFileDialog::getOpenFileName(this, tr("Import Templates"), "", tr("Minifigure Template Files (*.minifigure *.minifig);;All Files (*.*)"));
 
 	if (FileName.isEmpty())
 		return;
@@ -461,7 +461,7 @@ void swMinifigureBuilderWidget::TemplateImportButtonClicked()
 
 void swMinifigureBuilderWidget::TemplateExportButtonClicked()
 {
-	QString FileName = QFileDialog::getSaveFileName(this, tr("Export Templates"), "", tr("Minifigure Template Files (*.minifig);;All Files (*.*)"));
+	QString FileName = QFileDialog::getSaveFileName(this, tr("Export Templates"), "", tr("Minifigure Template Files (*.minifigure);;All Files (*.*)"));
 
 	if (FileName.isEmpty())
 		return;

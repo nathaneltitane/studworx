@@ -19,6 +19,13 @@ std::optional<float> swParseFloatLocalized(const QString& Value, QLocale Locale)
 
 void swSetupDialogHelp(QDialog* Dialog, QDialogButtonBox* ButtonBox);
 void swSetupWidgetHelp(QWidget* Root, QDialogButtonBox* ButtonBox);
+QString swRequestRebrickableApiKey(QWidget* Parent, const QString& Purpose);
+
+enum class swColorSource;
+
+QString swChooseColorConfigurationFile(QWidget* Parent, swColorSource Source, const QString& FileName, bool Existing);
+bool swUpdateColorConfigurationFile(QWidget* Parent, swColorSource Source, const QString& FileName, bool ShowSummary);
+QString swEnsureColorConfigurationFile(QWidget* Parent, swColorSource Source, const QString& FileName);
 
 // Gives windows a usable minimum size.
 class swWindowGeometryFilter : public QObject
@@ -176,6 +183,7 @@ enum class swPaintedIcon
 	BadgeRemove,
 	Close,
 	Undock,
+	Refresh,
 	Count
 };
 

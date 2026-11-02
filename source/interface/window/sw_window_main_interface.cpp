@@ -873,7 +873,7 @@ void swMainWindow::CreateToolBars()
 
 	// fill the builder when first shown
 	mMinifigureBuilderToolBar = new QDockWidget(tr("Minifigure Builder"), this);
-	mMinifigureBuilderToolBar->setObjectName("MinifigToolbar");
+	mMinifigureBuilderToolBar->setObjectName("MinifigureToolbar");
 	mMinifigureBuilderToolBar->setWhatsThis(tr("<p><b>Minifigure Builder</b></p><p>Choose the parts, colors and pose of a minifigure, then add it to the current model. The panel keeps its settings so you can add several variations.</p>"));
 	swSetupWidgetHelp(mMinifigureBuilderToolBar, nullptr);
 	addDockWidget(Qt::RightDockWidgetArea, mMinifigureBuilderToolBar);

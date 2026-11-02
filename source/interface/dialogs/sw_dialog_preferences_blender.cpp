@@ -1,11 +1,13 @@
 #include "sw_global.h"
 #include "sw_dialog_preferences_blender.h"
 #include "sw_application.h"
+#include "sw_library.h"
 #include "sw_window_main.h"
 #include "sw_model.h"
 #include "sw_colors.h"
 #include "sw_widget_picker_color.h"
 #include "sw_profile.h"
+#include "sw_color_configuration.h"
 #include "sw_http.h"
 #include "sw_file_zip.h"
 #include "sw_file.h"
@@ -61,7 +63,7 @@ swBlenderPreferences::BlenderPaths  swBlenderPreferences::mDefaultPaths [NUM_PAT
 	/* 0   PATH_BLENDER        */ {"blenderpath",        "blenderpath",        "",    QT_TRANSLATE_NOOP("QObject", "Blender Path"),             QT_TRANSLATE_NOOP("QObject", "Full file path to Blender application executable")},
 	/* 1   PATH_BLENDFILE      */ {"blendfile",          "blendfile",          "",    QT_TRANSLATE_NOOP("QObject", "Blendfile Path"),           QT_TRANSLATE_NOOP("QObject", "Full file path to a supplement .blend file - specify to append additional settings")},
 	/* 2   PATH_ENVIRONMENT    */ {"environmentfile",    "environmentfile",    "",    QT_TRANSLATE_NOOP("QObject", "Environment Texture Path"), QT_TRANSLATE_NOOP("QObject", "Full file path to .exr environment texture file - specify if not using default bundled in add-on")},
-	/* 3   PATH_LDCONFIG       */ {"customldconfigfile", "customldconfigfile", "",    QT_TRANSLATE_NOOP("QObject", "Custom LDConfig Path"),     QT_TRANSLATE_NOOP("QObject", "Full file path to custom LDConfig file - specify if not %1 alternate LDConfig file")},
+	/* 3   PATH_LDCONFIG       */ {"customldconfigfile", "customldconfigfile", "",    QT_TRANSLATE_NOOP("QObject", "LDraw Color Configuration"),     QT_TRANSLATE_NOOP("QObject", "Full file path to the LDraw Color Configuration file used by the custom color scheme")},
 	/* 4   PATH_LDRAW          */ {"ldrawdirectory",     "ldrawpath",          "",    QT_TRANSLATE_NOOP("QObject", "LDraw Directory"),          QT_TRANSLATE_NOOP("QObject", "Full directory path to the LDraw parts library (download from https://library.ldraw.org)")},
 	/* 5   PATH_LSYNTH         */ {"lsynthdirectory",    "",                   "",    QT_TRANSLATE_NOOP("QObject", "LSynth Directory"),         QT_TRANSLATE_NOOP("QObject", "Full directory path to LSynth primitives - specify if not using default bundled in add-on")},
 	/* 6   PATH_STUD_LOGO      */ {"studlogodirectory",  "",                   "",    QT_TRANSLATE_NOOP("QObject", "Stud Logo Directory"),      QT_TRANSLATE_NOOP("QObject", "Full directory path to stud logo primitives - if stud logo enabled, specify if unofficial parts not used or not using default bundled in add-on")},
@@ -85,7 +87,7 @@ swBlenderPreferences::BlenderSettings  swBlenderPreferences::mDefaultSettings [N
 	/* 9   LBL_INSTANCE_STUDS        */ {"instancestuds",                  "0",        QT_TRANSLATE_NOOP("QObject", "Instance Studs"),         QT_TRANSLATE_NOOP("QObject", "Creates a Blender Object for each and every stud (WARNING: can be slow to import and edit in Blender if there are lots of studs)")},
 	/*10   LBL_KEEP_ASPECT_RATIO     */ {"keepaspectratio",                "1",        QT_TRANSLATE_NOOP("QObject", "Keep Aspect Ratio"),      QT_TRANSLATE_NOOP("QObject", "Maintain the aspect ratio when resizing the output image - this attribute is not passed to Blender")},
 	/*11   LBL_LINK_PARTS            */ {"linkparts",                      "1",        QT_TRANSLATE_NOOP("QObject", "Link Like Parts"),        QT_TRANSLATE_NOOP("QObject", "Identical parts (of the same type and color) share the same mesh")},
-	/*12   LBL_MINIFIG_HIERARCHY     */ {"minifighierarchy",               "1",        QT_TRANSLATE_NOOP("QObject", "Parent Minifigs"),        QT_TRANSLATE_NOOP("QObject", "Parts of minifigs are automatically parented to each other in a hierarchy")},
+	/*12   LBL_MINIFIGURE_HIERARCHY  */ {"minifighierarchy",               "1",        QT_TRANSLATE_NOOP("QObject", "Parent Minifigures"),        QT_TRANSLATE_NOOP("QObject", "Parts of minifigures are automatically parented to each other in a hierarchy")},
 	/*13   LBL_NUMBER_NODES          */ {"numbernodes",                    "1",        QT_TRANSLATE_NOOP("QObject", "Number Objects"),         QT_TRANSLATE_NOOP("QObject", "Each object has a five-digit prefix, e.g., 00001_car. This keeps the list in its proper order.")},
 	/*14   LBL_OVERWRITE_IMAGE       */ {"overwriteimage",                 "1",        QT_TRANSLATE_NOOP("QObject", "Overwrite Image"),        QT_TRANSLATE_NOOP("QObject", "Specify whether to overwrite an existing rendered image file")},
 	/*15   LBL_OVERWRITE_MATERIALS   */ {"overwriteexistingmaterials",     "0",        QT_TRANSLATE_NOOP("QObject", "Use Existing Material"),  QT_TRANSLATE_NOOP("QObject", "Overwrite existing material with the same name")},
@@ -990,7 +992,7 @@ void swBlenderPreferences::ConfigureBlenderAddon(bool TestBlender, bool AddonUpd
 			if (Action == PR_INSTALL)
 			{
 				connect(mProcess, &QProcess::readyReadStandardOutput, this, [this]() { ReadStdOut(); });
-				const QString& LdrawLibPath = QFileInfo(swGetProfileString(SW_PROFILE_PARTS_LIBRARY)).absolutePath();
+				const QString LdrawLibPath = swApplication::GetLibraryDirectory();
 				QStringList SystemEnvironment = QProcess::systemEnvironment();
 				SystemEnvironment.prepend("LDRAW_DIRECTORY=" + LdrawLibPath);
 				SystemEnvironment.prepend("ADDONS_TO_LOAD=" + AddonPathsAndModuleNames);
@@ -1307,7 +1309,7 @@ void swBlenderPreferences::ConfigureBlenderAddon(bool TestBlender, bool AddonUpd
 		ScriptFile.setFileName(QString("%1/%2").arg(QDir::tempPath()).arg(ScriptName));
 		if (ScriptFile.open(QIODevice::WriteOnly | QIODevice::Text))
 		{
-			const QString& LdrawLibPath = QFileInfo(swGetProfileString(SW_PROFILE_PARTS_LIBRARY)).absolutePath();
+			const QString LdrawLibPath = swApplication::GetLibraryDirectory();
 			QTextStream Stream(&ScriptFile);
 
 			Stream << QLatin1String("@ECHO OFF& SETLOCAL") << Qt::endl;
@@ -2606,7 +2608,7 @@ void swBlenderPreferences::LoadSettings()
 		/* 1  PATH_BLENDFILE    */        << (QFileInfo::exists(DefaultBlendFile) ? DefaultBlendFile : QString())
 		/* 2  PATH_ENVIRONMENT  */        << QString()
 		/* 3  PATH_LDCONFIG     */        << swGetProfileString(SW_PROFILE_COLOR_CONFIGURATION)
-		/* 4  PATH_LDRAW        */        << LDrawPartsLibrary(swGetProfileString(SW_PROFILE_PARTS_LIBRARY))
+		/* 4  PATH_LDRAW        */        << LDrawPartsLibrary(swGetPartsLibrary() ? swGetPartsLibrary()->GetLibraryPath() : swGetProfileString(SW_PROFILE_PARTS_LIBRARY))
 		/* 5  PATH_LSYNTH       */        << QString()
 		/* 6  PATH_STUD_LOGO    */        << QString()
 		/* 7  PATH_STUDIO_LDRAW */        << QString()
@@ -3205,14 +3207,32 @@ void swBlenderPreferences::ValidateColourScheme(int Index)
 	const int Color_Scheme = ImportMM ? int(LBL_COLOUR_SCHEME_MM) : int(LBL_COLOUR_SCHEME);
 	BlenderSettings* Settings = ImportMM ? mBlenderSettingsMM : mBlenderSettings;
 
-	if (ComboBox->itemText(Index) == "custom" && mBlenderPaths[PATH_LDCONFIG].value.isEmpty() && swGetProfileString(SW_PROFILE_COLOR_CONFIGURATION).isEmpty())
+	const QString CustomColorPath = !mBlenderPaths[PATH_LDCONFIG].value.isEmpty() ? mBlenderPaths[PATH_LDCONFIG].value : swGetProfileString(SW_PROFILE_COLOR_CONFIGURATION);
+	QString EnsuredColorPath;
+
+	// the custom scheme asks for a missing color file first
+	if (ComboBox->itemText(Index) == "custom" && !swColorConfigurationExists(CustomColorPath))
+	{
+		EnsuredColorPath = swEnsureColorConfigurationFile(this, swColorSource::Standard, CustomColorPath);
+
+		if (!EnsuredColorPath.isEmpty())
+		{
+			mBlenderPaths[PATH_LDCONFIG].value = EnsuredColorPath;
+
+			if (mPathLineEditList.size() > PATH_LDCONFIG)
+				mPathLineEditList[PATH_LDCONFIG]->setText(EnsuredColorPath);
+			swSetProfileString(SW_PROFILE_COLOR_CONFIGURATION, EnsuredColorPath);
+		}
+	}
+
+	if (ComboBox->itemText(Index) == "custom" && !swColorConfigurationExists(CustomColorPath) && EnsuredColorPath.isEmpty())
 	{
 		BlenderSettings const* defaultSettings = ImportMM ? mDefaultSettingsMM : mDefaultSettings;
 		Settings[Color_Scheme].value = defaultSettings[Color_Scheme].value;
 
 		const QString& Title = tr("Set LDraw Color Scheme");
-		const QString& Header = "<b>" + tr ("Color scheme 'custom' cannot be enabled. Custom LDConfig file not found.") + "</b>";
-		const QString& Body = tr ("Color scheme 'custom' selected but no LDConfig file was specified.<br>The default color scheme '%1' will be used.<br>").arg(Settings[Color_Scheme].value);
+		const QString& Header = "<b>" + tr ("Color scheme 'custom' cannot be enabled. LDraw Color Configuration file not found.") + "</b>";
+		const QString& Body = tr ("Color scheme 'custom' selected but no LDraw Color Configuration file was specified.<br>The default color scheme '%1' will be used.<br>").arg(Settings[Color_Scheme].value);
 		ShowMessage(this, Header, Title, Body, QString(), MBB_OK, QMessageBox::Warning);
 	}
 	else

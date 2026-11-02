@@ -12,7 +12,7 @@ std::map<size_t, swPartData*> swTrainTrackInformation::mSleepers;
 
 void swTrainTrackInformation::Initialize(swPartsLibrary* Library)
 {
-	QFile ConfigFile(QLatin1String(":/resources/data/traintrack.json"));
+	QFile ConfigFile(QLatin1String(":/resources/data/train-tracks.json"));
 
 	if (!ConfigFile.open(QIODevice::ReadOnly))
 		return;

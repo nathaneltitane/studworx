@@ -64,19 +64,22 @@ static void swMigrateEarlierSettings()
 		swTakeOverSettings(QLatin1String("LeoCAD Software"), QLatin1String("LeoCAD"), false);
 }
 
+// short minifig names not yet spelled out
+static const QRegularExpression swMinifigureShortName(QStringLiteral("Minifig(?!ure)"));
+
 QString swRenameStoredName(QString Name)
 {
-	return Name.replace(QLatin1String("Pieces"), QLatin1String("Parts")).replace(QLatin1String("Piece"), QLatin1String("Part")).replace(QLatin1String("ViewSphere"), QLatin1String("ViewCube"));
+	return Name.replace(QLatin1String("Pieces"), QLatin1String("Parts")).replace(QLatin1String("Piece"), QLatin1String("Part")).replace(QLatin1String("ViewSphere"), QLatin1String("ViewCube")).replace(swMinifigureShortName, QLatin1String("Minifigure"));
 }
 
 static void swMigrateRenamedKeys()
 {
-	// rename piece and view sphere keys
+	// rename piece, view sphere and short minifig keys
 	QSettings Settings;
 
 	for (const QString& Key : Settings.allKeys())
 	{
-		if (!Key.contains(QLatin1String("Piece")) && !Key.contains(QLatin1String("ViewSphere")))
+		if (!Key.contains(QLatin1String("Piece")) && !Key.contains(QLatin1String("ViewSphere")) && !Key.contains(swMinifigureShortName))
 			continue;
 
 		Settings.setValue(swRenameStoredName(Key), Settings.value(Key));
@@ -126,7 +129,8 @@ static void swMigrateRenamedToolbars()
 	// keep toolbar places under new names
 	const QString RenamedToolbars[][2] =
 	{
-		{ QLatin1String("PiecesToolbar"), QLatin1String("PartsToolbar") }
+		{ QLatin1String("PiecesToolbar"), QLatin1String("PartsToolbar") },
+		{ QLatin1String("MinifigToolbar"), QLatin1String("MinifigureToolbar") }
 	};
 
 	QSettings Settings;
@@ -143,6 +147,23 @@ static void swMigrateRenamedToolbars()
 	Settings.sync();
 }
 
+static void swMigrateRenamedCategories()
+{
+	// spell out the short minifig category name
+	QSettings Settings;
+	const QString Key = QLatin1String("Settings/Categories");
+	const QString OldCategories = QString::fromUtf8(Settings.value(Key).toByteArray());
+	QString Categories = OldCategories;
+
+	Categories.replace(QRegularExpression(QStringLiteral("^Minifig="), QRegularExpression::MultilineOption), QLatin1String("Minifigure="));
+
+	if (Categories == OldCategories)
+		return;
+
+	Settings.setValue(Key, Categories.toUtf8());
+	Settings.sync();
+}
+
 void swMigrateSettings()
 {
 	// register stored number lists
@@ -154,4 +175,5 @@ void swMigrateSettings()
 	swMigrateRenamedKeys();
 	swMigrateRenamedShortcuts();
 	swMigrateRenamedToolbars();
+	swMigrateRenamedCategories();
 }

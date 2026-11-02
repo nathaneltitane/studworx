@@ -298,15 +298,21 @@ struct swCommandLineOptions
 	bool Save3DS = false;
 	bool SaveCOLLADA = false;
 	bool SaveKMZ = false;
-	bool KMZAllParts = false;
+	bool SetKMZGeometry = false;
+	bool KMZVisibleSurfaces = true;
 	bool SaveCSV = false;
 	bool SaveBrickLink = false;
+	bool SetBrickLinkCondition = false;
+	bool SetBrickLinkWantedList = false;
+	bool BrickLinkNotify = false;
+	int BrickLinkCondition = 0;
 	bool SaveHTML = false;
 	bool SavePOVRay = false;
 	bool RenderPOVRay = false;
 	bool SetCameraAngles = false;
 	bool SetCameraPosition = false;
 	bool Orthographic = false;
+	bool SetProjection = false;
 	bool TransparentImage = false;
 	bool SetFoV = false;
 	bool SetZPlanes = false;
@@ -351,6 +357,7 @@ struct swCommandLineOptions
 	QString SaveKMZName;
 	QString SaveCSVName;
 	QString SaveBrickLinkName;
+	QString BrickLinkWantedList;
 	QString SaveHTMLName;
 	QString SavePOVRayName;
 	QString RenderPOVRayName;
@@ -415,6 +422,8 @@ public:
 	bool LoadPartsLibrary(const QList<QPair<QString, bool>>& LibraryPaths, bool OnlyUsePaths, swStudStyle StudStyle, bool StudCylinderColorEnabled);
 	bool ReloadPartsLibrary(const QString& LibraryPath, bool OfficialLibrary);
 	static QString GetDownloadLibraryPath();
+	static QString GetEnvironmentLibraryPath();
+	static QString GetLibraryDirectory();
 
 	void SetClipboard(const QByteArray& Clipboard);
 	void ExportClipboard(const QByteArray& Clipboard);

@@ -1,5 +1,6 @@
 #include "sw_global.h"
 #include "sw_library.h"
+#include "sw_color_configuration.h"
 #include "sw_loader_asset.h"
 #include "sw_manager_thumbnail.h"
 #include "sw_file_zip.h"
@@ -782,11 +783,26 @@ bool swPartsLibrary::IsRetiredPartData(const swPartData* PartData) const
 
 void swPartsLibrary::LoadColors()
 {
-	QString CustomColorsPath = swGetProfileString(SW_PROFILE_COLOR_CONFIGURATION);
+	const swColorSource ColorSource = swGetColorSource();
+	const QString CustomColorsPath = swGetColorConfigurationPath(ColorSource);
 
+	// a missing chosen file falls back to the bundled or library colors
 	if (!CustomColorsPath.isEmpty())
 	{
 		swDiskFile ColorFile(CustomColorsPath);
+
+		if (ColorFile.Open(QIODevice::ReadOnly) && swLoadColorFile(ColorFile, mStudStyle))
+		{
+			UpdateLoadingMeshColors();
+			emit ColorsLoaded();
+			return;
+		}
+	}
+
+	// the alternate colors fall back to the bundled alternate file
+	if (ColorSource == swColorSource::Alternate)
+	{
+		swDiskFile ColorFile(swGetColorConfigurationResource(ColorSource));
 
 		if (ColorFile.Open(QIODevice::ReadOnly) && swLoadColorFile(ColorFile, mStudStyle))
 		{
@@ -866,13 +882,13 @@ void swPartsLibrary::UpdateStudStyleSource()
 	const QLatin1String FileNames[] =
 	{
 		QLatin1String(""),								  // Plain
-		QLatin1String(":/resources/data/studlogo1.zip"),		  // ThinLinesLogo
-		QLatin1String(":/resources/data/studlogo2.zip"),		  // OutlineLogo
-		QLatin1String(":/resources/data/studlogo3.zip"),		  // SharpTopLogo
-		QLatin1String(":/resources/data/studlogo4.zip"),		  // RoundedTopLogo
-		QLatin1String(":/resources/data/studlogo5.zip"),		  // FlattenedLogo
-		QLatin1String(":/resources/data/studslegostyle1.zip"), // HighContrast
-		QLatin1String(":/resources/data/studslegostyle2.zip")  // HighContrastLogo
+		QLatin1String(":/resources/data/ldraw-logo-stud-01.zip"),		  // ThinLinesLogo
+		QLatin1String(":/resources/data/ldraw-logo-stud-02.zip"),		  // OutlineLogo
+		QLatin1String(":/resources/data/ldraw-logo-stud-03.zip"),		  // SharpTopLogo
+		QLatin1String(":/resources/data/ldraw-logo-stud-04.zip"),		  // RoundedTopLogo
+		QLatin1String(":/resources/data/ldraw-logo-stud-05.zip"),		  // FlattenedLogo
+		QLatin1String(":/resources/data/ldraw-logo-stud-style-01.zip"), // HighContrast
+		QLatin1String(":/resources/data/ldraw-logo-stud-style-02.zip")  // HighContrastLogo
 	};
 
 	SW_ARRAY_SIZE_CHECK(FileNames, swStudStyle::Count);

@@ -18,6 +18,7 @@
 #include "sw_dialog_render.h"
 #include "sw_dialog_instructions.h"
 #include "sw_dialog_image.h"
+#include "sw_dialog_export_bricklink.h"
 #include "sw_profile.h"
 #include "sw_view.h"
 #include "sw_project.h"
@@ -115,7 +116,15 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		break;
 
 	case SW_FILE_EXPORT_BRICKLINK:
-		ShowResultError(swGetActiveProject()->ExportBrickLink(QString()), tr("Export BrickLink"));
+		if (const std::optional<swBrickLinkOptions> Options = swRequestBrickLinkExport(this))
+		{
+			const swResult<swBrickLinkExport> Result = swGetActiveProject()->ExportBrickLink(QString(), *Options);
+
+			if (Result)
+				swShowBrickLinkExportSummary(this, Result.value());
+			else if (!Result.error().isEmpty())
+				QMessageBox::warning(this, tr("Export BrickLink"), Result.error());
+		}
 		break;
 
 	case SW_FILE_EXPORT_CSV:

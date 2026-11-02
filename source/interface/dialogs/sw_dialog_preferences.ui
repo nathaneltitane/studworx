@@ -3,7 +3,7 @@
  <class>swPreferencesDialog</class>
  <widget class="QDialog" name="swPreferencesDialog">
   <property name="whatsThis">
-   <string>&lt;p&gt;&lt;b&gt;Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Configure the application, display, colors, part categories, and keyboard and mouse shortcuts. Choose OK to save the changes or Cancel to discard edits in Preferences. Language and antialiasing changes, and clearing the parts library, require restarting StudWorx.&lt;/p&gt;&lt;p&gt;Export buttons write files immediately. Blender add-on settings have their own Apply action and can configure Blender before you close Preferences.&lt;/p&gt;</string>
+   <string>&lt;p&gt;&lt;b&gt;Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Configure the application, rendering, views, interface, part categories, and keyboard and mouse shortcuts. Choose OK to save the changes or Cancel to discard edits in Preferences. Language and antialiasing changes, and clearing the parts library, require restarting StudWorx.&lt;/p&gt;&lt;p&gt;Export buttons write files immediately. Blender add-on settings have their own Apply action and can configure Blender before you close Preferences.&lt;/p&gt;</string>
   </property>
   <property name="geometry">
    <rect>
@@ -24,7 +24,7 @@
      </property>
      <widget class="QWidget" name="tabGeneral">
       <property name="whatsThis">
-       <string>&lt;p&gt;&lt;b&gt;General Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set application behavior and custom library, configuration, and renderer paths. Leave optional configuration paths empty to use the built-in settings.&lt;/p&gt;</string>
+       <string>&lt;p&gt;&lt;b&gt;General Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set application behavior and custom library, configuration, and renderer paths. Bundled copies of the color, minifigure and other data files are used until you set your own.&lt;/p&gt;</string>
       </property>
       <attribute name="title">
        <string>General</string>
@@ -161,12 +161,12 @@
            </layout>
           </item>
           <item row="3" column="0">
-           <widget class="QLabel" name="label_17">
+           <widget class="QLabel" name="ColorConfigLabel">
             <property name="toolTip">
-             <string>Choose a custom LDraw color configuration file, or leave empty to use the library colors.</string>
+             <string>Choose your copy of LDConfig.ldr, the official file that defines the LDraw colors and their edge lines, under any name. The parts library copy, or else the bundled copy, is used until a file is set. Update downloads the latest from library.ldraw.org.</string>
             </property>
             <property name="text">
-             <string>Color Configuration</string>
+             <string>LDraw Color Configuration</string>
             </property>
             <property name="buddy">
              <cstring>ColorConfigEdit</cstring>
@@ -178,29 +178,92 @@
             <item>
              <widget class="QLineEdit" name="ColorConfigEdit">
               <property name="accessibleName">
-               <string>Color Configuration</string>
+               <string>LDraw Color Configuration</string>
               </property>
               <property name="toolTip">
-               <string>Choose a custom LDraw color configuration file, or leave empty to use the library colors.</string>
+               <string>Choose your copy of LDConfig.ldr, the official file that defines the LDraw colors and their edge lines, under any name. The parts library copy, or else the bundled copy, is used until a file is set. Update downloads the latest from library.ldraw.org.</string>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QToolButton" name="ColorConfigBrowseButton">
               <property name="toolTip">
-               <string>Choose a custom LDraw color configuration file.</string>
+               <string>Choose an existing LDraw Color Configuration file.</string>
               </property>
               <property name="text">
                <string>...</string>
               </property>
              </widget>
             </item>
+            <item>
+             <widget class="QToolButton" name="ColorConfigUpdateButton">
+              <property name="accessibleName">
+               <string>Update LDraw Color Configuration</string>
+              </property>
+              <property name="toolTip">
+               <string>Download the latest LDConfig.ldr from library.ldraw.org and save it to the file named here, or choose a file name first.</string>
+              </property>
+              <property name="text">
+               <string>Update</string>
+              </property>
+             </widget>
+            </item>
            </layout>
           </item>
           <item row="4" column="0">
+           <widget class="QLabel" name="ColorConfigAlternateLabel">
+            <property name="toolTip">
+             <string>Choose your copy of LDCfgalt.ldr, the official alternate file with more realistic edge line colors for rendering, under any name. The bundled copy is used until a file is set. Update downloads the latest from library.ldraw.org.</string>
+            </property>
+            <property name="text">
+             <string>LDraw Alternate Color Configuration</string>
+            </property>
+            <property name="buddy">
+             <cstring>ColorConfigAlternateEdit</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <layout class="QHBoxLayout" name="ColorConfigAlternateLayout">
+            <item>
+             <widget class="QLineEdit" name="ColorConfigAlternateEdit">
+              <property name="accessibleName">
+               <string>LDraw Alternate Color Configuration</string>
+              </property>
+              <property name="toolTip">
+               <string>Choose your copy of LDCfgalt.ldr, the official alternate file with more realistic edge line colors for rendering, under any name. The bundled copy is used until a file is set. Update downloads the latest from library.ldraw.org.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="ColorConfigAlternateBrowseButton">
+              <property name="toolTip">
+               <string>Choose an existing LDraw Alternate Color Configuration file.</string>
+              </property>
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="ColorConfigAlternateUpdateButton">
+              <property name="accessibleName">
+               <string>Update LDraw Alternate Color Configuration</string>
+              </property>
+              <property name="toolTip">
+               <string>Download the latest LDCfgalt.ldr from library.ldraw.org and save it to the file named here, or choose a file name first.</string>
+              </property>
+              <property name="text">
+               <string>Update</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="5" column="0">
            <widget class="QLabel" name="label_18">
             <property name="toolTip">
-             <string>Choose a custom minifigure builder settings file, or leave empty to use the built-in choices.</string>
+             <string>Choose your minifigure.ini, the LDraw minifigure part list, under any name. The bundled copy is used until a file is set. Update downloads the latest from ldraw.org.</string>
             </property>
             <property name="text">
              <string>Minifigure Builder Settings</string>
@@ -210,7 +273,7 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
+          <item row="5" column="1">
            <layout class="QHBoxLayout" name="MinifigureBuilderSettingsLayout">
             <item>
              <widget class="QLineEdit" name="MinifigureBuilderSettingsEdit">
@@ -218,23 +281,86 @@
                <string>Minifigure Builder Settings</string>
               </property>
               <property name="toolTip">
-               <string>Choose a custom minifigure builder settings file, or leave empty to use the built-in choices.</string>
+               <string>Choose your minifigure.ini, the LDraw minifigure part list, under any name. The bundled copy is used until a file is set. Update downloads the latest from ldraw.org.</string>
               </property>
              </widget>
             </item>
             <item>
              <widget class="QToolButton" name="MinifigureBuilderSettingsBrowseButton">
               <property name="toolTip">
-               <string>Choose a minifigure builder settings INI file.</string>
+               <string>Choose an existing minifigure builder settings file.</string>
               </property>
               <property name="text">
                <string>...</string>
               </property>
              </widget>
             </item>
+            <item>
+             <widget class="QToolButton" name="MinifigureBuilderSettingsUpdateButton">
+              <property name="accessibleName">
+               <string>Update Minifigure Builder Settings</string>
+              </property>
+              <property name="toolTip">
+               <string>Download the latest minifigure part list from ldraw.org and save it as the minifigure builder settings file.</string>
+              </property>
+              <property name="text">
+               <string>Update</string>
+              </property>
+             </widget>
+            </item>
            </layout>
           </item>
-          <item row="5" column="0">
+          <item row="6" column="0">
+           <widget class="QLabel" name="BrickLinkMappingLabel">
+            <property name="toolTip">
+             <string>Choose the file that translates LDraw part numbers and colors for BrickLink wanted list exports, under any name. Update builds or refreshes it from the library and Rebrickable.</string>
+            </property>
+            <property name="text">
+             <string>BrickLink Mapping</string>
+            </property>
+            <property name="buddy">
+             <cstring>BrickLinkMappingEdit</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <layout class="QHBoxLayout" name="BrickLinkMappingLayout">
+            <item>
+             <widget class="QLineEdit" name="BrickLinkMappingEdit">
+              <property name="accessibleName">
+               <string>BrickLink Mapping</string>
+              </property>
+              <property name="toolTip">
+               <string>Choose the file that translates LDraw part numbers and colors for BrickLink wanted list exports, under any name. Update builds or refreshes it from the library and Rebrickable.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="BrickLinkMappingBrowseButton">
+              <property name="toolTip">
+               <string>Choose an existing BrickLink mapping file.</string>
+              </property>
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="BrickLinkMappingUpdateButton">
+              <property name="accessibleName">
+               <string>Update BrickLink Mapping</string>
+              </property>
+              <property name="toolTip">
+               <string>Build or refresh the BrickLink mapping file now from the BrickLink numbers in the library parts and from Rebrickable, keeping the entries already in the file.</string>
+              </property>
+              <property name="text">
+               <string>Update</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="7" column="0">
            <widget class="QLabel" name="povrayLabel">
             <property name="toolTip">
              <string>Set the POV-Ray executable used for rendering.</string>
@@ -247,7 +373,7 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="1">
+          <item row="7" column="1">
            <layout class="QHBoxLayout" name="povrayLayout">
             <item>
              <widget class="QLineEdit" name="povrayExecutable">
@@ -271,7 +397,7 @@
             </item>
            </layout>
           </item>
-          <item row="6" column="0">
+          <item row="8" column="0">
            <widget class="QLabel" name="label_9">
             <property name="toolTip">
              <string>Set the LGEO library folder used by POV-Ray exports.</string>
@@ -284,7 +410,7 @@
             </property>
            </widget>
           </item>
-          <item row="6" column="1">
+          <item row="8" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_10">
             <item>
              <widget class="QLineEdit" name="lgeoPath">
@@ -794,12 +920,12 @@
      </widget>
      <widget class="QWidget" name="tabRendering">
       <property name="whatsThis">
-       <string>&lt;p&gt;&lt;b&gt;Rendering Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Control shading, stud geometry, selection appearance, edges, and step effects. Some options are unavailable when the graphics system does not support them.&lt;/p&gt;</string>
+       <string>&lt;p&gt;&lt;b&gt;Rendering Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Control shading, stud geometry, colors, selection appearance, edges, and step effects. Some options are unavailable when the graphics system does not support them.&lt;/p&gt;</string>
       </property>
       <attribute name="title">
        <string>Rendering</string>
       </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,0,0,0,1">
+      <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,0,0,0,0,1">
        <item>
         <widget class="QGroupBox" name="PerformanceGroup">
          <property name="title">
@@ -1046,6 +1172,38 @@
              </size>
             </property>
            </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="ColorsGroup">
+         <property name="title">
+          <string>Colors</string>
+         </property>
+         <layout class="QGridLayout" name="ColorsLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="ColorSourceLabel">
+            <property name="toolTip">
+             <string>Choose where the LDraw colors and their edge lines come from: the file inside the parts library, or one of your own LDraw color configuration files set under Reference Paths.</string>
+            </property>
+            <property name="text">
+             <string>Colors From</string>
+            </property>
+            <property name="buddy">
+             <cstring>ColorSourceCombo</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="ColorSourceCombo">
+            <property name="accessibleName">
+             <string>Colors From</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose where the LDraw colors and their edge lines come from: the file inside the parts library, or one of your own LDraw color configuration files set under Reference Paths.</string>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
@@ -2716,12 +2874,12 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="ColorTab">
+     <widget class="QWidget" name="tabInterface">
       <property name="whatsThis">
-       <string>&lt;p&gt;&lt;b&gt;Display Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose colors for the background, objects, grid, and interface. These settings control the display; they do not change the LDraw colors assigned to model parts.&lt;/p&gt;</string>
+       <string>&lt;p&gt;&lt;b&gt;Interface Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose colors for the background, objects, grid, and interface. These settings control the display; they do not change the LDraw colors assigned to model parts.&lt;/p&gt;</string>
       </property>
       <attribute name="title">
-       <string>Colors</string>
+       <string>Interface</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_9" rowstretch="0,0,0,0,0,0,0,0,1">
        <item row="0" column="0">
@@ -4529,8 +4687,16 @@
   <tabstop>ShadowLibraryBrowseButton</tabstop>
   <tabstop>ColorConfigEdit</tabstop>
   <tabstop>ColorConfigBrowseButton</tabstop>
+  <tabstop>ColorConfigUpdateButton</tabstop>
+  <tabstop>ColorConfigAlternateEdit</tabstop>
+  <tabstop>ColorConfigAlternateBrowseButton</tabstop>
+  <tabstop>ColorConfigAlternateUpdateButton</tabstop>
   <tabstop>MinifigureBuilderSettingsEdit</tabstop>
   <tabstop>MinifigureBuilderSettingsBrowseButton</tabstop>
+  <tabstop>MinifigureBuilderSettingsUpdateButton</tabstop>
+  <tabstop>BrickLinkMappingEdit</tabstop>
+  <tabstop>BrickLinkMappingBrowseButton</tabstop>
+  <tabstop>BrickLinkMappingUpdateButton</tabstop>
   <tabstop>povrayExecutable</tabstop>
   <tabstop>povrayExecutableBrowse</tabstop>
   <tabstop>lgeoPath</tabstop>
@@ -4563,6 +4729,7 @@
   <tabstop>HighContrastButton</tabstop>
   <tabstop>ShadingMode</tabstop>
   <tabstop>LightingStyle</tabstop>
+  <tabstop>ColorSourceCombo</tabstop>
   <tabstop>FadeSteps</tabstop>
   <tabstop>FadeStepsColor</tabstop>
   <tabstop>HighlightNewParts</tabstop>

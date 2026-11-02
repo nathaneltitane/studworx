@@ -7,7 +7,7 @@
 #include "sw_data_part.h"
 #include "sw_library.h"
 #include "sw_manager_thumbnail.h"
-#include "sw_bricklink.h"
+#include "sw_dialog_export_bricklink.h"
 #include "sw_project.h"
 
 class swFrozenPartsView : public QTableView
@@ -471,14 +471,21 @@ QString swPropertiesDialog::GetExportFileName(const QString& Extension, const QS
 
 void swPropertiesDialog::ExportBrickLink()
 {
+	const std::optional<swBrickLinkOptions> Options = swRequestBrickLinkExport(this);
+
+	if (!Options)
+		return;
+
 	const QString FileName = GetExportFileName("xml", tr("Export BrickLink"), tr("XML Files (*.xml);;All Files (*.*)"));
 
 	if (FileName.isEmpty())
 		return;
 
-	swResult<void> Result = swExportBrickLink(FileName, mOptions->PartsList);
+	const swResult<int> Result = swExportBrickLink(FileName, mOptions->PartsList, *Options);
 
-	if (!Result && !Result.error().isEmpty())
+	if (Result)
+		swShowBrickLinkExportSummary(this, { FileName, Result.value() });
+	else if (!Result.error().isEmpty())
 		QMessageBox::warning(this, tr("Export BrickLink"), Result.error());
 }
 

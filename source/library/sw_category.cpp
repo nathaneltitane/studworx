@@ -46,7 +46,7 @@ void swResetCategories(std::vector<swLibraryCategory>& Categories, bool BuiltInL
 		"Electric=^%Battery | ^%Electric\n"
 		"Hinge and Bracket=^%Hinge | ^%Bracket | ^%Turntable\n"
 		"Hose=^%Hose | ^%Rubber | ^%String\n"
-		"Minifig=^%Minifig\n"
+		"Minifigure=^%Minifig\n"
 		"Miscellaneous=^%Arm | ^%Barrel | ^%Brush | ^%Bucket | ^%Cardboard | ^%Claw | ^%Cockpit | ^%Cocoon | ^%Conveyor | ^%Crane | ^%Cupboard | ^%Fence | ^%Gold | ^%Handle | ^%Hook | ^%Jack | ^%Key | ^%Ladder | ^%Medical | ^%Motor | ^%Rock | ^%Rope | ^%Slide | ^%Sheet | ^%Snow | ^%Sports | ^%Spring | ^%Staircase | ^%Stretcher | ^%Tap | ^%Tipper | ^%Trailer | ^%Umbrella | ^%Winch\n"
 		"Other=^%Ball | ^%Belville | ^%BigFig | ^%Die | ^%Duplo | ^%Fabuland | ^%Figure | ^%Homemaker | ^%Maxifig | ^%Microfig | ^%Mursten | ^%Quatro | ^%Scala | ^%Znap\n"
 		"Panel=^%Panel | ^%Castle Wall | ^%Castle Turret\n"

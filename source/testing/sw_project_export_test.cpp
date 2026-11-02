@@ -13,7 +13,7 @@ void swTests::KMZKeepsVisibleSurfaces_data()
 // Exports a red box around a hidden blue box to KMZ with the StudWorx binary. The archive must hold
 // the kml index and the COLLADA model named after the archive with spaces as underscores, both with
 // fixed dates, visible surfaces only must drop the blue box
-// and merge the red faces into one mesh, and --kmz-all-parts must keep both. SW_TEST_BINARY is the
+// and merge the red faces into one mesh, and --kmz-geometry all must keep both. SW_TEST_BINARY is the
 // studworx program, and SW_TEST_NATIVE_DISPLAY=1 renders on the running display instead of offscreen.
 void swTests::KMZKeepsVisibleSurfaces()
 {
@@ -61,10 +61,7 @@ void swTests::KMZKeepsVisibleSurfaces()
 		ExportEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
 
 	const QString FileName = Folder.filePath(ArchiveName);
-	QStringList Arguments = { Model.fileName(), "-kmz", FileName };
-
-	if (AllParts)
-		Arguments << "--kmz-all-parts";
+	const QStringList Arguments = { Model.fileName(), "--export-kmz", FileName, "--kmz-geometry", AllParts ? "all" : "visible" };
 
 	QProcess Export;
 	Export.setProcessEnvironment(ExportEnvironment);

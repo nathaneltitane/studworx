@@ -8,6 +8,7 @@
 #include "sw_file.h"
 #include "sw_profile.h"
 #include "sw_string.h"
+#include "sw_minifigure_configuration.h"
 
 const char* swMinifigureBuilder::mSectionNames[SW_MINIFIGURE_ITEM_COUNT] =
 {
@@ -99,7 +100,7 @@ void swMinifigureBuilder::LoadSettings()
 		}
 	}
 
-	swDiskFile MinifigureBuilderSettingsFile(":/resources/data/minifig.ini");
+	swDiskFile MinifigureBuilderSettingsFile(swGetMinifigureConfigurationResource());
 
 	if (MinifigureBuilderSettingsFile.Open(QIODevice::ReadOnly))
 		ParseSettings(MinifigureBuilderSettingsFile);
@@ -610,7 +611,7 @@ void swMinifigureBuilder::LoadTemplates()
 	mTemplates.clear();
 
 	QSettings Settings;
-	Settings.beginGroup("Minifig");
+	Settings.beginGroup("Minifigure");
 	QByteArray TemplateData = Settings.value("Templates").toByteArray();
 
 	AddTemplatesJson(TemplateData);
@@ -619,7 +620,7 @@ void swMinifigureBuilder::LoadTemplates()
 void swMinifigureBuilder::SaveTemplates()
 {
 	QSettings Settings;
-	Settings.beginGroup("Minifig");
+	Settings.beginGroup("Minifigure");
 	Settings.setValue("Templates", GetTemplatesJson());
 }
 

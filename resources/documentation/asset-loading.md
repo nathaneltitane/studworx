@@ -455,7 +455,7 @@ scoped reference management.
 reference, and releases the previous identity. Passing an lvalue copies and retains;
 passing a moved handle transfers the reference. Its raw-pointer constructor is a
 borrowing convenience that acquires its own reference. Placed parts and models
-store their definition handles directly, as do the current selection, minifig
+store their definition handles directly, as do the current selection, Minifigure
 parts, and thumbnail dependencies. Stored insertion previews use owning
 `swPreviewInsertPartInformation` entries, while transient `swInsertPartInformation` queries
 remain borrowed. Project-remapping owners also retain scoped references.

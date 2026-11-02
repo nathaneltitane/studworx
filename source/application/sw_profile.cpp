@@ -145,8 +145,10 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "ShadowLibrary", ""),                                          // SW_PROFILE_SHADOW_LIBRARY
 	swProfileEntry("Settings", "ShadowLibraryEnabled", true),                                 // SW_PROFILE_SHADOW_LIBRARY_ENABLED
 	swProfileEntry("Settings", "PartPalettes"),                                               // SW_PROFILE_PART_PALETTES
-	swProfileEntry("Settings", "MinifigSettings", ""),                                         // SW_PROFILE_MINIFIGURE_BUILDER_SETTINGS
+	swProfileEntry("Settings", "MinifigureSettings", ""),                                         // SW_PROFILE_MINIFIGURE_BUILDER_SETTINGS
 	swProfileEntry("Settings", "ColorConfig", ""),                                             // SW_PROFILE_COLOR_CONFIGURATION
+	swProfileEntry("Settings", "ColorConfigAlternate", ""),                                    // SW_PROFILE_COLOR_CONFIGURATION_ALTERNATE
+	swProfileEntry("Settings", "ColorSource", -1),                                             // SW_PROFILE_COLOR_SOURCE
 	swProfileEntry("Settings", "Shortcuts"),                                                   // SW_PROFILE_KEYBOARD_SHORTCUTS
 	swProfileEntry("Settings", "MouseShortcuts", QStringList()),                               // SW_PROFILE_MOUSE_SHORTCUTS
 	swProfileEntry("Settings", "Categories"),                                                  // SW_PROFILE_CATEGORIES
@@ -315,13 +317,17 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("InstructionsDefaults", "GridDivisions", 8),                                // SW_PROFILE_INSTRUCTIONS_DEFAULT_GRID_DIVISIONS
 	swProfileEntry("Settings", "PreviewSquareViewport", 0),                                    // SW_PROFILE_PREVIEW_SQUARE_VIEWPORT
 	swProfileEntry("Settings", "PreviewKeepSelection", 0),                                     // SW_PROFILE_PREVIEW_KEEP_SELECTION
-	swProfileEntry("Settings", "MinifigSyncRendering", 1),                                     // SW_PROFILE_MINIFIGURE_BUILDER_SYNCHRONIZED_RENDERING
-	swProfileEntry("Settings", "MinifigShadingMode", static_cast<int>(swShadingMode::DefaultLights)), // SW_PROFILE_MINIFIGURE_BUILDER_SHADING_MODE
-	swProfileEntry("Settings", "MinifigDrawEdgeLines", 1),                                     // SW_PROFILE_MINIFIGURE_BUILDER_DRAW_EDGE_LINES
-	swProfileEntry("Settings", "MinifigDrawConditionalLines", 1),                              // SW_PROFILE_MINIFIGURE_BUILDER_DRAW_CONDITIONAL_LINES
-	swProfileEntry("Settings", "MinifigLineWidth", 1.0f),                                      // SW_PROFILE_MINIFIGURE_BUILDER_LINE_WIDTH
+	swProfileEntry("Settings", "MinifigureSyncRendering", 1),                                     // SW_PROFILE_MINIFIGURE_BUILDER_SYNCHRONIZED_RENDERING
+	swProfileEntry("Settings", "MinifigureShadingMode", static_cast<int>(swShadingMode::DefaultLights)), // SW_PROFILE_MINIFIGURE_BUILDER_SHADING_MODE
+	swProfileEntry("Settings", "MinifigureDrawEdgeLines", 1),                                     // SW_PROFILE_MINIFIGURE_BUILDER_DRAW_EDGE_LINES
+	swProfileEntry("Settings", "MinifigureDrawConditionalLines", 1),                              // SW_PROFILE_MINIFIGURE_BUILDER_DRAW_CONDITIONAL_LINES
+	swProfileEntry("Settings", "MinifigureLineWidth", 1.0f),                                      // SW_PROFILE_MINIFIGURE_BUILDER_LINE_WIDTH
 	swProfileEntry("Settings", "PartsSnapToTiles", 1),                                        // SW_PROFILE_PARTS_SNAP_TO_TILES
-	swProfileEntry("Settings", "RebrickableApiKey", "")                                        // SW_PROFILE_REBRICKABLE_API_KEY
+	swProfileEntry("Settings", "RebrickableApiKey", ""),                                       // SW_PROFILE_REBRICKABLE_API_KEY
+	swProfileEntry("Settings", "BrickLinkMapping", ""),                                        // SW_PROFILE_BRICKLINK_MAPPING
+	swProfileEntry("Settings", "BrickLinkCondition", 0),                                       // SW_PROFILE_BRICKLINK_CONDITION
+	swProfileEntry("Settings", "BrickLinkWantedList", ""),                                     // SW_PROFILE_BRICKLINK_WANTED_LIST
+	swProfileEntry("Settings", "BrickLinkNotify", false)                                       // SW_PROFILE_BRICKLINK_NOTIFY
 };
 
 void swProfileInitialize()

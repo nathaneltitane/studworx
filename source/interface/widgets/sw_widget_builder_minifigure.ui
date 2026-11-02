@@ -82,10 +82,10 @@
       <item>
        <widget class="QToolButton" name="TemplateImportButton">
         <property name="toolTip">
-         <string>Add templates from a .minifig file.</string>
+         <string>Add templates from a .minifigure file.</string>
         </property>
         <property name="whatsThis">
-         <string>&lt;p&gt;&lt;b&gt;Import Templates&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add saved configurations from a .minifig file to the template collection. Existing template names are kept when the imported file contains the same names.&lt;/p&gt;</string>
+         <string>&lt;p&gt;&lt;b&gt;Import Templates&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add saved configurations from a .minifigure file to the template collection. Existing template names are kept when the imported file contains the same names.&lt;/p&gt;</string>
         </property>
         <property name="text">
          <string>Import...</string>
@@ -95,10 +95,10 @@
       <item>
        <widget class="QToolButton" name="TemplateExportButton">
         <property name="toolTip">
-         <string>Save the entire template collection to a .minifig file.</string>
+         <string>Save the entire template collection to a .minifigure file.</string>
         </property>
         <property name="whatsThis">
-         <string>&lt;p&gt;&lt;b&gt;Export Templates&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Write all templates to a .minifig file for backup or sharing. Export includes the entire collection, not just the selected template.&lt;/p&gt;</string>
+         <string>&lt;p&gt;&lt;b&gt;Export Templates&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Write all templates to a .minifigure file for backup or sharing. Export includes the entire collection, not just the selected template.&lt;/p&gt;</string>
         </property>
         <property name="text">
          <string>Export...</string>

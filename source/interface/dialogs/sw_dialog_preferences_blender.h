@@ -138,7 +138,7 @@ private:
 		LBL_INSTANCE_STUDS,                     //  9   QCheckBox
 		LBL_KEEP_ASPECT_RATIO,                  // 10   QCheckBox
 		LBL_LINK_PARTS,                         // 11   QCheckBox
-		LBL_MINIFIG_HIERARCHY,                  // 12   QCheckBox
+		LBL_MINIFIGURE_HIERARCHY,               // 12   QCheckBox
 		LBL_NUMBER_NODES,                       // 13   QCheckBox
 		LBL_OVERWRITE_IMAGE,                    // 14   QCheckBox
 		LBL_OVERWRITE_MATERIALS,                // 15   QCheckBox
@@ -204,7 +204,7 @@ private:
 		CTL_INSTANCE_STUDS_BOX,                                  //  9
 		CTL_KEEP_ASPECT_RATIO_BOX,                               // 10
 		CTL_LINK_PARTS_BOX,                                      // 11
-		CTL_MINIFIG_HIERARCHY_BOX,                               // 12
+		CTL_MINIFIGURE_HIERARCHY_BOX,                            // 12
 		CTL_NUMBER_NODES_BOX,                                    // 13
 		CTL_OVERWRITE_IMAGE_BOX,                                 // 14
 		CTL_OVERWRITE_MATERIALS_BOX,                             // 15

@@ -8,6 +8,7 @@ SOURCES += \
 	$$PWD/sw_dialog_category.cpp \
 	$$PWD/sw_dialog_color_edge.cpp \
 	$$PWD/sw_dialog_database_sets.cpp \
+	$$PWD/sw_dialog_export_bricklink.cpp \
 	$$PWD/sw_dialog_group.cpp \
 	$$PWD/sw_dialog_groups_edit.cpp \
 	$$PWD/sw_dialog_html.cpp \
@@ -36,6 +37,7 @@ HEADERS += \
 	$$PWD/sw_dialog_category.h \
 	$$PWD/sw_dialog_color_edge.h \
 	$$PWD/sw_dialog_database_sets.h \
+	$$PWD/sw_dialog_export_bricklink.h \
 	$$PWD/sw_dialog_group.h \
 	$$PWD/sw_dialog_groups_edit.h \
 	$$PWD/sw_dialog_html.h \
