@@ -256,12 +256,6 @@
 
 			/* version */
 
-			.version {
-				margin: 0;
-				padding: 25px 20px 0 20px;
-				text-align: center;
-			}
-
 			/* sections */
 
 			.section {
@@ -772,6 +766,21 @@
 				margin: 0;
 			}
 
+			/* the bird avatar sits beside the version and copyright line, as in the mechablocks drawer */
+
+			.copyright .made {
+				display: flex;
+				align-items: center;
+				gap: 10px;
+				margin: 0 0 10px 0;
+			}
+
+			.copyright .avatar img {
+				display: block;
+				width: 40px;
+				height: 40px;
+			}
+
 			/* the last section ends flush so every site keeps the same gap above the credits */
 
 			.section > :last-child,
@@ -1245,8 +1254,6 @@
 				<h2 class="tagline">BUILD. DESIGN. CREATE.</h2>
 			</div>
 		</div>
-
-		<p class="version">Version // 2026-11-01</p>
 
 		<section id="interface" class="section reveal">
 			<header class="head-section">
@@ -2957,7 +2964,10 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p>StudWorx is based on <a href="https://github.com/leozide/leocad">LeoCAD</a> by Leonardo Zide and its contributors. Parts come from the <a href="https://www.ldraw.org">LDraw</a> library, part connections from the <a href="https://github.com/RolandMelkert/LDCadShadowLibrary">LDCad shadow library</a> by Roland Melkert and POV-Ray parts from the <a href="https://github.com/jncraton/lgeo">LGEO library</a> by Lutz Uhlmann, neither bundled with StudWorx.</p>
 			<p>StudWorx is free software released under the GNU General Public License version 3.</p>
 			<p>Related projects: <a href="https://l2cu.app">L²CU</a>, the LDraw Linux command line utility, renders, exports and documents LDraw models with StudWorx, and <a href="https://mechablocks.com">MechaBlocks</a> publishes custom LEGO® mecha models built with it, each with a 3D viewer and building instructions.</p>
-			<p>StudWorx is made by <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
+			<div class="made">
+				<a class="avatar" href="https://nathaneltitane.com" aria-label="N Λ T H Λ N E L"><img src="logo/avatar-bird.png" alt="" width="40" height="40"></a>
+				<p>Version // 2026-11-01<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
+			</div>
 			<p>Disclaimer: LEGO® is a trademark of the LEGO® Group, which does not sponsor, authorize or endorse this project.</p>
 		</div>
 
