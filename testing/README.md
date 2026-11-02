@@ -67,7 +67,7 @@ when needed. Keep application startup and packaging out of the test target.
 
 ## GitHub CI
 
-`.github/workflows/continuous.yml` builds and runs this target on Linux (Qt 5),
+`.github/workflows/continuous.yml` builds and runs this target on Linux based systems (Qt 5),
 macOS (Qt 6), and Windows x64 (Qt 6 with MSVC 2022), on pull requests to `main`,
 pushes to `main`, and manual runs. JUnit reports are uploaded as artifacts,
 including on test failure. Adding a test does not require changing the workflow

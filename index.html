@@ -2780,7 +2780,7 @@
 					<tbody>
 						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-01_amd64.deb / arm64.deb</td></tr>
 						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-01-x86_64.rpm / aarch64.rpm</td></tr>
-						<tr><td>Any Linux</td><td>studworx-linux-2026-11-01-x86_64.appimage / aarch64.appimage</td></tr>
+						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-01-x86_64.appimage / aarch64.appimage</td></tr>
 						<tr><td>Windows</td><td>studworx-windows-2026-11-01-x64.exe</td></tr>
 						<tr><td>macOS</td><td>studworx-macos-2026-11-01-universal.dmg</td></tr>
 					</tbody>
@@ -2790,7 +2790,7 @@
 			<p class="more"><a href="https://github.com/nathaneltitane/studworx/releases/latest">Download the latest release ›</a></p>
 
 			<ul class="points">
-				<li><b>Linux.</b> The .deb and .rpm packages install to /opt/studworx. The AppImage runs from anywhere after chmod +x. Tested on Debian 12 and 13, Ubuntu 22.04 and 24.04, Rocky Linux 9, Fedora and openSUSE Tumbleweed.</li>
+				<li><b>Linux based systems.</b> The .deb and .rpm packages install to /opt/studworx. The AppImage runs from anywhere after chmod +x. Tested on Debian 12 and 13, Ubuntu 22.04 and 24.04, Rocky Linux 9, Fedora and openSUSE Tumbleweed.</li>
 				<li><b>macOS.</b> The disk <a href="#image">image</a> is not notarized: on the first start, right click StudWorx and choose Open.</li>
 				<li><b>Prepare.</b> To build, install a C++ compiler, Qt 5 (widgets, OpenGL, print support, network, xml and concurrent modules) and zlib development packages, listed below as build requirements. The optional packages add gamepad input, the terminal panel with KDE Frameworks KParts and a KDE Frameworks 5 Konsole, and the file manager thumbnails with KIO.</li>
 			</ul>
@@ -2872,7 +2872,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>File &gt; Export &gt; KMZ: zipped COLLADA for web viewers, flattened to the visible surfaces with one mesh per color by default, or every part with the KMZ Geometry preference, also from the command line with -kmz and --kmz-all-parts</li>
 					<li>Command line: <code>-bl</code>, <code>--export-bricklink</code> writes the BrickLink XML inventory like <code>--export-csv</code></li>
 					<li>Images: saved in the format of their extension, <code>.jpg</code>, <code>.bmp</code> and <code>.gif</code> are no longer written as PNG, backgrounds are opaque unless <code>--transparent</code> is used with PNG or GIF, and <code>.gif</code> steps save one still frame per step</li>
-					<li>Command line: renders and exports run without a display on Linux, <code>--stud-style</code> help lists the current stud style names</li>
+					<li>Command line: renders and exports run without a display on Linux based systems, <code>--stud-style</code> help lists the current stud style names</li>
 				</ul>
 			</details>
 

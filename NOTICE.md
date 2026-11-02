@@ -35,7 +35,7 @@
   - File > Export > KMZ: zipped COLLADA for web viewers, flattened to the visible surfaces with one mesh per color by default, or every part with the KMZ Geometry preference, also from the command line with -kmz and --kmz-all-parts
   - Command line: '-bl', '--export-bricklink' writes the BrickLink XML inventory like '--export-csv'
   - Images: saved in the format of their extension, '.jpg', '.bmp' and '.gif' are no longer written as PNG, backgrounds are opaque unless '--transparent' is used with PNG or GIF, and '.gif' steps save one still frame per step
-  - Command line: renders and exports run without a display on Linux, '--stud-style' help lists the current stud style names
+  - Command line: renders and exports run without a display on Linux based systems, '--stud-style' help lists the current stud style names
 
   </details>
 
