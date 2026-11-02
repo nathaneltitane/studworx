@@ -348,6 +348,8 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 
 ![The Instructions window](resources/images/instructions-window.png "wide")
 
+![Element margins, padding and anchors](resources/images/instructions-page-margins-padding-anchors.png "wide")
+
 <!-- gallery natural -->
 
 ![Properties](resources/images/instructions-panel-properties.png)
