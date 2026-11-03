@@ -98,20 +98,19 @@ void swViewCube::CreateResources(swContext* Context)
 	QImage AtlasImage(AtlasWidth, AtlasHeight, QImage::Format_Alpha8);
 	AtlasImage.fill(0);
 
+	// one size for all labels so the widest one fits inside the cell
+	constexpr int MaxLabelWidth = 360;
+	for (const QString& ViewName : ViewNames)
+		while (Font.pointSize() > 1 && QFontMetrics(Font).horizontalAdvance(ViewName) > MaxLabelWidth)
+			Font.setPointSize(Font.pointSize() - 1);
+
 	for (int ViewIdx = 0; ViewIdx < 6; ViewIdx++)
 	{
-		QFont LabelFont = Font;
-
-		// keep labels inside the cell
-		constexpr int MaxLabelWidth = 360;
-		while (LabelFont.pointSize() > 1 && QFontMetrics(LabelFont).horizontalAdvance(ViewNames[ViewIdx]) > MaxLabelWidth)
-			LabelFont.setPointSize(LabelFont.pointSize() - 1);
-
 		Painter.begin(&PainterImage);
 		Painter.setRenderHint(QPainter::TextAntialiasing);
 		Painter.fillRect(0, 0, PainterImage.width(), PainterImage.height(), QColor(0, 0, 0));
 		Painter.setPen(QColor(255, 255, 255));
-		Painter.setFont(LabelFont);
+		Painter.setFont(Font);
 		Painter.drawText(0, 0, PainterImage.width(), PainterImage.height(), Qt::AlignCenter, ViewNames[ViewIdx]);
 		Painter.end();
 

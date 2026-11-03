@@ -466,16 +466,10 @@ void swMinifigureBuilderWidget::TemplateExportButtonClicked()
 	if (FileName.isEmpty())
 		return;
 
-	QFile File(FileName);
+	QSaveFile File(FileName);
 
-	if (!File.open(QIODevice::WriteOnly))
-	{
+	if (!File.open(QIODevice::WriteOnly) || File.write(mMinifigureBuilder->GetTemplatesJson()) < 0 || !File.commit())
 		QMessageBox::warning(this, tr("Export Templates"), tr("Error writing to file '%1':\n%2").arg(FileName, File.errorString()));
-		return;
-	}
-
-	QByteArray Templates = mMinifigureBuilder->GetTemplatesJson();
-	File.write(Templates);
 }
 
 void swMinifigureBuilderWidget::SetCurrentTemplateModified()

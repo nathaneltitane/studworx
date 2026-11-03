@@ -64,14 +64,14 @@ void swKeyboardShortcuts::Reset()
 
 bool swKeyboardShortcuts::Save(const QString& FileName)
 {
-	QFile File(FileName);
+	QSaveFile File(FileName);
 
 	if (!File.open(QIODevice::WriteOnly))
 		return false;
 
 	QTextStream Stream(&File);
 
-	return Save(Stream);
+	return Save(Stream) && File.commit();
 }
 
 bool swKeyboardShortcuts::Save(QTextStream& Stream)
@@ -188,7 +188,7 @@ bool swMouseShortcuts::Save(const QString& FileName)
 	if (!Save(Shortcuts))
 		return false;
 
-	QFile File(FileName);
+	QSaveFile File(FileName);
 
 	if (!File.open(QIODevice::WriteOnly))
 		return false;
@@ -200,7 +200,7 @@ bool swMouseShortcuts::Save(const QString& FileName)
 
 	Stream.flush();
 
-	return true;
+	return File.commit();
 }
 bool swMouseShortcuts::Save(QStringList& Shortcuts)
 {

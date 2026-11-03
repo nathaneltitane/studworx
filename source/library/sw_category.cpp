@@ -129,14 +129,14 @@ bool swLoadCategories(const QByteArray& Buffer, std::vector<swLibraryCategory>& 
 
 bool swSaveCategories(const QString& FileName, const std::vector<swLibraryCategory>& Categories)
 {
-	QFile File(FileName);
+	QSaveFile File(FileName);
 
 	if (!File.open(QIODevice::WriteOnly))
 		return false;
 
 	QTextStream Stream(&File);
 
-	return swSaveCategories(Stream, Categories);
+	return swSaveCategories(Stream, Categories) && File.commit();
 }
 
 bool swSaveCategories(QTextStream& Stream, const std::vector<swLibraryCategory>& Categories)
