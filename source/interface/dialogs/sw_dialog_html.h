@@ -22,10 +22,12 @@ protected:
 
 private slots:
 	void OutputFolderBrowseClicked();
+	void EditStyleSheetClicked();
 
 private:
 	swHTMLExportOptions* mOptions;
 	QColor mBackgroundColor;
+	QString mStyleSheet;
 	std::array<QColor, SW_HTML_OVERRIDE_COLOR_COUNT> mOverrideColors;
 	QList<QWidget*> mOverrideColorWidgets;
 	Ui::swHTMLDialog* ui;

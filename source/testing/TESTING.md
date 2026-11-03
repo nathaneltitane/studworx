@@ -23,7 +23,8 @@ and come before moved part numbers, read from comma, quoted and tab separated li
 An HTML export into a folder that already holds a file must add only a folder
 named after the model, with a styled `index.html` as its entry page that holds
 the first instructions page image and a `step-1` anchor, and with a Landscape
-Display the page image must be saved at twice the size `index.html` shows it.
+Display the page image must be saved at twice the size `index.html` shows it. A style sheet in the profile must replace the built-in one, the built-in one must name the feature of each block in a comment set apart by blank lines,
+and a step model box Corner Radius must round the page cards.
 Rotation tests turn parts in 15, 30 and 90 degree steps around every axis, in
 the part's own frame and in model coordinates, and check that each quarter turn
 lands exactly on 0 and 1, that the turned part keeps its position and moves by

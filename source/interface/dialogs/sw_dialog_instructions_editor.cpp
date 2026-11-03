@@ -7,6 +7,8 @@
 #include "sw_project.h"
 #include "sw_window_main.h"
 #include "sw_window_utilities.h"
+#include "sw_widget_text_edit.h"
+#include "sw_widget_editor.h"
 
 // use to check ldraw lines and metas
 static const QStringList& swGetLDrawMetaKeywords()
@@ -88,7 +90,6 @@ public:
 protected:
 	void highlightBlock(const QString& Text) override;
 
-	QTextCharFormat CreateFormat(const QColor& Color, bool Bold, bool Italic) const;
 	QTextCharFormat GetColorCodeFormat(const QString& Code) const;
 
 	QTextCharFormat mCommentFormat;
@@ -107,29 +108,14 @@ swLDrawHighlighter::swLDrawHighlighter(QObject* Parent)
 	// tints for dark and light themes
 	const bool DarkTheme = gApplication && gApplication->IsDarkTheme();
 
-	mCommentFormat = CreateFormat(DarkTheme ? QColor(0x8a, 0x95, 0xa3) : QColor(0x6a, 0x73, 0x7d), false, true);
-	mKeywordFormat = CreateFormat(DarkTheme ? QColor(0x82, 0xaa, 0xff) : QColor(0x00, 0x33, 0xb3), true, false);
-	mValueFormat = CreateFormat(DarkTheme ? QColor(0xc3, 0xe8, 0x8d) : QColor(0x06, 0x7d, 0x17), false, false);
-	mNumberFormat = CreateFormat(DarkTheme ? QColor(0xf7, 0x8c, 0x6c) : QColor(0x17, 0x50, 0xeb), false, false);
-	mTypeFormat = CreateFormat(DarkTheme ? QColor(0xff, 0xcb, 0x6b) : QColor(0x9e, 0x6a, 0x00), true, false);
-	mPartFormat = CreateFormat(DarkTheme ? QColor(0x89, 0xdd, 0xff) : QColor(0x00, 0x62, 0x7a), true, false);
-	mDataFormat = CreateFormat(DarkTheme ? QColor(0x6a, 0x73, 0x80) : QColor(0x9a, 0xa0, 0xa6), false, false);
-	mErrorFormat = CreateFormat(DarkTheme ? QColor(0xff, 0x53, 0x70) : QColor(0xd3, 0x2f, 0x2f), false, false);
-	mErrorFormat.setUnderlineStyle(QTextCharFormat::WaveUnderline);
-	mErrorFormat.setUnderlineColor(mErrorFormat.foreground().color());
-}
-
-QTextCharFormat swLDrawHighlighter::CreateFormat(const QColor& Color, bool Bold, bool Italic) const
-{
-	QTextCharFormat Format;
-
-	Format.setForeground(Color);
-	Format.setFontItalic(Italic);
-
-	if (Bold)
-		Format.setFontWeight(QFont::Bold);
-
-	return Format;
+	mCommentFormat = swGetEditorTextFormat(swEditorTextFormat::Comment, DarkTheme);
+	mKeywordFormat = swGetEditorTextFormat(swEditorTextFormat::Keyword, DarkTheme);
+	mValueFormat = swGetEditorTextFormat(swEditorTextFormat::Value, DarkTheme);
+	mNumberFormat = swGetEditorTextFormat(swEditorTextFormat::Number, DarkTheme);
+	mTypeFormat = swGetEditorTextFormat(swEditorTextFormat::Type, DarkTheme);
+	mPartFormat = swGetEditorTextFormat(swEditorTextFormat::Part, DarkTheme);
+	mDataFormat = swGetEditorTextFormat(swEditorTextFormat::Data, DarkTheme);
+	mErrorFormat = swGetEditorTextFormat(swEditorTextFormat::Error, DarkTheme);
 }
 
 QTextCharFormat swLDrawHighlighter::GetColorCodeFormat(const QString& Code) const
@@ -281,175 +267,6 @@ void swLDrawHighlighter::highlightBlock(const QString& Text)
 		setFormat(0, 1, mErrorFormat);
 }
 
-// number lines and mark line ends
-class swEditorTextEdit : public QPlainTextEdit
-{
-public:
-	swEditorTextEdit(QWidget* Parent)
-		: QPlainTextEdit(Parent)
-	{
-		mLineNumberArea = new QWidget(this);
-		mLineNumberArea->installEventFilter(this);
-
-		connect(this, &QPlainTextEdit::blockCountChanged, this, &swEditorTextEdit::UpdateLineNumberWidth);
-		connect(this, &QPlainTextEdit::updateRequest, this, &swEditorTextEdit::UpdateLineNumberArea);
-		connect(this, &QPlainTextEdit::cursorPositionChanged, mLineNumberArea, QOverload<>::of(&QWidget::update));
-	}
-
-	void SetLineMarkersVisible(bool Visible)
-	{
-		mLineMarkersVisible = Visible;
-		viewport()->update();
-	}
-
-	void SetLineNumbersVisible(bool Visible)
-	{
-		mLineNumbersVisible = Visible;
-		mLineNumberArea->setVisible(Visible);
-		UpdateLineNumberWidth();
-	}
-
-	qreal GetLineHeight() const
-	{
-		// measure the laid out lines
-		const QTextBlock Block = document()->firstBlock();
-		const QTextLayout* Layout = Block.layout();
-
-		if (Block.isValid() && Layout && Layout->lineCount())
-			return blockBoundingRect(Block).height() / Layout->lineCount();
-
-		return fontMetrics().lineSpacing();
-	}
-
-protected:
-	int GetLineNumberWidth() const
-	{
-		if (!mLineNumbersVisible)
-			return 0;
-
-		const QFontMetrics Metrics(font());
-		const int Digits = QString::number(qMax(blockCount(), 1)).size();
-
-		return Metrics.horizontalAdvance(QLatin1Char('9')) * Digits + Metrics.horizontalAdvance(QLatin1Char(' ')) * 2;
-	}
-
-	void UpdateLineNumberWidth()
-	{
-		setViewportMargins(GetLineNumberWidth(), 0, 0, 0);
-		ResizeLineNumberArea();
-	}
-
-	void UpdateLineNumberArea(const QRect& Rect, int ScrollY)
-	{
-		if (ScrollY)
-			mLineNumberArea->scroll(0, ScrollY);
-		else
-			mLineNumberArea->update(0, Rect.y(), mLineNumberArea->width(), Rect.height());
-
-		if (Rect.contains(viewport()->rect()))
-			UpdateLineNumberWidth();
-	}
-
-	void ResizeLineNumberArea()
-	{
-		const QRect Rect = contentsRect();
-		mLineNumberArea->setGeometry(Rect.left(), Rect.top(), GetLineNumberWidth(), Rect.height());
-	}
-
-	void resizeEvent(QResizeEvent* Event) override
-	{
-		QPlainTextEdit::resizeEvent(Event);
-		ResizeLineNumberArea();
-	}
-
-	void changeEvent(QEvent* Event) override
-	{
-		QPlainTextEdit::changeEvent(Event);
-
-		if (Event->type() == QEvent::FontChange)
-			UpdateLineNumberWidth();
-	}
-
-	bool eventFilter(QObject* Object, QEvent* Event) override
-	{
-		if (Object == mLineNumberArea && Event->type() == QEvent::Paint)
-		{
-			PaintLineNumbers(static_cast<QPaintEvent*>(Event)->rect());
-			return true;
-		}
-
-		return QPlainTextEdit::eventFilter(Object, Event);
-	}
-
-	void PaintLineNumbers(const QRect& Rect)
-	{
-		QPainter Painter(mLineNumberArea);
-		Painter.fillRect(Rect, palette().color(QPalette::Window));
-		Painter.setFont(font());
-
-		// number the cursor line in text color
-		const int CursorBlock = textCursor().blockNumber();
-		const int Margin = QFontMetrics(font()).horizontalAdvance(QLatin1Char(' '));
-		const int Width = mLineNumberArea->width() - Margin;
-		const int Height = QFontMetrics(font()).height();
-		const QPointF Offset = contentOffset();
-
-		for (QTextBlock Block = firstVisibleBlock(); Block.isValid(); Block = Block.next())
-		{
-			const int Top = qRound(blockBoundingGeometry(Block).translated(Offset).top());
-
-			if (Top > Rect.bottom())
-				break;
-
-			if (!Block.isVisible())
-				continue;
-
-			Painter.setPen(palette().color(Block.blockNumber() == CursorBlock ? QPalette::Text : QPalette::PlaceholderText));
-			Painter.drawText(0, Top, Width, Height, Qt::AlignRight | Qt::AlignVCenter, QString::number(Block.blockNumber() + 1));
-		}
-	}
-
-	void paintEvent(QPaintEvent* Event) override
-	{
-		QPlainTextEdit::paintEvent(Event);
-
-		if (!mLineMarkersVisible)
-			return;
-
-		QPainter Painter(viewport());
-		Painter.setFont(font());
-		Painter.setPen(palette().color(QPalette::PlaceholderText));
-
-		const QPointF Offset = contentOffset();
-		const int Bottom = Event->rect().bottom();
-
-		for (QTextBlock Block = firstVisibleBlock(); Block.isValid(); Block = Block.next())
-		{
-			const QRectF Geometry = blockBoundingGeometry(Block).translated(Offset);
-
-			if (Geometry.top() > Bottom)
-				break;
-
-			const QTextLayout* Layout = Block.layout();
-
-			// an empty last line has no end
-			if (!Block.isVisible() || !Layout || !Layout->lineCount() || (!Block.next().isValid() && Block.length() <= 1))
-				continue;
-
-			// arrow after the last character
-			const QTextLine Line = Layout->lineAt(Layout->lineCount() - 1);
-			const qreal X = Geometry.left() + Line.cursorToX(Block.length() - 1);
-			const qreal Y = Geometry.top() + Line.y() + Line.ascent();
-
-			Painter.drawText(QPointF(X, Y), QString(QChar(0x21b5)));
-		}
-	}
-
-	QWidget* mLineNumberArea = nullptr;
-	bool mLineMarkersVisible = false;
-	bool mLineNumbersVisible = false;
-};
-
 swInstructionsEditorWidget::swInstructionsEditorWidget(QWidget* Parent, Project* Project, swInstructions* Instructions)
 	: QDockWidget(Parent), mProject(Project), mInstructions(Instructions)
 {
@@ -482,141 +299,17 @@ swInstructionsEditorWidget::swInstructionsEditorWidget(QWidget* Parent, Project*
 	mApplyButton = CreateButton(ButtonRow, tr("Apply"), tr("Check the syntax of the edited text and load the model from it, the change is unsaved until the model is saved."));
 	mRevertButton = CreateButton(ButtonRow, tr("Revert"), tr("Discard the edits and show the text of the model again."));
 
-	// options button at the top right
-	QWidget* OptionsRow = swCreatePanelRow(CentralWidget);
-	swAddPanelRowStretch(OptionsRow);
-	Layout->addWidget(OptionsRow);
-
-	QMenu* OptionsMenu = new QMenu(OptionsRow);
-	swAddPanelOptionsButton(OptionsRow, OptionsMenu, tr("Configure the editor."), tr("Editor Options"));
-
-	mHighlightAction = OptionsMenu->addAction(tr("&Syntax Highlighting"));
-	mHighlightAction->setCheckable(true);
-	mHighlightAction->setChecked(swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_EDITOR_HIGHLIGHT) != 0);
-	connect(mHighlightAction, &QAction::toggled, this, &swInstructionsEditorWidget::SetHighlightEnabled);
-
-	mNumbersAction = OptionsMenu->addAction(tr("Line &Numbers"));
-	mNumbersAction->setCheckable(true);
-	mNumbersAction->setChecked(swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_EDITOR_NUMBERS) != 0);
-	connect(mNumbersAction, &QAction::toggled, this, &swInstructionsEditorWidget::SetNumbersEnabled);
-
-	mWrapAction = OptionsMenu->addAction(tr("&Wrap Lines"));
-	mWrapAction->setCheckable(true);
-	mWrapAction->setChecked(swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_EDITOR_WRAP) != 0);
-	connect(mWrapAction, &QAction::toggled, this, &swInstructionsEditorWidget::SetWrapEnabled);
-
-	mMarkersAction = OptionsMenu->addAction(tr("Whitespace &Markers"));
-	mMarkersAction->setCheckable(true);
-	mMarkersAction->setChecked(swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_EDITOR_MARKERS) != 0);
-	connect(mMarkersAction, &QAction::toggled, this, &swInstructionsEditorWidget::SetMarkersEnabled);
-
-	OptionsMenu->addSeparator();
-
-	mFindAction = OptionsMenu->addAction(tr("&Find and Replace"));
-	mFindAction->setCheckable(true);
-	mFindAction->setShortcut(QKeySequence::Find);
-	mFindAction->setShortcutContext(Qt::WidgetWithChildrenShortcut);
-	addAction(mFindAction);
-	connect(mFindAction, &QAction::toggled, this, &swInstructionsEditorWidget::SetFindVisible);
-
-	QAction* MatchCaseAction = OptionsMenu->addAction(tr("Match &Case"));
-	MatchCaseAction->setCheckable(true);
-	connect(MatchCaseAction, &QAction::toggled, this, [this](bool Checked)
-	{
-		mMatchCase = Checked;
-		UpdateMatches();
-	});
-
-	QAction* WholeWordsAction = OptionsMenu->addAction(tr("Wh&ole Words"));
-	WholeWordsAction->setCheckable(true);
-	connect(WholeWordsAction, &QAction::toggled, this, [this](bool Checked)
-	{
-		mWholeWords = Checked;
-		UpdateMatches();
-	});
-
-	// find and replace rows below the text
-	mFindWidget = new QWidget(CentralWidget);
-	QVBoxLayout* FindLayout = new QVBoxLayout(mFindWidget);
-	FindLayout->setContentsMargins(0, 0, 0, 0);
-	mFindWidget->hide();
-
-	QWidget* FindRow = swCreatePanelRow(mFindWidget);
-	FindLayout->addWidget(FindRow);
-
-	mFindEdit = new QLineEdit(FindRow);
-	mFindEdit->setPlaceholderText(tr("Find"));
-	mFindEdit->setAccessibleName(tr("Find"));
-	mFindEdit->setToolTip(tr("Text to find in the model file, enter finds the next match and shift enter the previous one."));
-	mFindEdit->setClearButtonEnabled(true);
-	swSetupPanelEdit(mFindEdit);
-	static_cast<QHBoxLayout*>(FindRow->layout())->addWidget(mFindEdit, 2);
-
-	QToolButton* PreviousButton = CreateButton(FindRow, tr("Previous"), tr("Select the previous match."));
-	QToolButton* NextButton = CreateButton(FindRow, tr("Next"), tr("Select the next match."));
-
-	QWidget* ReplaceRow = swCreatePanelRow(mFindWidget);
-	FindLayout->addWidget(ReplaceRow);
-
-	mReplaceEdit = new QLineEdit(ReplaceRow);
-	mReplaceEdit->setPlaceholderText(tr("Replace"));
-	mReplaceEdit->setAccessibleName(tr("Replace"));
-	mReplaceEdit->setToolTip(tr("Text that replaces the matches, enter replaces the selected match."));
-	swSetupPanelEdit(mReplaceEdit);
-	static_cast<QHBoxLayout*>(ReplaceRow->layout())->addWidget(mReplaceEdit, 2);
-
-	QToolButton* ReplaceButton = CreateButton(ReplaceRow, tr("Replace"), tr("Replace the selected match and select the next one."));
-	QToolButton* ReplaceAllButton = CreateButton(ReplaceRow, tr("Replace All"), tr("Replace every match in the text."));
-
-	mMatchLabel = new QLabel(FindRow);
-	mMatchLabel->setMinimumWidth(mMatchLabel->fontMetrics().horizontalAdvance(tr("No Matches")));
-	mMatchLabel->setAlignment(Qt::AlignCenter);
-	static_cast<QHBoxLayout*>(FindRow->layout())->insertWidget(1, mMatchLabel);
-
-	QLabel* ReplaceSpacer = new QLabel(ReplaceRow);
-	ReplaceSpacer->setMinimumWidth(mMatchLabel->minimumWidth());
-	static_cast<QHBoxLayout*>(ReplaceRow->layout())->insertWidget(1, ReplaceSpacer);
-
-	connect(mFindEdit, &QLineEdit::textChanged, this, [this]()
-	{
-		// find from the selection start
-		QTextCursor Cursor = mTextEdit->textCursor();
-		Cursor.setPosition(Cursor.selectionStart());
-		mTextEdit->setTextCursor(Cursor);
-		FindMatch(false);
-	});
-	connect(mFindEdit, &QLineEdit::returnPressed, this, [this]()
-	{
-		FindMatch(QApplication::keyboardModifiers() & Qt::ShiftModifier);
-	});
-	connect(mReplaceEdit, &QLineEdit::returnPressed, this, &swInstructionsEditorWidget::ReplaceClicked);
-	connect(PreviousButton, &QToolButton::clicked, this, [this]() { FindMatch(true); });
-	connect(NextButton, &QToolButton::clicked, this, [this]() { FindMatch(false); });
-	connect(ReplaceButton, &QToolButton::clicked, this, &swInstructionsEditorWidget::ReplaceClicked);
-	connect(ReplaceAllButton, &QToolButton::clicked, this, &swInstructionsEditorWidget::ReplaceAllClicked);
-
-	QShortcut* CloseFindShortcut = new QShortcut(QKeySequence(Qt::Key_Escape), mFindWidget, nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
-	connect(CloseFindShortcut, &QShortcut::activated, mFindAction, [this]() { mFindAction->setChecked(false); });
-
-	// fixed font keeps the columns
-	mTextEdit = new swEditorTextEdit(CentralWidget);
-	mTextEdit->setFont(QFontDatabase::systemFont(QFontDatabase::FixedFont));
-	mTextEdit->setLineWrapMode(mWrapAction->isChecked() ? QPlainTextEdit::WidgetWidth : QPlainTextEdit::NoWrap);
+	// shared editor with options, find and replace
+	mHighlighter = new swLDrawHighlighter(this);
+	mEditor = new swEditorWidget(CentralWidget, mHighlighter);
+	mTextEdit = mEditor->GetTextEdit();
 	mTextEdit->setToolTip(tr("Text of the model file."));
 	mTextEdit->setAccessibleName(tr("Editor"));
+	connect(mEditor, &swEditorWidget::SnapRequested, this, &swInstructionsEditorWidget::SnapRequested);
 
 	// editor buttons below the text
-	Layout->addWidget(mTextEdit, 1);
-	Layout->addWidget(mFindWidget);
+	Layout->addWidget(mEditor, 1);
 	Layout->addWidget(ButtonRow);
-
-	SetMarkersEnabled(mMarkersAction->isChecked());
-	mTextEdit->SetLineNumbersVisible(mNumbersAction->isChecked());
-
-	mHighlighter = new swLDrawHighlighter(this);
-
-	if (mHighlightAction->isChecked())
-		mHighlighter->setDocument(mTextEdit->document());
 
 	connect(mApplyButton, &QToolButton::clicked, this, &swInstructionsEditorWidget::ApplyClicked);
 
@@ -628,8 +321,6 @@ swInstructionsEditorWidget::swInstructionsEditorWidget(QWidget* Parent, Project*
 	connect(SaveAction, &QAction::triggered, this, [this]() { ApplyText(true); });
 	connect(mRevertButton, &QToolButton::clicked, this, &swInstructionsEditorWidget::RevertClicked);
 	connect(mTextEdit->document(), &QTextDocument::modificationChanged, this, &swInstructionsEditorWidget::UpdateButtons);
-	connect(mTextEdit, &QPlainTextEdit::textChanged, this, &swInstructionsEditorWidget::UpdateMatches);
-	connect(mTextEdit, &QPlainTextEdit::cursorPositionChanged, this, &swInstructionsEditorWidget::UpdateMatches);
 
 	// follow the model while shown
 	connect(this, &QDockWidget::visibilityChanged, this, [this](bool Visible)
@@ -800,38 +491,16 @@ bool swInstructionsEditorWidget::ValidateText()
 	return false;
 }
 
+// use to follow the preferences editor options
+void swInstructionsEditorWidget::UpdateOptions()
+{
+	mEditor->UpdateOptions();
+}
+
 void swInstructionsEditorWidget::RevertClicked()
 {
 	mTextEdit->document()->setModified(false);
 	UpdateText();
-}
-
-// use to follow the preferences editor options
-void swInstructionsEditorWidget::UpdateOptions()
-{
-	mHighlightAction->setChecked(swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_EDITOR_HIGHLIGHT) != 0);
-	mNumbersAction->setChecked(swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_EDITOR_NUMBERS) != 0);
-	mWrapAction->setChecked(swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_EDITOR_WRAP) != 0);
-	mMarkersAction->setChecked(swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_EDITOR_MARKERS) != 0);
-}
-
-void swInstructionsEditorWidget::SetHighlightEnabled(bool Enabled)
-{
-	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_EDITOR_HIGHLIGHT, Enabled);
-	mHighlighter->setDocument(Enabled ? mTextEdit->document() : nullptr);
-}
-
-void swInstructionsEditorWidget::SetNumbersEnabled(bool Enabled)
-{
-	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_EDITOR_NUMBERS, Enabled);
-	mTextEdit->SetLineNumbersVisible(Enabled);
-}
-
-void swInstructionsEditorWidget::SetWrapEnabled(bool Enabled)
-{
-	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_EDITOR_WRAP, Enabled);
-	mTextEdit->setLineWrapMode(Enabled ? QPlainTextEdit::WidgetWidth : QPlainTextEdit::NoWrap);
-	emit SnapRequested();
 }
 
 // use to fit whole lines in the text
@@ -856,168 +525,4 @@ int swInstructionsEditorWidget::GetSnapDelta() const
 	}
 
 	return Delta;
-}
-
-void swInstructionsEditorWidget::SetMarkersEnabled(bool Enabled)
-{
-	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_EDITOR_MARKERS, Enabled);
-
-	// show whitespace and line end markers
-	QTextDocument* Document = mTextEdit->document();
-	QTextOption Option = Document->defaultTextOption();
-	Option.setFlags(Enabled ? Option.flags() | QTextOption::ShowTabsAndSpaces : Option.flags() & ~QTextOption::ShowTabsAndSpaces);
-	Document->setDefaultTextOption(Option);
-	mTextEdit->SetLineMarkersVisible(Enabled);
-}
-
-void swInstructionsEditorWidget::SetFindVisible(bool Visible)
-{
-	QSignalBlocker Blocker(mFindAction);
-	mFindAction->setChecked(Visible);
-	mFindWidget->setVisible(Visible);
-	emit SnapRequested();
-
-	if (!Visible)
-	{
-		mTextEdit->setExtraSelections({});
-		mTextEdit->setFocus();
-		return;
-	}
-
-	// find a one line selection
-	const QString Selection = mTextEdit->textCursor().selectedText();
-
-	if (!Selection.isEmpty() && !Selection.contains(QChar::ParagraphSeparator))
-		mFindEdit->setText(Selection);
-
-	mFindEdit->setFocus();
-	mFindEdit->selectAll();
-	UpdateMatches();
-}
-
-QTextDocument::FindFlags swInstructionsEditorWidget::GetFindFlags() const
-{
-	QTextDocument::FindFlags Flags;
-
-	if (mMatchCase)
-		Flags |= QTextDocument::FindCaseSensitively;
-
-	if (mWholeWords)
-		Flags |= QTextDocument::FindWholeWords;
-
-	return Flags;
-}
-
-void swInstructionsEditorWidget::FindMatch(bool Backward)
-{
-	const QString Text = mFindEdit->text();
-
-	if (Text.isEmpty())
-	{
-		UpdateMatches();
-		return;
-	}
-
-	QTextDocument* Document = mTextEdit->document();
-	const QTextDocument::FindFlags Flags = GetFindFlags() | (Backward ? QTextDocument::FindBackward : QTextDocument::FindFlags());
-	QTextCursor Cursor = Document->find(Text, mTextEdit->textCursor(), Flags);
-
-	// wrap the search around
-	if (Cursor.isNull())
-		Cursor = Document->find(Text, Backward ? Document->characterCount() - 1 : 0, Flags);
-
-	if (!Cursor.isNull())
-		mTextEdit->setTextCursor(Cursor);
-
-	UpdateMatches();
-}
-
-void swInstructionsEditorWidget::ReplaceClicked()
-{
-	const QString Text = mFindEdit->text();
-	QTextCursor Cursor = mTextEdit->textCursor();
-
-	if (Text.isEmpty())
-		return;
-
-	// replace a matching selection only
-	const QTextCursor Match = mTextEdit->document()->find(Text, Cursor.selectionStart(), GetFindFlags());
-
-	if (Cursor.hasSelection() && Match.selectionStart() == Cursor.selectionStart() && Match.selectionEnd() == Cursor.selectionEnd())
-	{
-		Cursor.insertText(mReplaceEdit->text());
-		mTextEdit->setTextCursor(Cursor);
-	}
-
-	FindMatch(false);
-}
-
-void swInstructionsEditorWidget::ReplaceAllClicked()
-{
-	const QString Text = mFindEdit->text();
-
-	if (Text.isEmpty())
-		return;
-
-	// undo each replacement
-	QTextDocument* Document = mTextEdit->document();
-	QTextCursor Cursor(Document);
-	int Count = 0;
-
-	Cursor.beginEditBlock();
-
-	for (QTextCursor Match = Document->find(Text, 0, GetFindFlags()); !Match.isNull(); Match = Document->find(Text, Cursor.position(), GetFindFlags()))
-	{
-		Cursor.setPosition(Match.selectionStart());
-		Cursor.setPosition(Match.selectionEnd(), QTextCursor::KeepAnchor);
-		Cursor.insertText(mReplaceEdit->text());
-		Count++;
-	}
-
-	Cursor.endEditBlock();
-
-	mMatchLabel->setText(tr("%n Replaced", nullptr, Count));
-}
-
-void swInstructionsEditorWidget::UpdateMatches()
-{
-	if (!mFindWidget->isVisible())
-		return;
-
-	const QString Text = mFindEdit->text();
-	QList<QTextEdit::ExtraSelection> Selections;
-
-	if (Text.isEmpty())
-	{
-		mMatchLabel->clear();
-		mTextEdit->setExtraSelections(Selections);
-		return;
-	}
-
-	// mark and count every match
-	QTextDocument* Document = mTextEdit->document();
-	const QTextCursor Current = mTextEdit->textCursor();
-	QColor Color = palette().color(QPalette::Highlight);
-	Color.setAlpha(80);
-	int CurrentIndex = 0;
-
-	for (QTextCursor Match = Document->find(Text, 0, GetFindFlags()); !Match.isNull(); Match = Document->find(Text, Match, GetFindFlags()))
-	{
-		QTextEdit::ExtraSelection Selection;
-		Selection.cursor = Match;
-		Selection.format.setBackground(Color);
-		Selections.append(Selection);
-
-		if (Match.selectionStart() == Current.selectionStart() && Match.selectionEnd() == Current.selectionEnd())
-			CurrentIndex = Selections.size();
-	}
-
-	mTextEdit->setExtraSelections(Selections);
-
-	if (Selections.isEmpty())
-		mMatchLabel->setText(tr("No Matches"));
-	else if (CurrentIndex)
-		mMatchLabel->setText(tr("%1 of %2").arg(CurrentIndex).arg(Selections.size()));
-	else
-		mMatchLabel->setText(tr("%n Matches", nullptr, Selections.size()));
 }

@@ -195,7 +195,7 @@ Instructions settings, written in the main model header. Models are quoted file 
 | `0 !SW OFFSET INSTRUCTION <element> <model> <step> <x> <y>` | Read, Write | element moved from its place |
 | `0 !SW LOCK INSTRUCTION <element> <model> <step> <x> <y>` | Read, Write | element locked at a position |
 | `0 !SW NOTICE INSTRUCTION <id> PAGE <page> POSITION <x> <y> TEXT <text>` | Read, Write | notice on a page |
-| `0 !SW POINTER INSTRUCTION <id> PAGE <page> SOURCE <element> ANCHOR <AUTO\|0-7> STYLE <DEFAULT\|LINE\|WEDGE> TIP <DEFAULT\|ARROWHEAD\|DOT> TARGET <POINT\|ELEMENT\|PART> <element> PART <index> POSITION <x> <y>` | Read, Write | pointer from an element border to a point, element or part |
+| `0 !SW POINTER INSTRUCTION <id> PAGE <page> SOURCE <element> ANCHOR <AUTO\|0-7> STYLE <DEFAULT\|LINE\|WEDGE> TIP <DEFAULT\|ARROW\|DOT> TARGET <POINT\|ELEMENT\|PART> <element> PART <index> POSITION <x> <y>` | Read, Write | pointer from an element border to a point, element or part |
 
 ### Group
 

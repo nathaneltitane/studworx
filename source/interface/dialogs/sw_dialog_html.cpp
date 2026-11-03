@@ -3,6 +3,9 @@
 #include "sw_dialog_html.h"
 #include "ui_sw_dialog_html.h"
 #include "sw_project.h"
+#include "sw_widget_text_edit.h"
+#include "sw_application.h"
+#include "sw_widget_editor.h"
 
 swHTMLDialog::swHTMLDialog(QWidget* Parent, swHTMLExportOptions* Options)
 	: QDialog(Parent), ui(new Ui::swHTMLDialog)
@@ -11,6 +14,7 @@ swHTMLDialog::swHTMLDialog(QWidget* Parent, swHTMLExportOptions* Options)
 	swSetupDialogHelp(this);
 
 	connect(ui->outputFolderBrowse, &QPushButton::clicked, this, &swHTMLDialog::OutputFolderBrowseClicked);
+	connect(ui->editStyleSheet, &QPushButton::clicked, this, &swHTMLDialog::EditStyleSheetClicked);
 
 	ui->stepWidth->setValidator(new QIntValidator(1, SW_MAXIMUM_IMAGE_DIMENSION, ui->stepWidth));
 	ui->stepHeight->setValidator(new QIntValidator(1, SW_MAXIMUM_IMAGE_DIMENSION, ui->stepHeight));
@@ -26,7 +30,6 @@ swHTMLDialog::swHTMLDialog(QWidget* Parent, swHTMLExportOptions* Options)
 	else
 		ui->allModels->setChecked(true);
 
-	ui->transparentImages->setChecked(mOptions->TransparentImages);
 	ui->singlePage->setChecked(mOptions->SinglePage);
 	ui->oneStepPerPage->setChecked(!mOptions->SinglePage);
 	ui->indexPage->setChecked(mOptions->IndexPage);
@@ -50,6 +53,7 @@ swHTMLDialog::swHTMLDialog(QWidget* Parent, swHTMLExportOptions* Options)
 	});
 	ui->overrideInstructions->setChecked(mOptions->OverrideInstructions);
 	mBackgroundColor = mOptions->BackgroundColor;
+	mStyleSheet = mOptions->StyleSheet;
 	swUpdateColorButton(ui->backgroundColor, mBackgroundColor);
 
 	connect(ui->backgroundColor, &QToolButton::clicked, this, [this]()
@@ -66,7 +70,7 @@ swHTMLDialog::swHTMLDialog(QWidget* Parent, swHTMLExportOptions* Options)
 	// rows in the order of the export override colors, half in each column
 	const std::pair<QString, QString> OverrideColorRows[SW_HTML_OVERRIDE_COLOR_COUNT] =
 	{
-		{ tr("Page Background"), tr("Color filling the whole page, margins included.") },
+		{ tr("Page Background"), tr("Color filling the whole page of main model and submodel steps, margins included.") },
 		{ tr("Cover Background"), tr("Color filling the whole cover page, margins included.") },
 		{ tr("Bill of Materials Background"), tr("Color filling the whole bill of materials page, margins included.") },
 		{ tr("Cover Title"), tr("Color of the model title and author.") },
@@ -75,7 +79,7 @@ swHTMLDialog::swHTMLDialog(QWidget* Parent, swHTMLExportOptions* Options)
 		{ tr("Fade"), tr("Color tinting the parts added in earlier steps, kept between 85 and 95 percent opaque.") },
 		{ tr("Highlight"), tr("Color of the outline around the parts added in each step, kept between 85 and 95 percent opaque.") },
 		{ tr("Step Background"), tr("Color filling the area of each step, transparent shows the page background.") },
-		{ tr("Step Number"), tr("Color of the step numbers.") },
+		{ tr("Step Number"), tr("Color of the step numbers and the Parts List title.") },
 		{ tr("Page Number"), tr("Color of the page numbers.") },
 		{ tr("Parts List Text"), tr("Color of the part counts.") },
 		{ tr("Divider"), tr("Color of the lines between steps.") },
@@ -140,15 +144,13 @@ swHTMLDialog::swHTMLDialog(QWidget* Parent, swHTMLExportOptions* Options)
 		for (QWidget* Widget : mOverrideColorWidgets)
 			Widget->setEnabled(SinglePage && ui->overrideInstructions->isChecked());
 
-		ui->transparentImages->setEnabled(ExportOptionsUsed);
-		ui->backgroundColorLabel->setEnabled(ExportOptionsUsed && !ui->transparentImages->isChecked());
-		ui->backgroundColor->setEnabled(ExportOptionsUsed && !ui->transparentImages->isChecked());
+		ui->backgroundColorLabel->setEnabled(ExportOptionsUsed);
+		ui->backgroundColor->setEnabled(ExportOptionsUsed);
 		ui->PartsGroup->setEnabled(ExportOptionsUsed);
 	};
 
 	connect(ui->singlePage, &QRadioButton::toggled, this, UpdatePageOptions);
 	connect(ui->overrideInstructions, &QCheckBox::toggled, this, UpdatePageOptions);
-	connect(ui->transparentImages, &QCheckBox::toggled, this, UpdatePageOptions);
 	UpdatePageOptions();
 }
 
@@ -219,7 +221,6 @@ void swHTMLDialog::accept()
 	mOptions->PathName = pathName;
 	mOptions->SubModels = ui->currentModelSubmodels->isChecked();
 	mOptions->CurrentOnly = ui->currentModelOnly->isChecked();
-	mOptions->TransparentImages = ui->transparentImages->isChecked();
 	mOptions->SinglePage = ui->singlePage->isChecked();
 	mOptions->IndexPage = ui->indexPage->isChecked();
 	mOptions->StepImagesWidth = Width;
@@ -231,6 +232,7 @@ void swHTMLDialog::accept()
 	mOptions->OverrideInstructions = ui->overrideInstructions->isChecked();
 	mOptions->BackgroundColor = mBackgroundColor;
 	mOptions->OverrideColors = mOverrideColors;
+	mOptions->StyleSheet = mStyleSheet;
 
 	QDialog::accept();
 }
@@ -241,4 +243,118 @@ void swHTMLDialog::OutputFolderBrowseClicked()
 
 	if (!result.isEmpty())
 		ui->outputFolder->setText(QDir::toNativeSeparators(result));
+}
+
+// color css selectors, properties, values and comments
+class swCSSHighlighter : public QSyntaxHighlighter
+{
+public:
+	explicit swCSSHighlighter(QObject* Parent)
+		: QSyntaxHighlighter(Parent)
+	{
+		const bool DarkTheme = gApplication && gApplication->IsDarkTheme();
+
+		mCommentFormat = swGetEditorTextFormat(swEditorTextFormat::Comment, DarkTheme);
+		mKeywordFormat = swGetEditorTextFormat(swEditorTextFormat::Keyword, DarkTheme);
+		mValueFormat = swGetEditorTextFormat(swEditorTextFormat::Value, DarkTheme);
+		mNumberFormat = swGetEditorTextFormat(swEditorTextFormat::Number, DarkTheme);
+		mTypeFormat = swGetEditorTextFormat(swEditorTextFormat::Type, DarkTheme);
+		mPartFormat = swGetEditorTextFormat(swEditorTextFormat::Part, DarkTheme);
+	}
+
+protected:
+	void highlightBlock(const QString& Text) override
+	{
+		static const QRegularExpression SelectorExpression(QLatin1String("^\\s*([^{}]+?)\\s*\\{"));
+		static const QRegularExpression PropertyExpression(QLatin1String("^\\s*([\\w-]+)\\s*:(.*)$"));
+		static const QRegularExpression NumberExpression(QLatin1String("#[0-9a-fA-F]{3,8}\\b|-?\\b\\d+(\\.\\d+)?(%|[a-z]+\\b)?"));
+		static const QRegularExpression VariableExpression(QLatin1String("--[\\w-]+"));
+		const QRegularExpressionMatch Selector = SelectorExpression.match(Text);
+		const QRegularExpressionMatch Property = PropertyExpression.match(Text);
+
+		// selectors and at rules open a block, properties hold values
+		if (Selector.hasMatch())
+			setFormat(Selector.capturedStart(1), Selector.capturedLength(1), Text.trimmed().startsWith(QLatin1Char('@')) ? mKeywordFormat : mTypeFormat);
+		else if (Property.hasMatch())
+		{
+			setFormat(Property.capturedStart(1), Property.capturedLength(1), mKeywordFormat);
+			setFormat(Property.capturedStart(2), Property.capturedLength(2), mValueFormat);
+
+			for (QRegularExpressionMatchIterator Iterator = NumberExpression.globalMatch(Text, Property.capturedStart(2)); Iterator.hasNext(); )
+			{
+				const QRegularExpressionMatch Match = Iterator.next();
+				setFormat(Match.capturedStart(), Match.capturedLength(), mNumberFormat);
+			}
+		}
+
+		for (QRegularExpressionMatchIterator Iterator = VariableExpression.globalMatch(Text); Iterator.hasNext(); )
+		{
+			const QRegularExpressionMatch Match = Iterator.next();
+			setFormat(Match.capturedStart(), Match.capturedLength(), mPartFormat);
+		}
+
+		// comments may span lines, state 1 marks an open comment
+		setCurrentBlockState(0);
+		int Start = previousBlockState() == 1 ? 0 : Text.indexOf(QLatin1String("/*"));
+
+		while (Start >= 0)
+		{
+			const int End = Text.indexOf(QLatin1String("*/"), Start);
+
+			if (End < 0)
+			{
+				setFormat(Start, Text.size() - Start, mCommentFormat);
+				setCurrentBlockState(1);
+				break;
+			}
+
+			setFormat(Start, End + 2 - Start, mCommentFormat);
+			Start = Text.indexOf(QLatin1String("/*"), End + 2);
+		}
+	}
+
+	QTextCharFormat mCommentFormat;
+	QTextCharFormat mKeywordFormat;
+	QTextCharFormat mValueFormat;
+	QTextCharFormat mNumberFormat;
+	QTextCharFormat mTypeFormat;
+	QTextCharFormat mPartFormat;
+};
+
+// use to edit the style sheet, the built-in one is kept as empty
+void swHTMLDialog::EditStyleSheetClicked()
+{
+	QDialog Dialog(this);
+	Dialog.setWindowTitle(tr("Style Sheet"));
+	Dialog.setWhatsThis(ui->StyleSheetGroup->whatsThis());
+	swSetupDialogHelp(&Dialog);
+
+	// shared editor with options, find and replace
+	swEditorWidget* Editor = new swEditorWidget(&Dialog, new swCSSHighlighter(&Dialog));
+	swEditorTextEdit* TextEdit = Editor->GetTextEdit();
+	TextEdit->setTabStopDistance(TextEdit->fontMetrics().horizontalAdvance(QLatin1Char(' ')) * 4);
+	TextEdit->setToolTip(tr("CSS style sheet of the exported pages."));
+	TextEdit->setWhatsThis(Dialog.whatsThis());
+	TextEdit->setAccessibleName(tr("Style Sheet"));
+	TextEdit->setPlainText(mStyleSheet.isEmpty() ? swGetHTMLStyleSheet() : mStyleSheet);
+
+	QDialogButtonBox* ButtonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults, &Dialog);
+	connect(ButtonBox, &QDialogButtonBox::accepted, &Dialog, &QDialog::accept);
+	connect(ButtonBox, &QDialogButtonBox::rejected, &Dialog, &QDialog::reject);
+
+	connect(ButtonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked, TextEdit, [TextEdit]()
+	{
+		TextEdit->setPlainText(swGetHTMLStyleSheet());
+	});
+
+	QVBoxLayout* Layout = new QVBoxLayout(&Dialog);
+	Layout->addWidget(Editor);
+	Layout->addWidget(ButtonBox);
+	Dialog.resize(size());
+
+	if (Dialog.exec() != QDialog::Accepted)
+		return;
+
+	const QString StyleSheet = TextEdit->toPlainText();
+	mStyleSheet = StyleSheet == swGetHTMLStyleSheet() ? QString() : StyleSheet;
 }

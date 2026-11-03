@@ -255,7 +255,7 @@
    <item>
     <widget class="QGroupBox" name="ImagesGroup">
      <property name="whatsThis">
-      <string>&lt;p&gt;&lt;b&gt;Step Images&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Width and Height set the step image size in pixels, from 1 to 32768 pixels. With Single Page they bound the page image size and keep the page proportions. Transparent Background leaves the image background clear, otherwise Background Color fills it and the frame around each image.&lt;/p&gt;</string>
+      <string>&lt;p&gt;&lt;b&gt;Step Images&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Width and Height set the step image size in pixels, from 1 to 32768 pixels. With Single Page they bound the page image size and keep the page proportions. Background Color fills the image background and the frame around each image, a transparent color leaves it clear.&lt;/p&gt;</string>
      </property>
      <property name="title">
       <string>Step Images</string>
@@ -301,10 +301,10 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="0">
+      <item row="2" column="0">
        <widget class="QLabel" name="backgroundColorLabel">
         <property name="toolTip">
-         <string>Color behind the model in the exported images.</string>
+         <string>Color behind the model in the exported images, transparent draws none.</string>
         </property>
         <property name="text">
          <string>Background Color</string>
@@ -314,7 +314,7 @@
         </property>
        </widget>
       </item>
-      <item row="3" column="1" colspan="2">
+      <item row="2" column="1" colspan="2">
        <widget class="QToolButton" name="backgroundColor">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -323,26 +323,13 @@
          </sizepolicy>
         </property>
         <property name="toolTip">
-         <string>Color behind the model in the exported images.</string>
+         <string>Color behind the model in the exported images, transparent draws none.</string>
         </property>
         <property name="accessibleName">
          <string>Background Color</string>
         </property>
         <property name="toolButtonStyle">
          <enum>Qt::ToolButtonTextBesideIcon</enum>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0" colspan="3">
-       <widget class="QCheckBox" name="transparentImages">
-        <property name="toolTip">
-         <string>Save step images with a transparent background.</string>
-        </property>
-        <property name="whatsThis">
-         <string>&lt;p&gt;&lt;b&gt;Transparent Background&lt;/b&gt;&lt;/p&gt;&lt;p&gt;When checked, the PNG step images have a transparent background so the page background can show through. When unchecked, they include the configured solid or gradient background with no transparency.&lt;/p&gt;</string>
-        </property>
-        <property name="text">
-         <string>Transparent Background</string>
         </property>
        </widget>
       </item>
@@ -382,6 +369,35 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="StyleSheetGroup">
+     <property name="whatsThis">
+      <string>&lt;p&gt;&lt;b&gt;Style Sheet&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The CSS style sheet of the exported pages, their colors, spacing, cards and arrows. Edit Style Sheet opens it in an editor, comments name the feature of each block, the options button holds the highlighting, line number, wrap, marker and find and replace options it shares with the Editor panel, Restore Defaults there brings back the built-in one. With Single Page the page corners follow the Corner Radius of the step model box in the Instructions window.&lt;/p&gt;</string>
+     </property>
+     <property name="title">
+      <string>Style Sheet</string>
+     </property>
+     <layout class="QHBoxLayout" name="StyleSheetLayout">
+      <item>
+       <widget class="QPushButton" name="editStyleSheet">
+        <property name="toolTip">
+         <string>Open the CSS style sheet of the exported pages in an editor.</string>
+        </property>
+        <property name="text">
+         <string>Edit Style Sheet...</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="StyleSheetSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
     <widget class="QDialogButtonBox" name="buttonBox">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
@@ -407,10 +423,10 @@
   <tabstop>overrideInstructions</tabstop>
   <tabstop>stepWidth</tabstop>
   <tabstop>stepHeight</tabstop>
-  <tabstop>transparentImages</tabstop>
   <tabstop>backgroundColor</tabstop>
   <tabstop>partsAfterEachStep</tabstop>
   <tabstop>partsAtTheEnd</tabstop>
+  <tabstop>editStyleSheet</tabstop>
  </tabstops>
  <resources/>
  <connections>

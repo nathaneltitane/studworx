@@ -282,7 +282,8 @@ Without it the exceptions file set in the Export BrickLink dialog is used.
 \fB\-\-export\-html \fR[\fIpath\fR]
 .br
 Creates HTML instructions in a folder named after the model inside \fIpath\fR, starting at index.html.
-With Single Page set in the Export HTML dialog, index.html scrolls through the Instructions window pages with #page-N and #step-N links and First, Previous, Next and Last Page arrows on the right, left or bottom edge, laid out for the shape chosen in Display and saved at twice the shown size. Background Color fills the step images, and Override Instructions Settings applies it, Transparent Background, the Parts List choices and the Settings Overrides colors to the Single Page export.
+With Single Page set in the Export HTML dialog, index.html scrolls through the Instructions window pages with #page-N and #step-N links and First, Previous, Next and Last Page arrows on the right, left or bottom edge, laid out for the shape chosen in Display and saved at twice the shown size. Background Color fills the step images, transparent when its alpha is zero, and Override Instructions Settings applies it, the Parts List choices and the Settings Overrides colors to the Single Page export.
+Single Page cards round their corners like the Corner Radius of the step model box, and Edit Style Sheet replaces the CSS of the pages, with comments naming the feature of each block.
 
 .TP
 \fB\-\-export\-povray \fR[\fIoutfile.pov\fR]

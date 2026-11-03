@@ -221,13 +221,14 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Defaults", "AmbientColor", SW_RGB(75, 75, 75)),                            // SW_PROFILE_DEFAULT_AMBIENT_COLOR
 
 	swProfileEntry("HTML", "Options", SW_HTML_SINGLE_PAGE),                                     // SW_PROFILE_HTML_OPTIONS
-	swProfileEntry("HTML", "ImageOptions", SW_IMAGE_TRANSPARENT),                              // SW_PROFILE_HTML_IMAGE_OPTIONS
+	swProfileEntry("HTML", "ImageOptions", 0),                                                  // SW_PROFILE_HTML_IMAGE_OPTIONS
 	swProfileEntry("HTML", "ImageWidth", 640),                                                 // SW_PROFILE_HTML_IMAGE_WIDTH
 	swProfileEntry("HTML", "ImageHeight", 480),                                                // SW_PROFILE_HTML_IMAGE_HEIGHT
 	swProfileEntry("HTML", "ArrowPosition", 0),                                                // SW_PROFILE_HTML_ARROW_POSITION
-	swProfileEntry("HTML", "BackgroundColor", SW_RGBA(255, 255, 255, 255)),                    // SW_PROFILE_HTML_BACKGROUND_COLOR
+	swProfileEntry("HTML", "BackgroundColor", SW_RGBA(255, 255, 255, 0)),                      // SW_PROFILE_HTML_BACKGROUND_COLOR
 	swProfileEntry("HTML", "OverrideColors", QStringList()),                                  // SW_PROFILE_HTML_OVERRIDE_COLORS
 	swProfileEntry("HTML", "Display", 0),                                                     // SW_PROFILE_HTML_DISPLAY
+	swProfileEntry("HTML", "StyleSheet", ""),                                                 // SW_PROFILE_HTML_STYLE_SHEET
 
 	swProfileEntry("POVRay", "Path", "/usr/bin/povray"),                                       // SW_PROFILE_POVRAY_PATH
 	swProfileEntry("POVRay", "LGEOPath", ""),                                                  // SW_PROFILE_POVRAY_LGEO_PATH

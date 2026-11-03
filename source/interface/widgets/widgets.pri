@@ -5,6 +5,7 @@ INCLUDEPATH += $$PWD
 SOURCES += \
 	$$PWD/sw_widget_builder_minifigure.cpp \
 	$$PWD/sw_widget_collapsible.cpp \
+	$$PWD/sw_widget_editor.cpp \
 	$$PWD/sw_widget_find_replace.cpp \
 	$$PWD/sw_widget_keyframe.cpp \
 	$$PWD/sw_widget_label_elided.cpp \
@@ -22,6 +23,7 @@ SOURCES += \
 HEADERS += \
 	$$PWD/sw_widget_builder_minifigure.h \
 	$$PWD/sw_widget_collapsible.h \
+	$$PWD/sw_widget_editor.h \
 	$$PWD/sw_widget_find_replace.h \
 	$$PWD/sw_widget_keyframe.h \
 	$$PWD/sw_widget_label_elided.h \
@@ -35,6 +37,7 @@ HEADERS += \
 	$$PWD/sw_widget_spin_box.h \
 	$$PWD/sw_widget_spin_box_double.h \
 	$$PWD/sw_widget_spinner.h \
+	$$PWD/sw_widget_text_edit.h \
 	$$PWD/sw_widget_timeline.h
 
 FORMS += \

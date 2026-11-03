@@ -7,9 +7,11 @@
 #include "sw_dialog_instructions_properties.h"
 #include "sw_project.h"
 #include "sw_model.h"
+#include "sw_object_part.h"
 #include "sw_window_utilities.h"
 #include "sw_profile.h"
 #include "sw_window_main.h"
+#include "sw_widget_spin_box.h"
 
 swInstructionsDialog::swInstructionsDialog(QWidget* Parent, Project* Project)
 	: QMainWindow(Parent), mProject(Project)
@@ -33,11 +35,39 @@ swInstructionsDialog::swInstructionsDialog(QWidget* Parent, Project* Project)
 	splitDockWidget(mPlacementWidget, mGridWidget, Qt::Vertical);
 
 	mPageWidget = new swInstructionsPageWidget(this, mInstructions, mPropertiesWidget, mPlacementWidget);
-	setCentralWidget(mPageWidget);
 
 	mPageListWidget = new swInstructionsPageListWidget(this, mInstructions);
 	mPageListWidget->setObjectName("InstructionsPageList");
 	addDockWidget(Qt::LeftDockWidgetArea, mPageListWidget);
+
+	// page bar sits under the page
+	QWidget* PageArea = new QWidget(this);
+	QVBoxLayout* PageAreaLayout = new QVBoxLayout(PageArea);
+	PageAreaLayout->setContentsMargins(0, 0, 0, 0);
+	PageAreaLayout->addWidget(mPageWidget, 1);
+	PageAreaLayout->addWidget(CreatePageBar());
+	setCentralWidget(PageArea);
+
+	// timeline shortcuts turn pages, kept off the editor panel
+	const std::pair<int, QToolButton*> PageCommands[] =
+	{
+		{ SW_VIEW_TIME_FIRST, mFirstButton },
+		{ SW_VIEW_TIME_PREVIOUS, mPreviousButton },
+		{ SW_VIEW_TIME_NEXT, mNextButton },
+		{ SW_VIEW_TIME_LAST, mLastButton }
+	};
+
+	for (const auto& [CommandId, Button] : PageCommands)
+	{
+		QAction* TimelineAction = gMainWindow->mActions[CommandId];
+
+		for (QWidget* Target : { PageArea, static_cast<QWidget*>(mPageListWidget) })
+		{
+			QShortcut* Shortcut = new QShortcut(TimelineAction->shortcut(), Target, nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
+			connect(Shortcut, &QShortcut::activated, Button, &QToolButton::click);
+			connect(TimelineAction, &QAction::changed, Shortcut, [Shortcut, TimelineAction]() { Shortcut->setKey(TimelineAction->shortcut()); });
+		}
+	}
 
 	// print panel opens below the grid
 	mPrintWidget = new swInstructionsPrintWidget(this, mInstructions);
@@ -297,6 +327,8 @@ void swInstructionsDialog::PageSetupChanged()
 
 void swInstructionsDialog::CurrentThumbnailChanged(int Index)
 {
+	UpdatePageBar();
+
 	if (Index < 0 || Index >= static_cast<int>(mInstructions->mPages.size()))
 	{
 		mPageWidget->SetCurrentPage(nullptr);
@@ -307,4 +339,164 @@ void swInstructionsDialog::CurrentThumbnailChanged(int Index)
 
 	mPageWidget->SetCurrentPage(Page);
 	mPropertiesWidget->SetCurrentPage(Index);
+}
+
+// use to build the page buttons and the page box
+QWidget* swInstructionsDialog::CreatePageBar()
+{
+	QWidget* PageBar = new QWidget(this);
+	QHBoxLayout* PageBarLayout = new QHBoxLayout(PageBar);
+	PageBarLayout->addStretch(1);
+
+	// arrows point away from the page names
+	auto CreateButton = [this, PageBar, PageBarLayout](const QString& Text, const QString& ToolTip, const QIcon& Icon, bool IconAfterText, auto Clicked)
+	{
+		QToolButton* Button = new QToolButton(PageBar);
+		Button->setText(Text);
+		Button->setToolTip(ToolTip);
+		Button->setIcon(Icon);
+		Button->setToolButtonStyle(Icon.isNull() ? Qt::ToolButtonTextOnly : Qt::ToolButtonTextBesideIcon);
+		Button->setLayoutDirection(IconAfterText ? Qt::RightToLeft : Qt::LeftToRight);
+		Button->setWhatsThis(tr("<p><b>Page Bar</b></p><p>Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The timeline First, Previous, Next and Last shortcuts turn the pages too while the page or the Pages panel has focus.</p>"));
+		connect(Button, &QToolButton::clicked, this, Clicked);
+		PageBarLayout->addWidget(Button);
+		return Button;
+	};
+
+	QListWidget* ThumbnailsWidget = mPageListWidget->mThumbnailsWidget;
+
+	mFirstButton = CreateButton(tr("&First"), tr("Go to the first page"), swCreatePaintedIcon(swPaintedIcon::TimeFirst), false, [this]() { ShowPage(0); });
+	mPreviousButton = CreateButton(tr("&Previous"), tr("Go to the previous page"), swCreatePaintedIcon(swPaintedIcon::TimePrevious), false, [this, ThumbnailsWidget]() { ShowPage(ThumbnailsWidget->currentRow() - 1); });
+	mCoverButton = CreateButton(tr("&Cover"), tr("Go to the cover page"), QIcon(), false, [this]() { ShowPage(FindPage(swInstructionsPageType::Cover)); });
+	mStepPageButton = CreateButton(tr("&Step Page"), tr("Insert an empty step before the current page"), QIcon(), false, [this]() { InsertStepPage(); });
+	mBlankPageButton = CreateButton(tr("Bl&ank Page"), tr("Insert a blank page before the current page"), QIcon(), false, [this, ThumbnailsWidget]() { mInstructions->InsertBlankPage(ThumbnailsWidget->currentRow()); });
+	mRemovePageButton = CreateButton(tr("&Remove Page"), tr("Remove the current page when it is blank or holds only empty steps"), QIcon(), false, [this]() { RemovePage(); });
+	mBillOfMaterialsButton = CreateButton(tr("&Bill of Materials"), tr("Go to the bill of materials page"), QIcon(), false, [this]() { ShowPage(FindPage(swInstructionsPageType::BillOfMaterials)); });
+	mNextButton = CreateButton(tr("&Next"), tr("Go to the next page"), swCreatePaintedIcon(swPaintedIcon::TimeNext), true, [this, ThumbnailsWidget]() { ShowPage(ThumbnailsWidget->currentRow() + 1); });
+	mLastButton = CreateButton(tr("&Last"), tr("Go to the last page"), swCreatePaintedIcon(swPaintedIcon::TimeLast), true, [this, ThumbnailsWidget]() { ShowPage(ThumbnailsWidget->count() - 1); });
+
+	PageBarLayout->addStretch(1);
+
+	// current page out of all pages, like the print range
+	mPageSpinBox = new swRangeSpinBox(PageBar);
+	mPageSpinBox->setToolTip(tr("Current page out of all pages, type a number to go there"));
+	mPageSpinBox->setWhatsThis(mFirstButton->whatsThis());
+	mPageSpinBox->setKeyboardTracking(false);
+	connect(mPageSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, [this](int Page) { ShowPage(Page - 1); });
+	PageBarLayout->addWidget(mPageSpinBox);
+
+	return PageBar;
+}
+
+// use to get the model whose steps fill a page, only the active model since step edits follow the timeline
+swModel* swInstructionsDialog::GetEditableStepModel(int Row) const
+{
+	if (Row < 0 || Row >= static_cast<int>(mInstructions->mPages.size()))
+		return nullptr;
+
+	const swInstructionsPage& Page = mInstructions->mPages[Row];
+
+	if (Page.Type != swInstructionsPageType::Steps || Page.Steps.empty() || Page.Steps.front().Model != mProject->GetActiveModel())
+		return nullptr;
+
+	return Page.Steps.front().Model;
+}
+
+// use to tell a step page holding no parts
+bool swInstructionsDialog::IsEmptyStepPage(int Row) const
+{
+	swModel* Model = GetEditableStepModel(Row);
+
+	if (!Model)
+		return false;
+
+	for (const swInstructionsStep& Step : mInstructions->mPages[Row].Steps)
+		for (const std::unique_ptr<swPart>& Part : Model->GetParts())
+			if (Part->GetStepShow() == Step.Step)
+				return false;
+
+	return true;
+}
+
+// use to insert an empty step before the first step of the page
+void swInstructionsDialog::InsertStepPage()
+{
+	const int Row = mPageListWidget->mThumbnailsWidget->currentRow();
+	swModel* Model = GetEditableStepModel(Row);
+
+	if (Model)
+		Model->InsertStepAction(mInstructions->mPages[Row].Steps.front().Step);
+}
+
+// use to remove a blank page or the empty steps of a page
+void swInstructionsDialog::RemovePage()
+{
+	const int Row = mPageListWidget->mThumbnailsWidget->currentRow();
+
+	if (Row < 0 || Row >= static_cast<int>(mInstructions->mPages.size()))
+		return;
+
+	if (mInstructions->mPages[Row].Type == swInstructionsPageType::Blank)
+	{
+		mInstructions->RemoveBlankPage(Row);
+		return;
+	}
+
+	if (!IsEmptyStepPage(Row))
+		return;
+
+	swModel* Model = GetEditableStepModel(Row);
+	std::vector<swStep> Steps;
+
+	for (const swInstructionsStep& Step : mInstructions->mPages[Row].Steps)
+		Steps.push_back(Step.Step);
+
+	// last step first so the earlier steps keep their numbers
+	for (auto StepIt = Steps.rbegin(); StepIt != Steps.rend(); ++StepIt)
+		Model->RemoveStepAction(*StepIt);
+}
+
+
+// use to select a page through the pages panel
+void swInstructionsDialog::ShowPage(int Row)
+{
+	QListWidget* ThumbnailsWidget = mPageListWidget->mThumbnailsWidget;
+
+	if (Row >= 0 && Row < ThumbnailsWidget->count())
+		ThumbnailsWidget->setCurrentRow(Row);
+}
+
+// use to find the first page of a type, -1 when there is none
+int swInstructionsDialog::FindPage(swInstructionsPageType Type) const
+{
+	for (size_t PageNumber = 0; PageNumber < mInstructions->mPages.size(); PageNumber++)
+		if (mInstructions->mPages[PageNumber].Type == Type)
+			return static_cast<int>(PageNumber);
+
+	return -1;
+}
+
+// use to grey out the buttons with nowhere to go
+void swInstructionsDialog::UpdatePageBar()
+{
+	if (!mFirstButton)
+		return;
+
+	const int Row = mPageListWidget->mThumbnailsWidget->currentRow();
+	const int LastRow = mPageListWidget->mThumbnailsWidget->count() - 1;
+
+	mFirstButton->setEnabled(Row > 0);
+	mPreviousButton->setEnabled(Row > 0);
+	mNextButton->setEnabled(Row >= 0 && Row < LastRow);
+	mLastButton->setEnabled(Row >= 0 && Row < LastRow);
+	mCoverButton->setEnabled(FindPage(swInstructionsPageType::Cover) >= 0);
+	mStepPageButton->setEnabled(GetEditableStepModel(Row) != nullptr);
+	mBlankPageButton->setEnabled(Row >= 0 && mInstructions->CanInsertBlankPage(Row));
+	mRemovePageButton->setEnabled((Row >= 0 && Row <= LastRow && mInstructions->mPages[Row].Type == swInstructionsPageType::Blank) || IsEmptyStepPage(Row));
+
+	QSignalBlocker Blocker(mPageSpinBox);
+	mPageSpinBox->setRange(1, qMax(LastRow + 1, 1));
+	mPageSpinBox->SetReference();
+	mPageSpinBox->setValue(Row + 1);
+	mBillOfMaterialsButton->setEnabled(FindPage(swInstructionsPageType::BillOfMaterials) >= 0);
 }

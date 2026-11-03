@@ -113,16 +113,22 @@ public:
 
 		if (mBoxStyle.BackgroundColor.alpha())
 		{
+			// corners stay round around the border, the margin included
+			const qreal BackgroundRadius = mBoxStyle.GetBackgroundRadius();
+			const qreal ContentRadius = qMax(0.0, BackgroundRadius - Inset);
 			QPainterPath BackgroundPath;
-			BackgroundPath.addRect(BoxRect);
+			BackgroundPath.addRoundedRect(BoxRect, BackgroundRadius, BackgroundRadius);
 
 			if (mContentBackground)
 			{
 				BackgroundPath.setFillRule(Qt::OddEvenFill);
-				BackgroundPath.addRect(T::boundingRect().translated(Inset, Inset));
+				BackgroundPath.addRoundedRect(T::boundingRect().translated(Inset, Inset), ContentRadius, ContentRadius);
 			}
 
+			Painter->save();
+			Painter->setRenderHint(QPainter::Antialiasing, mBoxStyle.CornerRadius > 0.0);
 			Painter->fillPath(BackgroundPath, mBoxStyle.BackgroundColor);
+			Painter->restore();
 		}
 
 		// Content inside the padding.
@@ -144,10 +150,10 @@ public:
 			const QRectF InnerRect = OuterRect.adjusted(BorderWidth, BorderWidth, -BorderWidth, -BorderWidth);
 			QPainterPath BorderPath;
 			BorderPath.setFillRule(Qt::OddEvenFill);
-			BorderPath.addRect(OuterRect);
+			BorderPath.addRoundedRect(OuterRect, mBoxStyle.CornerRadius, mBoxStyle.CornerRadius);
 
 			if (InnerRect.isValid())
-				BorderPath.addRect(InnerRect);
+				BorderPath.addRoundedRect(InnerRect, qMax(0.0, mBoxStyle.CornerRadius - BorderWidth), qMax(0.0, mBoxStyle.CornerRadius - BorderWidth));
 
 			Painter->save();
 			Painter->setRenderHint(QPainter::Antialiasing, true);
@@ -382,7 +388,7 @@ protected:
 	QGraphicsItem* mSource = nullptr;
 	QGraphicsItem* mTarget = nullptr;
 	swInstructionsPointerStyle mStyle = swInstructionsPointerStyle::Line;
-	swInstructionsPointerTip mTip = swInstructionsPointerTip::Arrowhead;
+	swInstructionsPointerTip mTip = swInstructionsPointerTip::Arrow;
 	QColor mColor;
 	qreal mWidth = 2.0;
 	qreal mTipSize = 12.0;

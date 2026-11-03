@@ -445,11 +445,10 @@ void swInstructionsStepNumberItem::Update()
 	bool Visible = mInstructions->GetBoolProperty(swInstructionsPropertyType::ShowStepNumber, mModel, mStep);
 	setVisible(Visible);
 
-	QFont StepNumberFont = mInstructions->GetFontProperty(swInstructionsPropertyType::StepNumberFont, mModel, mStep);
-
-	setFont(StepNumberFont);
-	setBrush(QBrush(mInstructions->GetColorProperty(swInstructionsPropertyType::StepNumberColor, mModel, mStep)));
-	setText(QString::number(mStep));
+	// step 0 is the bill of materials title
+	setFont(mInstructions->GetFontProperty(mStep ? swInstructionsPropertyType::StepNumberFont : swInstructionsPropertyType::BillOfMaterialsTitleFont, mModel, mStep));
+	setBrush(QBrush(mInstructions->GetColorProperty(mStep ? swInstructionsPropertyType::StepNumberColor : swInstructionsPropertyType::BillOfMaterialsTitleColor, mModel, mStep)));
+	setText(mStep ? QString::number(mStep) : QCoreApplication::translate("swInstructionsDialog", "Parts List"));
 }
 
 swInstructionsPageNumberItem::swInstructionsPageNumberItem(QGraphicsItem* Parent, swInstructions* Instructions, size_t PageIndex)
@@ -879,10 +878,10 @@ void swInstructionsPointerItem::paint(QPainter* Painter, const QStyleOptionGraph
 		const QPointF Direction = (mTipPosition - Base) / QLineF(Base, mTipPosition).length();
 		const qreal Width = mWidth == mSourceBorderWidth ? BorderWidth : mWidth;
 
-		// stop the line at the arrowhead
+		// stop the line at the arrow
 		QPointF LineEnd = mTipPosition;
 
-		if (mTip == swInstructionsPointerTip::Arrowhead && Line.length() > mTipSize)
+		if (mTip == swInstructionsPointerTip::Arrow && Line.length() > mTipSize)
 			LineEnd = mTipPosition - Direction * (mTipSize * 0.5);
 
 		QPen Pen(mColor, Width);
@@ -1156,6 +1155,7 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 
 		const QFont TitleFont = Instructions->GetFontProperty(swInstructionsPropertyType::CoverTitleFont, Model, 0);
 		const QColor TextColor = Instructions->GetColorProperty(swInstructionsPropertyType::CoverTitleColor, Model, 0);
+		const QColor AuthorColor = Instructions->GetColorProperty(swInstructionsPropertyType::CoverAuthorColor, Model, 0);
 
 		struct swCoverText
 		{
@@ -1183,7 +1183,7 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 
 			swInstructionsCoverTextItem* Item = new swInstructionsCoverTextItem(PageItem, Instructions, Model, Author);
 			Item->setFont(Font);
-			Item->setDefaultTextColor(TextColor);
+			Item->setDefaultTextColor(Author ? AuthorColor : TextColor);
 			Item->setPlainText(Text);
 			Item->document()->setDefaultTextOption(TextOption);
 
@@ -1201,11 +1201,7 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 
 		if (!Author.isEmpty() && Instructions->GetBoolProperty(swInstructionsPropertyType::ShowCoverAuthor, Model, 0))
 		{
-			QFont AuthorFont = TitleFont;
-			AuthorFont.setPointSizeF(TitleFont.pointSizeF() / 2.0);
-			AuthorFont.setBold(false);
-
-			AddCoverText(Author, AuthorFont, true, swInstructionsPropertyType::CoverAuthorPlacement);
+			AddCoverText(Author, Instructions->GetFontProperty(swInstructionsPropertyType::CoverAuthorFont, Model, 0), true, swInstructionsPropertyType::CoverAuthorPlacement);
 		}
 
 		// stack texts sharing a row
@@ -1263,13 +1259,32 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 
 	if (Page->Type == swInstructionsPageType::BillOfMaterials)
 	{
+		swInstructionsStepNumberItem* TitleItem = new swInstructionsStepNumberItem(PageItem, Instructions, Page->Model, 0);
+		TitleItem->Update();
+
+		// the list fills the page above or below the title
+		QRectF PartsRect = MarginsRect;
+
+		if (TitleItem->isVisible())
+		{
+			const QSizeF TitleSize = TitleItem->boundingRect().size();
+			const int TitlePlacement = swGetValidPlacement(Instructions->GetIntProperty(swInstructionsPropertyType::StepNumberPlacement, Page->Model, 0), true);
+			const QPointF TitlePosition = swGetPlacementPosition(MarginsRect, TitleSize, TitlePlacement);
+			swPlaceElement(TitleItem, Instructions, TitlePosition);
+
+			if (TitlePosition.y() + TitleSize.height() / 2.0 < MarginsRect.center().y())
+				PartsRect.setTop(TitlePosition.y() + TitleSize.height());
+			else
+				PartsRect.setBottom(TitlePosition.y());
+		}
+
 		swInstructionsPartsListItem* PartsImageItem = new swInstructionsPartsListItem(PageItem, Instructions, Page->Model, 0);
 		const qreal Inset = 2.0 * PartsImageItem->GetBoxStyle().GetInset();
-		PartsImageItem->SetBillOfMaterials(qMax(static_cast<int>(MarginsRect.width() - Inset), 16), qMax(static_cast<int>(MarginsRect.height() - Inset), 16));
+		PartsImageItem->SetBillOfMaterials(qMax(static_cast<int>(PartsRect.width() - Inset), 16), qMax(static_cast<int>(PartsRect.height() - Inset), 16));
 		PartsImageItem->Update();
 
 		const int Placement = swGetValidPlacement(Instructions->GetIntProperty(swInstructionsPropertyType::BillOfMaterialsPlacement, Page->Model, 0), true);
-		swPlaceElement(PartsImageItem, Instructions, swGetPlacementPosition(MarginsRect, PartsImageItem->boundingRect().size(), Placement));
+		swPlaceElement(PartsImageItem, Instructions, swGetPlacementPosition(PartsRect, PartsImageItem->boundingRect().size(), Placement));
 
 		return;
 	}
@@ -1614,7 +1629,7 @@ void swInstructionsPageWidget::contextMenuEvent(QContextMenuEvent* Event)
 		const int PointerStyle = Pointer->Style;
 		const int PointerTip = Pointer->Tip;
 
-		auto AddChoiceMenu = [this, &Menu](const QString& Title, const QStringList& Names, int Current, std::function<void(int)> SetChoice)
+		auto AddChoiceMenu = [this, &Menu](const QString& Title, const QStringList& Names, int Current, std::function<void(int)> SetChoice) -> QMenu*
 		{
 			QMenu* ChoiceMenu = Menu.addMenu(Title);
 			QActionGroup* ChoiceGroup = new QActionGroup(ChoiceMenu);
@@ -1634,6 +1649,8 @@ void swInstructionsPageWidget::contextMenuEvent(QContextMenuEvent* Event)
 					SetChoice(Choice);
 				});
 			}
+
+			return ChoiceMenu;
 		};
 
 		AddChoiceMenu(tr("Style"), { tr("Line"), tr("Callout Wedge") }, PointerStyle, [this, Id, PointerTip](int Style)
@@ -1641,10 +1658,13 @@ void swInstructionsPageWidget::contextMenuEvent(QContextMenuEvent* Event)
 			mInstructions->SetPointerStyle(Id, Style, PointerTip);
 		});
 
-		AddChoiceMenu(tr("Tip"), { tr("Arrowhead"), tr("Dot") }, PointerTip, [this, Id, PointerStyle](int Tip)
+		QMenu* TipMenu = AddChoiceMenu(tr("Tip"), { tr("Arrow"), tr("Dot") }, PointerTip, [this, Id, PointerStyle](int Tip)
 		{
 			mInstructions->SetPointerStyle(Id, PointerStyle, Tip);
 		});
+
+		// wedges have no tip
+		TipMenu->setEnabled((PointerStyle >= 0 ? PointerStyle : mInstructions->GetIntProperty(swInstructionsPropertyType::PointerStyle, nullptr, 0)) != static_cast<int>(swInstructionsPointerStyle::Wedge));
 
 		Menu.addSeparator();
 

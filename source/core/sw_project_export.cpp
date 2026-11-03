@@ -29,6 +29,8 @@
 
 // inline so the export folder holds only pages and images, images stay on white since parts lists use black text
 static const char swHTMLStyleSheet[] = R"(
+			/* colors and corner radius shared by every page */
+
 			:root {
 				color-scheme: light dark;
 				--page: #f6f7f9;
@@ -37,7 +39,10 @@ static const char swHTMLStyleSheet[] = R"(
 				--card: #ffffff;
 				--line: #d0d7de;
 				--link: #0969da;
+				--radius: 12px;
 			}
+
+			/* colors when the reader system is in dark mode */
 
 			@media (prefers-color-scheme: dark) {
 
@@ -51,6 +56,8 @@ static const char swHTMLStyleSheet[] = R"(
 
 			}
 
+			/* page width, spacing and text font */
+
 			body {
 				max-width: 1100px;
 				margin: 0 auto;
@@ -61,11 +68,15 @@ static const char swHTMLStyleSheet[] = R"(
 				text-align: center;
 			}
 
+			/* page title */
+
 			h1 {
 				margin: 0 0 32px;
 				font-size: 1.75em;
 				font-weight: 600;
 			}
+
+			/* step and parts list images on their card */
 
 			img {
 				max-width: 100%;
@@ -74,21 +85,29 @@ static const char swHTMLStyleSheet[] = R"(
 				box-sizing: border-box;
 				background: var(--card);
 				border: 1px solid var(--line);
-				border-radius: 12px;
+				border-radius: var(--radius);
 			}
+
+			/* spacing under paragraphs */
 
 			p {
 				margin: 0 0 16px;
 			}
+
+			/* links */
 
 			a {
 				color: var(--link);
 				text-decoration: none;
 			}
 
+			/* links under the pointer */
+
 			a:hover {
 				text-decoration: underline;
 			}
+
+			/* line above the created by footer */
 
 			hr {
 				border: 0;
@@ -96,23 +115,33 @@ static const char swHTMLStyleSheet[] = R"(
 				margin: 32px 0;
 			}
 
+			/* previous, index, next and parts used links of one step per page */
+
 			body > a, body > b {
 				display: inline-block;
 				margin: 0 8px;
 			}
+
+			/* created by text in the footer */
 
 			i {
 				color: var(--muted);
 				font-weight: 400;
 			}
 
+			/* single page, pages snap into view while scrolling */
+
 			html:has(section) {
 				scroll-snap-type: y mandatory;
 			}
 
+			/* single page, the title and the footer snap too */
+
 			html:has(section) h1, footer {
 				scroll-snap-align: start;
 			}
+
+			/* single page, one instruction page per screen */
 
 			section {
 				min-height: 100vh;
@@ -126,11 +155,15 @@ static const char swHTMLStyleSheet[] = R"(
 				scroll-snap-stop: always;
 			}
 
+			/* single page, page image fits the screen height */
+
 			section img {
 				padding: 0;
 				width: auto;
 				max-height: calc(100vh - 32px);
 			}
+
+			/* page navigation, on the right by default */
 
 			nav {
 				position: fixed;
@@ -143,15 +176,19 @@ static const char swHTMLStyleSheet[] = R"(
 				padding: 4px;
 				background: var(--page);
 				border: 1px solid var(--line);
-				border-radius: 12px;
+				border-radius: var(--radius);
 				opacity: 0.85;
 				transition: opacity 0.2s;
 			}
+
+			/* page navigation on the left */
 
 			nav.left {
 				right: auto;
 				left: 16px;
 			}
+
+			/* page navigation at the bottom */
 
 			nav.bottom {
 				top: auto;
@@ -161,9 +198,13 @@ static const char swHTMLStyleSheet[] = R"(
 				flex-direction: row;
 			}
 
+			/* page navigation while used */
+
 			nav:hover, nav:focus-within {
 				opacity: 1;
 			}
+
+			/* each page navigation button */
 
 			nav button {
 				width: 40px;
@@ -174,6 +215,8 @@ static const char swHTMLStyleSheet[] = R"(
 				color: var(--text);
 				cursor: pointer;
 			}
+
+			/* page navigation icons */
 
 			nav svg {
 				width: 24px;
@@ -186,9 +229,13 @@ static const char swHTMLStyleSheet[] = R"(
 				vertical-align: middle;
 			}
 
+			/* page navigation button under the pointer */
+
 			nav button:hover {
 				background: var(--line);
 			}
+
+			/* printing leaves the page navigation out */
 
 			@media print {
 
@@ -235,6 +282,16 @@ static std::vector<swInstructionsPropertyType> swGetHTMLOverrideColorTypes(int R
 	// rows in the order of the export dialog, then box border and box background
 	static const swInstructionsPropertyType RowTypes[] = { swInstructionsPropertyType::PageBackgroundColor, swInstructionsPropertyType::CoverBackgroundColor, swInstructionsPropertyType::BillOfMaterialsBackgroundColor, swInstructionsPropertyType::CoverTitleColor, swInstructionsPropertyType::PLIThumbnailBackgroundColor, swInstructionsPropertyType::NoticeTextColor, swInstructionsPropertyType::FadeColor, swInstructionsPropertyType::HighlightColor, swInstructionsPropertyType::StepBackgroundColor, swInstructionsPropertyType::StepNumberColor, swInstructionsPropertyType::PageNumberColor, swInstructionsPropertyType::PLITextColor, swInstructionsPropertyType::StepDividerColor, swInstructionsPropertyType::PointerColor };
 
+	// some rows also color the submodel pages, the author and the parts list title
+	if (Row < static_cast<int>(std::size(RowTypes)) && RowTypes[Row] == swInstructionsPropertyType::PageBackgroundColor)
+		return { RowTypes[Row], swInstructionsPropertyType::SubmodelBackgroundColor };
+
+	if (Row < static_cast<int>(std::size(RowTypes)) && RowTypes[Row] == swInstructionsPropertyType::CoverTitleColor)
+		return { RowTypes[Row], swInstructionsPropertyType::CoverAuthorColor };
+
+	if (Row < static_cast<int>(std::size(RowTypes)) && RowTypes[Row] == swInstructionsPropertyType::StepNumberColor)
+		return { RowTypes[Row], swInstructionsPropertyType::BillOfMaterialsTitleColor };
+
 	if (Row < static_cast<int>(std::size(RowTypes)))
 		return { RowTypes[Row] };
 
@@ -249,6 +306,12 @@ static std::vector<swInstructionsPropertyType> swGetHTMLOverrideColorTypes(int R
 	return BoxColorTypes;
 }
 
+QString swGetHTMLStyleSheet()
+{
+	// the sheet without the indent it takes inside the page
+	return QString::fromLatin1(swHTMLStyleSheet).replace(QLatin1String("\n\t\t\t"), QLatin1String("\n")).trimmed() + QLatin1Char('\n');
+}
+
 swHTMLExportOptions::swHTMLExportOptions(const Project* Project)
 {
 	QString FileName = Project->GetFileName();
@@ -259,7 +322,6 @@ swHTMLExportOptions::swHTMLExportOptions(const Project* Project)
 	int ImageOptions = swGetProfileInteger(SW_PROFILE_HTML_IMAGE_OPTIONS);
 	int HTMLOptions = swGetProfileInteger(SW_PROFILE_HTML_OPTIONS);
 
-	TransparentImages = (ImageOptions & SW_IMAGE_TRANSPARENT) != 0;
 	SubModels = (HTMLOptions & (SW_HTML_SUBMODELS)) != 0;
 	CurrentOnly = (HTMLOptions & SW_HTML_CURRENT_ONLY) != 0;
 	SinglePage = (HTMLOptions & SW_HTML_SINGLE_PAGE) != 0;
@@ -272,6 +334,11 @@ swHTMLExportOptions::swHTMLExportOptions(const Project* Project)
 	Display = swGetProfileInteger(SW_PROFILE_HTML_DISPLAY);
 	OverrideInstructions = (HTMLOptions & SW_HTML_OVERRIDE) != 0;
 	BackgroundColor = swQColorFromRGBA(swGetProfileInteger(SW_PROFILE_HTML_BACKGROUND_COLOR));
+
+	// the old transparent background check box becomes a transparent color
+	if (ImageOptions & SW_IMAGE_TRANSPARENT)
+		BackgroundColor.setAlpha(0);
+	StyleSheet = swGetProfileString(SW_PROFILE_HTML_STYLE_SHEET);
 
 	const QStringList ColorNames = swGetProfileStringList(SW_PROFILE_HTML_OVERRIDE_COLORS);
 	const swInstructionsProperties DefaultProperties = swInstructions::CreateDefaultProperties();
@@ -303,13 +370,14 @@ void swHTMLExportOptions::SaveDefaults()
 	if (OverrideInstructions)
 		HTMLOptions |= SW_HTML_OVERRIDE;
 
-	swSetProfileInteger(SW_PROFILE_HTML_IMAGE_OPTIONS, TransparentImages ? SW_IMAGE_TRANSPARENT : 0);
+	swSetProfileInteger(SW_PROFILE_HTML_IMAGE_OPTIONS, 0);
 	swSetProfileInteger(SW_PROFILE_HTML_OPTIONS, HTMLOptions);
 	swSetProfileInteger(SW_PROFILE_HTML_IMAGE_WIDTH, StepImagesWidth);
 	swSetProfileInteger(SW_PROFILE_HTML_IMAGE_HEIGHT, StepImagesHeight);
 	swSetProfileInteger(SW_PROFILE_HTML_ARROW_POSITION, ArrowPosition);
 	swSetProfileInteger(SW_PROFILE_HTML_DISPLAY, Display);
 	swSetProfileInteger(SW_PROFILE_HTML_BACKGROUND_COLOR, swRGBAFromQColor(BackgroundColor));
+	swSetProfileString(SW_PROFILE_HTML_STYLE_SHEET, StyleSheet);
 
 	QStringList ColorNames;
 
@@ -1525,14 +1593,21 @@ swResult<void> Project::ExportHTML(const swHTMLExportOptions& Options)
 	};
 
 	// the image card takes the image color so its rounded corners frame the image
-	const QString CardStyle = !Options.SinglePage && !Options.TransparentImages ? QString::fromLatin1("\t\t\t:root {\n\t\t\t\t--card: %1;\n\t\t\t}\n\n").arg(Options.BackgroundColor.name()) : QString();
+	QString CardStyle = !Options.SinglePage && Options.BackgroundColor.alpha() ? QString::fromLatin1("\t\t\t:root {\n\t\t\t\t--card: %1;\n\t\t\t}\n\n").arg(Options.BackgroundColor.name()) : QString();
 
-	auto WriteHeader = [&CardStyle](QTextStream& Stream, const QString& Title)
+	// an empty style sheet keeps the built-in one
+	QString StyleSheet;
+
+	// lines take the indent of the style element
+	for (const QString& Line : (Options.StyleSheet.isEmpty() ? swGetHTMLStyleSheet() : Options.StyleSheet).split(QLatin1Char('\n')))
+		StyleSheet += Line.trimmed().isEmpty() ? QLatin1String("\n") : QLatin1String("\t\t\t") + Line + QLatin1Char('\n');
+
+	auto WriteHeader = [&CardStyle, &StyleSheet](QTextStream& Stream, const QString& Title)
 	{
 #if (QT_VERSION < QT_VERSION_CHECK(6, 0, 0))
 		Stream.setCodec("UTF-8");
 #endif
-		Stream << QString::fromLatin1("<!DOCTYPE html>\n<HTML>\n\t<HEAD>\n\t\t<META CHARSET=\"UTF-8\">\n\t\t<META NAME=\"viewport\" CONTENT=\"width=device-width, initial-scale=1\">\n\t\t<TITLE>%1</TITLE>\n\t\t<STYLE>\n%2%3\t\t</STYLE>\n\t</HEAD>\n<BODY>\n<CENTER>\n<H1>%1</H1>\n").arg(Title.toHtmlEscaped(), QLatin1String(swHTMLStyleSheet), CardStyle);
+		Stream << QString::fromLatin1("<!DOCTYPE html>\n<HTML>\n\t<HEAD>\n\t\t<META CHARSET=\"UTF-8\">\n\t\t<META NAME=\"viewport\" CONTENT=\"width=device-width, initial-scale=1\">\n\t\t<TITLE>%1</TITLE>\n\t\t<STYLE>\n%2%3\t\t</STYLE>\n\t</HEAD>\n<BODY>\n<CENTER>\n<H1>%1</H1>\n").arg(Title.toHtmlEscaped(), StyleSheet, CardStyle);
 	};
 
 	const QString CreatedBy = tr("Created by %1").toHtmlEscaped().arg(QLatin1String("<A HREF=\"https://github.com/nathaneltitane/studworx\">StudWorx</A>"));
@@ -1569,7 +1644,7 @@ swResult<void> Project::ExportHTML(const swHTMLExportOptions& Options)
 					Instructions.SetDefaultColor(Type, Options.OverrideColors[Row]);
 
 			// the step images box takes the image background after the box background
-			Instructions.SetDefaultColor(swInstructionsPropertyType::StepImageBackgroundColor, Options.TransparentImages ? QColor(Qt::transparent) : Options.BackgroundColor);
+			Instructions.SetDefaultColor(swInstructionsPropertyType::StepImageBackgroundColor, Options.BackgroundColor);
 			Instructions.SetDefaultBool(swInstructionsPropertyType::ShowStepPLI, Options.PartsListStep);
 			Instructions.SetDefaultBool(swInstructionsPropertyType::ShowBillOfMaterials, Options.PartsListEnd);
 		}
@@ -1587,6 +1662,10 @@ swResult<void> Project::ExportHTML(const swHTMLExportOptions& Options)
 		}
 
 		const QSize ImageSize = QSizeF(Instructions.mPageSetup.Width, Instructions.mPageSetup.Height).scaled(QSizeF(Options.StepImagesWidth, Options.StepImagesHeight), Qt::KeepAspectRatio).toSize();
+		// page cards round like the step model box, in percent of the page so they match at any shown size
+		const qreal StepImageRadius = Instructions.GetBoxStyle(swInstructionsBoxElement::StepImage, nullptr, 0).GetBackgroundRadius();
+		CardStyle = QString::fromLatin1("\t\t\tsection img {\n\t\t\t\tborder-radius: %1% / %2%;\n\t\t\t}\n\n").arg(100.0 * StepImageRadius / Instructions.mPageSetup.Width, 0, 'f', 3).arg(100.0 * StepImageRadius / Instructions.mPageSetup.Height, 0, 'f', 3);
+
 		QString FileName = QFileInfo(Dir, IndexFileName).absoluteFilePath();
 		QFile File(FileName);
 
@@ -1756,7 +1835,7 @@ swResult<void> Project::ExportHTML(const swHTMLExportOptions& Options)
 		}
 
 		QString StepImageBaseName = QFileInfo(Dir, BaseName + QLatin1String("-%1.png")).absoluteFilePath();
-		const swResult<void> ImagesSaved = Model->SaveStepImages(StepImageBaseName, true, false, Options.StepImagesWidth, Options.StepImagesHeight, 1, LastStep, swImageBackground::Transparent, Options.TransparentImages ? QColor() : Options.BackgroundColor);
+		const swResult<void> ImagesSaved = Model->SaveStepImages(StepImageBaseName, true, false, Options.StepImagesWidth, Options.StepImagesHeight, 1, LastStep, swImageBackground::Transparent, Options.BackgroundColor);
 
 		if (!ImagesSaved)
 			return ImagesSaved;

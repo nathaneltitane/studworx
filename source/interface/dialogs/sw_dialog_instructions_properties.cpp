@@ -387,12 +387,16 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	CreateColorEditor(swInstructionsPropertyType::CoverBackgroundColor, tr("Cover Background"), tr("Color filling the whole cover page, margins included."));
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverBackgroundColor);
 
-	CreateFontEditor(swInstructionsPropertyType::CoverTitleFont, tr("Cover Title Font"), tr("Font of the model title, the author uses half its size."));
+	CreateFontEditor(swInstructionsPropertyType::CoverTitleFont, tr("Cover Title Font"), tr("Font of the model title."));
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverTitleFont);
-	CreateColorEditor(swInstructionsPropertyType::CoverTitleColor, tr("Cover Title Color"), tr("Color of the model title and author."));
+	CreateColorEditor(swInstructionsPropertyType::CoverTitleColor, tr("Cover Title Color"), tr("Color of the model title."));
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverTitleColor);
+	CreateFontEditor(swInstructionsPropertyType::CoverAuthorFont, tr("Cover Author Font"), tr("Font of the model author."));
+	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverAuthorFont);
+	CreateColorEditor(swInstructionsPropertyType::CoverAuthorColor, tr("Cover Author Color"), tr("Color of the model author."));
+	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverAuthorColor);
 
-	AddCategory(CategoryIndex::BillOfMaterials, tr("Bill of Materials"), tr("<p><b>Bill of Materials</b></p><p>The last page, listing every part of the model. It uses the Parts List settings.</p>"));
+	AddCategory(CategoryIndex::BillOfMaterials, tr("Bill of Materials"), tr("<p><b>Bill of Materials</b></p><p>The last page, listing every part of the model. It uses the Parts List settings, under a Parts List title in its own font and color, with the box of the step numbers.</p>"));
 
 	AddRow(CategoryIndex::BillOfMaterials, {
 		CreateToggleEditor(swInstructionsPropertyType::ShowBillOfMaterials, tr("Show Bill of Materials"), tr("End the instructions with a page listing every part of the model."))
@@ -404,11 +408,17 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 
 	CreateColorEditor(swInstructionsPropertyType::BillOfMaterialsBackgroundColor, tr("BOM Background"), tr("Color filling the whole bill of materials page, margins included."));
 	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsBackgroundColor);
+	CreateFontEditor(swInstructionsPropertyType::BillOfMaterialsTitleFont, tr("BOM Title Font"), tr("Font of the Parts List title above the bill of materials."));
+	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsTitleFont);
+	CreateColorEditor(swInstructionsPropertyType::BillOfMaterialsTitleColor, tr("BOM Title Color"), tr("Color of the Parts List title above the bill of materials."));
+	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsTitleColor);
 
 	AddCategory(CategoryIndex::Page, tr("Page"), tr("<p><b>Page</b></p><p>The background of the step and blank pages. It applies to all these pages, or only to the current page when it has its own. The cover and the bill of materials have their own backgrounds.</p>"));
 
-	CreateColorEditor(swInstructionsPropertyType::PageBackgroundColor, tr("Page Background"), tr("Color filling the whole page, margins included."));
+	CreateColorEditor(swInstructionsPropertyType::PageBackgroundColor, tr("Page Background"), tr("Color filling the whole page of main model steps, margins included."));
 	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::PageBackgroundColor);
+	CreateColorEditor(swInstructionsPropertyType::SubmodelBackgroundColor, tr("Submodel Background"), tr("Color filling the whole page of submodel steps, margins included."));
+	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::SubmodelBackgroundColor);
 
 	// background for all or current page
 	mBackgroundPageButton = new QToolButton(this);
@@ -426,6 +436,15 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	});
 
 	AddRow(CategoryIndex::Page, { mBackgroundPageButton });
+
+	QToolButton* BackgroundApplyAllButton = CreateApplyAllButton(tr("Use the background of this page on every page."));
+
+	connect(BackgroundApplyAllButton, &QToolButton::clicked, this, [this]()
+	{
+		mInstructions->ApplyPageToAllPages(mPageIndex, swInstructionsPropertyType::PageBackgroundColor);
+	});
+
+	AddRow(CategoryIndex::Page, { BackgroundApplyAllButton });
 
 	AddCategory(CategoryIndex::PageLayout, tr("Steps per Page"), tr("<p><b>Steps per Page</b></p><p>The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Steps fill landscape pages across each row and portrait pages down each column, following the orientation chosen in Page Setup. The dividers are the lines between neighboring steps.</p>"));
 
@@ -476,12 +495,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	mRowsSpinBox = CreatePageLayoutSpinBox(tr("Rows"), tr("Number of step rows on this page."));
 	mColumnsSpinBox = CreatePageLayoutSpinBox(tr("Columns"), tr("Number of step columns on this page."));
 
-	QToolButton* ApplyAllButton = new QToolButton(this);
-	ApplyAllButton->setText(tr("Apply to All Pages"));
-	ApplyAllButton->setToolTip(tr("Use this number of rows and columns on every page."));
-	ApplyAllButton->setWhatsThis(ApplyAllButton->toolTip());
-	ApplyAllButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
-	swSetupPanelButton(ApplyAllButton);
+	QToolButton* ApplyAllButton = CreateApplyAllButton(tr("Use this number of rows and columns on every page."));
 
 	connect(ApplyAllButton, &QToolButton::clicked, this, [this]()
 	{
@@ -521,10 +535,10 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	CreateColorEditor(swInstructionsPropertyType::PageNumberColor, tr("Page Number Color"), tr("Color of the page numbers."));
 	AddEditorRow(CategoryIndex::PageNumber, swInstructionsPropertyType::PageNumberColor);
 
-	AddCategory(CategoryIndex::Step, tr("Step Number"), tr("<p><b>Step Number</b></p><p>The step number and the area behind each step.</p>"));
+	AddCategory(CategoryIndex::Step, tr("Step Number"), tr("<p><b>Step Number</b></p><p>The step number and the area behind each step. The bill of materials shows a Parts List title in its place.</p>"));
 
 	AddRow(CategoryIndex::Step, {
-		CreateToggleEditor(swInstructionsPropertyType::ShowStepNumber, tr("Show Step Number"), tr("Show the number of each step in its top left corner."))
+		CreateToggleEditor(swInstructionsPropertyType::ShowStepNumber, tr("Show Step Number"), tr("Show the number of each step in its top left corner, and the Parts List title of the bill of materials."))
 	});
 
 	CreateFontEditor(swInstructionsPropertyType::StepNumberFont, tr("Step Number Font"), tr("Font of the step numbers."));
@@ -573,6 +587,16 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 
 	AddRow(CategoryIndex::PartsList, { mThumbnailPageButton });
 
+	mThumbnailApplyAllButton = CreateApplyAllButton(tr("Use the thumbnail size and background of this page on every page."));
+
+	connect(mThumbnailApplyAllButton, &QToolButton::clicked, this, [this]()
+	{
+		mInstructions->ApplyPageToAllPages(mPageIndex, swInstructionsPropertyType::PLIThumbnailSize);
+		mInstructions->ApplyPageToAllPages(mPageIndex, swInstructionsPropertyType::PLIThumbnailBackgroundColor);
+	});
+
+	AddRow(CategoryIndex::PartsList, { mThumbnailApplyAllButton });
+
 	AddCategory(CategoryIndex::Notice, tr("Notice"), tr("<p><b>Notice</b></p><p>Free text written on a page to point out something. Right-click the page and choose Add Notice to write one, double-click it to edit its text. Drag it, lock it in place or give it pointers like any other element.</p>"));
 
 	CreateFontEditor(swInstructionsPropertyType::NoticeFont, tr("Notice Font"), tr("Font of the notices."));
@@ -585,7 +609,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	// choices follow pointer styles and tips
 	CreateChoiceEditor(swInstructionsPropertyType::PointerStyle, tr("Pointer Style"), tr("Draw pointers as a line or as a callout wedge narrowing to the tip."), { tr("Line"), tr("Callout Wedge") });
 	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerStyle);
-	CreateChoiceEditor(swInstructionsPropertyType::PointerTip, tr("Pointer Tip"), tr("End pointers with an arrowhead or a dot."), { tr("Arrowhead"), tr("Dot") });
+	CreateChoiceEditor(swInstructionsPropertyType::PointerTip, tr("Pointer Tip"), tr("End line pointers with an arrow or a dot, callout wedges have no tip."), { tr("Arrow"), tr("Dot") });
 	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerTip);
 	CreateColorEditor(swInstructionsPropertyType::PointerColor, tr("Pointer Color"), tr("Color of the pointers."));
 	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerColor);
@@ -593,7 +617,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	// lowest pointer values
 	CreateLengthEditor(swInstructionsPropertyType::PointerWidth, tr("Pointer Width"), tr("Width of the pointer lines, Border follows the border of the element."), 0, 72, 0.1)->setSpecialValueText(tr("Border"));
 	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerWidth);
-	CreateLengthEditor(swInstructionsPropertyType::PointerTipSize, tr("Tip Size"), tr("Size of the arrowheads and dots, and width of the wedges at the element, never less than three times the pointer width."), 0, 288, 0.5)->setSpecialValueText(tr("Automatic"));
+	CreateLengthEditor(swInstructionsPropertyType::PointerTipSize, tr("Tip Size"), tr("Size of the arrows and dots, and width of the wedges at the element, never less than three times the pointer width."), 0, 288, 0.5)->setSpecialValueText(tr("Automatic"));
 	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerTipSize);
 
 	AddCategory(CategoryIndex::Box, tr("Box"), tr("<p><b>Box</b></p><p>The space and border around each element. The margin keeps other elements away, the padding keeps the border away from the content and the background fills all of it, margin and padding included. Pointers leave the border. Choose the element to edit, selecting an element on the page chooses it.</p>"));
@@ -624,6 +648,8 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.Padding)->parentWidget());
 		CreateLengthEditor(BoxTypes.BorderWidth, tr("Border Width"), tr("Width of the line around the element, 0 draws no line."), 0, 72, 0.1);
 		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.BorderWidth)->parentWidget());
+		CreateLengthEditor(BoxTypes.CornerRadius, tr("Corner Radius"), tr("Roundness of the box corners, 0 keeps them square."), 0, 72, 0.5);
+		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.CornerRadius)->parentWidget());
 		CreateColorEditor(BoxTypes.BorderColor, tr("Border Color"), tr("Color of the line around the element."));
 		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.BorderColor)->parentWidget());
 		CreateColorEditor(BoxTypes.BackgroundColor, tr("Background"), tr("Color filling the whole element, margin and padding included, transparent shows what lies behind."));
@@ -803,6 +829,19 @@ QComboBox* swInstructionsPropertiesWidget::CreateChoiceEditor(swInstructionsProp
 	});
 
 	return ComboBox;
+}
+
+// use to create a button giving every page a value of this page
+QToolButton* swInstructionsPropertiesWidget::CreateApplyAllButton(const QString& ToolTip)
+{
+	QToolButton* Button = new QToolButton(this);
+	Button->setText(tr("Apply to All Pages"));
+	Button->setToolTip(ToolTip);
+	Button->setWhatsThis(ToolTip);
+	Button->setToolButtonStyle(Qt::ToolButtonTextOnly);
+	swSetupPanelButton(Button);
+
+	return Button;
 }
 
 QToolButton* swInstructionsPropertiesWidget::CreateColorEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip)
@@ -1125,10 +1164,13 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 	const bool ShowStepDividers = GetBool(swInstructionsPropertyType::ShowStepDividers);
 
 	SetEnabled(swInstructionsPropertyType::DocumentFont, UseDocumentFont);
+	SetEnabled(swInstructionsPropertyType::PointerTip, mInstructions->GetIntProperty(swInstructionsPropertyType::PointerStyle, mModel, mStep) != static_cast<int>(swInstructionsPointerStyle::Wedge));
 	const bool ShowCoverPage = GetBool(swInstructionsPropertyType::ShowCoverPage);
 
 	SetEnabled(swInstructionsPropertyType::CoverTitleFont, !UseDocumentFont && ShowCoverPage);
 	SetEnabled(swInstructionsPropertyType::CoverTitleColor, ShowCoverPage);
+	SetEnabled(swInstructionsPropertyType::CoverAuthorFont, !UseDocumentFont && ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
+	SetEnabled(swInstructionsPropertyType::CoverAuthorColor, ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
 	SetEnabled(swInstructionsPropertyType::ShowCoverAuthor, ShowCoverPage);
 	SetEnabled(swInstructionsPropertyType::ShowCoverBlankPage, ShowCoverPage);
 	SetEnabled(swInstructionsPropertyType::CoverBackgroundColor, ShowCoverPage);
@@ -1137,6 +1179,8 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 
 	SetEnabled(swInstructionsPropertyType::ShowBillOfMaterialsBlankPage, ShowBillOfMaterials);
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsBackgroundColor, ShowBillOfMaterials);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleFont, !UseDocumentFont && ShowBillOfMaterials && ShowStepNumber);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleColor, ShowBillOfMaterials && ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::StepNumberFont, !UseDocumentFont && ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::StepNumberColor, ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::PLIFont, !UseDocumentFont);
@@ -1163,6 +1207,7 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 	QSignalBlocker Blocker(mThumbnailPageButton);
 
 	mThumbnailPageButton->setEnabled(PageType == swInstructionsPageType::Steps || PageType == swInstructionsPageType::BillOfMaterials);
+	mThumbnailApplyAllButton->setEnabled(mThumbnailPageButton->isEnabled());
 	mThumbnailPageButton->setChecked(mInstructions->HasPageProperty(mPageIndex, swInstructionsPropertyType::PLIThumbnailSize));
 
 	QSignalBlocker BackgroundBlocker(mBackgroundPageButton);

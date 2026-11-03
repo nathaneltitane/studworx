@@ -296,7 +296,8 @@ void swTests::BrickLinkUsesExceptions()
 // Exports a one brick model to HTML with the StudWorx binary into a folder that already holds a file.
 // The pages must land in a folder named after the model with index.html as the styled entry page,
 // and the chosen folder must keep only its own file and that folder. A display shape must save the pages
-// at twice their shown size. SW_TEST_BINARY is the studworx program.
+// at twice their shown size, use the style sheet of the profile in place of the built-in one, and round
+// the page cards like the step model box. SW_TEST_BINARY is the studworx program.
 void swTests::HTMLExportUsesModelFolder()
 {
 	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
@@ -310,7 +311,7 @@ void swTests::HTMLExportUsesModelFolder()
 
 	QFile Model(Folder.filePath("brick.ldr"));
 	QVERIFY(Model.open(QIODevice::WriteOnly));
-	Model.write("0 Test\r\n1 4 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n");
+	Model.write("0 Test\r\n0 !SW PROPERTY INSTRUCTION STEP_IMAGE_CORNER_RADIUS 24\r\n1 4 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n");
 	Model.close();
 
 	QDir Output(Folder.filePath("output"));
@@ -328,7 +329,7 @@ void swTests::HTMLExportUsesModelFolder()
 	QVERIFY(QDir(Folder.path()).mkpath("config/StudWorx"));
 	QFile Settings(Folder.filePath("config/StudWorx/StudWorx.conf"));
 	QVERIFY(Settings.open(QIODevice::WriteOnly));
-	Settings.write("[HTML]\nDisplay=1\nImageWidth=320\nImageHeight=180\n");
+	Settings.write("[HTML]\nDisplay=1\nImageWidth=320\nImageHeight=180\nStyleSheet=\"body {\\n\\tcolor: #400000;\\n}\\n\"\n");
 	Settings.close();
 
 	if (Environment.value("SW_TEST_NATIVE_DISPLAY") != QLatin1String("1"))
@@ -347,7 +348,27 @@ void swTests::HTMLExportUsesModelFolder()
 	QVERIFY(Index.open(QIODevice::ReadOnly));
 	const QByteArray Page = Index.readAll();
 	QVERIFY(Page.contains("<STYLE>"));
+	QVERIFY2(Page.contains("\t\t\tbody {\n\t\t\t\tcolor: #400000;\n\t\t\t}\n"), Page.constData());
+	QVERIFY2(!Page.contains("--radius"), Page.constData());
+	QVERIFY2(Page.contains("section img {\n\t\t\t\tborder-radius: ") && !Page.contains("border-radius: 0.000%"), Page.constData());
 	QVERIFY(Page.contains("<A ID=\"step-1\"></A>"));
 	QVERIFY(Page.contains("WIDTH=320 HEIGHT=180"));
 	QCOMPARE(QImage(Output.filePath("brick/brick-page-01.png")).size(), QSize(640, 360));
+
+	// the built-in style sheet names the feature of each block
+	QVERIFY(Settings.open(QIODevice::WriteOnly));
+	Settings.write("[HTML]\nDisplay=1\nImageWidth=320\nImageHeight=180\n");
+	Settings.close();
+
+	QDir BuiltInOutput(Folder.filePath("built-in"));
+	QVERIFY(BuiltInOutput.mkpath(QLatin1String(".")));
+	Export.start(Binary, { Model.fileName(), "--export-html", BuiltInOutput.path() });
+	QVERIFY2(Export.waitForFinished(120000), "the html was not saved");
+	QVERIFY2(Export.exitCode() == 0, Export.readAll().constData());
+
+	QFile BuiltInIndex(BuiltInOutput.filePath("brick/index.html"));
+	QVERIFY(BuiltInIndex.open(QIODevice::ReadOnly));
+	const QByteArray BuiltInPage = BuiltInIndex.readAll();
+	QVERIFY2(BuiltInPage.contains("\t\t\t/* page navigation, on the right by default */\n\n\t\t\tnav {"), BuiltInPage.constData());
+	QVERIFY2(BuiltInPage.contains("<NAV CLASS="), BuiltInPage.constData());
 }

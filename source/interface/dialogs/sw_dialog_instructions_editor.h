@@ -4,6 +4,7 @@ class Project;
 class swInstructions;
 class swLDrawHighlighter;
 class swEditorTextEdit;
+class swEditorWidget;
 
 // The editor panel shows the saved text.
 class swInstructionsEditorWidget : public QDockWidget
@@ -32,34 +33,14 @@ protected:
 	void ApplyText(bool Save);
 	bool ValidateText();
 	void RevertClicked();
-	void SetHighlightEnabled(bool Enabled);
-	void SetNumbersEnabled(bool Enabled);
-	void SetWrapEnabled(bool Enabled);
-	void SetMarkersEnabled(bool Enabled);
-	void SetFindVisible(bool Visible);
-	void FindMatch(bool Backward);
-	void ReplaceClicked();
-	void ReplaceAllClicked();
-	void UpdateMatches();
-	QTextDocument::FindFlags GetFindFlags() const;
 
 	Project* mProject = nullptr;
 	swInstructions* mInstructions = nullptr;
 	bool mUpdatePending = false;
 
 	swLDrawHighlighter* mHighlighter = nullptr;
+	swEditorWidget* mEditor = nullptr;
 	swEditorTextEdit* mTextEdit = nullptr;
 	QToolButton* mApplyButton = nullptr;
 	QToolButton* mRevertButton = nullptr;
-	QAction* mFindAction = nullptr;
-	QAction* mHighlightAction = nullptr;
-	QAction* mNumbersAction = nullptr;
-	QAction* mWrapAction = nullptr;
-	QAction* mMarkersAction = nullptr;
-	QWidget* mFindWidget = nullptr;
-	QLineEdit* mFindEdit = nullptr;
-	QLineEdit* mReplaceEdit = nullptr;
-	QLabel* mMatchLabel = nullptr;
-	bool mMatchCase = false;
-	bool mWholeWords = false;
 };

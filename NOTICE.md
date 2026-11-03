@@ -3,6 +3,13 @@
   <details open>
   <summary>2026-11-03</summary>
 
+  - Instructions: a bar under the page goes to the first, previous, cover, bill of materials, next and last pages, inserts a Step Page or Blank Page, removes blank or empty pages and has a page box to type the page, each button with its own mnemonic, and the timeline shortcuts turn the pages
+  - Instructions: Submodel Background in the Page category colors the pages of submodel steps apart from the main model pages
+  - Instructions: Apply to All Pages in the Page and Parts List categories gives every page the background or thumbnails of the current page, the Arrowhead pointer tip is now Arrow and Pointer Tip is greyed out for callout wedges
+  - Instructions: the Bill of Materials page shows a Parts List title in place of the step number, with its own BOM Title Font and BOM Title Color, and the cover author has its own Cover Author Font and Cover Author Color
+  - Export HTML: Transparent Background is gone, a Background Color with zero alpha leaves the step images clear
+  - Instructions: every element box has a Corner Radius in the Box category of the Properties panel, 0 keeps its corners square
+  - Export HTML: Single Page cards round their corners like the step model box, and Edit Style Sheet opens the CSS of the pages in an editor with the options and find and replace of the Editor panel, comments name the feature of each block, and Restore Defaults brings back the built-in one
   - Blender Render: StudWorx brings its own LDraw import and render add-ons, the output, image, scene, parts and editing settings sit in panels of the render window, and Open in Blender opens the model there to keep working on the scene
   - Render menu: Blender Render and POV-Ray Render are listed alphabetically
   - Preferences: the Blender executable is set on the General page with the other program and library locations
@@ -10,7 +17,7 @@
   - Export HTML moved from File > Export to the Instructions window, between Editor and Print
   - Export HTML: Single Page shows the Instructions window pages on one scrolling index.html that stops at each page, with #page-N and #step-N links and First, Previous, Next and Last Page arrows on the right, left or bottom edge set by Arrows
   - Export HTML: Display lays the Single Page pages out for the Instructions Page or a Landscape Display (1920 x 1080), Portrait Display (1080 x 1920) or Tablet (2048 x 1536), filling Width and Height, and pages are saved at twice their shown size for high density screens
-  - Export HTML: Background Color fills the step images and their rounded frames, and Override Instructions Settings applies it, Transparent Background, the Parts List choices and the Settings Overrides colors (page, cover, Bill of Materials, step, text, divider, pointer, fade, highlight and element boxes) to the Single Page export without changing the model
+  - Export HTML: Background Color fills the step images and their rounded frames, and a transparent color leaves them clear, and Override Instructions Settings applies it, the Parts List choices and the Settings Overrides colors (page, cover, Bill of Materials, step, text, divider, pointer, fade, highlight and element boxes) to the Single Page export without changing the model
   - Export BrickLink: a mapping of over 55,000 parts and 236 colors now ships with StudWorx, so exports work without building one first, and Part Exceptions lets you replace the BrickLink number of any part, also as '--bricklink-exceptions' on the command line
   - Export BrickLink and Export CSV: parts the library moved to a new number, such as 60470 to 60470a, are listed and counted under the new number
   - Preferences: updating the BrickLink mapping starts from the bundled file, prefers Rebrickable numbers over outdated ones and keeps the old number of lettered variants BrickLink never took, the Rebrickable API key sits in a new Online Services group on the General page

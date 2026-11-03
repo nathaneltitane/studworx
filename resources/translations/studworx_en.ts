@@ -19,25 +19,9 @@
     </message>
 </context>
 <context>
-    <name>swInstructionsEditorWidget</name>
+    <name>swEditorWidget</name>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="795"/>
-        <source>And %n more.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="798"/>
-        <source>The text was not applied, %n line(s) are not valid LDraw syntax:</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="979"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="325"/>
         <source>%n Replaced</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -45,8 +29,27 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="1022"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="368"/>
         <source>%n Matches</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+</context>
+<context>
+    <name>swInstructionsEditorWidget</name>
+    <message numerus="yes">
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="486"/>
+        <source>And %n more.</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="489"/>
+        <source>The text was not applied, %n line(s) are not valid LDraw syntax:</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>

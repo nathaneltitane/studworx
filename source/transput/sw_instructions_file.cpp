@@ -38,7 +38,11 @@ static const QLatin1String gInstructionsPropertyNames[] =
 	QLatin1String("NOTICE_BACKGROUND_COLOR"), QLatin1String("POINTER_STYLE"), QLatin1String("POINTER_TIP"),
 	QLatin1String("POINTER_COLOR"), QLatin1String("POINTER_WIDTH"), QLatin1String("POINTER_TIP_SIZE"),
 	QLatin1String("PARTS_LIST_LAYOUT"), QLatin1String("PARTS_LIST_ALIGNMENT"),
-	QLatin1String("MODEL_PROJECTION"), QLatin1String("FADE_PREVIOUS_STEPS"), QLatin1String("FADE_COLOR"), QLatin1String("HIGHLIGHT_NEW_PARTS"), QLatin1String("HIGHLIGHT_COLOR")
+	QLatin1String("MODEL_PROJECTION"), QLatin1String("FADE_PREVIOUS_STEPS"), QLatin1String("FADE_COLOR"), QLatin1String("HIGHLIGHT_NEW_PARTS"), QLatin1String("HIGHLIGHT_COLOR"),
+	QLatin1String("STEP_IMAGE_CORNER_RADIUS"), QLatin1String("STEP_NUMBER_CORNER_RADIUS"), QLatin1String("PARTS_LIST_CORNER_RADIUS"),
+	QLatin1String("PAGE_NUMBER_CORNER_RADIUS"), QLatin1String("COVER_TITLE_CORNER_RADIUS"), QLatin1String("COVER_AUTHOR_CORNER_RADIUS"),
+	QLatin1String("COVER_IMAGE_CORNER_RADIUS"), QLatin1String("NOTICE_CORNER_RADIUS"),
+	QLatin1String("BILL_OF_MATERIALS_TITLE_FONT"), QLatin1String("COVER_AUTHOR_FONT"), QLatin1String("BILL_OF_MATERIALS_TITLE_COLOR"), QLatin1String("COVER_AUTHOR_COLOR"), QLatin1String("SUBMODEL_BACKGROUND_COLOR")
 };
 
 static_assert(std::size(gInstructionsPropertyNames) == static_cast<size_t>(swInstructionsPropertyType::Count), "Missing property name");
@@ -66,7 +70,7 @@ static const QLatin1String gInstructionsPointerStyleNames[] =
 
 static const QLatin1String gInstructionsPointerTipNames[] =
 {
-	QLatin1String("ARROWHEAD"), QLatin1String("DOT")
+	QLatin1String("ARROW"), QLatin1String("DOT")
 };
 
 // default pointers write the default

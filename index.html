@@ -1451,7 +1451,7 @@
 				<li><b>Export.</b> 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages from the <a href="#instructions">Instructions</a> window, BrickLink wanted lists and CSV parts lists. BrickLink exports pick the condition, the wanted list by its number or the address of its page, and new listing notices, copy the XML and open the BrickLink upload page in one step, and translate part numbers and colors through a bundled mapping of over 55,000 parts or a file built from the library and Rebrickable, with Rebrickable numbers taking the lead over stale part keywords. BrickLink and CSV exports list parts the library moved to a new number under that number, and Part Exceptions in the BrickLink export keeps a comma or tab separated list of parts whose BrickLink number you set by hand.</li>
 				<li><b>KMZ.</b> Google Earth and SketchUp models, with the visible surfaces only or every part&#x27;s geometry, set in Preferences.</li>
 				<li><b>COLLADA.</b> Translucent colors can be marked as transparent materials for programs that read them.</li>
-				<li><b>HTML.</b> Export HTML in the Instructions window writes styled pages in a folder named after the model, opening at index.html, with light and dark colors that follow the browser. One scrolling page of the Instructions window pages that stops at each page, with #page-N and #step-N links and First, Previous, Next and Last Page arrows on the right, left or bottom edge, laid out for the Instructions Page, a Landscape Display, Portrait Display or Tablet shape in pixels and saved at twice that size for sharp high density screens, or one step per page with an index, step images of any width and height on a background color you choose or transparent, framed in rounded tiles of the same color, and a parts list after each step or at the end, which Override Instructions Settings also applies to the scrolling page with Settings Overrides for the page, cover, Bill of Materials, step, text, divider, pointer, fade, highlight and element box colors, without changing the model, for the current model, its submodels or all models.</li>
+				<li><b>HTML.</b> Export HTML in the Instructions window writes styled pages in a folder named after the model, opening at index.html, with light and dark colors that follow the browser. One scrolling page of the Instructions window pages that stops at each page, with #page-N and #step-N links and First, Previous, Next and Last Page arrows on the right, left or bottom edge, laid out for the Instructions Page, a Landscape Display, Portrait Display or Tablet shape in pixels and saved at twice that size for sharp high density screens, or one step per page with an index, step images of any width and height on a background color you choose, transparent with its alpha, framed in rounded tiles of the same color, and a parts list after each step or at the end, which Override Instructions Settings also applies to the scrolling page with Settings Overrides for the page, cover, Bill of Materials, step, text, divider, pointer, fade, highlight and element box colors, without changing the model, for the current model, its submodels or all models. Edit Style Sheet changes the CSS of the pages in an editor with the options and find and replace of the Editor panel, its comments naming the feature of each block.</li>
 				<li><b>Print.</b> File &gt; Print prints the current model view through the system print dialog, with a Preview button where the dialog allows it.</li>
 				<li><b>Thumbnails.</b> Model thumbnails in file managers, from a KDE thumbnail plugin or the desktop thumbnailer.</li>
 				<li><b>Parts library.</b> Downloaded on the first start as the official LDraw complete.zip, or chosen from an archive you already have, and reloaded from the File menu. An unofficial parts folder can be added beside it.</li>
@@ -1520,10 +1520,18 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/files-export-html.png" aria-label="Enlarge HTML export">
-						<img src="resources/images/files-export-html.png" alt="HTML export" width="960" height="1188" loading="lazy">
+						<img src="resources/images/files-export-html.png" alt="HTML export" width="960" height="1242" loading="lazy">
 					</button>
 
 					<figcaption>HTML export</figcaption>
+				</figure>
+
+				<figure>
+					<button class="shot" data-full="resources/images/files-export-html-style-sheet.png" aria-label="Enlarge HTML style sheet">
+						<img src="resources/images/files-export-html-style-sheet.png" alt="HTML style sheet" width="960" height="540" loading="lazy">
+					</button>
+
+					<figcaption>HTML style sheet</figcaption>
 				</figure>
 			</div>
 
@@ -2307,7 +2315,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/instructions-page-bill-of-materials.png" aria-label="Enlarge Bill of materials">
-						<img src="resources/images/instructions-page-bill-of-materials.png" alt="Bill of materials" width="2877" height="1747" loading="lazy">
+						<img src="resources/images/instructions-page-bill-of-materials.png" alt="Bill of materials" width="2244" height="1362" loading="lazy">
 					</button>
 
 					<figcaption>Bill of materials</figcaption>
@@ -2316,11 +2324,12 @@
 
 			<ul class="points">
 				<li><b>Page setup.</b> Paper and screen presets, metric or imperial units, margins and orientation.</li>
-				<li><b>Pages.</b> A cover page, a bill of materials, blank page breaks and the steps per page, set for each page.</li>
+				<li><b>Page bar.</b> First, Previous, Next and Last buttons under the page, Cover and Bill of Materials jumps that grey out while those pages are off, Step Page and Blank Page to insert an empty step or a blank page before the current page, Remove Page for blank pages and pages of empty steps, and a page box to type the page to go to. Every button has its own mnemonic, and the timeline First, Previous, Next and Last shortcuts turn the pages.</li>
+				<li><b>Pages.</b> A cover page with the model title and author in their own fonts and colors, a bill of materials under a Parts List title in its own font and color, blank page breaks and the steps per page, set for each page, with page backgrounds of their own for submodel steps and an Apply to All Pages for the page background and thumbnails.</li>
 				<li><b>Style.</b> Step dividers, the document font, the model projection, parts list counts, sort order and border, and full page backgrounds.</li>
 				<li><b>Step images.</b> Parts new to each step are outlined and the earlier ones fade.</li>
 				<li><b>Placement.</b> Place, drag and lock every page element within the page margins, on a snapping page grid. Snap to Anchors snaps the corners, edge centers and center of a dragged element to those of the page area and the other elements, and turning it on turns Snap to Grid off, and the other way around.</li>
-				<li><b>Elements.</b> Page numbers, colors, fonts, padding, margin, border and background for every page element, plus notices and pointers to emphasize parts and steps.</li>
+				<li><b>Elements.</b> Page numbers, colors, fonts, padding, margin, border, corner radius and background for every page element, plus notices and pointers to emphasize parts and steps.</li>
 				<li><b>Rulers.</b> Horizontal and vertical rulers measure the page in the page units, or the document units when they are in use, with the page and its margins shaded and an arrow on each ruler that follows the pointer, filled with its own color and alpha. Show Rulers turns them on and off.</li>
 				<li><b>Element inspector.</b> Like the box model of a web browser inspector, Show Element Margins and Show Element Padding fill the margin around and the padding inside every page element, and Show Element Anchors marks its corners, edge centers and center. Each overlay has its own color and alpha in the Colors <a href="#preferences">preferences</a>, and none of them is printed.</li>
 				<li><b>Editor, Export HTML and Print.</b> An Editor panel to read and edit the model file text, whose height snaps to whole lines so no line is ever cut off, Export HTML for the instruction pages, and a built-in Print panel.</li>
@@ -2345,7 +2354,7 @@
 			<div class="gallery natural">
 				<figure>
 					<button class="shot" data-full="resources/images/instructions-panel-properties.png" aria-label="Enlarge Properties">
-						<img src="resources/images/instructions-panel-properties.png" alt="Properties" width="396" height="1121" loading="lazy">
+						<img src="resources/images/instructions-panel-properties.png" alt="Properties" width="396" height="1196" loading="lazy">
 					</button>
 
 					<figcaption>Properties</figcaption>
@@ -2848,7 +2857,7 @@
 							<tr><td><code>0 !SW OFFSET INSTRUCTION &lt;element&gt; &lt;model&gt; &lt;step&gt; &lt;x&gt; &lt;y&gt;</code></td><td>Read, Write</td><td>element moved from its place</td></tr>
 							<tr><td><code>0 !SW LOCK INSTRUCTION &lt;element&gt; &lt;model&gt; &lt;step&gt; &lt;x&gt; &lt;y&gt;</code></td><td>Read, Write</td><td>element locked at a position</td></tr>
 							<tr><td><code>0 !SW NOTICE INSTRUCTION &lt;id&gt; PAGE &lt;page&gt; POSITION &lt;x&gt; &lt;y&gt; TEXT &lt;text&gt;</code></td><td>Read, Write</td><td>notice on a page</td></tr>
-							<tr><td><code>0 !SW POINTER INSTRUCTION &lt;id&gt; PAGE &lt;page&gt; SOURCE &lt;element&gt; ANCHOR &lt;AUTO|0-7&gt; STYLE &lt;DEFAULT|LINE|WEDGE&gt; TIP &lt;DEFAULT|ARROWHEAD|DOT&gt; TARGET &lt;POINT|ELEMENT|PART&gt; &lt;element&gt; PART &lt;index&gt; POSITION &lt;x&gt; &lt;y&gt;</code></td><td>Read, Write</td><td>pointer from an element border to a point, element or part</td></tr>
+							<tr><td><code>0 !SW POINTER INSTRUCTION &lt;id&gt; PAGE &lt;page&gt; SOURCE &lt;element&gt; ANCHOR &lt;AUTO|0-7&gt; STYLE &lt;DEFAULT|LINE|WEDGE&gt; TIP &lt;DEFAULT|ARROW|DOT&gt; TARGET &lt;POINT|ELEMENT|PART&gt; &lt;element&gt; PART &lt;index&gt; POSITION &lt;x&gt; &lt;y&gt;</code></td><td>Read, Write</td><td>pointer from an element border to a point, element or part</td></tr>
 						</tbody>
 					</table>
 				</div>
@@ -3060,7 +3069,7 @@
 				<h2>HELP // EVERY &quot;WHAT&#x27;S THIS?&quot; ENTRY</h2>
 			</header>
 
-			<p class="lead">The same help the app shows from Help &gt; What&#x27;s This?, the title bar question mark or F1: 463 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
+			<p class="lead">The same help the app shows from Help &gt; What&#x27;s This?, the title bar question mark or F1: 464 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
 			<div class="tools-help">
 				<input id="search-help" type="search" placeholder="Search help" aria-label="Search help">
@@ -3145,20 +3154,27 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<summary>2026-11-03</summary>
 
 				<ul>
+					<li><a href="#instructions">Instructions</a>: a bar under the page goes to the first, previous, cover, bill of materials, next and last pages, inserts a Step Page or Blank Page, removes blank or empty pages and has a page box to type the page, each button with its own mnemonic, and the timeline shortcuts turn the pages</li>
+					<li>Instructions: Submodel Background in the Page category colors the pages of submodel <a href="#steps">steps</a> apart from the main model pages</li>
+					<li>Instructions: Apply to All Pages in the Page and Parts List categories gives every page the background or thumbnails of the current page, the Arrowhead pointer tip is now Arrow and Pointer Tip is greyed out for callout wedges</li>
+					<li>Instructions: the Bill of Materials page shows a Parts List title in place of the step number, with its own BOM Title Font and BOM Title Color, and the cover author has its own Cover Author Font and Cover Author Color</li>
+					<li>Export HTML: Transparent Background is gone, a Background Color with zero alpha leaves the step images clear</li>
+					<li>Instructions: every element box has a Corner Radius in the Box category of the Properties panel, 0 keeps its corners square</li>
+					<li>Export HTML: Single Page cards round their corners like the step model box, and Edit Style Sheet opens the CSS of the pages in an editor with the options and find and replace of the Editor panel, comments name the feature of each block, and Restore Defaults brings back the built-in one</li>
 					<li>Blender Render: StudWorx brings its own LDraw import and render add-ons, the output, <a href="#image">image</a>, scene, parts and editing settings sit in <a href="#panels">panels</a> of the render window, and Open in Blender opens the model there to keep working on the scene</li>
 					<li>Render menu: Blender Render and POV-Ray Render are listed alphabetically</li>
 					<li><a href="#preferences">Preferences</a>: the Blender executable is set on the General page with the other program and library locations</li>
 					<li>Export HTML: pages go into a folder named after the model inside the chosen folder, open at index.html and are styled with light and dark colors that follow the browser</li>
-					<li>Export HTML moved from File &gt; Export to the <a href="#instructions">Instructions</a> window, between Editor and Print</li>
+					<li>Export HTML moved from File &gt; Export to the Instructions window, between Editor and Print</li>
 					<li>Export HTML: Single Page shows the Instructions window pages on one scrolling index.html that stops at each page, with #page-N and #step-N links and First, Previous, Next and Last Page arrows on the right, left or bottom edge set by Arrows</li>
 					<li>Export HTML: Display lays the Single Page pages out for the Instructions Page or a Landscape Display (1920 x 1080), Portrait Display (1080 x 1920) or Tablet (2048 x 1536), filling Width and Height, and pages are saved at twice their shown size for high density screens</li>
-					<li>Export HTML: Background Color fills the step images and their rounded frames, and Override Instructions Settings applies it, Transparent Background, the Parts List choices and the Settings Overrides colors (page, cover, Bill of Materials, step, text, divider, pointer, fade, highlight and element boxes) to the Single Page export without changing the model</li>
+					<li>Export HTML: Background Color fills the step images and their rounded frames, and a transparent color leaves them clear, and Override Instructions Settings applies it, the Parts List choices and the Settings Overrides colors (page, cover, Bill of Materials, step, text, divider, pointer, fade, highlight and element boxes) to the Single Page export without changing the model</li>
 					<li>Export BrickLink: a mapping of over 55,000 parts and 236 colors now ships with StudWorx, so exports work without building one first, and Part Exceptions lets you replace the BrickLink number of any part, also as <code>--bricklink-exceptions</code> on the command line</li>
 					<li>Export BrickLink and Export CSV: parts the library moved to a new number, such as 60470 to 60470a, are listed and counted under the new number</li>
 					<li>Preferences: updating the BrickLink mapping starts from the bundled file, prefers Rebrickable numbers over outdated ones and keeps the old number of lettered variants BrickLink never took, the Rebrickable API key sits in a new Online Services group on the General page</li>
 					<li>Preferences and Timeline: commands that share a shortcut show in red, and assigning a taken shortcut asks before moving it, a new Highlight Style shows as soon as you press OK</li>
 					<li>Dialogs: the <a href="#help">Help</a> buttons are gone, the question mark in the title bar and F1 explain every control, labels sit in one column on the left and fields reach the right edge</li>
-					<li>Rotation: turning parts or pivots in angle <a href="#steps">steps</a> lands exactly on square angles again, so later moves keep whole coordinates</li>
+					<li>Rotation: turning parts or pivots in angle steps lands exactly on square angles again, so later moves keep whole coordinates</li>
 					<li>Thumbnails: model thumbnails show again in file managers, and leftovers from the old StudWorks name are removed on <a href="#install">install</a></li>
 					<li>Properties and Import Set Inventory: light settings scroll without a sideways scroll bar, and long set names show in full</li>
 				</ul>
@@ -3345,9 +3361,9 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Export HTML","title":"Pages","paragraphs":["Single Page lays out the pages of the Instructions window on one scrolling index.html that stops at each page as you scroll up or down, with #page-1 and #step-1 links to jump to a page or step, and First, Previous, Next and Last Page arrows on the edge Arrows sets. Display lays the pages out for a screen in pixels: Instructions Page keeps the Instructions window page shape, while Landscape Display (1920 x 1080), Portrait Display (1080 x 1920) and Tablet (2048 x 1536) fill Width and Height and lay the exported pages out again at that shape. Pages are saved at twice the size for sharp high density screens, and blank print pages are left out. There the page colors and parts lists follow the Instructions window, unless Override Instructions Settings is checked. One Step per Page creates separate pages with navigation links. In that mode, Index Page adds a page linking to the steps."]},
 				{"group":"Export HTML","title":"Instructions","paragraphs":["With Single Page, Override Instructions Settings uses the Settings Overrides colors, the Step Images background and the Parts List choices instead of the Instructions window settings. Only the exported pages change, never the model."]},
 				{"group":"Export HTML","title":"Settings Overrides","paragraphs":["Colors of the exported pages while Override Instructions Settings is checked. Box Border and Box Background color the boxes around the step images, step numbers, parts lists, page numbers, cover title, cover author, cover image and notices."]},
-				{"group":"Export HTML","title":"Step Images","paragraphs":["Width and Height set the step image size in pixels, from 1 to 32768 pixels. With Single Page they bound the page image size and keep the page proportions. Transparent Background leaves the image background clear, otherwise Background Color fills it and the frame around each image."]},
-				{"group":"Export HTML","title":"Transparent Background","paragraphs":["When checked, the PNG step images have a transparent background so the page background can show through. When unchecked, they include the configured solid or gradient background with no transparency."]},
+				{"group":"Export HTML","title":"Step Images","paragraphs":["Width and Height set the step image size in pixels, from 1 to 32768 pixels. With Single Page they bound the page image size and keep the page proportions. Background Color fills the image background and the frame around each image, a transparent color leaves it clear."]},
 				{"group":"Export HTML","title":"Parts List","paragraphs":["After Each Step shows the parts added in that step. At the End shows the complete model inventory after the instructions. With Single Page and Override Instructions Settings they show or hide the step parts lists and the Bill of Materials page. You can enable either option, both, or neither."]},
+				{"group":"Export HTML","title":"Style Sheet","paragraphs":["The CSS style sheet of the exported pages, their colors, spacing, cards and arrows. Edit Style Sheet opens it in an editor, comments name the feature of each block, the options button holds the highlighting, line number, wrap, marker and find and replace options it shares with the Editor panel, Restore Defaults there brings back the built-in one. With Single Page the page corners follow the Corner Radius of the step model box in the Instructions window."]},
 				{"group":"Submodels","title":"Submodels","paragraphs":["Manage the model and its submodels. Create, rename, duplicate, delete, or reorder entries, then choose OK to apply the changes. Cancel discards the list changes; files already exported remain on disk.","Drag list entries to change their order. Use Set Active to switch to the current list item when applying changes."]},
 				{"group":"Submodels","title":"Model List","paragraphs":["Select one or more entries for actions such as Rename, Duplicate, Export, or Delete. Drag entries to reorder them. Double-click an entry to apply the list changes and make that entry active.","Model and submodel names must be unique; capitalization alone does not make a name unique."]},
 				{"group":"Submodels","title":"Delete Submodels","paragraphs":["Remove the selected entries after confirmation. At least one entry must remain. Changes take effect when you accept this dialog."]},
@@ -3408,6 +3424,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Save Model Image","title":"Animation","paragraphs":["Animated GIF saves a looping animation. The animation loops forever.","Turntable turns the model around one axis through the Framing center, starting from the current view. Full Turn makes seamless revolutions. Angle swings between two angles from the current view and back again. Turns sets how many revolutions or swings make up the loop, so complex builds can be shown from every side more than once.","Next Step moves through the steps chosen in the Steps group while the model turns, one step every few turns or seconds. The loop ends on the last step and starts again.","Steps plays the chosen steps one per frame, for short animated instructions.","Frames sets how many images make up one turn and Frame Rate how many play each second. Hold Last keeps the finished model on screen before a loop through the steps restarts. Duration shows how long one loop plays."]},
 				{"group":"Save Model Image","title":"Framing","paragraphs":["Current View saves exactly what the view shows. Fit Model aims at the model and moves the camera back until every part fits inside the image at every turntable angle, so animations turn in place without zooming. Fit Each Step fits every step on its own parts. Fitted stills are centered on the model.","Center sets the point the turntable turns around and the camera aims at. World Origin is the 0, 0, 0 point of the scene, Model Origin is the middle of the model base and Model Center is the middle of the model.","Margin keeps empty space around the model. Bounds measures the fit on the whole model, so every step lines up, or only on the steps being saved."]},
 				{"group":"Save Model Image","title":"Background","paragraphs":["View Color fills the background with the view background. Transparent leaves it empty so the model can be placed over other images.","Only PNG and GIF files keep transparency. GIF edges are hard, without smoothing."]},
+				{"group":"Instructions","title":"Page Bar","paragraphs":["Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The timeline First, Previous, Next and Last shortcuts turn the pages too while the page or the Pages panel has focus."]},
 				{"group":"Instructions","title":"Editor","paragraphs":["The text of the model file as it is saved, its parts, steps and instructions. Edit it and apply to load the model from the text, the change is unsaved until the model is saved."]},
 				{"group":"Instructions","title":"Pages","paragraphs":["Select a page to show it. Right-click a page to insert or remove blank pages around it."]},
 				{"group":"Instructions","title":"Placement","paragraphs":["Select an element on the page to place, move or lock it. Place the selected page element on a predefined area: the step model, step number, parts list, cover model, cover title, cover author or bill of materials. Step elements are placed in the part of the page their step gets from the split, or outside the other step element. Placements apply to all pages.","Every element can also be dragged on the page, it keeps its distance from its placement. A locked element keeps its position whatever its placement and is not dragged."]},
@@ -3417,11 +3434,11 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Instructions","title":"Properties","paragraphs":["Edit how the instruction pages look. With nothing selected on the page every section is shown, select an element to show only its settings and its box. Right-click the page to add notices and pointers. Changes apply to all pages."]},
 				{"group":"Instructions","title":"Document","paragraphs":["One font for all text of the instructions and the projection of the step and cover models. The instructions settings, notices and pointers are saved in the model file, the page setup and grid in the preferences."]},
 				{"group":"Instructions","title":"Cover Page","paragraphs":["The first page, showing the model title, its author and the finished model. The title comes from the model description, or its name when there is none, the author from the model properties."]},
-				{"group":"Instructions","title":"Bill of Materials","paragraphs":["The last page, listing every part of the model. It uses the Parts List settings."]},
+				{"group":"Instructions","title":"Bill of Materials","paragraphs":["The last page, listing every part of the model. It uses the Parts List settings, under a Parts List title in its own font and color, with the box of the step numbers."]},
 				{"group":"Instructions","title":"Page","paragraphs":["The background of the step and blank pages. It applies to all these pages, or only to the current page when it has its own. The cover and the bill of materials have their own backgrounds."]},
 				{"group":"Instructions","title":"Steps per Page","paragraphs":["The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Steps fill landscape pages across each row and portrait pages down each column, following the orientation chosen in Page Setup. The dividers are the lines between neighboring steps."]},
 				{"group":"Instructions","title":"Page Number","paragraphs":["The number of each page, the cover and blank pages are not numbered unless all pages are. Drag it or use the Placement panel to move it on all pages."]},
-				{"group":"Instructions","title":"Step Number","paragraphs":["The step number and the area behind each step."]},
+				{"group":"Instructions","title":"Step Number","paragraphs":["The step number and the area behind each step. The bill of materials shows a Parts List title in its place."]},
 				{"group":"Instructions","title":"Parts List","paragraphs":["The list of parts added in each step. The bill of materials uses the same settings."]},
 				{"group":"Instructions","title":"Notice","paragraphs":["Free text written on a page to point out something. Right-click the page and choose Add Notice to write one, double-click it to edit its text. Drag it, lock it in place or give it pointers like any other element."]},
 				{"group":"Instructions","title":"Pointer","paragraphs":["A pointer leaves the border of an element to point at a part, a step or a notice. Right-click an element and choose Add Pointer, then drag its tip onto a part of a step model, another element or any point of the page, the tip follows what it points at. Right-click a pointer to choose the anchor it leaves from, or its own style and tip."]},

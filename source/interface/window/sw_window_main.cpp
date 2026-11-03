@@ -648,8 +648,12 @@ void swMainWindow::ShowHTMLDialog(QWidget* Parent)
 {
 	swHTMLExportOptions Options(swGetActiveProject());
 	swHTMLDialog Dialog(Parent ? Parent : this, &Options);
+	const int Result = Dialog.exec();
 
-	if (Dialog.exec() != QDialog::Accepted)
+	// the style sheet editor shares the editor options
+	UpdateInstructionsOptions();
+
+	if (Result != QDialog::Accepted)
 		return;
 
 	Options.SaveDefaults();

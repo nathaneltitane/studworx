@@ -58,32 +58,32 @@ swInstructionsBoxTypes swGetBoxTypes(swInstructionsBoxElement Element)
 	switch (Element)
 	{
 	case swInstructionsBoxElement::StepImage:
-		return { swInstructionsPropertyType::StepImageMargin, swInstructionsPropertyType::StepImagePadding, swInstructionsPropertyType::StepImageBorderWidth, swInstructionsPropertyType::StepImageBorderColor, swInstructionsPropertyType::StepImageBackgroundColor };
+		return { swInstructionsPropertyType::StepImageMargin, swInstructionsPropertyType::StepImagePadding, swInstructionsPropertyType::StepImageBorderWidth, swInstructionsPropertyType::StepImageCornerRadius, swInstructionsPropertyType::StepImageBorderColor, swInstructionsPropertyType::StepImageBackgroundColor };
 
 	case swInstructionsBoxElement::StepNumber:
-		return { swInstructionsPropertyType::StepNumberMargin, swInstructionsPropertyType::StepNumberPadding, swInstructionsPropertyType::StepNumberBorderWidth, swInstructionsPropertyType::StepNumberBorderColor, swInstructionsPropertyType::StepNumberBackgroundColor };
+		return { swInstructionsPropertyType::StepNumberMargin, swInstructionsPropertyType::StepNumberPadding, swInstructionsPropertyType::StepNumberBorderWidth, swInstructionsPropertyType::StepNumberCornerRadius, swInstructionsPropertyType::StepNumberBorderColor, swInstructionsPropertyType::StepNumberBackgroundColor };
 
 	case swInstructionsBoxElement::PartsList:
-		return { swInstructionsPropertyType::PLIMargin, swInstructionsPropertyType::PLIPadding, swInstructionsPropertyType::PLIBorderWidth, swInstructionsPropertyType::PLIBorderColor, swInstructionsPropertyType::PLIBackgroundColor };
+		return { swInstructionsPropertyType::PLIMargin, swInstructionsPropertyType::PLIPadding, swInstructionsPropertyType::PLIBorderWidth, swInstructionsPropertyType::PLICornerRadius, swInstructionsPropertyType::PLIBorderColor, swInstructionsPropertyType::PLIBackgroundColor };
 
 	case swInstructionsBoxElement::PageNumber:
-		return { swInstructionsPropertyType::PageNumberMargin, swInstructionsPropertyType::PageNumberPadding, swInstructionsPropertyType::PageNumberBorderWidth, swInstructionsPropertyType::PageNumberBorderColor, swInstructionsPropertyType::PageNumberBackgroundColor };
+		return { swInstructionsPropertyType::PageNumberMargin, swInstructionsPropertyType::PageNumberPadding, swInstructionsPropertyType::PageNumberBorderWidth, swInstructionsPropertyType::PageNumberCornerRadius, swInstructionsPropertyType::PageNumberBorderColor, swInstructionsPropertyType::PageNumberBackgroundColor };
 
 	case swInstructionsBoxElement::CoverTitle:
-		return { swInstructionsPropertyType::CoverTitleMargin, swInstructionsPropertyType::CoverTitlePadding, swInstructionsPropertyType::CoverTitleBorderWidth, swInstructionsPropertyType::CoverTitleBorderColor, swInstructionsPropertyType::CoverTitleBackgroundColor };
+		return { swInstructionsPropertyType::CoverTitleMargin, swInstructionsPropertyType::CoverTitlePadding, swInstructionsPropertyType::CoverTitleBorderWidth, swInstructionsPropertyType::CoverTitleCornerRadius, swInstructionsPropertyType::CoverTitleBorderColor, swInstructionsPropertyType::CoverTitleBackgroundColor };
 
 	case swInstructionsBoxElement::CoverAuthor:
-		return { swInstructionsPropertyType::CoverAuthorMargin, swInstructionsPropertyType::CoverAuthorPadding, swInstructionsPropertyType::CoverAuthorBorderWidth, swInstructionsPropertyType::CoverAuthorBorderColor, swInstructionsPropertyType::CoverAuthorBackgroundColor };
+		return { swInstructionsPropertyType::CoverAuthorMargin, swInstructionsPropertyType::CoverAuthorPadding, swInstructionsPropertyType::CoverAuthorBorderWidth, swInstructionsPropertyType::CoverAuthorCornerRadius, swInstructionsPropertyType::CoverAuthorBorderColor, swInstructionsPropertyType::CoverAuthorBackgroundColor };
 
 	case swInstructionsBoxElement::CoverImage:
-		return { swInstructionsPropertyType::CoverImageMargin, swInstructionsPropertyType::CoverImagePadding, swInstructionsPropertyType::CoverImageBorderWidth, swInstructionsPropertyType::CoverImageBorderColor, swInstructionsPropertyType::CoverImageBackgroundColor };
+		return { swInstructionsPropertyType::CoverImageMargin, swInstructionsPropertyType::CoverImagePadding, swInstructionsPropertyType::CoverImageBorderWidth, swInstructionsPropertyType::CoverImageCornerRadius, swInstructionsPropertyType::CoverImageBorderColor, swInstructionsPropertyType::CoverImageBackgroundColor };
 
 	case swInstructionsBoxElement::Notice:
 	case swInstructionsBoxElement::Count:
 		break;
 	}
 
-	return { swInstructionsPropertyType::NoticeMargin, swInstructionsPropertyType::NoticePadding, swInstructionsPropertyType::NoticeBorderWidth, swInstructionsPropertyType::NoticeBorderColor, swInstructionsPropertyType::NoticeBackgroundColor };
+	return { swInstructionsPropertyType::NoticeMargin, swInstructionsPropertyType::NoticePadding, swInstructionsPropertyType::NoticeBorderWidth, swInstructionsPropertyType::NoticeCornerRadius, swInstructionsPropertyType::NoticeBorderColor, swInstructionsPropertyType::NoticeBackgroundColor };
 }
 
 swInstructions::swInstructions(Project* Project)
@@ -208,9 +208,12 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::DocumentFont)].Value = QFont("Arial", 16).toString();
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowCoverPage)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitleFont)].Value = QFont("Arial", 48).toString();
+	Properties[static_cast<int>(swInstructionsPropertyType::CoverAuthorFont)].Value = QFont("Arial", 24).toString();
+	Properties[static_cast<int>(swInstructionsPropertyType::CoverAuthorColor)].Value = SW_RGBA(0, 0, 0, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitleColor)].Value = SW_RGBA(0, 0, 0, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowCoverAuthor)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::PageBackgroundColor)].Value = SW_RGBA(255, 255, 255, 255);
+	Properties[static_cast<int>(swInstructionsPropertyType::SubmodelBackgroundColor)].Value = SW_RGBA(255, 255, 255, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::StepNumberPlacement)].Value = SW_PLACEMENT_GRID_SIZE + 1;
 	Properties[static_cast<int>(swInstructionsPropertyType::StepNumberAnchor)].Value = static_cast<int>(swInstructionsPlacementAnchor::Area);
 	Properties[static_cast<int>(swInstructionsPropertyType::PLIPlacement)].Value = SW_PLACEMENT_GRID_SIZE + SW_PLACEMENT_GRID_SIZE - 1;
@@ -242,6 +245,7 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 
 		Properties[static_cast<int>(BoxTypes.Margin)].Value = 6;
 		Properties[static_cast<int>(BoxTypes.Padding)].Value = 6;
+		Properties[static_cast<int>(BoxTypes.CornerRadius)].Value = 0;
 
 		if (static_cast<swInstructionsBoxElement>(Element) == swInstructionsBoxElement::PartsList)
 			continue;
@@ -253,11 +257,13 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 
 	// frame notices
 	Properties[static_cast<int>(swInstructionsPropertyType::NoticeFont)].Value = QFont("Arial", 16).toString();
+	Properties[static_cast<int>(swInstructionsPropertyType::BillOfMaterialsTitleFont)].Value = QFont("Arial", 24).toString();
+	Properties[static_cast<int>(swInstructionsPropertyType::BillOfMaterialsTitleColor)].Value = SW_RGBA(0, 0, 0, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::NoticeTextColor)].Value = SW_RGBA(0, 0, 0, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::NoticeBorderWidth)].Value = 2;
 	Properties[static_cast<int>(swInstructionsPropertyType::NoticeBackgroundColor)].Value = SW_RGBA(255, 255, 255, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::PointerStyle)].Value = static_cast<int>(swInstructionsPointerStyle::Line);
-	Properties[static_cast<int>(swInstructionsPropertyType::PointerTip)].Value = static_cast<int>(swInstructionsPointerTip::Arrowhead);
+	Properties[static_cast<int>(swInstructionsPropertyType::PointerTip)].Value = static_cast<int>(swInstructionsPointerTip::Arrow);
 	Properties[static_cast<int>(swInstructionsPropertyType::PointerColor)].Value = SW_RGBA(0, 0, 0, 255);
 
 	// pointers follow their element border
@@ -277,7 +283,7 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::HighlightNewParts)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::HighlightColor)].Value = SW_RGBA(255, 242, 0, 230);
 
-	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 97, "Missing default property");
+	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 110, "Missing default property");
 
 	return Properties;
 }
@@ -572,6 +578,10 @@ QVariant swInstructions::GetPageProperty(size_t PageIndex, swInstructionsPropert
 	if (HasPageProperty(PageIndex, Type) && GetPageKey(PageIndex, Key))
 		return mPagePropertyOverrides.at(Key)[static_cast<int>(Type)].Value;
 
+	// submodel pages have their own background
+	if (Type == swInstructionsPropertyType::PageBackgroundColor && mProject && GetPageKey(PageIndex, Key) && Key.first && Key.first != mProject->GetMainModel())
+		return mStepProperties[static_cast<int>(swInstructionsPropertyType::SubmodelBackgroundColor)].Value;
+
 	return mStepProperties[static_cast<int>(Type)].Value;
 }
 
@@ -623,16 +633,38 @@ void swInstructions::SetPageScope(size_t PageIndex, swInstructionsPropertyType T
 		return;
 
 	// pages fall back to the all pages value
+	const QVariant Value = GetPageProperty(PageIndex, Type);
 	swInstructionsProperty& Property = mPagePropertyOverrides[Key][static_cast<int>(Type)];
 
 	if (PageOnly)
 	{
 		Property.Mode = swInstructionsPropertyMode::Default;
-		Property.Value = mStepProperties[static_cast<int>(Type)].Value;
+		Property.Value = Value;
 	}
 	else
 		Property = swInstructionsProperty();
 
+	EmitPagePropertyChanged(Type);
+}
+
+// use to give every page the value shown on one page
+void swInstructions::ApplyPageToAllPages(size_t PageIndex, swInstructionsPropertyType Type)
+{
+	swInstructionsStepKey Key;
+
+	if (!IsPageProperty(Type) || !GetPageKey(PageIndex, Key))
+		return;
+
+	const QVariant Value = GetPageProperty(PageIndex, Type);
+
+	for (auto& [PageKey, Properties] : mPagePropertyOverrides)
+		Properties[static_cast<int>(Type)] = swInstructionsProperty();
+
+	// every page includes the submodel pages
+	if (Type == swInstructionsPropertyType::PageBackgroundColor)
+		SetDefaultProperty(swInstructionsPropertyType::SubmodelBackgroundColor, Value);
+
+	SetDefaultProperty(Type, Value);
 	EmitPagePropertyChanged(Type);
 }
 
@@ -725,6 +757,7 @@ swInstructionsBoxStyle swInstructions::GetBoxStyle(swInstructionsBoxElement Elem
 	BoxStyle.Margin = GetIntProperty(BoxTypes.Margin, Model, Step);
 	BoxStyle.Padding = GetIntProperty(BoxTypes.Padding, Model, Step);
 	BoxStyle.BorderWidth = GetIntProperty(BoxTypes.BorderWidth, Model, Step);
+	BoxStyle.CornerRadius = GetIntProperty(BoxTypes.CornerRadius, Model, Step);
 	BoxStyle.BorderColor = GetColorProperty(BoxTypes.BorderColor, Model, Step);
 	BoxStyle.BackgroundColor = GetColorProperty(BoxTypes.BackgroundColor, Model, Step);
 
@@ -1155,9 +1188,12 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::UseDocumentFont:
 	case swInstructionsPropertyType::DocumentFont:
 	case swInstructionsPropertyType::CoverTitleFont:
+	case swInstructionsPropertyType::CoverAuthorFont:
 	case swInstructionsPropertyType::CoverTitleColor:
+	case swInstructionsPropertyType::CoverAuthorColor:
 	case swInstructionsPropertyType::ShowCoverAuthor:
 	case swInstructionsPropertyType::PageBackgroundColor:
+	case swInstructionsPropertyType::SubmodelBackgroundColor:
 	case swInstructionsPropertyType::CoverBackgroundColor:
 	case swInstructionsPropertyType::BillOfMaterialsBackgroundColor:
 	case swInstructionsPropertyType::ShowStepDividers:
@@ -1226,6 +1262,16 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::PointerColor:
 	case swInstructionsPropertyType::PointerWidth:
 	case swInstructionsPropertyType::PointerTipSize:
+	case swInstructionsPropertyType::StepImageCornerRadius:
+	case swInstructionsPropertyType::StepNumberCornerRadius:
+	case swInstructionsPropertyType::PLICornerRadius:
+	case swInstructionsPropertyType::PageNumberCornerRadius:
+	case swInstructionsPropertyType::CoverTitleCornerRadius:
+	case swInstructionsPropertyType::CoverAuthorCornerRadius:
+	case swInstructionsPropertyType::CoverImageCornerRadius:
+	case swInstructionsPropertyType::NoticeCornerRadius:
+	case swInstructionsPropertyType::BillOfMaterialsTitleFont:
+	case swInstructionsPropertyType::BillOfMaterialsTitleColor:
 		emit PageLayoutChanged();
 		break;
 

@@ -148,6 +148,19 @@ enum class swInstructionsPropertyType
 	FadeColor,
 	HighlightNewParts,
 	HighlightColor,
+	StepImageCornerRadius,
+	StepNumberCornerRadius,
+	PLICornerRadius,
+	PageNumberCornerRadius,
+	CoverTitleCornerRadius,
+	CoverAuthorCornerRadius,
+	CoverImageCornerRadius,
+	NoticeCornerRadius,
+	BillOfMaterialsTitleFont,
+	CoverAuthorFont,
+	BillOfMaterialsTitleColor,
+	CoverAuthorColor,
+	SubmodelBackgroundColor,
 	Count
 };
 
@@ -177,6 +190,7 @@ struct swInstructionsBoxTypes
 	swInstructionsPropertyType Margin;
 	swInstructionsPropertyType Padding;
 	swInstructionsPropertyType BorderWidth;
+	swInstructionsPropertyType CornerRadius;
 	swInstructionsPropertyType BorderColor;
 	swInstructionsPropertyType BackgroundColor;
 };
@@ -191,11 +205,18 @@ struct swInstructionsBoxStyle
 	qreal BorderWidth = 0.0;
 	QColor BorderColor;
 	QColor BackgroundColor;
+	qreal CornerRadius = 0.0;
 
 	// The box padding.
 	qreal GetInset() const
 	{
 		return Margin + BorderWidth + Padding;
+	}
+
+	// use to round the background outside the border by the margin
+	qreal GetBackgroundRadius() const
+	{
+		return CornerRadius > 0.0 ? CornerRadius + Margin : 0.0;
 	}
 };
 
@@ -208,7 +229,7 @@ enum class swInstructionsPointerStyle
 
 enum class swInstructionsPointerTip
 {
-	Arrowhead,
+	Arrow,
 	Dot
 };
 
@@ -412,6 +433,7 @@ public:
 	static bool IsPageProperty(swInstructionsPropertyType Type);
 	bool HasPageProperty(size_t PageIndex, swInstructionsPropertyType Type) const;
 	void SetPageScope(size_t PageIndex, swInstructionsPropertyType Type, bool PageOnly);
+	void ApplyPageToAllPages(size_t PageIndex, swInstructionsPropertyType Type);
 	int GetPageIntProperty(size_t PageIndex, swInstructionsPropertyType Type) const;
 	QColor GetPageColorProperty(size_t PageIndex, swInstructionsPropertyType Type) const;
 	void SetPageInt(size_t PageIndex, swInstructionsPropertyType Type, int Value);

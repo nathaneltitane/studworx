@@ -25,7 +25,6 @@ public:
 	void SaveDefaults();
 
 	QString PathName;
-	bool TransparentImages;
 	bool SubModels;
 	bool CurrentOnly;
 	bool SinglePage;
@@ -39,7 +38,11 @@ public:
 	bool OverrideInstructions;
 	QColor BackgroundColor;
 	std::array<QColor, SW_HTML_OVERRIDE_COLOR_COUNT> OverrideColors;
+	QString StyleSheet;
 };
+
+// Gets the built-in style sheet of the exported pages.
+QString swGetHTMLStyleSheet();
 
 enum class swImageMotion
 {
