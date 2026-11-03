@@ -146,7 +146,7 @@ void swTests::BrickLinkUsesBundledMapping()
 
 	QFile Model(Folder.filePath("model.ldr"));
 	QVERIFY(Model.open(QIODevice::WriteOnly));
-	Model.write("0 Test\r\n1 4 0 0 0 1 0 0 0 1 0 0 0 1 2431pzu.dat\r\n1 72 40 0 0 1 0 0 0 1 0 0 0 1 2559c01.dat\r\n");
+	Model.write("0 Test\r\n1 4 0 0 0 1 0 0 0 1 0 0 0 1 2431pzu.dat\r\n1 72 40 0 0 1 0 0 0 1 0 0 0 1 92709c01.dat\r\n");
 	Model.close();
 
 	QProcessEnvironment ExportEnvironment = Environment;
@@ -169,5 +169,5 @@ void swTests::BrickLinkUsesBundledMapping()
 	const QByteArray Data = WantedList.readAll();
 
 	QVERIFY2(Data.contains("<ITEMID>2431pb0754</ITEMID>\n    <COLOR>5</COLOR>"), Data.constData());
-	QVERIFY2(Data.contains("<ITEMID>2558c03</ITEMID>\n    <COLOR>85</COLOR>"), Data.constData());
+	QVERIFY2(Data.contains("<ITEMID>92710c01</ITEMID>\n    <COLOR>85</COLOR>"), Data.constData());
 }

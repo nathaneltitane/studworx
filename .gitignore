@@ -38,6 +38,7 @@ uic_wrapper.bat
 appdir
 studworx-windows*.exe
 *.snap
+/tools/studworx-bricklink
 /tools/studworx-site
 /tools/studworx-social
 /resources/site/
