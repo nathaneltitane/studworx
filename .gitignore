@@ -18,6 +18,7 @@
 *.mpd
 !/resources/data/*.ldr
 !/resources/samples/*.ldr
+!/resources/blender/**/*.dat
 *.dae
 *.3ds
 *.obj

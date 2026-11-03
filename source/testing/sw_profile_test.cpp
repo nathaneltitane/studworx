@@ -11,10 +11,13 @@ void swTests::ProfileBatchSavesOnce()
 
 	const QString OrganizationName = QCoreApplication::organizationName();
 	const QString ApplicationName = QCoreApplication::applicationName();
+	const QSettings::Format Format = QSettings::defaultFormat();
 
 	QCoreApplication::setOrganizationName(QLatin1String("StudWorxTests"));
 	QCoreApplication::setApplicationName(QLatin1String("ProfileBatch"));
-	QSettings::setPath(QSettings::NativeFormat, QSettings::UserScope, Directory.path());
+	// windows and macos keep native settings in the registry and plists, which ignore the path
+	QSettings::setDefaultFormat(QSettings::IniFormat);
+	QSettings::setPath(QSettings::IniFormat, QSettings::UserScope, Directory.path());
 
 	const QString FileName = QSettings().fileName();
 
@@ -60,4 +63,5 @@ void swTests::ProfileBatchSavesOnce()
 
 	QCoreApplication::setOrganizationName(OrganizationName);
 	QCoreApplication::setApplicationName(ApplicationName);
+	QSettings::setDefaultFormat(Format);
 }
