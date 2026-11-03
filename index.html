@@ -117,6 +117,13 @@
 			html {
 				scroll-behavior: smooth;
 				scroll-padding-top: 20px;
+				scrollbar-width: none;
+			}
+
+			/* page scrollbar hidden so the fixed footer spans the full width */
+
+			html::-webkit-scrollbar {
+				display: none;
 			}
 
 			body {
@@ -146,6 +153,10 @@
 				font-weight: bold;
 			}
 
+			code {
+				color: #222222;
+			}
+
 			/* landing */
 
 			.landing {
@@ -161,6 +172,18 @@
 				background: url("resources/images/interface-main-window.png") center / cover no-repeat;
 				opacity: 0;
 				animation: reveal-backdrop 2s ease forwards;
+			}
+
+			.backdrop pre {
+				margin: 0;
+				padding: 0;
+				background: none;
+				border-radius: 0;
+				overflow: visible;
+				color: #bbbbbb;
+				font-size: clamp(5px, 0.9vw, 11px);
+				line-height: 1.1;
+				zoom: 2;
 			}
 
 			@keyframes reveal-backdrop {
@@ -298,8 +321,27 @@
 			}
 
 			.points li {
-				border-left: 4px solid #bbbbbb;
+				border-left: 5px solid #bbbbbb;
 				padding: 2.5px 0 2.5px 10px;
+			}
+
+			.points code {
+				overflow-wrap: anywhere;
+			}
+
+			.steps {
+				margin: 25px 0;
+				padding: 0 0 0 30px;
+			}
+
+			.steps li {
+				margin: 0 0 10px 0;
+				padding: 0 0 0 5px;
+			}
+
+			.steps li::marker {
+				color: #bbbbbb;
+				font-weight: bold;
 			}
 
 			.more a {
@@ -327,8 +369,8 @@
 			}
 
 			.icon.big {
-				width: 56px;
-				height: 56px;
+				width: 55px;
+				height: 55px;
 				margin: 0;
 				flex: none;
 			}
@@ -348,7 +390,7 @@
 				width: 100%;
 				padding: 0;
 				border: 0;
-				border-radius: 3px;
+				border-radius: 5px;
 				background: #eeeeee;
 				overflow: visible;
 				cursor: pointer;
@@ -356,11 +398,11 @@
 
 			figure.plain .shot {
 				background: transparent;
-				border-radius: 3px;
+				border-radius: 5px;
 			}
 
 			.shot img {
-				border-radius: 3px;
+				border-radius: 5px;
 				display: block;
 				width: 100%;
 				height: auto;
@@ -383,7 +425,7 @@
 				display: block;
 				width: 100%;
 				height: auto;
-				border-radius: 3px;
+				border-radius: 5px;
 				background: #1b1e22;
 			}
 
@@ -427,7 +469,7 @@
 
 			.gallery.natural .shot {
 				background: transparent;
-				border-radius: 3px;
+				border-radius: 5px;
 			}
 
 			.gallery.natural .shot img {
@@ -479,6 +521,22 @@
 				background: #eeeeee;
 			}
 
+			.table.wrap td {
+				white-space: normal;
+				min-width: 160px;
+			}
+
+			.package {
+				display: inline-block;
+				background: #f6f6f6;
+				color: #222222;
+				border-radius: 20px;
+				padding: 5px 10px;
+				margin: 5px 0;
+				font-size: 12px;
+				white-space: nowrap;
+			}
+
 			pre {
 				background: #eeeeee;
 				color: #222222;
@@ -487,18 +545,23 @@
 				overflow-x: auto;
 			}
 
+			pre.diagram {
+				font-size: 12px;
+				line-height: 1.25;
+			}
+
 			/* scrollbars kept clear of the corner radii */
 
 			::-webkit-scrollbar {
-				width: 6px;
-				height: 6px;
+				width: 5px;
+				height: 5px;
 			}
 
 			::-webkit-scrollbar-track {
 				background: transparent;
 			}
 
-			pre::-webkit-scrollbar-track:horizontal {
+			::-webkit-scrollbar-track:horizontal {
 				margin: 0 20px;
 			}
 
@@ -508,7 +571,7 @@
 
 			::-webkit-scrollbar-thumb {
 				background: #bbbbbb;
-				border-radius: 3px;
+				border-radius: 5px;
 			}
 
 			::-webkit-scrollbar-thumb:hover {
@@ -522,9 +585,17 @@
 				}
 			}
 
+			/* options */
+
+			.options {
+				columns: 2 420px;
+				column-gap: 25px;
+				margin: 25px 0;
+			}
+
 			/* help */
 
-			.tools-help {
+			.tools-search {
 				position: sticky;
 				top: 0;
 				z-index: 5;
@@ -532,7 +603,7 @@
 				padding: 10px 0;
 			}
 
-			#search-help {
+			#search {
 				width: 100%;
 				padding: 10px 20px;
 				border: 0;
@@ -543,18 +614,20 @@
 				outline: none;
 			}
 
-			#search-help:focus {
+			#search:focus {
 				background: #eeeeee;
 			}
 
 			.chips {
 				display: grid;
 				grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-				grid-auto-rows: 28px;
+				grid-auto-rows: 30px;
 				gap: 10px;
-				max-height: calc(4 * 28px + 3 * 10px);
+				max-height: calc(4 * 30px + 3 * 10px);
 				overflow-y: auto;
-				margin: 10px 0 0 0;
+				scrollbar-gutter: stable;
+				padding-right: 10px;
+				margin: 10px -15px 0 0;
 			}
 
 			.chip {
@@ -580,6 +653,130 @@
 				font-weight: bold;
 			}
 
+			.list-command {
+				columns: 2 480px;
+				column-gap: 25px;
+			}
+
+			.command {
+				break-inside: avoid;
+				background: #f6f6f6;
+				border-radius: 15px;
+				padding: 15px;
+				margin: 0 0 20px 0;
+			}
+
+			.head-command {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: baseline;
+				justify-content: space-between;
+				gap: 0 10px;
+			}
+
+			.head-command h3 {
+				margin: 0;
+				font-size: 16px;
+			}
+
+			.meta-command {
+				font-size: 12px;
+				color: #aaaaaa;
+			}
+
+			.command p {
+				margin: 5px 0 0 0;
+			}
+
+			.command pre {
+				margin: 10px 0;
+				padding: 10px 15px;
+				border-radius: 10px;
+				background: #ffffff;
+				font-size: 12px;
+				white-space: pre-wrap;
+			}
+
+			.option {
+				border-top: 1px solid #eeeeee;
+				padding: 10px 0 0 0;
+				margin: 10px 0 0 0;
+			}
+
+			.option code {
+				color: #222222;
+				font-weight: bold;
+			}
+
+			.option .argument {
+				color: #aaaaaa;
+				font-weight: normal;
+			}
+
+			.option p {
+				margin: 5px 0 0 0;
+			}
+
+			.marker {
+				color: #bbbbbb;
+				font-weight: bold;
+				text-decoration: underline;
+			}
+
+			.values {
+				display: grid;
+				align-items: start;
+				grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+				gap: 10px;
+				margin: 10px 0 0 0;
+			}
+
+			.values li {
+				background: #ffffff;
+				border-radius: 10px;
+				padding: 5px 10px;
+				margin: 0 0 5px 0;
+				font-size: 12px;
+			}
+
+			.tag {
+				display: inline-block;
+				background: #eeeeee;
+				color: #222222;
+				border-radius: 20px;
+				padding: 5px 10px;
+				margin: 5px 0;
+				font-size: 12px;
+				white-space: nowrap;
+			}
+
+			.tag.default {
+				background: #bbbbbb;
+				color: #ffffff;
+			}
+
+			.value {
+				text-align: center;
+				background: #ffffff;
+				border-radius: 20px;
+				padding: 5px 10px;
+				font-size: 12px;
+				color: #222222;
+			}
+
+			.value i {
+				color: #aaaaaa;
+				font-style: normal;
+			}
+
+			.empty-command {
+				padding: 20px 0;
+			}
+
+			.command.hidden, .option.hidden {
+				display: none;
+			}
+
 			.list-help {
 				columns: 3 320px;
 				column-gap: 25px;
@@ -595,7 +792,7 @@
 			.item-help {
 				break-inside: avoid;
 				background: #f6f6f6;
-				border-radius: 14px;
+				border-radius: 15px;
 				padding: 10px 15px;
 				margin: 0 0 10px 0;
 			}
@@ -616,7 +813,7 @@
 
 			details {
 				background: #f6f6f6;
-				border-radius: 14px;
+				border-radius: 15px;
 				padding: 10px 15px;
 				margin: 0 0 10px 0;
 			}
@@ -638,7 +835,7 @@
 			details code {
 				color: #222222;
 				font-weight: bold;
-				white-space: nowrap;
+				overflow-wrap: anywhere;
 			}
 
 			/* footer */
@@ -668,6 +865,12 @@
 				overflow-x: auto;
 				overflow-y: hidden;
 				scrollbar-width: none;
+			}
+
+			/* page scrollbar hidden so the fixed footer spans the full width */
+
+			html::-webkit-scrollbar {
+				display: none;
 			}
 
 			.footer::-webkit-scrollbar {
@@ -736,7 +939,7 @@
 
 			.button-navigation:hover .icon,
 			.button-navigation.current .icon {
-				transform: translateY(-3px);
+				transform: translateY(-5px);
 			}
 
 			.button-navigation:hover,
@@ -783,8 +986,8 @@
 
 			.copyright .avatar img {
 				display: block;
-				width: 64px;
-				height: 64px;
+				width: 65px;
+				height: 65px;
 			}
 
 			/* the last section ends flush so every site keeps the same gap above the credits */
@@ -816,8 +1019,80 @@
 			#viewer img {
 				max-width: 100%;
 				max-height: 100%;
-				border-radius: 3px;
+				border-radius: 5px;
 				box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+			}
+
+			/* terminal */
+
+			.terminal {
+				background: #1b1e22;
+				color: #222222;
+				border-radius: 20px;
+				padding: 15px 20px;
+				font-size: 12px;
+				line-height: 1.4;
+				overflow-x: auto;
+				white-space: pre;
+			}
+
+			.bar-terminal {
+				display: flex;
+				gap: 5px;
+				margin: 0 0 10px 0;
+			}
+
+			.bar-terminal i {
+				width: 10px;
+				height: 10px;
+				border-radius: 50%;
+				background: #bbbbbb;
+			}
+
+			/* palette */
+
+			.swatches {
+				display: grid;
+				grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+				gap: 10px;
+				margin: 25px 0;
+			}
+
+			.swatch {
+				background: #f6f6f6;
+				border-radius: 15px;
+				padding: 10px;
+				font-size: 12px;
+			}
+
+			.swatch span {
+				display: block;
+				height: 35px;
+				border-radius: 10px;
+				margin: 0 0 10px 0;
+			}
+
+			.swatch b {
+				display: block;
+			}
+
+			.glyph {
+				font-weight: bold;
+				white-space: pre;
+			}
+
+			.command ul {
+				margin: 5px 0 0 0;
+				padding: 0 0 0 20px;
+			}
+
+			.command .table {
+				margin: 10px 0;
+			}
+
+			.command th, .command td {
+				padding: 5px 10px;
+				font-size: 12px;
 			}
 
 			@media (max-width: 800px) {
@@ -839,8 +1114,10 @@
 			}
 
 			@media (max-width: 520px) {
+				.gallery.two { grid-template-columns: 1fr; }
 				.gallery.two, .gallery.three, .gallery.four { grid-template-columns: 1fr; }
 				.points { grid-template-columns: 1fr; }
+				.list-command { columns: 1; }
 				.section { padding: 50px 15px 15px 15px; }
 				.copyright { width: calc(100% - 30px); }
 				.section .gallery:has(> figure + figure) { margin: 25px -15px; padding: 0 15px 10px 15px; scroll-padding: 0 15px; }
@@ -3074,8 +3351,8 @@
 
 			<p class="lead">The same help the app shows from Help &gt; What&#x27;s This?, the title bar question mark or F1: 464 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
-			<div class="tools-help">
-				<input id="search-help" type="search" placeholder="Search help" aria-label="Search help">
+			<div class="tools-search">
+				<input id="search" type="search" placeholder="Search help" aria-label="Search help">
 				<div id="groups-help" class="chips"></div>
 			</div>
 
@@ -4031,7 +4308,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 			// help index with search and area chips
 
-			const search_help = document.getElementById ( 'search-help' ) ;
+			const search_help = document.getElementById ( 'search' ) ;
 			const list_help = document.getElementById ( 'list-help' ) ;
 			const chips_help = document.getElementById ( 'groups-help' ) ;
 
