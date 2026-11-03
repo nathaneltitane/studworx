@@ -192,15 +192,6 @@ const swCommand gCommands[] =
 		""
 	},
 
-	// SW_FILE_RENDER_OPEN_IN_BLENDER
-	{
-		QT_TRANSLATE_NOOP("Action", "File.Render.OpenInBlender"),
-		QT_TRANSLATE_NOOP("Menu", "&Open in Blender..."),
-		QT_TRANSLATE_NOOP("Status", "Open the current model in Blender"),
-		"",
-		""
-	},
-
 	// SW_FILE_INSTRUCTIONS
 	{
 		QT_TRANSLATE_NOOP("Action", "File.Instructions"),

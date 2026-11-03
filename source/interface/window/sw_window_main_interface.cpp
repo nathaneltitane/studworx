@@ -387,7 +387,6 @@ void swMainWindow::CreateMenus()
 	ExportMenu->addAction(mActions[SW_FILE_EXPORT_BRICKLINK]);
 	ExportMenu->addAction(mActions[SW_FILE_EXPORT_COLLADA]);
 	ExportMenu->addAction(mActions[SW_FILE_EXPORT_CSV]);
-	ExportMenu->addAction(mActions[SW_FILE_EXPORT_HTML]);
 	ExportMenu->addAction(mActions[SW_FILE_EXPORT_KMZ]);
 	ExportMenu->addAction(mActions[SW_FILE_EXPORT_POVRAY]);
 	ExportMenu->addAction(mActions[SW_FILE_EXPORT_WAVEFRONT]);
@@ -401,9 +400,8 @@ void swMainWindow::CreateMenus()
 	FileMenu->addAction(mActions[SW_FILE_INSTRUCTIONS]);
 #ifndef SW_DISABLE_RENDER_DIALOG
 	QMenu* RenderMenu = FileMenu->addMenu(tr("Ren&der"));
-	RenderMenu->addAction(mActions[SW_FILE_RENDER_POVRAY]);
 	RenderMenu->addAction(mActions[SW_FILE_RENDER_BLENDER]);
-	RenderMenu->addAction(mActions[SW_FILE_RENDER_OPEN_IN_BLENDER]);
+	RenderMenu->addAction(mActions[SW_FILE_RENDER_POVRAY]);
 #endif
 	FileMenu->addSeparator();
 	FileMenu->addAction(mActions[SW_FILE_RECENT1]);

@@ -596,7 +596,7 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 	return PainterImage;
 }
 
-swResult<void> swModel::SaveStepImages(const QString& BaseName, bool AddStepSuffix, bool Zoom, int Width, int Height, swStep Start, swStep End, swImageBackground Background)
+swResult<void> swModel::SaveStepImages(const QString& BaseName, bool AddStepSuffix, bool Zoom, int Width, int Height, swStep Start, swStep End, swImageBackground Background, const QColor& BackgroundColor)
 {
 	WaitForAssets();
 
@@ -633,13 +633,24 @@ swResult<void> swModel::SaveStepImages(const QString& BaseName, bool AddStepSuff
 		if (!Image)
 			return swUnexpected(Image.error());
 
+		QImage OutputImage = Image.value();
+
+		// a color behind the transparent render keeps smooth edges
+		if (BackgroundColor.isValid())
+		{
+			OutputImage = QImage(Image.value().size(), QImage::Format_ARGB32_Premultiplied);
+			OutputImage.fill(BackgroundColor);
+			QPainter Painter(&OutputImage);
+			Painter.drawImage(0, 0, Image.value());
+		}
+
 		QImageWriter Writer(FileName);
 
 		// keep the format of the extension
 		if (!QImageWriter::supportedImageFormats().contains(QFileInfo(FileName).suffix().toLower().toLatin1()))
 			Writer.setFormat("png");
 
-		if (!Writer.write(Image.value()))
+		if (!Writer.write(OutputImage))
 			return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, Writer.errorString()));
 	}
 

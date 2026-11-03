@@ -12,7 +12,7 @@
    <item>
     <widget class="QGroupBox" name="OutputGroup">
      <property name="whatsThis">
-      <string>&lt;p&gt;&lt;b&gt;Output Folder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The exporter creates this folder if needed and writes the instruction pages and their images into it. Use a separate folder for each export to keep the generated files together.&lt;/p&gt;</string>
+      <string>&lt;p&gt;&lt;b&gt;Output Folder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The exporter writes the instruction pages and their images into a folder named after the model inside this folder, starting at index.html, so nothing else in this folder is touched.&lt;/p&gt;</string>
      </property>
      <property name="title">
       <string>Output</string>
@@ -24,7 +24,7 @@
          <string>Folder for the generated HTML pages and images.</string>
         </property>
         <property name="whatsThis">
-         <string>&lt;p&gt;&lt;b&gt;Output Folder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The exporter creates this folder if needed and writes the instruction pages and their images into it. Use a separate folder for each export to keep the generated files together.&lt;/p&gt;</string>
+         <string>&lt;p&gt;&lt;b&gt;Output Folder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The exporter writes the instruction pages and their images into a folder named after the model inside this folder, starting at index.html, so nothing else in this folder is touched.&lt;/p&gt;</string>
         </property>
         <property name="text">
          <string>Folder</string>
@@ -40,7 +40,7 @@
          <string>Folder for the generated HTML pages and images.</string>
         </property>
         <property name="whatsThis">
-         <string>&lt;p&gt;&lt;b&gt;Output Folder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The exporter creates this folder if needed and writes the instruction pages and their images into it. Use a separate folder for each export to keep the generated files together.&lt;/p&gt;</string>
+         <string>&lt;p&gt;&lt;b&gt;Output Folder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The exporter writes the instruction pages and their images into a folder named after the model inside this folder, starting at index.html, so nothing else in this folder is touched.&lt;/p&gt;</string>
         </property>
        </widget>
       </item>
@@ -105,23 +105,98 @@
    <item>
     <widget class="QGroupBox" name="PagesGroup">
      <property name="whatsThis">
-      <string>&lt;p&gt;&lt;b&gt;Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Single Page places all steps for each model on one HTML page. One Step per Page creates separate pages with navigation links. In that mode, Index Page adds a page linking to the steps.&lt;/p&gt;</string>
+      <string>&lt;p&gt;&lt;b&gt;Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Single Page lays out the pages of the Instructions window on one scrolling index.html that stops at each page as you scroll up or down, with #page-1 and #step-1 links to jump to a page or step, and First, Previous, Next and Last Page arrows on the edge Arrows sets. Display lays the pages out for a screen in pixels: Instructions Page keeps the Instructions window page shape, while Landscape Display (1920 x 1080), Portrait Display (1080 x 1920) and Tablet (2048 x 1536) fill Width and Height and lay the exported pages out again at that shape. Pages are saved at twice the size for sharp high density screens, and blank print pages are left out. There the page colors and parts lists follow the Instructions window, unless Override Instructions Settings is checked. One Step per Page creates separate pages with navigation links. In that mode, Index Page adds a page linking to the steps.&lt;/p&gt;</string>
      </property>
      <property name="title">
       <string>Pages</string>
      </property>
-     <layout class="QVBoxLayout" name="PagesLayout">
-      <item>
+     <layout class="QGridLayout" name="PagesLayout">
+      <item row="0" column="0" colspan="2">
        <widget class="QRadioButton" name="singlePage">
         <property name="toolTip">
-         <string>Put all steps for each model on one HTML page.</string>
+         <string>Put the Instructions window pages on one scrolling HTML page.</string>
         </property>
         <property name="text">
          <string>Single Page</string>
         </property>
        </widget>
       </item>
-      <item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="arrowPositionLabel">
+        <property name="toolTip">
+         <string>Edge of the window that holds the page arrows.</string>
+        </property>
+        <property name="text">
+         <string>Arrows</string>
+        </property>
+        <property name="buddy">
+         <cstring>arrowPosition</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="arrowPosition">
+        <property name="toolTip">
+         <string>Edge of the window that holds the page arrows.</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Right</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Left</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Bottom</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QLabel" name="displayLabel">
+        <property name="toolTip">
+         <string>Screen shape the pages are laid out for, with its size in pixels.</string>
+        </property>
+        <property name="text">
+         <string>Display</string>
+        </property>
+        <property name="buddy">
+         <cstring>display</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="1">
+       <widget class="QComboBox" name="display">
+        <property name="toolTip">
+         <string>Screen shape the pages are laid out for, with its size in pixels.</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Instructions Page</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Landscape Display</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Portrait Display</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Tablet</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="2">
        <widget class="QRadioButton" name="oneStepPerPage">
         <property name="toolTip">
          <string>Create a separate HTML page for each step.</string>
@@ -131,7 +206,7 @@
         </property>
        </widget>
       </item>
-      <item>
+      <item row="4" column="0" colspan="2">
        <widget class="QCheckBox" name="indexPage">
         <property name="toolTip">
          <string>Add a step index when using One Step per Page.</string>
@@ -145,9 +220,42 @@
     </widget>
    </item>
    <item>
+    <widget class="QGroupBox" name="InstructionsGroup">
+     <property name="whatsThis">
+      <string>&lt;p&gt;&lt;b&gt;Instructions&lt;/b&gt;&lt;/p&gt;&lt;p&gt;With Single Page, Override Instructions Settings uses the Settings Overrides colors, the Step Images background and the Parts List choices instead of the Instructions window settings. Only the exported pages change, never the model.&lt;/p&gt;</string>
+     </property>
+     <property name="title">
+      <string>Instructions</string>
+     </property>
+     <layout class="QVBoxLayout" name="InstructionsLayout">
+      <item>
+       <widget class="QCheckBox" name="overrideInstructions">
+        <property name="toolTip">
+         <string>Use these colors, the Step Images background and the Parts List choices instead of the Instructions window settings.</string>
+        </property>
+        <property name="text">
+         <string>Override Instructions Settings</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="OverrideGroup">
+     <property name="whatsThis">
+      <string>&lt;p&gt;&lt;b&gt;Settings Overrides&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Colors of the exported pages while Override Instructions Settings is checked. Box Border and Box Background color the boxes around the step images, step numbers, parts lists, page numbers, cover title, cover author, cover image and notices.&lt;/p&gt;</string>
+     </property>
+     <property name="title">
+      <string>Settings Overrides</string>
+     </property>
+     <layout class="QGridLayout" name="OverrideLayout"/>
+    </widget>
+   </item>
+   <item>
     <widget class="QGroupBox" name="ImagesGroup">
      <property name="whatsThis">
-      <string>&lt;p&gt;&lt;b&gt;Step Images&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Width and Height set the step image size in pixels, from 1 to 32768 pixels. Transparent Background leaves the image background clear.&lt;/p&gt;</string>
+      <string>&lt;p&gt;&lt;b&gt;Step Images&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Width and Height set the step image size in pixels, from 1 to 32768 pixels. With Single Page they bound the page image size and keep the page proportions. Transparent Background leaves the image background clear, otherwise Background Color fills it and the frame around each image.&lt;/p&gt;</string>
      </property>
      <property name="title">
       <string>Step Images</string>
@@ -193,6 +301,38 @@
         </property>
        </widget>
       </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="backgroundColorLabel">
+        <property name="toolTip">
+         <string>Color behind the model in the exported images.</string>
+        </property>
+        <property name="text">
+         <string>Background Color</string>
+        </property>
+        <property name="buddy">
+         <cstring>backgroundColor</cstring>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1" colspan="2">
+       <widget class="QToolButton" name="backgroundColor">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="toolTip">
+         <string>Color behind the model in the exported images.</string>
+        </property>
+        <property name="accessibleName">
+         <string>Background Color</string>
+        </property>
+        <property name="toolButtonStyle">
+         <enum>Qt::ToolButtonTextBesideIcon</enum>
+        </property>
+       </widget>
+      </item>
       <item row="2" column="0" colspan="3">
        <widget class="QCheckBox" name="transparentImages">
         <property name="toolTip">
@@ -212,7 +352,7 @@
    <item>
     <widget class="QGroupBox" name="PartsGroup">
      <property name="whatsThis">
-      <string>&lt;p&gt;&lt;b&gt;Parts List&lt;/b&gt;&lt;/p&gt;&lt;p&gt;After Each Step shows the parts added in that step. At the End shows the complete model inventory after the instructions. You can enable either option, both, or neither.&lt;/p&gt;</string>
+      <string>&lt;p&gt;&lt;b&gt;Parts List&lt;/b&gt;&lt;/p&gt;&lt;p&gt;After Each Step shows the parts added in that step. At the End shows the complete model inventory after the instructions. With Single Page and Override Instructions Settings they show or hide the step parts lists and the Bill of Materials page. You can enable either option, both, or neither.&lt;/p&gt;</string>
      </property>
      <property name="title">
       <string>Parts List</string>
@@ -260,11 +400,15 @@
   <tabstop>currentModelSubmodels</tabstop>
   <tabstop>currentModelOnly</tabstop>
   <tabstop>singlePage</tabstop>
+  <tabstop>arrowPosition</tabstop>
+  <tabstop>display</tabstop>
   <tabstop>oneStepPerPage</tabstop>
   <tabstop>indexPage</tabstop>
+  <tabstop>overrideInstructions</tabstop>
   <tabstop>stepWidth</tabstop>
   <tabstop>stepHeight</tabstop>
   <tabstop>transparentImages</tabstop>
+  <tabstop>backgroundColor</tabstop>
   <tabstop>partsAfterEachStep</tabstop>
   <tabstop>partsAtTheEnd</tabstop>
  </tabstops>

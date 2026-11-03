@@ -32,7 +32,7 @@
 					"description": "StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library, built on LeoCAD.",
 					"applicationCategory": "DesignApplication",
 					"operatingSystem": "Linux, Windows, macOS",
-					"softwareVersion": "2026-11-02",
+					"softwareVersion": "2026-11-03",
 					"license": "https://www.gnu.org/licenses/gpl-3.0.html",
 					"downloadUrl": "https://github.com/nathaneltitane/studworx/releases/latest",
 					"image": "https://studworx.app/resources/social/social.png",
@@ -1448,10 +1448,10 @@
 				<li><b>Startup.</b> Open Most Recent File on Startup reopens the last model, Restore Tab Layout brings back its tabs and split <a href="#views">views</a>, and Load All Parts Before Showing waits until every part is loaded before the model appears.</li>
 				<li><b>LeoCAD models.</b> Models saved by LeoCAD open as they are, and their LeoCAD <a href="#meta">meta</a> commands are migrated to StudWorx ones, automatically when you choose so in <a href="#preferences">Preferences</a>.</li>
 				<li><b>Import.</b> LEGO® Digital Designer models and official set inventories. Set inventories use your own free Rebrickable API key, asked for once or set under Online Services in the preferences, and are searched by set name or number.</li>
-				<li><b>Export.</b> 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages with step images, BrickLink wanted lists and CSV parts lists. BrickLink exports pick the condition, the wanted list by its number or the address of its page, and new listing notices, copy the XML and open the BrickLink upload page in one step, and translate part numbers and colors through a bundled mapping of over 55,000 parts or a file built from the library and Rebrickable, with Rebrickable numbers taking the lead over stale part keywords. BrickLink and CSV exports list parts the library moved to a new number under that number, and Part Exceptions in the BrickLink export keeps a comma or tab separated list of parts whose BrickLink number you set by hand.</li>
+				<li><b>Export.</b> 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages from the <a href="#instructions">Instructions</a> window, BrickLink wanted lists and CSV parts lists. BrickLink exports pick the condition, the wanted list by its number or the address of its page, and new listing notices, copy the XML and open the BrickLink upload page in one step, and translate part numbers and colors through a bundled mapping of over 55,000 parts or a file built from the library and Rebrickable, with Rebrickable numbers taking the lead over stale part keywords. BrickLink and CSV exports list parts the library moved to a new number under that number, and Part Exceptions in the BrickLink export keeps a comma or tab separated list of parts whose BrickLink number you set by hand.</li>
 				<li><b>KMZ.</b> Google Earth and SketchUp models, with the visible surfaces only or every part&#x27;s geometry, set in Preferences.</li>
 				<li><b>COLLADA.</b> Translucent colors can be marked as transparent materials for programs that read them.</li>
-				<li><b>HTML.</b> One page per model or one step per page with an index, step images of any width and height with an optional transparent background, and a parts list after each step or at the end, for the current model, its submodels or all models.</li>
+				<li><b>HTML.</b> Export HTML in the Instructions window writes styled pages in a folder named after the model, opening at index.html, with light and dark colors that follow the browser. One scrolling page of the Instructions window pages that stops at each page, with #page-N and #step-N links and First, Previous, Next and Last Page arrows on the right, left or bottom edge, laid out for the Instructions Page, a Landscape Display, Portrait Display or Tablet shape in pixels and saved at twice that size for sharp high density screens, or one step per page with an index, step images of any width and height on a background color you choose or transparent, framed in rounded tiles of the same color, and a parts list after each step or at the end, which Override Instructions Settings also applies to the scrolling page with Settings Overrides for the page, cover, Bill of Materials, step, text, divider, pointer, fade, highlight and element box colors, without changing the model, for the current model, its submodels or all models.</li>
 				<li><b>Print.</b> File &gt; Print prints the current model view through the system print dialog, with a Preview button where the dialog allows it.</li>
 				<li><b>Thumbnails.</b> Model thumbnails in file managers, from a KDE thumbnail plugin or the desktop thumbnailer.</li>
 				<li><b>Parts library.</b> Downloaded on the first start as the official LDraw complete.zip, or chosen from an archive you already have, and reloaded from the File menu. An unofficial parts folder can be added beside it.</li>
@@ -1520,7 +1520,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/files-export-html.png" aria-label="Enlarge HTML export">
-						<img src="resources/images/files-export-html.png" alt="HTML export" width="960" height="636" loading="lazy">
+						<img src="resources/images/files-export-html.png" alt="HTML export" width="960" height="1188" loading="lazy">
 					</button>
 
 					<figcaption>HTML export</figcaption>
@@ -1708,7 +1708,7 @@
 			<ul class="points">
 				<li><b>POV-Ray.</b> Found on its own in the PATH, Flatpak or Snap and checked for version 3.7. LGEO high detail parts are found beside the parts library or downloaded on request, with a Parts choice between LDraw and LGEO.</li>
 				<li><b>Render window.</b> Choose the output file, follow the progress, and watch the <a href="#image">image</a> appear in the preview as it renders.</li>
-				<li><b>Blender.</b> Render with the Blender LDraw add-on, or Open in Blender to keep working on the scene there. The add-on settings live in <a href="#preferences">Preferences</a>.</li>
+				<li><b>Blender.</b> Render with the bundled Blender LDraw add-ons, with the output, image, scene, parts and editing settings in <a href="#panels">panels</a> of the render window, or Open in Blender to keep working on the scene there. The Blender executable is set in <a href="#preferences">Preferences</a>.</li>
 				<li><b>Lighting styles.</b> Standard, Studio, Matte and Toon, from the View menu or the command line with --lighting. Standard uses one light with soft highlights, Studio key, fill and rim lights, Matte no highlights, and Toon banded cel shading.</li>
 				<li><b>Shading.</b> Wireframe, flat shading, default lights, edge lines, conditional lines and mesh level of detail.</li>
 				<li><b>Mesh level of detail.</b> Distant parts draw with simpler meshes, from a distance set in Preferences, so large <a href="#models">models</a> stay smooth.</li>
@@ -1772,11 +1772,11 @@
 				</figure>
 
 				<figure>
-					<button class="shot" data-full="resources/images/rendering-blender.png" aria-label="Enlarge Blender add-on settings">
-						<img src="resources/images/rendering-blender.png" alt="Blender add-on settings" width="960" height="569" loading="lazy">
+					<button class="shot" data-full="resources/images/rendering-blender.png" aria-label="Enlarge Blender render window">
+						<img src="resources/images/rendering-blender.png" alt="Blender render window" width="960" height="1089" loading="lazy">
 					</button>
 
-					<figcaption>Blender add-on settings</figcaption>
+					<figcaption>Blender render window</figcaption>
 				</figure>
 
 				<figure>
@@ -2323,7 +2323,7 @@
 				<li><b>Elements.</b> Page numbers, colors, fonts, padding, margin, border and background for every page element, plus notices and pointers to emphasize parts and steps.</li>
 				<li><b>Rulers.</b> Horizontal and vertical rulers measure the page in the page units, or the document units when they are in use, with the page and its margins shaded and an arrow on each ruler that follows the pointer, filled with its own color and alpha. Show Rulers turns them on and off.</li>
 				<li><b>Element inspector.</b> Like the box model of a web browser inspector, Show Element Margins and Show Element Padding fill the margin around and the padding inside every page element, and Show Element Anchors marks its corners, edge centers and center. Each overlay has its own color and alpha in the Colors <a href="#preferences">preferences</a>, and none of them is printed.</li>
-				<li><b>Print and Editor.</b> A built-in Print panel, and an Editor panel to read and edit the model file text, whose height snaps to whole lines so no line is ever cut off.</li>
+				<li><b>Editor, Export HTML and Print.</b> An Editor panel to read and edit the model file text, whose height snaps to whole lines so no line is ever cut off, Export HTML for the instruction pages, and a built-in Print panel.</li>
 			</ul>
 
 			<figure class="wide">
@@ -2455,9 +2455,9 @@
 			<p class="lead">Eight pages with lined up label and control columns. Value boxes show their maximum and bring any typed number into range, and every slider shows its value.</p>
 
 			<ul class="points">
-				<li><b>General.</b> Reference paths, where the color configurations, minifigure builder settings and BrickLink mapping update from ldraw.org and Rebrickable with one button and bundled copies are used until a file is set, online services, where the Rebrickable API key is kept and Get Key opens its page, a rejected key being cleared so it is asked for again, the author of new <a href="#models">models</a> built from a name, email address and comment, such as All rights reserved, joined by the author line splitter and previewed as the author line, and the parts library, LGEO and POV-Ray locations.</li>
+				<li><b>General.</b> Reference paths, where the color configurations, minifigure builder settings and BrickLink mapping update from ldraw.org and Rebrickable with one button and bundled copies are used until a file is set, online services, where the Rebrickable API key is kept and Get Key opens its page, a rejected key being cleared so it is asked for again, the author of new <a href="#models">models</a> built from a name, email address and comment, such as All rights reserved, joined by the author line splitter and previewed as the author line, and the parts library, Blender, POV-Ray and LGEO locations.</li>
 				<li><b>Startup and <a href="#files">files</a>.</b> Open the most recent file, restore the tab layout, load all parts before showing a model, watch for file changes and migrate LeoCAD models automatically.</li>
-				<li><b><a href="#rendering">Rendering</a> and <a href="#views">Views</a>.</b> Rendering quality, the Blender add-on settings, and the Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups.</li>
+				<li><b><a href="#rendering">Rendering</a> and <a href="#views">Views</a>.</b> Rendering quality and the Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups.</li>
 				<li><b><a href="#interface">Interface</a> and <a href="#instructions">Instructions</a>.</b> Interface and view colors, edge contrast, the default instruction page settings, and the rulers and element inspector overlays of the instructions page.</li>
 				<li><b>View colors.</b> Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, flex paths, the view cube, every axis, and the element margin, padding and anchor overlays and the ruler pointer arrows of the instructions page, each with an alpha slider.</li>
 				<li><b>Categories.</b> Part categories turned on and off with a checkbox, edited, imported and exported.</li>
@@ -3030,7 +3030,7 @@
 
 			<details>
 				<summary>Blender</summary>
-				<p>The Blender LDraw import add-on handles these commands when its options in <a href="#preferences">Preferences</a> ask for it. The step StudWorx hands to Blender is written with LeoCAD meta commands, the form the add-on reads cameras, lights and groups from.</p>
+				<p>The Blender LDraw import add-on handles these commands when Import Cameras and Import Lights in the Scene panel of the Blender Render window ask for it. The step StudWorx hands to Blender is written with LeoCAD meta commands, the form the add-on reads cameras, lights and groups from.</p>
 
 				<div class="table">
 					<table>
@@ -3060,7 +3060,7 @@
 				<h2>HELP // EVERY &quot;WHAT&#x27;S THIS?&quot; ENTRY</h2>
 			</header>
 
-			<p class="lead">The same help the app shows from Help &gt; What&#x27;s This?, the title bar question mark or F1: 465 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
+			<p class="lead">The same help the app shows from Help &gt; What&#x27;s This?, the title bar question mark or F1: 463 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
 			<div class="tools-help">
 				<input id="search-help" type="search" placeholder="Search help" aria-label="Search help">
@@ -3085,11 +3085,11 @@
 					</thead>
 
 					<tbody>
-						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-02_amd64.deb / arm64.deb</td></tr>
-						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-02-x86_64.rpm / aarch64.rpm</td></tr>
-						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-02-x86_64.appimage / aarch64.appimage</td></tr>
-						<tr><td>Windows</td><td>studworx-windows-2026-11-02-x64.exe</td></tr>
-						<tr><td>macOS</td><td>studworx-macos-2026-11-02-universal.dmg</td></tr>
+						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-03_amd64.deb / arm64.deb</td></tr>
+						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-03-x86_64.rpm / aarch64.rpm</td></tr>
+						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-03-x86_64.appimage / aarch64.appimage</td></tr>
+						<tr><td>Windows</td><td>studworx-windows-2026-11-03-x64.exe</td></tr>
+						<tr><td>macOS</td><td>studworx-macos-2026-11-03-universal.dmg</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -3142,20 +3142,43 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p class="lead">The latest release notices from the StudWorx repository.</p>
 
 			<details open>
+				<summary>2026-11-03</summary>
+
+				<ul>
+					<li>Blender Render: StudWorx brings its own LDraw import and render add-ons, the output, <a href="#image">image</a>, scene, parts and editing settings sit in <a href="#panels">panels</a> of the render window, and Open in Blender opens the model there to keep working on the scene</li>
+					<li>Render menu: Blender Render and POV-Ray Render are listed alphabetically</li>
+					<li><a href="#preferences">Preferences</a>: the Blender executable is set on the General page with the other program and library locations</li>
+					<li>Export HTML: pages go into a folder named after the model inside the chosen folder, open at index.html and are styled with light and dark colors that follow the browser</li>
+					<li>Export HTML moved from File &gt; Export to the <a href="#instructions">Instructions</a> window, between Editor and Print</li>
+					<li>Export HTML: Single Page shows the Instructions window pages on one scrolling index.html that stops at each page, with #page-N and #step-N links and First, Previous, Next and Last Page arrows on the right, left or bottom edge set by Arrows</li>
+					<li>Export HTML: Display lays the Single Page pages out for the Instructions Page or a Landscape Display (1920 x 1080), Portrait Display (1080 x 1920) or Tablet (2048 x 1536), filling Width and Height, and pages are saved at twice their shown size for high density screens</li>
+					<li>Export HTML: Background Color fills the step images and their rounded frames, and Override Instructions Settings applies it, Transparent Background, the Parts List choices and the Settings Overrides colors (page, cover, Bill of Materials, step, text, divider, pointer, fade, highlight and element boxes) to the Single Page export without changing the model</li>
+					<li>Export BrickLink: a mapping of over 55,000 parts and 236 colors now ships with StudWorx, so exports work without building one first, and Part Exceptions lets you replace the BrickLink number of any part, also as <code>--bricklink-exceptions</code> on the command line</li>
+					<li>Export BrickLink and Export CSV: parts the library moved to a new number, such as 60470 to 60470a, are listed and counted under the new number</li>
+					<li>Preferences: updating the BrickLink mapping starts from the bundled file, prefers Rebrickable numbers over outdated ones and keeps the old number of lettered variants BrickLink never took, the Rebrickable API key sits in a new Online Services group on the General page</li>
+					<li>Preferences and Timeline: commands that share a shortcut show in red, and assigning a taken shortcut asks before moving it, a new Highlight Style shows as soon as you press OK</li>
+					<li>Dialogs: the <a href="#help">Help</a> buttons are gone, the question mark in the title bar and F1 explain every control, labels sit in one column on the left and fields reach the right edge</li>
+					<li>Rotation: turning parts or pivots in angle <a href="#steps">steps</a> lands exactly on square angles again, so later moves keep whole coordinates</li>
+					<li>Thumbnails: model thumbnails show again in file managers, and leftovers from the old StudWorks name are removed on <a href="#install">install</a></li>
+					<li>Properties and Import Set Inventory: light settings scroll without a sideways scroll bar, and long set names show in full</li>
+				</ul>
+			</details>
+
+			<details>
 				<summary>2026-11-02</summary>
 
 				<ul>
-					<li><a href="#preferences">Preferences</a>: LDraw Color Configuration, LDraw Alternate Color Configuration, Minifigure Builder Settings and BrickLink Mapping each have an Update button that downloads the latest file from library.ldraw.org, ldraw.org or Rebrickable, the minifigure part list is saved as <code>minifigure.ini</code></li>
+					<li>Preferences: LDraw Color Configuration, LDraw Alternate Color Configuration, Minifigure Builder Settings and BrickLink Mapping each have an Update button that downloads the latest file from library.ldraw.org, ldraw.org or Rebrickable, the minifigure part list is saved as <code>minifigure.ini</code></li>
 					<li>Preferences: the bundled color configurations and minifigure part list are used until you set your own file, a set file that went missing is asked for again at startup</li>
 					<li>Preferences: a new Online Services group on the General page holds the Rebrickable API key with a Get Key button to its page, a key Rebrickable rejects is cleared so you are asked again</li>
-					<li>Dialogs: the <a href="#help">Help</a> buttons are gone, the question mark in the title bar and F1 explain every control</li>
-					<li>Rotation: turning parts or pivots in angle <a href="#steps">steps</a> lands exactly on square angles again, so later moves keep whole coordinates</li>
+					<li>Dialogs: the Help buttons are gone, the question mark in the title bar and F1 explain every control</li>
+					<li>Rotation: turning parts or pivots in angle steps lands exactly on square angles again, so later moves keep whole coordinates</li>
 					<li>Preferences: commands that share a keyboard shortcut show in red, and assigning a taken shortcut asks before moving it, your shortcuts are left as they are</li>
 					<li>Preferences: a new Highlight Style shows on the selection as soon as you press OK, and closing the dialog no longer pauses while settings are saved</li>
 					<li>Array: the dialog has X, Y and Z column headers and numbered rows for each dimension</li>
 					<li>Edge Colors and Export HTML: the dialogs are laid out in clear groups with labels to the left and controls to the right</li>
 					<li>Properties: the light settings scroll without a sideways scroll bar and always keep one setting row in view</li>
-					<li>Thumbnails: model thumbnails show again in file managers that use the desktop thumbnailer, without step highlight or fading, and leftovers from the old StudWorks name are removed on <a href="#install">install</a></li>
+					<li>Thumbnails: model thumbnails show again in file managers that use the desktop thumbnailer, without step highlight or fading, and leftovers from the old StudWorks name are removed on install</li>
 					<li>Preferences: Colors From moved into a new Colors group on the <a href="#rendering">Rendering</a> page, the Colors page is now <a href="#interface">Interface</a></li>
 					<li>Export BrickLink: choose the condition, the wanted list and new listing notices, the choices are remembered, also as <code>--bricklink-condition</code>, <code>--bricklink-wanted-list</code> and <code>--bricklink-notify</code> on the command line</li>
 					<li>Command line: <code>--kmz-geometry all</code> or <code>visible</code> chooses the KMZ geometry and replaces <code>--kmz-all-parts</code></li>
@@ -3163,7 +3186,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Command line: options follow the usual style, one letter after a single dash and full words after two, so <code>-obj</code> is now <code>--export-wavefront</code>, <code>--libpath</code> is <code>--library</code>, <code>--fov</code> is <code>--field-of-view</code>, <code>--zplanes</code> is <code>--clip-planes</code>, <code>--orthographic</code> is <code>--projection orthographic</code>, <code>--aa-samples</code> is <code>--antialiasing-samples</code>, the edge colors are <code>--edge-color</code>, <code>--edge-color-black</code>, <code>--edge-color-dark</code>, <code>--edge-color-automatic</code>, <code>--edge-contrast</code> and <code>--edge-light-dark</code> with <code>--no-</code> forms, <code>--povray-render</code> is <code>--render-povray</code>, and the help is grouped by topic</li>
 					<li>Export BrickLink: paste the address of a wanted list page instead of its number, after saving, Copy XML and Open BrickLink puts the list on the clipboard and opens the BrickLink upload page</li>
 					<li>Minifigure Builder: templates export as <code>.minifigure</code> <a href="#files">files</a> and <code>.minifig</code> files still import, settings, toolbar and category names carry over on the first start</li>
-					<li>Site: the author avatar in the footer is now a sharper 1024 pixel <a href="#image">image</a></li>
+					<li>Site: the author avatar in the footer is now a sharper 1024 pixel image</li>
 					<li>The license is now formatted as Markdown, so it is easier to read on GitHub</li>
 					<li>Preferences and Timeline: commands with a shared shortcut stay red while selected, until the conflict is resolved</li>
 					<li>Render: the preset buttons line up with the fields beside them</li>
@@ -3209,13 +3232,13 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<summary>2026-10-30</summary>
 
 				<ul>
-					<li>Interface: built from standard Qt widgets throughout, <a href="#panels">panels</a>, dialogs and windows follow the system style and theme, only the model views draw with OpenGL</li>
+					<li>Interface: built from standard Qt widgets throughout, panels, dialogs and windows follow the system style and theme, only the model views draw with OpenGL</li>
 					<li>Save Model Image: live preview of the saved image with step arrows, ratio presets from square to widescreen with Landscape and Portrait, a transparent background for PNG and GIF files, Save and Cancel in the File box and help from the title bar What&#x27;s This button</li>
 					<li>Animated GIF: turntable animations from Save Model Image, one or more full turns or back and forth swings around the X, Y or Z axis, with frames per turn, a frame rate and the duration shown, played live in the preview</li>
 					<li>Animated steps: Steps plays the build one step per frame, Next Step moves on every few turns or seconds while the model turns, and Hold Last keeps the finished model on screen before the loop restarts, see <a href="https://studworx.app/#image">Image on the site</a></li>
 					<li>Image framing: Fit Model and Fit Each Step keep every part inside the image with an adjustable margin, turntables keep one steady zoom through the whole turn around the World Origin, Model Origin or Model Center, and View Color backgrounds now save opaque</li>
 					<li>Print: File &gt; Print prints the current model view through the system print dialog, with a Preview button where the dialog allows it</li>
-					<li>File menu: grouped by task, Print after Save As, Image beside <a href="#instructions">Instructions</a> and Render instead of under Export</li>
+					<li>File menu: grouped by task, Print after Save As, Image beside Instructions and Render instead of under Export</li>
 					<li>Preferences: Custom Paths is now Reference Paths</li>
 					<li>Preferences: new Export group with Mark COLLADA Transparency, on by default, writes <code>opaque=&quot;A_ONE&quot;</code> on transparent colors so viewers that skip the COLLADA default show transparent parts translucent without an l2cu pass</li>
 					<li>Rotate tool: dragging empty space with a mouse shortcut orbits, pans or zooms the view again instead of being taken as a rotation handle (LeoCAD #1073)</li>
@@ -3246,41 +3269,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				</ul>
 			</details>
 
-			<details>
-				<summary>2026-10-28</summary>
-
-				<ul>
-					<li>Cutaway: cut into the model around a clicked face to see inside it, with a cube, sphere or cylinder shaped cut - from View &gt; Cutaway, the model is never changed</li>
-					<li>Cutaway: click for the default size or drag to size it, move and resize it with the gizmo knobs, push in and pull out by one plate, Esc leaves it</li>
-					<li>Cutaway: faces lined with a light shade, its color and alpha set in Preferences, the alpha reads 0 to 1 over 95% to 85% transparency so the shade never disappears</li>
-					<li>Cutaway: cut parts show solid surfaces in their own color where the cut passes through them, like a sawn brick instead of a hollow shell</li>
-					<li>Projection: new model views and tabs open with the last chosen projection, set in Preferences to change only the active view or all model views at once</li>
-					<li>Instructions: Model Projection in the Document settings renders the step and cover <a href="#models">models</a> in perspective or orthographic, whatever the model view shows</li>
-					<li>Turntable: after an idle time the model turns full screen in perspective around the X, Y or Z axis set in Preferences on the background color, any input ends it</li>
-					<li>Preferences: Views page grouped into Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder without repeating View or Preview, every slider shows its value on its left and reaches the right edge</li>
-					<li>Preferences: units inside their boxes and named by the count (1 stud, 6 studs), turntable idle and turn durations in seconds, grid line spacing in a spin box</li>
-					<li>Preferences: the Files group sets the Author of new models, &quot;Author&quot; until it is set</li>
-					<li>Preview: the panel, its options and its preferences are named Preview, since it shows models as well as parts</li>
-					<li>Parts panel: a floating panel ends on whole thumbnail or list rows and scrolls by whole rows, the bottom row is never cut</li>
-					<li>Part categories: turn each category on or off with its checkbox, sub parts and aliases are no longer listed</li>
-					<li>Preview: <code>Keep Last Selection</code> keeps showing the last selected part</li>
-					<li>Minifigure Builder: no longer crashes at startup when the parts library cannot be loaded</li>
-					<li>Panels: the right column shrinks again, value fields without limits no longer size for the largest possible number</li>
-					<li>Minifigure Builder: the template buttons sit in pairs with Add to Model below, so the panel can shrink</li>
-					<li>Views: a model opened from the Open dialog, recent files or a drop shows like one opened directly, sized and fitted to its loaded parts before it is first drawn, also when it is reopened, and stays fitted as the window resizes until the camera is moved</li>
-					<li>Instructions: padding, margin, border and background for every page element, the background fills the whole box</li>
-					<li>Instructions: notices, free text added to any page with a right-click</li>
-					<li>Instructions: pointers from an element border to a part, step, notice or other element - eight anchors or the nearest, line or callout wedge, arrowhead or dot tip</li>
-					<li>Instructions: settings, page layouts, notices and pointers saved in the model file as <code>!SW INSTRUCTION</code> meta commands</li>
-					<li>View cube: the view sphere is now a cube with chamfered edges and corners - click any of its 6 faces, 12 edges or 8 corners for that view, with sharper labels</li>
-					<li>Sizes: view cube, axis icon and part thumbnails each come in Extra Small to Extra Large on a 16px baseline - view cube and axis icon 48 to 192, thumbnails 32 to 128, with older saved sizes moved to the nearest one</li>
-					<li>Axis icon: its own Preferences group with size, location, X, Y and Z labels, optional negative axes in their own duller colors set under Colors, and a chamfered view cube wireframe around the axis whose alpha reads 0 to 1 over the same range as the cutaway shade, the icon keeps the same clearance from the view edges as the view cube at each size with the labels kept inside it</li>
-					<li>Command line: import and export the settings, keyboard shortcuts, mouse shortcuts and part categories without opening a window - <code>--import-settings</code>, <code>--export-settings</code>, <code>--import-keyboard-shortcuts</code>, <code>--export-keyboard-shortcuts</code>, <code>--import-mouse-shortcuts</code>, <code>--export-mouse-shortcuts</code>, <code>--import-categories</code>, <code>--export-categories</code></li>
-					<li>Command line: <code>--help</code>, <code>--version</code> and the import and export options run without a display</li>
-					<li>Code: views, preferences, the parts library and projects split into smaller files by task - camera, input, categories, shortcuts, cache, loading, file and import - with no change in behavior</li>
-				</ul>
-			</details>
-
 			<p class="more"><a href="https://github.com/nathaneltitane/studworx/blob/main/NOTICE.md">Read every notice ›</a></p>
 		</section>
 
@@ -3291,7 +3279,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p>LEGO® is a trademark of the LEGO® Group, which does not sponsor, authorize or endorse this project.</p>
 			<div class="authorship">
 				<a class="avatar" href="https://nathaneltitane.com" aria-label="N Λ T H Λ N E L"><img src="resources/avatar/avatar-bird.png" alt="" width="64" height="64"></a>
-				<p>Version // 2026-11-02<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
+				<p>Version // 2026-11-03<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
 			</div>
 		</div>
 
@@ -3352,12 +3340,14 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Groups","title":"Edit Groups","paragraphs":["Reorganize the model's parts and groups in the tree. Drag parts or groups into a group, or to the top level to remove them from a parent group. Double-click a group name to rename it.","New Group creates a group inside the selected group, or beside an ungrouped part. Choose OK to apply the hierarchy, or Cancel to discard the changes. Empty groups are removed when changes are applied."]},
 				{"group":"Groups","title":"Group Hierarchy","paragraphs":["Drop an item onto a group to make it a member of that group. Move it to the top level to remove its parent group. Only group names can be edited; names must be unique and nonempty."]},
 				{"group":"Export HTML","title":"Export HTML","paragraphs":["Create browser-viewable building instructions and PNG images in the output folder. Choose which models to include, how to organize the step pages, and where to show parts lists.","Keep the generated HTML and image files together when copying or sharing the instructions."]},
-				{"group":"Export HTML","title":"Output Folder","paragraphs":["The exporter creates this folder if needed and writes the instruction pages and their images into it. Use a separate folder for each export to keep the generated files together."]},
+				{"group":"Export HTML","title":"Output Folder","paragraphs":["The exporter writes the instruction pages and their images into a folder named after the model inside this folder, starting at index.html, so nothing else in this folder is touched."]},
 				{"group":"Export HTML","title":"Models","paragraphs":["Export instructions for the model and all submodels, only the model or submodel being edited, or that entry with its referenced submodels. When several entries are exported, an overall index links to their instructions."]},
-				{"group":"Export HTML","title":"Pages","paragraphs":["Single Page places all steps for each model on one HTML page. One Step per Page creates separate pages with navigation links. In that mode, Index Page adds a page linking to the steps."]},
-				{"group":"Export HTML","title":"Step Images","paragraphs":["Width and Height set the step image size in pixels, from 1 to 32768 pixels. Transparent Background leaves the image background clear."]},
+				{"group":"Export HTML","title":"Pages","paragraphs":["Single Page lays out the pages of the Instructions window on one scrolling index.html that stops at each page as you scroll up or down, with #page-1 and #step-1 links to jump to a page or step, and First, Previous, Next and Last Page arrows on the edge Arrows sets. Display lays the pages out for a screen in pixels: Instructions Page keeps the Instructions window page shape, while Landscape Display (1920 x 1080), Portrait Display (1080 x 1920) and Tablet (2048 x 1536) fill Width and Height and lay the exported pages out again at that shape. Pages are saved at twice the size for sharp high density screens, and blank print pages are left out. There the page colors and parts lists follow the Instructions window, unless Override Instructions Settings is checked. One Step per Page creates separate pages with navigation links. In that mode, Index Page adds a page linking to the steps."]},
+				{"group":"Export HTML","title":"Instructions","paragraphs":["With Single Page, Override Instructions Settings uses the Settings Overrides colors, the Step Images background and the Parts List choices instead of the Instructions window settings. Only the exported pages change, never the model."]},
+				{"group":"Export HTML","title":"Settings Overrides","paragraphs":["Colors of the exported pages while Override Instructions Settings is checked. Box Border and Box Background color the boxes around the step images, step numbers, parts lists, page numbers, cover title, cover author, cover image and notices."]},
+				{"group":"Export HTML","title":"Step Images","paragraphs":["Width and Height set the step image size in pixels, from 1 to 32768 pixels. With Single Page they bound the page image size and keep the page proportions. Transparent Background leaves the image background clear, otherwise Background Color fills it and the frame around each image."]},
 				{"group":"Export HTML","title":"Transparent Background","paragraphs":["When checked, the PNG step images have a transparent background so the page background can show through. When unchecked, they include the configured solid or gradient background with no transparency."]},
-				{"group":"Export HTML","title":"Parts List","paragraphs":["After Each Step shows the parts added in that step. At the End shows the complete model inventory after the instructions. You can enable either option, both, or neither."]},
+				{"group":"Export HTML","title":"Parts List","paragraphs":["After Each Step shows the parts added in that step. At the End shows the complete model inventory after the instructions. With Single Page and Override Instructions Settings they show or hide the step parts lists and the Bill of Materials page. You can enable either option, both, or neither."]},
 				{"group":"Submodels","title":"Submodels","paragraphs":["Manage the model and its submodels. Create, rename, duplicate, delete, or reorder entries, then choose OK to apply the changes. Cancel discards the list changes; files already exported remain on disk.","Drag list entries to change their order. Use Set Active to switch to the current list item when applying changes."]},
 				{"group":"Submodels","title":"Model List","paragraphs":["Select one or more entries for actions such as Rename, Duplicate, Export, or Delete. Drag entries to reorder them. Double-click an entry to apply the list changes and make that entry active.","Model and submodel names must be unique; capitalization alone does not make a name unique."]},
 				{"group":"Submodels","title":"Delete Submodels","paragraphs":["Remove the selected entries after confirmation. At least one entry must remain. Changes take effect when you accept this dialog."]},
@@ -3367,13 +3357,13 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Part Palettes","title":"Palette List","paragraphs":["Select a palette before using Rename, Delete, Move Up, or Move Down. The list order determines the palette order in the part browser."]},
 				{"group":"Part Palettes","title":"Delete Palette","paragraphs":["Remove the selected palette and its list of part choices. Library parts and parts already used in models are not deleted. At least one palette must remain."]},
 				{"group":"Part Palettes","title":"Import Palette","paragraphs":["Open Import Set Inventory to search for a set and download its inventory. The new palette uses the set description as its name.","The palette stores part IDs; inventory colors and quantities are not stored. An internet connection is required."]},
-				{"group":"Preferences","title":"Preferences","paragraphs":["Configure the application, rendering, views, interface, part categories, and keyboard and mouse shortcuts. Choose OK to save the changes or Cancel to discard edits in Preferences. Language and antialiasing changes, and clearing the parts library, require restarting StudWorx.","Export buttons write files immediately. Blender add-on settings have their own Apply action and can configure Blender before you close Preferences."]},
+				{"group":"Preferences","title":"Preferences","paragraphs":["Configure the application, rendering, views, interface, part categories, and keyboard and mouse shortcuts. Choose OK to save the changes or Cancel to discard edits in Preferences. Language and antialiasing changes, and clearing the parts library, require restarting StudWorx.","Export buttons write files immediately."]},
 				{"group":"Preferences","title":"General Preferences","paragraphs":["Set application behavior and custom library, configuration, and renderer paths. Bundled copies of the color, minifigure and other data files are used until you set your own."]},
+				{"group":"Preferences","title":"Blender Executable","paragraphs":["Set the Blender program used by Blender Render and Open in Blender. StudWorx runs it once when you choose OK to check that it works, and brings its own LDraw import and render add-ons, so nothing needs to be installed in Blender. The render settings are in the panels of the Blender Render window."]},
 				{"group":"Preferences","title":"Online Services","paragraphs":["Keys for the online services StudWorx downloads from. The Rebrickable API key updates the BrickLink mapping and searches set inventories. It is free from your account settings at rebrickable.com, Get Key opens its page.","Leave it empty to be asked the first time it is needed. A key Rebrickable rejects is cleared so you are asked again."]},
 				{"group":"Preferences","title":"Files","paragraphs":["The author of new models is built from its name, email address and comment, joined by the author line splitter. Empty parts are left out, and the Author Line field shows the result. For example, Jane Doe, jane@example.com and All rights reserved joined by \" | \" give Jane Doe | jane@example.com | All rights reserved.","The author of an open model is changed in its properties.","The other options control how model files are opened and reloaded."]},
 				{"group":"Preferences","title":"Rendering Preferences","paragraphs":["Control shading, stud geometry, colors, selection appearance, edges, and step effects. Some options are unavailable when the graphics system does not support them."]},
 				{"group":"Preferences","title":"Highlight Style","paragraphs":["Choose how selected parts and parts added in the current step are highlighted in the viewport. Outline uses fading outlines in the selection, focus, or new-part highlight color. Selected parts also receive a faint fill over obscured portions. Tint and Edges uses tinted faces and colored edges for selection, and colored edges for new parts.","New-part highlighting requires Highlight New Parts. Wireframe views, image exports, and systems without outline support use Tint and Edges."]},
-				{"group":"Preferences","title":"Blender Add-on Settings","paragraphs":["Open the separate Blender configuration dialog. Its Apply action saves its settings independently of Preferences, and choosing an executable or importer can configure Blender immediately."]},
 				{"group":"Preferences","title":"View Preferences","paragraphs":["Choose navigation aids for model views and the preview, the cutaway size and shade, the idle turntable, and the base grid. Locations select the corner where each navigation aid appears."]},
 				{"group":"Preferences","title":"Interface Preferences","paragraphs":["Choose colors for the background, objects, grid, and interface. These settings control the display; they do not change the LDraw colors assigned to model parts."]},
 				{"group":"Preferences","title":"Instructions","paragraphs":["Colors of the element inspector of the instructions page, drawn like the box model of a web browser inspector: the margin fill around each element, the padding fill inside its border, and markers at its anchors, the corners, edge centers and center that placement aligns to. The Ruler Pointer color fills the arrows that follow the pointer on the rulers. Each color has an alpha from 0, transparent, to 1, opaque.","Show or hide each overlay with Show Element Margins, Show Element Padding and Show Element Anchors in the Instructions preferences or the Options menu of the Instructions window. The overlays show on screen only and are never printed."]},
@@ -3436,23 +3426,20 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Instructions","title":"Notice","paragraphs":["Free text written on a page to point out something. Right-click the page and choose Add Notice to write one, double-click it to edit its text. Drag it, lock it in place or give it pointers like any other element."]},
 				{"group":"Instructions","title":"Pointer","paragraphs":["A pointer leaves the border of an element to point at a part, a step or a notice. Right-click an element and choose Add Pointer, then drag its tip onto a part of a step model, another element or any point of the page, the tip follows what it points at. Right-click a pointer to choose the anchor it leaves from, or its own style and tip."]},
 				{"group":"Instructions","title":"Box","paragraphs":["The space and border around each element. The margin keeps other elements away, the padding keeps the border away from the content and the background fills all of it, margin and padding included. Pointers leave the border. Choose the element to edit, selecting an element on the page chooses it."]},
-				{"group":"Preferences","title":"Blender Executable","paragraphs":["Choose the Blender executable. Finishing an edit to this path starts Blender configuration and may install or update the LDraw add-on. Configuration must complete before add-on paths and settings become available."]},
-				{"group":"Preferences","title":"Blender LDraw Add-on","paragraphs":["Update downloads or reconfigures the LDraw add-on. Output opens the configuration log when available. The update-check preference takes effect as soon as you change it."]},
-				{"group":"Preferences","title":"Import and Render Modules","paragraphs":["Choose TN or MM to select the LDraw importer and its options. Changing the importer configures Blender immediately. The image render module is managed automatically; an import module is required to import or render a model."]},
-				{"group":"Preferences","title":"Add-on Paths","paragraphs":["Set the files and folders used by the selected importer. Use Browse to locate an entry. TN and MM use different optional paths. Configure Blender first to enable these controls."]},
-				{"group":"Preferences","title":"Import and Render Settings","paragraphs":["Adjust the selected importer's geometry, materials, camera, and image options. Hover over a control or press F1 for its description. Image width and height are in pixels, from 1 to 32768; render percentage scales the output dimensions."]},
-				{"group":"Preferences","title":"Reset Add-on Settings","paragraphs":["Choose Last Apply to restore the saved paths and settings, or System Default to load the built-in defaults. Choose OK to update the settings form, then Apply in the parent dialog to save them. Cancel keeps the current edits."]},
 				{"group":"Preferences","title":"Instructions Preferences","paragraphs":["Set the default page setup and grid that new models and the Default Page Setup option of the Properties panel load, and the options of the Instructions window."]},
-				{"group":"Render","title":"View Log","paragraphs":["Open the renderer output to investigate a failed render or warnings. This button becomes available when a log has been captured."]},
 				{"group":"Render","title":"Render","paragraphs":["Start the render using the current settings. While rendering, this button becomes Cancel so you can stop the operation."]},
-				{"group":"Render","title":"POV-Ray Image Render","paragraphs":["Render the current model step using POV-Ray. Choose the output image, its size and quality and the scene in the panels beside the preview, then select Render to start.","The preview is scaled to fit the window. View Log shows diagnostic output when available."]},
-				{"group":"Render","title":"Blender Image Render","paragraphs":["Render the current model step with the Blender LDraw add-on. Configure Blender and its add-on through Settings, choose an output image, then select Render.","The preview is scaled to fit the dialog. View Log shows diagnostic output when available."]},
-				{"group":"Render","title":"Blender Settings","paragraphs":["Configure the Blender executable, LDraw import modules, library paths, and render settings. Blender and an import module must be configured before rendering or opening the model."]},
-				{"group":"Render","title":"Open in Blender","paragraphs":["Export the current model step and open it in Blender for editing. Use Settings to configure Blender and its LDraw import add-on, then select Open in Blender.","This mode does not save a rendered image."]},
-				{"group":"Render","title":"Open in Blender","paragraphs":["Import the current model step into Blender for editing. Configure Blender and its LDraw import add-on through Settings if this action is unavailable."]},
+				{"group":"Render","title":"POV-Ray Image Render","paragraphs":["Render the current model step using POV-Ray. Choose the output image, its size and quality and the scene in the panels beside the preview, then select Render to start.","The preview is scaled to fit the window. Log shows the renderer output below the preview."]},
+				{"group":"Render","title":"Blender Image Render","paragraphs":["Render the current model step with Blender and the bundled LDraw add-ons. Choose the output image, its size and the scene, parts and editing settings in the panels beside the preview, then select Render to start, or Open in Blender to edit the model there.","Set the Blender executable in Preferences, General first. Log shows the Blender output below the preview."]},
 				{"group":"Render","title":"Presets","paragraphs":["Keep the image size, quality and scene settings under a name and bring them back with one choice. Save stores the current settings as a preset and Delete removes the chosen one."]},
 				{"group":"Render","title":"Output","paragraphs":["Choose where the rendered image is saved and its format, such as PNG, JPEG, or BMP."]},
 				{"group":"Render","title":"Image","paragraphs":["Set the size of the rendered image in pixels and the rendering quality. Larger images and higher quality take longer to render."]},
+				{"group":"Render","title":"Transparent Background","paragraphs":["Renders the background as transparent pixels for compositing. The ground plane added by Add Environment stays visible."]},
+				{"group":"Render","title":"Crop Image","paragraphs":["Cuts the transparent border off the rendered image so it ends at the visible model. Needs Transparent Background."]},
+				{"group":"Render","title":"Scene","paragraphs":["Set the look, colors, camera and lights of the scene Blender renders."]},
+				{"group":"Render","title":"Colors","paragraphs":["Realistic uses the colors of the real parts. Original LDraw uses the colors of the parts library. Alternate LDraw uses its alternate colors with lighter edges."]},
+				{"group":"Render","title":"Parts","paragraphs":["Set how much detail the parts get. More detail looks better and takes longer to import and render."]},
+				{"group":"Render","title":"Editing","paragraphs":["Set how the model is built up in Blender, which matters most when you edit it after Open in Blender."]},
+				{"group":"Render","title":"Render","paragraphs":["Render the image or open the model in Blender and follow the progress. While rendering, Render becomes Cancel so you can stop it. Log shows the Blender output below the preview."]},
 				{"group":"Render","title":"Quality","paragraphs":["Low uses POV-Ray's default quality without additional antialiasing options. Medium uses quality level 5 with antialiasing and fast radiosity. High uses quality level 11 with additional antialiasing settings and full radiosity."]},
 				{"group":"Render","title":"Area","paragraphs":["Full Image renders the whole image. Region renders only the part outlined on the preview, drag on the preview to draw it. A region rendered at the size of the last image is placed into that image so a detail can be refined without rendering everything again."]},
 				{"group":"Render","title":"Batch","paragraphs":["Render several images in one go, one for each building step or each camera of the model. Each image is saved next to the output file with the step number or camera name added to its name."]},
@@ -3464,9 +3451,9 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Render","title":"Floor","paragraphs":["Plain uses the floor color of the model. Shadow Catcher takes the background color so only the shadows show. Reflective adds a glossy mirror finish. Cyclorama fades the floor into the background with distance for a seamless backdrop."]},
 				{"group":"Render","title":"Environment","paragraphs":["Choose an equirectangular panorama, ideally an HDR or EXR image, that wraps around the scene as its sky and lights it through radiosity at Medium and High quality. Leave empty to use the background color."]},
 				{"group":"Render","title":"Render","paragraphs":["Start the render and follow its progress. While rendering, Render becomes Cancel so you can stop it. Log shows the renderer output below the preview."]},
+				{"group":"Render","title":"Open in Blender","paragraphs":["Import the current model step into Blender with the Scene, Parts and Editing settings and open it there for editing. No image is saved."]},
 				{"group":"Render","title":"Log","paragraphs":["The output of the renderer, updated while it renders. Read it to investigate warnings or a failed render, select text and copy it with the standard keyboard shortcut when reporting a problem."]},
 				{"group":"Render","title":"Log","paragraphs":["Show or hide the Log panel below the preview with the renderer output and diagnostic messages."]},
-				{"group":"Render","title":"Render Log","paragraphs":["Read the renderer output to investigate warnings or a failed render. Select text and copy it with the standard keyboard shortcut when reporting a problem. Close returns to the Render dialog."]},
 				{"group":"Minifigure Builder","title":"Choose Part","paragraphs":["Choose a part for this section of the minifigure. Select None to omit it, the selector then shows the name of the section. The preview updates when you select a different part."]},
 				{"group":"Minifigure Builder","title":"Choose Color","paragraphs":["Change the color of this minifigure part. The preview updates immediately, and saving a template includes the chosen color."]},
 				{"group":"Minifigure Builder","title":"Rotation","paragraphs":["Adjust this part's angle to pose the minifigure. Values range from -360 to 360 degrees. The available rotation depends on the selected minifigure section."]},
@@ -3515,7 +3502,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"File Menu","title":"Wavefront","paragraphs":["Export the current model in Wavefront OBJ format."]},
 				{"group":"File Menu","title":"POV-Ray Render","paragraphs":["Render the current model using POV-Ray."]},
 				{"group":"File Menu","title":"Blender Render","paragraphs":["Render the current model using Blender."]},
-				{"group":"File Menu","title":"Open in Blender","paragraphs":["Open the current model in Blender."]},
 				{"group":"File Menu","title":"Instructions","paragraphs":["Configure instructions layout."]},
 				{"group":"File Menu","title":"Print","paragraphs":["Print the current model view."]},
 				{"group":"File Menu","title":"Recent Files","paragraphs":["Open this model."]},

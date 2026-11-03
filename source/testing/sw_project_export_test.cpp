@@ -57,6 +57,13 @@ void swTests::KMZKeepsVisibleSurfaces()
 	ExportEnvironment.insert("XDG_DATA_HOME", Folder.filePath("data"));
 	ExportEnvironment.insert("XDG_CACHE_HOME", Folder.filePath("cache"));
 
+	// a landscape display at a small size keeps the export quick
+	QVERIFY(QDir(Folder.path()).mkpath("config/StudWorx"));
+	QFile Settings(Folder.filePath("config/StudWorx/StudWorx.conf"));
+	QVERIFY(Settings.open(QIODevice::WriteOnly));
+	Settings.write("[HTML]\nDisplay=1\nImageWidth=320\nImageHeight=180\n");
+	Settings.close();
+
 	if (Environment.value("SW_TEST_NATIVE_DISPLAY") != QLatin1String("1"))
 		ExportEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
 
@@ -285,3 +292,62 @@ void swTests::BrickLinkUsesExceptions()
 	QVERIFY2(Data.contains("<ITEMID>3002y</ITEMID>"), Data.constData());
 }
 
+
+// Exports a one brick model to HTML with the StudWorx binary into a folder that already holds a file.
+// The pages must land in a folder named after the model with index.html as the styled entry page,
+// and the chosen folder must keep only its own file and that folder. A display shape must save the pages
+// at twice their shown size. SW_TEST_BINARY is the studworx program.
+void swTests::HTMLExportUsesModelFolder()
+{
+	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
+	const QString Binary = Environment.value("SW_TEST_BINARY");
+
+	if (Binary.isEmpty())
+		QSKIP("SW_TEST_BINARY is not set");
+
+	QTemporaryDir Folder;
+	QVERIFY(Folder.isValid());
+
+	QFile Model(Folder.filePath("brick.ldr"));
+	QVERIFY(Model.open(QIODevice::WriteOnly));
+	Model.write("0 Test\r\n1 4 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n");
+	Model.close();
+
+	QDir Output(Folder.filePath("output"));
+	QVERIFY(Output.mkpath(QLatin1String(".")));
+	QFile Kept(Output.filePath("keep.txt"));
+	QVERIFY(Kept.open(QIODevice::WriteOnly));
+	Kept.close();
+
+	QProcessEnvironment ExportEnvironment = Environment;
+	ExportEnvironment.insert("XDG_CONFIG_HOME", Folder.filePath("config"));
+	ExportEnvironment.insert("XDG_DATA_HOME", Folder.filePath("data"));
+	ExportEnvironment.insert("XDG_CACHE_HOME", Folder.filePath("cache"));
+
+	// a landscape display at a small size keeps the export quick
+	QVERIFY(QDir(Folder.path()).mkpath("config/StudWorx"));
+	QFile Settings(Folder.filePath("config/StudWorx/StudWorx.conf"));
+	QVERIFY(Settings.open(QIODevice::WriteOnly));
+	Settings.write("[HTML]\nDisplay=1\nImageWidth=320\nImageHeight=180\n");
+	Settings.close();
+
+	if (Environment.value("SW_TEST_NATIVE_DISPLAY") != QLatin1String("1"))
+		ExportEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
+
+	QProcess Export;
+	Export.setProcessEnvironment(ExportEnvironment);
+	Export.setProcessChannelMode(QProcess::MergedChannels);
+	Export.start(Binary, { Model.fileName(), "--export-html", Output.path() });
+	QVERIFY2(Export.waitForFinished(120000), "the html was not saved");
+	QVERIFY2(Export.exitCode() == 0, Export.readAll().constData());
+
+	QCOMPARE(Output.entryList(QDir::AllEntries | QDir::NoDotAndDotDot, QDir::Name), QStringList({ "brick", "keep.txt" }));
+
+	QFile Index(Output.filePath("brick/index.html"));
+	QVERIFY(Index.open(QIODevice::ReadOnly));
+	const QByteArray Page = Index.readAll();
+	QVERIFY(Page.contains("<STYLE>"));
+	QVERIFY(Page.contains("<A ID=\"step-1\"></A>"));
+	QVERIFY(Page.contains("WIDTH=320 HEIGHT=180"));
+	QCOMPARE(QImage(Output.filePath("brick/brick-page-01.png")).size(), QSize(640, 360));
+}

@@ -22,7 +22,6 @@ SOURCES += \
 	$$PWD/sw_dialog_list_model.cpp \
 	$$PWD/sw_dialog_palette_part.cpp \
 	$$PWD/sw_dialog_preferences.cpp \
-	$$PWD/sw_dialog_preferences_blender.cpp \
 	$$PWD/sw_dialog_preferences_categories.cpp \
 	$$PWD/sw_dialog_preferences_instructions.cpp \
 	$$PWD/sw_dialog_preferences_shortcuts.cpp \
@@ -51,7 +50,6 @@ HEADERS += \
 	$$PWD/sw_dialog_list_model.h \
 	$$PWD/sw_dialog_palette_part.h \
 	$$PWD/sw_dialog_preferences.h \
-	$$PWD/sw_dialog_preferences_blender.h \
 	$$PWD/sw_dialog_properties.h \
 	$$PWD/sw_dialog_render.h \
 	$$PWD/sw_dialog_select.h \

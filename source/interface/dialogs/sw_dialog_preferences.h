@@ -56,6 +56,8 @@ struct swPreferencesDialogOptions
 	QString MinifigureBuilderSettingsPath;
 	QString BrickLinkMappingPath;
 	QString POVRayPath;
+	QString BlenderPath;
+	QString BlenderVersion;
 	QString LGEOPath;
 	QString RebrickableApiKey;
 	QString DefaultAuthorName;
@@ -132,7 +134,7 @@ private slots:
 	void AutomateEdgeColor();
 	void AutomateEdgeColorToggled();
 	void EdgeColorSliderValueChanged();
-	void BlenderAddonSettingsButtonClicked();
+	void BlenderExecutableBrowseClicked();
 	void StudStyleComboCurrentIndexChanged(int Index);
 	void AntiAliasingToggled();
 	void EdgeLinesToggled();

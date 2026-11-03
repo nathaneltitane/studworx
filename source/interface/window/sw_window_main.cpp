@@ -644,10 +644,10 @@ void swMainWindow::ShowAboutDialog()
 	Dialog.exec();
 }
 
-void swMainWindow::ShowHTMLDialog()
+void swMainWindow::ShowHTMLDialog(QWidget* Parent)
 {
 	swHTMLExportOptions Options(swGetActiveProject());
-	swHTMLDialog Dialog(this, &Options);
+	swHTMLDialog Dialog(Parent ? Parent : this, &Options);
 
 	if (Dialog.exec() != QDialog::Accepted)
 		return;

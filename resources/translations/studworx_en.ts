@@ -4,17 +4,15 @@
 <context>
     <name>swBlenderPreferences</name>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_blender.cpp" line="3994"/>
         <source>%1 of %n files extracted.</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>%1 of %n file extracted.</numerusform>
             <numerusform>%1 of %n files extracted.</numerusform>
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_blender.cpp" line="3659"/>
         <source>Finished writing Blender parameter entries. Processed %n lines in file &apos;%1&apos;.</source>
-        <translation>
+        <translation type="vanished">
             <numerusform>Finished writing Blender parameter entries. Processed %n line in file &apos;%1&apos;.</numerusform>
             <numerusform>Finished writing Blender parameter entries. Processed %n lines in file &apos;%1&apos;.</numerusform>
         </translation>
@@ -99,7 +97,7 @@
 <context>
     <name>swPreferencesDialog</name>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1466"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1483"/>
         <source>%n stud(s)</source>
         <translation>
             <numerusform>%n stud</numerusform>

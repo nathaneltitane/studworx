@@ -4,11 +4,11 @@
 #include "sw_project.h"
 #include "sw_application.h"
 #include "sw_profile.h"
-#include "sw_dialog_preferences_blender.h"
 #include "sw_model.h"
 #include "sw_object_camera.h"
 #include "sw_window_utilities.h"
 #include "sw_renderer_povray.h"
+#include "sw_renderer_blender.h"
 
 #ifndef SW_DISABLE_RENDER_DIALOG
 
@@ -156,6 +156,39 @@ void swRenderPreviewWidget::paintEvent(QPaintEvent* PaintEvent)
 	}
 }
 
+// use to warn with the full output behind show details
+static void swShowDetailedWarning(QWidget* Parent, const QString& Title, const QString& Text, const QString& Details)
+{
+	QMessageBox MessageBox(QMessageBox::Warning, Title, Text, QMessageBox::Ok, Parent);
+	MessageBox.setDetailedText(Details);
+	MessageBox.exec();
+}
+
+// use to find the bounds of the visible pixels
+QRect swGetOpaqueRect(const QImage& Image)
+{
+	const QImage ArgbImage = Image.convertToFormat(QImage::Format_ARGB32);
+	int Left = ArgbImage.width(), Top = ArgbImage.height(), Right = -1, Bottom = -1;
+
+	for (int y = 0; y < ArgbImage.height(); y++)
+	{
+		const QRgb* Line = reinterpret_cast<const QRgb*>(ArgbImage.constScanLine(y));
+
+		for (int x = 0; x < ArgbImage.width(); x++)
+		{
+			if (!qAlpha(Line[x]))
+				continue;
+
+			Left = std::min(Left, x);
+			Right = std::max(Right, x);
+			Top = std::min(Top, y);
+			Bottom = std::max(Bottom, y);
+		}
+	}
+
+	return Right < 0 ? QRect() : QRect(QPoint(Left, Top), QPoint(Right, Bottom));
+}
+
 swRenderDialog::swRenderDialog(QWidget* Parent, swRenderDialogMode RenderDialogMode)
 	: QDialog(Parent), mDialogMode(RenderDialogMode), ui(new Ui::swRenderDialog)
 {
@@ -165,117 +198,59 @@ swRenderDialog::swRenderDialog(QWidget* Parent, swRenderDialogMode RenderDialogM
 	mWidth = swGetProfileInteger(SW_PROFILE_RENDER_WIDTH);
 	mHeight = swGetProfileInteger(SW_PROFILE_RENDER_HEIGHT);
 	mQuality = swGetProfileRenderQuality();
-	mScale = 1.0f;
 
 	ui->OutputEdit->setText(swGetActiveProject()->GetImageFileName(false));
 
-	if (mDialogMode == swRenderDialogMode::RenderPOVRay)
-	{
-		// buttons in the render panel
-		mRenderButton = new QToolButton(this);
-		mRenderButton->setText(tr("Render"));
-		mLogButton = new QToolButton(this);
-		mLogButton->setText(tr("Log"));
-	}
-	else
-	{
-		QPushButton* RenderButton = new QPushButton(tr("Render"), ui->buttonBox);
-		ui->buttonBox->addButton(RenderButton, QDialogButtonBox::ActionRole);
-		mRenderButton = RenderButton;
-	}
+	// buttons in the render panel
+	mRenderButton = new QToolButton(this);
+	mRenderButton->setText(tr("Render"));
+	mLogButton = new QToolButton(this);
+	mLogButton->setText(tr("Log"));
 
-	mSettingsButton = new QPushButton(tr("Settings..."), ui->buttonBox);
-	ui->buttonBox->addButton(mSettingsButton, QDialogButtonBox::ResetRole);
-
-	if (mDialogMode != swRenderDialogMode::RenderPOVRay)
-	{
-		QPushButton* LogButton = new QPushButton(tr("View Log..."), ui->buttonBox);
-		ui->buttonBox->addButton(LogButton, QDialogButtonBox::ResetRole);
-		mLogButton = LogButton;
-	}
-
-	mLogButton->setEnabled(false);
-	mLogButton->setToolTip(tr("Show the renderer output and diagnostic messages."));
-	mLogButton->setWhatsThis(tr("<p><b>View Log</b></p><p>Open the renderer output to investigate a failed render or warnings. This button becomes available when a log has been captured.</p>"));
 	mRenderButton->setWhatsThis(tr("<p><b>Render</b></p><p>Start the render using the current settings. While rendering, this button becomes Cancel so you can stop the operation.</p>"));
 
 	connect(mRenderButton, &QAbstractButton::clicked, this, &swRenderDialog::RenderButtonClicked);
-	connect(mSettingsButton, &QPushButton::clicked, this, &swRenderDialog::SettingsButtonClicked);
-	connect(mLogButton, &QAbstractButton::clicked, this, &swRenderDialog::LogButtonClicked);
 	connect(ui->buttonBox, &QDialogButtonBox::rejected, this, &swRenderDialog::reject);
 	connect(ui->OutputBrowseButton, &QPushButton::clicked, this, &swRenderDialog::OutputBrowseButtonClicked);
+
+	ui->buttonBox->hide();
 
 	if (mDialogMode == swRenderDialogMode::RenderPOVRay)
 	{
 		setWindowTitle(tr("POV-Ray Image Render"));
-
-		setWhatsThis(tr("<p><b>POV-Ray Image Render</b></p><p>Render the current model step using POV-Ray. Choose the output image, its size and quality and the scene in the panels beside the preview, then select Render to start.</p><p>The preview is scaled to fit the window. View Log shows diagnostic output when available.</p>"));
+		setWhatsThis(tr("<p><b>POV-Ray Image Render</b></p><p>Render the current model step using POV-Ray. Choose the output image, its size and quality and the scene in the panels beside the preview, then select Render to start.</p><p>The preview is scaled to fit the window. Log shows the renderer output below the preview.</p>"));
 		mRenderButton->setToolTip(tr("Render the current model step with POV-Ray."));
-		ui->buttonBox->hide();
-
-		CreatePOVRayPanels();
 	}
 	else
 	{
-		setWindowTitle(mDialogMode == swRenderDialogMode::OpenInBlender ? tr("Blender LDraw Import") : tr("Blender Image Render"));
-		setWhatsThis(tr("<p><b>Blender Image Render</b></p><p>Render the current model step with the Blender LDraw add-on. Configure Blender and its add-on through Settings, choose an output image, then select Render.</p><p>The preview is scaled to fit the dialog. View Log shows diagnostic output when available.</p>"));
-		mSettingsButton->setWhatsThis(tr("<p><b>Blender Settings</b></p><p>Configure the Blender executable, LDraw import modules, library paths, and render settings. Blender and an import module must be configured before rendering or opening the model.</p>"));
-
-		bool BlenderConfigured = !swGetProfileString(SW_PROFILE_BLENDER_IMPORT_MODULE).isEmpty();
-
-		QStringList const& DataPathList = QStandardPaths::standardLocations(QStandardPaths::AppLocalDataLocation);
-		if (!QDir(QString("%1/Blender/addons/%2").arg(DataPathList.first(), SW_BLENDER_ADDON_RENDER_FOLDER)).isReadable())
-		{
-			BlenderConfigured = false;
-			swSetProfileString(SW_PROFILE_BLENDER_IMPORT_MODULE, QString());
-		}
-
-		mRenderButton->setToolTip(BlenderConfigured ? tr("Render the current model step with Blender.") : tr("Blender not configured. Use Settings to configure."));
-		mRenderButton->setEnabled(BlenderConfigured);
-
-		mSettingsButton->setToolTip(tr("Configure Blender, its add-on, and render settings."));
-
-		if (mDialogMode == swRenderDialogMode::OpenInBlender)
-		{
-			mSettingsButton->setToolTip(tr("Configure Blender and its LDraw import settings."));
-
-			mRenderButton->setText(tr("Open in Blender"));
-			setWhatsThis(tr("<p><b>Open in Blender</b></p><p>Export the current model step and open it in Blender for editing. Use Settings to configure Blender and its LDraw import add-on, then select Open in Blender.</p><p>This mode does not save a rendered image.</p>"));
-			mRenderButton->setWhatsThis(tr("<p><b>Open in Blender</b></p><p>Import the current model step into Blender for editing. Configure Blender and its LDraw import add-on through Settings if this action is unavailable.</p>"));
-
-			if (BlenderConfigured)
-				mRenderButton->setToolTip(tr("Import the current model step and open it in Blender."));
-
-			ui->outputLabel->hide();
-			ui->OutputEdit->hide();
-			ui->RenderProgress->hide();
-			ui->OutputBrowseButton->hide();
-			mLogButton->hide();
-
-			adjustSize();
-			setMinimumWidth(ui->preview->geometry().width());
-			ui->preview->hide();
-		}
+		setWindowTitle(tr("Blender Image Render"));
+		setWhatsThis(tr("<p><b>Blender Image Render</b></p><p>Render the current model step with Blender and the bundled LDraw add-ons. Choose the output image, its size and the scene, parts and editing settings in the panels beside the preview, then select Render to start, or Open in Blender to edit the model there.</p><p>Set the Blender executable in Preferences, General first. Log shows the Blender output below the preview.</p>"));
 	}
 
-	if (mDialogMode != swRenderDialogMode::OpenInBlender)
-	{
-		// render icon in the empty preview
-		ui->preview->SetPlaceholderSize(SW_PART_ICON_SIZES.back());
-		ui->preview->SetCanvasSize(QSize(mWidth, mHeight));
-	}
+	CreatePanels();
+
+	// render icon in the empty preview
+	ui->preview->SetPlaceholderSize(SW_PART_ICON_SIZES.back());
+	ui->preview->SetCanvasSize(QSize(mWidth, mHeight));
 
 	connect(&mUpdateTimer, &QTimer::timeout, this, &swRenderDialog::Update);
 
 	mUpdateTimer.start(500);
 }
 
-// use to lay out the povray window
-void swRenderDialog::CreatePOVRayPanels()
+// use to name the saved panel layout of the mode
+QString swRenderDialog::GetPanelStateGroup() const
 {
+	return mDialogMode == swRenderDialogMode::RenderBlender ? QStringLiteral("BlenderRenderWindow") : QStringLiteral("RenderWindow");
+}
+// use to lay out the render window
+void swRenderDialog::CreatePanels()
+{
+	const bool Blender = mDialogMode == swRenderDialogMode::RenderBlender;
+
 	QMainWindow* PanelWindow = new QMainWindow(this);
 	PanelWindow->setWindowFlags(Qt::Widget);
-	PanelWindow->setDockOptions(QMainWindow::AnimatedDocks | QMainWindow::AllowNestedDocks);
+	PanelWindow->setDockOptions(QMainWindow::AnimatedDocks | QMainWindow::AllowNestedDocks | QMainWindow::AllowTabbedDocks);
 
 	mPanelWindow = PanelWindow;
 
@@ -287,6 +262,9 @@ void swRenderDialog::CreatePOVRayPanels()
 	ui->outputLabel->hide();
 
 	QList<QLabel*> Labels;
+
+	// panels that end at their last row
+	QList<QWidget*> CompactPanels;
 
 	auto CreatePanel = [PanelWindow](const QString& Title, const QString& Name, const QString& WhatsThis)
 	{
@@ -333,6 +311,26 @@ void swRenderDialog::CreatePOVRayPanels()
 		return Row;
 	};
 
+	// check boxes sit right of the label column
+	auto CreateCheckBox = [&Labels](QWidget* Panel, const QString& Name, bool Checked, const QString& ToolTip, const QString& WhatsThis)
+	{
+		QWidget* Row = swCreatePanelRow(Panel);
+		Panel->layout()->addWidget(Row);
+
+		QLabel* Label = new QLabel(Row);
+		Labels.append(Label);
+		Row->layout()->addWidget(Label);
+
+		QCheckBox* CheckBox = new QCheckBox(Name, Row);
+		CheckBox->setChecked(Checked);
+		CheckBox->setToolTip(ToolTip);
+		CheckBox->setWhatsThis(WhatsThis);
+		swSetupPanelEdit(CheckBox);
+		static_cast<QHBoxLayout*>(Row->layout())->addWidget(CheckBox, 1);
+
+		return CheckBox;
+	};
+
 	auto CreateComboBox = [](const QStringList& Items, int Index)
 	{
 		QComboBox* ComboBox = new QComboBox();
@@ -353,38 +351,46 @@ void swRenderDialog::CreatePOVRayPanels()
 		return SpinBox;
 	};
 
-	QWidget* PresetsPanel = CreatePanel(tr("Presets"), "RenderPresets", tr("<p><b>Presets</b></p><p>Keep the image size, quality and scene settings under a name and bring them back with one choice. Save stores the current settings as a preset and Delete removes the chosen one.</p>"));
+	QWidget* PresetsPanel = nullptr;
+	QToolButton* PresetSaveButton = nullptr;
 
-	mPresetComboBox = new QComboBox();
-	CreateRow(PresetsPanel, tr("Preset"), mPresetComboBox, tr("Choose a preset to apply its image size, quality and scene settings."), QString());
-
-	// preset buttons line up with the preset list
-	QWidget* PresetButtonRow = swCreatePanelRow(PresetsPanel);
-	PresetsPanel->layout()->addWidget(PresetButtonRow);
-
-	QLabel* PresetButtonLabel = new QLabel(PresetButtonRow);
-	Labels.append(PresetButtonLabel);
-	PresetButtonRow->layout()->addWidget(PresetButtonLabel);
-
-	auto CreatePresetButton = [PresetButtonRow](const QString& Text, const QString& ToolTip)
+	if (!Blender)
 	{
-		QToolButton* Button = new QToolButton(PresetButtonRow);
-		Button->setText(Text);
-		Button->setToolTip(ToolTip);
-		Button->setWhatsThis(ToolTip);
-		Button->setToolButtonStyle(Qt::ToolButtonTextOnly);
-		swSetupPanelButton(Button);
-		Button->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
-		Button->setMinimumWidth(0);
-		static_cast<QHBoxLayout*>(PresetButtonRow->layout())->addWidget(Button, 1);
+		PresetsPanel = CreatePanel(tr("Presets"), "RenderPresets", tr("<p><b>Presets</b></p><p>Keep the image size, quality and scene settings under a name and bring them back with one choice. Save stores the current settings as a preset and Delete removes the chosen one.</p>"));
+		CompactPanels.append(PresetsPanel);
 
-		return Button;
-	};
+		mPresetComboBox = new QComboBox();
+		CreateRow(PresetsPanel, tr("Preset"), mPresetComboBox, tr("Choose a preset to apply its image size, quality and scene settings."), QString());
 
-	QToolButton* PresetSaveButton = CreatePresetButton(tr("Save..."), tr("Save the current image size, quality and scene settings as a preset."));
-	mPresetDeleteButton = CreatePresetButton(tr("Delete..."), tr("Delete the chosen preset."));
+		// preset buttons line up with the preset list
+		QWidget* PresetButtonRow = swCreatePanelRow(PresetsPanel);
+		PresetsPanel->layout()->addWidget(PresetButtonRow);
+
+		QLabel* PresetButtonLabel = new QLabel(PresetButtonRow);
+		Labels.append(PresetButtonLabel);
+		PresetButtonRow->layout()->addWidget(PresetButtonLabel);
+
+		auto CreatePresetButton = [PresetButtonRow](const QString& Text, const QString& ToolTip)
+		{
+			QToolButton* Button = new QToolButton(PresetButtonRow);
+			Button->setText(Text);
+			Button->setToolTip(ToolTip);
+			Button->setWhatsThis(ToolTip);
+			Button->setToolButtonStyle(Qt::ToolButtonTextOnly);
+			swSetupPanelButton(Button);
+			Button->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+			Button->setMinimumWidth(0);
+			static_cast<QHBoxLayout*>(PresetButtonRow->layout())->addWidget(Button, 1);
+
+			return Button;
+		};
+
+		PresetSaveButton = CreatePresetButton(tr("Save..."), tr("Save the current image size, quality and scene settings as a preset."));
+		mPresetDeleteButton = CreatePresetButton(tr("Delete..."), tr("Delete the chosen preset."));
+	}
 
 	QWidget* OutputPanel = CreatePanel(tr("Output"), "RenderOutput", tr("<p><b>Output</b></p><p>Choose where the rendered image is saved and its format, such as PNG, JPEG, or BMP.</p>"));
+	CompactPanels.append(OutputPanel);
 
 	QWidget* FileRow = CreateRow(OutputPanel, tr("File"), ui->OutputEdit, ui->OutputEdit->toolTip(), ui->OutputEdit->whatsThis());
 	ui->OutputBrowseButton->setParent(FileRow);
@@ -392,6 +398,7 @@ void swRenderDialog::CreatePOVRayPanels()
 	FileRow->layout()->addWidget(ui->OutputBrowseButton);
 
 	QWidget* ImagePanel = CreatePanel(tr("Image"), "RenderImage", tr("<p><b>Image</b></p><p>Set the size of the rendered image in pixels and the rendering quality. Larger images and higher quality take longer to render.</p>"));
+	CompactPanels.append(ImagePanel);
 
 	mWidthSpinBox = CreateSpinBox(mWidth);
 	QSpinBox* WidthSpinBox = mWidthSpinBox;
@@ -400,93 +407,6 @@ void swRenderDialog::CreatePOVRayPanels()
 	mHeightSpinBox = CreateSpinBox(mHeight);
 	QSpinBox* HeightSpinBox = mHeightSpinBox;
 	CreateRow(ImagePanel, tr("Height"), HeightSpinBox, tr("Set the rendered image height in pixels (1 to 32768)."), QString());
-
-	mQualityComboBox = CreateComboBox({ tr("Low"), tr("Medium"), tr("High") }, static_cast<int>(mQuality));
-	QComboBox* QualityComboBox = mQualityComboBox;
-	CreateRow(ImagePanel, tr("Quality"), QualityComboBox, tr("Choose the rendering quality; higher quality can take longer."), tr("<p><b>Quality</b></p><p>Low uses POV-Ray's default quality without additional antialiasing options. Medium uses quality level 5 with antialiasing and fast radiosity. High uses quality level 11 with additional antialiasing settings and full radiosity.</p>"));
-
-	mAreaComboBox = CreateComboBox({ tr("Full Image"), tr("Region") }, swGetProfileInteger(SW_PROFILE_RENDER_AREA));
-	CreateRow(ImagePanel, tr("Area"), mAreaComboBox, tr("Choose whether the whole image is rendered or only a region drawn on the preview."), tr("<p><b>Area</b></p><p>Full Image renders the whole image. Region renders only the part outlined on the preview, drag on the preview to draw it. A region rendered at the size of the last image is placed into that image so a detail can be refined without rendering everything again.</p>"));
-
-	QWidget* BatchPanel = CreatePanel(tr("Batch"), "RenderBatch", tr("<p><b>Batch</b></p><p>Render several images in one go, one for each building step or each camera of the model. Each image is saved next to the output file with the step number or camera name added to its name.</p>"));
-
-	mStepsComboBox = CreateComboBox({ tr("Model"), tr("Current Step"), tr("All Steps") }, swGetProfileInteger(SW_PROFILE_RENDER_STEPS));
-	CreateRow(BatchPanel, tr("Steps"), mStepsComboBox, tr("Choose whether the finished model, the current step or every step is rendered."), tr("<p><b>Steps</b></p><p>Model renders the finished model. Current Step renders the model as built up to the step shown in the main window. All Steps renders one image for every step, numbered after the step.</p>"));
-
-	mCamerasComboBox = new QComboBox();
-	CreateRow(BatchPanel, tr("Cameras"), mCamerasComboBox, tr("Choose the view or a camera of the model to render from, or every camera."), tr("<p><b>Cameras</b></p><p>View renders from the view of the main window. A camera renders from that camera of the model. All Cameras renders one image for every camera, named after the camera.</p>"));
-	UpdateCameras();
-
-	QWidget* ScenePanel = CreatePanel(tr("Scene"), "RenderScene", tr("<p><b>Scene</b></p><p>Set the lights, floor and surroundings the model is rendered in.</p>"));
-
-	QComboBox* PartsComboBox = CreateComboBox({ tr("LDraw"), tr("LGEO") }, swGetProfileInteger(SW_PROFILE_RENDER_PARTS));
-	CreateRow(ScenePanel, tr("Parts"), PartsComboBox, tr("Choose whether the model is rendered with LDraw parts or the modeled LGEO parts."), tr("<p><b>Parts</b></p><p>LDraw renders the parts of the parts library. LGEO replaces the parts it has with the smooth modeled parts of the LGEO library by Lutz Uhlmann, StudWorx offers to download it the first time. Models that ask for LGEO in their file always use it.</p>"));
-
-	mLightRigComboBox = CreateComboBox({ tr("Standard"), tr("Studio"), tr("Matte") }, swGetProfileInteger(SW_PROFILE_RENDER_LIGHT_RIG));
-	QComboBox* LightRigComboBox = mLightRigComboBox;
-	CreateRow(ScenePanel, tr("Lights"), LightRigComboBox, tr("Choose the lights placed around models that have no lights of their own."), tr("<p><b>Lights</b></p><p>Standard uses four point lights with crisp shadows. Studio uses a large soft key light, a fill light and a rim light behind the model. Matte uses a wide overhead light and a shadowless light from the camera for even, soft lighting. Lights placed in the model replace these.</p>"));
-
-	mFloorStyleComboBox = CreateComboBox({ tr("Plain"), tr("Shadow Catcher"), tr("Reflective"), tr("Cyclorama") }, swGetProfileInteger(SW_PROFILE_RENDER_FLOOR_STYLE));
-	QComboBox* FloorStyleComboBox = mFloorStyleComboBox;
-	CreateRow(ScenePanel, tr("Floor"), FloorStyleComboBox, tr("Choose how the floor under the model looks."), tr("<p><b>Floor</b></p><p>Plain uses the floor color of the model. Shadow Catcher takes the background color so only the shadows show. Reflective adds a glossy mirror finish. Cyclorama fades the floor into the background with distance for a seamless backdrop.</p>"));
-
-	mEnvironmentEdit = new QLineEdit();
-	QLineEdit* EnvironmentEdit = mEnvironmentEdit;
-	EnvironmentEdit->setText(QDir::toNativeSeparators(swGetProfileString(SW_PROFILE_RENDER_ENVIRONMENT_IMAGE)));
-	EnvironmentEdit->setPlaceholderText(tr("Background Color"));
-	EnvironmentEdit->setClearButtonEnabled(true);
-	QWidget* EnvironmentRow = CreateRow(ScenePanel, tr("Environment"), EnvironmentEdit, tr("Choose a panoramic image that surrounds and lights the scene, or leave empty to use the background color."), tr("<p><b>Environment</b></p><p>Choose an equirectangular panorama, ideally an HDR or EXR image, that wraps around the scene as its sky and lights it through radiosity at Medium and High quality. Leave empty to use the background color.</p>"));
-
-	QToolButton* EnvironmentButton = new QToolButton(EnvironmentRow);
-	EnvironmentButton->setText(tr("..."));
-	EnvironmentButton->setToolTip(tr("Choose an environment image."));
-	EnvironmentButton->setWhatsThis(EnvironmentButton->toolTip());
-	EnvironmentButton->setAccessibleName(tr("Browse"));
-	swSetupPanelButton(EnvironmentButton);
-	EnvironmentRow->layout()->addWidget(EnvironmentButton);
-
-	mBackgroundComboBox = CreateComboBox({ tr("Visible"), tr("Transparent") }, swGetProfileInteger(SW_PROFILE_RENDER_TRANSPARENT) ? 1 : 0);
-	QComboBox* BackgroundComboBox = mBackgroundComboBox;
-	CreateRow(ScenePanel, tr("Background"), BackgroundComboBox, tr("Choose whether the background and floor are rendered or left as transparent pixels for compositing."), QString());
-
-	QWidget* RenderPanel = CreatePanel(tr("Render"), "RenderRender", tr("<p><b>Render</b></p><p>Start the render and follow its progress. While rendering, Render becomes Cancel so you can stop it. Log shows the renderer output below the preview.</p>"));
-
-	QWidget* ProgressRow = swCreatePanelRow(RenderPanel);
-	RenderPanel->layout()->addWidget(ProgressRow);
-	ui->RenderProgress->setParent(ProgressRow);
-	ui->RenderProgress->setFixedHeight(swGetPanelButtonSize().height());
-	ProgressRow->layout()->addWidget(ui->RenderProgress);
-
-	// render button spans the panel
-	QWidget* ButtonRow = swCreatePanelRow(RenderPanel);
-	RenderPanel->layout()->addWidget(ButtonRow);
-
-	QToolButton* RenderButton = static_cast<QToolButton*>(mRenderButton);
-	RenderButton->setParent(ButtonRow);
-	RenderButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
-	RenderButton->setAccessibleName(tr("Render"));
-	swSetupPanelButton(RenderButton);
-	RenderButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
-	static_cast<QHBoxLayout*>(ButtonRow->layout())->addWidget(RenderButton, 1);
-
-	QToolButton* LogButton = static_cast<QToolButton*>(mLogButton);
-	LogButton->setParent(ButtonRow);
-	LogButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
-	LogButton->setAccessibleName(tr("Log"));
-	swSetupPanelButton(LogButton);
-	ButtonRow->layout()->addWidget(LogButton);
-
-	// scene panel takes the rest
-	static_cast<QVBoxLayout*>(ScenePanel->layout())->addStretch(1);
-
-	// labels share one width
-	int LabelWidth = 0;
-
-	for (QLabel* Label : Labels)
-		LabelWidth = std::max(LabelWidth, Label->sizeHint().width());
-
-	for (QLabel* Label : Labels)
-		Label->setFixedWidth(LabelWidth);
 
 	// keep changes for the next render
 	connect(WidthSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, [this](int Value)
@@ -503,92 +423,362 @@ void swRenderDialog::CreatePOVRayPanels()
 		ui->preview->SetCanvasSize(QSize(mWidth, mHeight));
 	});
 
-	connect(QualityComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int Index)
+	QWidget* RenderPanel = nullptr;
+	QWidget* StretchPanel = nullptr;
+
+	if (Blender)
 	{
-		mQuality = static_cast<swPOVRayRenderQuality>(Index);
-		swSetProfileRenderQuality(mQuality);
-	});
+		auto IsSettingOn = [](const QString& Key)
+		{
+			return swGetBlenderSetting(Key).compare(QLatin1String("True"), Qt::CaseInsensitive) == 0;
+		};
 
-	connect(PartsComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [](int Index)
+		auto GetSettingText = [](bool On)
+		{
+			return On ? QStringLiteral("True") : QStringLiteral("False");
+		};
+
+		auto CreateSettingCheckBox = [this, &CreateCheckBox, IsSettingOn, GetSettingText](QWidget* Panel, const QString& Name, const QString& Key, const QString& ToolTip, const QString& WhatsThis)
+		{
+			QCheckBox* CheckBox = CreateCheckBox(Panel, Name, IsSettingOn(Key), ToolTip, WhatsThis);
+
+			connect(CheckBox, &QCheckBox::toggled, this, [Key, GetSettingText](bool Checked)
+			{
+				swSetBlenderSetting(Key, GetSettingText(Checked));
+			});
+
+			return CheckBox;
+		};
+
+		auto CreateSettingComboBox = [this, &CreateRow, &CreateComboBox](QWidget* Panel, const QString& Name, const QStringList& Items, const QStringList& Values, const QString& Key, const QString& ToolTip, const QString& WhatsThis)
+		{
+			QComboBox* ComboBox = CreateComboBox(Items, Values.indexOf(swGetBlenderSetting(Key)));
+			CreateRow(Panel, Name, ComboBox, ToolTip, WhatsThis);
+
+			connect(ComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [Key, Values](int Index)
+			{
+				swSetBlenderSetting(Key, Values[Index]);
+			});
+		};
+
+		auto CreateDoubleSpinBox = [](double Maximum, double Value, const QString& Suffix)
+		{
+			QDoubleSpinBox* SpinBox = new QDoubleSpinBox();
+			SpinBox->setRange(0.0, Maximum);
+			SpinBox->setSingleStep(0.1);
+			SpinBox->setValue(Value);
+			SpinBox->setSuffix(Suffix);
+			swSetupPanelSpinBox(SpinBox);
+
+			return SpinBox;
+		};
+
+		// zero turns the setting off
+		auto CreateSettingSpinBox = [this, &CreateRow, &CreateDoubleSpinBox, IsSettingOn, GetSettingText](QWidget* Panel, const QString& Name, const QString& Key, const QString& ValueKey, double Maximum, double Factor, const QString& Suffix, const QString& ToolTip, const QString& WhatsThis)
+		{
+			QDoubleSpinBox* SpinBox = CreateDoubleSpinBox(Maximum, IsSettingOn(Key) ? swGetBlenderSetting(ValueKey).toDouble() * Factor : 0.0, Suffix);
+			SpinBox->setSpecialValueText(tr("Off"));
+			CreateRow(Panel, Name, SpinBox, ToolTip, WhatsThis);
+
+			connect(SpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, [Key, ValueKey, Factor, GetSettingText](double Value)
+			{
+				swSetBlenderSetting(Key, GetSettingText(Value > 0.0));
+
+				if (Value > 0.0)
+					swSetBlenderSetting(ValueKey, QString::number(Value / Factor));
+			});
+		};
+
+		CreateSettingCheckBox(OutputPanel, tr("Overwrite Image"), "overwriteimage", tr("Replace an existing image file of the same name."), QString());
+		QCheckBox* TransparentCheckBox = CreateSettingCheckBox(OutputPanel, tr("Transparent Background"), "transparentbackground", tr("Leave the background as transparent pixels for compositing."), tr("<p><b>Transparent Background</b></p><p>Renders the background as transparent pixels for compositing. The ground plane added by Add Environment stays visible.</p>"));
+
+		QCheckBox* CropCheckBox = CreateCheckBox(OutputPanel, tr("Crop Image"), swGetProfileInteger(SW_PROFILE_BLENDER_CROP_IMAGE), tr("Crop the image to the visible model, needs Transparent Background."), tr("<p><b>Crop Image</b></p><p>Cuts the transparent border off the rendered image so it ends at the visible model. Needs Transparent Background.</p>"));
+		CropCheckBox->setEnabled(TransparentCheckBox->isChecked());
+
+		connect(TransparentCheckBox, &QCheckBox::toggled, CropCheckBox, &QCheckBox::setEnabled);
+		connect(CropCheckBox, &QCheckBox::toggled, this, [](bool Checked)
+		{
+			swSetProfileInteger(SW_PROFILE_BLENDER_CROP_IMAGE, Checked);
+		});
+
+		QSpinBox* ScaleSpinBox = new QSpinBox();
+		ScaleSpinBox->setRange(1, 100);
+		ScaleSpinBox->setValue(std::clamp(qRound(swGetBlenderSetting("renderpercentage").toDouble()), 1, 100));
+		ScaleSpinBox->setSuffix(tr(" %"));
+		swSetupPanelSpinBox(ScaleSpinBox);
+		CreateRow(ImagePanel, tr("Scale"), ScaleSpinBox, tr("Render at a percentage of the image size for quick test renders."), QString());
+
+		connect(ScaleSpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, [](int Value)
+		{
+			swSetBlenderSetting("renderpercentage", QString::number(Value));
+		});
+
+		QWidget* ScenePanel = CreatePanel(tr("Scene"), "RenderScene", tr("<p><b>Scene</b></p><p>Set the look, colors, camera and lights of the scene Blender renders.</p>"));
+
+		CreateSettingComboBox(ScenePanel, tr("Look"), { tr("Photorealistic"), tr("LEGO® Instructions") }, { "normal", "instructions" }, "uselook", tr("Choose a photorealistic render or the flat look of LEGO® building instructions."), QString());
+		CreateSettingComboBox(ScenePanel, tr("Colors"), { tr("Realistic"), tr("Original LDraw"), tr("Alternate LDraw") }, { "lgeo", "ldraw", "alt" }, "usecolourscheme", tr("Choose the color scheme of the parts."), tr("<p><b>Colors</b></p><p>Realistic uses the colors of the real parts. Original LDraw uses the colors of the parts library. Alternate LDraw uses its alternate colors with lighter edges.</p>"));
+		CreateSettingCheckBox(ScenePanel, tr("Add Environment"), "addenvironment", tr("Add a ground plane and a lighting environment, photorealistic look only."), QString());
+		QCheckBox* PositionCheckBox = CreateSettingCheckBox(ScenePanel, tr("Position Camera"), "positioncamera", tr("Place the camera so the whole model is in view."), QString());
+
+		QDoubleSpinBox* BorderSpinBox = CreateDoubleSpinBox(50.0, swGetBlenderSetting("cameraborderpercentage").toDouble(), tr(" %"));
+		CreateRow(ScenePanel, tr("Camera Border"), BorderSpinBox, tr("Leave this border around the model when the camera is placed."), QString());
+		BorderSpinBox->setEnabled(PositionCheckBox->isChecked());
+
+		connect(PositionCheckBox, &QCheckBox::toggled, BorderSpinBox, &QWidget::setEnabled);
+		connect(BorderSpinBox, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, [](double Value)
+		{
+			swSetBlenderSetting("cameraborderpercentage", QString::number(Value));
+		});
+
+		CreateSettingCheckBox(ScenePanel, tr("Import Cameras"), "importcameras", tr("Use the cameras of the model."), QString());
+		CreateSettingCheckBox(ScenePanel, tr("Import Lights"), "importlights", tr("Use the lights of the model."), QString());
+
+		QWidget* PartsPanel = CreatePanel(tr("Parts"), "RenderParts", tr("<p><b>Parts</b></p><p>Set how much detail the parts get. More detail looks better and takes longer to import and render.</p>"));
+
+		CreateSettingComboBox(PartsPanel, tr("Primitives"), { tr("Standard"), tr("High"), tr("Low") }, { "Standard", "High", "Low" }, "resolution", tr("Choose the resolution of the part primitives, how round curved surfaces are."), QString());
+
+		const QStringList LogoValues = { QString(), "4", "3", "5" };
+		QComboBox* LogoComboBox = CreateComboBox({ tr("Off"), tr("Rounded"), tr("Flattened"), tr("Subtle Rounded") }, IsSettingOn("uselogostuds") ? std::max(static_cast<int>(LogoValues.indexOf(swGetBlenderSetting("logostudversion"))), 1) : 0);
+		CreateRow(PartsPanel, tr("Logo Studs"), LogoComboBox, tr("Show the LEGO® logo on the studs, at the cost of extra geometry and import time."), QString());
+
+		connect(LogoComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [LogoValues, GetSettingText](int Index)
+		{
+			swSetBlenderSetting("uselogostuds", GetSettingText(Index > 0));
+
+			if (Index > 0)
+				swSetBlenderSetting("logostudversion", LogoValues[Index]);
+		});
+
+		CreateSettingSpinBox(PartsPanel, tr("Bevel Edges"), "beveledges", "bevelwidth", 5.0, 1.0, QString(), tr("Round off sharp edges by this width, Off keeps them sharp."), QString());
+		CreateSettingSpinBox(PartsPanel, tr("Part Gaps"), "gaps", "realgapwidth", 2.0, 1000.0, tr(" mm"), tr("Leave this gap between the parts, Off places them touching."), QString());
+		CreateSettingComboBox(PartsPanel, tr("Flex Parts"), { tr("LSynth"), tr("LDCad") }, { "True", "False" }, "uselsynthparts", tr("Choose the source that shapes flexible parts such as hoses and string."), QString());
+		CreateSettingCheckBox(PartsPanel, tr("Curved Walls"), "curvedwalls", tr("Make surfaces slightly concave for livelier reflections."), QString());
+		CreateSettingCheckBox(PartsPanel, tr("Smooth Shading"), "smoothshading", tr("Smooth curved faces and keep sharp edges."), QString());
+
+		QWidget* EditingPanel = CreatePanel(tr("Editing"), "RenderEditing", tr("<p><b>Editing</b></p><p>Set how the model is built up in Blender, which matters most when you edit it after Open in Blender.</p>"));
+
+		CreateSettingCheckBox(EditingPanel, tr("Link Like Parts"), "linkparts", tr("Let parts of the same shape and color share one mesh."), QString());
+		CreateSettingCheckBox(EditingPanel, tr("Instance Studs"), "instancestuds", tr("Make every stud its own object, slow for models with many studs."), QString());
+		CreateSettingCheckBox(EditingPanel, tr("Flatten Hierarchy"), "flattenhierarchy", tr("Place all parts directly under the root instead of a tree of submodels."), QString());
+		CreateSettingCheckBox(EditingPanel, tr("Parent Minifigures"), "minifighierarchy", tr("Parent the parts of each minifigure to each other."), QString());
+
+		// scene, parts and editing share the space below
+		for (QWidget* Panel : { ScenePanel, PartsPanel, EditingPanel })
+			static_cast<QVBoxLayout*>(Panel->layout())->addStretch(1);
+
+		PanelWindow->tabifyDockWidget(qobject_cast<QDockWidget*>(ScenePanel->parentWidget()), qobject_cast<QDockWidget*>(PartsPanel->parentWidget()));
+		PanelWindow->tabifyDockWidget(qobject_cast<QDockWidget*>(PartsPanel->parentWidget()), qobject_cast<QDockWidget*>(EditingPanel->parentWidget()));
+		ScenePanel->parentWidget()->raise();
+
+		RenderPanel = CreatePanel(tr("Render"), "RenderRender", tr("<p><b>Render</b></p><p>Render the image or open the model in Blender and follow the progress. While rendering, Render becomes Cancel so you can stop it. Log shows the Blender output below the preview.</p>"));
+	}
+	else
 	{
-		swSetProfileInteger(SW_PROFILE_RENDER_PARTS, Index);
-	});
+		mQualityComboBox = CreateComboBox({ tr("Low"), tr("Medium"), tr("High") }, static_cast<int>(mQuality));
+		QComboBox* QualityComboBox = mQualityComboBox;
+		CreateRow(ImagePanel, tr("Quality"), QualityComboBox, tr("Choose the rendering quality; higher quality can take longer."), tr("<p><b>Quality</b></p><p>Low uses POV-Ray's default quality without additional antialiasing options. Medium uses quality level 5 with antialiasing and fast radiosity. High uses quality level 11 with additional antialiasing settings and full radiosity.</p>"));
 
-	connect(LightRigComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [](int Index)
+		mAreaComboBox = CreateComboBox({ tr("Full Image"), tr("Region") }, swGetProfileInteger(SW_PROFILE_RENDER_AREA));
+		CreateRow(ImagePanel, tr("Area"), mAreaComboBox, tr("Choose whether the whole image is rendered or only a region drawn on the preview."), tr("<p><b>Area</b></p><p>Full Image renders the whole image. Region renders only the part outlined on the preview, drag on the preview to draw it. A region rendered at the size of the last image is placed into that image so a detail can be refined without rendering everything again.</p>"));
+
+		QWidget* BatchPanel = CreatePanel(tr("Batch"), "RenderBatch", tr("<p><b>Batch</b></p><p>Render several images in one go, one for each building step or each camera of the model. Each image is saved next to the output file with the step number or camera name added to its name.</p>"));
+		CompactPanels.append(BatchPanel);
+
+		mStepsComboBox = CreateComboBox({ tr("Model"), tr("Current Step"), tr("All Steps") }, swGetProfileInteger(SW_PROFILE_RENDER_STEPS));
+		CreateRow(BatchPanel, tr("Steps"), mStepsComboBox, tr("Choose whether the finished model, the current step or every step is rendered."), tr("<p><b>Steps</b></p><p>Model renders the finished model. Current Step renders the model as built up to the step shown in the main window. All Steps renders one image for every step, numbered after the step.</p>"));
+
+		mCamerasComboBox = new QComboBox();
+		CreateRow(BatchPanel, tr("Cameras"), mCamerasComboBox, tr("Choose the view or a camera of the model to render from, or every camera."), tr("<p><b>Cameras</b></p><p>View renders from the view of the main window. A camera renders from that camera of the model. All Cameras renders one image for every camera, named after the camera.</p>"));
+		UpdateCameras();
+
+		QWidget* ScenePanel = CreatePanel(tr("Scene"), "RenderScene", tr("<p><b>Scene</b></p><p>Set the lights, floor and surroundings the model is rendered in.</p>"));
+		StretchPanel = ScenePanel;
+
+		QComboBox* PartsComboBox = CreateComboBox({ tr("LDraw"), tr("LGEO") }, swGetProfileInteger(SW_PROFILE_RENDER_PARTS));
+		CreateRow(ScenePanel, tr("Parts"), PartsComboBox, tr("Choose whether the model is rendered with LDraw parts or the modeled LGEO parts."), tr("<p><b>Parts</b></p><p>LDraw renders the parts of the parts library. LGEO replaces the parts it has with the smooth modeled parts of the LGEO library by Lutz Uhlmann, StudWorx offers to download it the first time. Models that ask for LGEO in their file always use it.</p>"));
+
+		mLightRigComboBox = CreateComboBox({ tr("Standard"), tr("Studio"), tr("Matte") }, swGetProfileInteger(SW_PROFILE_RENDER_LIGHT_RIG));
+		QComboBox* LightRigComboBox = mLightRigComboBox;
+		CreateRow(ScenePanel, tr("Lights"), LightRigComboBox, tr("Choose the lights placed around models that have no lights of their own."), tr("<p><b>Lights</b></p><p>Standard uses four point lights with crisp shadows. Studio uses a large soft key light, a fill light and a rim light behind the model. Matte uses a wide overhead light and a shadowless light from the camera for even, soft lighting. Lights placed in the model replace these.</p>"));
+
+		mFloorStyleComboBox = CreateComboBox({ tr("Plain"), tr("Shadow Catcher"), tr("Reflective"), tr("Cyclorama") }, swGetProfileInteger(SW_PROFILE_RENDER_FLOOR_STYLE));
+		QComboBox* FloorStyleComboBox = mFloorStyleComboBox;
+		CreateRow(ScenePanel, tr("Floor"), FloorStyleComboBox, tr("Choose how the floor under the model looks."), tr("<p><b>Floor</b></p><p>Plain uses the floor color of the model. Shadow Catcher takes the background color so only the shadows show. Reflective adds a glossy mirror finish. Cyclorama fades the floor into the background with distance for a seamless backdrop.</p>"));
+
+		mEnvironmentEdit = new QLineEdit();
+		QLineEdit* EnvironmentEdit = mEnvironmentEdit;
+		EnvironmentEdit->setText(QDir::toNativeSeparators(swGetProfileString(SW_PROFILE_RENDER_ENVIRONMENT_IMAGE)));
+		EnvironmentEdit->setPlaceholderText(tr("Background Color"));
+		EnvironmentEdit->setClearButtonEnabled(true);
+		QWidget* EnvironmentRow = CreateRow(ScenePanel, tr("Environment"), EnvironmentEdit, tr("Choose a panoramic image that surrounds and lights the scene, or leave empty to use the background color."), tr("<p><b>Environment</b></p><p>Choose an equirectangular panorama, ideally an HDR or EXR image, that wraps around the scene as its sky and lights it through radiosity at Medium and High quality. Leave empty to use the background color.</p>"));
+
+		QToolButton* EnvironmentButton = new QToolButton(EnvironmentRow);
+		EnvironmentButton->setText(tr("..."));
+		EnvironmentButton->setToolTip(tr("Choose an environment image."));
+		EnvironmentButton->setWhatsThis(EnvironmentButton->toolTip());
+		EnvironmentButton->setAccessibleName(tr("Browse"));
+		swSetupPanelButton(EnvironmentButton);
+		EnvironmentRow->layout()->addWidget(EnvironmentButton);
+
+		mBackgroundComboBox = CreateComboBox({ tr("Visible"), tr("Transparent") }, swGetProfileInteger(SW_PROFILE_RENDER_TRANSPARENT) ? 1 : 0);
+		QComboBox* BackgroundComboBox = mBackgroundComboBox;
+		CreateRow(ScenePanel, tr("Background"), BackgroundComboBox, tr("Choose whether the background and floor are rendered or left as transparent pixels for compositing."), QString());
+
+		RenderPanel = CreatePanel(tr("Render"), "RenderRender", tr("<p><b>Render</b></p><p>Start the render and follow its progress. While rendering, Render becomes Cancel so you can stop it. Log shows the renderer output below the preview.</p>"));
+
+		connect(QualityComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int Index)
+		{
+			mQuality = static_cast<swPOVRayRenderQuality>(Index);
+			swSetProfileRenderQuality(mQuality);
+		});
+
+		connect(PartsComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [](int Index)
+		{
+			swSetProfileInteger(SW_PROFILE_RENDER_PARTS, Index);
+		});
+
+		connect(LightRigComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [](int Index)
+		{
+			swSetProfileInteger(SW_PROFILE_RENDER_LIGHT_RIG, Index);
+		});
+
+		connect(FloorStyleComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [](int Index)
+		{
+			swSetProfileInteger(SW_PROFILE_RENDER_FLOOR_STYLE, Index);
+		});
+
+		connect(BackgroundComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [](int Index)
+		{
+			swSetProfileInteger(SW_PROFILE_RENDER_TRANSPARENT, Index);
+		});
+
+		connect(EnvironmentEdit, &QLineEdit::textChanged, this, [](const QString& Text)
+		{
+			swSetProfileString(SW_PROFILE_RENDER_ENVIRONMENT_IMAGE, QDir::fromNativeSeparators(Text.trimmed()));
+		});
+
+		// show custom on a mismatch
+		for (QSpinBox* SpinBox : { WidthSpinBox, HeightSpinBox })
+			connect(SpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, &swRenderDialog::UpdatePresets);
+
+		for (QComboBox* ComboBox : { QualityComboBox, LightRigComboBox, FloorStyleComboBox, BackgroundComboBox })
+			connect(ComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &swRenderDialog::UpdatePresets);
+
+		connect(EnvironmentEdit, &QLineEdit::textChanged, this, &swRenderDialog::UpdatePresets);
+
+		connect(mPresetComboBox, QOverload<int>::of(&QComboBox::activated), this, [this](int Index)
+		{
+			ApplyPreset(mPresetComboBox->itemData(Index).toString());
+		});
+
+		connect(PresetSaveButton, &QToolButton::clicked, this, &swRenderDialog::SavePresetClicked);
+		connect(mPresetDeleteButton, &QToolButton::clicked, this, &swRenderDialog::DeletePresetClicked);
+
+		UpdatePresets();
+
+		// keep the drawn region
+		const QStringList RegionValues = swGetProfileString(SW_PROFILE_RENDER_REGION).split(' ', Qt::SkipEmptyParts);
+
+		if (RegionValues.size() == 4)
+			ui->preview->SetRegion(QRectF(RegionValues[0].toDouble(), RegionValues[1].toDouble(), RegionValues[2].toDouble(), RegionValues[3].toDouble()) & QRectF(0.0, 0.0, 1.0, 1.0));
+
+		ui->preview->SetRegionMode(mAreaComboBox->currentIndex() == 1);
+
+		connect(mAreaComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int Index)
+		{
+			swSetProfileInteger(SW_PROFILE_RENDER_AREA, Index);
+			ui->preview->SetRegionMode(Index == 1);
+		});
+
+		connect(ui->preview, &swRenderPreviewWidget::RegionChanged, this, [](const QRectF& Region)
+		{
+			swSetProfileString(SW_PROFILE_RENDER_REGION, QString("%1 %2 %3 %4").arg(Region.x()).arg(Region.y()).arg(Region.width()).arg(Region.height()));
+		});
+
+		connect(mStepsComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [](int Index)
+		{
+			swSetProfileInteger(SW_PROFILE_RENDER_STEPS, Index);
+		});
+
+		connect(mCamerasComboBox, QOverload<int>::of(&QComboBox::activated), this, [this](int Index)
+		{
+			swSetProfileString(SW_PROFILE_RENDER_CAMERAS, mCamerasComboBox->itemData(Index).toString());
+		});
+
+		connect(EnvironmentButton, &QToolButton::clicked, this, [this, EnvironmentEdit]()
+		{
+			const QString FileName = QFileDialog::getOpenFileName(this, tr("Select Environment Image"), EnvironmentEdit->text(), tr("Environment Images (*.hdr *.exr *.png *.jpg *.jpeg *.tif *.tiff);;All Files (*.*)"));
+
+			if (!FileName.isEmpty())
+				EnvironmentEdit->setText(QDir::toNativeSeparators(FileName));
+		});
+	}
+
+	CompactPanels.append(RenderPanel);
+
+	QWidget* ProgressRow = swCreatePanelRow(RenderPanel);
+	RenderPanel->layout()->addWidget(ProgressRow);
+	ui->RenderProgress->setParent(ProgressRow);
+	ui->RenderProgress->setFixedHeight(swGetPanelButtonSize().height());
+	ProgressRow->layout()->addWidget(ui->RenderProgress);
+
+	// render button spans the panel
+	QWidget* ButtonRow = swCreatePanelRow(RenderPanel);
+	RenderPanel->layout()->addWidget(ButtonRow);
+
+	QList<QToolButton*> RenderButtons;
+
+	if (Blender)
 	{
-		swSetProfileInteger(SW_PROFILE_RENDER_LIGHT_RIG, Index);
-	});
+		QToolButton* OpenButton = new QToolButton(ButtonRow);
+		OpenButton->setText(tr("Open in Blender"));
+		OpenButton->setWhatsThis(tr("<p><b>Open in Blender</b></p><p>Import the current model step into Blender with the Scene, Parts and Editing settings and open it there for editing. No image is saved.</p>"));
+		RenderButtons.append(OpenButton);
 
-	connect(FloorStyleComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [](int Index)
+		connect(OpenButton, &QToolButton::clicked, this, [this]()
+		{
+			if (!mProcess)
+				RenderBlender(true);
+		});
+	}
+
+	RenderButtons.append(static_cast<QToolButton*>(mRenderButton));
+	RenderButtons.append(static_cast<QToolButton*>(mLogButton));
+
+	for (QToolButton* Button : RenderButtons)
 	{
-		swSetProfileInteger(SW_PROFILE_RENDER_FLOOR_STYLE, Index);
-	});
+		Button->setParent(ButtonRow);
+		Button->setToolButtonStyle(Qt::ToolButtonTextOnly);
+		Button->setAccessibleName(Button->text());
+		swSetupPanelButton(Button);
+		ButtonRow->layout()->addWidget(Button);
+	}
 
-	connect(BackgroundComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [](int Index)
+	mRenderButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+	static_cast<QHBoxLayout*>(ButtonRow->layout())->setStretchFactor(mRenderButton, 1);
+
+	if (Blender)
 	{
-		swSetProfileInteger(SW_PROFILE_RENDER_TRANSPARENT, Index);
-	});
+		// the add-ons are bundled, so a tested blender is all that is needed
+		const bool BlenderConfigured = !swGetProfileString(SW_PROFILE_BLENDER_VERSION).isEmpty() && QFileInfo(swGetProfileString(SW_PROFILE_BLENDER_PATH)).isExecutable();
 
-	connect(EnvironmentEdit, &QLineEdit::textChanged, this, [](const QString& Text)
-	{
-		swSetProfileString(SW_PROFILE_RENDER_ENVIRONMENT_IMAGE, QDir::fromNativeSeparators(Text.trimmed()));
-	});
+		RenderButtons[0]->setToolTip(BlenderConfigured ? tr("Import the current model step and open it in Blender.") : tr("Set the Blender executable in Preferences, General to use Blender."));
+		mRenderButton->setToolTip(BlenderConfigured ? tr("Render the current model step with Blender.") : RenderButtons[0]->toolTip());
 
-	// show custom on a mismatch
-	for (QSpinBox* SpinBox : { WidthSpinBox, HeightSpinBox })
-		connect(SpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, &swRenderDialog::UpdatePresets);
+		for (QToolButton* Button : { RenderButtons[0], static_cast<QToolButton*>(mRenderButton) })
+			Button->setEnabled(BlenderConfigured);
+	}
+	else
+		static_cast<QVBoxLayout*>(StretchPanel->layout())->addStretch(1);
 
-	for (QComboBox* ComboBox : { QualityComboBox, LightRigComboBox, FloorStyleComboBox, BackgroundComboBox })
-		connect(ComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &swRenderDialog::UpdatePresets);
+	// labels share one width
+	int LabelWidth = 0;
 
-	connect(EnvironmentEdit, &QLineEdit::textChanged, this, &swRenderDialog::UpdatePresets);
+	for (QLabel* Label : Labels)
+		LabelWidth = std::max(LabelWidth, Label->sizeHint().width());
 
-	connect(mPresetComboBox, QOverload<int>::of(&QComboBox::activated), this, [this](int Index)
-	{
-		ApplyPreset(mPresetComboBox->itemData(Index).toString());
-	});
-
-	connect(PresetSaveButton, &QToolButton::clicked, this, &swRenderDialog::SavePresetClicked);
-	connect(mPresetDeleteButton, &QToolButton::clicked, this, &swRenderDialog::DeletePresetClicked);
-
-	UpdatePresets();
-
-	// keep the drawn region
-	const QStringList RegionValues = swGetProfileString(SW_PROFILE_RENDER_REGION).split(' ', Qt::SkipEmptyParts);
-
-	if (RegionValues.size() == 4)
-		ui->preview->SetRegion(QRectF(RegionValues[0].toDouble(), RegionValues[1].toDouble(), RegionValues[2].toDouble(), RegionValues[3].toDouble()) & QRectF(0.0, 0.0, 1.0, 1.0));
-
-	ui->preview->SetRegionMode(mAreaComboBox->currentIndex() == 1);
-
-	connect(mAreaComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int Index)
-	{
-		swSetProfileInteger(SW_PROFILE_RENDER_AREA, Index);
-		ui->preview->SetRegionMode(Index == 1);
-	});
-
-	connect(ui->preview, &swRenderPreviewWidget::RegionChanged, this, [](const QRectF& Region)
-	{
-		swSetProfileString(SW_PROFILE_RENDER_REGION, QString("%1 %2 %3 %4").arg(Region.x()).arg(Region.y()).arg(Region.width()).arg(Region.height()));
-	});
-
-	connect(mStepsComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [](int Index)
-	{
-		swSetProfileInteger(SW_PROFILE_RENDER_STEPS, Index);
-	});
-
-	connect(mCamerasComboBox, QOverload<int>::of(&QComboBox::activated), this, [this](int Index)
-	{
-		swSetProfileString(SW_PROFILE_RENDER_CAMERAS, mCamerasComboBox->itemData(Index).toString());
-	});
-
-	connect(EnvironmentButton, &QToolButton::clicked, this, [this, EnvironmentEdit]()
-	{
-		const QString FileName = QFileDialog::getOpenFileName(this, tr("Select Environment Image"), EnvironmentEdit->text(), tr("Environment Images (*.hdr *.exr *.png *.jpg *.jpeg *.tif *.tiff);;All Files (*.*)"));
-
-		if (!FileName.isEmpty())
-			EnvironmentEdit->setText(QDir::toNativeSeparators(FileName));
-	});
+	for (QLabel* Label : Labels)
+		Label->setFixedWidth(LabelWidth);
 
 	// log below the preview
 	mLogPanel = new QDockWidget(tr("Log"), PanelWindow);
@@ -621,7 +811,6 @@ void swRenderDialog::CreatePOVRayPanels()
 
 	// log button toggles the log panel
 	mLogButton->setCheckable(true);
-	mLogButton->setEnabled(true);
 	mLogButton->setToolTip(tr("Show or hide the Log panel with the renderer output."));
 	mLogButton->setWhatsThis(tr("<p><b>Log</b></p><p>Show or hide the Log panel below the preview with the renderer output and diagnostic messages.</p>"));
 
@@ -637,19 +826,19 @@ void swRenderDialog::CreatePOVRayPanels()
 		}
 	});
 
-	for (QWidget* Panel : { PresetsPanel, OutputPanel, ImagePanel, BatchPanel, RenderPanel })
+	for (QWidget* Panel : CompactPanels)
 		Panel->setFixedHeight(Panel->sizeHint().height());
 
 	// open moved panels at a usable size
-	QList<QDockWidget*> CompactPanels;
+	QList<QDockWidget*> CompactDocks;
 
-	for (QWidget* Panel : { PresetsPanel, OutputPanel, ImagePanel, BatchPanel, RenderPanel })
-		CompactPanels.append(qobject_cast<QDockWidget*>(Panel->parentWidget()));
+	for (QWidget* Panel : CompactPanels)
+		CompactDocks.append(qobject_cast<QDockWidget*>(Panel->parentWidget()));
 
-	auto FitPanels = [PanelWindow, CompactPanels]()
+	auto FitPanels = [PanelWindow, CompactDocks]()
 	{
 		// compact panels end at their last row
-		for (QDockWidget* CompactPanel : CompactPanels)
+		for (QDockWidget* CompactPanel : CompactDocks)
 			CompactPanel->setMaximumHeight(CompactPanel->isFloating() ? QWIDGETSIZE_MAX : CompactPanel->sizeHint().height());
 
 		// restore squeezed panel sizes
@@ -664,7 +853,7 @@ void swRenderDialog::CreatePOVRayPanels()
 
 			if ((Area == Qt::LeftDockWidgetArea || Area == Qt::RightDockWidgetArea) && AreaPanel->width() < SW_RENDER_PANEL_WIDTH)
 				SidePanels.append(AreaPanel);
-			else if ((Area == Qt::TopDockWidgetArea || Area == Qt::BottomDockWidgetArea) && AreaPanel->height() < SW_RENDER_LOG_HEIGHT && !CompactPanels.contains(AreaPanel))
+			else if ((Area == Qt::TopDockWidgetArea || Area == Qt::BottomDockWidgetArea) && AreaPanel->height() < SW_RENDER_LOG_HEIGHT && !CompactDocks.contains(AreaPanel))
 				EdgePanels.append(AreaPanel);
 		}
 
@@ -696,13 +885,14 @@ void swRenderDialog::CreatePOVRayPanels()
 
 	// restore the panel layout
 	QSettings Settings;
-	Settings.beginGroup("RenderWindow");
+	Settings.beginGroup(GetPanelStateGroup());
 	PanelWindow->restoreState(Settings.value("State").toByteArray(), SW_RENDER_WINDOW_STATE_VERSION);
 	Settings.endGroup();
 
 	// keep untoggled panels visible
-	for (QWidget* Panel : { PresetsPanel, OutputPanel, ImagePanel, BatchPanel, ScenePanel, RenderPanel })
-		Panel->parentWidget()->show();
+	for (QDockWidget* Panel : PanelWindow->findChildren<QDockWidget*>(QString(), Qt::FindDirectChildrenOnly))
+		if (Panel != mLogPanel)
+			Panel->show();
 
 	mLogButton->setChecked(!mLogPanel->isHidden());
 
@@ -890,7 +1080,10 @@ void swRenderDialog::UpdateLogPanel()
 		return;
 
 	QFile File(GetStdErrFileName());
-	const QString Text = File.open(QFile::ReadOnly | QFile::Text) ? QString::fromLocal8Bit(File.readAll()) : QString();
+	QString Text = File.open(QFile::ReadOnly | QFile::Text) ? QString::fromLocal8Bit(File.readAll()) : QString();
+
+	if (mDialogMode == swRenderDialogMode::RenderBlender)
+		Text.prepend(mStdOutList.join(QString()));
 
 	if (Text == mLogEdit->toPlainText())
 		return;
@@ -905,7 +1098,7 @@ swRenderDialog::~swRenderDialog()
 	if (mPanelWindow)
 	{
 		QSettings Settings;
-		Settings.beginGroup("RenderWindow");
+		Settings.beginGroup(GetPanelStateGroup());
 		Settings.setValue("State", mPanelWindow->saveState(SW_RENDER_WINDOW_STATE_VERSION));
 		Settings.endGroup();
 	}
@@ -950,8 +1143,7 @@ void swRenderDialog::CloseProcess()
 		QFile::remove(GetPOVFileName());
 	}
 
-	if (mDialogMode != swRenderDialogMode::OpenInBlender)
-		mRenderButton->setText(tr("Render"));
+	mRenderButton->setText(tr("Render"));
 }
 
 bool swRenderDialog::PromptCancel()
@@ -978,10 +1170,7 @@ bool swRenderDialog::PromptCancel()
 	CloseProcess();
 
 	if (mStdOutList.size())
-	{
 		WriteStdOut();
-		mLogButton->setEnabled(true);
-	}
 
 	return true;
 }
@@ -994,8 +1183,6 @@ void swRenderDialog::RenderButtonClicked()
 		return;
 	}
 
-	mLogButton->setEnabled(mLogPanel != nullptr);
-
 	if (mLogEdit)
 		mLogEdit->clear();
 
@@ -1006,7 +1193,7 @@ void swRenderDialog::RenderButtonClicked()
 
 	if (mDialogMode != swRenderDialogMode::RenderPOVRay)
 	{
-		RenderBlender();
+		RenderBlender(false);
 		return;
 	}
 
@@ -1192,23 +1379,22 @@ void swRenderDialog::RenderPOVRay()
 	}
 }
 
-void swRenderDialog::RenderBlender()
+void swRenderDialog::RenderBlender(bool ImportOnly)
 {
-	const QString BlenderLDrawConfigFile = swGetProfileString(SW_PROFILE_BLENDER_LDRAW_CONFIGURATION_PATH);
-	const QString BlenderImportModule = swGetProfileString(SW_PROFILE_BLENDER_IMPORT_MODULE);
+	QString Error;
 
-	if (!QFileInfo(BlenderLDrawConfigFile).isReadable() && !BlenderImportModule.isEmpty())
-		swBlenderPreferences::SaveSettings();
+	if (!swSetupBlenderAddon(Error))
+	{
+		QMessageBox::warning(this, windowTitle(), Error);
+		return;
+	}
 
 	ui->RenderProgress->setFormat(tr("Saving Blender Model"));
 	QApplication::processEvents();
 
 	mBlendProgValue = 0;
 	mBlendProgMax = 0;
-
-	const QStringList DataPathList = QStandardPaths::standardLocations(QStandardPaths::AppLocalDataLocation);
-	mDataPath = DataPathList.first();
-	const QString DefaultBlendFile = QString("%1/blender/config/%2").arg(mDataPath, SW_BLENDER_ADDON_BLEND_FILE);
+	mStdOutList.clear();
 
 	swModel* Model = swGetActiveProject()->GetActiveModel();
 	const QString ModelFileName = QFileInfo(QDir(swGetProfileString(SW_PROFILE_PROJECTS_PATH)), QString("%1_Step_%2.ldr").arg(QFileInfo(Model->GetProperties().mFileName).baseName()).arg(Model->GetCurrentStep())).absoluteFilePath();
@@ -1227,156 +1413,84 @@ void swRenderDialog::RenderBlender()
 	if (!QFileInfo(ModelFileName).isReadable())
 		return;
 
-	bool SearchCustomDir = true;
+	QString PythonExpression = QString("import bpy; bpy.ops.render_scene.lpub3d_render_ldraw('EXEC_DEFAULT', resolution_width=%1, resolution_height=%2, render_percentage=%3, model_file=%4, image_file=%5, search_additional_paths=True")
+		.arg(mWidth).arg(mHeight).arg(swGetBlenderSetting("renderpercentage").toDouble())
+		.arg(swGetBlenderPythonString(QDir::toNativeSeparators(ModelFileName)), swGetBlenderPythonString(QDir::toNativeSeparators(ui->OutputEdit->text())));
 
-	QString Message;
 	QStringList Arguments;
-	QString PythonExpression = QString("\"import bpy; bpy.ops.render_scene.lpub3d_render_ldraw("
-										"'EXEC_DEFAULT', "
-										"resolution_width=%1, resolution_height=%2, "
-										"render_percentage=%3, model_file=r'%4', "
-										"image_file=r'%5'")
-										.arg(mWidth).arg(mHeight)
-										.arg(mScale * 100)
-										.arg(QDir::toNativeSeparators(ModelFileName).replace("\\","\\\\"),
-	                                         QDir::toNativeSeparators(ui->OutputEdit->text()).replace("\\","\\\\"));
-	if (BlenderImportModule == QLatin1String("MM"))
-		PythonExpression.append(", use_ldraw_import_mm=True");
-	if (SearchCustomDir)
-		PythonExpression.append(", search_additional_paths=True");
 
-	if (mDialogMode == swRenderDialogMode::OpenInBlender)
+	if (ImportOnly)
 	{
 		PythonExpression.append(", import_only=True");
-
-		Arguments << QLatin1String("--window-geometry");
-		Arguments << QLatin1String("200 100 1440 900");
+		Arguments << QLatin1String("--window-geometry") << QLatin1String("200") << QLatin1String("100") << QLatin1String("1440") << QLatin1String("900");
 	}
 	else
-	{
 		Arguments << QLatin1String("--background");
-	}
 
-	PythonExpression.append(", cli_render=True)\"");
+	PythonExpression.append(", cli_render=True)");
+	Arguments << swGetBlenderArguments(PythonExpression);
 
-	if (QFileInfo::exists(DefaultBlendFile))
-		Arguments << QDir::toNativeSeparators(DefaultBlendFile);
-	Arguments << QString("--python-expr");
-	Arguments << PythonExpression;
+	QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
+	Environment.insert(QLatin1String("LDRAW_DIRECTORY"), swApplication::GetLibraryDirectory());
 
-	QString ScriptName, ScriptCommand, ShellProgram;
+	const QString BlenderPath = swGetProfileString(SW_PROFILE_BLENDER_PATH);
 
-#ifdef Q_OS_WIN
-	ScriptName =  QLatin1String("render_ldraw_model.bat");
-#else
-	ScriptName =  QLatin1String("render_ldraw_model.sh");
-#endif
-	ScriptCommand = QString("\"%1\" %2").arg(swGetProfileString(SW_PROFILE_BLENDER_PATH), Arguments.join(" "));
-
-	if (mDialogMode == swRenderDialogMode::OpenInBlender)
-		ScriptCommand.append(QString(" > %1").arg(QDir::toNativeSeparators(GetStdOutFileName())));
-
-	const QLatin1String LineEnding("\n");
-
-	QFile ScriptFile(QString("%1/%2").arg(QDir::tempPath(), ScriptName));
-	if (ScriptFile.open(QIODevice::WriteOnly | QIODevice::Text))
+	if (ImportOnly)
 	{
-		QTextStream Stream(&ScriptFile);
-#ifdef Q_OS_WIN
-		Stream << QLatin1String("@ECHO OFF &SETLOCAL") << LineEnding;
-#else
-		Stream << QLatin1String("#!/bin/bash") << LineEnding;
-#endif
-		Stream << ScriptCommand << LineEnding;
-		ScriptFile.close();
-	}
-	else
-	{
-		QMessageBox::warning(this, windowTitle(), tr("Cannot write Blender render script file '%1':\n%2.").arg(ScriptFile.fileName(), ScriptFile.errorString()));
+		const QString StdOutFileName = GetStdOutFileName();
+		QFile::remove(StdOutFileName);
+
+		QProcess Launcher;
+		Launcher.setProgram(BlenderPath);
+		Launcher.setArguments(Arguments);
+		Launcher.setProcessEnvironment(Environment);
+		Launcher.setWorkingDirectory(swGetBlenderDataPath());
+		Launcher.setStandardOutputFile(StdOutFileName);
+		Launcher.setStandardErrorFile(GetStdErrFileName());
+
+		if (!Launcher.startDetached())
+		{
+			QMessageBox::warning(this, windowTitle(), tr("Error starting Blender."));
+			return;
+		}
+
+		// blender keeps running, so only the import messages of its first seconds are shown
+		QFile Log(StdOutFileName);
+		QFile ErrorLog(GetStdErrFileName());
+		const QTime Wait = QTime::currentTime().addSecs(3);
+
+		while (!Log.size() && !ErrorLog.size() && QTime::currentTime() < Wait)
+			QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+
+		if (Log.open(QFile::ReadOnly | QFile::Text) && ErrorLog.open(QFile::ReadOnly | QFile::Text))
+		{
+			const QString Output = QString::fromLocal8Bit(Log.readAll() + ErrorLog.readAll());
+			const bool HasError = Output.contains(QLatin1String("ERROR: "), Qt::CaseInsensitive);
+			const bool HasWarning = Output.contains(QLatin1String("WARNING: "), Qt::CaseInsensitive);
+
+			if (HasError || HasWarning)
+			{
+				const QString Items = HasError ? tr("errors%1").arg(HasWarning ? tr(" and warnings") : "") : tr("warnings");
+				const QString Body = tr("Open in Blender encountered %1. See Show Details...").arg(Items);
+				swShowDetailedWarning(this, tr("Open in Blender"), Body, Output);
+			}
+		}
 
 		return;
 	}
-
-	QThread::sleep(2);
-
-#ifdef Q_OS_WIN
-	ShellProgram = QLatin1String(SW_WINDOWS_SHELL);
-#else
-	ShellProgram = QLatin1String(SW_UNIX_SHELL);
-#endif
 
 	mProcess = new swRenderProcess(this);
 
 	connect(mProcess, &QProcess::readyReadStandardOutput, this, &swRenderDialog::ReadStdOut);
 
-	const QString LDrawLibPath = swApplication::GetLibraryDirectory();
-	QStringList SystemEnvironment = QProcess::systemEnvironment();
-	SystemEnvironment.prepend("LDRAW_DIRECTORY=" + LDrawLibPath);
-
-	mProcess->setEnvironment(SystemEnvironment);
-
-	mProcess->setWorkingDirectory(QDir::toNativeSeparators(QString("%1/blender").arg(mDataPath)));
-
+	mProcess->setProcessEnvironment(Environment);
+	mProcess->setWorkingDirectory(swGetBlenderDataPath());
 	mProcess->setStandardErrorFile(GetStdErrFileName());
 
-	if (mDialogMode == swRenderDialogMode::OpenInBlender)
-	{
-		QFileInfo Info(GetStdOutFileName());
-		if (Info.exists())
-			QFile::remove(Info.absoluteFilePath());
-#ifdef Q_OS_WIN
-		mProcess->startDetached(ShellProgram, QStringList() << "/C" << ScriptFile.fileName());
-#else
-		mProcess->startDetached(ShellProgram, QStringList() << ScriptFile.fileName());
-#endif
-		if (mProcess)
-		{
-			mProcess->kill();
-			CloseProcess();
-			if (mStdOutList.size())
-				WriteStdOut();
-			if (Info.exists())
-			{
-				QFile Log(Info.absoluteFilePath());
-				QTime Wait = QTime::currentTime().addSecs(3);
-				while (!Log.size() || QTime::currentTime() < Wait)
-					QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
-				if (Log.size()) {
-					if (Log.open(QFile::ReadOnly | QFile::Text))
-					{
-						QByteArray Ba = Log.readAll();
-#if (QT_VERSION >= QT_VERSION_CHECK(6, 0, 0))
-						const bool Error = QString(Ba).contains(QRegularExpression("(?:\\w)*ERROR: ", QRegularExpression::CaseInsensitiveOption));
-						const bool Warning = QString(Ba).contains(QRegularExpression("(?:\\w)*WARNING: ", QRegularExpression::CaseInsensitiveOption));
-#else
-						const bool Error = QString(Ba).contains(QRegExp("(?:\\w)*ERROR: ", Qt::CaseInsensitive));
-						const bool Warning = QString(Ba).contains(QRegExp("(?:\\w)*WARNING: ", Qt::CaseInsensitive));
-#endif
-						if (Error || Warning)
-						{
-							QMessageBox::Icon Icon = QMessageBox::Warning;
-							const QString Items = Error ? tr("errors%1").arg(Warning ? tr(" and warnings") : "") : Warning ? tr("warnings") : "";
-							const QString Title = tr("Open in Blender Output");
-							const QString Body = tr("Open in Blender encountered %1. See Show Details...").arg(Items);
-							swBlenderPreferences::ShowMessage(this, Body, Title, QString(), QString(Ba), 0, Icon);
-						}
-					}
-				}
-			}
-			close();
-			return;
-		}
-	}
-	else
-	{
-		ui->RenderProgress->setRange(mBlendProgValue, mBlendProgMax);
-		ui->RenderProgress->setValue(1);
-#ifdef Q_OS_WIN
-		mProcess->start(ShellProgram, QStringList() << "/C" << ScriptFile.fileName());
-#else
-		mProcess->start(ShellProgram, QStringList() << ScriptFile.fileName());
-#endif
-	}
+	ui->RenderProgress->setRange(mBlendProgValue, mBlendProgMax);
+	ui->RenderProgress->setValue(1);
+
+	mProcess->start(BlenderPath, Arguments);
 
 	if (mProcess->waitForStarted())
 	{
@@ -1386,8 +1500,7 @@ void swRenderDialog::RenderBlender()
 	}
 	else
 	{
-		Message = tr("Error starting Blender render process.");
-		QMessageBox::warning(this, windowTitle(), Message);
+		QMessageBox::warning(this, windowTitle(), tr("Error starting Blender render process."));
 		CloseProcess();
 	}
 }
@@ -1407,7 +1520,7 @@ void swRenderDialog::ReadStdOut()
 	QRegExp RxRenderProgress;
 	RxRenderProgress.setCaseSensitivity(Qt::CaseInsensitive);
 #endif
-	int BlenderVersionNum = QString(swGetProfileString(SW_PROFILE_BLENDER_VERSION).mid(1, 1)).toInt();
+	int BlenderVersionNum = swGetProfileString(SW_PROFILE_BLENDER_VERSION).section(QLatin1Char('.'), 0, 0).toInt();
 	bool BlenderVersion3OrGreater = BlenderVersionNum > 2;
 
 	if (BlenderVersion3OrGreater)
@@ -1454,7 +1567,7 @@ QString swRenderDialog::ReadStdErr(bool& HasError) const
 	while (!In.atEnd())
 	{
 		QString Line = In.readLine(0);
-		ReturnLines << Line.trimmed() + "<br>";
+		ReturnLines << Line.trimmed();
 
 		if (mDialogMode == swRenderDialogMode::RenderPOVRay)
 		{
@@ -1473,7 +1586,7 @@ QString swRenderDialog::ReadStdErr(bool& HasError) const
 		}
 	}
 
-	return ReturnLines.join(" ");
+	return ReturnLines.join('\n');
 }
 
 void swRenderDialog::WriteStdOut()
@@ -1488,8 +1601,6 @@ void swRenderDialog::WriteStdOut()
 			Out << Line;
 
 		File.close();
-
-		mLogButton->setEnabled(true);
 	}
 }
 
@@ -1614,7 +1725,7 @@ void swRenderDialog::ShowResult()
 		ui->RenderProgress->setFormat("%p%");
 
 		const QString Body  = tr("An error occurred while rendering.");
-		swBlenderPreferences::ShowMessage(this, Body, windowTitle(), QString(), StdErrLog, 0, QMessageBox::Warning);
+		swShowDetailedWarning(this, windowTitle(), Body, StdErrLog);
 		return;
 	}
 	else
@@ -1680,6 +1791,21 @@ void swRenderDialog::ShowResult()
 			setMinimumSize(100, 100);
 			QImageReader Reader(FileName);
 			mImage = Reader.read();
+
+			if (swGetProfileInteger(SW_PROFILE_BLENDER_CROP_IMAGE) && mImage.hasAlphaChannel())
+			{
+				const QRect CropRect = swGetOpaqueRect(mImage);
+
+				if (CropRect.isValid() && CropRect != mImage.rect())
+				{
+					mImage = mImage.copy(CropRect);
+					QImageWriter Writer(FileName);
+
+					if (!Writer.write(mImage))
+						QMessageBox::warning(this, windowTitle(), tr("Error writing to file '%1':\n%2").arg(FileName, Writer.errorString()));
+				}
+			}
+
 			mImage = mImage.convertToFormat(QImage::Format_ARGB32_Premultiplied);
 
 			mPreviewWidth  = mImage.width();
@@ -1705,78 +1831,6 @@ void swRenderDialog::OutputBrowseButtonClicked()
 
 	if (!Result.isEmpty())
 		ui->OutputEdit->setText(QDir::toNativeSeparators(Result));
-}
-
-void swRenderDialog::SettingsButtonClicked()
-{
-	swBlenderPreferencesDialog::GetBlenderPreferences(mWidth, mHeight, mScale, this);
-
-	if (swGetProfileString(SW_PROFILE_BLENDER_IMPORT_MODULE).isEmpty())
-		mRenderButton->setToolTip(tr("Blender not configured. Use Settings to configure."));
-	else
-		mRenderButton->setEnabled(true);
-}
-
-void swRenderDialog::LogButtonClicked()
-{
-	// show the log in the log panel
-	if (mLogPanel)
-		return;
-
-	QFileInfo FileInfo;
-	QString Message ;
-
-	if (mDialogMode == swRenderDialogMode::RenderPOVRay)
-	{
-		FileInfo.setFile(GetStdErrFileName());
-		Message = tr("POV-Ray standard error file not found: '%1'.").arg(FileInfo.absoluteFilePath());
-	}
-	else
-	{
-		FileInfo.setFile(GetStdOutFileName());
-		Message = tr("Blender standard output file not found: '%1'.").arg(FileInfo.absoluteFilePath());
-	}
-
-	if (!FileInfo.exists())
-	{
-		QMessageBox::warning(this, tr("Render Log"), Message);
-		return;
-	}
-
-	QFile File(FileInfo.absoluteFilePath());
-
-	if (!File.open(QFile::ReadOnly | QFile::Text))
-	{
-		QMessageBox::warning(this, tr("Render Log"), tr("Error opening log file '%1':\n%2.").arg(FileInfo.absoluteFilePath(), File.errorString()));
-		return;
-	}
-
-	QString Text = File.readAll();
-	File.close();
-
-	QDialog Dialog(this);
-
-	Dialog.setWindowTitle(tr("Render Log"));
-	Dialog.setWhatsThis(tr("<p><b>Render Log</b></p><p>Read the renderer output to investigate warnings or a failed render. Select text and copy it with the standard keyboard shortcut when reporting a problem. Close returns to the Render dialog.</p>"));
-	Dialog.resize(800, 600);
-
-	QVBoxLayout* Layout = new QVBoxLayout(&Dialog);
-
-	QTextBrowser* TextBrowser = new QTextBrowser(&Dialog);
-	Layout->addWidget(TextBrowser);
-	TextBrowser->setAccessibleName(tr("Renderer Output"));
-	TextBrowser->setToolTip(tr("Read and copy renderer output and diagnostic messages."));
-
-	TextBrowser->setText(Text);
-
-	QDialogButtonBox* ButtonBox = new QDialogButtonBox(QDialogButtonBox::Close, Qt::Horizontal, &Dialog);
-	Layout->addWidget(ButtonBox);
-	swSetupDialogHelp(&Dialog);
-
-	QObject::connect(ButtonBox, &QDialogButtonBox::rejected, &Dialog, &QDialog::reject);
-	QObject::connect(ButtonBox, &QDialogButtonBox::accepted, &Dialog, &QDialog::accept);
-
-	Dialog.exec();
 }
 
 swRenderProcess::~swRenderProcess()

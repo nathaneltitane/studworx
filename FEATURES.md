@@ -61,10 +61,10 @@ Models are plain LDraw text files in LeoCAD's format, so they open in either pro
 - **Startup.** Open Most Recent File on Startup reopens the last model, Restore Tab Layout brings back its tabs and split views, and Load All Parts Before Showing waits until every part is loaded before the model appears.
 - **LeoCAD models.** Models saved by LeoCAD open as they are, and their LeoCAD meta commands are migrated to StudWorx ones, automatically when you choose so in Preferences.
 - **Import.** LEGO® Digital Designer models and official set inventories. Set inventories use your own free Rebrickable API key, asked for once or set under Online Services in the preferences, and are searched by set name or number.
-- **Export.** 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages with step images, BrickLink wanted lists and CSV parts lists. BrickLink exports pick the condition, the wanted list by its number or the address of its page, and new listing notices, copy the XML and open the BrickLink upload page in one step, and translate part numbers and colors through a bundled mapping of over 55,000 parts or a file built from the library and Rebrickable, with Rebrickable numbers taking the lead over stale part keywords. BrickLink and CSV exports list parts the library moved to a new number under that number, and Part Exceptions in the BrickLink export keeps a comma or tab separated list of parts whose BrickLink number you set by hand.
+- **Export.** 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages from the Instructions window, BrickLink wanted lists and CSV parts lists. BrickLink exports pick the condition, the wanted list by its number or the address of its page, and new listing notices, copy the XML and open the BrickLink upload page in one step, and translate part numbers and colors through a bundled mapping of over 55,000 parts or a file built from the library and Rebrickable, with Rebrickable numbers taking the lead over stale part keywords. BrickLink and CSV exports list parts the library moved to a new number under that number, and Part Exceptions in the BrickLink export keeps a comma or tab separated list of parts whose BrickLink number you set by hand.
 - **KMZ.** Google Earth and SketchUp models, with the visible surfaces only or every part's geometry, set in Preferences.
 - **COLLADA.** Translucent colors can be marked as transparent materials for programs that read them.
-- **HTML.** One page per model or one step per page with an index, step images of any width and height with an optional transparent background, and a parts list after each step or at the end, for the current model, its submodels or all models.
+- **HTML.** Export HTML in the Instructions window writes styled pages in a folder named after the model, opening at index.html, with light and dark colors that follow the browser. One scrolling page of the Instructions window pages that stops at each page, with #page-N and #step-N links and First, Previous, Next and Last Page arrows on the right, left or bottom edge, laid out for the Instructions Page, a Landscape Display, Portrait Display or Tablet shape in pixels and saved at twice that size for sharp high density screens, or one step per page with an index, step images of any width and height on a background color you choose or transparent, framed in rounded tiles of the same color, and a parts list after each step or at the end, which Override Instructions Settings also applies to the scrolling page with Settings Overrides for the page, cover, Bill of Materials, step, text, divider, pointer, fade, highlight and element box colors, without changing the model, for the current model, its submodels or all models.
 - **Print.** File > Print prints the current model view through the system print dialog, with a Preview button where the dialog allows it.
 - **Thumbnails.** Model thumbnails in file managers, from a KDE thumbnail plugin or the desktop thumbnailer.
 - **Parts library.** Downloaded on the first start as the official LDraw complete.zip, or chosen from an archive you already have, and reloaded from the File menu. An unofficial parts folder can be added beside it.
@@ -182,7 +182,7 @@ The model view draws fast with OpenGL in four lighting styles, and File > Render
 
 - **POV-Ray.** Found on its own in the PATH, Flatpak or Snap and checked for version 3.7. LGEO high detail parts are found beside the parts library or downloaded on request, with a Parts choice between LDraw and LGEO.
 - **Render window.** Choose the output file, follow the progress, and watch the image appear in the preview as it renders.
-- **Blender.** Render with the Blender LDraw add-on, or Open in Blender to keep working on the scene there. The add-on settings live in Preferences.
+- **Blender.** Render with the bundled Blender LDraw add-ons, with the output, image, scene, parts and editing settings in panels of the render window, or Open in Blender to keep working on the scene there. The Blender executable is set in Preferences.
 - **Lighting styles.** Standard, Studio, Matte and Toon, from the View menu or the command line with --lighting. Standard uses one light with soft highlights, Studio key, fill and rim lights, Matte no highlights, and Toon banded cel shading.
 - **Shading.** Wireframe, flat shading, default lights, edge lines, conditional lines and mesh level of detail.
 - **Mesh level of detail.** Distant parts draw with simpler meshes, from a distance set in Preferences, so large models stay smooth.
@@ -204,7 +204,7 @@ The model view draws fast with OpenGL in four lighting styles, and File > Render
 
 ![Render menu](resources/images/rendering-menu-render.png)
 ![Render window](resources/images/rendering-render-window.png)
-![Blender add-on settings](resources/images/rendering-blender.png)
+![Blender render window](resources/images/rendering-blender.png)
 ![Edge colors](resources/images/rendering-edge-colors.png)
 
 <!-- gallery two -->
@@ -416,7 +416,7 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 - **Elements.** Page numbers, colors, fonts, padding, margin, border and background for every page element, plus notices and pointers to emphasize parts and steps.
 - **Rulers.** Horizontal and vertical rulers measure the page in the page units, or the document units when they are in use, with the page and its margins shaded and an arrow on each ruler that follows the pointer, filled with its own color and alpha. Show Rulers turns them on and off.
 - **Element inspector.** Like the box model of a web browser inspector, Show Element Margins and Show Element Padding fill the margin around and the padding inside every page element, and Show Element Anchors marks its corners, edge centers and center. Each overlay has its own color and alpha in the Colors preferences, and none of them is printed.
-- **Print and Editor.** A built-in Print panel, and an Editor panel to read and edit the model file text, whose height snaps to whole lines so no line is ever cut off.
+- **Editor, Export HTML and Print.** An Editor panel to read and edit the model file text, whose height snaps to whole lines so no line is ever cut off, Export HTML for the instruction pages, and a built-in Print panel.
 
 ![The Instructions window](resources/images/instructions-window.png "wide")
 
@@ -460,9 +460,9 @@ Large builds split into submodels that you can edit on their own or in place, in
 
 Eight pages with lined up label and control columns. Value boxes show their maximum and bring any typed number into range, and every slider shows its value.
 
-- **General.** Reference paths, where the color configurations, minifigure builder settings and BrickLink mapping update from ldraw.org and Rebrickable with one button and bundled copies are used until a file is set, online services, where the Rebrickable API key is kept and Get Key opens its page, a rejected key being cleared so it is asked for again, the author of new models built from a name, email address and comment, such as All rights reserved, joined by the author line splitter and previewed as the author line, and the parts library, LGEO and POV-Ray locations.
+- **General.** Reference paths, where the color configurations, minifigure builder settings and BrickLink mapping update from ldraw.org and Rebrickable with one button and bundled copies are used until a file is set, online services, where the Rebrickable API key is kept and Get Key opens its page, a rejected key being cleared so it is asked for again, the author of new models built from a name, email address and comment, such as All rights reserved, joined by the author line splitter and previewed as the author line, and the parts library, Blender, POV-Ray and LGEO locations.
 - **Startup and files.** Open the most recent file, restore the tab layout, load all parts before showing a model, watch for file changes and migrate LeoCAD models automatically.
-- **Rendering and Views.** Rendering quality, the Blender add-on settings, and the Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups.
+- **Rendering and Views.** Rendering quality and the Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups.
 - **Interface and Instructions.** Interface and view colors, edge contrast, the default instruction page settings, and the rulers and element inspector overlays of the instructions page.
 - **View colors.** Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, flex paths, the view cube, every axis, and the element margin, padding and anchor overlays and the ruler pointer arrows of the instructions page, each with an alpha slider.
 - **Categories.** Part categories turned on and off with a checkbox, edited, imported and exported.

@@ -1289,7 +1289,7 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			Options.StdOut += tr("  --bricklink-wanted-list <id|url>: BrickLink wanted list the exported parts are added to, by number or by the address of its page.\n");
 			Options.StdOut += tr("  --bricklink-notify: Ask BrickLink to notify new listings of the exported parts.\n");
 			Options.StdOut += tr("  --bricklink-exceptions <file>: Comma or tab separated file of parts and the BrickLink numbers that replace their mapping in BrickLink exports.\n");
-			Options.StdOut += tr("  --export-html <folder>: Create an HTML page for the model.\n");
+			Options.StdOut += tr("  --export-html <folder>: Create HTML instructions in a folder named after the model inside the folder.\n");
 			Options.StdOut += tr("  --export-povray <outfile.pov>: Export the model to POV-Ray format.\n");
 			Options.StdOut += tr("  --render-povray <outfile.png>: Render the model with POV-Ray using the POV-Ray window settings, the picture width and height, and the transparent background.\n");
 			Options.StdOut += tr("\nSettings:\n");
@@ -2244,6 +2244,8 @@ void swApplication::ShowPreferencesDialog()
 	Options.ColorConfigAlternatePath = swGetProfileString(SW_PROFILE_COLOR_CONFIGURATION_ALTERNATE);
 	Options.ColorSource = swGetColorSource();
 	Options.POVRayPath = swGetProfileString(SW_PROFILE_POVRAY_PATH);
+	Options.BlenderPath = swGetProfileString(SW_PROFILE_BLENDER_PATH);
+	Options.BlenderVersion = swGetProfileString(SW_PROFILE_BLENDER_VERSION);
 	Options.LGEOPath = swGetProfileString(SW_PROFILE_POVRAY_LGEO_PATH);
 	Options.RebrickableApiKey = swGetProfileString(SW_PROFILE_REBRICKABLE_API_KEY);
 	Options.DefaultAuthorName = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_NAME);
@@ -2337,6 +2339,8 @@ void swApplication::ShowPreferencesDialog()
 	swSetProfileString(SW_PROFILE_MINIFIGURE_BUILDER_SETTINGS, Options.MinifigureBuilderSettingsPath);
 	swSetProfileString(SW_PROFILE_BRICKLINK_MAPPING, Options.BrickLinkMappingPath);
 	swSetProfileString(SW_PROFILE_POVRAY_PATH, Options.POVRayPath);
+	swSetProfileString(SW_PROFILE_BLENDER_PATH, Options.BlenderPath);
+	swSetProfileString(SW_PROFILE_BLENDER_VERSION, Options.BlenderVersion);
 	swSetProfileString(SW_PROFILE_POVRAY_LGEO_PATH, Options.LGEOPath);
 	swSetProfileString(SW_PROFILE_REBRICKABLE_API_KEY, Options.RebrickableApiKey.trimmed());
 	swSetProfileString(SW_PROFILE_LANGUAGE, Options.Language);

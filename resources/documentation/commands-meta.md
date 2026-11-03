@@ -292,7 +292,7 @@ The StudWorx `SYNTH_PATH` object is named apart from these commands, which descr
 
 ## Blender
 
-The Blender LDraw import add-on handles these commands when its options in Preferences ask for it. The step StudWorx hands to Blender is written with LeoCAD meta commands, the form the add-on reads cameras, lights and groups from.
+The Blender LDraw import add-on handles these commands when Import Cameras and Import Lights in the Scene panel of the Blender Render window ask for it. The step StudWorx hands to Blender is written with LeoCAD meta commands, the form the add-on reads cameras, lights and groups from.
 
 | Command | Option | Use |
 | --- | --- | --- |

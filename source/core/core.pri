@@ -25,6 +25,7 @@ SOURCES += \
 	$$PWD/sw_project_export.cpp \
 	$$PWD/sw_project_file.cpp \
 	$$PWD/sw_project_import.cpp \
+	$$PWD/sw_renderer_blender.cpp \
 	$$PWD/sw_renderer_povray.cpp \
 	$$PWD/sw_string.cpp \
 	$$PWD/sw_track_train.cpp
@@ -44,6 +45,7 @@ HEADERS += \
 	$$PWD/sw_object_part.h \
 	$$PWD/sw_object_property.h \
 	$$PWD/sw_project.h \
+	$$PWD/sw_renderer_blender.h \
 	$$PWD/sw_renderer_povray.h \
 	$$PWD/sw_result.h \
 	$$PWD/sw_string.h \

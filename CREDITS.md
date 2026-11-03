@@ -6,6 +6,8 @@ Part connections come from the [LDCad shadow library](https://github.com/RolandM
 
 POV-Ray renders can use the [LGEO library](https://github.com/jncraton/lgeo) by Lutz Uhlmann, high detail LEGO® part models for POV-Ray that may be redistributed freely. It is not bundled with StudWorx.
 
+Blender renders use the LDraw import and render add-ons of [Blender LDraw Render](https://github.com/trevorsandy/blenderldrawrender) by Trevor Sandy for LPub3D, adapted from [Import LDraw](https://github.com/TobyLobster/ImportLDraw) by Toby Nelson and released under the GNU General Public License version 2. They are bundled with StudWorx.
+
 ## LeoCAD
 
 ### Author - Original Design

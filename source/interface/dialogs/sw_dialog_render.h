@@ -29,8 +29,7 @@ enum class swPOVRayFloorStyle
 enum class swRenderDialogMode
 {
 	RenderPOVRay,
-	RenderBlender,
-	OpenInBlender
+	RenderBlender
 };
 
 #ifndef SW_DISABLE_RENDER_DIALOG
@@ -124,6 +123,9 @@ protected:
 	QRectF mRegion = QRectF(0.25, 0.25, 0.5, 0.5);
 };
 
+// Bounds of the pixels that are not fully transparent, empty when there are none.
+QRect swGetOpaqueRect(const QImage& Image);
+
 struct swRenderJob
 {
 	swStep Step;
@@ -148,8 +150,6 @@ private slots:
 
 protected slots:
 	void RenderButtonClicked();
-	void SettingsButtonClicked();
-	void LogButtonClicked();
 	void ReadStdOut();
 	void WriteStdOut();
 
@@ -157,11 +157,12 @@ protected:
 	QString GetStdOutFileName() const;
 	QString GetStdErrFileName() const;
 	QString GetPOVFileName() const;
-	void CreatePOVRayPanels();
+	void CreatePanels();
+	QString GetPanelStateGroup() const;
 	void UpdateLogPanel();
 	QString ReadStdErr(bool& Error) const;
 	void RenderPOVRay();
-	void RenderBlender();
+	void RenderBlender(bool ImportOnly);
 	void CloseProcess();
 	bool PromptCancel();
 	void ShowResult();
@@ -182,7 +183,6 @@ protected:
 	QStringList mStdErrList;
 	QStringList mStdOutList;
 	QAbstractButton* mRenderButton = nullptr;
-	QPushButton* mSettingsButton = nullptr;
 	QAbstractButton* mLogButton = nullptr;
 	QMainWindow* mPanelWindow = nullptr;
 	QDockWidget* mLogPanel = nullptr;
@@ -216,8 +216,6 @@ protected:
 	swRenderDialogMode mDialogMode;
 	int mBlendProgValue;
 	int mBlendProgMax;
-	double mScale;
-	QString mDataPath;
 
 	Ui::swRenderDialog* ui;
 };

@@ -1,6 +1,6 @@
 #pragma once
 
-class swHTMLExportOptions;
+#include "sw_project.h"
 
 namespace Ui {
 class swHTMLDialog;
@@ -25,6 +25,9 @@ private slots:
 
 private:
 	swHTMLExportOptions* mOptions;
+	QColor mBackgroundColor;
+	std::array<QColor, SW_HTML_OVERRIDE_COLOR_COUNT> mOverrideColors;
+	QList<QWidget*> mOverrideColorWidgets;
 	Ui::swHTMLDialog* ui;
 };
 

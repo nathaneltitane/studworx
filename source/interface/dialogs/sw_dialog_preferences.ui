@@ -3,7 +3,7 @@
  <class>swPreferencesDialog</class>
  <widget class="QDialog" name="swPreferencesDialog">
   <property name="whatsThis">
-   <string>&lt;p&gt;&lt;b&gt;Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Configure the application, rendering, views, interface, part categories, and keyboard and mouse shortcuts. Choose OK to save the changes or Cancel to discard edits in Preferences. Language and antialiasing changes, and clearing the parts library, require restarting StudWorx.&lt;/p&gt;&lt;p&gt;Export buttons write files immediately. Blender add-on settings have their own Apply action and can configure Blender before you close Preferences.&lt;/p&gt;</string>
+   <string>&lt;p&gt;&lt;b&gt;Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Configure the application, rendering, views, interface, part categories, and keyboard and mouse shortcuts. Choose OK to save the changes or Cancel to discard edits in Preferences. Language and antialiasing changes, and clearing the parts library, require restarting StudWorx.&lt;/p&gt;&lt;p&gt;Export buttons write files immediately.&lt;/p&gt;</string>
   </property>
   <property name="geometry">
    <rect>
@@ -361,6 +361,52 @@
            </layout>
           </item>
           <item row="7" column="0">
+           <widget class="QLabel" name="BlenderExecutableLabel">
+            <property name="toolTip">
+             <string>Set the Blender executable used for Blender rendering and Open in Blender.</string>
+            </property>
+            <property name="whatsThis">
+             <string>&lt;p&gt;&lt;b&gt;Blender Executable&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the Blender program used by Blender Render and Open in Blender. StudWorx runs it once when you choose OK to check that it works, and brings its own LDraw import and render add-ons, so nothing needs to be installed in Blender. The render settings are in the panels of the Blender Render window.&lt;/p&gt;</string>
+            </property>
+            <property name="text">
+             <string>&amp;Blender Executable</string>
+            </property>
+            <property name="buddy">
+             <cstring>BlenderExecutable</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <layout class="QHBoxLayout" name="BlenderExecutableLayout">
+            <item>
+             <widget class="QLineEdit" name="BlenderExecutable">
+              <property name="accessibleName">
+               <string>Blender Executable</string>
+              </property>
+              <property name="toolTip">
+               <string>Set the Blender executable used for Blender rendering and Open in Blender.</string>
+              </property>
+              <property name="whatsThis">
+               <string>&lt;p&gt;&lt;b&gt;Blender Executable&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the Blender program used by Blender Render and Open in Blender. StudWorx runs it once when you choose OK to check that it works, and brings its own LDraw import and render add-ons, so nothing needs to be installed in Blender. The render settings are in the panels of the Blender Render window.&lt;/p&gt;</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="BlenderExecutableBrowse">
+              <property name="accessibleName">
+               <string>Browse</string>
+              </property>
+              <property name="toolTip">
+               <string>Locate the Blender executable.</string>
+              </property>
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="8" column="0">
            <widget class="QLabel" name="povrayLabel">
             <property name="toolTip">
              <string>Set the POV-Ray executable used for rendering.</string>
@@ -373,7 +419,7 @@
             </property>
            </widget>
           </item>
-          <item row="7" column="1">
+          <item row="8" column="1">
            <layout class="QHBoxLayout" name="povrayLayout">
             <item>
              <widget class="QLineEdit" name="povrayExecutable">
@@ -397,7 +443,7 @@
             </item>
            </layout>
           </item>
-          <item row="8" column="0">
+          <item row="9" column="0">
            <widget class="QLabel" name="label_9">
             <property name="toolTip">
              <string>Set the LGEO library folder used by POV-Ray exports.</string>
@@ -410,7 +456,7 @@
             </property>
            </widget>
           </item>
-          <item row="8" column="1">
+          <item row="9" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_10">
             <item>
              <widget class="QLineEdit" name="lgeoPath">
@@ -980,7 +1026,7 @@
       <attribute name="title">
        <string>Rendering</string>
       </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,0,0,0,0,1">
+      <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,0,0,0,1">
        <item>
         <widget class="QGroupBox" name="PerformanceGroup">
          <property name="title">
@@ -1576,60 +1622,6 @@
              <string/>
             </property>
            </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item>
-        <widget class="QGroupBox" name="BlenderGroup">
-         <property name="title">
-          <string>Blender</string>
-         </property>
-         <layout class="QGridLayout" name="BlenderLayout">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_39">
-            <property name="whatsThis">
-             <string>&lt;p&gt;&lt;b&gt;Blender Add-on Settings&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the separate Blender configuration dialog. Its Apply action saves its settings independently of Preferences, and choosing an executable or importer can configure Blender immediately.&lt;/p&gt;</string>
-            </property>
-            <property name="toolTip">
-             <string>Configure Blender and its LDraw import and render add-ons.</string>
-            </property>
-            <property name="buddy">
-             <cstring>BlenderAddonSettingsButton</cstring>
-            </property>
-            <property name="text">
-             <string>Blender LDraw Render</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QToolButton" name="BlenderAddonSettingsButton">
-            <property name="accessibleName">
-             <string>Blender LDraw Render</string>
-            </property>
-            <property name="whatsThis">
-             <string>&lt;p&gt;&lt;b&gt;Blender Add-on Settings&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the separate Blender configuration dialog. Its Apply action saves its settings independently of Preferences, and choosing an executable or importer can configure Blender immediately.&lt;/p&gt;</string>
-            </property>
-            <property name="toolTip">
-             <string>Configure Blender and its LDraw import and render add-ons.</string>
-            </property>
-            <property name="text">
-             <string>Add-on Settings...</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="3">
-           <spacer name="BlenderSpacer">
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
           </item>
          </layout>
         </widget>
@@ -4752,6 +4744,8 @@
   <tabstop>BrickLinkMappingEdit</tabstop>
   <tabstop>BrickLinkMappingBrowseButton</tabstop>
   <tabstop>BrickLinkMappingUpdateButton</tabstop>
+  <tabstop>BlenderExecutable</tabstop>
+  <tabstop>BlenderExecutableBrowse</tabstop>
   <tabstop>povrayExecutable</tabstop>
   <tabstop>povrayExecutableBrowse</tabstop>
   <tabstop>lgeoPath</tabstop>
@@ -4799,7 +4793,6 @@
   <tabstop>EdgeContrastSlider</tabstop>
   <tabstop>EdgeSaturationSlider</tabstop>
   <tabstop>LineWidthSlider</tabstop>
-  <tabstop>BlenderAddonSettingsButton</tabstop>
   <tabstop>ViewCubeSizeCombo</tabstop>
   <tabstop>ViewCubeLocationCombo</tabstop>
   <tabstop>FollowStepViewsCheckBox</tabstop>

@@ -605,6 +605,8 @@ public:
 
 	std::map<swModel*, swInstructionsModel> mModels;
 
+	static swInstructionsProperties CreateDefaultProperties();
+
 signals:
 	void StepSettingsChanged(swModel* Model, swStep Step);
 	void PageSetupChanged();
@@ -613,7 +615,6 @@ signals:
 	void UnitsChanged();
 
 protected:
-	static swInstructionsProperties CreateDefaultProperties();
 	void SetDefaultProperties();
 	void LoadCommandLines();
 	QStringList GetCommandLines() const;

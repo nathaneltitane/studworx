@@ -11,8 +11,12 @@ enum class swImageBackground;
 #define SW_HTML_INDEX         0x02
 #define SW_HTML_LIST_END       0x08
 #define SW_HTML_LIST_STEP      0x10
+#define SW_HTML_OVERRIDE       0x20
 #define SW_HTML_SUBMODELS     0x40
 #define SW_HTML_CURRENT_ONLY  0x80
+
+// rows of the override color settings
+#define SW_HTML_OVERRIDE_COLOR_COUNT 16
 
 class swHTMLExportOptions
 {
@@ -30,6 +34,11 @@ public:
 	int StepImagesHeight;
 	bool PartsListStep;
 	bool PartsListEnd;
+	int ArrowPosition;
+	int Display;
+	bool OverrideInstructions;
+	QColor BackgroundColor;
+	std::array<QColor, SW_HTML_OVERRIDE_COLOR_COUNT> OverrideColors;
 };
 
 enum class swImageMotion

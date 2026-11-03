@@ -224,6 +224,10 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("HTML", "ImageOptions", SW_IMAGE_TRANSPARENT),                              // SW_PROFILE_HTML_IMAGE_OPTIONS
 	swProfileEntry("HTML", "ImageWidth", 640),                                                 // SW_PROFILE_HTML_IMAGE_WIDTH
 	swProfileEntry("HTML", "ImageHeight", 480),                                                // SW_PROFILE_HTML_IMAGE_HEIGHT
+	swProfileEntry("HTML", "ArrowPosition", 0),                                                // SW_PROFILE_HTML_ARROW_POSITION
+	swProfileEntry("HTML", "BackgroundColor", SW_RGBA(255, 255, 255, 255)),                    // SW_PROFILE_HTML_BACKGROUND_COLOR
+	swProfileEntry("HTML", "OverrideColors", QStringList()),                                  // SW_PROFILE_HTML_OVERRIDE_COLORS
+	swProfileEntry("HTML", "Display", 0),                                                     // SW_PROFILE_HTML_DISPLAY
 
 	swProfileEntry("POVRay", "Path", "/usr/bin/povray"),                                       // SW_PROFILE_POVRAY_PATH
 	swProfileEntry("POVRay", "LGEOPath", ""),                                                  // SW_PROFILE_POVRAY_LGEO_PATH
@@ -243,11 +247,8 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Render", "Parts", 0),                                                      // SW_PROFILE_RENDER_PARTS
 
 	swProfileEntry("Blender", "Path", ""),                                                     // SW_PROFILE_BLENDER_PATH
-	swProfileEntry("Blender", "LDrawConfigPath", ""),                                          // SW_PROFILE_BLENDER_LDRAW_CONFIGURATION_PATH
 	swProfileEntry("Blender", "Version", ""),                                                  // SW_PROFILE_BLENDER_VERSION
-	swProfileEntry("Blender", "AddonVersion", ""),                                             // SW_PROFILE_BLENDER_ADDON_VERSION
-	swProfileEntry("Blender", "AddonVersionCheck", 1),                                         // SW_PROFILE_BLENDER_ADDON_VERSION_CHECK
-	swProfileEntry("Blender", "ImportModule", ""),                                             // SW_PROFILE_BLENDER_IMPORT_MODULE
+	swProfileEntry("Blender", "CropImage", 0),                                                 // SW_PROFILE_BLENDER_CROP_IMAGE
 
 	swProfileEntry("Settings", "PreviewViewCubeEnabled", 0),                                      // SW_PROFILE_PREVIEW_VIEW_CUBE_ENABLED
 	swProfileEntry("Settings", "PreviewViewCubeSize", 64),                                        // SW_PROFILE_PREVIEW_VIEW_CUBE_SIZE

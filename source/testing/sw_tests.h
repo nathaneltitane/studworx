@@ -30,6 +30,7 @@ private slots:
 	void BrickLinkUsesBundledMapping();
 	void ExportsResolveMovedParts();
 	void BrickLinkUsesExceptions();
+	void HTMLExportUsesModelFolder();
 	void AxisAlignedRotations_data();
 	void AxisAlignedRotations();
 	void AxisAlignedRotationTolerance();

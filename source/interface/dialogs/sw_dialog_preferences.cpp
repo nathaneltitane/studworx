@@ -5,7 +5,7 @@
 #include "sw_window_utilities.h"
 #include "sw_library.h"
 #include "sw_dialog_color_edge.h"
-#include "sw_dialog_preferences_blender.h"
+#include "sw_renderer_blender.h"
 #include "sw_dialog_export_bricklink.h"
 #include "sw_minifigure_configuration.h"
 #include "sw_window_main.h"
@@ -328,7 +328,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	// path fields end where the update buttons begin
 	const int UpdateButtonWidth = ui->ColorConfigUpdateButton->sizeHint().width();
 	const int ButtonSpacing = ui->ColorConfigLayout->spacing() >= 0 ? ui->ColorConfigLayout->spacing() : swGetLayoutSpacing(this, Qt::Horizontal);
-	QList<QHBoxLayout*> BrowseLayouts = { ui->horizontalLayout_3, ui->UnofficialLibraryLayout, ui->ShadowLibraryLayout, ui->horizontalLayout_10 };
+	QList<QHBoxLayout*> BrowseLayouts = { ui->horizontalLayout_3, ui->UnofficialLibraryLayout, ui->ShadowLibraryLayout, ui->BlenderExecutableLayout, ui->horizontalLayout_10 };
 
 #if !defined(Q_OS_WIN) && !defined(Q_OS_MACOS)
 	BrowseLayouts.append(ui->povrayLayout);
@@ -350,7 +350,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->AutomateEdgeColor, &QCheckBox::toggled, this, &swPreferencesDialog::AutomateEdgeColorToggled);
 	connect(ui->EdgeContrastSlider, &QSlider::valueChanged, this, &swPreferencesDialog::EdgeColorSliderValueChanged);
 	connect(ui->EdgeSaturationSlider, &QSlider::valueChanged, this, &swPreferencesDialog::EdgeColorSliderValueChanged);
-	connect(ui->BlenderAddonSettingsButton, &QPushButton::clicked, this, &swPreferencesDialog::BlenderAddonSettingsButtonClicked);
+	connect(ui->BlenderExecutableBrowse, &QToolButton::clicked, this, &swPreferencesDialog::BlenderExecutableBrowseClicked);
 	connect(ui->studStyleCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &swPreferencesDialog::StudStyleComboCurrentIndexChanged);
 	connect(ui->antiAliasing, &QCheckBox::toggled, this, &swPreferencesDialog::AntiAliasingToggled);
 	connect(ui->edgeLines, &QCheckBox::toggled, this, &swPreferencesDialog::EdgeLinesToggled);
@@ -461,6 +461,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->MinifigureBuilderSettingsEdit->setText(mOptions->MinifigureBuilderSettingsPath);
 	ui->BrickLinkMappingEdit->setText(mOptions->BrickLinkMappingPath);
 	ui->povrayExecutable->setText(mOptions->POVRayPath);
+	ui->BlenderExecutable->setText(mOptions->BlenderPath);
 	ui->lgeoPath->setText(mOptions->LGEOPath);
 	ui->RebrickableApiKeyEdit->setText(mOptions->RebrickableApiKey);
 	ui->AuthorName->setText(mOptions->DefaultAuthorName);
@@ -814,6 +815,23 @@ void swPreferencesDialog::accept()
 	if (!EnsureColorConfiguration())
 		return;
 
+	// a new blender is tested once here instead of before every render
+	const QString BlenderPath = ui->BlenderExecutable->text().trimmed();
+
+	if (BlenderPath != mOptions->BlenderPath || (mOptions->BlenderVersion.isEmpty() && !BlenderPath.isEmpty()))
+	{
+		QString Error;
+
+		QApplication::setOverrideCursor(Qt::WaitCursor);
+		mOptions->BlenderVersion = BlenderPath.isEmpty() ? QString() : swGetBlenderVersion(BlenderPath, Error);
+		QApplication::restoreOverrideCursor();
+
+		if (!BlenderPath.isEmpty() && mOptions->BlenderVersion.isEmpty())
+			QMessageBox::warning(this, tr("Blender Executable"), tr("'%1' did not run as Blender, so Blender rendering stays unavailable.\n\n%2").arg(QDir::toNativeSeparators(BlenderPath), Error));
+	}
+
+	mOptions->BlenderPath = BlenderPath;
+
 	const int GridLineSpacing = ui->gridLineSpacing->value();
 
 	mOptions->LibraryPath = ui->partsLibrary->text();
@@ -1003,21 +1021,6 @@ void swPreferencesDialog::ShadowLibraryEnabledToggled(bool Checked)
 	ui->ShadowLibraryBrowseButton->setEnabled(Checked);
 }
 
-void swPreferencesDialog::BlenderAddonSettingsButtonClicked()
-{
-#ifndef SW_DISABLE_BLENDER
-	int Width = 1280;
-	int Height = 720;
-	double Scale = 1.0f;
-
-	swBlenderPreferencesDialog::GetBlenderPreferences(
-		Width,
-		Height,
-		Scale,
-		this);
-#endif // !SW_BLENDER_DISABLED
-}
-
 void swPreferencesDialog::ColorConfigBrowseButtonClicked()
 {
 	BrowseColorConfiguration(swColorSource::Standard);
@@ -1197,6 +1200,20 @@ void swPreferencesDialog::PovrayExecutableBrowseClicked()
 
 	if (!Result.isEmpty())
 		ui->povrayExecutable->setText(QDir::toNativeSeparators(Result));
+}
+
+void swPreferencesDialog::BlenderExecutableBrowseClicked()
+{
+#ifdef Q_OS_WIN
+	const QString Filter(tr("Executable Files (*.exe);;All Files (*.*)"));
+#else
+	const QString Filter(tr("All Files (*.*)"));
+#endif
+
+	const QString Result = QFileDialog::getOpenFileName(this, tr("Select Blender Executable"), ui->BlenderExecutable->text(), Filter);
+
+	if (!Result.isEmpty())
+		ui->BlenderExecutable->setText(QDir::toNativeSeparators(Result));
 }
 
 void swPreferencesDialog::LgeoPathBrowseClicked()

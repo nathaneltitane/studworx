@@ -333,6 +333,7 @@ signals:
 	void ModelContentsChanged();
 
 public:
+	void ShowHTMLDialog(QWidget* Parent = nullptr);
 	void CloseInstructionsDialog();
 	void UpdateInstructionsOptions();
 	bool LoadProjectText(const QByteArray& FileData);
@@ -380,7 +381,6 @@ protected:
 	void SplitView(Qt::Orientation Orientation);
 	void LayoutNewView(QWidget* TabWidget, swViewWidget* ViewWidget);
 	void ShowAboutDialog();
-	void ShowHTMLDialog();
 	void ShowExportPOVRayDialog();
 	void ShowRenderDialog(swRenderDialogMode RenderDialogMode);
 	void ShowInstructionsDialog();

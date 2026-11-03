@@ -147,10 +147,6 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		ShowRenderDialog(swRenderDialogMode::RenderBlender);
 		break;
 
-	case SW_FILE_RENDER_OPEN_IN_BLENDER:
-		ShowRenderDialog(swRenderDialogMode::OpenInBlender);
-		break;
-
 	case SW_FILE_INSTRUCTIONS:
 		ShowInstructionsDialog();
 		break;

@@ -9,6 +9,7 @@
 #include "sw_model.h"
 #include "sw_window_utilities.h"
 #include "sw_profile.h"
+#include "sw_window_main.h"
 
 swInstructionsDialog::swInstructionsDialog(QWidget* Parent, Project* Project)
 	: QMainWindow(Parent), mProject(Project)
@@ -48,7 +49,11 @@ swInstructionsDialog::swInstructionsDialog(QWidget* Parent, Project* Project)
 	// print button toggles the print panel
 	QAction* PrintAction = mPrintWidget->toggleViewAction();
 	PrintAction->setToolTip(tr("Show or hide the Print panel to print the instruction pages"));
-	mPropertiesWidget->AddOptionsAction(PrintAction);
+
+	// html export draws these pages
+	QAction* ExportAction = new QAction(tr("Export HTML"), this);
+	ExportAction->setToolTip(tr("Export the instruction pages as HTML pages and images"));
+	connect(ExportAction, &QAction::triggered, this, [this]() { gMainWindow->ShowHTMLDialog(this); });
 
 	// editor panel opens below the page
 	mEditorWidget = new swInstructionsEditorWidget(this, mProject, mInstructions);
@@ -60,7 +65,11 @@ swInstructionsDialog::swInstructionsDialog(QWidget* Parent, Project* Project)
 	EditorAction->setShortcut(QKeySequence(tr("Ctrl+Shift+E")));
 	addAction(EditorAction);
 	EditorAction->setToolTip(tr("Show or hide the Editor panel to inspect and edit the text of the model file"));
+
+	// editor, export and print read left to right
 	mPropertiesWidget->AddOptionsAction(EditorAction);
+	mPropertiesWidget->AddOptionsAction(ExportAction);
+	mPropertiesWidget->AddOptionsAction(PrintAction);
 
 	connect(mPageListWidget->mThumbnailsWidget, &QListWidget::currentRowChanged, this, &swInstructionsDialog::CurrentThumbnailChanged);
 	UpdatePageList();
