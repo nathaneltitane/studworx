@@ -1,6 +1,20 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-03</summary>
+
+  - Export BrickLink: a mapping of over 55,000 parts and 236 colors now ships with StudWorx, so exports work without building one first, and Part Exceptions lets you replace the BrickLink number of any part, also as '--bricklink-exceptions' on the command line
+  - Export BrickLink and Export CSV: parts the library moved to a new number, such as 60470 to 60470a, are listed and counted under the new number
+  - Preferences: updating the BrickLink mapping starts from the bundled file, prefers Rebrickable numbers over outdated ones and keeps the old number of lettered variants BrickLink never took, the Rebrickable API key sits in a new Online Services group on the General page
+  - Preferences and Timeline: commands that share a shortcut show in red, and assigning a taken shortcut asks before moving it, a new Highlight Style shows as soon as you press OK
+  - Dialogs: the Help buttons are gone, the question mark in the title bar and F1 explain every control, labels sit in one column on the left and fields reach the right edge
+  - Rotation: turning parts or pivots in angle steps lands exactly on square angles again, so later moves keep whole coordinates
+  - Thumbnails: model thumbnails show again in file managers, and leftovers from the old StudWorks name are removed on install
+  - Properties and Import Set Inventory: light settings scroll without a sideways scroll bar, and long set names show in full
+
+  </details>
+
+  <details>
   <summary>2026-11-02</summary>
 
   - Preferences: LDraw Color Configuration, LDraw Alternate Color Configuration, Minifigure Builder Settings and BrickLink Mapping each have an Update button that downloads the latest file from library.ldraw.org, ldraw.org or Rebrickable, the minifigure part list is saved as 'minifigure.ini'
