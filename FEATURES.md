@@ -154,9 +154,9 @@ Check Animated GIF to save one looping GIF. The preview plays it live with a pla
 
 <!-- gallery three square -->
 
-![Turntable](resources/images/image-gif-animated.gif)
-![Steps](resources/images/image-gif-steps.gif)
-![Next Step, six steps, one turn each](resources/images/image-gif-next-step.gif)
+![Turntable](resources/images/save-model-image-animated.gif)
+![Steps](resources/images/save-model-image-steps.gif)
+![Next Step, six steps, one turn each](resources/images/save-model-image-next-step.gif)
 
 ### Settings and command line
 
