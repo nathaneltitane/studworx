@@ -130,3 +130,44 @@ void swTests::KMZKeepsVisibleSurfaces()
 		QVERIFY(!COLLADA.contains("target=\"#Color_Blue-material\""));
 	}
 }
+
+// Exports two parts to BrickLink with a fresh configuration and no parts library. With no mapping
+// file set the bundled mapping must translate the parts and colors to their current BrickLink numbers.
+void swTests::BrickLinkUsesBundledMapping()
+{
+	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
+	const QString Binary = Environment.value("SW_TEST_BINARY");
+
+	if (Binary.isEmpty())
+		QSKIP("SW_TEST_BINARY is not set");
+
+	QTemporaryDir Folder;
+	QVERIFY(Folder.isValid());
+
+	QFile Model(Folder.filePath("model.ldr"));
+	QVERIFY(Model.open(QIODevice::WriteOnly));
+	Model.write("0 Test\r\n1 4 0 0 0 1 0 0 0 1 0 0 0 1 2431pzu.dat\r\n1 72 40 0 0 1 0 0 0 1 0 0 0 1 2559c01.dat\r\n");
+	Model.close();
+
+	QProcessEnvironment ExportEnvironment = Environment;
+	ExportEnvironment.insert("XDG_CONFIG_HOME", Folder.filePath("config"));
+	ExportEnvironment.insert("XDG_DATA_HOME", Folder.filePath("data"));
+	ExportEnvironment.insert("XDG_CACHE_HOME", Folder.filePath("cache"));
+	ExportEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
+
+	const QString FileName = Folder.filePath("model.xml");
+
+	QProcess Export;
+	Export.setProcessEnvironment(ExportEnvironment);
+	Export.setProcessChannelMode(QProcess::MergedChannels);
+	Export.start(Binary, { Model.fileName(), "--export-bricklink", FileName });
+	QVERIFY2(Export.waitForFinished(120000), "the wanted list was not saved");
+	QVERIFY2(Export.exitCode() == 0, Export.readAll().constData());
+
+	QFile WantedList(FileName);
+	QVERIFY(WantedList.open(QIODevice::ReadOnly));
+	const QByteArray Data = WantedList.readAll();
+
+	QVERIFY2(Data.contains("<ITEMID>2431pb0754</ITEMID>\n    <COLOR>5</COLOR>"), Data.constData());
+	QVERIFY2(Data.contains("<ITEMID>2558c03</ITEMID>\n    <COLOR>85</COLOR>"), Data.constData());
+}

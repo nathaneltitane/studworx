@@ -36,6 +36,8 @@
   - Step View: the dialog fits its fields, with labels on the left and fields to the right edge
   - Site: the Rendering, Views, Keyboard and Mouse preference screenshots show the shared slider value column and a selected shortcut conflict in red, and the Steps section shows the Step View dialog
   - Site: the Import Set Inventory screenshot shows search results
+  - Export BrickLink: a current mapping of over 55,000 parts and 236 colors ships with StudWorx and is used until you set your own file, so exports work without building one first
+  - Preferences: updating the BrickLink mapping now starts a new file from the bundled one and takes the Rebrickable numbers over outdated BrickLink numbers in the part files
 
   </details>
 

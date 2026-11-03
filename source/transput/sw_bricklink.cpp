@@ -23,6 +23,9 @@ static constexpr int swPartHeaderLineCount = 40;
 // ldraw colors resolved by their parent
 static const QStringList swBrickLinkInheritedColors = { QStringLiteral("16"), QStringLiteral("24") };
 
+// the mapping used until a file is set and the start of a new one
+static const QString swBrickLinkMappingResource = QStringLiteral(":/resources/data/bricklink.json");
+
 static const QString swBrickLinkMappingComment = QStringLiteral("LDraw to BrickLink mappings. CC-0 licensed");
 static const QString swBrickLinkMappingKeyComment = QStringLiteral("Comment");
 static const QString swBrickLinkMappingKeyParts = QStringLiteral("Parts");
@@ -100,7 +103,7 @@ bool swBrickLinkMappingExists()
 {
 	const QString MappingPath = swGetBrickLinkMappingPath();
 
-	return !MappingPath.isEmpty() && QFileInfo(MappingPath).isFile();
+	return MappingPath.isEmpty() || QFileInfo(MappingPath).isFile();
 }
 
 // use to read a mapping file
@@ -144,11 +147,7 @@ static int swGetBrickLinkColor(const QJsonObject& ColorMapping, int ColorIndex)
 swResult<int> swExportBrickLink(const QString& SaveFileName, const swPartsList& PartsList, const swBrickLinkOptions& Options)
 {
 	const QString MappingPath = swGetBrickLinkMappingPath();
-
-	if (MappingPath.isEmpty())
-		return swUnexpected(QObject::tr("No BrickLink mapping file is set. Choose or update one under Preferences > General > Reference Paths."));
-
-	const swResult<QJsonObject> Mapping = swLoadBrickLinkMapping(MappingPath);
+	const swResult<QJsonObject> Mapping = swLoadBrickLinkMapping(!MappingPath.isEmpty() ? MappingPath : swBrickLinkMappingResource);
 
 	if (!Mapping)
 		return swUnexpected(QString(Mapping.error()));
@@ -379,16 +378,13 @@ swResult<int> swUpdateBrickLinkMapping(QWidget* Parent, const QString& FileName,
 {
 	QJsonObject Mapping;
 
-	// keep the entries already in the file
-	if (QFileInfo(FileName).isFile())
-	{
-		swResult<QJsonObject> Existing = swLoadBrickLinkMapping(FileName);
+	// keep the entries already in the file, a new file starts from the bundled one
+	const swResult<QJsonObject> Existing = swLoadBrickLinkMapping(QFileInfo(FileName).isFile() ? FileName : swBrickLinkMappingResource);
 
-		if (!Existing)
-			return swUnexpected(QString(Existing.error()));
+	if (!Existing)
+		return swUnexpected(QString(Existing.error()));
 
-		Mapping = Existing.value();
-	}
+	Mapping = Existing.value();
 
 	std::map<QString, QString> Parts;
 	std::map<QString, QString> Colors;
@@ -469,8 +465,8 @@ swResult<int> swUpdateBrickLinkMapping(QWidget* Parent, const QString& FileName,
 
 	ProgressDialog.hide();
 
-	// later sources win, the part keywords are set on the part itself
-	for (const std::map<QString, QString>* Source : { &RebrickableNamed, &RebrickableListed, &LibraryParts })
+	// later sources win, rebrickable follows bricklink renames the part keywords miss
+	for (const std::map<QString, QString>* Source : { &LibraryParts, &RebrickableNamed, &RebrickableListed })
 		for (const auto& [LDrawPart, BrickLinkPart] : *Source)
 			Parts[LDrawPart] = BrickLinkPart;
 

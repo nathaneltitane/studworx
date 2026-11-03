@@ -134,7 +134,7 @@ bool swUpdateBrickLinkMappingFile(QWidget* Parent, const QString& FileName, bool
 	return true;
 }
 
-// use to register and build a missing mapping file
+// use to rebuild a set mapping file gone missing
 static bool swEnsureBrickLinkMapping(QWidget* Parent)
 {
 	if (swBrickLinkMappingExists())
@@ -142,9 +142,7 @@ static bool swEnsureBrickLinkMapping(QWidget* Parent)
 
 	const QString Title = QCoreApplication::translate("swBrickLinkExportDialog", "Export BrickLink");
 	const QString MappingPath = swGetBrickLinkMappingPath();
-	const QString Question = MappingPath.isEmpty() ?
-		QCoreApplication::translate("swBrickLinkExportDialog", "No BrickLink mapping file is set. It translates LDraw part numbers and colors to BrickLink.\n\nChoose where to save it and build it now?") :
-		QCoreApplication::translate("swBrickLinkExportDialog", "The BrickLink mapping file '%1' was not found. It translates LDraw part numbers and colors to BrickLink.\n\nChoose where to save it and build it now?").arg(MappingPath);
+	const QString Question = QCoreApplication::translate("swBrickLinkExportDialog", "The BrickLink mapping file '%1' was not found. It translates LDraw part numbers and colors to BrickLink.\n\nChoose where to save it and build it now?").arg(MappingPath);
 
 	if (QMessageBox::question(Parent, Title, Question, QMessageBox::Yes | QMessageBox::Cancel, QMessageBox::Yes) != QMessageBox::Yes)
 		return false;

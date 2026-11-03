@@ -1448,7 +1448,7 @@
 				<li><b>Startup.</b> Open Most Recent File on Startup reopens the last model, Restore Tab Layout brings back its tabs and split <a href="#views">views</a>, and Load All Parts Before Showing waits until every part is loaded before the model appears.</li>
 				<li><b>LeoCAD models.</b> Models saved by LeoCAD open as they are, and their LeoCAD <a href="#meta">meta</a> commands are migrated to StudWorx ones, automatically when you choose so in <a href="#preferences">Preferences</a>.</li>
 				<li><b>Import.</b> LEGO® Digital Designer models and official set inventories. Set inventories use your own free Rebrickable API key, asked for once or set under Online Services in the preferences, and are searched by set name or number.</li>
-				<li><b>Export.</b> 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages with step images, BrickLink wanted lists and CSV parts lists. BrickLink exports pick the condition, the wanted list by its number or the address of its page, and new listing notices, copy the XML and open the BrickLink upload page in one step, and translate part numbers and colors through a mapping file built from the library and Rebrickable.</li>
+				<li><b>Export.</b> 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages with step images, BrickLink wanted lists and CSV parts lists. BrickLink exports pick the condition, the wanted list by its number or the address of its page, and new listing notices, copy the XML and open the BrickLink upload page in one step, and translate part numbers and colors through a bundled mapping of over 55,000 parts or a file built from the library and Rebrickable, with Rebrickable numbers taking the lead over stale part keywords.</li>
 				<li><b>KMZ.</b> Google Earth and SketchUp models, with the visible surfaces only or every part&#x27;s geometry, set in Preferences.</li>
 				<li><b>COLLADA.</b> Translucent colors can be marked as transparent materials for programs that read them.</li>
 				<li><b>HTML.</b> One page per model or one step per page with an index, step images of any width and height with an optional transparent background, and a parts list after each step or at the end, for the current model, its submodels or all models.</li>
@@ -3177,6 +3177,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Step View: the dialog fits its fields, with labels on the left and fields to the right edge</li>
 					<li>Site: the Rendering, <a href="#views">Views</a>, Keyboard and Mouse preference screenshots show the shared slider value column and a selected shortcut conflict in red, and the Steps section shows the Step View dialog</li>
 					<li>Site: the Import Set Inventory screenshot shows search results</li>
+					<li>Export BrickLink: a current mapping of over 55,000 parts and 236 colors ships with StudWorx and is used until you set your own file, so exports work without building one first</li>
+					<li>Preferences: updating the BrickLink mapping now starts a new file from the bundled one and takes the Rebrickable numbers over outdated BrickLink numbers in the part files</li>
 				</ul>
 			</details>
 

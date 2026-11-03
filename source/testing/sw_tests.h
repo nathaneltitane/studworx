@@ -27,6 +27,7 @@ private slots:
 	void TranslucentImagesKeepColor();
 	void KMZKeepsVisibleSurfaces_data();
 	void KMZKeepsVisibleSurfaces();
+	void BrickLinkUsesBundledMapping();
 	void AxisAlignedRotations_data();
 	void AxisAlignedRotations();
 	void AxisAlignedRotationTolerance();

@@ -14,6 +14,8 @@ that translucent pixels keep their color and opaque images keep the background
 It also exports a box hiding a smaller box to KMZ, to check the archive entries,
 the model named after the archive with spaces as underscores, fixed dates, and
 that `--kmz-geometry visible` drops the hidden box while `--kmz-geometry all` keeps it.
+A BrickLink export with no mapping file set must use the bundled mapping, so
+parts and colors leave as their current BrickLink numbers.
 Rotation tests turn parts in 15, 30 and 90 degree steps around every axis, in
 the part's own frame and in model coordinates, and check that each quarter turn
 lands exactly on 0 and 1, that the turned part keeps its position and moves by

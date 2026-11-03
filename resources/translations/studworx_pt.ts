@@ -4889,62 +4889,57 @@ O formato do ficheiro não é reconhecido.</translation>
         <translation type="obsolete">StudWorx</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="112"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="115"/>
         <source>Could not open the BrickLink mapping file &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="118"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="121"/>
         <source>&apos;%1&apos; is not a BrickLink mapping file: %2.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="149"/>
-        <source>No BrickLink mapping file is set. Choose or update one under Preferences &gt; General &gt; Reference Paths.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="180"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="179"/>
         <source>Could not open file &apos;%1&apos; for writing.</source>
         <translation type="unfinished">Erro ao abrir o ficheiro &apos;%1&apos; para escrever.</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="228"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="227"/>
         <source>Reading the BrickLink numbers of the library parts...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="77"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="80"/>
         <source>Rebrickable rejected the API key, so it was cleared. Enter a new one when asked, or under Preferences &gt; General &gt; Online Services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="342"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="341"/>
         <source>Could not download the part numbers from Rebrickable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="405"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="401"/>
         <source>Cancel</source>
         <translation type="unfinished">Cancelar</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="406"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="402"/>
         <source>Update BrickLink Mapping</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="420"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="416"/>
         <source>Downloading the BrickLink part numbers from Rebrickable...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="444"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="440"/>
         <source>Downloading the BrickLink colors from Rebrickable...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="501"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="497"/>
         <source>Could not write the BrickLink mapping file &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6264,15 +6259,15 @@ O formato do ficheiro não é reconhecido.</translation>
         <translation type="obsolete">Erro</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1012"/>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1018"/>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1036"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1017"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1023"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1041"/>
         <source>Stop Blender Process</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">Parar o processo do Blender</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1036"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1041"/>
         <source>%1 failed: %2</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">%1 falhou: %2</translation>
@@ -11434,7 +11429,7 @@ Veja https://github.com/nathaneltitane/studworx para saber como descarragar e in
 <context>
     <name>swBlockingProgress</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="639"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="644"/>
         <source>%v of %m</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11449,7 +11444,7 @@ Veja https://github.com/nathaneltitane/studworx para saber como descarragar e in
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="37"/>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="143"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="180"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="178"/>
         <source>Export BrickLink</source>
         <translation type="unfinished">Exportar BrickLink</translation>
     </message>
@@ -11537,41 +11532,34 @@ Veja https://github.com/nathaneltitane/studworx para saber como descarragar e in
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="146"/>
-        <source>No BrickLink mapping file is set. It translates LDraw part numbers and colors to BrickLink.
-
-Choose where to save it and build it now?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="147"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="145"/>
         <source>The BrickLink mapping file &apos;%1&apos; was not found. It translates LDraw part numbers and colors to BrickLink.
 
 Choose where to save it and build it now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="182"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="180"/>
         <source>Saved 1 lot to &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="182"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="180"/>
         <source>Saved %1 lots to &apos;%2&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="184"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="182"/>
         <source>Copy XML and Open BrickLink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="185"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="183"/>
         <source>Copy the saved XML to the clipboard and open the BrickLink wanted list upload page to paste it into.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="196"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="194"/>
         <source>Could not read file &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -11706,25 +11694,25 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swColorDialogPopup</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1212"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1217"/>
         <source>Choose Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Escolha a cor</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1213"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1218"/>
         <source>&lt;p&gt;&lt;b&gt;Choose Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pick a color using the swatches or enter its component values. Choose OK to use the selected color, or Cancel to keep the original color. Editing the controls alone does not apply the color.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Escolha a cor&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Escolha uma cor usando as amostras ou insira os valores dos componentes. Escolha OK para usar a cor selecionada ou Cancelar para manter a cor original. A edição dos controles por si só não aplica a cor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1239"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1244"/>
         <source>Custom Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cor personalizada</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1240"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1245"/>
         <source>Choose a color or enter its component values.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Escolha uma cor ou insira os valores dos componentes.</translation>
@@ -15092,7 +15080,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1314"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1319"/>
         <source>Transparent</source>
         <translation type="unfinished"></translation>
     </message>
@@ -15803,187 +15791,187 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="256"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="257"/>
         <source>No view change</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="256"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="257"/>
         <source>Relative to the default view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="256"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="257"/>
         <source>Absolute</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="256"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="257"/>
         <source>Added to the previous view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="256"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="257"/>
         <source>Back to the default view</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="257"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="258"/>
         <source>How this step turns the view, saved as an MLCAD ROTSTEP line ending the step.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="272"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="273"/>
         <source>Use Current View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="273"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="274"/>
         <source>Fill in the absolute rotation that matches the current view.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="459"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="460"/>
         <source>Use Model View Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="461"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="462"/>
         <source>Shading</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="463"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="464"/>
         <source>Wireframe</source>
         <translation type="unfinished">Estrutura de arame</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="464"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="465"/>
         <source>Flat Shading</source>
         <translation type="unfinished">Sombreamento plano</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="465"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="466"/>
         <source>Default Lights</source>
         <translation type="unfinished">Luzes padrão</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="469"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="470"/>
         <source>Standard Lighting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="469"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="470"/>
         <source>Studio Lighting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="469"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="470"/>
         <source>Matte Lighting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="469"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="470"/>
         <source>Toon Lighting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="478"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="479"/>
         <source>Edge Lines</source>
         <translation type="unfinished">Linhas de orla</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="479"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="480"/>
         <source>Conditional Lines</source>
         <translation type="unfinished">Linhas Condicionais</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="490"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="491"/>
         <source>Highlight New Parts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="492"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="493"/>
         <source>Part Connections</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="496"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="497"/>
         <source>View Cube</source>
         <translation type="unfinished">Ver Cubo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="497"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="498"/>
         <source>Axis Icon</source>
         <translation type="unfinished">Ícone do eixo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="498"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="499"/>
         <source>Base Grid</source>
         <translation type="unfinished">Grelha de Base</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="499"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="500"/>
         <source>XZ Height Grid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="500"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="501"/>
         <source>YZ Height Grid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="501"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="502"/>
         <source>Height Grids Behind Model</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="502"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="503"/>
         <source>X Axis Line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="503"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="504"/>
         <source>Y Axis Line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="504"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="505"/>
         <source>Z Axis Line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="489"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="490"/>
         <source>Fade Previous Steps</source>
         <translation type="unfinished">Desaparecer etapas anteriores</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="258"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="259"/>
         <source>Rotation</source>
         <translation type="unfinished">Rotação</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="261"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="262"/>
         <source>X</source>
         <translation type="unfinished">X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="261"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="262"/>
         <source>Y</source>
         <translation type="unfinished">Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="261"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="262"/>
         <source>Z</source>
         <translation type="unfinished">Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="268"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="269"/>
         <source>°</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="491"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="492"/>
         <source>Insert First Part at Origin</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22543,11 +22531,6 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <source>Choose the file that translates LDraw part numbers and colors for BrickLink wanted list exports, under any name. Update builds or refreshes it from the library and Rebrickable.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>BrickLink Mapping</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22670,6 +22653,11 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Keyboard Shortcuts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a command, click Key Sequence, press the desired key combination, then choose Assign. Remove clears the selected command&apos;s shortcut. Commands that share a shortcut show in red. Import replaces the shortcut list; Export writes the current list immediately. Choose OK in Preferences to save changes.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Choose the file that translates LDraw part numbers and colors for BrickLink wanted list exports, under any name. The bundled mapping is used until one is set. Update builds or refreshes it from the library and Rebrickable.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -24963,7 +24951,7 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="113"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="119"/>
         <source>Import Set Inventory</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Importar conjunto de inventário</translation>
@@ -25048,7 +25036,7 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
         <translation type="obsolete">Base de dados de conjuntos fornecida por &lt;a href=&quot;https://www.rebrickable.com&quot;&gt;Rebrickable&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="113"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="119"/>
         <source>Please select a set from the list.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione um conjunto da lista.</translation>
@@ -25059,47 +25047,47 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
         <translation type="obsolete">Definir inventário</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="34"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="40"/>
         <source>Set inventories are downloaded from Rebrickable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="123"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="129"/>
         <source>Downloading</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Baixando</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="124"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="130"/>
         <source>Downloading set inventory</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Fazendo download do inventário definido</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="161"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="167"/>
         <source>Keyword cannot be empty.</source>
         <translation>A palavra chave não podem ser vazia.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="161"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="167"/>
         <source>Search Sets</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">Pesquisar conjuntos</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="169"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="175"/>
         <source>Searching</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Procurando</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="170"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="176"/>
         <source>Connecting to server</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ligar ao servidor</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="220"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="226"/>
         <source>Rebrickable API Key</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25114,13 +25102,13 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
         <translation type="obsolete">Conectar ao banco de dados de conjuntos</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="263"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="265"/>
         <source>Error downloading set inventory.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Erro ao descarregar o inventário do conjunto.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="263"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="265"/>
         <source>Download Set Inventory</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">Baixar inventário do conjunto</translation>
