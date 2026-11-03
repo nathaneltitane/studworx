@@ -16,6 +16,10 @@ the model named after the archive with spaces as underscores, fixed dates, and
 that `--kmz-geometry visible` drops the hidden box while `--kmz-geometry all` keeps it.
 A BrickLink export with no mapping file set must use the bundled mapping, so
 parts and colors leave as their current BrickLink numbers.
+A part whose description reads `~Moved to` must leave the BrickLink and CSV
+exports as the part it moved to, merged into one lot with it.
+Part exceptions given with `--bricklink-exceptions` must replace the mapping
+and come before moved part numbers, read from comma, quoted and tab separated lines.
 Rotation tests turn parts in 15, 30 and 90 degree steps around every axis, in
 the part's own frame and in model coordinates, and check that each quarter turn
 lands exactly on 0 and 1, that the turned part keeps its position and moves by

@@ -327,7 +327,8 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "BrickLinkMapping", ""),                                        // SW_PROFILE_BRICKLINK_MAPPING
 	swProfileEntry("Settings", "BrickLinkCondition", 0),                                       // SW_PROFILE_BRICKLINK_CONDITION
 	swProfileEntry("Settings", "BrickLinkWantedList", ""),                                     // SW_PROFILE_BRICKLINK_WANTED_LIST
-	swProfileEntry("Settings", "BrickLinkNotify", false)                                       // SW_PROFILE_BRICKLINK_NOTIFY
+	swProfileEntry("Settings", "BrickLinkNotify", false),                                      // SW_PROFILE_BRICKLINK_NOTIFY
+	swProfileEntry("Settings", "BrickLinkExceptions", "")                                      // SW_PROFILE_BRICKLINK_EXCEPTIONS
 };
 
 // settings shared by the open batch

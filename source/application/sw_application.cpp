@@ -1190,6 +1190,8 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 		}
 		else if (Option == QLatin1String("--bricklink-notify"))
 			Options.BrickLinkNotify = true;
+		else if (Option == QLatin1String("--bricklink-exceptions"))
+			Options.SetBrickLinkExceptions = ParseString(Options.BrickLinkExceptions, true);
 		else if (Option == QLatin1String("--export-html"))
 		{
 			Options.SaveHTML = true;
@@ -1286,6 +1288,7 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			Options.StdOut += tr("  --bricklink-condition <any|new|used>: Condition wanted in BrickLink exports.\n");
 			Options.StdOut += tr("  --bricklink-wanted-list <id|url>: BrickLink wanted list the exported parts are added to, by number or by the address of its page.\n");
 			Options.StdOut += tr("  --bricklink-notify: Ask BrickLink to notify new listings of the exported parts.\n");
+			Options.StdOut += tr("  --bricklink-exceptions <file>: Comma or tab separated file of parts and the BrickLink numbers that replace their mapping in BrickLink exports.\n");
 			Options.StdOut += tr("  --export-html <folder>: Create an HTML page for the model.\n");
 			Options.StdOut += tr("  --export-povray <outfile.pov>: Export the model to POV-Ray format.\n");
 			Options.StdOut += tr("  --render-povray <outfile.png>: Render the model with POV-Ray using the POV-Ray window settings, the picture width and height, and the transparent background.\n");
@@ -2120,6 +2123,9 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 
 			if (Options.BrickLinkNotify)
 				BrickLinkOptions.Notify = true;
+
+			if (Options.SetBrickLinkExceptions)
+				BrickLinkOptions.ExceptionsPath = Options.BrickLinkExceptions;
 
 			swResult<swBrickLinkExport> ExportResult = mProject->ExportBrickLink(FileName, BrickLinkOptions);
 

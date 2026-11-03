@@ -38,6 +38,9 @@
   - Site: the Import Set Inventory screenshot shows search results
   - Export BrickLink: a current mapping of over 55,000 parts and 236 colors ships with StudWorx and is used until you set your own file, so exports work without building one first
   - Preferences: updating the BrickLink mapping now starts a new file from the bundled one and takes the Rebrickable numbers over outdated BrickLink numbers in the part files
+  - Export BrickLink and Export CSV: parts the library has moved to a new number, such as 60470 to 60470a, are listed under the new number and counted together with it
+  - Export BrickLink: Part Exceptions lists parts and the BrickLink numbers that replace their mapping, kept in a comma or tab separated file you can edit by hand, also as '--bricklink-exceptions' on the command line
+  - Preferences: updating the BrickLink mapping keeps the old BrickLink number of parts moved to a lettered variant BrickLink never took, such as 3660a staying 3660
 
   </details>
 

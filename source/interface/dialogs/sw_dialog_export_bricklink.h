@@ -11,10 +11,26 @@ public:
 
 	swBrickLinkOptions GetOptions() const;
 
+public slots:
+	void accept() override;
+
+protected slots:
+	void BrowseExceptions();
+	void LoadExceptions();
+	void AddException();
+	void RemoveExceptions();
+	void UpdateExceptionButtons();
+
 protected:
+	swBrickLinkExceptions GetExceptions() const;
+	void SetExceptions(const swBrickLinkExceptions& Exceptions);
+
 	QComboBox* mConditionCombo;
 	QLineEdit* mWantedListEdit;
 	QCheckBox* mNotifyCheck;
+	QLineEdit* mExceptionsEdit;
+	QTableWidget* mExceptionsTable;
+	QPushButton* mRemoveButton;
 };
 
 QString swChooseBrickLinkMappingFile(QWidget* Parent, const QString& FileName);

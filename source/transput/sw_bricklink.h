@@ -16,7 +16,11 @@ struct swBrickLinkOptions
 	swBrickLinkCondition Condition = swBrickLinkCondition::Any;
 	QString WantedListId;
 	bool Notify = false;
+	QString ExceptionsPath;
 };
+
+// library parts and the bricklink numbers that replace their mapping
+using swBrickLinkExceptions = std::vector<std::pair<QString, QString>>;
 
 struct swBrickLinkExport
 {
@@ -34,6 +38,10 @@ void swSetBrickLinkOptions(const swBrickLinkOptions& Options);
 
 QString swGetBrickLinkMappingPath();
 bool swBrickLinkMappingExists();
+
+QString swGetBrickLinkExceptionsPath(const QString& FileName);
+swResult<swBrickLinkExceptions> swLoadBrickLinkExceptions(const QString& FileName);
+swResult<void> swSaveBrickLinkExceptions(const QString& FileName, const swBrickLinkExceptions& Exceptions);
 
 swResult<int> swExportBrickLink(const QString& FileName, const swPartsList& PartsList, const swBrickLinkOptions& Options);
 swResult<int> swUpdateBrickLinkMapping(QWidget* Parent, const QString& FileName, const QString& ApiKey);

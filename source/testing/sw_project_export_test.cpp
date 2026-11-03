@@ -171,3 +171,117 @@ void swTests::BrickLinkUsesBundledMapping()
 	QVERIFY2(Data.contains("<ITEMID>2431pb0754</ITEMID>\n    <COLOR>5</COLOR>"), Data.constData());
 	QVERIFY2(Data.contains("<ITEMID>92710c01</ITEMID>\n    <COLOR>85</COLOR>"), Data.constData());
 }
+
+// A part whose description reads ~Moved to lists as the part it moved to, merged with that part, in
+// the BrickLink and CSV exports. A folder library holds the alias and its target.
+void swTests::ExportsResolveMovedParts()
+{
+	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
+	const QString Binary = Environment.value("SW_TEST_BINARY");
+
+	if (Binary.isEmpty())
+		QSKIP("SW_TEST_BINARY is not set");
+
+	QTemporaryDir Folder;
+	QVERIFY(Folder.isValid());
+	QVERIFY(QDir(Folder.path()).mkpath("library/parts"));
+
+	const auto WriteFile = [&Folder](const QString& Name, const QByteArray& Text)
+	{
+		QFile File(Folder.filePath(Name));
+
+		if (!File.open(QIODevice::WriteOnly))
+			return false;
+
+		return File.write(Text) == Text.size();
+	};
+
+	QVERIFY(WriteFile("library/parts/3001.dat", "0 Brick  2 x  4\r\n0 Name: 3001.dat\r\n4 16 -40 0 -20 40 0 -20 40 0 20 -40 0 20\r\n"));
+	QVERIFY(WriteFile("library/parts/3001old.dat", "0 ~Moved to 3001\r\n0 Name: 3001old.dat\r\n1 16 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n"));
+	QVERIFY(WriteFile("model.ldr", "0 Test\r\n1 4 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n1 4 0 -24 0 1 0 0 0 1 0 0 0 1 3001old.dat\r\n"));
+
+	QProcessEnvironment ExportEnvironment = Environment;
+	ExportEnvironment.insert("XDG_CONFIG_HOME", Folder.filePath("config"));
+	ExportEnvironment.insert("XDG_DATA_HOME", Folder.filePath("data"));
+	ExportEnvironment.insert("XDG_CACHE_HOME", Folder.filePath("cache"));
+	ExportEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
+
+	const QString WantedListName = Folder.filePath("model.xml");
+	const QString CSVName = Folder.filePath("model.csv");
+
+	QProcess Export;
+	Export.setProcessEnvironment(ExportEnvironment);
+	Export.setProcessChannelMode(QProcess::MergedChannels);
+	Export.start(Binary, { "--library", Folder.filePath("library"), Folder.filePath("model.ldr"), "--export-bricklink", WantedListName, "--export-csv", CSVName });
+	QVERIFY2(Export.waitForFinished(120000), "the exports were not saved");
+	QVERIFY2(Export.exitCode() == 0, Export.readAll().constData());
+
+	QFile WantedList(WantedListName);
+	QVERIFY(WantedList.open(QIODevice::ReadOnly));
+	const QByteArray WantedListData = WantedList.readAll();
+
+	QVERIFY2(WantedListData.contains("<ITEMID>3001</ITEMID>\n    <COLOR>5</COLOR>\n    <MINQTY>2</MINQTY>"), WantedListData.constData());
+	QVERIFY2(!WantedListData.contains("3001old"), WantedListData.constData());
+
+	QFile CSV(CSVName);
+	QVERIFY(CSV.open(QIODevice::ReadOnly));
+	const QByteArray CSVData = CSV.readAll();
+
+	QVERIFY2(CSVData.contains("\"Brick  2 x  4\",\"Red\",2,3001.dat,4"), CSVData.constData());
+	QVERIFY2(!CSVData.contains("3001old"), CSVData.constData());
+}
+
+// Part exceptions replace the mapping and come before moved part numbers, read from comma, quoted
+// and tab separated lines of the file given with --bricklink-exceptions.
+void swTests::BrickLinkUsesExceptions()
+{
+	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
+	const QString Binary = Environment.value("SW_TEST_BINARY");
+
+	if (Binary.isEmpty())
+		QSKIP("SW_TEST_BINARY is not set");
+
+	QTemporaryDir Folder;
+	QVERIFY(Folder.isValid());
+	QVERIFY(QDir(Folder.path()).mkpath("library/parts"));
+
+	const auto WriteFile = [&Folder](const QString& Name, const QByteArray& Text)
+	{
+		QFile File(Folder.filePath(Name));
+
+		if (!File.open(QIODevice::WriteOnly))
+			return false;
+
+		return File.write(Text) == Text.size();
+	};
+
+	QVERIFY(WriteFile("library/parts/3001.dat", "0 Brick  2 x  4\r\n0 Name: 3001.dat\r\n4 16 -40 0 -20 40 0 -20 40 0 20 -40 0 20\r\n"));
+	QVERIFY(WriteFile("library/parts/3001old.dat", "0 ~Moved to 3001\r\n0 Name: 3001old.dat\r\n1 16 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n"));
+	QVERIFY(WriteFile("library/parts/3002.dat", "0 Brick  2 x  3\r\n0 Name: 3002.dat\r\n4 16 -30 0 -20 30 0 -20 30 0 20 -30 0 20\r\n"));
+	QVERIFY(WriteFile("model.ldr", "0 Test\r\n1 4 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n1 4 0 -24 0 1 0 0 0 1 0 0 0 1 3001old.dat\r\n1 4 0 -48 0 1 0 0 0 1 0 0 0 1 3002.dat\r\n"));
+	QVERIFY(WriteFile("exceptions.csv", "# kept by hand\n3001OLD.dat\t3001x\n\"3002\", \"3002y\"\n"));
+
+	QProcessEnvironment ExportEnvironment = Environment;
+	ExportEnvironment.insert("XDG_CONFIG_HOME", Folder.filePath("config"));
+	ExportEnvironment.insert("XDG_DATA_HOME", Folder.filePath("data"));
+	ExportEnvironment.insert("XDG_CACHE_HOME", Folder.filePath("cache"));
+	ExportEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
+
+	const QString FileName = Folder.filePath("model.xml");
+
+	QProcess Export;
+	Export.setProcessEnvironment(ExportEnvironment);
+	Export.setProcessChannelMode(QProcess::MergedChannels);
+	Export.start(Binary, { "--library", Folder.filePath("library"), Folder.filePath("model.ldr"), "--export-bricklink", FileName, "--bricklink-exceptions", Folder.filePath("exceptions.csv") });
+	QVERIFY2(Export.waitForFinished(120000), "the wanted list was not saved");
+	QVERIFY2(Export.exitCode() == 0, Export.readAll().constData());
+
+	QFile WantedList(FileName);
+	QVERIFY(WantedList.open(QIODevice::ReadOnly));
+	const QByteArray Data = WantedList.readAll();
+
+	QVERIFY2(Data.contains("<ITEMID>3001</ITEMID>\n    <COLOR>5</COLOR>\n    <MINQTY>1</MINQTY>"), Data.constData());
+	QVERIFY2(Data.contains("<ITEMID>3001x</ITEMID>\n    <COLOR>5</COLOR>\n    <MINQTY>1</MINQTY>"), Data.constData());
+	QVERIFY2(Data.contains("<ITEMID>3002y</ITEMID>"), Data.constData());
+}
+

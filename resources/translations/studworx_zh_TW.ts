@@ -4255,9 +4255,9 @@ File format is not recognized.</source>
         <location filename="../../source/core/sw_project_export.cpp" line="605"/>
         <location filename="../../source/core/sw_project_export.cpp" line="645"/>
         <location filename="../../source/core/sw_project_export.cpp" line="1137"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1473"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="2318"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="2331"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1476"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="2321"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="2334"/>
         <source>Could not open file &apos;%1&apos; for writing.</source>
         <translation>無法開啟檔案 &apos;%1&apos; 進行寫入。</translation>
     </message>
@@ -4317,56 +4317,56 @@ File format is not recognized.</source>
         <translation>CSV 檔案 (*.csv);;所有檔案 (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1272"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1275"/>
         <source>Created by %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1295"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1333"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1425"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1298"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1336"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1428"/>
         <source>Instructions for %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1300"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1336"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1356"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1448"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1303"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1339"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1359"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1451"/>
         <source>Step %1</source>
         <translation type="unfinished">步驟 %1</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1339"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1376"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1451"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1342"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1379"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1454"/>
         <source>Parts Used</source>
         <translation type="unfinished">所用零件</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1355"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1358"/>
         <source>%1 - Step %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1368"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1399"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1371"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1402"/>
         <source>Previous</source>
         <translation type="unfinished">上一個</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1371"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1402"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1374"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1405"/>
         <source>Index</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1374"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1377"/>
         <source>Next</source>
         <translation type="unfinished">下一個</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1391"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1394"/>
         <source>Parts used by %1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4375,39 +4375,39 @@ File format is not recognized.</source>
         <translation type="vanished">創建圖片錯誤.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1465"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1468"/>
         <source>Export POV-Ray</source>
         <translation>導出 POV-Ray</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1465"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1468"/>
         <source>POV-Ray Files (*.pov);;All Files (*.*)</source>
         <translation>POV-Ray 檔案 (*.pov);;所有檔案 (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1941"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1944"/>
         <source>Could not find LGEO files in folder &apos;%1&apos;.</source>
         <translation>在資料夾 &apos;%1&apos; 中找不到 LGEO 檔案。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="2309"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="2312"/>
         <source>Export Wavefront</source>
         <translation>導出 Wavefront</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="2309"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="2312"/>
         <source>Wavefront Files (*.obj);;All Files (*.*)</source>
         <translation>Wavefront 檔案 (*.obj);;所有檔案 (*.*)</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_export.cpp" line="86"/>
         <location filename="../../source/core/sw_project_export.cpp" line="102"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1257"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1291"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1329"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1351"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1387"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1421"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1260"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1294"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1332"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1354"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1390"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1424"/>
         <location filename="../../source/core/sw_project_file.cpp" line="541"/>
         <location filename="../../source/core/sw_project_file.cpp" line="557"/>
         <location filename="../../source/core/sw_project_file.cpp" line="568"/>
@@ -4526,57 +4526,67 @@ File format is not recognized.</source>
         <translation type="vanished">StudWorx</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="115"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="201"/>
         <source>Could not open the BrickLink mapping file &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="121"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="207"/>
         <source>&apos;%1&apos; is not a BrickLink mapping file: %2.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="179"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="291"/>
         <source>Could not open file &apos;%1&apos; for writing.</source>
         <translation>無法開啟檔案 &apos;%1&apos; 進行寫入。</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="227"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="339"/>
         <source>Reading the BrickLink numbers of the library parts...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="80"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="87"/>
         <source>Rebrickable rejected the API key, so it was cleared. Enter a new one when asked, or under Preferences &gt; General &gt; Online Services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="341"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="147"/>
+        <source>Could not read the BrickLink exceptions file &apos;%1&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="190"/>
+        <source>Could not write the BrickLink exceptions file &apos;%1&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="453"/>
         <source>Could not download the part numbers from Rebrickable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="401"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="513"/>
         <source>Cancel</source>
         <translation type="unfinished">取消</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="402"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="514"/>
         <source>Update BrickLink Mapping</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="416"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="529"/>
         <source>Downloading the BrickLink part numbers from Rebrickable...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="440"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="556"/>
         <source>Downloading the BrickLink colors from Rebrickable...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="497"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="630"/>
         <source>Could not write the BrickLink mapping file &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8161,68 +8171,68 @@ POV-Ray renders can use the LGEO part library by Lutz Uhlmann.</source>
         <translation type="unfinished">檔案 &apos;%1&apos; 不可讀。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1233"/>
+        <location filename="../../source/application/sw_application.cpp" line="1235"/>
         <source>
 Library:
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1234"/>
+        <location filename="../../source/application/sw_application.cpp" line="1236"/>
         <source>  -l, --library &lt;path&gt;: Set the Parts Library location to path.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1237"/>
+        <location filename="../../source/application/sw_application.cpp" line="1239"/>
         <source>
 Pictures:
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1240"/>
+        <location filename="../../source/application/sw_application.cpp" line="1242"/>
         <source>  --height &lt;height&gt;: Set the picture height.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1244"/>
+        <location filename="../../source/application/sw_application.cpp" line="1246"/>
         <source>  --transparent: Render images with a transparent background (PNG and GIF only).
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1283"/>
+        <location filename="../../source/application/sw_application.cpp" line="1285"/>
         <source>  --kmz-geometry &lt;all|visible&gt;: Keep every part, or flatten to the visible surfaces with one mesh per color, in KMZ exports.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1303"/>
+        <location filename="../../source/application/sw_application.cpp" line="1306"/>
         <source>  -h, --help: Display this help message and exit.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1606"/>
-        <location filename="../../source/application/sw_application.cpp" line="2384"/>
+        <location filename="../../source/application/sw_application.cpp" line="1609"/>
+        <location filename="../../source/application/sw_application.cpp" line="2390"/>
         <source>Could not open the unofficial library archive &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1617"/>
+        <location filename="../../source/application/sw_application.cpp" line="1620"/>
         <source>The %1 file &apos;%2&apos; was not found, using the bundled copy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1625"/>
-        <location filename="../../source/application/sw_application.cpp" line="2391"/>
+        <location filename="../../source/application/sw_application.cpp" line="1628"/>
+        <location filename="../../source/application/sw_application.cpp" line="2397"/>
         <source>Could not find a shadow library in &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1780"/>
+        <location filename="../../source/application/sw_application.cpp" line="1783"/>
         <source>The file &apos;%1&apos; has no parts to render.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">檔案「%1」中沒有可算繪的零件。</translation>
@@ -8266,7 +8276,7 @@ Download the official library (about 140 MB) from library.ldraw.org into &apos;%
     <message>
         <location filename="../../source/application/sw_application.cpp" line="604"/>
         <location filename="../../source/application/sw_application.cpp" line="620"/>
-        <location filename="../../source/application/sw_application.cpp" line="2380"/>
+        <location filename="../../source/application/sw_application.cpp" line="2386"/>
         <source>Could not open the parts library &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8322,21 +8332,21 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <translation type="obsolete">StudWorx 連續構建 %1</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1226"/>
+        <location filename="../../source/application/sw_application.cpp" line="1228"/>
         <source>StudWorx Version %1
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">StudWorx 版本 %1</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1227"/>
+        <location filename="../../source/application/sw_application.cpp" line="1229"/>
         <source>Compiled %1
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">已編譯 %1</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1232"/>
+        <location filename="../../source/application/sw_application.cpp" line="1234"/>
         <source>Usage: studworx [options] [file]
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -8355,26 +8365,26 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <translation type="obsolete">  -l, --libpath &lt;path&gt;：將片段庫位置設置為路徑.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1235"/>
+        <location filename="../../source/application/sw_application.cpp" line="1237"/>
         <source>  --unofficial-library &lt;path&gt;: Set the Unofficial Parts Library archive to path.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1236"/>
+        <location filename="../../source/application/sw_application.cpp" line="1238"/>
         <source>  --shadow-library &lt;path&gt;: Set the LDCad Shadow Library location to path.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1238"/>
+        <location filename="../../source/application/sw_application.cpp" line="1240"/>
         <source>  -i, --image &lt;outfile.ext&gt;: Save a picture in the format specified by ext and exit.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  -i, --image &lt;outfile.ext&gt;：以ext指定的格式儲存一張圖片並退出。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1239"/>
+        <location filename="../../source/application/sw_application.cpp" line="1241"/>
         <source>  -w, --width &lt;width&gt;: Set the picture width.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -8387,63 +8397,63 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <translation type="obsolete">  -h, --height &lt;height&gt;: 設置圖片高度.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1241"/>
+        <location filename="../../source/application/sw_application.cpp" line="1243"/>
         <source>  -f, --from &lt;step&gt;: Set the first step to save pictures.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  -f,--from &lt;step&gt;：設置第一步儲存圖片</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1242"/>
+        <location filename="../../source/application/sw_application.cpp" line="1244"/>
         <source>  -t, --to &lt;step&gt;: Set the last step to save pictures.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  -t,--to &lt;step&gt;：設置最後一步儲存圖片</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1243"/>
+        <location filename="../../source/application/sw_application.cpp" line="1245"/>
         <source>  -s, --submodel &lt;submodel&gt;: Set the active submodel.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  -s, --submodel &lt;submodel&gt;: 設置活動子模型.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1245"/>
+        <location filename="../../source/application/sw_application.cpp" line="1247"/>
         <source>
 Camera:
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1246"/>
+        <location filename="../../source/application/sw_application.cpp" line="1248"/>
         <source>  -c, --camera &lt;camera name&gt;: Set the active camera.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  -c, --camera &lt;camera name&gt;: 設置活動相機.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1247"/>
+        <location filename="../../source/application/sw_application.cpp" line="1249"/>
         <source>  --viewpoint &lt;viewpoint&gt;: Set the view to one of the preset viewpoints (front, back, left, right, top, bottom, home).
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  --viewpoint &lt;viewpoint&gt;：將視圖設置為預設視點之一（前、後、左、右、上、下、主）。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1248"/>
+        <location filename="../../source/application/sw_application.cpp" line="1250"/>
         <source>  --camera-angles &lt;latitude&gt; &lt;longitude&gt;: Set the camera angles in degrees around the model.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  --camera-angles &lt;latitude&gt; &lt;longitude&gt;：設置模型周圍的相機角度（以度為單位）。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1249"/>
+        <location filename="../../source/application/sw_application.cpp" line="1251"/>
         <source>  --camera-position &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: Set the camera position, target and up vector.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  --camera-position &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;：設置相機位置、目標和上向量。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1250"/>
+        <location filename="../../source/application/sw_application.cpp" line="1252"/>
         <source>  --camera-position-ldraw &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: Set the camera position, target and up vector using LDraw coordinates.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -8475,14 +8485,14 @@ Camera:
         <translation type="obsolete">  --zplanes &lt;near&gt; &lt;far&gt;：設置用於渲染圖像的近剪裁平面和遠剪裁平面（1 &lt;= &lt;near&gt; &lt; &lt;far&gt;）.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1259"/>
+        <location filename="../../source/application/sw_application.cpp" line="1261"/>
         <source>  --fade-steps: Render parts from prior steps faded.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  --fade-steps：先前步驟中的渲染片段褪色。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1260"/>
+        <location filename="../../source/application/sw_application.cpp" line="1262"/>
         <source>  --no-fade-steps: Do not render parts from prior steps faded.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -8495,66 +8505,66 @@ Camera:
         <translation type="obsolete">  --fade-steps-color &lt;#AARRGGBB&gt;：先前步驟片段的渲染顏色.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1262"/>
+        <location filename="../../source/application/sw_application.cpp" line="1264"/>
         <source>  --highlight: Highlight parts in the steps they appear.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  --highlight：突出顯示出現步驟中的片段。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1263"/>
+        <location filename="../../source/application/sw_application.cpp" line="1265"/>
         <source>  --no-highlight: Do not highlight parts in the steps they appear.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  --no-highlight：不要在出現的步驟中突出顯示棋子。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1264"/>
+        <location filename="../../source/application/sw_application.cpp" line="1266"/>
         <source>  --highlight-color &lt;#AARRGGBB&gt;: Rendering color for highlighted parts.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  --highlight-color &lt;#AARRGGBB&gt;：突出顯示部分的渲染顏色.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1255"/>
+        <location filename="../../source/application/sw_application.cpp" line="1257"/>
         <source>  --shading &lt;mode&gt;: Select shading mode for rendering (wireframe, flat, default, full).
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  --shading &lt;mode&gt;：選擇渲染的著色模式（線框、平面、預設、完整）。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1251"/>
+        <location filename="../../source/application/sw_application.cpp" line="1253"/>
         <source>  --projection &lt;perspective|orthographic&gt;: Render images with a perspective or an orthographic projection.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1252"/>
+        <location filename="../../source/application/sw_application.cpp" line="1254"/>
         <source>  --field-of-view &lt;degrees&gt;: Set the vertical field of view used to render images (&lt; 180).
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1253"/>
+        <location filename="../../source/application/sw_application.cpp" line="1255"/>
         <source>  --clip-planes &lt;near&gt; &lt;far&gt;: Set the near and far clipping planes used to render images (1 &lt;= &lt;near&gt; &lt; &lt;far&gt;).
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1254"/>
+        <location filename="../../source/application/sw_application.cpp" line="1256"/>
         <source>
 Rendering:
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1256"/>
+        <location filename="../../source/application/sw_application.cpp" line="1258"/>
         <source>  --lighting &lt;style&gt;: Select the lighting style of the default shading (standard, studio, matte, toon).
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1257"/>
+        <location filename="../../source/application/sw_application.cpp" line="1259"/>
         <source>  --line-width &lt;width&gt;: Set the width of the edge lines.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -8671,55 +8681,55 @@ Rendering:
         <translation type="obsolete">  -html, --export-html &lt;folder&gt;：為模型創建 HTML 頁面.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1293"/>
+        <location filename="../../source/application/sw_application.cpp" line="1296"/>
         <source>  --import-settings &lt;infile.ini&gt;: Import the application settings and exit.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1294"/>
+        <location filename="../../source/application/sw_application.cpp" line="1297"/>
         <source>  --export-settings &lt;outfile.ini&gt;: Export the application settings and exit.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1295"/>
+        <location filename="../../source/application/sw_application.cpp" line="1298"/>
         <source>  --import-keyboard-shortcuts &lt;infile.txt&gt;: Import the keyboard shortcuts and exit.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1296"/>
+        <location filename="../../source/application/sw_application.cpp" line="1299"/>
         <source>  --export-keyboard-shortcuts &lt;outfile.txt&gt;: Export the keyboard shortcuts and exit.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1297"/>
+        <location filename="../../source/application/sw_application.cpp" line="1300"/>
         <source>  --import-mouse-shortcuts &lt;infile.txt&gt;: Import the mouse shortcuts and exit.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1298"/>
+        <location filename="../../source/application/sw_application.cpp" line="1301"/>
         <source>  --export-mouse-shortcuts &lt;outfile.txt&gt;: Export the mouse shortcuts and exit.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1299"/>
+        <location filename="../../source/application/sw_application.cpp" line="1302"/>
         <source>  --import-categories &lt;infile.txt&gt;: Import the part categories and exit.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1300"/>
+        <location filename="../../source/application/sw_application.cpp" line="1303"/>
         <source>  --export-categories &lt;outfile.txt&gt;: Export the part categories and exit.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1302"/>
+        <location filename="../../source/application/sw_application.cpp" line="1305"/>
         <source>  -v, --version: Output version information and exit.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -8732,7 +8742,7 @@ Rendering:
         <translation type="obsolete">  -?, --help: 顯示此幫助消息並退出.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1309"/>
+        <location filename="../../source/application/sw_application.cpp" line="1312"/>
         <source>Unknown option: &apos;%1&apos;.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -8745,21 +8755,21 @@ Rendering:
         <translation type="obsolete">當設置 -aec 或 --automate-edge-color 時，高對比度螺柱和邊緣顏色設置將被忽略。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1321"/>
+        <location filename="../../source/application/sw_application.cpp" line="1324"/>
         <source>Automate edge color is required for the &apos;%1&apos; option but is not enabled.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&apos;%1&apos; 選項需要自動邊緣顏色，但未啟用。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1332"/>
+        <location filename="../../source/application/sw_application.cpp" line="1335"/>
         <source>High contrast stud style is required for the &apos;%1&apos; option but is not enabled.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&apos;%1&apos; 選項需要高對比度螺柱樣式，但未啟用。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1362"/>
+        <location filename="../../source/application/sw_application.cpp" line="1365"/>
         <source>--viewpoint is ignored when --camera is set.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -8772,180 +8782,180 @@ Rendering:
         <translation type="obsolete">當 --camera 設置時，--orthographic 被忽略。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1368"/>
+        <location filename="../../source/application/sw_application.cpp" line="1371"/>
         <source>--camera-angles is ignored when --camera is set.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">當 --camera 設置時，--camera-angles 被忽略。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1371"/>
+        <location filename="../../source/application/sw_application.cpp" line="1374"/>
         <source>--camera-position is ignored when --camera is set.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">當 --camera 設置時，--camera-position 被忽略。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1376"/>
+        <location filename="../../source/application/sw_application.cpp" line="1379"/>
         <source>--camera-angles is ignored when --viewpoint is set.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">當 --viewpoint 設置時，--camera-angles 被忽略。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1379"/>
+        <location filename="../../source/application/sw_application.cpp" line="1382"/>
         <source>--camera-position is ignored when --viewpoint is set.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">當 --viewpoint 設置時，--camera-position 被忽略。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1384"/>
+        <location filename="../../source/application/sw_application.cpp" line="1387"/>
         <source>--camera-position is ignored when --camera-angles is set.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">當 --camera-angles 設置時，--camera-position 被忽略。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1391"/>
+        <location filename="../../source/application/sw_application.cpp" line="1394"/>
         <source>No file name specified.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">未指定檔案名.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1416"/>
+        <location filename="../../source/application/sw_application.cpp" line="1419"/>
         <source>Error loading settings file &apos;%1&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1432"/>
+        <location filename="../../source/application/sw_application.cpp" line="1435"/>
         <source>Error loading keyboard shortcuts file &apos;%1&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1440"/>
+        <location filename="../../source/application/sw_application.cpp" line="1443"/>
         <source>Error loading mouse shortcuts file &apos;%1&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1450"/>
+        <location filename="../../source/application/sw_application.cpp" line="1453"/>
         <source>Error loading categories file &apos;%1&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1472"/>
+        <location filename="../../source/application/sw_application.cpp" line="1475"/>
         <source>Error saving settings file &apos;%1&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1480"/>
+        <location filename="../../source/application/sw_application.cpp" line="1483"/>
         <source>Error saving keyboard shortcuts file &apos;%1&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1488"/>
+        <location filename="../../source/application/sw_application.cpp" line="1491"/>
         <source>Error saving mouse shortcuts file &apos;%1&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1496"/>
+        <location filename="../../source/application/sw_application.cpp" line="1499"/>
         <source>Error saving categories file &apos;%1&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1536"/>
+        <location filename="../../source/application/sw_application.cpp" line="1539"/>
         <source>Command line image export is not supported on iOS.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">iOS 不支持命令行圖像導出。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1550"/>
-        <location filename="../../source/application/sw_application.cpp" line="2172"/>
+        <location filename="../../source/application/sw_application.cpp" line="1553"/>
+        <location filename="../../source/application/sw_application.cpp" line="2178"/>
         <source>Initialize Renderer</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">初始化渲染器</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1734"/>
+        <location filename="../../source/application/sw_application.cpp" line="1737"/>
         <source>--transparent is ignored for &apos;%1&apos; files: only PNG and GIF files keep transparency.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1863"/>
+        <location filename="../../source/application/sw_application.cpp" line="1866"/>
         <source>LGEO parts need the standard POV-Ray include files such as colors.inc, which POV-Ray %1 could not find.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1868"/>
+        <location filename="../../source/application/sw_application.cpp" line="1871"/>
         <source>Error creating a temporary folder for the POV-Ray scene.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1918"/>
+        <location filename="../../source/application/sw_application.cpp" line="1921"/>
         <source>Error rendering &apos;%1&apos; with POV-Ray:
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2129"/>
+        <location filename="../../source/application/sw_application.cpp" line="2135"/>
         <source>Saved 1 lot to &apos;%1&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2129"/>
+        <location filename="../../source/application/sw_application.cpp" line="2135"/>
         <source>Saved %1 lots to &apos;%2&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2355"/>
+        <location filename="../../source/application/sw_application.cpp" line="2361"/>
         <source>Could not reload the parts library &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2372"/>
+        <location filename="../../source/application/sw_application.cpp" line="2378"/>
         <source>Could not find a default parts library, &apos;%1&apos; stays in use until StudWorx starts again and offers to download one.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2391"/>
+        <location filename="../../source/application/sw_application.cpp" line="2397"/>
         <source>Load Part Connections</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2399"/>
-        <location filename="../../source/application/sw_application.cpp" line="2401"/>
-        <location filename="../../source/application/sw_application.cpp" line="2403"/>
+        <location filename="../../source/application/sw_application.cpp" line="2405"/>
+        <location filename="../../source/application/sw_application.cpp" line="2407"/>
+        <location filename="../../source/application/sw_application.cpp" line="2409"/>
         <source>Preferences</source>
         <translatorcomment>Draft reused from an existing translation of this source text; requires review in this context.</translatorcomment>
         <translation type="unfinished">選項</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2399"/>
+        <location filename="../../source/application/sw_application.cpp" line="2405"/>
         <source>The new language and antialiasing settings apply the next time you start StudWorx.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2401"/>
+        <location filename="../../source/application/sw_application.cpp" line="2407"/>
         <source>The new language applies the next time you start StudWorx.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2403"/>
+        <location filename="../../source/application/sw_application.cpp" line="2409"/>
         <source>The new antialiasing setting applies the next time you start StudWorx.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8976,234 +8986,240 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
         <location filename="../../source/application/sw_application.cpp" line="604"/>
         <location filename="../../source/application/sw_application.cpp" line="620"/>
         <location filename="../../source/application/sw_application.cpp" line="623"/>
-        <location filename="../../source/application/sw_application.cpp" line="2355"/>
-        <location filename="../../source/application/sw_application.cpp" line="2372"/>
-        <location filename="../../source/application/sw_application.cpp" line="2380"/>
-        <location filename="../../source/application/sw_application.cpp" line="2384"/>
+        <location filename="../../source/application/sw_application.cpp" line="2361"/>
+        <location filename="../../source/application/sw_application.cpp" line="2378"/>
+        <location filename="../../source/application/sw_application.cpp" line="2386"/>
+        <location filename="../../source/application/sw_application.cpp" line="2390"/>
         <source>Load Parts Library</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">載入零件庫</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1258"/>
+        <location filename="../../source/application/sw_application.cpp" line="1260"/>
         <source>  --antialiasing-samples &lt;samples&gt;: Anti-aliasing sample size (1, 2, 4, or 8).
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1261"/>
+        <location filename="../../source/application/sw_application.cpp" line="1263"/>
         <source>  --fade-color &lt;#AARRGGBB&gt;: Rendering color for prior step parts.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1265"/>
+        <location filename="../../source/application/sw_application.cpp" line="1267"/>
         <source>
 Studs and Edges:
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1266"/>
+        <location filename="../../source/application/sw_application.cpp" line="1268"/>
         <source>  --stud-style &lt;style&gt;: Set the stud style (0=Plain, 1=Thin Lines Logo, 2=Outline Logo, 3=Sharp Top Logo, 4=Rounded Top Logo, 5=Flattened Logo, 6=High Contrast, 7=High Contrast with Logo).
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1267"/>
+        <location filename="../../source/application/sw_application.cpp" line="1269"/>
         <source>  --stud-cylinder-color &lt;#AARRGGBB&gt;: High contrast stud cylinder color.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1268"/>
+        <location filename="../../source/application/sw_application.cpp" line="1270"/>
         <source>  --no-stud-cylinder-color: Disable high contrast stud cylinder color.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1269"/>
+        <location filename="../../source/application/sw_application.cpp" line="1271"/>
         <source>  --edge-color &lt;#AARRGGBB&gt;: High contrast edge color.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1270"/>
+        <location filename="../../source/application/sw_application.cpp" line="1272"/>
         <source>  --no-edge-color: Disable high contrast edge color.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1271"/>
+        <location filename="../../source/application/sw_application.cpp" line="1273"/>
         <source>  --edge-color-black &lt;#AARRGGBB&gt;: High contrast edge color for black parts.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1272"/>
+        <location filename="../../source/application/sw_application.cpp" line="1274"/>
         <source>  --no-edge-color-black: Disable high contrast edge color for black parts.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1273"/>
+        <location filename="../../source/application/sw_application.cpp" line="1275"/>
         <source>  --edge-color-dark &lt;#AARRGGBB&gt;: High contrast edge color for dark color parts.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1274"/>
+        <location filename="../../source/application/sw_application.cpp" line="1276"/>
         <source>  --no-edge-color-dark: Disable high contrast edge color for dark color parts.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1275"/>
+        <location filename="../../source/application/sw_application.cpp" line="1277"/>
         <source>  --edge-color-automatic: Enable automatically adjusted edge colors.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1276"/>
+        <location filename="../../source/application/sw_application.cpp" line="1278"/>
         <source>  --edge-contrast &lt;contrast&gt;: Edge color contrast of automatic edge colors, between 0.0 and 1.0.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1277"/>
+        <location filename="../../source/application/sw_application.cpp" line="1279"/>
         <source>  --edge-light-dark &lt;value&gt;: Light/Dark color value of automatic edge colors, between 0.0 and 1.0.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1278"/>
+        <location filename="../../source/application/sw_application.cpp" line="1280"/>
         <source>
 Export:
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1279"/>
+        <location filename="../../source/application/sw_application.cpp" line="1281"/>
         <source>  --export-wavefront &lt;outfile.obj&gt;: Export the model to Wavefront OBJ format.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1280"/>
+        <location filename="../../source/application/sw_application.cpp" line="1282"/>
         <source>  --export-3ds &lt;outfile.3ds&gt;: Export the model to 3D Studio 3DS format.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1281"/>
+        <location filename="../../source/application/sw_application.cpp" line="1283"/>
         <source>  --export-collada &lt;outfile.dae&gt;: Export the model to COLLADA DAE format.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1282"/>
+        <location filename="../../source/application/sw_application.cpp" line="1284"/>
         <source>  --export-kmz &lt;outfile.kmz&gt;: Export the model to KMZ format.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1284"/>
+        <location filename="../../source/application/sw_application.cpp" line="1286"/>
         <source>  --export-csv &lt;outfile.csv&gt;: Export the list of parts used in CSV format.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1285"/>
+        <location filename="../../source/application/sw_application.cpp" line="1287"/>
         <source>  --export-bricklink &lt;outfile.xml&gt;: Export the list of parts used as a BrickLink XML wanted list, translated through the BrickLink mapping file set in the preferences.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1286"/>
+        <location filename="../../source/application/sw_application.cpp" line="1288"/>
         <source>  --bricklink-condition &lt;any|new|used&gt;: Condition wanted in BrickLink exports.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1287"/>
+        <location filename="../../source/application/sw_application.cpp" line="1289"/>
         <source>  --bricklink-wanted-list &lt;id|url&gt;: BrickLink wanted list the exported parts are added to, by number or by the address of its page.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1288"/>
+        <location filename="../../source/application/sw_application.cpp" line="1290"/>
         <source>  --bricklink-notify: Ask BrickLink to notify new listings of the exported parts.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1289"/>
-        <source>  --export-html &lt;folder&gt;: Create an HTML page for the model.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_application.cpp" line="1290"/>
-        <source>  --export-povray &lt;outfile.pov&gt;: Export the model to POV-Ray format.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/application/sw_application.cpp" line="1291"/>
-        <source>  --render-povray &lt;outfile.png&gt;: Render the model with POV-Ray using the POV-Ray window settings, the picture width and height, and the transparent background.
+        <source>  --bricklink-exceptions &lt;file&gt;: Comma or tab separated file of parts and the BrickLink numbers that replace their mapping in BrickLink exports.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1292"/>
+        <source>  --export-html &lt;folder&gt;: Create an HTML page for the model.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1293"/>
+        <source>  --export-povray &lt;outfile.pov&gt;: Export the model to POV-Ray format.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1294"/>
+        <source>  --render-povray &lt;outfile.png&gt;: Render the model with POV-Ray using the POV-Ray window settings, the picture width and height, and the transparent background.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1295"/>
         <source>
 Settings:
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1301"/>
+        <location filename="../../source/application/sw_application.cpp" line="1304"/>
         <source>
 Information:
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1316"/>
+        <location filename="../../source/application/sw_application.cpp" line="1319"/>
         <source>High contrast stud and edge color settings are ignored when --edge-color-automatic is set.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1365"/>
+        <location filename="../../source/application/sw_application.cpp" line="1368"/>
         <source>--projection is ignored when --camera is set.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1596"/>
+        <location filename="../../source/application/sw_application.cpp" line="1599"/>
         <source>StudWorx could not find an LDraw parts library.
 
 Download one from %1 and pass it with --library.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1677"/>
+        <location filename="../../source/application/sw_application.cpp" line="1680"/>
         <source>Error: model &apos;%1&apos; does not exist.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">錯誤：型號 &apos;%1&apos; 不存在。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1796"/>
-        <location filename="../../source/application/sw_application.cpp" line="1830"/>
-        <location filename="../../source/application/sw_application.cpp" line="1925"/>
-        <location filename="../../source/application/sw_application.cpp" line="1954"/>
-        <location filename="../../source/application/sw_application.cpp" line="1988"/>
-        <location filename="../../source/application/sw_application.cpp" line="2022"/>
-        <location filename="../../source/application/sw_application.cpp" line="2059"/>
-        <location filename="../../source/application/sw_application.cpp" line="2093"/>
-        <location filename="../../source/application/sw_application.cpp" line="2150"/>
+        <location filename="../../source/application/sw_application.cpp" line="1799"/>
+        <location filename="../../source/application/sw_application.cpp" line="1833"/>
+        <location filename="../../source/application/sw_application.cpp" line="1928"/>
+        <location filename="../../source/application/sw_application.cpp" line="1957"/>
+        <location filename="../../source/application/sw_application.cpp" line="1991"/>
+        <location filename="../../source/application/sw_application.cpp" line="2025"/>
+        <location filename="../../source/application/sw_application.cpp" line="2062"/>
+        <location filename="../../source/application/sw_application.cpp" line="2096"/>
+        <location filename="../../source/application/sw_application.cpp" line="2156"/>
         <source>Saved &apos;%1&apos;.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -11269,124 +11285,206 @@ Download one from %1 and pass it with --library.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="37"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="143"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="178"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="10"/>
+        <source>Exception Files (*.csv *.tsv *.txt);;All Files (*.*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="48"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="324"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="359"/>
         <source>Export BrickLink</source>
         <translation type="unfinished">導出 BrickLink</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="42"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="59"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="63"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="49"/>
+        <source>&lt;p&gt;&lt;b&gt;Export BrickLink&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Saves the part list as a BrickLink XML wanted list. Part numbers and colors are translated through the BrickLink mapping file set under Preferences &amp;gt; General &amp;gt; Reference Paths, parts the library moved to a new number take that number.&lt;/p&gt;&lt;p&gt;The wanted list takes the address of its BrickLink page or its number. After saving, Copy XML and Open BrickLink puts the list on the clipboard and opens the BrickLink upload page to paste it into.&lt;/p&gt;&lt;p&gt;Part Exceptions replace the mapping for the parts BrickLink does not take, they are saved to their file and used by every export.&lt;/p&gt;&lt;p&gt;The choices are remembered for the next export.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="53"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="70"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="74"/>
         <source>Wanted List</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="46"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="57"/>
         <source>Choose the condition wanted for every part: any condition, new only, or used only.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="47"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="53"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="58"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="64"/>
         <source>Condition</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="49"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="60"/>
         <source>Any</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="50"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="61"/>
         <source>New</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="51"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="62"/>
         <source>Used</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="38"/>
-        <source>&lt;p&gt;&lt;b&gt;Export BrickLink&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Saves the part list as a BrickLink XML wanted list. Part numbers and colors are translated through the BrickLink mapping file set under Preferences &amp;gt; General &amp;gt; Reference Paths.&lt;/p&gt;&lt;p&gt;The wanted list takes the address of its BrickLink page or its number. After saving, Copy XML and Open BrickLink puts the list on the clipboard and opens the BrickLink upload page to paste it into.&lt;/p&gt;&lt;p&gt;The choices are remembered for the next export.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="58"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="69"/>
         <source>Paste the address of the BrickLink wanted list page or enter its number to add the parts to it, or leave empty to use the main wanted list.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="62"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="73"/>
         <source>Main wanted list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="68"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="79"/>
         <source>Notify New Listings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="70"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="81"/>
         <source>Ask BrickLink to send an email when new lots matching these parts are listed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="83"/>
-        <source>Export...</source>
-        <translation type="unfinished">導出...</translation>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="90"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="119"/>
+        <source>Part Exceptions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="94"/>
+        <source>&lt;p&gt;&lt;b&gt;Part Exceptions&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Each row replaces the BrickLink number of a library part, for parts the mapping gets wrong or BrickLink does not know. Exceptions come before the mapping and the moved part numbers.&lt;/p&gt;&lt;p&gt;The rows are saved to the exceptions file when exporting, one part and its BrickLink number a line. The file can also be edited as comma or tab separated text.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="96"/>
+        <source>The comma or tab separated file the part exceptions are kept in, the StudWorx data folder keeps it when empty.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="97"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="100"/>
+        <source>Exceptions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="106"/>
+        <source>...</source>
+        <translation type="unfinished">...</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="107"/>
-        <source>Save BrickLink Mapping</source>
+        <source>Choose the exceptions file, the exceptions of an existing one are loaded.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="108"/>
+        <source>Browse</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="115"/>
+        <source>Part</source>
+        <translation type="unfinished">零件</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="115"/>
+        <source>BrickLink Part</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="120"/>
+        <source>The library part number, such as u8200, and the BrickLink number it is exported as.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="122"/>
+        <source>Add</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="123"/>
+        <source>Add an exception row and start typing its library part number.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="124"/>
+        <source>Remove</source>
+        <translation type="unfinished">移除</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="125"/>
+        <source>Remove the selected exception rows.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="153"/>
+        <source>Export...</source>
+        <translation type="unfinished">導出...</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="191"/>
+        <source>BrickLink Exceptions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="288"/>
+        <source>Save BrickLink Mapping</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="296"/>
         <source>Update BrickLink Mapping</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="116"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="297"/>
         <source>BrickLink part numbers and colors are downloaded from Rebrickable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="132"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="313"/>
         <source>Saved %1 part numbers to &apos;%2&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="145"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="326"/>
         <source>The BrickLink mapping file &apos;%1&apos; was not found. It translates LDraw part numbers and colors to BrickLink.
 
 Choose where to save it and build it now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="180"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="361"/>
         <source>Saved 1 lot to &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="180"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="361"/>
         <source>Saved %1 lots to &apos;%2&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="182"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="363"/>
         <source>Copy XML and Open BrickLink</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="183"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="364"/>
         <source>Copy the saved XML to the clipboard and open the BrickLink wanted list upload page to paste it into.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="194"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="375"/>
         <source>Could not read file &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -18378,8 +18476,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">無法載入外部項目 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="228"/>
-        <location filename="../../source/library/sw_library.cpp" line="673"/>
+        <location filename="../../source/library/sw_library.cpp" line="276"/>
+        <location filename="../../source/library/sw_library.cpp" line="721"/>
         <source>Could not find part &apos;%1&apos;.</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">找不到零件 &apos;%1&apos;。</translation>
@@ -18400,48 +18498,48 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="265"/>
+        <location filename="../../source/library/sw_library.cpp" line="313"/>
         <source>Could not find external model file &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="479"/>
+        <location filename="../../source/library/sw_library.cpp" line="527"/>
         <source>Could not decode embedded texture &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">無法解碼嵌入紋理 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="509"/>
+        <location filename="../../source/library/sw_library.cpp" line="557"/>
         <source>Invalid Base64 data for embedded file &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">嵌入檔案 &apos;%1&apos; 的 Base64 數據無效。</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="515"/>
+        <location filename="../../source/library/sw_library.cpp" line="563"/>
         <source>Could not read embedded file &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">無法讀取嵌入檔案 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="526"/>
+        <location filename="../../source/library/sw_library.cpp" line="574"/>
         <source>Could not open file &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">無法開啟檔案 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="532"/>
+        <location filename="../../source/library/sw_library.cpp" line="580"/>
         <source>Invalid archive file source.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">存檔檔案源無效。</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="540"/>
+        <location filename="../../source/library/sw_library.cpp" line="588"/>
         <source>Could not read archive entry %1.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">無法讀取存檔條目 %1。</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="543"/>
+        <location filename="../../source/library/sw_library.cpp" line="591"/>
         <source>Could not read archive file &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">無法讀取存檔檔案 &apos;%1&apos;。</translation>
@@ -18463,9 +18561,9 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">無法為零件 &apos;%1&apos; 生成幾何體。</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="1327"/>
-        <location filename="../../source/library/sw_library.cpp" line="1385"/>
-        <location filename="../../source/library/sw_library.cpp" line="1397"/>
+        <location filename="../../source/library/sw_library.cpp" line="1375"/>
+        <location filename="../../source/library/sw_library.cpp" line="1433"/>
+        <location filename="../../source/library/sw_library.cpp" line="1445"/>
         <location filename="../../source/library/sw_library_load.cpp" line="294"/>
         <location filename="../../source/library/sw_library_load.cpp" line="391"/>
         <source>Library loading was canceled.</source>
@@ -18498,13 +18596,13 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">無法開啟包含的檔案 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="1347"/>
+        <location filename="../../source/library/sw_library.cpp" line="1395"/>
         <source>Primitive include cycle at &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">原語包含位於 &apos;%1&apos; 的循環。</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="1422"/>
+        <location filename="../../source/library/sw_library.cpp" line="1470"/>
         <source>Could not load included file &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">無法載入包含的檔案 &apos;%1&apos;。</translation>

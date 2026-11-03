@@ -305,6 +305,7 @@ struct swCommandLineOptions
 	bool SetBrickLinkCondition = false;
 	bool SetBrickLinkWantedList = false;
 	bool BrickLinkNotify = false;
+	bool SetBrickLinkExceptions = false;
 	int BrickLinkCondition = 0;
 	bool SaveHTML = false;
 	bool SavePOVRay = false;
@@ -358,6 +359,7 @@ struct swCommandLineOptions
 	QString SaveCSVName;
 	QString SaveBrickLinkName;
 	QString BrickLinkWantedList;
+	QString BrickLinkExceptions;
 	QString SaveHTMLName;
 	QString SavePOVRayName;
 	QString RenderPOVRayName;

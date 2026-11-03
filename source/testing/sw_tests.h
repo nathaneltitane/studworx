@@ -28,6 +28,8 @@ private slots:
 	void KMZKeepsVisibleSurfaces_data();
 	void KMZKeepsVisibleSurfaces();
 	void BrickLinkUsesBundledMapping();
+	void ExportsResolveMovedParts();
+	void BrickLinkUsesExceptions();
 	void AxisAlignedRotations_data();
 	void AxisAlignedRotations();
 	void AxisAlignedRotationTolerance();

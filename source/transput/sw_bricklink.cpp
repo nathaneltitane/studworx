@@ -31,6 +31,12 @@ static const QString swBrickLinkMappingKeyComment = QStringLiteral("Comment");
 static const QString swBrickLinkMappingKeyParts = QStringLiteral("Parts");
 static const QString swBrickLinkMappingKeyColors = QStringLiteral("Colors");
 
+// exceptions are one part and its bricklink number a line, comma or tab separated
+static const QString swBrickLinkExceptionsName = QStringLiteral("bricklink-exceptions.csv");
+static const QString swBrickLinkPartExtension = QStringLiteral(".dat");
+static constexpr char swBrickLinkExceptionsComment = '#';
+static constexpr char swBrickLinkExceptionsQuote = '"';
+
 // wanted lists are numbers or the address of their bricklink page
 static const QString swBrickLinkUploadUrl = QStringLiteral("https://www.bricklink.com/v2/wanted/upload.page");
 static const QString swRebrickableApiKeyUrl = QStringLiteral("https://rebrickable.com/api/");
@@ -45,6 +51,7 @@ swBrickLinkOptions swGetBrickLinkOptions()
 	Options.Condition = static_cast<swBrickLinkCondition>(qBound(static_cast<int>(swBrickLinkCondition::Any), swGetProfileInteger(SW_PROFILE_BRICKLINK_CONDITION), static_cast<int>(swBrickLinkCondition::Used)));
 	Options.WantedListId = swGetProfileString(SW_PROFILE_BRICKLINK_WANTED_LIST);
 	Options.Notify = swGetProfileInteger(SW_PROFILE_BRICKLINK_NOTIFY);
+	Options.ExceptionsPath = swGetProfileString(SW_PROFILE_BRICKLINK_EXCEPTIONS);
 
 	return Options;
 }
@@ -92,6 +99,7 @@ void swSetBrickLinkOptions(const swBrickLinkOptions& Options)
 	swSetProfileInteger(SW_PROFILE_BRICKLINK_CONDITION, static_cast<int>(Options.Condition));
 	swSetProfileString(SW_PROFILE_BRICKLINK_WANTED_LIST, Options.WantedListId);
 	swSetProfileInteger(SW_PROFILE_BRICKLINK_NOTIFY, Options.Notify);
+	swSetProfileString(SW_PROFILE_BRICKLINK_EXCEPTIONS, Options.ExceptionsPath);
 }
 
 QString swGetBrickLinkMappingPath()
@@ -104,6 +112,84 @@ bool swBrickLinkMappingExists()
 	const QString MappingPath = swGetBrickLinkMappingPath();
 
 	return MappingPath.isEmpty() || QFileInfo(MappingPath).isFile();
+}
+
+// use to name the exceptions file, the data folder keeps it until one is set
+QString swGetBrickLinkExceptionsPath(const QString& FileName)
+{
+	if (!FileName.trimmed().isEmpty())
+		return FileName.trimmed();
+
+	return QDir::toNativeSeparators(QDir(QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation)).filePath(swBrickLinkExceptionsName));
+}
+
+// use to clean an exceptions field of spaces and quotes
+static QString swGetBrickLinkExceptionsField(const QString& Text)
+{
+	QString Field = Text.trimmed();
+
+	if (Field.size() > 1 && Field.startsWith(QLatin1Char(swBrickLinkExceptionsQuote)) && Field.endsWith(QLatin1Char(swBrickLinkExceptionsQuote)))
+		Field = Field.mid(1, Field.size() - 2).trimmed();
+
+	return Field;
+}
+
+// use to read the exceptions file, a missing one has none
+swResult<swBrickLinkExceptions> swLoadBrickLinkExceptions(const QString& FileName)
+{
+	swBrickLinkExceptions Exceptions;
+	QFile File(FileName);
+
+	if (!File.exists())
+		return Exceptions;
+
+	if (!File.open(QIODevice::ReadOnly | QIODevice::Text))
+		return swUnexpected(QObject::tr("Could not read the BrickLink exceptions file '%1'.").arg(QDir::toNativeSeparators(FileName)));
+
+	while (!File.atEnd())
+	{
+		const QString Line = QString::fromUtf8(File.readLine()).trimmed();
+
+		if (Line.isEmpty() || Line.startsWith(QLatin1Char(swBrickLinkExceptionsComment)))
+			continue;
+
+		const QChar Separator = Line.contains(QLatin1Char('\t')) ? QLatin1Char('\t') : QLatin1Char(',');
+		const QStringList Fields = Line.split(Separator);
+
+		if (Fields.size() < 2)
+			continue;
+
+		QString Part = swGetBrickLinkExceptionsField(Fields[0]).toLower();
+		const QString BrickLinkPart = swGetBrickLinkExceptionsField(Fields[1]);
+
+		if (Part.endsWith(swBrickLinkPartExtension))
+			Part.chop(swBrickLinkPartExtension.size());
+
+		if (!Part.isEmpty() && !BrickLinkPart.isEmpty())
+			Exceptions.emplace_back(Part, BrickLinkPart);
+	}
+
+	return Exceptions;
+}
+
+// use to write the exceptions file, none to write leaves a missing one missing
+swResult<void> swSaveBrickLinkExceptions(const QString& FileName, const swBrickLinkExceptions& Exceptions)
+{
+	if (Exceptions.empty() && !QFileInfo::exists(FileName))
+		return {};
+
+	QDir().mkpath(QFileInfo(FileName).absolutePath());
+
+	QSaveFile File(FileName);
+	QByteArray Text;
+
+	for (const auto& [Part, BrickLinkPart] : Exceptions)
+		Text += Part.toUtf8() + ',' + BrickLinkPart.toUtf8() + '\n';
+
+	if (!File.open(QIODevice::WriteOnly) || File.write(Text) < 0 || !File.commit())
+		return swUnexpected(QObject::tr("Could not write the BrickLink exceptions file '%1'.").arg(QDir::toNativeSeparators(FileName)));
+
+	return {};
 }
 
 // use to read a mapping file
@@ -144,6 +230,18 @@ static int swGetBrickLinkColor(const QJsonObject& ColorMapping, int ColorIndex)
 	return Color > 0 ? Color : 0;
 }
 
+// use to name a part by its file name without extension
+static QString swGetBrickLinkPartName(const swPartData* PartData)
+{
+	QString PartName = QString::fromLatin1(PartData->mFileName).toLower();
+	const int Extension = PartName.lastIndexOf(QLatin1Char('.'));
+
+	if (Extension > 0)
+		PartName.truncate(Extension);
+
+	return PartName;
+}
+
 swResult<int> swExportBrickLink(const QString& SaveFileName, const swPartsList& PartsList, const swBrickLinkOptions& Options)
 {
 	const QString MappingPath = swGetBrickLinkMappingPath();
@@ -155,19 +253,33 @@ swResult<int> swExportBrickLink(const QString& SaveFileName, const swPartsList& 
 	const QJsonObject PartMapping = Mapping.value()[swBrickLinkMappingKeyParts].toObject();
 	const QJsonObject ColorMapping = Mapping.value()[swBrickLinkMappingKeyColors].toObject();
 
+	const swResult<swBrickLinkExceptions> Exceptions = swLoadBrickLinkExceptions(swGetBrickLinkExceptionsPath(Options.ExceptionsPath));
+
+	if (!Exceptions)
+		return swUnexpected(QString(Exceptions.error()));
+
+	const std::map<QString, QString> ExceptionParts(Exceptions.value().begin(), Exceptions.value().end());
+
 	// lots keyed by bricklink part and color
 	std::map<std::pair<QString, int>, int> Inventory;
+	swPartsLibrary* Library = swGetPartsLibrary();
 
 	for (const auto& PartIt : PartsList)
 	{
-		const swPartData* PartData = PartIt.first;
-		QString PartName = QString::fromLatin1(PartData->mFileName).toLower();
-		const int Extension = PartName.lastIndexOf(QLatin1Char('.'));
+		const QString PartName = swGetBrickLinkPartName(PartIt.first);
+		const auto ExceptionIt = ExceptionParts.find(PartName);
+		QString BrickLinkPart;
 
-		if (Extension > 0)
-			PartName.truncate(Extension);
+		// exceptions come first, moved part aliases order as the parts they moved to
+		if (ExceptionIt != ExceptionParts.end())
+			BrickLinkPart = ExceptionIt->second;
+		else
+		{
+			const QString MovedName = swGetBrickLinkPartName(Library ? Library->FindMovedPart(PartIt.first) : PartIt.first);
+			const auto MovedIt = ExceptionParts.find(MovedName);
 
-		const QString BrickLinkPart = swGetBrickLinkPart(PartMapping, PartName);
+			BrickLinkPart = MovedIt != ExceptionParts.end() ? MovedIt->second : swGetBrickLinkPart(PartMapping, MovedName);
+		}
 
 		for (const auto& ColorIt : PartIt.second)
 			Inventory[{ BrickLinkPart, swGetBrickLinkColor(ColorMapping, ColorIt.first) }] += ColorIt.second;
@@ -216,8 +328,8 @@ swResult<int> swExportBrickLink(const QString& SaveFileName, const swPartsList& 
 	return static_cast<int>(Inventory.size());
 }
 
-// use to read the bricklink numbers set in the part keywords
-static bool swReadLibraryBrickLinkParts(QProgressDialog& ProgressDialog, std::map<QString, QString>& Parts)
+// use to read the bricklink numbers set in the part keywords and the parts moved to a new number
+static bool swReadLibraryBrickLinkParts(QProgressDialog& ProgressDialog, std::map<QString, QString>& Parts, std::map<QString, QString>& MovedParts)
 {
 	swPartsLibrary* Library = swGetPartsLibrary();
 	const std::vector<swPartData*> LibraryParts = Library->GetParts();
@@ -243,16 +355,16 @@ static bool swReadLibraryBrickLinkParts(QProgressDialog& ProgressDialog, std::ma
 		if (!PartData->IsLibraryPart() || PartData->IsSubPart())
 			continue;
 
+		const QString PartName = swGetBrickLinkPartName(PartData);
+		const swPartData* MovedData = Library->FindMovedPart(PartData);
+
+		if (MovedData != PartData)
+			MovedParts[PartName] = swGetBrickLinkPartName(MovedData);
+
 		swResult<std::unique_ptr<swFile>> File = Library->OpenPartDataFile(Library->GetPartId(PartData).c_str());
 
 		if (!File)
 			continue;
-
-		QString PartName = QString::fromLatin1(PartData->mFileName).toLower();
-		const int Extension = PartName.lastIndexOf(QLatin1Char('.'));
-
-		if (Extension > 0)
-			PartName.truncate(Extension);
 
 		for (int LineIndex = 0; LineIndex < swPartHeaderLineCount && File.value()->ReadLine(Line, sizeof(Line)); LineIndex++)
 		{
@@ -412,14 +524,18 @@ swResult<int> swUpdateBrickLinkMapping(QWidget* Parent, const QString& FileName,
 	// rebrickable names its parts after ldraw unless it lists the ldraw numbers
 	std::map<QString, QString> RebrickableNamed;
 	std::map<QString, QString> RebrickableListed;
+	std::set<QString> BrickLinkKnown;
 
-	const swResult<void> PartsResult = swReadRebrickableList(ProgressDialog, HttpManager, swRebrickablePartsUrl.arg(ApiKey), QObject::tr("Downloading the BrickLink part numbers from Rebrickable..."), [&RebrickableNamed, &RebrickableListed](const QJsonObject& Part)
+	const swResult<void> PartsResult = swReadRebrickableList(ProgressDialog, HttpManager, swRebrickablePartsUrl.arg(ApiKey), QObject::tr("Downloading the BrickLink part numbers from Rebrickable..."), [&RebrickableNamed, &RebrickableListed, &BrickLinkKnown](const QJsonObject& Part)
 	{
 		const QJsonObject ExternalIds = Part[QLatin1String("external_ids")].toObject();
 		const QJsonArray BrickLinkIds = ExternalIds[QLatin1String("BrickLink")].toArray();
 
 		if (BrickLinkIds.isEmpty())
 			return;
+
+		for (const QJsonValue BrickLinkId : BrickLinkIds)
+			BrickLinkKnown.insert(BrickLinkId.toString().toLower());
 
 		const QString BrickLinkPart = BrickLinkIds.first().toString();
 		const QJsonArray LDrawIds = ExternalIds[QLatin1String("LDraw")].toArray();
@@ -459,8 +575,9 @@ swResult<int> swUpdateBrickLinkMapping(QWidget* Parent, const QString& FileName,
 		return swUnexpected(QString(ColorsResult.error()));
 
 	std::map<QString, QString> LibraryParts;
+	std::map<QString, QString> MovedParts;
 
-	if (!swReadLibraryBrickLinkParts(ProgressDialog, LibraryParts))
+	if (!swReadLibraryBrickLinkParts(ProgressDialog, LibraryParts, MovedParts))
 		return swUnexpected(QString());
 
 	ProgressDialog.hide();
@@ -469,6 +586,22 @@ swResult<int> swUpdateBrickLinkMapping(QWidget* Parent, const QString& FileName,
 	for (const std::map<QString, QString>* Source : { &LibraryParts, &RebrickableNamed, &RebrickableListed })
 		for (const auto& [LDrawPart, BrickLinkPart] : *Source)
 			Parts[LDrawPart] = BrickLinkPart;
+
+	const auto FindBrickLinkPart = [&Parts](const QString& LDrawPart)
+	{
+		const auto PartIt = Parts.find(LDrawPart);
+
+		return PartIt != Parts.end() && !PartIt->second.isEmpty() ? PartIt->second : LDrawPart;
+	};
+
+	// parts moved to a lettered variant keep the bricklink number of their old one when bricklink never took the new one
+	for (const auto& [OldPart, NewPart] : MovedParts)
+	{
+		const QString OldBrickLinkPart = FindBrickLinkPart(OldPart);
+
+		if (NewPart.startsWith(OldPart) && !BrickLinkKnown.count(FindBrickLinkPart(NewPart).toLower()) && BrickLinkKnown.count(OldBrickLinkPart.toLower()))
+			Parts[NewPart] = OldBrickLinkPart;
+	}
 
 	// the colors resolved by their parent are never written
 	for (const QString& Color : swBrickLinkInheritedColors)

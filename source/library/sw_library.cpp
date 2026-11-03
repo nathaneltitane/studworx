@@ -187,6 +187,54 @@ swPartData* swPartsLibrary::FindPartData(const char* PartName, Project* CurrentP
 	return mPartManager->FindPartData(Name, CurrentProject);
 }
 
+// use to follow moved part aliases to the part they moved to
+const swPartData* swPartsLibrary::FindMovedPart(const swPartData* PartData)
+{
+	static constexpr char MovedPrefix[] = "~Moved to ";
+	static constexpr size_t MovedPrefixLength = sizeof(MovedPrefix) - 1;
+	static constexpr int MovedHops = 8;
+
+	for (int Hop = 0; Hop < MovedHops && PartData; Hop++)
+	{
+		if (strncmp(PartData->m_strDescription, MovedPrefix, MovedPrefixLength))
+			break;
+
+		std::string Target = PartData->m_strDescription + MovedPrefixLength;
+		Target = Target.substr(0, Target.find(' '));
+
+		if (Target.empty())
+			break;
+
+		const swPartData* TargetData = FindPartData((Target + ".dat").c_str(), nullptr);
+
+		if (!TargetData)
+			TargetData = FindPartData(Target.c_str(), nullptr);
+
+		if (!TargetData || TargetData == PartData)
+			break;
+
+		PartData = TargetData;
+	}
+
+	return PartData;
+}
+
+// use to merge moved part aliases into the parts they moved to
+swPartsList swPartsLibrary::ResolveMovedParts(const swPartsList& PartsList)
+{
+	swPartsList MovedList;
+
+	for (const auto& [PartData, Colors] : PartsList)
+	{
+		std::map<int, int>& MovedColors = MovedList[FindMovedPart(PartData)];
+
+		for (const auto& [Color, Count] : Colors)
+			MovedColors[Color] += Count;
+	}
+
+	return MovedList;
+}
+
 swPartDataReference swPartsLibrary::AcquirePartData(const char* PartName, Project* CurrentProject, bool CreateMissing, bool SearchProjectFolder)
 {
 	Q_ASSERT(QThread::currentThread() == thread());

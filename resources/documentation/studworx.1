@@ -254,6 +254,7 @@ Exports the list of parts used in CSV format.
 .br
 Exports the list of parts used in BrickLink XML format, ready for a BrickLink wanted list.
 Part numbers and colors are translated through the BrickLink mapping file set in the preferences, or the bundled one when none is set.
+Parts the library moved to a new number are listed under that number, and the exceptions file replaces the mapping of the parts it lists.
 
 .TP
 \fB\-\-bricklink\-condition \fIany\fR|\fInew\fR|\fIused\fR
@@ -270,6 +271,12 @@ An address without a list number uses the main wanted list.
 \fB\-\-bricklink\-notify
 .br
 Asks BrickLink to notify new listings of the exported parts.
+
+.TP
+\fB\-\-bricklink\-exceptions \fIfile\fR
+.br
+Sets the comma or tab separated file of parts and the BrickLink numbers that replace their mapping in BrickLink exports.
+Without it the exceptions file set in the Export BrickLink dialog is used.
 
 .TP
 \fB\-\-export\-html \fR[\fIpath\fR]

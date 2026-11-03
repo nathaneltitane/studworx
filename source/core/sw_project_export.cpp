@@ -1138,7 +1138,10 @@ swResult<void> swExportCSV(const QString& FileName, const swPartsList& PartsList
 
 	CSVFile.WriteLine("Part Name,Color,Quantity,Part ID,Color Code\n");
 
-	for (const auto& PartIt : PartsList)
+	swPartsLibrary* Library = swGetPartsLibrary();
+
+	// moved part aliases list as the parts they moved to
+	for (const auto& PartIt : Library ? Library->ResolveMovedParts(PartsList) : PartsList)
 	{
 		const swPartData* PartData = PartIt.first;
 

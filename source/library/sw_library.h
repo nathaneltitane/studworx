@@ -165,6 +165,12 @@ public:
 	// Returns a borrowed project identity.
 	swPartData* FindPartData(const char* PartName, Project* Project);
 
+	// Follows ~Moved to aliases to the library part they moved to.
+	const swPartData* FindMovedPart(const swPartData* PartData);
+
+	// Merges the aliases of a parts list into the parts they moved to.
+	swPartsList ResolveMovedParts(const swPartsList& PartsList);
+
 	// Returns a scoped identity reference.
 	swPartDataReference AcquirePartData(const char* PartName, Project* Project, bool CreateMissing, bool SearchProjectFolder);
 
