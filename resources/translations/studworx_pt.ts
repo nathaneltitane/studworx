@@ -17550,8 +17550,8 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1251"/>
         <location filename="../../source/core/sw_model_edit.cpp" line="1752"/>
-        <location filename="../../source/core/sw_model_tool.cpp" line="179"/>
-        <location filename="../../source/core/sw_model_tool.cpp" line="717"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="180"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="718"/>
         <source>Move</source>
         <translation>Mover</translation>
     </message>
@@ -17559,7 +17559,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model_edit.cpp" line="358"/>
         <location filename="../../source/core/sw_model_edit.cpp" line="1448"/>
         <location filename="../../source/core/sw_model_edit.cpp" line="1758"/>
-        <location filename="../../source/core/sw_model_tool.cpp" line="187"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="188"/>
         <source>Rotate</source>
         <translation>Rodar</translation>
     </message>
@@ -17734,7 +17734,7 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="208"/>
-        <location filename="../../source/core/sw_model_tool.cpp" line="265"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="266"/>
         <source>Add Part</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Adicionar peça</translation>
@@ -17756,7 +17756,7 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="475"/>
-        <location filename="../../source/core/sw_model_tool.cpp" line="566"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="567"/>
         <source>Delete</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">Eliminar</translation>
@@ -17794,17 +17794,17 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="303"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="304"/>
         <source>Add Spotlight</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model.cpp" line="1159"/>
+        <location filename="../../source/core/sw_model.cpp" line="1165"/>
         <source>Minifigure </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model.cpp" line="1184"/>
+        <location filename="../../source/core/sw_model.cpp" line="1190"/>
         <source>Add Minifigure</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17901,7 +17901,7 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1550"/>
-        <location filename="../../source/core/sw_model_tool.cpp" line="587"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="588"/>
         <source>Paint</source>
         <translatorcomment>Draft reused from an existing translation of this source text; requires review in this context.</translatorcomment>
         <translation type="unfinished">Pintar</translation>
@@ -17939,35 +17939,35 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Mostrar peças</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="199"/>
-        <location filename="../../source/core/sw_model_tool.cpp" line="662"/>
-        <location filename="../../source/core/sw_model_tool.cpp" line="778"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="200"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="663"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="779"/>
         <source>Zoom</source>
         <translation>Zoom</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="207"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="208"/>
         <source>Pan</source>
         <translation>Movimento Horizontal</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="215"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="216"/>
         <source>Orbit</source>
         <translation>Órbitar</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="223"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="224"/>
         <source>Roll</source>
         <translation>Inclinar</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="289"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="290"/>
         <source>Add Camera</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Adicionar câmera</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="299"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="300"/>
         <source>Add Point Light</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Adicionar luz pontual</translation>
@@ -17978,19 +17978,19 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">Adicionar luz spot</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="307"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="308"/>
         <source>Add Directional Light</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Adicionar luz direcional</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="311"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="312"/>
         <source>Add Area Light</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Adicionar luz de área</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="756"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="757"/>
         <source>Zoom Extents</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Extensões de zoom</translation>
@@ -18063,7 +18063,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">Esconder</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="697"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="698"/>
         <source>Look At</source>
         <translation>Olhar Para</translation>
     </message>

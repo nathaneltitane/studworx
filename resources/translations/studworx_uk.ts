@@ -17700,8 +17700,8 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1251"/>
         <location filename="../../source/core/sw_model_edit.cpp" line="1752"/>
-        <location filename="../../source/core/sw_model_tool.cpp" line="179"/>
-        <location filename="../../source/core/sw_model_tool.cpp" line="717"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="180"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="718"/>
         <source>Move</source>
         <translation type="unfinished">Перемістити</translation>
     </message>
@@ -17709,7 +17709,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model_edit.cpp" line="358"/>
         <location filename="../../source/core/sw_model_edit.cpp" line="1448"/>
         <location filename="../../source/core/sw_model_edit.cpp" line="1758"/>
-        <location filename="../../source/core/sw_model_tool.cpp" line="187"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="188"/>
         <source>Rotate</source>
         <translation type="unfinished">Покрутити</translation>
     </message>
@@ -17884,7 +17884,7 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="208"/>
-        <location filename="../../source/core/sw_model_tool.cpp" line="265"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="266"/>
         <source>Add Part</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Додати фрагмент</translation>
@@ -17906,7 +17906,7 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="475"/>
-        <location filename="../../source/core/sw_model_tool.cpp" line="566"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="567"/>
         <source>Delete</source>
         <translatorcomment>Draft reused from an existing translation of this source text; requires review in this context.</translatorcomment>
         <translation type="unfinished">Видалити</translation>
@@ -17944,17 +17944,17 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="303"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="304"/>
         <source>Add Spotlight</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model.cpp" line="1159"/>
+        <location filename="../../source/core/sw_model.cpp" line="1165"/>
         <source>Minifigure </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model.cpp" line="1184"/>
+        <location filename="../../source/core/sw_model.cpp" line="1190"/>
         <source>Add Minifigure</source>
         <translation type="unfinished"></translation>
     </message>
@@ -18051,7 +18051,7 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1550"/>
-        <location filename="../../source/core/sw_model_tool.cpp" line="587"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="588"/>
         <source>Paint</source>
         <translatorcomment>Draft reused from an existing translation of this source text; requires review in this context.</translatorcomment>
         <translation type="unfinished">Фарбувати</translation>
@@ -18089,35 +18089,35 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Показати фрагменти</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="199"/>
-        <location filename="../../source/core/sw_model_tool.cpp" line="662"/>
-        <location filename="../../source/core/sw_model_tool.cpp" line="778"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="200"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="663"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="779"/>
         <source>Zoom</source>
         <translation type="unfinished">Масштабувати</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="207"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="208"/>
         <source>Pan</source>
         <translation type="unfinished">Подвинути</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="215"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="216"/>
         <source>Orbit</source>
         <translation type="unfinished">Прокрутити</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="223"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="224"/>
         <source>Roll</source>
         <translation type="unfinished">Нахилити</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="289"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="290"/>
         <source>Add Camera</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Додати камеру</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="299"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="300"/>
         <source>Add Point Light</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Додайте точкове світло</translation>
@@ -18128,19 +18128,19 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">Додайте точкове світло</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="307"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="308"/>
         <source>Add Directional Light</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Додайте спрямоване світло</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="311"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="312"/>
         <source>Add Area Light</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Додати зону освітлення</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="756"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="757"/>
         <source>Zoom Extents</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Розміри масштабування</translation>
@@ -18165,7 +18165,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">Додайте мініфігурку</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_tool.cpp" line="697"/>
+        <location filename="../../source/core/sw_model_tool.cpp" line="698"/>
         <source>Look At</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Подивіться</translation>
