@@ -12,6 +12,7 @@ uniform sampler2D Texture;
 uniform mediump int CutawayShape;
 uniform mediump mat4 WorldCutawayMatrix;
 uniform mediump vec4 CutawayEye;
+uniform mediump vec4 CutawayEdge;
 
 void main()
 {
@@ -23,5 +24,5 @@ void main()
 	SW_SHADER_PRECISION vec3 DiffuseColor = TexelColor.rgb * TexelColor.a + MaterialColor.rgb * MaterialColor.a * (1.0 - TexelColor.a);
 	if (Alpha > 0.0)
 		DiffuseColor /= Alpha;
-	gl_FragColor = vec4(DiffuseColor * Diffuse + SpecularColor, Alpha);
+	gl_FragColor = vec4(mix(DiffuseColor * Diffuse + SpecularColor, CutawayEdge.rgb, CutEdge), Alpha);
 }

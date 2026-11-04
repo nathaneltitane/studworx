@@ -66,7 +66,7 @@ void swView::OnDraw()
 	mScene->SetRequireCompleteAssets(static_cast<bool>(mRenderFramebuffer));
 	mScene->SetRequireGeneratedMeshes(mRenderFramebuffer && mViewType != swViewType::PartsList);
 	mScene->SetLODDistance(Preferences.mMeshLODDistance);
-	mScene->SetCutaway(mViewType == swViewType::View ? mCutawayShape : swCutawayShape::None, GetCutawayMatrix());
+	mScene->SetCutaway(mViewType == swViewType::View ? mCutawayShape : swCutawayShape::None, GetCutawayMatrix(), Preferences.mCutawayEdges);
 
 	mScene->Begin(mCamera->mWorldView);
 

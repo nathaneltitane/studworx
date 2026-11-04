@@ -60,6 +60,7 @@ void swPreferences::LoadDefaults()
 	mOverlayColor = swGetProfileUnsignedInteger(SW_PROFILE_OVERLAY_COLOR);
 	mCutawayShadeColor = swGetProfileUnsignedInteger(SW_PROFILE_CUTAWAY_SHADE_COLOR);
 	mCutawayShadeAlpha = swGetProfileInteger(SW_PROFILE_CUTAWAY_SHADE_ALPHA);
+	mCutawayEdges = swGetProfileInteger(SW_PROFILE_CUTAWAY_EDGES);
 	mActiveViewColor = swGetProfileUnsignedInteger(SW_PROFILE_ACTIVE_VIEW_COLOR);
 	mInactiveViewColor = swGetProfileUnsignedInteger(SW_PROFILE_INACTIVE_VIEW_COLOR);
 	mDrawEdgeLines = swGetProfileInteger(SW_PROFILE_DRAW_EDGE_LINES);
@@ -176,6 +177,7 @@ void swPreferences::SaveDefaults()
 	swSetProfileUnsignedInteger(SW_PROFILE_OVERLAY_COLOR, mOverlayColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_CUTAWAY_SHADE_COLOR, mCutawayShadeColor);
 	swSetProfileInteger(SW_PROFILE_CUTAWAY_SHADE_ALPHA, mCutawayShadeAlpha);
+	swSetProfileInteger(SW_PROFILE_CUTAWAY_EDGES, mCutawayEdges);
 	swSetProfileUnsignedInteger(SW_PROFILE_ACTIVE_VIEW_COLOR, mActiveViewColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_INACTIVE_VIEW_COLOR, mInactiveViewColor);
 	swSetProfileInteger(SW_PROFILE_DRAW_EDGE_LINES, mDrawEdgeLines);

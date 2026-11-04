@@ -98,6 +98,7 @@ struct swProgram
 	GLint CutawayMatrixLocation;
 	GLint WorldCutawayMatrixLocation;
 	GLint CutawayEyeLocation;
+	GLint CutawayEdgeLocation;
 };
 
 enum class swPolygonOffset
@@ -263,6 +264,13 @@ public:
 		mCutawayDirty = true;
 	}
 
+	// use to draw cut edges this many pixels wide, 0 hides them
+	void SetCutawayEdgeWidth(float Width)
+	{
+		mCutawayEdge.w = Width;
+		mCutawayEdgeDirty = true;
+	}
+
 	void SetTextHaloColor(const swVector4& Color)
 	{
 		mTextHaloColor = Color;
@@ -288,6 +296,7 @@ public:
 	}
 
 	void SetColor(float Red, float Green, float Blue, float Alpha);
+	void SetCutawayEdgeColor(const swVector4& Color);
 	void SetColorIndex(int ColorIndex);
 	void SetColorIndexTinted(int ColorIndex, const swVector4& Tint, float Weight);
 	void SetColorIndexTinted(int ColorIndex, const swVector4& Tint);
@@ -365,6 +374,8 @@ protected:
 	swLightingStyle mLightingStyle;
 	swCutawayShape mCutawayShape;
 	swMatrix44 mCutawayMatrix;
+	swVector4 mCutawayEdge;
+	bool mCutawayEdgeDirty;
 	bool mColorDirty;
 	bool mTextHaloColorDirty;
 	bool mWorldMatrixDirty;

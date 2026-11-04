@@ -323,6 +323,7 @@ Look at a model from any side, see inside it without changing it, and measure it
 - **Cameras.** A floating camera bar, camera orbit snapping and cameras numbered Camera 001.
 - **Cutaways.** Cube, sphere and cylinder cutaways with solid cut surfaces, a shaded cut and resize knobs, pushed in or pulled out by one plate. The model is never changed.
 - **Cutaway controls.** Grow and Shrink resize the cutaway, Push In and Pull Out move it one plate, Shade Color sets the light shade on the cut faces, and Remove shows the whole model again.
+- **Cut edges.** With edge lines on, the cut draws edge lines in each part's edge color where it meets the outer faces, and thinner lines along the corners of the cut faces. Cut Edges in Preferences > Views > Cutaway turns them off.
 - **Grids.** A base grid with studs, lines and origin lines, vertical XZ and YZ height grids sized around the model, and a toggle for each axis line.
 - **Grid settings.** Line spacing, stud and line colors, and Height Grids Behind Model to keep the height grids behind the parts.
 - **Idle turntable.** The model turns full screen around the X, Y or Z axis when you leave StudWorx idle. Any input ends it. The idle time and the time for one turn are set in Preferences.

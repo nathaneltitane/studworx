@@ -86,6 +86,7 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "OverlayColor", SW_RGBA(42, 46, 50, 255)),                                  // SW_PROFILE_OVERLAY_COLOR #2a2e32ff
 	swProfileEntry("Settings", "CutawayShadeColor", SW_RGBA(255, 255, 255, 25)),                           // SW_PROFILE_CUTAWAY_SHADE_COLOR #ffffff19
 	swProfileEntry("Settings", "CutawayShadeAlpha", 50),                                             // SW_PROFILE_CUTAWAY_SHADE_ALPHA
+	swProfileEntry("Settings", "CutawayEdges", 1),                                                         // SW_PROFILE_CUTAWAY_EDGES
 	swProfileEntry("Settings", "ActiveViewColor", SW_RGBA(85, 85, 127, 255)),                              // SW_PROFILE_ACTIVE_VIEW_COLOR #55557fff
 	swProfileEntry("Settings", "InactiveViewColor", SW_RGBA(42, 46, 50, 255)),                             // SW_PROFILE_INACTIVE_VIEW_COLOR #2a2e32ff
 	swProfileEntry("Settings", "DrawEdgeLines", 1),                                                        // SW_PROFILE_DRAW_EDGE_LINES

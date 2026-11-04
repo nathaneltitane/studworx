@@ -456,6 +456,7 @@ void swScene::Draw(swContext* Context, const std::function<void()>& PreTransluce
 	};
 
 	const bool DrawLines = mDrawEdgeLines && mLineWidth > 0.0f;
+	Context->SetCutawayEdgeWidth(mCutawayEdges && DrawLines ? mLineWidth : 0.0f);
 	const bool DrawConditional = mDrawConditionalLines && mLineWidth > 0.0f && swContext::SupportsMaterial(swMaterialType::UnlitColorConditional);
 
 	swShadingMode ShadingMode = mShadingMode;

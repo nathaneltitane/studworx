@@ -105,6 +105,8 @@ swContext::swContext()
 	mLightingStyle = swLightingStyle::Standard;
 	mCutawayShape = swCutawayShape::None;
 	mCutawayMatrix = swMatrix44Identity();
+	mCutawayEdge = swVector4(0.0f, 0.0f, 0.0f, 0.0f);
+	mCutawayEdgeDirty = false;
 	mColorDirty = false;
 	mTextHaloColorDirty = false;
 	mWorldMatrixDirty = false;
@@ -305,57 +307,64 @@ swResult<void> swContext::CreateShaderPrograms()
 "			(CutawayShape == 3 && dot(PixelCutaway.xy, PixelCutaway.xy) < 1.0 && abs(PixelCutaway.z) < 1.0)) \\\n"
 "			discard;\n"
 
-// back faces show the solid inside
+// back faces show the solid inside, cut edges are drawn on both sides of the cut
 "#define SW_PIXEL_CUTAWAY_CAP \\\n"
 "		SW_SHADER_PRECISION vec3 CapNormal = vec3(0.0, 0.0, 0.0); \\\n"
+"		SW_SHADER_PRECISION float CutEdge = 0.0; \\\n"
 "		gl_FragDepth = gl_FragCoord.z; \\\n"
 "		if (CutawayShape != 0) \\\n"
 "		{ \\\n"
 "			SW_SHADER_PRECISION vec3 CapToward = CutawayEye.w > 0.5 ? CutawayEye.xyz - PixelCutaway : CutawayEye.xyz; \\\n"
 "			SW_SHADER_PRECISION float CapLimit = CutawayEye.w > 0.5 ? 1.0 : 1.0e6; \\\n"
-"			if (dot((WorldCutawayMatrix * vec4(PixelNormal, 0.0)).xyz, CapToward) < 0.0) \\\n"
+"			SW_SHADER_PRECISION vec3 CapStep = vec3(abs(CapToward.x) < 1.0e-6 ? 1.0e-6 : CapToward.x, abs(CapToward.y) < 1.0e-6 ? 1.0e-6 : CapToward.y, abs(CapToward.z) < 1.0e-6 ? 1.0e-6 : CapToward.z); \\\n"
+"			SW_SHADER_PRECISION vec3 CapNear = min((-1.0 - PixelCutaway) / CapStep, (1.0 - PixelCutaway) / CapStep); \\\n"
+"			SW_SHADER_PRECISION vec3 CapFar = max((-1.0 - PixelCutaway) / CapStep, (1.0 - PixelCutaway) / CapStep); \\\n"
+"			SW_SHADER_PRECISION float CapEnter = -1.0e6; \\\n"
+"			SW_SHADER_PRECISION float CapExit = 1.0e6; \\\n"
+"			SW_SHADER_PRECISION vec3 CapEnterNormal = vec3(0.0, 0.0, 0.0); \\\n"
+"			if (CutawayShape == 1) \\\n"
 "			{ \\\n"
-"				SW_SHADER_PRECISION vec3 CapStep = vec3(abs(CapToward.x) < 1.0e-6 ? 1.0e-6 : CapToward.x, abs(CapToward.y) < 1.0e-6 ? 1.0e-6 : CapToward.y, abs(CapToward.z) < 1.0e-6 ? 1.0e-6 : CapToward.z); \\\n"
-"				SW_SHADER_PRECISION vec3 CapNear = min((-1.0 - PixelCutaway) / CapStep, (1.0 - PixelCutaway) / CapStep); \\\n"
-"				SW_SHADER_PRECISION vec3 CapFar = max((-1.0 - PixelCutaway) / CapStep, (1.0 - PixelCutaway) / CapStep); \\\n"
-"				SW_SHADER_PRECISION float CapEnter = -1.0e6; \\\n"
-"				SW_SHADER_PRECISION float CapExit = 1.0e6; \\\n"
-"				SW_SHADER_PRECISION vec3 CapEnterNormal = vec3(0.0, 0.0, 0.0); \\\n"
-"				if (CutawayShape == 1) \\\n"
+"				CapEnter = max(CapNear.x, max(CapNear.y, CapNear.z)); \\\n"
+"				CapExit = min(CapFar.x, min(CapFar.y, CapFar.z)); \\\n"
+"				CapEnterNormal = CapEnter == CapNear.x ? vec3(sign(CapToward.x), 0.0, 0.0) : (CapEnter == CapNear.y ? vec3(0.0, sign(CapToward.y), 0.0) : vec3(0.0, 0.0, sign(CapToward.z))); \\\n"
+"			} \\\n"
+"			else \\\n"
+"			{ \\\n"
+"				SW_SHADER_PRECISION vec3 CapRay = CutawayShape == 2 ? CapToward : vec3(CapToward.xy, 0.0); \\\n"
+"				SW_SHADER_PRECISION vec3 CapStart = CutawayShape == 2 ? PixelCutaway : vec3(PixelCutaway.xy, 0.0); \\\n"
+"				SW_SHADER_PRECISION float CapA = max(dot(CapRay, CapRay), 1.0e-12); \\\n"
+"				SW_SHADER_PRECISION float CapB = dot(CapStart, CapRay); \\\n"
+"				SW_SHADER_PRECISION float CapRoot = CapB * CapB - CapA * (dot(CapStart, CapStart) - 1.0); \\\n"
+"				if (CapRoot > 0.0) \\\n"
 "				{ \\\n"
-"					CapEnter = max(CapNear.x, max(CapNear.y, CapNear.z)); \\\n"
-"					CapExit = min(CapFar.x, min(CapFar.y, CapFar.z)); \\\n"
-"					CapEnterNormal = CapEnter == CapNear.x ? vec3(sign(CapToward.x), 0.0, 0.0) : (CapEnter == CapNear.y ? vec3(0.0, sign(CapToward.y), 0.0) : vec3(0.0, 0.0, sign(CapToward.z))); \\\n"
+"					CapEnter = (-CapB - sqrt(CapRoot)) / CapA; \\\n"
+"					CapExit = (-CapB + sqrt(CapRoot)) / CapA; \\\n"
+"					CapEnterNormal = -(CapStart + CapRay * CapEnter); \\\n"
 "				} \\\n"
 "				else \\\n"
+"					CapExit = CapEnter; \\\n"
+"				if (CutawayShape == 3 && CapNear.z > CapEnter) \\\n"
 "				{ \\\n"
-"					SW_SHADER_PRECISION vec3 CapRay = CutawayShape == 2 ? CapToward : vec3(CapToward.xy, 0.0); \\\n"
-"					SW_SHADER_PRECISION vec3 CapStart = CutawayShape == 2 ? PixelCutaway : vec3(PixelCutaway.xy, 0.0); \\\n"
-"					SW_SHADER_PRECISION float CapA = max(dot(CapRay, CapRay), 1.0e-12); \\\n"
-"					SW_SHADER_PRECISION float CapB = dot(CapStart, CapRay); \\\n"
-"					SW_SHADER_PRECISION float CapRoot = CapB * CapB - CapA * (dot(CapStart, CapStart) - 1.0); \\\n"
-"					if (CapRoot > 0.0) \\\n"
-"					{ \\\n"
-"						CapEnter = (-CapB - sqrt(CapRoot)) / CapA; \\\n"
-"						CapExit = (-CapB + sqrt(CapRoot)) / CapA; \\\n"
-"						CapEnterNormal = -(CapStart + CapRay * CapEnter); \\\n"
-"					} \\\n"
-"					else \\\n"
-"						CapExit = CapEnter; \\\n"
-"					if (CutawayShape == 3 && CapNear.z > CapEnter) \\\n"
-"					{ \\\n"
-"						CapEnter = CapNear.z; \\\n"
-"						CapEnterNormal = vec3(0.0, 0.0, sign(CapToward.z)); \\\n"
-"					} \\\n"
-"					if (CutawayShape == 3) \\\n"
-"						CapExit = min(CapExit, CapFar.z); \\\n"
+"					CapEnter = CapNear.z; \\\n"
+"					CapEnterNormal = vec3(0.0, 0.0, sign(CapToward.z)); \\\n"
 "				} \\\n"
-"				if (CapEnter < CapExit && CapEnter > 0.0 && CapEnter < CapLimit) \\\n"
-"				{ \\\n"
-"					CapNormal = (vec4(CapEnterNormal, 0.0) * WorldCutawayMatrix).xyz; \\\n"
-"					gl_FragDepth = gl_FragCoord.z - max(abs(dFdx(gl_FragCoord.z)), abs(dFdy(gl_FragCoord.z))) * 2.0 - 1.0e-5; \\\n"
-"				} \\\n"
+"				if (CutawayShape == 3) \\\n"
+"					CapExit = min(CapExit, CapFar.z); \\\n"
 "			} \\\n"
+"			SW_SHADER_PRECISION vec3 CapSide = abs(PixelCutaway + CapToward * clamp(CapEnter, 0.0, CapLimit)); \\\n"
+"			SW_SHADER_PRECISION float CapCorner = CutawayShape == 1 ? 1.0 - (CapSide.x + CapSide.y + CapSide.z - max(CapSide.x, max(CapSide.y, CapSide.z)) - min(CapSide.x, min(CapSide.y, CapSide.z))) : (CutawayShape == 3 ? max(1.0 - length(CapSide.xy), 1.0 - CapSide.z) : 1.0); \\\n"
+"			SW_SHADER_PRECISION vec3 CutSide = abs(PixelCutaway); \\\n"
+"			SW_SHADER_PRECISION float CutDistance = CutawayShape == 1 ? max(CutSide.x, max(CutSide.y, CutSide.z)) - 1.0 : (CutawayShape == 2 ? length(CutSide) - 1.0 : max(length(CutSide.xy), CutSide.z) - 1.0); \\\n"
+"			SW_SHADER_PRECISION float CapCornerWidth = fwidth(CapCorner) * CutawayEdge.w * 0.3; \\\n"
+"			SW_SHADER_PRECISION float CutDistanceWidth = fwidth(CutDistance) * CutawayEdge.w; \\\n"
+"			if (CapEnter < CapExit && CapEnter > 0.0 && CapEnter < CapLimit && dot((WorldCutawayMatrix * vec4(PixelNormal, 0.0)).xyz, CapToward) < 0.0) \\\n"
+"			{ \\\n"
+"				CapNormal = (vec4(CapEnterNormal, 0.0) * WorldCutawayMatrix).xyz; \\\n"
+"				gl_FragDepth = gl_FragCoord.z - max(abs(dFdx(gl_FragCoord.z)), abs(dFdy(gl_FragCoord.z))) * 2.0 - 1.0e-5; \\\n"
+"				CutEdge = CapCorner < CapCornerWidth ? 1.0 : 0.0; \\\n"
+"			} \\\n"
+"			else \\\n"
+"				CutEdge = CutDistance < CutDistanceWidth ? 1.0 : 0.0; \\\n"
 "		}\n"
 	};
 
@@ -562,6 +571,7 @@ swResult<void> swContext::CreateShaderPrograms()
 		mPrograms[MaterialType].CutawayMatrixLocation = glGetUniformLocation(Program, "CutawayMatrix");
 		mPrograms[MaterialType].WorldCutawayMatrixLocation = glGetUniformLocation(Program, "WorldCutawayMatrix");
 		mPrograms[MaterialType].CutawayEyeLocation = glGetUniformLocation(Program, "CutawayEye");
+		mPrograms[MaterialType].CutawayEdgeLocation = glGetUniformLocation(Program, "CutawayEdge");
 
 		const GLint TextureLocation = glGetUniformLocation(Program, "Texture");
 
@@ -958,6 +968,7 @@ void swContext::SetMaterial(swMaterialType MaterialType)
 	mTextHaloColorDirty = true;
 	mLightingStyleDirty = true;
 	mCutawayDirty = true;
+	mCutawayEdgeDirty = true;
 }
 
 void swContext::SetViewport(int x, int y, int Width, int Height)
@@ -1273,19 +1284,31 @@ void swContext::SetColor(float Red, float Green, float Blue, float Alpha)
 	SetColor(swVector4(Red, Green, Blue, Alpha));
 }
 
+void swContext::SetCutawayEdgeColor(const swVector4& Color)
+{
+	if (Color.x == mCutawayEdge.x && Color.y == mCutawayEdge.y && Color.z == mCutawayEdge.z)
+		return;
+
+	mCutawayEdge = swVector4(Color.x, Color.y, Color.z, mCutawayEdge.w);
+	mCutawayEdgeDirty = true;
+}
+
 void swContext::SetColorIndex(int ColorIndex)
 {
+	SetCutawayEdgeColor(gColorList[ColorIndex].Edge);
 	SetColor(gColorList[ColorIndex].Value);
 }
 
 void swContext::SetColorIndexTinted(int ColorIndex, const swVector4& Tint, float Weight)
 {
+	SetCutawayEdgeColor(gColorList[ColorIndex].Edge);
 	const swVector3 Color(gColorList[ColorIndex].Value * Weight + Tint * (1.0f - Weight));
 	SetColor(swVector4(Color, gColorList[ColorIndex].Value.w));
 }
 
 void swContext::SetColorIndexTinted(int ColorIndex, const swVector4& Tint)
 {
+	SetCutawayEdgeColor(gColorList[ColorIndex].Edge);
 	SetColor(gColorList[ColorIndex].Value * Tint);
 }
 
@@ -1691,6 +1714,12 @@ void swContext::FlushState()
 		mWorldMatrixDirty = false;
 		mViewMatrixDirty = false;
 		mProjectionMatrixDirty = false;
+	}
+
+	if (mCutawayEdgeDirty && Program.CutawayEdgeLocation != -1)
+	{
+		glUniform4fv(Program.CutawayEdgeLocation, 1, mCutawayEdge.GetFloats());
+		mCutawayEdgeDirty = false;
 	}
 
 	if (mColorDirty && Program.MaterialColorLocation != -1)

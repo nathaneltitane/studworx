@@ -316,9 +316,8 @@
 				padding: 0;
 				margin: 25px 0;
 				display: grid;
-				align-items: start;
 				grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-				gap: 10px 30px;
+				gap: 10px 20px;
 			}
 
 			.points li {
@@ -1559,17 +1558,17 @@
 			</figure>
 
 			<ul class="points">
-				<li><b>Menus by task.</b> File, Edit, View, Part, <a href="#steps">Steps</a>, <a href="#models">Models</a> and <a href="#help">Help</a>, with clean labels and a unique mnemonic in each menu. The View menu holds the Toolbars, Viewpoints, Cutaway, Cameras, Projection and Shading submenus.</li>
-				<li><b>Options menus.</b> The gear button on the model view and on every panel opens the settings that belong to it: grids, preview, parts and colors.</li>
-				<li><b>Toolbars.</b> Standard, <a href="#tools">Tools</a> and Time toolbars. Move and rotate cursors show the axis they work on.</li>
-				<li><b>Transform toolbar.</b> Type a position or rotation for the selection and apply it, as absolute coordinates or relative to where it is now.</li>
-				<li><b>Tabs, splits and status bar.</b> Open several models in tabs, split the view, go Full Screen, and read the view orientation, projection and focus position in the status bar. Right click the status bar to show or hide each segment.</li>
+				<li><b>Contextual <a href="#help">help</a>.</b> Choose Help &gt; What&#x27;s This? or click the question mark in a title bar, then click any control to read what it does. F1 explains the focused control, Shift+F1 starts What&#x27;s This inside a dialog, and every entry is listed in the Help index below.</li>
 				<li><b>Split views.</b> Split the current view horizontally or vertically, as often as you like, remove one view, or Reset Views back to one. Each view keeps its own camera and projection, and a border marks the active one.</li>
-				<li><b>Toolbars and panels on demand.</b> View &gt; Toolbars shows or hides each toolbar and panel: Standard, Tools, Time, Parts, Colors, Properties, Timeline, Preview, Terminal and Minifigure Builder. Close Tab closes the current model tab.</li>
-				<li><b>Undo and clipboard.</b> Undo and Redo every change, and Cut, Copy and Paste parts between models and tabs.</li>
-				<li><b>Contextual help.</b> Choose Help &gt; What&#x27;s This? or click the question mark in a title bar, then click any control to read what it does. F1 explains the focused control, Shift+F1 starts What&#x27;s This inside a dialog, and every entry is listed in the Help index below.</li>
+				<li><b>Toolbars and panels on demand.</b> View &gt; Toolbars shows or hides each toolbar and panel: Standard, <a href="#tools">Tools</a>, Time, Parts, Colors, Properties, Timeline, Preview, Terminal and Minifigure Builder. Close Tab closes the current model tab.</li>
+				<li><b>Menus by task.</b> File, Edit, View, Part, <a href="#steps">Steps</a>, <a href="#models">Models</a> and Help, with clean labels and a unique mnemonic in each menu. The View menu holds the Toolbars, Viewpoints, Cutaway, Cameras, Projection and Shading submenus.</li>
+				<li><b>Tabs, splits and status bar.</b> Open several models in tabs, split the view, go Full Screen, and read the view orientation, projection and focus position in the status bar. Right click the status bar to show or hide each segment.</li>
 				<li><b>Help menu.</b> Home Page opens the StudWorx repository on GitHub, Report a Bug its issues, and About shows the version and system information.</li>
+				<li><b>Options menus.</b> The gear button on the model view and on every panel opens the settings that belong to it: grids, preview, parts and colors.</li>
 				<li><b>Ten languages.</b> English, French, German, Spanish, Portuguese, Czech, Ukrainian, Russian, Simplified Chinese and Traditional Chinese.</li>
+				<li><b>Transform toolbar.</b> Type a position or rotation for the selection and apply it, as absolute coordinates or relative to where it is now.</li>
+				<li><b>Toolbars.</b> Standard, Tools and Time toolbars. Move and rotate cursors show the axis they work on.</li>
+				<li><b>Undo and clipboard.</b> Undo and Redo every change, and Cut, Copy and Paste parts between models and tabs.</li>
 				<li><b>Color theme.</b> Follow the system, or force the light or dark theme, from <a href="#preferences">Preferences</a>.</li>
 			</ul>
 
@@ -1727,18 +1726,18 @@
 			<p class="lead"><a href="#models">Models</a> are plain LDraw text files in LeoCAD&#x27;s format, so they open in either program. StudWorx reads and writes them, imports from other tools, exports to 3D and parts list formats, and prints the current view.</p>
 
 			<ul class="points">
+				<li><b>HTML.</b> Export HTML in the <a href="#instructions">Instructions</a> window writes styled pages in a folder named after the model, opening at index.html, with light and dark colors that follow the browser. One scrolling page of the Instructions window pages that stops at each page, with #page-N and #step-N links and First, Previous, Next and Last Page arrows on the right, left or bottom edge, laid out for the Instructions Page, a Landscape Display, Portrait Display or Tablet shape in pixels and saved at twice that size for sharp high density screens, or one step per page with an index, step images of any width and height on a background color you choose, transparent with its alpha, framed in rounded tiles of the same color, and a parts list after each step or at the end, which Override Instructions Settings also applies to the scrolling page with Settings Overrides for the page, cover, Bill of Materials, step, text, divider, pointer, fade, highlight and element box colors, without changing the model, for the current model, its submodels or all models. Edit Style Sheet changes the CSS of the pages in an editor with the options and find and replace of the Editor panel, its comments naming the feature of each block.</li>
+				<li><b>Export.</b> 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages from the Instructions window, BrickLink wanted lists and CSV parts lists. BrickLink exports pick the condition, the wanted list by its number or the address of its page, and new listing notices, copy the XML and open the BrickLink upload page in one step, and translate part numbers and colors through a bundled mapping of over 55,000 parts or a file built from the library and Rebrickable, with Rebrickable numbers taking the lead over stale part keywords. BrickLink and CSV exports list parts the library moved to a new number under that number, and Part Exceptions in the BrickLink export keeps a comma or tab separated list of parts whose BrickLink number you set by hand.</li>
 				<li><b>LDraw models.</b> .ldr, .mpd and .dat files, with New, Open, Merge, Save, Save As, Reload and the four most recent files. Save As follows the LDraw file specification and adds the extension when it is left out: .ldr for a single model, .mpd for a model with submodels or embedded data. Files are written with Unix line endings, and a model loaded with Windows line endings keeps them when saved. Watch for File Changes reloads a model edited in another program. Sample models, a minifigure and a flexible part, <a href="#install">install</a> to /usr/share/studworx/samples, the samples folder beside the program on Windows, or the application bundle resources on macOS.</li>
-				<li><b>Startup.</b> Open Most Recent File on Startup reopens the last model, Restore Tab Layout brings back its tabs and split <a href="#views">views</a>, and Load All Parts Before Showing waits until every part is loaded before the model appears.</li>
-				<li><b>LeoCAD models.</b> Models saved by LeoCAD open as they are, and their LeoCAD <a href="#meta">meta</a> commands are migrated to StudWorx ones, automatically when you choose so in <a href="#preferences">Preferences</a>.</li>
-				<li><b>Import.</b> LEGO® Digital Designer models and official set inventories. Set inventories use your own free Rebrickable API key, asked for once or set under Online Services in the preferences, and are searched by set name or number.</li>
-				<li><b>Export.</b> 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages from the <a href="#instructions">Instructions</a> window, BrickLink wanted lists and CSV parts lists. BrickLink exports pick the condition, the wanted list by its number or the address of its page, and new listing notices, copy the XML and open the BrickLink upload page in one step, and translate part numbers and colors through a bundled mapping of over 55,000 parts or a file built from the library and Rebrickable, with Rebrickable numbers taking the lead over stale part keywords. BrickLink and CSV exports list parts the library moved to a new number under that number, and Part Exceptions in the BrickLink export keeps a comma or tab separated list of parts whose BrickLink number you set by hand.</li>
-				<li><b>KMZ.</b> Google Earth and SketchUp models, with the visible surfaces only or every part&#x27;s geometry, set in Preferences.</li>
-				<li><b>COLLADA.</b> Translucent colors can be marked as transparent materials for programs that read them.</li>
-				<li><b>HTML.</b> Export HTML in the Instructions window writes styled pages in a folder named after the model, opening at index.html, with light and dark colors that follow the browser. One scrolling page of the Instructions window pages that stops at each page, with #page-N and #step-N links and First, Previous, Next and Last Page arrows on the right, left or bottom edge, laid out for the Instructions Page, a Landscape Display, Portrait Display or Tablet shape in pixels and saved at twice that size for sharp high density screens, or one step per page with an index, step images of any width and height on a background color you choose, transparent with its alpha, framed in rounded tiles of the same color, and a parts list after each step or at the end, which Override Instructions Settings also applies to the scrolling page with Settings Overrides for the page, cover, Bill of Materials, step, text, divider, pointer, fade, highlight and element box colors, without changing the model, for the current model, its submodels or all models. Edit Style Sheet changes the CSS of the pages in an editor with the options and find and replace of the Editor panel, its comments naming the feature of each block.</li>
-				<li><b>Print.</b> File &gt; Print prints the current model view through the system print dialog, with a Preview button where the dialog allows it.</li>
-				<li><b>Thumbnails.</b> Model thumbnails in file managers, from a KDE thumbnail plugin or the desktop thumbnailer.</li>
-				<li><b>Parts library.</b> Downloaded on the first start as the official LDraw complete.zip, or chosen from an archive you already have, and reloaded from the File menu. An unofficial parts folder can be added beside it.</li>
 				<li><b>Command line.</b> Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx. <a href="https://l2cu.app">L²CU</a>, the LDraw Linux command line utility, drives these renders and exports for whole folders of models.</li>
+				<li><b>Import.</b> LEGO® Digital Designer models and official set inventories. Set inventories use your own free Rebrickable API key, asked for once or set under Online Services in the <a href="#preferences">preferences</a>, and are searched by set name or number.</li>
+				<li><b>Startup.</b> Open Most Recent File on Startup reopens the last model, Restore Tab Layout brings back its tabs and split <a href="#views">views</a>, and Load All Parts Before Showing waits until every part is loaded before the model appears.</li>
+				<li><b>Parts library.</b> Downloaded on the first start as the official LDraw complete.zip, or chosen from an archive you already have, and reloaded from the File menu. An unofficial parts folder can be added beside it.</li>
+				<li><b>LeoCAD models.</b> Models saved by LeoCAD open as they are, and their LeoCAD <a href="#meta">meta</a> commands are migrated to StudWorx ones, automatically when you choose so in Preferences.</li>
+				<li><b>Print.</b> File &gt; Print prints the current model view through the system print dialog, with a Preview button where the dialog allows it.</li>
+				<li><b>KMZ.</b> Google Earth and SketchUp models, with the visible surfaces only or every part&#x27;s geometry, set in Preferences.</li>
+				<li><b>Thumbnails.</b> Model thumbnails in file managers, from a KDE thumbnail plugin or the desktop thumbnailer.</li>
+				<li><b>COLLADA.</b> Translucent colors can be marked as transparent materials for programs that read them.</li>
 				<li><b>Exit.</b> File &gt; Exit asks to save each changed model before StudWorx closes.</li>
 			</ul>
 
@@ -1878,12 +1877,12 @@
 			</div>
 
 			<ul class="points">
-				<li><b>Background.</b> View Color saves the view background opaque. Transparent leaves it empty so the model can be placed over other images. Only PNG and GIF <a href="#files">files</a> keep transparency.</li>
-				<li><b>Steps.</b> Current Step, All Steps or a Range. Saving several still steps writes one numbered file per step: model.png becomes model01.png, model02.png and so on. The arrows under the preview look through the steps first.</li>
 				<li><b>Framing.</b> Current View saves what the model view shows. Fit Model moves the camera back until every part fits, at every turntable angle. Fit Each Step fits every step on its own parts. Margin keeps 0 to 50 percent of empty space around the model.</li>
-				<li><b>Center and Bounds.</b> Turntables turn around the World Origin, the Model Origin or the Model Center. Bounds measures the fit on the Whole Model, so every step lines up, or on the Shown Steps only.</li>
-				<li><b>Size.</b> Ratio presets from 1:1 Square through 5:4, 4:3, 3:2 and 16:10 to 16:9 and 21:9, Free, or the shape of the View. Width and Height go up to 32768 pixels, in Landscape or Portrait.</li>
 				<li><b>File.</b> The path runs along the bottom of the dialog, type it or choose it with the ... button. The extension sets the format: .png, .jpg, .bmp, or .gif for animations. Turning Animated GIF on or off switches the extension for you.</li>
+				<li><b>Steps.</b> Current Step, All Steps or a Range. Saving several still steps writes one numbered file per step: model.png becomes model01.png, model02.png and so on. The arrows under the preview look through the steps first.</li>
+				<li><b>Size.</b> Ratio presets from 1:1 Square through 5:4, 4:3, 3:2 and 16:10 to 16:9 and 21:9, Free, or the shape of the View. Width and Height go up to 32768 pixels, in Landscape or Portrait.</li>
+				<li><b>Center and Bounds.</b> Turntables turn around the World Origin, the Model Origin or the Model Center. Bounds measures the fit on the Whole Model, so every step lines up, or on the Shown Steps only.</li>
+				<li><b>Background.</b> View Color saves the view background opaque. Transparent leaves it empty so the model can be placed over other images. Only PNG and GIF <a href="#files">files</a> keep transparency.</li>
 			</ul>
 
 			<h3>Animated GIF</h3>
@@ -1909,10 +1908,10 @@
 
 			<ul class="points">
 				<li><b>Turntable.</b> The model turns around the X, Y or Z axis through the Framing center. Full Turn makes seamless revolutions, Angle swings between two angles, measured from the current view, and back. Turns sets 1 to 10 revolutions per loop, Frames the images in one turn, Frame Rate how many are shown each second. Fit Model keeps one steady zoom through the whole turn.</li>
-				<li><b>Steps.</b> Each chosen step becomes one frame, without turning, for short animated <a href="#instructions">instructions</a>. At 2 fps every step shows for half a second.</li>
-				<li><b>Next Step.</b> The model keeps turning while the build moves on every 1 to 10 Turns or every 0.1 to 60 Seconds, through the chosen steps, and the loop ends on the last one. Turns then shows the total, steps × turns per step. Frames stay per turn, so the turning speed is the same however many steps there are.</li>
-				<li><b>Hold Last.</b> Keeps the finished model on screen for 0 to 10 seconds before a loop through the steps restarts.</li>
 				<li><b>Duration.</b> Shows how long one loop plays: turns × frames ÷ frame rate for a turntable, steps ÷ frame rate + hold for steps, and the frames of every step ÷ frame rate + hold with Next Step. Six steps, one turn each, at 24 frames per turn and 12 fps with a one second hold make 144 frames playing for 13 seconds.</li>
+				<li><b>Next Step.</b> The model keeps turning while the build moves on every 1 to 10 Turns or every 0.1 to 60 Seconds, through the chosen steps, and the loop ends on the last one. Turns then shows the total, steps × turns per step. Frames stay per turn, so the turning speed is the same however many steps there are.</li>
+				<li><b>Steps.</b> Each chosen step becomes one frame, without turning, for short animated <a href="#instructions">instructions</a>. At 2 fps every step shows for half a second.</li>
+				<li><b>Hold Last.</b> Keeps the finished model on screen for 0 to 10 seconds before a loop through the steps restarts.</li>
 			</ul>
 
 			<div class="gallery two">
@@ -1999,16 +1998,16 @@
 			</figure>
 
 			<ul class="points">
-				<li><b>POV-Ray.</b> Found on its own in the PATH, Flatpak or Snap and checked for version 3.7. LGEO high detail parts are found beside the parts library or downloaded on request, with a Parts choice between LDraw and LGEO.</li>
-				<li><b>Render window.</b> Choose the output file, follow the progress, and watch the <a href="#image">image</a> appear in the preview as it renders.</li>
-				<li><b>Blender.</b> Render with the bundled Blender LDraw add-ons, with the output, image, scene, parts and editing settings in <a href="#panels">panels</a> of the render window, or Open in Blender to keep working on the scene there. The Blender executable is set in <a href="#preferences">Preferences</a>.</li>
-				<li><b>Lighting styles.</b> Standard, Studio, Matte and Toon, from the View menu or the command line with --lighting. Standard uses one light with soft highlights, Studio key, fill and rim lights, Matte no highlights, and Toon banded cel shading.</li>
-				<li><b>Shading.</b> Wireframe, flat shading, default lights, edge lines, conditional lines and mesh level of detail.</li>
-				<li><b>Mesh level of detail.</b> Distant parts draw with simpler meshes, from a distance set in Preferences, so large <a href="#models">models</a> stay smooth.</li>
-				<li><b>Studs.</b> Eight stud styles: Plain, Thin Lines Logo, Outline Logo, Sharp Top Logo, Rounded Top Logo, Flattened Logo, High Contrast and High Contrast with Logo.</li>
-				<li><b>Color configurations.</b> Colors come from the parts library, the LDraw color configuration or the alternate configuration with more realistic edge line colors for rendering, chosen under Rendering &gt; Colors.</li>
-				<li><b>Edge colors.</b> Automate Edge Color computes edge colors from each part color, with edge contrast, saturation and light to dark settings, or set the stud cylinder, edge, black edge and dark edge colors yourself.</li>
 				<li><b>Separate settings.</b> The model view, the preview, the parts list and the Minifigure Builder each keep their own rendering settings. Each can follow the model view instead, or set its own wireframe, flat shading, default lights, edge lines, conditional lines and line width.</li>
+				<li><b>Blender.</b> Render with the bundled Blender LDraw add-ons, with the output, <a href="#image">image</a>, scene, parts and editing settings in <a href="#panels">panels</a> of the render window, or Open in Blender to keep working on the scene there. The Blender executable is set in <a href="#preferences">Preferences</a>.</li>
+				<li><b>Lighting styles.</b> Standard, Studio, Matte and Toon, from the View menu or the command line with --lighting. Standard uses one light with soft highlights, Studio key, fill and rim lights, Matte no highlights, and Toon banded cel shading.</li>
+				<li><b>POV-Ray.</b> Found on its own in the PATH, Flatpak or Snap and checked for version 3.7. LGEO high detail parts are found beside the parts library or downloaded on request, with a Parts choice between LDraw and LGEO.</li>
+				<li><b>Edge colors.</b> Automate Edge Color computes edge colors from each part color, with edge contrast, saturation and light to dark settings, or set the stud cylinder, edge, black edge and dark edge colors yourself.</li>
+				<li><b>Color configurations.</b> Colors come from the parts library, the LDraw color configuration or the alternate configuration with more realistic edge line colors for rendering, chosen under Rendering &gt; Colors.</li>
+				<li><b>Studs.</b> Eight stud styles: Plain, Thin Lines Logo, Outline Logo, Sharp Top Logo, Rounded Top Logo, Flattened Logo, High Contrast and High Contrast with Logo.</li>
+				<li><b>Mesh level of detail.</b> Distant parts draw with simpler meshes, from a distance set in Preferences, so large <a href="#models">models</a> stay smooth.</li>
+				<li><b>Render window.</b> Choose the output file, follow the progress, and watch the image appear in the preview as it renders.</li>
+				<li><b>Shading.</b> Wireframe, flat shading, default lights, edge lines, conditional lines and mesh level of detail.</li>
 				<li><b>Selection highlight.</b> Outline or tint and edges, with an adjustable outline width and transparency.</li>
 				<li><b>Antialiasing.</b> 2x, 4x or 8x samples, and an adjustable line width.</li>
 			</ul>
@@ -2117,28 +2116,28 @@
 			<p class="lead">Pick a part in the Parts panel, drop it in the model view, then move, rotate, paint and group it. Snapping keeps everything on the LDraw grid, and selection tools find the parts you need in large <a href="#models">models</a>.</p>
 
 			<ul class="points">
-				<li><b>Parts.</b> Insert, delete, duplicate, paint, hide and group parts, with the first part placed at the origin as an option.</li>
-				<li><b>Insert colors.</b> Insert with the current color, the selected part&#x27;s color or the last inserted color, or lock the Parts panel to one color.</li>
-				<li><b>Snapping.</b> Move in studs, flats and bricks, rotate in degrees with a custom angle, with relative or absolute transforms and separate or shared rotation.</li>
-				<li><b>Move snap.</b> Horizontal <a href="#steps">steps</a> of 1/20 stud, 1/4 stud, 1 flat, 1/2 stud and 1, 2, 3, 4 or 8 studs, vertical steps of 1/20 stud, 1/4 stud, 1 flat, 1/2 stud, 1 stud and 1, 2, 4 or 8 bricks, or None.</li>
-				<li><b>Rotation snap.</b> 1, 5, 15, 22.5, 30, 45, 60, 90 or 180 degrees, a custom angle, or None. Camera Snap orbits the view in the same steps. Turns in any step land exactly on square angles, so later moves keep whole coordinates.</li>
+				<li><b>Explode.</b> The Explode panel, shown from the panel context menu or View &gt; Toolbars, spreads every other visible part, or only the selected ones with each group moving as one part, away from an anchor, the focused part or the first or last selected one, by an X, Y and Z percentage of its distance, or one value for all three with Uniform following the chosen axis. Each part slides straight out along the stud, pin or socket that holds it, a part without one along the nearest X, Y or Z axis from the part beside it, and with Show Lines a line in the Explode Lines color from <a href="#preferences">Preferences</a> runs through the connection, from the socket on the part it came off to the moved part. Submodels in the spread, and the submodels inside them, flatten into their parts first, so everything spreads, and the flatten and spread are one undo step. Changing a setting spreads the parts again, Collapse or Undo puts the parts and the submodels back, and any other edit only puts the parts back. Save Copy saves the whole exploded project to a separate file named with -exploded before the extension, and the open file is not saved.</li>
 				<li><b>Transforms.</b> Relative Transforms move and rotate the selection around the part that has focus, Absolute Transforms in model coordinates. Rotate Separately turns each part around its own pivot, Rotate Together turns the selection as one. Each pair has a toggle shortcut.</li>
+				<li><b>Control points.</b> Insert and remove control points, clamp a point along the path or release it to rotate freely, align it to the path once, or turn it along the X, Y or Z axis. New points can start clamped, and the spread handle shapes the curve.</li>
+				<li><b>Rotation snap.</b> 1, 5, 15, 22.5, 30, 45, 60, 90 or 180 degrees, a custom angle, or None. Camera Snap orbits the view in the same <a href="#steps">steps</a>. Turns in any step land exactly on square angles, so later moves keep whole coordinates.</li>
+				<li><b>Move snap.</b> Horizontal steps of 1/20 stud, 1/4 stud, 1 flat, 1/2 stud and 1, 2, 3, 4 or 8 studs, vertical steps of 1/20 stud, 1/4 stud, 1 flat, 1/2 stud, 1 stud and 1, 2, 4 or 8 bricks, or None.</li>
 				<li><b>Keyboard moves.</b> Move and rotate the selection along +X, -X, +Y, -Y, +Z and -Z by the snap steps. Fixed Direction Keys keeps the arrow keys on the model axes instead of following the view.</li>
 				<li><b>Selection.</b> Select All, None, Invert, Adjacent Parts, by Name, and by part, color or both. Select Connected Parts follows the connection shapes of the LDCad shadow library.</li>
 				<li><b>Selection modes.</b> Single Selection picks one part, Part Selection every part of the same type, Color Selection every part of the same color, and Part and Color Selection both.</li>
-				<li><b>Select by Name.</b> A checklist of every object in the model, with All, None and Invert.</li>
-				<li><b>Part connections.</b> Use Part Connections turns connected part selection on and off, with the shadow library folder chosen in <a href="#preferences">Preferences</a>.</li>
-				<li><b>Find and Replace.</b> A bar to find parts by part and color, step through the matches or Find All, and replace one or all, submodels included on request.</li>
-				<li><b>Array.</b> Repeat the selection along one, two or three axes, with a count, an X, Y and Z offset and an X, Y and Z rotation for each.</li>
-				<li><b>Explode.</b> The Explode panel, shown from the panel context menu or View &gt; Toolbars, spreads every other visible part, or only the selected ones with each group moving as one part, away from an anchor, the focused part or the first or last selected one, by an X, Y and Z percentage of its distance, or one value for all three with Uniform following the chosen axis. Each part slides straight out along the stud, pin or socket that holds it, a part without one along the nearest X, Y or Z axis from the part beside it, and with Show Lines a line in the Explode Lines color from Preferences runs through the connection, from the socket on the part it came off to the moved part. Submodels in the spread, and the submodels inside them, flatten into their parts first, so everything spreads, and the flatten and spread are one undo step. Changing a setting spreads the parts again, Collapse or Undo puts the parts and the submodels back, and any other edit only puts the parts back. Save Copy saves the whole exploded project to a separate file named with -exploded before the extension, and the open file is not saved.</li>
-				<li><b>Flex Path.</b> Hoses, cables and other flexible parts bend along control points that stop at the part length.</li>
-				<li><b>Control points.</b> Insert and remove control points, clamp a point along the path or release it to rotate freely, align it to the path once, or turn it along the X, Y or Z axis. New points can start clamped, and the spread handle shapes the curve.</li>
 				<li><b>Groups.</b> Group the selection under a unique name, Ungroup, add the focused part to a group or remove it, and Edit Groups in a tree of parts and groups.</li>
-				<li><b>Hide and show.</b> Hide Selected or Hide Unselected, then Unhide Selected or Unhide All.</li>
-				<li><b>Show Earlier and Later.</b> Move the selected parts one step earlier or later.</li>
+				<li><b>Snapping.</b> Move in studs, flats and bricks, rotate in degrees with a custom angle, with relative or absolute transforms and separate or shared rotation.</li>
 				<li><b>Train track.</b> Rotate Train Track turns a track piece to its next connection, and Focus Next and Previous Connection choose where the next piece joins.</li>
+				<li><b>Find and Replace.</b> A bar to find parts by part and color, step through the matches or Find All, and replace one or all, submodels included on request.</li>
 				<li><b>Pivot points and keyframes.</b> Reset Pivot Point puts the pivot back at each part&#x27;s origin, and Remove Keyframes clears the animation of the selected parts.</li>
+				<li><b>Insert colors.</b> Insert with the current color, the selected part&#x27;s color or the last inserted color, or lock the Parts panel to one color.</li>
+				<li><b>Array.</b> Repeat the selection along one, two or three axes, with a count, an X, Y and Z offset and an X, Y and Z rotation for each.</li>
+				<li><b>Part connections.</b> Use Part Connections turns connected part selection on and off, with the shadow library folder chosen in Preferences.</li>
+				<li><b>Parts.</b> Insert, delete, duplicate, paint, hide and group parts, with the first part placed at the origin as an option.</li>
+				<li><b>Flex Path.</b> Hoses, cables and other flexible parts bend along control points that stop at the part length.</li>
 				<li><b>Lights and cameras.</b> Lights and cameras are placed in the model and saved with it, see <a href="#tools">Tools</a>.</li>
+				<li><b>Hide and show.</b> Hide Selected or Hide Unselected, then Unhide Selected or Unhide All.</li>
+				<li><b>Select by Name.</b> A checklist of every object in the model, with All, None and Invert.</li>
+				<li><b>Show Earlier and Later.</b> Move the selected parts one step earlier or later.</li>
 			</ul>
 
 			<div class="gallery natural">
@@ -2269,12 +2268,12 @@
 
 			<ul class="points">
 				<li><b>Edit tools.</b> Insert adds the part chosen in the Parts panel, Select picks objects, with Ctrl or a drag for several, Move and Rotate change the selection, Erase removes what you click, Paint colors a part, and Color Picker takes a part&#x27;s color.</li>
-				<li><b>View tools.</b> Zoom, Pan, Rotate View and Roll change the camera, and Zoom Region zooms into a rectangle you drag.</li>
-				<li><b>Keyboard view.</b> Zoom In and Zoom Out, and Move Forward, Backward, Left, Right, Up and Down.</li>
 				<li><b>Lights.</b> Point Light, Spotlight, Directional Light and Area Light tools place lights in the model, with named properties and units, saved in the model file.</li>
 				<li><b>Cameras.</b> The Camera tool places a camera. View &gt; Cameras switches between the first sixteen cameras, or None for the free view.</li>
-				<li><b>Cancel Action.</b> Esc cancels the current mouse action, and with nothing selected removes the cutaway.</li>
+				<li><b>View tools.</b> Zoom, Pan, Rotate View and Roll change the camera, and Zoom Region zooms into a rectangle you drag.</li>
 				<li><b>Mouse.</b> Mouse sensitivity and a shortcut for every tool and view action, recorded in <a href="#preferences">Preferences</a>.</li>
+				<li><b>Cancel Action.</b> Esc cancels the current mouse action, and with nothing selected removes the cutaway.</li>
+				<li><b>Keyboard view.</b> Zoom In and Zoom Out, and Move Forward, Backward, Left, Right, Up and Down.</li>
 			</ul>
 
 			<div class="gallery natural">
@@ -2323,19 +2322,20 @@
 			<p class="lead">Look at a model from any side, see inside it without changing it, and measure it against the grid.</p>
 
 			<ul class="points">
-				<li><b>View cube.</b> Chamfered edges and corners: click any of its 6 faces, 12 edges or 8 corners for that view.</li>
+				<li><b>Cut edges.</b> With edge lines on, the cut draws edge lines in each part&#x27;s edge color where it meets the outer faces, and thinner lines along the corners of the cut faces. Cut Edges in <a href="#preferences">Preferences</a> &gt; Views &gt; Cutaway turns them off.</li>
 				<li><b>View cube settings.</b> Shown in any corner of the view, in Extra Small to Extra Large, with its own face, highlight and text colors, and small full names or large abbreviations (TP, BT, LT, RT, FT, BK) on its faces.</li>
-				<li><b>Axis icon.</b> X, Y and Z labels with optional negative axes. The view cube, axis icon and part thumbnails come in Extra Small to Extra Large.</li>
+				<li><b>Cutaway controls.</b> Grow and Shrink resize the cutaway, Push In and Pull Out move it one plate, Shade Color sets the light shade on the cut faces, and Remove shows the whole model again.</li>
+				<li><b>Idle turntable.</b> The model turns full screen around the X, Y or Z axis when you leave StudWorx idle. Any input ends it. The idle time and the time for one turn are set in Preferences.</li>
+				<li><b>Cutaways.</b> Cube, sphere and cylinder cutaways with solid cut surfaces, a shaded cut and resize knobs, pushed in or pulled out by one plate. The model is never changed.</li>
 				<li><b>Axis icon settings.</b> Shown in any corner, with or without labels, with negative axes and a cube outline of adjustable transparency, and a color for each axis and its negative.</li>
+				<li><b>Grids.</b> A base grid with studs, lines and origin lines, vertical XZ and YZ height grids sized around the model, and a toggle for each axis line.</li>
+				<li><b>Axis icon.</b> X, Y and Z labels with optional negative axes. The view cube, axis icon and part thumbnails come in Extra Small to Extra Large.</li>
+				<li><b>Grid settings.</b> Line spacing, stud and line colors, and Height Grids Behind Model to keep the height grids behind the parts.</li>
+				<li><b>View cube.</b> Chamfered edges and corners: click any of its 6 faces, 12 edges or 8 corners for that view.</li>
 				<li><b>Preview overlays.</b> The preview shows its own view cube and axis icon, each turned on and off from its options.</li>
 				<li><b>Viewpoints.</b> Front, Back, Top, Bottom, Left, Right and Home, Zoom Extents, Look At and Normal to Face.</li>
-				<li><b>Projection.</b> Perspective or orthographic, for the active view or all views at once.</li>
 				<li><b>Cameras.</b> A floating camera bar, camera orbit snapping and cameras numbered Camera 001.</li>
-				<li><b>Cutaways.</b> Cube, sphere and cylinder cutaways with solid cut surfaces, a shaded cut and resize knobs, pushed in or pulled out by one plate. The model is never changed.</li>
-				<li><b>Cutaway controls.</b> Grow and Shrink resize the cutaway, Push In and Pull Out move it one plate, Shade Color sets the light shade on the cut faces, and Remove shows the whole model again.</li>
-				<li><b>Grids.</b> A base grid with studs, lines and origin lines, vertical XZ and YZ height grids sized around the model, and a toggle for each axis line.</li>
-				<li><b>Grid settings.</b> Line spacing, stud and line colors, and Height Grids Behind Model to keep the height grids behind the parts.</li>
-				<li><b>Idle turntable.</b> The model turns full screen around the X, Y or Z axis when you leave StudWorx idle. Any input ends it. The idle time and the time for one turn are set in <a href="#preferences">Preferences</a>.</li>
+				<li><b>Projection.</b> Perspective or orthographic, for the active view or all views at once.</li>
 			</ul>
 
 			<div class="gallery natural">
@@ -2458,13 +2458,13 @@
 			<p class="lead">Every part belongs to a building step. Steps drive the model view, the <a href="#instructions">instructions</a> and the animated GIFs.</p>
 
 			<ul class="points">
-				<li><b>Steps menu.</b> Go to the first, previous, next or last step, and insert or remove steps.</li>
+				<li><b>Step view commands.</b> Step View sets the view rotation of the current step, Remove Step View clears it, and Follow Step <a href="#views">Views</a> turns the view to each step&#x27;s rotation as you change steps.</li>
 				<li><b>Timeline.</b> Shows the step each part is added in and removed in. An empty removal step reads Never. Drag parts between steps or reorder them.</li>
-				<li><b>Move and paste.</b> Move the selection to the current, previous or next step, and paste with its steps.</li>
-				<li><b>Step <a href="#views">views</a>.</b> MLCad ROTSTEP step views are shown, edited and followed in the Timeline.</li>
-				<li><b>Step view commands.</b> Step View sets the view rotation of the current step, Remove Step View clears it, and Follow Step Views turns the view to each step&#x27;s rotation as you change steps.</li>
 				<li><b>Emphasis.</b> Fade Previous Steps and Highlight New Parts in the model view and the instructions, with a color for each.</li>
 				<li><b>Animation keys.</b> Add Keys records new animation keys for parts, lights and cameras as you change them.</li>
+				<li><b>Move and paste.</b> Move the selection to the current, previous or next step, and paste with its steps.</li>
+				<li><b>Steps menu.</b> Go to the first, previous, next or last step, and insert or remove steps.</li>
+				<li><b>Step views.</b> MLCad ROTSTEP step views are shown, edited and followed in the Timeline.</li>
 			</ul>
 
 			<div class="gallery natural">
@@ -2519,14 +2519,14 @@
 			</figure>
 
 			<ul class="points">
+				<li><b>Properties.</b> Compact position, rotation and transform rows and a spanning color swatch. Lights and cameras get named rows with units.</li>
+				<li><b>Terminal folders.</b> Follow Model Folder moves the terminal to the folder of each model you open, and Go to Model Folder moves it there once.</li>
 				<li><b>Parts.</b> Categories and palettes with a filter. The panel snaps to whole thumbnail tiles and rows, docked or floating.</li>
 				<li><b>Part palettes.</b> Create, rename, reorder and delete palettes, import them, or build one from an online set inventory.</li>
 				<li><b>Colors.</b> Collapsible solid, translucent and special color groups with square color tiles.</li>
-				<li><b>Properties.</b> Compact position, rotation and transform rows and a spanning color swatch. Lights and cameras get named rows with units.</li>
+				<li><b>Terminal.</b> An embedded terminal sized to whole rows and columns, with Open Model Folder.</li>
 				<li><b>Minifigure Builder.</b> Build a minifigure from templates and add several variations to the model.</li>
 				<li><b>Preview.</b> Parts and <a href="#models">models</a> in a square viewport, with Keep Last Selection.</li>
-				<li><b>Terminal.</b> An embedded terminal sized to whole rows and columns, with Open Model Folder.</li>
-				<li><b>Terminal folders.</b> Follow Model Folder moves the terminal to the folder of each model you open, and Go to Model Folder moves it there once.</li>
 			</ul>
 
 			<div class="gallery natural">
@@ -2601,7 +2601,7 @@
 			<div class="gallery three">
 				<figure>
 					<button class="shot" data-full="resources/images/instructions-page-cover.png" aria-label="Enlarge Cover page">
-						<img src="resources/images/instructions-page-cover.png" alt="Cover page" width="2877" height="1747" loading="lazy">
+						<img src="resources/images/instructions-page-cover.png" alt="Cover page" width="2673" height="1543" loading="lazy">
 					</button>
 
 					<figcaption>Cover page</figcaption>
@@ -2609,7 +2609,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/instructions-page-step.png" aria-label="Enlarge Step page">
-						<img src="resources/images/instructions-page-step.png" alt="Step page" width="2877" height="1747" loading="lazy">
+						<img src="resources/images/instructions-page-step.png" alt="Step page" width="2673" height="1543" loading="lazy">
 					</button>
 
 					<figcaption>Step page</figcaption>
@@ -2617,7 +2617,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/instructions-page-bill-of-materials.png" aria-label="Enlarge Bill of materials">
-						<img src="resources/images/instructions-page-bill-of-materials.png" alt="Bill of materials" width="2244" height="1362" loading="lazy">
+						<img src="resources/images/instructions-page-bill-of-materials.png" alt="Bill of materials" width="2084" height="1203" loading="lazy">
 					</button>
 
 					<figcaption>Bill of materials</figcaption>
@@ -2625,16 +2625,16 @@
 			</div>
 
 			<ul class="points">
-				<li><b>Page setup.</b> Paper and screen presets, metric or imperial units, margins and orientation.</li>
 				<li><b>Page bar.</b> First, Previous, Next and Last buttons under the page, Cover and Bill of Materials jumps that grey out while those pages are off, Step Page and Blank Page to insert an empty step or a blank page before the current page, Remove Page for blank pages and pages of empty steps, and a page box to type the page to go to. Every button has its own mnemonic, and the timeline First, Previous, Next and Last shortcuts turn the pages.</li>
 				<li><b>Pages.</b> A cover page with the model title and author in their own fonts and colors, a bill of materials under a Parts List title in its own font and color, blank page breaks and the steps per page, set for each page, with page backgrounds of their own for submodel steps and an Apply to All Pages for the page background and thumbnails.</li>
-				<li><b>Style.</b> Step dividers, the document font, the model projection, parts list counts, sort order and border, and full page backgrounds.</li>
-				<li><b>Step images.</b> Parts new to each step are outlined and the earlier ones fade.</li>
-				<li><b>Placement.</b> Place, drag and lock every page element within the page margins, on a snapping page grid. Snap to Anchors snaps the corners, edge centers and center of a dragged element to those of the page area and the other elements, and turning it on turns Snap to Grid off, and the other way around.</li>
-				<li><b>Elements.</b> Page numbers, colors, fonts, padding, margin, border, corner radius and background for every page element, plus notices and pointers to emphasize parts and steps.</li>
-				<li><b>Rulers.</b> Horizontal and vertical rulers measure the page in the page units, or the document units when they are in use, with the page and its margins shaded and an arrow on each ruler that follows the pointer, filled with its own color and alpha. Show Rulers turns them on and off.</li>
 				<li><b>Element inspector.</b> Like the box model of a web browser inspector, Show Element Margins and Show Element Padding fill the margin around and the padding inside every page element, and Show Element Anchors marks its corners, edge centers and center. Each overlay has its own color and alpha in the Colors <a href="#preferences">preferences</a>, and none of them is printed.</li>
+				<li><b>Placement.</b> Place, drag and lock every page element within the page margins, on a snapping page grid. Snap to Anchors snaps the corners, edge centers and center of a dragged element to those of the page area and the other elements, and turning it on turns Snap to Grid off, and the other way around.</li>
+				<li><b>Rulers.</b> Horizontal and vertical rulers measure the page in the page units, or the document units when they are in use, with the page and its margins shaded and an arrow on each ruler that follows the pointer, filled with its own color and alpha. Show Rulers turns them on and off.</li>
 				<li><b>Editor, Export HTML and Print.</b> An Editor panel to read and edit the model file text, whose height snaps to whole lines so no line is ever cut off, Export HTML for the instruction pages, and a built-in Print panel.</li>
+				<li><b>Elements.</b> Page numbers, colors, fonts, padding, margin, border, corner radius and background for every page element, plus notices and pointers to emphasize parts and steps.</li>
+				<li><b>Style.</b> Step dividers, the document font, the model projection, parts list counts, sort order and border, and full page backgrounds.</li>
+				<li><b>Page setup.</b> Paper and screen presets, metric or imperial units, margins and orientation.</li>
+				<li><b>Step images.</b> Parts new to each step are outlined and the earlier ones fade.</li>
 			</ul>
 
 			<figure class="wide">
@@ -2713,13 +2713,13 @@
 			<p class="lead">Large builds split into submodels that you can edit on their own or in place, inside the model that uses them.</p>
 
 			<ul class="points">
-				<li><b>Properties.</b> Part IDs, thumbnails and counts, with BrickLink or CSV export.</li>
 				<li><b>Submodels.</b> New Submodel, the Submodels list, Open Selected Model, Inline Selected Models, Flatten Model, which replaces every submodel at all depths with its parts in one undo step, also run from the command line with --flatten, and Move to New Model.</li>
-				<li><b>Submodels list.</b> Create, rename, duplicate and delete submodels, set the active one, and export them as separate LDraw <a href="#files">files</a>.</li>
-				<li><b>Models menu.</b> Switch between up to forty models of the file from the Models menu.</li>
-				<li><b>In-place editing.</b> Edit a submodel inside its parent. A path bar shows where you are, and its buttons go back to each model.</li>
 				<li><b>Editing commands.</b> Edit Selected Submodel enters the selected submodel in place, and End Submodel Editing goes back to its parent.</li>
+				<li><b>Submodels list.</b> Create, rename, duplicate and delete submodels, set the active one, and export them as separate LDraw <a href="#files">files</a>.</li>
+				<li><b>In-place editing.</b> Edit a submodel inside its parent. A path bar shows where you are, and its buttons go back to each model.</li>
 				<li><b>Names.</b> Consistent default names and numbered duplicates: Submodel 001.ldr, and Car.ldr becomes Car 001.ldr.</li>
+				<li><b>Models menu.</b> Switch between up to forty models of the file from the Models menu.</li>
+				<li><b>Properties.</b> Part IDs, thumbnails and counts, with BrickLink or CSV export.</li>
 			</ul>
 
 			<div class="gallery three">
@@ -2767,14 +2767,14 @@
 
 			<ul class="points">
 				<li><b>General.</b> Reference paths, where the color configurations, minifigure builder settings and BrickLink mapping update from ldraw.org and Rebrickable with one button and bundled copies are used until a file is set, online services, where the Rebrickable API key is kept and Get Key opens its page, a rejected key being cleared so it is asked for again, the author of new <a href="#models">models</a> built from a name, email address and comment, such as All rights reserved, joined by the author line splitter and previewed as the author line, and the parts library, Blender, POV-Ray and LGEO locations.</li>
-				<li><b>Startup and <a href="#files">files</a>.</b> Open the most recent file, restore the tab layout, load all parts before showing a model, watch for file changes and migrate LeoCAD models automatically.</li>
-				<li><b><a href="#rendering">Rendering</a> and <a href="#views">Views</a>.</b> Rendering quality and the Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups.</li>
-				<li><b><a href="#interface">Interface</a> and <a href="#instructions">Instructions</a>.</b> Interface and view colors, edge contrast, the default instruction page settings, and the rulers and element inspector overlays of the instructions page.</li>
-				<li><b>View colors.</b> Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, flex paths, the view cube, every axis, and the element margin, padding and anchor overlays and the ruler pointer arrows of the instructions page, each with an alpha slider.</li>
-				<li><b>Categories.</b> Part categories turned on and off with a checkbox, edited, imported and exported.</li>
+				<li><b>View colors.</b> Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, flex paths, the view cube, every axis, and the element margin, padding and anchor overlays and the ruler pointer arrows of the <a href="#instructions">instructions</a> page, each with an alpha slider.</li>
 				<li><b>Keyboard and Mouse.</b> Shortcuts recorded by clicking, importable and exportable. Commands that share a shortcut show in red, and assigning a taken shortcut asks before moving it.</li>
+				<li><b>Startup and <a href="#files">files</a>.</b> Open the most recent file, restore the tab layout, load all parts before showing a model, watch for file changes and migrate LeoCAD models automatically.</li>
+				<li><b><a href="#interface">Interface</a> and Instructions.</b> Interface and view colors, edge contrast, the default instruction page settings, and the rulers and element inspector overlays of the instructions page.</li>
+				<li><b><a href="#rendering">Rendering</a> and <a href="#views">Views</a>.</b> Rendering quality and the Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups.</li>
 				<li><b>Shortcut filters.</b> Filter commands and tools by name or shortcut, give each two shortcuts, and reset them to the defaults.</li>
 				<li><b>From LeoCAD.</b> Settings, part palettes and minifigure templates are copied from LeoCAD on the first start.</li>
+				<li><b>Categories.</b> Part categories turned on and off with a checkbox, edited, imported and exported.</li>
 			</ul>
 
 			<div class="gallery four tall">
@@ -3408,9 +3408,9 @@
 			<p class="more"><a href="https://github.com/nathaneltitane/studworx/releases/latest">Download the latest release ›</a></p>
 
 			<ul class="points">
+				<li><b>Prepare.</b> To build, install a C++ compiler, Qt 5 (widgets, OpenGL, print support, network, xml and concurrent modules) and zlib development packages, listed below as build requirements. The optional packages add gamepad input, the terminal panel with KDE Frameworks KParts and a KDE Frameworks 5 Konsole, and the file manager thumbnails with KIO.</li>
 				<li><b>Linux based systems.</b> The .deb and .rpm packages install to /opt/studworx. The AppImage runs from anywhere after chmod +x. Tested on Debian 12 and 13, Ubuntu 22.04 and 24.04, Rocky Linux 9, Fedora and openSUSE Tumbleweed.</li>
 				<li><b>macOS.</b> The disk <a href="#image">image</a> is not notarized: on the first start, right click StudWorx and choose Open.</li>
-				<li><b>Prepare.</b> To build, install a C++ compiler, Qt 5 (widgets, OpenGL, print support, network, xml and concurrent modules) and zlib development packages, listed below as build requirements. The optional packages add gamepad input, the terminal panel with KDE Frameworks KParts and a KDE Frameworks 5 Konsole, and the file manager thumbnails with KIO.</li>
 			</ul>
 
 			<div class="table">
@@ -3456,6 +3456,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<summary>2026-11-03</summary>
 
 				<ul>
+					<li>Cutaway: edge lines in the part edge color outline where the cutaway cuts through parts, with thinner lines along the corners of the cut, and Cut Edges in <a href="#preferences">Preferences</a> &gt; <a href="#views">Views</a> &gt; Cutaway turns them off</li>
 					<li>Explode: the Explode panel, shown from the panel context menu or View &gt; Toolbars, spreads the parts on screen away from an anchor part, straight out of their connections with lines back to where they connect, submodels at all depths flatten first in the same undo step and Collapse puts them back, and Save Copy saves the exploded model to a separate -exploded file</li>
 					<li>Submodels: Flatten Model in the Model menu and the Submodel context menu replaces every submodel at all depths with its parts in one undo step</li>
 					<li>Command line: --flatten &lt;outfile.ldr&gt; replaces every submodel at all depths with its parts and saves the model, before any other export</li>
@@ -3463,7 +3464,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Lights: point lights and light targets draw as wireframe spheres like the other lights, and spot, directional and area light outlines use more segments</li>
 					<li><a href="#tools">Tools</a>: the Delete tool is now Erase, so it no longer shares a name with Part &gt; Delete</li>
 					<li>Defaults: new view colors and keyboard and mouse shortcuts, with Orbit on the right button and Pan on the middle button</li>
-					<li>Keyboard shortcuts: categories in <a href="#preferences">Preferences</a> show readable names such as Snap (Angle)</li>
+					<li>Keyboard shortcuts: categories in Preferences show readable names such as Snap (Angle)</li>
 					<li>View cube: a Labels setting in Preferences shows Small Labels or Large Abbreviations (TP, BT, LT, RT, FT, BK) on its faces</li>
 					<li><a href="#instructions">Instructions</a>: a bar under the page goes to the first, previous, cover, bill of materials, next and last pages, inserts a Step Page or Blank Page, removes blank or empty pages and has a page box to type the page, each button with its own mnemonic, and the timeline shortcuts turn the pages</li>
 					<li>Instructions: Submodel Background in the Page category colors the pages of submodel <a href="#steps">steps</a> apart from the main model pages</li>
@@ -3526,7 +3527,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Find and Replace: the bar labels read Find and Replace</li>
 					<li>Import Set Inventory: the Name column takes the free width, so long set names show in full</li>
 					<li>Step View: the dialog fits its fields, with labels on the left and fields to the right edge</li>
-					<li>Site: the Rendering, <a href="#views">Views</a>, Keyboard and Mouse preference screenshots show the shared slider value column and a selected shortcut conflict in red, and the Steps section shows the Step View dialog</li>
+					<li>Site: the Rendering, Views, Keyboard and Mouse preference screenshots show the shared slider value column and a selected shortcut conflict in red, and the Steps section shows the Step View dialog</li>
 					<li>Site: the Import Set Inventory screenshot shows search results</li>
 					<li>Export BrickLink: a current mapping of over 55,000 parts and 236 colors ships with StudWorx and is used until you set your own file, so exports work without building one first</li>
 					<li>Preferences: updating the BrickLink mapping now starts a new file from the bundled one and takes the Rebrickable numbers over outdated BrickLink numbers in the part files</li>

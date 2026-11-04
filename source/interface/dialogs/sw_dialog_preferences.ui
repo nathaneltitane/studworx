@@ -2156,6 +2156,16 @@
             </property>
            </widget>
           </item>
+          <item row="3" column="0" colspan="3">
+           <widget class="QCheckBox" name="CutawayEdgesCheckBox">
+            <property name="toolTip">
+             <string>Draw edge lines where the cutaway cuts through parts, in the part edge color, when edge lines are shown.</string>
+            </property>
+            <property name="text">
+             <string>Cut Edges</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
        </item>
@@ -4866,6 +4876,7 @@
   <tabstop>CutawaySizeSpinBox</tabstop>
   <tabstop>CutawayShadeColorButton</tabstop>
   <tabstop>CutawayShadeAlphaSlider</tabstop>
+  <tabstop>CutawayEdgesCheckBox</tabstop>
   <tabstop>TurntableIdleDurationSpinBox</tabstop>
   <tabstop>TurntableTurnTimeSpinBox</tabstop>
   <tabstop>TurntableAxisCombo</tabstop>

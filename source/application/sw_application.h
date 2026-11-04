@@ -199,6 +199,7 @@ public:
 	quint32 mOverlayColor;
 	quint32 mCutawayShadeColor;
 	int mCutawayShadeAlpha;
+	bool mCutawayEdges;
 	quint32 mActiveViewColor;
 	quint32 mInactiveViewColor;
 	bool mDrawEdgeLines;

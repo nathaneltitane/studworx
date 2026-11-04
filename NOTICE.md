@@ -3,6 +3,7 @@
   <details open>
   <summary>2026-11-03</summary>
 
+  - Cutaway: edge lines in the part edge color outline where the cutaway cuts through parts, with thinner lines along the corners of the cut, and Cut Edges in Preferences > Views > Cutaway turns them off
   - Explode: the Explode panel, shown from the panel context menu or View > Toolbars, spreads the parts on screen away from an anchor part, straight out of their connections with lines back to where they connect, submodels at all depths flatten first in the same undo step and Collapse puts them back, and Save Copy saves the exploded model to a separate -exploded file
   - Submodels: Flatten Model in the Model menu and the Submodel context menu replaces every submodel at all depths with its parts in one undo step
   - Command line: --flatten <outfile.ldr> replaces every submodel at all depths with its parts and saves the model, before any other export

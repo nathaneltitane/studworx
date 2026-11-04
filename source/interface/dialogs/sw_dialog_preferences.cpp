@@ -586,6 +586,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	UpdateStudSuffix(ui->CutawaySizeSpinBox);
 	ui->CutawayShadeAlphaSlider->setValue(mOptions->Preferences.mCutawayShadeAlpha);
 	CutawayShadeAlphaChanged();
+	ui->CutawayEdgesCheckBox->setChecked(mOptions->Preferences.mCutawayEdges);
 	ui->ElementMarginAlphaSlider->setValue(mOptions->Instructions.ElementMarginAlpha);
 	ui->ElementPaddingAlphaSlider->setValue(mOptions->Instructions.ElementPaddingAlpha);
 	ui->ElementAnchorAlphaSlider->setValue(mOptions->Instructions.ElementAnchorAlpha);
@@ -928,6 +929,7 @@ void swPreferencesDialog::accept()
 	mOptions->Preferences.mProjectionScope = static_cast<swProjectionScope>(ui->ProjectionScopeCombo->currentIndex());
 	mOptions->Preferences.mCutawaySize = ui->CutawaySizeSpinBox->value();
 	mOptions->Preferences.mCutawayShadeAlpha = ui->CutawayShadeAlphaSlider->value();
+	mOptions->Preferences.mCutawayEdges = ui->CutawayEdgesCheckBox->isChecked();
 	mOptions->Preferences.mTurntableIdleDuration = ui->TurntableIdleDurationSpinBox->value();
 	mOptions->Preferences.mTurntableTurnTime = ui->TurntableTurnTimeSpinBox->value();
 	mOptions->Preferences.mTurntableAxis = static_cast<swTurntableAxis>(ui->TurntableAxisCombo->currentIndex());

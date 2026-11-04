@@ -119,10 +119,11 @@ public:
 		mLightingStyle = LightingStyle;
 	}
 
-	void SetCutaway(swCutawayShape CutawayShape, const swMatrix44& CutawayMatrix)
+	void SetCutaway(swCutawayShape CutawayShape, const swMatrix44& CutawayMatrix, bool CutawayEdges)
 	{
 		mCutawayShape = CutawayShape;
 		mCutawayMatrix = CutawayMatrix;
+		mCutawayEdges = CutawayEdges;
 	}
 
 	void SetLineSettings(bool DrawEdgeLines, bool DrawConditionalLines, float LineWidth)
@@ -212,6 +213,7 @@ protected:
 	swLightingStyle mLightingStyle;
 	swCutawayShape mCutawayShape;
 	swMatrix44 mCutawayMatrix;
+	bool mCutawayEdges = true;
 	bool mDrawInterface = false;
 	swHighlightRenderMode mHighlightRenderMode;
 	bool mRequireCompleteAssets = false;
