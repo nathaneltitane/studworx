@@ -102,6 +102,7 @@ studworx model.ldr opens a model. The options below work without opening a windo
 | --stud-style | One of the eight stud styles |
 | --edge-color, --edge-color-black, --edge-color-dark, --stud-cylinder-color, their --no- forms, --edge-color-automatic, --edge-contrast, --edge-light-dark | Edge, black edge, dark edge and stud cylinder colors, automated edge colors, contrast and light to dark value |
 | --bricklink-exceptions | Use a comma or tab separated file of parts and their BrickLink numbers in BrickLink exports |
+| --flatten | Replace every submodel at all depths with its parts and save the model, before any other export |
 | --export-wavefront, --export-3ds, --export-collada, --export-kmz, --export-csv, --export-bricklink, --export-html, --export-povray | Export Wavefront, 3D Studio, COLLADA, KMZ, CSV, BrickLink, HTML and POV-Ray files |
 | --render-povray | Render with POV-Ray |
 | --import-settings, --export-settings | Settings as an ini file |
@@ -444,7 +445,7 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 Large builds split into submodels that you can edit on their own or in place, inside the model that uses them.
 
 - **Properties.** Part IDs, thumbnails and counts, with BrickLink or CSV export.
-- **Submodels.** New Submodel, the Submodels list, Open Selected Model, Inline Selected Models, Flatten Model, which replaces every submodel at all depths with its parts in one undo step, and Move to New Model.
+- **Submodels.** New Submodel, the Submodels list, Open Selected Model, Inline Selected Models, Flatten Model, which replaces every submodel at all depths with its parts in one undo step, also run from the command line with --flatten, and Move to New Model.
 - **Submodels list.** Create, rename, duplicate and delete submodels, set the active one, and export them as separate LDraw files.
 - **Models menu.** Switch between up to forty models of the file from the Models menu.
 - **In-place editing.** Edit a submodel inside its parent. A path bar shows where you are, and its buttons go back to each model.

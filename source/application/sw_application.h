@@ -302,6 +302,7 @@ struct swCommandLineOptions
 	bool SetKMZGeometry = false;
 	bool KMZVisibleSurfaces = true;
 	bool SaveCSV = false;
+	bool SaveFlatten = false;
 	bool SaveBrickLink = false;
 	bool SetBrickLinkCondition = false;
 	bool SetBrickLinkWantedList = false;
@@ -358,6 +359,7 @@ struct swCommandLineOptions
 	QString SaveCOLLADAName;
 	QString SaveKMZName;
 	QString SaveCSVName;
+	QString SaveFlattenName;
 	QString SaveBrickLinkName;
 	QString BrickLinkWantedList;
 	QString BrickLinkExceptions;
@@ -381,7 +383,7 @@ struct swCommandLineOptions
 	// Tells if only settings transfer.
 	bool HasSaveAndExit() const
 	{
-		return SaveImage || SaveWavefront || Save3DS || SaveCOLLADA || SaveKMZ || SaveCSV || SaveBrickLink || SaveHTML || SavePOVRay || RenderPOVRay;
+		return SaveImage || SaveFlatten || SaveWavefront || Save3DS || SaveCOLLADA || SaveKMZ || SaveCSV || SaveBrickLink || SaveHTML || SavePOVRay || RenderPOVRay;
 	}
 
 	bool HasSettingsTransfer() const

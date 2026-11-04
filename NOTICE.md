@@ -5,6 +5,7 @@
 
   - Explode: the Explode panel, shown from the panel context menu or View > Toolbars, spreads the parts on screen away from an anchor part, straight out of their connections with lines back to where they connect, submodels at all depths flatten first in the same undo step and Collapse puts them back, and Save Copy saves the exploded model to a separate -exploded file
   - Submodels: Flatten Model in the Model menu and the Submodel context menu replaces every submodel at all depths with its parts in one undo step
+  - Command line: --flatten <outfile.ldr> replaces every submodel at all depths with its parts and saves the model, before any other export
   - Instructions: a bar under the page goes to the first, previous, cover, bill of materials, next and last pages, inserts a Step Page or Blank Page, removes blank or empty pages and has a page box to type the page, each button with its own mnemonic, and the timeline shortcuts turn the pages
   - Instructions: Submodel Background in the Page category colors the pages of submodel steps apart from the main model pages
   - Instructions: Apply to All Pages in the Page and Parts List categories gives every page the background or thumbnails of the current page, the Arrowhead pointer tip is now Arrow and Pointer Tip is greyed out for callout wedges

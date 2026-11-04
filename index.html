@@ -1836,6 +1836,7 @@
 						<tr><td>--stud-style</td><td>One of the eight stud styles</td></tr>
 						<tr><td>--edge-color, --edge-color-black, --edge-color-dark, --stud-cylinder-color, their --no- forms, --edge-color-automatic, --edge-contrast, --edge-light-dark</td><td>Edge, black edge, dark edge and stud cylinder colors, automated edge colors, contrast and light to dark value</td></tr>
 						<tr><td>--bricklink-exceptions</td><td>Use a comma or tab separated file of parts and their BrickLink numbers in BrickLink exports</td></tr>
+						<tr><td>--flatten</td><td>Replace every submodel at all depths with its parts and save the model, before any other export</td></tr>
 						<tr><td>--export-wavefront, --export-3ds, --export-collada, --export-kmz, --export-csv, --export-bricklink, --export-html, --export-povray</td><td>Export Wavefront, 3D Studio, COLLADA, KMZ, CSV, BrickLink, HTML and POV-Ray files</td></tr>
 						<tr><td>--render-povray</td><td>Render with POV-Ray</td></tr>
 						<tr><td>--import-settings, --export-settings</td><td>Settings as an ini file</td></tr>
@@ -2702,7 +2703,7 @@
 
 			<ul class="points">
 				<li><b>Properties.</b> Part IDs, thumbnails and counts, with BrickLink or CSV export.</li>
-				<li><b>Submodels.</b> New Submodel, the Submodels list, Open Selected Model, Inline Selected Models, Flatten Model, which replaces every submodel at all depths with its parts in one undo step, and Move to New Model.</li>
+				<li><b>Submodels.</b> New Submodel, the Submodels list, Open Selected Model, Inline Selected Models, Flatten Model, which replaces every submodel at all depths with its parts in one undo step, also run from the command line with --flatten, and Move to New Model.</li>
 				<li><b>Submodels list.</b> Create, rename, duplicate and delete submodels, set the active one, and export them as separate LDraw <a href="#files">files</a>.</li>
 				<li><b>Models menu.</b> Switch between up to forty models of the file from the Models menu.</li>
 				<li><b>In-place editing.</b> Edit a submodel inside its parent. A path bar shows where you are, and its buttons go back to each model.</li>
@@ -3446,6 +3447,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<ul>
 					<li>Explode: the Explode panel, shown from the panel context menu or View &gt; Toolbars, spreads the parts on screen away from an anchor part, straight out of their connections with lines back to where they connect, submodels at all depths flatten first in the same undo step and Collapse puts them back, and Save Copy saves the exploded model to a separate -exploded file</li>
 					<li>Submodels: Flatten Model in the Model menu and the Submodel context menu replaces every submodel at all depths with its parts in one undo step</li>
+					<li>Command line: --flatten &lt;outfile.ldr&gt; replaces every submodel at all depths with its parts and saves the model, before any other export</li>
 					<li><a href="#instructions">Instructions</a>: a bar under the page goes to the first, previous, cover, bill of materials, next and last pages, inserts a Step Page or Blank Page, removes blank or empty pages and has a page box to type the page, each button with its own mnemonic, and the timeline shortcuts turn the pages</li>
 					<li>Instructions: Submodel Background in the Page category colors the pages of submodel <a href="#steps">steps</a> apart from the main model pages</li>
 					<li>Instructions: Apply to All Pages in the Page and Parts List categories gives every page the background or thumbnails of the current page, the Arrowhead pointer tip is now Arrow and Pointer Tip is greyed out for callout wedges</li>

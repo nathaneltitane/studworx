@@ -26,6 +26,7 @@ SOURCES += \
 	sw_command_meta_test.cpp \
 	sw_connectivity_test.cpp \
 	sw_math_test.cpp \
+	sw_model_flatten_test.cpp \
 	sw_object_history_test.cpp \
 	sw_object_property_test.cpp \
 	sw_profile_test.cpp \

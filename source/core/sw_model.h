@@ -416,6 +416,7 @@ public:
 	void MoveSelectionToModel(swModel* Model);
 	void InlineSelectedModels();
 	void FlattenModel();
+	bool FlattenSubModels(bool SelectedOnly, swPart*& Anchor, std::vector<swObject*>& Selection);
 
 	swGroup* AddGroup(const QString& Prefix, swGroup* Parent);
 	swGroup* GetGroup(const QString& Name, bool CreateIfMissing);
@@ -640,7 +641,6 @@ protected:
 	void BeginEditHistory();
 	void BeginMergeableEditHistory(swModelHistoryEditMerge ModelHistoryEditMerge, swObjectPropertyId PropertyId);
 	void EndEditHistory();
-	bool FlattenSubModels(bool SelectedOnly, swPart*& Anchor, std::vector<swObject*>& Selection);
 	void SetModelProperties(const swModelProperties& ModelProperties);
 
 	void RunHistorySequence(const std::vector<std::unique_ptr<swModelHistory>>& HistorySequence, bool Apply);

@@ -1102,6 +1102,11 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			if (ParseInteger(StudStyle, 0, static_cast<int>(swStudStyle::Count) - 1))
 				Options.StudStyle = static_cast<swStudStyle>(StudStyle);
 		}
+		else if (Option == QLatin1String("--flatten"))
+		{
+			Options.SaveFlatten = true;
+			ParseString(Options.SaveFlattenName, true);
+		}
 		else if (Option == QLatin1String("--export-wavefront"))
 		{
 			Options.SaveWavefront = true;
@@ -1280,6 +1285,7 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			Options.StdOut += tr("  --edge-contrast <contrast>: Edge color contrast of automatic edge colors, between 0.0 and 1.0.\n");
 			Options.StdOut += tr("  --edge-light-dark <value>: Light/Dark color value of automatic edge colors, between 0.0 and 1.0.\n");
 			Options.StdOut += tr("\nExport:\n");
+			Options.StdOut += tr("  --flatten <outfile.ldr>: Replace every submodel at all depths with its parts and save the model, before any other export.\n");
 			Options.StdOut += tr("  --export-wavefront <outfile.obj>: Export the model to Wavefront OBJ format.\n");
 			Options.StdOut += tr("  --export-3ds <outfile.3ds>: Export the model to 3D Studio 3DS format.\n");
 			Options.StdOut += tr("  --export-collada <outfile.dae>: Export the model to COLLADA DAE format.\n");
@@ -1720,6 +1726,24 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 					ActiveView->SetCameraAngles(Options.CameraLatLon[0], Options.CameraLatLon[1]);
 				else if (Options.SetCameraPosition)
 					ActiveView->SetViewpoint(Options.CameraPosition[0], Options.CameraPosition[1], Options.CameraPosition[2]);
+			}
+		}
+
+		if (Options.SaveFlatten)
+		{
+			swPart* Anchor = nullptr;
+			std::vector<swObject*> Selection;
+
+			mProject->GetMainModel()->FlattenSubModels(false, Anchor, Selection);
+
+			const swResult<void> FlattenResult = mProject->SaveCopy(Options.SaveFlattenName);
+
+			if (FlattenResult)
+				StdOut << tr("Saved '%1'.\n").arg(Options.SaveFlattenName);
+			else
+			{
+				OutputFailed = true;
+				StdErr << FlattenResult.error() << '\n';
 			}
 		}
 
