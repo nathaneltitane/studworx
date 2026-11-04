@@ -59,6 +59,7 @@ struct swExplodeSettings
 };
 
 enum class swCameraProjection;
+enum class swCutawayShape;
 struct swImageTurntable;
 struct swImageFraming;
 struct swSetInventoryItem;
@@ -600,6 +601,12 @@ public:
 
 	void AddMinifigure(const swMinifigure& Minifigure);
 	void UpdateInterface();
+
+	// cutaway of the views, kept with the file
+	swCutawayShape mCutawayShape{};
+	swVector3 mCutawayCenter;
+	swVector3 mCutawayNormal;
+	float mCutawaySize = 0.0f;
 
 protected:
 	swResult<QImage> RenderStepImageWithReadyAssets(bool Zoom, int Width, int Height, swStep Step, swCamera* OutputCamera, swImageBackground Background);

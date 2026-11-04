@@ -1,10 +1,14 @@
 #!/bin/bash
 
-# build and install studworx with its thumbnailer and file associations, without a package
+# build and install studworx
 
 # usage: tools/studworx-install [prefix] [build directory]
 
+# stop on any error
+
 set -e
+
+# script folder
 
 directory_script="${BASH_SOURCE[0]%/*}"
 
@@ -15,15 +19,22 @@ then
 	directory_script="."
 fi
 
+# source, prefix and build folders
+
 directory_source="$(cd "${directory_script}/.." && pwd)"
 directory_prefix="${1:-/usr/local}"
 directory_build="${2:-${directory_source}/build/install}"
 
-tool_qmake="$(command -v qmake || command -v qmake-qt5)"
+# qt5 qmake
+
+tool_qmake="$(command -v qmake || command -v qmake-qt5)" || true
+
+# stop without qmake
 
 if [ -z "${tool_qmake}" ]
 then
 	printf "%s\n" "qmake not found"
+
 	exit 1
 fi
 
@@ -37,9 +48,9 @@ do
 	directory_writable="${directory_writable:-/}"
 done
 
-# use to run a command as superuser when the target is not writable
-
 command_run () {
+
+	# use to run as superuser if needed
 
 	local directory_target="${1}"
 
@@ -49,37 +60,50 @@ command_run () {
 	else
 		sudo "${@:2}"
 	fi
+
 }
 
 # build and install
 
 mkdir -p "${directory_build}"
+
 cd "${directory_build}"
 
-"${tool_qmake}" "${directory_source}/studworx.pro" \
-	CONFIG+=release CONFIG-=debug \
+"${tool_qmake}" "${directory_source}/studworx.pro"	\
+	CONFIG+=release CONFIG-=debug					\
 	INSTALL_PREFIX="${directory_prefix}"
 
+# compile and install
+
 make -j "$(nproc)"
+
 command_run "${directory_writable}" make install
 
 # kde thumbnail plugin
 
-directory_plugins="$("${tool_qmake}" -query QT_INSTALL_PLUGINS)"
+# qt plugin folders
 
-if [ -f "$("${tool_qmake}" -query QT_INSTALL_ARCHDATA)/mkspecs/modules/qt_KIOGui.pri" ]
+directory_plugins="$("${tool_qmake}" -query QT_INSTALL_PLUGINS)"
+directory_archdata="$("${tool_qmake}" -query QT_INSTALL_ARCHDATA)"
+file_kio="${directory_archdata}/mkspecs/modules/qt_KIOGui.pri"
+
+# only with kio
+
+if [ -f "${file_kio}" ]
 then
 	mkdir -p "${directory_build}/thumbnailer"
+
 	cd "${directory_build}/thumbnailer"
 
-	"${tool_qmake}" "${directory_source}/source/thumbnailer/thumbnailer.pro" \
-		CONFIG+=release CONFIG-=debug \
+	"${tool_qmake}" "${directory_source}/source/thumbnailer/thumbnailer.pro"	\
+		CONFIG+=release CONFIG-=debug											\
 		BIN_DIR="${directory_prefix}/bin"
 
 	# rebuild for the program path
 
 	make clean
 	make -j "$(nproc)"
+
 	command_run "${directory_plugins}" make install
 
 	cd "${directory_build}"
@@ -87,16 +111,20 @@ else
 	printf "%s\n" "kde frameworks kio not found, thumbnail plugin skipped"
 fi
 
+# installed share and program
+
 directory_share="${directory_prefix}/share"
 file_program="${directory_prefix}/bin/studworx"
 
-# use to point an installed entry at the installed binary
-
 program_set () {
+
+	# use to point entries at the binary
 
 	local file_target="${1}"
 	local lines_file
 	local index_line
+
+	# full program path
 
 	mapfile -t lines_file < "${file_target}"
 
@@ -107,15 +135,19 @@ program_set () {
 		lines_file[index_line]="${lines_file[index_line]/ studworx / ${file_program} }"
 	done
 
+	# write back
+
 	printf "%s\n" "${lines_file[@]}" | command_run "${directory_writable}" tee "${file_target}" > /dev/null
+
 }
 
 # run without studworx on the path
 
 program_set "${directory_share}/applications/studworx.desktop"
+
 program_set "${directory_share}/thumbnailers/studworx.thumbnailer"
 
-# trash entries left by the studworks name
+# trash old studworks entries
 
 file_legacy="thumbnailers/studworks.thumbnailer"
 
@@ -129,22 +161,29 @@ done
 
 # refresh desktop caches
 
-if [ -n "$(command -v update-mime-database)" ]
+tool_mime="$(command -v update-mime-database)" || true
+tool_desktop="$(command -v update-desktop-database)" || true
+tool_icons="$(command -v gtk-update-icon-cache)" || true
+tool_associate="$(command -v xdg-mime)" || true
+
+# mime, desktop and icons
+
+if [ -n "${tool_mime}" ]
 then
-	command_run "${directory_writable}" update-mime-database "${directory_share}/mime"
+	command_run "${directory_writable}" "${tool_mime}" "${directory_share}/mime"
 fi
 
-if [ -n "$(command -v update-desktop-database)" ]
+if [ -n "${tool_desktop}" ]
 then
-	command_run "${directory_writable}" update-desktop-database "${directory_share}/applications"
+	command_run "${directory_writable}" "${tool_desktop}" "${directory_share}/applications"
 fi
 
-if [ -n "$(command -v gtk-update-icon-cache)" ]
+if [ -n "${tool_icons}" ]
 then
-	command_run "${directory_writable}" gtk-update-icon-cache -q -t "${directory_share}/icons/hicolor"
+	command_run "${directory_writable}" "${tool_icons}" -q -t "${directory_share}/icons/hicolor"
 fi
 
-# associate file types from the desktop file
+# associate the desktop file types
 
 list_types=()
 
@@ -156,20 +195,27 @@ do
 	fi
 done < "${directory_source}/platform/studworx.desktop"
 
-if [ -n "$(command -v xdg-mime)" ] && [ "${#list_types[@]}" -gt 0 ]
+# default application
+
+if [ -n "${tool_associate}" ] && [ "${#list_types[@]}" -gt 0 ]
 then
-	xdg-mime default studworx.desktop "${list_types[@]}"
+	"${tool_associate}" default studworx.desktop "${list_types[@]}"
 fi
 
 # refresh kde service cache
 
-for tool_sycoca in kbuildsycoca6 kbuildsycoca5
+for name_sycoca in kbuildsycoca6 kbuildsycoca5
 do
-	if [ -n "$(command -v "${tool_sycoca}")" ]
+	tool_sycoca="$(command -v "${name_sycoca}")" || true
+
+	if [ -n "${tool_sycoca}" ]
 	then
 		"${tool_sycoca}" > /dev/null 2>&1
+
 		break
 	fi
 done
+
+# report the result
 
 printf "%s\n" "studworx installed to ${directory_prefix}"

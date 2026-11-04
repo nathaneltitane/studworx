@@ -1,7 +1,7 @@
 name: studworx
 base: core18
 adopt-info: studworx
-version: '2026-11-03'
+version: '2026-11-04'
 grade: stable
 confinement: strict
 
@@ -34,5 +34,5 @@ parts:
       - libqt5xml5
       - libqt5svg5
       - qt5-image-formats-plugins
-    source: https://github.com/nathaneltitane/studworx/archive/refs/tags/2026-11-03.tar.gz
+    source: https://github.com/nathaneltitane/studworx/archive/refs/tags/2026-11-04.tar.gz
     parse-info: [usr/share/metainfo/io.github.nathaneltitane.StudWorx.appdata.xml]

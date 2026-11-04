@@ -164,6 +164,7 @@ Each light property takes the `_KEY` form when animated.
 | `0 !SW DESCRIPTION MODEL <text>` | Read | description, written as the first line |
 | `0 !SW ASSET_SOURCE MODEL <base64 path>` | Read, Write | folder searched for embedded file sources |
 | `0 !SW ASSET_SOURCE_PRIORITY MODEL SOURCE` | Read, Write | search the asset sources before the model folder |
+| `0 !SW CUTAWAY MODEL <CUBE\|SPHERE\|CYLINDER> <x> <y> <z> <normal x> <normal y> <normal z> <size>` | Read, Write | cutaway kept with the model, center and size in StudWorx units |
 
 ### POV-Ray
 

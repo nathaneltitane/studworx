@@ -65,3 +65,59 @@ void swTests::CommandMetaRoundTripsModel()
 	QCOMPARE(StudWorx.count("0 !SW "), LeoCAD.count("0 !LEOCAD "));
 	QCOMPARE(swWriteCommandMeta(StudWorx, swCommandMetaFormat::LeoCAD), LeoCAD);
 }
+
+// Saves a flattened model holding a cutaway line. A good line must come back in the saved
+// model with its values, and a line with no normal must leave the model without a cutaway.
+void swTests::CommandMetaKeepsCutaway()
+{
+	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
+	const QString Binary = Environment.value("SW_TEST_BINARY");
+
+	if (Binary.isEmpty())
+		QSKIP("SW_TEST_BINARY is not set");
+
+	QTemporaryDir Folder;
+	QVERIFY(Folder.isValid());
+	QVERIFY(QDir(Folder.path()).mkpath("library/parts"));
+
+	QFile Part(Folder.filePath("library/parts/3001.dat"));
+	QVERIFY(Part.open(QIODevice::WriteOnly));
+	Part.write("0 Brick  2 x  4\r\n0 Name: 3001.dat\r\n4 16 -40 0 -20 40 0 -20 40 0 20 -40 0 20\r\n");
+	Part.close();
+
+	QProcessEnvironment SaveEnvironment = Environment;
+	SaveEnvironment.insert("XDG_CONFIG_HOME", Folder.filePath("config"));
+	SaveEnvironment.insert("XDG_DATA_HOME", Folder.filePath("data"));
+	SaveEnvironment.insert("XDG_CACHE_HOME", Folder.filePath("cache"));
+	SaveEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
+
+	// flattens a model with this cutaway line and returns its cutaway lines
+	const auto SaveCutaway = [&](const QByteArray& CutawayLine)
+	{
+		QFile Model(Folder.filePath("model.mpd"));
+
+		if (!Model.open(QIODevice::WriteOnly))
+			return QStringList{ "model not written" };
+
+		Model.write("0 FILE main.ldr\r\n0 main\r\n" + CutawayLine + "\r\n1 4 0 0 0 1 0 0 0 1 0 0 0 1 sub.ldr\r\n0 NOFILE\r\n0 FILE sub.ldr\r\n1 1 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n0 NOFILE\r\n");
+		Model.close();
+
+		QProcess Save;
+		Save.setProcessEnvironment(SaveEnvironment);
+		Save.setProcessChannelMode(QProcess::MergedChannels);
+		Save.start(Binary, { "--library", Folder.filePath("library"), Model.fileName(), "--flatten", Folder.filePath("saved.mpd") });
+
+		if (!Save.waitForFinished(120000) || Save.exitCode() != 0)
+			return QStringList{ QString::fromUtf8(Save.readAll()) };
+
+		QFile Saved(Folder.filePath("saved.mpd"));
+
+		if (!Saved.open(QIODevice::ReadOnly))
+			return QStringList{ "model not saved" };
+
+		return QString::fromUtf8(Saved.readAll()).split("\r\n").filter("CUTAWAY");
+	};
+
+	QCOMPARE(SaveCutaway("0 !SW CUTAWAY MODEL CYLINDER 10.50000 -20 30 0 1 0 50"), QStringList{ "0 !SW CUTAWAY MODEL CYLINDER 10.5 -20 30 0 1 0 50" });
+	QCOMPARE(SaveCutaway("0 !SW CUTAWAY MODEL CYLINDER 10 -20 30 0 0 0 50"), QStringList());
+}

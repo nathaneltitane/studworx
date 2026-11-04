@@ -8,6 +8,7 @@
 #include "sw_manager_thumbnail.h"
 #include "sw_file.h"
 #include "sw_command_meta.h"
+#include "sw_view.h"
 
 void Project::LoadLDrawDocument(const QByteArray& FileData, const Project* ReferenceProject, bool ReuseExistingModels)
 {
@@ -667,6 +668,8 @@ swResult<void> Project::SaveCopy(const QString& FileName) const
 
 bool Project::Save(QTextStream& Stream) const
 {
+	swView::StoreCutaways();
+
 	const bool MPD = IsMultiPart();
 	std::set<const swModel*> WrittenModels;
 	std::set<const swEmbeddedData*> WrittenData;

@@ -32,7 +32,7 @@
 					"description": "StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library.",
 					"applicationCategory": "DesignApplication",
 					"operatingSystem": "Linux, Windows, macOS",
-					"softwareVersion": "2026-11-03",
+					"softwareVersion": "2026-11-04",
 					"license": "https://www.gnu.org/licenses/gpl-3.0.html",
 					"downloadUrl": "https://github.com/nathaneltitane/studworx/releases/latest",
 					"image": "https://studworx.app/resources/social/social.png",
@@ -1728,7 +1728,7 @@
 			<ul class="points">
 				<li><b>HTML.</b> Export HTML in the <a href="#instructions">Instructions</a> window writes styled pages in a folder named after the model, opening at index.html, with light and dark colors that follow the browser. One scrolling page of the Instructions window pages that stops at each page, with #page-N and #step-N links and First, Previous, Next and Last Page arrows on the right, left or bottom edge, laid out for the Instructions Page, a Landscape Display, Portrait Display or Tablet shape in pixels and saved at twice that size for sharp high density screens, or one step per page with an index, step images of any width and height on a background color you choose, transparent with its alpha, framed in rounded tiles of the same color, and a parts list after each step or at the end, which Override Instructions Settings also applies to the scrolling page with Settings Overrides for the page, cover, Bill of Materials, step, text, divider, pointer, fade, highlight and element box colors, without changing the model, for the current model, its submodels or all models. Edit Style Sheet changes the CSS of the pages in an editor with the options and find and replace of the Editor panel, its comments naming the feature of each block.</li>
 				<li><b>Export.</b> 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages from the Instructions window, BrickLink wanted lists and CSV parts lists. BrickLink exports pick the condition, the wanted list by its number or the address of its page, and new listing notices, copy the XML and open the BrickLink upload page in one step, and translate part numbers and colors through a bundled mapping of over 55,000 parts or a file built from the library and Rebrickable, with Rebrickable numbers taking the lead over stale part keywords. BrickLink and CSV exports list parts the library moved to a new number under that number, and Part Exceptions in the BrickLink export keeps a comma or tab separated list of parts whose BrickLink number you set by hand.</li>
-				<li><b>LDraw models.</b> .ldr, .mpd and .dat files, with New, Open, Merge, Save, Save As, Reload and the four most recent files. Save As follows the LDraw file specification and adds the extension when it is left out: .ldr for a single model, .mpd for a model with submodels or embedded data. Files are written with Unix line endings, and a model loaded with Windows line endings keeps them when saved. Watch for File Changes reloads a model edited in another program. Sample models, a minifigure and a flexible part, <a href="#install">install</a> to /usr/share/studworx/samples, the samples folder beside the program on Windows, or the application bundle resources on macOS.</li>
+				<li><b>LDraw models.</b> .ldr, .mpd and .dat files, with New, Open, Merge, Save, Save As, Reload and the four most recent files. Save As follows the LDraw file specification and adds the extension when it is left out: .ldr for a single model, .mpd for a model with submodels or embedded data. Files are written with Unix line endings, and a model loaded with Windows line endings keeps them when saved. Watch for File Changes reloads a model edited in another program. Sample models, a minifigure, cube, sphere and cylinder cutaways of it, an exploded model, a flexible part and lights and cameras, <a href="#install">install</a> to /usr/share/studworx/samples, the samples folder beside the program on Windows, or the application bundle resources on macOS.</li>
 				<li><b>Command line.</b> Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx. <a href="https://l2cu.app">L²CU</a>, the LDraw Linux command line utility, drives these renders and exports for whole folders of models.</li>
 				<li><b>Import.</b> LEGO® Digital Designer models and official set inventories. Set inventories use your own free Rebrickable API key, asked for once or set under Online Services in the <a href="#preferences">preferences</a>, and are searched by set name or number.</li>
 				<li><b>Startup.</b> Open Most Recent File on Startup reopens the last model, Restore Tab Layout brings back its tabs and split <a href="#views">views</a>, and Load All Parts Before Showing waits until every part is loaded before the model appears.</li>
@@ -2322,11 +2322,11 @@
 			<p class="lead">Look at a model from any side, see inside it without changing it, and measure it against the grid.</p>
 
 			<ul class="points">
+				<li><b>Cutaways.</b> Cube, sphere and cylinder cutaways with solid cut surfaces, a shaded cut and resize knobs, pushed in or pulled out by one plate. The cutaway is saved with the model and comes back when the file opens, and the parts themselves are never changed.</li>
 				<li><b>Cut edges.</b> With edge lines on, the cut draws edge lines in each part&#x27;s edge color where it meets the outer faces, and thinner lines along the corners of the cut faces. Cut Edges in <a href="#preferences">Preferences</a> &gt; Views &gt; Cutaway turns them off.</li>
 				<li><b>View cube settings.</b> Shown in any corner of the view, in Extra Small to Extra Large, with its own face, highlight and text colors, and small full names or large abbreviations (TP, BT, LT, RT, FT, BK) on its faces.</li>
 				<li><b>Cutaway controls.</b> Grow and Shrink resize the cutaway, Push In and Pull Out move it one plate, Shade Color sets the light shade on the cut faces, and Remove shows the whole model again.</li>
 				<li><b>Idle turntable.</b> The model turns full screen around the X, Y or Z axis when you leave StudWorx idle. Any input ends it. The idle time and the time for one turn are set in Preferences.</li>
-				<li><b>Cutaways.</b> Cube, sphere and cylinder cutaways with solid cut surfaces, a shaded cut and resize knobs, pushed in or pulled out by one plate. The model is never changed.</li>
 				<li><b>Axis icon settings.</b> Shown in any corner, with or without labels, with negative axes and a cube outline of adjustable transparency, and a color for each axis and its negative.</li>
 				<li><b>Grids.</b> A base grid with studs, lines and origin lines, vertical XZ and YZ height grids sized around the model, and a toggle for each axis line.</li>
 				<li><b>Axis icon.</b> X, Y and Z labels with optional negative axes. The view cube, axis icon and part thumbnails come in Extra Small to Extra Large.</li>
@@ -3113,6 +3113,7 @@
 							<tr><td><code>0 !SW DESCRIPTION MODEL &lt;text&gt;</code></td><td>Read</td><td>description, written as the first line</td></tr>
 							<tr><td><code>0 !SW ASSET_SOURCE MODEL &lt;base64 path&gt;</code></td><td>Read, Write</td><td>folder searched for embedded file sources</td></tr>
 							<tr><td><code>0 !SW ASSET_SOURCE_PRIORITY MODEL SOURCE</code></td><td>Read, Write</td><td>search the asset sources before the model folder</td></tr>
+							<tr><td><code>0 !SW CUTAWAY MODEL &lt;CUBE|SPHERE|CYLINDER&gt; &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;normal x&gt; &lt;normal y&gt; &lt;normal z&gt; &lt;size&gt;</code></td><td>Read, Write</td><td>cutaway kept with the model, center and size in StudWorx units</td></tr>
 						</tbody>
 					</table>
 				</div>
@@ -3396,11 +3397,11 @@
 					</thead>
 
 					<tbody>
-						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-03_amd64.deb / arm64.deb</td></tr>
-						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-03-x86_64.rpm / aarch64.rpm</td></tr>
-						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-03-x86_64.appimage / aarch64.appimage</td></tr>
-						<tr><td>Windows</td><td>studworx-windows-2026-11-03-x64.exe</td></tr>
-						<tr><td>macOS</td><td>studworx-macos-2026-11-03-universal.dmg</td></tr>
+						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-04_amd64.deb / arm64.deb</td></tr>
+						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-04-x86_64.rpm / aarch64.rpm</td></tr>
+						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-04-x86_64.appimage / aarch64.appimage</td></tr>
+						<tr><td>Windows</td><td>studworx-windows-2026-11-04-x64.exe</td></tr>
+						<tr><td>macOS</td><td>studworx-macos-2026-11-04-universal.dmg</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -3453,6 +3454,15 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p class="lead">The latest release notices from the StudWorx repository.</p>
 
 			<details open>
+				<summary>2026-11-04</summary>
+
+				<ul>
+					<li>Cutaway: the cutaway of a view is saved with the model and comes back when the file opens, the parts themselves are never changed</li>
+					<li>Samples: cube, sphere and cylinder cutaway samples of the minifigure join the explode, flexible part, lights and cameras and minifigure samples</li>
+				</ul>
+			</details>
+
+			<details>
 				<summary>2026-11-03</summary>
 
 				<ul>
@@ -3579,24 +3589,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				</ul>
 			</details>
 
-			<details>
-				<summary>2026-10-29</summary>
-
-				<ul>
-					<li>File managers: LDraw model files show a thumbnail of the model, from a KDE thumbnail plugin or the desktop thumbnailer, rendered with the new <code>--transparent</code> command line option</li>
-					<li>Select Connected Parts: selects every part joined to the selection, with the connection shapes of the <a href="https://github.com/RolandMelkert/LDCadShadowLibrary">LDCad shadow library</a> by Roland Melkert, set and turned on or off under Preferences › Part Connections</li>
-					<li>Parts library: no longer bundled, the first start offers to download the official LDraw <code>complete.zip</code> into the data folder or to choose an existing archive</li>
-					<li>Install: <code>tools/studworx-install</code> builds and installs StudWorx without a package, with thumbnails, file types and associations, <code>~/.local</code> needs no superuser rights, run it again after <code>git pull</code> to update</li>
-					<li>Instructions: step images outline the parts new to each step and fade the earlier ones, set by Fade Previous Steps and Highlight New Parts in the Document settings, their colors kept 85% to 95% opaque</li>
-					<li>Instructions: every page element stays within the page margins, page numbers included, and Page Setup margins are limited to the room the page size leaves</li>
-					<li>Value boxes: the maximum shows after the value (6 / 32 studs), any number can be typed and is brought into range once applied</li>
-					<li>Find and Replace: one bar that starts with its close button, a chevron shows or hides the replace row, long part names no longer stretch it</li>
-					<li>Views: the camera name and the editing path float over the view as bars with a close button, each model in the path is a button that goes back to it, and the bars only move when the view cube or axis icon is in the way</li>
-					<li>POV-Ray: found on its own in the PATH, Flatpak or Snap and checked for version 3.7, LGEO parts found beside the parts library or downloaded on request, both asked for like the parts library when missing, a Parts choice between LDraw and LGEO, and <code>--povray-render</code> renders a model to PNG from the command line</li>
-					<li>Icons and cursors drawn in code and sharp at any size, the base grid toggle hides only the grids and leaves the axis lines alone, the terminal panel sizes to whole rows and columns</li>
-				</ul>
-			</details>
-
 			<p class="more"><a href="https://github.com/nathaneltitane/studworx/blob/main/NOTICE.md">Read every notice ›</a></p>
 		</section>
 
@@ -3607,7 +3599,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p>LEGO® is a trademark of the LEGO® Group, which does not sponsor, authorize or endorse this project.</p>
 			<div class="authorship">
 				<a class="avatar" href="https://nathaneltitane.com" aria-label="N Λ T H Λ N E L"><img src="resources/avatar/avatar-bird.png" alt="" width="64" height="64"></a>
-				<p>Version // 2026-11-03<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
+				<p>Version // 2026-11-04<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
 			</div>
 		</div>
 

@@ -47,6 +47,8 @@ swView::swView(swViewType ViewType, swModel* Model)
 	// use the last chosen projection
 	if (mViewType == swViewType::View && mCamera->IsSimple())
 		mCamera->SetProjection(mLastProjection);
+
+	LoadCutaway();
 }
 
 swView::~swView()

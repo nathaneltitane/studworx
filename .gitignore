@@ -18,6 +18,7 @@
 *.mpd
 !/resources/data/*.ldr
 !/resources/samples/*.ldr
+!/resources/samples/*.mpd
 !/resources/blender/**/*.dat
 *.dae
 *.3ds
@@ -40,6 +41,8 @@ appdir
 studworx-windows*.exe
 *.snap
 /tools/studworx-bricklink
+/tools/studworx-capture
+/tools/studworx-update
 /tools/studworx-site
 /tools/studworx-social
 /resources/site/

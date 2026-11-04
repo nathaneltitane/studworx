@@ -318,6 +318,7 @@ public:
 	void ResizeCutaway(float Scale);
 	void MoveCutaway(float Distance);
 	void RemoveCutaway();
+	static void StoreCutaways();
 
 	bool HasCutaway() const
 	{
@@ -443,6 +444,7 @@ protected:
 	void PickFaceNormal();
 	void StopFaceNormalPick();
 	void PickCutaway();
+	void LoadCutaway();
 	void StopCutawayPick();
 	swMatrix44 GetCutawayMatrix() const;
 	bool GetCutawayRange(const swVector3& Start, const swVector3& End, float& Entry, float& Exit) const;

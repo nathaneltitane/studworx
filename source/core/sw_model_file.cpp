@@ -239,6 +239,19 @@ void swModel::SaveLDraw(QTextStream& Stream, bool SelectedOnly, swStep LastStep)
 	if (!mAssetSourceDirectories.empty() && !mPreferCurrentAssetDirectory)
 		Stream << QLatin1String("0 !SW ASSET_SOURCE_PRIORITY MODEL SOURCE") << LineEnding;
 
+	if (mCutawayShape != swCutawayShape::None)
+	{
+		const char* Shapes[] = { "NONE", "CUBE", "SPHERE", "CYLINDER" };
+
+		Stream << QLatin1String("0 !SW CUTAWAY MODEL ") << Shapes[static_cast<int>(mCutawayShape)];
+
+		for (const swVector3& Vector : { mCutawayCenter, mCutawayNormal })
+			for (int Axis = 0; Axis < 3; Axis++)
+				Stream << ' ' << swFormatValue(Vector[Axis], 3);
+
+		Stream << ' ' << swFormatValue(mCutawaySize, 3) << LineEnding;
+	}
+
 	// copied parts leave the instructions behind
 	if (!SelectedOnly)
 	{
@@ -458,6 +471,7 @@ void swModel::LoadLDraw(QIODevice& Device, Project* Project)
 	mAssetSourceDirectories.clear();
 	mInstructionLines.clear();
 	mPreferCurrentAssetDirectory = true;
+	mCutawayShape = swCutawayShape::None;
 	bool ReadingHeader = true;
 	bool FirstLine = true;
 
@@ -572,6 +586,27 @@ void swModel::LoadLDraw(QIODevice& Device, Project* Project)
 				{
 					LineStream >> Token;
 					mPreferCurrentAssetDirectory = Token != QLatin1String("SOURCE");
+				}
+				else if (Token == QLatin1String("CUTAWAY"))
+				{
+					const QStringList Shapes = { "NONE", "CUBE", "SPHERE", "CYLINDER" };
+					float Values[7];
+
+					LineStream >> Token;
+
+					for (float& Value : Values)
+						LineStream >> Value;
+
+					const int Shape = Shapes.indexOf(Token);
+
+					// a bad line leaves the model without a cutaway
+					if (Shape > 0 && LineStream.status() == QTextStream::Ok && Values[6] > 0.0f && swLength(swVector3(Values[3], Values[4], Values[5])) > 0.0f)
+					{
+						mCutawayShape = static_cast<swCutawayShape>(Shape);
+						mCutawayCenter = swVector3(Values[0], Values[1], Values[2]);
+						mCutawayNormal = swVector3(Values[3], Values[4], Values[5]);
+						mCutawaySize = Values[6];
+					}
 				}
 				else
 				{

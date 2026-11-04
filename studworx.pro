@@ -147,7 +147,12 @@ unix:!macx {
 	thumbnailer.path = $$THUMBNAILER_DIR
 	thumbnailer.files = platform/studworx.thumbnailer
 	samples.path = $$SAMPLES_DIR
+	samples.files += resources/samples/sample-cutaway-cube.ldr
+	samples.files += resources/samples/sample-cutaway-cylinder.ldr
+	samples.files += resources/samples/sample-cutaway-sphere.ldr
+	samples.files += resources/samples/sample-explode.mpd
 	samples.files += resources/samples/sample-flex.ldr
+	samples.files += resources/samples/sample-lights-cameras.ldr
 	samples.files += resources/samples/sample-minifigure.ldr
 
 	INSTALLS += target docs man desktop icons mime appdata thumbnailer samples
@@ -171,7 +176,12 @@ macx {
 	document_icon.path = Contents/Resources
 	QMAKE_BUNDLE_DATA += document_icon
 
+	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-cutaway-cube.ldr
+	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-cutaway-cylinder.ldr
+	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-cutaway-sphere.ldr
+	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-explode.mpd
 	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-flex.ldr
+	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-lights-cameras.ldr
 	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-minifigure.ldr
 	samples.path = Contents/Resources/samples
 	QMAKE_BUNDLE_DATA += samples

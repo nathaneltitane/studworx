@@ -4,7 +4,11 @@
 
 # usage: tools/studworx-language-update [language]
 
+# stop on any error
+
 set -e
+
+# script folder
 
 directory_script="${BASH_SOURCE[0]%/*}"
 
@@ -15,20 +19,42 @@ then
 	directory_script="."
 fi
 
+# source and catalog folders
+
 directory_source="$(cd "${directory_script}/.." && pwd)"
 directory_translations="${directory_source}/resources/translations"
 
+# one language or all
+
 language="${1:-*}"
 
-tool_update="$(command -v lupdate || command -v lupdate-qt5)"
+# qt5 lupdate
+
+tool_update="$(command -v lupdate || command -v lupdate-qt5)" || true
+
+# stop without lupdate
+
+if [ -z "${tool_update}" ]
+then
+	printf "%s\n" "lupdate not found"
+
+	exit 1
+fi
+
+# run from the repository
 
 cd "${directory_source}"
 
+# refresh each catalog
+
 for file_catalog in "${directory_translations}"/studworx_${language}.ts
 do
+	# stop on an unknown language
+
 	if [ ! -f "${file_catalog}" ]
 	then
 		printf "%s\n" "language not found: ${1}"
+
 		exit 1
 	fi
 

@@ -1,6 +1,13 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-04</summary>
+
+  - Cutaway: the cutaway of a view is saved with the model and comes back when the file opens, the parts themselves are never changed
+  - Samples: cube, sphere and cylinder cutaway samples of the minifigure join the explode, flexible part, lights and cameras and minifigure samples
+  </details>
+
+  <details>
   <summary>2026-11-03</summary>
 
   - Cutaway: edge lines in the part edge color outline where the cutaway cuts through parts, with thinner lines along the corners of the cut, and Cut Edges in Preferences > Views > Cutaway turns them off

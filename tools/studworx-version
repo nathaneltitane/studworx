@@ -1,0 +1,484 @@
+#!/bin/bash
+
+# move the release date version
+
+# enable as the pre-push hook with: ln -s ../../tools/studworx-version .git/hooks/pre-push
+
+# stop on any error
+
+set -e
+
+script="$(basename -- "${BASH_SOURCE[0]}")"
+version="2026-11-04"
+
+# usage ────────────────────────────────────────────────────────────────────────
+
+state_set=0
+list_positional=()
+
+while (( $# ))
+do
+	case "${1}"
+	in
+		-d|--date)
+			state_set=1
+
+			if [ -n "${2}" ] && [[ ${2} != -* ]]
+			then
+				version_new="${2}"
+
+				shift
+			fi
+		;;
+
+		-h|--help)
+			echo
+			echo -e "Usage: ./${script} [OPTION] [PARAMETER]"
+			echo
+			echo -e "Options:"
+			echo
+			echo -e "Note:                Without an option, runs as the git pre-push hook bump."
+			echo
+			echo -e "-d, --date [date]    Move the version to a [d]ate, yyyy-mm-dd, today by default."
+			echo
+			echo -e "-h, --help           Show [h]elp and usage information."
+			echo
+			echo -e "'${script}'          [ Version // ${version} ]"
+			echo
+
+			exit
+		;;
+
+		*)
+			list_positional+=("${1}")
+		;;
+
+		esac
+
+	shift
+
+done
+
+# variables ────────────────────────────────────────────────────────────────────
+
+# repository root
+
+directory_source="$(git rev-parse --show-toplevel)"
+
+# files and names
+
+file_global="source/application/sw_global.h"
+file_notice="NOTICE.md"
+name_branch_release="main"
+name_tool="tools/studworx-version"
+file_site="tools/studworx-site"
+message_commit="Code & Features Update"
+pattern_date='^[0-9]{4}-[0-9]{2}-[0-9]{2}$'
+
+# paths that make a release
+
+paths_code=(source resources ':!resources/translations' ':!resources/documentation' ':!resources/images' platform '*.pro' '*.pri')
+
+# today as a date
+
+printf -v version_today "%(%Y-%m-%d)T" -1
+
+# work from the repository
+
+cd "${directory_source}"
+
+# functions ────────────────────────────────────────────────────────────────────
+
+version_read () {
+
+	# use to read the current version
+
+	local line_global
+
+	unset version_old
+
+	# first version line
+
+	while IFS= read -r line_global
+	do
+		if [[ ${line_global} =~ SW_VERSION_TEXT\ \"([0-9-]+)\" ]]
+		then
+			version_old="${BASH_REMATCH[1]}"
+
+			break
+		fi
+	done < "${file_global}"
+
+}
+
+version_replace () {
+
+	# use to replace text in matching lines
+
+	local file_target="${1}"
+	local pattern_line="${2}"
+	local text_old="${3}"
+	local text_new="${4}"
+	local lines_file
+	local index_line
+
+	# replace in matching lines
+
+	mapfile -t lines_file < "${file_target}"
+
+	for index_line in "${!lines_file[@]}"
+	do
+		if [[ ${lines_file[index_line]} == ${pattern_line} ]]
+		then
+			lines_file[index_line]="${lines_file[index_line]//${text_old}/${text_new}}"
+		fi
+	done
+
+	# write back
+
+	printf "%s\n" "${lines_file[@]}" > "${file_target}"
+
+	printf "%s\n" "updated ${file_target}"
+
+}
+
+version_insert () {
+
+	# use to insert before the first match
+
+	local file_target="${1}"
+	local pattern_line="${2}"
+	local lines_insert=("${@:3}")
+	local lines_file
+	local lines_result=()
+	local line_file
+	local state_insert=0
+
+	# insert once
+
+	mapfile -t lines_file < "${file_target}"
+
+	for line_file in "${lines_file[@]}"
+	do
+		if [ "${state_insert}" = 0 ] && [[ ${line_file} == ${pattern_line} ]]
+		then
+			lines_result+=("${lines_insert[@]}")
+			state_insert=1
+		fi
+
+		lines_result+=("${line_file}")
+	done
+
+	# write back
+
+	printf "%s\n" "${lines_result[@]}" > "${file_target}"
+
+	printf "%s\n" "updated ${file_target}"
+
+}
+
+version_move () {
+
+	# use to move the version everywhere
+
+	local version_compact_old="${version_old//-/}"
+	local version_compact_new="${version_new//-/}"
+
+	# source version
+
+	version_replace "${file_global}" "*SW_VERSION_TEXT*" "${version_old}" "${version_new}"
+
+	# new notice on top, open
+
+	version_replace "${file_notice}" "  <details open>" "<details open>" "<details>"
+
+	version_insert "${file_notice}" "  <details>" "  <details open>" "  <summary>${version_new}</summary>" "" "  </details>" ""
+
+	# packaging and templates
+
+	version_replace .github/ISSUE_TEMPLATE/bug_report.md "*StudWorx Version*" "${version_old}" "${version_new}"
+
+	version_replace resources/packaging/arch/PKGBUILD "pkgver=*" "${version_compact_old}" "${version_compact_new}"
+
+	version_insert resources/packaging/common/io.github.nathaneltitane.StudWorx.appdata.xml "*<release version=*" $'\t\t'"<release version=\"${version_new}\" date=\"${version_new}\" />"
+
+	version_replace platform/Info.plist "*<string>${version_old}</string>*" "${version_old}" "${version_new}"
+
+	version_replace platform/Info.plist "*<string>${version_compact_old}</string>*" "${version_compact_old}" "${version_compact_new}"
+
+	version_replace snapcraft.yaml "*${version_old}*" "${version_old}" "${version_new}"
+
+}
+
+version_set () {
+
+	# use to set the version by hand
+
+	# today by default
+
+	version_new="${version_new:-${version_today}}"
+
+	# stop on a bad date
+
+	if [[ ! ${version_new} =~ ${pattern_date} ]]
+	then
+		printf "%s\n" "version not a date: ${version_new}"
+
+		exit 1
+	fi
+
+	# stop without a version
+
+	version_read
+
+	if [ -z "${version_old}" ]
+	then
+		printf "%s\n" "version not found in ${file_global}"
+
+		exit 1
+	fi
+
+	# nothing to move
+
+	if [ "${version_old}" = "${version_new}" ]
+	then
+		printf "%s\n" "version already ${version_new}"
+
+		exit 0
+	fi
+
+	# only forward
+
+	if [[ ! ${version_new} > ${version_old} ]]
+	then
+		printf "%s\n" "version ${version_new} not after ${version_old}"
+
+		exit 1
+	fi
+
+	# move and remind
+
+	version_move
+
+	printf "%s\n" "version ${version_old} moved to ${version_new}, write its notice in ${file_notice} before pushing"
+
+}
+
+version_bump () {
+
+	# use to bump on a code push
+
+	local name_remote="${1}"
+	local state_main=0
+	local hash_head
+	local name_branch
+	local hash_release
+	local type_release
+	local files_changed
+	local status_tree
+	local state_notice=0
+	local state_insert=0
+	local prompt_notice
+	local text_notice
+	local reference_local
+	local hash_local
+	local reference_remote
+	local hash_remote
+	local line_file
+	local line_notice
+
+	local -a lines_release=()
+	local -a lines_example=()
+	local -a lines_notice=()
+	local -a lines_file=()
+	local -a lines_result=()
+
+	# only pushes of main
+
+	hash_head="$(git rev-parse HEAD)"
+	name_branch="$(git branch --show-current)"
+
+	while read -r reference_local hash_local reference_remote hash_remote
+	do
+		if [ "${reference_remote}" = "refs/heads/${name_branch_release}" ] && [ "${reference_local}" = "refs/heads/${name_branch_release}" ] && [ "${hash_local}" = "${hash_head}" ]
+		then
+			state_main=1
+		fi
+	done
+
+	if [ "${state_main}" = 0 ] || [ "${name_branch}" != "${name_branch_release}" ]
+	then
+		exit 0
+	fi
+
+	version_read
+
+	# only released, only a later day
+
+	if [ -z "${version_old}" ] || [[ ! ${version_today} > ${version_old} ]]
+	then
+		exit 0
+	fi
+
+	# release tag from the remote
+
+	mapfile -t lines_release < <(git ls-remote "${name_remote}" "refs/tags/${version_old}" "refs/tags/${version_old}^{}" || true)
+
+	if [ "${#lines_release[@]}" = 0 ]
+	then
+		exit 0
+	fi
+
+	# commit listed last
+
+	hash_release="${lines_release[-1]%%[[:space:]]*}"
+
+	if [ -z "${hash_release}" ]
+	then
+		exit 0
+	fi
+
+	# object type of the release commit
+
+	type_release="$(git cat-file -t "${hash_release}" 2> /dev/null)" || true
+
+	if [ -z "${type_release}" ]
+	then
+		exit 0
+	fi
+
+	# code changed since
+
+	files_changed="$(git diff --name-only "${hash_release}" HEAD -- "${paths_code[@]}")"
+
+	if [ -z "${files_changed}" ]
+	then
+		exit 0
+	fi
+
+	# uncommitted changes to tracked files
+
+	status_tree="$(git status --porcelain --untracked-files=no)"
+
+	if [ -n "${status_tree}" ]
+	then
+		printf "%s\n" "version bump needed but the working tree has uncommitted changes, commit them and push again"
+
+		exit 1
+	fi
+
+	# last notice as an example
+
+	while IFS= read -r line_file
+	do
+		if [[ ${line_file} =~ ^\ \ \<summary\>[0-9]{4}-[0-9]{2}-[0-9]{2}\</summary\>$ ]]
+		then
+			if [ "${state_notice}" = 1 ]
+			then
+				break
+			fi
+
+			state_notice=1
+		elif [ "${state_notice}" = 1 ] && [[ ${line_file} == "  - "* ]]
+		then
+			lines_example+=("${line_file#  }")
+		fi
+	done < "${file_notice}"
+
+	# ask claude for the notice
+
+	printf "%s\n" "version ${version_old} is released and code changed since, writing the ${version_today} notice"
+
+	prompt_notice="Write the release notice for StudWorx version ${version_today}, covering the changes since version ${version_old}.
+Read them with git log and git diff ${hash_release} HEAD, user facing changes only.
+Answer with 2 to 8 lines and nothing else, each line starting with '- ', short and plain, no final period, written like these lines of the previous notice:
+$(printf "%s\n" "${lines_example[@]}")
+Always write LEGO® for the brand, and part, never piece.
+When no change is user facing, answer only NONE."
+
+	text_notice="$(claude -p "${prompt_notice}" --allowedTools "Bash(git log:*)" "Bash(git diff:*)" "Bash(git show:*)" "Read" "Grep" "Glob" < /dev/null)" || unset text_notice
+
+	# keep the list lines
+
+	while IFS= read -r line_notice
+	do
+		if [[ ${line_notice} == "- "* ]]
+		then
+			lines_notice+=("${line_notice}")
+		fi
+	done <<< "${text_notice}"
+
+	# no user facing changes
+
+	if [ "${#lines_notice[@]}" = 0 ] && [[ ${text_notice} == *NONE* ]]
+	then
+		printf "%s\n" "no user facing changes, version stays ${version_old}"
+
+		exit 0
+	fi
+
+	# stop without a notice
+
+	if [ "${#lines_notice[@]}" = 0 ]
+	then
+		printf "%s\n" "no notice written, run ${name_tool} --date, write the notice and push again"
+
+		exit 1
+	fi
+
+	# move to today
+
+	version_new="${version_today}"
+
+	version_move
+
+	# notice under the new summary
+
+	mapfile -t lines_file < "${file_notice}"
+
+	for line_file in "${lines_file[@]}"
+	do
+		lines_result+=("${line_file}")
+
+		if [ "${state_insert}" = 0 ] && [ "${line_file}" = "  <summary>${version_today}</summary>" ]
+		then
+			lines_result+=("" "${lines_notice[@]/#/  }")
+			state_insert=1
+		fi
+	done
+
+	printf "%s\n" "${lines_result[@]}" > "${file_notice}"
+
+	# site with the new version
+
+	if [ -x "${file_site}" ]
+	then
+		"${file_site}"
+	fi
+
+	# commit the bump
+
+	git commit --quiet --all --message "${message_commit}"
+
+	printf "%s\n" "version ${version_today}:" "${lines_notice[@]}"
+
+	# push the bump instead
+
+	git push --no-verify "${name_remote}" "${name_branch_release}"
+
+	printf "%s\n" "pushed with the version bump, the original push is cancelled"
+
+	exit 1
+
+}
+
+# version ──────────────────────────────────────────────────────────────────────
+
+# by hand or as the hook
+
+if [ "${state_set}" = 1 ]
+then
+	version_set
+else
+	version_bump "${list_positional[0]}"
+fi

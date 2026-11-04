@@ -115,6 +115,43 @@ void swView::RemoveCutaway()
 	Redraw();
 }
 
+// use to show the cutaway saved with the model
+void swView::LoadCutaway()
+{
+	if (mViewType != swViewType::View || !mModel || mModel->mCutawayShape == swCutawayShape::None)
+		return;
+
+	const swVector3 Normal = mModel->mCutawayNormal;
+	int NormalAxis = 0;
+
+	for (int AxisIndex = 1; AxisIndex < 3; AxisIndex++)
+		if (fabsf(Normal[AxisIndex]) > fabsf(Normal[NormalAxis]))
+			NormalAxis = AxisIndex;
+
+	mCutawayNormal = mCutawayAxes[NormalAxis] * (Normal[NormalAxis] < 0.0f ? -1.0f : 1.0f);
+	mCutawayShapeAxes[0] = mCutawayAxes[(NormalAxis + 1) % 3];
+	mCutawayShapeAxes[1] = mCutawayAxes[(NormalAxis + 2) % 3];
+	mCutawayShapeAxes[2] = mCutawayAxes[NormalAxis];
+	mCutawayCenter = mModel->mCutawayCenter;
+	mCutawaySize = mModel->mCutawaySize;
+	mCutawayShape = mModel->mCutawayShape;
+}
+
+// use to keep each view cutaway with its model before a save
+void swView::StoreCutaways()
+{
+	for (swView* View : mViews)
+	{
+		if (View->mViewType != swViewType::View || !View->mModel)
+			continue;
+
+		View->mModel->mCutawayShape = View->mCutawayShape;
+		View->mModel->mCutawayCenter = View->mCutawayCenter;
+		View->mModel->mCutawayNormal = View->mCutawayNormal;
+		View->mModel->mCutawaySize = View->mCutawaySize;
+	}
+}
+
 // use to keep the arrows 100 pixels long
 float swView::GetCutawayHandleLength() const
 {

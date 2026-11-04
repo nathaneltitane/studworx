@@ -28,6 +28,8 @@ and a step model box Corner Radius must round the page cards.
 `--flatten` must replace a submodel inside a moved and turned submodel with its
 parts at their world positions, with color 16 parts taking the color of the submodel above,
 and `--undo` must then bring back the original main model.
+A saved model must keep its `0 !SW CUTAWAY MODEL` line with its values, and drop
+a cutaway line with no normal.
 Rotation tests turn parts in 15, 30 and 90 degree steps around every axis, in
 the part's own frame and in model coordinates, and check that each quarter turn
 lands exactly on 0 and 1, that the turned part keeps its position and moves by
