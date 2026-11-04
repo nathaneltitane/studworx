@@ -12,7 +12,7 @@
 		<!-- title -->
 
 		<title>StudWorx - LDraw / LEGO® model builder</title>
-		<meta name="description" content="StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library, built on LeoCAD.">
+		<meta name="description" content="StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library.">
 		<meta name="theme-color" content="#bbbbbb">
 		<link rel="canonical" href="https://studworx.app/">
 
@@ -29,7 +29,7 @@
 					"name": "StudWorx",
 					"alternateName": "StudWorx LDraw",
 					"url": "https://studworx.app/",
-					"description": "StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library, built on LeoCAD.",
+					"description": "StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library.",
 					"applicationCategory": "DesignApplication",
 					"operatingSystem": "Linux, Windows, macOS",
 					"softwareVersion": "2026-11-03",
@@ -85,8 +85,8 @@
 		<meta property="og:type" content="website">
 		<meta property="og:site_name" content="StudWorx">
 		<meta property="og:url" content="https://studworx.app/">
-		<meta property="og:title" content="StudWorx - LDraw / LEGO® model builder">
-		<meta property="og:description" content="StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library, built on LeoCAD.">
+		<meta property="og:title" content="StudWorx">
+		<meta property="og:description" content="StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library.">
 		<meta property="og:image" content="https://studworx.app/resources/social/social.png">
 		<meta property="og:image:width" content="1280">
 		<meta property="og:image:height" content="640">
@@ -1526,7 +1526,7 @@
 			</div>
 
 			<div class="foot-landing">
-				<p>StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library, built on LeoCAD.</p>
+				<p>StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library.</p>
 				<p>It keeps LeoCAD's file format, so models open in either program, and adds a reworked interface with modeling, imaging and instructions features on top.</p>
 
 				<div class="buttons">
@@ -2125,6 +2125,7 @@
 				<li><b>Part connections.</b> Use Part Connections turns connected part selection on and off, with the shadow library folder chosen in <a href="#preferences">Preferences</a>.</li>
 				<li><b>Find and Replace.</b> A bar to find parts by part and color, step through the matches or Find All, and replace one or all, submodels included on request.</li>
 				<li><b>Array.</b> Repeat the selection along one, two or three axes, with a count, an X, Y and Z offset and an X, Y and Z rotation for each.</li>
+				<li><b>Explode.</b> The Explode panel, shown from the panel context menu or View &gt; Toolbars, spreads every other visible part, or only the selected ones with each group moving as one part, away from an anchor, the focused part or the first or last selected one, by an X, Y and Z percentage of its distance, or one value for all three with Uniform following the chosen axis. Each part slides straight out along the stud, pin or socket that holds it, a part without one along the nearest X, Y or Z axis from the part beside it, and with Show Lines a line in the Explode Lines color from Preferences runs through the connection, from the socket on the part it came off to the moved part. Submodels in the spread, and the submodels inside them, flatten into their parts first, so everything spreads, and the flatten and spread are one undo step. Changing a setting spreads the parts again, Collapse or Undo puts the parts and the submodels back, and any other edit only puts the parts back. Save Copy saves the whole exploded project to a separate file named with -exploded before the extension, and the open file is not saved.</li>
 				<li><b>Flex Path.</b> Hoses, cables and other flexible parts bend along control points that stop at the part length.</li>
 				<li><b>Control points.</b> Insert and remove control points, clamp a point along the path or release it to rotate freely, align it to the path once, or turn it along the X, Y or Z axis. New points can start clamped, and the spread handle shapes the curve.</li>
 				<li><b>Groups.</b> Group the selection under a unique name, Ungroup, add the focused part to a group or remove it, and Edit Groups in a tree of parts and groups.</li>
@@ -2227,6 +2228,14 @@
 				</button>
 
 				<figcaption>The Array dialog</figcaption>
+			</figure>
+
+			<figure>
+				<button class="shot" data-full="resources/images/modeling-explode.png" aria-label="Enlarge Explode">
+					<img src="resources/images/modeling-explode.png" alt="Explode" width="512" height="283" loading="lazy">
+				</button>
+
+				<figcaption>Explode</figcaption>
 			</figure>
 
 			<figure class="video">
@@ -2692,7 +2701,7 @@
 
 			<ul class="points">
 				<li><b>Properties.</b> Part IDs, thumbnails and counts, with BrickLink or CSV export.</li>
-				<li><b>Submodels.</b> New Submodel, the Submodels list, Open Selected Model, Inline Selected Models and Move to New Model.</li>
+				<li><b>Submodels.</b> New Submodel, the Submodels list, Open Selected Model, Inline Selected Models, Flatten Model, which replaces every submodel at all depths with its parts in one undo step, and Move to New Model.</li>
 				<li><b>Submodels list.</b> Create, rename, duplicate and delete submodels, set the active one, and export them as separate LDraw <a href="#files">files</a>.</li>
 				<li><b>Models menu.</b> Switch between up to forty models of the file from the Models menu.</li>
 				<li><b>In-place editing.</b> Edit a submodel inside its parent. A path bar shows where you are, and its buttons go back to each model.</li>
@@ -3349,7 +3358,7 @@
 				<h2>HELP // EVERY &quot;WHAT&#x27;S THIS?&quot; ENTRY</h2>
 			</header>
 
-			<p class="lead">The same help the app shows from Help &gt; What&#x27;s This?, the title bar question mark or F1: 464 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
+			<p class="lead">The same help the app shows from Help &gt; What&#x27;s This?, the title bar question mark or F1: 478 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
 			<div class="tools-search">
 				<input id="search" type="search" placeholder="Search help" aria-label="Search help">
@@ -3434,6 +3443,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<summary>2026-11-03</summary>
 
 				<ul>
+					<li>Explode: the Explode panel, shown from the panel context menu or View &gt; Toolbars, spreads the parts on screen away from an anchor part, straight out of their connections with lines back to where they connect, submodels at all depths flatten first in the same undo step and Collapse puts them back, and Save Copy saves the exploded model to a separate -exploded file</li>
+					<li>Submodels: Flatten Model in the Model menu and the Submodel context menu replaces every submodel at all depths with its parts in one undo step</li>
 					<li><a href="#instructions">Instructions</a>: a bar under the page goes to the first, previous, cover, bill of materials, next and last pages, inserts a Step Page or Blank Page, removes blank or empty pages and has a page box to type the page, each button with its own mnemonic, and the timeline shortcuts turn the pages</li>
 					<li>Instructions: Submodel Background in the Page category colors the pages of submodel <a href="#steps">steps</a> apart from the main model pages</li>
 					<li>Instructions: Apply to All Pages in the Page and Parts List categories gives every page the background or thumbnails of the current page, the Arrowhead pointer tip is now Arrow and Pointer Tip is greyed out for callout wedges</li>
@@ -3688,6 +3699,15 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Minifigure Builder","title":"Delete Template","paragraphs":["Remove the selected named template after confirmation. This does not remove parts from the preview or an existing model. The Default template cannot be deleted."]},
 				{"group":"Minifigure Builder","title":"Import Templates","paragraphs":["Add saved configurations from a .minifigure file to the template collection. Existing template names are kept when the imported file contains the same names."]},
 				{"group":"Minifigure Builder","title":"Export Templates","paragraphs":["Write all templates to a .minifigure file for backup or sharing. Export includes the entire collection, not just the selected template."]},
+				{"group":"Main Window","title":"Explode","paragraphs":["Spread the parts on screen away from the chosen anchor part, which stays in place. Each part slides straight out along the stud, pin or socket that holds it, and a line joins it back to where it connects. Set how far along X, Y and Z, then choose Explode. While the parts are spread, changing a setting spreads them again. Collapse or any edit puts them back, and the file never changes. Save Copy saves the exploded model to a separate file named with -exploded, and the open file stays as it is."]},
+				{"group":"Main Window","title":"Anchor","paragraphs":["The part or submodel that keeps its position while every other part moves away from it: the focused part, or the first or last selected part in the model order. With Selected Parts Only, the anchor's whole group stays in place."]},
+				{"group":"Main Window","title":"X Spread","paragraphs":["Scales how far each part sits from the anchor part along the X axis, measured between their centers. 100% leaves the parts in place, 200% doubles the distance. Set X and Z to 100% and Y higher to spread the parts only vertically."]},
+				{"group":"Main Window","title":"Y Spread","paragraphs":["Scales how far each part sits from the anchor part along the Y axis, measured between their centers. 100% leaves the parts in place, 200% doubles the distance. Set X and Z to 100% and Y higher to spread the parts only vertically."]},
+				{"group":"Main Window","title":"Z Spread","paragraphs":["Scales how far each part sits from the anchor part along the Z axis, measured between their centers. 100% leaves the parts in place, 200% doubles the distance. Set X and Z to 100% and Y higher to spread the parts only vertically."]},
+				{"group":"Main Window","title":"Uniform","paragraphs":["Spread the parts the same amount along every axis. The axis chosen beside it sets the value and the other two follow it."]},
+				{"group":"Main Window","title":"Uniform Axis","paragraphs":["With Uniform on, this axis stays editable and the other two take its value."]},
+				{"group":"Main Window","title":"Selected Parts Only","paragraphs":["Move only the selected parts away from the anchor and leave the rest of the model where it is. The parts of a group move together as one part. Off, every visible part of the model moves on its own."]},
+				{"group":"Main Window","title":"Show Lines","paragraphs":["Draw a line through each connection, from the socket or stud on the part it came off to the same spot on the moved part, in the Explode Lines color from Preferences. Lines show only on screen and are not saved."]},
 				{"group":"Preferences","title":"High Contrast Edge Colors","paragraphs":["Choose custom stud and edge colors for high contrast stud styles. Enable an override with its checkbox, then choose its color. Light to Dark sets the threshold for dark part edge colors. Automated edge colors take precedence over the part edge overrides.","Choose OK to return changes to Preferences, then choose OK in Preferences to keep them. Cancel discards changes in this dialog. Reset restores an individual control's default."]},
 				{"group":"Preferences","title":"Automated Edge Colors","paragraphs":["Adjust the contrast and saturation used to calculate part edge colors. Both controls range from 0.00 to 1.00. Reset restores a control to 0.50.","Choose OK to return changes to Preferences, then choose OK in Preferences to keep them. Cancel discards changes in this dialog."]},
 				{"group":"Preferences","title":"Edge Contrast","paragraphs":["Adjust the contrast used by automated edge colors to distinguish edges from part surfaces. The range is 0.00 to 1.00; Reset restores 0.50."]},
@@ -3756,6 +3776,9 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Minifigure Builder","title":"Rotation","paragraphs":["Adjust this part's angle to pose the minifigure. Values range from -360 to 360 degrees. The available rotation depends on the selected minifigure section."]},
 				{"group":"Minifigure Builder","title":"Minifigure Builder Preview","paragraphs":["Check the assembled minifigure as you change parts, colors, or angles. Choose Add to Model to add it to the current model."]},
 				{"group":"Minifigure Builder","title":"Randomize","paragraphs":["Build a random minifigure from the parts in the current library, with random colors. Choose it again for another one, or save the result as a template."]},
+				{"group":"Main Window","title":"Explode","paragraphs":["Spread the parts on screen away from the anchor with the settings above. Submodels, and the submodels inside them, flatten into their parts first, so everything spreads in one undo step. While they are spread, changing a setting spreads them again."]},
+				{"group":"Main Window","title":"Collapse","paragraphs":["Put the exploded parts back where they were and the flattened submodels back together, like Undo. Any edit to the model puts the parts back too and keeps the submodels flattened."]},
+				{"group":"Main Window","title":"Save Copy","paragraphs":["Explode the parts and save the whole project to a separate file, named after the open file with -exploded before the extension. The open file keeps its name, Collapse puts its submodels back, and the copy cannot replace it."]},
 				{"group":"Main Window","title":"Find and Replace","paragraphs":["Find parts by color, part or both, then step through the matches or select them all. Open the replace options to swap the color or part of the matches, one at a time or all at once.","Include Submodels makes Replace All change the matching parts inside every submodel used by this model too."]},
 				{"group":"Main Window","title":"Lock Preview","paragraphs":["Keep the current preview while you browse. Unlock Preview allows the display to update again. An empty preview cannot be locked."]},
 				{"group":"Main Window","title":"Property Keyframe","paragraphs":["Enable or remove a keyframe for this property at the current building step. Keyframes let the property's value change between steps."]},
@@ -3932,6 +3955,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"View Menu","title":"Preview","paragraphs":["Toggle the Preview Toolbar."]},
 				{"group":"View Menu","title":"Terminal","paragraphs":["Toggle the Terminal panel."]},
 				{"group":"View Menu","title":"Minifigure Builder","paragraphs":["Toggle the Minifigure Builder Panel."]},
+				{"group":"View Menu","title":"Explode","paragraphs":["Show or hide the Explode panel, which spreads the parts on screen away from an anchor, the focused part or the first or last selected one, scaled along X, Y and Z. With Selected Parts Only, each group moves as one part. Each part slides straight out along the connection that holds it, a part without one along the nearest axis from the part beside it, and with Show Lines a line runs through each connection back to the socket it came off. Submodels, and the submodels inside them, flatten into their parts first in the same undo step. Collapse or Undo puts the parts and submodels back, and Save Copy saves the exploded model to a separate file named with -exploded."]},
 				{"group":"View Menu","title":"Full Screen","paragraphs":["Toggle fullscreen mode."]},
 				{"group":"View Menu","title":"Close Tab","paragraphs":["Close current tab."]},
 				{"group":"View Menu","title":"Wireframe","paragraphs":["Display the scene as wireframe."]},
@@ -4057,6 +4081,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Part Menu","title":"Open Selected Model","paragraphs":["Open the model referenced by the selected part in a new tab."]},
 				{"group":"Part Menu","title":"Move to New Model","paragraphs":["Move the selected parts to a new model and replace them with a reference to the model."]},
 				{"group":"Part Menu","title":"Inline Selected Models","paragraphs":["Insert the contents of the selected model references into the current model."]},
+				{"group":"Part Menu","title":"Flatten Model","paragraphs":["Replace every submodel in the current model, and every submodel inside those, with its parts in one undo step. Each part keeps its place and color, and the groups inside the submodels are not kept."]},
 				{"group":"Part Menu","title":"Edit Selected Submodel","paragraphs":["Edit the currently selected submodel in-place."]},
 				{"group":"Part Menu","title":"End Submodel Editing","paragraphs":["End in-place submodel editing."]},
 				{"group":"Part Menu","title":"Group","paragraphs":["Group selected parts together."]},

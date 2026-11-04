@@ -3469,6 +3469,32 @@
             </property>
            </widget>
           </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="ExplodeLineColorLabel">
+            <property name="toolTip">
+             <string>Choose the display color for the lines from each exploded part back to where it connects.</string>
+            </property>
+            <property name="buddy">
+             <cstring>ExplodeLineColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Explode Lines</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QToolButton" name="ExplodeLineColorButton">
+            <property name="accessibleName">
+             <string>Explode Lines Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the display color for the lines from each exploded part back to where it connects.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
           <item row="0" column="2">
            <spacer name="horizontalSpacer_16">
             <property name="orientation">
@@ -4852,6 +4878,7 @@
   <tabstop>MarqueeBorderColorButton</tabstop>
   <tabstop>MarqueeFillColorButton</tabstop>
   <tabstop>OverlayColorButton</tabstop>
+  <tabstop>ExplodeLineColorButton</tabstop>
   <tabstop>gridLineColor</tabstop>
   <tabstop>gridStudColor</tabstop>
   <tabstop>ViewCubeColorButton</tabstop>

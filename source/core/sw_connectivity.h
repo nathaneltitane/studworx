@@ -94,6 +94,9 @@ public:
 	static bool AreConnected(const std::vector<swConnectionCylinder>& Cylinders, const swMatrix44& Transform, const std::vector<swConnectionCylinder>& OtherCylinders, const swMatrix44& OtherTransform);
 	static bool AreConnected(const swConnectionShapes& Shapes, const swConnectionShapes& OtherShapes);
 
+	// Gives the axis and the position of the first seated pair.
+	static bool GetConnectionAxis(const swConnectionShapes& Shapes, const swConnectionShapes& OtherShapes, swVector3& Axis, swVector3& Point);
+
 	// Grows Box to hold the shapes.
 	static void AddToBoundingBox(const std::vector<swConnectionCylinder>& Cylinders, const swMatrix44& Transform, swBoundingBox& Box);
 
@@ -103,5 +106,6 @@ public:
 private:
 	static bool AreSectionsCompatible(const swConnectionSection& Male, const swConnectionSection& Female);
 	static bool FitsAt(const swConnectionCylinder& Male, const swConnectionCylinder& Female, float Offset);
+	static bool FindSeat(const std::vector<swConnectionCylinder>& Cylinders, const swMatrix44& Transform, const std::vector<swConnectionCylinder>& OtherCylinders, const swMatrix44& OtherTransform, swMatrix44* SeatFrame);
 	static bool IsSeated(const swConnectionCylinder& Cylinder, const swMatrix44& Frame, const swConnectionCylinder& Other, const swMatrix44& OtherFrame);
 };

@@ -6,6 +6,7 @@ SOURCES += \
 	$$PWD/sw_widget_builder_minifigure.cpp \
 	$$PWD/sw_widget_collapsible.cpp \
 	$$PWD/sw_widget_editor.cpp \
+	$$PWD/sw_widget_explode.cpp \
 	$$PWD/sw_widget_find_replace.cpp \
 	$$PWD/sw_widget_keyframe.cpp \
 	$$PWD/sw_widget_label_elided.cpp \
@@ -24,6 +25,7 @@ HEADERS += \
 	$$PWD/sw_widget_builder_minifigure.h \
 	$$PWD/sw_widget_collapsible.h \
 	$$PWD/sw_widget_editor.h \
+	$$PWD/sw_widget_explode.h \
 	$$PWD/sw_widget_find_replace.h \
 	$$PWD/sw_widget_keyframe.h \
 	$$PWD/sw_widget_label_elided.h \
@@ -41,7 +43,8 @@ HEADERS += \
 	$$PWD/sw_widget_timeline.h
 
 FORMS += \
-	$$PWD/sw_widget_builder_minifigure.ui
+	$$PWD/sw_widget_builder_minifigure.ui \
+	$$PWD/sw_widget_explode.ui
 
 # Optional embedded Konsole terminal on systems with KDE Frameworks, left out of bundled packages.
 qtHaveModule(KParts):isEmpty(BUNDLE_LIBRARIES) {

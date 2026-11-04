@@ -317,6 +317,9 @@ public:
 	swMatrix44 mModelWorld;
 	swMatrix44 mPivotMatrix = swMatrix44Identity();
 
+	// view only explode, never saved
+	swVector3 mExplodeOffset = swVector3(0.0f, 0.0f, 0.0f);
+
 protected:
 	void UpdateMesh();
 	void UpdatePathCache() const;

@@ -387,6 +387,7 @@ protected:
 	void DrawViewport() const;
 	void DrawAxes() const;
 	void DrawCutaway() const;
+	void DrawExplodeLines() const;
 	void DrawCutawayGizmo() const;
 
 	void DrawSelectZoomRegionOverlay();

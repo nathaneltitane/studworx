@@ -339,6 +339,10 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		ToggleDockWidget(mMinifigureBuilderToolBar);
 		break;
 
+	case SW_VIEW_TOOLBAR_EXPLODE:
+		ToggleDockWidget(mExplodeToolBar);
+		break;
+
 	case SW_VIEW_FULL_SCREEN:
 		ToggleFullScreen();
 		break;
@@ -924,6 +928,11 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 	case SW_PART_INLINE_SELECTED_MODELS:
 		if (ActiveModel)
 			ActiveModel->InlineSelectedModels();
+		break;
+
+	case SW_PART_FLATTEN_MODEL:
+		if (ActiveModel)
+			ActiveModel->FlattenModel();
 		break;
 
 	case SW_PART_EDIT_END_SUBMODEL:

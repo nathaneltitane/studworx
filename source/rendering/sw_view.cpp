@@ -372,6 +372,7 @@ void swView::ShowContextMenu() const
 	SubmodelMenu->addAction(Actions[SW_PART_EDIT_END_SUBMODEL]);
 	SubmodelMenu->addAction(Actions[SW_PART_VIEW_SELECTED_MODEL]);
 	SubmodelMenu->addAction(Actions[SW_PART_INLINE_SELECTED_MODELS]);
+	SubmodelMenu->addAction(Actions[SW_PART_FLATTEN_MODEL]);
 	SubmodelMenu->addAction(Actions[SW_PART_MOVE_SELECTION_TO_MODEL]);
 
 	Popup->addMenu(gMainWindow->GetToolsMenu());

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>swExplodeWidget</class>
+ <widget class="QWidget" name="swExplodeWidget">
+  <property name="whatsThis">
+   <string>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Spread the parts on screen away from the chosen anchor part, which stays in place. Each part slides straight out along the stud, pin or socket that holds it, and a line joins it back to where it connects. Set how far along X, Y and Z, then choose Explode. While the parts are spread, changing a setting spreads them again. Collapse or any edit puts them back, and the file never changes. Save Copy saves the exploded model to a separate file named with -exploded, and the open file stays as it is.&lt;/p&gt;</string>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>350</width>
+    <height>200</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Explode</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="labelAnchor">
+       <property name="text">
+        <string>Anchor</string>
+       </property>
+       <property name="buddy">
+        <cstring>anchor</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="anchor">
+       <property name="toolTip">
+        <string>The part that stays in place while the others move away from it.</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;p&gt;&lt;b&gt;Anchor&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The part or submodel that keeps its position while every other part moves away from it: the focused part, or the first or last selected part in the model order. With Selected Parts Only, the anchor's whole group stays in place.&lt;/p&gt;</string>
+       </property>
+       <property name="accessibleName">
+        <string>Anchor</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="labelX">
+       <property name="text">
+        <string>X</string>
+       </property>
+       <property name="buddy">
+        <cstring>spreadX</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QSpinBox" name="spreadX">
+       <property name="toolTip">
+        <string>Distance from the anchor part along X, as a percentage of the current distance.</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;p&gt;&lt;b&gt;X Spread&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Scales how far each part sits from the anchor part along the X axis, measured between their centers. 100% leaves the parts in place, 200% doubles the distance. Set X and Z to 100% and Y higher to spread the parts only vertically.&lt;/p&gt;</string>
+       </property>
+       <property name="accessibleName">
+        <string>X spread</string>
+       </property>
+       <property name="suffix">
+        <string> %</string>
+       </property>
+       <property name="minimum">
+        <number>100</number>
+       </property>
+       <property name="maximum">
+        <number>1000</number>
+       </property>
+       <property name="singleStep">
+        <number>10</number>
+       </property>
+       <property name="value">
+        <number>200</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="labelY">
+       <property name="text">
+        <string>Y</string>
+       </property>
+       <property name="buddy">
+        <cstring>spreadY</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QSpinBox" name="spreadY">
+       <property name="toolTip">
+        <string>Distance from the anchor part along Y, as a percentage of the current distance.</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;p&gt;&lt;b&gt;Y Spread&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Scales how far each part sits from the anchor part along the Y axis, measured between their centers. 100% leaves the parts in place, 200% doubles the distance. Set X and Z to 100% and Y higher to spread the parts only vertically.&lt;/p&gt;</string>
+       </property>
+       <property name="accessibleName">
+        <string>Y spread</string>
+       </property>
+       <property name="suffix">
+        <string> %</string>
+       </property>
+       <property name="minimum">
+        <number>100</number>
+       </property>
+       <property name="maximum">
+        <number>1000</number>
+       </property>
+       <property name="singleStep">
+        <number>10</number>
+       </property>
+       <property name="value">
+        <number>200</number>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="labelZ">
+       <property name="text">
+        <string>Z</string>
+       </property>
+       <property name="buddy">
+        <cstring>spreadZ</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QSpinBox" name="spreadZ">
+       <property name="toolTip">
+        <string>Distance from the anchor part along Z, as a percentage of the current distance.</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;p&gt;&lt;b&gt;Z Spread&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Scales how far each part sits from the anchor part along the Z axis, measured between their centers. 100% leaves the parts in place, 200% doubles the distance. Set X and Z to 100% and Y higher to spread the parts only vertically.&lt;/p&gt;</string>
+       </property>
+       <property name="accessibleName">
+        <string>Z spread</string>
+       </property>
+       <property name="suffix">
+        <string> %</string>
+       </property>
+       <property name="minimum">
+        <number>100</number>
+       </property>
+       <property name="maximum">
+        <number>1000</number>
+       </property>
+       <property name="singleStep">
+        <number>10</number>
+       </property>
+       <property name="value">
+        <number>200</number>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <layout class="QHBoxLayout" name="uniformLayout">
+       <item>
+        <widget class="QCheckBox" name="uniform">
+         <property name="toolTip">
+          <string>Keep X, Y and Z at the same value.</string>
+         </property>
+         <property name="whatsThis">
+          <string>&lt;p&gt;&lt;b&gt;Uniform&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Spread the parts the same amount along every axis. The axis chosen beside it sets the value and the other two follow it.&lt;/p&gt;</string>
+         </property>
+         <property name="text">
+          <string>Uniform</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="uniformAxis">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="toolTip">
+          <string>The axis the other two follow.</string>
+         </property>
+         <property name="whatsThis">
+          <string>&lt;p&gt;&lt;b&gt;Uniform Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;With Uniform on, this axis stays editable and the other two take its value.&lt;/p&gt;</string>
+         </property>
+         <property name="accessibleName">
+          <string>Uniform axis</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>X</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Y</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Z</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item row="5" column="1">
+      <widget class="QCheckBox" name="selectedOnly">
+       <property name="toolTip">
+        <string>Spread only the selected parts instead of every visible part.</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;p&gt;&lt;b&gt;Selected Parts Only&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move only the selected parts away from the anchor and leave the rest of the model where it is. The parts of a group move together as one part. Off, every visible part of the model moves on its own.&lt;/p&gt;</string>
+       </property>
+       <property name="text">
+        <string>Selected Parts Only</string>
+       </property>
+      </widget>
+       </item>
+     <item row="6" column="1">
+      <widget class="QCheckBox" name="showLines">
+       <property name="toolTip">
+        <string>Draw a line from each exploded part back to where it connects.</string>
+       </property>
+       <property name="whatsThis">
+        <string>&lt;p&gt;&lt;b&gt;Show Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw a line through each connection, from the socket or stud on the part it came off to the same spot on the moved part, in the Explode Lines color from Preferences. Lines show only on screen and are not saved.&lt;/p&gt;</string>
+       </property>
+       <property name="text">
+        <string>Show Lines</string>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

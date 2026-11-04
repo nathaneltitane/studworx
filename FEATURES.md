@@ -234,6 +234,7 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 - **Part connections.** Use Part Connections turns connected part selection on and off, with the shadow library folder chosen in Preferences.
 - **Find and Replace.** A bar to find parts by part and color, step through the matches or Find All, and replace one or all, submodels included on request.
 - **Array.** Repeat the selection along one, two or three axes, with a count, an X, Y and Z offset and an X, Y and Z rotation for each.
+- **Explode.** The Explode panel, shown from the panel context menu or View > Toolbars, spreads every other visible part, or only the selected ones with each group moving as one part, away from an anchor, the focused part or the first or last selected one, by an X, Y and Z percentage of its distance, or one value for all three with Uniform following the chosen axis. Each part slides straight out along the stud, pin or socket that holds it, a part without one along the nearest X, Y or Z axis from the part beside it, and with Show Lines a line in the Explode Lines color from Preferences runs through the connection, from the socket on the part it came off to the moved part. Submodels in the spread, and the submodels inside them, flatten into their parts first, so everything spreads, and the flatten and spread are one undo step. Changing a setting spreads the parts again, Collapse or Undo puts the parts and the submodels back, and any other edit only puts the parts back. Save Copy saves the whole exploded project to a separate file named with -exploded before the extension, and the open file is not saved.
 - **Flex Path.** Hoses, cables and other flexible parts bend along control points that stop at the part length.
 - **Control points.** Insert and remove control points, clamp a point along the path or release it to rotate freely, align it to the path once, or turn it along the X, Y or Z axis. New points can start clamped, and the spread handle shapes the curve.
 - **Groups.** Group the selection under a unique name, Ungroup, add the focused part to a group or remove it, and Edit Groups in a tree of parts and groups.
@@ -265,6 +266,8 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 ![The Find and Replace bar](resources/images/modeling-find-replace.png "wide plain")
 
 ![The Array dialog](resources/images/modeling-array.png "wide plain")
+
+![Explode](resources/images/modeling-explode.png)
 
 <!-- video -->
 
@@ -441,7 +444,7 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 Large builds split into submodels that you can edit on their own or in place, inside the model that uses them.
 
 - **Properties.** Part IDs, thumbnails and counts, with BrickLink or CSV export.
-- **Submodels.** New Submodel, the Submodels list, Open Selected Model, Inline Selected Models and Move to New Model.
+- **Submodels.** New Submodel, the Submodels list, Open Selected Model, Inline Selected Models, Flatten Model, which replaces every submodel at all depths with its parts in one undo step, and Move to New Model.
 - **Submodels list.** Create, rename, duplicate and delete submodels, set the active one, and export them as separate LDraw files.
 - **Models menu.** Switch between up to forty models of the file from the Models menu.
 - **In-place editing.** Edit a submodel inside its parent. A path bar shows where you are, and its buttons go back to each model.

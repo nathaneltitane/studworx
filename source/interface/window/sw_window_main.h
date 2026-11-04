@@ -460,6 +460,8 @@ protected:
 	QDockWidget* mPropertiesToolBar = nullptr;
 	QDockWidget* mTimelineToolBar = nullptr;
 	QDockWidget* mMinifigureBuilderToolBar = nullptr;
+	QDockWidget* mExplodeToolBar = nullptr;
+	class swExplodeWidget* mExplodeWidget = nullptr;
 
 	swPartSelectionWidget* mPartSelectionWidget = nullptr;
 	swColorList* mColorList = nullptr;

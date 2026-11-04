@@ -292,6 +292,8 @@ void swModel::FocusPreviousTrainTrack()
 
 void swModel::RotateFocusedTrainTrack(int Direction)
 {
+	CollapseExplode();
+
 	const swObject* Focus = GetFocusObject();
 
 	if (!Focus || !Focus->IsPart())
@@ -995,6 +997,109 @@ void swModel::InlineSelectedModels()
 	gMainWindow->UpdateInUseCategory();
 }
 
+// use to inline every submodel at all depths in one undo step
+void swModel::FlattenModel()
+{
+	BeginHistorySequence();
+	BeginEditHistory();
+
+	swPart* Anchor = nullptr;
+	std::vector<swObject*> Selection;
+
+	if (!FlattenSubModels(false, Anchor, Selection))
+	{
+		QMessageBox::information(gMainWindow, tr("Flatten Model"), tr("The model has no submodels."));
+
+		DiscardHistorySequence();
+
+		return;
+	}
+
+	EndEditHistory();
+
+	SetSelectionAndFocus(Selection, nullptr, 0, swSelectionMode::Single);
+
+	EndHistorySequence(tr("Flatten Model"));
+
+	gMainWindow->UpdateTimeline(false, false);
+	gMainWindow->UpdateInUseCategory();
+}
+
+// use to swap submodels for their parts at all depths in one go, the anchor hands over to the biggest part it held
+bool swModel::FlattenSubModels(bool SelectedOnly, swPart*& Anchor, std::vector<swObject*>& Selection)
+{
+	bool Modified = false;
+
+	for (size_t PartIndex = 0; PartIndex < mParts.size(); )
+	{
+		swPart* Part = mParts[PartIndex].get();
+
+		if (!Part->mPartData->IsModel() || (SelectedOnly && !Part->IsSelected()))
+		{
+			if (Part->IsSelected())
+				Selection.push_back(Part);
+
+			PartIndex++;
+			continue;
+		}
+
+		mParts[PartIndex].release();
+		mParts.erase(mParts.begin() + PartIndex);
+
+		Modified = true;
+
+		swPart* Biggest = nullptr;
+		float BiggestVolume = -1.0f;
+
+		// todo recreate groups
+		const std::function<void(const swModel*, const swMatrix44&, int)> AddParts = [&](const swModel* Model, const swMatrix44& World, int ColorIndex)
+		{
+			for (const std::unique_ptr<swPart>& ModelPart : Model->mParts)
+			{
+				const swMatrix44 PartWorld = swMultiply(ModelPart->mModelWorld, World);
+				const int PartColorIndex = ModelPart->GetColorIndex() == gDefaultColor ? ColorIndex : ModelPart->GetColorIndex();
+
+				if (ModelPart->mPartData->IsModel())
+				{
+					AddParts(ModelPart->mPartData->GetModel(), PartWorld, PartColorIndex);
+					continue;
+				}
+
+				swPart* NewPart = new swPart(nullptr);
+
+				NewPart->SetPartData(ModelPart->mPartData, ModelPart->GetID(), true, true);
+				NewPart->Initialize(PartWorld, Part->GetStepShow());
+				NewPart->SetColorIndex(PartColorIndex);
+				NewPart->UpdatePosition(mCurrentStep);
+
+				AddPart(std::unique_ptr<swPart>(NewPart), PartIndex);
+				PartIndex++;
+
+				if (Part->IsSelected())
+					Selection.push_back(NewPart);
+
+				const swVector3 Size = ModelPart->GetBoundingBox().Max - ModelPart->GetBoundingBox().Min;
+				const float Volume = Size.x * Size.y * Size.z;
+
+				if (Volume > BiggestVolume)
+				{
+					Biggest = NewPart;
+					BiggestVolume = Volume;
+				}
+			}
+		};
+
+		AddParts(Part->mPartData->GetModel(), Part->mModelWorld, Part->GetColorIndex());
+
+		if (Part == Anchor)
+			Anchor = Biggest;
+
+		delete Part;
+	}
+
+	return Modified;
+}
+
 void swModel::RemoveCameraFromViews(swCamera* Camera)
 {
 	std::vector<swView*> Views = swView::GetModelViews(this);
@@ -1058,6 +1163,8 @@ bool swModel::RemoveSelectedObjects()
 
 void swModel::MoveSelectedObjects(const swVector3& PartDistance, const swVector3& ObjectDistance, swModelTransformFlags Flags, swModelHistoryEditMerge ModelHistoryEditMerge)
 {
+	CollapseExplode();
+
 	if (Flags.testFlag(swModelTransformFlag::Checkpoint))
 	{
 		BeginHistorySequence();
@@ -1171,6 +1278,8 @@ void swModel::RotateSelectedObjects(const swVector3& Angles, swModelTransformFla
 
 void swModel::RotateSelectedObjects(const swMatrix33& InputRotationMatrix, swModelTransformFlags Flags, swModelHistoryEditMerge ModelHistoryEditMerge)
 {
+	CollapseExplode();
+
 	if (Flags.testFlag(swModelTransformFlag::Checkpoint))
 	{
 		BeginHistorySequence();
@@ -1347,6 +1456,8 @@ void swModel::RotateSelectedObjects(const swMatrix33& InputRotationMatrix, swMod
 
 void swModel::ScaleSelectedParts(const float Scale)
 {
+	CollapseExplode();
+
 	if (Scale < 0.001f)
 		return;
 
@@ -1366,6 +1477,8 @@ void swModel::ScaleSelectedParts(const float Scale)
 
 void swModel::TransformSelectedObjects(swTransformType TransformType, const swVector3& Transform)
 {
+	CollapseExplode();
+
 	switch (TransformType)
 	{
 	case swTransformType::AbsoluteTranslation:

@@ -166,7 +166,10 @@ void swPart::SaveLDraw(QTextStream& Stream) const
 
 	Stream << "1 " << mColorCode << ' ';
 
-	const float* Matrix = mModelWorld.GetFloats();
+	swMatrix44 SaveWorld = mModelWorld;
+	SaveWorld.SetTranslation(SaveWorld.GetTranslation() - mExplodeOffset);
+
+	const float* Matrix = SaveWorld.GetFloats();
 	const float Numbers[12] = { Matrix[12], -Matrix[14], Matrix[13], Matrix[0], -Matrix[8], Matrix[4], -Matrix[2], Matrix[10], -Matrix[6], Matrix[1], -Matrix[9], Matrix[5] };
 
 	for (int NumberIdx = 0; NumberIdx < 12; NumberIdx++)
@@ -1821,6 +1824,7 @@ void swPart::UpdatePosition(swStep Step)
 	mRotation.Update(Step);
 
 	mModelWorld = swMatrix44(mRotation, mPosition);
+	mModelWorld.SetTranslation(mModelWorld.GetTranslation() + mExplodeOffset);
 }
 
 void swPart::UpdateMesh()

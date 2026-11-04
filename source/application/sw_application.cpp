@@ -143,6 +143,7 @@ void swPreferences::LoadDefaults()
 	mPathColor = swGetProfileUnsignedInteger(SW_PROFILE_PATH_COLOR);
 	mPathOutOfReachColor = swGetProfileUnsignedInteger(SW_PROFILE_PATH_OUT_OF_REACH_COLOR);
 	mSpreadHandleColor = swGetProfileUnsignedInteger(SW_PROFILE_SPREAD_HANDLE_COLOR);
+	mExplodeLineColor = swGetProfileUnsignedInteger(SW_PROFILE_EXPLODE_LINE_COLOR);
 }
 
 void swPreferences::SaveDefaults()
@@ -257,6 +258,7 @@ void swPreferences::SaveDefaults()
 	swSetProfileUnsignedInteger(SW_PROFILE_PATH_COLOR, mPathColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_PATH_OUT_OF_REACH_COLOR, mPathOutOfReachColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_SPREAD_HANDLE_COLOR, mSpreadHandleColor);
+	swSetProfileUnsignedInteger(SW_PROFILE_EXPLODE_LINE_COLOR, mExplodeLineColor);
 }
 
 struct swRenderTargetProfileKeys

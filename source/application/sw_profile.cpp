@@ -58,14 +58,14 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "AllowLOD", true),                                                          // SW_PROFILE_ALLOW_LOD
 	swProfileEntry("Settings", "LODDistance", 750.0f),                                                     // SW_PROFILE_LOD_DISTANCE
 	swProfileEntry("Settings", "FadeSteps", false),                                                        // SW_PROFILE_FADE_STEPS
-	swProfileEntry("Settings", "FadeStepsColor", SW_RGBA(128, 128, 128, 217)),                             // SW_PROFILE_FADE_STEPS_COLOR
+	swProfileEntry("Settings", "FadeStepsColor", SW_RGBA(128, 128, 128, 217)),                             // SW_PROFILE_FADE_STEPS_COLOR #808080d9
 	swProfileEntry("Settings", "HighlightNewParts", 0),                                                   // SW_PROFILE_HIGHLIGHT_NEW_PARTS
-	swProfileEntry("Settings", "HighlightNewPartsColor", SW_RGBA(255, 242, 0, 230)),                      // SW_PROFILE_HIGHLIGHT_NEW_PARTS_COLOR
+	swProfileEntry("Settings", "HighlightNewPartsColor", SW_RGBA(255, 242, 0, 230)),                      // SW_PROFILE_HIGHLIGHT_NEW_PARTS_COLOR #fff200e6
 	swProfileEntry("Settings", "ShadingMode", static_cast<int>(swShadingMode::DefaultLights)),             // SW_PROFILE_SHADING_MODE
 	swProfileEntry("Settings", "LightingStyle", static_cast<int>(swLightingStyle::Standard)),               // SW_PROFILE_LIGHTING_STYLE
 	swProfileEntry("Settings", "HighlightRenderMode", static_cast<int>(swHighlightRenderMode::Outline)),      // SW_PROFILE_HIGHLIGHT_RENDER_MODE
 	swProfileEntry("Settings", "SelectionOutlineWidth", 4),                                                // SW_PROFILE_SELECTION_OUTLINE_WIDTH
-	swProfileEntry("Settings", "BackgroundColor", SW_RGB(49, 52, 55)),                                     // SW_PROFILE_BACKGROUND_COLOR
+	swProfileEntry("Settings", "BackgroundColor", SW_RGB(49, 52, 55)),                                     // SW_PROFILE_BACKGROUND_COLOR #313437ff
 	swProfileEntry("Settings", "DrawAxes", 0),                                                             // SW_PROFILE_DRAW_AXES
 	swProfileEntry("Settings", "FollowStepViews", 1),                                                      // SW_PROFILE_FOLLOW_STEP_VIEWS
 	swProfileEntry("Settings", "ProjectionScope", static_cast<int>(swProjectionScope::AllViews)),          // SW_PROFILE_PROJECTION_SCOPE
@@ -79,15 +79,15 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "AxisIconNegative", 0),                                                    // SW_PROFILE_AXIS_ICON_NEGATIVE
 	swProfileEntry("Settings", "AxisIconCubeOutline", 0),                                                 // SW_PROFILE_AXIS_ICON_CUBE_OUTLINE
 	swProfileEntry("Settings", "AxisIconCubeOutlineAlpha", 50),                                     // SW_PROFILE_AXIS_ICON_CUBE_OUTLINE_ALPHA
-	swProfileEntry("Settings", "TextColor", SW_RGBA(214, 220, 227, 255)),                                  // SW_PROFILE_TEXT_COLOR
-	swProfileEntry("Settings", "TextHaloColor", SW_RGBA(17, 19, 24, 160)),                                // SW_PROFILE_TEXT_HALO_COLOR
-	swProfileEntry("Settings", "MarqueeBorderColor", SW_RGBA(64, 64, 255, 255)),                           // SW_PROFILE_MARQUEE_BORDER_COLOR
-	swProfileEntry("Settings", "MarqueeFillColor", SW_RGBA(64, 64, 255, 64)),                              // SW_PROFILE_MARQUEE_FILL_COLOR
-	swProfileEntry("Settings", "OverlayColor", SW_RGBA(0, 0, 0, 255)),                                     // SW_PROFILE_OVERLAY_COLOR
-	swProfileEntry("Settings", "CutawayShadeColor", SW_RGB(255, 255, 255)),                                // SW_PROFILE_CUTAWAY_SHADE_COLOR
+	swProfileEntry("Settings", "TextColor", SW_RGBA(214, 220, 227, 255)),                                  // SW_PROFILE_TEXT_COLOR #d6dce3ff
+	swProfileEntry("Settings", "TextHaloColor", SW_RGBA(17, 19, 24, 160)),                                // SW_PROFILE_TEXT_HALO_COLOR #111318a0
+	swProfileEntry("Settings", "MarqueeBorderColor", SW_RGBA(64, 64, 255, 255)),                           // SW_PROFILE_MARQUEE_BORDER_COLOR #4040ffff
+	swProfileEntry("Settings", "MarqueeFillColor", SW_RGBA(64, 64, 255, 64)),                              // SW_PROFILE_MARQUEE_FILL_COLOR #4040ff40
+	swProfileEntry("Settings", "OverlayColor", SW_RGBA(0, 0, 0, 255)),                                     // SW_PROFILE_OVERLAY_COLOR #000000ff
+	swProfileEntry("Settings", "CutawayShadeColor", SW_RGB(255, 255, 255)),                                // SW_PROFILE_CUTAWAY_SHADE_COLOR #ffffffff
 	swProfileEntry("Settings", "CutawayShadeAlpha", 50),                                             // SW_PROFILE_CUTAWAY_SHADE_ALPHA
-	swProfileEntry("Settings", "ActiveViewColor", SW_RGBA(41, 128, 185, 255)),                             // SW_PROFILE_ACTIVE_VIEW_COLOR
-	swProfileEntry("Settings", "InactiveViewColor", SW_RGBA(69, 69, 69, 255)),                             // SW_PROFILE_INACTIVE_VIEW_COLOR
+	swProfileEntry("Settings", "ActiveViewColor", SW_RGBA(41, 128, 185, 255)),                             // SW_PROFILE_ACTIVE_VIEW_COLOR #2980b9ff
+	swProfileEntry("Settings", "InactiveViewColor", SW_RGBA(69, 69, 69, 255)),                             // SW_PROFILE_INACTIVE_VIEW_COLOR #454545ff
 	swProfileEntry("Settings", "DrawEdgeLines", 1),                                                        // SW_PROFILE_DRAW_EDGE_LINES
 	swProfileEntry("Settings", "DrawConditionalLines", 1),                                                 // SW_PROFILE_DRAW_CONDITIONAL_LINES
 	swProfileEntry("Settings", "PreviewSyncRendering", 1),                                                   // SW_PROFILE_PREVIEW_SYNCHRONIZED_RENDERING
@@ -101,10 +101,10 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "PartsDrawConditionalLines", 1),                                             // SW_PROFILE_PARTS_DRAW_CONDITIONAL_LINES
 	swProfileEntry("Settings", "PartsLineWidth", 1.0f),                                                     // SW_PROFILE_PARTS_LINE_WIDTH
 	swProfileEntry("Settings", "GridStuds", 1),                                                            // SW_PROFILE_GRID_STUDS
-	swProfileEntry("Settings", "GridStudColor", SW_RGBA(24, 24, 24, 192)),                                 // SW_PROFILE_GRID_STUD_COLOR
+	swProfileEntry("Settings", "GridStudColor", SW_RGBA(24, 24, 24, 192)),                                 // SW_PROFILE_GRID_STUD_COLOR #181818c0
 	swProfileEntry("Settings", "GridLines", 1),                                                            // SW_PROFILE_GRID_LINES
 	swProfileEntry("Settings", "GridLineSpacing", 5),                                                      // SW_PROFILE_GRID_LINE_SPACING
-	swProfileEntry("Settings", "GridLineColor", SW_RGBA(24, 24, 24, 255)),                                 // SW_PROFILE_GRID_LINE_COLOR
+	swProfileEntry("Settings", "GridLineColor", SW_RGBA(24, 24, 24, 255)),                                 // SW_PROFILE_GRID_LINE_COLOR #181818ff
 	swProfileEntry("Settings", "GridOrigin", 0),                                                           // SW_PROFILE_GRID_ORIGIN
 	swProfileEntry("Settings", "GridNegativeAxes", 1),                                                     // SW_PROFILE_GRID_NEGATIVE_AXES
 	swProfileEntry("Settings", "GridHeightXZ", 0),                                                         // SW_PROFILE_GRID_HEIGHT_XZ
@@ -117,25 +117,26 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "ViewCubeEnabled", 1),                                                      // SW_PROFILE_VIEW_CUBE_ENABLED
 	swProfileEntry("Settings", "ViewCubeLocation", (int)swViewCubeLocation::TopRight),                   // SW_PROFILE_VIEW_CUBE_LOCATION
 	swProfileEntry("Settings", "ViewCubeSize", 96),                                                       // SW_PROFILE_VIEW_CUBE_SIZE
-	swProfileEntry("Settings", "ViewCubeColor", SW_RGBA(27, 31, 36, 255)),                                 // SW_PROFILE_VIEW_CUBE_COLOR
-	swProfileEntry("Settings", "ViewCubeTextColor", SW_RGBA(232, 237, 242, 255)),                          // SW_PROFILE_VIEW_CUBE_TEXT_COLOR
-	swProfileEntry("Settings", "ViewCubeHighlightColor", SW_RGBA(41, 128, 185, 255)),                      // SW_PROFILE_VIEW_CUBE_HIGHLIGHT_COLOR
-	swProfileEntry("Settings", "AxisXColor", SW_RGBA(200, 40, 60, 255)),                                   // SW_PROFILE_AXIS_X_COLOR
-	swProfileEntry("Settings", "AxisYColor", SW_RGBA(100, 200, 20, 255)),                                  // SW_PROFILE_AXIS_Y_COLOR
-	swProfileEntry("Settings", "AxisZColor", SW_RGBA(40, 60, 230, 255)),                                   // SW_PROFILE_AXIS_Z_COLOR
-	swProfileEntry("Settings", "AxisXNegativeColor", SW_RGBA(150, 62, 72, 255)),                          // SW_PROFILE_AXIS_X_NEGATIVE_COLOR
-	swProfileEntry("Settings", "AxisYNegativeColor", SW_RGBA(96, 150, 50, 255)),                          // SW_PROFILE_AXIS_Y_NEGATIVE_COLOR
-	swProfileEntry("Settings", "AxisZNegativeColor", SW_RGBA(62, 74, 168, 255)),                          // SW_PROFILE_AXIS_Z_NEGATIVE_COLOR
-	swProfileEntry("Settings", "ObjectSelectedColor", static_cast<uint>(SW_RGBA(229, 76, 102, 255))),      // SW_PROFILE_OBJECT_SELECTED_COLOR
-	swProfileEntry("Settings", "ObjectFocusedColor", static_cast<uint>(SW_RGBA(102, 76, 229, 255))),       // SW_PROFILE_OBJECT_FOCUSED_COLOR
-	swProfileEntry("Settings", "CameraColor", static_cast<uint>(SW_RGBA(128, 204, 128, 255))),             // SW_PROFILE_CAMERA_COLOR
-	swProfileEntry("Settings", "LightColor", static_cast<uint>(SW_RGBA(128, 204, 128, 255))),              // SW_PROFILE_LIGHT_COLOR
-	swProfileEntry("Settings", "ControlPointColor", static_cast<uint>(SW_RGBA(128, 204, 128, 128))),       // SW_PROFILE_CONTROL_POINT_COLOR
-	swProfileEntry("Settings", "ControlPointFocusedColor", static_cast<uint>(SW_RGBA(102, 76, 229, 128))), // SW_PROFILE_CONTROL_POINT_FOCUSED_COLOR
-	swProfileEntry("Settings", "ControlPointSeatedColor", static_cast<uint>(SW_RGBA(255, 178, 0, 192))),   // SW_PROFILE_CONTROL_POINT_SEATED_COLOR
-	swProfileEntry("Settings", "PathColor", static_cast<uint>(SW_RGBA(102, 76, 229, 255))),               // SW_PROFILE_PATH_COLOR
-	swProfileEntry("Settings", "PathOutOfReachColor", static_cast<uint>(SW_RGBA(229, 76, 76, 255))),       // SW_PROFILE_PATH_OUT_OF_REACH_COLOR
-	swProfileEntry("Settings", "SpreadHandleColor", static_cast<uint>(SW_RGBA(0, 0, 204, 255))),           // SW_PROFILE_SPREAD_HANDLE_COLOR
+	swProfileEntry("Settings", "ViewCubeColor", SW_RGBA(27, 31, 36, 255)),                                 // SW_PROFILE_VIEW_CUBE_COLOR #1b1f24ff
+	swProfileEntry("Settings", "ViewCubeTextColor", SW_RGBA(232, 237, 242, 255)),                          // SW_PROFILE_VIEW_CUBE_TEXT_COLOR #e8edf2ff
+	swProfileEntry("Settings", "ViewCubeHighlightColor", SW_RGBA(41, 128, 185, 255)),                      // SW_PROFILE_VIEW_CUBE_HIGHLIGHT_COLOR #2980b9ff
+	swProfileEntry("Settings", "AxisXColor", SW_RGBA(200, 40, 60, 255)),                                   // SW_PROFILE_AXIS_X_COLOR #c8283cff
+	swProfileEntry("Settings", "AxisYColor", SW_RGBA(100, 200, 20, 255)),                                  // SW_PROFILE_AXIS_Y_COLOR #64c814ff
+	swProfileEntry("Settings", "AxisZColor", SW_RGBA(40, 60, 230, 255)),                                   // SW_PROFILE_AXIS_Z_COLOR #283ce6ff
+	swProfileEntry("Settings", "AxisXNegativeColor", SW_RGBA(150, 62, 72, 255)),                          // SW_PROFILE_AXIS_X_NEGATIVE_COLOR #963e48ff
+	swProfileEntry("Settings", "AxisYNegativeColor", SW_RGBA(96, 150, 50, 255)),                          // SW_PROFILE_AXIS_Y_NEGATIVE_COLOR #609632ff
+	swProfileEntry("Settings", "AxisZNegativeColor", SW_RGBA(62, 74, 168, 255)),                          // SW_PROFILE_AXIS_Z_NEGATIVE_COLOR #3e4aa8ff
+	swProfileEntry("Settings", "ObjectSelectedColor", static_cast<uint>(SW_RGBA(229, 76, 102, 255))),      // SW_PROFILE_OBJECT_SELECTED_COLOR #e54c66ff
+	swProfileEntry("Settings", "ObjectFocusedColor", static_cast<uint>(SW_RGBA(102, 76, 229, 255))),       // SW_PROFILE_OBJECT_FOCUSED_COLOR #664ce5ff
+	swProfileEntry("Settings", "CameraColor", static_cast<uint>(SW_RGBA(128, 204, 128, 255))),             // SW_PROFILE_CAMERA_COLOR #80cc80ff
+	swProfileEntry("Settings", "LightColor", static_cast<uint>(SW_RGBA(128, 204, 128, 255))),              // SW_PROFILE_LIGHT_COLOR #80cc80ff
+	swProfileEntry("Settings", "ControlPointColor", static_cast<uint>(SW_RGBA(128, 204, 128, 128))),       // SW_PROFILE_CONTROL_POINT_COLOR #80cc8080
+	swProfileEntry("Settings", "ControlPointFocusedColor", static_cast<uint>(SW_RGBA(102, 76, 229, 128))), // SW_PROFILE_CONTROL_POINT_FOCUSED_COLOR #664ce580
+	swProfileEntry("Settings", "ControlPointSeatedColor", static_cast<uint>(SW_RGBA(255, 178, 0, 192))),   // SW_PROFILE_CONTROL_POINT_SEATED_COLOR #ffb200c0
+	swProfileEntry("Settings", "PathColor", static_cast<uint>(SW_RGBA(102, 76, 229, 255))),               // SW_PROFILE_PATH_COLOR #664ce5ff
+	swProfileEntry("Settings", "PathOutOfReachColor", static_cast<uint>(SW_RGBA(229, 76, 76, 255))),       // SW_PROFILE_PATH_OUT_OF_REACH_COLOR #e54c4cff
+	swProfileEntry("Settings", "SpreadHandleColor", static_cast<uint>(SW_RGBA(0, 0, 204, 255))),           // SW_PROFILE_SPREAD_HANDLE_COLOR #0000ccff
+	swProfileEntry("Settings", "ExplodeLineColor", static_cast<uint>(SW_RGBA(255, 85, 0, 255))),         // SW_PROFILE_EXPLODE_LINE_COLOR #ff5500ff
 
 	swProfileEntry("Settings", "Language", ""),                                                // SW_PROFILE_LANGUAGE
 	swProfileEntry("Settings", "ColorTheme", static_cast<int>(swColorTheme::Dark)),            // SW_PROFILE_COLOR_THEME
@@ -218,14 +219,14 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Defaults", "AuthorEmail", ""),                                             // SW_PROFILE_DEFAULT_AUTHOR_EMAIL
 	swProfileEntry("Defaults", "AuthorComment", ""),                                           // SW_PROFILE_DEFAULT_AUTHOR_COMMENT
 	swProfileEntry("Defaults", "AuthorSplitter", " | "),                                       // SW_PROFILE_DEFAULT_AUTHOR_SPLITTER
-	swProfileEntry("Defaults", "AmbientColor", SW_RGB(75, 75, 75)),                            // SW_PROFILE_DEFAULT_AMBIENT_COLOR
+	swProfileEntry("Defaults", "AmbientColor", SW_RGB(75, 75, 75)),                            // SW_PROFILE_DEFAULT_AMBIENT_COLOR #4b4b4bff
 
 	swProfileEntry("HTML", "Options", SW_HTML_SINGLE_PAGE),                                     // SW_PROFILE_HTML_OPTIONS
 	swProfileEntry("HTML", "ImageOptions", 0),                                                  // SW_PROFILE_HTML_IMAGE_OPTIONS
 	swProfileEntry("HTML", "ImageWidth", 640),                                                 // SW_PROFILE_HTML_IMAGE_WIDTH
 	swProfileEntry("HTML", "ImageHeight", 480),                                                // SW_PROFILE_HTML_IMAGE_HEIGHT
 	swProfileEntry("HTML", "ArrowPosition", 0),                                                // SW_PROFILE_HTML_ARROW_POSITION
-	swProfileEntry("HTML", "BackgroundColor", SW_RGBA(255, 255, 255, 0)),                      // SW_PROFILE_HTML_BACKGROUND_COLOR
+	swProfileEntry("HTML", "BackgroundColor", SW_RGBA(255, 255, 255, 0)),                      // SW_PROFILE_HTML_BACKGROUND_COLOR #ffffff00
 	swProfileEntry("HTML", "OverrideColors", QStringList()),                                  // SW_PROFILE_HTML_OVERRIDE_COLORS
 	swProfileEntry("HTML", "Display", 0),                                                     // SW_PROFILE_HTML_DISPLAY
 	swProfileEntry("HTML", "StyleSheet", ""),                                                 // SW_PROFILE_HTML_STYLE_SHEET
@@ -258,13 +259,13 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "PreviewAxisIconSize", 64),                                         // SW_PROFILE_PREVIEW_AXIS_ICON_SIZE
 
 	swProfileEntry("Settings", "StudCylinderColorEnabled", true),                              // SW_PROFILE_STUD_CYLINDER_COLOR_ENABLED
-	swProfileEntry("Settings", "StudCylinderColor", SW_RGBA(27, 42, 52, 255)),                 // SW_PROFILE_STUD_CYLINDER_COLOR
+	swProfileEntry("Settings", "StudCylinderColor", SW_RGBA(27, 42, 52, 255)),                 // SW_PROFILE_STUD_CYLINDER_COLOR #1b2a34ff
 	swProfileEntry("Settings", "PartEdgeColorEnabled", true),                                 // SW_PROFILE_PART_EDGE_COLOR_ENABLED
-	swProfileEntry("Settings", "PartEdgeColor", SW_RGBA(0, 0, 0, 255)),                       // SW_PROFILE_PART_EDGE_COLOR
+	swProfileEntry("Settings", "PartEdgeColor", SW_RGBA(0, 0, 0, 255)),                       // SW_PROFILE_PART_EDGE_COLOR #000000ff
 	swProfileEntry("Settings", "BlackEdgeColorEnabled", true),                                 // SW_PROFILE_BLACK_EDGE_COLOR_ENABLED
-	swProfileEntry("Settings", "BlackEdgeColor", SW_RGBA(255, 255, 255, 255)),                 // SW_PROFILE_BLACK_EDGE_COLOR
+	swProfileEntry("Settings", "BlackEdgeColor", SW_RGBA(255, 255, 255, 255)),                 // SW_PROFILE_BLACK_EDGE_COLOR #ffffffff
 	swProfileEntry("Settings", "DarkEdgeColorEnabled", true),                                  // SW_PROFILE_DARK_EDGE_COLOR_ENABLED
-	swProfileEntry("Settings", "DarkEdgeColor", SW_RGBA(27, 42, 52, 255)),                     // SW_PROFILE_DARK_EDGE_COLOR
+	swProfileEntry("Settings", "DarkEdgeColor", SW_RGBA(27, 42, 52, 255)),                     // SW_PROFILE_DARK_EDGE_COLOR #1b2a34ff
 	swProfileEntry("Settings", "PartEdgeContrast", 0.5f),                                     // SW_PROFILE_PART_EDGE_CONTRAST
 	swProfileEntry("Settings", "PartColorValueLDIndex", 0.5f),                                // SW_PROFILE_PART_COLOR_VALUE_LD_INDEX
 	swProfileEntry("Settings", "AutomateEdgeColor", 0),                                        // SW_PROFILE_AUTOMATE_EDGE_COLOR
@@ -289,20 +290,20 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Instructions", "EditorMarkers", 1),                                        // SW_PROFILE_INSTRUCTIONS_EDITOR_MARKERS
 	swProfileEntry("Instructions", "NewModelDefaults", 1),                                     // SW_PROFILE_INSTRUCTIONS_NEW_MODEL_DEFAULTS
 	swProfileEntry("Instructions", "GridDivisions", 8),                                        // SW_PROFILE_INSTRUCTIONS_GRID_DIVISIONS
-	swProfileEntry("Instructions", "GridPrimaryColor", SW_RGBA(61, 174, 233, 110)),            // SW_PROFILE_INSTRUCTIONS_GRID_PRIMARY_COLOR
-	swProfileEntry("Instructions", "GridSecondaryColor", SW_RGBA(61, 174, 233, 40)),           // SW_PROFILE_INSTRUCTIONS_GRID_SECONDARY_COLOR
-	swProfileEntry("Instructions", "MarginColor", SW_RGBA(61, 174, 233, 160)),                 // SW_PROFILE_INSTRUCTIONS_MARGIN_COLOR
+	swProfileEntry("Instructions", "GridPrimaryColor", SW_RGBA(61, 174, 233, 110)),            // SW_PROFILE_INSTRUCTIONS_GRID_PRIMARY_COLOR #3daee96e
+	swProfileEntry("Instructions", "GridSecondaryColor", SW_RGBA(61, 174, 233, 40)),           // SW_PROFILE_INSTRUCTIONS_GRID_SECONDARY_COLOR #3daee928
+	swProfileEntry("Instructions", "MarginColor", SW_RGBA(61, 174, 233, 160)),                 // SW_PROFILE_INSTRUCTIONS_MARGIN_COLOR #3daee9a0
 	swProfileEntry("Instructions", "ShowElementMargins", 0),                                   // SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_MARGINS
 	swProfileEntry("Instructions", "ShowElementPadding", 0),                                   // SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_PADDING
 	swProfileEntry("Instructions", "ShowElementAnchors", 0),                                   // SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_ANCHORS
 	swProfileEntry("Instructions", "ShowRulers", 1),                                           // SW_PROFILE_INSTRUCTIONS_SHOW_RULERS
-	swProfileEntry("Instructions", "ElementMarginColor", SW_RGB(246, 178, 107)),               // SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR
+	swProfileEntry("Instructions", "ElementMarginColor", SW_RGB(246, 178, 107)),               // SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR #f6b26bff
 	swProfileEntry("Instructions", "ElementMarginAlpha", 66),                                  // SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_ALPHA
-	swProfileEntry("Instructions", "ElementPaddingColor", SW_RGB(147, 196, 125)),              // SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR
+	swProfileEntry("Instructions", "ElementPaddingColor", SW_RGB(147, 196, 125)),              // SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR #93c47dff
 	swProfileEntry("Instructions", "ElementPaddingAlpha", 55),                                 // SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_ALPHA
-	swProfileEntry("Instructions", "ElementAnchorColor", SW_RGB(214, 51, 160)),                // SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR
+	swProfileEntry("Instructions", "ElementAnchorColor", SW_RGB(214, 51, 160)),                // SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR #d633a0ff
 	swProfileEntry("Instructions", "ElementAnchorAlpha", 100),                                 // SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_ALPHA
-	swProfileEntry("Instructions", "RulerPointerColor", SW_RGB(230, 40, 40)),                  // SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR
+	swProfileEntry("Instructions", "RulerPointerColor", SW_RGB(230, 40, 40)),                  // SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR #e62828ff
 	swProfileEntry("Instructions", "RulerPointerAlpha", 100),                                  // SW_PROFILE_INSTRUCTIONS_RULER_POINTER_ALPHA
 	swProfileEntry("InstructionsDefaults", "PageWidth", 1008.0f),                              // SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_WIDTH
 	swProfileEntry("InstructionsDefaults", "PageHeight", 612.0f),                              // SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_HEIGHT

@@ -276,6 +276,7 @@ public:
 	std::vector<QString> GetLoadWarningDetails() const;
 	swResult<void> Save(const QString& FileName);
 	bool Save(QTextStream& Stream) const;
+	swResult<void> SaveCopy(const QString& FileName) const;
 	swResult<void> Merge(const std::vector<Project*>& Sources);
 	bool ImportLDD(const QString& FileName);
 	bool ImportInventory(const std::vector<swSetInventoryItem>& SetInventory, const QString& Name, const QString& Description);

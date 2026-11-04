@@ -409,6 +409,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->MarqueeBorderColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->MarqueeFillColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->OverlayColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
+	connect(ui->ExplodeLineColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->CutawayShadeColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->ElementMarginColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->ElementPaddingColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
@@ -711,6 +712,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	SetButtonPixmap(mOptions->Preferences.mMarqueeBorderColor, ui->MarqueeBorderColorButton);
 	SetButtonPixmap(mOptions->Preferences.mMarqueeFillColor, ui->MarqueeFillColorButton);
 	SetButtonPixmap(mOptions->Preferences.mOverlayColor, ui->OverlayColorButton);
+	SetButtonPixmap(mOptions->Preferences.mExplodeLineColor, ui->ExplodeLineColorButton);
 	SetButtonPixmap(mOptions->Preferences.mCutawayShadeColor | SW_RGBA(0, 0, 0, 255), ui->CutawayShadeColorButton);
 	SetButtonPixmap(mOptions->Instructions.ElementMarginColor | SW_RGBA(0, 0, 0, 255), ui->ElementMarginColorButton);
 	SetButtonPixmap(mOptions->Instructions.ElementPaddingColor | SW_RGBA(0, 0, 0, 255), ui->ElementPaddingColorButton);
@@ -1275,6 +1277,12 @@ void swPreferencesDialog::ColorButtonClicked()
 	{
 		Color = &mOptions->Preferences.mOverlayColor;
 		Title = tr("Select Overlay Color");
+	}
+	else if (Button == ui->ExplodeLineColorButton)
+	{
+		Color = &mOptions->Preferences.mExplodeLineColor;
+		Title = tr("Select Explode Lines Color");
+		DialogOptions = QColorDialog::ShowAlphaChannel;
 	}
 	else if (Button == ui->CutawayShadeColorButton)
 	{

@@ -268,6 +268,15 @@ void swTests::ConnectivityConnectsSeatedShapes()
 	QVERIFY(swConnectivity::AreConnected(HoleAndAntiStud, BarAndStud));
 	QVERIFY(!swConnectivity::AreConnected(BarAndStud, HoleAway));
 
+	// The seated pair gives its axis, along the bar, and the bar's position.
+	swVector3 Axis;
+	swVector3 Point;
+
+	QVERIFY(swConnectivity::GetConnectionAxis(BarAndStud, HoleAndAntiStud, Axis, Point));
+	QVERIFY(fabsf(fabsf(Axis.z) - 1.0f) < 0.01f);
+	QVERIFY(fabsf(Point.x) < 0.01f && fabsf(Point.y) < 0.01f);
+	QVERIFY(!swConnectivity::GetConnectionAxis(BarAndStud, HoleAway, Axis, Point));
+
 	// The box around the bar's shape takes in its length and radius.
 	swBoundingBox Box = { swVector3(FLT_MAX, FLT_MAX, FLT_MAX), swVector3(-FLT_MAX, -FLT_MAX, -FLT_MAX) };
 

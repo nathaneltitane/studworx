@@ -1551,6 +1551,15 @@ const swCommand gCommands[] =
 		""
 	},
 
+	// SW_VIEW_TOOLBAR_EXPLODE
+	{
+		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Explode"),
+		QT_TRANSLATE_NOOP("Menu", "Explode"),
+		QT_TRANSLATE_NOOP("Status", "Toggle the Explode panel"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Explode</b></p><p>Show or hide the Explode panel, which spreads the parts on screen away from an anchor, the focused part or the first or last selected one, scaled along X, Y and Z. With Selected Parts Only, each group moves as one part. Each part slides straight out along the connection that holds it, a part without one along the nearest axis from the part beside it, and with Show Lines a line runs through each connection back to the socket it came off. Submodels, and the submodels inside them, flatten into their parts first in the same undo step. Collapse or Undo puts the parts and submodels back, and Save Copy saves the exploded model to a separate file named with -exploded.</p>"),
+		""
+	},
+
 	// SW_VIEW_FULL_SCREEN
 	{
 		QT_TRANSLATE_NOOP("Action", "View.FullScreen"),
@@ -2673,6 +2682,15 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Inline Selected Models"),
 		QT_TRANSLATE_NOOP("Status", "Insert the contents of the selected model references into the current model"),
 		"",
+		""
+	},
+
+	// SW_PART_FLATTEN_MODEL
+	{
+		QT_TRANSLATE_NOOP("Action", "Part.FlattenModel"),
+		QT_TRANSLATE_NOOP("Menu", "Flatten Model"),
+		QT_TRANSLATE_NOOP("Status", "Replace every submodel, and the submodels inside it, with its parts in one step"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Flatten Model</b></p><p>Replace every submodel in the current model, and every submodel inside those, with its parts in one undo step. Each part keeps its place and color, and the groups inside the submodels are not kept.</p>"),
 		""
 	},
 

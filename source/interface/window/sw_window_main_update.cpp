@@ -1,5 +1,6 @@
 #include "sw_global.h"
 #include "sw_window_main.h"
+#include "sw_widget_explode.h"
 #include "sw_widget_builder_minifigure.h"
 #include "sw_widget_spin_box_double.h"
 #include "sw_widget_selection_part.h"
@@ -84,6 +85,10 @@ void swMainWindow::UpdateSelectedObjects(bool SelectionChanged)
 		mActions[SW_PART_RESET_PIVOT_POINT]->setEnabled(Flags & SW_SELECTION_SELECTED);
 		mActions[SW_PART_REMOVE_KEY_FRAMES]->setEnabled(Flags & SW_SELECTION_SELECTED);
 		mActions[SW_PART_ARRAY]->setEnabled(Flags & SW_SELECTION_PART);
+
+		if (mExplodeWidget)
+			mExplodeWidget->UpdateAnchors();
+
 		mActions[SW_PART_CONTROL_POINT_INSERT]->setEnabled(Flags & SW_SELECTION_CAN_ADD_CONTROL_POINT);
 		mActions[SW_PART_CONTROL_POINT_REMOVE]->setEnabled(Flags & SW_SELECTION_CAN_REMOVE_CONTROL_POINT);
 		mActions[SW_PART_CONTROL_POINT_TANGENT]->setEnabled(Flags & SW_SELECTION_CAN_CLAMP_TANGENT);

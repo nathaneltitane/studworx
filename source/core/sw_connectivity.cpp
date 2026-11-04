@@ -188,13 +188,25 @@ void swConnectivity::AddToBoundingBox(const std::vector<swConnectionCylinder>& C
 
 bool swConnectivity::AreConnected(const std::vector<swConnectionCylinder>& Cylinders, const swMatrix44& Transform, const std::vector<swConnectionCylinder>& OtherCylinders, const swMatrix44& OtherTransform)
 {
+	return FindSeat(Cylinders, Transform, OtherCylinders, OtherTransform, nullptr);
+}
+
+bool swConnectivity::FindSeat(const std::vector<swConnectionCylinder>& Cylinders, const swMatrix44& Transform, const std::vector<swConnectionCylinder>& OtherCylinders, const swMatrix44& OtherTransform, swMatrix44* SeatFrame)
+{
 	for (const swConnectionCylinder& Cylinder : Cylinders)
 	{
 		const swMatrix44 Frame = swMultiply(swMatrix44LDrawToStudWorx(Cylinder.Transform), Transform);
 
 		for (const swConnectionCylinder& OtherCylinder : OtherCylinders)
-			if (AreCompatible(Cylinder, OtherCylinder) && IsSeated(Cylinder, Frame, OtherCylinder, swMultiply(swMatrix44LDrawToStudWorx(OtherCylinder.Transform), OtherTransform)))
-				return true;
+		{
+			if (!AreCompatible(Cylinder, OtherCylinder) || !IsSeated(Cylinder, Frame, OtherCylinder, swMultiply(swMatrix44LDrawToStudWorx(OtherCylinder.Transform), OtherTransform)))
+				continue;
+
+			if (SeatFrame)
+				*SeatFrame = Frame;
+
+			return true;
+		}
 	}
 
 	return false;
@@ -206,6 +218,26 @@ bool swConnectivity::AreConnected(const swConnectionShapes& Shapes, const swConn
 		for (const auto& [OtherCylinders, OtherTransform] : OtherShapes)
 			if (AreConnected(*Cylinders, Transform, *OtherCylinders, OtherTransform))
 				return true;
+
+	return false;
+}
+
+bool swConnectivity::GetConnectionAxis(const swConnectionShapes& Shapes, const swConnectionShapes& OtherShapes, swVector3& Axis, swVector3& Point)
+{
+	swMatrix44 SeatFrame;
+
+	for (const auto& [Cylinders, Transform] : Shapes)
+	{
+		for (const auto& [OtherCylinders, OtherTransform] : OtherShapes)
+		{
+			if (!FindSeat(*Cylinders, Transform, *OtherCylinders, OtherTransform, &SeatFrame))
+				continue;
+
+			Axis = swNormalize(swMultiply30(swVector3(0.0f, 0.0f, 1.0f), SeatFrame));
+			Point = SeatFrame.GetTranslation();
+			return true;
+		}
+	}
 
 	return false;
 }

@@ -4,7 +4,7 @@ All tests run in one Qt Test executable, `studworx_tests`. The current tests cov
 object history, property-key comparisons, and the final animation key after
 step insertion, removal, and key deletion, including 8,000 deterministic
 randomized undo/redo and merge transitions, and how the connection shapes of
-the LDCad shadow library are read and fit together, on made-up parts.
+the LDCad shadow library are read and fit together and along which axis, on made-up parts.
 With `SW_TEST_BINARY` set to a built `studworx`, a one brick model is exported
 to POV-Ray and rendered at 64 x 64 (skipped without POV-Ray, `SW_TEST_LIBRARY`
 sets an optional parts library). The same binary saves a Trans-Clear model on

@@ -1,5 +1,6 @@
 #include "sw_global.h"
 #include "sw_window_main.h"
+#include "sw_widget_explode.h"
 #include "sw_widget_builder_minifigure.h"
 #include "sw_widget_spin_box_double.h"
 #include "sw_widget_selection_part.h"
@@ -448,6 +449,7 @@ void swMainWindow::CreateMenus()
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_TIMELINE]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_PREVIEW]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_MINIFIGURE_BUILDER]);
+	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_EXPLODE]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_TERMINAL]);
 	ToolBarsMenu->addSeparator();
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_STANDARD]);
@@ -510,6 +512,7 @@ void swMainWindow::CreateMenus()
 	ModelMenu->addAction(mActions[SW_PART_EDIT_END_SUBMODEL]);
 	ModelMenu->addAction(mActions[SW_PART_VIEW_SELECTED_MODEL]);
 	ModelMenu->addAction(mActions[SW_PART_INLINE_SELECTED_MODELS]);
+	ModelMenu->addAction(mActions[SW_PART_FLATTEN_MODEL]);
 	ModelMenu->addAction(mActions[SW_PART_MOVE_SELECTION_TO_MODEL]);
 	ModelMenu->addSeparator();
 	for (int ModelIdx = SW_MODEL_FIRST; ModelIdx <= SW_MODEL_LAST; ModelIdx++)
@@ -889,16 +892,25 @@ void swMainWindow::CreateToolBars()
 		}
 	});
 
+	mExplodeToolBar = new QDockWidget(tr("Explode"), this);
+	mExplodeToolBar->setObjectName("ExplodeToolbar");
+	mExplodeWidget = new swExplodeWidget(mExplodeToolBar);
+	mExplodeToolBar->setWidget(mExplodeWidget);
+	addDockWidget(Qt::RightDockWidgetArea, mExplodeToolBar);
+	mExplodeToolBar->hide();
+
 	tabifyDockWidget(mPartsToolBar, mPropertiesToolBar);
 	tabifyDockWidget(mPropertiesToolBar, mTimelineToolBar);
 	tabifyDockWidget(mTimelineToolBar, mPreviewToolBar);
 	tabifyDockWidget(mPreviewToolBar, mMinifigureBuilderToolBar);
+	tabifyDockWidget(mMinifigureBuilderToolBar, mExplodeToolBar);
 
 	connect(mPropertiesToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 	connect(mTimelineToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 	connect(mPartsToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 	connect(mColorsToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 	connect(mMinifigureBuilderToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
+	connect(mExplodeToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 
 	mPartsToolBar->raise();
 }

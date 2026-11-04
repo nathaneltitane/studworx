@@ -636,6 +636,35 @@ swResult<void> Project::Save(const QString& FileName)
 	return swResult<void>();
 }
 
+// use to write the project to another file without taking that file over
+// shortcut: relative asset paths stay as they are, rebase them like Save if copies go to other folders
+swResult<void> Project::SaveCopy(const QString& FileName) const
+{
+	QSaveFile File(FileName);
+
+	if (!File.open(QIODevice::WriteOnly))
+		return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, File.errorString()));
+
+	QByteArray Bytes;
+	QTextStream Stream(&Bytes, QIODevice::WriteOnly);
+	const bool Serialized = Save(Stream);
+	Stream.flush();
+
+	if (Serialized && Stream.status() == QTextStream::Ok)
+		Bytes = swWriteCommandMeta(Bytes, mLeoCADMetaCommands ? swCommandMetaFormat::LeoCAD : swCommandMetaFormat::StudWorx);
+
+	if (!Serialized || Stream.status() != QTextStream::Ok || File.write(Bytes) != Bytes.size())
+	{
+		File.cancelWriting();
+		return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, tr("Could not write all model data.")));
+	}
+
+	if (!File.commit())
+		return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, File.errorString()));
+
+	return swResult<void>();
+}
+
 bool Project::Save(QTextStream& Stream) const
 {
 	const bool MPD = IsMultiPart();

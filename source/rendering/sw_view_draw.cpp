@@ -220,6 +220,9 @@ void swView::OnDraw()
 	if (DrawInterface)
 		DrawCutaway();
 
+	if (DrawInterface)
+		DrawExplodeLines();
+
 	if (DrawOverlays)
 		DrawAxes();
 
@@ -799,6 +802,29 @@ void swView::DrawCutaway() const
 }
 
 // use to draw the cutaway gizmo
+// use to join exploded parts back to where they connect
+void swView::DrawExplodeLines() const
+{
+	const swModel* ActiveModel = GetActiveModel();
+
+	if (!ActiveModel || ActiveModel->GetExplodeLines().empty())
+		return;
+
+	const std::vector<swVector3>& Lines = ActiveModel->GetExplodeLines();
+
+	mContext->SetLineWidth(swGetPreferences().mLineWidth);
+	mContext->SetMaterial(swMaterialType::UnlitColor);
+	mContext->SetWorldMatrix(swMatrix44Identity());
+	mContext->SetViewMatrix(mCamera->mWorldView);
+	mContext->SetProjectionMatrix(GetProjectionMatrix());
+	mContext->EnableColorBlend(true);
+	mContext->SetColor(swVector4FromColor(swGetPreferences().mExplodeLineColor));
+	mContext->SetVertexBufferPointer(Lines.data());
+	mContext->SetVertexFormatPosition(3);
+	mContext->DrawPrimitives(GL_LINES, 0, static_cast<GLsizei>(Lines.size()));
+	mContext->EnableColorBlend(false);
+}
+
 void swView::DrawCutawayGizmo() const
 {
 	const int ConeSegments = 12;

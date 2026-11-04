@@ -470,6 +470,8 @@ void swModel::BeginEditHistory()
 
 void swModel::BeginMergeableEditHistory(swModelHistoryEditMerge ModelHistoryEditMerge, swObjectPropertyId PropertyId)
 {
+	CollapseExplode();
+
 	const swModelHistoryEditMergeKey MergeKey = { ModelHistoryEditMerge, PropertyId, mCurrentStep, gMainWindow ? gMainWindow->GetAddKeys() : false };
 	std::unique_ptr<swModelHistoryEdit> ModelHistoryEdit = std::make_unique<swModelHistoryEdit>(MergeKey);
 

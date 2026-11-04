@@ -27,14 +27,17 @@
 
 void swModel::UndoAction()
 {
+	CollapseExplode();
+
 	if (mUndoHistory.empty())
 		return;
 
 	std::unique_ptr<swModelHistoryEntry> Undo = std::move(mUndoHistory.front());
 
-	RunHistorySequence(Undo->HistorySequence, false);
-
+	// the entry leaves the list before it runs, panels updated mid-run read the history
 	mUndoHistory.erase(mUndoHistory.begin());
+
+	RunHistorySequence(Undo->HistorySequence, false);
 	mRedoHistory.insert(mRedoHistory.begin(), std::move(Undo));
 
 	gMainWindow->UpdateModified(mProject ? mProject->IsModified() : IsModified());
@@ -43,14 +46,16 @@ void swModel::UndoAction()
 
 void swModel::RedoAction()
 {
+	CollapseExplode();
+
 	if (mRedoHistory.empty())
 		return;
 
 	std::unique_ptr<swModelHistoryEntry> Redo = std::move(mRedoHistory.front());
 
-	RunHistorySequence(Redo->HistorySequence, true);
-
 	mRedoHistory.erase(mRedoHistory.begin());
+
+	RunHistorySequence(Redo->HistorySequence, true);
 	mUndoHistory.insert(mUndoHistory.begin(), std::move(Redo));
 
 	gMainWindow->UpdateModified(mProject ? mProject->IsModified() : IsModified());

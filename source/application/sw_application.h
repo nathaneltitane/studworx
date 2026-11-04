@@ -266,6 +266,7 @@ public:
 	quint32 mPathColor;
 	quint32 mPathOutOfReachColor;
 	quint32 mSpreadHandleColor;
+	quint32 mExplodeLineColor;
 
 
 	int mPreviewViewCubeEnabled;

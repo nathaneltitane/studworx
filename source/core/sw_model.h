@@ -42,6 +42,22 @@ enum class swPartsListAlignment
 	End
 };
 
+enum class swExplodeAnchor
+{
+	Focused,
+	First,
+	Last,
+	Count
+};
+
+struct swExplodeSettings
+{
+	swExplodeAnchor Anchor = swExplodeAnchor::Focused;
+	swVector3 Spread = swVector3(2.0f, 2.0f, 2.0f);
+	bool SelectedOnly = false;
+	bool ShowLines = true;
+};
+
 enum class swCameraProjection;
 struct swImageTurntable;
 struct swImageFraming;
@@ -399,6 +415,7 @@ public:
 
 	void MoveSelectionToModel(swModel* Model);
 	void InlineSelectedModels();
+	void FlattenModel();
 
 	swGroup* AddGroup(const QString& Prefix, swGroup* Parent);
 	swGroup* GetGroup(const QString& Name, bool CreateIfMissing);
@@ -564,6 +581,23 @@ public:
 
 	void ShowPropertiesDialog();
 	void ShowArrayDialog();
+	swPart* GetExplodeAnchor(swExplodeAnchor Anchor) const;
+	void Explode(const swExplodeSettings& Settings);
+	bool SaveExplodedCopy(const swExplodeSettings& Settings);
+	void CollapseExplode();
+	void CollapseExplodeAction();
+	bool IsExplodeFlattened() const;
+
+	bool IsExploded() const
+	{
+		return mExploded;
+	}
+
+	const std::vector<swVector3>& GetExplodeLines() const
+	{
+		return mExplodeLines;
+	}
+
 	void AddMinifigure(const swMinifigure& Minifigure);
 	void UpdateInterface();
 
@@ -606,6 +640,7 @@ protected:
 	void BeginEditHistory();
 	void BeginMergeableEditHistory(swModelHistoryEditMerge ModelHistoryEditMerge, swObjectPropertyId PropertyId);
 	void EndEditHistory();
+	bool FlattenSubModels(bool SelectedOnly, swPart*& Anchor, std::vector<swObject*>& Selection);
 	void SetModelProperties(const swModelProperties& ModelProperties);
 
 	void RunHistorySequence(const std::vector<std::unique_ptr<swModelHistory>>& HistorySequence, bool Apply);
@@ -640,6 +675,9 @@ protected:
 	swPartDataReference mPartData;
 
 	bool mIsPreview;
+	bool mExploded = false;
+	std::vector<swVector3> mExplodeLines;
+	quint64 mExplodeRevision = 0;
 	bool mActive;
 	swStep mCurrentStep;
 	swVector3 mMouseToolDistance;

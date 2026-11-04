@@ -798,6 +798,363 @@ void swModel::ShowArrayDialog()
 	gMainWindow->UpdateTimeline(false, false);
 }
 
+// use to find the part that stays in place, the first and last selected follow the model order
+swPart* swModel::GetExplodeAnchor(swExplodeAnchor Anchor) const
+{
+	if (Anchor == swExplodeAnchor::Focused)
+	{
+		swObject* Focus = GetFocusObject();
+		return Focus && Focus->IsPart() ? static_cast<swPart*>(Focus) : nullptr;
+	}
+
+	// shortcut: first and last selected follow the model order, track the click order if users expect that
+	swPart* Found = nullptr;
+
+	for (const std::unique_ptr<swPart>& Part : mParts)
+	{
+		if (!Part->IsSelected())
+			continue;
+
+		Found = Part.get();
+
+		if (Anchor == swExplodeAnchor::First)
+			break;
+	}
+
+	return Found;
+}
+
+// use to flatten the submodels and spread the parts away from the anchor, one undo puts it all back
+void swModel::Explode(const swExplodeSettings& Settings)
+{
+	// a new spread starts again from the model the last one flattened
+	if (IsExplodeFlattened())
+		CollapseExplodeAction();
+
+	swPart* Anchor = GetExplodeAnchor(Settings.Anchor);
+
+	if (!Anchor)
+		return;
+
+	const bool HasSubModels = std::any_of(mParts.begin(), mParts.end(), [&Settings](const std::unique_ptr<swPart>& Part)
+	{
+		return Part->mPartData->IsModel() && (!Settings.SelectedOnly || Part->IsSelected());
+	});
+
+	if (HasSubModels)
+	{
+		BeginHistorySequence();
+		BeginEditHistory();
+
+		std::vector<swObject*> Selection;
+
+		FlattenSubModels(Settings.SelectedOnly, Anchor, Selection);
+		EndEditHistory();
+
+		SetSelectionAndFocus(Selection, Settings.Anchor == swExplodeAnchor::Focused ? Anchor : nullptr, SW_PART_SECTION_POSITION, swSelectionMode::Single);
+
+		EndHistorySequence(tr("Explode"));
+
+		mExplodeRevision = mUndoHistory.empty() ? 0 : mUndoHistory.front()->Revision;
+
+		gMainWindow->UpdateTimeline(false, false);
+		gMainWindow->UpdateInUseCategory();
+
+		if (!Anchor)
+			return;
+	}
+
+	for (const std::unique_ptr<swPart>& Part : mParts)
+		Part->mExplodeOffset = swVector3(0.0f, 0.0f, 0.0f);
+
+	mExplodeLines.clear();
+
+	// with selected parts only a group moves as one part
+	const auto GetUnit = [&Settings](const swPart* Part) -> const void*
+	{
+		swGroup* Group = Part->GetGroup();
+
+		if (Settings.SelectedOnly && Group)
+			return Group->GetTopGroup();
+
+		return Part;
+	};
+
+	const swVector3 Scale = Settings.Spread - swVector3(1.0f, 1.0f, 1.0f);
+
+	struct swExplodePart
+	{
+		swPart* Part;
+		swVector3 Center;
+		swBoundingBox Box;
+		swConnectionShapes Shapes;
+		swVector3 Offset;
+		swVector3 Start;
+		swVector3 End;
+		const void* Unit;
+		bool Line;
+		bool Reached;
+	};
+
+	std::vector<swExplodePart> ExplodeParts;
+	std::vector<size_t> Queue;
+
+	for (const std::unique_ptr<swPart>& Part : mParts)
+	{
+		if (Part.get() != Anchor && !Part->IsVisible(mCurrentStep))
+			continue;
+
+		const swBoundingBox& PartBox = Part->GetBoundingBox();
+		swExplodePart ExplodePart = { Part.get(), swMultiply31((PartBox.Min + PartBox.Max) * 0.5f, Part->mModelWorld), { swVector3(FLT_MAX, FLT_MAX, FLT_MAX), swVector3(-FLT_MAX, -FLT_MAX, -FLT_MAX) }, {}, swVector3(0.0f, 0.0f, 0.0f), swVector3(0.0f, 0.0f, 0.0f), swVector3(0.0f, 0.0f, 0.0f), GetUnit(Part.get()), false, false };
+
+		AddPartShapes(Part.get(), swMatrix44Identity(), ExplodePart.Shapes);
+
+		for (const auto& [Cylinders, Transform] : ExplodePart.Shapes)
+			swConnectivity::AddToBoundingBox(*Cylinders, Transform, ExplodePart.Box);
+
+		ExplodeParts.push_back(std::move(ExplodePart));
+	}
+
+	const void* AnchorUnit = GetUnit(Anchor);
+	const swBoundingBox& AnchorBox = Anchor->GetBoundingBox();
+	const swVector3 AnchorCenter = swMultiply31((AnchorBox.Min + AnchorBox.Max) * 0.5f, Anchor->mModelWorld);
+
+	// parts that stay put keep a zero offset so the parts hanging on them start from where they sit
+	const auto StaysPut = [&Settings, AnchorUnit](const swExplodePart& ExplodePart)
+	{
+		return ExplodePart.Unit == AnchorUnit || (Settings.SelectedOnly && !ExplodePart.Part->IsSelected());
+	};
+
+	// the rest of a part's group moves with it
+	const auto ReachUnit = [&ExplodeParts, &Queue, &StaysPut](const void* Unit, const swVector3& Offset)
+	{
+		for (size_t PartIndex = 0; PartIndex < ExplodeParts.size(); PartIndex++)
+		{
+			swExplodePart& Member = ExplodeParts[PartIndex];
+
+			if (Member.Reached || Member.Unit != Unit)
+				continue;
+
+			Member.Offset = StaysPut(Member) ? swVector3(0.0f, 0.0f, 0.0f) : Offset;
+			Member.Reached = true;
+			Queue.push_back(PartIndex);
+		}
+	};
+
+	// the world axis closest to a direction keeps moves and lines orthogonal
+	const auto SnapAxis = [](const swVector3& Direction)
+	{
+		int Axis = 0;
+
+		for (int Index = 1; Index < 3; Index++)
+			if (fabsf(Direction[Index]) > fabsf(Direction[Axis]))
+				Axis = Index;
+
+		swVector3 Snapped(0.0f, 0.0f, 0.0f);
+		Snapped[Axis] = Direction[Axis] < 0.0f ? -1.0f : 1.0f;
+		return Snapped;
+	};
+
+	// move a part out from its parent along one axis, the line runs through Point on that axis
+	const auto MoveFrom = [&Scale, &ReachUnit](const swExplodePart& From, swExplodePart& To, const swVector3& Axis, const swVector3& Point)
+	{
+		const swVector3 Move = Axis * swDot(To.Center - From.Center, Axis) * Scale;
+
+		To.Start = Point + From.Offset;
+		To.End = Point + From.Offset + Move;
+		To.Line = true;
+		ReachUnit(To.Unit, From.Offset + Move);
+	};
+
+	ReachUnit(AnchorUnit, swVector3(0.0f, 0.0f, 0.0f));
+
+	// only compare shapes of nearby parts
+	const auto BoxesMeet = [](const swBoundingBox& a, const swBoundingBox& b)
+	{
+		const float Margin = 1.0f;
+
+		for (int Axis = 0; Axis < 3; Axis++)
+			if (a.Min[Axis] > b.Max[Axis] + Margin || b.Min[Axis] > a.Max[Axis] + Margin)
+				return false;
+
+		return true;
+	};
+
+	// slide each part out along the connection to the part it hangs on
+	size_t QueueIndex = 0;
+
+	const auto Spread = [&]()
+	{
+		for (; QueueIndex < Queue.size(); QueueIndex++)
+		{
+			const swExplodePart& From = ExplodeParts[Queue[QueueIndex]];
+
+			for (size_t PartIndex = 0; PartIndex < ExplodeParts.size(); PartIndex++)
+			{
+				swExplodePart& To = ExplodeParts[PartIndex];
+				swVector3 Axis;
+				swVector3 Point;
+
+				if (To.Reached || To.Shapes.empty() || !BoxesMeet(From.Box, To.Box) || !swConnectivity::GetConnectionAxis(From.Shapes, To.Shapes, Axis, Point))
+					continue;
+
+				// centers level on the connection axis give no direction, so use the nearest world axis
+				if (fabsf(swDot(To.Center - From.Center, Axis)) < 1.0f)
+					Axis = SnapAxis(To.Center - From.Center);
+
+				MoveFrom(From, To, Axis, Point);
+			}
+		}
+	};
+
+	Spread();
+
+	// parts without a connection hang on the nearest placed part, closest to the anchor first
+	std::vector<size_t> Loose;
+
+	for (size_t PartIndex = 0; PartIndex < ExplodeParts.size(); PartIndex++)
+		if (!ExplodeParts[PartIndex].Reached)
+			Loose.push_back(PartIndex);
+
+	std::sort(Loose.begin(), Loose.end(), [&ExplodeParts, &AnchorCenter](size_t a, size_t b)
+	{
+		return swLengthSquared(ExplodeParts[a].Center - AnchorCenter) < swLengthSquared(ExplodeParts[b].Center - AnchorCenter);
+	});
+
+	for (size_t LooseIndex : Loose)
+	{
+		swExplodePart& To = ExplodeParts[LooseIndex];
+
+		if (To.Reached)
+			continue;
+
+		const swExplodePart* From = nullptr;
+
+		for (const swExplodePart& Placed : ExplodeParts)
+			if (Placed.Reached && (!From || swLengthSquared(Placed.Center - To.Center) < swLengthSquared(From->Center - To.Center)))
+				From = &Placed;
+
+		MoveFrom(*From, To, SnapAxis(To.Center - From->Center), To.Center);
+		Spread();
+	}
+
+	for (swExplodePart& ExplodePart : ExplodeParts)
+	{
+		if (StaysPut(ExplodePart))
+			continue;
+
+		ExplodePart.Part->mExplodeOffset = ExplodePart.Offset;
+
+		if (Settings.ShowLines && ExplodePart.Line)
+		{
+			mExplodeLines.push_back(ExplodePart.Start);
+			mExplodeLines.push_back(ExplodePart.End);
+		}
+	}
+
+	for (const std::unique_ptr<swPart>& Part : mParts)
+		Part->UpdatePosition(mCurrentStep);
+
+	mExploded = true;
+
+	gMainWindow->UpdateSelectedObjects(true);
+	UpdateAllViews();
+}
+
+// use to save the exploded model to a separate file, the open project keeps its file and positions
+bool swModel::SaveExplodedCopy(const swExplodeSettings& Settings)
+{
+	Explode(Settings);
+
+	if (!mExploded)
+		return false;
+
+	Project* ActiveProject = swGetActiveProject();
+	const QString ProjectFileName = ActiveProject->GetFileName();
+	const QString DefaultSuffix = ActiveProject->IsMultiPart() ? QLatin1String("mpd") : QLatin1String("ldr");
+	const QFileInfo ProjectInfo(ProjectFileName.isEmpty() ? QDir(swGetProfileString(SW_PROFILE_PROJECTS_PATH)).absoluteFilePath(ActiveProject->GetTitle()) : ProjectFileName);
+	const QString Suffix = ProjectInfo.suffix().isEmpty() ? DefaultSuffix : ProjectInfo.suffix();
+	const QString CopyName = ProjectInfo.absoluteDir().absoluteFilePath(ProjectInfo.completeBaseName() + QLatin1String("-exploded.") + Suffix);
+
+	QString FileName = QFileDialog::getSaveFileName(gMainWindow, tr("Save Exploded Copy"), CopyName, tr("Supported Files (*.%1);;All Files (*.*)").arg(DefaultSuffix));
+
+	if (FileName.isEmpty())
+		return false;
+
+	if (QFileInfo(FileName).suffix().isEmpty())
+		FileName += QLatin1Char('.') + DefaultSuffix;
+
+	if (!ProjectFileName.isEmpty() && QFileInfo(FileName).absoluteFilePath() == QFileInfo(ProjectFileName).absoluteFilePath())
+	{
+		QMessageBox::warning(gMainWindow, tr("Save Exploded Copy"), tr("The exploded copy needs a name other than the open file."));
+		return false;
+	}
+
+	// the saved place drops the explode offset, so fold it into the transform while writing
+	std::vector<std::pair<swPart*, swVector3>> Offsets;
+
+	for (const std::unique_ptr<swPart>& Part : mParts)
+	{
+		Offsets.emplace_back(Part.get(), Part->mExplodeOffset);
+		Part->mExplodeOffset = swVector3(0.0f, 0.0f, 0.0f);
+	}
+
+	// shortcut: parts with position keyframes keep their unexploded keys, write exploded keys if animated models need it
+	const swResult<void> Result = ActiveProject->SaveCopy(FileName);
+
+	for (const auto& [Part, Offset] : Offsets)
+		Part->mExplodeOffset = Offset;
+
+	if (!Result)
+	{
+		QMessageBox::warning(gMainWindow, tr("Save Exploded Copy"), Result.error());
+		return false;
+	}
+
+	return true;
+}
+
+// use to tell whether the last edit is the flatten of the spread, selecting parts since does not count
+bool swModel::IsExplodeFlattened() const
+{
+	return mExplodeRevision && GetCurrentHistoryRevision() == mExplodeRevision;
+}
+
+// use to put the spread back, with the submodels it flattened when no edit came after
+void swModel::CollapseExplodeAction()
+{
+	if (!IsExplodeFlattened())
+	{
+		CollapseExplode();
+		return;
+	}
+
+	while (!mUndoHistory.empty() && mUndoHistory.front()->Revision != mExplodeRevision)
+		UndoAction();
+
+	UndoAction();
+}
+
+void swModel::CollapseExplode()
+{
+	if (!mExploded)
+		return;
+
+	mExploded = false;
+	mExplodeLines.clear();
+
+	for (const std::unique_ptr<swPart>& Part : mParts)
+	{
+		Part->mExplodeOffset = swVector3(0.0f, 0.0f, 0.0f);
+		Part->UpdatePosition(mCurrentStep);
+	}
+
+	if (gMainWindow)
+		gMainWindow->UpdateSelectedObjects(true);
+
+	UpdateAllViews();
+}
+
 void swModel::AddMinifigure(const swMinifigure& Minifigure)
 {
 	gMainWindow->GetActiveView()->MakeCurrent();
