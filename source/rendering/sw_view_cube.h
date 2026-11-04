@@ -28,6 +28,7 @@ public:
 
 protected:
 	void UpdateSettings();
+	static void CreateLabelTexture(swContext* Context);
 	swMatrix44 GetViewMatrix() const;
 	swMatrix44 GetProjectionMatrix() const;
 	std::bitset<6> GetIntersectionFlags() const;
@@ -58,6 +59,7 @@ protected:
 	static constexpr int mCornerCount = 8;
 	static constexpr int mFacetCount = mFaceCount + mEdgeCount + mCornerCount;
 
+	static bool mLabelAbbreviations;
 	static swTexture* mTexture;
 	static swVertexBuffer mVertexBuffer;
 	static swIndexBuffer mIndexBuffer;

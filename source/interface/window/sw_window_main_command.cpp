@@ -1368,8 +1368,8 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		SetTool(swTool::Rotate);
 		break;
 
-	case SW_EDIT_ACTION_DELETE:
-		SetTool(swTool::Eraser);
+	case SW_EDIT_ACTION_ERASE:
+		SetTool(swTool::Erase);
 		break;
 
 	case SW_EDIT_ACTION_PAINT:

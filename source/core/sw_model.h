@@ -416,7 +416,6 @@ public:
 	void MoveSelectionToModel(swModel* Model);
 	void InlineSelectedModels();
 	void FlattenModel();
-	bool FlattenSubModels(bool SelectedOnly, swPart*& Anchor, std::vector<swObject*>& Selection);
 
 	swGroup* AddGroup(const QString& Prefix, swGroup* Parent);
 	swGroup* GetGroup(const QString& Name, bool CreateIfMissing);
@@ -510,7 +509,7 @@ public:
 
 	void FindReplacePart(bool SearchForward, bool FindAll, bool Replace);
 
-	void UndoAction();
+	bool UndoAction();
 	void RedoAction();
 
 	swVector3 SnapPosition(const swVector3& Delta) const;
@@ -546,7 +545,7 @@ public:
 	void UpdateRotateTool(const swVector3& Axis, float Angle, bool AlternateButtonDrag, bool Relative);
 	void UpdateRotateTool(const swMatrix33& RotationMatrix, bool AlternateButtonDrag, bool Relative);
 	void UpdateScaleTool(const float Scale);
-	void EraserToolClicked(swObject* Object);
+	void EraseToolClicked(swObject* Object);
 	void PaintToolClicked(swObject* Object);
 	void ColorPickerToolClicked(const swObject* Object);
 	void UpdateZoomTool(swCamera* Camera, float Mouse);
@@ -641,6 +640,7 @@ protected:
 	void BeginEditHistory();
 	void BeginMergeableEditHistory(swModelHistoryEditMerge ModelHistoryEditMerge, swObjectPropertyId PropertyId);
 	void EndEditHistory();
+	bool FlattenSubModels(bool SelectedOnly, swPart*& Anchor, std::vector<swObject*>& Selection);
 	void SetModelProperties(const swModelProperties& ModelProperties);
 
 	void RunHistorySequence(const std::vector<std::unique_ptr<swModelHistory>>& HistorySequence, bool Apply);

@@ -93,6 +93,7 @@ void swPreferences::LoadDefaults()
 	mViewCubeColor = swGetProfileUnsignedInteger(SW_PROFILE_VIEW_CUBE_COLOR);
 	mViewCubeTextColor = swGetProfileUnsignedInteger(SW_PROFILE_VIEW_CUBE_TEXT_COLOR);
 	mViewCubeHighlightColor = swGetProfileUnsignedInteger(SW_PROFILE_VIEW_CUBE_HIGHLIGHT_COLOR);
+	mViewCubeLabelAbbreviations = swGetProfileInteger(SW_PROFILE_VIEW_CUBE_LABEL_ABBREVIATIONS);
 	mAxisXColor = swGetProfileUnsignedInteger(SW_PROFILE_AXIS_X_COLOR);
 	mAxisYColor = swGetProfileUnsignedInteger(SW_PROFILE_AXIS_Y_COLOR);
 	mAxisZColor = swGetProfileUnsignedInteger(SW_PROFILE_AXIS_Z_COLOR);
@@ -208,6 +209,7 @@ void swPreferences::SaveDefaults()
 	swSetProfileUnsignedInteger(SW_PROFILE_VIEW_CUBE_COLOR, mViewCubeColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_VIEW_CUBE_TEXT_COLOR, mViewCubeTextColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_VIEW_CUBE_HIGHLIGHT_COLOR, mViewCubeHighlightColor);
+	swSetProfileInteger(SW_PROFILE_VIEW_CUBE_LABEL_ABBREVIATIONS, mViewCubeLabelAbbreviations);
 	swSetProfileUnsignedInteger(SW_PROFILE_AXIS_X_COLOR, mAxisXColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_AXIS_Y_COLOR, mAxisYColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_AXIS_Z_COLOR, mAxisZColor);
@@ -311,16 +313,17 @@ void swPreferences::SetInterfaceColors(swColorTheme ColorTheme)
 
 	if (ColorTheme == swColorTheme::Dark || SystemDark)
 	{
-		mTextColor = SW_RGBA(214, 220, 227, 255);
-		mTextHaloColor = SW_RGBA(17, 19, 24, 160);
-		mBackgroundSolidColor = SW_RGB(49, 52, 55);
+		// the dark colors are the profile defaults
+		mTextColor = swGetProfileDefaultUnsignedInteger(SW_PROFILE_TEXT_COLOR);
+		mTextHaloColor = swGetProfileDefaultUnsignedInteger(SW_PROFILE_TEXT_HALO_COLOR);
+		mBackgroundSolidColor = swGetProfileDefaultUnsignedInteger(SW_PROFILE_BACKGROUND_COLOR);
 		mOverlayColor = swGetProfileUnsignedInteger(SW_PROFILE_OVERLAY_COLOR);
-		mActiveViewColor = SW_RGBA(41, 128, 185, 255);
-		mGridStudColor = SW_RGBA(24, 24, 24, 192);
-		mGridLineColor = SW_RGBA(24, 24, 24, 255);
-		mViewCubeColor = SW_RGBA(27, 31, 36, 255);
-		mViewCubeTextColor = SW_RGBA(232, 237, 242, 255);
-		mViewCubeHighlightColor = SW_RGBA(41, 128, 185, 255);
+		mActiveViewColor = swGetProfileDefaultUnsignedInteger(SW_PROFILE_ACTIVE_VIEW_COLOR);
+		mGridStudColor = swGetProfileDefaultUnsignedInteger(SW_PROFILE_GRID_STUD_COLOR);
+		mGridLineColor = swGetProfileDefaultUnsignedInteger(SW_PROFILE_GRID_LINE_COLOR);
+		mViewCubeColor = swGetProfileDefaultUnsignedInteger(SW_PROFILE_VIEW_CUBE_COLOR);
+		mViewCubeTextColor = swGetProfileDefaultUnsignedInteger(SW_PROFILE_VIEW_CUBE_TEXT_COLOR);
+		mViewCubeHighlightColor = swGetProfileDefaultUnsignedInteger(SW_PROFILE_VIEW_CUBE_HIGHLIGHT_COLOR);
 	}
 	else
 	{
@@ -1107,6 +1110,11 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			Options.SaveFlatten = true;
 			ParseString(Options.SaveFlattenName, true);
 		}
+		else if (Option == QLatin1String("--undo"))
+		{
+			Options.SaveUndo = true;
+			ParseString(Options.SaveUndoName, true);
+		}
 		else if (Option == QLatin1String("--export-wavefront"))
 		{
 			Options.SaveWavefront = true;
@@ -1286,6 +1294,7 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			Options.StdOut += tr("  --edge-light-dark <value>: Light/Dark color value of automatic edge colors, between 0.0 and 1.0.\n");
 			Options.StdOut += tr("\nExport:\n");
 			Options.StdOut += tr("  --flatten <outfile.ldr>: Replace every submodel at all depths with its parts and save the model, before any other export.\n");
+			Options.StdOut += tr("  --undo <outfile.ldr>: Undo every command line edit and save the model, to check that undo restores it.\n");
 			Options.StdOut += tr("  --export-wavefront <outfile.obj>: Export the model to Wavefront OBJ format.\n");
 			Options.StdOut += tr("  --export-3ds <outfile.3ds>: Export the model to 3D Studio 3DS format.\n");
 			Options.StdOut += tr("  --export-collada <outfile.dae>: Export the model to COLLADA DAE format.\n");
@@ -1731,10 +1740,7 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 
 		if (Options.SaveFlatten)
 		{
-			swPart* Anchor = nullptr;
-			std::vector<swObject*> Selection;
-
-			mProject->GetMainModel()->FlattenSubModels(false, Anchor, Selection);
+			mProject->GetMainModel()->FlattenModel();
 
 			const swResult<void> FlattenResult = mProject->SaveCopy(Options.SaveFlattenName);
 
@@ -1744,6 +1750,21 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 			{
 				OutputFailed = true;
 				StdErr << FlattenResult.error() << '\n';
+			}
+		}
+
+		if (Options.SaveUndo)
+		{
+			while (mProject->GetMainModel()->UndoAction());
+
+			const swResult<void> UndoResult = mProject->SaveCopy(Options.SaveUndoName);
+
+			if (UndoResult)
+				StdOut << tr("Saved '%1'.\n").arg(Options.SaveUndoName);
+			else
+			{
+				OutputFailed = true;
+				StdErr << UndoResult.error() << '\n';
 			}
 		}
 

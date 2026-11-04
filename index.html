@@ -488,7 +488,9 @@
 			}
 
 			.gallery.cube .shot {
+				display: block;
 				width: auto;
+				margin: 0 auto;
 				background: transparent;
 			}
 
@@ -1837,6 +1839,7 @@
 						<tr><td>--edge-color, --edge-color-black, --edge-color-dark, --stud-cylinder-color, their --no- forms, --edge-color-automatic, --edge-contrast, --edge-light-dark</td><td>Edge, black edge, dark edge and stud cylinder colors, automated edge colors, contrast and light to dark value</td></tr>
 						<tr><td>--bricklink-exceptions</td><td>Use a comma or tab separated file of parts and their BrickLink numbers in BrickLink exports</td></tr>
 						<tr><td>--flatten</td><td>Replace every submodel at all depths with its parts and save the model, before any other export</td></tr>
+						<tr><td>--undo</td><td>Undo every command line edit and save the model, to check that undo restores it</td></tr>
 						<tr><td>--export-wavefront, --export-3ds, --export-collada, --export-kmz, --export-csv, --export-bricklink, --export-html, --export-povray</td><td>Export Wavefront, 3D Studio, COLLADA, KMZ, CSV, BrickLink, HTML and POV-Ray files</td></tr>
 						<tr><td>--render-povray</td><td>Render with POV-Ray</td></tr>
 						<tr><td>--import-settings, --export-settings</td><td>Settings as an ini file</td></tr>
@@ -2265,7 +2268,7 @@
 			<p class="lead">The Tools toolbar sets what the mouse does in the model view. Every tool has a keyboard shortcut, and mouse buttons with modifier keys can start any tool for one drag.</p>
 
 			<ul class="points">
-				<li><b>Edit tools.</b> Insert adds the part chosen in the Parts panel, Select picks objects, with Ctrl or a drag for several, Move and Rotate change the selection, Delete removes what you click, Paint colors a part, and Color Picker takes a part&#x27;s color.</li>
+				<li><b>Edit tools.</b> Insert adds the part chosen in the Parts panel, Select picks objects, with Ctrl or a drag for several, Move and Rotate change the selection, Erase removes what you click, Paint colors a part, and Color Picker takes a part&#x27;s color.</li>
 				<li><b>View tools.</b> Zoom, Pan, Rotate View and Roll change the camera, and Zoom Region zooms into a rectangle you drag.</li>
 				<li><b>Keyboard view.</b> Zoom In and Zoom Out, and Move Forward, Backward, Left, Right, Up and Down.</li>
 				<li><b>Lights.</b> Point Light, Spotlight, Directional Light and Area Light tools place lights in the model, with named properties and units, saved in the model file.</li>
@@ -2287,7 +2290,7 @@
 			<div class="gallery natural">
 				<figure>
 					<button class="shot" data-full="resources/images/tools-lights-cameras.png" aria-label="Enlarge Lights and cameras">
-						<img src="resources/images/tools-lights-cameras.png" alt="Lights and cameras" width="1240" height="1700" loading="lazy">
+						<img src="resources/images/tools-lights-cameras.png" alt="Lights and cameras" width="1700" height="1470" loading="lazy">
 					</button>
 
 					<figcaption>Lights and cameras</figcaption>
@@ -2321,7 +2324,7 @@
 
 			<ul class="points">
 				<li><b>View cube.</b> Chamfered edges and corners: click any of its 6 faces, 12 edges or 8 corners for that view.</li>
-				<li><b>View cube settings.</b> Shown in any corner of the view, in Extra Small to Extra Large, with its own face, highlight and text colors.</li>
+				<li><b>View cube settings.</b> Shown in any corner of the view, in Extra Small to Extra Large, with its own face, highlight and text colors, and small full names or large abbreviations (TP, BT, LT, RT, FT, BK) on its faces.</li>
 				<li><b>Axis icon.</b> X, Y and Z labels with optional negative axes. The view cube, axis icon and part thumbnails come in Extra Small to Extra Large.</li>
 				<li><b>Axis icon settings.</b> Shown in any corner, with or without labels, with negative axes and a cube outline of adjustable transparency, and a color for each axis and its negative.</li>
 				<li><b>Preview overlays.</b> The preview shows its own view cube and axis icon, each turned on and off from its options.</li>
@@ -2355,11 +2358,19 @@
 
 			<div class="gallery cube">
 				<figure>
-					<button class="shot" data-full="resources/images/views-cube.png" aria-label="Enlarge View cube">
-						<img src="resources/images/views-cube.png" alt="View cube" width="136" height="136" loading="lazy">
+					<button class="shot" data-full="resources/images/view-cube-label-small.png" aria-label="Enlarge View cube small labels">
+						<img src="resources/images/view-cube-label-small.png" alt="View cube small labels" width="136" height="136" loading="lazy">
 					</button>
 
-					<figcaption>View cube</figcaption>
+					<figcaption>View cube small labels</figcaption>
+				</figure>
+
+				<figure>
+					<button class="shot" data-full="resources/images/view-cube-label-abbreviated.png" aria-label="Enlarge View cube large abbreviations">
+						<img src="resources/images/view-cube-label-abbreviated.png" alt="View cube large abbreviations" width="136" height="136" loading="lazy">
+					</button>
+
+					<figcaption>View cube large abbreviations</figcaption>
 				</figure>
 
 				<figure>
@@ -2769,7 +2780,7 @@
 			<div class="gallery four tall">
 				<figure>
 					<button class="shot" data-full="resources/images/preferences-general.png" aria-label="Enlarge General">
-						<img src="resources/images/preferences-general.png" alt="General" width="960" height="2033" loading="lazy">
+						<img src="resources/images/preferences-general.png" alt="General" width="960" height="2073" loading="lazy">
 					</button>
 
 					<figcaption>General</figcaption>
@@ -2777,7 +2788,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/preferences-rendering.png" aria-label="Enlarge Rendering">
-						<img src="resources/images/preferences-rendering.png" alt="Rendering" width="960" height="2033" loading="lazy">
+						<img src="resources/images/preferences-rendering.png" alt="Rendering" width="960" height="2073" loading="lazy">
 					</button>
 
 					<figcaption>Rendering</figcaption>
@@ -2785,7 +2796,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/preferences-views.png" aria-label="Enlarge Views">
-						<img src="resources/images/preferences-views.png" alt="Views" width="960" height="2033" loading="lazy">
+						<img src="resources/images/preferences-views.png" alt="Views" width="960" height="2073" loading="lazy">
 					</button>
 
 					<figcaption>Views</figcaption>
@@ -2793,7 +2804,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/preferences-interface.png" aria-label="Enlarge Interface">
-						<img src="resources/images/preferences-interface.png" alt="Interface" width="960" height="2033" loading="lazy">
+						<img src="resources/images/preferences-interface.png" alt="Interface" width="960" height="2073" loading="lazy">
 					</button>
 
 					<figcaption>Interface</figcaption>
@@ -2801,7 +2812,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/preferences-instructions.png" aria-label="Enlarge Instructions">
-						<img src="resources/images/preferences-instructions.png" alt="Instructions" width="960" height="2033" loading="lazy">
+						<img src="resources/images/preferences-instructions.png" alt="Instructions" width="960" height="2073" loading="lazy">
 					</button>
 
 					<figcaption>Instructions</figcaption>
@@ -2809,7 +2820,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/preferences-categories.png" aria-label="Enlarge Categories">
-						<img src="resources/images/preferences-categories.png" alt="Categories" width="960" height="2033" loading="lazy">
+						<img src="resources/images/preferences-categories.png" alt="Categories" width="960" height="2073" loading="lazy">
 					</button>
 
 					<figcaption>Categories</figcaption>
@@ -2817,7 +2828,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/preferences-keyboard.png" aria-label="Enlarge Keyboard">
-						<img src="resources/images/preferences-keyboard.png" alt="Keyboard" width="960" height="2033" loading="lazy">
+						<img src="resources/images/preferences-keyboard.png" alt="Keyboard" width="960" height="2073" loading="lazy">
 					</button>
 
 					<figcaption>Keyboard</figcaption>
@@ -2825,7 +2836,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/preferences-mouse.png" aria-label="Enlarge Mouse">
-						<img src="resources/images/preferences-mouse.png" alt="Mouse" width="960" height="2033" loading="lazy">
+						<img src="resources/images/preferences-mouse.png" alt="Mouse" width="960" height="2073" loading="lazy">
 					</button>
 
 					<figcaption>Mouse</figcaption>
@@ -3448,6 +3459,12 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Explode: the Explode panel, shown from the panel context menu or View &gt; Toolbars, spreads the parts on screen away from an anchor part, straight out of their connections with lines back to where they connect, submodels at all depths flatten first in the same undo step and Collapse puts them back, and Save Copy saves the exploded model to a separate -exploded file</li>
 					<li>Submodels: Flatten Model in the Model menu and the Submodel context menu replaces every submodel at all depths with its parts in one undo step</li>
 					<li>Command line: --flatten &lt;outfile.ldr&gt; replaces every submodel at all depths with its parts and saves the model, before any other export</li>
+					<li>Command line: --undo &lt;outfile.ldr&gt; undoes every command line edit and saves the model, to check that undo restores it</li>
+					<li>Lights: point lights and light targets draw as wireframe spheres like the other lights, and spot, directional and area light outlines use more segments</li>
+					<li><a href="#tools">Tools</a>: the Delete tool is now Erase, so it no longer shares a name with Part &gt; Delete</li>
+					<li>Defaults: new view colors and keyboard and mouse shortcuts, with Orbit on the right button and Pan on the middle button</li>
+					<li>Keyboard shortcuts: categories in <a href="#preferences">Preferences</a> show readable names such as Snap (Angle)</li>
+					<li>View cube: a Labels setting in Preferences shows Small Labels or Large Abbreviations (TP, BT, LT, RT, FT, BK) on its faces</li>
 					<li><a href="#instructions">Instructions</a>: a bar under the page goes to the first, previous, cover, bill of materials, next and last pages, inserts a Step Page or Blank Page, removes blank or empty pages and has a page box to type the page, each button with its own mnemonic, and the timeline shortcuts turn the pages</li>
 					<li>Instructions: Submodel Background in the Page category colors the pages of submodel <a href="#steps">steps</a> apart from the main model pages</li>
 					<li>Instructions: Apply to All Pages in the Page and Parts List categories gives every page the background or thumbnails of the current page, the Arrowhead pointer tip is now Arrow and Pointer Tip is greyed out for callout wedges</li>
@@ -3457,7 +3474,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Export HTML: Single Page cards round their corners like the step model box, and Edit Style Sheet opens the CSS of the pages in an editor with the options and find and replace of the Editor panel, comments name the feature of each block, and Restore Defaults brings back the built-in one</li>
 					<li>Blender Render: StudWorx brings its own LDraw import and render add-ons, the output, <a href="#image">image</a>, scene, parts and editing settings sit in <a href="#panels">panels</a> of the render window, and Open in Blender opens the model there to keep working on the scene</li>
 					<li>Render menu: Blender Render and POV-Ray Render are listed alphabetically</li>
-					<li><a href="#preferences">Preferences</a>: the Blender executable is set on the General page with the other program and library locations</li>
+					<li>Preferences: the Blender executable is set on the General page with the other program and library locations</li>
 					<li>Export HTML: pages go into a folder named after the model inside the chosen folder, open at index.html and are styled with light and dark colors that follow the browser</li>
 					<li>Export HTML moved from File &gt; Export to the Instructions window, between Editor and Print</li>
 					<li>Export HTML: Single Page shows the Instructions window pages on one scrolling index.html that stops at each page, with #page-N and #step-N links and First, Previous, Next and Last Page arrows on the right, left or bottom edge set by Arrows</li>
@@ -3907,7 +3924,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Tools","title":"Select Tool","paragraphs":["Pick objects in the model view or drag a selection rectangle. Selection Mode controls whether matching part types or colors are included. The focused object provides the reference for relative transforms."]},
 				{"group":"Tools","title":"Move Tool","paragraphs":["Select the objects to move, then drag in the model view. Use the manipulator to constrain movement to an axis or plane. Movement Snap sets the increments, and Transform Options selects the coordinate reference."]},
 				{"group":"Tools","title":"Rotate Tool","paragraphs":["Select objects, then drag a rotation handle in the model view. Rotation Snap sets the angle increments. Transform Options chooses relative or model axes and whether parts rotate together or separately."]},
-				{"group":"Tools","title":"Eraser Tool","paragraphs":["Use this tool to remove objects by clicking them in the model view. This is different from deleting the current selection as a single command. Undo restores an object removed by the tool."]},
+				{"group":"Tools","title":"Erase Tool","paragraphs":["Use this tool to remove objects by clicking them in the model view. This is different from deleting the current selection as a single command. Undo restores an object removed by the tool."]},
 				{"group":"Tools","title":"Paint Tool","paragraphs":["Choose the replacement color in the Colors dock, then click parts in the model view to recolor them. To recolor the current selection together, use the color button above the swatches."]},
 				{"group":"Tools","title":"Color Picker Tool","paragraphs":["Click a part in the model view to make its color the current color. You can then use that color for insertion or painting; sampling it does not recolor the part."]},
 				{"group":"Tools","title":"Zoom Tool","paragraphs":["Drag in the model view to move the viewpoint closer to or farther from the model. This changes the view rather than resizing parts. Use Zoom Region to frame a particular area."]},

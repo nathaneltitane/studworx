@@ -1816,6 +1816,39 @@
             </item>
            </widget>
           </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="ViewCubeLabelsLabel">
+            <property name="toolTip">
+             <string>Choose small full view names or large abbreviations (TP, BT, LT, RT, FT, BK) on the view cube faces.</string>
+            </property>
+            <property name="buddy">
+             <cstring>ViewCubeLabelsCombo</cstring>
+            </property>
+            <property name="text">
+             <string>Labels</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="ViewCubeLabelsCombo">
+            <property name="accessibleName">
+             <string>Labels</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose small full view names or large abbreviations (TP, BT, LT, RT, FT, BK) on the view cube faces.</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Small Labels</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Large Abbreviations</string>
+             </property>
+            </item>
+           </widget>
+          </item>
          </layout>
         </widget>
        </item>
@@ -4821,6 +4854,7 @@
   <tabstop>LineWidthSlider</tabstop>
   <tabstop>ViewCubeSizeCombo</tabstop>
   <tabstop>ViewCubeLocationCombo</tabstop>
+  <tabstop>ViewCubeLabelsCombo</tabstop>
   <tabstop>FollowStepViewsCheckBox</tabstop>
   <tabstop>ProjectionScopeCombo</tabstop>
   <tabstop>AxisIconSizeCombo</tabstop>

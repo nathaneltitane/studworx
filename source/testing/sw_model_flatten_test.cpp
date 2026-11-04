@@ -2,7 +2,7 @@
 
 // Flattens a model holding a submodel inside a moved submodel with --flatten. The main model must
 // keep only part lines, each at its world position and rotation, with color 16 parts taking the
-// color of the submodel above them.
+// color of the submodel above them. --undo then has to bring back the original main model.
 void swTests::FlattenReplacesNestedSubModels()
 {
 	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
@@ -46,44 +46,56 @@ void swTests::FlattenReplacesNestedSubModels()
 	FlattenEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
 
 	const QString FlatName = Folder.filePath("flat.mpd");
+	const QString UndoName = Folder.filePath("undo.mpd");
 
 	QProcess Flatten;
 	Flatten.setProcessEnvironment(FlattenEnvironment);
 	Flatten.setProcessChannelMode(QProcess::MergedChannels);
-	Flatten.start(Binary, { "--library", Folder.filePath("library"), Folder.filePath("model.mpd"), "--flatten", FlatName });
+	Flatten.start(Binary, { "--library", Folder.filePath("library"), Folder.filePath("model.mpd"), "--flatten", FlatName, "--undo", UndoName });
 	QVERIFY2(Flatten.waitForFinished(120000), "the flattened model was not saved");
 	QVERIFY2(Flatten.exitCode() == 0, Flatten.readAll().constData());
 
-	QFile Flat(FlatName);
-	QVERIFY(Flat.open(QIODevice::ReadOnly));
-	const QString FlatData = QString::fromUtf8(Flat.readAll());
-
-	// the main model is the first file, up to its NOFILE
-	const QString MainData = FlatData.left(FlatData.indexOf("0 NOFILE"));
-	QList<QStringList> PartLines;
-
-	for (const QString& Line : MainData.split('\n'))
+	// checks the part lines of the main model, the first file up to its NOFILE
+	const auto CheckMainModel = [](const QString& FileName, const QStringList& ExpectedNames, const QList<QList<float>>& Expected)
 	{
-		const QStringList Fields = Line.simplified().split(' ');
+		QFile File(FileName);
+		QVERIFY(File.open(QIODevice::ReadOnly));
+		const QString Data = QString::fromUtf8(File.readAll());
+		const QString MainData = Data.left(Data.indexOf("0 NOFILE"));
+		QList<QStringList> PartLines;
 
-		if (Fields.size() == 15 && Fields[0] == "1")
-			PartLines.append(Fields);
-	}
+		for (const QString& Line : MainData.split('\n'))
+		{
+			const QStringList Fields = Line.simplified().split(' ');
 
-	const QList<QList<float>> Expected =
+			if (Fields.size() == 15 && Fields[0] == "1")
+				PartLines.append(Fields);
+		}
+
+		QVERIFY2(PartLines.size() == Expected.size(), qPrintable(MainData));
+
+		for (int LineIndex = 0; LineIndex < Expected.size(); LineIndex++)
+		{
+			QVERIFY2(PartLines[LineIndex][14].toLower() == ExpectedNames[LineIndex], qPrintable(MainData));
+
+			for (int FieldIndex = 0; FieldIndex < Expected[LineIndex].size(); FieldIndex++)
+				QVERIFY2(qAbs(PartLines[LineIndex][FieldIndex + 1].toFloat() - Expected[LineIndex][FieldIndex]) < 0.01f, qPrintable(QString("line %1 field %2:\n%3").arg(LineIndex).arg(FieldIndex + 1).arg(MainData)));
+		}
+	};
+
+	CheckMainModel(FlatName, { "3001.dat", "3001.dat", "3001.dat" },
 	{
 		{ 14, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1 },
 		{ 4, 100, -24, -20, 0, 0, 1, 0, 1, 0, -1, 0, 0 },
 		{ 1, 100, -24, 0, 0, 0, 1, 0, 1, 0, -1, 0, 0 }
-	};
+	});
 
-	QVERIFY2(PartLines.size() == Expected.size(), qPrintable(MainData));
+	if (QTest::currentTestFailed())
+		return;
 
-	for (int LineIndex = 0; LineIndex < Expected.size(); LineIndex++)
+	CheckMainModel(UndoName, { "3001.dat", "outer.ldr" },
 	{
-		QVERIFY2(PartLines[LineIndex][14].toLower() == "3001.dat", qPrintable(MainData));
-
-		for (int FieldIndex = 0; FieldIndex < Expected[LineIndex].size(); FieldIndex++)
-			QVERIFY2(qAbs(PartLines[LineIndex][FieldIndex + 1].toFloat() - Expected[LineIndex][FieldIndex]) < 0.01f, qPrintable(QString("line %1 field %2:\n%3").arg(LineIndex).arg(FieldIndex + 1).arg(MainData)));
-	}
+		{ 14, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1 },
+		{ 4, 100, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1 }
+	});
 }

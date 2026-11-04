@@ -100,7 +100,7 @@
 <context>
     <name>swPreferencesDialog</name>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1491"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1493"/>
         <source>%n stud(s)</source>
         <translation>
             <numerusform>%n stud</numerusform>

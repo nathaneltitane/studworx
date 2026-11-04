@@ -9,7 +9,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "&New"),
 		QT_TRANSLATE_NOOP("Status", "Create a new model"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>New Model</b></p><p>Create a new, empty model. If the current model has unsaved changes, StudWorx asks whether to save them before replacing it.</p>"),
-		"Ctrl+N"
+		""
 	},
 
 	// SW_FILE_OPEN
@@ -27,7 +27,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "&Merge..."),
 		QT_TRANSLATE_NOOP("Status", "Merge the contents of another file with the current one"),
 		"",
-		""
+		"Ctrl+M"
 	},
 
 	// SW_FILE_RELOAD
@@ -72,7 +72,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Save &As..."),
 		QT_TRANSLATE_NOOP("Status", "Save the current model with a new name"),
 		"",
-		""
+		"Alt+S"
 	},
 
 	// SW_FILE_SAVE_IMAGE
@@ -81,7 +81,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Ima&ge..."),
 		QT_TRANSLATE_NOOP("Status", "Export an image of the current view"),
 		"",
-		""
+		"Alt+Shift+I"
 	},
 
 	// SW_FILE_IMPORT_LDD
@@ -144,7 +144,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "&BrickLink..."),
 		QT_TRANSLATE_NOOP("Status", "Export a list of parts used in BrickLink XML format"),
 		"",
-		""
+		"Ctrl+Shift+B"
 	},
 
 	// SW_FILE_EXPORT_CSV
@@ -180,7 +180,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "&POV-Ray Render..."),
 		QT_TRANSLATE_NOOP("Status", "Render the current model using POV-Ray"),
 		"",
-		""
+		"Alt+Shift+P"
 	},
 
 	// SW_FILE_RENDER_BLENDER
@@ -189,7 +189,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "&Blender Render..."),
 		QT_TRANSLATE_NOOP("Status", "Render the current model using Blender"),
 		"",
-		""
+		"Alt+Shift+B"
 	},
 
 	// SW_FILE_INSTRUCTIONS
@@ -198,7 +198,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Instr&uctions..."),
 		QT_TRANSLATE_NOOP("Status", "Configure instructions layout"),
 		"",
-		"Ctrl+Shift+U"
+		"Alt+Shift+U"
 	},
 
 	// SW_FILE_PRINT
@@ -207,7 +207,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "&Print..."),
 		QT_TRANSLATE_NOOP("Status", "Print the current model view"),
 		"",
-		""
+		"Ctrl+P"
 	},
 
 	// SW_FILE_RECENT1
@@ -252,7 +252,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "E&xit"),
 		QT_TRANSLATE_NOOP("Status", "Quit the application; prompts to save model"),
 		"",
-		""
+		"Ctrl+Q"
 	},
 
 	// SW_EDIT_UNDO
@@ -270,7 +270,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "&Redo"),
 		QT_TRANSLATE_NOOP("Status", "Redo the previously undone action"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Redo</b></p><p>Reapply an edit that was reversed with Undo. Making a new edit after Undo replaces the redo history with the new sequence of edits.</p>"),
-		"Ctrl+Y"
+		"Ctrl+Shift+Z"
 	},
 
 	// SW_EDIT_CUT
@@ -306,7 +306,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Paste with Steps"),
 		QT_TRANSLATE_NOOP("Status", "Insert Clipboard contents in their original steps"),
 		"",
-		""
+		"Ctrl+Shift+V"
 	},
 
 	// SW_EDIT_FIND
@@ -324,7 +324,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Find Ne&xt"),
 		QT_TRANSLATE_NOOP("Status", "Find next part"),
 		"",
-		"F3"
+		""
 	},
 
 	// SW_EDIT_FIND_PREVIOUS
@@ -333,7 +333,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Find Pre&vious"),
 		QT_TRANSLATE_NOOP("Status", "Find previous part"),
 		"",
-		"Shift+F3"
+		""
 	},
 
 	// SW_EDIT_FIND_ALL
@@ -342,7 +342,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Find All"),
 		QT_TRANSLATE_NOOP("Status", "Find all parts that match the search criteria"),
 		"",
-		""
+		"Ctrl+Alt+F"
 	},
 
 	// SW_EDIT_REPLACE
@@ -405,7 +405,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Select A&djacent Parts"),
 		QT_TRANSLATE_NOOP("Status", "Add the parts connected directly to the selected parts to the selection"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Select Adjacent Parts</b></p><p>Add every visible part connected directly to a selected part by a stud, anti stud, hole, axle or bar. Repeat to grow the selection one part further each time. Connections come from the LDCad shadow library set as Part Connections in Preferences, parts without shadow data never connect.</p>"),
-		""
+		"Ctrl+Alt+Shift+A"
 	},
 
 	// SW_EDIT_SELECT_CONNECTED
@@ -414,7 +414,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Select Conn&ected Parts"),
 		QT_TRANSLATE_NOOP("Status", "Add all parts connected to the selected parts to the selection"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Select Connected Parts</b></p><p>Add every visible part connected to a selected part, directly or through other parts, by a stud, anti stud, hole, axle or bar. Use it to pick up a whole assembly from one of its parts. Connections come from the LDCad shadow library set as Part Connections in Preferences, parts without shadow data never connect.</p>"),
-		""
+		"Ctrl+Alt+Shift+S"
 	},
 
 	// SW_EDIT_TOGGLE_SHADOW_LIBRARY
@@ -423,7 +423,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Part Connections"),
 		QT_TRANSLATE_NOOP("Status", "Toggle finding connected parts with the LDCad shadow library"),
 		"",
-		""
+		"Ctrl+Alt+Shift+C"
 	},
 
 	// SW_EDIT_SELECT_BY_NAME
@@ -441,7 +441,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Single Selection"),
 		QT_TRANSLATE_NOOP("Status", "Select one part at a time"),
 		"",
-		""
+		"Ctrl+Shift+S"
 	},
 
 	// SW_EDIT_SELECT_PART
@@ -450,7 +450,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Part Selection"),
 		QT_TRANSLATE_NOOP("Status", "Select all parts of the same type"),
 		"",
-		""
+		"Ctrl+Shift+P"
 	},
 
 	// SW_EDIT_SELECT_COLOR
@@ -459,7 +459,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Color Selection"),
 		QT_TRANSLATE_NOOP("Status", "Select all parts of the same color"),
 		"",
-		""
+		"Ctrl+Shift+C"
 	},
 
 	// SW_EDIT_SELECT_PART_COLOR
@@ -468,7 +468,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Part and Color Selection"),
 		QT_TRANSLATE_NOOP("Status", "Select all parts of the same type and color"),
 		"",
-		""
+		"Ctrl+Shift+A"
 	},
 
 	// SW_EDIT_TRANSFORM_RELATIVE
@@ -477,7 +477,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Relative Transforms"),
 		QT_TRANSLATE_NOOP("Status", "Move and rotate objects relative to the one that has focus"),
 		"",
-		""
+		"-"
 	},
 
 	// SW_EDIT_TRANSFORM_ABSOLUTE
@@ -486,7 +486,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Absolute Transforms"),
 		QT_TRANSLATE_NOOP("Status", "Move and rotate objects in absolute coordinates"),
 		"",
-		""
+		"+"
 	},
 
 	// SW_EDIT_TRANSFORM_TOGGLE_RELATIVE
@@ -495,7 +495,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Toggle Relative Transforms"),
 		QT_TRANSLATE_NOOP("Status", "Toggle moving and rotating objects relative to the one that has focus"),
 		"",
-		""
+		"/"
 	},
 
 	// SW_EDIT_TRANSFORM_SEPARATELY
@@ -504,7 +504,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Rotate Separately"),
 		QT_TRANSLATE_NOOP("Status", "Rotate selected parts separately"),
 		"",
-		""
+		"Ctrl+-"
 	},
 
 	// SW_EDIT_TRANSFORM_TOGETHER
@@ -513,7 +513,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Rotate Together"),
 		QT_TRANSLATE_NOOP("Status", "Rotate selected parts together"),
 		"",
-		""
+		"Ctrl+="
 	},
 
 	// SW_EDIT_TRANSFORM_TOGGLE_SEPARATE
@@ -522,7 +522,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Toggle Separate Transforms"),
 		QT_TRANSLATE_NOOP("Status", "Toggle rotating selected parts separately"),
 		"",
-		""
+		"Ctrl+T"
 	},
 
 	// SW_EDIT_SNAP_MOVE_TOGGLE
@@ -531,7 +531,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Move Snap Enabled"),
 		QT_TRANSLATE_NOOP("Status", "Toggle movement snapping"),
 		"",
-		""
+		"Ctrl+Shift+M"
 	},
 
 	// SW_EDIT_SNAP_MOVE_XY0
@@ -630,7 +630,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "None"),
 		QT_TRANSLATE_NOOP("Status", "Do not snap movement along the Z axis"),
 		"",
-		"Ctrl+Shift+0"
+		"Alt+#"
 	},
 
 	// SW_EDIT_SNAP_MOVE_Z1
@@ -639,7 +639,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "1/20 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 1/20 stud"),
 		"",
-		"Ctrl+Shift+1"
+		"Alt+1"
 	},
 
 	// SW_EDIT_SNAP_MOVE_Z2
@@ -648,7 +648,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "1/4 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 1/4 stud"),
 		"",
-		"Ctrl+Shift+2"
+		"Alt+2"
 	},
 
 	// SW_EDIT_SNAP_MOVE_Z3
@@ -657,7 +657,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "1 Flat"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 1 flat"),
 		"",
-		"Ctrl+Shift+3"
+		"Alt+3"
 	},
 
 	// SW_EDIT_SNAP_MOVE_Z4
@@ -666,7 +666,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "1/2 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 1/2 stud"),
 		"",
-		"Ctrl+Shift+4"
+		"Alt+4"
 	},
 
 	// SW_EDIT_SNAP_MOVE_Z5
@@ -675,7 +675,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "1 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 1 stud"),
 		"",
-		"Ctrl+Shift+5"
+		"Alt+5"
 	},
 
 	// SW_EDIT_SNAP_MOVE_Z6
@@ -684,7 +684,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "1 Brick"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 1 brick"),
 		"",
-		"Ctrl+Shift+6"
+		"Alt+6"
 	},
 
 	// SW_EDIT_SNAP_MOVE_Z7
@@ -693,7 +693,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "2 Bricks"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 2 bricks"),
 		"",
-		"Ctrl+Shift+7"
+		"Alt+7"
 	},
 
 	// SW_EDIT_SNAP_MOVE_Z8
@@ -702,7 +702,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "4 Bricks"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 4 bricks"),
 		"",
-		"Ctrl+Shift+8"
+		"Alt+8"
 	},
 
 	// SW_EDIT_SNAP_MOVE_Z9
@@ -711,7 +711,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "8 Bricks"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 8 bricks"),
 		"",
-		"Ctrl+Shift+9"
+		"Alt+9"
 	},
 
 	// SW_EDIT_SNAP_ANGLE_TOGGLE
@@ -720,7 +720,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Rotation Snap Enabled"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to fixed intervals"),
 		"",
-		""
+		"Alt+R"
 	},
 
 	// SW_EDIT_SNAP_ANGLE0
@@ -729,7 +729,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "None"),
 		QT_TRANSLATE_NOOP("Status", "Do not snap rotations"),
 		"",
-		"Shift+0"
+		"Ctrl+0"
 	},
 
 	// SW_EDIT_SNAP_ANGLE1
@@ -738,7 +738,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "1 Degree"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to 1 degree"),
 		"",
-		"Shift+1"
+		"Ctrl+1"
 	},
 
 	// SW_EDIT_SNAP_ANGLE2
@@ -747,7 +747,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "5 Degrees"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to 5 degrees"),
 		"",
-		"Shift+2"
+		"Ctrl+2"
 	},
 
 	// SW_EDIT_SNAP_ANGLE3
@@ -756,7 +756,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "15 Degrees"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to 15 degrees"),
 		"",
-		"Shift+3"
+		"Ctrl+3"
 	},
 
 	// SW_EDIT_SNAP_ANGLE4
@@ -765,7 +765,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "22.5 Degrees"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to 22.5 degrees"),
 		"",
-		"Shift+4"
+		"Ctrl+4"
 	},
 
 	// SW_EDIT_SNAP_ANGLE5
@@ -774,7 +774,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "30 Degrees"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to 30 degrees"),
 		"",
-		"Shift+5"
+		"Ctrl+5"
 	},
 
 	// SW_EDIT_SNAP_ANGLE6
@@ -783,7 +783,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "45 Degrees"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to 45 degrees"),
 		"",
-		"Shift+6"
+		"Ctrl+6"
 	},
 
 	// SW_EDIT_SNAP_ANGLE7
@@ -792,7 +792,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "60 Degrees"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to 60 degrees"),
 		"",
-		"Shift+7"
+		"Ctrl+7"
 	},
 
 	// SW_EDIT_SNAP_ANGLE8
@@ -801,7 +801,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "90 Degrees"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to 90 degrees"),
 		"",
-		"Shift+8"
+		"Ctrl+8"
 	},
 
 	// SW_EDIT_SNAP_ANGLE9
@@ -810,7 +810,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "180 Degrees"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to 180 degrees"),
 		"",
-		"Shift+9"
+		"Ctrl+9"
 	},
 
 	// SW_EDIT_SNAP_ANGLE_CUSTOM
@@ -846,7 +846,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Absolute Translation"),
 		QT_TRANSLATE_NOOP("Status", "Switch to absolute translation mode when applying transforms"),
 		"",
-		""
+		"Alt+Shift+T"
 	},
 
 	// SW_EDIT_TRANSFORM_RELATIVE_TRANSLATION
@@ -855,7 +855,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Relative Translation"),
 		QT_TRANSLATE_NOOP("Status", "Switch to relative translation mode when applying transforms"),
 		"",
-		""
+		"Ctrl+Alt+T"
 	},
 
 	// SW_EDIT_TRANSFORM_ABSOLUTE_ROTATION
@@ -864,7 +864,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Absolute Rotation"),
 		QT_TRANSLATE_NOOP("Status", "Switch to absolute rotation mode when applying transforms"),
 		"",
-		""
+		"Alt+Shift+R"
 	},
 
 	// SW_EDIT_TRANSFORM_RELATIVE_ROTATION
@@ -873,7 +873,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Relative Rotation"),
 		QT_TRANSLATE_NOOP("Status", "Switch to relative rotation mode when applying transforms"),
 		"",
-		""
+		"Ctrl+Alt+R"
 	},
 
 	// SW_EDIT_ACTION_INSERT
@@ -927,7 +927,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Camera"),
 		QT_TRANSLATE_NOOP("Status", "Create a new camera"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Camera Tool</b></p><p>Create a camera in the model view. Select the camera to edit its position, target, projection, and field of view in Properties. To look through the camera, choose it from View &gt; Cameras.</p>"),
-		""
+		"Ctrl+Alt+C"
 	},
 
 	// SW_EDIT_ACTION_SELECT
@@ -936,7 +936,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Select"),
 		QT_TRANSLATE_NOOP("Status", "Select objects (hold the CTRL key down or drag the mouse to select multiple objects)"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Select Tool</b></p><p>Pick objects in the model view or drag a selection rectangle. Selection Mode controls whether matching part types or colors are included. The focused object provides the reference for relative transforms.</p>"),
-		""
+		"Shift+S"
 	},
 
 	// SW_EDIT_ACTION_MOVE
@@ -945,7 +945,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Move"),
 		QT_TRANSLATE_NOOP("Status", "Move selected objects"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Move Tool</b></p><p>Select the objects to move, then drag in the model view. Use the manipulator to constrain movement to an axis or plane. Movement Snap sets the increments, and Transform Options selects the coordinate reference.</p>"),
-		""
+		"Shift+M"
 	},
 
 	// SW_EDIT_ACTION_ROTATE
@@ -954,16 +954,16 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Rotate"),
 		QT_TRANSLATE_NOOP("Status", "Rotate selected parts"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotate Tool</b></p><p>Select objects, then drag a rotation handle in the model view. Rotation Snap sets the angle increments. Transform Options chooses relative or model axes and whether parts rotate together or separately.</p>"),
-		""
+		"Shift+R"
 	},
 
-	// SW_EDIT_ACTION_DELETE
+	// SW_EDIT_ACTION_ERASE
 	{
-		QT_TRANSLATE_NOOP("Action", "Edit.Tool.Delete"),
-		QT_TRANSLATE_NOOP("Menu", "Delete"),
-		QT_TRANSLATE_NOOP("Status", "Delete objects"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Eraser Tool</b></p><p>Use this tool to remove objects by clicking them in the model view. This is different from deleting the current selection as a single command. Undo restores an object removed by the tool.</p>"),
-		""
+		QT_TRANSLATE_NOOP("Action", "Edit.Tool.Erase"),
+		QT_TRANSLATE_NOOP("Menu", "Erase"),
+		QT_TRANSLATE_NOOP("Status", "Erase objects"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Erase Tool</b></p><p>Use this tool to remove objects by clicking them in the model view. This is different from deleting the current selection as a single command. Undo restores an object removed by the tool.</p>"),
+		"Shift+E"
 	},
 
 	// SW_EDIT_ACTION_PAINT
@@ -972,7 +972,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Paint"),
 		QT_TRANSLATE_NOOP("Status", "Change part color"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Paint Tool</b></p><p>Choose the replacement color in the Colors dock, then click parts in the model view to recolor them. To recolor the current selection together, use the color button above the swatches.</p>"),
-		""
+		"P"
 	},
 
 	// SW_EDIT_ACTION_COLOR_PICKER
@@ -981,7 +981,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Color Picker"),
 		QT_TRANSLATE_NOOP("Status", "Get part color"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Color Picker Tool</b></p><p>Click a part in the model view to make its color the current color. You can then use that color for insertion or painting; sampling it does not recolor the part.</p>"),
-		""
+		"C"
 	},
 
 	// SW_EDIT_ACTION_ZOOM
@@ -990,7 +990,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Zoom"),
 		QT_TRANSLATE_NOOP("Status", "Zoom in or out"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Zoom Tool</b></p><p>Drag in the model view to move the viewpoint closer to or farther from the model. This changes the view rather than resizing parts. Use Zoom Region to frame a particular area.</p>"),
-		""
+		"Z"
 	},
 
 	// SW_EDIT_ACTION_PAN
@@ -999,7 +999,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Pan"),
 		QT_TRANSLATE_NOOP("Status", "Pan the current view"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Pan Tool</b></p><p>Drag to shift the view sideways or vertically without moving the model. Use this to reposition the model on screen while keeping the viewing direction.</p>"),
-		""
+		"Shift+P"
 	},
 
 	// SW_EDIT_ACTION_ROTATE_VIEW
@@ -1008,7 +1008,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Rotate View"),
 		QT_TRANSLATE_NOOP("Status", "Rotate the current view"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Orbit Tool</b></p><p>Drag to orbit the view around its center and inspect the model from another direction. This rotates the viewpoint rather than the selected parts; use Rotate for object edits.</p>"),
-		""
+		"Shift+V"
 	},
 
 	// SW_EDIT_ACTION_ROLL
@@ -1017,7 +1017,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Roll"),
 		QT_TRANSLATE_NOOP("Status", "Roll the current view"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Roll Tool</b></p><p>Drag to turn the view around its viewing axis, tilting what appears upright on screen. Model parts keep their positions and orientations.</p>"),
-		""
+		"Shift+L"
 	},
 
 	// SW_EDIT_ACTION_ZOOM_REGION
@@ -1026,7 +1026,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Zoom Region"),
 		QT_TRANSLATE_NOOP("Status", "Zoom into a region of the screen"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Zoom Region Tool</b></p><p>Drag a rectangle around the area you want to inspect. The view zooms to frame that region without changing model geometry.</p>"),
-		""
+		"Shift+Z"
 	},
 
 	// SW_EDIT_CANCEL
@@ -1044,7 +1044,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Preference&s..."),
 		QT_TRANSLATE_NOOP("Status", "Change program settings"),
 		"",
-		""
+		"Ctrl+Alt+Shift+P"
 	},
 
 	// SW_VIEW_ZOOM_IN
@@ -1053,7 +1053,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Zoom In"),
 		QT_TRANSLATE_NOOP("Status", "Zoom in"),
 		"",
-		"+"
+		""
 	},
 
 	// SW_VIEW_ZOOM_OUT
@@ -1062,7 +1062,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Zoom Out"),
 		QT_TRANSLATE_NOOP("Status", "Zoom out"),
 		"",
-		"-"
+		""
 	},
 
 	// SW_VIEW_ZOOM_EXTENTS
@@ -1071,7 +1071,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Zoom E&xtents"),
 		QT_TRANSLATE_NOOP("Status", "Fit all parts in the current view"),
 		"",
-		""
+		"#"
 	},
 
 	// SW_VIEW_LOOK_AT
@@ -1107,7 +1107,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Move Left"),
 		QT_TRANSLATE_NOOP("Status", "Move the current view to the left"),
 		"",
-		""
+		"Ctrl+Alt+Left"
 	},
 
 	// SW_VIEW_MOVE_RIGHT
@@ -1116,7 +1116,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Move Right"),
 		QT_TRANSLATE_NOOP("Status", "Move the current view to the right"),
 		"",
-		""
+		"Ctrl+Alt+Right"
 	},
 
 	// SW_VIEW_MOVE_UP
@@ -1125,7 +1125,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Move Up"),
 		QT_TRANSLATE_NOOP("Status", "Move the current view up"),
 		"",
-		""
+		"Ctrl+Alt+Up"
 	},
 
 	// SW_VIEW_MOVE_DOWN
@@ -1134,7 +1134,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Move Down"),
 		QT_TRANSLATE_NOOP("Status", "Move the current view down"),
 		"",
-		""
+		"Ctrl+Alt+Down"
 	},
 
 	// SW_VIEW_VIEWPOINT_FRONT
@@ -1359,7 +1359,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "First"),
 		QT_TRANSLATE_NOOP("Status", "Go to the first step of the model"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>First Step</b></p><p>Display the model at its first building step. Step navigation changes which parts are visible; it does not move parts to a different step.</p>"),
-		"Alt+Up"
+		""
 	},
 
 	// SW_VIEW_TIME_PREVIOUS
@@ -1368,7 +1368,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Previous"),
 		QT_TRANSLATE_NOOP("Status", "Go to the previous step"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Previous Step</b></p><p>Display the model one building step earlier. Parts introduced in later steps are hidden so you can inspect the earlier stage of construction.</p>"),
-		"Alt+Left"
+		"Ctrl+E"
 	},
 
 	// SW_VIEW_TIME_NEXT
@@ -1377,7 +1377,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Next"),
 		QT_TRANSLATE_NOOP("Status", "Go to the next step"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Next Step</b></p><p>Display the next building step to reveal the next stage of the model. Use the Timeline to change which step introduces a part.</p>"),
-		"Alt+Right"
+		"Ctrl+N"
 	},
 
 	// SW_VIEW_TIME_LAST
@@ -1386,7 +1386,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Last"),
 		QT_TRANSLATE_NOOP("Status", "Go to the last step of the model"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Last Step</b></p><p>Display the last building step of the current model. Use this to return to the completed model after inspecting earlier steps.</p>"),
-		"Alt+Down"
+		""
 	},
 
 	// SW_VIEW_TIME_INSERT_BEFORE
@@ -1413,7 +1413,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Remove Step"),
 		QT_TRANSLATE_NOOP("Status", "Remove current step"),
 		"",
-		""
+		"Shift+Del"
 	},
 
 	// SW_VIEW_TIME_ADD_KEYS
@@ -1467,7 +1467,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Standard"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Standard Toolbar"),
 		"",
-		""
+		"F4"
 	},
 
 	// SW_VIEW_TOOLBAR_TOOLS
@@ -1476,7 +1476,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Tools"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Tools Toolbar"),
 		"",
-		""
+		"F5"
 	},
 
 	// SW_VIEW_TOOLBAR_TIME
@@ -1485,7 +1485,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Time"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Time Toolbar"),
 		"",
-		""
+		"F6"
 	},
 
 	// SW_VIEW_TOOLBAR_PARTS
@@ -1494,7 +1494,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Parts"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Parts Toolbar"),
 		"",
-		""
+		"F8"
 	},
 
 	// SW_VIEW_TOOLBAR_COLORS
@@ -1503,7 +1503,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Colors"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Colors Toolbar"),
 		"",
-		""
+		"F7"
 	},
 
 	// SW_VIEW_TOOLBAR_PROPERTIES
@@ -1512,7 +1512,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Properties"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Properties Toolbar"),
 		"",
-		""
+		"F9"
 	},
 
 	// SW_VIEW_TOOLBAR_TIMELINE
@@ -1521,7 +1521,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Timeline"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Timeline Toolbar"),
 		"",
-		""
+		"F10"
 	},
 
 	// SW_VIEW_TOOLBAR_PREVIEW
@@ -1530,7 +1530,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Preview"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Preview Toolbar"),
 		"",
-		""
+		"F11"
 	},
 
 	// SW_VIEW_TOOLBAR_TERMINAL
@@ -1566,7 +1566,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "&Full Screen"),
 		QT_TRANSLATE_NOOP("Status", "Toggle fullscreen mode"),
 		"",
-		""
+		"Alt+F11"
 	},
 
 	// SW_VIEW_CLOSE_CURRENT_TAB
@@ -1584,7 +1584,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "&Wireframe"),
 		QT_TRANSLATE_NOOP("Status", "Display the scene as wireframe"),
 		"",
-		""
+		"Shift+W"
 	},
 
 	// SW_VIEW_SHADE_FLAT
@@ -1593,7 +1593,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "&Flat Shading"),
 		QT_TRANSLATE_NOOP("Status", "Display the scene without any shading or lights"),
 		"",
-		""
+		"Shift+F"
 	},
 
 	// SW_VIEW_SHADE_DEFAULT_LIGHTS
@@ -1647,7 +1647,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "&Perspective"),
 		QT_TRANSLATE_NOOP("Status", "Set the current camera to use a perspective projection"),
 		"",
-		""
+		"F3"
 	},
 
 	// SW_VIEW_PROJECTION_ORTHOGRAPHIC
@@ -1656,7 +1656,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "&Orthographic"),
 		QT_TRANSLATE_NOOP("Status", "Set the current camera to use an orthographic projection"),
 		"",
-		""
+		"F2"
 	},
 
 	// SW_VIEW_TOGGLE_VIEW_CUBE
@@ -1665,7 +1665,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "View Cube"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the view cube"),
 		"",
-		""
+		"F12"
 	},
 
 	// SW_VIEW_TOGGLE_AXIS_ICON
@@ -1674,7 +1674,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Axis Icon"),
 		QT_TRANSLATE_NOOP("Status", "Toggle axis icon"),
 		"",
-		""
+		"Alt+F12"
 	},
 
 	// SW_VIEW_TOGGLE_GRID
@@ -2430,7 +2430,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Reset &Pivot Point"),
 		QT_TRANSLATE_NOOP("Status", "Reset the pivot point of the selected parts to their origin"),
 		"",
-		""
+		"Ctrl+#"
 	},
 
 	// SW_PART_REMOVE_KEY_FRAMES
@@ -2448,7 +2448,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Insert Control Point"),
 		QT_TRANSLATE_NOOP("Status", "Insert a new control point"),
 		"",
-		""
+		"Ctrl+["
 	},
 
 	// SW_PART_CONTROL_POINT_REMOVE
@@ -2457,7 +2457,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Remove Control Point"),
 		QT_TRANSLATE_NOOP("Status", "Remove the selected control point"),
 		"",
-		""
+		"Ctrl+]"
 	},
 
 	// SW_PART_CONTROL_POINT_TANGENT
@@ -2538,7 +2538,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Move +X"),
 		QT_TRANSLATE_NOOP("Status", "Move selected objects along the X axis"),
 		"",
-		"Down"
+		"Right"
 	},
 
 	// SW_PART_MOVE_MINUS_X
@@ -2547,7 +2547,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Move -X"),
 		QT_TRANSLATE_NOOP("Status", "Move selected objects along the X axis"),
 		"",
-		"Up"
+		"Left"
 	},
 
 	// SW_PART_MOVE_PLUS_Y
@@ -2556,7 +2556,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Move +Y"),
 		QT_TRANSLATE_NOOP("Status", "Move selected objects along the Y axis"),
 		"",
-		"Right"
+		"Up"
 	},
 
 	// SW_PART_MOVE_MINUS_Y
@@ -2565,7 +2565,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Move -Y"),
 		QT_TRANSLATE_NOOP("Status", "Move selected objects along the Y axis"),
 		"",
-		"Left"
+		"Down"
 	},
 
 	// SW_PART_MOVE_PLUS_Z
@@ -2574,7 +2574,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Move +Z"),
 		QT_TRANSLATE_NOOP("Status", "Move selected objects along the Z axis"),
 		"",
-		"PgUp"
+		"Alt+Up"
 	},
 
 	// SW_PART_MOVE_MINUS_Z
@@ -2583,7 +2583,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Move -Z"),
 		QT_TRANSLATE_NOOP("Status", "Move selected objects along the Z axis"),
 		"",
-		"PgDown"
+		"Alt+Down"
 	},
 
 	// SW_PART_ROTATE_PLUS_X
@@ -2592,7 +2592,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Rotate +X"),
 		QT_TRANSLATE_NOOP("Status", "Rotate selected objects around the X axis"),
 		"",
-		"Shift+Down"
+		"Ctrl+Down"
 	},
 
 	// SW_PART_ROTATE_MINUS_X
@@ -2601,7 +2601,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Rotate -X"),
 		QT_TRANSLATE_NOOP("Status", "Rotate selected objects around the X axis"),
 		"",
-		"Shift+Up"
+		"Ctrl+Up"
 	},
 
 	// SW_PART_ROTATE_PLUS_Y
@@ -2610,7 +2610,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Rotate +Y"),
 		QT_TRANSLATE_NOOP("Status", "Rotate selected objects around the Y axis"),
 		"",
-		"Shift+Right"
+		"Ctrl+Shift+Left"
 	},
 
 	// SW_PART_ROTATE_MINUS_Y
@@ -2619,7 +2619,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Rotate -Y"),
 		QT_TRANSLATE_NOOP("Status", "Rotate selected objects around the Y axis"),
 		"",
-		"Shift+Left"
+		"Ctrl+Shift+Right"
 	},
 
 	// SW_PART_ROTATE_PLUS_Z
@@ -2628,7 +2628,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Rotate +Z"),
 		QT_TRANSLATE_NOOP("Status", "Rotate selected objects around the Z axis"),
 		"",
-		"Shift+PgUp"
+		"Ctrl+Left"
 	},
 
 	// SW_PART_ROTATE_MINUS_Z
@@ -2637,7 +2637,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Rotate -Z"),
 		QT_TRANSLATE_NOOP("Status", "Rotate selected objects around the Z axis"),
 		"",
-		"Shift+PgDown"
+		"Ctrl+Right"
 	},
 
 	// SW_PART_MINIFIGURE_BUILDER
@@ -2664,7 +2664,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Open Selected Model"),
 		QT_TRANSLATE_NOOP("Status", "Open the model referenced by the selected part in a new tab"),
 		"",
-		""
+		"Ctrl+Shift+O"
 	},
 
 	// SW_PART_MOVE_SELECTION_TO_MODEL
@@ -2673,7 +2673,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Move to New Model..."),
 		QT_TRANSLATE_NOOP("Status", "Move the selected parts to a new model and replace them with a reference to the model"),
 		"",
-		""
+		"Ctrl+Alt+N"
 	},
 
 	// SW_PART_INLINE_SELECTED_MODELS
@@ -2682,7 +2682,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Inline Selected Models"),
 		QT_TRANSLATE_NOOP("Status", "Insert the contents of the selected model references into the current model"),
 		"",
-		""
+		"Ctrl+Shift+I"
 	},
 
 	// SW_PART_FLATTEN_MODEL
@@ -2691,7 +2691,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Flatten Model"),
 		QT_TRANSLATE_NOOP("Status", "Replace every submodel, and the submodels inside it, with its parts in one step"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Flatten Model</b></p><p>Replace every submodel in the current model, and every submodel inside those, with its parts in one undo step. Each part keeps its place and color, and the groups inside the submodels are not kept.</p>"),
-		""
+		"Ctrl+Shift+F"
 	},
 
 	// SW_PART_EDIT_SELECTED_SUBMODEL
@@ -2700,7 +2700,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Edit Selected Submodel"),
 		QT_TRANSLATE_NOOP("Status", "Edit the currently selected submodel in-place"),
 		"",
-		""
+		"Ctrl+Shift+E"
 	},
 
 	// SW_PART_EDIT_END_SUBMODEL
@@ -2709,7 +2709,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "End Submodel Editing"),
 		QT_TRANSLATE_NOOP("Status", "End in-place submodel editing"),
 		"",
-		""
+		"Ctrl+Shift+W"
 	},
 
 	// SW_PART_GROUP
@@ -2727,7 +2727,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "&Ungroup"),
 		QT_TRANSLATE_NOOP("Status", "Ungroup selected group"),
 		"",
-		"Ctrl+U"
+		"Ctrl+Shift+G"
 	},
 
 	// SW_PART_GROUP_ADD
@@ -2754,7 +2754,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "&Edit Groups..."),
 		QT_TRANSLATE_NOOP("Status", "Edit groups"),
 		"",
-		""
+		"Ctrl+Alt+Shift+G"
 	},
 
 	// SW_PART_HIDE_SELECTED
@@ -2772,7 +2772,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Hide &Unselected"),
 		QT_TRANSLATE_NOOP("Status", "Hide objects that are not selected"),
 		"",
-		""
+		"Ctrl+Alt+Shift+H"
 	},
 
 	// SW_PART_UNHIDE_SELECTED
@@ -2781,7 +2781,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "&Unhide Selected"),
 		QT_TRANSLATE_NOOP("Status", "Show hidden objects that are selected"),
 		"",
-		""
+		"Ctrl+Shift+H"
 	},
 
 	// SW_PART_UNHIDE_ALL
@@ -2790,7 +2790,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "U&nhide All"),
 		QT_TRANSLATE_NOOP("Status", "Show all hidden objects"),
 		"",
-		""
+		"Ctrl+Alt+H"
 	},
 
 	// SW_PART_SHOW_EARLIER
@@ -2817,7 +2817,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "New Submodel..."),
 		QT_TRANSLATE_NOOP("Status", "Create a new submodel"),
 		"",
-		""
+		"Alt+Shift+N"
 	},
 
 	// SW_MODEL_PROPERTIES
@@ -2835,7 +2835,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Submodels..."),
 		QT_TRANSLATE_NOOP("Status", "Show a list of all submodels"),
 		"",
-		""
+		"Alt+Shift+M"
 	},
 
 	// SW_MODEL_01
@@ -3311,7 +3311,7 @@ const char* gToolNames[] =
 	QT_TRANSLATE_NOOP("Mouse", "Select"),              // swTool::Select
 	QT_TRANSLATE_NOOP("Mouse", "Move"),                // swTool::Move
 	QT_TRANSLATE_NOOP("Mouse", "Rotate"),              // swTool::Rotate
-	QT_TRANSLATE_NOOP("Mouse", "Delete"),              // swTool::Eraser
+	QT_TRANSLATE_NOOP("Mouse", "Erase"),               // swTool::Erase
 	QT_TRANSLATE_NOOP("Mouse", "Paint"),               // swTool::Paint
 	QT_TRANSLATE_NOOP("Mouse", "ColorPicker"),         // swTool::ColorPicker
 	QT_TRANSLATE_NOOP("Mouse", "Zoom"),                // swTool::Zoom

@@ -1209,7 +1209,7 @@ bool swViewManipulator::IsTrackToolAllowed(swTrackTool TrackTool, quint32 Allowe
 		case swTrackTool::ScaleMinus:
 			return AllowedTransforms & (SW_OBJECT_TRANSFORM_SCALE_X | SW_OBJECT_TRANSFORM_SCALE_Y | SW_OBJECT_TRANSFORM_SCALE_Z);
 
-		case swTrackTool::Eraser:
+		case swTrackTool::Erase:
 		case swTrackTool::Paint:
 		case swTrackTool::ColorPicker:
 		case swTrackTool::Zoom:

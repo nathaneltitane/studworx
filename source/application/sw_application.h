@@ -234,6 +234,7 @@ public:
 	quint32 mViewCubeColor;
 	quint32 mViewCubeTextColor;
 	quint32 mViewCubeHighlightColor;
+	bool mViewCubeLabelAbbreviations;
 	quint32 mAxisXColor;
 	quint32 mAxisYColor;
 	quint32 mAxisZColor;
@@ -303,6 +304,7 @@ struct swCommandLineOptions
 	bool KMZVisibleSurfaces = true;
 	bool SaveCSV = false;
 	bool SaveFlatten = false;
+	bool SaveUndo = false;
 	bool SaveBrickLink = false;
 	bool SetBrickLinkCondition = false;
 	bool SetBrickLinkWantedList = false;
@@ -360,6 +362,7 @@ struct swCommandLineOptions
 	QString SaveKMZName;
 	QString SaveCSVName;
 	QString SaveFlattenName;
+	QString SaveUndoName;
 	QString SaveBrickLinkName;
 	QString BrickLinkWantedList;
 	QString BrickLinkExceptions;
@@ -383,7 +386,7 @@ struct swCommandLineOptions
 	// Tells if only settings transfer.
 	bool HasSaveAndExit() const
 	{
-		return SaveImage || SaveFlatten || SaveWavefront || Save3DS || SaveCOLLADA || SaveKMZ || SaveCSV || SaveBrickLink || SaveHTML || SavePOVRay || RenderPOVRay;
+		return SaveImage || SaveFlatten || SaveUndo || SaveWavefront || Save3DS || SaveCOLLADA || SaveKMZ || SaveCSV || SaveBrickLink || SaveHTML || SavePOVRay || RenderPOVRay;
 	}
 
 	bool HasSettingsTransfer() const

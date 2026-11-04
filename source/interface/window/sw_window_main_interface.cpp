@@ -159,7 +159,7 @@ void swMainWindow::CreateActions()
 
 	mActions[SW_EDIT_ACTION_ROTATE]->setIcon(swCreatePaintedIcon(swPaintedIcon::ActionRotate));
 
-	mActions[SW_EDIT_ACTION_DELETE]->setIcon(swCreatePaintedIcon(swPaintedIcon::ActionDelete));
+	mActions[SW_EDIT_ACTION_ERASE]->setIcon(swCreatePaintedIcon(swPaintedIcon::ActionErase));
 
 	mActions[SW_EDIT_ACTION_PAINT]->setIcon(swCreatePaintedIcon(swPaintedIcon::ActionPaint));
 
@@ -360,7 +360,7 @@ void swMainWindow::CreateMenus()
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_SELECT]);
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_MOVE]);
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_ROTATE]);
-	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_DELETE]);
+	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_ERASE]);
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_PAINT]);
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_COLOR_PICKER]);
 	mToolsMenu->addSeparator();
@@ -651,7 +651,7 @@ void swMainWindow::CreateToolBars()
 	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_SELECT]);
 	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_MOVE]);
 	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_ROTATE]);
-	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_DELETE]);
+	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_ERASE]);
 	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_PAINT]);
 	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_COLOR_PICKER]);
 	mToolsToolBar->addSeparator();

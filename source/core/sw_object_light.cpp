@@ -747,7 +747,7 @@ void swLight::DrawSpotLight(swContext* Context) const
 {
 	SetupLightMatrix(Context);
 
-	constexpr int ConeEdges = 8;
+	constexpr int ConeEdges = 16;
 	float Verts[(ConeEdges + 1) * 3];
 	float* CurVert = Verts;
 
@@ -768,11 +768,21 @@ void swLight::DrawSpotLight(swContext* Context) const
 	Context->SetVertexBufferPointer(Verts);
 	Context->SetVertexFormatPosition(3);
 
-	const GLushort Indices[(ConeEdges + 4) * 2] =
+	GLushort Indices[(ConeEdges + 4) * 2];
+	GLushort* Index = Indices;
+
+	for (int EdgeIndex = 0; EdgeIndex < ConeEdges; EdgeIndex++)
 	{
-		0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 0,
-		0, 8, 2, 8, 4, 8, 6, 8,
-	};
+		*Index++ = EdgeIndex;
+		*Index++ = (EdgeIndex + 1) % ConeEdges;
+	}
+
+	// four lines from the rim to the apex
+	for (int EdgeIndex = 0; EdgeIndex < ConeEdges; EdgeIndex += ConeEdges / 4)
+	{
+		*Index++ = EdgeIndex;
+		*Index++ = ConeEdges;
+	}
 
 	Context->SetIndexBufferPointer(Indices);
 
@@ -836,7 +846,7 @@ void swLight::DrawAreaLight(swContext* Context) const
 	}
 	else
 	{
-		constexpr int CircleEdges = 16;
+		constexpr int CircleEdges = 32;
 
 		float Verts[CircleEdges * 3];
 		float* CurVert = Verts;
@@ -855,12 +865,20 @@ void swLight::DrawAreaLight(swContext* Context) const
 		Context->SetVertexBufferPointer(Verts);
 		Context->SetVertexFormatPosition(3);
 
-		const GLushort Indices[(CircleEdges + 2) * 2] =
+		GLushort Indices[(CircleEdges + 2) * 2];
+		GLushort* Index = Indices;
+
+		for (int EdgeIndex = 0; EdgeIndex < CircleEdges; EdgeIndex++)
 		{
-			0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8,
-			8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 0,
-			0, 8, 4, 12
-		};
+			*Index++ = EdgeIndex;
+			*Index++ = (EdgeIndex + 1) % CircleEdges;
+		}
+
+		// two lines across the middle
+		*Index++ = 0;
+		*Index++ = CircleEdges / 2;
+		*Index++ = CircleEdges / 4;
+		*Index++ = CircleEdges * 3 / 4;
 
 		Context->SetIndexBufferPointer(Indices);
 
@@ -901,90 +919,38 @@ void swLight::SetupLightMatrix(swContext* Context) const
 
 void swLight::DrawSphere(swContext* Context, const swVector3& Center, float Radius) const
 {
-	constexpr int Slices = 6;
-	constexpr int NumIndices = 3 * Slices + 6 * Slices * (Slices - 2) + 3 * Slices;
-	constexpr int NumVertices = (Slices - 1) * Slices + 2;
-	swVector3 Vertices[NumVertices];
-	quint16 Indices[NumIndices];
-
-	swVector3* Vertex = Vertices;
-	quint16* Index = Indices;
-
-	*Vertex++ = Center + swVector3(0, 0, Radius);
-
-	for (int i = 1; i < Slices; i++)
+	// wireframe like the other lights: three axis rings and the outline facing the view
+	constexpr int RingEdges = 32;
+	const swMatrix44 ViewToLocal = swMatrix44AffineInverse(swMultiply(mWorldMatrix, Context->GetViewMatrix()));
+	const swVector3 RingAxes[4][2] =
 	{
-		const float r0 = Radius * sinf(i * (SW_PI / Slices));
-		const float z0 = Radius * cosf(i * (SW_PI / Slices));
+		{ swVector3(Radius, 0.0f, 0.0f), swVector3(0.0f, Radius, 0.0f) },
+		{ swVector3(Radius, 0.0f, 0.0f), swVector3(0.0f, 0.0f, Radius) },
+		{ swVector3(0.0f, Radius, 0.0f), swVector3(0.0f, 0.0f, Radius) },
+		{ swNormalize(swMultiply30(swVector3(1.0f, 0.0f, 0.0f), ViewToLocal)) * Radius, swNormalize(swMultiply30(swVector3(0.0f, 1.0f, 0.0f), ViewToLocal)) * Radius }
+	};
+	swVector3 Vertices[4 * RingEdges];
 
-		for (int j = 0; j < Slices; j++)
+	for (int RingIndex = 0; RingIndex < 4; RingIndex++)
+	{
+		for (int EdgeIndex = 0; EdgeIndex < RingEdges; EdgeIndex++)
 		{
-			const float x0 = r0 * sinf(j * (SW_TWO_PI / Slices));
-			const float y0 = r0 * cosf(j * (SW_TWO_PI / Slices));
-
-			*Vertex++ = Center + swVector3(x0, y0, z0);
+			const float Angle = EdgeIndex * SW_TWO_PI / RingEdges;
+			Vertices[RingIndex * RingEdges + EdgeIndex] = Center + RingAxes[RingIndex][0] * cosf(Angle) + RingAxes[RingIndex][1] * sinf(Angle);
 		}
 	}
-
-	*Vertex++ = Center + swVector3(0, 0, -Radius);
-
-	for (quint16 i = 0; i < Slices - 1; i++)
-	{
-		*Index++ = 0;
-		*Index++ = 1 + i;
-		*Index++ = 1 + i + 1;
-	}
-
-	*Index++ = 0;
-	*Index++ = 1;
-	*Index++ = 1 + Slices - 1;
-
-	for (quint16 i = 0; i < Slices - 2; i++)
-	{
-		quint16 Row1 = 1 + i * Slices;
-		quint16 Row2 = 1 + (i + 1) * Slices;
-
-		for (quint16 j = 0; j < Slices - 1; j++)
-		{
-			*Index++ = Row1 + j;
-			*Index++ = Row2 + j + 1;
-			*Index++ = Row2 + j;
-
-			*Index++ = Row1 + j;
-			*Index++ = Row1 + j + 1;
-			*Index++ = Row2 + j + 1;
-		}
-
-		*Index++ = Row1 + Slices - 1;
-		*Index++ = Row2 + 0;
-		*Index++ = Row2 + Slices - 1;
-
-		*Index++ = Row1 + Slices - 1;
-		*Index++ = Row2 + 0;
-		*Index++ = Row1 + 0;
-	}
-
-	for (quint16 i = 0; i < Slices - 1; i++)
-	{
-		*Index++ = (Slices - 1) * Slices + 1;
-		*Index++ = (Slices - 1) * (Slices - 1) + i;
-		*Index++ = (Slices - 1) * (Slices - 1) + i + 1;
-	}
-
-	*Index++ = (Slices - 1) * Slices + 1;
-	*Index++ = (Slices - 1) * (Slices - 1) + (Slices - 2) + 1;
-	*Index++ = (Slices - 1) * (Slices - 1);
 
 	Context->SetVertexBufferPointer(Vertices);
 	Context->SetVertexFormatPosition(3);
-	Context->SetIndexBufferPointer(Indices);
 
-	Context->DrawIndexedPrimitives(GL_TRIANGLES, NumIndices, GL_UNSIGNED_SHORT, 0);
+	for (int RingIndex = 0; RingIndex < 4; RingIndex++)
+		Context->DrawPrimitives(GL_LINE_LOOP, RingIndex * RingEdges, RingEdges);
 }
 
 void swLight::DrawCylinder(swContext* Context, float Radius, float Height) const
 {
-	constexpr int Slices = 8;
+	constexpr int Slices = 16;
+	constexpr int SideLines = 8;
 
 	float Verts[(Slices * 2) * 3];
 	float* CurVert = Verts;
@@ -1002,18 +968,30 @@ void swLight::DrawCylinder(swContext* Context, float Radius, float Height) const
 		*CurVert++ = 0.0f;
 	}
 
-	const GLushort Indices[48] =
+	constexpr int NumIndices = (SideLines + Slices * 2) * 2;
+	GLushort Indices[NumIndices];
+	GLushort* Index = Indices;
+
+	// keep eight side lines however many slices round the ends
+	for (int EdgeIndex = 0; EdgeIndex < Slices; EdgeIndex += Slices / SideLines)
 	{
-		0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
-		0, 2, 2, 4, 4, 6, 6, 8, 8, 10, 10, 12, 12, 14, 14, 0,
-		1, 3, 3, 5, 5, 7, 7, 9, 9, 11, 11, 13, 13, 15, 15, 1,
-	};
+		*Index++ = EdgeIndex * 2;
+		*Index++ = EdgeIndex * 2 + 1;
+	}
+
+	for (int EdgeIndex = 0; EdgeIndex < Slices; EdgeIndex++)
+	{
+		*Index++ = EdgeIndex * 2;
+		*Index++ = (EdgeIndex + 1) % Slices * 2;
+		*Index++ = EdgeIndex * 2 + 1;
+		*Index++ = (EdgeIndex + 1) % Slices * 2 + 1;
+	}
 
 	Context->SetVertexBufferPointer(Verts);
 	Context->SetVertexFormatPosition(3);
 	Context->SetIndexBufferPointer(Indices);
 
-	Context->DrawIndexedPrimitives(GL_LINES, 48, GL_UNSIGNED_SHORT, 0);
+	Context->DrawIndexedPrimitives(GL_LINES, NumIndices, GL_UNSIGNED_SHORT, 0);
 }
 
 void swLight::DrawTarget(swContext* Context) const
@@ -1064,7 +1042,7 @@ void swLight::DrawTarget(swContext* Context) const
 
 void swLight::DrawCone(swContext* Context, float TargetDistance) const
 {
-	constexpr int ConeEdges = 16;
+	constexpr int ConeEdges = 32;
 	const float OuterRadius = tanf(SW_DEGREES_TO_RADIANS * mSpotConeAngle / 2.0f) * TargetDistance;
 
 	float Verts[(ConeEdges * 2 + 1) * 3];
@@ -1104,14 +1082,28 @@ void swLight::DrawCone(swContext* Context, float TargetDistance) const
 	Context->SetVertexBufferPointer(Verts);
 	Context->SetVertexFormatPosition(3);
 
-	constexpr GLushort Indices[(ConeEdges * 2 + 4) * 2] =
+	GLushort Indices[(ConeEdges * 2 + 4) * 2];
+	GLushort* Index = Indices;
+
+	for (int EdgeIndex = 0; EdgeIndex < ConeEdges; EdgeIndex++)
 	{
-		0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8,
-		8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13, 14, 14, 15, 15, 0,
-		16, 0, 16, 4, 16, 8, 16, 12,
-		17, 18, 18, 19, 19, 20, 20, 21, 21, 22, 22, 23, 23, 24, 24, 25,
-		25, 26, 26, 27, 27, 28, 28, 29, 29, 30, 30, 31, 31, 32, 32, 17
-	};
+		*Index++ = EdgeIndex;
+		*Index++ = (EdgeIndex + 1) % ConeEdges;
+	}
+
+	// four lines from the apex to the outer rim
+	for (int EdgeIndex = 0; EdgeIndex < ConeEdges; EdgeIndex += ConeEdges / 4)
+	{
+		*Index++ = ConeEdges;
+		*Index++ = EdgeIndex;
+	}
+
+	// the penumbra ring follows the apex vertex
+	for (int EdgeIndex = 0; EdgeIndex < ConeEdges; EdgeIndex++)
+	{
+		*Index++ = ConeEdges + 1 + EdgeIndex;
+		*Index++ = ConeEdges + 1 + (EdgeIndex + 1) % ConeEdges;
+	}
 
 	Context->SetIndexBufferPointer(Indices);
 

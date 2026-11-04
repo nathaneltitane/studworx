@@ -165,20 +165,12 @@ void swMouseShortcuts::Reset()
 	Clear();
 
 	swToolShortcut& RotateViewShortcut = mShortcuts[static_cast<int>(swTool::RotateView)];
-	RotateViewShortcut.Modifiers1 = Qt::AltModifier;
-	RotateViewShortcut.Button1 = Qt::LeftButton;
-	RotateViewShortcut.Modifiers2 = Qt::NoModifier;
-	RotateViewShortcut.Button2 = Qt::RightButton;
+	RotateViewShortcut.Modifiers1 = Qt::NoModifier;
+	RotateViewShortcut.Button1 = Qt::RightButton;
 
 	swToolShortcut& PanShortcut = mShortcuts[static_cast<int>(swTool::Pan)];
-	PanShortcut.Modifiers1 = Qt::AltModifier;
+	PanShortcut.Modifiers1 = Qt::NoModifier;
 	PanShortcut.Button1 = Qt::MiddleButton;
-	PanShortcut.Modifiers2 = Qt::ShiftModifier;
-	PanShortcut.Button2 = Qt::RightButton;
-
-	swToolShortcut& ZoomShortcut = mShortcuts[static_cast<int>(swTool::Zoom)];
-	ZoomShortcut.Modifiers1 = Qt::AltModifier;
-	ZoomShortcut.Button1 = Qt::RightButton;
 }
 
 bool swMouseShortcuts::Save(const QString& FileName)

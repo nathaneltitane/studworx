@@ -403,7 +403,7 @@ swTrackTool swView::GetOverrideTrackTool(Qt::MouseButton Button) const
 	    swTrackTool::Select,           // swTool::Select
 	    swTrackTool::MoveXYZ,          // swTool::Move
 	    swTrackTool::RotateTrackBall,  // swTool::Rotate
-	    swTrackTool::Eraser,           // swTool::Eraser
+	    swTrackTool::Erase,           // swTool::Erase
 	    swTrackTool::Paint,            // swTool::Paint
 	    swTrackTool::ColorPicker,      // swTool::ColorPicker
 	    swTrackTool::Zoom,             // swTool::Zoom
@@ -518,7 +518,7 @@ swCursor swView::GetCursor() const
 		swCursor::Select,           // swTrackTool::SelectTrainTrack
 		swCursor::Move,             // swTrackTool::ScalePlus
 		swCursor::Move,             // swTrackTool::ScaleMinus
-		swCursor::Delete,           // swTrackTool::Eraser
+		swCursor::Erase,           // swTrackTool::Erase
 		swCursor::Paint,            // swTrackTool::Paint
 		swCursor::ColorPicker,      // swTrackTool::ColorPicker
 		swCursor::Zoom,             // swTrackTool::Zoom
@@ -619,7 +619,7 @@ void swView::SetCursor(swCursor CursorType)
 		{ 16, 16, swPaintedIcon::CursorRotateAxisZ, swPaintedIcon::Count },  // swCursor::RotateAxisZ
 		{ 16, 16, swPaintedIcon::CursorRotateX, swPaintedIcon::Count },      // swCursor::RotateX
 		{ 16, 16, swPaintedIcon::CursorRotateY, swPaintedIcon::Count },      // swCursor::RotateY
-		{ 16, 16, swPaintedIcon::ActionDelete, swPaintedIcon::Count },       // swCursor::Delete
+		{ 16, 16, swPaintedIcon::ActionErase, swPaintedIcon::Count },       // swCursor::Erase
 		{ 16, 25, swPaintedIcon::ActionPaint, swPaintedIcon::Count },        // swCursor::Paint
 		{  8, 24, swPaintedIcon::ActionPickerColor, swPaintedIcon::Count },  // swCursor::ColorPicker
 		{ 14, 14, swPaintedIcon::ActionZoom, swPaintedIcon::Count },         // swCursor::Zoom
@@ -755,7 +755,7 @@ swTool swView::GetCurrentTool() const
 		swTool::Select,           // swTrackTool::SelectTrainTrack
 		swTool::Move,             // swTrackTool::ScalePlus
 		swTool::Move,             // swTrackTool::ScaleMinus
-		swTool::Eraser,           // swTrackTool::Eraser
+		swTool::Erase,           // swTrackTool::Erase
 		swTool::Paint,            // swTrackTool::Paint
 		swTool::ColorPicker,      // swTrackTool::ColorPicker
 		swTool::Zoom,             // swTrackTool::Zoom
@@ -864,8 +864,8 @@ void swView::UpdateTrackTool()
 		}
 		break;
 
-	case swTool::Eraser:
-		NewTrackTool = swTrackTool::Eraser;
+	case swTool::Erase:
+		NewTrackTool = swTrackTool::Erase;
 		break;
 
 	case swTool::Paint:
@@ -1111,7 +1111,7 @@ void swView::StartTracking(swTrackButton TrackButton)
 			}
 			break;
 
-		case swTool::Eraser:
+		case swTool::Erase:
 		case swTool::Paint:
 		case swTool::ColorPicker:
 			break;
@@ -1174,7 +1174,7 @@ void swView::StopTracking(bool Accept)
 		ActiveModel->EndMouseTool(Tool, this, Accept);
 		break;
 
-	case swTool::Eraser:
+	case swTool::Erase:
 	case swTool::Paint:
 	case swTool::ColorPicker:
 		break;
@@ -1422,8 +1422,8 @@ void swView::OnButtonDown(swTrackButton TrackButton)
 			StartTracking(TrackButton);
 		break;
 
-	case swTrackTool::Eraser:
-		ActiveModel->EraserToolClicked(FindObjectUnderPointer(false, false).Object);
+	case swTrackTool::Erase:
+		ActiveModel->EraseToolClicked(FindObjectUnderPointer(false, false).Object);
 		mToolClicked = true;
 		break;
 
@@ -2032,7 +2032,7 @@ void swView::OnMouseMove()
 	case swTrackTool::RotateTrainTrackLeft:
 	case swTrackTool::InsertTrainTrack:
 	case swTrackTool::SelectTrainTrack:
-	case swTrackTool::Eraser:
+	case swTrackTool::Erase:
 		break;
 
 	case swTrackTool::Paint:

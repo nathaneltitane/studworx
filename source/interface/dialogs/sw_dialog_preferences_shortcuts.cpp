@@ -99,6 +99,26 @@ bool swPreferencesDialog::eventFilter(QObject* Object, QEvent* Event)
 	return QDialog::eventFilter(Object, Event);
 }
 
+// use to show a readable name for a category of the command identifiers
+static QString swGetCommandCategoryName(const QString& Category)
+{
+	static const QMap<QString, const char*> Names =
+	{
+		{ QLatin1String("ControlPoint"), QT_TRANSLATE_NOOP("swPreferencesDialog", "Control Point") },
+		{ QLatin1String("HighlightStyle"), QT_TRANSLATE_NOOP("swPreferencesDialog", "Highlight Style") },
+		{ QLatin1String("InsertColor"), QT_TRANSLATE_NOOP("swPreferencesDialog", "Insert Color") },
+		{ QLatin1String("MinifigureBuilder"), QT_TRANSLATE_NOOP("swPreferencesDialog", "Minifigure Builder") },
+		{ QLatin1String("SnapAngle"), QT_TRANSLATE_NOOP("swPreferencesDialog", "Snap (Angle)") },
+		{ QLatin1String("SnapMove"), QT_TRANSLATE_NOOP("swPreferencesDialog", "Snap (Move)") },
+		{ QLatin1String("StepView"), QT_TRANSLATE_NOOP("swPreferencesDialog", "Step View") },
+		{ QLatin1String("StudStyle"), QT_TRANSLATE_NOOP("swPreferencesDialog", "Stud Style") },
+		{ QLatin1String("TrainTrack"), QT_TRANSLATE_NOOP("swPreferencesDialog", "Train Track") }
+	};
+
+	const char* Name = Names.value(Category);
+	return Name ? swPreferencesDialog::tr(Name) : Category;
+}
+
 void swPreferencesDialog::UpdateCommandList()
 {
 	ui->commandList->clear();
@@ -147,9 +167,9 @@ void swPreferencesDialog::UpdateCommandList()
 				SubSection = Section;
 
 			if (Parent)
-				CategoryItem = new QTreeWidgetItem(Parent, QStringList(SubSection));
+				CategoryItem = new QTreeWidgetItem(Parent, QStringList(swGetCommandCategoryName(SubSection)));
 			else
-				CategoryItem = new QTreeWidgetItem(ui->commandList, QStringList(SubSection));
+				CategoryItem = new QTreeWidgetItem(ui->commandList, QStringList(swGetCommandCategoryName(SubSection)));
 
 			QFont Font = CategoryItem->font(0);
 			Font.setBold(true);

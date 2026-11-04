@@ -569,14 +569,17 @@ void swModel::RunHistorySequence(const std::vector<std::unique_ptr<swModelHistor
 			RunAction(ModelHistory->get(), false);
 	}
 
-	if (EditChanged)
-		gMainWindow->UpdateInUseCategory();
+	if (gMainWindow)
+	{
+		if (EditChanged)
+			gMainWindow->UpdateInUseCategory();
 
-	if (SelectionChanged)
-		gMainWindow->UpdateSelectedObjects(true);
+		if (SelectionChanged)
+			gMainWindow->UpdateSelectedObjects(true);
 
-	gMainWindow->UpdateCurrentStep();
-	gMainWindow->UpdateTimeline(true, false);
+		gMainWindow->UpdateCurrentStep();
+		gMainWindow->UpdateTimeline(true, false);
+	}
 
 	UpdateAllViews();
 	if (EditChanged)
@@ -639,16 +642,19 @@ void swModel::EndHistorySequence(const QString& Description)
 
 	mRedoHistory.clear();
 
-	gMainWindow->UpdateModified(mProject ? mProject->IsModified() : IsModified());
-	gMainWindow->UpdateUndoRedo(!mUndoHistory.empty() ? mUndoHistory.front()->Description : nullptr, !mRedoHistory.empty() ? mRedoHistory.front()->Description : nullptr);
-	gMainWindow->UpdateTimeline(true, false);
-
-	for (const std::unique_ptr<swModelHistory>& ModelHistory : mUndoHistory.front()->HistorySequence)
+	if (gMainWindow)
 	{
-		if (dynamic_cast<const swModelHistorySelect*>(ModelHistory.get()))
+		gMainWindow->UpdateModified(mProject ? mProject->IsModified() : IsModified());
+		gMainWindow->UpdateUndoRedo(!mUndoHistory.empty() ? mUndoHistory.front()->Description : nullptr, !mRedoHistory.empty() ? mRedoHistory.front()->Description : nullptr);
+		gMainWindow->UpdateTimeline(true, false);
+
+		for (const std::unique_ptr<swModelHistory>& ModelHistory : mUndoHistory.front()->HistorySequence)
 		{
-			gMainWindow->UpdateSelectedObjects(true);
-			break;
+			if (dynamic_cast<const swModelHistorySelect*>(ModelHistory.get()))
+			{
+				gMainWindow->UpdateSelectedObjects(true);
+				break;
+			}
 		}
 	}
 

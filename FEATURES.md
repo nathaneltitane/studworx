@@ -103,6 +103,7 @@ studworx model.ldr opens a model. The options below work without opening a windo
 | --edge-color, --edge-color-black, --edge-color-dark, --stud-cylinder-color, their --no- forms, --edge-color-automatic, --edge-contrast, --edge-light-dark | Edge, black edge, dark edge and stud cylinder colors, automated edge colors, contrast and light to dark value |
 | --bricklink-exceptions | Use a comma or tab separated file of parts and their BrickLink numbers in BrickLink exports |
 | --flatten | Replace every submodel at all depths with its parts and save the model, before any other export |
+| --undo | Undo every command line edit and save the model, to check that undo restores it |
 | --export-wavefront, --export-3ds, --export-collada, --export-kmz, --export-csv, --export-bricklink, --export-html, --export-povray | Export Wavefront, 3D Studio, COLLADA, KMZ, CSV, BrickLink, HTML and POV-Ray files |
 | --render-povray | Render with POV-Ray |
 | --import-settings, --export-settings | Settings as an ini file |
@@ -288,7 +289,7 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 
 The Tools toolbar sets what the mouse does in the model view. Every tool has a keyboard shortcut, and mouse buttons with modifier keys can start any tool for one drag.
 
-- **Edit tools.** Insert adds the part chosen in the Parts panel, Select picks objects, with Ctrl or a drag for several, Move and Rotate change the selection, Delete removes what you click, Paint colors a part, and Color Picker takes a part's color.
+- **Edit tools.** Insert adds the part chosen in the Parts panel, Select picks objects, with Ctrl or a drag for several, Move and Rotate change the selection, Erase removes what you click, Paint colors a part, and Color Picker takes a part's color.
 - **View tools.** Zoom, Pan, Rotate View and Roll change the camera, and Zoom Region zooms into a rectangle you drag.
 - **Keyboard view.** Zoom In and Zoom Out, and Move Forward, Backward, Left, Right, Up and Down.
 - **Lights.** Point Light, Spotlight, Directional Light and Area Light tools place lights in the model, with named properties and units, saved in the model file.
@@ -313,7 +314,7 @@ The Tools toolbar sets what the mouse does in the model view. Every tool has a k
 Look at a model from any side, see inside it without changing it, and measure it against the grid.
 
 - **View cube.** Chamfered edges and corners: click any of its 6 faces, 12 edges or 8 corners for that view.
-- **View cube settings.** Shown in any corner of the view, in Extra Small to Extra Large, with its own face, highlight and text colors.
+- **View cube settings.** Shown in any corner of the view, in Extra Small to Extra Large, with its own face, highlight and text colors, and small full names or large abbreviations (TP, BT, LT, RT, FT, BK) on its faces.
 - **Axis icon.** X, Y and Z labels with optional negative axes. The view cube, axis icon and part thumbnails come in Extra Small to Extra Large.
 - **Axis icon settings.** Shown in any corner, with or without labels, with negative axes and a cube outline of adjustable transparency, and a color for each axis and its negative.
 - **Preview overlays.** The preview shows its own view cube and axis icon, each turned on and off from its options.
@@ -333,7 +334,8 @@ Look at a model from any side, see inside it without changing it, and measure it
 
 <!-- gallery cube -->
 
-![View cube](resources/images/views-cube.png)
+![View cube small labels](resources/images/view-cube-label-small.png)
+![View cube large abbreviations](resources/images/view-cube-label-abbreviated.png)
 ![Axis icon](resources/images/views-axis.png)
 
 <!-- gallery three -->

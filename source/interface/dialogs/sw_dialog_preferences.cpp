@@ -605,6 +605,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	AxisIconCubeOutlineAlphaChanged();
 
 	ui->ViewCubeLocationCombo->setCurrentIndex((int)mOptions->Preferences.mViewCubeLocation);
+	ui->ViewCubeLabelsCombo->setCurrentIndex(mOptions->Preferences.mViewCubeLabelAbbreviations ? 1 : 0);
 
 	ui->ViewCubeSizeCombo->setCurrentIndex(mOptions->Preferences.mViewCubeEnabled ? swSizeIndex(mOptions->Preferences.mViewCubeSize, SW_VIEW_CUBE_SIZES) : 0);
 
@@ -647,9 +648,9 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 
 	if (!swContext::SupportsMaterial(swMaterialType::UnlitViewCube))
 	{
-		const std::array<QWidget*, 7> Controls =
+		const std::array<QWidget*, 8> Controls =
 		{
-			ui->ViewCubeSizeCombo, ui->ViewCubeLocationCombo,
+			ui->ViewCubeSizeCombo, ui->ViewCubeLocationCombo, ui->ViewCubeLabelsCombo,
 			ui->PreviewViewCubeSizeCombo, ui->PreviewViewCubeLocationCombo,
 			ui->ViewCubeColorButton, ui->ViewCubeTextColorButton, ui->ViewCubeHighlightColorButton
 		};
@@ -937,6 +938,7 @@ void swPreferencesDialog::accept()
 	mOptions->Preferences.mAxisIconCubeOutlineAlpha = ui->AxisIconCubeOutlineAlphaSlider->value();
 	mOptions->Preferences.mViewCubeEnabled = ui->ViewCubeSizeCombo->currentIndex() > 0;
 	mOptions->Preferences.mViewCubeLocation = (swViewCubeLocation)ui->ViewCubeLocationCombo->currentIndex();
+	mOptions->Preferences.mViewCubeLabelAbbreviations = ui->ViewCubeLabelsCombo->currentIndex() == 1;
 
 	if (ui->ViewCubeSizeCombo->currentIndex() > 0)
 		mOptions->Preferences.mViewCubeSize = SW_VIEW_CUBE_SIZES[ui->ViewCubeSizeCombo->currentIndex() - 1];

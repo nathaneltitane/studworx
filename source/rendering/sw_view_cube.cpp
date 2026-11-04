@@ -8,6 +8,7 @@
 #include "sw_texture.h"
 
 swTexture* swViewCube::mTexture;
+bool swViewCube::mLabelAbbreviations;
 swVertexBuffer swViewCube::mVertexBuffer;
 swIndexBuffer swViewCube::mIndexBuffer;
 int swViewCube::mIndexCount;
@@ -77,11 +78,13 @@ swMatrix44 swViewCube::GetProjectionMatrix() const
 	return swMatrix44Orthographic(-SW_VIEW_CUBE_BOUNDARY, SW_VIEW_CUBE_BOUNDARY, -SW_VIEW_CUBE_BOUNDARY, SW_VIEW_CUBE_BOUNDARY, -SW_VIEW_CUBE_BOUNDARY, SW_VIEW_CUBE_BOUNDARY);
 }
 
-void swViewCube::CreateResources(swContext* Context)
+// use to draw the face labels into the texture atlas
+void swViewCube::CreateLabelTexture(swContext* Context)
 {
 	constexpr int SourceCellSize = 512, CellHeight = 256, CellBottom = (SourceCellSize - CellHeight) / 2;
 	constexpr int AtlasWidth = SourceCellSize, AtlasHeight = 2048;
 	mTexture = new swTexture();
+	mLabelAbbreviations = swGetPreferences().mViewCubeLabelAbbreviations;
 
 	const QString ViewNames[6] =
 	{
@@ -89,19 +92,28 @@ void swViewCube::CreateResources(swContext* Context)
 		QCoreApplication::translate("ViewName", "Front"), QCoreApplication::translate("ViewName", "Top"), QCoreApplication::translate("ViewName", "Bottom")
 	};
 
+	const QString ViewAbbreviations[6] =
+	{
+		QCoreApplication::translate("ViewName", "LT", "Left"), QCoreApplication::translate("ViewName", "RT", "Right"), QCoreApplication::translate("ViewName", "BK", "Back"),
+		QCoreApplication::translate("ViewName", "FT", "Front"), QCoreApplication::translate("ViewName", "TP", "Top"), QCoreApplication::translate("ViewName", "BT", "Bottom")
+	};
+
+	const QString* Labels = mLabelAbbreviations ? ViewAbbreviations : ViewNames;
+
 	QImage PainterImage(SourceCellSize, SourceCellSize, QImage::Format_ARGB32);
 	QPainter Painter;
 
 	// mipmapped interface font labels
 	QFont Font = QGuiApplication::font();
-	Font.setPointSize(144);
+	Font.setPointSize(mLabelAbbreviations ? 288 : 144);
 	QImage AtlasImage(AtlasWidth, AtlasHeight, QImage::Format_Alpha8);
 	AtlasImage.fill(0);
 
-	// one size for all labels so the widest one fits inside the cell
-	constexpr int MaxLabelWidth = 360;
-	for (const QString& ViewName : ViewNames)
-		while (Font.pointSize() > 1 && QFontMetrics(Font).horizontalAdvance(ViewName) > MaxLabelWidth)
+	// one size for all labels so the widest and tallest one fits inside the cell
+	const int MaxLabelWidth = mLabelAbbreviations ? 440 : 360;
+	constexpr int MaxLabelHeight = 200;
+	for (int ViewIdx = 0; ViewIdx < 6; ViewIdx++)
+		while (Font.pointSize() > 1 && (QFontMetrics(Font).horizontalAdvance(Labels[ViewIdx]) > MaxLabelWidth || QFontMetrics(Font).tightBoundingRect(Labels[ViewIdx]).height() > MaxLabelHeight))
 			Font.setPointSize(Font.pointSize() - 1);
 
 	for (int ViewIdx = 0; ViewIdx < 6; ViewIdx++)
@@ -111,7 +123,7 @@ void swViewCube::CreateResources(swContext* Context)
 		Painter.fillRect(0, 0, PainterImage.width(), PainterImage.height(), QColor(0, 0, 0));
 		Painter.setPen(QColor(255, 255, 255));
 		Painter.setFont(Font);
-		Painter.drawText(0, 0, PainterImage.width(), PainterImage.height(), Qt::AlignCenter, ViewNames[ViewIdx]);
+		Painter.drawText(0, 0, PainterImage.width(), PainterImage.height(), Qt::AlignCenter, Labels[ViewIdx]);
 		Painter.end();
 
 		// keep each label in one atlas row
@@ -128,6 +140,11 @@ void swViewCube::CreateResources(swContext* Context)
 
 	mTexture->SetImage(std::move(AtlasImage), SW_TEXTURE_MIPMAPS | SW_TEXTURE_TRILINEAR);
 	mTexture->Upload(Context);
+}
+
+void swViewCube::CreateResources(swContext* Context)
+{
+	CreateLabelTexture(Context);
 
 	swMatrix44 Transforms[6] =
 	{
@@ -284,6 +301,13 @@ void swViewCube::Draw()
 	Context->SetProjectionMatrix(GetProjectionMatrix());
 
 	Context->DrawIndexedPrimitives(GL_TRIANGLES, mIndexCount, GL_UNSIGNED_SHORT, 0);
+
+	// redraw the labels when the label style changes in Preferences
+	if (mLabelAbbreviations != swGetPreferences().mViewCubeLabelAbbreviations)
+	{
+		delete mTexture;
+		CreateLabelTexture(Context);
+	}
 
 	Context->SetMaterial(swMaterialType::UnlitViewCube);
 	Context->BindTexture2D(mTexture);

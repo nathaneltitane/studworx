@@ -25,12 +25,12 @@
 #include "sw_string.h"
 #include <locale.h>
 
-void swModel::UndoAction()
+bool swModel::UndoAction()
 {
 	CollapseExplode();
 
 	if (mUndoHistory.empty())
-		return;
+		return false;
 
 	std::unique_ptr<swModelHistoryEntry> Undo = std::move(mUndoHistory.front());
 
@@ -40,8 +40,13 @@ void swModel::UndoAction()
 	RunHistorySequence(Undo->HistorySequence, false);
 	mRedoHistory.insert(mRedoHistory.begin(), std::move(Undo));
 
-	gMainWindow->UpdateModified(mProject ? mProject->IsModified() : IsModified());
-	gMainWindow->UpdateUndoRedo(!mUndoHistory.empty() ? mUndoHistory.front()->Description : nullptr, !mRedoHistory.empty() ? mRedoHistory.front()->Description : nullptr);
+	if (gMainWindow)
+	{
+		gMainWindow->UpdateModified(mProject ? mProject->IsModified() : IsModified());
+		gMainWindow->UpdateUndoRedo(!mUndoHistory.empty() ? mUndoHistory.front()->Description : nullptr, !mRedoHistory.empty() ? mRedoHistory.front()->Description : nullptr);
+	}
+
+	return true;
 }
 
 void swModel::RedoAction()
@@ -58,8 +63,11 @@ void swModel::RedoAction()
 	RunHistorySequence(Redo->HistorySequence, true);
 	mUndoHistory.insert(mUndoHistory.begin(), std::move(Redo));
 
-	gMainWindow->UpdateModified(mProject ? mProject->IsModified() : IsModified());
-	gMainWindow->UpdateUndoRedo(!mUndoHistory.empty() ? mUndoHistory.front()->Description : nullptr, !mRedoHistory.empty() ? mRedoHistory.front()->Description : nullptr);
+	if (gMainWindow)
+	{
+		gMainWindow->UpdateModified(mProject ? mProject->IsModified() : IsModified());
+		gMainWindow->UpdateUndoRedo(!mUndoHistory.empty() ? mUndoHistory.front()->Description : nullptr, !mRedoHistory.empty() ? mRedoHistory.front()->Description : nullptr);
+	}
 }
 
 void swModel::BeginMouseTool(swTool Tool, swView* View)
@@ -81,7 +89,7 @@ void swModel::BeginMouseTool(swTool Tool, swView* View)
 			BeginEditHistory();
 			break;
 
-		case swTool::Eraser:
+		case swTool::Erase:
 		case swTool::Paint:
 		case swTool::ColorPicker:
 			break;
@@ -188,7 +196,7 @@ void swModel::EndMouseTool(swTool Tool, swView* View, bool Accept)
 		EndHistorySequence(tr("Rotate"));
 		break;
 
-	case swTool::Eraser:
+	case swTool::Erase:
 	case swTool::Paint:
 	case swTool::ColorPicker:
 		break;
@@ -508,7 +516,7 @@ void swModel::UpdateScaleTool(const float Scale)
 	UpdateAllViews();
 }
 
-void swModel::EraserToolClicked(swObject* Object)
+void swModel::EraseToolClicked(swObject* Object)
 {
 	if (!Object)
 		return;
@@ -564,7 +572,7 @@ void swModel::EraserToolClicked(swObject* Object)
 	}
 
 	EndEditHistory();
-	EndHistorySequence(tr("Delete"));
+	EndHistorySequence(tr("Erase"));
 
 	gMainWindow->UpdateTimeline(false, false);
 	gMainWindow->UpdateSelectedObjects(true);

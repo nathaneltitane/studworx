@@ -1616,7 +1616,7 @@ static void swDrawPaintedIcon(QPainter* Painter, swPaintedIcon Icon, const QSize
 		Draw.Fill(swCreateIconCircle(12, 12, 2));
 		break;
 
-	case swPaintedIcon::ActionDelete:
+	case swPaintedIcon::ActionErase:
 		Draw.Stroke(swCreateIconLine({ { 3, 6 }, { 21, 6 } }));
 		Draw.Stroke(swCreateIconLine({ { 9, 6 }, { 9, 3 }, { 15, 3 }, { 15, 6 } }));
 		Draw.Stroke(swCreateIconLine({ { 5, 6 }, { 6, 21 }, { 18, 21 }, { 19, 6 } }));

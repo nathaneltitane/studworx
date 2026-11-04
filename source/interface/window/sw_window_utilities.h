@@ -150,7 +150,7 @@ enum class swPaintedIcon
 	ActionSelect,
 	ActionMove,
 	ActionRotate,
-	ActionDelete,
+	ActionErase,
 	ActionPaint,
 	ActionPickerColor,
 	ActionZoom,

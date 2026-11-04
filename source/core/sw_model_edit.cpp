@@ -1008,7 +1008,8 @@ void swModel::FlattenModel()
 
 	if (!FlattenSubModels(false, Anchor, Selection))
 	{
-		QMessageBox::information(gMainWindow, tr("Flatten Model"), tr("The model has no submodels."));
+		if (gMainWindow)
+			QMessageBox::information(gMainWindow, tr("Flatten Model"), tr("The model has no submodels."));
 
 		DiscardHistorySequence();
 
@@ -1020,6 +1021,9 @@ void swModel::FlattenModel()
 	SetSelectionAndFocus(Selection, nullptr, 0, swSelectionMode::Single);
 
 	EndHistorySequence(tr("Flatten Model"));
+
+	if (!gMainWindow)
+		return;
 
 	gMainWindow->UpdateTimeline(false, false);
 	gMainWindow->UpdateInUseCategory();

@@ -213,6 +213,11 @@ public:
 		mViewProjectionMatrixDirty = true;
 	}
 
+	const swMatrix44& GetViewMatrix() const
+	{
+		return mViewMatrix;
+	}
+
 	const swMatrix44& GetProjectionMatrix()
 	{
 		return mProjectionMatrix;

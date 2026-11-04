@@ -474,8 +474,11 @@ void swModel::SetCurrentStep(swStep Step)
 	CalculateStep(Step);
 	UpdateControlPointSeats();
 
-	gMainWindow->UpdateTimeline(false, false);
-	gMainWindow->UpdateSelectedObjects(true);
+	if (gMainWindow)
+	{
+		gMainWindow->UpdateTimeline(false, false);
+		gMainWindow->UpdateSelectedObjects(true);
+	}
 
 	// only step changes turn the view
 	if (StepChanged && swGetPreferences().mFollowStepViews && !mIsPreview)
@@ -483,7 +486,9 @@ void swModel::SetCurrentStep(swStep Step)
 			View->ApplyStepView();
 
 	UpdateAllViews();
-	gMainWindow->UpdateCurrentStep();
+
+	if (gMainWindow)
+		gMainWindow->UpdateCurrentStep();
 }
 
 void swModel::ShowFirstStep()
