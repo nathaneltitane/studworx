@@ -499,7 +499,7 @@ public:
 
 	// Frames turn the active view around the model center.
 	QImage GetFramedImage(int Width, int Height, swStep Step, swStep LastStep, swImageBackground Background, const swImageFraming& Framing, const swImageTurntable& Turntable, int Frame);
-	swResult<void> SaveFramedImages(const QString& BaseName, bool AddStepSuffix, int Width, int Height, swStep Start, swStep End, swImageBackground Background, const swImageFraming& Framing, const swImageTurntable& Turntable, const swCamera* ViewCamera = nullptr);
+	swResult<void> SaveFramedImages(const QString& BaseName, bool AddStepSuffix, int Width, int Height, swStep Start, swStep End, swImageBackground Background, const swImageFraming& Framing, const swImageTurntable& Turntable);
 
 	void RayTest(swObjectRayTest& ObjectRayTest) const;
 	void BoxTest(swObjectBoxTest& ObjectBoxTest) const;

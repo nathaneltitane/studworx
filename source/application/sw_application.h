@@ -336,8 +336,6 @@ struct swCommandLineOptions
 	bool AutomateEdgeColor = false;
 	int ImageWidth;
 	int ImageHeight;
-	QString PoseName;
-	int PoseAnimationFrames = 0;
 	int AASamples;
 	swShadingMode ShadingMode;
 	swLightingStyle LightingStyle;

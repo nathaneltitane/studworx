@@ -323,7 +323,6 @@ Give a placed submodel a joint, turn it with the mouse and save the results as p
 - **Pose tool.** Next to Rotate in the Tools toolbar. Click down into submodels to take the innermost one with a joint and drag. A hinge turns about its axis by the horizontal drag, a ball turns about the screen up and right directions. Angle Snap applies and one drag is one undo step.
 - **Poses panel.** View > Toolbars > Poses lists the saved poses. Save stores every joint angle under a name, saving a name again replaces it, Recall puts the angles back in one undo step, and Rename and Delete edit the list. Poses are saved in the first file of the model as `0 !SW POSE "<name>" "<submodel file>" <piece index> <rx ry rz>`, one line per joint.
 - **Poses motion.** File > Save Image > Animated GIF with Motion Poses blends through the saved poses in order and back to the first, Frames per pose change, with Frame Rate and Hold Last. Hinges blend their angle, balls blend along the shortest turn.
-- **Command line.** `--pose <name>` with `-i` saves the image of a saved pose, and `--pose-animation <frames>` with `-i out.gif` saves the Poses animation with that many frames between two poses. The camera options set the view of both.
 
 ![Poses animation of a minifigure](resources/images/modeling-poses.gif)
 ![Poses panel](resources/images/panels-poses.png)

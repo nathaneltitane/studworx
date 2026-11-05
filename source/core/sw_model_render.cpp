@@ -940,18 +940,18 @@ QImage swModel::GetFramedImage(int Width, int Height, swStep Step, swStep LastSt
 	return Image.value();
 }
 
-swResult<void> swModel::SaveFramedImages(const QString& BaseName, bool AddStepSuffix, int Width, int Height, swStep Start, swStep End, swImageBackground Background, const swImageFraming& Framing, const swImageTurntable& Turntable, const swCamera* ViewCamera)
+swResult<void> swModel::SaveFramedImages(const QString& BaseName, bool AddStepSuffix, int Width, int Height, swStep Start, swStep End, swImageBackground Background, const swImageFraming& Framing, const swImageTurntable& Turntable)
 {
 	swScopedGLContextState GLState;
 
 	WaitForAssets();
 
 	std::unique_ptr<swView> OutputView;
-	const swCamera* BaseCamera = ViewCamera;
+	const swCamera* BaseCamera = nullptr;
 
-	if (!BaseCamera && gMainWindow && gMainWindow->GetActiveView())
+	if (gMainWindow && gMainWindow->GetActiveView())
 		BaseCamera = gMainWindow->GetActiveView()->GetCamera();
-	else if (!BaseCamera)
+	else
 	{
 		const swStep CurrentStep = mCurrentStep;
 
