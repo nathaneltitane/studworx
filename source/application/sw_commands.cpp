@@ -980,7 +980,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.Tool.Pose"),
 		QT_TRANSLATE_NOOP("Menu", "Pose"),
 		QT_TRANSLATE_NOOP("Status", "Pose a joint"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Pose Tool</b></p><p>Drag a submodel that has a joint to turn it. Hinges turn about their axis, balls turn freely. Use Set Joint in the Piece menu to give a submodel a joint.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Pose Tool</b></p><p>Drag a submodel that has a joint to turn it. Hinges turn about their axis with the horizontal drag, balls turn about the screen up and right directions. Rotation Snap sets the steps and one drag is one undo step. Use Set Joint in the Part menu to give a submodel a joint.</p>"),
 		"Shift+J"
 	},
 
@@ -1574,7 +1574,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Poses"),
 		QT_TRANSLATE_NOOP("Menu", "Poses"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Poses panel"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Poses</b></p><p>Show or hide the Poses panel. Save stores the joint angles of every submodel as a named pose, Recall puts them back in one undo step, and the Poses motion in the image dialog plays the saved poses as an animation. The panel also shows the joint of the selected submodel, with its axis and a Clear button.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Poses</b></p><p>Show or hide the Poses panel. Save stores the joint angles of every submodel as a named pose, Recall puts them back in one undo step, and the Poses motion in the image dialog plays the saved poses as an animation. The panel also shows the joint of the selected submodel, with its axis and Clear Joint.</p>"),
 		""
 	},
 
@@ -2447,7 +2447,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.SetJoint"),
 		QT_TRANSLATE_NOOP("Menu", "Set &Joint"),
 		QT_TRANSLATE_NOOP("Status", "Click a connection of the selected submodel to make it a joint"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Set Joint</b></p><p>Select one submodel, choose Set Joint, then click one of its connections with the Pose tool. A round connection makes a hinge on its axis and a sphere makes a ball. A part without shadow data gets a hinge on its origin. The joint shows in the Poses panel and setting it can be undone.</p>"),
 		""
 	},
 

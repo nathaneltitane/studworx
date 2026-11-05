@@ -320,12 +320,12 @@ Give a placed submodel a joint, turn it with the mouse and save the results as p
 
 - **Joints from the shadow library.** SNAP_CYL round shapes become hinges, and SNAP_CLP clips, SNAP_FGR fingers and SNAP_GEN spheres (`bounding=sph`) are read as well. Only SNAP_CYL shapes take part in part connections. Shapes in sub-files of a part, and their placement and mirroring, are followed the same way.
 - **Set Joint.** Part > Set Joint with one submodel selected, then click a connection of the submodel with the Pose tool. A round shape makes a hinge on its axis, a sphere makes a ball, and a part without shadow data gets a hinge on its origin. The Poses panel shows the joint, with an X, Y or Z axis choice, the angle and Clear Joint. The joint is saved before the placed submodel as `0 !SW JOINT PART <HINGE|BALL> <pivot x y z> <axis x y z> <rotation x y z>` in LDraw coordinates, and setting and clearing it is undoable.
-- **Pose tool.** Next to Rotate in the Tools toolbar. Click down into submodels to take the innermost one with a joint and drag. A hinge turns about its axis by the horizontal drag, a ball turns about the screen up and right directions. Angle Snap applies and one drag is one undo step.
-- **Poses panel.** View > Toolbars > Poses lists the saved poses. Save stores every joint angle under a name, saving a name again replaces it, Recall puts the angles back in one undo step, and Rename and Delete edit the list. Poses are saved in the first file of the model as `0 !SW POSE "<name>" "<submodel file>" <piece index> <rx ry rz>`, one line per joint.
-- **Poses motion.** File > Save Image > Animated GIF with Motion Poses blends through the saved poses in order and back to the first, Frames per pose change, with Frame Rate and Hold Last. Hinges blend their angle, balls blend along the shortest turn.
+- **Pose tool.** Next to Rotate in the Tools toolbar. Click down into submodels to take the innermost one with a joint and drag. A hinge turns about its axis by the horizontal drag, a ball turns about the screen up and right directions. Rotation Snap applies and one drag is one undo step.
+- **Poses panel.** View > Toolbars > Poses lists the saved poses. Save stores every joint angle under a name, saving a name again replaces it, Recall puts the angles back in one undo step, and Rename and Delete edit the list. Poses are saved in the first file of the model as `0 !SW POSE "<name>" "<submodel file>" <part index> <rx ry rz>`, one line per joint.
+- **Poses motion.** File > Image > Animated GIF with Motion Poses blends through the saved poses in order and back to the first, Frames per pose change, with Frame Rate and Hold Last. Hinges blend their angle, balls blend along the shortest turn.
 
-![Poses animation of a minifigure](resources/images/modeling-poses.gif)
-![Poses panel](resources/images/panels-poses.png)
+![Poses animation of a minifigure](resources/images/tools-poses.gif)
+![Save Image with Motion Poses](resources/images/tools-poses-motion.png)
 
 ## Views
 
@@ -408,6 +408,7 @@ Panels dock side by side in any area of the main window, with uniform headers, b
 - **Properties.** Compact position, rotation and transform rows and a spanning color swatch. Lights and cameras get named rows with units.
 - **Minifigure Builder.** Build a minifigure from templates and add several variations to the model.
 - **Preview.** Parts and models in a square viewport, with Keep Last Selection.
+- **Poses.** The joint of the selected submodel with its axis and Clear Joint, and the saved poses with Save, Recall, Rename and Delete.
 - **Terminal.** An embedded terminal sized to whole rows and columns, with Open Model Folder.
 - **Terminal folders.** Follow Model Folder moves the terminal to the folder of each model you open, and Go to Model Folder moves it there once.
 
@@ -419,6 +420,7 @@ Panels dock side by side in any area of the main window, with uniform headers, b
 ![Minifigure Builder](resources/images/panels-minifigure-builder.png)
 ![Colors](resources/images/panels-colors.png)
 ![Properties](resources/images/panels-properties.png)
+![Poses](resources/images/panels-poses.png)
 
 ![Terminal](resources/images/panels-terminal.png "wide")
 

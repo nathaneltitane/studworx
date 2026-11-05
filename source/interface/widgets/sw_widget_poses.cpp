@@ -11,16 +11,33 @@ swPosesWidget::swPosesWidget(QWidget* Parent)
 
 	mList = new QListWidget(this);
 	mList->setToolTip(tr("Saved poses, played in this order by the Poses motion"));
+	mList->setWhatsThis(tr("<p><b>Poses</b></p><p>The poses saved in the model, in the order the Poses motion of the image dialog plays them. Pick one to recall, rename or delete it.</p>"));
 	Layout->addWidget(mList);
 
 	QHBoxLayout* Buttons = new QHBoxLayout();
-	const std::pair<QString, void (swPosesWidget::*)()> Entries[] = { { tr("Save"), &swPosesWidget::SaveClicked }, { tr("Recall"), &swPosesWidget::RecallClicked }, { tr("Rename"), &swPosesWidget::RenameClicked }, { tr("Delete"), &swPosesWidget::DeleteClicked } };
+	struct swPoseButton
+	{
+		QString Text;
+		QString ToolTip;
+		QString WhatsThis;
+		void (swPosesWidget::*Slot)();
+	};
 
-	for (const auto& [Text, Slot] : Entries)
+	const swPoseButton Entries[] =
+	{
+		{ tr("Save"), tr("Save the joint angles as a pose"), tr("<p><b>Save</b></p><p>Store the angles of every joint in the model under a name. Saving a name that already exists replaces that pose.</p>"), &swPosesWidget::SaveClicked },
+		{ tr("Recall"), tr("Put the joints back in the picked pose"), tr("<p><b>Recall</b></p><p>Turn every joint back to the angles of the picked pose, in one undo step.</p>"), &swPosesWidget::RecallClicked },
+		{ tr("Rename"), tr("Rename the picked pose"), tr("<p><b>Rename</b></p><p>Give the picked pose a new name.</p>"), &swPosesWidget::RenameClicked },
+		{ tr("Delete"), tr("Delete the picked pose"), tr("<p><b>Delete</b></p><p>Remove the picked pose from the model. The joints keep their angles.</p>"), &swPosesWidget::DeleteClicked }
+	};
+
+	for (const swPoseButton& Entry : Entries)
 	{
 		QToolButton* Button = new QToolButton(this);
-		Button->setText(Text);
-		connect(Button, &QToolButton::clicked, this, Slot);
+		Button->setText(Entry.Text);
+		Button->setToolTip(Entry.ToolTip);
+		Button->setWhatsThis(Entry.WhatsThis);
+		connect(Button, &QToolButton::clicked, this, Entry.Slot);
 		Buttons->addWidget(Button);
 	}
 
@@ -34,11 +51,14 @@ swPosesWidget::swPosesWidget(QWidget* Parent)
 	mAxisCombo = new QComboBox(this);
 	mAxisCombo->addItems({ tr("Axis X"), tr("Axis Y"), tr("Axis Z") });
 	mAxisCombo->setToolTip(tr("Hinge axis, for parts without shadow data"));
+	mAxisCombo->setWhatsThis(tr("<p><b>Axis</b></p><p>The axis a hinge turns about, in the coordinates of the submodel. Use it for parts without shadow data, which get a hinge on their origin.</p>"));
 	connect(mAxisCombo, QOverload<int>::of(&QComboBox::activated), this, &swPosesWidget::AxisChanged);
 	JointRow->addWidget(mAxisCombo);
 
 	mClearButton = new QToolButton(this);
 	mClearButton->setText(tr("Clear Joint"));
+	mClearButton->setToolTip(tr("Remove the joint of the selected submodel"));
+	mClearButton->setWhatsThis(tr("<p><b>Clear Joint</b></p><p>Remove the joint of the selected submodel and put it back in its placed position. This can be undone.</p>"));
 	connect(mClearButton, &QToolButton::clicked, this, &swPosesWidget::ClearClicked);
 	JointRow->addWidget(mClearButton);
 	Layout->addLayout(JointRow);

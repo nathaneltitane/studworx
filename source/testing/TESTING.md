@@ -5,6 +5,10 @@ object history, property-key comparisons, and the final animation key after
 step insertion, removal, and key deletion, including 8,000 deterministic
 randomized undo/redo and merge transitions, and how the connection shapes of
 the LDCad shadow library are read and fit together and along which axis, on made-up parts.
+Clip, finger and sphere shapes must be read as joints, a round shape in a placed
+sub-file must keep its pivot and axis, and poses must blend a hinge along its axis
+and a ball along the shortest turn. With `SW_TEST_BINARY` set, a model with a
+`0 !SW JOINT PART` line and a `0 !SW POSE` line must save both back unchanged.
 With `SW_TEST_BINARY` set to a built `studworx`, a one brick model is exported
 to POV-Ray and rendered at 64 x 64 (skipped without POV-Ray, `SW_TEST_LIBRARY`
 sets an optional parts library). The same binary saves a Trans-Clear model on

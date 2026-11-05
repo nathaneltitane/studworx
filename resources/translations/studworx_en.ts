@@ -59,7 +59,7 @@
 <context>
     <name>swMainWindow</name>
     <message numerus="yes">
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="155"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="160"/>
         <source>%n objects selected</source>
         <translation>
             <numerusform>%n object selected</numerusform>
@@ -78,7 +78,7 @@
 <context>
     <name>swModel</name>
     <message numerus="yes">
-        <location filename="../../source/core/sw_model_selection.cpp" line="1522"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1524"/>
         <source>Replace Parts</source>
         <translation>
             <numerusform>Replace Part</numerusform>

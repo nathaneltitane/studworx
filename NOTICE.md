@@ -4,6 +4,7 @@
   <summary>2026-11-05</summary>
 
   - Open: LEGO® Digital Designer models (.lxf and .lxfml) open from File > Open, recent files, drag and drop, the command line and the file manager as a new untitled model
+  - Poses: Part > Set Joint gives a submodel a hinge or ball joint from the shadow library connections, the Pose tool next to Rotate turns it with the mouse, the Poses panel saves, recalls, renames and deletes named poses, and File > Image plays them as an animated GIF with Motion Poses
   - Import: File > Import takes .lxfml as well as .lxf
   - Submodels: the menu now reads Open Selected Submodel, Inline Selected Submodels, Flatten Submodels and Move to New Submodel
   - Menus: Select Invert is now Invert Selection, Remove Step is now Delete Step, and the snap toggles read Move Snap, Rotation Snap and Camera Snap
