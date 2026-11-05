@@ -14,8 +14,8 @@ StudWorx is built from standard Qt widgets: panels, dialogs and windows follow y
 - **Options menus.** The gear button on the model view and on every panel opens the settings that belong to it: grids, preview, parts and colors.
 - **Toolbars.** Standard, Tools and Time toolbars. Move and rotate cursors show the axis they work on.
 - **Transform toolbar.** Type a position or rotation for the selection and apply it, as absolute coordinates or relative to where it is now.
-- **Tabs, splits and status bar.** Open several models in tabs, split the view, go Full Screen, and read the view orientation, projection and focus position in the status bar. Right click the status bar to show or hide each segment.
-- **Split views.** Split the current view horizontally or vertically, as often as you like, remove one view, or Reset Views back to one. Each view keeps its own camera and projection, and a border marks the active one.
+- **Tabs, splits and status bar.** Open several models in tabs, split the view, go Full Screen, and read the view orientation, projection and focus position in the status bar, with the name, ID and weight of the selected part. Right click the status bar to show or hide each segment.
+- **Split views.** Split the current view horizontally or vertically, as often as you like, remove one view, or Reset Views back to one. Each view keeps its own camera and projection, a border marks the active one, and the view cube and axis icon stay on the top left view.
 - **Toolbars and panels on demand.** View > Toolbars shows or hides each toolbar and panel: Standard, Tools, Time, Parts, Colors, Properties, Timeline, Preview, Terminal and Minifigure Builder. Close Tab closes the current model tab.
 - **Undo and clipboard.** Undo and Redo every change, and Cut, Copy and Paste parts between models and tabs.
 - **Contextual help.** Choose Help > What's This? or click the question mark in a title bar, then click any control to read what it does. F1 explains the focused control, Shift+F1 starts What's This inside a dialog, and every entry is listed in the Help index below.
@@ -60,7 +60,7 @@ Models are plain LDraw text files in LeoCAD's format, so they open in either pro
 - **LDraw models.** .ldr, .mpd and .dat files, with New, Open, Merge, Save, Save As, Reload and the four most recent files. Save As follows the LDraw file specification and adds the extension when it is left out: .ldr for a single model, .mpd for a model with submodels or embedded data. Files are written with Unix line endings, and a model loaded with Windows line endings keeps them when saved. Watch for File Changes reloads a model edited in another program. Sample models, a minifigure, cube, sphere and cylinder cutaways of it, an exploded model, a flexible part and lights and cameras, install to /usr/share/studworx/samples, the samples folder beside the program on Windows, or the application bundle resources on macOS.
 - **Startup.** Open Most Recent File on Startup reopens the last model, Restore Tab Layout brings back its tabs and split views, and Load All Parts Before Showing waits until every part is loaded before the model appears.
 - **LeoCAD models.** Models saved by LeoCAD open as they are, and their LeoCAD meta commands are migrated to StudWorx ones, automatically when you choose so in Preferences.
-- **Import.** LEGO® Digital Designer models and official set inventories. Set inventories use your own free Rebrickable API key, asked for once or set under Online Services in the preferences, and are searched by set name or number.
+- **Import.** LEGO® Digital Designer models, with a bundled part and color mapping, and official set inventories. Set inventories use your own free Rebrickable API key, asked for once or set under Online Services in the preferences, and are searched by set name or number.
 - **Export.** 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages from the Instructions window, BrickLink wanted lists and CSV parts lists. BrickLink exports pick the condition, the wanted list by its number or the address of its page, and new listing notices, copy the XML and open the BrickLink upload page in one step, and translate part numbers and colors through a bundled mapping of over 55,000 parts or a file built from the library and Rebrickable, with Rebrickable numbers taking the lead over stale part keywords. BrickLink and CSV exports list parts the library moved to a new number under that number, and Part Exceptions in the BrickLink export keeps a comma or tab separated list of parts whose BrickLink number you set by hand.
 - **KMZ.** Google Earth and SketchUp models, with the visible surfaces only or every part's geometry, set in Preferences.
 - **COLLADA.** Translucent colors can be marked as transparent materials for programs that read them.
@@ -324,7 +324,7 @@ Look at a model from any side, see inside it without changing it, and measure it
 - **Cutaways.** Cube, sphere and cylinder cutaways with solid cut surfaces, a shaded cut and resize knobs, pushed in or pulled out by one plate. The cutaway is saved with the model and comes back when the file opens, and the parts themselves are never changed.
 - **Cutaway controls.** Grow and Shrink resize the cutaway, Push In and Pull Out move it one plate, Shade Color sets the light shade on the cut faces, and Remove shows the whole model again.
 - **Cut edges.** With edge lines on, the cut draws edge lines in each part's edge color where it meets the outer faces, and thinner lines along the corners of the cut faces. Cut Edges in Preferences > Views > Cutaway turns them off.
-- **Grids.** A base grid with studs, lines and origin lines, vertical XZ and YZ height grids sized around the model, and a toggle for each axis line.
+- **Grids.** A base grid with studs, lines and origin lines, vertical XZ and YZ height grids sized around the model, shown with the base grid and greyed out in the view options while it is off, and a toggle for each axis line.
 - **Grid settings.** Line spacing, stud and line colors, and Height Grids Behind Model to keep the height grids behind the parts.
 - **Idle turntable.** The model turns full screen around the X, Y or Z axis when you leave StudWorx idle. Any input ends it. The idle time and the time for one turn are set in Preferences.
 
@@ -381,7 +381,7 @@ Panels dock side by side in any area of the main window, with uniform headers, b
 
 ![A selected part with its Properties](resources/images/panels-main-window-selection.png "wide")
 
-- **Parts.** Categories and palettes with a filter. The panel snaps to whole thumbnail tiles and rows, docked or floating.
+- **Parts.** Categories and palettes with a filter. The panel snaps to whole thumbnail tiles and rows, docked or floating, and the tooltip of each part shows its name, ID and weight.
 - **Part palettes.** Create, rename, reorder and delete palettes, import them, or build one from an online set inventory.
 - **Colors.** Collapsible solid, translucent and special color groups with square color tiles.
 - **Properties.** Compact position, rotation and transform rows and a spanning color swatch. Lights and cameras get named rows with units.
@@ -447,7 +447,7 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 
 Large builds split into submodels that you can edit on their own or in place, inside the model that uses them.
 
-- **Properties.** Part IDs, thumbnails and counts, with BrickLink or CSV export.
+- **Properties.** Part IDs, thumbnails and counts, with BrickLink or CSV export, and the size and weight of the model in metric and imperial units. A Weight column gives each part's weight in grams or ounces, chosen with the units box below the table, from the BrickLink part weights, and parts without a known weight show N/A.
 - **Submodels.** New Submodel, the Submodels list, Open Selected Model, Inline Selected Models, Flatten Model, which replaces every submodel at all depths with its parts in one undo step, also run from the command line with --flatten, and Move to New Model.
 - **Submodels list.** Create, rename, duplicate and delete submodels, set the active one, and export them as separate LDraw files.
 - **Models menu.** Switch between up to forty models of the file from the Models menu.
@@ -467,10 +467,10 @@ Large builds split into submodels that you can edit on their own or in place, in
 
 <!-- preferences | grid | PREFERENCES // EVERY SETTING IN ONE PLACE -->
 
-Eight pages with lined up label and control columns. Value boxes show their maximum and bring any typed number into range, and every slider shows its value.
+Eight pages with lined up label and control columns, checkboxes included, each label greyed out with its control. Value boxes show their maximum and bring any typed number into range, and every slider shows its value.
 
 - **General.** Reference paths, where the color configurations, minifigure builder settings and BrickLink mapping update from ldraw.org and Rebrickable with one button and bundled copies are used until a file is set, online services, where the Rebrickable API key is kept and Get Key opens its page, a rejected key being cleared so it is asked for again, the author of new models built from a name, email address and comment, such as All rights reserved, joined by the author line splitter and previewed as the author line, and the parts library, Blender, POV-Ray and LGEO locations.
-- **Startup and files.** Open the most recent file, restore the tab layout, load all parts before showing a model, watch for file changes and migrate LeoCAD models automatically.
+- **Startup and files.** Open the most recent file, restore the tab layout, load all parts before showing a model, watch for file changes and ask, migrate or keep LeoCAD models when opened.
 - **Rendering and Views.** Rendering quality and the Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups.
 - **Interface and Instructions.** Interface and view colors, edge contrast, the default instruction page settings, and the rulers and element inspector overlays of the instructions page.
 - **View colors.** Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, flex paths, the view cube, every axis, and the element margin, padding and anchor overlays and the ruler pointer arrows of the instructions page, each with an alpha slider.

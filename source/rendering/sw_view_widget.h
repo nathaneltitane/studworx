@@ -71,7 +71,7 @@ protected:
 	void UpdateOverlayGeometry();
 	void UpdateModelEditingButtons();
 	void UpdateCameraName();
-	static std::array<int, 4> GetOverlayCornerSizes();
+	std::array<int, 4> GetOverlayCornerSizes() const;
 
 	std::unique_ptr<swView> mView;
 	QWidget* mOverlay = nullptr;

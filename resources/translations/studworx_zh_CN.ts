@@ -4142,26 +4142,26 @@
         <translation type="unfinished">型号 &apos;%1&apos; 已删除。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="53"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="54"/>
         <source>Embedded data has no filename.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">嵌入数据没有文件名。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="107"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="108"/>
         <source>Unexpected statement in embedded data &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">嵌入数据 &apos;%1&apos; 中存在意外语句。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="142"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="143"/>
         <source>Duplicate model &apos;%1&apos; was ignored; model names are case-insensitive.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">重复模型 &apos;%1&apos; 被忽略；型号名称不区分大小写。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="357"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="366"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="358"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="367"/>
         <source>Error reading file &apos;%1&apos;:
 %2</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -4169,15 +4169,15 @@
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="357"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="366"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="456"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="358"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="367"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="457"/>
         <source>Load Model</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">加载模型</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="456"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="457"/>
         <source>Error loading file &apos;%1&apos;:
 File format is not recognized.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -4185,8 +4185,8 @@ File format is not recognized.</source>
  文件格式无法识别。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="557"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="659"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="558"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="660"/>
         <source>Could not write all model data.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">无法写入所有模型数据。</translation>
@@ -4253,19 +4253,19 @@ File format is not recognized.</source>
         <translation type="unfinished">无法保留子型号名称 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="774"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="777"/>
         <source>Cannot export different submodels named &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">无法导出名为 &apos;%1&apos; 的不同子模型。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="824"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="827"/>
         <source>Could not serialize all model data.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">无法序列化所有模型数据。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="862"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="865"/>
         <source>Cannot export different embedded data named &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">无法导出名为 &apos;%1&apos; 的不同嵌入数据。</translation>
@@ -4469,12 +4469,12 @@ File format is not recognized.</source>
         <location filename="../../source/core/sw_project_export.cpp" line="1781"/>
         <location filename="../../source/core/sw_project_export.cpp" line="1817"/>
         <location filename="../../source/core/sw_project_export.cpp" line="1850"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="541"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="557"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="568"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="646"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="659"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="663"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="542"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="558"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="569"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="647"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="660"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="664"/>
         <source>Error writing to file &apos;%1&apos;:
 %2</source>
         <translation>写入文件 &apos;%1&apos; 时出错:
@@ -4588,67 +4588,77 @@ File format is not recognized.</source>
         <translation type="vanished">StudWorx</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="201"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="202"/>
         <source>Could not open the BrickLink mapping file &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="207"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="208"/>
         <source>&apos;%1&apos; is not a BrickLink mapping file: %2.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="291"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="334"/>
         <source>Could not open file &apos;%1&apos; for writing.</source>
         <translation>无法打开文件 &apos;%1&apos; 进行写入。</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="339"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="382"/>
         <source>Reading the BrickLink numbers of the library parts...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="87"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="88"/>
         <source>Rebrickable rejected the API key, so it was cleared. Enter a new one when asked, or under Preferences &gt; General &gt; Online Services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="147"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="148"/>
         <source>Could not read the BrickLink exceptions file &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="190"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="191"/>
         <source>Could not write the BrickLink exceptions file &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="453"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="285"/>
+        <source>%1 g</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="285"/>
+        <source>N/A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="496"/>
         <source>Could not download the part numbers from Rebrickable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="513"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="556"/>
         <source>Cancel</source>
         <translation type="unfinished">取消</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="514"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="557"/>
         <source>Update BrickLink Mapping</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="529"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="572"/>
         <source>Downloading the BrickLink part numbers from Rebrickable...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="556"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="599"/>
         <source>Downloading the BrickLink colors from Rebrickable...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="630"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="673"/>
         <source>Could not write the BrickLink mapping file &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7762,8 +7772,48 @@ File format is not recognized.</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;添加关键帧&lt;/b&gt;&lt;/p&gt;&lt;p&gt;若希望编辑操作在当前步骤创建新的动画关键帧，请启用此功能。例如，在后续步骤中移动零件，可以使其在该步骤具有不同的位置。“属性”中的菱形控件用于显示和切换各个属性的关键帧。&lt;/p&gt;</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1433"/>
+        <source>&lt;p&gt;&lt;b&gt;Split Horizontal&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Split the current view into two views stacked one above the other, each with its own camera. The view cube and axis icon stay on the top left view.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1442"/>
+        <source>&lt;p&gt;&lt;b&gt;Split Vertical&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Split the current view into two views side by side, each with its own camera. The view cube and axis icon stay on the top left view.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="1559"/>
         <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Explode panel, which spreads the parts on screen away from an anchor, the focused part or the first or last selected one, scaled along X, Y and Z. With Selected Parts Only, each group moves as one part. Each part slides straight out along the connection that holds it, a part without one along the nearest axis from the part beside it, and with Show Lines a line runs through each connection back to the socket it came off. Submodels, and the submodels inside them, flatten into their parts first in the same undo step. Collapse or Undo puts the parts and submodels back, and Save Copy saves the exploded model to a separate file named with -exploded.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1667"/>
+        <source>&lt;p&gt;&lt;b&gt;View Cube&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the view cube. Click its faces, edges and corners to turn the camera. With split views it shows on the top left view only.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1676"/>
+        <source>&lt;p&gt;&lt;b&gt;Axis Icon&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the X, Y and Z axis icon. With split views it shows on the top left view only.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1685"/>
+        <source>&lt;p&gt;&lt;b&gt;Base Grid&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the base grid. The height grids draw only with the base grid, and their menu entries are greyed out while it is off.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1820"/>
+        <source>&lt;p&gt;&lt;b&gt;XZ Height Grid&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the vertical XZ height grid sized around the model. It needs the base grid turned on.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1829"/>
+        <source>&lt;p&gt;&lt;b&gt;YZ Height Grid&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the vertical YZ height grid sized around the model. It needs the base grid turned on.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1838"/>
+        <source>&lt;p&gt;&lt;b&gt;Height Grids Behind Model&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the height grids behind the model instead of through the origin axes. It needs the base grid turned on.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -15688,11 +15738,11 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="131"/>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="417"/>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="440"/>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="449"/>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="457"/>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="473"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="416"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="439"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="448"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="456"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="472"/>
         <source>Save Model</source>
         <translation>保存模型</translation>
     </message>
@@ -15989,7 +16039,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;预览&lt;/b&gt;&lt;/p&gt;&lt;p&gt;检查零件而不将其放入模型中。双击零件停靠区中的零件进行预览。当源选择发生变化时，锁定预览保持当前预览；解锁它以允许更新。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="949"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="950"/>
         <source>Asset loading failed</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">资源加载失败</translation>
@@ -16219,32 +16269,32 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">基础网格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="500"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="502"/>
         <source>XZ Height Grid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="501"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="503"/>
         <source>YZ Height Grid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="502"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="504"/>
         <source>Height Grids Behind Model</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="503"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="505"/>
         <source>X Axis Line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="504"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="506"/>
         <source>Y Axis Line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="505"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="507"/>
         <source>Z Axis Line</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16344,96 +16394,94 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="148"/>
         <source>%1 (ID: %2)</source>
-        <translation>%1 (ID: %2)</translation>
+        <translation type="vanished">%1 (ID: %2)</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="154"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="155"/>
         <source>%n objects selected</source>
         <translation>
             <numerusform>已选择 %n 个物体</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="158"/>
         <source> - %1 (ID: %2)</source>
-        <translation> - %1 (ID: %2)</translation>
+        <translation type="vanished"> - %1 (ID: %2)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="162"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="163"/>
         <source> in group &apos;%1&apos;</source>
         <translation> 在组 &apos;%1&apos; 中</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="195"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="196"/>
         <source>Part</source>
         <translation type="unfinished">零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="197"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="198"/>
         <source>Camera</source>
         <translation type="unfinished">相机</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="199"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="200"/>
         <source>Light</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="201"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="202"/>
         <source>Origin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="203"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="204"/>
         <source>%1 X: %2 Y: %3 Z: %4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="283"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="285"/>
         <source>Step %1</source>
         <translation>步骤 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="328"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="329"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="330"/>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="331"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="333"/>
         <source>free</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="330"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="332"/>
         <source>relative</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="330"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="332"/>
         <source>absolute</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="331"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="333"/>
         <source>%1 deg.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="332"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="334"/>
         <source>separately</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="332"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="334"/>
         <source>together</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="334"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="336"/>
         <source>Move XY: %1 Z: %2 - Axes: %3 - Rotate: %4 / %5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="336"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="338"/>
         <source>Movement snap, rotation snap, transform axes and rotation pivot. Change them with the last buttons of the standard toolbar.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16501,22 +16549,22 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished"> M: %1 %2 R: %3 </translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="358"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="360"/>
         <source>&amp;Undo %1</source>
         <translation>撤销 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="363"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="365"/>
         <source>&amp;Undo</source>
         <translation>撤销</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="369"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="371"/>
         <source>&amp;Redo %1</source>
         <translation>重做 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="376"/>
         <source>&amp;Redo</source>
         <translation>重做</translation>
     </message>
@@ -16542,7 +16590,7 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="231"/>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="317"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="316"/>
         <source>Supported Files (*.lcd *.ldr *.dat *.mpd);;All Files (*.*)</source>
         <translation>支持的文件 (*.lcd *.ldr *.dat *.mpd);;所有文件 (*.*)</translation>
     </message>
@@ -16573,12 +16621,12 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="292"/>
-        <source>Migrate LeoCAD models automatically</source>
+        <source>Remember this choice</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="317"/>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="352"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="316"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="351"/>
         <source>Merge Model</source>
         <translation>合并模型</translation>
     </message>
@@ -16591,12 +16639,12 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">已合并 %1 个子模型。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="362"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="361"/>
         <source>Import</source>
         <translation>导入</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="362"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="361"/>
         <source>LEGO® Digital Designer Files (*.lxf);;All Files (*.*)</source>
         <translation>LEGO® Digital Designer 文件 (*.lxf);;所有文件 (*.*)</translation>
     </message>
@@ -16609,12 +16657,12 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">加载错误 &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="415"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="414"/>
         <source>Supported Files (*.mpd);;All Files (*.*)</source>
         <translation>支持的文件 (*.mpd);;所有文件 (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="415"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="414"/>
         <source>Supported Files (*.ldr *.dat *.mpd);;All Files (*.*)</source>
         <translation>支持的文件 (*.ldr *.dat *.mpd);;所有文件 (*.*)</translation>
     </message>
@@ -16635,18 +16683,18 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished"> 移动: %1 %2 旋转: %3 %4 </translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="348"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="347"/>
         <source>Cannot Merge Model</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">无法合并模型</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="438"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="437"/>
         <source>&apos;%1&apos; already exists. Replace it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="449"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="448"/>
         <source>Saving files in LCD format is no longer supported. Please use the LDR or MPD formats instead.</source>
         <oldsource>Saving files in LCD format is no longer supported, please use the LDR or MPD formats instead.</oldsource>
         <translation type="unfinished">不再支持保存为 LCD 格式，请改用 LDR 或 MPD 格式。</translation>
@@ -16657,95 +16705,95 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">保存项目</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="473"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="472"/>
         <source>Save changes to &apos;%1&apos;?</source>
         <translation>保存对 &apos;%1&apos; 的更改？</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="137"/>
-        <location filename="../../source/interface/window/sw_window_main.h" line="143"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="137"/>
-        <location filename="../../source/interface/window/sw_window_main.h" line="143"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <source>1/20S</source>
         <translation>1/20S</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="137"/>
-        <location filename="../../source/interface/window/sw_window_main.h" line="143"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <source>1/4S</source>
         <translation>1/4S</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="137"/>
-        <location filename="../../source/interface/window/sw_window_main.h" line="143"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <source>1F</source>
         <translation>1F</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="137"/>
-        <location filename="../../source/interface/window/sw_window_main.h" line="143"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <source>1/2S</source>
         <translation>1/2S</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="137"/>
-        <location filename="../../source/interface/window/sw_window_main.h" line="143"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <source>1S</source>
         <translation>1S</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="137"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
         <source>2S</source>
         <translation>2S</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="137"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
         <source>3S</source>
         <translation>3S</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="137"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
         <source>4S</source>
         <translation>4S</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="137"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
         <source>8S</source>
         <translation>8S</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="1043"/>
-        <location filename="../../source/interface/window/sw_window_main.h" line="138"/>
-        <location filename="../../source/interface/window/sw_window_main.h" line="144"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="140"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="146"/>
         <source>None</source>
         <translation>无</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="143"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <source>1B</source>
         <translation>1B</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="143"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <source>2B</source>
         <translation>2B</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="143"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <source>4B</source>
         <translation>4B</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="143"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <source>8B</source>
         <translation>8B</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="352"/>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="351"/>
         <source>Merged %n submodels.</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">
@@ -16753,49 +16801,59 @@ Choose where to save it and download the latest %3 now?</source>
         </translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="243"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="245"/>
         <source>View: %1 deg. Lat. / %2 deg. Lon. / %3</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">视图：纬度 %1 度 / 经度 %2 度 / %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="242"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="244"/>
         <source>Perspective</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">透视</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="242"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="149"/>
+        <source>%1 - ID: %2 - Weight: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="159"/>
+        <source> - %1 - ID: %2 - Weight: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="244"/>
         <source>Orthographic</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">正交</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="973"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="974"/>
         <source>Selection</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">选择</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="974"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="975"/>
         <source>View Orientation</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">视图方向</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="975"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="976"/>
         <source>Position</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">位置</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="976"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="977"/>
         <source>Snap and Transform</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">吸附与变换</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="977"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="978"/>
         <source>Step</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">步骤</translation>
@@ -17452,13 +17510,13 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="721"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="756"/>
         <source>Model &apos;%1&apos;: reference to &apos;%2&apos; was ignored because it would create a circular reference.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">模型 &apos;%1&apos;：对 &apos;%2&apos; 的引用被忽略，因为它会创建循环引用。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="1009"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="1044"/>
         <location filename="../../source/core/sw_model_group.cpp" line="77"/>
         <source>Group </source>
         <translation type="unfinished"></translation>
@@ -18687,31 +18745,43 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swPartSelectionListModel</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="375"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="376"/>
         <source>Could not load part &apos;%1&apos;.</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">无法加载零件 &apos;%1&apos;。</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="378"/>
+        <source>%1
+ID: %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="379"/>
+        <source>
+Weight: %1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>swPartSelectionListView</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="630"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="634"/>
         <source>Add to Palette</source>
         <translation>添加到库</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="641"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="645"/>
         <source>None</source>
         <translation>无</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="645"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="649"/>
         <source>Remove from Palette</source>
         <translation>从库中移除</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="651"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="655"/>
         <source>Open Submodel</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">开放子模型</translation>
@@ -18735,14 +18805,14 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swPartSelectionWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1119"/>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1120"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1123"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1124"/>
         <source>Filter Categories</source>
         <translation>筛选类别</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1127"/>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1594"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1131"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1598"/>
         <source>Match Case</source>
         <translation>区分大小写</translation>
     </message>
@@ -18755,158 +18825,158 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">选项</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1508"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1512"/>
         <source>Edit Palettes...</source>
         <translation>编辑零件库...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1537"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1541"/>
         <source>Icons</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">图标</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1541"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1545"/>
         <source>No Icons</source>
         <translation>无图标</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1546"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1550"/>
         <source>Extra Small Icons</source>
         <translation>超小图标</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1551"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1555"/>
         <source>Small Icons</source>
         <translation>小图标</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1556"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1560"/>
         <source>Medium Icons</source>
         <translation>中图标</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1561"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1565"/>
         <source>Large Icons</source>
         <translation>大图标</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1566"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1570"/>
         <source>Extra Large Icons</source>
         <translation>超大图标</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1581"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1585"/>
         <source>Lock Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">锁色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1588"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1592"/>
         <source>Filter</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">筛选</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1590"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1594"/>
         <source>Regular Expression</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">正则表达式</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1600"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1604"/>
         <source>Part ID</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">零件编号</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1605"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1609"/>
         <source>Part Description</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">零件描述</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1517"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1521"/>
         <source>Show Part Names</source>
         <translation>显示零件名称</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1121"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1125"/>
         <source>Filter category names to narrow the category list.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">过滤类别名称以缩小类别列表。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1136"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1140"/>
         <source>Part Categories</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">零件类别</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1137"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1141"/>
         <source>Choose a category or palette to display its parts.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">选择一个类别或调色板来显示其零件。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1153"/>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1154"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1157"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1158"/>
         <source>Filter Parts</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">过滤片</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1155"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1159"/>
         <source>Filter the displayed parts using the matching options.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">使用匹配选项过滤显示的零件。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1160"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1164"/>
         <source>Configure part filtering and list display.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">配置零件过滤和列表显示。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1160"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1164"/>
         <source>Part List Options</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">零件清单选项</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1164"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1168"/>
         <source>Available Parts</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">可用零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1165"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1169"/>
         <source>Select a part from the filtered list.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">从过滤列表中选择一个零件。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1522"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1526"/>
         <source>Show Decorated Parts</source>
         <translation>显示带图案零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1526"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1530"/>
         <source>Show Part Aliases</source>
         <translation>显示零件别名</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1531"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1535"/>
         <source>Snap Panel Width to Tiles</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1575"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1579"/>
         <source>List Mode</source>
         <translation>列表模式</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1612"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1616"/>
         <source>Rendering</source>
         <translation type="unfinished">渲染</translation>
     </message>
@@ -18915,22 +18985,22 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">锁定预览颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1653"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1657"/>
         <source>Favorites</source>
         <translation>收藏夹</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1786"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1790"/>
         <source>All Parts</source>
         <translation>所有零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1792"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1796"/>
         <source>In Use</source>
         <translation>使用中</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1798"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1802"/>
         <source>Submodels</source>
         <translation>子模型</translation>
     </message>
@@ -19354,7 +19424,7 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="114"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="124"/>
         <source>Stud Style</source>
         <translation>凸点样式</translation>
     </message>
@@ -20716,20 +20786,20 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">选择人仔设置文件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1129"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1142"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1134"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1147"/>
         <source>Settings Files (*.ini);;All Files (*.*)</source>
         <translation>设置文件 (*.ini);;所有文件 (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1200"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1214"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1205"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1219"/>
         <source>Executable Files (*.exe);;All Files (*.*)</source>
         <translation>可执行文件 (*.exe);;所有文件 (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1202"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1216"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1207"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1221"/>
         <source>All Files (*.*)</source>
         <translation>所有文件 (*.*)</translation>
     </message>
@@ -20738,22 +20808,22 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">打开 POV-Ray</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1227"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1232"/>
         <source>Open LGEO Folder</source>
         <translation>打开 LGEO 文件夹</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1242"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1247"/>
         <source>Reset Colors</source>
         <translation>重置颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1242"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1247"/>
         <source>Would you like to also reset the interface colors to match the color theme?</source>
         <translation>是否同时重置界面颜色以匹配颜色主题？</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1256"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1261"/>
         <source>Select Background Color</source>
         <translation>选择背景颜色</translation>
     </message>
@@ -20770,235 +20840,235 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">选择坐标轴颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="834"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="839"/>
         <source>&apos;%1&apos; did not run as Blender, so Blender rendering stays unavailable.
 
 %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="994"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="999"/>
         <source>Select Parts Library</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="994"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="999"/>
         <source>Parts Libraries (*.zip *.bin LDConfig.ldr ldconfig.ldr);;All Files (*.*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1010"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1015"/>
         <source>Select Unofficial Library Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1010"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1015"/>
         <source>Supported Archives (*.zip);;All Files (*.*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1018"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1023"/>
         <source>Select Part Connections Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1129"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1134"/>
         <source>Choose Minifigure Builder Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1142"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1147"/>
         <source>Save Minifigure Builder Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1159"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1164"/>
         <source>Saved the latest minifigure builder settings to &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1164"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1169"/>
         <source>Select BrickLink Mapping File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1164"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1169"/>
         <source>Mapping Files (*.txt *.json);;All Files (*.*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1219"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1224"/>
         <source>Select Blender Executable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1261"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1266"/>
         <source>Select Text Color</source>
         <translation>选择文本颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1266"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1271"/>
         <source>Select Text Halo Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">选择文本光晕颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1272"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1277"/>
         <source>Select Marquee Border Color</source>
         <translation>选择选框边框颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1277"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1282"/>
         <source>Select Marquee Fill Color</source>
         <translation>选择选框填充颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1283"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1288"/>
         <source>Select Overlay Color</source>
         <translation>选择叠加色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1288"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1293"/>
         <source>Select Explode Lines Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1294"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1299"/>
         <source>Select Cutaway Shade Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1299"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1304"/>
         <source>Select Element Margin Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1304"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1309"/>
         <source>Select Element Padding Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1309"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1314"/>
         <source>Select Element Anchor Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1314"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1319"/>
         <source>Select Ruler Pointer Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1319"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1324"/>
         <source>Select Active View Color</source>
         <translation>选择活动视图颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1324"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1329"/>
         <source>Select Inactive View Color</source>
         <translation>选择非活动视图颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1329"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1334"/>
         <source>Select Fade Color</source>
         <translation>选择淡化颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1335"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1340"/>
         <source>Select Highlight Color</source>
         <translation>选择高亮颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1341"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1346"/>
         <source>Select Grid Stud Color</source>
         <translation>选择网格凸点颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1347"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1352"/>
         <source>Select Grid Line Color</source>
         <translation>选择网格线颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1352"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1357"/>
         <source>Select View Cube Color</source>
         <translation>选择视图立方体颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1357"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1362"/>
         <source>Select View Cube Text Color</source>
         <translation>选择视图立方体文本颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1362"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1367"/>
         <source>Select View Cube Highlight Color</source>
         <translation>选择视图立方体高亮颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1367"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1372"/>
         <source>Select X Axis Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1372"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1377"/>
         <source>Select Y Axis Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1377"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1382"/>
         <source>Select Z Axis Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1397"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1402"/>
         <source>Select Object Selected Color</source>
         <translation>选择选定物体颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1402"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1407"/>
         <source>Select Object Focused Color</source>
         <translation>选择焦点物体颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1407"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1412"/>
         <source>Select Camera Color</source>
         <translation>选择相机颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1412"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1417"/>
         <source>Select Light Color</source>
         <translation>选择光源颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1417"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1422"/>
         <source>Select Control Point Color</source>
         <translation>选择控制点颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1423"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1428"/>
         <source>Select Control Point Focused Color</source>
         <translation>选择焦点控制点颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1429"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1434"/>
         <source>Select Control Point Seated Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1435"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1440"/>
         <source>Select Flex Path Spread Handle Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1441"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1446"/>
         <source>Select Flex Path Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1447"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1452"/>
         <source>Select Flex Path Out of Reach Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1495"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1500"/>
         <source>%n stud(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -21029,10 +21099,10 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_categories.cpp" line="228"/>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_categories.cpp" line="247"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="386"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="407"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="582"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="603"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="396"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="417"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="592"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="613"/>
         <source>Text Files (*.txt);;All Files (*.*)</source>
         <translation>文本文件 (*.txt);;所有文件 (*.*)</translation>
     </message>
@@ -21064,27 +21134,27 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="unfinished">重置类别</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="330"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="340"/>
         <source>The shortcut &apos;%1&apos; is already assigned to &apos;%2&apos;. Do you want to replace it?</source>
         <translation>快捷键 &apos;%1&apos; 已分配给 &apos;%2&apos;。是否替换？</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="449"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="459"/>
         <source>Insert</source>
         <translation type="unfinished">插入</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="450"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="460"/>
         <source>Edit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="451"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="461"/>
         <source>View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="614"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="624"/>
         <source>Reset Mouse Shortcuts</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">重置鼠标快捷方式</translation>
@@ -21095,161 +21165,161 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="97"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="105"/>
         <source>Default Page Setup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="105"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="113"/>
         <source>Choose the default page size, orientation, margins and their units.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="109"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="117"/>
         <source>Reset</source>
         <translation type="unfinished">重置</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="110"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="118"/>
         <source>Bring back the built-in default page setup, grid and line colors.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="113"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="149"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="121"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="154"/>
         <source>Page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="114"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="122"/>
         <source>Page size, orientation and margins of new instructions.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="117"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="125"/>
         <source>Load on New Models</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="117"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="125"/>
         <source>Start every new model with the default page setup and grid.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="120"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="127"/>
         <source>Default Grid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="124"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="131"/>
         <source>Show Grid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="124"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="131"/>
         <source>Show the grid on the pages of new instructions, it is never printed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="126"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="132"/>
         <source>Snap to Grid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="126"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="132"/>
         <source>Snap dragged elements to the grid of new instructions.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="130"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="135"/>
         <source>Main unit of the grid drawn with the primary color, in the margin units of the default page setup.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="131"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="132"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="136"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="137"/>
         <source>Grid Size</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="141"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="146"/>
         <source>Split each grid unit into fractions drawn with the secondary color, dragged elements snap to the fractions.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="142"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="143"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="147"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="148"/>
         <source>Divisions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="149"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="154"/>
         <source>Margins</source>
         <translation type="unfinished">边距</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="150"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="155"/>
         <source>Lay the grid out within the margins or across the whole page.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="151"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="153"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="156"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="158"/>
         <source>Grid Area</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="158"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="163"/>
         <source>Instructions Page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="162"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="167"/>
         <source>Show Margins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="162"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="167"/>
         <source>Outline the page margins on screen, they are never printed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="164"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="168"/>
         <source>Show Rulers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="164"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="168"/>
         <source>Show rulers in the page units along the page, their arrows follow the pointer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="166"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="169"/>
         <source>Show Element Margins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="166"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="169"/>
         <source>Fill the margins around each element on screen with the element margin color, they are never printed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="168"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="170"/>
         <source>Show Element Padding</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="168"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="170"/>
         <source>Fill the padding inside the border of each element on screen with the element padding color, it is never printed.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="170"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="171"/>
         <source>Show Element Anchors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="170"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="171"/>
         <source>Mark the corners, edge centers and center of each element on screen, they are never printed.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21299,58 +21369,58 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="211"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="210"/>
         <source>Line Numbers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="211"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="210"/>
         <source>Number the lines of the model file in the Editor panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="213"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="211"/>
         <source>Wrap Lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="213"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="211"/>
         <source>Wrap long lines of the model file in the Editor panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="215"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="212"/>
         <source>Whitespace Markers</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="215"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="212"/>
         <source>Mark tabs, spaces and line ends in the Editor panel.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="218"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="214"/>
         <source>Instructions</source>
         <translation type="unfinished">说明书</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="286"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="282"/>
         <source>Landscape</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="286"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="282"/>
         <source>Portrait</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="290"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="286"/>
         <source>%1, %2, %3, %4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="292"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="288"/>
         <source>%1 x %2 %3 %4, margins %5 %6...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21359,7 +21429,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">导入快捷键</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="394"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="404"/>
         <source>Error loading keyboard shortcuts file.</source>
         <translation>加载键盘快捷键文件时出错。</translation>
     </message>
@@ -21368,12 +21438,12 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">导出快捷键</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="414"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="424"/>
         <source>Error saving keyboard shortcuts file.</source>
         <translation>保存键盘快捷键文件时出错。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="421"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="431"/>
         <source>Are you sure you want to load the default keyboard shortcuts?</source>
         <translation>确定要加载默认键盘快捷键吗？</translation>
     </message>
@@ -21393,20 +21463,20 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>右键</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="332"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="527"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="536"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="342"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="537"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="546"/>
         <source>Override Shortcut</source>
         <translation>覆盖快捷键</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="631"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="636"/>
         <source>Default Lights is unavailable. Flat shading is used instead.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">默认灯光不可用。而是使用平面阴影。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="658"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="663"/>
         <source>View cube rendering is unavailable.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">视图立方体渲染不可用。</translation>
@@ -21417,96 +21487,96 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="obsolete">轮廓渲染不可用。将使用面部色彩和彩色边缘。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1205"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1210"/>
         <source>Select POV-Ray Executable</source>
         <translation>选择 POV-Ray 可执行文件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="394"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="404"/>
         <source>Import Keyboard Shortcuts</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">导入键盘快捷键</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="414"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="424"/>
         <source>Export Keyboard Shortcuts</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">导出键盘快捷键</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="421"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="431"/>
         <source>Reset Keyboard Shortcuts</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">重置键盘快捷键</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="527"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="536"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="537"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="546"/>
         <source>This shortcut is already assigned to &apos;%1&apos;. Do you want to replace it?</source>
         <oldsource>This shortcut is already assigned to &apos;%1&apos;, do you want to replace it?</oldsource>
         <translation type="unfinished">此快捷键已分配给 &apos;%1&apos;，是否替换？</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="386"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="582"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="396"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="592"/>
         <source>Import Shortcuts</source>
         <translation>导入快捷键</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="590"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="600"/>
         <source>Error loading mouse shortcuts file.</source>
         <translation>加载鼠标快捷键文件时出错。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="407"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="603"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="417"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="613"/>
         <source>Export Shortcuts</source>
         <translation>导出快捷键</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="111"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="121"/>
         <source>Snap (Angle)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="112"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="122"/>
         <source>Snap (Move)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="113"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="123"/>
         <source>Step View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="115"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="125"/>
         <source>Train Track</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="233"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="243"/>
         <source>The shortcut &apos;%1&apos; is shared by %2.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="590"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="600"/>
         <source>Import Mouse Shortcuts</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">导入鼠标快捷方式</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="609"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="619"/>
         <source>Error saving mouse shortcuts file.</source>
         <translation>保存鼠标快捷键文件时出错。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="609"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="619"/>
         <source>Export Mouse Shortcuts</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">导出鼠标快捷方式</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="614"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="624"/>
         <source>Are you sure you want to load the default mouse shortcuts?</source>
         <translation>确定要加载默认鼠标快捷键吗？</translation>
     </message>
@@ -21522,12 +21592,12 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="108"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="118"/>
         <source>Highlight Style</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="680"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="685"/>
         <source>Outline rendering is unavailable; the Tint and Edges style will be used.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21588,7 +21658,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="109"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="119"/>
         <source>Insert Color</source>
         <translation type="unfinished"></translation>
     </message>
@@ -21948,16 +22018,6 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <source>Convert the LeoCAD meta commands of opened models to StudWorx meta commands without asking. Migrated models are no longer read fully by LeoCAD.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <source>Migrate LeoCAD Models Automatically</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>PO&amp;V-Ray Executable</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22073,7 +22133,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="107"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="117"/>
         <source>Control Point</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22194,7 +22254,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="110"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="120"/>
         <source>Minifigure Builder</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22235,7 +22295,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="unfinished">负 X 轴颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1382"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1387"/>
         <source>Select Negative X Axis Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">选择负 X 轴颜色</translation>
@@ -22253,7 +22313,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="unfinished">负 Y 轴颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1387"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1392"/>
         <source>Select Negative Y Axis Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">选择负 Y 轴颜色</translation>
@@ -22271,7 +22331,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="unfinished">负 Z 轴颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1392"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1397"/>
         <source>Select Negative Z Axis Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">选择负 Z 轴颜色</translation>
@@ -22325,8 +22385,8 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="unfinished">以负轴颜色绘制轴线的负半部分，Z 轴线延伸到基础网格下方。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="564"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1560"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="569"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1565"/>
         <source>%1 ldu</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">%1 ldu</translation>
@@ -22629,11 +22689,6 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <source>&lt;p&gt;&lt;b&gt;Files&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The author of new models is built from its name, email address and comment, joined by the author line splitter. Empty parts are left out, and the Author Line field shows the result. For example, Jane Doe, jane@example.com and All rights reserved joined by &amp;quot; | &amp;quot; give Jane Doe | jane@example.com | All rights reserved.&lt;/p&gt;&lt;p&gt;The author of an open model is changed in its properties.&lt;/p&gt;&lt;p&gt;The other options control how model files are opened and reloaded.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Set a comment added to the author of new models, such as All rights reserved.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22889,7 +22944,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1137"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1142"/>
         <source>Update Minifigure Builder Settings</source>
         <translation type="unfinished"></translation>
     </message>
@@ -22975,7 +23030,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="834"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="839"/>
         <source>Blender Executable</source>
         <translation type="unfinished">Blender 可执行文件</translation>
     </message>
@@ -23027,6 +23082,46 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Cut Edges</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Author&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The author of new models is built from its name, email address and comment, joined by the author line splitter. Empty parts are left out, and the Author Line field shows the result. For example, Jane Doe, jane@example.com and All rights reserved joined by &amp;quot; | &amp;quot; give Jane Doe | jane@example.com | All rights reserved.&lt;/p&gt;&lt;p&gt;The author of an open model is changed in its properties.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Author</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Files&lt;/b&gt;&lt;/p&gt;&lt;p&gt;These options control how model files are opened and reloaded.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Choose what happens to the LeoCAD meta commands of opened models: ask each time, migrate them to StudWorx meta commands, or keep them. Migrated models are no longer read fully by LeoCAD.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Migrate Files on Load</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Ask</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Migrate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Keep</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -23267,54 +23362,90 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="294"/>
-        <source>Metric: %1 x %2 x %3 cm - Imperial: %4 x %5 x %6 inches - LDraw: %7 x %8 x %9 ldu</source>
+        <source>Metric: %1 x %2 x %3 cm
+Imperial: %4 x %5 x %6 inches
+LDraw: %7 x %8 x %9 ldu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="313"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="314"/>
         <source>Preview</source>
         <translation type="unfinished">预览</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="314"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="315"/>
         <source>ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="315"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="316"/>
         <source>Part</source>
         <translation>零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="326"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="395"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="327"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="413"/>
         <source>Total</source>
         <translation>总计</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="429"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="467"/>
+        <source>N/A</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="469"/>
+        <source>%1 oz</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="471"/>
+        <source>%1 g</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="480"/>
+        <source>Metric: %1 g
+Imperial: %2 oz
+Parts: %3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="483"/>
+        <source>
+N/A: %1 part</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="483"/>
+        <source>
+N/A: %1 parts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="487"/>
         <source>Unique parts: %1 - Total parts: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="479"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="537"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="547"/>
         <source>Export BrickLink</source>
         <translation type="unfinished">导出 BrickLink</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="479"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="537"/>
         <source>XML Files (*.xml);;All Files (*.*)</source>
         <translation type="unfinished">XML 文件 (*.xml);;所有文件 (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="494"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="502"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="552"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="560"/>
         <source>Export CSV</source>
         <translation type="unfinished">导出 CSV</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="494"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="552"/>
         <source>CSV Files (*.csv);;All Files (*.*)</source>
         <translation type="unfinished">CSV 文件 (*.csv);;所有文件 (*.*)</translation>
     </message>
@@ -23350,13 +23481,8 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="462"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="520"/>
         <source>Parts</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
-        <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The table counts parts across all steps, including parts inside submodels. The first column shows a thumbnail of each part in its most used color, and the ID column shows its number. Color columns show quantities, and totals summarize each part, each color, and the whole model. Click a column heading to sort. The thumbnail, ID and part-name columns stay visible while you scroll horizontally. Counts cannot be edited here.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -23412,6 +23538,57 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Measurements</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Total model weight from the BrickLink catalog.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Model Weight&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The total weight in grams and ounces of every part across all steps, from the BrickLink part weights. Parts without a known weight are counted as N/A and add nothing to the total.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="328"/>
+        <source>Weight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Model Weight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The table counts parts across all steps, including parts inside submodels. The first column shows a thumbnail of each part in its most used color, and the ID column shows its number. Color columns show quantities, and totals summarize each part, each color, and the whole model. The Weight column shows the grams or ounces of each row, chosen with the units box below the table, from the BrickLink part weights, or N/A when unknown. Click a column heading to sort. The thumbnail, ID and part-name columns stay visible while you scroll horizontally. Counts cannot be edited here.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Show the Weight column in metric or imperial units.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Weight Units&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Shows the Weight column in grams for Metric or ounces for Imperial. Sorting by weight is the same in both units.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Weight Units</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Metric</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
+        <source>Imperial</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -26098,12 +26275,12 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_view.cpp" line="360"/>
+        <location filename="../../source/rendering/sw_view.cpp" line="372"/>
         <source>Align to Axis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_view.cpp" line="370"/>
+        <location filename="../../source/rendering/sw_view.cpp" line="382"/>
         <source>Submodel</source>
         <translation type="unfinished"></translation>
     </message>

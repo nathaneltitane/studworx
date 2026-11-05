@@ -32,6 +32,7 @@
 #include "sw_widget_preview.h"
 #include "sw_model_history.h"
 #include "sw_widget_spinner.h"
+#include "sw_bricklink.h"
 
 #if SW_ENABLE_GAMEPAD
 #include <QtGamepad/QGamepad>
@@ -145,7 +146,7 @@ void swMainWindow::UpdateSelectedObjects(bool SelectionChanged)
 	if ((Selection.size() == 1) && Focus)
 	{
 		if (Focus->IsPart())
-			Message = tr("%1 (ID: %2)").arg(Focus->GetName(), ((swPart*)Focus)->GetID());
+			Message = tr("%1 - ID: %2 - Weight: %3").arg(Focus->GetName(), ((swPart*)Focus)->GetID(), swGetBrickLinkWeightText(((swPart*)Focus)->mPartData.Get()));
 		else
 			Message = Focus->GetName();
 	}
@@ -155,7 +156,7 @@ void swMainWindow::UpdateSelectedObjects(bool SelectionChanged)
 
 		if (Focus && Focus->IsPart())
 		{
-			Message.append(tr(" - %1 (ID: %2)").arg(Focus->GetName(), ((swPart*)Focus)->GetID()));
+			Message.append(tr(" - %1 - ID: %2 - Weight: %3").arg(Focus->GetName(), ((swPart*)Focus)->GetID(), swGetBrickLinkWeightText(((swPart*)Focus)->mPartData.Get())));
 
 			const swGroup* Group = ((swPart*)Focus)->GetGroup();
 			if (Group && !Group->mName.isEmpty())
@@ -208,7 +209,8 @@ void swMainWindow::UpdateStatusBarPosition()
 // use to show the chosen segments
 void swMainWindow::UpdateStatusSegments()
 {
-	mStatusBarLabel->setVisible(mStatusSegments & SW_STATUS_SEGMENT_SELECTION);
+	// temporary messages cover the selection
+	mStatusBarLabel->setVisible((mStatusSegments & SW_STATUS_SEGMENT_SELECTION) && statusBar()->currentMessage().isEmpty());
 
 	const std::pair<QLabel*, std::pair<int, const QString*>> Segments[] =
 	{

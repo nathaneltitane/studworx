@@ -8,6 +8,10 @@ POV-Ray renders can use the [LGEO library](https://github.com/jncraton/lgeo) by 
 
 Blender renders use the LDraw import and render add-ons of [Blender LDraw Render](https://github.com/trevorsandy/blenderldrawrender) by Trevor Sandy for LPub3D, adapted from [Import LDraw](https://github.com/TobyLobster/ImportLDraw) by Toby Nelson and released under the GNU General Public License version 2. They are bundled with StudWorx.
 
+LEGO® Digital Designer imports use part, color and placement mappings converted from the [ldraw.xml](http://slswww.free.fr/ldraw.xml) of slswww.free.fr and the contributors credited there. They are bundled with StudWorx.
+
+Part weights come from the [BrickLink](https://www.bricklink.com) catalog and are bundled with StudWorx.
+
 ## LeoCAD
 
 ### Author - Original Design

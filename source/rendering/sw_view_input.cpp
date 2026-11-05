@@ -685,7 +685,16 @@ void swView::StartFaceNormalPick()
 	mPickingFaceNormal = true;
 	UpdateCursor();
 
-	gMainWindow->statusBar()->showMessage(tr("Click a face to view it straight on, or press Esc to cancel."));
+	ShowStatusMessage(tr("Click a face to view it straight on, or press Esc to cancel."));
+}
+
+// show once the menu that ran the command has closed and cleared its tip
+void swView::ShowStatusMessage(const QString& Message, int Timeout)
+{
+	QTimer::singleShot(0, mWidget, [Message, Timeout]()
+	{
+		gMainWindow->statusBar()->showMessage(Message, Timeout);
+	});
 }
 
 void swView::StopFaceNormalPick()

@@ -5,6 +5,14 @@
 
   - Cutaway: the cutaway of a view is saved with the model and comes back when the file opens, the parts themselves are never changed
   - Samples: cube, sphere and cylinder cutaway samples of the minifigure join the explode, flexible part, lights and cameras and minifigure samples
+  - Weights: part weights from BrickLink ship with StudWorx, the Properties dialog shows the model weight in grams and ounces and a Weight column with Metric or Imperial units, and the part tooltip and status bar show the weight of a part, or N/A when it is unknown
+  - Properties: the measurements and weight are listed one unit per line
+  - Import: LEGO® Digital Designer models use a bundled part, color and placement mapping converted from the ldraw.xml of slswww.free.fr, an ldraw.xml in the parts library is no longer read
+  - Preferences: Migrate Files on Load chooses Ask, Migrate or Keep for models with LeoCAD meta commands, and Remember this choice in the question sets it
+  - Preferences: every checkbox sits in the control column with its label on the left, and the label greys out with its checkbox
+  - Status bar: hints such as the face pick and cutaway messages no longer overlap the selection text and stay shown after the menu closes
+  - Views: the height grid entries of the view options are greyed out while the base grid is off
+  - Views: with split views the view cube and axis icon show on the top left view only
   </details>
 
   <details>

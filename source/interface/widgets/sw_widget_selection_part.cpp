@@ -9,6 +9,7 @@
 #include "sw_manager_thumbnail.h"
 #include "sw_project.h"
 #include "sw_data_part.h"
+#include "sw_bricklink.h"
 #include "sw_extensions_opengl.h"
 #include "sw_category.h"
 #include "sw_track_train.h"
@@ -374,7 +375,10 @@ QVariant swPartSelectionListModel::data(const QModelIndex& Index, int Role) cons
 				if (PartData->mState == swAssetState::Failed)
 					return QVariant(tr("Could not load part '%1'.").arg(QString::fromLatin1(PartData->mFileName)));
 
-				return QVariant(QString("'%1' ('%2')").arg(QString::fromLatin1(PartData->m_strDescription), QString::fromLatin1(PartData->mFileName)));
+				QString ToolTip = tr("%1\nID: %2").arg(QString::fromLatin1(PartData->m_strDescription), QString::fromLatin1(PartData->mFileName));
+				ToolTip.append(tr("\nWeight: %1").arg(swGetBrickLinkWeightText(PartData)));
+
+				return QVariant(ToolTip);
 			}
 			break;
 

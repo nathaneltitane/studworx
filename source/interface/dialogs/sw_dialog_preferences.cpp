@@ -286,6 +286,11 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->setupUi(this);
 	swSetupDialogHelp(this);
 
+	// labels follow their checkbox state
+	for (QLabel* Label : findChildren<QLabel*>())
+		if (QCheckBox* CheckBox = qobject_cast<QCheckBox*>(Label->buddy()))
+			CheckBox->installEventFilter(this);
+
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
 	ui->povrayLabel->hide();
 	ui->povrayExecutable->hide();
@@ -500,7 +505,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->FlexMiddleControlPoint->setChecked(mOptions->Preferences.mFlexMiddleControlPoint);
 	ui->WatchFileChanges->setChecked(mOptions->Preferences.mWatchFileChanges);
 	ui->LoadPartsBeforeShowing->setChecked(mOptions->Preferences.mLoadPartsBeforeShowing);
-	ui->MigrateMetaCommands->setChecked(mOptions->Preferences.mMigrateMetaCommands);
+	ui->MigrateMetaCommands->setCurrentIndex(static_cast<int>(mOptions->Preferences.mMigrateMetaCommands));
 	ui->MarkColladaTransparency->setChecked(mOptions->Preferences.mMarkColladaTransparency);
 	ui->KMZGeometry->setCurrentIndex(mOptions->Preferences.mKMZVisibleSurfaces ? 0 : 1);
 	ui->AutomateEdgeColor->setChecked(mOptions->Preferences.mAutomateEdgeColor);
@@ -874,7 +879,7 @@ void swPreferencesDialog::accept()
 	mOptions->Preferences.mFlexMiddleControlPoint = ui->FlexMiddleControlPoint->isChecked();
 	mOptions->Preferences.mWatchFileChanges = ui->WatchFileChanges->isChecked();
 	mOptions->Preferences.mLoadPartsBeforeShowing = ui->LoadPartsBeforeShowing->isChecked();
-	mOptions->Preferences.mMigrateMetaCommands = ui->MigrateMetaCommands->isChecked();
+	mOptions->Preferences.mMigrateMetaCommands = static_cast<swMigrateMetaCommandsMode>(ui->MigrateMetaCommands->currentIndex());
 	mOptions->Preferences.mMarkColladaTransparency = ui->MarkColladaTransparency->isChecked();
 	mOptions->Preferences.mKMZVisibleSurfaces = ui->KMZGeometry->currentIndex() == 0;
 

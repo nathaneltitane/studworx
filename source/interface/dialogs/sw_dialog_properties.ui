@@ -116,6 +116,9 @@
          <property name="text">
           <string>Measurements</string>
          </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
         </widget>
        </item>
        <item row="3" column="1">
@@ -128,6 +131,38 @@
          </property>
          <property name="accessibleName">
           <string>Model Measurements</string>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QLabel" name="label_5">
+         <property name="toolTip">
+          <string>Total model weight from the BrickLink catalog.</string>
+         </property>
+         <property name="whatsThis">
+          <string>&lt;p&gt;&lt;b&gt;Model Weight&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The total weight in grams and ounces of every part across all steps, from the BrickLink part weights. Parts without a known weight are counted as N/A and add nothing to the total.&lt;/p&gt;</string>
+         </property>
+         <property name="text">
+          <string>Weight</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLabel" name="WeightLabel">
+         <property name="toolTip">
+          <string>Total model weight from the BrickLink catalog.</string>
+         </property>
+         <property name="whatsThis">
+          <string>&lt;p&gt;&lt;b&gt;Model Weight&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The total weight in grams and ounces of every part across all steps, from the BrickLink part weights. Parts without a known weight are counted as N/A and add nothing to the total.&lt;/p&gt;</string>
+         </property>
+         <property name="accessibleName">
+          <string>Model Weight</string>
          </property>
          <property name="text">
           <string/>
@@ -147,7 +182,7 @@
           <string>View part quantities by color; click a column heading to sort.</string>
          </property>
          <property name="whatsThis">
-          <string>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The table counts parts across all steps, including parts inside submodels. The first column shows a thumbnail of each part in its most used color, and the ID column shows its number. Color columns show quantities, and totals summarize each part, each color, and the whole model. Click a column heading to sort. The thumbnail, ID and part-name columns stay visible while you scroll horizontally. Counts cannot be edited here.&lt;/p&gt;</string>
+          <string>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The table counts parts across all steps, including parts inside submodels. The first column shows a thumbnail of each part in its most used color, and the ID column shows its number. Color columns show quantities, and totals summarize each part, each color, and the whole model. The Weight column shows the grams or ounces of each row, chosen with the units box below the table, from the BrickLink part weights, or N/A when unknown. Click a column heading to sort. The thumbnail, ID and part-name columns stay visible while you scroll horizontally. Counts cannot be edited here.&lt;/p&gt;</string>
          </property>
          <property name="accessibleName">
           <string>Parts</string>
@@ -193,6 +228,29 @@
             </size>
            </property>
           </spacer>
+         </item>
+         <item>
+          <widget class="QComboBox" name="WeightUnitCombo">
+           <property name="toolTip">
+            <string>Show the Weight column in metric or imperial units.</string>
+           </property>
+           <property name="whatsThis">
+            <string>&lt;p&gt;&lt;b&gt;Weight Units&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Shows the Weight column in grams for Metric or ounces for Imperial. Sorting by weight is the same in both units.&lt;/p&gt;</string>
+           </property>
+           <property name="accessibleName">
+            <string>Weight Units</string>
+           </property>
+           <item>
+            <property name="text">
+             <string>Metric</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Imperial</string>
+            </property>
+           </item>
+          </widget>
          </item>
          <item>
           <widget class="QPushButton" name="ExportBrickLinkButton">

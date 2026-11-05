@@ -46,7 +46,7 @@ void swViewCube::UpdateSettings()
 	{
 	case swViewType::View:
 		mSize = Preferences.mViewCubeSize;
-		mEnabled = Preferences.mViewCubeEnabled;
+		mEnabled = Preferences.mViewCubeEnabled && mView->IsMainView();
 		mLocation = Preferences.mViewCubeLocation;
 		break;
 

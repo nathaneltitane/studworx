@@ -1430,7 +1430,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.SplitHorizontal"),
 		QT_TRANSLATE_NOOP("Menu", "Split &Horizontal"),
 		QT_TRANSLATE_NOOP("Status", "Split the current view horizontally"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Split Horizontal</b></p><p>Split the current view into two views stacked one above the other, each with its own camera. The view cube and axis icon stay on the top left view.</p>"),
 		""
 	},
 
@@ -1439,7 +1439,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.SplitVertical"),
 		QT_TRANSLATE_NOOP("Menu", "Split &Vertical"),
 		QT_TRANSLATE_NOOP("Status", "Split the current view vertically"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Split Vertical</b></p><p>Split the current view into two views side by side, each with its own camera. The view cube and axis icon stay on the top left view.</p>"),
 		""
 	},
 
@@ -1664,7 +1664,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.ToggleViewCube"),
 		QT_TRANSLATE_NOOP("Menu", "View Cube"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the view cube"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>View Cube</b></p><p>Show or hide the view cube. Click its faces, edges and corners to turn the camera. With split views it shows on the top left view only.</p>"),
 		"F12"
 	},
 
@@ -1673,7 +1673,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.ToggleAxisIcon"),
 		QT_TRANSLATE_NOOP("Menu", "Axis Icon"),
 		QT_TRANSLATE_NOOP("Status", "Toggle axis icon"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Axis Icon</b></p><p>Show or hide the X, Y and Z axis icon. With split views it shows on the top left view only.</p>"),
 		"Alt+F12"
 	},
 
@@ -1682,7 +1682,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.ToggleGrid"),
 		QT_TRANSLATE_NOOP("Menu", "Base Grid"),
 		QT_TRANSLATE_NOOP("Status", "Toggle grid"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Base Grid</b></p><p>Show or hide the base grid. The height grids draw only with the base grid, and their menu entries are greyed out while it is off.</p>"),
 		""
 	},
 
@@ -1817,7 +1817,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Grid.ToggleHeightXZ"),
 		QT_TRANSLATE_NOOP("Menu", "XZ Height Grid"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the vertical XZ height grid"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>XZ Height Grid</b></p><p>Show or hide the vertical XZ height grid sized around the model. It needs the base grid turned on.</p>"),
 		""
 	},
 
@@ -1826,7 +1826,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Grid.ToggleHeightYZ"),
 		QT_TRANSLATE_NOOP("Menu", "YZ Height Grid"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the vertical YZ height grid"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>YZ Height Grid</b></p><p>Show or hide the vertical YZ height grid sized around the model. It needs the base grid turned on.</p>"),
 		""
 	},
 
@@ -1835,7 +1835,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Grid.ToggleHeightBehindModel"),
 		QT_TRANSLATE_NOOP("Menu", "Height Grids Behind Model"),
 		QT_TRANSLATE_NOOP("Status", "Toggle drawing the height grids behind the model instead of through the origin axes"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Height Grids Behind Model</b></p><p>Draw the height grids behind the model instead of through the origin axes. It needs the base grid turned on.</p>"),
 		""
 	},
 

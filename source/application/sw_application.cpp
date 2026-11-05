@@ -113,7 +113,7 @@ void swPreferences::LoadDefaults()
 	mFlexMiddleControlPoint = swGetProfileInteger(SW_PROFILE_FLEX_MIDDLE_CONTROL_POINT);
 	mWatchFileChanges = swGetProfileInteger(SW_PROFILE_WATCH_FILE_CHANGES);
 	mLoadPartsBeforeShowing = swGetProfileInteger(SW_PROFILE_LOAD_PARTS_BEFORE_SHOWING);
-	mMigrateMetaCommands = swGetProfileInteger(SW_PROFILE_MIGRATE_META_COMMANDS);
+	mMigrateMetaCommands = static_cast<swMigrateMetaCommandsMode>(qBound(0, swGetProfileInteger(SW_PROFILE_MIGRATE_META_COMMANDS), static_cast<int>(swMigrateMetaCommandsMode::Keep)));
 	mMarkColladaTransparency = swGetProfileInteger(SW_PROFILE_MARK_COLLADA_TRANSPARENCY);
 	mKMZVisibleSurfaces = swGetProfileInteger(SW_PROFILE_KMZ_VISIBLE_SURFACES);
 	mColorTheme = swGetProfileColorTheme();
@@ -230,7 +230,7 @@ void swPreferences::SaveDefaults()
 	swSetProfileInteger(SW_PROFILE_FLEX_MIDDLE_CONTROL_POINT, mFlexMiddleControlPoint);
 	swSetProfileInteger(SW_PROFILE_WATCH_FILE_CHANGES, mWatchFileChanges);
 	swSetProfileInteger(SW_PROFILE_LOAD_PARTS_BEFORE_SHOWING, mLoadPartsBeforeShowing);
-	swSetProfileInteger(SW_PROFILE_MIGRATE_META_COMMANDS, mMigrateMetaCommands);
+	swSetProfileInteger(SW_PROFILE_MIGRATE_META_COMMANDS, static_cast<int>(mMigrateMetaCommands));
 	swSetProfileInteger(SW_PROFILE_MARK_COLLADA_TRANSPARENCY, mMarkColladaTransparency);
 	swSetProfileInteger(SW_PROFILE_KMZ_VISIBLE_SURFACES, mKMZVisibleSurfaces);
 	swSetProfileColorTheme(mColorTheme);

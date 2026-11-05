@@ -497,9 +497,11 @@ void swMainWindow::ModelViewOptionsMenuAboutToShow()
 	AddMenuCommand(Menu, tr("View Cube"), SW_VIEW_TOGGLE_VIEW_CUBE, Preferences.mViewCubeEnabled);
 	AddMenuCommand(Menu, tr("Axis Icon"), SW_VIEW_TOGGLE_AXIS_ICON, Preferences.mDrawAxes);
 	AddMenuCommand(Menu, tr("Base Grid"), SW_VIEW_TOGGLE_GRID, Preferences.mGridEnabled);
-	AddMenuCommand(Menu, tr("XZ Height Grid"), SW_VIEW_GRID_TOGGLE_HEIGHT_XZ, Preferences.mDrawGridHeightXZ);
-	AddMenuCommand(Menu, tr("YZ Height Grid"), SW_VIEW_GRID_TOGGLE_HEIGHT_YZ, Preferences.mDrawGridHeightYZ);
-	AddMenuCommand(Menu, tr("Height Grids Behind Model"), SW_VIEW_GRID_TOGGLE_HEIGHT_BEHIND, Preferences.mGridHeightBehindModel);
+
+	// height grids draw only with the base grid
+	AddMenuCommand(Menu, tr("XZ Height Grid"), SW_VIEW_GRID_TOGGLE_HEIGHT_XZ, Preferences.mDrawGridHeightXZ)->setEnabled(Preferences.mGridEnabled);
+	AddMenuCommand(Menu, tr("YZ Height Grid"), SW_VIEW_GRID_TOGGLE_HEIGHT_YZ, Preferences.mDrawGridHeightYZ)->setEnabled(Preferences.mGridEnabled);
+	AddMenuCommand(Menu, tr("Height Grids Behind Model"), SW_VIEW_GRID_TOGGLE_HEIGHT_BEHIND, Preferences.mGridHeightBehindModel)->setEnabled(Preferences.mGridEnabled);
 	AddMenuCommand(Menu, tr("X Axis Line"), SW_VIEW_GRID_TOGGLE_AXIS_X, Preferences.mDrawGridAxisX);
 	AddMenuCommand(Menu, tr("Y Axis Line"), SW_VIEW_GRID_TOGGLE_AXIS_Y, Preferences.mDrawGridAxisY);
 	AddMenuCommand(Menu, tr("Z Axis Line"), SW_VIEW_GRID_TOGGLE_AXIS_Z, Preferences.mDrawGridAxisZ);

@@ -8,6 +8,7 @@
 #include "sw_library.h"
 #include "sw_manager_thumbnail.h"
 #include "sw_dialog_export_bricklink.h"
+#include "sw_bricklink.h"
 #include "sw_project.h"
 
 class swFrozenPartsView : public QTableView
@@ -267,9 +268,8 @@ public:
 
 		if (column() > 2)
 		{
-			int Count = data(Qt::UserRole).toInt();
-			int OtherCount = Other.data(Qt::UserRole).toInt();
-			return Count < OtherCount;
+			// counts and weights
+			return data(Qt::UserRole).toDouble() < Other.data(Qt::UserRole).toDouble();
 		}
 
 		return QTableWidgetItem::operator<(Other);
@@ -291,7 +291,7 @@ swPropertiesDialog::swPropertiesDialog(QWidget* Parent, swPropertiesDialogOption
 	ui->CommentsEdit->setText(mOptions->Properties.mComments);
 
 	const swVector3 Dimensions = Options->BoundingBox.Max - Options->BoundingBox.Min;
-	QString Format = tr("Metric: %1 x %2 x %3 cm - Imperial: %4 x %5 x %6 inches - LDraw: %7 x %8 x %9 ldu");
+	QString Format = tr("Metric: %1 x %2 x %3 cm\nImperial: %4 x %5 x %6 inches\nLDraw: %7 x %8 x %9 ldu");
 	QString Measurements = Format.arg(swFormatDoubleLocalized(Dimensions.x * 0.04, locale(), 'f', 2), swFormatDoubleLocalized(Dimensions.y * 0.04, locale(), 'f', 2), swFormatDoubleLocalized(Dimensions.z * 0.04, locale(), 'f', 2),
 	                                  swFormatDoubleLocalized(Dimensions.x / 64.0, locale(), 'f', 2), swFormatDoubleLocalized(Dimensions.y / 64.0, locale(), 'f', 2), swFormatDoubleLocalized(Dimensions.z / 64.0, locale(), 'f', 2),
 	                                  swFormatDoubleLocalized(Dimensions.x, locale(), 'f', 2), swFormatDoubleLocalized(Dimensions.y, locale(), 'f', 2), swFormatDoubleLocalized(Dimensions.z, locale(), 'f', 2));
@@ -299,6 +299,7 @@ swPropertiesDialog::swPropertiesDialog(QWidget* Parent, swPropertiesDialogOption
 	ui->MeasurementsLabel->setText(Measurements);
 
 	const swPartsList& PartsList = mOptions->PartsList;
+
 	QStringList HorizontalLabels;
 
 	std::vector<bool> ColorsUsed(gColorList.size());
@@ -324,12 +325,13 @@ swPropertiesDialog::swPropertiesDialog(QWidget* Parent, swPropertiesDialogOption
 	}
 
 	HorizontalLabels.append(tr("Total"));
+	HorizontalLabels.append(tr("Weight"));
 
 	QTableWidget* PartsTable = ui->PartsTable;
 	const int ThumbnailSize = 32;
 	PartsTable->setIconSize(QSize(ThumbnailSize, ThumbnailSize));
 	PartsTable->verticalHeader()->setDefaultSectionSize(qMax(PartsTable->verticalHeader()->defaultSectionSize(), ThumbnailSize + 4));
-	PartsTable->setColumnCount(ColorCount + 4);
+	PartsTable->setColumnCount(ColorCount + 5);
 	PartsTable->setRowCount((int)PartsList.size() + 1);
 	PartsTable->setHorizontalHeaderLabels(HorizontalLabels);
 	PartsTable->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
@@ -337,6 +339,14 @@ swPropertiesDialog::swPropertiesDialog(QWidget* Parent, swPropertiesDialogOption
 	std::vector<int> InfoTotals(PartsList.size());
 	std::vector<int> ColorTotals(ColorCount);
 	int Row = 0, Total = 0, UniqueCount = 0;
+
+	// unlisted parts add nothing and are counted
+	std::vector<std::optional<double>> InfoWeights(PartsList.size());
+	double Weight = 0.0;
+	int WeightMissing = 0;
+
+	// grams to ounces
+	constexpr double WeightOunces = 0.03527396;
 	swThumbnailManager* ThumbnailManager = swGetPartsLibrary()->GetThumbnailManager();
 
 	connect(ThumbnailManager, &swThumbnailManager::ThumbnailReady, this, &swPropertiesDialog::ThumbnailReady);
@@ -378,6 +388,14 @@ swPropertiesDialog::swPropertiesDialog(QWidget* Parent, swPropertiesDialogOption
 			Total += Count;
 		}
 
+		if (const std::optional<double> PartWeight = swGetBrickLinkWeight(PartData))
+		{
+			InfoWeights[Row] = *PartWeight * InfoTotals[Row];
+			Weight += *InfoWeights[Row];
+		}
+		else
+			WeightMissing += InfoTotals[Row];
+
 		// thumbnail in the most used color
 		auto [ThumbnailId, Thumbnail] = ThumbnailManager->RequestThumbnail(const_cast<swPartData*>(PartData), ThumbnailColor, ThumbnailSize, devicePixelRatioF());
 		mThumbnails.emplace_back(ThumbnailId, ThumbnailItem);
@@ -409,6 +427,11 @@ swPropertiesDialog::swPropertiesDialog(QWidget* Parent, swPropertiesDialogOption
 		Item = new swPartsTableWidgetItem(InfoTotals[Row], locale());
 		Item->setTextAlignment(Qt::AlignCenter);
 		PartsTable->setItem(Row, ColorCount + 3, Item);
+
+		Item = new swPartsTableWidgetItem(QString());
+		Item->setData(Qt::UserRole, InfoWeights[Row] ? *InfoWeights[Row] : -1.0);
+		Item->setTextAlignment(Qt::AlignCenter);
+		PartsTable->setItem(Row, ColorCount + 4, Item);
 	}
 
 	for (int ColorIndex = 0; ColorIndex < ColorCount; ColorIndex++)
@@ -424,7 +447,42 @@ swPropertiesDialog::swPropertiesDialog(QWidget* Parent, swPropertiesDialogOption
 	Item->setTextAlignment(Qt::AlignCenter);
 	PartsTable->setItem((int)InfoTotals.size(), ColorCount + 3, Item);
 
+	Item = new swPartsTableWidgetItem(QString());
+	Item->setData(Qt::UserRole, Weight);
+	Item->mLast = true;
+	Item->setTextAlignment(Qt::AlignCenter);
+	PartsTable->setItem((int)InfoTotals.size(), ColorCount + 4, Item);
+
+	// weight column in the chosen units
+	const auto UpdateWeightColumn = [this, PartsTable, WeightOunces, Column = ColorCount + 4]()
+	{
+		const bool Imperial = ui->WeightUnitCombo->currentIndex() == 1;
+
+		for (int WeightRow = 0; WeightRow < PartsTable->rowCount(); WeightRow++)
+		{
+			QTableWidgetItem* WeightItem = PartsTable->item(WeightRow, Column);
+			const double Grams = WeightItem->data(Qt::UserRole).toDouble();
+
+			if (Grams < 0.0)
+				WeightItem->setText(tr("N/A"));
+			else if (Imperial)
+				WeightItem->setText(tr("%1 oz").arg(swFormatDoubleLocalized(Grams * WeightOunces, locale(), 'f', 2)));
+			else
+				WeightItem->setText(tr("%1 g").arg(swFormatDoubleLocalized(Grams, locale(), 'f', 2)));
+		}
+	};
+
+	UpdateWeightColumn();
+	connect(ui->WeightUnitCombo, QOverload<int>::of(&QComboBox::currentIndexChanged), this, UpdateWeightColumn);
+
 	ui->PartsTable->FreezePartColumns();
+
+	QString WeightText = tr("Metric: %1 g\nImperial: %2 oz\nParts: %3").arg(swFormatDoubleLocalized(Weight, locale(), 'f', 2), swFormatDoubleLocalized(Weight * WeightOunces, locale(), 'f', 2), swFormatIntegerLocalized(Total, locale()));
+
+	if (WeightMissing)
+		WeightText.append((WeightMissing == 1 ? tr("\nN/A: %1 part") : tr("\nN/A: %1 parts")).arg(swFormatIntegerLocalized(WeightMissing, locale())));
+
+	ui->WeightLabel->setText(WeightText);
 
 	ui->PartsCountLabel->setText(tr("Unique parts: %1 - Total parts: %2").arg(swFormatIntegerLocalized(UniqueCount, locale()), swFormatIntegerLocalized(Total, locale())));
 

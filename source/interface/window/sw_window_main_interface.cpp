@@ -929,11 +929,12 @@ void swMainWindow::CreateStatusBar()
 	QStatusBar* StatusBar = new QStatusBar(this);
 	setStatusBar(StatusBar);
 
-	// keep the last item one spacing in
-	StatusBar->setContentsMargins(0, 0, swGetLayoutSpacing(StatusBar, Qt::Horizontal), 0);
+	// keep the first and last items one spacing in
+	StatusBar->setContentsMargins(swGetLayoutSpacing(StatusBar, Qt::Horizontal), 0, swGetLayoutSpacing(StatusBar, Qt::Horizontal), 0);
 
 	mStatusBarLabel = new swElidedLabel();
 	StatusBar->addWidget(mStatusBarLabel, 1);
+	connect(StatusBar, &QStatusBar::messageChanged, this, &swMainWindow::UpdateStatusSegments);
 
 	mStatusLoadSpinner = new swSpinnerWidget();
 	StatusBar->addPermanentWidget(mStatusLoadSpinner);

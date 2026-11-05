@@ -35,6 +35,16 @@ bool swPreferencesDialog::eventFilter(QObject* Object, QEvent* Event)
 	if (Object == ui->splitter->handle(1) && Event->type() == QEvent::MouseButtonRelease)
 		QTimer::singleShot(0, this, &swPreferencesDialog::SnapCategoriesTree);
 
+	if (QCheckBox* CheckBox = qobject_cast<QCheckBox*>(Object))
+	{
+		if (Event->type() == QEvent::EnabledChange)
+			for (QLabel* Label : findChildren<QLabel*>())
+				if (Label->buddy() == CheckBox)
+					Label->setEnabled(CheckBox->isEnabled());
+
+		return QDialog::eventFilter(Object, Event);
+	}
+
 	// record the clicked button
 	if (Object == ui->MouseShortcutEdit)
 	{

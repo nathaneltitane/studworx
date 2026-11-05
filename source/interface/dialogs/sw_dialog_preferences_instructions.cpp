@@ -86,11 +86,19 @@ void swPreferencesDialog::CreateInstructionsTab()
 	QFormLayout* TabLayout = new QFormLayout(Tab);
 	TabLayout->setFieldGrowthPolicy(QFormLayout::ExpandingFieldsGrow);
 
-	auto CreateCheckBox = [](QWidget* Parent, const QString& Text, const QString& ToolTip, bool Checked)
+	// label left of the checkbox
+	auto CreateCheckBox = [](QFormLayout* Layout, QWidget* Parent, const QString& Text, const QString& ToolTip, bool Checked)
 	{
-		QCheckBox* CheckBox = new QCheckBox(Text, Parent);
+		QCheckBox* CheckBox = new QCheckBox(Parent);
+		CheckBox->setAccessibleName(Text);
 		CheckBox->setToolTip(ToolTip);
 		CheckBox->setChecked(Checked);
+
+		QLabel* Label = new QLabel(Text, Parent);
+		Label->setToolTip(ToolTip);
+		Label->setBuddy(CheckBox);
+		Layout->addRow(Label, CheckBox);
+
 		return CheckBox;
 	};
 
@@ -114,17 +122,14 @@ void swPreferencesDialog::CreateInstructionsTab()
 	PageLabel->setToolTip(tr("Page size, orientation and margins of new instructions."));
 	PageLayout->addRow(PageLabel, PageRowLayout);
 
-	mInstructionsNewModelDefaults = CreateCheckBox(PageGroup, tr("Load on New Models"), tr("Start every new model with the default page setup and grid."), Instructions.NewModelDefaults);
-	PageLayout->addRow(mInstructionsNewModelDefaults);
+	mInstructionsNewModelDefaults = CreateCheckBox(PageLayout, PageGroup, tr("Load on New Models"), tr("Start every new model with the default page setup and grid."), Instructions.NewModelDefaults);
 
 	QGroupBox* GridGroup = new QGroupBox(tr("Default Grid"), Tab);
 	QFormLayout* GridLayout = new QFormLayout(GridGroup);
 	TabLayout->addRow(GridGroup);
 
-	mInstructionsShowGrid = CreateCheckBox(GridGroup, tr("Show Grid"), tr("Show the grid on the pages of new instructions, it is never printed."), Instructions.ShowGrid);
-	GridLayout->addRow(mInstructionsShowGrid);
-	mInstructionsSnapToGrid = CreateCheckBox(GridGroup, tr("Snap to Grid"), tr("Snap dragged elements to the grid of new instructions."), Instructions.SnapToGrid);
-	GridLayout->addRow(mInstructionsSnapToGrid);
+	mInstructionsShowGrid = CreateCheckBox(GridLayout, GridGroup, tr("Show Grid"), tr("Show the grid on the pages of new instructions, it is never printed."), Instructions.ShowGrid);
+	mInstructionsSnapToGrid = CreateCheckBox(GridLayout, GridGroup, tr("Snap to Grid"), tr("Snap dragged elements to the grid of new instructions."), Instructions.SnapToGrid);
 
 	mInstructionsGridSize = new swInstructionsLengthSpinBox(GridGroup);
 	mInstructionsGridSize->setToolTip(tr("Main unit of the grid drawn with the primary color, in the margin units of the default page setup."));
@@ -159,16 +164,11 @@ void swPreferencesDialog::CreateInstructionsTab()
 	QFormLayout* WindowLayout = new QFormLayout(WindowGroup);
 	TabLayout->addRow(WindowGroup);
 
-	mInstructionsShowMargins = CreateCheckBox(WindowGroup, tr("Show Margins"), tr("Outline the page margins on screen, they are never printed."), Instructions.ShowMargins);
-	WindowLayout->addRow(mInstructionsShowMargins);
-	mInstructionsShowRulers = CreateCheckBox(WindowGroup, tr("Show Rulers"), tr("Show rulers in the page units along the page, their arrows follow the pointer."), Instructions.ShowRulers);
-	WindowLayout->addRow(mInstructionsShowRulers);
-	mInstructionsShowElementMargins = CreateCheckBox(WindowGroup, tr("Show Element Margins"), tr("Fill the margins around each element on screen with the element margin color, they are never printed."), Instructions.ShowElementMargins);
-	WindowLayout->addRow(mInstructionsShowElementMargins);
-	mInstructionsShowElementPadding = CreateCheckBox(WindowGroup, tr("Show Element Padding"), tr("Fill the padding inside the border of each element on screen with the element padding color, it is never printed."), Instructions.ShowElementPadding);
-	WindowLayout->addRow(mInstructionsShowElementPadding);
-	mInstructionsShowElementAnchors = CreateCheckBox(WindowGroup, tr("Show Element Anchors"), tr("Mark the corners, edge centers and center of each element on screen, they are never printed."), Instructions.ShowElementAnchors);
-	WindowLayout->addRow(mInstructionsShowElementAnchors);
+	mInstructionsShowMargins = CreateCheckBox(WindowLayout, WindowGroup, tr("Show Margins"), tr("Outline the page margins on screen, they are never printed."), Instructions.ShowMargins);
+	mInstructionsShowRulers = CreateCheckBox(WindowLayout, WindowGroup, tr("Show Rulers"), tr("Show rulers in the page units along the page, their arrows follow the pointer."), Instructions.ShowRulers);
+	mInstructionsShowElementMargins = CreateCheckBox(WindowLayout, WindowGroup, tr("Show Element Margins"), tr("Fill the margins around each element on screen with the element margin color, they are never printed."), Instructions.ShowElementMargins);
+	mInstructionsShowElementPadding = CreateCheckBox(WindowLayout, WindowGroup, tr("Show Element Padding"), tr("Fill the padding inside the border of each element on screen with the element padding color, it is never printed."), Instructions.ShowElementPadding);
+	mInstructionsShowElementAnchors = CreateCheckBox(WindowLayout, WindowGroup, tr("Show Element Anchors"), tr("Mark the corners, edge centers and center of each element on screen, they are never printed."), Instructions.ShowElementAnchors);
 
 	// line colors keep transparency
 	auto CreateColorButton = [this, WindowLayout, WindowGroup](const QString& Name, const QString& ToolTip, QColor* Color)
@@ -206,14 +206,10 @@ void swPreferencesDialog::CreateInstructionsTab()
 	QFormLayout* EditorLayout = new QFormLayout(EditorGroup);
 	TabLayout->addRow(EditorGroup);
 
-	mInstructionsEditorHighlight = CreateCheckBox(EditorGroup, tr("Syntax Highlighting"), tr("Color the commands of the model file in the Editor panel."), Instructions.EditorHighlight);
-	EditorLayout->addRow(mInstructionsEditorHighlight);
-	mInstructionsEditorNumbers = CreateCheckBox(EditorGroup, tr("Line Numbers"), tr("Number the lines of the model file in the Editor panel."), Instructions.EditorNumbers);
-	EditorLayout->addRow(mInstructionsEditorNumbers);
-	mInstructionsEditorWrap = CreateCheckBox(EditorGroup, tr("Wrap Lines"), tr("Wrap long lines of the model file in the Editor panel."), Instructions.EditorWrap);
-	EditorLayout->addRow(mInstructionsEditorWrap);
-	mInstructionsEditorMarkers = CreateCheckBox(EditorGroup, tr("Whitespace Markers"), tr("Mark tabs, spaces and line ends in the Editor panel."), Instructions.EditorMarkers);
-	EditorLayout->addRow(mInstructionsEditorMarkers);
+	mInstructionsEditorHighlight = CreateCheckBox(EditorLayout, EditorGroup, tr("Syntax Highlighting"), tr("Color the commands of the model file in the Editor panel."), Instructions.EditorHighlight);
+	mInstructionsEditorNumbers = CreateCheckBox(EditorLayout, EditorGroup, tr("Line Numbers"), tr("Number the lines of the model file in the Editor panel."), Instructions.EditorNumbers);
+	mInstructionsEditorWrap = CreateCheckBox(EditorLayout, EditorGroup, tr("Wrap Lines"), tr("Wrap long lines of the model file in the Editor panel."), Instructions.EditorWrap);
+	mInstructionsEditorMarkers = CreateCheckBox(EditorLayout, EditorGroup, tr("Whitespace Markers"), tr("Mark tabs, spaces and line ends in the Editor panel."), Instructions.EditorMarkers);
 
 	ui->tabWidget->insertTab(ui->tabWidget->indexOf(ui->tabCategories), Tab, tr("Instructions"));
 

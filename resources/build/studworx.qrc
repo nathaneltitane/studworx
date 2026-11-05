@@ -11,8 +11,8 @@
         <file alias="data/ldraw-color-configuration.ldr">../data/ldraw-color-configuration.ldr</file>
         <file alias="data/ldraw-color-configuration-alternate.ldr">../data/ldraw-color-configuration-alternate.ldr</file>
         <file alias="data/minifigure.ini">../data/minifigure.ini</file>
-        <file alias="data/ldraw.xml">../data/ldraw.xml</file>
-        <file alias="data/bricklink.json">../data/bricklink.json</file>
+        <file alias="data/lego-digital-designer.json">../data/lego-digital-designer.json</file>
+        <file alias="data/parts.json">../data/parts.json</file>
         <file alias="data/train-tracks.json">../data/train-tracks.json</file>
         <file alias="translations/studworx_cs.qm">../translations/studworx_cs.qm</file>
         <file alias="translations/studworx_de.qm">../translations/studworx_de.qm</file>

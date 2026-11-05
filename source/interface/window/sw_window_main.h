@@ -44,9 +44,11 @@ public:
 
 	QWidget* GetAnyViewWidget()
 	{
-		QWidget* Widget = layout()->itemAt(0)->widget();
+		// layouts empty out while views split or close
+		QLayoutItem* Item = layout() ? layout()->itemAt(0) : nullptr;
+		QWidget* Widget = Item ? Item->widget() : nullptr;
 
-		while (Widget->metaObject() == &QSplitter::staticMetaObject)
+		while (Widget && Widget->metaObject() == &QSplitter::staticMetaObject)
 			Widget = ((QSplitter*)Widget)->widget(0);
 
 		return Widget;
@@ -173,7 +175,7 @@ public:
 	}
 
 	swModel* GetActiveModel() const;
-	swModelTabWidget* GetTabForView(swView* View) const;
+	swModelTabWidget* GetTabForView(const swView* View) const;
 
 	swModel* GetCurrentTabModel() const
 	{

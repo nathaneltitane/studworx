@@ -400,7 +400,7 @@ void swView::DrawAxes() const
 	switch (mViewType)
 	{
 		case swViewType::View:
-			if (!Preferences.mDrawAxes)
+			if (!Preferences.mDrawAxes || !IsMainView())
 				return;
 			break;
 

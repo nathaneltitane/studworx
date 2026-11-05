@@ -627,23 +627,49 @@
           <string>Startup</string>
          </property>
          <layout class="QGridLayout" name="StartupLayout">
-          <item row="0" column="0" colspan="2">
-           <widget class="QCheckBox" name="autoLoadMostRecent">
+          <item row="0" column="0">
+           <widget class="QLabel" name="autoLoadMostRecentLabel">
             <property name="toolTip">
              <string>Open the most recently used file when StudWorx starts.</string>
             </property>
             <property name="text">
              <string>Open Most Recent File</string>
             </property>
+            <property name="buddy">
+             <cstring>autoLoadMostRecent</cstring>
+            </property>
            </widget>
           </item>
-          <item row="1" column="0" colspan="2">
-           <widget class="QCheckBox" name="RestoreTabLayout">
+          <item row="0" column="1">
+           <widget class="QCheckBox" name="autoLoadMostRecent">
+            <property name="accessibleName">
+             <string>Open Most Recent File</string>
+            </property>
+            <property name="toolTip">
+             <string>Open the most recently used file when StudWorx starts.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="RestoreTabLayoutLabel">
             <property name="toolTip">
              <string>Restore saved model tabs and view layouts when opening a model.</string>
             </property>
             <property name="text">
              <string>Restore Tab Layout</string>
+            </property>
+            <property name="buddy">
+             <cstring>RestoreTabLayout</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QCheckBox" name="RestoreTabLayout">
+            <property name="accessibleName">
+             <string>Restore Tab Layout</string>
+            </property>
+            <property name="toolTip">
+             <string>Restore saved model tabs and view layouts when opening a model.</string>
             </property>
            </widget>
           </item>
@@ -651,14 +677,14 @@
         </widget>
        </item>
        <item row="4" column="0" colspan="2">
-        <widget class="QGroupBox" name="FilesGroup">
+        <widget class="QGroupBox" name="AuthorGroup">
          <property name="whatsThis">
-          <string>&lt;p&gt;&lt;b&gt;Files&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The author of new models is built from its name, email address and comment, joined by the author line splitter. Empty parts are left out, and the Author Line field shows the result. For example, Jane Doe, jane@example.com and All rights reserved joined by &amp;quot; | &amp;quot; give Jane Doe | jane@example.com | All rights reserved.&lt;/p&gt;&lt;p&gt;The author of an open model is changed in its properties.&lt;/p&gt;&lt;p&gt;The other options control how model files are opened and reloaded.&lt;/p&gt;</string>
+          <string>&lt;p&gt;&lt;b&gt;Author&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The author of new models is built from its name, email address and comment, joined by the author line splitter. Empty parts are left out, and the Author Line field shows the result. For example, Jane Doe, jane@example.com and All rights reserved joined by &amp;quot; | &amp;quot; give Jane Doe | jane@example.com | All rights reserved.&lt;/p&gt;&lt;p&gt;The author of an open model is changed in its properties.&lt;/p&gt;</string>
          </property>
          <property name="title">
-          <string>Files</string>
+          <string>Author</string>
          </property>
-         <layout class="QGridLayout" name="FilesLayout">
+         <layout class="QGridLayout" name="AuthorLayout">
           <item row="0" column="0">
            <widget class="QLabel" name="AuthorNameLabel">
             <property name="toolTip">
@@ -777,52 +803,131 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="0" colspan="2">
-           <widget class="QCheckBox" name="WatchFileChanges">
+         </layout>
+        </widget>
+       </item>
+       <item row="5" column="0" colspan="2">
+        <widget class="QGroupBox" name="FilesGroup">
+         <property name="whatsThis">
+          <string>&lt;p&gt;&lt;b&gt;Files&lt;/b&gt;&lt;/p&gt;&lt;p&gt;These options control how model files are opened and reloaded.&lt;/p&gt;</string>
+         </property>
+         <property name="title">
+          <string>Files</string>
+         </property>
+         <layout class="QGridLayout" name="FilesLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="WatchFileChangesLabel">
             <property name="toolTip">
              <string>Ask to reload the model when its file is changed by another application. Use File &gt; Reload to reload it manually.</string>
             </property>
             <property name="text">
              <string>Watch for File Changes</string>
             </property>
+            <property name="buddy">
+             <cstring>WatchFileChanges</cstring>
+            </property>
            </widget>
           </item>
-          <item row="6" column="0" colspan="2">
-           <widget class="QCheckBox" name="LoadPartsBeforeShowing">
+          <item row="0" column="1">
+           <widget class="QCheckBox" name="WatchFileChanges">
+            <property name="accessibleName">
+             <string>Watch for File Changes</string>
+            </property>
+            <property name="toolTip">
+             <string>Ask to reload the model when its file is changed by another application. Use File &gt; Reload to reload it manually.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="LoadPartsBeforeShowingLabel">
             <property name="toolTip">
              <string>Wait until every part of a model is loaded before showing it, instead of showing parts as they load.</string>
             </property>
             <property name="text">
              <string>Load All Parts Before Showing a Model</string>
             </property>
+            <property name="buddy">
+             <cstring>LoadPartsBeforeShowing</cstring>
+            </property>
            </widget>
           </item>
-          <item row="7" column="0" colspan="2">
-           <widget class="QCheckBox" name="MigrateMetaCommands">
+          <item row="1" column="1">
+           <widget class="QCheckBox" name="LoadPartsBeforeShowing">
+            <property name="accessibleName">
+             <string>Load All Parts Before Showing a Model</string>
+            </property>
             <property name="toolTip">
-             <string>Convert the LeoCAD meta commands of opened models to StudWorx meta commands without asking. Migrated models are no longer read fully by LeoCAD.</string>
+             <string>Wait until every part of a model is loaded before showing it, instead of showing parts as they load.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="MigrateMetaCommandsLabel">
+            <property name="toolTip">
+             <string>Choose what happens to the LeoCAD meta commands of opened models: ask each time, migrate them to StudWorx meta commands, or keep them. Migrated models are no longer read fully by LeoCAD.</string>
             </property>
             <property name="text">
-             <string>Migrate LeoCAD Models Automatically</string>
+             <string>Migrate Files on Load</string>
             </property>
+            <property name="buddy">
+             <cstring>MigrateMetaCommands</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="MigrateMetaCommands">
+            <property name="accessibleName">
+             <string>Migrate Files on Load</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose what happens to the LeoCAD meta commands of opened models: ask each time, migrate them to StudWorx meta commands, or keep them. Migrated models are no longer read fully by LeoCAD.</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Ask</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Migrate</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Keep</string>
+             </property>
+            </item>
            </widget>
           </item>
          </layout>
         </widget>
        </item>
-       <item row="5" column="0" colspan="2">
+       <item row="6" column="0" colspan="2">
         <widget class="QGroupBox" name="ExportGroup">
          <property name="title">
           <string>Export</string>
          </property>
          <layout class="QGridLayout" name="ExportLayout">
-          <item row="0" column="0" colspan="2">
-           <widget class="QCheckBox" name="MarkColladaTransparency">
+          <item row="0" column="0">
+           <widget class="QLabel" name="MarkColladaTransparencyLabel">
             <property name="toolTip">
              <string>Write opaque="A_ONE" on COLLADA transparent colors so viewers that skip the COLLADA default show transparent parts translucent.</string>
             </property>
             <property name="text">
              <string>Mark COLLADA Transparency</string>
+            </property>
+            <property name="buddy">
+             <cstring>MarkColladaTransparency</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QCheckBox" name="MarkColladaTransparency">
+            <property name="accessibleName">
+             <string>Mark COLLADA Transparency</string>
+            </property>
+            <property name="toolTip">
+             <string>Write opaque="A_ONE" on COLLADA transparent colors so viewers that skip the COLLADA default show transparent parts translucent.</string>
             </property>
            </widget>
           </item>
@@ -862,19 +967,32 @@
          </layout>
         </widget>
        </item>
-       <item row="6" column="0" colspan="2">
+       <item row="7" column="0" colspan="2">
         <widget class="QGroupBox" name="EditingGroup">
          <property name="title">
           <string>Editing</string>
          </property>
          <layout class="QGridLayout" name="EditingLayout">
-          <item row="0" column="0" colspan="2">
-           <widget class="QCheckBox" name="fixedDirectionKeys">
+          <item row="0" column="0">
+           <widget class="QLabel" name="fixedDirectionKeysLabel">
             <property name="toolTip">
              <string>Move parts along fixed model axes instead of view-relative directions.</string>
             </property>
             <property name="text">
              <string>Fixed Direction Keys</string>
+            </property>
+            <property name="buddy">
+             <cstring>fixedDirectionKeys</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QCheckBox" name="fixedDirectionKeys">
+            <property name="accessibleName">
+             <string>Fixed Direction Keys</string>
+            </property>
+            <property name="toolTip">
+             <string>Move parts along fixed model axes instead of view-relative directions.</string>
             </property>
            </widget>
           </item>
@@ -916,13 +1034,26 @@
             </item>
            </widget>
           </item>
-          <item row="1" column="0" colspan="2">
-           <widget class="QCheckBox" name="FirstPartAtOrigin">
+          <item row="1" column="0">
+           <widget class="QLabel" name="FirstPartAtOriginLabel">
             <property name="toolTip">
              <string>Place the first part of an empty model at 0, 0, 0 instead of where it is dropped.</string>
             </property>
             <property name="text">
              <string>Insert First Part at Origin</string>
+            </property>
+            <property name="buddy">
+             <cstring>FirstPartAtOrigin</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QCheckBox" name="FirstPartAtOrigin">
+            <property name="accessibleName">
+             <string>Insert First Part at Origin</string>
+            </property>
+            <property name="toolTip">
+             <string>Place the first part of an empty model at 0, 0, 0 instead of where it is dropped.</string>
             </property>
            </widget>
           </item>
@@ -942,7 +1073,7 @@
          </layout>
         </widget>
        </item>
-       <item row="7" column="0" colspan="2">
+       <item row="8" column="0" colspan="2">
         <widget class="QGroupBox" name="FlexiblePartsGroup">
          <property name="title">
           <string>Flexible Parts</string>
@@ -981,23 +1112,49 @@
             </item>
            </widget>
           </item>
-          <item row="1" column="0" colspan="2">
-           <widget class="QCheckBox" name="FlexClampNewControlPoints">
+          <item row="1" column="0">
+           <widget class="QLabel" name="FlexClampNewControlPointsLabel">
             <property name="toolTip">
              <string>Start new middle control points with Clamp Tangent turned on. Clamp Tangent can still be turned off from the view context menu.</string>
             </property>
             <property name="text">
              <string>Clamp New Control Points</string>
             </property>
+            <property name="buddy">
+             <cstring>FlexClampNewControlPoints</cstring>
+            </property>
            </widget>
           </item>
-          <item row="2" column="0" colspan="2">
-           <widget class="QCheckBox" name="FlexMiddleControlPoint">
+          <item row="1" column="1">
+           <widget class="QCheckBox" name="FlexClampNewControlPoints">
+            <property name="accessibleName">
+             <string>Clamp New Control Points</string>
+            </property>
+            <property name="toolTip">
+             <string>Start new middle control points with Clamp Tangent turned on. Clamp Tangent can still be turned off from the view context menu.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="FlexMiddleControlPointLabel">
             <property name="toolTip">
              <string>Give newly inserted flexible parts a control point halfway along their path.</string>
             </property>
             <property name="text">
              <string>Add Middle Control Point</string>
+            </property>
+            <property name="buddy">
+             <cstring>FlexMiddleControlPoint</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QCheckBox" name="FlexMiddleControlPoint">
+            <property name="accessibleName">
+             <string>Add Middle Control Point</string>
+            </property>
+            <property name="toolTip">
+             <string>Give newly inserted flexible parts a control point halfway along their path.</string>
             </property>
            </widget>
           </item>
@@ -1034,71 +1191,105 @@
          </property>
          <layout class="QGridLayout" name="PerformanceLayout">
           <item row="0" column="0">
-           <widget class="QCheckBox" name="antiAliasing">
+           <widget class="QLabel" name="antiAliasingLabel">
             <property name="toolTip">
              <string>Smooth jagged edges in model views; changes require restarting StudWorx.</string>
             </property>
             <property name="text">
              <string>Anti-aliasing</string>
             </property>
+            <property name="buddy">
+             <cstring>antiAliasing</cstring>
+            </property>
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QComboBox" name="antiAliasingSamples">
-            <property name="accessibleName">
-             <string>Antialiasing Samples</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose the antialiasing sample count; more samples can use more graphics resources.</string>
-            </property>
+           <layout class="QHBoxLayout" name="antiAliasingLayout" stretch="0,1">
             <item>
-             <property name="text">
-              <string>2x</string>
-             </property>
+             <widget class="QCheckBox" name="antiAliasing">
+              <property name="accessibleName">
+               <string>Anti-aliasing</string>
+              </property>
+              <property name="toolTip">
+               <string>Smooth jagged edges in model views; changes require restarting StudWorx.</string>
+              </property>
+             </widget>
             </item>
             <item>
-             <property name="text">
-              <string>4x</string>
-             </property>
+             <widget class="QComboBox" name="antiAliasingSamples">
+              <property name="accessibleName">
+               <string>Antialiasing Samples</string>
+              </property>
+              <property name="toolTip">
+               <string>Choose the antialiasing sample count; more samples can use more graphics resources.</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>2x</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>4x</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>8x</string>
+               </property>
+              </item>
+             </widget>
             </item>
-            <item>
-             <property name="text">
-              <string>8x</string>
-             </property>
-            </item>
-           </widget>
+           </layout>
           </item>
           <item row="1" column="0">
-           <widget class="QCheckBox" name="MeshLOD">
+           <widget class="QLabel" name="MeshLODTitleLabel">
             <property name="toolTip">
              <string>Use simpler meshes for distant parts to improve display performance.</string>
             </property>
             <property name="text">
              <string>Mesh LOD</string>
             </property>
+            <property name="buddy">
+             <cstring>MeshLOD</cstring>
+            </property>
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QSlider" name="MeshLODSlider">
-            <property name="accessibleName">
-             <string>Mesh Detail Distance</string>
-            </property>
-            <property name="toolTip">
-             <string>Set the distance from the camera in LDraw units (ldu, 20 ldu per stud) beyond which parts draw simpler studs.</string>
-            </property>
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="tickPosition">
-             <enum>QSlider::TickPosition::NoTicks</enum>
-            </property>
-           </widget>
+           <layout class="QHBoxLayout" name="MeshLODLayout" stretch="0,1">
+            <item>
+             <widget class="QCheckBox" name="MeshLOD">
+              <property name="accessibleName">
+               <string>Mesh LOD</string>
+              </property>
+              <property name="toolTip">
+               <string>Use simpler meshes for distant parts to improve display performance.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSlider" name="MeshLODSlider">
+              <property name="accessibleName">
+               <string>Mesh Detail Distance</string>
+              </property>
+              <property name="toolTip">
+               <string>Set the distance from the camera in LDraw units (ldu, 20 ldu per stud) beyond which parts draw simpler studs.</string>
+              </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="tickPosition">
+               <enum>QSlider::TickPosition::NoTicks</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
           <item row="1" column="2">
            <widget class="QLabel" name="MeshLODLabel">
@@ -1316,50 +1507,98 @@
          </property>
          <layout class="QGridLayout" name="StepsLayout">
           <item row="0" column="0">
-           <widget class="QCheckBox" name="FadeSteps">
+           <widget class="QLabel" name="FadeStepsLabel">
             <property name="toolTip">
              <string>Tint parts from previous building steps with the chosen fade color.</string>
             </property>
             <property name="text">
              <string>Fade Previous Steps</string>
             </property>
+            <property name="buddy">
+             <cstring>FadeSteps</cstring>
+            </property>
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QToolButton" name="FadeStepsColor">
-            <property name="accessibleName">
-             <string>Previous Step Color</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose the tint used for parts from previous steps.</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
+           <layout class="QHBoxLayout" name="FadeStepsLayout" stretch="0,0,1">
+            <item>
+             <widget class="QCheckBox" name="FadeSteps">
+              <property name="accessibleName">
+               <string>Fade Previous Steps</string>
+              </property>
+              <property name="toolTip">
+               <string>Tint parts from previous building steps with the chosen fade color.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="FadeStepsColor">
+              <property name="accessibleName">
+               <string>Previous Step Color</string>
+              </property>
+              <property name="toolTip">
+               <string>Choose the tint used for parts from previous steps.</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="FadeStepsSpacer">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+             </spacer>
+            </item>
+           </layout>
           </item>
           <item row="1" column="0">
-           <widget class="QCheckBox" name="HighlightNewParts">
+           <widget class="QLabel" name="HighlightNewPartsLabel">
             <property name="toolTip">
              <string>Highlight parts introduced in the current building step.</string>
             </property>
             <property name="text">
              <string>Highlight New Parts</string>
             </property>
+            <property name="buddy">
+             <cstring>HighlightNewParts</cstring>
+            </property>
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QToolButton" name="HighlightNewPartsColor">
-            <property name="accessibleName">
-             <string>New Part Highlight Color</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose the highlight color for parts in the current step.</string>
-            </property>
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
+           <layout class="QHBoxLayout" name="HighlightNewPartsLayout" stretch="0,0,1">
+            <item>
+             <widget class="QCheckBox" name="HighlightNewParts">
+              <property name="accessibleName">
+               <string>Highlight New Parts</string>
+              </property>
+              <property name="toolTip">
+               <string>Highlight parts introduced in the current building step.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="HighlightNewPartsColor">
+              <property name="accessibleName">
+               <string>New Part Highlight Color</string>
+              </property>
+              <property name="toolTip">
+               <string>Choose the highlight color for parts in the current step.</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="HighlightNewPartsSpacer">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+             </spacer>
+            </item>
+           </layout>
           </item>
           <item row="2" column="0">
            <widget class="QLabel" name="HighlightRenderModeLabel">
@@ -1462,12 +1701,25 @@
            </widget>
           </item>
           <item row="1" column="0">
-           <widget class="QCheckBox" name="ConditionalLinesCheckBox">
+           <widget class="QLabel" name="ConditionalLinesLabel">
             <property name="toolTip">
              <string>Draw conditional lines where needed to show curved part surfaces.</string>
             </property>
             <property name="text">
              <string>Conditional Lines</string>
+            </property>
+            <property name="buddy">
+             <cstring>ConditionalLinesCheckBox</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QCheckBox" name="ConditionalLinesCheckBox">
+            <property name="accessibleName">
+             <string>Conditional Lines</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw conditional lines where needed to show curved part surfaces.</string>
             </property>
            </widget>
           </item>
@@ -1520,22 +1772,48 @@
            </widget>
           </item>
           <item row="0" column="0">
-           <widget class="QCheckBox" name="edgeLines">
+           <widget class="QLabel" name="edgeLinesLabel">
             <property name="toolTip">
              <string>Draw the edge lines defined by each part.</string>
             </property>
             <property name="text">
              <string>Edge Lines</string>
             </property>
+            <property name="buddy">
+             <cstring>edgeLines</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QCheckBox" name="edgeLines">
+            <property name="accessibleName">
+             <string>Edge Lines</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw the edge lines defined by each part.</string>
+            </property>
            </widget>
           </item>
           <item row="2" column="0">
-           <widget class="QCheckBox" name="AutomateEdgeColor">
+           <widget class="QLabel" name="AutomateEdgeColorLabel">
             <property name="toolTip">
              <string>Calculate edge colors from part colors instead of using their defined edge colors.</string>
             </property>
             <property name="text">
              <string>Automate Edge Color</string>
+            </property>
+            <property name="buddy">
+             <cstring>AutomateEdgeColor</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QCheckBox" name="AutomateEdgeColor">
+            <property name="accessibleName">
+             <string>Automate Edge Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Calculate edge colors from part colors instead of using their defined edge colors.</string>
             </property>
            </widget>
           </item>
@@ -1655,13 +1933,26 @@
           <string>Model</string>
          </property>
          <layout class="QGridLayout" name="gridLayout_3">
-          <item row="0" column="0" colspan="2">
-           <widget class="QCheckBox" name="FollowStepViewsCheckBox">
+          <item row="0" column="0">
+           <widget class="QLabel" name="FollowStepViewsLabel">
             <property name="toolTip">
              <string>Turn the view to each step's view rotation (MLCAD ROTSTEP) when changing steps.</string>
             </property>
             <property name="text">
              <string>Follow Step Views</string>
+            </property>
+            <property name="buddy">
+             <cstring>FollowStepViewsCheckBox</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QCheckBox" name="FollowStepViewsCheckBox">
+            <property name="accessibleName">
+             <string>Follow Step Views</string>
+            </property>
+            <property name="toolTip">
+             <string>Turn the view to each step's view rotation (MLCAD ROTSTEP) when changing steps.</string>
             </property>
            </widget>
           </item>
@@ -1954,33 +2245,72 @@
             </item>
            </widget>
           </item>
-          <item row="2" column="0" colspan="3">
-           <widget class="QCheckBox" name="AxisIconLabelsCheckBox">
+          <item row="2" column="0">
+           <widget class="QLabel" name="AxisIconLabelsLabel">
             <property name="toolTip">
              <string>Show the X, Y and Z labels on the model-axis indicator.</string>
             </property>
             <property name="text">
              <string>Labels</string>
             </property>
+            <property name="buddy">
+             <cstring>AxisIconLabelsCheckBox</cstring>
+            </property>
            </widget>
           </item>
-          <item row="3" column="0" colspan="3">
-           <widget class="QCheckBox" name="AxisIconNegativeCheckBox">
+          <item row="2" column="1" colspan="2">
+           <widget class="QCheckBox" name="AxisIconLabelsCheckBox">
+            <property name="accessibleName">
+             <string>Labels</string>
+            </property>
+            <property name="toolTip">
+             <string>Show the X, Y and Z labels on the model-axis indicator.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="AxisIconNegativeLabel">
             <property name="toolTip">
              <string>Show the negative X, Y and Z axes on the model-axis indicator in their own colors.</string>
             </property>
             <property name="text">
              <string>Negative Axes</string>
             </property>
+            <property name="buddy">
+             <cstring>AxisIconNegativeCheckBox</cstring>
+            </property>
            </widget>
           </item>
-          <item row="4" column="0" colspan="3">
-           <widget class="QCheckBox" name="AxisIconCubeOutlineCheckBox">
+          <item row="3" column="1" colspan="2">
+           <widget class="QCheckBox" name="AxisIconNegativeCheckBox">
+            <property name="accessibleName">
+             <string>Negative Axes</string>
+            </property>
+            <property name="toolTip">
+             <string>Show the negative X, Y and Z axes on the model-axis indicator in their own colors.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="AxisIconCubeOutlineLabel">
             <property name="toolTip">
              <string>Draw the view cube outline around the model-axis indicator with the axis origin at its center.</string>
             </property>
             <property name="text">
              <string>Cube Outline</string>
+            </property>
+            <property name="buddy">
+             <cstring>AxisIconCubeOutlineCheckBox</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1" colspan="2">
+           <widget class="QCheckBox" name="AxisIconCubeOutlineCheckBox">
+            <property name="accessibleName">
+             <string>Cube Outline</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw the view cube outline around the model-axis indicator with the axis origin at its center.</string>
             </property>
            </widget>
           </item>
@@ -2156,13 +2486,26 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="0" colspan="3">
-           <widget class="QCheckBox" name="CutawayEdgesCheckBox">
+          <item row="3" column="0">
+           <widget class="QLabel" name="CutawayEdgesLabel">
             <property name="toolTip">
              <string>Draw edge lines where the cutaway cuts through parts, in the part edge color, when edge lines are shown.</string>
             </property>
             <property name="text">
              <string>Cut Edges</string>
+            </property>
+            <property name="buddy">
+             <cstring>CutawayEdgesCheckBox</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1" colspan="2">
+           <widget class="QCheckBox" name="CutawayEdgesCheckBox">
+            <property name="accessibleName">
+             <string>Cut Edges</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw edge lines where the cutaway cuts through parts, in the part edge color, when edge lines are shown.</string>
             </property>
            </widget>
           </item>
@@ -2293,118 +2636,252 @@
          </property>
          <layout class="QGridLayout" name="gridLayout_2">
           <item row="1" column="0">
-           <widget class="QCheckBox" name="gridLines">
+           <widget class="QLabel" name="gridLinesLabel">
             <property name="toolTip">
              <string>Show base-grid lines at the specified spacing.</string>
             </property>
             <property name="text">
              <string>Draw Lines Every</string>
             </property>
+            <property name="buddy">
+             <cstring>gridLines</cstring>
+            </property>
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="swRangeSpinBox" name="gridLineSpacing">
-            <property name="accessibleName">
-             <string>Grid Line Spacing</string>
-            </property>
-            <property name="toolTip">
-             <string>Set base-grid line spacing in studs (1 to 10000).</string>
-            </property>
-            <property name="minimum">
-             <number>1</number>
-            </property>
-            <property name="maximum">
-             <number>10000</number>
-            </property>
-           </widget>
+           <layout class="QHBoxLayout" name="gridLinesLayout" stretch="0,1">
+            <item>
+             <widget class="QCheckBox" name="gridLines">
+              <property name="accessibleName">
+               <string>Draw Lines Every</string>
+              </property>
+              <property name="toolTip">
+               <string>Show base-grid lines at the specified spacing.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="swRangeSpinBox" name="gridLineSpacing">
+              <property name="accessibleName">
+               <string>Grid Line Spacing</string>
+              </property>
+              <property name="toolTip">
+               <string>Set base-grid line spacing in studs (1 to 10000).</string>
+              </property>
+              <property name="minimum">
+               <number>1</number>
+              </property>
+              <property name="maximum">
+               <number>10000</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
           </item>
-          <item row="2" column="0" colspan="3">
-           <widget class="QCheckBox" name="GridOriginCheckBox">
+          <item row="2" column="0">
+           <widget class="QLabel" name="GridOriginLabel">
             <property name="toolTip">
              <string>Emphasize the base-grid lines through the model origin.</string>
             </property>
             <property name="text">
              <string>Draw Origin Lines</string>
             </property>
+            <property name="buddy">
+             <cstring>GridOriginCheckBox</cstring>
+            </property>
            </widget>
           </item>
-          <item row="3" column="0" colspan="3">
-           <widget class="QCheckBox" name="GridHeightXZCheckBox">
+          <item row="2" column="1" colspan="2">
+           <widget class="QCheckBox" name="GridOriginCheckBox">
+            <property name="accessibleName">
+             <string>Draw Origin Lines</string>
+            </property>
+            <property name="toolTip">
+             <string>Emphasize the base-grid lines through the model origin.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="GridHeightXZLabel">
             <property name="toolTip">
              <string>Draw a vertical grid on the XZ plane through the X axis with lines every plate height.</string>
             </property>
             <property name="text">
              <string>Draw XZ Height Grid</string>
             </property>
+            <property name="buddy">
+             <cstring>GridHeightXZCheckBox</cstring>
+            </property>
            </widget>
           </item>
-          <item row="4" column="0" colspan="3">
-           <widget class="QCheckBox" name="GridHeightYZCheckBox">
+          <item row="3" column="1" colspan="2">
+           <widget class="QCheckBox" name="GridHeightXZCheckBox">
+            <property name="accessibleName">
+             <string>Draw XZ Height Grid</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw a vertical grid on the XZ plane through the X axis with lines every plate height.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="GridHeightYZLabel">
             <property name="toolTip">
              <string>Draw a vertical grid on the YZ plane through the Y axis with lines every plate height.</string>
             </property>
             <property name="text">
              <string>Draw YZ Height Grid</string>
             </property>
+            <property name="buddy">
+             <cstring>GridHeightYZCheckBox</cstring>
+            </property>
            </widget>
           </item>
-          <item row="5" column="0" colspan="3">
-           <widget class="QCheckBox" name="GridHeightBehindCheckBox">
+          <item row="4" column="1" colspan="2">
+           <widget class="QCheckBox" name="GridHeightYZCheckBox">
+            <property name="accessibleName">
+             <string>Draw YZ Height Grid</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw a vertical grid on the YZ plane through the Y axis with lines every plate height.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="GridHeightBehindLabel">
             <property name="toolTip">
              <string>Draw the height grids on the side of the model facing away from the camera instead of through the origin axes.</string>
             </property>
             <property name="text">
              <string>Draw Height Grids Behind the Model</string>
             </property>
+            <property name="buddy">
+             <cstring>GridHeightBehindCheckBox</cstring>
+            </property>
            </widget>
           </item>
-          <item row="6" column="0" colspan="3">
-           <widget class="QCheckBox" name="GridAxisXCheckBox">
+          <item row="5" column="1" colspan="2">
+           <widget class="QCheckBox" name="GridHeightBehindCheckBox">
+            <property name="accessibleName">
+             <string>Draw Height Grids Behind the Model</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw the height grids on the side of the model facing away from the camera instead of through the origin axes.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="GridAxisXLabel">
             <property name="toolTip">
              <string>Draw the x axis line at the grid origin.</string>
             </property>
             <property name="text">
              <string>Draw X Axis Line</string>
             </property>
+            <property name="buddy">
+             <cstring>GridAxisXCheckBox</cstring>
+            </property>
            </widget>
           </item>
-          <item row="7" column="0" colspan="3">
-           <widget class="QCheckBox" name="GridAxisYCheckBox">
+          <item row="6" column="1" colspan="2">
+           <widget class="QCheckBox" name="GridAxisXCheckBox">
+            <property name="accessibleName">
+             <string>Draw X Axis Line</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw the x axis line at the grid origin.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="GridAxisYLabel">
             <property name="toolTip">
              <string>Draw the y axis line at the grid origin.</string>
             </property>
             <property name="text">
              <string>Draw Y Axis Line</string>
             </property>
+            <property name="buddy">
+             <cstring>GridAxisYCheckBox</cstring>
+            </property>
            </widget>
           </item>
-          <item row="8" column="0" colspan="3">
-           <widget class="QCheckBox" name="GridAxisZCheckBox">
+          <item row="7" column="1" colspan="2">
+           <widget class="QCheckBox" name="GridAxisYCheckBox">
+            <property name="accessibleName">
+             <string>Draw Y Axis Line</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw the y axis line at the grid origin.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="GridAxisZLabel">
             <property name="toolTip">
              <string>Draw the z axis line at the grid origin, or along the height grids when they are shown.</string>
             </property>
             <property name="text">
              <string>Draw Z Axis Line</string>
             </property>
+            <property name="buddy">
+             <cstring>GridAxisZCheckBox</cstring>
+            </property>
            </widget>
           </item>
-          <item row="9" column="0" colspan="3">
-           <widget class="QCheckBox" name="GridNegativeAxesCheckBox">
+          <item row="8" column="1" colspan="2">
+           <widget class="QCheckBox" name="GridAxisZCheckBox">
+            <property name="accessibleName">
+             <string>Draw Z Axis Line</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw the z axis line at the grid origin, or along the height grids when they are shown.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="QLabel" name="GridNegativeAxesLabel">
             <property name="toolTip">
              <string>Draw the negative halves of the axis lines in the negative axis colors, with the Z line reaching below the base grid.</string>
             </property>
             <property name="text">
              <string>Draw Negative Axes</string>
             </property>
+            <property name="buddy">
+             <cstring>GridNegativeAxesCheckBox</cstring>
+            </property>
            </widget>
           </item>
-          <item row="0" column="0" colspan="3">
-           <widget class="QCheckBox" name="gridStuds">
+          <item row="9" column="1" colspan="2">
+           <widget class="QCheckBox" name="GridNegativeAxesCheckBox">
+            <property name="accessibleName">
+             <string>Draw Negative Axes</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw the negative halves of the axis lines in the negative axis colors, with the Z line reaching below the base grid.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="gridStudsLabel">
             <property name="toolTip">
              <string>Show stud positions on the base grid.</string>
             </property>
             <property name="text">
              <string>Draw Studs</string>
+            </property>
+            <property name="buddy">
+             <cstring>gridStuds</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" colspan="2">
+           <widget class="QCheckBox" name="gridStuds">
+            <property name="accessibleName">
+             <string>Draw Studs</string>
+            </property>
+            <property name="toolTip">
+             <string>Show stud positions on the base grid.</string>
             </property>
            </widget>
           </item>
@@ -2417,13 +2894,26 @@
           <string>Parts</string>
          </property>
          <layout class="QGridLayout" name="PartsLayout">
-          <item row="0" column="0" colspan="3">
-           <widget class="QCheckBox" name="PartsSyncRendering">
+          <item row="0" column="0">
+           <widget class="QLabel" name="PartsSyncRenderingLabel">
             <property name="toolTip">
              <string>Use the model view rendering settings for the parts list and parts list images.</string>
             </property>
             <property name="text">
              <string>Use Model Settings</string>
+            </property>
+            <property name="buddy">
+             <cstring>PartsSyncRendering</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" colspan="2">
+           <widget class="QCheckBox" name="PartsSyncRendering">
+            <property name="accessibleName">
+             <string>Use Model Settings</string>
+            </property>
+            <property name="toolTip">
+             <string>Use the model view rendering settings for the parts list and parts list images.</string>
             </property>
            </widget>
           </item>
@@ -2466,22 +2956,48 @@
            </widget>
           </item>
           <item row="2" column="0">
-           <widget class="QCheckBox" name="PartsEdgeLines">
+           <widget class="QLabel" name="PartsEdgeLinesLabel">
             <property name="toolTip">
              <string>Draw edge lines on parts in the parts list and parts list images.</string>
             </property>
             <property name="text">
              <string>Edge Lines</string>
             </property>
+            <property name="buddy">
+             <cstring>PartsEdgeLines</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QCheckBox" name="PartsEdgeLines">
+            <property name="accessibleName">
+             <string>Edge Lines</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw edge lines on parts in the parts list and parts list images.</string>
+            </property>
            </widget>
           </item>
           <item row="3" column="0">
-           <widget class="QCheckBox" name="PartsConditionalLines">
+           <widget class="QLabel" name="PartsConditionalLinesLabel">
             <property name="toolTip">
              <string>Draw conditional lines on parts in the parts list and parts list images.</string>
             </property>
             <property name="text">
              <string>Conditional Lines</string>
+            </property>
+            <property name="buddy">
+             <cstring>PartsConditionalLines</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QCheckBox" name="PartsConditionalLines">
+            <property name="accessibleName">
+             <string>Conditional Lines</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw conditional lines on parts in the parts list and parts list images.</string>
             </property>
            </widget>
           </item>
@@ -2531,13 +3047,26 @@
             </property>
            </spacer>
           </item>
-          <item row="5" column="0" colspan="3">
-           <widget class="QCheckBox" name="PartsSnapToTiles">
+          <item row="5" column="0">
+           <widget class="QLabel" name="PartsSnapToTilesLabel">
             <property name="toolTip">
              <string>Snap the width of the docked parts panel to whole thumbnail tiles after resizing it, and the categories to the longest category name when docked on top or bottom.</string>
             </property>
             <property name="text">
              <string>Snap Panel Width to Tiles</string>
+            </property>
+            <property name="buddy">
+             <cstring>PartsSnapToTiles</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1" colspan="2">
+           <widget class="QCheckBox" name="PartsSnapToTiles">
+            <property name="accessibleName">
+             <string>Snap Panel Width to Tiles</string>
+            </property>
+            <property name="toolTip">
+             <string>Snap the width of the docked parts panel to whole thumbnail tiles after resizing it, and the categories to the longest category name when docked on top or bottom.</string>
             </property>
            </widget>
           </item>
@@ -2699,23 +3228,49 @@
             </item>
            </widget>
           </item>
-          <item row="3" column="0" colspan="3">
-           <widget class="QCheckBox" name="PreviewSquareViewportCheckBox">
+          <item row="3" column="0">
+           <widget class="QLabel" name="PreviewSquareViewportLabel">
             <property name="toolTip">
              <string>Keep the preview square, with a 1:1 width to height ratio, whatever the panel size.</string>
             </property>
             <property name="text">
              <string>Square Viewport</string>
             </property>
+            <property name="buddy">
+             <cstring>PreviewSquareViewportCheckBox</cstring>
+            </property>
            </widget>
           </item>
-          <item row="4" column="0" colspan="3">
-           <widget class="QCheckBox" name="PreviewSyncRendering">
+          <item row="3" column="1" colspan="2">
+           <widget class="QCheckBox" name="PreviewSquareViewportCheckBox">
+            <property name="accessibleName">
+             <string>Square Viewport</string>
+            </property>
+            <property name="toolTip">
+             <string>Keep the preview square, with a 1:1 width to height ratio, whatever the panel size.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="PreviewSyncRenderingLabel">
             <property name="toolTip">
              <string>Use the model view rendering settings for the preview.</string>
             </property>
             <property name="text">
              <string>Use Model Settings</string>
+            </property>
+            <property name="buddy">
+             <cstring>PreviewSyncRendering</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1" colspan="2">
+           <widget class="QCheckBox" name="PreviewSyncRendering">
+            <property name="accessibleName">
+             <string>Use Model Settings</string>
+            </property>
+            <property name="toolTip">
+             <string>Use the model view rendering settings for the preview.</string>
             </property>
            </widget>
           </item>
@@ -2757,23 +3312,49 @@
             </item>
            </widget>
           </item>
-          <item row="6" column="0" colspan="3">
-           <widget class="QCheckBox" name="PreviewEdgeLines">
+          <item row="6" column="0">
+           <widget class="QLabel" name="PreviewEdgeLinesLabel">
             <property name="toolTip">
              <string>Draw edge lines on parts in the preview.</string>
             </property>
             <property name="text">
              <string>Edge Lines</string>
             </property>
+            <property name="buddy">
+             <cstring>PreviewEdgeLines</cstring>
+            </property>
            </widget>
           </item>
-          <item row="7" column="0" colspan="3">
-           <widget class="QCheckBox" name="PreviewConditionalLines">
+          <item row="6" column="1" colspan="2">
+           <widget class="QCheckBox" name="PreviewEdgeLines">
+            <property name="accessibleName">
+             <string>Edge Lines</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw edge lines on parts in the preview.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="PreviewConditionalLinesLabel">
             <property name="toolTip">
              <string>Draw conditional lines on parts in the preview.</string>
             </property>
             <property name="text">
              <string>Conditional Lines</string>
+            </property>
+            <property name="buddy">
+             <cstring>PreviewConditionalLines</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1" colspan="2">
+           <widget class="QCheckBox" name="PreviewConditionalLines">
+            <property name="accessibleName">
+             <string>Conditional Lines</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw conditional lines on parts in the preview.</string>
             </property>
            </widget>
           </item>
@@ -2832,13 +3413,26 @@
           <string>Minifigure Builder</string>
          </property>
          <layout class="QGridLayout" name="MinifigureBuilderLayout">
-          <item row="0" column="0" colspan="3">
-           <widget class="QCheckBox" name="MinifigureBuilderSyncRendering">
+          <item row="0" column="0">
+           <widget class="QLabel" name="MinifigureBuilderSyncRenderingLabel">
             <property name="toolTip">
              <string>Use the model view rendering settings for the minifigure builder preview.</string>
             </property>
             <property name="text">
              <string>Use Model Settings</string>
+            </property>
+            <property name="buddy">
+             <cstring>MinifigureBuilderSyncRendering</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1" colspan="2">
+           <widget class="QCheckBox" name="MinifigureBuilderSyncRendering">
+            <property name="accessibleName">
+             <string>Use Model Settings</string>
+            </property>
+            <property name="toolTip">
+             <string>Use the model view rendering settings for the minifigure builder preview.</string>
             </property>
            </widget>
           </item>
@@ -2880,23 +3474,49 @@
             </item>
            </widget>
           </item>
-          <item row="2" column="0" colspan="3">
-           <widget class="QCheckBox" name="MinifigureBuilderEdgeLines">
+          <item row="2" column="0">
+           <widget class="QLabel" name="MinifigureBuilderEdgeLinesLabel">
             <property name="toolTip">
              <string>Draw edge lines on parts in the minifigure builder preview.</string>
             </property>
             <property name="text">
              <string>Edge Lines</string>
             </property>
+            <property name="buddy">
+             <cstring>MinifigureBuilderEdgeLines</cstring>
+            </property>
            </widget>
           </item>
-          <item row="3" column="0" colspan="3">
-           <widget class="QCheckBox" name="MinifigureBuilderConditionalLines">
+          <item row="2" column="1" colspan="2">
+           <widget class="QCheckBox" name="MinifigureBuilderEdgeLines">
+            <property name="accessibleName">
+             <string>Edge Lines</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw edge lines on parts in the minifigure builder preview.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="MinifigureBuilderConditionalLinesLabel">
             <property name="toolTip">
              <string>Draw conditional lines on parts in the minifigure builder preview.</string>
             </property>
             <property name="text">
              <string>Conditional Lines</string>
+            </property>
+            <property name="buddy">
+             <cstring>MinifigureBuilderConditionalLines</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1" colspan="2">
+           <widget class="QCheckBox" name="MinifigureBuilderConditionalLines">
+            <property name="accessibleName">
+             <string>Conditional Lines</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw conditional lines on parts in the minifigure builder preview.</string>
             </property>
            </widget>
           </item>

@@ -280,29 +280,28 @@ bool swMainWindow::OpenProjectFile(const QString& FileName)
 
 bool swMainWindow::MigrateMetaCommands(const QString& FileName)
 {
-	// migrate without asking
-	if (swGetPreferences().mMigrateMetaCommands)
-		return true;
+	// answer without asking
+	if (swGetPreferences().mMigrateMetaCommands != swMigrateMetaCommandsMode::Ask)
+		return swGetPreferences().mMigrateMetaCommands == swMigrateMetaCommandsMode::Migrate;
 
 	QMessageBox MessageBox(QMessageBox::Question, tr("Migrate Model"), tr("'%1' uses LeoCAD meta commands. Do you want to migrate it to StudWorx meta commands?").arg(QFileInfo(FileName).fileName()), QMessageBox::NoButton, this);
 	MessageBox.setInformativeText(tr("A migrated model is saved with StudWorx meta commands, LeoCAD then ignores its cameras, lights, groups and part settings. A model kept as it is stays readable in LeoCAD."));
 	QPushButton* MigrateButton = MessageBox.addButton(tr("Migrate"), QMessageBox::AcceptRole);
 	MessageBox.addButton(tr("Keep"), QMessageBox::RejectRole);
 	MessageBox.setDefaultButton(MigrateButton);
-	QCheckBox* AutomaticCheckBox = new QCheckBox(tr("Migrate LeoCAD models automatically"));
-	MessageBox.setCheckBox(AutomaticCheckBox);
+	QCheckBox* RememberCheckBox = new QCheckBox(tr("Remember this choice"));
+	MessageBox.setCheckBox(RememberCheckBox);
 	MessageBox.exec();
 
-	if (MessageBox.clickedButton() != MigrateButton)
-		return false;
+	const bool Migrate = MessageBox.clickedButton() == MigrateButton;
 
-	if (AutomaticCheckBox->isChecked())
+	if (RememberCheckBox->isChecked())
 	{
-		swGetPreferences().mMigrateMetaCommands = true;
-		swSetProfileInteger(SW_PROFILE_MIGRATE_META_COMMANDS, true);
+		swGetPreferences().mMigrateMetaCommands = Migrate ? swMigrateMetaCommandsMode::Migrate : swMigrateMetaCommandsMode::Keep;
+		swSetProfileInteger(SW_PROFILE_MIGRATE_META_COMMANDS, static_cast<int>(swGetPreferences().mMigrateMetaCommands));
 	}
 
-	return true;
+	return Migrate;
 }
 
 void swMainWindow::ShowMergeDialog()

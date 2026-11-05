@@ -1157,7 +1157,7 @@ swModel* swMainWindow::GetActiveModel() const
 	return ActiveView ? ActiveView->GetActiveModel() : nullptr;
 }
 
-swModelTabWidget* swMainWindow::GetTabForView(swView* View) const
+swModelTabWidget* swMainWindow::GetTabForView(const swView* View) const
 {
 	QWidget* Widget = View->GetWidget();
 

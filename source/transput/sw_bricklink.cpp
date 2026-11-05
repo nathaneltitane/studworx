@@ -24,12 +24,13 @@ static constexpr int swPartHeaderLineCount = 40;
 static const QStringList swBrickLinkInheritedColors = { QStringLiteral("16"), QStringLiteral("24") };
 
 // the mapping used until a file is set and the start of a new one
-static const QString swBrickLinkMappingResource = QStringLiteral(":/resources/data/bricklink.json");
+static const QString swBrickLinkMappingResource = QStringLiteral(":/resources/data/parts.json");
 
 static const QString swBrickLinkMappingComment = QStringLiteral("LDraw to BrickLink mappings. CC-0 licensed");
 static const QString swBrickLinkMappingKeyComment = QStringLiteral("Comment");
 static const QString swBrickLinkMappingKeyParts = QStringLiteral("Parts");
 static const QString swBrickLinkMappingKeyColors = QStringLiteral("Colors");
+static const QString swBrickLinkMappingKeyWeights = QStringLiteral("Weights");
 
 // exceptions are one part and its bricklink number a line, comma or tab separated
 static const QString swBrickLinkExceptionsName = QStringLiteral("bricklink-exceptions.csv");
@@ -240,6 +241,48 @@ static QString swGetBrickLinkPartName(const swPartData* PartData)
 		PartName.truncate(Extension);
 
 	return PartName;
+}
+
+// use to find the part weight in grams, empty when unlisted
+std::optional<double> swGetBrickLinkWeight(const swPartData* PartData)
+{
+	static QString CachedPath;
+	static QJsonObject CachedParts;
+	static QJsonObject CachedWeights;
+
+	const QString MappingPath = swGetBrickLinkMappingPath();
+	const QString FileName = !MappingPath.isEmpty() ? MappingPath : swBrickLinkMappingResource;
+
+	if (FileName != CachedPath)
+	{
+		const swResult<QJsonObject> Mapping = swLoadBrickLinkMapping(FileName);
+
+		CachedPath = FileName;
+		CachedParts = Mapping ? Mapping.value()[swBrickLinkMappingKeyParts].toObject() : QJsonObject();
+		CachedWeights = Mapping ? Mapping.value()[swBrickLinkMappingKeyWeights].toObject() : QJsonObject();
+
+		// custom mappings without weights use the bundled ones
+		if (CachedWeights.isEmpty() && FileName != swBrickLinkMappingResource)
+		{
+			const swResult<QJsonObject> Bundled = swLoadBrickLinkMapping(swBrickLinkMappingResource);
+			CachedWeights = Bundled ? Bundled.value()[swBrickLinkMappingKeyWeights].toObject() : QJsonObject();
+		}
+	}
+
+	const QJsonValue Weight = CachedWeights[swGetBrickLinkPart(CachedParts, swGetBrickLinkPartName(PartData))];
+
+	if (!Weight.isDouble())
+		return std::nullopt;
+
+	return Weight.toDouble();
+}
+
+// use to show the part weight in grams, n/a when unlisted
+QString swGetBrickLinkWeightText(const swPartData* PartData)
+{
+	const std::optional<double> Weight = swGetBrickLinkWeight(PartData);
+
+	return Weight ? QObject::tr("%1 g").arg(QLocale::system().toString(*Weight)) : QObject::tr("N/A");
 }
 
 swResult<int> swExportBrickLink(const QString& SaveFileName, const swPartsList& PartsList, const swBrickLinkOptions& Options)

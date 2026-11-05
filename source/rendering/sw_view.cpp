@@ -71,6 +71,16 @@ swView::~swView()
 	delete mContext;
 }
 
+// splits keep the original view top left
+bool swView::IsMainView() const
+{
+	swModelTabWidget* TabWidget = gMainWindow ? gMainWindow->GetTabForView(this) : nullptr;
+
+	QWidget* MainWidget = TabWidget ? TabWidget->GetAnyViewWidget() : nullptr;
+
+	return !MainWidget || MainWidget == mWidget;
+}
+
 std::vector<swView*> swView::GetModelViews(const swModel* Model)
 {
 	std::vector<swView*> Views;

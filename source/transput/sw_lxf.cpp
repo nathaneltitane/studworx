@@ -5,82 +5,61 @@
 #include "sw_window_main.h"
 #include "sw_object_part.h"
 #include "sw_file.h"
+#include "sw_colors.h"
 #include <QDomDocument>
 
-static bool swLoadLDrawXML(std::map<int, int>& MaterialTable, std::map<int, std::string>& BrickTable, std::map<std::string, std::pair<swVector3, swVector4>>& TransformTable)
+// lego digital designer to ldraw mappings, lists keep the source order
+static const QString swDesignerMappingResource = QStringLiteral(":/resources/data/lego-digital-designer.json");
+static const QString swDesignerKeyMaterials = QStringLiteral("Materials");
+static const QString swDesignerKeyBricks = QStringLiteral("Bricks");
+static const QString swDesignerKeyTransformations = QStringLiteral("Transformations");
+static constexpr int swDesignerTransformationSize = 7;
+
+static QJsonObject swLoadDesignerMapping()
 {
-	QFile File(swGetPartsLibrary()->GetLibraryFilePath(QLatin1String("ldraw.xml")));
-	QByteArray Data;
+	QFile File(swDesignerMappingResource);
 
-	if (File.open(QIODevice::ReadOnly))
-		Data = File.readAll();
-	else
+	if (!File.open(QIODevice::ReadOnly))
+		return QJsonObject();
+
+	return QJsonDocument::fromJson(File.readAll()).object();
+}
+
+// use to pick the last listed part found in the library, else the last listed
+static QString swGetDesignerPart(const QJsonArray& Candidates, Project* Project)
+{
+	for (qsizetype CandidateIdx = Candidates.size() - 1; CandidateIdx >= 0; CandidateIdx--)
+		if (swGetPartsLibrary()->FindPartData(Candidates[CandidateIdx].toString().toLatin1().constData(), Project))
+			return Candidates[CandidateIdx].toString();
+
+	return Candidates.isEmpty() ? QString() : Candidates.last().toString();
+}
+
+// use to pick the last listed known color, else the last listed
+static int swGetDesignerColor(const QJsonArray& Candidates)
+{
+	for (qsizetype CandidateIdx = Candidates.size() - 1; CandidateIdx >= 0; CandidateIdx--)
 	{
-		QFile DefaultFile(":/resources/data/ldraw.xml");
+		const int ColorCode = Candidates[CandidateIdx].toInt();
 
-		if (DefaultFile.open(QIODevice::ReadOnly))
-			Data = DefaultFile.readAll();
+		for (const swColor& Color : gColorList)
+			if (static_cast<int>(Color.Code) == ColorCode)
+				return ColorCode;
 	}
 
-	if (Data.isEmpty())
-		return false;
-
-	QDomDocument Document;
-	Document.setContent(QString::fromUtf8(Data));
-
-	QDomElement Root = Document.documentElement();
-	if (Root.tagName() != QLatin1String("LDrawMapping"))
-		return false;
-
-	for (QDomNode Node = Root.firstChild(); !Node.isNull(); Node = Node.nextSibling())
-	{
-		QDomElement Element = Node.toElement();
-		QString ElementName = Element.tagName();
-
-		if (ElementName == QLatin1String("Material"))
-		{
-			int LDrawColor = Element.attribute(QLatin1String("ldraw")).toInt();
-			int LegoColor = Element.attribute(QLatin1String("lego")).toInt();
-
-			MaterialTable[LegoColor] = LDrawColor;
-		}
-		else if (ElementName == QLatin1String("Brick"))
-		{
-			QString LDrawID = Element.attribute(QLatin1String("ldraw"));
-			int LegoID = Element.attribute(QLatin1String("lego")).toInt();
-
-			BrickTable.insert(std::make_pair(LegoID, LDrawID.toStdString()));
-		}
-		else if (ElementName == QLatin1String("Transformation"))
-		{
-			QString LDrawID = Element.attribute(QLatin1String("ldraw"));
-
-			swVector3 Translation;
-			swVector4 AxisAngle;
-
-			Translation[0] = Element.attribute(QLatin1String("tx")).toFloat();
-			Translation[1] = Element.attribute(QLatin1String("ty")).toFloat();
-			Translation[2] = Element.attribute(QLatin1String("tz")).toFloat();
-			AxisAngle[0] = Element.attribute(QLatin1String("ax")).toFloat();
-			AxisAngle[1] = Element.attribute(QLatin1String("ay")).toFloat();
-			AxisAngle[2] = Element.attribute(QLatin1String("az")).toFloat();
-			AxisAngle[3] = Element.attribute(QLatin1String("angle")).toFloat();
-
-			TransformTable.insert(std::make_pair(LDrawID.toStdString(), std::make_pair(Translation, AxisAngle)));
-		}
-	}
-
-	return true;
+	return Candidates.isEmpty() ? 16 : Candidates.last().toInt();
 }
 
 bool swImportLXFMLFile(const QString& FileData, Project* Project, std::vector<swPart*>& Parts, std::vector<std::vector<swPart*>>& Groups)
 {
-	std::map<int, int> MaterialTable;
-	std::map<int, std::string> BrickTable;
-	std::map<std::string, std::pair<swVector3, swVector4>> TransformTable;
+	const QJsonObject Mapping = swLoadDesignerMapping();
 
-	if (!swLoadLDrawXML(MaterialTable, BrickTable, TransformTable))
+	if (Mapping.isEmpty())
 		return false;
+
+	const QJsonObject Materials = Mapping[swDesignerKeyMaterials].toObject();
+	const QJsonObject Bricks = Mapping[swDesignerKeyBricks].toObject();
+	const QJsonObject Transformations = Mapping[swDesignerKeyTransformations].toObject();
 
 	QDomDocument Document;
 	Document.setContent(FileData);
@@ -151,25 +130,20 @@ bool swImportLXFMLFile(const QString& FileData, Project* Project, std::vector<sw
 				QString LegoID = PartElement.attribute(QLatin1String("designID"));
 				int Material = PartElement.attribute(QLatin1String("materials")).split(',').first().toInt();
 
-				swPartDataReference PartData;
-				const auto BrickIt = BrickTable.find(LegoID.toInt());
+				// unlisted designs share their ldraw number
+				QString PartName = swGetDesignerPart(Bricks[QString::number(LegoID.toInt())].toArray(), Project);
 
-				if (BrickIt != BrickTable.end())
-					PartData = swGetPartsLibrary()->AcquirePartData(BrickIt->second.c_str(), Project, true, false);
-				else
-					PartData = swGetPartsLibrary()->AcquirePartData(LegoID.toLatin1() + ".dat", Project, true, false);
+				if (PartName.isEmpty())
+					PartName = LegoID + QLatin1String(".dat");
 
-				const auto ColorIt = MaterialTable.find(Material);
-				int ColorCode = 16;
+				swPartDataReference PartData = swGetPartsLibrary()->AcquirePartData(PartName.toLatin1().constData(), Project, true, false);
+				const int ColorCode = swGetDesignerColor(Materials[QString::number(Material)].toArray());
+				const QJsonArray Offset = Transformations[PartName].toArray();
 
-				if (ColorIt != MaterialTable.end())
-					ColorCode = ColorIt->second;
-
-				const auto TransformIt = TransformTable.find(BrickIt != BrickTable.end() ? BrickIt->second : (LegoID.toStdString() + ".dat"));
-				if (TransformIt != TransformTable.end())
+				if (Offset.size() == swDesignerTransformationSize)
 				{
-					const swVector4& AxisAngle = TransformIt->second.second;
-					const swVector3& TransformTranslation = TransformIt->second.first;
+					const swVector3 TransformTranslation(Offset[0].toDouble(), Offset[1].toDouble(), Offset[2].toDouble());
+					const swVector4 AxisAngle(Offset[3].toDouble(), Offset[4].toDouble(), Offset[5].toDouble(), Offset[6].toDouble());
 
 					swMatrix44 Transform = swMatrix44FromAxisAngle(swVector3(AxisAngle[0], AxisAngle[1], AxisAngle[2]), -AxisAngle[3]);
 					Transform.SetTranslation(swMultiply30(-TransformTranslation, Transform));

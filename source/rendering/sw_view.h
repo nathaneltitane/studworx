@@ -167,6 +167,8 @@ public:
 		return mLastFocusedView == this;
 	}
 
+	bool IsMainView() const;
+
 	bool IsTracking() const
 	{
 		return mTrackButton != swTrackButton::None;
@@ -443,6 +445,7 @@ protected:
 
 	void PickFaceNormal();
 	void StopFaceNormalPick();
+	void ShowStatusMessage(const QString& Message, int Timeout = 0);
 	void PickCutaway();
 	void LoadCutaway();
 	void StopCutawayPick();

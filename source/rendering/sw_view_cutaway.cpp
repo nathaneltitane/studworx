@@ -15,7 +15,7 @@ void swView::StartCutawayPick(swCutawayShape CutawayShape)
 	mCutawayPickShape = CutawayShape;
 	UpdateCursor();
 
-	gMainWindow->statusBar()->showMessage(tr("Click a face to cut away the model around it, or press Esc to cancel."));
+	ShowStatusMessage(tr("Click a face to cut away the model around it, or press Esc to cancel."));
 }
 
 void swView::StopCutawayPick()
@@ -82,7 +82,7 @@ void swView::ResizeCutaway(float Scale)
 {
 	if (mCutawayShape == swCutawayShape::None)
 	{
-		gMainWindow->statusBar()->showMessage(tr("Place a cube, sphere or cylinder cutaway first."), 3000);
+		ShowStatusMessage(tr("Place a cube, sphere or cylinder cutaway first."), 3000);
 		return;
 	}
 
@@ -95,7 +95,7 @@ void swView::MoveCutaway(float Distance)
 {
 	if (mCutawayShape == swCutawayShape::None)
 	{
-		gMainWindow->statusBar()->showMessage(tr("Place a cube, sphere or cylinder cutaway first."), 3000);
+		ShowStatusMessage(tr("Place a cube, sphere or cylinder cutaway first."), 3000);
 		return;
 	}
 

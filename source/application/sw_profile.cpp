@@ -172,7 +172,7 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "FlexMiddleControlPoint", false),                               // SW_PROFILE_FLEX_MIDDLE_CONTROL_POINT
 	swProfileEntry("Settings", "WatchFileChanges", true),                                      // SW_PROFILE_WATCH_FILE_CHANGES
 	swProfileEntry("Settings", "LoadPartsBeforeShowing", false),                              // SW_PROFILE_LOAD_PARTS_BEFORE_SHOWING
-	swProfileEntry("Settings", "MigrateMetaCommands", false),                                  // SW_PROFILE_MIGRATE_META_COMMANDS
+	swProfileEntry("Settings", "MigrateMetaCommands", 0),                                      // SW_PROFILE_MIGRATE_META_COMMANDS
 	swProfileEntry("Settings", "MarkColladaTransparency", true),                               // SW_PROFILE_MARK_COLLADA_TRANSPARENCY
 	swProfileEntry("Settings", "KMZVisibleSurfaces", true),                                    // SW_PROFILE_KMZ_VISIBLE_SURFACES
 	swProfileEntry("Settings", "AutosaveInterval", 10),                                        // SW_PROFILE_AUTO_SAVE_INTERVAL

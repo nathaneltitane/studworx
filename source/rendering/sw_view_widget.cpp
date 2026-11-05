@@ -270,10 +270,13 @@ void swViewWidget::UpdateOverlayGeometry()
 }
 
 // use to size the corner widgets
-std::array<int, 4> swViewWidget::GetOverlayCornerSizes()
+std::array<int, 4> swViewWidget::GetOverlayCornerSizes() const
 {
 	const swPreferences& Preferences = swGetPreferences();
 	std::array<int, 4> CornerSizes = {};
+
+	if (!mView->IsMainView())
+		return CornerSizes;
 
 	if (Preferences.mViewCubeEnabled && Preferences.mViewCubeSize > 0)
 	{

@@ -1559,10 +1559,10 @@
 
 			<ul class="points">
 				<li><b>Contextual <a href="#help">help</a>.</b> Choose Help &gt; What&#x27;s This? or click the question mark in a title bar, then click any control to read what it does. F1 explains the focused control, Shift+F1 starts What&#x27;s This inside a dialog, and every entry is listed in the Help index below.</li>
-				<li><b>Split views.</b> Split the current view horizontally or vertically, as often as you like, remove one view, or Reset Views back to one. Each view keeps its own camera and projection, and a border marks the active one.</li>
+				<li><b>Split views.</b> Split the current view horizontally or vertically, as often as you like, remove one view, or Reset Views back to one. Each view keeps its own camera and projection, a border marks the active one, and the view cube and axis icon stay on the top left view.</li>
+				<li><b>Tabs, splits and status bar.</b> Open several <a href="#models">models</a> in tabs, split the view, go Full Screen, and read the view orientation, projection and focus position in the status bar, with the name, ID and weight of the selected part. Right click the status bar to show or hide each segment.</li>
 				<li><b>Toolbars and panels on demand.</b> View &gt; Toolbars shows or hides each toolbar and panel: Standard, <a href="#tools">Tools</a>, Time, Parts, Colors, Properties, Timeline, Preview, Terminal and Minifigure Builder. Close Tab closes the current model tab.</li>
-				<li><b>Menus by task.</b> File, Edit, View, Part, <a href="#steps">Steps</a>, <a href="#models">Models</a> and Help, with clean labels and a unique mnemonic in each menu. The View menu holds the Toolbars, Viewpoints, Cutaway, Cameras, Projection and Shading submenus.</li>
-				<li><b>Tabs, splits and status bar.</b> Open several models in tabs, split the view, go Full Screen, and read the view orientation, projection and focus position in the status bar. Right click the status bar to show or hide each segment.</li>
+				<li><b>Menus by task.</b> File, Edit, View, Part, <a href="#steps">Steps</a>, Models and Help, with clean labels and a unique mnemonic in each menu. The View menu holds the Toolbars, Viewpoints, Cutaway, Cameras, Projection and Shading submenus.</li>
 				<li><b>Help menu.</b> Home Page opens the StudWorx repository on GitHub, Report a Bug its issues, and About shows the version and system information.</li>
 				<li><b>Options menus.</b> The gear button on the model view and on every panel opens the settings that belong to it: grids, preview, parts and colors.</li>
 				<li><b>Ten languages.</b> English, French, German, Spanish, Portuguese, Czech, Ukrainian, Russian, Simplified Chinese and Traditional Chinese.</li>
@@ -1730,7 +1730,7 @@
 				<li><b>Export.</b> 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages from the Instructions window, BrickLink wanted lists and CSV parts lists. BrickLink exports pick the condition, the wanted list by its number or the address of its page, and new listing notices, copy the XML and open the BrickLink upload page in one step, and translate part numbers and colors through a bundled mapping of over 55,000 parts or a file built from the library and Rebrickable, with Rebrickable numbers taking the lead over stale part keywords. BrickLink and CSV exports list parts the library moved to a new number under that number, and Part Exceptions in the BrickLink export keeps a comma or tab separated list of parts whose BrickLink number you set by hand.</li>
 				<li><b>LDraw models.</b> .ldr, .mpd and .dat files, with New, Open, Merge, Save, Save As, Reload and the four most recent files. Save As follows the LDraw file specification and adds the extension when it is left out: .ldr for a single model, .mpd for a model with submodels or embedded data. Files are written with Unix line endings, and a model loaded with Windows line endings keeps them when saved. Watch for File Changes reloads a model edited in another program. Sample models, a minifigure, cube, sphere and cylinder cutaways of it, an exploded model, a flexible part and lights and cameras, <a href="#install">install</a> to /usr/share/studworx/samples, the samples folder beside the program on Windows, or the application bundle resources on macOS.</li>
 				<li><b>Command line.</b> Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx. <a href="https://l2cu.app">L²CU</a>, the LDraw Linux command line utility, drives these renders and exports for whole folders of models.</li>
-				<li><b>Import.</b> LEGO® Digital Designer models and official set inventories. Set inventories use your own free Rebrickable API key, asked for once or set under Online Services in the <a href="#preferences">preferences</a>, and are searched by set name or number.</li>
+				<li><b>Import.</b> LEGO® Digital Designer models, with a bundled part and color mapping, and official set inventories. Set inventories use your own free Rebrickable API key, asked for once or set under Online Services in the <a href="#preferences">preferences</a>, and are searched by set name or number.</li>
 				<li><b>Startup.</b> Open Most Recent File on Startup reopens the last model, Restore Tab Layout brings back its tabs and split <a href="#views">views</a>, and Load All Parts Before Showing waits until every part is loaded before the model appears.</li>
 				<li><b>Parts library.</b> Downloaded on the first start as the official LDraw complete.zip, or chosen from an archive you already have, and reloaded from the File menu. An unofficial parts folder can be added beside it.</li>
 				<li><b>LeoCAD models.</b> Models saved by LeoCAD open as they are, and their LeoCAD <a href="#meta">meta</a> commands are migrated to StudWorx ones, automatically when you choose so in Preferences.</li>
@@ -2324,11 +2324,11 @@
 			<ul class="points">
 				<li><b>Cutaways.</b> Cube, sphere and cylinder cutaways with solid cut surfaces, a shaded cut and resize knobs, pushed in or pulled out by one plate. The cutaway is saved with the model and comes back when the file opens, and the parts themselves are never changed.</li>
 				<li><b>Cut edges.</b> With edge lines on, the cut draws edge lines in each part&#x27;s edge color where it meets the outer faces, and thinner lines along the corners of the cut faces. Cut Edges in <a href="#preferences">Preferences</a> &gt; Views &gt; Cutaway turns them off.</li>
+				<li><b>Grids.</b> A base grid with studs, lines and origin lines, vertical XZ and YZ height grids sized around the model, shown with the base grid and greyed out in the view options while it is off, and a toggle for each axis line.</li>
 				<li><b>View cube settings.</b> Shown in any corner of the view, in Extra Small to Extra Large, with its own face, highlight and text colors, and small full names or large abbreviations (TP, BT, LT, RT, FT, BK) on its faces.</li>
 				<li><b>Cutaway controls.</b> Grow and Shrink resize the cutaway, Push In and Pull Out move it one plate, Shade Color sets the light shade on the cut faces, and Remove shows the whole model again.</li>
 				<li><b>Idle turntable.</b> The model turns full screen around the X, Y or Z axis when you leave StudWorx idle. Any input ends it. The idle time and the time for one turn are set in Preferences.</li>
 				<li><b>Axis icon settings.</b> Shown in any corner, with or without labels, with negative axes and a cube outline of adjustable transparency, and a color for each axis and its negative.</li>
-				<li><b>Grids.</b> A base grid with studs, lines and origin lines, vertical XZ and YZ height grids sized around the model, and a toggle for each axis line.</li>
 				<li><b>Axis icon.</b> X, Y and Z labels with optional negative axes. The view cube, axis icon and part thumbnails come in Extra Small to Extra Large.</li>
 				<li><b>Grid settings.</b> Line spacing, stud and line colors, and Height Grids Behind Model to keep the height grids behind the parts.</li>
 				<li><b>View cube.</b> Chamfered edges and corners: click any of its 6 faces, 12 edges or 8 corners for that view.</li>
@@ -2519,9 +2519,9 @@
 			</figure>
 
 			<ul class="points">
+				<li><b>Parts.</b> Categories and palettes with a filter. The panel snaps to whole thumbnail tiles and rows, docked or floating, and the tooltip of each part shows its name, ID and weight.</li>
 				<li><b>Properties.</b> Compact position, rotation and transform rows and a spanning color swatch. Lights and cameras get named rows with units.</li>
 				<li><b>Terminal folders.</b> Follow Model Folder moves the terminal to the folder of each model you open, and Go to Model Folder moves it there once.</li>
-				<li><b>Parts.</b> Categories and palettes with a filter. The panel snaps to whole thumbnail tiles and rows, docked or floating.</li>
 				<li><b>Part palettes.</b> Create, rename, reorder and delete palettes, import them, or build one from an online set inventory.</li>
 				<li><b>Colors.</b> Collapsible solid, translucent and special color groups with square color tiles.</li>
 				<li><b>Terminal.</b> An embedded terminal sized to whole rows and columns, with Open Model Folder.</li>
@@ -2713,13 +2713,13 @@
 			<p class="lead">Large builds split into submodels that you can edit on their own or in place, inside the model that uses them.</p>
 
 			<ul class="points">
+				<li><b>Properties.</b> Part IDs, thumbnails and counts, with BrickLink or CSV export, and the size and weight of the model in metric and imperial units. A Weight column gives each part&#x27;s weight in grams or ounces, chosen with the units box below the table, from the BrickLink part weights, and parts without a known weight show N/A.</li>
 				<li><b>Submodels.</b> New Submodel, the Submodels list, Open Selected Model, Inline Selected Models, Flatten Model, which replaces every submodel at all depths with its parts in one undo step, also run from the command line with --flatten, and Move to New Model.</li>
 				<li><b>Editing commands.</b> Edit Selected Submodel enters the selected submodel in place, and End Submodel Editing goes back to its parent.</li>
 				<li><b>Submodels list.</b> Create, rename, duplicate and delete submodels, set the active one, and export them as separate LDraw <a href="#files">files</a>.</li>
 				<li><b>In-place editing.</b> Edit a submodel inside its parent. A path bar shows where you are, and its buttons go back to each model.</li>
 				<li><b>Names.</b> Consistent default names and numbered duplicates: Submodel 001.ldr, and Car.ldr becomes Car 001.ldr.</li>
 				<li><b>Models menu.</b> Switch between up to forty models of the file from the Models menu.</li>
-				<li><b>Properties.</b> Part IDs, thumbnails and counts, with BrickLink or CSV export.</li>
 			</ul>
 
 			<div class="gallery three">
@@ -2763,13 +2763,13 @@
 				<h2>PREFERENCES // EVERY SETTING IN ONE PLACE</h2>
 			</header>
 
-			<p class="lead">Eight pages with lined up label and control columns. Value boxes show their maximum and bring any typed number into range, and every slider shows its value.</p>
+			<p class="lead">Eight pages with lined up label and control columns, checkboxes included, each label greyed out with its control. Value boxes show their maximum and bring any typed number into range, and every slider shows its value.</p>
 
 			<ul class="points">
 				<li><b>General.</b> Reference paths, where the color configurations, minifigure builder settings and BrickLink mapping update from ldraw.org and Rebrickable with one button and bundled copies are used until a file is set, online services, where the Rebrickable API key is kept and Get Key opens its page, a rejected key being cleared so it is asked for again, the author of new <a href="#models">models</a> built from a name, email address and comment, such as All rights reserved, joined by the author line splitter and previewed as the author line, and the parts library, Blender, POV-Ray and LGEO locations.</li>
 				<li><b>View colors.</b> Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, flex paths, the view cube, every axis, and the element margin, padding and anchor overlays and the ruler pointer arrows of the <a href="#instructions">instructions</a> page, each with an alpha slider.</li>
+				<li><b>Startup and <a href="#files">files</a>.</b> Open the most recent file, restore the tab layout, load all parts before showing a model, watch for file changes and ask, migrate or keep LeoCAD models when opened.</li>
 				<li><b>Keyboard and Mouse.</b> Shortcuts recorded by clicking, importable and exportable. Commands that share a shortcut show in red, and assigning a taken shortcut asks before moving it.</li>
-				<li><b>Startup and <a href="#files">files</a>.</b> Open the most recent file, restore the tab layout, load all parts before showing a model, watch for file changes and migrate LeoCAD models automatically.</li>
 				<li><b><a href="#interface">Interface</a> and Instructions.</b> Interface and view colors, edge contrast, the default instruction page settings, and the rulers and element inspector overlays of the instructions page.</li>
 				<li><b><a href="#rendering">Rendering</a> and <a href="#views">Views</a>.</b> Rendering quality and the Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups.</li>
 				<li><b>Shortcut filters.</b> Filter commands and tools by name or shortcut, give each two shortcuts, and reset them to the defaults.</li>
@@ -2780,7 +2780,7 @@
 			<div class="gallery four tall">
 				<figure>
 					<button class="shot" data-full="resources/images/preferences-general.png" aria-label="Enlarge General">
-						<img src="resources/images/preferences-general.png" alt="General" width="960" height="2073" loading="lazy">
+						<img src="resources/images/preferences-general.png" alt="General" width="960" height="2051" loading="lazy">
 					</button>
 
 					<figcaption>General</figcaption>
@@ -2788,7 +2788,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/preferences-rendering.png" aria-label="Enlarge Rendering">
-						<img src="resources/images/preferences-rendering.png" alt="Rendering" width="960" height="2073" loading="lazy">
+						<img src="resources/images/preferences-rendering.png" alt="Rendering" width="960" height="2051" loading="lazy">
 					</button>
 
 					<figcaption>Rendering</figcaption>
@@ -2796,7 +2796,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/preferences-views.png" aria-label="Enlarge Views">
-						<img src="resources/images/preferences-views.png" alt="Views" width="960" height="2072" loading="lazy">
+						<img src="resources/images/preferences-views.png" alt="Views" width="960" height="2051" loading="lazy">
 					</button>
 
 					<figcaption>Views</figcaption>
@@ -2804,7 +2804,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/preferences-interface.png" aria-label="Enlarge Interface">
-						<img src="resources/images/preferences-interface.png" alt="Interface" width="960" height="2073" loading="lazy">
+						<img src="resources/images/preferences-interface.png" alt="Interface" width="960" height="2051" loading="lazy">
 					</button>
 
 					<figcaption>Interface</figcaption>
@@ -2812,7 +2812,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/preferences-instructions.png" aria-label="Enlarge Instructions">
-						<img src="resources/images/preferences-instructions.png" alt="Instructions" width="960" height="2073" loading="lazy">
+						<img src="resources/images/preferences-instructions.png" alt="Instructions" width="960" height="2051" loading="lazy">
 					</button>
 
 					<figcaption>Instructions</figcaption>
@@ -2820,7 +2820,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/preferences-categories.png" aria-label="Enlarge Categories">
-						<img src="resources/images/preferences-categories.png" alt="Categories" width="960" height="2073" loading="lazy">
+						<img src="resources/images/preferences-categories.png" alt="Categories" width="960" height="2051" loading="lazy">
 					</button>
 
 					<figcaption>Categories</figcaption>
@@ -2828,7 +2828,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/preferences-keyboard.png" aria-label="Enlarge Keyboard">
-						<img src="resources/images/preferences-keyboard.png" alt="Keyboard" width="960" height="2073" loading="lazy">
+						<img src="resources/images/preferences-keyboard.png" alt="Keyboard" width="960" height="2051" loading="lazy">
 					</button>
 
 					<figcaption>Keyboard</figcaption>
@@ -2836,7 +2836,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/preferences-mouse.png" aria-label="Enlarge Mouse">
-						<img src="resources/images/preferences-mouse.png" alt="Mouse" width="960" height="2073" loading="lazy">
+						<img src="resources/images/preferences-mouse.png" alt="Mouse" width="960" height="2051" loading="lazy">
 					</button>
 
 					<figcaption>Mouse</figcaption>
@@ -3372,7 +3372,7 @@
 				<h2>HELP // EVERY &quot;WHAT&#x27;S THIS?&quot; ENTRY</h2>
 			</header>
 
-			<p class="lead">The same help the app shows from Help &gt; What&#x27;s This?, the title bar question mark or F1: 478 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
+			<p class="lead">The same help the app shows from Help &gt; What&#x27;s This?, the title bar question mark or F1: 481 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
 			<div class="tools-search">
 				<input id="search" type="search" placeholder="Search help" aria-label="Search help">
@@ -3459,6 +3459,14 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<ul>
 					<li>Cutaway: the cutaway of a view is saved with the model and comes back when the file opens, the parts themselves are never changed</li>
 					<li>Samples: cube, sphere and cylinder cutaway samples of the minifigure join the explode, flexible part, lights and cameras and minifigure samples</li>
+					<li>Weights: part weights from BrickLink ship with StudWorx, the Properties dialog shows the model weight in grams and ounces and a Weight column with Metric or Imperial units, and the part tooltip and status bar show the weight of a part, or N/A when it is unknown</li>
+					<li>Properties: the measurements and weight are listed one unit per line</li>
+					<li>Import: LEGO® Digital Designer <a href="#models">models</a> use a bundled part, color and placement mapping converted from the ldraw.xml of slswww.free.fr, an ldraw.xml in the parts library is no longer read</li>
+					<li><a href="#preferences">Preferences</a>: Migrate <a href="#files">Files</a> on Load chooses Ask, Migrate or Keep for models with LeoCAD <a href="#meta">meta</a> commands, and Remember this choice in the question sets it</li>
+					<li>Preferences: every checkbox sits in the control column with its label on the left, and the label greys out with its checkbox</li>
+					<li>Status bar: hints such as the face pick and cutaway messages no longer overlap the selection text and stay shown after the menu closes</li>
+					<li><a href="#views">Views</a>: the height grid entries of the view options are greyed out while the base grid is off</li>
+					<li>Views: with split views the view cube and axis icon show on the top left view only</li>
 				</ul>
 			</details>
 
@@ -3466,7 +3474,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<summary>2026-11-03</summary>
 
 				<ul>
-					<li>Cutaway: edge lines in the part edge color outline where the cutaway cuts through parts, with thinner lines along the corners of the cut, and Cut Edges in <a href="#preferences">Preferences</a> &gt; <a href="#views">Views</a> &gt; Cutaway turns them off</li>
+					<li>Cutaway: edge lines in the part edge color outline where the cutaway cuts through parts, with thinner lines along the corners of the cut, and Cut Edges in Preferences &gt; Views &gt; Cutaway turns them off</li>
 					<li>Explode: the Explode panel, shown from the panel context menu or View &gt; Toolbars, spreads the parts on screen away from an anchor part, straight out of their connections with lines back to where they connect, submodels at all depths flatten first in the same undo step and Collapse puts them back, and Save Copy saves the exploded model to a separate -exploded file</li>
 					<li>Submodels: Flatten Model in the Model menu and the Submodel context menu replaces every submodel at all depths with its parts in one undo step</li>
 					<li>Command line: --flatten &lt;outfile.ldr&gt; replaces every submodel at all depths with its parts and saves the model, before any other export</li>
@@ -3523,7 +3531,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Command line: <code>-h</code> now shows the help like <code>--help</code>, the picture height is set with <code>--height</code></li>
 					<li>Command line: options follow the usual style, one letter after a single dash and full words after two, so <code>-obj</code> is now <code>--export-wavefront</code>, <code>--libpath</code> is <code>--library</code>, <code>--fov</code> is <code>--field-of-view</code>, <code>--zplanes</code> is <code>--clip-planes</code>, <code>--orthographic</code> is <code>--projection orthographic</code>, <code>--aa-samples</code> is <code>--antialiasing-samples</code>, the edge colors are <code>--edge-color</code>, <code>--edge-color-black</code>, <code>--edge-color-dark</code>, <code>--edge-color-automatic</code>, <code>--edge-contrast</code> and <code>--edge-light-dark</code> with <code>--no-</code> forms, <code>--povray-render</code> is <code>--render-povray</code>, and the help is grouped by topic</li>
 					<li>Export BrickLink: paste the address of a wanted list page instead of its number, after saving, Copy XML and Open BrickLink puts the list on the clipboard and opens the BrickLink upload page</li>
-					<li>Minifigure Builder: templates export as <code>.minifigure</code> <a href="#files">files</a> and <code>.minifig</code> files still import, settings, toolbar and category names carry over on the first start</li>
+					<li>Minifigure Builder: templates export as <code>.minifigure</code> files and <code>.minifig</code> files still import, settings, toolbar and category names carry over on the first start</li>
 					<li>Site: the author avatar in the footer is now a sharper 1024 pixel image</li>
 					<li>The license is now formatted as Markdown, so it is easier to read on GitHub</li>
 					<li>Preferences and Timeline: commands with a shared shortcut stay red while selected, until the conflict is resolved</li>
@@ -3561,7 +3569,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 				<ul>
 					<li>Interface: close, undock and filter clear buttons are drawn to match the theme, and the custom theme draws its own tree lines and expand arrows</li>
-					<li>Site: new <a href="#meta">Meta</a> section covering the LDraw meta commands StudWorx reads and writes, see <a href="https://studworx.app/#meta">Meta on the site</a></li>
+					<li>Site: new Meta section covering the LDraw meta commands StudWorx reads and writes, see <a href="https://studworx.app/#meta">Meta on the site</a></li>
 					<li>Manual page: covers LeoCAD <code>.lcd</code> projects opening read only, step numbers in saved image names, the step and field of view limits, the LGEO library and studworx.app</li>
 				</ul>
 			</details>
@@ -3681,7 +3689,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Preferences","title":"General Preferences","paragraphs":["Set application behavior and custom library, configuration, and renderer paths. Bundled copies of the color, minifigure and other data files are used until you set your own."]},
 				{"group":"Preferences","title":"Blender Executable","paragraphs":["Set the Blender program used by Blender Render and Open in Blender. StudWorx runs it once when you choose OK to check that it works, and brings its own LDraw import and render add-ons, so nothing needs to be installed in Blender. The render settings are in the panels of the Blender Render window."]},
 				{"group":"Preferences","title":"Online Services","paragraphs":["Keys for the online services StudWorx downloads from. The Rebrickable API key updates the BrickLink mapping and searches set inventories. It is free from your account settings at rebrickable.com, Get Key opens its page.","Leave it empty to be asked the first time it is needed. A key Rebrickable rejects is cleared so you are asked again."]},
-				{"group":"Preferences","title":"Files","paragraphs":["The author of new models is built from its name, email address and comment, joined by the author line splitter. Empty parts are left out, and the Author Line field shows the result. For example, Jane Doe, jane@example.com and All rights reserved joined by \" | \" give Jane Doe | jane@example.com | All rights reserved.","The author of an open model is changed in its properties.","The other options control how model files are opened and reloaded."]},
+				{"group":"Preferences","title":"Author","paragraphs":["The author of new models is built from its name, email address and comment, joined by the author line splitter. Empty parts are left out, and the Author Line field shows the result. For example, Jane Doe, jane@example.com and All rights reserved joined by \" | \" give Jane Doe | jane@example.com | All rights reserved.","The author of an open model is changed in its properties."]},
+				{"group":"Preferences","title":"Files","paragraphs":["These options control how model files are opened and reloaded."]},
 				{"group":"Preferences","title":"Rendering Preferences","paragraphs":["Control shading, stud geometry, colors, selection appearance, edges, and step effects. Some options are unavailable when the graphics system does not support them."]},
 				{"group":"Preferences","title":"Highlight Style","paragraphs":["Choose how selected parts and parts added in the current step are highlighted in the viewport. Outline uses fading outlines in the selection, focus, or new-part highlight color. Selected parts also receive a faint fill over obscured portions. Tint and Edges uses tinted faces and colored edges for selection, and colored edges for new parts.","New-part highlighting requires Highlight New Parts. Wireframe views, image exports, and systems without outline support use Tint and Edges."]},
 				{"group":"Preferences","title":"View Preferences","paragraphs":["Choose navigation aids for model views and the preview, the cutaway size and shade, the idle turntable, and the base grid. Locations select the corner where each navigation aid appears."]},
@@ -3695,7 +3704,9 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Model Properties","title":"Model Properties","paragraphs":["Edit the current model's author, description, and comments on the Summary tab. Measurements and Parts provide read-only information. Choose OK to apply the metadata changes, or Cancel to discard them."]},
 				{"group":"Model Properties","title":"Model Summary","paragraphs":["Author, description, and comments are stored in the model file when you save it. Measurements show its overall size."]},
 				{"group":"Model Properties","title":"Model Measurements","paragraphs":["The dimensions of the model's bounding box are shown in centimeters, inches, and LDraw units (ldu). The values are read-only and include parts across all steps."]},
-				{"group":"Model Properties","title":"Parts","paragraphs":["The table counts parts across all steps, including parts inside submodels. The first column shows a thumbnail of each part in its most used color, and the ID column shows its number. Color columns show quantities, and totals summarize each part, each color, and the whole model. Click a column heading to sort. The thumbnail, ID and part-name columns stay visible while you scroll horizontally. Counts cannot be edited here."]},
+				{"group":"Model Properties","title":"Model Weight","paragraphs":["The total weight in grams and ounces of every part across all steps, from the BrickLink part weights. Parts without a known weight are counted as N/A and add nothing to the total."]},
+				{"group":"Model Properties","title":"Parts","paragraphs":["The table counts parts across all steps, including parts inside submodels. The first column shows a thumbnail of each part in its most used color, and the ID column shows its number. Color columns show quantities, and totals summarize each part, each color, and the whole model. The Weight column shows the grams or ounces of each row, chosen with the units box below the table, from the BrickLink part weights, or N/A when unknown. Click a column heading to sort. The thumbnail, ID and part-name columns stay visible while you scroll horizontally. Counts cannot be edited here."]},
+				{"group":"Model Properties","title":"Weight Units","paragraphs":["Shows the Weight column in grams for Metric or ounces for Imperial. Sorting by weight is the same in both units."]},
 				{"group":"Model Properties","title":"Export BrickLink","paragraphs":["Saves the parts listed in this table as a BrickLink XML wanted list, the same format as File > Export > BrickLink. Only the model shown in this dialog and its submodels are included."]},
 				{"group":"Model Properties","title":"Export CSV","paragraphs":["Saves the parts listed in this table as comma separated values with name, color, quantity, ID and color code, the same format as File > Export > CSV. Only the model shown in this dialog and its submodels are included."]},
 				{"group":"Render","title":"Output Image","paragraphs":["Choose where to save the rendered image and its format, such as PNG, JPEG, or BMP. The output path applies to image rendering; Open in Blender does not use it."]},
@@ -3954,8 +3965,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Steps Menu","title":"Insert After","paragraphs":["Insert a new step after the current step."]},
 				{"group":"Steps Menu","title":"Remove Step","paragraphs":["Remove current step."]},
 				{"group":"Steps Menu","title":"Add Keys","paragraphs":["Enable this when an edit should create a new animation key at the current step. For example, moving a part at a later step can give it a different position there. The diamond controls in Properties show and toggle keys for individual properties."]},
-				{"group":"View Menu","title":"Split Horizontal","paragraphs":["Split the current view horizontally."]},
-				{"group":"View Menu","title":"Split Vertical","paragraphs":["Split the current view vertically."]},
+				{"group":"View Menu","title":"Split Horizontal","paragraphs":["Split the current view into two views stacked one above the other, each with its own camera. The view cube and axis icon stay on the top left view."]},
+				{"group":"View Menu","title":"Split Vertical","paragraphs":["Split the current view into two views side by side, each with its own camera. The view cube and axis icon stay on the top left view."]},
 				{"group":"View Menu","title":"Remove View","paragraphs":["Remove the current view."]},
 				{"group":"View Menu","title":"Reset Views","paragraphs":["Reset all views."]},
 				{"group":"View Menu","title":"Standard","paragraphs":["Toggle the Standard Toolbar."]},
@@ -3980,9 +3991,9 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"View Menu","title":"Toon Lighting","paragraphs":["Light parts drawn with the Default Lights shading mode in a few flat brightness bands with a sharp highlight, for a cartoon look that pairs well with edge lines."]},
 				{"group":"View Menu","title":"Perspective","paragraphs":["Set the current camera to use a perspective projection."]},
 				{"group":"View Menu","title":"Orthographic","paragraphs":["Set the current camera to use an orthographic projection."]},
-				{"group":"View Menu","title":"View Cube","paragraphs":["Toggle the view cube."]},
-				{"group":"View Menu","title":"Axis Icon","paragraphs":["Toggle axis icon."]},
-				{"group":"View Menu","title":"Base Grid","paragraphs":["Toggle grid."]},
+				{"group":"View Menu","title":"View Cube","paragraphs":["Show or hide the view cube. Click its faces, edges and corners to turn the camera. With split views it shows on the top left view only."]},
+				{"group":"View Menu","title":"Axis Icon","paragraphs":["Show or hide the X, Y and Z axis icon. With split views it shows on the top left view only."]},
+				{"group":"View Menu","title":"Base Grid","paragraphs":["Show or hide the base grid. The height grids draw only with the base grid, and their menu entries are greyed out while it is off."]},
 				{"group":"View Menu","title":"Fade Previous Steps","paragraphs":["Toggle fading previous model steps."]},
 				{"group":"Steps Menu","title":"Step View","paragraphs":["Set the view rotation of the current step."]},
 				{"group":"Steps Menu","title":"Remove Step View","paragraphs":["Remove the view rotation of the current step."]},
@@ -3997,9 +4008,9 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"View Menu","title":"Pull Out","paragraphs":["Move the cutaway one plate back out of the model."]},
 				{"group":"View Menu","title":"Shade Color","paragraphs":["Choose the light shade on the cutaway faces."]},
 				{"group":"View Menu","title":"Remove","paragraphs":["Show the whole model again, or press Esc with nothing selected."]},
-				{"group":"View Menu","title":"XZ Height Grid","paragraphs":["Toggle the vertical XZ height grid."]},
-				{"group":"View Menu","title":"YZ Height Grid","paragraphs":["Toggle the vertical YZ height grid."]},
-				{"group":"View Menu","title":"Height Grids Behind Model","paragraphs":["Toggle drawing the height grids behind the model instead of through the origin axes."]},
+				{"group":"View Menu","title":"XZ Height Grid","paragraphs":["Show or hide the vertical XZ height grid sized around the model. It needs the base grid turned on."]},
+				{"group":"View Menu","title":"YZ Height Grid","paragraphs":["Show or hide the vertical YZ height grid sized around the model. It needs the base grid turned on."]},
+				{"group":"View Menu","title":"Height Grids Behind Model","paragraphs":["Draw the height grids behind the model instead of through the origin axes. It needs the base grid turned on."]},
 				{"group":"View Menu","title":"X Axis Line","paragraphs":["Toggle the x axis line on the grid origin."]},
 				{"group":"View Menu","title":"Y Axis Line","paragraphs":["Toggle the y axis line on the grid origin."]},
 				{"group":"View Menu","title":"Z Axis Line","paragraphs":["Toggle the z axis line on the grid origin and the height grids."]},

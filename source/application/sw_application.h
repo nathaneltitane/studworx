@@ -88,6 +88,13 @@ enum class swInsertColorMode
 	LastInsertedColor
 };
 
+enum class swMigrateMetaCommandsMode
+{
+	Ask,
+	Migrate,
+	Keep
+};
+
 enum class swFlexSpreadMode
 {
 	Normal,
@@ -254,7 +261,7 @@ public:
 	bool mFlexMiddleControlPoint;
 	bool mWatchFileChanges;
 	bool mLoadPartsBeforeShowing;
-	bool mMigrateMetaCommands;
+	swMigrateMetaCommandsMode mMigrateMetaCommands;
 	bool mMarkColladaTransparency;
 	bool mKMZVisibleSurfaces;
 	swColorTheme mColorTheme;
