@@ -18,4 +18,9 @@
 		<comment>Multi-part LDraw File</comment>
 		<glob pattern="*.mpd"/>
 	</mime-type>
+	<mime-type type="application/x-lxf">
+		<comment>LEGO Digital Designer Model</comment>
+		<glob pattern="*.lxf"/>
+		<glob pattern="*.lxfml"/>
+	</mime-type>
 </mime-info>

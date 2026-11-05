@@ -217,14 +217,14 @@ swRenderDialog::swRenderDialog(QWidget* Parent, swRenderDialogMode RenderDialogM
 
 	if (mDialogMode == swRenderDialogMode::RenderPOVRay)
 	{
-		setWindowTitle(tr("POV-Ray Image Render"));
-		setWhatsThis(tr("<p><b>POV-Ray Image Render</b></p><p>Render the current model step using POV-Ray. Choose the output image, its size and quality and the scene in the panels beside the preview, then select Render to start.</p><p>The preview is scaled to fit the window. Log shows the renderer output below the preview.</p>"));
+		setWindowTitle(tr("POV-Ray Render"));
+		setWhatsThis(tr("<p><b>POV-Ray Render</b></p><p>Render the current model step using POV-Ray. Choose the output image, its size and quality and the scene in the panels beside the preview, then select Render to start.</p><p>The preview is scaled to fit the window. Log shows the renderer output below the preview.</p>"));
 		mRenderButton->setToolTip(tr("Render the current model step with POV-Ray."));
 	}
 	else
 	{
-		setWindowTitle(tr("Blender Image Render"));
-		setWhatsThis(tr("<p><b>Blender Image Render</b></p><p>Render the current model step with Blender and the bundled LDraw add-ons. Choose the output image, its size and the scene, parts and editing settings in the panels beside the preview, then select Render to start, or Open in Blender to edit the model there.</p><p>Set the Blender executable in Preferences, General first. Log shows the Blender output below the preview.</p>"));
+		setWindowTitle(tr("Blender Render"));
+		setWhatsThis(tr("<p><b>Blender Render</b></p><p>Render the current model step with Blender and the bundled LDraw add-ons. Choose the output image, its size and the scene, parts and editing settings in the panels beside the preview, then select Render to start, or Open in Blender to edit the model there.</p><p>Set the Blender executable in Preferences, General first. Log shows the Blender output below the preview.</p>"));
 	}
 
 	CreatePanels();
@@ -707,7 +707,7 @@ void swRenderDialog::CreatePanels()
 
 		connect(EnvironmentButton, &QToolButton::clicked, this, [this, EnvironmentEdit]()
 		{
-			const QString FileName = QFileDialog::getOpenFileName(this, tr("Select Environment Image"), EnvironmentEdit->text(), tr("Environment Images (*.hdr *.exr *.png *.jpg *.jpeg *.tif *.tiff);;All Files (*.*)"));
+			const QString FileName = QFileDialog::getOpenFileName(this, tr("Select Environment Image"), EnvironmentEdit->text(), tr("Environment Images (*.hdr *.exr *.png *.jpg *.jpeg *.tif *.tiff);;All Files (*)"));
 
 			if (!FileName.isEmpty())
 				EnvironmentEdit->setText(QDir::toNativeSeparators(FileName));
@@ -991,7 +991,7 @@ void swRenderDialog::SavePresetClicked()
 
 	if (PresetIndex != -1)
 	{
-		if (QMessageBox::question(this, tr("Save Preset"), tr("A preset with the name '%1' already exists, do you want to overwrite it?").arg(Name), QMessageBox::Yes | QMessageBox::No) != QMessageBox::Yes)
+		if (QMessageBox::question(this, tr("Save Preset"), tr("A preset named '%1' already exists. Do you want to overwrite it?").arg(Name), QMessageBox::Yes | QMessageBox::No) != QMessageBox::Yes)
 			return;
 
 		Presets[PresetIndex] = Preset;
@@ -1374,7 +1374,7 @@ void swRenderDialog::RenderPOVRay()
 	else
 	{
 		delete Process;
-		QMessageBox::warning(this, windowTitle(), tr("Error starting POV-Ray."));
+		QMessageBox::warning(this, windowTitle(), tr("Could not start POV-Ray."));
 		CloseProcess();
 	}
 }
@@ -1450,7 +1450,7 @@ void swRenderDialog::RenderBlender(bool ImportOnly)
 
 		if (!Launcher.startDetached())
 		{
-			QMessageBox::warning(this, windowTitle(), tr("Error starting Blender."));
+			QMessageBox::warning(this, windowTitle(), tr("Could not start Blender."));
 			return;
 		}
 
@@ -1500,7 +1500,7 @@ void swRenderDialog::RenderBlender(bool ImportOnly)
 	}
 	else
 	{
-		QMessageBox::warning(this, windowTitle(), tr("Error starting Blender render process."));
+		QMessageBox::warning(this, windowTitle(), tr("Could not start the Blender render process."));
 		CloseProcess();
 	}
 }
@@ -1779,7 +1779,7 @@ void swRenderDialog::ShowResult()
 			Success = Writer.write(mImage);
 
 			if (!Success)
-				QMessageBox::warning(this, windowTitle(), tr("Error writing to file '%1':\n%2").arg(FileName, Writer.errorString()));
+				QMessageBox::warning(this, windowTitle(), tr("Could not write file '%1':\n%2").arg(FileName, Writer.errorString()));
 		}
 
 	}
@@ -1802,7 +1802,7 @@ void swRenderDialog::ShowResult()
 					QImageWriter Writer(FileName);
 
 					if (!Writer.write(mImage))
-						QMessageBox::warning(this, windowTitle(), tr("Error writing to file '%1':\n%2").arg(FileName, Writer.errorString()));
+						QMessageBox::warning(this, windowTitle(), tr("Could not write file '%1':\n%2").arg(FileName, Writer.errorString()));
 				}
 			}
 
@@ -1819,7 +1819,7 @@ void swRenderDialog::ShowResult()
 	{
 		mJobs.clear();
 		mJobIndex = 0;
-		QMessageBox::warning(this, windowTitle(), tr("Render failed."));
+		QMessageBox::warning(this, windowTitle(), tr("Could not render the image."));
 	}
 
 	WriteStdOut();
@@ -1827,7 +1827,7 @@ void swRenderDialog::ShowResult()
 
 void swRenderDialog::OutputBrowseButtonClicked()
 {
-	const QString Result = QFileDialog::getSaveFileName(this, tr("Select Output File"), ui->OutputEdit->text(), tr("Supported Image Files (*.bmp *.png *.jpg);;BMP Files (*.bmp);;PNG Files (*.png);;JPEG Files (*.jpg);;All Files (*.*)"));
+	const QString Result = QFileDialog::getSaveFileName(this, tr("Save Image File"), ui->OutputEdit->text(), tr("Supported Image Files (*.bmp *.png *.jpg);;BMP Files (*.bmp);;PNG Files (*.png);;JPEG Files (*.jpg);;All Files (*)"));
 
 	if (!Result.isEmpty())
 		ui->OutputEdit->setText(QDir::toNativeSeparators(Result));

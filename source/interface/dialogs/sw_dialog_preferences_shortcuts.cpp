@@ -393,7 +393,7 @@ void swPreferencesDialog::ShortcutRemoveClicked()
 
 void swPreferencesDialog::ShortcutsImportClicked()
 {
-	QString FileName = QFileDialog::getOpenFileName(this, tr("Import Shortcuts"), "", tr("Text Files (*.txt);;All Files (*.*)"));
+	QString FileName = QFileDialog::getOpenFileName(this, tr("Import Shortcuts"), "", tr("Shortcut Files (*.txt);;All Files (*)"));
 
 	if (FileName.isEmpty())
 		return;
@@ -401,7 +401,7 @@ void swPreferencesDialog::ShortcutsImportClicked()
 	swKeyboardShortcuts Shortcuts;
 	if (!Shortcuts.Load(FileName))
 	{
-		QMessageBox::warning(this, tr("Import Keyboard Shortcuts"), tr("Error loading keyboard shortcuts file."));
+		QMessageBox::warning(this, tr("Import Shortcuts"), tr("Could not read keyboard shortcuts file '%1'.").arg(FileName));
 		return;
 	}
 
@@ -414,14 +414,14 @@ void swPreferencesDialog::ShortcutsImportClicked()
 
 void swPreferencesDialog::ShortcutsExportClicked()
 {
-	QString FileName = QFileDialog::getSaveFileName(this, tr("Export Shortcuts"), "", tr("Text Files (*.txt);;All Files (*.*)"));
+	QString FileName = QFileDialog::getSaveFileName(this, tr("Export Shortcuts"), "", tr("Shortcut Files (*.txt);;All Files (*)"));
 
 	if (FileName.isEmpty())
 		return;
 
 	if (!mOptions->KeyboardShortcuts.Save(FileName))
 	{
-		QMessageBox::warning(this, tr("Export Keyboard Shortcuts"), tr("Error saving keyboard shortcuts file."));
+		QMessageBox::warning(this, tr("Export Keyboard Shortcuts"), tr("Could not write keyboard shortcuts file '%1'.").arg(FileName));
 		return;
 	}
 }
@@ -589,7 +589,7 @@ void swPreferencesDialog::MouseRemoveClicked()
 
 void swPreferencesDialog::MouseImportButtonClicked()
 {
-	QString FileName = QFileDialog::getOpenFileName(this, tr("Import Shortcuts"), "", tr("Text Files (*.txt);;All Files (*.*)"));
+	QString FileName = QFileDialog::getOpenFileName(this, tr("Import Shortcuts"), "", tr("Shortcut Files (*.txt);;All Files (*)"));
 
 	if (FileName.isEmpty())
 		return;
@@ -597,7 +597,7 @@ void swPreferencesDialog::MouseImportButtonClicked()
 	swMouseShortcuts Shortcuts;
 	if (!Shortcuts.Load(FileName))
 	{
-		QMessageBox::warning(this, tr("Import Mouse Shortcuts"), tr("Error loading mouse shortcuts file."));
+		QMessageBox::warning(this, tr("Import Mouse Shortcuts"), tr("Could not read mouse shortcuts file '%1'.").arg(FileName));
 		return;
 	}
 
@@ -610,13 +610,13 @@ void swPreferencesDialog::MouseImportButtonClicked()
 
 void swPreferencesDialog::MouseExportButtonClicked()
 {
-	QString FileName = QFileDialog::getSaveFileName(this, tr("Export Shortcuts"), "", tr("Text Files (*.txt);;All Files (*.*)"));
+	QString FileName = QFileDialog::getSaveFileName(this, tr("Export Shortcuts"), "", tr("Shortcut Files (*.txt);;All Files (*)"));
 
 	if (FileName.isEmpty())
 		return;
 
 	if (!mOptions->MouseShortcuts.Save(FileName))
-		QMessageBox::warning(this, tr("Export Mouse Shortcuts"), tr("Error saving mouse shortcuts file."));
+		QMessageBox::warning(this, tr("Export Mouse Shortcuts"), tr("Could not write mouse shortcuts file '%1'.").arg(FileName));
 }
 
 void swPreferencesDialog::MouseResetClicked()

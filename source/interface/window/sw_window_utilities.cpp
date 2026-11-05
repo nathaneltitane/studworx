@@ -50,7 +50,7 @@ QString swChooseColorConfigurationFile(QWidget* Parent, swColorSource Source, co
 	}
 
 	const QString Title = Existing ? QCoreApplication::translate("swColorConfiguration", "Choose %1").arg(swGetColorConfigurationName(Source)) : QCoreApplication::translate("swColorConfiguration", "Save %1").arg(swGetColorConfigurationName(Source));
-	const QString Filter = QCoreApplication::translate("swColorConfiguration", "LDraw Files (*.ldr);;All Files (*.*)");
+	const QString Filter = QCoreApplication::translate("swColorConfiguration", "LDraw Files (*.ldr);;All Files (*)");
 	const QString Result = Existing ? QFileDialog::getOpenFileName(Parent, Title, StartPath, Filter) : QFileDialog::getSaveFileName(Parent, Title, StartPath, Filter);
 
 	return Result.isEmpty() ? QString() : QDir::toNativeSeparators(Result);
@@ -1014,13 +1014,13 @@ int swTerminateChildProcess(QWidget* Parent, const qint64 Pid, const qint64 Ppid
 
 	if ((hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, PPID)) == INVALID_HANDLE_VALUE)
 	{
-		QMessageBox::warning(Parent, QObject::tr("Stop Blender Process"), QString("%1 failed: %1").arg("CreateToolhelp32Snapshot").arg(GetLastError()));
+		QMessageBox::warning(Parent, QObject::tr("Stop Blender Process"), QObject::tr("%1 failed: %2").arg("CreateToolhelp32Snapshot").arg(GetLastError()));
 		return -1;
 	}
 	PE32.dwSize = sizeof(PROCESSENTRY32);
 	if (Process32First(hSnapshot, &PE32) == FALSE)
 	{
-		QMessageBox::warning(Parent, QObject::tr("Stop Blender Process"), QString("%1 failed: %2").arg("Process32First").arg(GetLastError()));
+		QMessageBox::warning(Parent, QObject::tr("Stop Blender Process"), QObject::tr("%1 failed: %2").arg("Process32First").arg(GetLastError()));
 		CloseHandle(hSnapshot);
 		return -2;
 	}

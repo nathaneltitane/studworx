@@ -31,6 +31,7 @@ SOURCES += \
 	sw_object_property_test.cpp \
 	sw_profile_test.cpp \
 	sw_project_export_test.cpp \
+	sw_project_import_test.cpp \
 	sw_renderer_povray_test.cpp \
 	sw_view_image_test.cpp \
 	main.cpp

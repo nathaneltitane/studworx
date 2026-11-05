@@ -1,6 +1,14 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-05</summary>
+
+  - Interface: menu, status bar, dialog and message wording is consistent, errors read "Could not …", file filters read "LDraw Models" and "All Files", and the command line help, man page and FEATURES.md agree with the menus
+  - Open: LEGO® Digital Designer models (.lxf and .lxfml) open from File > Open, recent files, drag and drop, the command line and the file manager as a new untitled model, and File > Import takes .lxfml as well as .lxf
+
+  </details>
+
+  <details>
   <summary>2026-11-04</summary>
 
   - Cutaway: the cutaway of a view is saved with the model and comes back when the file opens, the parts themselves are never changed

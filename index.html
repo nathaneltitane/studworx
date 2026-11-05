@@ -1561,12 +1561,12 @@
 				<li><b>Contextual <a href="#help">help</a>.</b> Choose Help &gt; What&#x27;s This? or click the question mark in a title bar, then click any control to read what it does. F1 explains the focused control, Shift+F1 starts What&#x27;s This inside a dialog, and every entry is listed in the Help index below.</li>
 				<li><b>Split views.</b> Split the current view horizontally or vertically, as often as you like, remove one view, or Reset Views back to one. Each view keeps its own camera and projection, a border marks the active one, and the view cube and axis icon stay on the top left view.</li>
 				<li><b>Tabs, splits and status bar.</b> Open several <a href="#models">models</a> in tabs, split the view, go Full Screen, and read the view orientation, projection and focus position in the status bar, with the name, ID and weight of the selected part. Right click the status bar to show or hide each segment.</li>
-				<li><b>Toolbars and panels on demand.</b> View &gt; Toolbars shows or hides each toolbar and panel: Standard, <a href="#tools">Tools</a>, Time, Parts, Colors, Properties, Timeline, Preview, Terminal and Minifigure Builder. Close Tab closes the current model tab.</li>
+				<li><b>Transform toolbar.</b> Type a position or rotation for the selection and apply it, as absolute coordinates or relative to where it is now. It has no entry of its own: its fields sit at the bottom of the Properties panel, shown with View &gt; Toolbars &gt; Properties.</li>
+				<li><b>Toolbars and panels on demand.</b> View &gt; Toolbars shows or hides each toolbar and panel: Standard, <a href="#tools">Tools</a>, Time, Parts, Colors, Properties, Timeline, Preview, Terminal, Minifigure Builder and Explode. Close Tab closes the current model tab.</li>
 				<li><b>Menus by task.</b> File, Edit, View, Part, <a href="#steps">Steps</a>, Models and Help, with clean labels and a unique mnemonic in each menu. The View menu holds the Toolbars, Viewpoints, Cutaway, Cameras, Projection and Shading submenus.</li>
 				<li><b>Help menu.</b> Home Page opens the StudWorx repository on GitHub, Report a Bug its issues, and About shows the version and system information.</li>
 				<li><b>Options menus.</b> The gear button on the model view and on every panel opens the settings that belong to it: grids, preview, parts and colors.</li>
 				<li><b>Ten languages.</b> English, French, German, Spanish, Portuguese, Czech, Ukrainian, Russian, Simplified Chinese and Traditional Chinese.</li>
-				<li><b>Transform toolbar.</b> Type a position or rotation for the selection and apply it, as absolute coordinates or relative to where it is now.</li>
 				<li><b>Toolbars.</b> Standard, Tools and Time toolbars. Move and rotate cursors show the axis they work on.</li>
 				<li><b>Undo and clipboard.</b> Undo and Redo every change, and Cut, Copy and Paste parts between models and tabs.</li>
 				<li><b>Color theme.</b> Follow the system, or force the light or dark theme, from <a href="#preferences">Preferences</a>.</li>
@@ -1633,7 +1633,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/interface-menu-steps.png" aria-label="Enlarge Steps">
-						<img src="resources/images/interface-menu-steps.png" alt="Steps" width="217" height="197" loading="lazy">
+						<img src="resources/images/interface-menu-steps.png" alt="Steps" width="207" height="197" loading="lazy">
 					</button>
 
 					<figcaption>Steps</figcaption>
@@ -1641,7 +1641,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/interface-menu-models.png" aria-label="Enlarge Models">
-						<img src="resources/images/interface-menu-models.png" alt="Models" width="302" height="315" loading="lazy">
+						<img src="resources/images/interface-menu-models.png" alt="Models" width="319" height="315" loading="lazy">
 					</button>
 
 					<figcaption>Models</figcaption>
@@ -1745,8 +1745,8 @@
 				<li><b>HTML.</b> Export HTML in the <a href="#instructions">Instructions</a> window writes styled pages in a folder named after the model, opening at index.html, with light and dark colors that follow the browser. One scrolling page of the Instructions window pages that stops at each page, with #page-N and #step-N links and First, Previous, Next and Last Page arrows on the right, left or bottom edge, laid out for the Instructions Page, a Landscape Display, Portrait Display or Tablet shape in pixels and saved at twice that size for sharp high density screens, or one step per page with an index, step images of any width and height on a background color you choose, transparent with its alpha, framed in rounded tiles of the same color, and a parts list after each step or at the end, which Override Instructions Settings also applies to the scrolling page with Settings Overrides for the page, cover, Bill of Materials, step, text, divider, pointer, fade, highlight and element box colors, without changing the model, for the current model, its submodels or all models. Edit Style Sheet changes the CSS of the pages in an editor with the options and find and replace of the Editor panel, its comments naming the feature of each block.</li>
 				<li><b>Export.</b> 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages from the Instructions window, BrickLink wanted lists and CSV parts lists. BrickLink exports pick the condition, the wanted list by its number or the address of its page, and new listing notices, copy the XML and open the BrickLink upload page in one step, and translate part numbers and colors through a bundled mapping of over 55,000 parts or a file built from the library and Rebrickable, with Rebrickable numbers taking the lead over stale part keywords. BrickLink and CSV exports list parts the library moved to a new number under that number, and Part Exceptions in the BrickLink export keeps a comma or tab separated list of parts whose BrickLink number you set by hand.</li>
 				<li><b>LDraw models.</b> .ldr, .mpd and .dat files, with New, Open, Merge, Save, Save As, Reload and the four most recent files. Save As follows the LDraw file specification and adds the extension when it is left out: .ldr for a single model, .mpd for a model with submodels or embedded data. Files are written with Unix line endings, and a model loaded with Windows line endings keeps them when saved. Watch for File Changes reloads a model edited in another program. Sample models, a minifigure, cube, sphere and cylinder cutaways of it, an exploded model, a flexible part and lights and cameras, <a href="#install">install</a> to /usr/share/studworx/samples, the samples folder beside the program on Windows, or the application bundle resources on macOS.</li>
-				<li><b>Command line.</b> Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx. <a href="https://l2cu.app">L²CU</a>, the LDraw Linux command line utility, drives these renders and exports for whole folders of models.</li>
-				<li><b>Import.</b> LEGO® Digital Designer models, with a bundled part and color mapping, and official set inventories. Set inventories use your own free Rebrickable API key, asked for once or set under Online Services in the <a href="#preferences">preferences</a>, and are searched by set name or number.</li>
+				<li><b>Import.</b> LEGO® Digital Designer models (.lxf and .lxfml), also opened with Open, recent files, drag and drop and the command line as an untitled project, with a bundled part and color mapping, and official set inventories. Set inventories use your own free Rebrickable API key, asked for once or set under Online Services in the <a href="#preferences">preferences</a>, and are searched by set name or number.</li>
+				<li><b>Command line.</b> Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx. <a href="https://l2cu.app">L²CU</a>, the LDraw command line utility for Linux based systems, drives these renders and exports for whole folders of models.</li>
 				<li><b>Startup.</b> Open Most Recent File on Startup reopens the last model, Restore Tab Layout brings back its tabs and split <a href="#views">views</a>, and Load All Parts Before Showing waits until every part is loaded before the model appears.</li>
 				<li><b>Parts library.</b> Downloaded on the first start as the official LDraw complete.zip, or chosen from an archive you already have, and reloaded from the File menu. An unofficial parts folder can be added beside it.</li>
 				<li><b>LeoCAD models.</b> Models saved by LeoCAD open as they are, and their LeoCAD <a href="#meta">meta</a> commands are migrated to StudWorx ones, automatically when you choose so in Preferences.</li>
@@ -1853,18 +1853,20 @@
 					<tbody>
 						<tr><td>-l, --library, --unofficial-library, --shadow-library</td><td>Choose the parts, unofficial parts and LDCad shadow libraries</td></tr>
 						<tr><td>-i, --image, -w, --width, --height</td><td>Save an <a href="#image">image</a> of the model at a size</td></tr>
-						<tr><td>-f, --from, -t, --to, -s, --submodel</td><td>Save a range of <a href="#steps">steps</a>, or one submodel</td></tr>
+						<tr><td>-f, --from &lt;step&gt;, -t, --to &lt;step&gt;, -s, --submodel</td><td>Save a range of <a href="#steps">steps</a>, or one submodel</td></tr>
 						<tr><td>-c, --camera, --viewpoint, --camera-angles, --camera-position, --camera-position-ldraw</td><td>Choose a camera, a viewpoint or an exact camera position</td></tr>
 						<tr><td>--projection, --field-of-view, --clip-planes, --transparent</td><td>Projection, field of view, clipping planes and a transparent background</td></tr>
-						<tr><td>--fade-steps, --highlight, and their colors</td><td>Fade previous steps and highlight new parts</td></tr>
-						<tr><td>--shading, --lighting, --line-width, --antialiasing-samples</td><td>Shading mode, lighting style, edge line width and antialiasing</td></tr>
-						<tr><td>--stud-style</td><td>One of the eight stud styles</td></tr>
+						<tr><td>--fade-steps, --no-fade-steps, --fade-color, --highlight, --no-highlight, --highlight-color</td><td>Fade previous steps and highlight new parts</td></tr>
+						<tr><td>--shading, --lighting, --line-width, --antialiasing-samples</td><td>Shading mode, lighting style, edge line width and anti-aliasing</td></tr>
+						<tr><td>--stud-style &lt;id&gt;</td><td>One of the eight stud styles, 0 to 7</td></tr>
 						<tr><td>--edge-color, --edge-color-black, --edge-color-dark, --stud-cylinder-color, their --no- forms, --edge-color-automatic, --edge-contrast, --edge-light-dark</td><td>Edge, black edge, dark edge and stud cylinder colors, automated edge colors, contrast and light to dark value</td></tr>
+						<tr><td>--bricklink-condition, --bricklink-wanted-list, --bricklink-notify</td><td>Set the condition wanted, the wanted list to add to, and ask BrickLink to notify new listings</td></tr>
 						<tr><td>--bricklink-exceptions</td><td>Use a comma or tab separated file of parts and their BrickLink numbers in BrickLink exports</td></tr>
 						<tr><td>--flatten</td><td>Replace every submodel at all depths with its parts and save the model, before any other export</td></tr>
 						<tr><td>--undo</td><td>Undo every command line edit and save the model, to check that undo restores it</td></tr>
-						<tr><td>--export-wavefront, --export-3ds, --export-collada, --export-kmz, --export-csv, --export-bricklink, --export-html, --export-povray</td><td>Export Wavefront, 3D Studio, COLLADA, KMZ, CSV, BrickLink, HTML and POV-Ray files</td></tr>
-						<tr><td>--render-povray</td><td>Render with POV-Ray</td></tr>
+						<tr><td>--export-wavefront, --export-3ds, --export-collada, --export-kmz, --export-csv, --export-bricklink, --export-html, --export-povray</td><td>Export Wavefront, 3D Studio, COLLADA, KMZ, CSV, BrickLink, HTML and POV-Ray files, each with an optional file name</td></tr>
+						<tr><td>--kmz-geometry</td><td>Keep every part or only the visible surfaces in KMZ exports</td></tr>
+						<tr><td>--render-povray</td><td>Render with POV-Ray, with an optional file name</td></tr>
 						<tr><td>--import-settings, --export-settings</td><td>Settings as an ini file</td></tr>
 						<tr><td>--import-keyboard-shortcuts, --export-keyboard-shortcuts, --import-mouse-shortcuts, --export-mouse-shortcuts</td><td>Keyboard and mouse shortcuts</td></tr>
 						<tr><td>--import-categories, --export-categories</td><td>Part categories</td></tr>
@@ -2028,12 +2030,12 @@
 				<li><b>POV-Ray.</b> Found on its own in the PATH, Flatpak or Snap and checked for version 3.7. LGEO high detail parts are found beside the parts library or downloaded on request, with a Parts choice between LDraw and LGEO.</li>
 				<li><b>Edge colors.</b> Automate Edge Color computes edge colors from each part color, with edge contrast, saturation and light to dark settings, or set the stud cylinder, edge, black edge and dark edge colors yourself.</li>
 				<li><b>Color configurations.</b> Colors come from the parts library, the LDraw color configuration or the alternate configuration with more realistic edge line colors for rendering, chosen under Rendering &gt; Colors.</li>
-				<li><b>Studs.</b> Eight stud styles: Plain, Thin Lines Logo, Outline Logo, Sharp Top Logo, Rounded Top Logo, Flattened Logo, High Contrast and High Contrast with Logo.</li>
+				<li><b>Studs.</b> Eight stud styles: Plain, Thin-Line Logo, Outline Logo, Sharp Top Logo, Rounded Top Logo, Flattened Logo, High Contrast and High Contrast Logo.</li>
 				<li><b>Mesh level of detail.</b> Distant parts draw with simpler meshes, from a distance set in Preferences, so large <a href="#models">models</a> stay smooth.</li>
 				<li><b>Render window.</b> Choose the output file, follow the progress, and watch the image appear in the preview as it renders.</li>
 				<li><b>Shading.</b> Wireframe, flat shading, default lights, edge lines, conditional lines and mesh level of detail.</li>
 				<li><b>Selection highlight.</b> Outline or tint and edges, with an adjustable outline width and transparency.</li>
-				<li><b>Antialiasing.</b> 2x, 4x or 8x samples, and an adjustable line width.</li>
+				<li><b>Anti-aliasing.</b> 2x, 4x or 8x samples, and an adjustable line width.</li>
 			</ul>
 
 			<div class="gallery four">
@@ -2145,12 +2147,12 @@
 				<li><b>Control points.</b> Insert and remove control points, clamp a point along the path or release it to rotate freely, align it to the path once, or turn it along the X, Y or Z axis. New points can start clamped, and the spread handle shapes the curve.</li>
 				<li><b>Rotation snap.</b> 1, 5, 15, 22.5, 30, 45, 60, 90 or 180 degrees, a custom angle, or None. Camera Snap orbits the view in the same <a href="#steps">steps</a>. Turns in any step land exactly on square angles, so later moves keep whole coordinates.</li>
 				<li><b>Move snap.</b> Horizontal steps of 1/20 stud, 1/4 stud, 1 flat, 1/2 stud and 1, 2, 3, 4 or 8 studs, vertical steps of 1/20 stud, 1/4 stud, 1 flat, 1/2 stud, 1 stud and 1, 2, 4 or 8 bricks, or None.</li>
+				<li><b>Selection.</b> Select All, Select None, Invert Selection, Adjacent Parts, by Name, and by part, color or both. Select Connected Parts follows the connection shapes of the LDCad shadow library.</li>
 				<li><b>Keyboard moves.</b> Move and rotate the selection along +X, -X, +Y, -Y, +Z and -Z by the snap steps. Fixed Direction Keys keeps the arrow keys on the model axes instead of following the view.</li>
-				<li><b>Selection.</b> Select All, None, Invert, Adjacent Parts, by Name, and by part, color or both. Select Connected Parts follows the connection shapes of the LDCad shadow library.</li>
 				<li><b>Selection modes.</b> Single Selection picks one part, Part Selection every part of the same type, Color Selection every part of the same color, and Part and Color Selection both.</li>
 				<li><b>Groups.</b> Group the selection under a unique name, Ungroup, add the focused part to a group or remove it, and Edit Groups in a tree of parts and groups.</li>
 				<li><b>Snapping.</b> Move in studs, flats and bricks, rotate in degrees with a custom angle, with relative or absolute transforms and separate or shared rotation.</li>
-				<li><b>Train track.</b> Rotate Train Track turns a track piece to its next connection, and Focus Next and Previous Connection choose where the next piece joins.</li>
+				<li><b>Train track.</b> Rotate Train Track turns a track part to its next connection, and Focus Next and Previous Connection choose where the next part joins.</li>
 				<li><b>Find and Replace.</b> A bar to find parts by part and color, step through the matches or Find All, and replace one or all, submodels included on request.</li>
 				<li><b>Pivot points and keyframes.</b> Reset Pivot Point puts the pivot back at each part&#x27;s origin, and Remove Keyframes clears the animation of the selected parts.</li>
 				<li><b>Insert colors.</b> Insert with the current color, the selected part&#x27;s color or the last inserted color, or lock the Parts panel to one color.</li>
@@ -2167,7 +2169,7 @@
 			<div class="gallery natural">
 				<figure>
 					<button class="shot" data-full="resources/images/modeling-menu-move-snap.png" aria-label="Enlarge Move snap">
-						<img src="resources/images/modeling-menu-move-snap.png" alt="Move snap" width="358" height="301" loading="lazy">
+						<img src="resources/images/modeling-menu-move-snap.png" alt="Move snap" width="370" height="301" loading="lazy">
 					</button>
 
 					<figcaption>Move snap</figcaption>
@@ -2175,7 +2177,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/modeling-menu-rotation-snap.png" aria-label="Enlarge Rotation snap">
-						<img src="resources/images/modeling-menu-rotation-snap.png" alt="Rotation snap" width="257" height="360" loading="lazy">
+						<img src="resources/images/modeling-menu-rotation-snap.png" alt="Rotation snap" width="204" height="360" loading="lazy">
 					</button>
 
 					<figcaption>Rotation snap</figcaption>
@@ -2502,7 +2504,7 @@
 			<div class="gallery natural">
 				<figure>
 					<button class="shot" data-full="resources/images/interface-menu-steps.png" aria-label="Enlarge Steps menu">
-						<img src="resources/images/interface-menu-steps.png" alt="Steps menu" width="217" height="197" loading="lazy">
+						<img src="resources/images/interface-menu-steps.png" alt="Steps menu" width="207" height="197" loading="lazy">
 					</button>
 
 					<figcaption>Steps menu</figcaption>
@@ -2754,7 +2756,7 @@
 
 			<ul class="points">
 				<li><b>Properties.</b> Part IDs, thumbnails and counts, with BrickLink or CSV export, and the size and weight of the model in metric and imperial units. A Weight column gives each part&#x27;s weight in grams or ounces, chosen with the units box below the table, from the BrickLink part weights, and parts without a known weight show N/A.</li>
-				<li><b>Submodels.</b> New Submodel, the Submodels list, Open Selected Model, Inline Selected Models, Flatten Model, which replaces every submodel at all depths with its parts in one undo step, also run from the command line with --flatten, and Move to New Model.</li>
+				<li><b>Submodels.</b> New Submodel, the Submodels list, Open Selected Submodel, Inline Selected Submodels, Flatten Submodels, which replaces every submodel at all depths with its parts in one undo step, also run from the command line with --flatten, and Move to New Submodel.</li>
 				<li><b>Editing commands.</b> Edit Selected Submodel enters the selected submodel in place, and End Submodel Editing goes back to its parent.</li>
 				<li><b>Submodels list.</b> Create, rename, duplicate and delete submodels, set the active one, and export them as separate LDraw <a href="#files">files</a>.</li>
 				<li><b>In-place editing.</b> Edit a submodel inside its parent. A path bar shows where you are, and its buttons go back to each model.</li>
@@ -2807,7 +2809,7 @@
 
 			<ul class="points">
 				<li><b>General.</b> Reference paths, where the color configurations, minifigure builder settings and BrickLink mapping update from ldraw.org and Rebrickable with one button and bundled copies are used until a file is set, online services, where the Rebrickable API key is kept and Get Key opens its page, a rejected key being cleared so it is asked for again, the author of new <a href="#models">models</a> built from a name, email address and comment, such as All rights reserved, joined by the author line splitter and previewed as the author line, and the parts library, Blender, POV-Ray and LGEO locations.</li>
-				<li><b>View colors.</b> Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, flex paths, the view cube, every axis, and the element margin, padding and anchor overlays and the ruler pointer arrows of the <a href="#instructions">instructions</a> page, each with an alpha slider.</li>
+				<li><b>View colors.</b> Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, Flex Paths, the view cube, every axis, and the element margin, padding and anchor overlays and the ruler pointer arrows of the <a href="#instructions">instructions</a> page, each with an alpha slider.</li>
 				<li><b>Startup and <a href="#files">files</a>.</b> Open the most recent file, restore the tab layout, load all parts before showing a model, watch for file changes and ask, migrate or keep LeoCAD models when opened.</li>
 				<li><b>Keyboard and Mouse.</b> Shortcuts recorded by clicking, importable and exportable. Commands that share a shortcut show in red, and assigning a taken shortcut asks before moving it.</li>
 				<li><b><a href="#interface">Interface</a> and Instructions.</b> Interface and view colors, edge contrast, the default instruction page settings, and the rulers and element inspector overlays of the instructions page.</li>
@@ -3494,6 +3496,15 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p class="lead">The latest release notices from the StudWorx repository.</p>
 
 			<details open>
+				<summary>2026-11-05</summary>
+
+				<ul>
+					<li><a href="#interface">Interface</a>: menu, status bar, dialog and message wording is consistent, errors read &quot;Could not …&quot;, file filters read &quot;LDraw <a href="#models">Models</a>&quot; and &quot;All <a href="#files">Files</a>&quot;, and the command line <a href="#help">help</a>, man page and FEATURES.md agree with the menus</li>
+					<li>Open: LEGO® Digital Designer models (.lxf and .lxfml) open from File &gt; Open, recent files, drag and drop, the command line and the file manager as a new untitled model, and File &gt; Import takes .lxfml as well as .lxf</li>
+				</ul>
+			</details>
+
+			<details>
 				<summary>2026-11-04</summary>
 
 				<ul>
@@ -3501,8 +3512,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Samples: cube, sphere and cylinder cutaway samples of the minifigure join the explode, flexible part, lights and cameras and minifigure samples</li>
 					<li>Weights: part weights from BrickLink ship with StudWorx, the Properties dialog shows the model weight in grams and ounces and a Weight column with Metric or Imperial units, and the part tooltip and status bar show the weight of a part, or N/A when it is unknown</li>
 					<li>Properties: the measurements and weight are listed one unit per line</li>
-					<li>Import: LEGO® Digital Designer <a href="#models">models</a> use a bundled part, color and placement mapping converted from the ldraw.xml of slswww.free.fr, an ldraw.xml in the parts library is no longer read</li>
-					<li><a href="#preferences">Preferences</a>: Migrate <a href="#files">Files</a> on Load chooses Ask, Migrate or Keep for models with LeoCAD <a href="#meta">meta</a> commands, and Remember this choice in the question sets it</li>
+					<li>Import: LEGO® Digital Designer models use a bundled part, color and placement mapping converted from the ldraw.xml of slswww.free.fr, an ldraw.xml in the parts library is no longer read</li>
+					<li><a href="#preferences">Preferences</a>: Migrate Files on Load chooses Ask, Migrate or Keep for models with LeoCAD <a href="#meta">meta</a> commands, and Remember this choice in the question sets it</li>
 					<li>Preferences: every checkbox sits in the control column with its label on the left, and the label greys out with its checkbox</li>
 					<li>Status bar: hints such as the face pick and cutaway messages no longer overlap the selection text and stay shown after the menu closes</li>
 					<li><a href="#views">Views</a>: the height grid entries of the view options are greyed out while the base grid is off</li>
@@ -3543,7 +3554,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Export BrickLink and Export CSV: parts the library moved to a new number, such as 60470 to 60470a, are listed and counted under the new number</li>
 					<li>Preferences: updating the BrickLink mapping starts from the bundled file, prefers Rebrickable numbers over outdated ones and keeps the old number of lettered variants BrickLink never took, the Rebrickable API key sits in a new Online Services group on the General page</li>
 					<li>Preferences and Timeline: commands that share a shortcut show in red, and assigning a taken shortcut asks before moving it, a new Highlight Style shows as soon as you press OK</li>
-					<li>Dialogs: the <a href="#help">Help</a> buttons are gone, the question mark in the title bar and F1 explain every control, labels sit in one column on the left and fields reach the right edge</li>
+					<li>Dialogs: the Help buttons are gone, the question mark in the title bar and F1 explain every control, labels sit in one column on the left and fields reach the right edge</li>
 					<li>Rotation: turning parts or pivots in angle steps lands exactly on square angles again, so later moves keep whole coordinates</li>
 					<li>Thumbnails: model thumbnails show again in file managers, and leftovers from the old StudWorks name are removed on <a href="#install">install</a></li>
 					<li>Properties and Import Set Inventory: light settings scroll without a sideways scroll bar, and long set names show in full</li>
@@ -3565,7 +3576,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Edge Colors and Export HTML: the dialogs are laid out in clear groups with labels to the left and controls to the right</li>
 					<li>Properties: the light settings scroll without a sideways scroll bar and always keep one setting row in view</li>
 					<li>Thumbnails: model thumbnails show again in file managers that use the desktop thumbnailer, without step highlight or fading, and leftovers from the old StudWorks name are removed on install</li>
-					<li>Preferences: Colors From moved into a new Colors group on the <a href="#rendering">Rendering</a> page, the Colors page is now <a href="#interface">Interface</a></li>
+					<li>Preferences: Colors From moved into a new Colors group on the <a href="#rendering">Rendering</a> page, the Colors page is now Interface</li>
 					<li>Export BrickLink: choose the condition, the wanted list and new listing notices, the choices are remembered, also as <code>--bricklink-condition</code>, <code>--bricklink-wanted-list</code> and <code>--bricklink-notify</code> on the command line</li>
 					<li>Command line: <code>--kmz-geometry all</code> or <code>visible</code> chooses the KMZ geometry and replaces <code>--kmz-all-parts</code></li>
 					<li>Command line: <code>-h</code> now shows the help like <code>--help</code>, the picture height is set with <code>--height</code></li>
@@ -3611,29 +3622,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Interface: close, undock and filter clear buttons are drawn to match the theme, and the custom theme draws its own tree lines and expand arrows</li>
 					<li>Site: new Meta section covering the LDraw meta commands StudWorx reads and writes, see <a href="https://studworx.app/#meta">Meta on the site</a></li>
 					<li>Manual page: covers LeoCAD <code>.lcd</code> projects opening read only, step numbers in saved image names, the step and field of view limits, the LGEO library and studworx.app</li>
-				</ul>
-			</details>
-
-			<details>
-				<summary>2026-10-30</summary>
-
-				<ul>
-					<li>Interface: built from standard Qt widgets throughout, panels, dialogs and windows follow the system style and theme, only the model views draw with OpenGL</li>
-					<li>Save Model Image: live preview of the saved image with step arrows, ratio presets from square to widescreen with Landscape and Portrait, a transparent background for PNG and GIF files, Save and Cancel in the File box and help from the title bar What&#x27;s This button</li>
-					<li>Animated GIF: turntable animations from Save Model Image, one or more full turns or back and forth swings around the X, Y or Z axis, with frames per turn, a frame rate and the duration shown, played live in the preview</li>
-					<li>Animated steps: Steps plays the build one step per frame, Next Step moves on every few turns or seconds while the model turns, and Hold Last keeps the finished model on screen before the loop restarts, see <a href="https://studworx.app/#image">Image on the site</a></li>
-					<li>Image framing: Fit Model and Fit Each Step keep every part inside the image with an adjustable margin, turntables keep one steady zoom through the whole turn around the World Origin, Model Origin or Model Center, and View Color backgrounds now save opaque</li>
-					<li>Print: File &gt; Print prints the current model view through the system print dialog, with a Preview button where the dialog allows it</li>
-					<li>File menu: grouped by task, Print after Save As, Image beside Instructions and Render instead of under Export</li>
-					<li>Preferences: Custom Paths is now Reference Paths</li>
-					<li>Preferences: new Export group with Mark COLLADA Transparency, on by default, writes <code>opaque=&quot;A_ONE&quot;</code> on transparent colors so viewers that skip the COLLADA default show transparent parts translucent without an l2cu pass</li>
-					<li>Rotate tool: dragging empty space with a mouse shortcut orbits, pans or zooms the view again instead of being taken as a rotation handle (LeoCAD #1073)</li>
-					<li>Translucent colors: Parts list icons, transparent images and instruction steps keep translucent parts their true color instead of darkened by the background, and transparent decals blend over their part color (LeoCAD #938)</li>
-					<li>Status bar: shows the position of a part while it is dragged in or placed with the Insert tool, and returns to the focused object when the part is dragged back out (LeoCAD #939)</li>
-					<li>File &gt; Export &gt; KMZ: zipped COLLADA for web viewers, flattened to the visible surfaces with one mesh per color by default, or every part with the KMZ Geometry preference, also from the command line with -kmz and --kmz-all-parts</li>
-					<li>Command line: <code>-bl</code>, <code>--export-bricklink</code> writes the BrickLink XML inventory like <code>--export-csv</code></li>
-					<li>Images: saved in the format of their extension, <code>.jpg</code>, <code>.bmp</code> and <code>.gif</code> are no longer written as PNG, backgrounds are opaque unless <code>--transparent</code> is used with PNG or GIF, and <code>.gif</code> steps save one still frame per step</li>
-					<li>Command line: renders and exports run without a display on Linux based systems, <code>--stud-style</code> help lists the current stud style names</li>
 				</ul>
 			</details>
 
@@ -3809,8 +3797,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Instructions","title":"Box","paragraphs":["The space and border around each element. The margin keeps other elements away, the padding keeps the border away from the content and the background fills all of it, margin and padding included. Pointers leave the border. Choose the element to edit, selecting an element on the page chooses it."]},
 				{"group":"Preferences","title":"Instructions Preferences","paragraphs":["Set the default page setup and grid that new models and the Default Page Setup option of the Properties panel load, and the options of the Instructions window."]},
 				{"group":"Render","title":"Render","paragraphs":["Start the render using the current settings. While rendering, this button becomes Cancel so you can stop the operation."]},
-				{"group":"Render","title":"POV-Ray Image Render","paragraphs":["Render the current model step using POV-Ray. Choose the output image, its size and quality and the scene in the panels beside the preview, then select Render to start.","The preview is scaled to fit the window. Log shows the renderer output below the preview."]},
-				{"group":"Render","title":"Blender Image Render","paragraphs":["Render the current model step with Blender and the bundled LDraw add-ons. Choose the output image, its size and the scene, parts and editing settings in the panels beside the preview, then select Render to start, or Open in Blender to edit the model there.","Set the Blender executable in Preferences, General first. Log shows the Blender output below the preview."]},
+				{"group":"Render","title":"POV-Ray Render","paragraphs":["Render the current model step using POV-Ray. Choose the output image, its size and quality and the scene in the panels beside the preview, then select Render to start.","The preview is scaled to fit the window. Log shows the renderer output below the preview."]},
+				{"group":"Render","title":"Blender Render","paragraphs":["Render the current model step with Blender and the bundled LDraw add-ons. Choose the output image, its size and the scene, parts and editing settings in the panels beside the preview, then select Render to start, or Open in Blender to edit the model there.","Set the Blender executable in Preferences, General first. Log shows the Blender output below the preview."]},
 				{"group":"Render","title":"Presets","paragraphs":["Keep the image size, quality and scene settings under a name and bring them back with one choice. Save stores the current settings as a preset and Delete removes the chosen one."]},
 				{"group":"Render","title":"Output","paragraphs":["Choose where the rendered image is saved and its format, such as PNG, JPEG, or BMP."]},
 				{"group":"Render","title":"Image","paragraphs":["Set the size of the rendered image in pixels and the rendering quality. Larger images and higher quality take longer to render."]},
@@ -3874,7 +3862,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"File Menu","title":"Save Model","paragraphs":["Save the model and its submodels to disk. The first save asks for a filename. Use Save As to save a separate copy under another name."]},
 				{"group":"File Menu","title":"Save As","paragraphs":["Save the current model with a new name."]},
 				{"group":"File Menu","title":"Image","paragraphs":["Export an image of the current view."]},
-				{"group":"File Menu","title":"LEGO® Digital Designer","paragraphs":["Import a file in LEGO® Digital Designer LXF format."]},
+				{"group":"File Menu","title":"LEGO® Digital Designer","paragraphs":["Import a file in LEGO® Digital Designer LXF or LXFML format."]},
 				{"group":"File Menu","title":"Set Inventory","paragraphs":["Import all parts from an official set."]},
 				{"group":"File Menu","title":"3D Studio","paragraphs":["Export the current model in 3D Studio 3DS format."]},
 				{"group":"File Menu","title":"COLLADA","paragraphs":["Export the current model in COLLADA DAE format."]},
@@ -3905,7 +3893,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Edit Menu","title":"Replace All","paragraphs":["Replace all parts that match the search criteria."]},
 				{"group":"Edit Menu","title":"Select All","paragraphs":["Select all parts in the model."]},
 				{"group":"Edit Menu","title":"Select None","paragraphs":["Deselect everything."]},
-				{"group":"Edit Menu","title":"Select Invert","paragraphs":["Invert the current selection set."]},
+				{"group":"Edit Menu","title":"Invert Selection","paragraphs":["Invert the current selection set."]},
 				{"group":"Edit Menu","title":"Select Adjacent Parts","paragraphs":["Add every visible part connected directly to a selected part by a stud, anti stud, hole, axle or bar. Repeat to grow the selection one part further each time. Connections come from the LDCad shadow library set as Part Connections in Preferences, parts without shadow data never connect."]},
 				{"group":"Edit Menu","title":"Select Connected Parts","paragraphs":["Add every visible part connected to a selected part, directly or through other parts, by a stud, anti stud, hole, axle or bar. Use it to pick up a whole assembly from one of its parts. Connections come from the LDCad shadow library set as Part Connections in Preferences, parts without shadow data never connect."]},
 				{"group":"Edit Menu","title":"Part Connections","paragraphs":["Toggle finding connected parts with the LDCad shadow library."]},
@@ -3920,7 +3908,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Edit Menu","title":"Rotate Separately","paragraphs":["Rotate selected parts separately."]},
 				{"group":"Edit Menu","title":"Rotate Together","paragraphs":["Rotate selected parts together."]},
 				{"group":"Edit Menu","title":"Toggle Separate Transforms","paragraphs":["Toggle rotating selected parts separately."]},
-				{"group":"Edit Menu","title":"Move Snap Enabled","paragraphs":["Toggle movement snapping."]},
+				{"group":"Edit Menu","title":"Move Snap","paragraphs":["Toggle movement snapping."]},
 				{"group":"Edit Menu","title":"None","paragraphs":["Do not snap movement along the XY plane."]},
 				{"group":"Edit Menu","title":"1/20 Stud","paragraphs":["Snap movement along the XY plane to 1/20 stud."]},
 				{"group":"Edit Menu","title":"1/4 Stud","paragraphs":["Snap movement along the XY plane to 1/4 stud."]},
@@ -3941,7 +3929,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Edit Menu","title":"2 Bricks","paragraphs":["Snap movement along the Z axis to 2 bricks."]},
 				{"group":"Edit Menu","title":"4 Bricks","paragraphs":["Snap movement along the Z axis to 4 bricks."]},
 				{"group":"Edit Menu","title":"8 Bricks","paragraphs":["Snap movement along the Z axis to 8 bricks."]},
-				{"group":"Edit Menu","title":"Rotation Snap Enabled","paragraphs":["Snap rotations to fixed intervals."]},
+				{"group":"Edit Menu","title":"Rotation Snap","paragraphs":["Snap rotations to fixed intervals."]},
 				{"group":"Edit Menu","title":"None","paragraphs":["Do not snap rotations."]},
 				{"group":"Edit Menu","title":"1 Degree","paragraphs":["Snap rotations to 1 degree."]},
 				{"group":"Edit Menu","title":"5 Degrees","paragraphs":["Snap rotations to 5 degrees."]},
@@ -3953,7 +3941,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Edit Menu","title":"90 Degrees","paragraphs":["Snap rotations to 90 degrees."]},
 				{"group":"Edit Menu","title":"180 Degrees","paragraphs":["Snap rotations to 180 degrees."]},
 				{"group":"Edit Menu","title":"Custom","paragraphs":["Snap rotations to a custom angle."]},
-				{"group":"Edit Menu","title":"Camera Snap Enabled","paragraphs":["Toggle orbiting the camera in steps of the rotation snap angle."]},
+				{"group":"Edit Menu","title":"Camera Snap","paragraphs":["Toggle orbiting the camera in steps of the rotation snap angle."]},
 				{"group":"Edit Menu","title":"Transform","paragraphs":["Apply transform to selected objects."]},
 				{"group":"Edit Menu","title":"Absolute Translation","paragraphs":["Switch to absolute translation mode when applying transforms."]},
 				{"group":"Edit Menu","title":"Relative Translation","paragraphs":["Switch to relative translation mode when applying transforms."]},
@@ -4003,24 +3991,24 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Steps Menu","title":"Last Step","paragraphs":["Display the last building step of the current model. Use this to return to the completed model after inspecting earlier steps."]},
 				{"group":"Steps Menu","title":"Insert Before","paragraphs":["Insert a new step before the current step."]},
 				{"group":"Steps Menu","title":"Insert After","paragraphs":["Insert a new step after the current step."]},
-				{"group":"Steps Menu","title":"Remove Step","paragraphs":["Remove current step."]},
+				{"group":"Steps Menu","title":"Delete Step","paragraphs":["Delete the current step."]},
 				{"group":"Steps Menu","title":"Add Keys","paragraphs":["Enable this when an edit should create a new animation key at the current step. For example, moving a part at a later step can give it a different position there. The diamond controls in Properties show and toggle keys for individual properties."]},
 				{"group":"View Menu","title":"Split Horizontal","paragraphs":["Split the current view into two views stacked one above the other, each with its own camera. The view cube and axis icon stay on the top left view."]},
 				{"group":"View Menu","title":"Split Vertical","paragraphs":["Split the current view into two views side by side, each with its own camera. The view cube and axis icon stay on the top left view."]},
 				{"group":"View Menu","title":"Remove View","paragraphs":["Remove the current view."]},
 				{"group":"View Menu","title":"Reset Views","paragraphs":["Reset all views."]},
-				{"group":"View Menu","title":"Standard","paragraphs":["Toggle the Standard Toolbar."]},
-				{"group":"View Menu","title":"Tools","paragraphs":["Toggle the Tools Toolbar."]},
-				{"group":"View Menu","title":"Time","paragraphs":["Toggle the Time Toolbar."]},
-				{"group":"View Menu","title":"Parts","paragraphs":["Toggle the Parts Toolbar."]},
-				{"group":"View Menu","title":"Colors","paragraphs":["Toggle the Colors Toolbar."]},
-				{"group":"View Menu","title":"Properties","paragraphs":["Toggle the Properties Toolbar."]},
-				{"group":"View Menu","title":"Timeline","paragraphs":["Toggle the Timeline Toolbar."]},
-				{"group":"View Menu","title":"Preview","paragraphs":["Toggle the Preview Toolbar."]},
+				{"group":"View Menu","title":"Standard","paragraphs":["Toggle the Standard toolbar."]},
+				{"group":"View Menu","title":"Tools","paragraphs":["Toggle the Tools toolbar."]},
+				{"group":"View Menu","title":"Time","paragraphs":["Toggle the Time toolbar."]},
+				{"group":"View Menu","title":"Parts","paragraphs":["Toggle the Parts panel."]},
+				{"group":"View Menu","title":"Colors","paragraphs":["Toggle the Colors panel."]},
+				{"group":"View Menu","title":"Properties","paragraphs":["Toggle the Properties panel."]},
+				{"group":"View Menu","title":"Timeline","paragraphs":["Toggle the Timeline panel."]},
+				{"group":"View Menu","title":"Preview","paragraphs":["Toggle the Preview panel."]},
 				{"group":"View Menu","title":"Terminal","paragraphs":["Toggle the Terminal panel."]},
-				{"group":"View Menu","title":"Minifigure Builder","paragraphs":["Toggle the Minifigure Builder Panel."]},
+				{"group":"View Menu","title":"Minifigure Builder","paragraphs":["Toggle the Minifigure Builder panel."]},
 				{"group":"View Menu","title":"Explode","paragraphs":["Show or hide the Explode panel, which spreads the parts on screen away from an anchor, the focused part or the first or last selected one, scaled along X, Y and Z. With Selected Parts Only, each group moves as one part. Each part slides straight out along the connection that holds it, a part without one along the nearest axis from the part beside it, and with Show Lines a line runs through each connection back to the socket it came off. Submodels, and the submodels inside them, flatten into their parts first in the same undo step. Collapse or Undo puts the parts and submodels back, and Save Copy saves the exploded model to a separate file named with -exploded."]},
-				{"group":"View Menu","title":"Full Screen","paragraphs":["Toggle fullscreen mode."]},
+				{"group":"View Menu","title":"Full Screen","paragraphs":["Toggle full screen mode."]},
 				{"group":"View Menu","title":"Close Tab","paragraphs":["Close current tab."]},
 				{"group":"View Menu","title":"Wireframe","paragraphs":["Display the scene as wireframe."]},
 				{"group":"View Menu","title":"Flat Shading","paragraphs":["Display the scene without any shading or lights."]},
@@ -4060,9 +4048,9 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"View Menu","title":"Solid Colors","paragraphs":["Expand or collapse the solid colors."]},
 				{"group":"View Menu","title":"Translucent Colors","paragraphs":["Expand or collapse the translucent colors."]},
 				{"group":"View Menu","title":"Special Colors","paragraphs":["Expand or collapse the special colors."]},
-				{"group":"Part Menu","title":"Insert with Current Color","paragraphs":["Insert new parts with the current color."]},
-				{"group":"Part Menu","title":"Insert with Selected Part Color","paragraphs":["Insert new parts with the color of the selected part."]},
-				{"group":"Part Menu","title":"Insert with Last Inserted Color","paragraphs":["Insert new parts with the color of the last inserted part."]},
+				{"group":"Part Menu","title":"Current Color","paragraphs":["Insert new parts with the current color."]},
+				{"group":"Part Menu","title":"Selected Part Color","paragraphs":["Insert new parts with the color of the selected part."]},
+				{"group":"Part Menu","title":"Last Inserted Part Color","paragraphs":["Insert new parts with the color of the last inserted part."]},
 				{"group":"View Menu","title":"Lock Parts Color","paragraphs":["Toggle keeping the parts list in a fixed color instead of following the insert color."]},
 				{"group":"File Menu","title":"Open Most Recent File on Startup","paragraphs":["Toggle opening the most recently used file when StudWorx starts."]},
 				{"group":"File Menu","title":"Restore Tab Layout","paragraphs":["Toggle restoring saved model tabs and view layouts when opening a model."]},
@@ -4078,13 +4066,13 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"View Menu","title":"Increase Outline Width","paragraphs":["Make the selection outline thicker."]},
 				{"group":"View Menu","title":"Decrease Outline Width","paragraphs":["Make the selection outline thinner."]},
 				{"group":"View Menu","title":"Plain Studs","paragraphs":["Draw studs with the plain style."]},
-				{"group":"View Menu","title":"Thin Lines Logo Studs","paragraphs":["Draw studs with the thin lines logo style."]},
+				{"group":"View Menu","title":"Thin-Line Logo Studs","paragraphs":["Draw studs with the thin-line logo style."]},
 				{"group":"View Menu","title":"Outline Logo Studs","paragraphs":["Draw studs with the outline logo style."]},
 				{"group":"View Menu","title":"Sharp Top Logo Studs","paragraphs":["Draw studs with the sharp top logo style."]},
 				{"group":"View Menu","title":"Rounded Top Logo Studs","paragraphs":["Draw studs with the rounded top logo style."]},
 				{"group":"View Menu","title":"Flattened Logo Studs","paragraphs":["Draw studs with the flattened logo style."]},
 				{"group":"View Menu","title":"High Contrast Studs","paragraphs":["Draw studs with the high contrast style."]},
-				{"group":"View Menu","title":"High Contrast with Logo Studs","paragraphs":["Draw studs with the high contrast with logo style."]},
+				{"group":"View Menu","title":"High Contrast Logo Studs","paragraphs":["Draw studs with the high contrast logo style."]},
 				{"group":"View Menu","title":"Edge Lines","paragraphs":["Toggle edge lines in model views."]},
 				{"group":"View Menu","title":"Conditional Lines","paragraphs":["Toggle conditional lines in model views."]},
 				{"group":"View Menu","title":"Preview Uses Model View Settings","paragraphs":["Toggle using the model view rendering settings for the preview."]},
@@ -4142,10 +4130,10 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Part Menu","title":"Rotate -Z","paragraphs":["Rotate selected objects around the Z axis."]},
 				{"group":"Part Menu","title":"Minifigure Builder","paragraphs":["Show the Minifigure Builder panel to build a minifigure and add it to the model."]},
 				{"group":"Part Menu","title":"Array","paragraphs":["Make copies of the selected parts."]},
-				{"group":"Part Menu","title":"Open Selected Model","paragraphs":["Open the model referenced by the selected part in a new tab."]},
-				{"group":"Part Menu","title":"Move to New Model","paragraphs":["Move the selected parts to a new model and replace them with a reference to the model."]},
-				{"group":"Part Menu","title":"Inline Selected Models","paragraphs":["Insert the contents of the selected model references into the current model."]},
-				{"group":"Part Menu","title":"Flatten Model","paragraphs":["Replace every submodel in the current model, and every submodel inside those, with its parts in one undo step. Each part keeps its place and color, and the groups inside the submodels are not kept."]},
+				{"group":"Part Menu","title":"Open Selected Submodel","paragraphs":["Open the submodel referenced by the selected part in a new tab."]},
+				{"group":"Part Menu","title":"Move to New Submodel","paragraphs":["Move the selected parts to a new submodel and replace them with a reference to it."]},
+				{"group":"Part Menu","title":"Inline Selected Submodels","paragraphs":["Insert the contents of the selected submodels into the current model."]},
+				{"group":"Part Menu","title":"Flatten Submodels","paragraphs":["Replace every submodel in the current model, and every submodel inside those, with its parts in one undo step. Each part keeps its place and color, and the groups inside the submodels are not kept."]},
 				{"group":"Part Menu","title":"Edit Selected Submodel","paragraphs":["Edit the currently selected submodel in-place."]},
 				{"group":"Part Menu","title":"End Submodel Editing","paragraphs":["End in-place submodel editing."]},
 				{"group":"Part Menu","title":"Group","paragraphs":["Group selected parts together."]},
@@ -4162,10 +4150,10 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Models Menu","title":"New Submodel","paragraphs":["Create a new submodel."]},
 				{"group":"Models Menu","title":"Properties","paragraphs":["Display the properties of the current submodel."]},
 				{"group":"Models Menu","title":"Submodels","paragraphs":["Show a list of all submodels."]},
-				{"group":"Models Menu","title":"Submodels 1 to 40","paragraphs":["Switch to this submodel."]},
+				{"group":"Models Menu","title":"Submodel 1","paragraphs":["Switch to this submodel."]},
 				{"group":"Help Menu","title":"What's This?","paragraphs":["Click a control to read its contextual help."]},
-				{"group":"Help Menu","title":"Home Page","paragraphs":["Open StudWorx' home page on the internet using your default web browser."]},
-				{"group":"Help Menu","title":"Report a Bug","paragraphs":["Open StudWorx' bug report form on your default web browser."]},
+				{"group":"Help Menu","title":"Home Page","paragraphs":["Open the StudWorx home page in your default web browser."]},
+				{"group":"Help Menu","title":"Report a Bug","paragraphs":["Open the StudWorx bug report form in your default web browser."]},
 				{"group":"Help Menu","title":"About","paragraphs":["Display program version number and system information."]},
 				{"group":"Timeline","title":"Insert Step Before","paragraphs":["Insert a new step before the current step."]},
 				{"group":"Timeline","title":"Insert Step After","paragraphs":["Insert a new step after the current step."]},

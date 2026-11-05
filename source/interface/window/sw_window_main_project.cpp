@@ -138,7 +138,7 @@ bool swMainWindow::LoadProjectText(const QByteArray& FileData)
 
 	if (!NewProject->LoadText(FileData, CurrentProject->GetFileName(), CurrentProject->GetMainModel()->GetProperties().mFileName))
 	{
-		QMessageBox::warning(mInstructionsDialog ? static_cast<QWidget*>(mInstructionsDialog) : this, tr("Editor"), tr("The text is not a model file."));
+		QMessageBox::warning(mInstructionsDialog ? static_cast<QWidget*>(mInstructionsDialog) : this, tr("Edit Model Text"), tr("The text is not a model file."));
 		return false;
 	}
 
@@ -228,7 +228,7 @@ bool swMainWindow::OpenProject(const QString& FileName)
 		if (LoadFileName.isEmpty())
 			LoadFileName = swGetProfileString(SW_PROFILE_PROJECTS_PATH);
 
-		LoadFileName = QFileDialog::getOpenFileName(this, tr("Open Model"), LoadFileName, tr("Supported Files (*.lcd *.ldr *.dat *.mpd);;All Files (*.*)"));
+		LoadFileName = QFileDialog::getOpenFileName(this, tr("Open Model"), LoadFileName, tr("LDraw Models (*.ldr *.mpd *.dat);;LeoCAD Models (*.lcd);;LEGO® Digital Designer Models (*.lxf *.lxfml);;All Files (*)"));
 
 		if (LoadFileName.isEmpty())
 			return false;
@@ -285,7 +285,7 @@ bool swMainWindow::MigrateMetaCommands(const QString& FileName)
 		return swGetPreferences().mMigrateMetaCommands == swMigrateMetaCommandsMode::Migrate;
 
 	QMessageBox MessageBox(QMessageBox::Question, tr("Migrate Model"), tr("'%1' uses LeoCAD meta commands. Do you want to migrate it to StudWorx meta commands?").arg(QFileInfo(FileName).fileName()), QMessageBox::NoButton, this);
-	MessageBox.setInformativeText(tr("A migrated model is saved with StudWorx meta commands, LeoCAD then ignores its cameras, lights, groups and part settings. A model kept as it is stays readable in LeoCAD."));
+	MessageBox.setInformativeText(tr("A migrated model is saved with StudWorx meta commands. LeoCAD then ignores its cameras, lights, groups and part settings. A model kept as it is stays readable in LeoCAD."));
 	QPushButton* MigrateButton = MessageBox.addButton(tr("Migrate"), QMessageBox::AcceptRole);
 	MessageBox.addButton(tr("Keep"), QMessageBox::RejectRole);
 	MessageBox.setDefaultButton(MigrateButton);
@@ -313,7 +313,7 @@ void swMainWindow::ShowMergeDialog()
 	else
 		InitialFolder = QFileInfo(InitialFolder).absolutePath();
 
-	QStringList LoadFileNames = QFileDialog::getOpenFileNames(this, tr("Merge Model"), InitialFolder, tr("Supported Files (*.lcd *.ldr *.dat *.mpd);;All Files (*.*)"));
+	QStringList LoadFileNames = QFileDialog::getOpenFileNames(this, tr("Merge Model"), InitialFolder, tr("LDraw Models (*.ldr *.mpd *.dat);;LeoCAD Models (*.lcd);;All Files (*)"));
 
 	if (LoadFileNames.isEmpty())
 		return;
@@ -358,7 +358,7 @@ void swMainWindow::ImportLDD()
 	if (!SaveProjectIfModified())
 		return;
 
-	QString LoadFileName = QFileDialog::getOpenFileName(this, tr("Import"), QString(), tr("LEGO® Digital Designer Files (*.lxf);;All Files (*.*)"));
+	QString LoadFileName = QFileDialog::getOpenFileName(this, tr("Import LEGO® Digital Designer Model"), QString(), tr("LEGO® Digital Designer Models (*.lxf *.lxfml);;All Files (*)"));
 	if (LoadFileName.isEmpty())
 		return;
 
@@ -411,7 +411,7 @@ bool swMainWindow::SaveProject(const QString& FileName)
 
 		const bool MultiPart = Project->IsMultiPart();
 		const QString DefaultSuffix = MultiPart ? QLatin1String("mpd") : QLatin1String("ldr");
-		QString Filter = MultiPart ? tr("Supported Files (*.mpd);;All Files (*.*)") : tr("Supported Files (*.ldr *.dat *.mpd);;All Files (*.*)");
+		QString Filter = MultiPart ? tr("LDraw Models (*.mpd);;All Files (*)") : tr("LDraw Models (*.ldr *.dat *.mpd);;All Files (*)");
 
 		QFileDialog Dialog(this, tr("Save Model"), SaveFileName, Filter);
 		Dialog.setAcceptMode(QFileDialog::AcceptSave);

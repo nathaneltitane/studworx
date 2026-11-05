@@ -332,7 +332,7 @@ void swMinifigureBuilderWidget::UpdateTemplateCombo()
 	if (ui->TemplateComboBox->count())
 		ui->TemplateComboBox->insertSeparator(ui->TemplateComboBox->count());
 
-	// built in templates last
+	// built-in templates last
 	ui->TemplateComboBox->addItem(tr("Default Template"), swMinifigureBuilder::GetDefaultTemplateName());
 	ui->TemplateComboBox->addItem(tr("Empty Minifigure"), swMinifigureBuilder::GetEmptyTemplateName());
 
@@ -400,7 +400,7 @@ void swMinifigureBuilderWidget::TemplateSaveButtonClicked()
 
 	if (swMinifigureBuilder::IsBuiltInTemplate(TemplateName))
 	{
-		QMessageBox::information(this, tr("Save Template"), tr("Cannot overwrite a built in template."));
+		QMessageBox::information(this, tr("Save Template"), tr("Cannot overwrite a built-in template."));
 		return;
 	}
 
@@ -440,7 +440,7 @@ void swMinifigureBuilderWidget::TemplateDeleteButtonClicked()
 
 void swMinifigureBuilderWidget::TemplateImportButtonClicked()
 {
-	QString FileName = QFileDialog::getOpenFileName(this, tr("Import Templates"), "", tr("Minifigure Template Files (*.minifigure *.minifig);;All Files (*.*)"));
+	QString FileName = QFileDialog::getOpenFileName(this, tr("Import Templates"), "", tr("Minifigure Template Files (*.minifigure *.minifig);;All Files (*)"));
 
 	if (FileName.isEmpty())
 		return;
@@ -449,7 +449,7 @@ void swMinifigureBuilderWidget::TemplateImportButtonClicked()
 
 	if (!File.open(QIODevice::ReadOnly))
 	{
-		QMessageBox::warning(this, tr("Import Templates"), tr("Error reading file '%1':\n%2").arg(FileName, File.errorString()));
+		QMessageBox::warning(this, tr("Import Templates"), tr("Could not read file '%1':\n%2").arg(FileName, File.errorString()));
 		return;
 	}
 
@@ -461,7 +461,7 @@ void swMinifigureBuilderWidget::TemplateImportButtonClicked()
 
 void swMinifigureBuilderWidget::TemplateExportButtonClicked()
 {
-	QString FileName = QFileDialog::getSaveFileName(this, tr("Export Templates"), "", tr("Minifigure Template Files (*.minifigure);;All Files (*.*)"));
+	QString FileName = QFileDialog::getSaveFileName(this, tr("Export Templates"), "", tr("Minifigure Template Files (*.minifigure);;All Files (*)"));
 
 	if (FileName.isEmpty())
 		return;
@@ -469,7 +469,7 @@ void swMinifigureBuilderWidget::TemplateExportButtonClicked()
 	QSaveFile File(FileName);
 
 	if (!File.open(QIODevice::WriteOnly) || File.write(mMinifigureBuilder->GetTemplatesJson()) < 0 || !File.commit())
-		QMessageBox::warning(this, tr("Export Templates"), tr("Error writing to file '%1':\n%2").arg(FileName, File.errorString()));
+		QMessageBox::warning(this, tr("Export Templates"), tr("Could not write file '%1':\n%2").arg(FileName, File.errorString()));
 }
 
 void swMinifigureBuilderWidget::SetCurrentTemplateModified()

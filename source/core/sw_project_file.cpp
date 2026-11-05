@@ -350,12 +350,26 @@ bool Project::Load(const QString& FileName, bool ShowErrors)
 	if (!mIsPreview)
 		parent = gMainWindow;
 
+	const QString Suffix = QFileInfo(FileName).suffix().toLower();
+
+	// import LEGO Digital Designer files as an untitled project
+	if (Suffix == QLatin1String("lxf") || Suffix == QLatin1String("lxfml"))
+	{
+		if (ImportLDD(FileName))
+			return true;
+
+		if (ShowErrors)
+			QMessageBox::warning(parent, tr("Load Model"), tr("Could not open file '%1':\nThe file format is not recognized.").arg(FileName));
+
+		return false;
+	}
+
 	QFile File(FileName);
 
 	if (!File.open(QIODevice::ReadOnly))
 	{
 		if (ShowErrors)
-			QMessageBox::warning(parent, tr("Load Model"), tr("Error reading file '%1':\n%2").arg(FileName, File.errorString()));
+			QMessageBox::warning(parent, tr("Load Model"), tr("Could not read file '%1':\n%2").arg(FileName, File.errorString()));
 		return false;
 	}
 
@@ -364,7 +378,7 @@ bool Project::Load(const QString& FileName, bool ShowErrors)
 	if (File.error() != QFileDevice::NoError)
 	{
 		if (ShowErrors)
-			QMessageBox::warning(parent, tr("Load Model"), tr("Error reading file '%1':\n%2").arg(FileName, File.errorString()));
+			QMessageBox::warning(parent, tr("Load Model"), tr("Could not read file '%1':\n%2").arg(FileName, File.errorString()));
 		return false;
 	}
 
@@ -454,7 +468,7 @@ bool Project::LoadDocument(const QByteArray& FileData, const QString& FileName, 
 	if (mModels.empty())
 	{
 		if (ShowErrors)
-			QMessageBox::warning(parent, tr("Load Model"), tr("Error loading file '%1':\nFile format is not recognized.").arg(FileName));
+			QMessageBox::warning(parent, tr("Load Model"), tr("Could not open file '%1':\nThe file format is not recognized.").arg(FileName));
 		return false;
 	}
 
@@ -539,7 +553,7 @@ swResult<void> Project::Save(const QString& FileName)
 	if (!File.open(QIODevice::WriteOnly))
 	{
 		RestoreAssetSources();
-		return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, File.errorString()));
+		return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, File.errorString()));
 	}
 
 	{
@@ -555,7 +569,7 @@ swResult<void> Project::Save(const QString& FileName)
 		{
 			File.cancelWriting();
 			RestoreAssetSources();
-			return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, tr("Could not write all model data.")));
+			return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, tr("Could not write all model data.")));
 		}
 	}
 
@@ -566,7 +580,7 @@ swResult<void> Project::Save(const QString& FileName)
 	{
 		SetFileName(PreviousFileName);
 		RestoreAssetSources();
-		return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, File.errorString()));
+		return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, File.errorString()));
 	}
 
 	if (!mIsPreview)
@@ -644,7 +658,7 @@ swResult<void> Project::SaveCopy(const QString& FileName) const
 	QSaveFile File(FileName);
 
 	if (!File.open(QIODevice::WriteOnly))
-		return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, File.errorString()));
+		return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, File.errorString()));
 
 	QByteArray Bytes;
 	QTextStream Stream(&Bytes, QIODevice::WriteOnly);
@@ -657,11 +671,11 @@ swResult<void> Project::SaveCopy(const QString& FileName) const
 	if (!Serialized || Stream.status() != QTextStream::Ok || File.write(Bytes) != Bytes.size())
 	{
 		File.cancelWriting();
-		return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, tr("Could not write all model data.")));
+		return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, tr("Could not write all model data.")));
 	}
 
 	if (!File.commit())
-		return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, File.errorString()));
+		return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, File.errorString()));
 
 	return swResult<void>();
 }

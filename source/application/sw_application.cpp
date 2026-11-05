@@ -613,7 +613,7 @@ bool swApplication::SetupPartsLibrary()
 
 	for (;;)
 	{
-		const QString FileName = QFileDialog::getOpenFileName(gMainWindow, tr("Open Parts Library Archive"), QDir::homePath(), tr("Parts Library Archives (*.zip);;All Files (*.*)"));
+		const QString FileName = QFileDialog::getOpenFileName(gMainWindow, tr("Open Parts Library Archive"), QDir::homePath(), tr("Parts Library Archives (*.zip);;All Files (*)"));
 
 		if (FileName.isEmpty())
 			break;
@@ -1254,7 +1254,7 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			Options.StdOut += tr("  --unofficial-library <path>: Set the Unofficial Parts Library archive to path.\n");
 			Options.StdOut += tr("  --shadow-library <path>: Set the LDCad Shadow Library location to path.\n");
 			Options.StdOut += tr("\nPictures:\n");
-			Options.StdOut += tr("  -i, --image <outfile.ext>: Save a picture in the format specified by ext and exit.\n");
+			Options.StdOut += tr("  -i, --image [outfile.ext]: Save a picture in the format specified by ext and exit.\n");
 			Options.StdOut += tr("  -w, --width <width>: Set the picture width.\n");
 			Options.StdOut += tr("  --height <height>: Set the picture height.\n");
 			Options.StdOut += tr("  -f, --from <step>: Set the first step to save pictures.\n");
@@ -1282,7 +1282,7 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			Options.StdOut += tr("  --no-highlight: Do not highlight parts in the steps they appear.\n");
 			Options.StdOut += tr("  --highlight-color <#AARRGGBB>: Rendering color for highlighted parts.\n");
 			Options.StdOut += tr("\nStuds and Edges:\n");
-			Options.StdOut += tr("  --stud-style <style>: Set the stud style (0=Plain, 1=Thin Lines Logo, 2=Outline Logo, 3=Sharp Top Logo, 4=Rounded Top Logo, 5=Flattened Logo, 6=High Contrast, 7=High Contrast with Logo).\n");
+			Options.StdOut += tr("  --stud-style <id>: Set the stud style (0=Plain, 1=Thin-Line Logo, 2=Outline Logo, 3=Sharp Top Logo, 4=Rounded Top Logo, 5=Flattened Logo, 6=High Contrast, 7=High Contrast Logo).\n");
 			Options.StdOut += tr("  --stud-cylinder-color <#AARRGGBB>: High contrast stud cylinder color.\n");
 			Options.StdOut += tr("  --no-stud-cylinder-color: Disable high contrast stud cylinder color.\n");
 			Options.StdOut += tr("  --edge-color <#AARRGGBB>: High contrast edge color.\n");
@@ -1297,20 +1297,20 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			Options.StdOut += tr("\nExport:\n");
 			Options.StdOut += tr("  --flatten <outfile.ldr>: Replace every submodel at all depths with its parts and save the model, before any other export.\n");
 			Options.StdOut += tr("  --undo <outfile.ldr>: Undo every command line edit and save the model, to check that undo restores it.\n");
-			Options.StdOut += tr("  --export-wavefront <outfile.obj>: Export the model to Wavefront OBJ format.\n");
-			Options.StdOut += tr("  --export-3ds <outfile.3ds>: Export the model to 3D Studio 3DS format.\n");
-			Options.StdOut += tr("  --export-collada <outfile.dae>: Export the model to COLLADA DAE format.\n");
-			Options.StdOut += tr("  --export-kmz <outfile.kmz>: Export the model to KMZ format.\n");
+			Options.StdOut += tr("  --export-wavefront [outfile.obj]: Export the model to Wavefront OBJ format.\n");
+			Options.StdOut += tr("  --export-3ds [outfile.3ds]: Export the model to 3D Studio 3DS format.\n");
+			Options.StdOut += tr("  --export-collada [outfile.dae]: Export the model to COLLADA DAE format.\n");
+			Options.StdOut += tr("  --export-kmz [outfile.kmz]: Export the model to KMZ format.\n");
 			Options.StdOut += tr("  --kmz-geometry <all|visible>: Keep every part, or flatten to the visible surfaces with one mesh per color, in KMZ exports.\n");
-			Options.StdOut += tr("  --export-csv <outfile.csv>: Export the list of parts used in CSV format.\n");
-			Options.StdOut += tr("  --export-bricklink <outfile.xml>: Export the list of parts used as a BrickLink XML wanted list, translated through the BrickLink mapping file set in the preferences.\n");
+			Options.StdOut += tr("  --export-csv [outfile.csv]: Export the list of parts used in CSV format.\n");
+			Options.StdOut += tr("  --export-bricklink [outfile.xml]: Export the list of parts used as a BrickLink XML wanted list, translated through the BrickLink mapping file set in the preferences.\n");
 			Options.StdOut += tr("  --bricklink-condition <any|new|used>: Condition wanted in BrickLink exports.\n");
 			Options.StdOut += tr("  --bricklink-wanted-list <id|url>: BrickLink wanted list the exported parts are added to, by number or by the address of its page.\n");
 			Options.StdOut += tr("  --bricklink-notify: Ask BrickLink to notify new listings of the exported parts.\n");
 			Options.StdOut += tr("  --bricklink-exceptions <file>: Comma or tab separated file of parts and the BrickLink numbers that replace their mapping in BrickLink exports.\n");
-			Options.StdOut += tr("  --export-html <folder>: Create HTML instructions in a folder named after the model inside the folder.\n");
-			Options.StdOut += tr("  --export-povray <outfile.pov>: Export the model to POV-Ray format.\n");
-			Options.StdOut += tr("  --render-povray <outfile.png>: Render the model with POV-Ray using the POV-Ray window settings, the picture width and height, and the transparent background.\n");
+			Options.StdOut += tr("  --export-html [folder]: Create HTML instructions in a folder named after the model inside the folder.\n");
+			Options.StdOut += tr("  --export-povray [outfile.pov]: Export the model to POV-Ray format.\n");
+			Options.StdOut += tr("  --render-povray [outfile.png]: Render the model with POV-Ray using the POV-Ray window settings, the picture width and height, and the transparent background.\n");
 			Options.StdOut += tr("\nSettings:\n");
 			Options.StdOut += tr("  --import-settings <infile.ini>: Import the application settings and exit.\n");
 			Options.StdOut += tr("  --export-settings <outfile.ini>: Export the application settings and exit.\n");
@@ -1435,7 +1435,7 @@ static bool swTransferSettings(const swCommandLineOptions& Options, QTextStream&
 		QSettings SettingsFile(Options.SettingsImportName, QSettings::IniFormat);
 
 		if (!QFileInfo(Options.SettingsImportName).isReadable() || SettingsFile.status() != QSettings::NoError)
-			ReportError(swApplication::tr("Error loading settings file '%1'.\n").arg(Options.SettingsImportName));
+			ReportError(swApplication::tr("Could not load settings file '%1'.\n").arg(Options.SettingsImportName));
 		else
 		{
 			QSettings Settings;
@@ -1451,7 +1451,7 @@ static bool swTransferSettings(const swCommandLineOptions& Options, QTextStream&
 	if (!Options.KeyboardShortcutsImportName.isEmpty())
 	{
 		if (!gKeyboardShortcuts.Load(Options.KeyboardShortcutsImportName))
-			ReportError(swApplication::tr("Error loading keyboard shortcuts file '%1'.\n").arg(Options.KeyboardShortcutsImportName));
+			ReportError(swApplication::tr("Could not load keyboard shortcuts file '%1'.\n").arg(Options.KeyboardShortcutsImportName));
 		else
 			swSaveDefaultKeyboardShortcuts();
 	}
@@ -1459,7 +1459,7 @@ static bool swTransferSettings(const swCommandLineOptions& Options, QTextStream&
 	if (!Options.MouseShortcutsImportName.isEmpty())
 	{
 		if (!gMouseShortcuts.Load(Options.MouseShortcutsImportName))
-			ReportError(swApplication::tr("Error loading mouse shortcuts file '%1'.\n").arg(Options.MouseShortcutsImportName));
+			ReportError(swApplication::tr("Could not load mouse shortcuts file '%1'.\n").arg(Options.MouseShortcutsImportName));
 		else
 			swSaveDefaultMouseShortcuts();
 	}
@@ -1469,7 +1469,7 @@ static bool swTransferSettings(const swCommandLineOptions& Options, QTextStream&
 		std::vector<swLibraryCategory> Categories;
 
 		if (!swLoadCategories(Options.CategoriesImportName, Categories) || Categories.empty())
-			ReportError(swApplication::tr("Error loading categories file '%1'.\n").arg(Options.CategoriesImportName));
+			ReportError(swApplication::tr("Could not load categories file '%1'.\n").arg(Options.CategoriesImportName));
 		else
 		{
 			gCategories = Categories;
@@ -1491,7 +1491,7 @@ static bool swTransferSettings(const swCommandLineOptions& Options, QTextStream&
 		SettingsFile.sync();
 
 		if (SettingsFile.status() != QSettings::NoError)
-			ReportError(swApplication::tr("Error saving settings file '%1'.\n").arg(Options.SettingsExportName));
+			ReportError(swApplication::tr("Could not save settings file '%1'.\n").arg(Options.SettingsExportName));
 	}
 
 	if (!Options.KeyboardShortcutsExportName.isEmpty())
@@ -1499,7 +1499,7 @@ static bool swTransferSettings(const swCommandLineOptions& Options, QTextStream&
 		swLoadDefaultKeyboardShortcuts();
 
 		if (!gKeyboardShortcuts.Save(Options.KeyboardShortcutsExportName))
-			ReportError(swApplication::tr("Error saving keyboard shortcuts file '%1'.\n").arg(Options.KeyboardShortcutsExportName));
+			ReportError(swApplication::tr("Could not save keyboard shortcuts file '%1'.\n").arg(Options.KeyboardShortcutsExportName));
 	}
 
 	if (!Options.MouseShortcutsExportName.isEmpty())
@@ -1507,7 +1507,7 @@ static bool swTransferSettings(const swCommandLineOptions& Options, QTextStream&
 		swLoadDefaultMouseShortcuts();
 
 		if (!gMouseShortcuts.Save(Options.MouseShortcutsExportName))
-			ReportError(swApplication::tr("Error saving mouse shortcuts file '%1'.\n").arg(Options.MouseShortcutsExportName));
+			ReportError(swApplication::tr("Could not save mouse shortcuts file '%1'.\n").arg(Options.MouseShortcutsExportName));
 	}
 
 	if (!Options.CategoriesExportName.isEmpty())
@@ -1515,7 +1515,7 @@ static bool swTransferSettings(const swCommandLineOptions& Options, QTextStream&
 		swLoadDefaultCategories();
 
 		if (!swSaveCategories(Options.CategoriesExportName, gCategories))
-			ReportError(swApplication::tr("Error saving categories file '%1'.\n").arg(Options.CategoriesExportName));
+			ReportError(swApplication::tr("Could not save categories file '%1'.\n").arg(Options.CategoriesExportName));
 	}
 
 	return TransferOK;
@@ -1917,7 +1917,7 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 			else if (!TemporaryDir.isValid())
 			{
 				OutputFailed = true;
-				StdErr << tr("Error creating a temporary folder for the POV-Ray scene.\n");
+				StdErr << tr("Could not create a temporary folder for the POV-Ray scene.\n");
 			}
 			else
 			{
@@ -1967,7 +1967,7 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 					if (!Process.waitForStarted() || !Process.waitForFinished(-1) || Process.exitStatus() != QProcess::NormalExit || Process.exitCode() != 0 || !QFileInfo::exists(FileName))
 					{
 						OutputFailed = true;
-						StdErr << tr("Error rendering '%1' with POV-Ray:\n").arg(FileName);
+						StdErr << tr("Could not render '%1' with POV-Ray:\n").arg(FileName);
 
 						const QStringList OutputLines = QString::fromLocal8Bit(Process.readAll()).trimmed().split('\n');
 
@@ -2428,7 +2428,7 @@ void swApplication::ShowPreferencesDialog()
 			}
 
 			if (!LibraryLoaded)
-				QMessageBox::warning(gMainWindow, tr("Load Parts Library"), tr("Could not find a default parts library, '%1' stays in use until StudWorx starts again and offers to download one.").arg(mLibrary->GetLibraryPath()));
+				QMessageBox::warning(gMainWindow, tr("Load Parts Library"), tr("Could not find a default parts library. '%1' stays in use until StudWorx starts again and offers to download one.").arg(mLibrary->GetLibraryPath()));
 		}
 		else
 		{

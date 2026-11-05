@@ -319,7 +319,7 @@ QString swSetupLGEO(QWidget* Parent)
 
 	for (;;)
 	{
-		const QString Path = QFileDialog::getExistingDirectory(Parent, QCoreApplication::translate("swRenderDialog", "Open LGEO Folder"), QDir::homePath());
+		const QString Path = QFileDialog::getExistingDirectory(Parent, QCoreApplication::translate("swRenderDialog", "Select LGEO Folder"), QDir::homePath());
 
 		if (Path.isEmpty())
 			break;
@@ -330,7 +330,7 @@ QString swSetupLGEO(QWidget* Parent)
 			return QDir::cleanPath(Path);
 		}
 
-		QMessageBox::warning(Parent, Title, QCoreApplication::translate("swRenderDialog", "'%1' is not an LGEO part library, it has no lg_elements.lst and lg folder.").arg(QDir::toNativeSeparators(Path)));
+		QMessageBox::warning(Parent, Title, QCoreApplication::translate("swRenderDialog", "'%1' is not an LGEO part library. It has no lg_elements.lst and lg folder.").arg(QDir::toNativeSeparators(Path)));
 	}
 
 	QMessageBox::warning(Parent, Title, QCoreApplication::translate("swRenderDialog", "No LGEO part library was downloaded or set, the render uses LDraw parts.\n\nDownload it from %1 and set it under Preferences › General › LGEO Library.").arg(QLatin1String(SW_LGEO_PROJECT_URL)));
@@ -366,7 +366,7 @@ swPOVRayProgram swSetupPOVRay(QWidget* Parent, const swPOVRayProgram& Found)
 	{
 		for (;;)
 		{
-			const QString Path = QFileDialog::getOpenFileName(Parent, QCoreApplication::translate("swRenderDialog", "Open POV-Ray Program"), QLatin1String("/usr/bin"));
+			const QString Path = QFileDialog::getOpenFileName(Parent, QCoreApplication::translate("swRenderDialog", "Select POV-Ray Executable"), QLatin1String("/usr/bin"));
 
 			if (Path.isEmpty())
 				break;
@@ -379,11 +379,11 @@ swPOVRayProgram swSetupPOVRay(QWidget* Parent, const swPOVRayProgram& Found)
 				return Program;
 			}
 
-			QMessageBox::warning(Parent, Title, Program.Version.isEmpty() ? QCoreApplication::translate("swRenderDialog", "'%1' is not a POV-Ray program.").arg(QDir::toNativeSeparators(Path)) : swGetPOVRayMissingMessage(Program));
+			QMessageBox::warning(Parent, Title, Program.Version.isEmpty() ? QCoreApplication::translate("swRenderDialog", "'%1' is not a POV-Ray executable.").arg(QDir::toNativeSeparators(Path)) : swGetPOVRayMissingMessage(Program));
 		}
 	}
 
-	QMessageBox::warning(Parent, Title, QCoreApplication::translate("swRenderDialog", "No POV-Ray program was set.\n\nInstall POV-Ray 3.7 or newer from %1 and set it under Preferences › General › POV-Ray Executable.").arg(QLatin1String(SW_POVRAY_DOWNLOAD_URL)));
+	QMessageBox::warning(Parent, Title, QCoreApplication::translate("swRenderDialog", "No POV-Ray executable was set.\n\nInstall POV-Ray 3.7 or newer from %1 and set it under Preferences › General › POV-Ray Executable.").arg(QLatin1String(SW_POVRAY_DOWNLOAD_URL)));
 
 	return swPOVRayProgram();
 }

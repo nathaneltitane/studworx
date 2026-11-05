@@ -486,7 +486,7 @@ bool swInstructionsEditorWidget::ValidateText()
 		Errors.append(tr("And %n more.", nullptr, ErrorCount - 10));
 	}
 
-	QMessageBox::warning(this, tr("Editor"), tr("The text was not applied, %n line(s) are not valid LDraw syntax:", nullptr, ErrorCount) + QLatin1String("\n\n") + Errors.join('\n'));
+	QMessageBox::warning(this, tr("Editor"), tr("The text was not applied. %n line(s) are not valid LDraw syntax:", nullptr, ErrorCount) + QLatin1String("\n\n") + Errors.join('\n'));
 
 	return false;
 }

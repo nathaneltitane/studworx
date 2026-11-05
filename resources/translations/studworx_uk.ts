@@ -2481,10 +2481,9 @@
         <translation type="unfinished">&amp;Виберіть Немає</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="396"/>
         <source>Select &amp;Invert</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Виберіть Інвертувати</translation>
+        <translation type="obsolete">&amp;Виберіть Інвертувати</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="432"/>
@@ -2650,10 +2649,9 @@
         <translation type="unfinished">Перемикання окремих трансформацій</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="531"/>
         <source>Move Snap Enabled</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Move Snap увімкнено</translation>
+        <translation type="obsolete">Move Snap увімкнено</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="540"/>
@@ -2748,10 +2746,9 @@
         <translation type="unfinished">8 Цеглин</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="720"/>
         <source>Rotation Snap Enabled</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Прив’язку повороту ввімкнено</translation>
+        <translation type="obsolete">Прив’язку повороту ввімкнено</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="738"/>
@@ -2810,11 +2807,6 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="819"/>
         <source>Custom...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_commands.cpp" line="828"/>
-        <source>Camera Snap Enabled</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3189,11 +3181,9 @@
         <translation type="unfinished">Вставити після</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1413"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3258"/>
         <source>Remove Step</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Видалити крок</translation>
+        <translation type="obsolete">Видалити крок</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1422"/>
@@ -3495,18 +3485,23 @@
         <translation type="unfinished">Спеціальні кольори</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1926"/>
-        <source>Insert with Current Color</source>
+        <location filename="../../source/application/sw_commands.cpp" line="2664"/>
+        <source>Open Selected Submodel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1935"/>
-        <source>Insert with Selected Part Color</source>
+        <location filename="../../source/application/sw_commands.cpp" line="2673"/>
+        <source>Move to New Submodel...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1944"/>
-        <source>Insert with Last Inserted Color</source>
+        <location filename="../../source/application/sw_commands.cpp" line="2682"/>
+        <source>Inline Selected Submodels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2691"/>
+        <source>Flatten Submodels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3555,6 +3550,16 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2088"/>
+        <source>Thin-Line Logo Studs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2142"/>
+        <source>High Contrast Logo Studs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="2376"/>
         <source>Keep Last Selection</source>
         <translation type="unfinished"></translation>
@@ -3585,13 +3590,208 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2691"/>
-        <source>Flatten Model</source>
+        <location filename="../../source/application/sw_commands.cpp" line="2826"/>
+        <source>Proper&amp;ties...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2826"/>
-        <source>Proper&amp;ties...</source>
+        <location filename="../../source/application/sw_commands.cpp" line="2844"/>
+        <source>Submodel 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2853"/>
+        <source>Submodel 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2862"/>
+        <source>Submodel 3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2871"/>
+        <source>Submodel 4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2880"/>
+        <source>Submodel 5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2889"/>
+        <source>Submodel 6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2898"/>
+        <source>Submodel 7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2907"/>
+        <source>Submodel 8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2916"/>
+        <source>Submodel 9</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2925"/>
+        <source>Submodel 10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2934"/>
+        <source>Submodel 11</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2943"/>
+        <source>Submodel 12</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2952"/>
+        <source>Submodel 13</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2961"/>
+        <source>Submodel 14</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2970"/>
+        <source>Submodel 15</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2979"/>
+        <source>Submodel 16</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2988"/>
+        <source>Submodel 17</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2997"/>
+        <source>Submodel 18</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3006"/>
+        <source>Submodel 19</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3015"/>
+        <source>Submodel 20</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3024"/>
+        <source>Submodel 21</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3033"/>
+        <source>Submodel 22</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3042"/>
+        <source>Submodel 23</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3051"/>
+        <source>Submodel 24</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3060"/>
+        <source>Submodel 25</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3069"/>
+        <source>Submodel 26</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3078"/>
+        <source>Submodel 27</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3087"/>
+        <source>Submodel 28</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3096"/>
+        <source>Submodel 29</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3105"/>
+        <source>Submodel 30</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3114"/>
+        <source>Submodel 31</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3123"/>
+        <source>Submodel 32</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3132"/>
+        <source>Submodel 33</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3141"/>
+        <source>Submodel 34</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3150"/>
+        <source>Submodel 35</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3159"/>
+        <source>Submodel 36</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3168"/>
+        <source>Submodel 37</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3177"/>
+        <source>Submodel 38</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3186"/>
+        <source>Submodel 39</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3195"/>
+        <source>Submodel 40</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3635,6 +3835,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="396"/>
+        <source>&amp;Invert Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="405"/>
         <source>Select A&amp;djacent Parts</source>
         <translation type="unfinished"></translation>
@@ -3650,6 +3855,21 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="531"/>
+        <source>Move Snap</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="720"/>
+        <source>Rotation Snap</source>
+        <translation type="unfinished">Обертання Snap</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="828"/>
+        <source>Camera Snap</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="963"/>
         <source>Erase</source>
         <translation type="unfinished"></translation>
@@ -3657,6 +3877,27 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1044"/>
         <source>Preference&amp;s...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1413"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3258"/>
+        <source>Delete Step</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1926"/>
+        <source>Current Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1935"/>
+        <source>Selected Part Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1944"/>
+        <source>Last Inserted Part Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3685,11 +3926,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2088"/>
-        <source>Thin Lines Logo Studs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/application/sw_commands.cpp" line="2097"/>
         <source>Outline Logo Studs</source>
         <translation type="unfinished"></translation>
@@ -3712,11 +3948,6 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2133"/>
         <source>High Contrast Studs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2142"/>
-        <source>High Contrast with Logo Studs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4008,22 +4239,19 @@
         <translation type="unfinished">&amp;Масив...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2664"/>
         <source>Open Selected Model</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відкрийте вибрану модель</translation>
+        <translation type="obsolete">Відкрийте вибрану модель</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2673"/>
         <source>Move to New Model...</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перейти до нової моделі...</translation>
+        <translation type="obsolete">Перейти до нової моделі...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2682"/>
         <source>Inline Selected Models</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Вбудовані вибрані моделі</translation>
+        <translation type="obsolete">Вбудовані вибрані моделі</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2700"/>
@@ -4121,244 +4349,204 @@
         <translation type="unfinished">Підмоделі...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2844"/>
         <source>Model 1</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 1</translation>
+        <translation type="obsolete">Модель 1</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2853"/>
         <source>Model 2</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 2</translation>
+        <translation type="obsolete">Модель 2</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2862"/>
         <source>Model 3</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 3</translation>
+        <translation type="obsolete">Модель 3</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2871"/>
         <source>Model 4</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 4</translation>
+        <translation type="obsolete">Модель 4</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2880"/>
         <source>Model 5</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 5</translation>
+        <translation type="obsolete">Модель 5</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2889"/>
         <source>Model 6</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 6</translation>
+        <translation type="obsolete">Модель 6</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2898"/>
         <source>Model 7</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 7</translation>
+        <translation type="obsolete">Модель 7</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2907"/>
         <source>Model 8</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 8</translation>
+        <translation type="obsolete">Модель 8</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2916"/>
         <source>Model 9</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 9</translation>
+        <translation type="obsolete">Модель 9</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2925"/>
         <source>Model 10</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 10</translation>
+        <translation type="obsolete">Модель 10</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2934"/>
         <source>Model 11</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 11</translation>
+        <translation type="obsolete">Модель 11</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2943"/>
         <source>Model 12</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 12</translation>
+        <translation type="obsolete">Модель 12</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2952"/>
         <source>Model 13</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 13</translation>
+        <translation type="obsolete">Модель 13</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2961"/>
         <source>Model 14</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 14</translation>
+        <translation type="obsolete">Модель 14</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2970"/>
         <source>Model 15</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 15</translation>
+        <translation type="obsolete">Модель 15</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2979"/>
         <source>Model 16</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 16</translation>
+        <translation type="obsolete">Модель 16</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2988"/>
         <source>Model 17</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 17</translation>
+        <translation type="obsolete">Модель 17</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2997"/>
         <source>Model 18</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 18</translation>
+        <translation type="obsolete">Модель 18</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3006"/>
         <source>Model 19</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 19</translation>
+        <translation type="obsolete">Модель 19</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3015"/>
         <source>Model 20</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 20</translation>
+        <translation type="obsolete">Модель 20</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3024"/>
         <source>Model 21</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 21</translation>
+        <translation type="obsolete">Модель 21</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3033"/>
         <source>Model 22</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 22</translation>
+        <translation type="obsolete">Модель 22</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3042"/>
         <source>Model 23</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 23</translation>
+        <translation type="obsolete">Модель 23</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3051"/>
         <source>Model 24</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 24</translation>
+        <translation type="obsolete">Модель 24</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3060"/>
         <source>Model 25</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 25</translation>
+        <translation type="obsolete">Модель 25</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3069"/>
         <source>Model 26</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 26</translation>
+        <translation type="obsolete">Модель 26</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3078"/>
         <source>Model 27</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 27</translation>
+        <translation type="obsolete">Модель 27</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3087"/>
         <source>Model 28</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 28</translation>
+        <translation type="obsolete">Модель 28</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3096"/>
         <source>Model 29</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 29</translation>
+        <translation type="obsolete">Модель 29</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3105"/>
         <source>Model 30</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 30</translation>
+        <translation type="obsolete">Модель 30</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3114"/>
         <source>Model 31</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 31</translation>
+        <translation type="obsolete">Модель 31</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3123"/>
         <source>Model 32</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 32</translation>
+        <translation type="obsolete">Модель 32</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3132"/>
         <source>Model 33</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 33</translation>
+        <translation type="obsolete">Модель 33</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3141"/>
         <source>Model 34</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 34</translation>
+        <translation type="obsolete">Модель 34</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3150"/>
         <source>Model 35</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 35</translation>
+        <translation type="obsolete">Модель 35</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3159"/>
         <source>Model 36</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 36</translation>
+        <translation type="obsolete">Модель 36</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3168"/>
         <source>Model 37</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 37</translation>
+        <translation type="obsolete">Модель 37</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3177"/>
         <source>Model 38</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 38</translation>
+        <translation type="obsolete">Модель 38</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3186"/>
         <source>Model 39</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 39</translation>
+        <translation type="obsolete">Модель 39</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3195"/>
         <source>Model 40</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель 40</translation>
+        <translation type="obsolete">Модель 40</translation>
     </message>
     <message>
         <source>What&apos;s This?</source>
@@ -4543,9 +4731,8 @@
         <translation type="vanished">Порожня назва</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project.cpp" line="238"/>
         <source>The submodel name cannot be empty.</source>
-        <translation>Назва підмоделі не може бути порожньою.</translation>
+        <translation type="vanished">Назва підмоделі не може бути порожньою.</translation>
     </message>
     <message>
         <source>Duplicate Submodel</source>
@@ -4598,48 +4785,44 @@
         <translation type="unfinished">Дубльована модель &apos;%1&apos; була проігнорована; назви моделей нечутливі до регістру.</translation>
     </message>
     <message>
+        <location filename="../../source/core/sw_project_file.cpp" line="372"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="381"/>
+        <source>Could not read file &apos;%1&apos;:
+%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/core/sw_project_file.cpp" line="362"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="471"/>
+        <source>Could not open file &apos;%1&apos;:
+The file format is not recognized.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Error</source>
         <translation type="vanished">Помилка</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="358"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="367"/>
         <source>Error reading file &apos;%1&apos;:
 %2</source>
-        <translation>Помилка читання файла &apos;%1&apos;:
+        <translation type="vanished">Помилка читання файла &apos;%1&apos;:
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="457"/>
         <source>Error loading file &apos;%1&apos;:
 File format is not recognized.</source>
-        <translation>Помилка завантаження файла &apos;%1&apos;:
+        <translation type="vanished">Помилка завантаження файла &apos;%1&apos;:
 Формат файла не розпізнано.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="403"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="419"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1588"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1673"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1722"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1759"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1781"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1817"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1850"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="542"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="558"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="569"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="647"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="660"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="664"/>
         <source>Error writing to file &apos;%1&apos;:
 %2</source>
-        <translation>Помилка запису у файл &apos;%1&apos;:
+        <translation type="vanished">Помилка запису у файл &apos;%1&apos;:
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="558"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="660"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="572"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="674"/>
         <source>Could not write all model data.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося записати всі дані моделі.</translation>
@@ -4692,6 +4875,11 @@ File format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/core/sw_project.cpp" line="238"/>
+        <source>Submodel name cannot be empty.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/core/sw_project.cpp" line="271"/>
         <source>A part named &apos;%1&apos; already exists in this model. Please enter a unique name.</source>
         <translation type="unfinished"></translation>
@@ -4712,9 +4900,10 @@ File format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="358"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="367"/>
-        <location filename="../../source/core/sw_project_file.cpp" line="457"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="362"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="372"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="381"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="471"/>
         <source>Load Model</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">Завантажити модель</translation>
@@ -4743,33 +4932,32 @@ File format is not recognized.</source>
         <translation type="unfinished">Не вдалося зарезервувати назву підмоделі &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="777"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="791"/>
         <source>Cannot export different submodels named &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Неможливо експортувати різні субмоделі з назвою &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="827"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="841"/>
         <source>Could not serialize all model data.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося серіалізувати всі дані моделі.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_file.cpp" line="865"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="879"/>
         <source>Cannot export different embedded data named &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Неможливо експортувати різні вбудовані дані під назвою &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_import.cpp" line="400"/>
+        <location filename="../../source/core/sw_project_import.cpp" line="416"/>
         <source>Clipboard contains no model.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Буфер обміну не містить моделі.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="505"/>
         <source>3DS Files (*.3ds);;All Files (*.*)</source>
-        <translation>Файли 3DS (*.3ds);;Усі файли (*.*)</translation>
+        <translation type="vanished">Файли 3DS (*.3ds);;Усі файли (*.*)</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_export.cpp" line="513"/>
@@ -4788,9 +4976,8 @@ File format is not recognized.</source>
         <translation>Експортувати BrickLink</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="897"/>
         <source>XML Files (*.xml);;All Files (*.*)</source>
-        <translation>Файли XML (*.xml);;Усі файли (*.*)</translation>
+        <translation type="vanished">Файли XML (*.xml);;Усі файли (*.*)</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_export.cpp" line="914"/>
@@ -4798,23 +4985,12 @@ File format is not recognized.</source>
         <translation>Експортувати COLLADA</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="914"/>
         <source>COLLADA Files (*.dae);;All Files (*.*)</source>
-        <translation>Файли COLLADA (*.dae);;Усі файли (*.*)</translation>
+        <translation type="vanished">Файли COLLADA (*.dae);;Усі файли (*.*)</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_export.cpp" line="936"/>
         <source>Export KMZ</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="936"/>
-        <source>KMZ Files (*.kmz);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="965"/>
-        <source>Error writing to file &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4833,13 +5009,62 @@ File format is not recognized.</source>
         <translation>Експортувати CSV</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1440"/>
         <source>CSV Files (*.csv);;All Files (*.*)</source>
-        <translation>Файли CSV (*.csv);;Усі файли (*.*)</translation>
+        <translation type="vanished">Файли CSV (*.csv);;Усі файли (*.*)</translation>
+    </message>
+    <message>
+        <location filename="../../source/core/sw_project_export.cpp" line="403"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="419"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1588"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1673"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1722"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1759"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1781"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1817"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="1850"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="556"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="572"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="583"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="661"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="674"/>
+        <location filename="../../source/core/sw_project_file.cpp" line="678"/>
+        <source>Could not write file &apos;%1&apos;:
+%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/core/sw_project_export.cpp" line="505"/>
+        <source>3DS Files (*.3ds);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/core/sw_project_export.cpp" line="897"/>
+        <source>XML Files (*.xml);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/core/sw_project_export.cpp" line="914"/>
+        <source>COLLADA Files (*.dae);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/core/sw_project_export.cpp" line="936"/>
+        <source>KMZ Files (*.kmz);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/core/sw_project_export.cpp" line="965"/>
+        <source>Could not write file &apos;%1&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/core/sw_project_export.cpp" line="1440"/>
+        <source>CSV Files (*.csv);;All Files (*)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_export.cpp" line="1541"/>
-        <source>Error creating folder &apos;%1&apos;.</source>
+        <source>Could not create folder &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4921,6 +5146,16 @@ File format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/core/sw_project_export.cpp" line="1889"/>
+        <source>POV-Ray Files (*.pov);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/core/sw_project_export.cpp" line="2733"/>
+        <source>Wavefront Files (*.obj);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Error creating images.</source>
         <translation type="vanished">Помилка створення зображення.</translation>
     </message>
@@ -4930,9 +5165,8 @@ File format is not recognized.</source>
         <translation>Експортувати POV-Ray</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1889"/>
         <source>POV-Ray Files (*.pov);;All Files (*.*)</source>
-        <translation>Файли POV-Ray (*.pov);;Усі файли (*.*)</translation>
+        <translation type="vanished">Файли POV-Ray (*.pov);;Усі файли (*.*)</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_export.cpp" line="2365"/>
@@ -4945,9 +5179,8 @@ File format is not recognized.</source>
         <translation>Експортувати Wavefront</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="2733"/>
         <source>Wavefront Files (*.obj);;All Files (*.*)</source>
-        <translation>Файли Wavefront (*.obj);;Усі файли (*.*)</translation>
+        <translation type="vanished">Файли Wavefront (*.obj);;Усі файли (*.*)</translation>
     </message>
 </context>
 <context>
@@ -6176,6 +6409,8 @@ File format is not recognized.</source>
         <translation type="unfinished">Зупинити процес Blender</translation>
     </message>
     <message>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1017"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1023"/>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1041"/>
         <source>%1 failed: %2</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -6306,10 +6541,9 @@ File format is not recognized.</source>
         <translation type="obsolete">Збережіть зображення поточного перегляду</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="91"/>
         <source>Import a file in LEGO® Digital Designer LXF format</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Імпортуйте файл у форматі LEGO® Digital Designer LXF</translation>
+        <translation type="obsolete">Імпортуйте файл у форматі LEGO® Digital Designer LXF</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="100"/>
@@ -7116,11 +7350,9 @@ File format is not recognized.</source>
         <translation type="unfinished">Вставте новий крок після поточного кроку</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1414"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3259"/>
         <source>Remove current step</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Видалити поточний крок</translation>
+        <translation type="obsolete">Видалити поточний крок</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1423"/>
@@ -7153,61 +7385,48 @@ File format is not recognized.</source>
         <translation type="unfinished">Скинути всі перегляди</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1468"/>
         <source>Toggle the Standard Toolbar</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемкніть стандартну панель інструментів</translation>
+        <translation type="obsolete">Перемкніть стандартну панель інструментів</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1477"/>
         <source>Toggle the Tools Toolbar</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемкніть панель інструментів «Інструменти».</translation>
+        <translation type="obsolete">Перемкніть панель інструментів «Інструменти».</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1486"/>
         <source>Toggle the Time Toolbar</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемкніть панель інструментів часу</translation>
+        <translation type="obsolete">Перемкніть панель інструментів часу</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1495"/>
         <source>Toggle the Parts Toolbar</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемкніть панель інструментів Parts</translation>
+        <translation type="obsolete">Перемкніть панель інструментів Parts</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1504"/>
         <source>Toggle the Colors Toolbar</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемкніть панель інструментів «Кольори».</translation>
+        <translation type="obsolete">Перемкніть панель інструментів «Кольори».</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1513"/>
         <source>Toggle the Properties Toolbar</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемкніть панель інструментів властивостей</translation>
+        <translation type="obsolete">Перемкніть панель інструментів властивостей</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1522"/>
         <source>Toggle the Timeline Toolbar</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемкнути панель інструментів шкали часу</translation>
+        <translation type="obsolete">Перемкнути панель інструментів шкали часу</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1531"/>
         <source>Toggle the Preview Toolbar</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Увімкнути панель інструментів попереднього перегляду</translation>
+        <translation type="obsolete">Увімкнути панель інструментів попереднього перегляду</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1540"/>
         <source>Toggle the Terminal panel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1549"/>
-        <source>Toggle the Minifigure Builder Panel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7216,10 +7435,9 @@ File format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1567"/>
         <source>Toggle fullscreen mode</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемкнути повноекранний режим</translation>
+        <translation type="obsolete">Перемкнути повноекранний режим</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1576"/>
@@ -7517,8 +7735,13 @@ File format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2089"/>
-        <source>Draw studs with the thin lines logo style</source>
+        <location filename="../../source/application/sw_commands.cpp" line="3214"/>
+        <source>Open the StudWorx home page in your default web browser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3223"/>
+        <source>Open the StudWorx bug report form in your default web browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7544,11 +7767,6 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2134"/>
         <source>Draw studs with the high contrast style</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2143"/>
-        <source>Draw studs with the high contrast with logo style</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7617,6 +7835,11 @@ File format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="91"/>
+        <source>Import a file in LEGO® Digital Designer LXF or LXFML format</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="136"/>
         <source>Export the current model in KMZ format</source>
         <translation type="unfinished"></translation>
@@ -7639,6 +7862,72 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="424"/>
         <source>Toggle finding connected parts with the LDCad shadow library</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1414"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3259"/>
+        <source>Delete the current step</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1468"/>
+        <source>Toggle the Standard toolbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1477"/>
+        <source>Toggle the Tools toolbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1486"/>
+        <source>Toggle the Time toolbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1495"/>
+        <source>Toggle the Parts panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1504"/>
+        <source>Toggle the Colors panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1513"/>
+        <source>Toggle the Properties panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1522"/>
+        <source>Toggle the Timeline panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1531"/>
+        <source>Toggle the Preview panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1549"/>
+        <source>Toggle the Minifigure Builder panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1567"/>
+        <source>Toggle full screen mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2089"/>
+        <source>Draw studs with the thin-line logo style</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2143"/>
+        <source>Draw studs with the high contrast logo style</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7782,18 +8071,23 @@ File format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2665"/>
+        <source>Open the submodel referenced by the selected part in a new tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2674"/>
+        <source>Move the selected parts to a new submodel and replace them with a reference to it</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2683"/>
+        <source>Insert the contents of the selected submodels into the current model</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="2692"/>
         <source>Replace every submodel, and the submodels inside it, with its parts in one step</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3214"/>
-        <source>Open StudWorx&apos; home page on the internet using your default web browser</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3223"/>
-        <source>Open StudWorx&apos; bug report form on your default web browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7900,22 +8194,19 @@ File format is not recognized.</source>
         <translation type="unfinished">Зробіть копії вибраних частин</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2665"/>
         <source>Open the model referenced by the selected part in a new tab</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відкрийте модель, на яку посилається вибраний фрагмент, у новій вкладці</translation>
+        <translation type="obsolete">Відкрийте модель, на яку посилається вибраний фрагмент, у новій вкладці</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2674"/>
         <source>Move the selected parts to a new model and replace them with a reference to the model</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемістіть вибрані фрагменти в нову модель і замініть їх посиланням на модель</translation>
+        <translation type="obsolete">Перемістіть вибрані фрагменти в нову модель і замініть їх посиланням на модель</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2683"/>
         <source>Insert the contents of the selected model references into the current model</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Вставте вміст вибраних посилань на модель у поточну модель</translation>
+        <translation type="obsolete">Вставте вміст вибраних посилань на модель у поточну модель</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2701"/>
@@ -8421,7 +8712,7 @@ File format is not recognized.</source>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2693"/>
-        <source>&lt;p&gt;&lt;b&gt;Flatten Model&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace every submodel in the current model, and every submodel inside those, with its parts in one undo step. Each part keeps its place and color, and the groups inside the submodels are not kept.&lt;/p&gt;</source>
+        <source>&lt;p&gt;&lt;b&gt;Flatten Submodels&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace every submodel in the current model, and every submodel inside those, with its parts in one undo step. Each part keeps its place and color, and the groups inside the submodels are not kept.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -8723,6 +9014,12 @@ Pictures:
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_application.cpp" line="1257"/>
+        <source>  -i, --image [outfile.ext]: Save a picture in the format specified by ext and exit.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_application.cpp" line="1264"/>
         <source>
 Camera:
@@ -8770,12 +9067,6 @@ Rendering:
         <location filename="../../source/application/sw_application.cpp" line="1284"/>
         <source>
 Studs and Edges:
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_application.cpp" line="1285"/>
-        <source>  --stud-style &lt;style&gt;: Set the stud style (0=Plain, 1=Thin Lines Logo, 2=Outline Logo, 3=Sharp Top Logo, 4=Rounded Top Logo, 5=Flattened Logo, 6=High Contrast, 7=High Contrast with Logo).
 </source>
         <translation type="unfinished"></translation>
     </message>
@@ -8865,42 +9156,6 @@ Export:
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1300"/>
-        <source>  --export-wavefront &lt;outfile.obj&gt;: Export the model to Wavefront OBJ format.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_application.cpp" line="1301"/>
-        <source>  --export-3ds &lt;outfile.3ds&gt;: Export the model to 3D Studio 3DS format.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_application.cpp" line="1302"/>
-        <source>  --export-collada &lt;outfile.dae&gt;: Export the model to COLLADA DAE format.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_application.cpp" line="1303"/>
-        <source>  --export-kmz &lt;outfile.kmz&gt;: Export the model to KMZ format.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_application.cpp" line="1305"/>
-        <source>  --export-csv &lt;outfile.csv&gt;: Export the list of parts used in CSV format.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_application.cpp" line="1306"/>
-        <source>  --export-bricklink &lt;outfile.xml&gt;: Export the list of parts used as a BrickLink XML wanted list, translated through the BrickLink mapping file set in the preferences.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/application/sw_application.cpp" line="1307"/>
         <source>  --bricklink-condition &lt;any|new|used&gt;: Condition wanted in BrickLink exports.
 </source>
@@ -8921,18 +9176,6 @@ Export:
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1310"/>
         <source>  --bricklink-exceptions &lt;file&gt;: Comma or tab separated file of parts and the BrickLink numbers that replace their mapping in BrickLink exports.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_application.cpp" line="1312"/>
-        <source>  --export-povray &lt;outfile.pov&gt;: Export the model to POV-Ray format.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_application.cpp" line="1313"/>
-        <source>  --render-povray &lt;outfile.png&gt;: Render the model with POV-Ray using the POV-Ray window settings, the picture width and height, and the transparent background.
 </source>
         <translation type="unfinished"></translation>
     </message>
@@ -8959,6 +9202,54 @@ Information:
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1387"/>
         <source>--projection is ignored when --camera is set.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1438"/>
+        <source>Could not load settings file &apos;%1&apos;.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1454"/>
+        <source>Could not load keyboard shortcuts file &apos;%1&apos;.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1462"/>
+        <source>Could not load mouse shortcuts file &apos;%1&apos;.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1472"/>
+        <source>Could not load categories file &apos;%1&apos;.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1494"/>
+        <source>Could not save settings file &apos;%1&apos;.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1502"/>
+        <source>Could not save keyboard shortcuts file &apos;%1&apos;.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1510"/>
+        <source>Could not save mouse shortcuts file &apos;%1&apos;.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1518"/>
+        <source>Could not save categories file &apos;%1&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
@@ -8993,6 +9284,36 @@ Information:
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Недійсні значення параметрів, указані для опції &apos;%1&apos;: вимоги: 1 &lt;= &lt;near&gt; &lt; &lt;far&gt;.</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1305"/>
+        <source>  --export-csv [outfile.csv]: Export the list of parts used in CSV format.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1306"/>
+        <source>  --export-bricklink [outfile.xml]: Export the list of parts used as a BrickLink XML wanted list, translated through the BrickLink mapping file set in the preferences.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1311"/>
+        <source>  --export-html [folder]: Create HTML instructions in a folder named after the model inside the folder.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1312"/>
+        <source>  --export-povray [outfile.pov]: Export the model to POV-Ray format.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1313"/>
+        <source>  --render-povray [outfile.png]: Render the model with POV-Ray using the POV-Ray window settings, the picture width and height, and the transparent background.
+</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1354"/>
@@ -9047,11 +9368,6 @@ Download the official library (about 140 MB) from library.ldraw.org into &apos;%
     <message>
         <location filename="../../source/application/sw_application.cpp" line="616"/>
         <source>Open Parts Library Archive</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_application.cpp" line="616"/>
-        <source>Parts Library Archives (*.zip);;All Files (*.*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9134,11 +9450,10 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1257"/>
         <source>  -i, --image &lt;outfile.ext&gt;: Save a picture in the format specified by ext and exit.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  -i, --image &lt;outfile.ext&gt;: зберегти зображення у форматі, визначеному ext, і вийти.</translation>
+        <translation type="obsolete">  -i, --image &lt;outfile.ext&gt;: зберегти зображення у форматі, визначеному ext, і вийти.</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1258"/>
@@ -9477,54 +9792,6 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <translation type="unfinished">Ім&apos;я файлу не вказано.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1438"/>
-        <source>Error loading settings file &apos;%1&apos;.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_application.cpp" line="1454"/>
-        <source>Error loading keyboard shortcuts file &apos;%1&apos;.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_application.cpp" line="1462"/>
-        <source>Error loading mouse shortcuts file &apos;%1&apos;.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_application.cpp" line="1472"/>
-        <source>Error loading categories file &apos;%1&apos;.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_application.cpp" line="1494"/>
-        <source>Error saving settings file &apos;%1&apos;.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_application.cpp" line="1502"/>
-        <source>Error saving keyboard shortcuts file &apos;%1&apos;.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_application.cpp" line="1510"/>
-        <source>Error saving mouse shortcuts file &apos;%1&apos;.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_application.cpp" line="1518"/>
-        <source>Error saving categories file &apos;%1&apos;.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/application/sw_application.cpp" line="1572"/>
         <location filename="../../source/application/sw_application.cpp" line="2227"/>
         <source>Initialize Renderer</source>
@@ -9545,6 +9812,18 @@ Download one from %1 and pass it with --library.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_application.cpp" line="1920"/>
+        <source>Could not create a temporary folder for the POV-Ray scene.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1970"/>
+        <source>Could not render &apos;%1&apos; with POV-Ray:
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_application.cpp" line="2184"/>
         <source>Saved 1 lot to &apos;%1&apos;.
 </source>
@@ -9554,11 +9833,6 @@ Download one from %1 and pass it with --library.</source>
         <location filename="../../source/application/sw_application.cpp" line="2184"/>
         <source>Saved %1 lots to &apos;%2&apos;.
 </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_application.cpp" line="2431"/>
-        <source>Could not find a default parts library, &apos;%1&apos; stays in use until StudWorx starts again and offers to download one.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9683,6 +9957,11 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
         <translation type="unfinished">Завантажити бібліотеку деталей</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_application.cpp" line="616"/>
+        <source>Parts Library Archives (*.zip);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_application.cpp" line="1259"/>
         <source>  --height &lt;height&gt;: Set the picture height.
 </source>
@@ -9695,14 +9974,38 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1304"/>
-        <source>  --kmz-geometry &lt;all|visible&gt;: Keep every part, or flatten to the visible surfaces with one mesh per color, in KMZ exports.
+        <location filename="../../source/application/sw_application.cpp" line="1285"/>
+        <source>  --stud-style &lt;id&gt;: Set the stud style (0=Plain, 1=Thin-Line Logo, 2=Outline Logo, 3=Sharp Top Logo, 4=Rounded Top Logo, 5=Flattened Logo, 6=High Contrast, 7=High Contrast Logo).
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1311"/>
-        <source>  --export-html &lt;folder&gt;: Create HTML instructions in a folder named after the model inside the folder.
+        <location filename="../../source/application/sw_application.cpp" line="1300"/>
+        <source>  --export-wavefront [outfile.obj]: Export the model to Wavefront OBJ format.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1301"/>
+        <source>  --export-3ds [outfile.3ds]: Export the model to 3D Studio 3DS format.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1302"/>
+        <source>  --export-collada [outfile.dae]: Export the model to COLLADA DAE format.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1303"/>
+        <source>  --export-kmz [outfile.kmz]: Export the model to KMZ format.
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="1304"/>
+        <source>  --kmz-geometry &lt;all|visible&gt;: Keep every part, or flatten to the visible surfaces with one mesh per color, in KMZ exports.
 </source>
         <translation type="unfinished"></translation>
     </message>
@@ -9748,20 +10051,13 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1920"/>
-        <source>Error creating a temporary folder for the POV-Ray scene.
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_application.cpp" line="1970"/>
-        <source>Error rendering &apos;%1&apos; with POV-Ray:
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/application/sw_application.cpp" line="2414"/>
         <source>Could not reload the parts library &apos;%1&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application.cpp" line="2431"/>
+        <source>Could not find a default parts library. &apos;%1&apos; stays in use until StudWorx starts again and offers to download one.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -11384,12 +11680,12 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <name>swBrickLinkExportDialog</name>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="7"/>
-        <source>Mapping Files (*.txt *.json);;All Files (*.*)</source>
+        <source>Mapping Files (*.txt *.json);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="10"/>
-        <source>Exception Files (*.csv *.tsv *.txt);;All Files (*.*)</source>
+        <source>Exception Files (*.csv *.tsv *.txt);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -11676,7 +11972,7 @@ Choose where to save it and build it now?</source>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="53"/>
-        <source>LDraw Files (*.ldr);;All Files (*.*)</source>
+        <source>LDraw Files (*.ldr);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -13487,7 +13783,7 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="700"/>
-        <source>Supported Image Files (*.bmp *.png *.jpg *.gif);;BMP Files (*.bmp);;PNG Files (*.png);;JPEG Files (*.jpg);;Animated GIF Files (*.gif);;All Files (*.*)</source>
+        <source>Supported Image Files (*.bmp *.png *.jpg *.gif);;BMP Files (*.bmp);;PNG Files (*.png);;JPEG Files (*.jpg);;Animated GIF Files (*.gif);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -13983,6 +14279,15 @@ Choose where to save it and download the latest %3 now?</source>
         <source>Discard the edits and show the text of the model again.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message numerus="yes">
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="489"/>
+        <source>The text was not applied. %n line(s) are not valid LDraw syntax:</source>
+        <translation type="unfinished">
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+            <numerusform></numerusform>
+        </translation>
+    </message>
     <message>
         <source>Find</source>
         <translation type="obsolete">Пошук</translation>
@@ -14017,15 +14322,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message numerus="yes">
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="486"/>
         <source>And %n more.</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-            <numerusform></numerusform>
-        </translation>
-    </message>
-    <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="489"/>
-        <source>The text was not applied, %n line(s) are not valid LDraw syntax:</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>
@@ -14679,7 +14975,7 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_print.cpp" line="209"/>
-        <source>PDF Files (*.pdf);;All Files (*.*)</source>
+        <source>PDF Files (*.pdf);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -16511,16 +16807,40 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="141"/>
+        <source>Edit Model Text</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="231"/>
+        <source>LDraw Models (*.ldr *.mpd *.dat);;LeoCAD Models (*.lcd);;LEGO® Digital Designer Models (*.lxf *.lxfml);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="316"/>
+        <source>LDraw Models (*.ldr *.mpd *.dat);;LeoCAD Models (*.lcd);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="361"/>
+        <source>LEGO® Digital Designer Models (*.lxf *.lxfml);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="288"/>
+        <source>A migrated model is saved with StudWorx meta commands. LeoCAD then ignores its cameras, lights, groups and part settings. A model kept as it is stays readable in LeoCAD.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="662"/>
         <source>Export HTML</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Експорт HTML</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="670"/>
         <source>POV-Ray Export</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">POV-Ray Експорт</translation>
+        <translation type="obsolete">POV-Ray Експорт</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="873"/>
@@ -16736,13 +17056,18 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="670"/>
+        <source>Export POV-Ray</source>
+        <translation type="unfinished">Експортувати POV-Ray</translation>
+    </message>
+    <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="759"/>
         <source>Print</source>
         <translation type="unfinished">Роздрукувати</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="759"/>
-        <source>Error starting the print job.</source>
+        <source>Could not start the print job.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -16924,20 +17249,13 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="141"/>
-        <source>Editor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="141"/>
         <source>The text is not a model file.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="231"/>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="316"/>
         <source>Supported Files (*.lcd *.ldr *.dat *.mpd);;All Files (*.*)</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Підтримувані файли (*.lcd *.ldr *.dat *.mpd);;Усі файли (*.*)</translation>
+        <translation type="obsolete">Підтримувані файли (*.lcd *.ldr *.dat *.mpd);;Усі файли (*.*)</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="287"/>
@@ -16947,11 +17265,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="287"/>
         <source>&apos;%1&apos; uses LeoCAD meta commands. Do you want to migrate it to StudWorx meta commands?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="288"/>
-        <source>A migrated model is saved with StudWorx meta commands, LeoCAD then ignores its cameras, lights, groups and part settings. A model kept as it is stays readable in LeoCAD.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -17013,22 +17326,34 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_command.cpp" line="181"/>
-        <source>Cannot Cut Model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Неможливо вирізати модель</translation>
+        <source>Cannot Cut Selection</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_command.cpp" line="186"/>
-        <source>Cannot Copy Model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Неможливо скопіювати модель</translation>
+        <source>Cannot Copy Selection</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_command.cpp" line="191"/>
         <location filename="../../source/interface/window/sw_window_main_command.cpp" line="196"/>
+        <source>Cannot Paste Selection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot Cut Model</source>
+        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
+        <translation type="obsolete">Неможливо вирізати модель</translation>
+    </message>
+    <message>
+        <source>Cannot Copy Model</source>
+        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
+        <translation type="obsolete">Неможливо скопіювати модель</translation>
+    </message>
+    <message>
         <source>Cannot Paste Model</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Не вдається вставити модель</translation>
+        <translation type="obsolete">Не вдається вставити модель</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_command.cpp" line="470"/>
@@ -17040,28 +17365,24 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">StudWorx</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="361"/>
         <source>Import</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Імпорт</translation>
+        <translation type="obsolete">Імпорт</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="361"/>
         <source>LEGO® Digital Designer Files (*.lxf);;All Files (*.*)</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">LEGO® Файли Digital Designer (*.lxf);;Усі файли (*.*)</translation>
+        <translation type="obsolete">LEGO® Файли Digital Designer (*.lxf);;Усі файли (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="414"/>
         <source>Supported Files (*.mpd);;All Files (*.*)</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Підтримувані файли (*.mpd);;Усі файли (*.*)</translation>
+        <translation type="obsolete">Підтримувані файли (*.mpd);;Усі файли (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="414"/>
         <source>Supported Files (*.ldr *.dat *.mpd);;All Files (*.*)</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Підтримувані файли (*.ldr *.dat *.mpd);;Усі файли (*.*)</translation>
+        <translation type="obsolete">Підтримувані файли (*.ldr *.dat *.mpd);;Усі файли (*.*)</translation>
     </message>
     <message>
         <source>Error</source>
@@ -17087,6 +17408,21 @@ Choose where to save it and download the latest %3 now?</source>
         <source>Cannot Merge Model</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдається об’єднати модель</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="361"/>
+        <source>Import LEGO® Digital Designer Model</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="414"/>
+        <source>LDraw Models (*.mpd);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_project.cpp" line="414"/>
+        <source>LDraw Models (*.ldr *.dat *.mpd);;All Files (*)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="437"/>
@@ -17559,12 +17895,29 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="403"/>
-        <source>Cannot overwrite a built in template.</source>
+        <source>Cannot overwrite a built-in template.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="443"/>
-        <source>Minifigure Template Files (*.minifigure *.minifig);;All Files (*.*)</source>
+        <source>Minifigure Template Files (*.minifigure *.minifig);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="452"/>
+        <source>Could not read file &apos;%1&apos;:
+%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="464"/>
+        <source>Minifigure Template Files (*.minifigure);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="472"/>
+        <source>Could not write file &apos;%1&apos;:
+%2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -17696,10 +18049,9 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">Помилка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="452"/>
         <source>Error reading file &apos;%1&apos;:
 %2</source>
-        <translation type="unfinished">Помилка читання файла &apos;%1&apos;:
+        <translation type="obsolete">Помилка читання файла &apos;%1&apos;:
 %2</translation>
     </message>
     <message>
@@ -17710,15 +18062,9 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Експортувати шаблони</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="464"/>
-        <source>Minifigure Template Files (*.minifigure);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="472"/>
         <source>Error writing to file &apos;%1&apos;:
 %2</source>
-        <translation type="unfinished">Помилка запису у файл &apos;%1&apos;:
+        <translation type="obsolete">Помилка запису у файл &apos;%1&apos;:
 %2</translation>
     </message>
     <message>
@@ -17779,27 +18125,17 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">StudWorx</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="168"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="186"/>
         <source>Error creating images.</source>
-        <translation>Помилка створення зображення.</translation>
+        <translation type="vanished">Помилка створення зображення.</translation>
     </message>
     <message>
         <source>Error</source>
         <translation type="vanished">Помилка</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="654"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="973"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="989"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="993"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1023"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1031"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1043"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1047"/>
         <source>Error writing to file &apos;%1&apos;:
 %2</source>
-        <translation>Помилка запису у файл &apos;%1&apos;:
+        <translation type="vanished">Помилка запису у файл &apos;%1&apos;:
 %2</translation>
     </message>
     <message>
@@ -17816,10 +18152,9 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">Нова модель</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_edit.cpp" line="983"/>
         <source>No models selected.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Не вибрано жодної моделі.</translation>
+        <translation type="obsolete">Не вибрано жодної моделі.</translation>
     </message>
     <message>
         <source>Hide</source>
@@ -17870,6 +18205,11 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Не вдалося створити геометрію деталі &apos;%1&apos;.</translation>
     </message>
     <message>
+        <location filename="../../source/core/sw_model.cpp" line="658"/>
+        <source>Delete Step</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/core/sw_model.cpp" line="861"/>
         <source>Explode</source>
         <translation type="unfinished"></translation>
@@ -17883,7 +18223,7 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="1084"/>
-        <source>Supported Files (*.%1);;All Files (*.*)</source>
+        <source>LDraw Models (*.%1);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -17934,6 +18274,12 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Створити зображення кроку</translation>
     </message>
     <message>
+        <location filename="../../source/core/sw_model_render.cpp" line="168"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="186"/>
+        <source>Could not create the step images.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/core/sw_model_render.cpp" line="257"/>
         <location filename="../../source/core/sw_model_render.cpp" line="432"/>
         <location filename="../../source/core/sw_model_render.cpp" line="441"/>
@@ -17955,6 +18301,19 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Не вдалося прочитати зображення списку частин.</translation>
     </message>
     <message>
+        <location filename="../../source/core/sw_model_render.cpp" line="654"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="973"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="989"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="993"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1023"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1031"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1043"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1047"/>
+        <source>Could not write file &apos;%1&apos;:
+%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/core/sw_model.cpp" line="570"/>
         <source>Set Step View</source>
         <translation type="unfinished"></translation>
@@ -17966,10 +18325,9 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Вставити крок</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model.cpp" line="658"/>
         <source>Remove Step</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Видалити крок</translation>
+        <translation type="obsolete">Видалити крок</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_group.cpp" line="73"/>
@@ -18051,13 +18409,13 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1012"/>
-        <location filename="../../source/core/sw_model_edit.cpp" line="1023"/>
-        <source>Flatten Model</source>
+        <source>The model has no submodels.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1012"/>
-        <source>The model has no submodels.</source>
+        <location filename="../../source/core/sw_model_edit.cpp" line="1023"/>
+        <source>Flatten Submodels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -18154,9 +18512,18 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="983"/>
+        <source>Inline Selected Submodels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/core/sw_model_edit.cpp" line="983"/>
+        <source>No submodels selected.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Inline Selected Models</source>
         <translatorcomment>Draft reused from an existing translation of this source text; requires review in this context.</translatorcomment>
-        <translation type="unfinished">Вбудовані вибрані моделі</translation>
+        <translation type="obsolete">Вбудовані вибрані моделі</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="994"/>
@@ -18492,11 +18859,17 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.cpp" line="194"/>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.cpp" line="209"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_list_model.cpp" line="216"/>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.cpp" line="224"/>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.cpp" line="246"/>
         <source>Export Submodel</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Підмодель експорту</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_list_model.cpp" line="216"/>
+        <source>LDraw Models (*.ldr *.dat);;All Files (*)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>StudWorx</source>
@@ -18508,10 +18881,9 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Немає чого експортувати.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_list_model.cpp" line="216"/>
         <source>Export Model</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель експорту</translation>
+        <translation type="obsolete">Модель експорту</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.cpp" line="230"/>
@@ -18535,9 +18907,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">Зберегти модель</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_list_model.cpp" line="216"/>
         <source>Supported Files (*.ldr *.dat);;All Files (*.*)</source>
-        <translation>Підтримувані файли (*.ldr *.dat);;Усі файли (*.*)</translation>
+        <translation type="vanished">Підтримувані файли (*.ldr *.dat);;Усі файли (*.*)</translation>
     </message>
     <message numerus="yes">
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.cpp" line="148"/>
@@ -19789,10 +20160,9 @@ Weight: %1</source>
         <translation type="unfinished">Рівнина</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Thin Lines Logo</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Тонкі лінії логотип</translation>
+        <translation type="obsolete">Тонкі лінії логотип</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -19825,10 +20195,9 @@ Weight: %1</source>
         <translation type="unfinished">Високий контраст</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>High Contrast with Logo</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Високий контраст із логотипом</translation>
+        <translation type="obsolete">Високий контраст із логотипом</translation>
     </message>
     <message>
         <source>Settings...</source>
@@ -21174,32 +21543,25 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="obsolete">Виберіть файл налаштувань Minifig</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1134"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1147"/>
         <source>Settings Files (*.ini);;All Files (*.*)</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Файли налаштувань (*.ini);;Усі файли (*.*)</translation>
+        <translation type="obsolete">Файли налаштувань (*.ini);;Усі файли (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1205"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1219"/>
         <source>Executable Files (*.exe);;All Files (*.*)</source>
-        <translation>Виконувані файли (*.exe);;Усі файли (*.*)</translation>
+        <translation type="vanished">Виконувані файли (*.exe);;Усі файли (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1207"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1221"/>
         <source>All Files (*.*)</source>
-        <translation>Усі файли (*.*)</translation>
+        <translation type="vanished">Усі файли (*.*)</translation>
     </message>
     <message>
         <source>Open POV-Ray Executable</source>
         <translation type="vanished">Показати розташування програми POV-Ray</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1232"/>
         <source>Open LGEO Folder</source>
-        <translation>Показати розташування теки LGEO</translation>
+        <translation type="vanished">Показати розташування теки LGEO</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1247"/>
@@ -21241,18 +21603,8 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="999"/>
-        <source>Parts Libraries (*.zip *.bin LDConfig.ldr ldconfig.ldr);;All Files (*.*)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1015"/>
         <source>Select Unofficial Library Archive</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1015"/>
-        <source>Supported Archives (*.zip);;All Files (*.*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -21281,13 +21633,46 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="999"/>
+        <source>Parts Library Files (*.zip *.bin LDConfig.ldr ldconfig.ldr);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1015"/>
+        <source>Supported Archives (*.zip);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1134"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1147"/>
+        <source>Settings Files (*.ini);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1169"/>
-        <source>Mapping Files (*.txt *.json);;All Files (*.*)</source>
+        <source>Mapping Files (*.txt *.json);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1205"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1219"/>
+        <source>Executable Files (*.exe);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1207"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1221"/>
+        <source>All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1224"/>
         <source>Select Blender Executable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1232"/>
+        <source>Select LGEO Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -21504,17 +21889,26 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_categories.cpp" line="228"/>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_categories.cpp" line="247"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="396"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="417"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="592"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="613"/>
-        <source>Text Files (*.txt);;All Files (*.*)</source>
-        <translation>Текстові файли (*.txt);;Усі файли (*.*)</translation>
+        <source>Category Files (*.txt);;All Files (*)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_categories.cpp" line="236"/>
+        <source>Could not read categories file &apos;%1&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_categories.cpp" line="254"/>
+        <source>Could not write categories file &apos;%1&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Text Files (*.txt);;All Files (*.*)</source>
+        <translation type="vanished">Текстові файли (*.txt);;Усі файли (*.*)</translation>
+    </message>
+    <message>
         <source>Error loading categories file.</source>
-        <translation>Помилка завантаження файла категорій.</translation>
+        <translation type="vanished">Помилка завантаження файла категорій.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_categories.cpp" line="247"/>
@@ -21523,9 +21917,8 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>Експортувати категорії</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_categories.cpp" line="254"/>
         <source>Error saving categories file.</source>
-        <translation>Помилка збереження файла категорій.</translation>
+        <translation type="vanished">Помилка збереження файла категорій.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_categories.cpp" line="261"/>
@@ -21557,6 +21950,16 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="461"/>
         <source>View</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="600"/>
+        <source>Could not read mouse shortcuts file &apos;%1&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="619"/>
+        <source>Could not write mouse shortcuts file &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -21835,18 +22238,16 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">Імпортувати комбінації клавіш</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="404"/>
         <source>Error loading keyboard shortcuts file.</source>
-        <translation>Помилка завантаження файла комбінацій клавіш.</translation>
+        <translation type="vanished">Помилка завантаження файла комбінацій клавіш.</translation>
     </message>
     <message>
         <source>Export shortcuts</source>
         <translation type="vanished">Експортувати комбінації клавіш</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="424"/>
         <source>Error saving keyboard shortcuts file.</source>
-        <translation>Помилка збереження файла комбінацій клавіш.</translation>
+        <translation type="vanished">Помилка збереження файла комбінацій клавіш.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="431"/>
@@ -21899,10 +22300,9 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="unfinished">Виберіть POV-Ray Виконуваний файл</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="404"/>
         <source>Import Keyboard Shortcuts</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
-        <translation type="unfinished">Імпортувати сполучення клавіш</translation>
+        <translation type="obsolete">Імпортувати сполучення клавіш</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="424"/>
@@ -21925,16 +22325,16 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="396"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="404"/>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="592"/>
         <source>Import Shortcuts</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Імпорт ярликів</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="600"/>
         <source>Error loading mouse shortcuts file.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Помилка завантаження файлу ярликів миші.</translation>
+        <translation type="obsolete">Помилка завантаження файлу ярликів миші.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="417"/>
@@ -21969,16 +22369,33 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="396"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="417"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="592"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="613"/>
+        <source>Shortcut Files (*.txt);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="404"/>
+        <source>Could not read keyboard shortcuts file &apos;%1&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="424"/>
+        <source>Could not write keyboard shortcuts file &apos;%1&apos;.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="600"/>
         <source>Import Mouse Shortcuts</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">Імпортувати сполучення кнопок миші</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="619"/>
         <source>Error saving mouse shortcuts file.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Помилка збереження файлу ярликів миші.</translation>
+        <translation type="obsolete">Помилка збереження файлу ярликів миші.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="619"/>
@@ -23010,22 +23427,12 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <source>Choose the display color for the flex path of a flexible part, along the length the part covers.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Flex Path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Flex Path Color</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <source>Choose the display color for the stretch of a flex path the part is too short to cover.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -23535,6 +23942,26 @@ Unsupported video cards use face tint and colored edges.</source>
         <source>Keep</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Thin-Line Logo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>High Contrast Logo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Choose the display color for the Flex Path of a flexible part, along the length the part covers.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Choose the display color for the stretch of a Flex Path the part is too short to cover.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>swPreviewDockWidget</name>
@@ -23868,8 +24295,17 @@ N/A: %1 parts</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="537"/>
+        <source>XML Files (*.xml);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="552"/>
+        <source>CSV Files (*.csv);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>XML Files (*.xml);;All Files (*.*)</source>
-        <translation type="unfinished">Файли XML (*.xml);;Усі файли (*.*)</translation>
+        <translation type="obsolete">Файли XML (*.xml);;Усі файли (*.*)</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="552"/>
@@ -23878,9 +24314,8 @@ N/A: %1 parts</source>
         <translation type="unfinished">Експортувати CSV</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_properties.cpp" line="552"/>
         <source>CSV Files (*.csv);;All Files (*.*)</source>
-        <translation type="unfinished">Файли CSV (*.csv);;Усі файли (*.*)</translation>
+        <translation type="obsolete">Файли CSV (*.csv);;Усі файли (*.*)</translation>
     </message>
     <message>
         <source>Select Background Color</source>
@@ -24909,10 +25344,9 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Відтворення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Почати відтворення з використанням поточних налаштувань. Під час візуалізації ця кнопка стає Скасувати, щоб ви могли зупинити операцію.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="220"/>
         <source>POV-Ray Image Render</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">POV-Ray Відтворення зображень</translation>
+        <translation type="obsolete">POV-Ray Відтворення зображень</translation>
     </message>
     <message>
         <source>Render Model</source>
@@ -24925,10 +25359,9 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="obsolete">Blender LDraw Імпорт</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="226"/>
         <source>Blender Image Render</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Blender Відтворення зображень</translation>
+        <translation type="obsolete">Blender Відтворення зображень</translation>
     </message>
     <message>
         <source>Blender not configured. Use Settings to configure.</source>
@@ -25034,6 +25467,26 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="348"/>
         <source> px</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="220"/>
+        <source>POV-Ray Render</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="221"/>
+        <source>&lt;p&gt;&lt;b&gt;POV-Ray Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the current model step using POV-Ray. Choose the output image, its size and quality and the scene in the panels beside the preview, then select Render to start.&lt;/p&gt;&lt;p&gt;The preview is scaled to fit the window. Log shows the renderer output below the preview.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="226"/>
+        <source>Blender Render</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="227"/>
+        <source>&lt;p&gt;&lt;b&gt;Blender Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the current model step with Blender and the bundled LDraw add-ons. Choose the output image, its size and the scene, parts and editing settings in the panels beside the preview, then select Render to start, or Open in Blender to edit the model there.&lt;/p&gt;&lt;p&gt;Set the Blender executable in Preferences, General first. Log shows the Blender output below the preview.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -25244,16 +25697,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="600"/>
         <source>Standard</source>
         <translation type="unfinished">Стандартний</translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="221"/>
-        <source>&lt;p&gt;&lt;b&gt;POV-Ray Image Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the current model step using POV-Ray. Choose the output image, its size and quality and the scene in the panels beside the preview, then select Render to start.&lt;/p&gt;&lt;p&gt;The preview is scaled to fit the window. Log shows the renderer output below the preview.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="227"/>
-        <source>&lt;p&gt;&lt;b&gt;Blender Image Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the current model step with Blender and the bundled LDraw add-ons. Choose the output image, its size and the scene, parts and editing settings in the panels beside the preview, then select Render to start, or Open in Blender to edit the model there.&lt;/p&gt;&lt;p&gt;Set the Blender executable in Preferences, General first. Log shows the Blender output below the preview.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="480"/>
@@ -25703,8 +26146,40 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="710"/>
-        <source>Environment Images (*.hdr *.exr *.png *.jpg *.jpeg *.tif *.tiff);;All Files (*.*)</source>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="994"/>
+        <source>A preset named &apos;%1&apos; already exists. Do you want to overwrite it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1453"/>
+        <source>Could not start Blender.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1503"/>
+        <source>Could not start the Blender render process.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1782"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1805"/>
+        <source>Could not write file &apos;%1&apos;:
+%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1822"/>
+        <source>Could not render the image.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1830"/>
+        <source>Save Image File</source>
+        <translation type="unfinished">Зберегти файл зображення</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1830"/>
+        <source>Supported Image Files (*.bmp *.png *.jpg);;BMP Files (*.bmp);;PNG Files (*.png);;JPEG Files (*.jpg);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -25760,11 +26235,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="994"/>
-        <source>A preset with the name &apos;%1&apos; already exists, do you want to overwrite it?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1015"/>
         <source>Delete Preset</source>
         <translation type="unfinished"></translation>
@@ -25807,15 +26277,15 @@ Install the povray-includes package or the include files of your POV-Ray version
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1377"/>
+        <source>Could not start POV-Ray.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1392"/>
         <source>Saving Blender Model</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Збереження моделі Blender</translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1453"/>
-        <source>Error starting Blender.</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cannot write Blender render script file &apos;%1&apos;:
@@ -25855,11 +26325,10 @@ Install the povray-includes package or the include files of your POV-Ray version
         <translation type="unfinished">Відкрити в Blender виявлено %1. Див. Показати деталі...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1503"/>
         <source>Error starting Blender render process.</source>
         <oldsource>Error starting Blender render process</oldsource>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Помилка запуску процесу візуалізації Blender</translation>
+        <translation type="obsolete">Помилка запуску процесу візуалізації Blender</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1562"/>
@@ -25876,10 +26345,9 @@ Install the povray-includes package or the include files of your POV-Ray version
         <translation type="unfinished">Під час візуалізації сталася помилка.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1822"/>
         <source>Render failed.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Помилка візуалізації.</translation>
+        <translation type="obsolete">Помилка візуалізації.</translation>
     </message>
     <message>
         <source>POV-Ray Settings</source>
@@ -25991,6 +26459,11 @@ Install the povray-includes package or the include files of your POV-Ray version
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="710"/>
+        <source>Environment Images (*.hdr *.exr *.png *.jpg *.jpeg *.tif *.tiff);;All Files (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="795"/>
         <source>Read and copy renderer output and diagnostic messages.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -26081,31 +26554,26 @@ Install the povray-includes package or the include files of your POV-Ray version
         <translation type="vanished">Помилка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1377"/>
         <source>Error starting POV-Ray.</source>
-        <translation>Помилка запуску POV-Ray.</translation>
+        <translation type="vanished">Помилка запуску POV-Ray.</translation>
     </message>
     <message>
         <source>An error occurred while rendering. Check details or try again.</source>
         <translation type="vanished">Виявлено помилку під час вимальовування. Перевірте деталі або спробуйте заново.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1782"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1805"/>
         <source>Error writing to file &apos;%1&apos;:
 %2</source>
-        <translation>Помилка запису у файл &apos;%1&apos;:
+        <translation type="vanished">Помилка запису у файл &apos;%1&apos;:
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1830"/>
         <source>Select Output File</source>
-        <translation>Обрати вихідну теку</translation>
+        <translation type="vanished">Обрати вихідну теку</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1830"/>
         <source>Supported Image Files (*.bmp *.png *.jpg);;BMP Files (*.bmp);;PNG Files (*.png);;JPEG Files (*.jpg);;All Files (*.*)</source>
-        <translation>Усі файли зображень (*.bmp *.png *.jpg);;BMP файли (*.bmp);;PNG файли (*.png);;JPEG файли (*.jpg);;Усі файли (*.*)</translation>
+        <translation type="vanished">Усі файли зображень (*.bmp *.png *.jpg);;BMP файли (*.bmp);;PNG файли (*.png);;JPEG файли (*.jpg);;Усі файли (*.*)</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_renderer_povray.cpp" line="302"/>
@@ -26130,13 +26598,17 @@ Download it (about 7 MB) from %1 into &apos;%2&apos;?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_renderer_povray.cpp" line="322"/>
         <source>Open LGEO Folder</source>
-        <translation type="unfinished">Показати розташування теки LGEO</translation>
+        <translation type="obsolete">Показати розташування теки LGEO</translation>
+    </message>
+    <message>
+        <location filename="../../source/core/sw_renderer_povray.cpp" line="322"/>
+        <source>Select LGEO Folder</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/core/sw_renderer_povray.cpp" line="333"/>
-        <source>&apos;%1&apos; is not an LGEO part library, it has no lg_elements.lst and lg folder.</source>
+        <source>&apos;%1&apos; is not an LGEO part library. It has no lg_elements.lst and lg folder.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -26178,17 +26650,17 @@ Download it from %1 and set it under Preferences › General › LGEO Library.</
     </message>
     <message>
         <location filename="../../source/core/sw_renderer_povray.cpp" line="369"/>
-        <source>Open POV-Ray Program</source>
-        <translation type="unfinished"></translation>
+        <source>Select POV-Ray Executable</source>
+        <translation type="unfinished">Виберіть POV-Ray Виконуваний файл</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_renderer_povray.cpp" line="382"/>
-        <source>&apos;%1&apos; is not a POV-Ray program.</source>
+        <source>&apos;%1&apos; is not a POV-Ray executable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/core/sw_renderer_povray.cpp" line="386"/>
-        <source>No POV-Ray program was set.
+        <source>No POV-Ray executable was set.
 
 Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General › POV-Ray Executable.</source>
         <translation type="unfinished"></translation>
@@ -26285,6 +26757,8 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="119"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="167"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="265"/>
         <source>Import Set Inventory</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Імпорт набору інвентарю</translation>
@@ -26396,10 +26870,14 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
         <translation>Ключові слова не можуть бути порожніми.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="167"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="265"/>
+        <source>Could not download the set inventory.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Search Sets</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
-        <translation type="unfinished">Знайти набори</translation>
+        <translation type="obsolete">Знайти набори</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="175"/>
@@ -26426,15 +26904,13 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
         <translation type="obsolete">Підключитися до бази даних наборів</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="265"/>
         <source>Error downloading set inventory.</source>
-        <translation>Помилка завантаження інвентаря набору.</translation>
+        <translation type="vanished">Помилка завантаження інвентаря набору.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="265"/>
         <source>Download Set Inventory</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
-        <translation type="unfinished">Завантажити список деталей набору</translation>
+        <translation type="obsolete">Завантажити список деталей набору</translation>
     </message>
 </context>
 <context>
@@ -26629,11 +27105,8 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
         <translation type="obsolete">StudWorx</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_view_image.cpp" line="31"/>
-        <location filename="../../source/rendering/sw_view_image.cpp" line="65"/>
-        <location filename="../../source/rendering/sw_view_image.cpp" line="75"/>
         <source>Error creating images.</source>
-        <translation type="unfinished">Помилка створення зображення.</translation>
+        <translation type="obsolete">Помилка створення зображення.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_view_image.cpp" line="31"/>
@@ -26641,6 +27114,20 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
         <source>Create Step Images</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">Створити зображення кроків</translation>
+    </message>
+    <message>
+        <location filename="../../source/rendering/sw_view_image.cpp" line="31"/>
+        <location filename="../../source/rendering/sw_view_image.cpp" line="65"/>
+        <location filename="../../source/rendering/sw_view_image.cpp" line="75"/>
+        <source>Could not create the step images.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/rendering/sw_view_image.cpp" line="100"/>
+        <location filename="../../source/rendering/sw_view_image.cpp" line="111"/>
+        <source>Could not write file &apos;%1&apos;:
+%2</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_view_input.cpp" line="688"/>
@@ -26663,11 +27150,9 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
         <translation type="obsolete">Помилка</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_view_image.cpp" line="100"/>
-        <location filename="../../source/rendering/sw_view_image.cpp" line="111"/>
         <source>Error writing to file &apos;%1&apos;:
 %2</source>
-        <translation type="unfinished">Помилка запису у файл &apos;%1&apos;:
+        <translation type="obsolete">Помилка запису у файл &apos;%1&apos;:
 %2</translation>
     </message>
     <message>

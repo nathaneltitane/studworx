@@ -697,7 +697,7 @@ void swImageDialog::accept()
 // use to pick the output file
 void swImageDialog::BrowseFile()
 {
-	const QString FilePath = QFileDialog::getSaveFileName(this, tr("Save Image File"), mFileEdit->text(), tr("Supported Image Files (*.bmp *.png *.jpg *.gif);;BMP Files (*.bmp);;PNG Files (*.png);;JPEG Files (*.jpg);;Animated GIF Files (*.gif);;All Files (*.*)"));
+	const QString FilePath = QFileDialog::getSaveFileName(this, tr("Save Image File"), mFileEdit->text(), tr("Supported Image Files (*.bmp *.png *.jpg *.gif);;BMP Files (*.bmp);;PNG Files (*.png);;JPEG Files (*.jpg);;Animated GIF Files (*.gif);;All Files (*)"));
 
 	if (!FilePath.isEmpty())
 		mFileEdit->setText(QDir::toNativeSeparators(FilePath));

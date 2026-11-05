@@ -13,10 +13,10 @@ StudWorx is built from standard Qt widgets: panels, dialogs and windows follow y
 - **Menus by task.** File, Edit, View, Part, Steps, Models and Help, with clean labels and a unique mnemonic in each menu. The View menu holds the Toolbars, Viewpoints, Cutaway, Cameras, Projection and Shading submenus.
 - **Options menus.** The gear button on the model view and on every panel opens the settings that belong to it: grids, preview, parts and colors.
 - **Toolbars.** Standard, Tools and Time toolbars. Move and rotate cursors show the axis they work on.
-- **Transform toolbar.** Type a position or rotation for the selection and apply it, as absolute coordinates or relative to where it is now.
+- **Transform toolbar.** Type a position or rotation for the selection and apply it, as absolute coordinates or relative to where it is now. It has no entry of its own: its fields sit at the bottom of the Properties panel, shown with View > Toolbars > Properties.
 - **Tabs, splits and status bar.** Open several models in tabs, split the view, go Full Screen, and read the view orientation, projection and focus position in the status bar, with the name, ID and weight of the selected part. Right click the status bar to show or hide each segment.
 - **Split views.** Split the current view horizontally or vertically, as often as you like, remove one view, or Reset Views back to one. Each view keeps its own camera and projection, a border marks the active one, and the view cube and axis icon stay on the top left view.
-- **Toolbars and panels on demand.** View > Toolbars shows or hides each toolbar and panel: Standard, Tools, Time, Parts, Colors, Properties, Timeline, Preview, Terminal and Minifigure Builder. Close Tab closes the current model tab.
+- **Toolbars and panels on demand.** View > Toolbars shows or hides each toolbar and panel: Standard, Tools, Time, Parts, Colors, Properties, Timeline, Preview, Terminal, Minifigure Builder and Explode. Close Tab closes the current model tab.
 - **Undo and clipboard.** Undo and Redo every change, and Cut, Copy and Paste parts between models and tabs.
 - **Contextual help.** Choose Help > What's This? or click the question mark in a title bar, then click any control to read what it does. F1 explains the focused control, Shift+F1 starts What's This inside a dialog, and every entry is listed in the Help index below.
 - **Help menu.** Home Page opens the StudWorx repository on GitHub, Report a Bug its issues, and About shows the version and system information.
@@ -64,7 +64,7 @@ Models are plain LDraw text files in LeoCAD's format, so they open in either pro
 - **LDraw models.** .ldr, .mpd and .dat files, with New, Open, Merge, Save, Save As, Reload and the four most recent files. Save As follows the LDraw file specification and adds the extension when it is left out: .ldr for a single model, .mpd for a model with submodels or embedded data. Files are written with Unix line endings, and a model loaded with Windows line endings keeps them when saved. Watch for File Changes reloads a model edited in another program. Sample models, a minifigure, cube, sphere and cylinder cutaways of it, an exploded model, a flexible part and lights and cameras, install to /usr/share/studworx/samples, the samples folder beside the program on Windows, or the application bundle resources on macOS.
 - **Startup.** Open Most Recent File on Startup reopens the last model, Restore Tab Layout brings back its tabs and split views, and Load All Parts Before Showing waits until every part is loaded before the model appears.
 - **LeoCAD models.** Models saved by LeoCAD open as they are, and their LeoCAD meta commands are migrated to StudWorx ones, automatically when you choose so in Preferences.
-- **Import.** LEGO® Digital Designer models, with a bundled part and color mapping, and official set inventories. Set inventories use your own free Rebrickable API key, asked for once or set under Online Services in the preferences, and are searched by set name or number.
+- **Import.** LEGO® Digital Designer models (.lxf and .lxfml), also opened with Open, recent files, drag and drop and the command line as an untitled project, with a bundled part and color mapping, and official set inventories. Set inventories use your own free Rebrickable API key, asked for once or set under Online Services in the preferences, and are searched by set name or number.
 - **Export.** 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages from the Instructions window, BrickLink wanted lists and CSV parts lists. BrickLink exports pick the condition, the wanted list by its number or the address of its page, and new listing notices, copy the XML and open the BrickLink upload page in one step, and translate part numbers and colors through a bundled mapping of over 55,000 parts or a file built from the library and Rebrickable, with Rebrickable numbers taking the lead over stale part keywords. BrickLink and CSV exports list parts the library moved to a new number under that number, and Part Exceptions in the BrickLink export keeps a comma or tab separated list of parts whose BrickLink number you set by hand.
 - **KMZ.** Google Earth and SketchUp models, with the visible surfaces only or every part's geometry, set in Preferences.
 - **COLLADA.** Translucent colors can be marked as transparent materials for programs that read them.
@@ -72,7 +72,7 @@ Models are plain LDraw text files in LeoCAD's format, so they open in either pro
 - **Print.** File > Print prints the current model view through the system print dialog, with a Preview button where the dialog allows it.
 - **Thumbnails.** Model thumbnails in file managers, from a KDE thumbnail plugin or the desktop thumbnailer.
 - **Parts library.** Downloaded on the first start as the official LDraw complete.zip, or chosen from an archive you already have, and reloaded from the File menu. An unofficial parts folder can be added beside it.
-- **Command line.** Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx. [L²CU](https://l2cu.app), the LDraw Linux command line utility, drives these renders and exports for whole folders of models.
+- **Command line.** Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx. [L²CU](https://l2cu.app), the LDraw command line utility for Linux based systems, drives these renders and exports for whole folders of models.
 - **Exit.** File > Exit asks to save each changed model before StudWorx closes.
 
 <!-- gallery natural -->
@@ -99,18 +99,20 @@ studworx model.ldr opens a model. The options below work without opening a windo
 | --- | --- |
 | -l, --library, --unofficial-library, --shadow-library | Choose the parts, unofficial parts and LDCad shadow libraries |
 | -i, --image, -w, --width, --height | Save an image of the model at a size |
-| -f, --from, -t, --to, -s, --submodel | Save a range of steps, or one submodel |
+| -f, --from <step>, -t, --to <step>, -s, --submodel | Save a range of steps, or one submodel |
 | -c, --camera, --viewpoint, --camera-angles, --camera-position, --camera-position-ldraw | Choose a camera, a viewpoint or an exact camera position |
 | --projection, --field-of-view, --clip-planes, --transparent | Projection, field of view, clipping planes and a transparent background |
-| --fade-steps, --highlight, and their colors | Fade previous steps and highlight new parts |
-| --shading, --lighting, --line-width, --antialiasing-samples | Shading mode, lighting style, edge line width and antialiasing |
-| --stud-style | One of the eight stud styles |
+| --fade-steps, --no-fade-steps, --fade-color, --highlight, --no-highlight, --highlight-color | Fade previous steps and highlight new parts |
+| --shading, --lighting, --line-width, --antialiasing-samples | Shading mode, lighting style, edge line width and anti-aliasing |
+| --stud-style <id> | One of the eight stud styles, 0 to 7 |
 | --edge-color, --edge-color-black, --edge-color-dark, --stud-cylinder-color, their --no- forms, --edge-color-automatic, --edge-contrast, --edge-light-dark | Edge, black edge, dark edge and stud cylinder colors, automated edge colors, contrast and light to dark value |
+| --bricklink-condition, --bricklink-wanted-list, --bricklink-notify | Set the condition wanted, the wanted list to add to, and ask BrickLink to notify new listings |
 | --bricklink-exceptions | Use a comma or tab separated file of parts and their BrickLink numbers in BrickLink exports |
 | --flatten | Replace every submodel at all depths with its parts and save the model, before any other export |
 | --undo | Undo every command line edit and save the model, to check that undo restores it |
-| --export-wavefront, --export-3ds, --export-collada, --export-kmz, --export-csv, --export-bricklink, --export-html, --export-povray | Export Wavefront, 3D Studio, COLLADA, KMZ, CSV, BrickLink, HTML and POV-Ray files |
-| --render-povray | Render with POV-Ray |
+| --export-wavefront, --export-3ds, --export-collada, --export-kmz, --export-csv, --export-bricklink, --export-html, --export-povray | Export Wavefront, 3D Studio, COLLADA, KMZ, CSV, BrickLink, HTML and POV-Ray files, each with an optional file name |
+| --kmz-geometry | Keep every part or only the visible surfaces in KMZ exports |
+| --render-povray | Render with POV-Ray, with an optional file name |
 | --import-settings, --export-settings | Settings as an ini file |
 | --import-keyboard-shortcuts, --export-keyboard-shortcuts, --import-mouse-shortcuts, --export-mouse-shortcuts | Keyboard and mouse shortcuts |
 | --import-categories, --export-categories | Part categories |
@@ -194,12 +196,12 @@ The model view draws fast with OpenGL in four lighting styles, and File > Render
 - **Lighting styles.** Standard, Studio, Matte and Toon, from the View menu or the command line with --lighting. Standard uses one light with soft highlights, Studio key, fill and rim lights, Matte no highlights, and Toon banded cel shading.
 - **Shading.** Wireframe, flat shading, default lights, edge lines, conditional lines and mesh level of detail.
 - **Mesh level of detail.** Distant parts draw with simpler meshes, from a distance set in Preferences, so large models stay smooth.
-- **Studs.** Eight stud styles: Plain, Thin Lines Logo, Outline Logo, Sharp Top Logo, Rounded Top Logo, Flattened Logo, High Contrast and High Contrast with Logo.
+- **Studs.** Eight stud styles: Plain, Thin-Line Logo, Outline Logo, Sharp Top Logo, Rounded Top Logo, Flattened Logo, High Contrast and High Contrast Logo.
 - **Color configurations.** Colors come from the parts library, the LDraw color configuration or the alternate configuration with more realistic edge line colors for rendering, chosen under Rendering > Colors.
 - **Edge colors.** Automate Edge Color computes edge colors from each part color, with edge contrast, saturation and light to dark settings, or set the stud cylinder, edge, black edge and dark edge colors yourself.
 - **Separate settings.** The model view, the preview, the parts list and the Minifigure Builder each keep their own rendering settings. Each can follow the model view instead, or set its own wireframe, flat shading, default lights, edge lines, conditional lines and line width.
 - **Selection highlight.** Outline or tint and edges, with an adjustable outline width and transparency.
-- **Antialiasing.** 2x, 4x or 8x samples, and an adjustable line width.
+- **Anti-aliasing.** 2x, 4x or 8x samples, and an adjustable line width.
 
 <!-- gallery four -->
 
@@ -235,7 +237,7 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 - **Rotation snap.** 1, 5, 15, 22.5, 30, 45, 60, 90 or 180 degrees, a custom angle, or None. Camera Snap orbits the view in the same steps. Turns in any step land exactly on square angles, so later moves keep whole coordinates.
 - **Transforms.** Relative Transforms move and rotate the selection around the part that has focus, Absolute Transforms in model coordinates. Rotate Separately turns each part around its own pivot, Rotate Together turns the selection as one. Each pair has a toggle shortcut.
 - **Keyboard moves.** Move and rotate the selection along +X, -X, +Y, -Y, +Z and -Z by the snap steps. Fixed Direction Keys keeps the arrow keys on the model axes instead of following the view.
-- **Selection.** Select All, None, Invert, Adjacent Parts, by Name, and by part, color or both. Select Connected Parts follows the connection shapes of the LDCad shadow library.
+- **Selection.** Select All, Select None, Invert Selection, Adjacent Parts, by Name, and by part, color or both. Select Connected Parts follows the connection shapes of the LDCad shadow library.
 - **Selection modes.** Single Selection picks one part, Part Selection every part of the same type, Color Selection every part of the same color, and Part and Color Selection both.
 - **Select by Name.** A checklist of every object in the model, with All, None and Invert.
 - **Part connections.** Use Part Connections turns connected part selection on and off, with the shadow library folder chosen in Preferences.
@@ -247,7 +249,7 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 - **Groups.** Group the selection under a unique name, Ungroup, add the focused part to a group or remove it, and Edit Groups in a tree of parts and groups.
 - **Hide and show.** Hide Selected or Hide Unselected, then Unhide Selected or Unhide All.
 - **Show Earlier and Later.** Move the selected parts one step earlier or later.
-- **Train track.** Rotate Train Track turns a track piece to its next connection, and Focus Next and Previous Connection choose where the next piece joins.
+- **Train track.** Rotate Train Track turns a track part to its next connection, and Focus Next and Previous Connection choose where the next part joins.
 - **Pivot points and keyframes.** Reset Pivot Point puts the pivot back at each part's origin, and Remove Keyframes clears the animation of the selected parts.
 - **Lights and cameras.** Lights and cameras are placed in the model and saved with it, see Tools.
 
@@ -455,7 +457,7 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 Large builds split into submodels that you can edit on their own or in place, inside the model that uses them.
 
 - **Properties.** Part IDs, thumbnails and counts, with BrickLink or CSV export, and the size and weight of the model in metric and imperial units. A Weight column gives each part's weight in grams or ounces, chosen with the units box below the table, from the BrickLink part weights, and parts without a known weight show N/A.
-- **Submodels.** New Submodel, the Submodels list, Open Selected Model, Inline Selected Models, Flatten Model, which replaces every submodel at all depths with its parts in one undo step, also run from the command line with --flatten, and Move to New Model.
+- **Submodels.** New Submodel, the Submodels list, Open Selected Submodel, Inline Selected Submodels, Flatten Submodels, which replaces every submodel at all depths with its parts in one undo step, also run from the command line with --flatten, and Move to New Submodel.
 - **Submodels list.** Create, rename, duplicate and delete submodels, set the active one, and export them as separate LDraw files.
 - **Models menu.** Switch between up to forty models of the file from the Models menu.
 - **In-place editing.** Edit a submodel inside its parent. A path bar shows where you are, and its buttons go back to each model.
@@ -480,7 +482,7 @@ Eight pages with lined up label and control columns, checkboxes included, each l
 - **Startup and files.** Open the most recent file, restore the tab layout, load all parts before showing a model, watch for file changes and ask, migrate or keep LeoCAD models when opened.
 - **Rendering and Views.** Rendering quality and the Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups.
 - **Interface and Instructions.** Interface and view colors, edge contrast, the default instruction page settings, and the rulers and element inspector overlays of the instructions page.
-- **View colors.** Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, flex paths, the view cube, every axis, and the element margin, padding and anchor overlays and the ruler pointer arrows of the instructions page, each with an alpha slider.
+- **View colors.** Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, Flex Paths, the view cube, every axis, and the element margin, padding and anchor overlays and the ruler pointer arrows of the instructions page, each with an alpha slider.
 - **Categories.** Part categories turned on and off with a checkbox, edited, imported and exported.
 - **Keyboard and Mouse.** Shortcuts recorded by clicking, importable and exportable. Commands that share a shortcut show in red, and assigning a taken shortcut asks before moving it.
 - **Shortcut filters.** Filter commands and tools by name or shortcut, give each two shortcuts, and reset them to the defaults.

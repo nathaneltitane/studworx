@@ -400,7 +400,7 @@ swResult<void> Project::ExportCurrentStep(const QString& FileName)
 	QSaveFile File(FileName);
 
 	if (!File.open(QIODevice::WriteOnly) || File.write(Output) != Output.size() || !File.commit())
-		return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, File.errorString()));
+		return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, File.errorString()));
 
 	swSetProfileString(SW_PROFILE_PROJECTS_PATH, QFileInfo(FileName).absolutePath());
 	return swResult<void>();
@@ -416,7 +416,7 @@ swResult<void> Project::ExportModel(const QString& FileName, swModel* Model) con
 	QSaveFile File(FileName);
 
 	if (!File.open(QIODevice::WriteOnly) || File.write(Bytes.value()) != Bytes.value().size() || !File.commit())
-		return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, File.errorString()));
+		return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, File.errorString()));
 
 	return swResult<void>();
 }
@@ -502,7 +502,7 @@ swResult<void> Project::Export3DStudio(const QString& FileName)
 {
 	const std::vector<swModelPartsEntry> ModelParts = GetModelParts();
 
-	QString SaveFileName = GetExportFileName(FileName, "3ds", tr("Export 3D Studio"), tr("3DS Files (*.3ds);;All Files (*.*)"));
+	QString SaveFileName = GetExportFileName(FileName, "3ds", tr("Export 3D Studio"), tr("3DS Files (*.3ds);;All Files (*)"));
 
 	if (SaveFileName.isEmpty())
 		return swUnexpected(QString());
@@ -894,7 +894,7 @@ swResult<swBrickLinkExport> Project::ExportBrickLink(const QString& FileName, co
 	if (PartsList.empty())
 		return swUnexpected(tr("Nothing to export."));
 
-	QString SaveFileName = GetExportFileName(FileName, "xml", tr("Export BrickLink"), tr("XML Files (*.xml);;All Files (*.*)"));
+	QString SaveFileName = GetExportFileName(FileName, "xml", tr("Export BrickLink"), tr("XML Files (*.xml);;All Files (*)"));
 
 	if (SaveFileName.isEmpty())
 		return swUnexpected(QString());
@@ -911,7 +911,7 @@ swResult<void> Project::ExportCOLLADA(const QString& FileName)
 {
 	const std::vector<swModelPartsEntry> ModelParts = GetModelParts();
 
-	QString SaveFileName = GetExportFileName(FileName, "dae", tr("Export COLLADA"), tr("COLLADA Files (*.dae);;All Files (*.*)"));
+	QString SaveFileName = GetExportFileName(FileName, "dae", tr("Export COLLADA"), tr("COLLADA Files (*.dae);;All Files (*)"));
 
 	if (SaveFileName.isEmpty())
 		return swUnexpected(QString());
@@ -933,7 +933,7 @@ swResult<void> Project::ExportKMZ(const QString& FileName)
 	if (ModelParts.empty())
 		return swUnexpected(tr("Nothing to export."));
 
-	QString SaveFileName = GetExportFileName(FileName, "kmz", tr("Export KMZ"), tr("KMZ Files (*.kmz);;All Files (*.*)"));
+	QString SaveFileName = GetExportFileName(FileName, "kmz", tr("Export KMZ"), tr("KMZ Files (*.kmz);;All Files (*)"));
 
 	if (SaveFileName.isEmpty())
 		return swUnexpected(QString());
@@ -962,7 +962,7 @@ swResult<void> Project::ExportKMZ(const QString& FileName)
 		return swUnexpected(tr("Could not open file '%1' for writing.").arg(SaveFileName));
 
 	if (!ZipFile.AddFile("doc.kml", KML, DosDate) || !ZipFile.AddFile(ModelFileName.toUtf8().constData(), COLLADA, DosDate) || !ZipFile.CloseWrite())
-		return swUnexpected(tr("Error writing to file '%1'.").arg(SaveFileName));
+		return swUnexpected(tr("Could not write file '%1'.").arg(SaveFileName));
 
 	return swResult<void>();
 }
@@ -1437,7 +1437,7 @@ swResult<void> Project::ExportCSV(const QString& FileName)
 	if (PartsList.empty())
 		return swUnexpected(tr("Nothing to export."));
 
-	QString SaveFileName = GetExportFileName(FileName, "csv", tr("Export CSV"), tr("CSV Files (*.csv);;All Files (*.*)"));
+	QString SaveFileName = GetExportFileName(FileName, "csv", tr("Export CSV"), tr("CSV Files (*.csv);;All Files (*)"));
 
 	if (SaveFileName.isEmpty())
 		return swUnexpected(QString());
@@ -1538,7 +1538,7 @@ swResult<void> Project::ExportHTML(const swHTMLExportOptions& Options)
 	QDir Dir(QDir(Options.PathName).filePath(ProjectBaseName));
 
 	if (!Dir.mkpath(QLatin1String(".")))
-		return swUnexpected(tr("Error creating folder '%1'.").arg(QDir::toNativeSeparators(Dir.absolutePath())));
+		return swUnexpected(tr("Could not create folder '%1'.").arg(QDir::toNativeSeparators(Dir.absolutePath())));
 
 	// the entry page of the export
 	const QString IndexFileName = QLatin1String("index.html");
@@ -1585,7 +1585,7 @@ swResult<void> Project::ExportHTML(const swHTMLExportOptions& Options)
 		QImageWriter Writer(FileName);
 
 		if (!Writer.write(Image.value()))
-			return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, Writer.errorString()));
+			return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, Writer.errorString()));
 
 		Stream << QString::fromLatin1("<p><IMG SRC=\"%1\" /></p><br><br>\n").arg(ImageName.toHtmlEscaped());
 
@@ -1670,7 +1670,7 @@ swResult<void> Project::ExportHTML(const swHTMLExportOptions& Options)
 		QFile File(FileName);
 
 		if (!File.open(QIODevice::WriteOnly))
-			return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, File.errorString()));
+			return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, File.errorString()));
 
 		QTextStream Stream(&File);
 
@@ -1719,7 +1719,7 @@ swResult<void> Project::ExportHTML(const swHTMLExportOptions& Options)
 			QImageWriter Writer(ImageFileName);
 
 			if (!Writer.write(Image))
-				return swUnexpected(tr("Error writing to file '%1':\n%2").arg(ImageFileName, Writer.errorString()));
+				return swUnexpected(tr("Could not write file '%1':\n%2").arg(ImageFileName, Writer.errorString()));
 
 			Stream << QString::fromLatin1("<SECTION ID=\"page-%1\">%2<IMG SRC=\"%3\" ALT=\"%4\" WIDTH=%5 HEIGHT=%6></SECTION>\n").arg(PageNumber, StepAnchors, ImageName.toHtmlEscaped(), tr("Page %1").arg(PageNumber).toHtmlEscaped(), QString::number(ImageSize.width()), QString::number(ImageSize.height()));
 		}
@@ -1756,7 +1756,7 @@ swResult<void> Project::ExportHTML(const swHTMLExportOptions& Options)
 			QFile File(FileName);
 
 			if (!File.open(QIODevice::WriteOnly))
-				return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, File.errorString()));
+				return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, File.errorString()));
 
 			QTextStream Stream(&File);
 
@@ -1778,7 +1778,7 @@ swResult<void> Project::ExportHTML(const swHTMLExportOptions& Options)
 			QFile File(FileName);
 
 			if (!File.open(QIODevice::WriteOnly))
-				return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, File.errorString()));
+				return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, File.errorString()));
 
 			QTextStream Stream(&File);
 
@@ -1814,7 +1814,7 @@ swResult<void> Project::ExportHTML(const swHTMLExportOptions& Options)
 			QFile File(FileName);
 
 			if (!File.open(QIODevice::WriteOnly))
-				return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, File.errorString()));
+				return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, File.errorString()));
 
 			QTextStream Stream(&File);
 
@@ -1847,7 +1847,7 @@ swResult<void> Project::ExportHTML(const swHTMLExportOptions& Options)
 		QFile File(FileName);
 
 		if (!File.open(QIODevice::WriteOnly))
-			return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, File.errorString()));
+			return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, File.errorString()));
 
 		QTextStream Stream(&File);
 
@@ -1886,7 +1886,7 @@ swResult<void> Project::ExportPOVRay(const QString& FileName, const swCamera* Ex
 {
 	const std::vector<swModelPartsEntry> ModelParts = GetModelParts(Step);
 
-	QString SaveFileName = GetExportFileName(FileName, QLatin1String("pov"), tr("Export POV-Ray"), tr("POV-Ray Files (*.pov);;All Files (*.*)"));
+	QString SaveFileName = GetExportFileName(FileName, QLatin1String("pov"), tr("Export POV-Ray"), tr("POV-Ray Files (*.pov);;All Files (*)"));
 
 	if (SaveFileName.isEmpty())
 		return swUnexpected(QString());
@@ -2730,7 +2730,7 @@ swResult<void> Project::ExportWavefront(const QString& FileName)
 {
 	const std::vector<swModelPartsEntry> ModelParts = GetModelParts();
 
-	QString SaveFileName = GetExportFileName(FileName, QLatin1String("obj"), tr("Export Wavefront"), tr("Wavefront Files (*.obj);;All Files (*.*)"));
+	QString SaveFileName = GetExportFileName(FileName, QLatin1String("obj"), tr("Export Wavefront"), tr("Wavefront Files (*.obj);;All Files (*)"));
 
 	if (SaveFileName.isEmpty())
 		return swUnexpected(QString());

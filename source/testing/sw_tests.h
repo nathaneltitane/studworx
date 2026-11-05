@@ -37,4 +37,5 @@ private slots:
 	void AxisAlignedRotations();
 	void AxisAlignedRotationTolerance();
 	void ProfileBatchSavesOnce();
+	void OpenLXFMLImportsModel();
 };

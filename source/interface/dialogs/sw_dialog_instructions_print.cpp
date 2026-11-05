@@ -206,7 +206,7 @@ void swInstructionsPrintWidget::UpdateFileRow()
 
 bool swInstructionsPrintWidget::BrowseFile()
 {
-	const QString FileName = QFileDialog::getSaveFileName(this, tr("Print to File"), mFileEdit->text(), tr("PDF Files (*.pdf);;All Files (*.*)"));
+	const QString FileName = QFileDialog::getSaveFileName(this, tr("Print to File"), mFileEdit->text(), tr("PDF Files (*.pdf);;All Files (*)"));
 
 	if (FileName.isEmpty())
 		return false;

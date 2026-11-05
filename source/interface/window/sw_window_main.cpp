@@ -667,7 +667,7 @@ void swMainWindow::ShowExportPOVRayDialog()
 	swResult<void> ExportResult = swGetActiveProject()->ExportPOVRay(QString());
 
 	if (!ExportResult && !ExportResult.error().isEmpty())
-		QMessageBox::warning(this, tr("POV-Ray Export" ), ExportResult.error());
+		QMessageBox::warning(this, tr("Export POV-Ray"), ExportResult.error());
 }
 
 void swMainWindow::ShowRenderDialog(swRenderDialogMode RenderDialogMode)
@@ -756,7 +756,7 @@ void swMainWindow::PrintModelView(QPrinter* Printer)
 
 	if (!Painter.begin(Printer))
 	{
-		QMessageBox::warning(this, tr("Print"), tr("Error starting the print job."));
+		QMessageBox::warning(this, tr("Print"), tr("Could not start the print job."));
 		return;
 	}
 

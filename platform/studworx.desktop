@@ -11,7 +11,7 @@ Exec=studworx %f
 Terminal=false
 Type=Application
 Icon=studworx
-MimeType=application/vnd.studworx;application/x-ldraw;application/x-multi-part-ldraw;application/x-multipart-ldraw;application/x-ldlite;
+MimeType=application/vnd.studworx;application/x-ldraw;application/x-multi-part-ldraw;application/x-multipart-ldraw;application/x-ldlite;application/x-lxf;
 Categories=Graphics;3DGraphics;Education;
 Keywords=CAD;LEGO;LDraw;
 

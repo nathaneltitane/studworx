@@ -213,7 +213,7 @@ void swModelListDialog::ExportModelClicked()
 
 		QString SaveFileName = QFileInfo(QDir(swGetProfileString(SW_PROFILE_PROJECTS_PATH)), CurrentItem->text()).absoluteFilePath();
 
-		SaveFileName = QFileDialog::getSaveFileName(this, tr("Export Model"), SaveFileName, tr("Supported Files (*.ldr *.dat);;All Files (*.*)"));
+		SaveFileName = QFileDialog::getSaveFileName(this, tr("Export Submodel"), SaveFileName, tr("LDraw Models (*.ldr *.dat);;All Files (*)"));
 
 		if (SaveFileName.isEmpty())
 			return;

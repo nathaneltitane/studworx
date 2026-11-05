@@ -164,7 +164,7 @@ void swSetsDatabaseDialog::SearchButtonClicked()
 
 	if (Keyword.isEmpty())
 	{
-		QMessageBox::information(this, tr("Search Sets"), tr("Keyword cannot be empty."));
+		QMessageBox::information(this, tr("Import Set Inventory"), tr("Keyword cannot be empty."));
 		return;
 	}
 
@@ -262,7 +262,7 @@ void swSetsDatabaseDialog::DownloadFinished(swHttpReply* Reply)
 		if (!Reply->error())
 			mInventory = Reply->readAll();
 		else
-			QMessageBox::warning(this, tr("Download Set Inventory"), tr("Error downloading set inventory."));
+			QMessageBox::warning(this, tr("Import Set Inventory"), tr("Could not download the set inventory."));
 
 		mInventoryReply = nullptr;
 	}

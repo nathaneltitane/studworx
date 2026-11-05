@@ -178,22 +178,22 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 
 	case SW_EDIT_CUT:
 		if (ActiveModel)
-			ShowResultError(ActiveModel->Cut(), tr("Cannot Cut Model"));
+			ShowResultError(ActiveModel->Cut(), tr("Cannot Cut Selection"));
 		break;
 
 	case SW_EDIT_COPY:
 		if (ActiveModel)
-			ShowResultError(ActiveModel->Copy(), tr("Cannot Copy Model"));
+			ShowResultError(ActiveModel->Copy(), tr("Cannot Copy Selection"));
 		break;
 
 	case SW_EDIT_PASTE:
 		if (ActiveModel)
-			ShowResultError(ActiveModel->Paste(true), tr("Cannot Paste Model"));
+			ShowResultError(ActiveModel->Paste(true), tr("Cannot Paste Selection"));
 		break;
 
 	case SW_EDIT_PASTE_STEPS:
 		if (ActiveModel)
-			ShowResultError(ActiveModel->Paste(false), tr("Cannot Paste Model"));
+			ShowResultError(ActiveModel->Paste(false), tr("Cannot Paste Selection"));
 		break;
 
 	case SW_EDIT_FIND:

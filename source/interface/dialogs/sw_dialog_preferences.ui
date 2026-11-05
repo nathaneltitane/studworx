@@ -1326,7 +1326,7 @@
             </item>
             <item>
              <property name="text">
-              <string>Thin Lines Logo</string>
+              <string>Thin-Line Logo</string>
              </property>
             </item>
             <item>
@@ -1356,7 +1356,7 @@
             </item>
             <item>
              <property name="text">
-              <string>High Contrast with Logo</string>
+              <string>High Contrast Logo</string>
              </property>
             </item>
            </widget>
@@ -3853,7 +3853,7 @@
           <item row="3" column="0">
            <widget class="QLabel" name="PathColorLabel">
             <property name="toolTip">
-             <string>Choose the display color for the flex path of a flexible part, along the length the part covers.</string>
+             <string>Choose the display color for the Flex Path of a flexible part, along the length the part covers.</string>
             </property>
             <property name="buddy">
              <cstring>PathColorButton</cstring>
@@ -3869,7 +3869,7 @@
              <string>Flex Path Color</string>
             </property>
             <property name="toolTip">
-             <string>Choose the display color for the flex path of a flexible part, along the length the part covers.</string>
+             <string>Choose the display color for the Flex Path of a flexible part, along the length the part covers.</string>
             </property>
             <property name="text">
              <string />
@@ -3879,7 +3879,7 @@
           <item row="4" column="0">
            <widget class="QLabel" name="PathOutOfReachColorLabel">
             <property name="toolTip">
-             <string>Choose the display color for the stretch of a flex path the part is too short to cover.</string>
+             <string>Choose the display color for the stretch of a Flex Path the part is too short to cover.</string>
             </property>
             <property name="buddy">
              <cstring>PathOutOfReachColorButton</cstring>
@@ -3895,7 +3895,7 @@
              <string>Flex Path Out of Reach Color</string>
             </property>
             <property name="toolTip">
-             <string>Choose the display color for the stretch of a flex path the part is too short to cover.</string>
+             <string>Choose the display color for the stretch of a Flex Path the part is too short to cover.</string>
             </property>
             <property name="text">
              <string />

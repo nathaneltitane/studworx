@@ -534,7 +534,7 @@ void swPropertiesDialog::ExportBrickLink()
 	if (!Options)
 		return;
 
-	const QString FileName = GetExportFileName("xml", tr("Export BrickLink"), tr("XML Files (*.xml);;All Files (*.*)"));
+	const QString FileName = GetExportFileName("xml", tr("Export BrickLink"), tr("XML Files (*.xml);;All Files (*)"));
 
 	if (FileName.isEmpty())
 		return;
@@ -549,7 +549,7 @@ void swPropertiesDialog::ExportBrickLink()
 
 void swPropertiesDialog::ExportCSV()
 {
-	const QString FileName = GetExportFileName("csv", tr("Export CSV"), tr("CSV Files (*.csv);;All Files (*.*)"));
+	const QString FileName = GetExportFileName("csv", tr("Export CSV"), tr("CSV Files (*.csv);;All Files (*)"));
 
 	if (FileName.isEmpty())
 		return;

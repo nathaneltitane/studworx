@@ -88,7 +88,7 @@ const swCommand gCommands[] =
 	{
 		QT_TRANSLATE_NOOP("Action", "File.Import.LDD"),
 		QT_TRANSLATE_NOOP("Menu", "&LEGO® Digital Designer..."),
-		QT_TRANSLATE_NOOP("Status", "Import a file in LEGO® Digital Designer LXF format"),
+		QT_TRANSLATE_NOOP("Status", "Import a file in LEGO® Digital Designer LXF or LXFML format"),
 		"",
 		""
 	},
@@ -393,7 +393,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SELECT_INVERT
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SelectInvert"),
-		QT_TRANSLATE_NOOP("Menu", "Select &Invert"),
+		QT_TRANSLATE_NOOP("Menu", "&Invert Selection"),
 		QT_TRANSLATE_NOOP("Status", "Invert the current selection set"),
 		"",
 		"Ctrl+I"
@@ -528,7 +528,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_TOGGLE
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.Snap.Toggle"),
-		QT_TRANSLATE_NOOP("Menu", "Move Snap Enabled"),
+		QT_TRANSLATE_NOOP("Menu", "Move Snap"),
 		QT_TRANSLATE_NOOP("Status", "Toggle movement snapping"),
 		"",
 		"Ctrl+Shift+M"
@@ -717,7 +717,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_ANGLE_TOGGLE
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapAngle.Toggle"),
-		QT_TRANSLATE_NOOP("Menu", "Rotation Snap Enabled"),
+		QT_TRANSLATE_NOOP("Menu", "Rotation Snap"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to fixed intervals"),
 		"",
 		"Alt+R"
@@ -825,7 +825,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_ORBIT_TOGGLE
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapAngle.ToggleOrbit"),
-		QT_TRANSLATE_NOOP("Menu", "Camera Snap Enabled"),
+		QT_TRANSLATE_NOOP("Menu", "Camera Snap"),
 		QT_TRANSLATE_NOOP("Status", "Toggle orbiting the camera in steps of the rotation snap angle"),
 		"",
 		""
@@ -1410,8 +1410,8 @@ const swCommand gCommands[] =
 	// SW_VIEW_TIME_DELETE
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Time.Delete"),
-		QT_TRANSLATE_NOOP("Menu", "Remove Step"),
-		QT_TRANSLATE_NOOP("Status", "Remove current step"),
+		QT_TRANSLATE_NOOP("Menu", "Delete Step"),
+		QT_TRANSLATE_NOOP("Status", "Delete the current step"),
 		"",
 		"Shift+Del"
 	},
@@ -1465,7 +1465,7 @@ const swCommand gCommands[] =
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Standard"),
 		QT_TRANSLATE_NOOP("Menu", "Standard"),
-		QT_TRANSLATE_NOOP("Status", "Toggle the Standard Toolbar"),
+		QT_TRANSLATE_NOOP("Status", "Toggle the Standard toolbar"),
 		"",
 		"F4"
 	},
@@ -1474,7 +1474,7 @@ const swCommand gCommands[] =
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Tools"),
 		QT_TRANSLATE_NOOP("Menu", "Tools"),
-		QT_TRANSLATE_NOOP("Status", "Toggle the Tools Toolbar"),
+		QT_TRANSLATE_NOOP("Status", "Toggle the Tools toolbar"),
 		"",
 		"F5"
 	},
@@ -1483,7 +1483,7 @@ const swCommand gCommands[] =
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Time"),
 		QT_TRANSLATE_NOOP("Menu", "Time"),
-		QT_TRANSLATE_NOOP("Status", "Toggle the Time Toolbar"),
+		QT_TRANSLATE_NOOP("Status", "Toggle the Time toolbar"),
 		"",
 		"F6"
 	},
@@ -1492,7 +1492,7 @@ const swCommand gCommands[] =
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Parts"),
 		QT_TRANSLATE_NOOP("Menu", "Parts"),
-		QT_TRANSLATE_NOOP("Status", "Toggle the Parts Toolbar"),
+		QT_TRANSLATE_NOOP("Status", "Toggle the Parts panel"),
 		"",
 		"F8"
 	},
@@ -1501,7 +1501,7 @@ const swCommand gCommands[] =
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Colors"),
 		QT_TRANSLATE_NOOP("Menu", "Colors"),
-		QT_TRANSLATE_NOOP("Status", "Toggle the Colors Toolbar"),
+		QT_TRANSLATE_NOOP("Status", "Toggle the Colors panel"),
 		"",
 		"F7"
 	},
@@ -1510,7 +1510,7 @@ const swCommand gCommands[] =
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Properties"),
 		QT_TRANSLATE_NOOP("Menu", "Properties"),
-		QT_TRANSLATE_NOOP("Status", "Toggle the Properties Toolbar"),
+		QT_TRANSLATE_NOOP("Status", "Toggle the Properties panel"),
 		"",
 		"F9"
 	},
@@ -1519,7 +1519,7 @@ const swCommand gCommands[] =
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Timeline"),
 		QT_TRANSLATE_NOOP("Menu", "Timeline"),
-		QT_TRANSLATE_NOOP("Status", "Toggle the Timeline Toolbar"),
+		QT_TRANSLATE_NOOP("Status", "Toggle the Timeline panel"),
 		"",
 		"F10"
 	},
@@ -1528,7 +1528,7 @@ const swCommand gCommands[] =
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Preview"),
 		QT_TRANSLATE_NOOP("Menu", "Preview"),
-		QT_TRANSLATE_NOOP("Status", "Toggle the Preview Toolbar"),
+		QT_TRANSLATE_NOOP("Status", "Toggle the Preview panel"),
 		"",
 		"F11"
 	},
@@ -1546,7 +1546,7 @@ const swCommand gCommands[] =
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.MinifigureBuilder"),
 		QT_TRANSLATE_NOOP("Menu", "Minifigure Builder"),
-		QT_TRANSLATE_NOOP("Status", "Toggle the Minifigure Builder Panel"),
+		QT_TRANSLATE_NOOP("Status", "Toggle the Minifigure Builder panel"),
 		"",
 		""
 	},
@@ -1564,7 +1564,7 @@ const swCommand gCommands[] =
 	{
 		QT_TRANSLATE_NOOP("Action", "View.FullScreen"),
 		QT_TRANSLATE_NOOP("Menu", "&Full Screen"),
-		QT_TRANSLATE_NOOP("Status", "Toggle fullscreen mode"),
+		QT_TRANSLATE_NOOP("Status", "Toggle full screen mode"),
 		"",
 		"Alt+F11"
 	},
@@ -1923,7 +1923,7 @@ const swCommand gCommands[] =
 	// SW_PART_INSERT_COLOR_CURRENT
 	{
 		QT_TRANSLATE_NOOP("Action", "Part.InsertColor.Current"),
-		QT_TRANSLATE_NOOP("Menu", "Insert with Current Color"),
+		QT_TRANSLATE_NOOP("Menu", "Current Color"),
 		QT_TRANSLATE_NOOP("Status", "Insert new parts with the current color"),
 		"",
 		""
@@ -1932,7 +1932,7 @@ const swCommand gCommands[] =
 	// SW_PART_INSERT_COLOR_SELECTED
 	{
 		QT_TRANSLATE_NOOP("Action", "Part.InsertColor.Selected"),
-		QT_TRANSLATE_NOOP("Menu", "Insert with Selected Part Color"),
+		QT_TRANSLATE_NOOP("Menu", "Selected Part Color"),
 		QT_TRANSLATE_NOOP("Status", "Insert new parts with the color of the selected part"),
 		"",
 		""
@@ -1941,7 +1941,7 @@ const swCommand gCommands[] =
 	// SW_PART_INSERT_COLOR_LAST_INSERTED
 	{
 		QT_TRANSLATE_NOOP("Action", "Part.InsertColor.LastInserted"),
-		QT_TRANSLATE_NOOP("Menu", "Insert with Last Inserted Color"),
+		QT_TRANSLATE_NOOP("Menu", "Last Inserted Part Color"),
 		QT_TRANSLATE_NOOP("Status", "Insert new parts with the color of the last inserted part"),
 		"",
 		""
@@ -2085,8 +2085,8 @@ const swCommand gCommands[] =
 	// SW_VIEW_STUD_STYLE_THIN_LINES_LOGO
 	{
 		QT_TRANSLATE_NOOP("Action", "View.StudStyle.ThinLinesLogo"),
-		QT_TRANSLATE_NOOP("Menu", "Thin Lines Logo Studs"),
-		QT_TRANSLATE_NOOP("Status", "Draw studs with the thin lines logo style"),
+		QT_TRANSLATE_NOOP("Menu", "Thin-Line Logo Studs"),
+		QT_TRANSLATE_NOOP("Status", "Draw studs with the thin-line logo style"),
 		"",
 		""
 	},
@@ -2139,8 +2139,8 @@ const swCommand gCommands[] =
 	// SW_VIEW_STUD_STYLE_HIGH_CONTRAST_LOGO
 	{
 		QT_TRANSLATE_NOOP("Action", "View.StudStyle.HighContrastLogo"),
-		QT_TRANSLATE_NOOP("Menu", "High Contrast with Logo Studs"),
-		QT_TRANSLATE_NOOP("Status", "Draw studs with the high contrast with logo style"),
+		QT_TRANSLATE_NOOP("Menu", "High Contrast Logo Studs"),
+		QT_TRANSLATE_NOOP("Status", "Draw studs with the high contrast logo style"),
 		"",
 		""
 	},
@@ -2661,8 +2661,8 @@ const swCommand gCommands[] =
 	//  SW_PART_VIEW_SELECTED_MODEL
 	{
 		QT_TRANSLATE_NOOP("Action", "Part.ViewSelectedModel"),
-		QT_TRANSLATE_NOOP("Menu", "Open Selected Model"),
-		QT_TRANSLATE_NOOP("Status", "Open the model referenced by the selected part in a new tab"),
+		QT_TRANSLATE_NOOP("Menu", "Open Selected Submodel"),
+		QT_TRANSLATE_NOOP("Status", "Open the submodel referenced by the selected part in a new tab"),
 		"",
 		"Ctrl+Shift+O"
 	},
@@ -2670,8 +2670,8 @@ const swCommand gCommands[] =
 	// SW_PART_MOVE_SELECTION_TO_MODEL
 	{
 		QT_TRANSLATE_NOOP("Action", "Part.MoveSelectionToModel"),
-		QT_TRANSLATE_NOOP("Menu", "Move to New Model..."),
-		QT_TRANSLATE_NOOP("Status", "Move the selected parts to a new model and replace them with a reference to the model"),
+		QT_TRANSLATE_NOOP("Menu", "Move to New Submodel..."),
+		QT_TRANSLATE_NOOP("Status", "Move the selected parts to a new submodel and replace them with a reference to it"),
 		"",
 		"Ctrl+Alt+N"
 	},
@@ -2679,8 +2679,8 @@ const swCommand gCommands[] =
 	// SW_PART_INLINE_SELECTED_MODELS
 	{
 		QT_TRANSLATE_NOOP("Action", "Part.InlineSelectedModels"),
-		QT_TRANSLATE_NOOP("Menu", "Inline Selected Models"),
-		QT_TRANSLATE_NOOP("Status", "Insert the contents of the selected model references into the current model"),
+		QT_TRANSLATE_NOOP("Menu", "Inline Selected Submodels"),
+		QT_TRANSLATE_NOOP("Status", "Insert the contents of the selected submodels into the current model"),
 		"",
 		"Ctrl+Shift+I"
 	},
@@ -2688,9 +2688,9 @@ const swCommand gCommands[] =
 	// SW_PART_FLATTEN_MODEL
 	{
 		QT_TRANSLATE_NOOP("Action", "Part.FlattenModel"),
-		QT_TRANSLATE_NOOP("Menu", "Flatten Model"),
+		QT_TRANSLATE_NOOP("Menu", "Flatten Submodels"),
 		QT_TRANSLATE_NOOP("Status", "Replace every submodel, and the submodels inside it, with its parts in one step"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Flatten Model</b></p><p>Replace every submodel in the current model, and every submodel inside those, with its parts in one undo step. Each part keeps its place and color, and the groups inside the submodels are not kept.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Flatten Submodels</b></p><p>Replace every submodel in the current model, and every submodel inside those, with its parts in one undo step. Each part keeps its place and color, and the groups inside the submodels are not kept.</p>"),
 		"Ctrl+Shift+F"
 	},
 
@@ -2841,7 +2841,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_01
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model01"),
-		QT_TRANSLATE_NOOP("Menu", "Model 1"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 1"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -2850,7 +2850,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_02
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model02"),
-		QT_TRANSLATE_NOOP("Menu", "Model 2"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 2"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -2859,7 +2859,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_03
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model03"),
-		QT_TRANSLATE_NOOP("Menu", "Model 3"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 3"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -2868,7 +2868,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_04
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model04"),
-		QT_TRANSLATE_NOOP("Menu", "Model 4"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 4"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -2877,7 +2877,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_05
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model05"),
-		QT_TRANSLATE_NOOP("Menu", "Model 5"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 5"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -2886,7 +2886,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_06
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model06"),
-		QT_TRANSLATE_NOOP("Menu", "Model 6"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 6"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -2895,7 +2895,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_07
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model07"),
-		QT_TRANSLATE_NOOP("Menu", "Model 7"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 7"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -2904,7 +2904,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_08
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model08"),
-		QT_TRANSLATE_NOOP("Menu", "Model 8"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 8"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -2913,7 +2913,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_09
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model09"),
-		QT_TRANSLATE_NOOP("Menu", "Model 9"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 9"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -2922,7 +2922,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_10
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model10"),
-		QT_TRANSLATE_NOOP("Menu", "Model 10"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 10"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -2931,7 +2931,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_11
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model11"),
-		QT_TRANSLATE_NOOP("Menu", "Model 11"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 11"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -2940,7 +2940,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_12
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model12"),
-		QT_TRANSLATE_NOOP("Menu", "Model 12"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 12"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -2949,7 +2949,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_13
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model13"),
-		QT_TRANSLATE_NOOP("Menu", "Model 13"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 13"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -2958,7 +2958,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_14
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model14"),
-		QT_TRANSLATE_NOOP("Menu", "Model 14"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 14"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -2967,7 +2967,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_15
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model15"),
-		QT_TRANSLATE_NOOP("Menu", "Model 15"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 15"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -2976,7 +2976,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_16
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model16"),
-		QT_TRANSLATE_NOOP("Menu", "Model 16"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 16"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -2985,7 +2985,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_17
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model17"),
-		QT_TRANSLATE_NOOP("Menu", "Model 17"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 17"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -2994,7 +2994,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_18
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model18"),
-		QT_TRANSLATE_NOOP("Menu", "Model 18"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 18"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3003,7 +3003,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_19
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model19"),
-		QT_TRANSLATE_NOOP("Menu", "Model 19"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 19"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3012,7 +3012,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_20
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model20"),
-		QT_TRANSLATE_NOOP("Menu", "Model 20"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 20"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3021,7 +3021,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_21
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model21"),
-		QT_TRANSLATE_NOOP("Menu", "Model 21"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 21"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3030,7 +3030,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_22
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model22"),
-		QT_TRANSLATE_NOOP("Menu", "Model 22"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 22"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3039,7 +3039,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_23
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model23"),
-		QT_TRANSLATE_NOOP("Menu", "Model 23"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 23"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3048,7 +3048,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_24
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model24"),
-		QT_TRANSLATE_NOOP("Menu", "Model 24"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 24"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3057,7 +3057,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_25
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model25"),
-		QT_TRANSLATE_NOOP("Menu", "Model 25"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 25"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3066,7 +3066,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_26
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model26"),
-		QT_TRANSLATE_NOOP("Menu", "Model 26"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 26"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3075,7 +3075,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_27
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model27"),
-		QT_TRANSLATE_NOOP("Menu", "Model 27"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 27"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3084,7 +3084,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_28
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model28"),
-		QT_TRANSLATE_NOOP("Menu", "Model 28"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 28"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3093,7 +3093,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_29
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model29"),
-		QT_TRANSLATE_NOOP("Menu", "Model 29"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 29"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3102,7 +3102,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_30
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model30"),
-		QT_TRANSLATE_NOOP("Menu", "Model 30"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 30"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3111,7 +3111,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_31
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model31"),
-		QT_TRANSLATE_NOOP("Menu", "Model 31"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 31"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3120,7 +3120,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_32
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model32"),
-		QT_TRANSLATE_NOOP("Menu", "Model 32"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 32"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3129,7 +3129,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_33
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model33"),
-		QT_TRANSLATE_NOOP("Menu", "Model 33"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 33"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3138,7 +3138,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_34
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model34"),
-		QT_TRANSLATE_NOOP("Menu", "Model 34"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 34"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3147,7 +3147,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_35
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model35"),
-		QT_TRANSLATE_NOOP("Menu", "Model 35"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 35"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3156,7 +3156,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_36
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model36"),
-		QT_TRANSLATE_NOOP("Menu", "Model 36"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 36"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3165,7 +3165,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_37
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model37"),
-		QT_TRANSLATE_NOOP("Menu", "Model 37"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 37"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3174,7 +3174,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_38
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model38"),
-		QT_TRANSLATE_NOOP("Menu", "Model 38"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 38"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3183,7 +3183,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_39
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model39"),
-		QT_TRANSLATE_NOOP("Menu", "Model 39"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 39"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3192,7 +3192,7 @@ const swCommand gCommands[] =
 	// SW_MODEL_40
 	{
 		QT_TRANSLATE_NOOP("Action", "Model.Model40"),
-		QT_TRANSLATE_NOOP("Menu", "Model 40"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel 40"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
 		"",
 		""
@@ -3211,7 +3211,7 @@ const swCommand gCommands[] =
 	{
 		QT_TRANSLATE_NOOP("Action", "Help.HomePage"),
 		QT_TRANSLATE_NOOP("Menu", "&Home Page"),
-		QT_TRANSLATE_NOOP("Status", "Open StudWorx' home page on the internet using your default web browser"),
+		QT_TRANSLATE_NOOP("Status", "Open the StudWorx home page in your default web browser"),
 		"",
 		""
 	},
@@ -3220,7 +3220,7 @@ const swCommand gCommands[] =
 	{
 		QT_TRANSLATE_NOOP("Action", "Help.BugReport"),
 		QT_TRANSLATE_NOOP("Menu", "Report a &Bug"),
-		QT_TRANSLATE_NOOP("Status", "Open StudWorx' bug report form on your default web browser"),
+		QT_TRANSLATE_NOOP("Status", "Open the StudWorx bug report form in your default web browser"),
 		"",
 		""
 	},
@@ -3255,8 +3255,8 @@ const swCommand gCommands[] =
 	// SW_TIMELINE_DELETE
 	{
 		"",
-		QT_TRANSLATE_NOOP("Menu", "Remove Step"),
-		QT_TRANSLATE_NOOP("Status", "Remove current step"),
+		QT_TRANSLATE_NOOP("Menu", "Delete Step"),
+		QT_TRANSLATE_NOOP("Status", "Delete the current step"),
 		"",
 		""
 	},

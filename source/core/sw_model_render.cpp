@@ -165,7 +165,7 @@ swResult<QImage> swModel::RenderStepImageWithReadyAssets(bool Zoom, int Width, i
 		if (!mActive)
 			CalculateStep(SW_STEP_MAXIMUM);
 
-		return swUnexpected(tr("Error creating images."));
+		return swUnexpected(tr("Could not create the step images."));
 	}
 
 	View.OnDraw();
@@ -183,7 +183,7 @@ swResult<QImage> swModel::RenderStepImageWithReadyAssets(bool Zoom, int Width, i
 		Image = Image.convertToFormat(QImage::Format_RGB32);
 
 	if (Image.isNull())
-		return swUnexpected(tr("Error creating images."));
+		return swUnexpected(tr("Could not create the step images."));
 
 	return Image;
 }
@@ -651,7 +651,7 @@ swResult<void> swModel::SaveStepImages(const QString& BaseName, bool AddStepSuff
 			Writer.setFormat("png");
 
 		if (!Writer.write(OutputImage))
-			return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, Writer.errorString()));
+			return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, Writer.errorString()));
 	}
 
 	return swResult<void>();
@@ -970,7 +970,7 @@ swResult<void> swModel::SaveFramedImages(const QString& BaseName, bool AddStepSu
 		swGifWriter Writer(BaseName, QSize(Width, Height));
 
 		if (!Writer.Open())
-			return swUnexpected(tr("Error writing to file '%1':\n%2").arg(BaseName, Writer.GetErrorString()));
+			return swUnexpected(tr("Could not write file '%1':\n%2").arg(BaseName, Writer.GetErrorString()));
 
 		const int FrameCount = Turntable.GetFrameCount(End - Start + 1);
 
@@ -986,11 +986,11 @@ swResult<void> swModel::SaveFramedImages(const QString& BaseName, bool AddStepSu
 				return swUnexpected(Image.error());
 
 			if (!Writer.AddFrame(Image.value(), Turntable.GetFrameDelay(Frame, FrameCount), Transparent))
-				return swUnexpected(tr("Error writing to file '%1':\n%2").arg(BaseName, Writer.GetErrorString()));
+				return swUnexpected(tr("Could not write file '%1':\n%2").arg(BaseName, Writer.GetErrorString()));
 		}
 
 		if (!Writer.Close())
-			return swUnexpected(tr("Error writing to file '%1':\n%2").arg(BaseName, Writer.GetErrorString()));
+			return swUnexpected(tr("Could not write file '%1':\n%2").arg(BaseName, Writer.GetErrorString()));
 
 		return swResult<void>();
 	}
@@ -1020,7 +1020,7 @@ swResult<void> swModel::SaveFramedImages(const QString& BaseName, bool AddStepSu
 				Writer.setFormat("png");
 
 			if (!Writer.write(Image.value()))
-				return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, Writer.errorString()));
+				return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, Writer.errorString()));
 
 			continue;
 		}
@@ -1028,7 +1028,7 @@ swResult<void> swModel::SaveFramedImages(const QString& BaseName, bool AddStepSu
 		swGifWriter Writer(FileName, QSize(Width, Height));
 
 		if (!Writer.Open())
-			return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, Writer.GetErrorString()));
+			return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, Writer.GetErrorString()));
 
 		for (int Frame = 0; Frame < Turntable.GetFrameCount(1); Frame++)
 		{
@@ -1040,11 +1040,11 @@ swResult<void> swModel::SaveFramedImages(const QString& BaseName, bool AddStepSu
 				return swUnexpected(Image.error());
 
 			if (!Writer.AddFrame(Image.value(), Turntable.GetFrameDelay(Frame, Turntable.GetFrameCount(1)), Transparent))
-				return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, Writer.GetErrorString()));
+				return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, Writer.GetErrorString()));
 		}
 
 		if (!Writer.Close())
-			return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, Writer.GetErrorString()));
+			return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, Writer.GetErrorString()));
 	}
 
 	return swResult<void>();

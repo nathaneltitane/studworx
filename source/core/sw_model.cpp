@@ -655,7 +655,7 @@ void swModel::RemoveStepAction(swStep Step)
 
 	EndEditHistory();
 	ShiftStepViews(Step, -1);
-	EndHistorySequence(tr("Remove Step"));
+	EndHistorySequence(tr("Delete Step"));
 
 	SetCurrentStep(mCurrentStep);
 }
@@ -1081,7 +1081,7 @@ bool swModel::SaveExplodedCopy(const swExplodeSettings& Settings)
 	const QString Suffix = ProjectInfo.suffix().isEmpty() ? DefaultSuffix : ProjectInfo.suffix();
 	const QString CopyName = ProjectInfo.absoluteDir().absoluteFilePath(ProjectInfo.completeBaseName() + QLatin1String("-exploded.") + Suffix);
 
-	QString FileName = QFileDialog::getSaveFileName(gMainWindow, tr("Save Exploded Copy"), CopyName, tr("Supported Files (*.%1);;All Files (*.*)").arg(DefaultSuffix));
+	QString FileName = QFileDialog::getSaveFileName(gMainWindow, tr("Save Exploded Copy"), CopyName, tr("LDraw Models (*.%1);;All Files (*)").arg(DefaultSuffix));
 
 	if (FileName.isEmpty())
 		return false;

@@ -28,7 +28,7 @@ std::vector<QImage> swView::GetStepImages(swStep Start, swStep End)
 	if (!BeginRenderToImage(mWidth, mHeight))
 	{
 		if (gMainWindow)
-			QMessageBox::warning(gMainWindow, tr("Create Step Images"), tr("Error creating images."));
+			QMessageBox::warning(gMainWindow, tr("Create Step Images"), tr("Could not create the step images."));
 
 		return Images;
 	}
@@ -62,7 +62,7 @@ std::vector<QImage> swView::GetStepImages(swStep Start, swStep End)
 		mModel->CalculateStep(SW_STEP_MAXIMUM);
 
 	if (RenderFailed && gMainWindow)
-		QMessageBox::warning(gMainWindow, tr("Create Step Images"), tr("Error creating images."));
+		QMessageBox::warning(gMainWindow, tr("Create Step Images"), tr("Could not create the step images."));
 
 	return Images;
 }
@@ -72,7 +72,7 @@ swResult<void> swView::SaveStepImages(const QString& BaseName, bool AddStepSuffi
 	std::vector<QImage> Images = GetStepImages(Start, End);
 
 	if (Images.size() != static_cast<size_t>(End - Start + 1))
-		return swUnexpected(tr("Error creating images."));
+		return swUnexpected(tr("Could not create the step images."));
 
 	const bool Transparent = Background == swImageBackground::Transparent;
 	const QByteArray Format = QFileInfo(BaseName).suffix().toLower().toLatin1();
@@ -97,7 +97,7 @@ swResult<void> swView::SaveStepImages(const QString& BaseName, bool AddStepSuffi
 			swGifWriter Writer(FileName, Image.size());
 
 			if (!Writer.Open() || !Writer.AddFrame(Image, 0, Transparent) || !Writer.Close())
-				return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, Writer.GetErrorString()));
+				return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, Writer.GetErrorString()));
 		}
 		else
 		{
@@ -108,7 +108,7 @@ swResult<void> swView::SaveStepImages(const QString& BaseName, bool AddStepSuffi
 				Writer.setFormat("png");
 
 			if (!Writer.write(Image))
-				return swUnexpected(tr("Error writing to file '%1':\n%2").arg(FileName, Writer.errorString()));
+				return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, Writer.errorString()));
 		}
 
 		if (ProgressCallback)

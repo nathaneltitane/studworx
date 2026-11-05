@@ -49,7 +49,7 @@
     </message>
     <message numerus="yes">
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="489"/>
-        <source>The text was not applied, %n line(s) are not valid LDraw syntax:</source>
+        <source>The text was not applied. %n line(s) are not valid LDraw syntax:</source>
         <translation type="unfinished">
             <numerusform></numerusform>
             <numerusform></numerusform>

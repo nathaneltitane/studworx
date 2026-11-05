@@ -225,7 +225,7 @@ void swPreferencesDialog::DeleteCategoryClicked()
 
 void swPreferencesDialog::ImportCategoriesClicked()
 {
-	QString FileName = QFileDialog::getOpenFileName(this, tr("Import Categories"), "", tr("Text Files (*.txt);;All Files (*.*)"));
+	QString FileName = QFileDialog::getOpenFileName(this, tr("Import Categories"), "", tr("Category Files (*.txt);;All Files (*)"));
 
 	if (FileName.isEmpty())
 		return;
@@ -233,7 +233,7 @@ void swPreferencesDialog::ImportCategoriesClicked()
 	std::vector<swLibraryCategory> Categories;
 	if (!swLoadCategories(FileName, Categories))
 	{
-		QMessageBox::warning(this, tr("Import Categories"), tr("Error loading categories file."));
+		QMessageBox::warning(this, tr("Import Categories"), tr("Could not read categories file '%1'.").arg(FileName));
 		return;
 	}
 
@@ -244,14 +244,14 @@ void swPreferencesDialog::ImportCategoriesClicked()
 
 void swPreferencesDialog::ExportCategoriesClicked()
 {
-	QString FileName = QFileDialog::getSaveFileName(this, tr("Export Categories"), "", tr("Text Files (*.txt);;All Files (*.*)"));
+	QString FileName = QFileDialog::getSaveFileName(this, tr("Export Categories"), "", tr("Category Files (*.txt);;All Files (*)"));
 
 	if (FileName.isEmpty())
 		return;
 
 	if (!swSaveCategories(FileName, mOptions->Categories))
 	{
-		QMessageBox::warning(this, tr("Export Categories"), tr("Error saving categories file."));
+		QMessageBox::warning(this, tr("Export Categories"), tr("Could not write categories file '%1'.").arg(FileName));
 		return;
 	}
 }

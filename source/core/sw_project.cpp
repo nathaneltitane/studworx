@@ -235,7 +235,7 @@ QString Project::GetNewModelName(QWidget* ParentWidget, const QString& DialogTit
 
 		if (Name.isEmpty())
 		{
-			QMessageBox::information(ParentWidget, DialogTitle, tr("The submodel name cannot be empty."));
+			QMessageBox::information(ParentWidget, DialogTitle, tr("Submodel name cannot be empty."));
 			continue;
 		}
 

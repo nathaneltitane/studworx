@@ -4,10 +4,10 @@
 #include "sw_profile.h"
 
 // mapping files are json text
-static const char* swBrickLinkMappingFilter = QT_TRANSLATE_NOOP("swBrickLinkExportDialog", "Mapping Files (*.txt *.json);;All Files (*.*)");
+static const char* swBrickLinkMappingFilter = QT_TRANSLATE_NOOP("swBrickLinkExportDialog", "Mapping Files (*.txt *.json);;All Files (*)");
 
 // exceptions files are comma or tab separated text
-static const char* swBrickLinkExceptionsFilter = QT_TRANSLATE_NOOP("swBrickLinkExportDialog", "Exception Files (*.csv *.tsv *.txt);;All Files (*.*)");
+static const char* swBrickLinkExceptionsFilter = QT_TRANSLATE_NOOP("swBrickLinkExportDialog", "Exception Files (*.csv *.tsv *.txt);;All Files (*)");
 
 // exceptions table columns
 enum swBrickLinkExceptionsColumn

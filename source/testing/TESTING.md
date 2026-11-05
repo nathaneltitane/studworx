@@ -106,3 +106,5 @@ qmake ..\..\source\testing\testing.pro -spec win32-msvc CONFIG+=release CONFIG-=
 nmake /NOLOGO
 nmake /NOLOGO check "TESTARGS=-o test-results.xml,junitxml -o -,txt"
 ```
+A LEGO® Digital Designer `.lxfml` model opened on the command line must load as an
+untitled project with its part, checked by saving it with `--flatten`.

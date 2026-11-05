@@ -9,7 +9,8 @@ has an easy to use interface and includes thousands of different
 parts in its library.
 .PP
 \fIINFILE\fR can be an LDraw model (.ldr, .mpd or .dat), or a LeoCAD
-project (.lcd), which is read only and saved as LDraw.
+project (.lcd), which is read only and saved as LDraw. A LEGO\(rg Digital
+Designer model (.lxf or .lxfml) is imported as an untitled project.
 
 .SH OPTIONS
 Below is a summary of all of the options that \fIStudWorx\fR
@@ -46,7 +47,7 @@ use a name based on \fIinfile\fR. The file format is selected by \fIext\fR
 and can be png, jpg, bmp or gif, with one still GIF for each step (if \fIext\fR
 is not present then the default preferences format will be used).
 When a range of steps is saved, each picture gets its step number added
-to the name, as in \fIoutfile1.png\fR.
+to the name, as in \fIoutfile01.png\fR.
 
 .TP
 \fB\-w \fIwidth\fR, \fB\-\-width \fIwidth
@@ -59,14 +60,14 @@ Sets the width of the picture to \fIwidth\fR.
 Sets the height of the picture to \fIheight\fR.
 
 .TP
-\fB\-f \fItime\fR, \fB\-\-from \fItime
+\fB\-f \fIstep\fR, \fB\-\-from \fIstep
 .br
-Start saving pictures at the step \fItime\fR. Steps start at 1 and end at 255.
+Start saving pictures at the step \fIstep\fR. Steps start at 1 and end at 255.
 
 .TP
-\fB\-t \fItime\fR, \fB\-\-to \fItime
+\fB\-t \fIstep\fR, \fB\-\-to \fIstep
 .br
-Save pictures until the step \fItime\fR.
+Save pictures until the step \fIstep\fR.
 
 .TP
 \fB\-s \fIsubmodel\fR, \fB\-\-submodel \fIsubmodel
@@ -81,7 +82,7 @@ Sets the active camera to \fIcamera\fR.
 .TP
 \fB\-\-stud\-style\ \fIid
 .br
-Set the stud style. Valid values 0=Plain, 1=Thin Lines Logo, 2=Outline Logo, 3=Sharp Top Logo, 4=Rounded Top Logo, 5=Flattened Logo, 6=High Contrast, 7=High Contrast with Logo.
+Set the stud style. Valid values 0=Plain, 1=Thin-Line Logo, 2=Outline Logo, 3=Sharp Top Logo, 4=Rounded Top Logo, 5=Flattened Logo, 6=High Contrast, 7=High Contrast Logo.
 
 .TP
 \fB\-\-viewpoint \fRfront\ |\ back\ |\ left\ |\ right\ |\ top\ |\ bottom\ |\ home
@@ -97,7 +98,7 @@ Set the camera angles in degrees around the model.
 Set the camera position, target and up vector using the \fIStudWorx\fR coordinate system.
 
 .TP
-.BI "\-\-camera\-position-ldraw " x " " y " " z "  " tx " " ty " " tz "  " ux " " uy " " uz
+.BI "\-\-camera\-position\-ldraw " x " " y " " z "  " tx " " ty " " tz "  " ux " " uy " " uz
 Set the camera position, target and up vector using the \fILDraw\fR coordinate system.
 
 .TP
@@ -153,12 +154,12 @@ Select shading mode for rendering.
 Select the lighting style used by the default shading mode.
 
 .TP
-.BI "\-\-line-width " width
+.BI "\-\-line\-width " width
 Set the width of the edge lines.
 
 .TP
 .BI "\-\-antialiasing\-samples " count
-AntiAliasing sample size (1, 2, 4, or 8).
+Anti-aliasing sample size (1, 2, 4, or 8).
 
 .TP
 \fB\-\-no\-stud\-cylinder\-color
@@ -351,7 +352,7 @@ Output version information and exit.
 
 .TP
 .BR \-h ",\ " \-\-help
-Display a brief usage synopsis and exit.
+Display this help message and exit.
 
 .SH ENVIRONMENT
 ``LDRAW_DIRECTORY'' may be set to the parts library folder or archive, and

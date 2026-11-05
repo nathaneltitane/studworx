@@ -996,7 +996,7 @@ void swPreferencesDialog::accept()
 // use to choose a parts library
 void swPreferencesDialog::PartsLibraryBrowseClicked()
 {
-	QString Result = QFileDialog::getOpenFileName(this, tr("Select Parts Library"), ui->partsLibrary->text(), tr("Parts Libraries (*.zip *.bin LDConfig.ldr ldconfig.ldr);;All Files (*.*)"));
+	QString Result = QFileDialog::getOpenFileName(this, tr("Select Parts Library"), ui->partsLibrary->text(), tr("Parts Library Files (*.zip *.bin LDConfig.ldr ldconfig.ldr);;All Files (*)"));
 
 	if (Result.isEmpty())
 		return;
@@ -1012,7 +1012,7 @@ void swPreferencesDialog::PartsLibraryBrowseClicked()
 
 void swPreferencesDialog::UnofficialLibraryBrowseButtonClicked()
 {
-	QString Result = QFileDialog::getOpenFileName(this, tr("Select Unofficial Library Archive"), ui->UnofficialLibraryEdit->text(), tr("Supported Archives (*.zip);;All Files (*.*)"));
+	QString Result = QFileDialog::getOpenFileName(this, tr("Select Unofficial Library Archive"), ui->UnofficialLibraryEdit->text(), tr("Supported Archives (*.zip);;All Files (*)"));
 
 	if (!Result.isEmpty())
 		ui->UnofficialLibraryEdit->setText(QDir::toNativeSeparators(Result));
@@ -1131,7 +1131,7 @@ QString swPreferencesDialog::GetMinifigureBuilderSettingsStartPath() const
 
 void swPreferencesDialog::MinifigureBuilderSettingsBrowseButtonClicked()
 {
-	const QString Result = QFileDialog::getOpenFileName(this, tr("Choose Minifigure Builder Settings"), GetMinifigureBuilderSettingsStartPath(), tr("Settings Files (*.ini);;All Files (*.*)"));
+	const QString Result = QFileDialog::getOpenFileName(this, tr("Choose Minifigure Builder Settings"), GetMinifigureBuilderSettingsStartPath(), tr("Settings Files (*.ini);;All Files (*)"));
 
 	if (!Result.isEmpty())
 		ui->MinifigureBuilderSettingsEdit->setText(QDir::toNativeSeparators(Result));
@@ -1144,7 +1144,7 @@ void swPreferencesDialog::MinifigureBuilderSettingsUpdateButtonClicked()
 
 	if (FileName.isEmpty())
 	{
-		FileName = QFileDialog::getSaveFileName(this, tr("Save Minifigure Builder Settings"), GetMinifigureBuilderSettingsStartPath(), tr("Settings Files (*.ini);;All Files (*.*)"));
+		FileName = QFileDialog::getSaveFileName(this, tr("Save Minifigure Builder Settings"), GetMinifigureBuilderSettingsStartPath(), tr("Settings Files (*.ini);;All Files (*)"));
 
 		if (FileName.isEmpty())
 			return;
@@ -1166,7 +1166,7 @@ void swPreferencesDialog::MinifigureBuilderSettingsUpdateButtonClicked()
 
 void swPreferencesDialog::BrickLinkMappingBrowseButtonClicked()
 {
-	const QString Result = QFileDialog::getOpenFileName(this, tr("Select BrickLink Mapping File"), ui->BrickLinkMappingEdit->text(), tr("Mapping Files (*.txt *.json);;All Files (*.*)"));
+	const QString Result = QFileDialog::getOpenFileName(this, tr("Select BrickLink Mapping File"), ui->BrickLinkMappingEdit->text(), tr("Mapping Files (*.txt *.json);;All Files (*)"));
 
 	if (!Result.isEmpty())
 		ui->BrickLinkMappingEdit->setText(QDir::toNativeSeparators(Result));
@@ -1202,9 +1202,9 @@ void swPreferencesDialog::RebrickableApiKeyButtonClicked()
 void swPreferencesDialog::PovrayExecutableBrowseClicked()
 {
 #ifdef Q_OS_WIN
-	QString filter(tr("Executable Files (*.exe);;All Files (*.*)"));
+	QString filter(tr("Executable Files (*.exe);;All Files (*)"));
 #else
-	QString filter(tr("All Files (*.*)"));
+	QString filter(tr("All Files (*)"));
 #endif
 
 	QString Result = QFileDialog::getOpenFileName(this, tr("Select POV-Ray Executable"), ui->povrayExecutable->text(), filter);
@@ -1216,9 +1216,9 @@ void swPreferencesDialog::PovrayExecutableBrowseClicked()
 void swPreferencesDialog::BlenderExecutableBrowseClicked()
 {
 #ifdef Q_OS_WIN
-	const QString Filter(tr("Executable Files (*.exe);;All Files (*.*)"));
+	const QString Filter(tr("Executable Files (*.exe);;All Files (*)"));
 #else
-	const QString Filter(tr("All Files (*.*)"));
+	const QString Filter(tr("All Files (*)"));
 #endif
 
 	const QString Result = QFileDialog::getOpenFileName(this, tr("Select Blender Executable"), ui->BlenderExecutable->text(), Filter);
@@ -1229,7 +1229,7 @@ void swPreferencesDialog::BlenderExecutableBrowseClicked()
 
 void swPreferencesDialog::LgeoPathBrowseClicked()
 {
-	QString Result = QFileDialog::getExistingDirectory(this, tr("Open LGEO Folder"), ui->lgeoPath->text());
+	QString Result = QFileDialog::getExistingDirectory(this, tr("Select LGEO Folder"), ui->lgeoPath->text());
 
 	if (!Result.isEmpty())
 		ui->lgeoPath->setText(QDir::toNativeSeparators(Result));
@@ -1244,7 +1244,7 @@ void swPreferencesDialog::ColorThemeCurrentIndexChanged(int Index)
 {
 	Q_UNUSED(Index);
 
-	if (QMessageBox::question(this, tr("Reset Colors"), tr("Would you like to also reset the interface colors to match the color theme?")) == QMessageBox::Yes)
+	if (QMessageBox::question(this, tr("Reset Colors"), tr("Would you like to also reset the interface colors to match the color theme?"), QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes)
 		mOptions->Preferences.SetInterfaceColors(static_cast<swColorTheme>(ui->ColorTheme->currentIndex()));
 }
 

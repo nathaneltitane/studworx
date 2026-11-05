@@ -314,19 +314,35 @@ swResult<void> Project::MergeInternal(const std::vector<Project*>& Sources, cons
 
 bool Project::ImportLDD(const QString& FileName)
 {
-	swZipFile ZipFile;
+	QByteArray XMLData;
 
-	if (!ZipFile.OpenRead(FileName))
-		return false;
+	if (QFileInfo(FileName).suffix().compare(QLatin1String("lxfml"), Qt::CaseInsensitive) == 0)
+	{
+		QFile XMLFile(FileName);
 
-	swMemoryFile XMLFile;
-	if (!ZipFile.ExtractFile("IMAGE100.LXFML", XMLFile))
-		return false;
+		if (!XMLFile.open(QIODevice::ReadOnly))
+			return false;
+
+		XMLData = XMLFile.readAll();
+	}
+	else
+	{
+		swZipFile ZipFile;
+
+		if (!ZipFile.OpenRead(FileName))
+			return false;
+
+		swMemoryFile XMLFile;
+		if (!ZipFile.ExtractFile("IMAGE100.LXFML", XMLFile))
+			return false;
+
+		XMLData = QByteArray((const char*)XMLFile.mBuffer);
+	}
 
 	QString ModelName = QFileInfo(FileName).completeBaseName();
 	std::unique_ptr<swModel> NewModel(new swModel(ModelName, this, false));
 
-	if (!NewModel->LoadLDD(QString::fromUtf8((const char*)XMLFile.mBuffer)))
+	if (!NewModel->LoadLDD(QString::fromUtf8(XMLData)))
 		return false;
 
 	NewModel->SetSaved();
