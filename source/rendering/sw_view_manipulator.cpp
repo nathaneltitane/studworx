@@ -1211,6 +1211,7 @@ bool swViewManipulator::IsTrackToolAllowed(swTrackTool TrackTool, quint32 Allowe
 
 		case swTrackTool::Erase:
 		case swTrackTool::Paint:
+		case swTrackTool::Pose:
 		case swTrackTool::ColorPicker:
 		case swTrackTool::Zoom:
 		case swTrackTool::Pan:

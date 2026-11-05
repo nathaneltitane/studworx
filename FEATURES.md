@@ -16,7 +16,7 @@ StudWorx is built from standard Qt widgets: panels, dialogs and windows follow y
 - **Transform toolbar.** Type a position or rotation for the selection and apply it, as absolute coordinates or relative to where it is now. It has no entry of its own: its fields sit at the bottom of the Properties panel, shown with View > Toolbars > Properties.
 - **Tabs, splits and status bar.** Open several models in tabs, split the view, go Full Screen, and read the view orientation, projection and focus position in the status bar, with the name, ID and weight of the selected part. Right click the status bar to show or hide each segment.
 - **Split views.** Split the current view horizontally or vertically, as often as you like, remove one view, or Reset Views back to one. Each view keeps its own camera and projection, a border marks the active one, and the view cube and axis icon stay on the top left view.
-- **Toolbars and panels on demand.** View > Toolbars shows or hides each toolbar and panel: Standard, Tools, Time, Parts, Colors, Properties, Timeline, Preview, Terminal, Minifigure Builder and Explode. Close Tab closes the current model tab.
+- **Toolbars and panels on demand.** View > Toolbars shows or hides each toolbar and panel: Standard, Tools, Time, Parts, Colors, Properties, Timeline, Preview, Terminal, Minifigure Builder, Explode and Poses. Close Tab closes the current model tab.
 - **Undo and clipboard.** Undo and Redo every change, and Cut, Copy and Paste parts between models and tabs.
 - **Contextual help.** Choose Help > What's This? or click the question mark in a title bar, then click any control to read what it does. F1 explains the focused control, Shift+F1 starts What's This inside a dialog, and every entry is listed in the Help index below.
 - **Help menu.** Home Page opens the StudWorx repository on GitHub, Report a Bug its issues, and About shows the version and system information.
@@ -313,6 +313,20 @@ The Tools toolbar sets what the mouse does in the model view. Every tool has a k
 ![Lights and cameras](resources/images/tools-lights-cameras.png)
 ![Tools menu](resources/images/tools-menu-tools.png)
 ![Light properties](resources/images/tools-light-properties.png)
+
+### Pose mode
+
+Give a placed submodel a joint, turn it with the mouse and save the results as poses, to recall them or play them as an animation.
+
+- **Joints from the shadow library.** SNAP_CYL round shapes become hinges, and SNAP_CLP clips, SNAP_FGR fingers and SNAP_GEN spheres (`bounding=sph`) are read as well. Only SNAP_CYL shapes take part in part connections. Shapes in sub-files of a part, and their placement and mirroring, are followed the same way.
+- **Set Joint.** Part > Set Joint with one submodel selected, then click a connection of the submodel with the Pose tool. A round shape makes a hinge on its axis, a sphere makes a ball, and a part without shadow data gets a hinge on its origin. The Poses panel shows the joint, with an X, Y or Z axis choice, the angle and Clear Joint. The joint is saved before the placed submodel as `0 !SW JOINT PART <HINGE|BALL> <pivot x y z> <axis x y z> <rotation x y z>` in LDraw coordinates, and setting and clearing it is undoable.
+- **Pose tool.** Next to Rotate in the Tools toolbar. Click down into submodels to take the innermost one with a joint and drag. A hinge turns about its axis by the horizontal drag, a ball turns about the screen up and right directions. Angle Snap applies and one drag is one undo step.
+- **Poses panel.** View > Toolbars > Poses lists the saved poses. Save stores every joint angle under a name, saving a name again replaces it, Recall puts the angles back in one undo step, and Rename and Delete edit the list. Poses are saved in the first file of the model as `0 !SW POSE "<name>" "<submodel file>" <piece index> <rx ry rz>`, one line per joint.
+- **Poses motion.** File > Save Image > Animated GIF with Motion Poses blends through the saved poses in order and back to the first, Frames per pose change, with Frame Rate and Hold Last. Hinges blend their angle, balls blend along the shortest turn.
+- **Command line.** `--pose <name>` with `-i` saves the image of a saved pose, and `--pose-animation <frames>` with `-i out.gif` saves the Poses animation with that many frames between two poses. The camera options set the view of both.
+
+![Poses animation of a minifigure](resources/images/modeling-poses.gif)
+![Poses panel](resources/images/panels-poses.png)
 
 ## Views
 

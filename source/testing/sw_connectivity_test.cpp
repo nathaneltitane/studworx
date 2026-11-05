@@ -103,7 +103,7 @@ void swTests::ShadowParsesIncludesAndClears()
 	const char* Ignored[] =
 	{
 		"0 //!LDCAD SNAP_CYL [gender=M] [secs=R 6 4]",
-		"0 !LDCAD SNAP_CLP [radius=4] [length=8]",
+		"0 !LDCAD SNAP_CLP [radius=x] [length=8]",
 		"0 !LDCAD SNAP_INCL [pos=0 0 0]",
 		"0 !LDCAD SNAP_CYL [gender=M] [secs=R 6]",
 		"1 16 0 0 0 1 0 0 0 1 0 0 0 1 stud.dat",

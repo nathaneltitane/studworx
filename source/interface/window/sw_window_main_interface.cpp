@@ -1,6 +1,7 @@
 #include "sw_global.h"
 #include "sw_window_main.h"
 #include "sw_widget_explode.h"
+#include "sw_widget_poses.h"
 #include "sw_widget_builder_minifigure.h"
 #include "sw_widget_spin_box_double.h"
 #include "sw_widget_selection_part.h"
@@ -162,6 +163,7 @@ void swMainWindow::CreateActions()
 	mActions[SW_EDIT_ACTION_ERASE]->setIcon(swCreatePaintedIcon(swPaintedIcon::ActionErase));
 
 	mActions[SW_EDIT_ACTION_PAINT]->setIcon(swCreatePaintedIcon(swPaintedIcon::ActionPaint));
+	mActions[SW_EDIT_ACTION_POSE]->setIcon(swCreatePaintedIcon(swPaintedIcon::ActionPose));
 
 	mActions[SW_EDIT_ACTION_COLOR_PICKER]->setIcon(swCreatePaintedIcon(swPaintedIcon::ActionPickerColor));
 
@@ -360,6 +362,7 @@ void swMainWindow::CreateMenus()
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_SELECT]);
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_MOVE]);
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_ROTATE]);
+	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_POSE]);
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_ERASE]);
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_PAINT]);
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_COLOR_PICKER]);
@@ -450,6 +453,7 @@ void swMainWindow::CreateMenus()
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_PREVIEW]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_MINIFIGURE_BUILDER]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_EXPLODE]);
+	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_POSES]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_TERMINAL]);
 	ToolBarsMenu->addSeparator();
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_STANDARD]);
@@ -477,6 +481,7 @@ void swMainWindow::CreateMenus()
 	PartMenu->addAction(mActions[SW_PART_DUPLICATE]);
 	PartMenu->addSeparator();
 	PartMenu->addAction(mActions[SW_PART_PAINT_SELECTED]);
+	PartMenu->addAction(mActions[SW_PART_SET_JOINT]);
 	PartMenu->addAction(mActions[SW_PART_ARRAY]);
 	PartMenu->addAction(mActions[SW_PART_RESET_PIVOT_POINT]);
 	PartMenu->addAction(mActions[SW_PART_REMOVE_KEY_FRAMES]);
@@ -651,6 +656,7 @@ void swMainWindow::CreateToolBars()
 	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_SELECT]);
 	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_MOVE]);
 	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_ROTATE]);
+	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_POSE]);
 	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_ERASE]);
 	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_PAINT]);
 	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_COLOR_PICKER]);
@@ -902,8 +908,16 @@ void swMainWindow::CreateToolBars()
 	tabifyDockWidget(mPartsToolBar, mPropertiesToolBar);
 	tabifyDockWidget(mPropertiesToolBar, mTimelineToolBar);
 	tabifyDockWidget(mTimelineToolBar, mPreviewToolBar);
+	mPosesToolBar = new QDockWidget(tr("Poses"), this);
+	mPosesToolBar->setObjectName("PosesToolbar");
+	mPosesWidget = new swPosesWidget(mPosesToolBar);
+	mPosesToolBar->setWidget(mPosesWidget);
+	addDockWidget(Qt::RightDockWidgetArea, mPosesToolBar);
+	mPosesToolBar->hide();
+
 	tabifyDockWidget(mPreviewToolBar, mMinifigureBuilderToolBar);
 	tabifyDockWidget(mMinifigureBuilderToolBar, mExplodeToolBar);
+	tabifyDockWidget(mExplodeToolBar, mPosesToolBar);
 
 	connect(mPropertiesToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 	connect(mTimelineToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
@@ -911,6 +925,7 @@ void swMainWindow::CreateToolBars()
 	connect(mColorsToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 	connect(mMinifigureBuilderToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 	connect(mExplodeToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
+	connect(mPosesToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 
 	mPartsToolBar->raise();
 }

@@ -343,6 +343,10 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		ToggleDockWidget(mExplodeToolBar);
 		break;
 
+	case SW_VIEW_TOOLBAR_POSES:
+		ToggleDockWidget(mPosesToolBar);
+		break;
+
 	case SW_VIEW_FULL_SCREEN:
 		ToggleFullScreen();
 		break;
@@ -784,6 +788,13 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 	case SW_PART_PAINT_SELECTED:
 		if (ActiveModel)
 			ActiveModel->PaintSelectedParts();
+		break;
+
+	case SW_PART_SET_JOINT:
+		SetTool(swTool::Pose);
+
+		if (ActiveModel)
+			ActiveModel->StartJointPick();
 		break;
 
 	case SW_PART_RESET_PIVOT_POINT:
@@ -1374,6 +1385,10 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 
 	case SW_EDIT_ACTION_PAINT:
 		SetTool(swTool::Paint);
+		break;
+
+	case SW_EDIT_ACTION_POSE:
+		SetTool(swTool::Pose);
 		break;
 
 	case SW_EDIT_ACTION_COLOR_PICKER:

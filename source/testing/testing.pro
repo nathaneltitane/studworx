@@ -29,6 +29,7 @@ SOURCES += \
 	sw_model_flatten_test.cpp \
 	sw_object_history_test.cpp \
 	sw_object_property_test.cpp \
+	sw_pose_test.cpp \
 	sw_profile_test.cpp \
 	sw_project_export_test.cpp \
 	sw_project_import_test.cpp \

@@ -908,6 +908,10 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			ParseInteger(Options.ImageWidth, 1, SW_MAXIMUM_IMAGE_DIMENSION);
 		else if (Option == QLatin1String("--height"))
 			ParseInteger(Options.ImageHeight, 1, SW_MAXIMUM_IMAGE_DIMENSION);
+		else if (Option == QLatin1String("--pose"))
+			ParseString(Options.PoseName, true);
+		else if (Option == QLatin1String("--pose-animation"))
+			ParseInteger(Options.PoseAnimationFrames, 2, 360);
 		else if (Option == QLatin1String("-f") || Option == QLatin1String("--from"))
 			ParseUnsigned(Options.ImageStart, 1, SW_STEP_MAXIMUM);
 		else if (Option == QLatin1String("-t") || Option == QLatin1String("--to"))
@@ -1257,6 +1261,8 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			Options.StdOut += tr("  -i, --image [outfile.ext]: Save a picture in the format specified by ext and exit.\n");
 			Options.StdOut += tr("  -w, --width <width>: Set the picture width.\n");
 			Options.StdOut += tr("  --height <height>: Set the picture height.\n");
+			Options.StdOut += tr("  --pose <name>: Show a saved pose in the picture.\n");
+			Options.StdOut += tr("  --pose-animation <frames>: Save an animated GIF that blends through the saved poses and back, with this many frames between two poses.\n");
 			Options.StdOut += tr("  -f, --from <step>: Set the first step to save pictures.\n");
 			Options.StdOut += tr("  -t, --to <step>: Set the last step to save pictures.\n");
 			Options.StdOut += tr("  -s, --submodel <submodel>: Set the active submodel.\n");
@@ -1848,13 +1854,54 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 				StdOut << tr("Saved '%1'.\n").arg(FileName);
 			};
 
-			const swResult<void> ImagesSaved = ActiveView->SaveStepImages(Frame, Options.ImageStart != Options.ImageEnd, Options.ImageStart, Options.ImageEnd, ImageBackground, ProgressCallback);
+			swModel* MainModel = mProject->GetMainModel();
 
-			if (!ImagesSaved)
+			if (!Options.PoseName.isEmpty())
 			{
-				StdErr << ImagesSaved.error() << '\n';
+				const std::vector<swPose>& Poses = MainModel->GetPoses();
+				const auto Found = std::find_if(Poses.begin(), Poses.end(), [&Options](const swPose& Pose) { return Pose.Name == Options.PoseName; });
 
-				return swStartupMode::Error;
+				if (Found == Poses.end())
+				{
+					StdErr << tr("The pose '%1' does not exist.\n").arg(Options.PoseName);
+
+					return swStartupMode::Error;
+				}
+
+				ActiveModel->ApplyPoseBlend(*Found, *Found, 0.0f);
+			}
+
+			if (Options.PoseAnimationFrames > 0)
+			{
+				swImageTurntable Turntable;
+				swImageFraming Framing;
+
+				Turntable.Enabled = true;
+				Turntable.Motion = swImageMotion::Poses;
+				Turntable.Frames = Options.PoseAnimationFrames;
+				Framing.Fit = swImageFit::CurrentView;
+
+				const swResult<void> AnimationSaved = ActiveModel->SaveFramedImages(Options.ImageName, false, Options.ImageWidth, Options.ImageHeight, Options.ImageEnd, Options.ImageEnd, ImageBackground, Framing, Turntable, ActiveView->GetCamera());
+
+				if (!AnimationSaved)
+				{
+					StdErr << AnimationSaved.error() << '\n';
+
+					return swStartupMode::Error;
+				}
+
+				StdOut << tr("Saved '%1'.\n").arg(Options.ImageName);
+			}
+			else
+			{
+				const swResult<void> ImagesSaved = ActiveView->SaveStepImages(Frame, Options.ImageStart != Options.ImageEnd, Options.ImageStart, Options.ImageEnd, ImageBackground, ProgressCallback);
+
+				if (!ImagesSaved)
+				{
+					StdErr << ImagesSaved.error() << '\n';
+
+					return swStartupMode::Error;
+				}
 			}
 		}
 

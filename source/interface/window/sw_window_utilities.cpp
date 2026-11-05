@@ -1632,6 +1632,13 @@ static void swDrawPaintedIcon(QPainter* Painter, swPaintedIcon Icon, const QSize
 		Draw.Erase(swCreateIconLine({ { 14.5, 17 }, { 14.5, 23 } }), 1.5);
 		break;
 
+	case swPaintedIcon::ActionPose:
+		Draw.Stroke(swCreateIconLine({ { 5, 20 }, { 12, 12 }, { 19, 14 } }), 2.5);
+		Draw.Fill(swCreateIconCircle(12, 12, 3));
+		Draw.Fill(swCreateIconCircle(5, 20, 2));
+		Draw.Fill(swCreateIconCircle(19, 14, 2));
+		break;
+
 	case swPaintedIcon::ActionPickerColor:
 		Draw.Stroke(swCreateIconLine({ { 13, 11 }, { 5, 19 } }));
 		Draw.Fill(swCreateIconCircle(4, 20, 1.5));

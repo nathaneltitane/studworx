@@ -90,6 +90,7 @@ enum class swTrackTool
 	ScaleMinus,
 	Erase,
 	Paint,
+	Pose,
 	ColorPicker,
 	Zoom,
 	Pan,

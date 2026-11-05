@@ -1668,6 +1668,70 @@ inline swVector4 swQuaternionToAxisAngle(const swVector4& a)
 	}
 }
 
+// use to blend rotation vectors in degrees
+inline swVector3 swBlendRotation(const swVector3& From, const swVector3& To, float Fraction, const swVector3* HingeAxis)
+{
+	if (HingeAxis)
+	{
+		const swVector3 Axis = swNormalize(*HingeAxis);
+
+		return Axis * (swDot(From, Axis) * (1.0f - Fraction) + swDot(To, Axis) * Fraction);
+	}
+
+	float Quaternions[2][4];
+	const swVector3 Vectors[2] = { From, To };
+
+	for (int Index = 0; Index < 2; Index++)
+	{
+		const float Angle = swLength(Vectors[Index]);
+		const float Half = Angle * SW_DEGREES_TO_RADIANS / 2.0f;
+		const float Scale = Angle > 0.00001f ? sinf(Half) / Angle : 0.0f;
+
+		for (int Axis = 0; Axis < 3; Axis++)
+			Quaternions[Index][Axis] = Vectors[Index][Axis] * Scale;
+
+		Quaternions[Index][3] = cosf(Half);
+	}
+
+	float Dot = 0.0f;
+
+	for (int Axis = 0; Axis < 4; Axis++)
+		Dot += Quaternions[0][Axis] * Quaternions[1][Axis];
+
+	// take the shorter way round
+	const float Sign = Dot < 0.0f ? -1.0f : 1.0f;
+	Dot = fabsf(Dot);
+
+	const float Theta = acosf(qMin(Dot, 1.0f));
+	const float Sine = sinf(Theta);
+	const float WeightFrom = Sine > 0.001f ? sinf((1.0f - Fraction) * Theta) / Sine : 1.0f - Fraction;
+	const float WeightTo = (Sine > 0.001f ? sinf(Fraction * Theta) / Sine : Fraction) * Sign;
+	float Result[4];
+
+	for (int Axis = 0; Axis < 4; Axis++)
+		Result[Axis] = Quaternions[0][Axis] * WeightFrom + Quaternions[1][Axis] * WeightTo;
+
+	const float Length = sqrtf(Result[0] * Result[0] + Result[1] * Result[1] + Result[2] * Result[2] + Result[3] * Result[3]);
+
+	if (Length < 0.00001f)
+		return swVector3(0.0f, 0.0f, 0.0f);
+
+	for (float& Value : Result)
+		Value /= Length;
+
+	// keep the angle under half a turn
+	if (Result[3] < 0.0f)
+		for (float& Value : Result)
+			Value = -Value;
+
+	const float Sin = sqrtf(qMax(0.0f, 1.0f - Result[3] * Result[3]));
+
+	if (Sin < 0.00001f)
+		return swVector3(0.0f, 0.0f, 0.0f);
+
+	return swVector3(Result[0], Result[1], Result[2]) * (2.0f * acosf(qMin(Result[3], 1.0f)) / SW_DEGREES_TO_RADIANS / Sin);
+}
+
 inline swVector4 swQuaternionMultiply(const swVector4& a, const swVector4& b)
 {
 	const float x =  a[0] * b[3] + a[1] * b[2] - a[2] * b[1] + a[3] * b[0];

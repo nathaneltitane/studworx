@@ -837,7 +837,8 @@ bool swModel::FindControlPointSeat(const swPart* Part, quint32 ControlPointIndex
 			continue;
 
 		for (const swConnectionCylinder& Cylinder : swShadowLibrary::GetCylinders(PartName.c_str()))
-			Fittings.emplace_back(&Cylinder, swMultiply(swMatrix44LDrawToStudWorx(Cylinder.Transform), PartWorld));
+			if (Cylinder.Kind == swConnectionKind::Cylinder)
+				Fittings.emplace_back(&Cylinder, swMultiply(swMatrix44LDrawToStudWorx(Cylinder.Transform), PartWorld));
 	}
 
 	if (Fittings.empty())
@@ -857,7 +858,8 @@ bool swModel::FindControlPointSeat(const swPart* Part, quint32 ControlPointIndex
 				continue;
 
 			for (const swConnectionCylinder& Cylinder : swShadowLibrary::GetCylinders(PartName.c_str()))
-				Frames.emplace_back(swMultiply(swMatrix44LDrawToStudWorx(Cylinder.Transform), PartWorld));
+				if (Cylinder.Kind == swConnectionKind::Cylinder)
+					Frames.emplace_back(swMultiply(swMatrix44LDrawToStudWorx(Cylinder.Transform), PartWorld));
 		}
 
 		return Frames;

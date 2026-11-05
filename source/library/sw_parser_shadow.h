@@ -41,6 +41,7 @@ public:
 
 private:
 	static std::vector<swConnectionCylinder> ParseCylinder(const std::map<QString, QString>& Parameters);
+	static std::vector<swConnectionCylinder> ParseJoint(const std::map<QString, QString>& Parameters, const QString& Keyword);
 	static std::map<QString, QString> ParseParameters(const QString& Line);
 	static QString GetParameter(const std::map<QString, QString>& Parameters, const char* Key);
 	static bool IsParameterTrue(const std::map<QString, QString>& Parameters, const char* Key);

@@ -34,8 +34,19 @@ enum class swConnectionScale
 	LengthOrRadius
 };
 
+// Clip, finger and ball shapes only mark joints.
+enum class swConnectionKind
+{
+	Cylinder,
+	Clip,
+	Finger,
+	Ball
+};
+
 struct swConnectionCylinder
 {
+	swConnectionKind Kind = swConnectionKind::Cylinder;
+
 	// The shape runs along -Y in part coordinates.
 	swMatrix44 Transform;
 	swConnectionGender Gender;

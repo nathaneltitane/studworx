@@ -35,8 +35,30 @@ struct swPartControlPoint
 	}
 };
 
+enum class swJointType
+{
+	None,
+	Hinge,
+	Ball
+};
+
+// Pivot, axis and rotation in degrees, part local.
+struct swPartJoint
+{
+	swJointType Type = swJointType::None;
+	swVector3 Pivot = swVector3(0.0f, 0.0f, 0.0f);
+	swVector3 Axis = swVector3(0.0f, 0.0f, 1.0f);
+	swVector3 Rotation = swVector3(0.0f, 0.0f, 0.0f);
+
+	bool operator==(const swPartJoint& Other) const
+	{
+		return Type == Other.Type && Pivot == Other.Pivot && Axis == Other.Axis && Rotation == Other.Rotation;
+	}
+};
+
 struct swPartHistoryState
 {
+	swPartJoint Joint;
 	swObjectId Id;
 	bool Hidden;
 	int FileLine;
@@ -57,7 +79,7 @@ struct swPartHistoryState
 		return Id == Other.Id && Hidden == Other.Hidden && FileLine == Other.FileLine && PartId == Other.PartId &&
             GroupId == Other.GroupId && ColorIndex == Other.ColorIndex && ColorCode == Other.ColorCode &&
             StepShow == Other.StepShow && StepHide == Other.StepHide && PivotMatrix == Other.PivotMatrix &&
-            PivotPointValid == Other.PivotPointValid && ControlPoints == Other.ControlPoints &&
+            PivotPointValid == Other.PivotPointValid && Joint == Other.Joint && ControlPoints == Other.ControlPoints &&
             Position == Other.Position && Rotation == Other.Rotation;
 	}
 };
@@ -302,6 +324,10 @@ public:
 		mRotation.ChangeKey(Rotation, Step, AddKey);
 	}
 
+	// Turns the part about its joint.
+	swMatrix44 GetJointMatrix(const swVector3& Rotation) const;
+	void SetJointRotation(const swVector3& Rotation, swStep Step);
+
 	swVector3 GetRotationCenter() const;
 	swMatrix33 GetRelativeRotation() const;
 
@@ -316,6 +342,7 @@ public:
 
 	swMatrix44 mModelWorld;
 	swMatrix44 mPivotMatrix = swMatrix44Identity();
+	swPartJoint mJoint;
 
 	// view only explode, never saved
 	swVector3 mExplodeOffset = swVector3(0.0f, 0.0f, 0.0f);

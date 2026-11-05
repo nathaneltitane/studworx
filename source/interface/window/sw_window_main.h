@@ -464,6 +464,8 @@ protected:
 	QDockWidget* mMinifigureBuilderToolBar = nullptr;
 	QDockWidget* mExplodeToolBar = nullptr;
 	class swExplodeWidget* mExplodeWidget = nullptr;
+	QDockWidget* mPosesToolBar = nullptr;
+	class swPosesWidget* mPosesWidget = nullptr;
 
 	swPartSelectionWidget* mPartSelectionWidget = nullptr;
 	swColorList* mColorList = nullptr;

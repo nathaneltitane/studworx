@@ -264,6 +264,14 @@ std::optional<swShadowLine> swShadowParser::ParseLine(const QString& Line)
 		if (Result.Cylinders.empty())
 			return std::nullopt;
 	}
+	else if (Keyword == QLatin1String("SNAP_CLP") || Keyword == QLatin1String("SNAP_FGR") || Keyword == QLatin1String("SNAP_GEN"))
+	{
+		Result.Type = swShadowLineType::Cylinder;
+		Result.Cylinders = ParseJoint(Parameters, Keyword);
+
+		if (Result.Cylinders.empty())
+			return std::nullopt;
+	}
 	else if (Keyword == QLatin1String("SNAP_INCL"))
 	{
 		Result.Type = swShadowLineType::Include;
@@ -353,4 +361,77 @@ std::vector<swConnectionCylinder> swShadowParser::ParseCylinder(const std::map<Q
 	}
 
 	return Cylinders;
+}
+
+// use to read joint shapes
+std::vector<swConnectionCylinder> swShadowParser::ParseJoint(const std::map<QString, QString>& Parameters, const QString& Keyword)
+{
+	swConnectionCylinder Joint;
+
+	Joint.Gender = swConnectionGender::Male;
+	Joint.Group = GetParameter(Parameters, "group");
+	Joint.Center = IsParameterTrue(Parameters, "center");
+	Joint.ClosedStart = false;
+	Joint.ClosedEnd = false;
+	Joint.Scale = swConnectionScale::None;
+	Joint.InheritMirrored = true;
+
+	if (Keyword == QLatin1String("SNAP_CLP"))
+	{
+		const std::optional<std::vector<float>> Radius = ParseNumbers(GetParameter(Parameters, "radius"), 1);
+		const std::optional<std::vector<float>> Length = ParseNumbers(GetParameter(Parameters, "length"), 1);
+
+		if (!Radius || !Length)
+			return {};
+
+		Joint.Kind = swConnectionKind::Clip;
+		Joint.Sections.push_back({ swConnectionShape::Round, (*Radius)[0], (*Length)[0] });
+	}
+	else if (Keyword == QLatin1String("SNAP_FGR"))
+	{
+		const QStringList Sequence = SplitTokens(GetParameter(Parameters, "seq"));
+		const std::optional<std::vector<float>> Radius = ParseNumbers(GetParameter(Parameters, "radius"), 1);
+		float Length = 0.0f;
+
+		if (!Radius || Sequence.empty())
+			return {};
+
+		for (const QString& Token : Sequence)
+		{
+			bool Ok = false;
+			Length += Token.toFloat(&Ok);
+
+			if (!Ok)
+				return {};
+		}
+
+		Joint.Kind = swConnectionKind::Finger;
+		Joint.Sections.push_back({ swConnectionShape::Round, (*Radius)[0], Length });
+	}
+	else
+	{
+		// only ball bounds are joints
+		const QStringList Bounding = SplitTokens(GetParameter(Parameters, "bounding"));
+		bool Ok = false;
+		const float Radius = Bounding.size() == 2 && Bounding[0] == QLatin1String("sph") ? Bounding[1].toFloat(&Ok) : 0.0f;
+
+		if (!Ok || !std::isfinite(Radius) || Radius <= 0.0f)
+			return {};
+
+		Joint.Kind = swConnectionKind::Ball;
+		Joint.Sections.push_back({ swConnectionShape::Round, Radius, 0.0f });
+	}
+
+	const std::optional<swMatrix44> Transform = ParseTransform(Parameters);
+
+	if (!Transform)
+		return {};
+
+	Joint.Transform = *Transform;
+
+	// scaled frames are not joints
+	if (!NormalizeFrame(Joint))
+		return {};
+
+	return { Joint };
 }

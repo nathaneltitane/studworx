@@ -47,7 +47,8 @@ QString swGetHTMLStyleSheet();
 enum class swImageMotion
 {
 	Turntable,
-	Steps
+	Steps,
+	Poses
 };
 
 enum class swImageNextStep
@@ -83,7 +84,7 @@ struct swImageTurntable
 	// Steps share one file when the animation moves through them.
 	bool IsStepping() const
 	{
-		return Enabled && (Motion == swImageMotion::Steps || NextStep != swImageNextStep::Off);
+		return Enabled && (Motion == swImageMotion::Steps || Motion == swImageMotion::Poses || NextStep != swImageNextStep::Off);
 	}
 
 	// Frames each step shows while the model turns.

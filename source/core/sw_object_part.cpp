@@ -51,6 +51,7 @@ swPart::swPart(const swPart& Other)
 
 	mPivotMatrix = Other.mPivotMatrix;
 	mPivotPointValid = Other.mPivotPointValid;
+	mJoint = Other.mJoint;
 
 	mPosition = Other.mPosition;
 	mRotation = Other.mRotation;
@@ -161,6 +162,18 @@ void swPart::SaveLDraw(QTextStream& Stream) const
 		Stream << LineEnding;
 	}
 
+	if (mJoint.Type != swJointType::None)
+	{
+		const swVector3 Values[3] = { mJoint.Pivot, mJoint.Axis, mJoint.Rotation };
+
+		Stream << QLatin1String("0 !SW JOINT PART ") << (mJoint.Type == swJointType::Hinge ? QLatin1String("HINGE") : QLatin1String("BALL"));
+
+		for (const swVector3& Value : Values)
+			Stream << ' ' << swFormatValue(Value[0], 4) << ' ' << swFormatValue(-Value[2], 4) << ' ' << swFormatValue(Value[1], 4);
+
+		Stream << LineEnding;
+	}
+
 	mPosition.Save(Stream, "PART", "POSITION", false);
 	mRotation.Save(Stream, "PART", "ORIENTATION", false);
 
@@ -200,6 +213,22 @@ bool swPart::ParseLDrawLine(QTextStream& Stream)
 
 			mPivotMatrix = PivotMatrix;
 			mPivotPointValid = true;
+		}
+		else if (Token == QLatin1String("JOINT"))
+		{
+			QString Type;
+			float Numbers[9];
+
+			Stream >> Type;
+
+			for (float& Number : Numbers)
+				Stream >> Number;
+
+			// ldraw to internal axes
+			mJoint.Type = Type == QLatin1String("BALL") ? swJointType::Ball : swJointType::Hinge;
+			mJoint.Pivot = swVector3(Numbers[0], Numbers[2], -Numbers[1]);
+			mJoint.Axis = swVector3(Numbers[3], Numbers[5], -Numbers[4]);
+			mJoint.Rotation = swVector3(Numbers[6], Numbers[8], -Numbers[7]);
 		}
 		else if (mPosition.Load(Stream, Token, "POSITION"))
 			continue;
@@ -1046,6 +1075,7 @@ swPartHistoryState swPart::GetHistoryState() const
 	State.StepHide = mStepHide;
 	State.PivotMatrix = mPivotMatrix;
 	State.PivotPointValid = mPivotPointValid;
+	State.Joint = mJoint;
 	State.ControlPoints = mControlPoints;
 	State.Position = mPosition;
 	State.Rotation = mRotation;
@@ -1066,6 +1096,7 @@ void swPart::SetHistoryState(const swPartHistoryState& State, Project* Project, 
 	mStepHide = State.StepHide;
 	mPivotMatrix = State.PivotMatrix;
 	mPivotPointValid = State.PivotPointValid;
+	mJoint = State.Joint;
 	mControlPoints = State.ControlPoints;
 	mPosition = State.Position;
 	mRotation = State.Rotation;
@@ -1816,6 +1847,30 @@ void swPart::CompareBoundingBox(swVector3& Min, swVector3& Max) const
 swGroup* swPart::GetTopGroup()
 {
 	return mGroup ? mGroup->GetTopGroup() : nullptr;
+}
+
+swMatrix44 swPart::GetJointMatrix(const swVector3& Rotation) const
+{
+	const float Angle = swLength(Rotation);
+
+	if (Angle < 0.00001f)
+		return swMatrix44Identity();
+
+	return swMultiply(swMultiply(swMatrix44Translation(-mJoint.Pivot), swMatrix44FromAxisAngle(Rotation / Angle, Angle * SW_DEGREES_TO_RADIANS)), swMatrix44Translation(mJoint.Pivot));
+}
+
+// use to pose the part at a joint
+void swPart::SetJointRotation(const swVector3& Rotation, swStep Step)
+{
+	swMatrix44 Posed = mModelWorld;
+	Posed.SetTranslation(Posed.GetTranslation() - mExplodeOffset);
+
+	Posed = swMultiply(GetJointMatrix(Rotation), swMultiply(swMatrix44AffineInverse(GetJointMatrix(mJoint.Rotation)), Posed));
+	mJoint.Rotation = Rotation;
+
+	SetPosition(Posed.GetTranslation(), Step, false);
+	SetRotation(swMatrix33Clean(swMatrix33(Posed)), Step, false);
+	UpdatePosition(Step);
 }
 
 void swPart::UpdatePosition(swStep Step)

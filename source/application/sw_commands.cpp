@@ -975,6 +975,15 @@ const swCommand gCommands[] =
 		"P"
 	},
 
+	// SW_EDIT_ACTION_POSE
+	{
+		QT_TRANSLATE_NOOP("Action", "Edit.Tool.Pose"),
+		QT_TRANSLATE_NOOP("Menu", "Pose"),
+		QT_TRANSLATE_NOOP("Status", "Pose a joint"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Pose Tool</b></p><p>Drag a submodel that has a joint to turn it. Hinges turn about their axis, balls turn freely. Use Set Joint in the Piece menu to give a submodel a joint.</p>"),
+		"Shift+J"
+	},
+
 	// SW_EDIT_ACTION_COLOR_PICKER
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.Tool.ColorPicker"),
@@ -1557,6 +1566,15 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Explode"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Explode panel"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Explode</b></p><p>Show or hide the Explode panel, which spreads the parts on screen away from an anchor, the focused part or the first or last selected one, scaled along X, Y and Z. With Selected Parts Only, each group moves as one part. Each part slides straight out along the connection that holds it, a part without one along the nearest axis from the part beside it, and with Show Lines a line runs through each connection back to the socket it came off. Submodels, and the submodels inside them, flatten into their parts first in the same undo step. Collapse or Undo puts the parts and submodels back, and Save Copy saves the exploded model to a separate file named with -exploded.</p>"),
+		""
+	},
+
+	// SW_VIEW_TOOLBAR_POSES
+	{
+		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Poses"),
+		QT_TRANSLATE_NOOP("Menu", "Poses"),
+		QT_TRANSLATE_NOOP("Status", "Toggle the Poses panel"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Poses</b></p><p>Show or hide the Poses panel. Save stores the joint angles of every submodel as a named pose, Recall puts them back in one undo step, and the Poses motion in the image dialog plays the saved poses as an animation. The panel also shows the joint of the selected submodel, with its axis and a Clear button.</p>"),
 		""
 	},
 
@@ -2420,6 +2438,15 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.PaintSelected"),
 		QT_TRANSLATE_NOOP("Menu", "&Paint Selected"),
 		QT_TRANSLATE_NOOP("Status", "Change the color of the selected parts"),
+		"",
+		""
+	},
+
+	// SW_PART_SET_JOINT
+	{
+		QT_TRANSLATE_NOOP("Action", "Part.SetJoint"),
+		QT_TRANSLATE_NOOP("Menu", "Set &Joint"),
+		QT_TRANSLATE_NOOP("Status", "Click a connection of the selected submodel to make it a joint"),
 		"",
 		""
 	},
@@ -3313,6 +3340,7 @@ const char* gToolNames[] =
 	QT_TRANSLATE_NOOP("Mouse", "Rotate"),              // swTool::Rotate
 	QT_TRANSLATE_NOOP("Mouse", "Erase"),               // swTool::Erase
 	QT_TRANSLATE_NOOP("Mouse", "Paint"),               // swTool::Paint
+	QT_TRANSLATE_NOOP("Mouse", "Pose"),                // swTool::Pose
 	QT_TRANSLATE_NOOP("Mouse", "ColorPicker"),         // swTool::ColorPicker
 	QT_TRANSLATE_NOOP("Mouse", "Zoom"),                // swTool::Zoom
 	QT_TRANSLATE_NOOP("Mouse", "Pan"),                 // swTool::Pan

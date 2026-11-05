@@ -119,7 +119,7 @@ std::vector<std::pair<float, float>> swConnectivity::GetInsertRanges(const swCon
 
 bool swConnectivity::AreCompatible(const swConnectionCylinder& a, const swConnectionCylinder& b)
 {
-	if (a.Gender == b.Gender || a.Group.compare(b.Group, Qt::CaseInsensitive) != 0)
+	if (a.Kind != swConnectionKind::Cylinder || b.Kind != swConnectionKind::Cylinder || a.Gender == b.Gender || a.Group.compare(b.Group, Qt::CaseInsensitive) != 0)
 		return false;
 
 	const swConnectionCylinder& Male = a.Gender == swConnectionGender::Male ? a : b;
@@ -171,6 +171,9 @@ void swConnectivity::AddToBoundingBox(const std::vector<swConnectionCylinder>& C
 {
 	for (const swConnectionCylinder& Cylinder : Cylinders)
 	{
+		if (Cylinder.Kind != swConnectionKind::Cylinder)
+			continue;
+
 		const swMatrix44 Frame = swMultiply(swMatrix44LDrawToStudWorx(Cylinder.Transform), Transform);
 		const swVector3 Axis = swNormalize(swMultiply30(swVector3(0.0f, 0.0f, 1.0f), Frame));
 		const swVector3 Radius(Cylinder.GetRadius(), Cylinder.GetRadius(), Cylinder.GetRadius());

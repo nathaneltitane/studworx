@@ -44,6 +44,8 @@ protected:
 	void UpdateTurntable();
 	swImageTurntable GetTurntable() const;
 	bool IsStepMotion() const;
+	bool IsPoseMotion() const;
+	int GetFrameStepCount() const;
 	swImageNextStep GetNextStep() const;
 
 	// Camera fit and orbit center.

@@ -496,6 +496,7 @@ QMenu* swMainWindow::createPopupMenu()
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_PREVIEW]);
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_MINIFIGURE_BUILDER]);
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_EXPLODE]);
+	Menu->addAction(mActions[SW_VIEW_TOOLBAR_POSES]);
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_TERMINAL]);
 	Menu->addSeparator();
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_STANDARD]);
@@ -517,6 +518,7 @@ void swMainWindow::UpdateDockWidgetActions()
 	mActions[SW_VIEW_TOOLBAR_PREVIEW]->setChecked(mPreviewToolBar->isVisible());
 	mActions[SW_VIEW_TOOLBAR_MINIFIGURE_BUILDER]->setChecked(mMinifigureBuilderToolBar->isVisible());
 	mActions[SW_VIEW_TOOLBAR_EXPLODE]->setChecked(mExplodeToolBar->isVisible());
+	mActions[SW_VIEW_TOOLBAR_POSES]->setChecked(mPosesToolBar->isVisible());
 	mActions[SW_VIEW_TOOLBAR_TERMINAL]->setChecked(mTerminalToolBar && mTerminalToolBar->isVisible());
 }
 
@@ -827,7 +829,7 @@ void swMainWindow::ShowImageDialog()
 	Options.Turntable.AngleEnd = swGetProfileInteger(SW_PROFILE_IMAGE_ANGLE_END);
 	Options.Turntable.Frames = swGetProfileInteger(SW_PROFILE_IMAGE_FRAMES);
 	Options.Turntable.FrameRate = swGetProfileFloat(SW_PROFILE_IMAGE_FRAME_RATE);
-	Options.Turntable.Motion = static_cast<swImageMotion>(qBound(0, swGetProfileInteger(SW_PROFILE_IMAGE_MOTION), 1));
+	Options.Turntable.Motion = static_cast<swImageMotion>(qBound(0, swGetProfileInteger(SW_PROFILE_IMAGE_MOTION), 2));
 	Options.Turntable.Turns = swGetProfileInteger(SW_PROFILE_IMAGE_TURNS);
 	Options.Turntable.NextStep = static_cast<swImageNextStep>(qBound(0, swGetProfileInteger(SW_PROFILE_IMAGE_NEXT_STEP), 2));
 	Options.Turntable.NextStepTurns = swGetProfileInteger(SW_PROFILE_IMAGE_NEXT_STEP_TURNS);

@@ -243,6 +243,20 @@ public:
 	QString FooterIncludeFile;
 };
 
+// Joint rotation of a placed submodel, by model file and part index.
+struct swPoseJoint
+{
+	QString Model;
+	int Index = 0;
+	swVector3 Rotation = swVector3(0.0f, 0.0f, 0.0f);
+};
+
+struct swPose
+{
+	QString Name;
+	std::vector<swPoseJoint> Joints;
+};
+
 struct swModelHistoryEntry
 {
 	std::vector<std::unique_ptr<swModelHistory>> HistorySequence;
@@ -361,6 +375,30 @@ public:
 		mInstructionLines = InstructionLines;
 	}
 
+	// Saved poses stay with the main model.
+	const std::vector<swPose>& GetPoses() const
+	{
+		return mPoses;
+	}
+
+	void SetPoses(const std::vector<swPose>& Poses)
+	{
+		mPoses = Poses;
+	}
+
+	swPose GetCurrentPose(const QString& Name) const;
+	void ApplyPoseBlend(const swPose& From, const swPose& To, float Fraction);
+	void RecallPoseAction(const swPose& Pose);
+
+	// Joint tools, true when a drag starts.
+	void StartJointPick();
+	bool PoseToolClicked(const swVector3& Start, const swVector3& End, const swVector3& Right, const swVector3& Up);
+	void UpdatePoseTool(float DeltaX, float DeltaY);
+	void EndPoseTool(bool Accept);
+	swPart* GetJointPart() const;
+	void SetJointAxisAction(swPart* Part, int Axis);
+	void ClearJointAction(swPart* Part);
+
 	bool HasDirectGeometry() const
 	{
 		return mHasDirectGeometry;
@@ -461,7 +499,7 @@ public:
 
 	// Frames turn the active view around the model center.
 	QImage GetFramedImage(int Width, int Height, swStep Step, swStep LastStep, swImageBackground Background, const swImageFraming& Framing, const swImageTurntable& Turntable, int Frame);
-	swResult<void> SaveFramedImages(const QString& BaseName, bool AddStepSuffix, int Width, int Height, swStep Start, swStep End, swImageBackground Background, const swImageFraming& Framing, const swImageTurntable& Turntable);
+	swResult<void> SaveFramedImages(const QString& BaseName, bool AddStepSuffix, int Width, int Height, swStep Start, swStep End, swImageBackground Background, const swImageFraming& Framing, const swImageTurntable& Turntable, const swCamera* ViewCamera = nullptr);
 
 	void RayTest(swObjectRayTest& ObjectRayTest) const;
 	void BoxTest(swObjectBoxTest& ObjectBoxTest) const;
@@ -650,6 +688,11 @@ protected:
 	bool FlattenSubModels(bool SelectedOnly, swPart*& Anchor, std::vector<swObject*>& Selection);
 	void SetModelProperties(const swModelProperties& ModelProperties);
 
+	// Pose edits cover every model.
+	void BeginPoseEdit();
+	void EndPoseEdit(const QString& Description, bool Accept);
+	bool PoseRayTest(const swVector3& Start, const swVector3& End, float& Distance, std::vector<std::pair<swModel*, swPart*>>& Chain, std::vector<std::pair<swModel*, swPart*>>& Hit);
+
 	void RunHistorySequence(const std::vector<std::unique_ptr<swModelHistory>>& HistorySequence, bool Apply);
 	void BeginHistorySequence();
 	void EndHistorySequence(const QString& Description);
@@ -701,9 +744,17 @@ protected:
 	std::vector<std::unique_ptr<swGroup>> mGroups;
 	QStringList mFileLines;
 	QStringList mInstructionLines;
+	std::vector<swPose> mPoses;
 	bool mHasDirectGeometry = false;
 
 	std::vector<std::unique_ptr<swModelHistory>> mHistorySequence;
+	std::vector<std::pair<swModel*, std::unique_ptr<swModelHistoryEdit>>> mPoseEdits;
+	bool mJointPick = false;
+	swPart* mPoseJoint = nullptr;
+	swVector3 mPoseStartRotation;
+	swMatrix33 mPoseWorldRotation;
+	swVector3 mPoseRight;
+	swVector3 mPoseUp;
 	swObjectPropertyId mActivePropertyEdit = swObjectPropertyId::Count;
 	quint64 mSavedHistoryRevision = 0;
 	quint64 mNextHistoryRevision = 1;

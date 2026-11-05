@@ -7,6 +7,7 @@ SOURCES += \
 	$$PWD/sw_widget_collapsible.cpp \
 	$$PWD/sw_widget_editor.cpp \
 	$$PWD/sw_widget_explode.cpp \
+	$$PWD/sw_widget_poses.cpp \
 	$$PWD/sw_widget_find_replace.cpp \
 	$$PWD/sw_widget_keyframe.cpp \
 	$$PWD/sw_widget_label_elided.cpp \
@@ -26,6 +27,7 @@ HEADERS += \
 	$$PWD/sw_widget_collapsible.h \
 	$$PWD/sw_widget_editor.h \
 	$$PWD/sw_widget_explode.h \
+	$$PWD/sw_widget_poses.h \
 	$$PWD/sw_widget_find_replace.h \
 	$$PWD/sw_widget_keyframe.h \
 	$$PWD/sw_widget_label_elided.h \

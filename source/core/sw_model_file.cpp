@@ -1,4 +1,5 @@
 #include "sw_global.h"
+#include <QRegularExpression>
 #include "sw_model.h"
 #include "sw_model_history.h"
 #include "sw_object_part.h"
@@ -263,6 +264,16 @@ void swModel::SaveLDraw(QTextStream& Stream, bool SelectedOnly, swStep LastStep)
 
 			Stream << QLatin1String("0 !SW ") << Property << QLatin1String(" INSTRUCTION") << Arguments << LineEnding;
 		}
+
+		// joint rotations in ldraw axes
+		for (const swPose& Pose : mPoses)
+			for (const swPoseJoint& Joint : Pose.Joints)
+			{
+				QString Name = Pose.Name;
+				Name.replace(QLatin1Char('"'), QLatin1Char('\''));
+
+				Stream << QLatin1String("0 !SW POSE \"") << Name << QLatin1String("\" \"") << Joint.Model << QLatin1String("\" ") << Joint.Index << ' ' << swFormatValue(Joint.Rotation[0], 4) << ' ' << swFormatValue(-Joint.Rotation[2], 4) << ' ' << swFormatValue(Joint.Rotation[1], 4) << LineEnding;
+			}
 	}
 
 	std::vector<swGroup*> CurrentGroups;
@@ -470,6 +481,7 @@ void swModel::LoadLDraw(QIODevice& Device, Project* Project)
 	mProperties.mStepViews.clear();
 	mAssetSourceDirectories.clear();
 	mInstructionLines.clear();
+	mPoses.clear();
 	mPreferCurrentAssetDirectory = true;
 	mCutawayShape = swCutawayShape::None;
 	bool ReadingHeader = true;
@@ -649,6 +661,25 @@ void swModel::LoadLDraw(QIODevice& Device, Project* Project)
 			else if (Token == QLatin1String("POV_RAY"))
 			{
 				mPOVRayOptions.ParseLDrawLine(LineStream);
+			}
+			else if (Token == QLatin1String("POSE"))
+			{
+				static const QRegularExpression PoseExpression(QStringLiteral("^\\s*\"([^\"]*)\"\\s+\"([^\"]*)\"\\s+(\\d+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)"));
+				const QRegularExpressionMatch Match = PoseExpression.match(LineStream.readAll());
+
+				if (Match.hasMatch())
+				{
+					auto Pose = std::find_if(mPoses.begin(), mPoses.end(), [&Match](const swPose& Other) { return Other.Name == Match.captured(1); });
+
+					if (Pose == mPoses.end())
+					{
+						mPoses.emplace_back();
+						mPoses.back().Name = Match.captured(1);
+						Pose = mPoses.end() - 1;
+					}
+
+					Pose->Joints.push_back({ Match.captured(2), Match.captured(3).toInt(), swVector3(Match.captured(4).toFloat(), Match.captured(6).toFloat(), -Match.captured(5).toFloat()) });
+				}
 			}
 			else if (Token == QLatin1String("INSTRUCTION"))
 			{

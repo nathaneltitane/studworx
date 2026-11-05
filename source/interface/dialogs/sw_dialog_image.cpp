@@ -294,9 +294,10 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 	TurntableLayout->addWidget(MotionLabel, 1, 0);
 
 	mMotionComboBox = new QComboBox(TurntableGroup);
-	mMotionComboBox->setToolTip(tr("Turn the model or play the steps one per frame."));
+	mMotionComboBox->setToolTip(tr("Turn the model, play the steps one per frame or play the saved poses."));
 	mMotionComboBox->addItem(tr("Turntable"));
 	mMotionComboBox->addItem(tr("Steps"));
+	mMotionComboBox->addItem(tr("Poses"));
 	mMotionComboBox->setCurrentIndex(static_cast<int>(Options->Turntable.Motion));
 	MotionLabel->setBuddy(mMotionComboBox);
 	TurntableLayout->addWidget(mMotionComboBox, 1, 1);
@@ -899,7 +900,8 @@ void swImageDialog::UpdateTurntable()
 {
 	const bool Animated = mAnimatedCheckBox->isChecked();
 	const bool StepMotion = IsStepMotion();
-	const bool Turning = Animated && !StepMotion;
+	const bool PoseMotion = IsPoseMotion();
+	const bool Turning = Animated && !StepMotion && !PoseMotion;
 	const swImageNextStep NextStep = GetNextStep();
 
 	mMotionComboBox->setEnabled(Animated);
@@ -911,7 +913,7 @@ void swImageDialog::UpdateTurntable()
 	mNextStepComboBox->setEnabled(Turning);
 	mNextStepSpinBox->setEnabled(Turning && NextStep != swImageNextStep::Off);
 	mTurnsSpinBox->setEnabled(Turning && NextStep == swImageNextStep::Off);
-	mFramesSpinBox->setEnabled(Turning);
+	mFramesSpinBox->setEnabled(Turning || PoseMotion);
 
 	// interval in turns or seconds
 	{
@@ -938,7 +940,7 @@ void swImageDialog::UpdateTurntable()
 	}
 
 	mFrameRateSpinBox->setEnabled(Animated);
-	mHoldLastSpinBox->setEnabled(Animated && (StepMotion || NextStep != swImageNextStep::Off));
+	mHoldLastSpinBox->setEnabled(Animated && (StepMotion || PoseMotion || NextStep != swImageNextStep::Off));
 	mPlayButton->setVisible(Animated);
 
 	// steps give one frame each
@@ -955,12 +957,12 @@ void swImageDialog::UpdateTurntable()
 		{
 			mFramesSpinBox->setRange(2, 360);
 			mFramesSpinBox->setValue(mTurntableFrames);
-			mFramesSpinBox->setToolTip(tr("Number of images in one turn (2 to 360)."));
+			mFramesSpinBox->setToolTip(PoseMotion ? tr("Number of images between two poses (2 to 360).") : tr("Number of images in one turn (2 to 360)."));
 		}
 	}
 
 	const swImageTurntable Turntable = GetTurntable();
-	const int FrameCount = Turntable.GetFrameCount(GetRangeEnd() - GetRangeStart() + 1);
+	const int FrameCount = Turntable.GetFrameCount(GetFrameStepCount());
 
 	// stepping sets the turn count
 	{
@@ -990,7 +992,7 @@ void swImageDialog::UpdateFraming()
 	const bool Fit = Framing.Fit != swImageFit::CurrentView;
 
 	// settings without effect stay off
-	const bool Turning = mAnimatedCheckBox->isChecked() && !IsStepMotion();
+	const bool Turning = mAnimatedCheckBox->isChecked() && !IsStepMotion() && !IsPoseMotion();
 
 	mCenterComboBox->setEnabled(Turning);
 	mMarginSpinBox->setEnabled(Fit);
@@ -1037,6 +1039,25 @@ swImageNextStep swImageDialog::GetNextStep() const
 	return static_cast<swImageNextStep>(mNextStepComboBox->currentIndex());
 }
 
+bool swImageDialog::IsPoseMotion() const
+{
+	return mAnimatedCheckBox->isChecked() && mMotionComboBox->currentIndex() == static_cast<int>(swImageMotion::Poses);
+}
+
+// use to count steps or poses
+int swImageDialog::GetFrameStepCount() const
+{
+	if (IsPoseMotion())
+	{
+		swModel* Model = gMainWindow ? gMainWindow->GetActiveModel() : nullptr;
+		swModel* Main = Model && Model->GetProject() ? Model->GetProject()->GetMainModel() : nullptr;
+
+		return Main ? static_cast<int>(Main->GetPoses().size()) : 0;
+	}
+
+	return GetRangeEnd() - GetRangeStart() + 1;
+}
+
 bool swImageDialog::IsStepMotion() const
 {
 	return mAnimatedCheckBox->isChecked() && mMotionComboBox->currentIndex() == static_cast<int>(swImageMotion::Steps);
@@ -1055,7 +1076,7 @@ void swImageDialog::UpdatePreview()
 	mStepLabel->setText(tr("Step %1 of %2").arg(mPreviewStep).arg(mLastStep));
 
 	const swImageTurntable Turntable = GetTurntable();
-	const int FrameCount = Turntable.GetFrameCount(GetRangeEnd() - GetRangeStart() + 1);
+	const int FrameCount = Turntable.GetFrameCount(GetFrameStepCount());
 
 	// playing steps pick their own
 	mPreviousButton->setVisible(!Turntable.IsStepping());
@@ -1083,7 +1104,7 @@ void swImageDialog::RenderPreview()
 
 	if (mAnimatedCheckBox->isChecked())
 	{
-		mPreviewFrames.resize(GetTurntable().GetFrameCount(GetRangeEnd() - GetRangeStart() + 1));
+		mPreviewFrames.resize(GetTurntable().GetFrameCount(GetFrameStepCount()));
 		mPreviewFrame = qBound(0, mPreviewFrame, mPreviewFrames.size() - 1);
 		ShowPreviewFrame();
 

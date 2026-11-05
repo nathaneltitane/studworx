@@ -405,6 +405,7 @@ swTrackTool swView::GetOverrideTrackTool(Qt::MouseButton Button) const
 	    swTrackTool::RotateTrackBall,  // swTool::Rotate
 	    swTrackTool::Erase,           // swTool::Erase
 	    swTrackTool::Paint,            // swTool::Paint
+	    swTrackTool::Pose,             // swTool::Pose
 	    swTrackTool::ColorPicker,      // swTool::ColorPicker
 	    swTrackTool::Zoom,             // swTool::Zoom
 	    swTrackTool::Pan,              // swTool::Pan
@@ -520,6 +521,7 @@ swCursor swView::GetCursor() const
 		swCursor::Move,             // swTrackTool::ScaleMinus
 		swCursor::Erase,           // swTrackTool::Erase
 		swCursor::Paint,            // swTrackTool::Paint
+		swCursor::Rotate,           // swTrackTool::Pose
 		swCursor::ColorPicker,      // swTrackTool::ColorPicker
 		swCursor::Zoom,             // swTrackTool::Zoom
 		swCursor::Pan,              // swTrackTool::Pan
@@ -766,6 +768,7 @@ swTool swView::GetCurrentTool() const
 		swTool::Move,             // swTrackTool::ScaleMinus
 		swTool::Erase,           // swTrackTool::Erase
 		swTool::Paint,            // swTrackTool::Paint
+		swTool::Pose,             // swTrackTool::Pose
 		swTool::ColorPicker,      // swTrackTool::ColorPicker
 		swTool::Zoom,             // swTrackTool::Zoom
 		swTool::Pan,              // swTrackTool::Pan
@@ -879,6 +882,10 @@ void swView::UpdateTrackTool()
 
 	case swTool::Paint:
 		NewTrackTool = swTrackTool::Paint;
+		break;
+
+	case swTool::Pose:
+		NewTrackTool = swTrackTool::Pose;
 		break;
 
 	case swTool::ColorPicker:
@@ -1122,6 +1129,7 @@ void swView::StartTracking(swTrackButton TrackButton)
 
 		case swTool::Erase:
 		case swTool::Paint:
+		case swTool::Pose:
 		case swTool::ColorPicker:
 			break;
 
@@ -1186,6 +1194,10 @@ void swView::StopTracking(bool Accept)
 	case swTool::Erase:
 	case swTool::Paint:
 	case swTool::ColorPicker:
+		break;
+
+	case swTool::Pose:
+		ActiveModel->EndPoseTool(Accept);
 		break;
 
 	case swTool::Zoom:
@@ -1439,6 +1451,32 @@ void swView::OnButtonDown(swTrackButton TrackButton)
 	case swTrackTool::Paint:
 		ActiveModel->PaintToolClicked(FindObjectUnderPointer(true, false).Object);
 		StartTracking(TrackButton);
+		mToolClicked = true;
+		break;
+
+	case swTrackTool::Pose:
+		{
+			swVector3 StartEnd[2] = { swVector3((float)mMouseX, (float)mMouseY, 0.0f), swVector3((float)mMouseX, (float)mMouseY, 1.0f) };
+			const swMatrix44 CameraWorld = swMatrix44AffineInverse(mCamera->mWorldView);
+			swVector3 Right = swMultiply30(swVector3(1.0f, 0.0f, 0.0f), CameraWorld);
+			swVector3 Up = swMultiply30(swVector3(0.0f, 1.0f, 0.0f), CameraWorld);
+
+			UnprojectPoints(StartEnd, 2);
+
+			if (ActiveModel != mModel)
+			{
+				const swMatrix44 Inverse = swMatrix44AffineInverse(mActiveSubmodelTransform);
+
+				StartEnd[0] = swMultiply31(StartEnd[0], Inverse);
+				StartEnd[1] = swMultiply31(StartEnd[1], Inverse);
+				Right = swNormalize(swMultiply30(Right, Inverse));
+				Up = swNormalize(swMultiply30(Up, Inverse));
+			}
+
+			if (ActiveModel->PoseToolClicked(StartEnd[0], StartEnd[1], Right, Up))
+				StartTracking(TrackButton);
+		}
+
 		mToolClicked = true;
 		break;
 
@@ -2046,6 +2084,10 @@ void swView::OnMouseMove()
 
 	case swTrackTool::Paint:
 		ActiveModel->PaintToolClicked(FindObjectUnderPointer(true, false).Object);
+		break;
+
+	case swTrackTool::Pose:
+		ActiveModel->UpdatePoseTool((float)(mMouseX - mMouseDownX), (float)(mMouseY - mMouseDownY));
 		break;
 
 	case swTrackTool::ColorPicker:

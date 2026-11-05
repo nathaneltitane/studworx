@@ -21,6 +21,10 @@ private slots:
 	void ShadowParsesIncludesAndClears();
 	void ShadowReadsSubFileReferences();
 	void ShadowScalesAndMirrorsSubFileShapes();
+	void ShadowParsesJointKinds();
+	void ShadowPlacesSubFileJoint();
+	void PoseBlendsRotations();
+	void PoseJointSavesAndLoads();
 	void ConnectivityFitsShapesAlongTheirAxis();
 	void ConnectivityConnectsSeatedShapes();
 	void POVRayRendersExport();
