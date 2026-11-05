@@ -3,6 +3,18 @@
   <details open>
   <summary>2026-11-05</summary>
 
+  - Open: LEGO® Digital Designer models (.lxf and .lxfml) open from File > Open, recent files, drag and drop, the command line and the file manager as a new untitled model
+  - Import: File > Import takes .lxfml as well as .lxf
+  - Submodels: the menu now reads Open Selected Submodel, Inline Selected Submodels, Flatten Submodels and Move to New Submodel
+  - Menus: Select Invert is now Invert Selection, Remove Step is now Delete Step, and the snap toggles read Move Snap, Rotation Snap and Camera Snap
+  - Studs: the stud styles are named Thin-Line Logo and High Contrast Logo in the menus, preferences and command line help
+  - Interface: errors read "Could not …", file filters read "All Files", status bar text names toolbars and panels correctly, and the command line help, man page and FEATURES.md agree with the menus
+
+  </details>
+
+  <details>
+  <summary>2026-11-05</summary>
+
   - Interface: menu, status bar, dialog and message wording is consistent, errors read "Could not …", file filters read "LDraw Models" and "All Files", and the command line help, man page and FEATURES.md agree with the menus
   - Open: LEGO® Digital Designer models (.lxf and .lxfml) open from File > Open, recent files, drag and drop, the command line and the file manager as a new untitled model, and File > Import takes .lxfml as well as .lxf
 
