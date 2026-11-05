@@ -25,6 +25,10 @@ StudWorx is built from standard Qt widgets: panels, dialogs and windows follow y
 
 ![Standard, Tools and Time toolbars](resources/images/interface-toolbars.png "wide plain")
 
+![Status bar with the selected part](resources/images/interface-status-bar.png "wide plain")
+
+![Split views](resources/images/interface-split-views.png "wide")
+
 ### Menus
 
 <!-- gallery natural -->
@@ -75,6 +79,7 @@ Models are plain LDraw text files in LeoCAD's format, so they open in either pro
 
 ![Import menu](resources/images/files-menu-import.png)
 ![Export menu](resources/images/files-menu-export.png)
+![LeoCAD meta command migration](resources/images/files-leocad-migrate.png)
 ![Print](resources/images/files-print.png)
 ![Rebrickable API key](resources/images/files-rebrickable-api-key.png)
 ![Model thumbnails in Dolphin](resources/images/files-thumbnails.png)
@@ -332,6 +337,7 @@ Look at a model from any side, see inside it without changing it, and measure it
 
 ![Viewpoints](resources/images/interface-menu-view-viewpoints.png)
 ![Grids](resources/images/interface-menu-options-view-grids.png)
+![Grids with the base grid off](resources/images/interface-menu-options-view-grids-off.png)
 
 <!-- gallery cube -->
 
@@ -394,6 +400,7 @@ Panels dock side by side in any area of the main window, with uniform headers, b
 
 ![Preview](resources/images/panels-preview.png)
 ![Parts](resources/images/panels-parts.png)
+![Part tooltip](resources/images/panels-parts-tooltip.png)
 ![Minifigure Builder](resources/images/panels-minifigure-builder.png)
 ![Colors](resources/images/panels-colors.png)
 ![Properties](resources/images/panels-properties.png)
