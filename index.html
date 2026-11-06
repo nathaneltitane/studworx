@@ -32,7 +32,7 @@
 					"description": "StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library.",
 					"applicationCategory": "DesignApplication",
 					"operatingSystem": "Linux, Windows, macOS",
-					"softwareVersion": "2026-11-05",
+					"softwareVersion": "2026-11-06",
 					"license": "https://www.gnu.org/licenses/gpl-3.0.html",
 					"downloadUrl": "https://github.com/nathaneltitane/studworx/releases/latest",
 					"image": "https://studworx.app/resources/social/social.png",
@@ -3504,11 +3504,11 @@
 					</thead>
 
 					<tbody>
-						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-05_amd64.deb / arm64.deb</td></tr>
-						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-05-x86_64.rpm / aarch64.rpm</td></tr>
-						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-05-x86_64.appimage / aarch64.appimage</td></tr>
-						<tr><td>Windows</td><td>studworx-windows-2026-11-05-x64.exe</td></tr>
-						<tr><td>macOS</td><td>studworx-macos-2026-11-05-universal.dmg</td></tr>
+						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-06_amd64.deb / arm64.deb</td></tr>
+						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-06-x86_64.rpm / aarch64.rpm</td></tr>
+						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-06-x86_64.appimage / aarch64.appimage</td></tr>
+						<tr><td>Windows</td><td>studworx-windows-2026-11-06-x64.exe</td></tr>
+						<tr><td>macOS</td><td>studworx-macos-2026-11-06-universal.dmg</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -3564,9 +3564,24 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<summary>2026-11-06</summary>
 
 				<ul>
-					<li>Joints: Part &gt; Joint &gt; Set, also in the model view right-click menu, gives a submodel hinge or ball joints from the shadow library connections, several per submodel, with its own pointer and the picked part outlined in red, the Joints tool next to Rotate turns it with the mouse, Part &gt; Joint &gt; Move and Rotate and the Use Joint Rotation preference turn it with the rotate keys and the Rotate tool, the Joints panel lists every model and its joints in a tree and saves, recalls, renames and deletes named poses per model, and File &gt; <a href="#image">Image</a> plays the main model poses as an animated GIF with Motion Joints</li>
+					<li>Joints: Part &gt; Joint &gt; Set, also in the model view right-click menu, gives a submodel hinge or ball joints from the shadow library connections, several per submodel, with the picked part outlined in red, the Joints tool next to Rotate turns them with the mouse, and Part &gt; Joint &gt; Move and Rotate and the Use Joint Rotation preference turn them with the rotate keys and the Rotate tool</li>
+					<li>Joints: the Poses panel is now the Joints panel, listing every model, its submodels as `arm-right.ldr 006` and their joints as `Joint 001` in a tree, and saving, recalling, renaming and deleting named poses per model</li>
+					<li><a href="#image">Image</a>: File &gt; Image plays the main model poses as an animated GIF with Motion Joints</li>
+					<li><a href="#preferences">Preferences</a>: the new Context Menu tab lets you arrange the model view right-click menu, adding commands, separators and named submenus, renaming, reordering or resetting them</li>
 					<li><a href="#views">Views</a>: the base and height grids each have their own toggle, and All Grids turns them on or off together</li>
-					<li>Views: Fade on Edit and Fade on Joint Set tint the rest of the model with their own colors, set under <a href="#steps">Steps</a> and Highlighting in the view gear menu and in the <a href="#preferences">preferences</a>, and an empty step no longer fades the model</li>
+					<li>Views: Fade on Edit and Fade on Joint Set tint the rest of the model with their own colors, set under <a href="#steps">Steps</a> and Highlighting in the view gear menu and in the preferences, and an empty step no longer fades the model</li>
+					<li>Status bar: a selected submodel shows ID: N/A and the total weight of its parts when all of them have one, also in its Parts panel tooltip</li>
+					<li>Settings: every setting has a line in StudWorx.conf from the first start</li>
+				</ul>
+			</details>
+
+			<details>
+				<summary>2026-11-06</summary>
+
+				<ul>
+					<li>Joints: Part &gt; Joint &gt; Set, also in the model view right-click menu, gives a submodel hinge or ball joints from the shadow library connections, several per submodel, with its own pointer and the picked part outlined in red, the Joints tool next to Rotate turns it with the mouse, Part &gt; Joint &gt; Move and Rotate and the Use Joint Rotation preference turn it with the rotate keys and the Rotate tool, the Joints panel lists every model and its joints in a tree and saves, recalls, renames and deletes named poses per model, and File &gt; Image plays the main model poses as an animated GIF with Motion Joints</li>
+					<li>Views: the base and height grids each have their own toggle, and All Grids turns them on or off together</li>
+					<li>Views: Fade on Edit and Fade on Joint Set tint the rest of the model with their own colors, set under Steps and Highlighting in the view gear menu and in the preferences, and an empty step no longer fades the model</li>
 					<li>Settings: every setting has a line in StudWorx.conf from the first start</li>
 					<li>Joints: the panel lists submodels as `arm-right.ldr 006` and joints as `Joint 001`, and the angle column is left aligned like the others</li>
 					<li>Status bar: a selected submodel shows ID: N/A and the total weight of its parts when all of them have one, also in its Parts panel tooltip</li>
@@ -3689,15 +3704,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				</ul>
 			</details>
 
-			<details>
-				<summary>2026-11-01</summary>
-
-				<ul>
-					<li>Site: the <a href="#modeling">Modeling</a> section has a looping video of a Flex Path hose seated between two bricks and reshaped by its control points, see <a href="https://studworx.app/#modeling">Modeling on the site</a></li>
-					<li>Site: the Array dialog screenshot is now shown full width</li>
-				</ul>
-			</details>
-
 			<p class="more"><a href="https://github.com/nathaneltitane/studworx/blob/main/NOTICE.md">Read every notice ›</a></p>
 		</section>
 
@@ -3708,7 +3714,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p>LEGO® is a trademark of the LEGO® Group, which does not sponsor, authorize or endorse this project.</p>
 			<div class="authorship">
 				<a class="avatar" href="https://nathaneltitane.com" aria-label="N Λ T H Λ N E L"><img src="resources/avatar/avatar-bird.png" alt="" width="64" height="64"></a>
-				<p>Version // 2026-11-05<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
+				<p>Version // 2026-11-06<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
 			</div>
 		</div>
 

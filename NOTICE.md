@@ -3,6 +3,20 @@
   <details open>
   <summary>2026-11-06</summary>
 
+  - Joints: Part > Joint > Set, also in the model view right-click menu, gives a submodel hinge or ball joints from the shadow library connections, several per submodel, with the picked part outlined in red, the Joints tool next to Rotate turns them with the mouse, and Part > Joint > Move and Rotate and the Use Joint Rotation preference turn them with the rotate keys and the Rotate tool
+  - Joints: the Poses panel is now the Joints panel, listing every model, its submodels as `arm-right.ldr 006` and their joints as `Joint 001` in a tree, and saving, recalling, renaming and deleting named poses per model
+  - Image: File > Image plays the main model poses as an animated GIF with Motion Joints
+  - Preferences: the new Context Menu tab lets you arrange the model view right-click menu, adding commands, separators and named submenus, renaming, reordering or resetting them
+  - Views: the base and height grids each have their own toggle, and All Grids turns them on or off together
+  - Views: Fade on Edit and Fade on Joint Set tint the rest of the model with their own colors, set under Steps and Highlighting in the view gear menu and in the preferences, and an empty step no longer fades the model
+  - Status bar: a selected submodel shows ID: N/A and the total weight of its parts when all of them have one, also in its Parts panel tooltip
+  - Settings: every setting has a line in StudWorx.conf from the first start
+
+  </details>
+
+  <details>
+  <summary>2026-11-06</summary>
+
   - Joints: Part > Joint > Set, also in the model view right-click menu, gives a submodel hinge or ball joints from the shadow library connections, several per submodel, with its own pointer and the picked part outlined in red, the Joints tool next to Rotate turns it with the mouse, Part > Joint > Move and Rotate and the Use Joint Rotation preference turn it with the rotate keys and the Rotate tool, the Joints panel lists every model and its joints in a tree and saves, recalls, renames and deletes named poses per model, and File > Image plays the main model poses as an animated GIF with Motion Joints
   - Views: the base and height grids each have their own toggle, and All Grids turns them on or off together
   - Views: Fade on Edit and Fade on Joint Set tint the rest of the model with their own colors, set under Steps and Highlighting in the view gear menu and in the preferences, and an empty step no longer fades the model
