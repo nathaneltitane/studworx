@@ -30,6 +30,6 @@ Part weights come from the [BrickLink](https://www.bricklink.com) catalog and ar
 - Petter Reinholdtsen <pere@hungry.com>
 - Renaud Breard <renaud@islande.net>
 - Rodney Rushing <leocad.reg@yenandjen.com>
-- Torbjörn Söderstedt <torbjrn@gmail.com>
 - Sylvain L. Sauvage <ssauvage@club-internet.fr>
+- Torbjörn Söderstedt <torbjrn@gmail.com>
 - Zezinho <lists.jjorge@free.fr>

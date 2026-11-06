@@ -169,7 +169,29 @@ void swMainWindow::UpdateSelectedObjects(bool SelectionChanged)
 
 		if (Focus && Focus->IsPart())
 		{
-			Message.append(tr(" - %1 - ID: %2 - Weight: %3").arg(Focus->GetName(), ((swPart*)Focus)->mPartData->IsModel() ? tr("N/A") : ((swPart*)Focus)->GetID(), swGetBrickLinkWeightText(((swPart*)Focus)->mPartData.Get())));
+			// selection total, n/a when a part is unlisted
+			std::optional<double> Weight = 0.0;
+			int PartCount = 0;
+
+			for (const swObject* Object : Selection)
+			{
+				if (!Object->IsPart())
+					continue;
+
+				PartCount++;
+				const std::optional<double> PartWeight = swGetBrickLinkWeight(((const swPart*)Object)->mPartData.Get());
+				Weight = Weight && PartWeight ? std::optional<double>(*Weight + *PartWeight) : std::nullopt;
+			}
+
+			// total only for two parts or more
+			QString WeightText = tr("N/A");
+
+			if (Weight && PartCount > 1)
+				WeightText = tr("%1 g Total").arg(QLocale::system().toString(*Weight));
+			else if (Weight)
+				WeightText = tr("%1 g").arg(QLocale::system().toString(*Weight));
+
+			Message.append(tr(" - %1 - ID: %2 - Weight: %3").arg(Focus->GetName(), ((swPart*)Focus)->mPartData->IsModel() ? tr("N/A") : ((swPart*)Focus)->GetID(), WeightText));
 
 			const swGroup* Group = ((swPart*)Focus)->GetGroup();
 			if (Group && !Group->mName.isEmpty())

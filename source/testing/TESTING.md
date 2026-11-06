@@ -32,8 +32,13 @@ and a step model box Corner Radius must round the page cards.
 `--flatten` must replace a submodel inside a moved and turned submodel with its
 parts at their world positions, with color 16 parts taking the color of the submodel above,
 and `--undo` must then bring back the original main model.
-A saved model must keep its `0 !SW CUTAWAY MODEL` line with its values, and drop
+LeoCAD meta commands must read as their StudWorx forms and other lines pass
+unchanged, a model must convert to either format and back with its line endings
+and indents kept, and with `SW_TEST_MODEL` set to a LeoCAD model, that model must
+round trip with every meta command converted. A saved model must keep its `0 !SW CUTAWAY MODEL` line with its values, and drop
 a cutaway line with no normal.
+A LEGO® Digital Designer `.lxfml` model opened on the command line must load as an
+untitled project with its part, checked by saving it with `--flatten`.
 Rotation tests turn parts in 15, 30 and 90 degree steps around every axis, in
 the part's own frame and in model coordinates, and check that each quarter turn
 lands exactly on 0 and 1, that the turned part keeps its position and moves by
@@ -111,5 +116,3 @@ qmake ..\..\source\testing\testing.pro -spec win32-msvc CONFIG+=release CONFIG-=
 nmake /NOLOGO
 nmake /NOLOGO check "TESTARGS=-o test-results.xml,junitxml -o -,txt"
 ```
-A LEGO® Digital Designer `.lxfml` model opened on the command line must load as an
-untitled project with its part, checked by saving it with `--flatten`.

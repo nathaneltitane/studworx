@@ -5382,12 +5382,12 @@ The file format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="334"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="355"/>
         <source>Could not open file &apos;%1&apos; for writing.</source>
         <translation type="unfinished">N’a pas pu ouvrir le fichier « %1 » en écriture.</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="382"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="403"/>
         <source>Reading the BrickLink numbers of the library parts...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5407,42 +5407,42 @@ The file format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="285"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="306"/>
         <source>%1 g</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="285"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="306"/>
         <source>N/A</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="496"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="517"/>
         <source>Could not download the part numbers from Rebrickable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="556"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="577"/>
         <source>Cancel</source>
         <translation type="unfinished">Annuler</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="557"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="578"/>
         <source>Update BrickLink Mapping</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="572"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="593"/>
         <source>Downloading the BrickLink part numbers from Rebrickable...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="599"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="620"/>
         <source>Downloading the BrickLink colors from Rebrickable...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="673"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="694"/>
         <source>Could not write the BrickLink mapping file &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17636,44 +17636,44 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">Importer</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="343"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="344"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="346"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="359"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="360"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="362"/>
         <source>free</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="345"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="361"/>
         <source>relative</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="345"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="361"/>
         <source>absolute</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="346"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="362"/>
         <source>%1 deg.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="347"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="363"/>
         <source>separately</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="347"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="363"/>
         <source>together</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="349"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="365"/>
         <source>Move XY: %1 Z: %2 - Axes: %3 - Rotate: %4 / %5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="351"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="367"/>
         <source>Movement snap, rotation snap, transform axes and rotation pivot. Change them with the last buttons of the standard toolbar.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17722,37 +17722,37 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Barre d&apos;outils temporelle&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Les boutons fléchés vous permettent de parcourir les étapes de construction afin que vous puissiez inspecter la façon dont le modèle est assemblé. Ils ne changent pas le pas attribué à une pièce ; utilisez la chronologie pour cela. Ajouter des clés contrôle si les modifications créent des clés d&apos;animation à l&apos;étape actuelle, permettant aux propriétés telles que la position de varier d&apos;une étape à l&apos;autre.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="176"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="192"/>
         <source> in group &apos;%1&apos;</source>
         <translation> dans le groupe « %1 »</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="209"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="225"/>
         <source>Part</source>
         <translation type="unfinished">Pièce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="211"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="227"/>
         <source>Camera</source>
         <translation type="unfinished">Caméra</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="213"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="229"/>
         <source>Light</source>
         <translation type="unfinished">Lumière</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="215"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="231"/>
         <source>Origin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="217"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="233"/>
         <source>%1 X: %2 Y: %3 Z: %4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="298"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="314"/>
         <source>Step %1</source>
         <translation>Étape %1</translation>
     </message>
@@ -17761,22 +17761,22 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished"> M : %1 %2 R : %3 </translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="389"/>
         <source>&amp;Undo %1</source>
         <translation>Ann&amp;uler %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="378"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="394"/>
         <source>&amp;Undo</source>
         <translation>Ann&amp;uler</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="384"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="400"/>
         <source>&amp;Redo %1</source>
         <translation>&amp;Refaire %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="389"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="405"/>
         <source>&amp;Redo</source>
         <translation>&amp;Refaire</translation>
     </message>
@@ -17913,13 +17913,13 @@ Choose where to save it and download the latest %3 now?</source>
         </translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="258"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="274"/>
         <source>View: %1 deg. Lat. / %2 deg. Lon. / %3</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Vue : %1 deg. Lat. / %2 deg. Lon. / %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="257"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="273"/>
         <source>Perspective</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Perspective</translation>
@@ -17931,17 +17931,28 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="162"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="172"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="187"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="188"/>
         <source>N/A</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="172"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="187"/>
+        <source>%1 g Total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="187"/>
+        <source>%1 g</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="188"/>
         <source> - %1 - ID: %2 - Weight: %3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="257"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="273"/>
         <source>Orthographic</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Orthographique</translation>

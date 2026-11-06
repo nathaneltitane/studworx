@@ -177,6 +177,26 @@ version_insert () {
 
 }
 
+version_has () {
+
+	# use to find a line in a file
+
+	local file_target="${1}"
+	local text_line="${2}"
+	local line_file
+
+	while IFS= read -r line_file
+	do
+		if [ "${line_file}" = "${text_line}" ]
+		then
+			return 0
+		fi
+	done < "${file_target}"
+
+	return 1
+
+}
+
 version_move () {
 
 	# use to move the version everywhere
@@ -188,11 +208,14 @@ version_move () {
 
 	version_replace "${file_global}" "*SW_VERSION_TEXT*" "${version_old}" "${version_new}"
 
-	# new notice on top, open
+	# new notice on top, open, once per date
 
-	version_replace "${file_notice}" "  <details open>" "<details open>" "<details>"
+	if ! version_has "${file_notice}" "  <summary>${version_new}</summary>"
+	then
+		version_replace "${file_notice}" "  <details open>" "<details open>" "<details>"
 
-	version_insert "${file_notice}" "  <details>" "  <details open>" "  <summary>${version_new}</summary>" "" "  </details>" ""
+		version_insert "${file_notice}" "  <details>" "  <details open>" "  <summary>${version_new}</summary>" "" "  </details>" ""
+	fi
 
 	# packaging and templates
 
@@ -200,7 +223,10 @@ version_move () {
 
 	version_replace resources/packaging/arch/PKGBUILD "pkgver=*" "${version_compact_old}" "${version_compact_new}"
 
-	version_insert resources/packaging/common/io.github.nathaneltitane.StudWorx.appdata.xml "*<release version=*" $'\t\t'"<release version=\"${version_new}\" date=\"${version_new}\" />"
+	if ! version_has resources/packaging/common/io.github.nathaneltitane.StudWorx.appdata.xml $'\t\t'"<release version=\"${version_new}\" date=\"${version_new}\" />"
+	then
+		version_insert resources/packaging/common/io.github.nathaneltitane.StudWorx.appdata.xml "*<release version=*" $'\t\t'"<release version=\"${version_new}\" date=\"${version_new}\" />"
+	fi
 
 	version_replace platform/Info.plist "*<string>${version_old}</string>*" "${version_old}" "${version_new}"
 
@@ -367,6 +393,21 @@ version_bump () {
 		exit 1
 	fi
 
+	# notice of today already written
+
+	if version_has "${file_notice}" "  <summary>${version_today}</summary>"
+	then
+		printf "%s\n" "version ${version_old} is released and code changed since, using the ${version_today} notice already written"
+
+		version_new="${version_today}"
+
+		version_move
+
+		version_publish
+
+		return
+	fi
+
 	# last notice as an example
 
 	while IFS= read -r line_file
@@ -449,6 +490,16 @@ When no change is user facing, answer only NONE."
 
 	printf "%s\n" "${lines_result[@]}" > "${file_notice}"
 
+	printf "%s\n" "version ${version_today}:" "${lines_notice[@]}"
+
+	version_publish
+
+}
+
+version_publish () {
+
+	# use to commit and push the bump
+
 	# site with the new version
 
 	if [ -x "${file_site}" ]
@@ -459,8 +510,6 @@ When no change is user facing, answer only NONE."
 	# commit the bump
 
 	git commit --quiet --all --message "${message_commit}"
-
-	printf "%s\n" "version ${version_today}:" "${lines_notice[@]}"
 
 	# push the bump instead
 

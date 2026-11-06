@@ -10,13 +10,13 @@ StudWorx is built from standard Qt widgets: panels, dialogs and windows follow y
 
 ![The main window with the model view, Parts, Colors, Properties and Timeline panels](resources/images/interface-main-window.png "wide")
 
-- **Menus by task.** File, Edit, View, Part, Steps, Models and Help, with clean labels and a unique mnemonic in each menu. The View menu holds the Toolbars, Viewpoints, Cutaway, Cameras, Projection and Shading submenus.
-- **Options menus.** The gear button on the model view and on every panel opens the settings that belong to it: grids, preview, parts and colors.
+- **Menus by task.** File, Edit, View, Part, Steps, Models and Help, with clean labels and a unique mnemonic in each menu. Edit holds the Selection Mode, Transform and Tools submenus, View the Toolbars, Viewpoints, Cutaway, Cameras, Projection and Shading submenus, and Part the Joint, Group and Visibility submenus.
+- **Options menus.** A gear button opens the settings that belong to its place: grids, steps and highlighting and view overlays on the model view, list display and filtering on Parts, the insert color on Colors, overlays and selection on Preview, shading and lines on the Minifigure Builder, the model folder on Terminal, editing on the Editor and page setup on the instructions Properties.
 - **Toolbars.** Standard, Tools and Time toolbars. Move and rotate cursors show the axis they work on.
 - **Transform toolbar.** Type a position or rotation for the selection and apply it, as absolute coordinates or relative to where it is now. It has no entry of its own: its fields sit at the bottom of the Properties panel, shown with View > Toolbars > Properties.
-- **Tabs, splits and status bar.** Open several models in tabs, split the view, go Full Screen, and read the view orientation, projection and focus position in the status bar, with the name, ID and weight of the selected part, a submodel reading ID N/A and the total weight of its parts when all of them have one. Right click the status bar to show or hide each segment.
+- **Tabs, splits and status bar.** Open several models in tabs, close one with Close Tab (Ctrl+W) or the others from the tab's right-click menu, split the view and go Full Screen. The status bar shows the selection, the view orientation and projection, the focus position, the snap and transform settings and the current step. The selection reads the name, ID and weight of the selected part, a submodel reading ID N/A and the total weight of its parts when all of them have one, and the total weight of two or more selected parts. Right click the status bar to show or hide each segment.
 - **Split views.** Split the current view horizontally or vertically, as often as you like, remove one view, or Reset Views back to one. Each view keeps its own camera and projection, a border marks the active one, and the view cube and axis icon stay on the top left view.
-- **Toolbars and panels on demand.** View > Toolbars shows or hides each toolbar and panel: Standard, Tools, Time, Parts, Colors, Properties, Timeline, Preview, Terminal, Minifigure Builder, Explode and Joints. Close Tab closes the current model tab.
+- **Toolbars and panels on demand.** View > Toolbars shows or hides each toolbar and panel: Standard, Tools, Time, Parts, Colors, Properties, Timeline, Preview, Terminal, Minifigure Builder, Explode and Joints.
 - **Undo and clipboard.** Undo and Redo every change, and Cut, Copy and Paste parts between models and tabs.
 - **Contextual help.** Choose Help > "What's This?" or click the question mark in a title bar, then click any control to read what it does. F1 explains the focused control, Shift+F1 starts "What's This?" inside a dialog, and every entry is listed in the Help index below.
 - **Help menu.** Home Page opens the StudWorx repository on GitHub, Report a Bug its issues, and About shows the version and system information.
@@ -63,7 +63,7 @@ Models are plain LDraw text files in LeoCAD's format, so they open in either pro
 
 - **LDraw models.** .ldr, .mpd and .dat files, with New, Open, Merge, Save, Save As, Reload and the four most recent files. Save As follows the LDraw file specification and adds the extension when it is left out: .ldr for a single model, .mpd for a model with submodels or embedded data. Files are written with Unix line endings, and a model loaded with Windows line endings keeps them when saved. Watch for File Changes reloads a model edited in another program. Sample models, a minifigure, cube, sphere and cylinder cutaways of it, an exploded model, a flexible part and lights and cameras, install to /usr/share/studworx/samples, the samples folder beside the program on Windows, or the application bundle resources on macOS.
 - **Startup.** Open Most Recent File on Startup reopens the last model, Restore Tab Layout brings back its tabs and split views, and Load All Parts Before Showing waits until every part is loaded before the model appears.
-- **LeoCAD models.** Models saved by LeoCAD open as they are, and their LeoCAD meta commands are migrated to StudWorx ones, automatically when you choose so in Preferences.
+- **LeoCAD models.** Models saved by LeoCAD open as they are, and their LeoCAD meta commands are migrated to StudWorx ones, automatically when you choose so in Preferences. Older LeoCAD projects (.lcd) open and merge too, and save as LDraw.
 - **Import.** LEGO® Digital Designer models (.lxf and .lxfml), also opened with Open, recent files, drag and drop and the command line as an untitled project, with a bundled part and color mapping, and official set inventories. Set inventories use your own free Rebrickable API key, asked for once or set under Online Services in the preferences, and are searched by set name or number.
 - **Export.** 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages from the Instructions window, BrickLink wanted lists and CSV parts lists. BrickLink exports pick the condition, the wanted list by its number or the address of its page, and new listing notices, copy the XML and open the BrickLink upload page in one step, and translate part numbers and colors through a bundled mapping of over 55,000 parts or a file built from the library and Rebrickable, with Rebrickable numbers taking the lead over stale part keywords. BrickLink and CSV exports list parts the library moved to a new number under that number, and Part Exceptions in the BrickLink export keeps a comma or tab separated list of parts whose BrickLink number you set by hand.
 - **KMZ.** Google Earth and SketchUp models, with the visible surfaces only or every part's geometry, set in Preferences.
@@ -140,21 +140,22 @@ File > Image saves still images and animated GIFs of the active model. The previ
 
 Check Animated GIF to save one looping GIF. The preview plays it live with a play and pause button, and Motion chooses what moves.
 
-| Setting | Turntable | Steps |
-| --- | --- | --- |
-| Axis, Full Turn, Angle | used | off |
-| Next Step | Off, Turns or Seconds | off |
-| Turns | revolutions or swings per loop | off |
-| Frames | per turn, 2 to 360 | one per step, read only |
-| Frame Rate | 0.5 to 50 fps | 0.5 to 50 fps |
-| Hold Last | with Next Step on | used |
-| Duration | read only | read only |
+| Setting | Turntable | Steps | Joints |
+| --- | --- | --- | --- |
+| Axis, Full Turn, Angle | used | off | off |
+| Next Step | Off, Turns or Seconds | off | off |
+| Turns | revolutions or swings per loop | off | off |
+| Frames | per turn, 2 to 360 | one per step, read only | between two poses, 2 to 360 |
+| Frame Rate | 0.5 to 50 fps | 0.5 to 50 fps | 0.5 to 50 fps |
+| Hold Last | with Next Step on | used | used |
+| Duration | read only | read only | read only |
 
 - **Turntable.** The model turns around the X, Y or Z axis through the Framing center. Full Turn makes seamless revolutions, Angle swings between two angles, measured from the current view, and back. Turns sets 1 to 10 revolutions per loop, Frames the images in one turn, Frame Rate how many are shown each second. Fit Model keeps one steady zoom through the whole turn.
 - **Steps.** Each chosen step becomes one frame, without turning, for short animated instructions. At 2 fps every step shows for half a second.
 - **Next Step.** The model keeps turning while the build moves on every 1 to 10 Turns or every 0.1 to 60 Seconds, through the chosen steps, and the loop ends on the last one. Turns then shows the total, steps × turns per step. Frames stay per turn, so the turning speed is the same however many steps there are.
-- **Hold Last.** Keeps the finished model on screen for 0 to 10 seconds before a loop through the steps restarts.
-- **Duration.** Shows how long one loop plays: turns × frames ÷ frame rate for a turntable, steps ÷ frame rate + hold for steps, and the frames of every step ÷ frame rate + hold with Next Step. Six steps, one turn each, at 24 frames per turn and 12 fps with a one second hold make 144 frames playing for 13 seconds.
+- **Joints.** Blends through the poses of the main model and back to the first, see Joints mode.
+- **Hold Last.** Keeps the finished model on screen for 0 to 10 seconds before a loop through the steps or poses restarts.
+- **Duration.** Shows how long one loop plays: turns × frames ÷ frame rate for a turntable, steps ÷ frame rate + hold for steps, the frames of every step ÷ frame rate + hold with Next Step, and poses × frames ÷ frame rate + hold for joints. Six steps, one turn each, at 24 frames per turn and 12 fps with a one second hold make 144 frames playing for 13 seconds.
 
 <!-- gallery two -->
 
@@ -298,10 +299,10 @@ The Tools toolbar sets what the mouse does in the model view. Every tool has a k
 
 - **Edit tools.** Insert adds the part chosen in the Parts panel, Select picks objects, with Ctrl or a drag for several, Move and Rotate change the selection, Erase removes what you click, Paint colors a part, and Color Picker takes a part's color.
 - **View tools.** Zoom, Pan, Rotate View and Roll change the camera, and Zoom Region zooms into a rectangle you drag.
-- **Keyboard view.** Zoom In and Zoom Out, and Move Forward, Backward, Left, Right, Up and Down.
+- **Keyboard and gamepad view.** Zoom In and Zoom Out, and Move Forward, Backward, Left, Right, Up and Down. In builds with gamepad support, the left stick of a gamepad moves the camera.
 - **Lights.** Point Light, Spotlight, Directional Light and Area Light tools place lights in the model, with named properties and units, saved in the model file.
 - **Cameras.** The Camera tool places a camera. View > Cameras switches between the first sixteen cameras, or None for the free view.
-- **Cancel Action.** Esc cancels the current mouse action, and with nothing selected removes the cutaway.
+- **Cancel Action.** Esc cancels the current mouse action, a face or cutaway pick or a cutaway resize, closes the Find and Replace bar, clears the selection, and with nothing selected removes the cutaway.
 - **Mouse.** Mouse sensitivity and a shortcut for every tool and view action, recorded in Preferences.
 
 <!-- gallery natural -->
@@ -322,7 +323,7 @@ Give a placed submodel a joint, turn it with the mouse and save the angles as po
 - **Set Joint.** Part > Joint > Set with one submodel selected, then click a connection of the submodel with the Joints tool, which shows the Set Joint pointer and outlines the part under it in red. The click sets the joint and goes back to the Select tool. A submodel can hold several joints: Set again at another connection adds one, and Set at a joint already there resets it. During the pick only the selected submodel takes clicks, so you can pick through other submodels in front of it. A round shape makes a hinge on its axis, a sphere makes a ball, and a part without shadow data gets a hinge on its origin. The Joints panel shows the joint, with an X, Y or Z axis choice, the angle and Clear Joint. Each joint is saved before the placed submodel, one line per joint, as `0 !SW JOINT PART <HINGE|BALL> <pivot x y z> <axis x y z> <rotation x y z>` in LDraw coordinates, and setting and clearing it is undoable.
 - **Joints tool.** Next to Rotate in the Tools toolbar, and the Joint menu is also in the right-click menu of the model view. With one submodel selected, the parts holding its joints are outlined in red, and a right click goes back to the Select tool. Click down into submodels to take the innermost one with a joint and drag; on a submodel with several joints, the joint nearest the click turns. A hinge turns about its axis by the horizontal drag, a ball turns about the screen up and right directions. Rotation Snap applies and one drag is one undo step.
 - **Joint Move and Rotate.** Part > Joint > Move or Rotate, also in the right-click menu of the model view, switches to the Move or Rotate tool with the gizmo on the pivot of the selected submodel's picked joint, lined up with a hinge axis in relative mode. The move gizmo gets a red hexagon like a cube outline and the rotate gizmo a red outer ring. The rotate keys and the Rotate tool then turn the joint around its pivot and axis instead of the pivot point, saving the turn as the joint angle; a hinge only turns about its axis. Selecting something else goes back to the pivot point. Use Joint Rotation under General > Editing in the preferences does this whenever a selected submodel has a joint.
-- **Joints panel.** View > Toolbars > Joints shows a tree of every model with joints, under it each jointed submodel by name and position (`arm-right.ldr 006`), and under that each of its joints (`Joint 001`) with type and angle. Clicking a joint selects its submodel, in its own model, and makes it the joint the panel and the Move and Rotate gizmos work on. Below the tree are the poses of the picked model, which hold that model's joints only. Save stores them under a name, saving a name again replaces it, Recall puts the angles back in one undo step, and Rename and Delete edit the list. Poses are saved in their own model's file as `0 !SW JOINT MODEL "<name>" "<model file>" <part index> <rx ry rz> [joint number]`, one line per joint, the joint number left out for the first joint. Older project-wide sets and `0 !SW POSE` lines still load, split into the models they belong to.
+- **Joints panel.** View > Toolbars > Joints shows a tree of every model with joints, under it each jointed submodel by name and position (`arm-right.ldr 006`), and under that each of its joints (`Joint 001`) with type and angle. Clicking a joint selects its submodel, in its own model, and makes it the joint the panel and the Move and Rotate gizmos work on. Below the tree are the poses of the picked model, which hold that model's joints only. Save stores them under a name, saving a name again replaces it, Recall puts the angles back in one undo step, and Rename and Delete edit the list. Poses are saved in their own model's file as `0 !SW JOINT MODEL "<name>" "<model file>" <part index> <rx ry rz> [joint number]`, one line per joint, the joint number counting from 0 and left out for the first joint. Older project-wide sets and `0 !SW POSE` lines still load, split into the models they belong to.
 - **Joints motion.** File > Image > Animated GIF with Motion Joints blends through the poses of the main model in order and back to the first, with Frames between two poses, Frame Rate and Hold Last. Hinges blend their angle, balls blend along the shortest turn.
 
 ![Joints animation of a minifigure](resources/images/tools-joints.gif)
@@ -410,7 +411,7 @@ Panels dock side by side in any area of the main window, with uniform headers, b
 - **Colors.** Collapsible solid, translucent and special color groups with square color tiles.
 - **Properties.** Compact position, rotation and transform rows and a spanning color swatch. Lights and cameras get named rows with units.
 - **Minifigure Builder.** Build a minifigure from templates and add several variations to the model.
-- **Preview.** Parts and models in a square viewport, with Keep Last Selection.
+- **Preview.** Parts and models, in a Square Viewport when you choose, with Keep Last Selection.
 - **Joints.** The picked joint of the selected submodel with its axis and Clear Joint, the tree of models, submodels and their joints, and the poses of the picked model with Save, Recall, Rename and Delete.
 - **Terminal.** An embedded terminal sized to whole rows and columns, with Open Model Folder.
 - **Terminal folders.** Follow Model Folder moves the terminal to the folder of each model you open, and Go to Model Folder moves it there once.
@@ -494,12 +495,12 @@ Large builds split into submodels that you can edit on their own or in place, in
 
 <!-- preferences | grid | PREFERENCES // EVERY SETTING IN ONE PLACE -->
 
-Eight pages with lined up label and control columns, checkboxes included, each label greyed out with its control. Value boxes show their maximum and bring any typed number into range, and every slider shows its value.
+Nine pages with lined up label and control columns, checkboxes included, each label greyed out with its control. Value boxes show their maximum and bring any typed number into range, and every slider shows its value.
 
 - **General.** Reference paths, where the color configurations, minifigure builder settings and BrickLink mapping update from ldraw.org and Rebrickable with one button and bundled copies are used until a file is set, online services, where the Rebrickable API key is kept and Get Key opens its page, a rejected key being cleared so it is asked for again, the author of new models built from a name, email address and comment, such as All rights reserved, joined by the author line splitter and previewed as the author line, and the parts library, Blender, POV-Ray and LGEO locations.
 - **Startup and files.** Open the most recent file, restore the tab layout, load all parts before showing a model, watch for file changes and ask, migrate or keep LeoCAD models when opened.
-- **Rendering and Views.** Rendering quality and the Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups.
-- **Interface and Instructions.** Interface and view colors, edge contrast, the default instruction page settings, and the rulers and element inspector overlays of the instructions page.
+- **Rendering and Views.** Performance, colors, steps and highlighting, and lines with edge contrast on Rendering, and the Model, View Cube, Axis Icon, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups on Views.
+- **Interface and Instructions.** Interface and view colors, the default instruction page settings, and the rulers and element inspector overlays of the instructions page.
 - **View colors.** Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, Flex Paths, the view cube, every axis, and the element margin, padding and anchor overlays and the ruler pointer arrows of the instructions page, each with an alpha slider.
 - **Categories.** Part categories turned on and off with a checkbox, edited, imported and exported.
 - **Context Menu.** The right-click menu of the model view is yours to arrange, in its own tab before Keyboard. Add commands and menus from the list on the left with the arrow, a double click or a drag, reorder them with Up, Down or a drag, and add separators and named submenus, rename or remove entries, or reset to the default layout. Control point commands only show on flexible parts, and empty submenus are left out.
