@@ -13,6 +13,7 @@
 #include "sw_widget_find_replace.h"
 #include "sw_library.h"
 #include "sw_widget_selection_part_popup.h"
+#include "sw_application.h"
 
 swFindReplaceParameters swView::mFindReplaceParams;
 QPointer<swFindReplaceWidget> swView::mFindWidget;
@@ -341,69 +342,78 @@ void swView::ShowTrainTrackPopup()
 	mWidget->UpdateMousePosition();
 }
 
+// fill a menu from the context menu layout
+static void swAddContextMenuEntries(QMenu* Menu, const QStringList& Layout, int& LineIndex, int Depth, bool FlexPart)
+{
+	QAction** Actions = gMainWindow->mActions;
+
+	while (LineIndex < Layout.size())
+	{
+		const QString& Line = Layout[LineIndex];
+		int LineDepth = 0;
+
+		while (LineDepth < Line.size() && Line[LineDepth] == QLatin1Char('\t'))
+			LineDepth++;
+
+		if (LineDepth < Depth)
+			return;
+
+		const QString Entry = Line.mid(LineDepth);
+		LineIndex++;
+
+		if (LineDepth > Depth || Entry.isEmpty())
+			continue;
+
+		if (Entry == QLatin1String("-"))
+			Menu->addSeparator();
+		else if (Entry.startsWith(QLatin1Char('>')))
+		{
+			QMenu* SubMenu = Menu->addMenu(qApp->translate("ContextMenu", Entry.mid(1).toUtf8().constData()));
+			swAddContextMenuEntries(SubMenu, Layout, LineIndex, Depth + 1, FlexPart);
+
+			// hide submenus left empty
+
+			const QList<QAction*> SubActions = SubMenu->actions();
+
+			if (std::all_of(SubActions.begin(), SubActions.end(), [](const QAction* Action) { return Action->isSeparator(); }))
+				Menu->removeAction(SubMenu->menuAction());
+		}
+		else if (Entry.startsWith(QLatin1Char('@')))
+		{
+			QMenu* Builtin = gMainWindow->findChild<QMenu*>(Entry.mid(1));
+
+			if (Builtin)
+				Menu->addMenu(Builtin);
+		}
+		else
+		{
+			const int CommandIndex = swFindCommand(Entry);
+
+			// control points only on flex parts
+
+			if (CommandIndex < 0 || (!FlexPart && CommandIndex >= SW_PART_CONTROL_POINT_INSERT && CommandIndex <= SW_PART_CONTROL_POINT_ALIGN_Z))
+				continue;
+
+			Menu->addAction(Actions[CommandIndex]);
+		}
+	}
+}
+
 void swView::ShowContextMenu() const
 {
 	if (mViewType != swViewType::View)
 		return;
 
-	QAction** Actions = gMainWindow->mActions;
-
-	QMenu* Popup = new QMenu();
-
-	Popup->addAction(Actions[SW_EDIT_CUT]);
-	Popup->addAction(Actions[SW_EDIT_COPY]);
-	Popup->addAction(Actions[SW_EDIT_PASTE]);
-	Popup->addAction(Actions[SW_EDIT_PASTE_STEPS]);
-	Popup->addAction(Actions[SW_PART_DUPLICATE]);
-	Popup->addAction(Actions[SW_PART_DELETE]);
-
-	// control points only on flex parts
 	const swModel* ActiveModel = GetActiveModel();
 	const swPart* FocusPart = ActiveModel ? dynamic_cast<const swPart*>(ActiveModel->GetFocusObject()) : nullptr;
+	const bool FlexPart = FocusPart && FocusPart->mPartData && FocusPart->mPartData->GetSynthInfo();
+	const QStringList& Custom = swGetPreferences().mContextMenu;
+	const QStringList Layout = Custom.isEmpty() ? swGetDefaultContextMenu() : Custom;
 
-	if (FocusPart && FocusPart->mPartData && FocusPart->mPartData->GetSynthInfo())
-	{
-		Popup->addSeparator();
+	QMenu* Popup = new QMenu();
+	int LineIndex = 0;
 
-		Popup->addAction(Actions[SW_PART_CONTROL_POINT_INSERT]);
-		Popup->addAction(Actions[SW_PART_CONTROL_POINT_REMOVE]);
-		Popup->addAction(Actions[SW_PART_CONTROL_POINT_ALIGN_TANGENT]);
-
-		QMenu* AxisMenu = Popup->addMenu(tr("Align to Axis"));
-		AxisMenu->addAction(Actions[SW_PART_CONTROL_POINT_ALIGN_X]);
-		AxisMenu->addAction(Actions[SW_PART_CONTROL_POINT_ALIGN_Y]);
-		AxisMenu->addAction(Actions[SW_PART_CONTROL_POINT_ALIGN_Z]);
-
-		Popup->addAction(Actions[SW_PART_CONTROL_POINT_TANGENT]);
-	}
-
-	Popup->addSeparator();
-
-	QMenu* SubmodelMenu = Popup->addMenu(tr("Submodel"));
-	SubmodelMenu->addAction(Actions[SW_PART_EDIT_SELECTED_SUBMODEL]);
-	SubmodelMenu->addAction(Actions[SW_PART_EDIT_END_SUBMODEL]);
-	SubmodelMenu->addAction(Actions[SW_PART_VIEW_SELECTED_MODEL]);
-	SubmodelMenu->addAction(Actions[SW_PART_INLINE_SELECTED_MODELS]);
-	SubmodelMenu->addAction(Actions[SW_PART_FLATTEN_MODEL]);
-	SubmodelMenu->addAction(Actions[SW_PART_MOVE_SELECTION_TO_MODEL]);
-
-	Popup->addMenu(gMainWindow->GetToolsMenu());
-
-	Popup->addSeparator();
-
-	Popup->addAction(Actions[SW_VIEW_NORMAL_TO_FACE]);
-	Popup->addMenu(gMainWindow->GetViewpointMenu());
-	Popup->addMenu(gMainWindow->GetCameraMenu());
-	Popup->addMenu(gMainWindow->GetProjectionMenu());
-	Popup->addMenu(gMainWindow->GetShadingMenu());
-	Popup->addMenu(gMainWindow->GetCutawayMenu());
-
-	Popup->addSeparator();
-
-	Popup->addAction(Actions[SW_VIEW_SPLIT_HORIZONTAL]);
-	Popup->addAction(Actions[SW_VIEW_SPLIT_VERTICAL]);
-	Popup->addAction(Actions[SW_VIEW_REMOVE_VIEW]);
-	Popup->addAction(Actions[SW_VIEW_RESET_VIEWS]);
+	swAddContextMenuEntries(Popup, Layout, LineIndex, 0, FlexPart);
 
 	Popup->exec(QCursor::pos());
 	delete Popup;

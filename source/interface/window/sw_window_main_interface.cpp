@@ -1,7 +1,7 @@
 #include "sw_global.h"
 #include "sw_window_main.h"
 #include "sw_widget_explode.h"
-#include "sw_widget_poses.h"
+#include "sw_widget_joints.h"
 #include "sw_widget_builder_minifigure.h"
 #include "sw_widget_spin_box_double.h"
 #include "sw_widget_selection_part.h"
@@ -163,7 +163,7 @@ void swMainWindow::CreateActions()
 	mActions[SW_EDIT_ACTION_ERASE]->setIcon(swCreatePaintedIcon(swPaintedIcon::ActionErase));
 
 	mActions[SW_EDIT_ACTION_PAINT]->setIcon(swCreatePaintedIcon(swPaintedIcon::ActionPaint));
-	mActions[SW_EDIT_ACTION_POSE]->setIcon(swCreatePaintedIcon(swPaintedIcon::ActionPose));
+	mActions[SW_EDIT_ACTION_JOINTS]->setIcon(swCreatePaintedIcon(swPaintedIcon::ActionJoints));
 
 	mActions[SW_EDIT_ACTION_COLOR_PICKER]->setIcon(swCreatePaintedIcon(swPaintedIcon::ActionPickerColor));
 
@@ -302,6 +302,7 @@ void swMainWindow::CreateMenus()
 	mActions[SW_EDIT_TRANSFORM]->setMenu(TransformMenu);
 
 	mCameraMenu = new QMenu(tr("C&ameras"), this);
+	mCameraMenu->setObjectName("Camera");
 	mCameraMenu->addAction(mActions[SW_VIEW_CAMERA_NONE]);
 
 	for (int actionIdx = SW_VIEW_CAMERA_FIRST; actionIdx <= SW_VIEW_CAMERA_LAST; actionIdx++)
@@ -310,6 +311,7 @@ void swMainWindow::CreateMenus()
 	connect(mCameraMenu, &QMenu::aboutToShow, this, &swMainWindow::CameraMenuAboutToShow);
 
 	mViewpointMenu = new QMenu(tr("View&points"), this);
+	mViewpointMenu->setObjectName("Viewpoint");
 	mViewpointMenu->addAction(mActions[SW_VIEW_VIEWPOINT_FRONT]);
 	mViewpointMenu->addAction(mActions[SW_VIEW_VIEWPOINT_BACK]);
 	mViewpointMenu->addAction(mActions[SW_VIEW_VIEWPOINT_LEFT]);
@@ -321,6 +323,7 @@ void swMainWindow::CreateMenus()
 	mViewpointMenu->addAction(mActions[SW_VIEW_STEP_VIEW_EDIT]);
 	mViewpointMenu->addAction(mActions[SW_VIEW_STEP_VIEW_TOGGLE_FOLLOW]);
 	mCutawayMenu = new QMenu(tr("&Cutaway"), this);
+	mCutawayMenu->setObjectName("Cutaway");
 	mCutawayMenu->addAction(mActions[SW_VIEW_CUTAWAY_CUBE]);
 	mCutawayMenu->addAction(mActions[SW_VIEW_CUTAWAY_SPHERE]);
 	mCutawayMenu->addAction(mActions[SW_VIEW_CUTAWAY_CYLINDER]);
@@ -337,12 +340,14 @@ void swMainWindow::CreateMenus()
 	mViewpointMenu->addAction(mActions[SW_VIEW_NORMAL_TO_FACE]);
 
 	mProjectionMenu = new QMenu(tr("Projection"), this);
+	mProjectionMenu->setObjectName("Projection");
 	mProjectionMenu->addAction(mActions[SW_VIEW_PROJECTION_PERSPECTIVE]);
 	mProjectionMenu->addAction(mActions[SW_VIEW_PROJECTION_ORTHOGRAPHIC]);
 
 	connect(mProjectionMenu, &QMenu::aboutToShow, this, &swMainWindow::ProjectionMenuAboutToShow);
 
 	mShadingMenu = new QMenu(tr("&Shading"), this);
+	mShadingMenu->setObjectName("Shading");
 	mShadingMenu->addAction(mActions[SW_VIEW_SHADING_WIREFRAME]);
 	mShadingMenu->addAction(mActions[SW_VIEW_SHADING_FLAT]);
 	mShadingMenu->addAction(mActions[SW_VIEW_SHADING_DEFAULT_LIGHTS]);
@@ -352,6 +357,7 @@ void swMainWindow::CreateMenus()
 		mShadingMenu->addAction(mActions[ActionIdx]);
 
 	mToolsMenu = new QMenu(tr("Tools"), this);
+	mToolsMenu->setObjectName("Tools");
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_INSERT]);
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_POINT_LIGHT]);
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_SPOTLIGHT]);
@@ -362,7 +368,7 @@ void swMainWindow::CreateMenus()
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_SELECT]);
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_MOVE]);
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_ROTATE]);
-	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_POSE]);
+	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_JOINTS]);
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_ERASE]);
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_PAINT]);
 	mToolsMenu->addAction(mActions[SW_EDIT_ACTION_COLOR_PICKER]);
@@ -384,9 +390,11 @@ void swMainWindow::CreateMenus()
 	FileMenu->addSeparator();
 	FileMenu->addAction(mActions[SW_FILE_MERGE]);
 	QMenu* ImportMenu = FileMenu->addMenu(tr("&Import"));
+	ImportMenu->setObjectName("Import");
 	ImportMenu->addAction(mActions[SW_FILE_IMPORT_LDD]);
 	ImportMenu->addAction(mActions[SW_FILE_IMPORT_INVENTORY]);
 	QMenu* ExportMenu = FileMenu->addMenu(tr("&Export"));
+	ExportMenu->setObjectName("Export");
 	ExportMenu->addAction(mActions[SW_FILE_EXPORT_3DS]);
 	ExportMenu->addAction(mActions[SW_FILE_EXPORT_BRICKLINK]);
 	ExportMenu->addAction(mActions[SW_FILE_EXPORT_COLLADA]);
@@ -404,6 +412,7 @@ void swMainWindow::CreateMenus()
 	FileMenu->addAction(mActions[SW_FILE_INSTRUCTIONS]);
 #ifndef SW_DISABLE_RENDER_DIALOG
 	QMenu* RenderMenu = FileMenu->addMenu(tr("Ren&der"));
+	RenderMenu->setObjectName("Render");
 	RenderMenu->addAction(mActions[SW_FILE_RENDER_BLENDER]);
 	RenderMenu->addAction(mActions[SW_FILE_RENDER_POVRAY]);
 #endif
@@ -445,6 +454,7 @@ void swMainWindow::CreateMenus()
 
 	QMenu* ViewMenu = menuBar()->addMenu(tr("&View"));
 	QMenu* ToolBarsMenu = ViewMenu->addMenu(tr("T&oolbars"));
+	ToolBarsMenu->setObjectName("Toolbars");
 	connect(ToolBarsMenu, &QMenu::aboutToShow, this, &swMainWindow::UpdateDockWidgetActions);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_PARTS]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_COLORS]);
@@ -453,7 +463,7 @@ void swMainWindow::CreateMenus()
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_PREVIEW]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_MINIFIGURE_BUILDER]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_EXPLODE]);
-	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_POSES]);
+	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_JOINTS]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_TERMINAL]);
 	ToolBarsMenu->addSeparator();
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_STANDARD]);
@@ -481,21 +491,28 @@ void swMainWindow::CreateMenus()
 	PartMenu->addAction(mActions[SW_PART_DUPLICATE]);
 	PartMenu->addSeparator();
 	PartMenu->addAction(mActions[SW_PART_PAINT_SELECTED]);
-	PartMenu->addAction(mActions[SW_PART_SET_JOINT]);
 	PartMenu->addAction(mActions[SW_PART_ARRAY]);
 	PartMenu->addAction(mActions[SW_PART_RESET_PIVOT_POINT]);
 	PartMenu->addAction(mActions[SW_PART_REMOVE_KEY_FRAMES]);
 	PartMenu->addSeparator();
-	PartMenu->addAction(mActions[SW_PART_GROUP]);
-	PartMenu->addAction(mActions[SW_PART_UNGROUP]);
-	PartMenu->addAction(mActions[SW_PART_GROUP_REMOVE]);
-	PartMenu->addAction(mActions[SW_PART_GROUP_ADD]);
-	PartMenu->addAction(mActions[SW_PART_GROUP_EDIT]);
-	PartMenu->addSeparator();
-	PartMenu->addAction(mActions[SW_PART_HIDE_SELECTED]);
-	PartMenu->addAction(mActions[SW_PART_HIDE_UNSELECTED]);
-	PartMenu->addAction(mActions[SW_PART_UNHIDE_SELECTED]);
-	PartMenu->addAction(mActions[SW_PART_UNHIDE_ALL]);
+	QMenu* JointMenu = PartMenu->addMenu(tr("&Joint"));
+	JointMenu->setObjectName("Joint");
+	JointMenu->addAction(mActions[SW_PART_SET_JOINT]);
+	JointMenu->addAction(mActions[SW_PART_JOINT_MOVE]);
+	JointMenu->addAction(mActions[SW_PART_JOINT_ROTATE]);
+	QMenu* GroupMenu = PartMenu->addMenu(tr("&Group"));
+	GroupMenu->setObjectName("Group");
+	GroupMenu->addAction(mActions[SW_PART_GROUP]);
+	GroupMenu->addAction(mActions[SW_PART_UNGROUP]);
+	GroupMenu->addAction(mActions[SW_PART_GROUP_ADD]);
+	GroupMenu->addAction(mActions[SW_PART_GROUP_REMOVE]);
+	GroupMenu->addAction(mActions[SW_PART_GROUP_EDIT]);
+	QMenu* VisibilityMenu = PartMenu->addMenu(tr("&Visibility"));
+	VisibilityMenu->setObjectName("Visibility");
+	VisibilityMenu->addAction(mActions[SW_PART_HIDE_SELECTED]);
+	VisibilityMenu->addAction(mActions[SW_PART_HIDE_UNSELECTED]);
+	VisibilityMenu->addAction(mActions[SW_PART_UNHIDE_SELECTED]);
+	VisibilityMenu->addAction(mActions[SW_PART_UNHIDE_ALL]);
 
 	QMenu* StepMenu = menuBar()->addMenu(tr("&Steps"));
 	StepMenu->addAction(mActions[SW_VIEW_TIME_FIRST]);
@@ -553,6 +570,7 @@ void swMainWindow::CreateMenus()
 void swMainWindow::CreateToolBars()
 {
 	mSelectionModeMenu = new QMenu(tr("Selection Mode"), this);
+	mSelectionModeMenu->setObjectName("Selection Mode");
 	for (int ModeIdx = SW_EDIT_SELECTION_MODE_FIRST; ModeIdx <= SW_EDIT_SELECTION_MODE_LAST; ModeIdx++)
 		mSelectionModeMenu->addAction(mActions[ModeIdx]);
 
@@ -564,6 +582,7 @@ void swMainWindow::CreateToolBars()
 	SelectionModeAction->setMenu(mSelectionModeMenu);
 
 	mTransformMenu = new QMenu(tr("Transform"), this);
+	mTransformMenu->setObjectName("Transform");
 	mTransformMenu->addAction(mActions[SW_EDIT_TRANSFORM_RELATIVE]);
 	mTransformMenu->addAction(mActions[SW_EDIT_TRANSFORM_ABSOLUTE]);
 	mTransformMenu->addSeparator();
@@ -615,7 +634,7 @@ void swMainWindow::CreateToolBars()
 
 	mStandardToolBar = addToolBar(tr("Standard"));
 	mStandardToolBar->setObjectName("StandardToolbar");
-	mStandardToolBar->setWhatsThis(tr("<p><b>Standard Toolbar</b></p><p>Use file controls to create, open, and save models, and Undo or Redo to navigate edit history. Before moving or rotating objects, choose the selection rule, coordinate reference, and snapping increments from the four drop-down controls. Help > What's This? explains individual controls.</p>"));
+	mStandardToolBar->setWhatsThis(tr("<p><b>Standard Toolbar</b></p><p>Use file controls to create, open, and save models, and Undo or Redo to navigate edit history. Before moving or rotating objects, choose the selection rule, coordinate reference, and snapping increments from the four drop-down controls. Help > \"What's This?\" explains individual controls.</p>"));
 	mStandardToolBar->addAction(mActions[SW_FILE_NEW]);
 	mStandardToolBar->addAction(mActions[SW_FILE_OPEN]);
 	mStandardToolBar->addAction(mActions[SW_FILE_SAVE]);
@@ -656,7 +675,7 @@ void swMainWindow::CreateToolBars()
 	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_SELECT]);
 	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_MOVE]);
 	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_ROTATE]);
-	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_POSE]);
+	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_JOINTS]);
 	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_ERASE]);
 	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_PAINT]);
 	mToolsToolBar->addAction(mActions[SW_EDIT_ACTION_COLOR_PICKER]);
@@ -908,16 +927,16 @@ void swMainWindow::CreateToolBars()
 	tabifyDockWidget(mPartsToolBar, mPropertiesToolBar);
 	tabifyDockWidget(mPropertiesToolBar, mTimelineToolBar);
 	tabifyDockWidget(mTimelineToolBar, mPreviewToolBar);
-	mPosesToolBar = new QDockWidget(tr("Poses"), this);
-	mPosesToolBar->setObjectName("PosesToolbar");
-	mPosesWidget = new swPosesWidget(mPosesToolBar);
-	mPosesToolBar->setWidget(mPosesWidget);
-	addDockWidget(Qt::RightDockWidgetArea, mPosesToolBar);
-	mPosesToolBar->hide();
+	mJointsToolBar = new QDockWidget(tr("Joints"), this);
+	mJointsToolBar->setObjectName("JointsToolbar");
+	mJointsWidget = new swJointsWidget(mJointsToolBar);
+	mJointsToolBar->setWidget(mJointsWidget);
+	addDockWidget(Qt::RightDockWidgetArea, mJointsToolBar);
+	mJointsToolBar->hide();
 
 	tabifyDockWidget(mPreviewToolBar, mMinifigureBuilderToolBar);
 	tabifyDockWidget(mMinifigureBuilderToolBar, mExplodeToolBar);
-	tabifyDockWidget(mExplodeToolBar, mPosesToolBar);
+	tabifyDockWidget(mExplodeToolBar, mJointsToolBar);
 
 	connect(mPropertiesToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 	connect(mTimelineToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
@@ -925,7 +944,7 @@ void swMainWindow::CreateToolBars()
 	connect(mColorsToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 	connect(mMinifigureBuilderToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 	connect(mExplodeToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
-	connect(mPosesToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
+	connect(mJointsToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 
 	mPartsToolBar->raise();
 }

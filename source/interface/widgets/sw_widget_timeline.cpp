@@ -132,10 +132,11 @@ void swTimelineWidget::Update(bool Clear, bool UpdateItems)
 				delete StepItem->child(ChildIdx);
 	}
 
+	// one empty step to add parts into
 	swStep LastStep = Model->GetLastStep();
 	if (Model->HasParts())
 		LastStep++;
-	LastStep  = swMaximum(LastStep, Model->GetCurrentStep());
+	LastStep = swMaximum(LastStep, Model->GetCurrentStep());
 
 	for (int TopLevelItemIdx = LastStep; TopLevelItemIdx < topLevelItemCount(); )
 	{

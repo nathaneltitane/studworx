@@ -244,17 +244,18 @@ public:
 };
 
 // Joint rotation of a placed submodel, by model file and part index.
-struct swPoseJoint
+struct swJointAngle
 {
 	QString Model;
 	int Index = 0;
 	swVector3 Rotation = swVector3(0.0f, 0.0f, 0.0f);
+	int Joint = 0;
 };
 
 struct swPose
 {
 	QString Name;
-	std::vector<swPoseJoint> Joints;
+	std::vector<swJointAngle> Joints;
 };
 
 struct swModelHistoryEntry
@@ -375,7 +376,7 @@ public:
 		mInstructionLines = InstructionLines;
 	}
 
-	// Saved poses stay with the main model.
+	// Saved poses of the joints in this model.
 	const std::vector<swPose>& GetPoses() const
 	{
 		return mPoses;
@@ -388,14 +389,31 @@ public:
 
 	swPose GetCurrentPose(const QString& Name) const;
 	void ApplyPoseBlend(const swPose& From, const swPose& To, float Fraction);
-	void RecallPoseAction(const swPose& Pose);
+	void RecallPoseAction(swModel* Owner, const swPose& Pose);
+	static void DistributePoses(const std::vector<std::unique_ptr<swModel>>& Models);
 
 	// Joint tools, true when a drag starts.
-	void StartJointPick();
-	bool PoseToolClicked(const swVector3& Start, const swVector3& End, const swVector3& Right, const swVector3& Up);
-	void UpdatePoseTool(float DeltaX, float DeltaY);
-	void EndPoseTool(bool Accept);
+	void SetJointPick(bool Pick);
+	void SetJointRotate(bool Rotate);
+	void UpdateJointRotate();
+	swPart* GetRotateJoint() const;
+	bool RotateJoint(swPart* Part, const swMatrix33& WorldRotation);
+	bool IsJointPick() const
+	{
+		return mJointPick;
+	}
+	bool JointsToolClicked(const swVector3& Start, const swVector3& End, const swVector3& Right, const swVector3& Up);
+	void UpdateJointsTool(float DeltaX, float DeltaY);
+	void EndJointsTool(bool Accept);
 	swPart* GetJointPart() const;
+	size_t GetJointIndex() const;
+	void SetJointIndex(const swPart* Part, size_t Index)
+	{
+		mJointIndexPart = Part;
+		mJointIndex = Index;
+	}
+	bool UpdateJointHover(const swVector3& Start, const swVector3& End);
+	void AddJointHighlight(swScene* Scene, const swMatrix44& Transform) const;
 	void SetJointAxisAction(swPart* Part, int Axis);
 	void ClearJointAction(swPart* Part);
 
@@ -467,6 +485,7 @@ public:
 
 	void SaveLDraw(QTextStream& Stream, bool SelectedOnly, swStep LastStep) const;
 	void LoadLDraw(QIODevice& Device, Project* Project);
+	void ReadPoseLine(const QString& Line);
 	bool LoadBinary(swFile* File);
 	bool LoadLDD(const QString& FileData);
 	bool LoadInventory(const std::vector<swSetInventoryItem>& SetInventory);
@@ -688,10 +707,10 @@ protected:
 	bool FlattenSubModels(bool SelectedOnly, swPart*& Anchor, std::vector<swObject*>& Selection);
 	void SetModelProperties(const swModelProperties& ModelProperties);
 
-	// Pose edits cover every model.
-	void BeginPoseEdit();
-	void EndPoseEdit(const QString& Description, bool Accept);
-	bool PoseRayTest(const swVector3& Start, const swVector3& End, float& Distance, std::vector<std::pair<swModel*, swPart*>>& Chain, std::vector<std::pair<swModel*, swPart*>>& Hit);
+	// Joint edits cover every model.
+	void BeginJointsEdit();
+	void EndJointsEdit(const QString& Description, bool Accept);
+	bool JointsRayTest(const swVector3& Start, const swVector3& End, float& Distance, std::vector<std::pair<swModel*, swPart*>>& Chain, std::vector<std::pair<swModel*, swPart*>>& Hit);
 
 	void RunHistorySequence(const std::vector<std::unique_ptr<swModelHistory>>& HistorySequence, bool Apply);
 	void BeginHistorySequence();
@@ -748,13 +767,18 @@ protected:
 	bool mHasDirectGeometry = false;
 
 	std::vector<std::unique_ptr<swModelHistory>> mHistorySequence;
-	std::vector<std::pair<swModel*, std::unique_ptr<swModelHistoryEdit>>> mPoseEdits;
+	std::vector<std::pair<swModel*, std::unique_ptr<swModelHistoryEdit>>> mJointsEdits;
 	bool mJointPick = false;
-	swPart* mPoseJoint = nullptr;
-	swVector3 mPoseStartRotation;
-	swMatrix33 mPoseWorldRotation;
-	swVector3 mPoseRight;
-	swVector3 mPoseUp;
+	const swPart* mJointRotate = nullptr;
+	std::vector<const swPart*> mJointHover;
+	swPart* mJointsJoint = nullptr;
+	size_t mJointsJointIndex = 0;
+	size_t mJointIndex = 0;
+	const swPart* mJointIndexPart = nullptr;
+	swVector3 mJointsStartRotation;
+	swMatrix33 mJointsWorldRotation;
+	swVector3 mJointsRight;
+	swVector3 mJointsUp;
 	swObjectPropertyId mActivePropertyEdit = swObjectPropertyId::Count;
 	quint64 mSavedHistoryRevision = 0;
 	quint64 mNextHistoryRevision = 1;

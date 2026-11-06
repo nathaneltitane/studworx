@@ -13,7 +13,9 @@ enum class swRenderMeshState : int
 	Focused,
 	Preview,
 	Faded,
-	Highlighted
+	Highlighted,
+	FadedInline,
+	FadedJoint
 };
 
 struct swRenderMesh
@@ -23,6 +25,7 @@ struct swRenderMesh
 	int ColorIndex;
 	int LodIndex;
 	swRenderMeshState State;
+	swVector4 FadeColor;
 };
 
 struct swTranslucentMeshInstance
@@ -52,6 +55,16 @@ public:
 	swPart* GetActiveSubmodelInstance() const
 	{
 		return mActiveSubmodelInstance;
+	}
+
+	void SetJointFadePart(const swPart* JointFadePart)
+	{
+		mJointFadePart = JointFadePart;
+	}
+
+	const swPart* GetJointFadePart() const
+	{
+		return mJointFadePart;
 	}
 
 	const swMatrix44& GetViewMatrix() const
@@ -171,8 +184,7 @@ public:
 
 	void SetFadeColor(quint32 FadeColor)
 	{
-		mFadeColor = swVector4FromColor(swClampStepColorAlpha(FadeColor));
-		mTranslucentFade = mFadeColor.w != 1.0f;
+		mFadeColor = swVector4FromColor(swClampFadeColorAlpha(FadeColor));
 	}
 
 	const swVector4& GetHighlightColor() const
@@ -208,6 +220,7 @@ protected:
 	swMatrix44 mViewMatrix;
 	swMatrix44 mActiveSubmodelTransform;
 	swPart* mActiveSubmodelInstance = nullptr;
+	const swPart* mJointFadePart = nullptr;
 	std::vector<swModel*> mModelEditingPath;
 	swShadingMode mShadingMode;
 	swLightingStyle mLightingStyle;
@@ -227,6 +240,8 @@ protected:
 	float mMeshLODDistance;
 
 	swVector4 mFadeColor;
+	swVector4 mFadeInlineColor;
+	swVector4 mFadeJointColor;
 	swVector4 mHighlightColor;
 	bool mHasFadedParts = false;
 	bool mTranslucentFade = false;

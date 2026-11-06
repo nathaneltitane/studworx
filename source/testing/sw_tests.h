@@ -24,7 +24,7 @@ private slots:
 	void ShadowParsesJointKinds();
 	void ShadowPlacesSubFileJoint();
 	void PoseBlendsRotations();
-	void PoseJointSavesAndLoads();
+	void PoseSavesAndLoads();
 	void ConnectivityFitsShapesAlongTheirAxis();
 	void ConnectivityConnectsSeatedShapes();
 	void POVRayRendersExport();
@@ -41,5 +41,7 @@ private slots:
 	void AxisAlignedRotations();
 	void AxisAlignedRotationTolerance();
 	void ProfileBatchSavesOnce();
+	void ProfileWritesEveryKey();
+	void ContextMenuDefaultResolves();
 	void OpenLXFMLImportsModel();
 };

@@ -19,6 +19,7 @@ HEADERS += \
 
 SOURCES += \
 	../application/sw_profile.cpp \
+	../application/sw_commands.cpp \
 	../core/sw_connectivity.cpp \
 	../core/sw_object_property.cpp \
 	../transput/sw_command_meta.cpp \
@@ -29,7 +30,7 @@ SOURCES += \
 	sw_model_flatten_test.cpp \
 	sw_object_history_test.cpp \
 	sw_object_property_test.cpp \
-	sw_pose_test.cpp \
+	sw_joints_test.cpp \
 	sw_profile_test.cpp \
 	sw_project_export_test.cpp \
 	sw_project_import_test.cpp \

@@ -72,7 +72,12 @@ void swPreferences::LoadDefaults()
 	mAllowLOD = swGetProfileInteger(SW_PROFILE_ALLOW_LOD);
 	mMeshLODDistance = swGetProfileFloat(SW_PROFILE_LOD_DISTANCE);
 	mFadeSteps = swGetProfileInteger(SW_PROFILE_FADE_STEPS);
-	mFadeStepsColor = swClampStepColorAlpha(swGetProfileUnsignedInteger(SW_PROFILE_FADE_STEPS_COLOR));
+	mFadeStepsColor = swClampFadeColorAlpha(swGetProfileUnsignedInteger(SW_PROFILE_FADE_STEPS_COLOR));
+	mFadeInline = swGetProfileInteger(SW_PROFILE_FADE_INLINE);
+	mFadeInlineColor = swGetProfileUnsignedInteger(SW_PROFILE_FADE_INLINE_COLOR);
+	mFadeJoint = swGetProfileInteger(SW_PROFILE_FADE_JOINT);
+	mFadeJointColor = swGetProfileUnsignedInteger(SW_PROFILE_FADE_JOINT_COLOR);
+	mFadeJointMoving = swGetProfileInteger(SW_PROFILE_FADE_JOINT_MOVING);
 	mHighlightNewParts = swGetProfileInteger(SW_PROFILE_HIGHLIGHT_NEW_PARTS);
 	mHighlightNewPartsColor = swClampStepColorAlpha(swGetProfileUnsignedInteger(SW_PROFILE_HIGHLIGHT_NEW_PARTS_COLOR));
 	mDrawGridStuds = swGetProfileInteger(SW_PROFILE_GRID_STUDS);
@@ -82,6 +87,7 @@ void swPreferences::LoadDefaults()
 	mGridLineColor = swGetProfileUnsignedInteger(SW_PROFILE_GRID_LINE_COLOR);
 	mDrawGridOrigin = swGetProfileInteger(SW_PROFILE_GRID_ORIGIN);
 	mDrawGridNegativeAxes = swGetProfileInteger(SW_PROFILE_GRID_NEGATIVE_AXES);
+	mGridEnabled = swGetProfileInteger(SW_PROFILE_GRID_ENABLED);
 	mDrawGridHeightXZ = swGetProfileInteger(SW_PROFILE_GRID_HEIGHT_XZ);
 	mDrawGridHeightYZ = swGetProfileInteger(SW_PROFILE_GRID_HEIGHT_YZ);
 	mGridHeightBehindModel = swGetProfileInteger(SW_PROFILE_GRID_HEIGHT_BEHIND_MODEL);
@@ -104,6 +110,8 @@ void swPreferences::LoadDefaults()
 	mAutoLoadMostRecent = swGetProfileInteger(SW_PROFILE_AUTO_LOAD_MOST_RECENT);
 	mRestoreTabLayout = swGetProfileInteger(SW_PROFILE_RESTORE_TAB_LAYOUT);
 	mFirstPartAtOrigin = swGetProfileInteger(SW_PROFILE_FIRST_PART_AT_ORIGIN);
+	mJointRotation = swGetProfileInteger(SW_PROFILE_JOINT_ROTATION);
+	mContextMenu = swGetProfileStringList(SW_PROFILE_CONTEXT_MENU);
 	mShadowLibraryEnabled = swGetProfileInteger(SW_PROFILE_SHADOW_LIBRARY_ENABLED);
 	mPartsSnapToTiles = swGetProfileInteger(SW_PROFILE_PARTS_SNAP_TO_TILES);
 	mTerminalFollowModel = swGetProfileInteger(SW_PROFILE_TERMINAL_FOLLOW_MODEL);
@@ -190,6 +198,11 @@ void swPreferences::SaveDefaults()
 	swSetProfileFloat(SW_PROFILE_LOD_DISTANCE, mMeshLODDistance);
 	swSetProfileInteger(SW_PROFILE_FADE_STEPS, mFadeSteps);
 	swSetProfileUnsignedInteger(SW_PROFILE_FADE_STEPS_COLOR, mFadeStepsColor);
+	swSetProfileInteger(SW_PROFILE_FADE_INLINE, mFadeInline);
+	swSetProfileUnsignedInteger(SW_PROFILE_FADE_INLINE_COLOR, mFadeInlineColor);
+	swSetProfileInteger(SW_PROFILE_FADE_JOINT, mFadeJoint);
+	swSetProfileUnsignedInteger(SW_PROFILE_FADE_JOINT_COLOR, mFadeJointColor);
+	swSetProfileInteger(SW_PROFILE_FADE_JOINT_MOVING, mFadeJointMoving);
 	swSetProfileInteger(SW_PROFILE_HIGHLIGHT_NEW_PARTS, mHighlightNewParts);
 	swSetProfileUnsignedInteger(SW_PROFILE_HIGHLIGHT_NEW_PARTS_COLOR, mHighlightNewPartsColor);
 	swSetProfileInteger(SW_PROFILE_GRID_STUDS, mDrawGridStuds);
@@ -199,6 +212,7 @@ void swPreferences::SaveDefaults()
 	swSetProfileUnsignedInteger(SW_PROFILE_GRID_LINE_COLOR, mGridLineColor);
 	swSetProfileInteger(SW_PROFILE_GRID_ORIGIN, mDrawGridOrigin);
 	swSetProfileInteger(SW_PROFILE_GRID_NEGATIVE_AXES, mDrawGridNegativeAxes);
+	swSetProfileInteger(SW_PROFILE_GRID_ENABLED, mGridEnabled);
 	swSetProfileInteger(SW_PROFILE_GRID_HEIGHT_XZ, mDrawGridHeightXZ);
 	swSetProfileInteger(SW_PROFILE_GRID_HEIGHT_YZ, mDrawGridHeightYZ);
 	swSetProfileInteger(SW_PROFILE_GRID_HEIGHT_BEHIND_MODEL, mGridHeightBehindModel);
@@ -221,6 +235,8 @@ void swPreferences::SaveDefaults()
 	swSetProfileInteger(SW_PROFILE_AUTO_LOAD_MOST_RECENT, mAutoLoadMostRecent);
 	swSetProfileInteger(SW_PROFILE_RESTORE_TAB_LAYOUT, mRestoreTabLayout);
 	swSetProfileInteger(SW_PROFILE_FIRST_PART_AT_ORIGIN, mFirstPartAtOrigin);
+	swSetProfileInteger(SW_PROFILE_JOINT_ROTATION, mJointRotation);
+	swSetProfileStringList(SW_PROFILE_CONTEXT_MENU, mContextMenu);
 	swSetProfileInteger(SW_PROFILE_SHADOW_LIBRARY_ENABLED, mShadowLibraryEnabled);
 	swSetProfileInteger(SW_PROFILE_PARTS_SNAP_TO_TILES, mPartsSnapToTiles);
 	swSetProfileInteger(SW_PROFILE_TERMINAL_FOLLOW_MODEL, mTerminalFollowModel);
@@ -352,6 +368,7 @@ swApplication::swApplication(int& Argc, char** Argv)
 	mDefaultPalette = QApplication::palette();
 
 	swProfileInitialize();
+	swProfileWriteMissing();
 
 	mPreferences.LoadDefaults();
 

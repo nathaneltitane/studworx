@@ -59,6 +59,11 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "LODDistance", 750.0f),                                                     // SW_PROFILE_LOD_DISTANCE
 	swProfileEntry("Settings", "FadeSteps", false),                                                        // SW_PROFILE_FADE_STEPS
 	swProfileEntry("Settings", "FadeStepsColor", SW_RGBA(0, 0, 0, 217)),                                   // SW_PROFILE_FADE_STEPS_COLOR #000000d9
+	swProfileEntry("Settings", "FadeInline", true),                                                       // SW_PROFILE_FADE_INLINE
+	swProfileEntry("Settings", "FadeInlineColor", SW_RGBA(255, 255, 255, 77)),                            // SW_PROFILE_FADE_INLINE_COLOR #ffffff4d
+	swProfileEntry("Settings", "FadeJoint", true),                                                        // SW_PROFILE_FADE_JOINT
+	swProfileEntry("Settings", "FadeJointColor", SW_RGBA(255, 255, 255, 77)),                             // SW_PROFILE_FADE_JOINT_COLOR #ffffff4d
+	swProfileEntry("Settings", "FadeJointMoving", false),                                                 // SW_PROFILE_FADE_JOINT_MOVING
 	swProfileEntry("Settings", "HighlightNewParts", 0),                                                   // SW_PROFILE_HIGHLIGHT_NEW_PARTS
 	swProfileEntry("Settings", "HighlightNewPartsColor", SW_RGBA(255, 85, 0, 217)),                       // SW_PROFILE_HIGHLIGHT_NEW_PARTS_COLOR #ff5500d9
 	swProfileEntry("Settings", "ShadingMode", static_cast<int>(swShadingMode::DefaultLights)),             // SW_PROFILE_SHADING_MODE
@@ -108,6 +113,7 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "GridLineColor", SW_RGBA(42, 46, 50, 255)),                                 // SW_PROFILE_GRID_LINE_COLOR #2a2e32ff
 	swProfileEntry("Settings", "GridOrigin", 0),                                                           // SW_PROFILE_GRID_ORIGIN
 	swProfileEntry("Settings", "GridNegativeAxes", 1),                                                     // SW_PROFILE_GRID_NEGATIVE_AXES
+	swProfileEntry("Settings", "GridEnabled", true),                                                       // SW_PROFILE_GRID_ENABLED
 	swProfileEntry("Settings", "GridHeightXZ", 0),                                                         // SW_PROFILE_GRID_HEIGHT_XZ
 	swProfileEntry("Settings", "GridHeightYZ", 0),                                                         // SW_PROFILE_GRID_HEIGHT_YZ
 	swProfileEntry("Settings", "GridHeightBehindModel", 0),                                                // SW_PROFILE_GRID_HEIGHT_BEHIND_MODEL
@@ -165,6 +171,8 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "OrbitSnap", false),                                            // SW_PROFILE_ORBIT_SNAP
 	swProfileEntry("Settings", "StatusBarSegments", 31),                                       // SW_PROFILE_STATUS_BAR_SEGMENTS
 	swProfileEntry("Settings", "FirstPartAtOrigin", false),                                   // SW_PROFILE_FIRST_PART_AT_ORIGIN
+	swProfileEntry("Settings", "JointRotation", false),                                       // SW_PROFILE_JOINT_ROTATION
+	swProfileEntry("Settings", "ContextMenu", QStringList()),                                 // SW_PROFILE_CONTEXT_MENU
 	swProfileEntry("Settings", "TerminalFollowModel", true),                                   // SW_PROFILE_TERMINAL_FOLLOW_MODEL
 	swProfileEntry("Settings", "InsertColorMode", 0),                                          // SW_PROFILE_INSERT_COLOR_MODE
 	swProfileEntry("Settings", "FlexSpreadMode", 1),                                           // SW_PROFILE_FLEX_SPREAD_MODE
@@ -384,6 +392,20 @@ static void swSetProfileValue(const swProfileEntry& Entry, const QVariant& Value
 void swProfileInitialize()
 {
 	gProfileEntries[SW_PROFILE_PROJECTS_PATH].mDefault = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation);
+}
+
+// every setting gets a line in the settings file
+void swProfileWriteMissing()
+{
+	QSettings Settings;
+
+	for (const swProfileEntry& Entry : gProfileEntries)
+	{
+		const QString Name = QString("%1/%2").arg(Entry.mSection, Entry.mKey);
+
+		if (!Settings.contains(Name))
+			Settings.setValue(Name, std::visit([](const auto& Value) { return QVariant::fromValue(Value); }, Entry.mDefault));
+	}
 }
 
 void swRemoveProfileKey(SW_PROFILE_KEY Key)

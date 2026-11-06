@@ -1558,11 +1558,11 @@
 			</figure>
 
 			<ul class="points">
-				<li><b>Contextual <a href="#help">help</a>.</b> Choose Help &gt; What&#x27;s This? or click the question mark in a title bar, then click any control to read what it does. F1 explains the focused control, Shift+F1 starts What&#x27;s This inside a dialog, and every entry is listed in the Help index below.</li>
+				<li><b>Tabs, splits and status bar.</b> Open several <a href="#models">models</a> in tabs, split the view, go Full Screen, and read the view orientation, projection and focus position in the status bar, with the name, ID and weight of the selected part, a submodel reading ID N/A and the total weight of its parts when all of them have one. Right click the status bar to show or hide each segment.</li>
+				<li><b>Contextual <a href="#help">help</a>.</b> Choose Help &gt; &quot;What&#x27;s This?&quot; or click the question mark in a title bar, then click any control to read what it does. F1 explains the focused control, Shift+F1 starts &quot;What&#x27;s This?&quot; inside a dialog, and every entry is listed in the Help index below.</li>
 				<li><b>Split views.</b> Split the current view horizontally or vertically, as often as you like, remove one view, or Reset Views back to one. Each view keeps its own camera and projection, a border marks the active one, and the view cube and axis icon stay on the top left view.</li>
-				<li><b>Tabs, splits and status bar.</b> Open several <a href="#models">models</a> in tabs, split the view, go Full Screen, and read the view orientation, projection and focus position in the status bar, with the name, ID and weight of the selected part. Right click the status bar to show or hide each segment.</li>
 				<li><b>Transform toolbar.</b> Type a position or rotation for the selection and apply it, as absolute coordinates or relative to where it is now. It has no entry of its own: its fields sit at the bottom of the Properties panel, shown with View &gt; Toolbars &gt; Properties.</li>
-				<li><b>Toolbars and panels on demand.</b> View &gt; Toolbars shows or hides each toolbar and panel: Standard, <a href="#tools">Tools</a>, Time, Parts, Colors, Properties, Timeline, Preview, Terminal, Minifigure Builder, Explode and Poses. Close Tab closes the current model tab.</li>
+				<li><b>Toolbars and panels on demand.</b> View &gt; Toolbars shows or hides each toolbar and panel: Standard, <a href="#tools">Tools</a>, Time, Parts, Colors, Properties, Timeline, Preview, Terminal, Minifigure Builder, Explode and Joints. Close Tab closes the current model tab.</li>
 				<li><b>Menus by task.</b> File, Edit, View, Part, <a href="#steps">Steps</a>, Models and Help, with clean labels and a unique mnemonic in each menu. The View menu holds the Toolbars, Viewpoints, Cutaway, Cameras, Projection and Shading submenus.</li>
 				<li><b>Help menu.</b> Home Page opens the StudWorx repository on GitHub, Report a Bug its issues, and About shows the version and system information.</li>
 				<li><b>Options menus.</b> The gear button on the model view and on every panel opens the settings that belong to it: grids, preview, parts and colors.</li>
@@ -1625,7 +1625,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/interface-menu-part.png" aria-label="Enlarge Part">
-						<img src="resources/images/interface-menu-part.png" alt="Part" width="263" height="471" loading="lazy">
+						<img src="resources/images/interface-menu-part.png" alt="Part" width="279" height="282" loading="lazy">
 					</button>
 
 					<figcaption>Part</figcaption>
@@ -1693,7 +1693,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/interface-menu-options-view-grids.png" aria-label="Enlarge View options">
-						<img src="resources/images/interface-menu-options-view-grids.png" alt="View options" width="327" height="438" loading="lazy">
+						<img src="resources/images/interface-menu-options-view-grids.png" alt="View options" width="541" height="256" loading="lazy">
 					</button>
 
 					<figcaption>View options</figcaption>
@@ -2017,7 +2017,7 @@
 
 			<figure class="wide">
 				<button class="shot" data-full="resources/images/rendering-povray.png" aria-label="Enlarge A POV-Ray render">
-					<img src="resources/images/rendering-povray.png" alt="A POV-Ray render" width="3840" height="2131" loading="lazy">
+					<img src="resources/images/rendering-povray.png" alt="A POV-Ray render" width="3840" height="2123" loading="lazy">
 				</button>
 
 				<figcaption>A POV-Ray render</figcaption>
@@ -2185,7 +2185,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/interface-menu-options-view-grids.png" aria-label="Enlarge Part connections">
-						<img src="resources/images/interface-menu-options-view-grids.png" alt="Part connections" width="327" height="438" loading="lazy">
+						<img src="resources/images/interface-menu-options-view-grids.png" alt="Part connections" width="541" height="256" loading="lazy">
 					</button>
 
 					<figcaption>Part connections</figcaption>
@@ -2323,7 +2323,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/tools-menu-tools.png" aria-label="Enlarge Tools menu">
-						<img src="resources/images/tools-menu-tools.png" alt="Tools menu" width="478" height="653" loading="lazy">
+						<img src="resources/images/tools-menu-tools.png" alt="Tools menu" width="478" height="719" loading="lazy">
 					</button>
 
 					<figcaption>Tools menu</figcaption>
@@ -2338,31 +2338,40 @@
 				</figure>
 			</div>
 
-			<h3>Pose mode</h3>
-			<p>Give a placed submodel a joint, turn it with the mouse and save the results as poses, to recall them or play them as an animation.</p>
+			<h3>Joints mode</h3>
+			<p>Give a placed submodel a joint, turn it with the mouse and save the angles as poses of each model, to recall them or play them as an animation.</p>
 
 			<ul class="points">
-				<li><b>Set Joint.</b> Part &gt; Set Joint with one submodel selected, then click a connection of the submodel with the Pose tool. A round shape makes a hinge on its axis, a sphere makes a ball, and a part without shadow data gets a hinge on its origin. The Poses panel shows the joint, with an X, Y or Z axis choice, the angle and Clear Joint. The joint is saved before the placed submodel as <code>0 !SW JOINT PART &lt;HINGE|BALL&gt; &lt;pivot x y z&gt; &lt;axis x y z&gt; &lt;rotation x y z&gt;</code> in LDraw coordinates, and setting and clearing it is undoable.</li>
-				<li><b>Poses panel.</b> View &gt; Toolbars &gt; Poses lists the saved poses. Save stores every joint angle under a name, saving a name again replaces it, Recall puts the angles back in one undo step, and Rename and Delete edit the list. Poses are saved in the first file of the model as <code>0 !SW POSE &quot;&lt;name&gt;&quot; &quot;&lt;submodel file&gt;&quot; &lt;part index&gt; &lt;rx ry rz&gt;</code>, one line per joint.</li>
+				<li><b>Joints panel.</b> View &gt; Toolbars &gt; Joints shows a tree of every model with joints, under it each jointed submodel by name and position (<code>arm-right.ldr 006</code>), and under that each of its joints (<code>Joint 001</code>) with type and angle. Clicking a joint selects its submodel, in its own model, and makes it the joint the panel and the Move and Rotate gizmos work on. Below the tree are the poses of the picked model, which hold that model&#x27;s joints only. Save stores them under a name, saving a name again replaces it, Recall puts the angles back in one undo step, and Rename and Delete edit the list. Poses are saved in their own model&#x27;s file as <code>0 !SW JOINT MODEL &quot;&lt;name&gt;&quot; &quot;&lt;model file&gt;&quot; &lt;part index&gt; &lt;rx ry rz&gt; [joint number]</code>, one line per joint, the joint number left out for the first joint. Older project-wide sets and <code>0 !SW POSE</code> lines still load, split into the <a href="#models">models</a> they belong to.</li>
+				<li><b>Set Joint.</b> Part &gt; Joint &gt; Set with one submodel selected, then click a connection of the submodel with the Joints tool, which shows the Set Joint pointer and outlines the part under it in red. The click sets the joint and goes back to the Select tool. A submodel can hold several joints: Set again at another connection adds one, and Set at a joint already there resets it. During the pick only the selected submodel takes clicks, so you can pick through other submodels in front of it. A round shape makes a hinge on its axis, a sphere makes a ball, and a part without shadow data gets a hinge on its origin. The Joints panel shows the joint, with an X, Y or Z axis choice, the angle and Clear Joint. Each joint is saved before the placed submodel, one line per joint, as <code>0 !SW JOINT PART &lt;HINGE|BALL&gt; &lt;pivot x y z&gt; &lt;axis x y z&gt; &lt;rotation x y z&gt;</code> in LDraw coordinates, and setting and clearing it is undoable.</li>
+				<li><b>Joint Move and Rotate.</b> Part &gt; Joint &gt; Move or Rotate, also in the right-click menu of the model view, switches to the Move or Rotate tool with the gizmo on the pivot of the selected submodel&#x27;s picked joint, lined up with a hinge axis in relative mode. The move gizmo gets a red hexagon like a cube outline and the rotate gizmo a red outer ring. The rotate keys and the Rotate tool then turn the joint around its pivot and axis instead of the pivot point, saving the turn as the joint angle; a hinge only turns about its axis. Selecting something else goes back to the pivot point. Use Joint Rotation under General &gt; Editing in the preferences does this whenever a selected submodel has a joint.</li>
+				<li><b>Joints tool.</b> Next to Rotate in the Tools toolbar, and the Joint menu is also in the right-click menu of the model view. With one submodel selected, the parts holding its joints are outlined in red, and a right click goes back to the Select tool. Click down into submodels to take the innermost one with a joint and drag; on a submodel with several joints, the joint nearest the click turns. A hinge turns about its axis by the horizontal drag, a ball turns about the screen up and right directions. Rotation Snap applies and one drag is one undo step.</li>
 				<li><b>Joints from the shadow library.</b> SNAP_CYL round shapes become hinges, and SNAP_CLP clips, SNAP_FGR fingers and SNAP_GEN spheres (<code>bounding=sph</code>) are read as well. Only SNAP_CYL shapes take part in part connections. Shapes in sub-files of a part, and their placement and mirroring, are followed the same way.</li>
-				<li><b>Pose tool.</b> Next to Rotate in the Tools toolbar. Click down into submodels to take the innermost one with a joint and drag. A hinge turns about its axis by the horizontal drag, a ball turns about the screen up and right directions. Rotation Snap applies and one drag is one undo step.</li>
-				<li><b>Poses motion.</b> File &gt; <a href="#image">Image</a> &gt; Animated GIF with Motion Poses blends through the saved poses in order and back to the first, Frames per pose change, with Frame Rate and Hold Last. Hinges blend their angle, balls blend along the shortest turn.</li>
+				<li><b>Joints motion.</b> File &gt; <a href="#image">Image</a> &gt; Animated GIF with Motion Joints blends through the poses of the main model in order and back to the first, with Frames between two poses, Frame Rate and Hold Last. Hinges blend their angle, balls blend along the shortest turn.</li>
 			</ul>
 
 			<figure>
-				<button class="shot" data-full="resources/images/tools-poses.gif" aria-label="Enlarge Poses animation of a minifigure">
-					<img src="resources/images/tools-poses.gif" alt="Poses animation of a minifigure" width="600" height="600" loading="lazy">
+				<button class="shot" data-full="resources/images/tools-joints.gif" aria-label="Enlarge Joints animation of a minifigure">
+					<img src="resources/images/tools-joints.gif" alt="Joints animation of a minifigure" width="600" height="600" loading="lazy">
 				</button>
 
-				<figcaption>Poses animation of a minifigure</figcaption>
+				<figcaption>Joints animation of a minifigure</figcaption>
 			</figure>
 
 			<figure>
-				<button class="shot" data-full="resources/images/tools-poses-motion.png" aria-label="Enlarge Save Image with Motion Poses">
-					<img src="resources/images/tools-poses-motion.png" alt="Save Image with Motion Poses" width="1305" height="1178" loading="lazy">
+				<button class="shot" data-full="resources/images/tools-joints-motion.png" aria-label="Enlarge Save Image with Motion Joints">
+					<img src="resources/images/tools-joints-motion.png" alt="Save Image with Motion Joints" width="1305" height="1178" loading="lazy">
 				</button>
 
-				<figcaption>Save Image with Motion Poses</figcaption>
+				<figcaption>Save Image with Motion Joints</figcaption>
+			</figure>
+
+			<figure>
+				<button class="shot" data-full="resources/images/interface-menu-part.png" aria-label="Enlarge Part &gt; Joint">
+					<img src="resources/images/interface-menu-part.png" alt="Part &gt; Joint" width="279" height="282" loading="lazy">
+				</button>
+
+				<figcaption>Part &gt; Joint</figcaption>
 			</figure>
 		</section>
 
@@ -2377,7 +2386,7 @@
 			<ul class="points">
 				<li><b>Cutaways.</b> Cube, sphere and cylinder cutaways with solid cut surfaces, a shaded cut and resize knobs, pushed in or pulled out by one plate. The cutaway is saved with the model and comes back when the file opens, and the parts themselves are never changed.</li>
 				<li><b>Cut edges.</b> With edge lines on, the cut draws edge lines in each part&#x27;s edge color where it meets the outer faces, and thinner lines along the corners of the cut faces. Cut Edges in <a href="#preferences">Preferences</a> &gt; Views &gt; Cutaway turns them off.</li>
-				<li><b>Grids.</b> A base grid with studs, lines and origin lines, vertical XZ and YZ height grids sized around the model, shown with the base grid and greyed out in the view options while it is off, and a toggle for each axis line.</li>
+				<li><b>Grids.</b> A base grid with studs, lines and origin lines, vertical XZ and YZ height grids sized around the model, each grid with its own toggle and All Grids to turn them on or off together, and a toggle for each axis line.</li>
 				<li><b>View cube settings.</b> Shown in any corner of the view, in Extra Small to Extra Large, with its own face, highlight and text colors, and small full names or large abbreviations (TP, BT, LT, RT, FT, BK) on its faces.</li>
 				<li><b>Cutaway controls.</b> Grow and Shrink resize the cutaway, Push In and Pull Out move it one plate, Shade Color sets the light shade on the cut faces, and Remove shows the whole model again.</li>
 				<li><b>Idle turntable.</b> The model turns full screen around the X, Y or Z axis when you leave StudWorx idle. Any input ends it. The idle time and the time for one turn are set in Preferences.</li>
@@ -2402,7 +2411,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/interface-menu-options-view-grids.png" aria-label="Enlarge Grids">
-						<img src="resources/images/interface-menu-options-view-grids.png" alt="Grids" width="327" height="438" loading="lazy">
+						<img src="resources/images/interface-menu-options-view-grids.png" alt="Grids" width="541" height="256" loading="lazy">
 					</button>
 
 					<figcaption>Grids</figcaption>
@@ -2410,7 +2419,7 @@
 
 				<figure>
 					<button class="shot" data-full="resources/images/interface-menu-options-view-grids-off.png" aria-label="Enlarge Grids with the base grid off">
-						<img src="resources/images/interface-menu-options-view-grids-off.png" alt="Grids with the base grid off" width="327" height="438" loading="lazy">
+						<img src="resources/images/interface-menu-options-view-grids-off.png" alt="Grids with the base grid off" width="541" height="256" loading="lazy">
 					</button>
 
 					<figcaption>Grids with the base grid off</figcaption>
@@ -2519,9 +2528,9 @@
 			<p class="lead">Every part belongs to a building step. Steps drive the model view, the <a href="#instructions">instructions</a> and the animated GIFs.</p>
 
 			<ul class="points">
+				<li><b>Emphasis.</b> Highlight New Parts and Fade Previous Steps in the model view and the instructions, with a color for each, and an empty step fades nothing. Fade on Edit tints the rest of the model with the edit fade color while you edit a submodel in place. When it is off, the rest of the model keeps its own colors, slightly translucent. Fade on Joint Set tints every other submodel while you pick a joint, and Fade on Joint Move and Rotate keeps it on while you move or rotate in that mode. All five are under Steps and Highlighting in the view gear menu.</li>
 				<li><b>Step view commands.</b> Step View sets the view rotation of the current step, Remove Step View clears it, and Follow Step <a href="#views">Views</a> turns the view to each step&#x27;s rotation as you change steps.</li>
 				<li><b>Timeline.</b> Shows the step each part is added in and removed in. An empty removal step reads Never. Drag parts between steps or reorder them.</li>
-				<li><b>Emphasis.</b> Fade Previous Steps and Highlight New Parts in the model view and the instructions, with a color for each.</li>
 				<li><b>Animation keys.</b> Add Keys records new animation keys for parts, lights and cameras as you change them.</li>
 				<li><b>Move and paste.</b> Move the selection to the current, previous or next step, and paste with its steps.</li>
 				<li><b>Steps menu.</b> Go to the first, previous, next or last step, and insert or remove steps.</li>
@@ -2554,6 +2563,14 @@
 				</figure>
 
 				<figure>
+					<button class="shot" data-full="resources/images/interface-menu-options-view-steps.png" aria-label="Enlarge Steps and Highlighting">
+						<img src="resources/images/interface-menu-options-view-steps.png" alt="Steps and Highlighting" width="563" height="256" loading="lazy">
+					</button>
+
+					<figcaption>Steps and Highlighting</figcaption>
+				</figure>
+
+				<figure>
 					<button class="shot" data-full="resources/images/steps-emphasis.png" aria-label="Enlarge Fade and highlight">
 						<img src="resources/images/steps-emphasis.png" alt="Fade and highlight" width="1200" height="1500" loading="lazy">
 					</button>
@@ -2580,15 +2597,15 @@
 			</figure>
 
 			<ul class="points">
+				<li><b>Joints.</b> The picked joint of the selected submodel with its axis and Clear Joint, the tree of <a href="#models">models</a>, submodels and their joints, and the poses of the picked model with Save, Recall, Rename and Delete.</li>
 				<li><b>Parts.</b> Categories and palettes with a filter. The panel snaps to whole thumbnail tiles and rows, docked or floating, and the tooltip of each part shows its name, ID and weight.</li>
-				<li><b>Poses.</b> The joint of the selected submodel with its axis and Clear Joint, and the saved poses with Save, Recall, Rename and Delete.</li>
 				<li><b>Properties.</b> Compact position, rotation and transform rows and a spanning color swatch. Lights and cameras get named rows with units.</li>
 				<li><b>Terminal folders.</b> Follow Model Folder moves the terminal to the folder of each model you open, and Go to Model Folder moves it there once.</li>
 				<li><b>Part palettes.</b> Create, rename, reorder and delete palettes, import them, or build one from an online set inventory.</li>
 				<li><b>Colors.</b> Collapsible solid, translucent and special color groups with square color tiles.</li>
 				<li><b>Terminal.</b> An embedded terminal sized to whole rows and columns, with Open Model Folder.</li>
 				<li><b>Minifigure Builder.</b> Build a minifigure from templates and add several variations to the model.</li>
-				<li><b>Preview.</b> Parts and <a href="#models">models</a> in a square viewport, with Keep Last Selection.</li>
+				<li><b>Preview.</b> Parts and models in a square viewport, with Keep Last Selection.</li>
 			</ul>
 
 			<div class="gallery natural">
@@ -2641,11 +2658,11 @@
 				</figure>
 
 				<figure>
-					<button class="shot" data-full="resources/images/panels-poses.png" aria-label="Enlarge Poses">
-						<img src="resources/images/panels-poses.png" alt="Poses" width="533" height="284" loading="lazy">
+					<button class="shot" data-full="resources/images/panels-joints.png" aria-label="Enlarge Joints">
+						<img src="resources/images/panels-joints.png" alt="Joints" width="535" height="560" loading="lazy">
 					</button>
 
-					<figcaption>Poses</figcaption>
+					<figcaption>Joints</figcaption>
 				</figure>
 			</div>
 
@@ -2845,6 +2862,7 @@
 
 			<ul class="points">
 				<li><b>General.</b> Reference paths, where the color configurations, minifigure builder settings and BrickLink mapping update from ldraw.org and Rebrickable with one button and bundled copies are used until a file is set, online services, where the Rebrickable API key is kept and Get Key opens its page, a rejected key being cleared so it is asked for again, the author of new <a href="#models">models</a> built from a name, email address and comment, such as All rights reserved, joined by the author line splitter and previewed as the author line, and the parts library, Blender, POV-Ray and LGEO locations.</li>
+				<li><b>Context Menu.</b> The right-click menu of the model view is yours to arrange, in its own tab before Keyboard. Add commands and menus from the list on the left with the arrow, a double click or a drag, reorder them with Up, Down or a drag, and add separators and named submenus, rename or remove entries, or reset to the default layout. Control point commands only show on flexible parts, and empty submenus are left out.</li>
 				<li><b>View colors.</b> Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, Flex Paths, the view cube, every axis, and the element margin, padding and anchor overlays and the ruler pointer arrows of the <a href="#instructions">instructions</a> page, each with an alpha slider.</li>
 				<li><b>Startup and <a href="#files">files</a>.</b> Open the most recent file, restore the tab layout, load all parts before showing a model, watch for file changes and ask, migrate or keep LeoCAD models when opened.</li>
 				<li><b>Keyboard and Mouse.</b> Shortcuts recorded by clicking, importable and exportable. Commands that share a shortcut show in red, and assigning a taken shortcut asks before moving it.</li>
@@ -2902,6 +2920,14 @@
 					</button>
 
 					<figcaption>Categories</figcaption>
+				</figure>
+
+				<figure>
+					<button class="shot" data-full="resources/images/preferences-context-menu.png" aria-label="Enlarge Context Menu">
+						<img src="resources/images/preferences-context-menu.png" alt="Context Menu" width="960" height="2051" loading="lazy">
+					</button>
+
+					<figcaption>Context Menu</figcaption>
 				</figure>
 
 				<figure>
@@ -3119,7 +3145,7 @@
 							<tr><td><code>0 !SW PIVOT PART &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;matrix&gt;</code></td><td>Read, Write</td><td>custom pivot point</td></tr>
 							<tr><td><code>0 !SW POSITION_KEY PART &lt;step&gt; &lt;x&gt; &lt;y&gt; &lt;z&gt;</code></td><td>Read, Write</td><td>animated position</td></tr>
 							<tr><td><code>0 !SW ORIENTATION_KEY PART &lt;step&gt; &lt;matrix&gt;</code></td><td>Read, Write</td><td>animated orientation</td></tr>
-							<tr><td><code>0 !SW JOINT PART &lt;HINGE|BALL&gt; &lt;pivot x y z&gt; &lt;axis x y z&gt; &lt;rotation x y z&gt;</code></td><td>Read, Write</td><td>joint of a placed submodel, rotation as a vector in degrees</td></tr>
+							<tr><td><code>0 !SW JOINT PART &lt;HINGE|BALL&gt; &lt;pivot x y z&gt; &lt;axis x y z&gt; &lt;rotation x y z&gt;</code></td><td>Read, Write</td><td>joint of a placed submodel, rotation as a vector in degrees, one line per joint</td></tr>
 						</tbody>
 					</table>
 				</div>
@@ -3193,7 +3219,8 @@
 							<tr><td><code>0 !SW ASSET_SOURCE MODEL &lt;base64 path&gt;</code></td><td>Read, Write</td><td>folder searched for embedded file sources</td></tr>
 							<tr><td><code>0 !SW ASSET_SOURCE_PRIORITY MODEL SOURCE</code></td><td>Read, Write</td><td>search the asset sources before the model folder</td></tr>
 							<tr><td><code>0 !SW CUTAWAY MODEL &lt;CUBE|SPHERE|CYLINDER&gt; &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;normal x&gt; &lt;normal y&gt; &lt;normal z&gt; &lt;size&gt;</code></td><td>Read, Write</td><td>cutaway kept with the model, center and size in StudWorx units</td></tr>
-							<tr><td><code>0 !SW POSE &quot;&lt;name&gt;&quot; &quot;&lt;submodel file&gt;&quot; &lt;part index&gt; &lt;rx&gt; &lt;ry&gt; &lt;rz&gt;</code></td><td>Read, Write</td><td>joint angles of a saved pose, one line per joint, in the first file of the model</td></tr>
+							<tr><td><code>0 !SW JOINT MODEL &quot;&lt;name&gt;&quot; &quot;&lt;submodel file&gt;&quot; &lt;part index&gt; &lt;rx&gt; &lt;ry&gt; &lt;rz&gt; [&lt;joint&gt;]</code></td><td>Read, Write</td><td>joint angles of a saved pose, one line per joint, the joint number counting from 0 and left out for the first, in the file of the model the joints belong to</td></tr>
+							<tr><td><code>0 !SW POSE &quot;&lt;name&gt;&quot; &quot;&lt;submodel file&gt;&quot; &lt;part index&gt; &lt;rx&gt; &lt;ry&gt; &lt;rz&gt;</code></td><td>Read</td><td>older name of a pose line, saved as <code>0 !SW JOINT MODEL</code> once the model is edited</td></tr>
 						</tbody>
 					</table>
 				</div>
@@ -3452,7 +3479,7 @@
 				<h2>HELP // EVERY &quot;WHAT&#x27;S THIS?&quot; ENTRY</h2>
 			</header>
 
-			<p class="lead">The same help the app shows from Help &gt; What&#x27;s This?, the title bar question mark or F1: 491 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
+			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 498 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
 			<div class="tools-search">
 				<input id="search" type="search" placeholder="Search help" aria-label="Search help">
@@ -3534,16 +3561,16 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p class="lead">The latest release notices from the StudWorx repository.</p>
 
 			<details open>
-				<summary>2026-11-05</summary>
+				<summary>2026-11-06</summary>
 
 				<ul>
-					<li>Open: LEGO® Digital Designer <a href="#models">models</a> (.lxf and .lxfml) open from File &gt; Open, recent <a href="#files">files</a>, drag and drop, the command line and the file manager as a new untitled model</li>
-					<li>Poses: Part &gt; Set Joint gives a submodel a hinge or ball joint from the shadow library connections, the Pose tool next to Rotate turns it with the mouse, the Poses panel saves, recalls, renames and deletes named poses, and File &gt; <a href="#image">Image</a> plays them as an animated GIF with Motion Poses</li>
-					<li>Import: File &gt; Import takes .lxfml as well as .lxf</li>
-					<li>Submodels: the menu now reads Open Selected Submodel, Inline Selected Submodels, Flatten Submodels and Move to New Submodel</li>
-					<li>Menus: Select Invert is now Invert Selection, Remove Step is now Delete Step, and the snap toggles read Move Snap, Rotation Snap and Camera Snap</li>
-					<li>Studs: the stud styles are named Thin-Line Logo and High Contrast Logo in the menus, <a href="#preferences">preferences</a> and command line <a href="#help">help</a></li>
-					<li><a href="#interface">Interface</a>: errors read &quot;Could not …&quot;, file filters read &quot;All Files&quot;, status bar text names toolbars and <a href="#panels">panels</a> correctly, and the command line help, man page and FEATURES.md agree with the menus</li>
+					<li>Joints: Part &gt; Joint &gt; Set, also in the model view right-click menu, gives a submodel hinge or ball joints from the shadow library connections, several per submodel, with its own pointer and the picked part outlined in red, the Joints tool next to Rotate turns it with the mouse, Part &gt; Joint &gt; Move and Rotate and the Use Joint Rotation preference turn it with the rotate keys and the Rotate tool, the Joints panel lists every model and its joints in a tree and saves, recalls, renames and deletes named poses per model, and File &gt; <a href="#image">Image</a> plays the main model poses as an animated GIF with Motion Joints</li>
+					<li><a href="#views">Views</a>: the base and height grids each have their own toggle, and All Grids turns them on or off together</li>
+					<li>Views: Fade on Edit and Fade on Joint Set tint the rest of the model with their own colors, set under <a href="#steps">Steps</a> and Highlighting in the view gear menu and in the <a href="#preferences">preferences</a>, and an empty step no longer fades the model</li>
+					<li>Settings: every setting has a line in StudWorx.conf from the first start</li>
+					<li>Joints: the panel lists submodels as `arm-right.ldr 006` and joints as `Joint 001`, and the angle column is left aligned like the others</li>
+					<li>Status bar: a selected submodel shows ID: N/A and the total weight of its parts when all of them have one, also in its Parts panel tooltip</li>
+					<li><a href="#rendering">Rendering</a>: a model opened from the command line by a relative path renders with Blender next to the model, where the image was not found before</li>
 				</ul>
 			</details>
 
@@ -3551,8 +3578,12 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<summary>2026-11-05</summary>
 
 				<ul>
-					<li>Interface: menu, status bar, dialog and message wording is consistent, errors read &quot;Could not …&quot;, file filters read &quot;LDraw Models&quot; and &quot;All Files&quot;, and the command line help, man page and FEATURES.md agree with the menus</li>
-					<li>Open: LEGO® Digital Designer models (.lxf and .lxfml) open from File &gt; Open, recent files, drag and drop, the command line and the file manager as a new untitled model, and File &gt; Import takes .lxfml as well as .lxf</li>
+					<li>Open: LEGO® Digital Designer <a href="#models">models</a> (.lxf and .lxfml) open from File &gt; Open, recent <a href="#files">files</a>, drag and drop, the command line and the file manager as a new untitled model</li>
+					<li>Import: File &gt; Import takes .lxfml as well as .lxf</li>
+					<li>Submodels: the menu now reads Open Selected Submodel, Inline Selected Submodels, Flatten Submodels and Move to New Submodel</li>
+					<li>Menus: Select Invert is now Invert Selection, Remove Step is now Delete Step, and the snap toggles read Move Snap, Rotation Snap and Camera Snap</li>
+					<li>Studs: the stud styles are named Thin-Line Logo and High Contrast Logo in the menus, preferences and command line <a href="#help">help</a></li>
+					<li><a href="#interface">Interface</a>: errors read &quot;Could not …&quot;, file filters read &quot;LDraw Models&quot; and &quot;All Files&quot;, menu, status bar, dialog and message wording is consistent, status bar text names toolbars and <a href="#panels">panels</a> correctly, and the command line help, man page and FEATURES.md agree with the menus</li>
 				</ul>
 			</details>
 
@@ -3568,7 +3599,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Preferences: Migrate Files on Load chooses Ask, Migrate or Keep for models with LeoCAD <a href="#meta">meta</a> commands, and Remember this choice in the question sets it</li>
 					<li>Preferences: every checkbox sits in the control column with its label on the left, and the label greys out with its checkbox</li>
 					<li>Status bar: hints such as the face pick and cutaway messages no longer overlap the selection text and stay shown after the menu closes</li>
-					<li><a href="#views">Views</a>: the height grid entries of the view options are greyed out while the base grid is off</li>
+					<li>Views: the height grid entries of the view options are greyed out while the base grid is off</li>
 					<li>Views: with split views the view cube and axis icon show on the top left view only</li>
 				</ul>
 			</details>
@@ -3588,7 +3619,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Keyboard shortcuts: categories in Preferences show readable names such as Snap (Angle)</li>
 					<li>View cube: a Labels setting in Preferences shows Small Labels or Large Abbreviations (TP, BT, LT, RT, FT, BK) on its faces</li>
 					<li><a href="#instructions">Instructions</a>: a bar under the page goes to the first, previous, cover, bill of materials, next and last pages, inserts a Step Page or Blank Page, removes blank or empty pages and has a page box to type the page, each button with its own mnemonic, and the timeline shortcuts turn the pages</li>
-					<li>Instructions: Submodel Background in the Page category colors the pages of submodel <a href="#steps">steps</a> apart from the main model pages</li>
+					<li>Instructions: Submodel Background in the Page category colors the pages of submodel steps apart from the main model pages</li>
 					<li>Instructions: Apply to All Pages in the Page and Parts List categories gives every page the background or thumbnails of the current page, the Arrowhead pointer tip is now Arrow and Pointer Tip is greyed out for callout wedges</li>
 					<li>Instructions: the Bill of Materials page shows a Parts List title in place of the step number, with its own BOM Title Font and BOM Title Color, and the cover author has its own Cover Author Font and Cover Author Color</li>
 					<li>Export HTML: Transparent Background is gone, a Background Color with zero alpha leaves the step images clear</li>
@@ -3628,7 +3659,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Edge Colors and Export HTML: the dialogs are laid out in clear groups with labels to the left and controls to the right</li>
 					<li>Properties: the light settings scroll without a sideways scroll bar and always keep one setting row in view</li>
 					<li>Thumbnails: model thumbnails show again in file managers that use the desktop thumbnailer, without step highlight or fading, and leftovers from the old StudWorks name are removed on install</li>
-					<li>Preferences: Colors From moved into a new Colors group on the <a href="#rendering">Rendering</a> page, the Colors page is now Interface</li>
+					<li>Preferences: Colors From moved into a new Colors group on the Rendering page, the Colors page is now Interface</li>
 					<li>Export BrickLink: choose the condition, the wanted list and new listing notices, the choices are remembered, also as <code>--bricklink-condition</code>, <code>--bricklink-wanted-list</code> and <code>--bricklink-notify</code> on the command line</li>
 					<li>Command line: <code>--kmz-geometry all</code> or <code>visible</code> chooses the KMZ geometry and replaces <code>--kmz-all-parts</code></li>
 					<li>Command line: <code>-h</code> now shows the help like <code>--help</code>, the picture height is set with <code>--height</code></li>
@@ -3768,7 +3799,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Preferences","title":"Instructions","paragraphs":["Colors of the element inspector of the instructions page, drawn like the box model of a web browser inspector: the margin fill around each element, the padding fill inside its border, and markers at its anchors, the corners, edge centers and center that placement aligns to. The Ruler Pointer color fills the arrows that follow the pointer on the rulers. Each color has an alpha from 0, transparent, to 1, opaque.","Show or hide each overlay with Show Element Margins, Show Element Padding and Show Element Anchors in the Instructions preferences or the Options menu of the Instructions window. The overlays show on screen only and are never printed."]},
 				{"group":"Preferences","title":"Part Categories","paragraphs":["Create, edit, reorder, or import categories for the part browser. The right-hand list shows parts matching the selected category. Imported and edited categories are saved when you choose OK in Preferences; Export writes the current list immediately."]},
 				{"group":"Preferences","title":"Keyboard Shortcuts","paragraphs":["Select a command, click Key Sequence, press the desired key combination, then choose Assign. Remove clears the selected command's shortcut. Commands that share a shortcut show in red. Import replaces the shortcut list; Export writes the current list immediately. Choose OK in Preferences to save changes."]},
-				{"group":"Preferences","title":"Key Sequence","paragraphs":["Click here and press the key combination you want to assign. Function keys, including F1, are recorded as shortcut candidates in this field. Use the What's This button in the title bar for guidance. Assign asks before replacing a shortcut already used by another command."]},
+				{"group":"Preferences","title":"Key Sequence","paragraphs":["Click here and press the key combination you want to assign. Function keys, including F1, are recorded as shortcut candidates in this field. Use the \"What's This?\" button in the title bar for guidance. Assign asks before replacing a shortcut already used by another command."]},
 				{"group":"Preferences","title":"Mouse Shortcuts","paragraphs":["Select a tool, click the Mouse Sequence field with the button and modifiers to use, then choose Assign. Each tool can have two shortcuts; a new assignment becomes the primary shortcut. Remove clears the primary shortcut and promotes the secondary shortcut. Choose OK in Preferences to save changes."]},
 				{"group":"Preferences","title":"Mouse Sequence","paragraphs":["Click here with the mouse button you want to assign while holding any Control, Alt or Shift modifiers. Assign makes it the primary shortcut of the selected tool and asks before replacing a shortcut already used by another tool."]},
 				{"group":"Model Properties","title":"Model Properties","paragraphs":["Edit the current model's author, description, and comments on the Summary tab. Measurements and Parts provide read-only information. Choose OK to apply the metadata changes, or Cancel to discard them."]},
@@ -3815,7 +3846,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Save Model Image","title":"File","paragraphs":["Choose an output folder, file name, and image extension, such as .png, .jpg, .bmp, or .gif for an animation.","When saving several steps, the step number is added before the extension. For example, 'model.png' becomes 'model01.png', 'model02.png', and so on."]},
 				{"group":"Save Model Image","title":"Size","paragraphs":["Set the saved image width and height in pixels. Each value must be between 1 and 32768. Larger images use more memory and may exceed the graphics hardware limits.","Ratio links width and height so changing one updates the other. View uses the shape of the current view and Free unlinks them. Landscape and Portrait turn the image on its side."]},
 				{"group":"Save Model Image","title":"Steps","paragraphs":["Choose Current Step, All Steps, or Range. The range fields are used only for Range. Both ends are included, and they may be equal to save just one step."]},
-				{"group":"Save Model Image","title":"Animation","paragraphs":["Animated GIF saves a looping animation. The animation loops forever.","Turntable turns the model around one axis through the Framing center, starting from the current view. Full Turn makes seamless revolutions. Angle swings between two angles from the current view and back again. Turns sets how many revolutions or swings make up the loop, so complex builds can be shown from every side more than once.","Next Step moves through the steps chosen in the Steps group while the model turns, one step every few turns or seconds. The loop ends on the last step and starts again.","Steps plays the chosen steps one per frame, for short animated instructions.","Poses blends through the poses saved in the Poses panel, in order and back to the first. Frames sets how many images go between two poses.","Frames sets how many images make up one turn and Frame Rate how many play each second. Hold Last keeps the finished model on screen before a loop through the steps restarts. Duration shows how long one loop plays."]},
+				{"group":"Save Model Image","title":"Animation","paragraphs":["Animated GIF saves an animation that loops forever.","Turntable turns the model around one axis through the Framing center, starting from the current view. Full Turn makes seamless revolutions. Angle swings between two angles from the current view and back again. Turns sets how many revolutions or swings make up the loop, so complex builds can be shown from every side more than once.","Next Step moves through the steps chosen in the Steps group while the model turns, one step every few turns or seconds. The loop ends on the last step and starts again.","Steps plays the chosen steps one per frame, for short animated instructions.","Joints blends through the poses of the main model saved in the Joints panel, in order and back to the first. Frames sets how many images go between two poses.","Frames sets how many images make up one turn and Frame Rate how many play each second. Hold Last keeps the finished model on screen before a loop through the steps restarts. Duration shows how long one loop plays."]},
 				{"group":"Save Model Image","title":"Framing","paragraphs":["Current View saves exactly what the view shows. Fit Model aims at the model and moves the camera back until every part fits inside the image at every turntable angle, so animations turn in place without zooming. Fit Each Step fits every step on its own parts. Fitted stills are centered on the model.","Center sets the point the turntable turns around and the camera aims at. World Origin is the 0, 0, 0 point of the scene, Model Origin is the middle of the model base and Model Center is the middle of the model.","Margin keeps empty space around the model. Bounds measures the fit on the whole model, so every step lines up, or only on the steps being saved."]},
 				{"group":"Save Model Image","title":"Background","paragraphs":["View Color fills the background with the view background. Transparent leaves it empty so the model can be placed over other images.","Only PNG and GIF files keep transparency. GIF edges are hard, without smoothing."]},
 				{"group":"Instructions","title":"Page Bar","paragraphs":["Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The timeline First, Previous, Next and Last shortcuts turn the pages too while the page or the Pages panel has focus."]},
@@ -3874,13 +3905,14 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Main Window","title":"Collapse","paragraphs":["Put the exploded parts back where they were and the flattened submodels back together, like Undo. Any edit to the model puts the parts back too and keeps the submodels flattened."]},
 				{"group":"Main Window","title":"Save Copy","paragraphs":["Explode the parts and save the whole project to a separate file, named after the open file with -exploded before the extension. The open file keeps its name, Collapse puts its submodels back, and the copy cannot replace it."]},
 				{"group":"Main Window","title":"Find and Replace","paragraphs":["Find parts by color, part or both, then step through the matches or select them all. Open the replace options to swap the color or part of the matches, one at a time or all at once.","Include Submodels makes Replace All change the matching parts inside every submodel used by this model too."]},
-				{"group":"Main Window","title":"Poses","paragraphs":["The poses saved in the model, in the order the Poses motion of the image dialog plays them. Pick one to recall, rename or delete it."]},
-				{"group":"Main Window","title":"Save","paragraphs":["Store the angles of every joint in the model under a name. Saving a name that already exists replaces that pose."]},
-				{"group":"Main Window","title":"Recall","paragraphs":["Turn every joint back to the angles of the picked pose, in one undo step."]},
+				{"group":"Main Window","title":"Joints","paragraphs":["Every model with joints, under it each jointed submodel by line index, and under that each of its joints with type and angle. Click a joint to select its submodel and make it the joint the panel and the rotate gizmo work on. Click a model to show its poses."]},
+				{"group":"Main Window","title":"Poses","paragraphs":["The poses saved in the model picked above, each holding the angles of that model's joints only. The Joints motion of the image dialog plays the poses of the main model in this order. Pick one to recall, rename or delete it."]},
+				{"group":"Main Window","title":"Save","paragraphs":["Store the angles of the joints in this model under a name. Saving a name that already exists replaces that pose."]},
+				{"group":"Main Window","title":"Recall","paragraphs":["Turn the joints of this model back to the angles of the picked pose, in one undo step."]},
 				{"group":"Main Window","title":"Rename","paragraphs":["Give the picked pose a new name."]},
 				{"group":"Main Window","title":"Delete","paragraphs":["Remove the picked pose from the model. The joints keep their angles."]},
 				{"group":"Main Window","title":"Axis","paragraphs":["The axis a hinge turns about, in the coordinates of the submodel. Use it for parts without shadow data, which get a hinge on their origin."]},
-				{"group":"Main Window","title":"Clear Joint","paragraphs":["Remove the joint of the selected submodel and put it back in its placed position. This can be undone."]},
+				{"group":"Main Window","title":"Clear Joint","paragraphs":["Remove the picked joint of the selected submodel and put that joint back at rest. This can be undone."]},
 				{"group":"Main Window","title":"Lock Preview","paragraphs":["Keep the current preview while you browse. Unlock Preview allows the display to update again. An empty preview cannot be locked."]},
 				{"group":"Main Window","title":"Property Keyframe","paragraphs":["Enable or remove a keyframe for this property at the current building step. Keyframes let the property's value change between steps."]},
 				{"group":"Main Window","title":"Choose Part","paragraphs":["Select a part, then choose OK or double-click it to use it. Cancel keeps the original choice. Filter the list to find a part; Options controls matching and list display. When None is available, select it to omit the part."]},
@@ -3890,7 +3922,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Main Window","title":"Transform Options","paragraphs":["Choose the axes and pivot used for interactive transforms. Relative Transforms uses the focused object's orientation, so movement along X follows that object's local X axis. Absolute Transforms uses the model axes. Rotate Together rotates the selection around a shared pivot; Rotate Separately rotates each part around its own origin."]},
 				{"group":"Main Window","title":"Movement Snap","paragraphs":["Choose how far objects move in each snapped increment. XY controls movement across the base plane; Z controls vertical movement, so they can use different intervals. Turn snapping off for free placement, then enable it again when you need consistent spacing."]},
 				{"group":"Main Window","title":"Rotation Snap","paragraphs":["Choose an angle increment for interactive rotation. For example, a 90-degree increment is useful for quarter turns, while smaller increments allow finer alignment. Turn snapping off for free rotation without fixed angle increments."]},
-				{"group":"Main Window","title":"Standard Toolbar","paragraphs":["Use file controls to create, open, and save models, and Undo or Redo to navigate edit history. Before moving or rotating objects, choose the selection rule, coordinate reference, and snapping increments from the four drop-down controls. Help > What's This? explains individual controls."]},
+				{"group":"Main Window","title":"Standard Toolbar","paragraphs":["Use file controls to create, open, and save models, and Undo or Redo to navigate edit history. Before moving or rotating objects, choose the selection rule, coordinate reference, and snapping increments from the four drop-down controls. Help > \"What's This?\" explains individual controls."]},
 				{"group":"Main Window","title":"Time Toolbar","paragraphs":["The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Timeline for that. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps."]},
 				{"group":"Main Window","title":"Tools Toolbar","paragraphs":["Choose a tool, then use it in the model view. Insertion tools create parts, lights, or cameras. Editing tools select, transform, remove, or recolor objects. Navigation tools change the viewpoint without changing model geometry. Mouse assignments can be customized in Preferences."]},
 				{"group":"Main Window","title":"Parts","paragraphs":["Choose a category or palette and filter its parts. Selecting a part prepares it for insertion; drag it into the model view to place it. Double-click a part to open its preview. Options controls filtering, thumbnails, and list display."]},
@@ -4007,7 +4039,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Tools","title":"Rotate Tool","paragraphs":["Select objects, then drag a rotation handle in the model view. Rotation Snap sets the angle increments. Transform Options chooses relative or model axes and whether parts rotate together or separately."]},
 				{"group":"Tools","title":"Erase Tool","paragraphs":["Use this tool to remove objects by clicking them in the model view. This is different from deleting the current selection as a single command. Undo restores an object removed by the tool."]},
 				{"group":"Tools","title":"Paint Tool","paragraphs":["Choose the replacement color in the Colors dock, then click parts in the model view to recolor them. To recolor the current selection together, use the color button above the swatches."]},
-				{"group":"Tools","title":"Pose Tool","paragraphs":["Drag a submodel that has a joint to turn it. Hinges turn about their axis with the horizontal drag, balls turn about the screen up and right directions. Rotation Snap sets the steps and one drag is one undo step. Use Set Joint in the Part menu to give a submodel a joint."]},
+				{"group":"Tools","title":"Joints Tool","paragraphs":["Drag a submodel that has a joint to turn it. Hinges turn about their axis with the horizontal drag, balls turn about the screen up and right directions. Rotation Snap sets the steps and one drag is one undo step. Use Part > Joint > Set to give a submodel a joint."]},
 				{"group":"Tools","title":"Color Picker Tool","paragraphs":["Click a part in the model view to make its color the current color. You can then use that color for insertion or painting; sampling it does not recolor the part."]},
 				{"group":"Tools","title":"Zoom Tool","paragraphs":["Drag in the model view to move the viewpoint closer to or farther from the model. This changes the view rather than resizing parts. Use Zoom Region to frame a particular area."]},
 				{"group":"Tools","title":"Pan Tool","paragraphs":["Drag to shift the view sideways or vertically without moving the model. Use this to reposition the model on screen while keeping the viewing direction."]},
@@ -4058,7 +4090,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"View Menu","title":"Terminal","paragraphs":["Toggle the Terminal panel."]},
 				{"group":"View Menu","title":"Minifigure Builder","paragraphs":["Toggle the Minifigure Builder panel."]},
 				{"group":"View Menu","title":"Explode","paragraphs":["Show or hide the Explode panel, which spreads the parts on screen away from an anchor, the focused part or the first or last selected one, scaled along X, Y and Z. With Selected Parts Only, each group moves as one part. Each part slides straight out along the connection that holds it, a part without one along the nearest axis from the part beside it, and with Show Lines a line runs through each connection back to the socket it came off. Submodels, and the submodels inside them, flatten into their parts first in the same undo step. Collapse or Undo puts the parts and submodels back, and Save Copy saves the exploded model to a separate file named with -exploded."]},
-				{"group":"View Menu","title":"Poses","paragraphs":["Show or hide the Poses panel. Save stores the joint angles of every submodel as a named pose, Recall puts them back in one undo step, and the Poses motion in the image dialog plays the saved poses as an animation. The panel also shows the joint of the selected submodel, with its axis and Clear Joint."]},
+				{"group":"View Menu","title":"Joints","paragraphs":["Show or hide the Joints panel. A tree lists every model with its jointed submodels and their joints, click a joint to select its submodel. Save stores the joint angles of the picked model as a named pose, Recall puts them back in one undo step, and the Joints motion in the image dialog plays the poses of the main model as an animation. The panel also shows the picked joint of the selected submodel, with its axis and Clear Joint."]},
 				{"group":"View Menu","title":"Full Screen","paragraphs":["Toggle full screen mode."]},
 				{"group":"View Menu","title":"Close Tab","paragraphs":["Close current tab."]},
 				{"group":"View Menu","title":"Wireframe","paragraphs":["Display the scene as wireframe."]},
@@ -4072,8 +4104,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"View Menu","title":"Orthographic","paragraphs":["Set the current camera to use an orthographic projection."]},
 				{"group":"View Menu","title":"View Cube","paragraphs":["Show or hide the view cube. Click its faces, edges and corners to turn the camera. With split views it shows on the top left view only."]},
 				{"group":"View Menu","title":"Axis Icon","paragraphs":["Show or hide the X, Y and Z axis icon. With split views it shows on the top left view only."]},
-				{"group":"View Menu","title":"Base Grid","paragraphs":["Show or hide the base grid. The height grids draw only with the base grid, and their menu entries are greyed out while it is off."]},
-				{"group":"View Menu","title":"Fade Previous Steps","paragraphs":["Toggle fading previous model steps."]},
+				{"group":"View Menu","title":"Base Grid","paragraphs":["Show or hide the base grid. The height grids have their own toggles."]},
+				{"group":"View Menu","title":"Fade Previous Steps","paragraphs":["Tint parts from previous building steps with the chosen fade color, so the parts of the current step stand out."]},
 				{"group":"Steps Menu","title":"Step View","paragraphs":["Set the view rotation of the current step."]},
 				{"group":"Steps Menu","title":"Remove Step View","paragraphs":["Remove the view rotation of the current step."]},
 				{"group":"Steps Menu","title":"Follow Step Views","paragraphs":["Toggle turning the view to each step's view rotation when changing steps."]},
@@ -4087,9 +4119,10 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"View Menu","title":"Pull Out","paragraphs":["Move the cutaway one plate back out of the model."]},
 				{"group":"View Menu","title":"Shade Color","paragraphs":["Choose the light shade on the cutaway faces."]},
 				{"group":"View Menu","title":"Remove","paragraphs":["Show the whole model again, or press Esc with nothing selected."]},
-				{"group":"View Menu","title":"XZ Height Grid","paragraphs":["Show or hide the vertical XZ height grid sized around the model. It needs the base grid turned on."]},
-				{"group":"View Menu","title":"YZ Height Grid","paragraphs":["Show or hide the vertical YZ height grid sized around the model. It needs the base grid turned on."]},
-				{"group":"View Menu","title":"Height Grids Behind Model","paragraphs":["Draw the height grids behind the model instead of through the origin axes. It needs the base grid turned on."]},
+				{"group":"View Menu","title":"All Grids","paragraphs":["Turn the base grid and both height grids on together, or off when they are all on. The axis lines are not changed."]},
+				{"group":"View Menu","title":"XZ Height Grid","paragraphs":["Show or hide the vertical XZ height grid sized around the model."]},
+				{"group":"View Menu","title":"YZ Height Grid","paragraphs":["Show or hide the vertical YZ height grid sized around the model."]},
+				{"group":"View Menu","title":"Height Grids Behind Model","paragraphs":["Draw the height grids behind the model instead of through the origin axes."]},
 				{"group":"View Menu","title":"X Axis Line","paragraphs":["Toggle the x axis line on the grid origin."]},
 				{"group":"View Menu","title":"Y Axis Line","paragraphs":["Toggle the y axis line on the grid origin."]},
 				{"group":"View Menu","title":"Z Axis Line","paragraphs":["Toggle the z axis line on the grid origin and the height grids."]},
@@ -4107,7 +4140,10 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"File Menu","title":"Restore Tab Layout","paragraphs":["Toggle restoring saved model tabs and view layouts when opening a model."]},
 				{"group":"Edit Menu","title":"Fixed Direction Keys","paragraphs":["Toggle moving parts along fixed model axes instead of view-relative directions."]},
 				{"group":"View Menu","title":"Mesh LOD","paragraphs":["Toggle using simpler meshes for distant parts."]},
-				{"group":"View Menu","title":"Highlight New Parts","paragraphs":["Toggle highlighting parts added in the current step."]},
+				{"group":"View Menu","title":"Highlight New Parts","paragraphs":["Highlight the parts added in the current building step with the chosen highlight color."]},
+				{"group":"View Menu","title":"Fade on Edit","paragraphs":["Tint the rest of the model with the chosen color while editing a submodel in place. When off, the rest of the model stays in its own colors, slightly translucent."]},
+				{"group":"View Menu","title":"Fade on Joint Set","paragraphs":["Tint all but the selected submodel with the chosen color while setting a joint."]},
+				{"group":"View Menu","title":"Fade on Joint Move and Rotate","paragraphs":["Keep the joint fade while moving or rotating a joint. Leave it off to check parts for collisions in their own colors."]},
 				{"group":"View Menu","title":"Grid Studs","paragraphs":["Toggle drawing studs on the base grid."]},
 				{"group":"View Menu","title":"Grid Lines","paragraphs":["Toggle drawing lines on the base grid."]},
 				{"group":"View Menu","title":"Grid Origin Lines","paragraphs":["Toggle drawing the base grid origin lines."]},
@@ -4155,7 +4191,9 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Part Menu","title":"Delete","paragraphs":["Delete selected objects."]},
 				{"group":"Part Menu","title":"Duplicate","paragraphs":["Create a copy of the selected parts."]},
 				{"group":"Part Menu","title":"Paint Selected","paragraphs":["Change the color of the selected parts."]},
-				{"group":"Part Menu","title":"Set Joint","paragraphs":["Select one submodel, choose Set Joint, then click one of its connections with the Pose tool. A round connection makes a hinge on its axis and a sphere makes a ball. A part without shadow data gets a hinge on its origin. The joint shows in the Poses panel and setting it can be undone."]},
+				{"group":"Part Menu","title":"Set Joint","paragraphs":["Select one submodel, choose Part > Joint > Set, also in the right-click menu of the model view, then click one of its connections with the Set Joint pointer, which outlines the part under it in red. The click sets the joint and goes back to the Select tool. Set again at another connection adds a joint, and Set at a joint already there resets it. A round connection makes a hinge on its axis and a sphere makes a ball. A part without shadow data gets a hinge on its origin. The joint shows in the Joints panel and setting it can be undone."]},
+				{"group":"Part Menu","title":"Joint Move","paragraphs":["With one submodel with a joint selected, switches to the Move tool with the gizmo on the pivot of the picked joint, outlined by a red hexagon. Selecting something else goes back to the pivot point."]},
+				{"group":"Part Menu","title":"Joint Rotate","paragraphs":["With one submodel with a joint selected, switches to the Rotate tool with the gizmo on the pivot of the picked joint, outlined in red, and the rotate keys and the Rotate tool turn the joint around its own pivot and axis. A hinge only turns about its axis. Selecting something else goes back to the pivot point. Use Joint Rotation in the preferences does this whenever a selected submodel has a joint."]},
 				{"group":"Part Menu","title":"Reset Pivot Point","paragraphs":["Reset the pivot point of the selected parts to their origin."]},
 				{"group":"Part Menu","title":"Remove Keyframes","paragraphs":["Remove all keyframes from the selected parts."]},
 				{"group":"Part Menu","title":"Insert Control Point","paragraphs":["Insert a new control point."]},

@@ -1303,6 +1303,22 @@ void swModel::RotateSelectedObjects(const swMatrix33& InputRotationMatrix, swMod
 			Rotated = true;
 		}
 	}
+	else if (swPart* Joint = GetRotateJoint())
+	{
+		swMatrix33 WorldRotation = RotationMatrix;
+
+		// the joint pivot replaces the pivot point
+		if (Flags.testFlag(swModelTransformFlag::Relative))
+		{
+			swVector3 Center;
+			swMatrix33 RelativeRotation;
+
+			GetMoveRotateTransform(Center, RelativeRotation);
+			WorldRotation = swMultiply(swMatrix33AffineInverse(RelativeRotation), swMultiply(RotationMatrix, RelativeRotation));
+		}
+
+		Rotated = RotateJoint(Joint, WorldRotation);
+	}
 	else
 	{
 		int SelectionFlags;

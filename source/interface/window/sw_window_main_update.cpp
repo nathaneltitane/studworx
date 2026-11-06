@@ -1,7 +1,7 @@
 #include "sw_global.h"
 #include "sw_window_main.h"
 #include "sw_widget_explode.h"
-#include "sw_widget_poses.h"
+#include "sw_widget_joints.h"
 #include "sw_widget_builder_minifigure.h"
 #include "sw_widget_spin_box_double.h"
 #include "sw_widget_selection_part.h"
@@ -53,6 +53,9 @@ void swMainWindow::UpdateSelectedObjects(bool SelectionChanged)
 	{
 		mTimelineWidget->UpdateSelection();
 
+		if (ActiveModel)
+			ActiveModel->UpdateJointRotate();
+
 		// picked color overrides the part color
 		if (swGetPreferences().mInsertColorMode == swInsertColorMode::SelectedPartColor)
 		{
@@ -88,9 +91,6 @@ void swMainWindow::UpdateSelectedObjects(bool SelectionChanged)
 		mActions[SW_PART_RESET_PIVOT_POINT]->setEnabled(Flags & SW_SELECTION_SELECTED);
 		mActions[SW_PART_REMOVE_KEY_FRAMES]->setEnabled(Flags & SW_SELECTION_SELECTED);
 		mActions[SW_PART_ARRAY]->setEnabled(Flags & SW_SELECTION_PART);
-
-		if (mPosesWidget)
-			mPosesWidget->UpdateJoint();
 
 		if (mExplodeWidget)
 			mExplodeWidget->UpdateAnchors();
@@ -132,6 +132,14 @@ void swMainWindow::UpdateSelectedObjects(bool SelectionChanged)
 
 	mPropertiesWidget->Update(Selection, Focus);
 
+	if (mJointsWidget)
+		mJointsWidget->UpdateJoint();
+
+	swPart* JointPart = ActiveModel ? ActiveModel->GetJointPart() : nullptr;
+	const bool HasJoint = JointPart && JointPart->HasJoints();
+	mActions[SW_PART_JOINT_MOVE]->setEnabled(HasJoint);
+	mActions[SW_PART_JOINT_ROTATE]->setEnabled(HasJoint);
+
 	if (Focus && Focus->IsPart())
 	{
 		swPart* Part = (swPart*)Focus;
@@ -151,7 +159,7 @@ void swMainWindow::UpdateSelectedObjects(bool SelectionChanged)
 	if ((Selection.size() == 1) && Focus)
 	{
 		if (Focus->IsPart())
-			Message = tr("%1 - ID: %2 - Weight: %3").arg(Focus->GetName(), ((swPart*)Focus)->GetID(), swGetBrickLinkWeightText(((swPart*)Focus)->mPartData.Get()));
+			Message = tr("%1 - ID: %2 - Weight: %3").arg(Focus->GetName(), ((swPart*)Focus)->mPartData->IsModel() ? tr("N/A") : ((swPart*)Focus)->GetID(), swGetBrickLinkWeightText(((swPart*)Focus)->mPartData.Get()));
 		else
 			Message = Focus->GetName();
 	}
@@ -161,7 +169,7 @@ void swMainWindow::UpdateSelectedObjects(bool SelectionChanged)
 
 		if (Focus && Focus->IsPart())
 		{
-			Message.append(tr(" - %1 - ID: %2 - Weight: %3").arg(Focus->GetName(), ((swPart*)Focus)->GetID(), swGetBrickLinkWeightText(((swPart*)Focus)->mPartData.Get())));
+			Message.append(tr(" - %1 - ID: %2 - Weight: %3").arg(Focus->GetName(), ((swPart*)Focus)->mPartData->IsModel() ? tr("N/A") : ((swPart*)Focus)->GetID(), swGetBrickLinkWeightText(((swPart*)Focus)->mPartData.Get())));
 
 			const swGroup* Group = ((swPart*)Focus)->GetGroup();
 			if (Group && !Group->mName.isEmpty())

@@ -152,7 +152,7 @@ enum class swPaintedIcon
 	ActionRotate,
 	ActionErase,
 	ActionPaint,
-	ActionPose,
+	ActionJoints,
 	ActionPickerColor,
 	ActionZoom,
 	ActionZoomRegion,

@@ -1,23 +1,27 @@
 ### NOTICE
 
   <details open>
-  <summary>2026-11-05</summary>
+  <summary>2026-11-06</summary>
 
-  - Open: LEGO® Digital Designer models (.lxf and .lxfml) open from File > Open, recent files, drag and drop, the command line and the file manager as a new untitled model
-  - Poses: Part > Set Joint gives a submodel a hinge or ball joint from the shadow library connections, the Pose tool next to Rotate turns it with the mouse, the Poses panel saves, recalls, renames and deletes named poses, and File > Image plays them as an animated GIF with Motion Poses
-  - Import: File > Import takes .lxfml as well as .lxf
-  - Submodels: the menu now reads Open Selected Submodel, Inline Selected Submodels, Flatten Submodels and Move to New Submodel
-  - Menus: Select Invert is now Invert Selection, Remove Step is now Delete Step, and the snap toggles read Move Snap, Rotation Snap and Camera Snap
-  - Studs: the stud styles are named Thin-Line Logo and High Contrast Logo in the menus, preferences and command line help
-  - Interface: errors read "Could not …", file filters read "All Files", status bar text names toolbars and panels correctly, and the command line help, man page and FEATURES.md agree with the menus
+  - Joints: Part > Joint > Set, also in the model view right-click menu, gives a submodel hinge or ball joints from the shadow library connections, several per submodel, with its own pointer and the picked part outlined in red, the Joints tool next to Rotate turns it with the mouse, Part > Joint > Move and Rotate and the Use Joint Rotation preference turn it with the rotate keys and the Rotate tool, the Joints panel lists every model and its joints in a tree and saves, recalls, renames and deletes named poses per model, and File > Image plays the main model poses as an animated GIF with Motion Joints
+  - Views: the base and height grids each have their own toggle, and All Grids turns them on or off together
+  - Views: Fade on Edit and Fade on Joint Set tint the rest of the model with their own colors, set under Steps and Highlighting in the view gear menu and in the preferences, and an empty step no longer fades the model
+  - Settings: every setting has a line in StudWorx.conf from the first start
+  - Joints: the panel lists submodels as `arm-right.ldr 006` and joints as `Joint 001`, and the angle column is left aligned like the others
+  - Status bar: a selected submodel shows ID: N/A and the total weight of its parts when all of them have one, also in its Parts panel tooltip
+  - Rendering: a model opened from the command line by a relative path renders with Blender next to the model, where the image was not found before
 
   </details>
 
   <details>
   <summary>2026-11-05</summary>
 
-  - Interface: menu, status bar, dialog and message wording is consistent, errors read "Could not …", file filters read "LDraw Models" and "All Files", and the command line help, man page and FEATURES.md agree with the menus
-  - Open: LEGO® Digital Designer models (.lxf and .lxfml) open from File > Open, recent files, drag and drop, the command line and the file manager as a new untitled model, and File > Import takes .lxfml as well as .lxf
+  - Open: LEGO® Digital Designer models (.lxf and .lxfml) open from File > Open, recent files, drag and drop, the command line and the file manager as a new untitled model
+  - Import: File > Import takes .lxfml as well as .lxf
+  - Submodels: the menu now reads Open Selected Submodel, Inline Selected Submodels, Flatten Submodels and Move to New Submodel
+  - Menus: Select Invert is now Invert Selection, Remove Step is now Delete Step, and the snap toggles read Move Snap, Rotation Snap and Camera Snap
+  - Studs: the stud styles are named Thin-Line Logo and High Contrast Logo in the menus, preferences and command line help
+  - Interface: errors read "Could not …", file filters read "LDraw Models" and "All Files", menu, status bar, dialog and message wording is consistent, status bar text names toolbars and panels correctly, and the command line help, man page and FEATURES.md agree with the menus
 
   </details>
 
@@ -140,7 +144,7 @@
   <summary>2026-10-30</summary>
 
   - Interface: built from standard Qt widgets throughout, panels, dialogs and windows follow the system style and theme, only the model views draw with OpenGL
-  - Save Model Image: live preview of the saved image with step arrows, ratio presets from square to widescreen with Landscape and Portrait, a transparent background for PNG and GIF files, Save and Cancel in the File box and help from the title bar What's This button
+  - Save Model Image: live preview of the saved image with step arrows, ratio presets from square to widescreen with Landscape and Portrait, a transparent background for PNG and GIF files, Save and Cancel in the File box and help from the title bar "What's This?" button
   - Animated GIF: turntable animations from Save Model Image, one or more full turns or back and forth swings around the X, Y or Z axis, with frames per turn, a frame rate and the duration shown, played live in the preview
   - Animated steps: Steps plays the build one step per frame, Next Step moves on every few turns or seconds while the model turns, and Hold Last keeps the finished model on screen before the loop restarts, see [Image on the site](https://studworx.app/#image)
   - Image framing: Fit Model and Fit Each Step keep every part inside the image with an adjustable margin, turntables keep one steady zoom through the whole turn around the World Origin, Model Origin or Model Center, and View Color backgrounds now save opaque

@@ -975,12 +975,12 @@ const swCommand gCommands[] =
 		"P"
 	},
 
-	// SW_EDIT_ACTION_POSE
+	// SW_EDIT_ACTION_JOINTS
 	{
-		QT_TRANSLATE_NOOP("Action", "Edit.Tool.Pose"),
-		QT_TRANSLATE_NOOP("Menu", "Pose"),
-		QT_TRANSLATE_NOOP("Status", "Pose a joint"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Pose Tool</b></p><p>Drag a submodel that has a joint to turn it. Hinges turn about their axis with the horizontal drag, balls turn about the screen up and right directions. Rotation Snap sets the steps and one drag is one undo step. Use Set Joint in the Part menu to give a submodel a joint.</p>"),
+		QT_TRANSLATE_NOOP("Action", "Edit.Tool.Joints"),
+		QT_TRANSLATE_NOOP("Menu", "Joints"),
+		QT_TRANSLATE_NOOP("Status", "Turn a joint"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joints Tool</b></p><p>Drag a submodel that has a joint to turn it. Hinges turn about their axis with the horizontal drag, balls turn about the screen up and right directions. Rotation Snap sets the steps and one drag is one undo step. Use Part &gt; Joint &gt; Set to give a submodel a joint.</p>"),
 		"Shift+J"
 	},
 
@@ -1569,12 +1569,12 @@ const swCommand gCommands[] =
 		""
 	},
 
-	// SW_VIEW_TOOLBAR_POSES
+	// SW_VIEW_TOOLBAR_JOINTS
 	{
-		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Poses"),
-		QT_TRANSLATE_NOOP("Menu", "Poses"),
-		QT_TRANSLATE_NOOP("Status", "Toggle the Poses panel"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Poses</b></p><p>Show or hide the Poses panel. Save stores the joint angles of every submodel as a named pose, Recall puts them back in one undo step, and the Poses motion in the image dialog plays the saved poses as an animation. The panel also shows the joint of the selected submodel, with its axis and Clear Joint.</p>"),
+		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Joints"),
+		QT_TRANSLATE_NOOP("Menu", "Joints"),
+		QT_TRANSLATE_NOOP("Status", "Toggle the Joints panel"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joints</b></p><p>Show or hide the Joints panel. A tree lists every model with its jointed submodels and their joints, click a joint to select its submodel. Save stores the joint angles of the picked model as a named pose, Recall puts them back in one undo step, and the Joints motion in the image dialog plays the poses of the main model as an animation. The panel also shows the picked joint of the selected submodel, with its axis and Clear Joint.</p>"),
 		""
 	},
 
@@ -1700,7 +1700,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.ToggleGrid"),
 		QT_TRANSLATE_NOOP("Menu", "Base Grid"),
 		QT_TRANSLATE_NOOP("Status", "Toggle grid"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Base Grid</b></p><p>Show or hide the base grid. The height grids draw only with the base grid, and their menu entries are greyed out while it is off.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Base Grid</b></p><p>Show or hide the base grid. The height grids have their own toggles.</p>"),
 		""
 	},
 
@@ -1709,7 +1709,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.FadePreviousSteps"),
 		QT_TRANSLATE_NOOP("Menu", "Fade Previous Steps"),
 		QT_TRANSLATE_NOOP("Status", "Toggle fading previous model steps"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Fade Previous Steps</b></p><p>Tint parts from previous building steps with the chosen fade color, so the parts of the current step stand out.</p>"),
 		""
 	},
 
@@ -1830,12 +1830,21 @@ const swCommand gCommands[] =
 		""
 	},
 
+	// SW_VIEW_GRID_TOGGLE_ALL
+	{
+		QT_TRANSLATE_NOOP("Action", "View.Grid.ToggleAll"),
+		QT_TRANSLATE_NOOP("Menu", "All Grids"),
+		QT_TRANSLATE_NOOP("Status", "Turn the base, XZ and YZ height grids on or off together"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>All Grids</b></p><p>Turn the base grid and both height grids on together, or off when they are all on. The axis lines are not changed.</p>"),
+		""
+	},
+
 	// SW_VIEW_GRID_TOGGLE_HEIGHT_XZ
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Grid.ToggleHeightXZ"),
 		QT_TRANSLATE_NOOP("Menu", "XZ Height Grid"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the vertical XZ height grid"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>XZ Height Grid</b></p><p>Show or hide the vertical XZ height grid sized around the model. It needs the base grid turned on.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>XZ Height Grid</b></p><p>Show or hide the vertical XZ height grid sized around the model.</p>"),
 		""
 	},
 
@@ -1844,7 +1853,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Grid.ToggleHeightYZ"),
 		QT_TRANSLATE_NOOP("Menu", "YZ Height Grid"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the vertical YZ height grid"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>YZ Height Grid</b></p><p>Show or hide the vertical YZ height grid sized around the model. It needs the base grid turned on.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>YZ Height Grid</b></p><p>Show or hide the vertical YZ height grid sized around the model.</p>"),
 		""
 	},
 
@@ -1853,7 +1862,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Grid.ToggleHeightBehindModel"),
 		QT_TRANSLATE_NOOP("Menu", "Height Grids Behind Model"),
 		QT_TRANSLATE_NOOP("Status", "Toggle drawing the height grids behind the model instead of through the origin axes"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Height Grids Behind Model</b></p><p>Draw the height grids behind the model instead of through the origin axes. It needs the base grid turned on.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Height Grids Behind Model</b></p><p>Draw the height grids behind the model instead of through the origin axes.</p>"),
 		""
 	},
 
@@ -2015,7 +2024,34 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.ToggleHighlightNewParts"),
 		QT_TRANSLATE_NOOP("Menu", "Highlight New Parts"),
 		QT_TRANSLATE_NOOP("Status", "Toggle highlighting parts added in the current step"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Highlight New Parts</b></p><p>Highlight the parts added in the current building step with the chosen highlight color.</p>"),
+		""
+	},
+
+	// SW_VIEW_TOGGLE_FADE_ON_EDIT
+	{
+		QT_TRANSLATE_NOOP("Action", "View.ToggleFadeOnEdit"),
+		QT_TRANSLATE_NOOP("Menu", "Fade on Edit"),
+		QT_TRANSLATE_NOOP("Status", "Toggle tinting the rest of the model while editing a submodel in place"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Fade on Edit</b></p><p>Tint the rest of the model with the chosen color while editing a submodel in place. When off, the rest of the model stays in its own colors, slightly translucent.</p>"),
+		""
+	},
+
+	// SW_VIEW_TOGGLE_FADE_ON_JOINT_SET
+	{
+		QT_TRANSLATE_NOOP("Action", "View.ToggleFadeOnJointSet"),
+		QT_TRANSLATE_NOOP("Menu", "Fade on Joint Set"),
+		QT_TRANSLATE_NOOP("Status", "Toggle tinting all but the selected submodel while setting a joint"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Fade on Joint Set</b></p><p>Tint all but the selected submodel with the chosen color while setting a joint.</p>"),
+		""
+	},
+
+	// SW_VIEW_TOGGLE_FADE_ON_JOINT_MOVE
+	{
+		QT_TRANSLATE_NOOP("Action", "View.ToggleFadeOnJointMove"),
+		QT_TRANSLATE_NOOP("Menu", "Fade on Joint Move and Rotate"),
+		QT_TRANSLATE_NOOP("Status", "Toggle tinting all but the selected submodel while moving or rotating a joint"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Fade on Joint Move and Rotate</b></p><p>Keep the joint fade while moving or rotating a joint. Leave it off to check parts for collisions in their own colors.</p>"),
 		""
 	},
 
@@ -2445,9 +2481,27 @@ const swCommand gCommands[] =
 	// SW_PART_SET_JOINT
 	{
 		QT_TRANSLATE_NOOP("Action", "Part.SetJoint"),
-		QT_TRANSLATE_NOOP("Menu", "Set &Joint"),
+		QT_TRANSLATE_NOOP("Menu", "&Set"),
 		QT_TRANSLATE_NOOP("Status", "Click a connection of the selected submodel to make it a joint"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Set Joint</b></p><p>Select one submodel, choose Set Joint, then click one of its connections with the Pose tool. A round connection makes a hinge on its axis and a sphere makes a ball. A part without shadow data gets a hinge on its origin. The joint shows in the Poses panel and setting it can be undone.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Set Joint</b></p><p>Select one submodel, choose Part &gt; Joint &gt; Set, also in the right-click menu of the model view, then click one of its connections with the Set Joint pointer, which outlines the part under it in red. The click sets the joint and goes back to the Select tool. Set again at another connection adds a joint, and Set at a joint already there resets it. A round connection makes a hinge on its axis and a sphere makes a ball. A part without shadow data gets a hinge on its origin. The joint shows in the Joints panel and setting it can be undone.</p>"),
+		""
+	},
+
+	// SW_PART_JOINT_MOVE
+	{
+		QT_TRANSLATE_NOOP("Action", "Part.JointMove"),
+		QT_TRANSLATE_NOOP("Menu", "&Move"),
+		QT_TRANSLATE_NOOP("Status", "Move the selected submodel with the gizmo on its picked joint"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joint Move</b></p><p>With one submodel with a joint selected, switches to the Move tool with the gizmo on the pivot of the picked joint, outlined by a red hexagon. Selecting something else goes back to the pivot point.</p>"),
+		""
+	},
+
+	// SW_PART_JOINT_ROTATE
+	{
+		QT_TRANSLATE_NOOP("Action", "Part.JointRotate"),
+		QT_TRANSLATE_NOOP("Menu", "&Rotate"),
+		QT_TRANSLATE_NOOP("Status", "Rotate the selected submodel around its picked joint instead of the pivot point"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joint Rotate</b></p><p>With one submodel with a joint selected, switches to the Rotate tool with the gizmo on the pivot of the picked joint, outlined in red, and the rotate keys and the Rotate tool turn the joint around its own pivot and axis. A hinge only turns about its axis. Selecting something else goes back to the pivot point. Use Joint Rotation in the preferences does this whenever a selected submodel has a joint.</p>"),
 		""
 	},
 
@@ -3340,7 +3394,7 @@ const char* gToolNames[] =
 	QT_TRANSLATE_NOOP("Mouse", "Rotate"),              // swTool::Rotate
 	QT_TRANSLATE_NOOP("Mouse", "Erase"),               // swTool::Erase
 	QT_TRANSLATE_NOOP("Mouse", "Paint"),               // swTool::Paint
-	QT_TRANSLATE_NOOP("Mouse", "Pose"),                // swTool::Pose
+	QT_TRANSLATE_NOOP("Mouse", "Joints"),                // swTool::Joints
 	QT_TRANSLATE_NOOP("Mouse", "ColorPicker"),         // swTool::ColorPicker
 	QT_TRANSLATE_NOOP("Mouse", "Zoom"),                // swTool::Zoom
 	QT_TRANSLATE_NOOP("Mouse", "Pan"),                 // swTool::Pan
@@ -3350,3 +3404,75 @@ const char* gToolNames[] =
 };
 
 SW_ARRAY_SIZE_CHECK(gToolNames, swTool::Count);
+
+QStringList swGetDefaultContextMenu()
+{
+	// names for the translation tools
+	[[maybe_unused]] static const char* const TranslatedNames[] =
+	{
+		QT_TRANSLATE_NOOP("ContextMenu", "Submodel"),
+		QT_TRANSLATE_NOOP("ContextMenu", "Control Points"),
+		QT_TRANSLATE_NOOP("ContextMenu", "Align to Axis"),
+		QT_TRANSLATE_NOOP("ContextMenu", "View"),
+	};
+
+	return QStringList(
+	{
+		"Edit.Cut", "Edit.Copy", "Edit.Paste", "Edit.PasteSteps",
+		"-",
+		"Part.Duplicate", "Part.Delete",
+		"-",
+		">Submodel",
+		"\tPart.EditSelectedSubmodel", "\tPart.EditEndSubmodel", "\tPart.ViewSelectedModel", "\tPart.InlineSelectedModels", "\tPart.FlattenModel", "\tPart.MoveSelectionToModel",
+		"@Joint",
+		">Control Points",
+		"\tPart.ControlPoint.Insert", "\tPart.ControlPoint.Remove", "\tPart.ControlPoint.AlignTangent",
+		"\t>Align to Axis",
+		"\t\tPart.ControlPoint.AlignX", "\t\tPart.ControlPoint.AlignY", "\t\tPart.ControlPoint.AlignZ",
+		"\tPart.ControlPoint.Tangent",
+		"-",
+		"@Tools",
+		"-",
+		"View.NormalToFace", "@Viewpoint", "@Camera", "@Projection", "@Shading", "@Cutaway",
+		"-",
+		">View",
+		"\tView.SplitHorizontal", "\tView.SplitVertical", "\tView.RemoveView", "\tView.ResetViews"
+	});
+}
+
+const QStringList& swGetContextMenuBuiltins()
+{
+	// names for the translation tools
+	[[maybe_unused]] static const char* const TranslatedNames[] =
+	{
+		QT_TRANSLATE_NOOP("ContextMenu", "Import"),
+		QT_TRANSLATE_NOOP("ContextMenu", "Export"),
+		QT_TRANSLATE_NOOP("ContextMenu", "Render"),
+		QT_TRANSLATE_NOOP("ContextMenu", "Selection Mode"),
+		QT_TRANSLATE_NOOP("ContextMenu", "Transform"),
+		QT_TRANSLATE_NOOP("ContextMenu", "Tools"),
+		QT_TRANSLATE_NOOP("ContextMenu", "Toolbars"),
+		QT_TRANSLATE_NOOP("ContextMenu", "Viewpoint"),
+		QT_TRANSLATE_NOOP("ContextMenu", "Cutaway"),
+		QT_TRANSLATE_NOOP("ContextMenu", "Camera"),
+		QT_TRANSLATE_NOOP("ContextMenu", "Projection"),
+		QT_TRANSLATE_NOOP("ContextMenu", "Shading"),
+		QT_TRANSLATE_NOOP("ContextMenu", "Joint"),
+		QT_TRANSLATE_NOOP("ContextMenu", "Group"),
+		QT_TRANSLATE_NOOP("ContextMenu", "Visibility"),
+	};
+
+	// window submenus by object name
+
+	static const QStringList Builtins({ "Import", "Export", "Render", "Selection Mode", "Transform", "Tools", "Toolbars", "Viewpoint", "Cutaway", "Camera", "Projection", "Shading", "Joint", "Group", "Visibility" });
+	return Builtins;
+}
+
+int swFindCommand(const QString& ID)
+{
+	for (int CommandIndex = 0; CommandIndex < SW_COMMAND_COUNT; CommandIndex++)
+		if (gCommands[CommandIndex].ID[0] && ID == QLatin1String(gCommands[CommandIndex].ID))
+			return CommandIndex;
+
+	return -1;
+}

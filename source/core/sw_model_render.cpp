@@ -36,6 +36,10 @@ void swModel::GetScene(swScene* Scene, const swCamera* ViewCamera, bool AllowHig
 	// selected parts outside the step
 	const bool DrawSelected = Scene->GetDrawInterface();
 
+	// an empty step fades nothing
+	if (AllowFade)
+		AllowFade = std::any_of(mParts.begin(), mParts.end(), [this](const std::unique_ptr<swPart>& Part) { return Part->GetStepShow() == mCurrentStep && Part->IsVisible(mCurrentStep); });
+
 	for (const std::unique_ptr<swPart>& Part : mParts)
 	{
 		if ((DrawSelected && Part->IsSelected()) || Part->IsVisible(mCurrentStep))
@@ -687,7 +691,7 @@ int swImageTurntable::GetFrameCount(int StepCount) const
 		return qMax(StepCount, 1);
 
 	// one transition per pose, back to the first
-	if (Motion == swImageMotion::Poses)
+	if (Motion == swImageMotion::Joints)
 		return qMax(StepCount, 1) * qMax(Frames, 1);
 
 	if (NextStep == swImageNextStep::Off)
@@ -701,7 +705,7 @@ int swImageTurntable::GetFrameStep(int Frame) const
 	if (Motion == swImageMotion::Steps)
 		return Frame;
 
-	if (Motion == swImageMotion::Poses)
+	if (Motion == swImageMotion::Joints)
 		return 0;
 
 	if (NextStep == swImageNextStep::Off)
@@ -971,13 +975,14 @@ swResult<void> swModel::SaveFramedImages(const QString& BaseName, bool AddStepSu
 	const float Aspect = static_cast<float>(Width) / Height;
 	swCamera Camera(true);
 
-	// poses in a single file
-	if (Turntable.Enabled && Turntable.Motion == swImageMotion::Poses)
+	// main model poses in a single file
+	if (Turntable.Enabled && Turntable.Motion == swImageMotion::Joints)
 	{
-		const std::vector<swPose> Poses = mProject->GetMainModel()->GetPoses();
+		swModel* Main = mProject->GetMainModel();
+		const std::vector<swPose> Poses = Main->GetPoses();
 
 		if (Poses.size() < 2)
-			return swUnexpected(tr("Save at least two poses first."));
+			return swUnexpected(tr("Save at least two poses of the main model first."));
 
 		const QString FileName = AddStepSuffix ? BaseName.arg(End, 2, 10, QLatin1Char('0')) : BaseName;
 		swGifWriter Writer(FileName, QSize(Width, Height));
@@ -985,7 +990,7 @@ swResult<void> swModel::SaveFramedImages(const QString& BaseName, bool AddStepSu
 		if (!Writer.Open())
 			return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, Writer.GetErrorString()));
 
-		const swPose Original = GetCurrentPose(QString());
+		const swPose Original = Main->GetCurrentPose(QString());
 		const int Per = qMax(Turntable.Frames, 1);
 		const int FrameCount = Turntable.GetFrameCount(static_cast<int>(Poses.size()));
 		swResult<void> Result;
@@ -994,7 +999,7 @@ swResult<void> swModel::SaveFramedImages(const QString& BaseName, bool AddStepSu
 		{
 			const size_t From = Frame / Per;
 
-			ApplyPoseBlend(Poses[From], Poses[(From + 1) % Poses.size()], static_cast<float>(Frame % Per) / Per);
+			Main->ApplyPoseBlend(Poses[From], Poses[(From + 1) % Poses.size()], static_cast<float>(Frame % Per) / Per);
 			SetImageCamera(&Camera, BaseCamera, Framing, Turntable, 0, End, End, Aspect);
 
 			const swResult<QImage> Image = RenderStepImageWithReadyAssets(false, Width, Height, End, &Camera, Background);
@@ -1005,7 +1010,7 @@ swResult<void> swModel::SaveFramedImages(const QString& BaseName, bool AddStepSu
 				Result = swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, Writer.GetErrorString()));
 		}
 
-		ApplyPoseBlend(Original, Original, 0.0f);
+		Main->ApplyPoseBlend(Original, Original, 0.0f);
 
 		if (Result && !Writer.Close())
 			Result = swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, Writer.GetErrorString()));

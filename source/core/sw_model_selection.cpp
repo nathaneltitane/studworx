@@ -272,6 +272,26 @@ bool swModel::GetMoveRotateTransform(swVector3& Center, swMatrix33& RelativeRota
 	Center = swVector3(0.0f, 0.0f, 0.0f);
 	RelativeRotation = swMatrix33Identity();
 
+	// the gizmo sits on the joint pivot
+
+	if (const swPart* Joint = GetRotateJoint())
+	{
+		const size_t JointIndex = Joint == GetJointPart() ? GetJointIndex() : 0;
+		const swMatrix44 Frame = Joint->GetJointFrame(JointIndex);
+
+		Center = swMultiply31(Joint->mJoints[JointIndex].Pivot, Frame);
+
+		if (Relative)
+		{
+			const swVector3 AxisZ = swNormalize(Joint->mJoints[JointIndex].Axis);
+			const swVector3 AxisX = swNormalize(swCross(fabsf(AxisZ[0]) < 0.9f ? swVector3(1.0f, 0.0f, 0.0f) : swVector3(0.0f, 1.0f, 0.0f), AxisZ));
+
+			RelativeRotation = swMultiply(swMatrix33(AxisX, swCross(AxisZ, AxisX), AxisZ), swMatrix33(Frame));
+		}
+
+		return true;
+	}
+
 	for (const std::unique_ptr<swPart>& Part : mParts)
 	{
 		if (!Part->IsSelected())

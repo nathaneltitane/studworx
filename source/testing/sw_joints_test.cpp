@@ -62,8 +62,8 @@ void swTests::PoseBlendsRotations()
 	QVERIFY(swLength(swBlendRotation(Ball, Ball, 0.0f, nullptr) - Ball) < 0.01f);
 }
 
-// Saves a model with a joint and poses, which must come back unchanged.
-void swTests::PoseJointSavesAndLoads()
+// Saves a model with a joint and poses, each pose written in its own model.
+void swTests::PoseSavesAndLoads()
 {
 	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
 	const QString Binary = Environment.value("SW_TEST_BINARY");
@@ -80,12 +80,17 @@ void swTests::PoseJointSavesAndLoads()
 	Part.write("0 Brick  2 x  4\r\n0 Name: 3001.dat\r\n4 16 -40 0 -20 40 0 -20 40 0 20 -40 0 20\r\n");
 	Part.close();
 
-	const QByteArray Joint = "0 !SW JOINT PART HINGE 1.0000 2.0000 3.0000 0.0000 0.0000 1.0000 0.0000 0.0000 30.0000";
-	const QByteArray Pose = "0 !SW POSE \"Open\" \"sub.ldr\" 0 0.0000 0.0000 30.0000";
+	const QByteArray Joint = "0 !SW JOINT PART HINGE 1 2 3 0 0 1 0 0 30";
+	const QByteArray Pose = "0 !SW JOINT MODEL \"Open\" \"main.ldr\" 0 0 0 30";
+	const QByteArray OldPose = "0 !SW JOINT MODEL \"Open\" \"sub.ldr\" 0 0 0 15";
+
+	// a second joint on the same submodel
+	const QByteArray SecondJoint = "0 !SW JOINT PART HINGE 5 6 7 1 0 0 15 0 0";
+	const QByteArray SecondPose = "0 !SW JOINT MODEL \"Open\" \"main.ldr\" 0 15 0 0 1";
 
 	QFile Model(Folder.filePath("model.mpd"));
 	QVERIFY(Model.open(QIODevice::WriteOnly));
-	Model.write("0 FILE main.ldr\r\n0 main\r\n" + Pose + "\r\n" + Joint + "\r\n1 4 0 0 0 1 0 0 0 1 0 0 0 1 sub.ldr\r\n0 NOFILE\r\n0 FILE sub.ldr\r\n1 1 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n0 NOFILE\r\n");
+	Model.write("0 FILE main.ldr\r\n0 main\r\n" + Pose + "\r\n" + SecondPose + "\r\n" + OldPose + "\r\n" + Joint + "\r\n" + SecondJoint + "\r\n1 4 0 0 0 1 0 0 0 1 0 0 0 1 sub.ldr\r\n0 NOFILE\r\n0 FILE sub.ldr\r\n1 1 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n0 NOFILE\r\n");
 	Model.close();
 
 	QProcessEnvironment SaveEnvironment = Environment;
@@ -107,4 +112,11 @@ void swTests::PoseJointSavesAndLoads()
 
 	QVERIFY(Lines.contains(QString::fromUtf8(Joint)));
 	QVERIFY(Lines.contains(QString::fromUtf8(Pose)));
+	QVERIFY(Lines.indexOf(QString::fromUtf8(SecondJoint)) > Lines.indexOf(QString::fromUtf8(Joint)));
+	QVERIFY(Lines.contains(QString::fromUtf8(SecondPose)));
+
+	// old project wide poses move into their model
+	const int SubStart = Lines.indexOf("0 FILE sub.ldr");
+	QVERIFY(SubStart > Lines.indexOf(QString::fromUtf8(Pose)));
+	QVERIFY(Lines.indexOf(QString::fromUtf8(OldPose)) > SubStart);
 }

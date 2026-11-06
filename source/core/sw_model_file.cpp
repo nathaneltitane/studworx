@@ -265,14 +265,20 @@ void swModel::SaveLDraw(QTextStream& Stream, bool SelectedOnly, swStep LastStep)
 			Stream << QLatin1String("0 !SW ") << Property << QLatin1String(" INSTRUCTION") << Arguments << LineEnding;
 		}
 
-		// joint rotations in ldraw axes
+		// pose joint rotations in ldraw axes
 		for (const swPose& Pose : mPoses)
-			for (const swPoseJoint& Joint : Pose.Joints)
+			for (const swJointAngle& Joint : Pose.Joints)
 			{
 				QString Name = Pose.Name;
 				Name.replace(QLatin1Char('"'), QLatin1Char('\''));
 
-				Stream << QLatin1String("0 !SW POSE \"") << Name << QLatin1String("\" \"") << Joint.Model << QLatin1String("\" ") << Joint.Index << ' ' << swFormatValue(Joint.Rotation[0], 4) << ' ' << swFormatValue(-Joint.Rotation[2], 4) << ' ' << swFormatValue(Joint.Rotation[1], 4) << LineEnding;
+				Stream << QLatin1String("0 !SW JOINT MODEL \"") << Name << QLatin1String("\" \"") << GetFileName() << QLatin1String("\" ") << Joint.Index << ' ' << swFormatValue(Joint.Rotation[0], 4) << ' ' << swFormatValue(-Joint.Rotation[2], 4) << ' ' << swFormatValue(Joint.Rotation[1], 4);
+
+				// one joint needs no number
+				if (Joint.Joint > 0)
+					Stream << ' ' << Joint.Joint;
+
+				Stream << LineEnding;
 			}
 	}
 
@@ -599,6 +605,8 @@ void swModel::LoadLDraw(QIODevice& Device, Project* Project)
 					LineStream >> Token;
 					mPreferCurrentAssetDirectory = Token != QLatin1String("SOURCE");
 				}
+				else if (Token == QLatin1String("JOINT"))
+					ReadPoseLine(LineStream.readAll());
 				else if (Token == QLatin1String("CUTAWAY"))
 				{
 					const QStringList Shapes = { "NONE", "CUBE", "SPHERE", "CYLINDER" };
@@ -663,24 +671,7 @@ void swModel::LoadLDraw(QIODevice& Device, Project* Project)
 				mPOVRayOptions.ParseLDrawLine(LineStream);
 			}
 			else if (Token == QLatin1String("POSE"))
-			{
-				static const QRegularExpression PoseExpression(QStringLiteral("^\\s*\"([^\"]*)\"\\s+\"([^\"]*)\"\\s+(\\d+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)"));
-				const QRegularExpressionMatch Match = PoseExpression.match(LineStream.readAll());
-
-				if (Match.hasMatch())
-				{
-					auto Pose = std::find_if(mPoses.begin(), mPoses.end(), [&Match](const swPose& Other) { return Other.Name == Match.captured(1); });
-
-					if (Pose == mPoses.end())
-					{
-						mPoses.emplace_back();
-						mPoses.back().Name = Match.captured(1);
-						Pose = mPoses.end() - 1;
-					}
-
-					Pose->Joints.push_back({ Match.captured(2), Match.captured(3).toInt(), swVector3(Match.captured(4).toFloat(), Match.captured(6).toFloat(), -Match.captured(5).toFloat()) });
-				}
-			}
+				ReadPoseLine(LineStream.readAll());
 			else if (Token == QLatin1String("INSTRUCTION"))
 			{
 				mInstructionLines.append(LineStream.readAll().trimmed());

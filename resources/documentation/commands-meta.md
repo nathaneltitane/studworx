@@ -115,7 +115,7 @@ Written before the type 1 line of the part they apply to.
 | `0 !SW PIVOT PART <x> <y> <z> <matrix>` | Read, Write | custom pivot point |
 | `0 !SW POSITION_KEY PART <step> <x> <y> <z>` | Read, Write | animated position |
 | `0 !SW ORIENTATION_KEY PART <step> <matrix>` | Read, Write | animated orientation |
-| `0 !SW JOINT PART <HINGE\|BALL> <pivot x y z> <axis x y z> <rotation x y z>` | Read, Write | joint of a placed submodel, rotation as a vector in degrees |
+| `0 !SW JOINT PART <HINGE\|BALL> <pivot x y z> <axis x y z> <rotation x y z>` | Read, Write | joint of a placed submodel, rotation as a vector in degrees, one line per joint |
 
 ### Camera
 
@@ -166,7 +166,8 @@ Each light property takes the `_KEY` form when animated.
 | `0 !SW ASSET_SOURCE MODEL <base64 path>` | Read, Write | folder searched for embedded file sources |
 | `0 !SW ASSET_SOURCE_PRIORITY MODEL SOURCE` | Read, Write | search the asset sources before the model folder |
 | `0 !SW CUTAWAY MODEL <CUBE\|SPHERE\|CYLINDER> <x> <y> <z> <normal x> <normal y> <normal z> <size>` | Read, Write | cutaway kept with the model, center and size in StudWorx units |
-| `0 !SW POSE "<name>" "<submodel file>" <part index> <rx> <ry> <rz>` | Read, Write | joint angles of a saved pose, one line per joint, in the first file of the model |
+| `0 !SW JOINT MODEL "<name>" "<submodel file>" <part index> <rx> <ry> <rz> [<joint>]` | Read, Write | joint angles of a saved pose, one line per joint, the joint number counting from 0 and left out for the first, in the file of the model the joints belong to |
+| `0 !SW POSE "<name>" "<submodel file>" <part index> <rx> <ry> <rz>` | Read | older name of a pose line, saved as `0 !SW JOINT MODEL` once the model is edited |
 
 ### POV-Ray
 

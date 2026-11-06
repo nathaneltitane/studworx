@@ -219,6 +219,11 @@ public:
 	float mMeshLODDistance;
 	bool mFadeSteps;
 	quint32 mFadeStepsColor;
+	bool mFadeInline;
+	quint32 mFadeInlineColor;
+	bool mFadeJoint;
+	quint32 mFadeJointColor;
+	bool mFadeJointMoving;
 	bool mHighlightNewParts;
 	quint32 mHighlightNewPartsColor;
 	bool mGridEnabled = true;
@@ -252,6 +257,8 @@ public:
 	bool mAutoLoadMostRecent;
 	bool mRestoreTabLayout;
 	bool mFirstPartAtOrigin;
+	bool mJointRotation;
+	QStringList mContextMenu;
 	bool mShadowLibraryEnabled;
 	bool mPartsSnapToTiles;
 	bool mTerminalFollowModel;

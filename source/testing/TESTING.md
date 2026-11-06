@@ -8,7 +8,7 @@ the LDCad shadow library are read and fit together and along which axis, on made
 Clip, finger and sphere shapes must be read as joints, a round shape in a placed
 sub-file must keep its pivot and axis, and poses must blend a hinge along its axis
 and a ball along the shortest turn. With `SW_TEST_BINARY` set, a model with a
-`0 !SW JOINT PART` line and a `0 !SW POSE` line must save both back unchanged.
+`0 !SW JOINT PART` line and a `0 !SW JOINT MODEL` line must save both back unchanged.
 With `SW_TEST_BINARY` set to a built `studworx`, a one brick model is exported
 to POV-Ray and rendered at 64 x 64 (skipped without POV-Ray, `SW_TEST_LIBRARY`
 sets an optional parts library). The same binary saves a Trans-Clear model on
@@ -40,7 +40,8 @@ lands exactly on 0 and 1, that the turned part keeps its position and moves by
 whole steps, and that real angles are never rounded.
 A profile test writes settings inside a batch, in a temporary settings folder,
 and checks that they read back at once, that a nested batch and a removed key
-behave, and that the file is written only when the batch ends.
+behave, and that the file is written only when the batch ends. A first start
+must give every setting a line in the settings file and keep a value already set.
 
 The executable creates a `QCoreApplication`; apart from the `SW_TEST_BINARY`
 checks it does not open windows or require an OpenGL context, the parts library, or network access. It uses the same Qt

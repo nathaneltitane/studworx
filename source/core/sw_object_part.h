@@ -58,7 +58,7 @@ struct swPartJoint
 
 struct swPartHistoryState
 {
-	swPartJoint Joint;
+	std::vector<swPartJoint> Joints;
 	swObjectId Id;
 	bool Hidden;
 	int FileLine;
@@ -79,7 +79,7 @@ struct swPartHistoryState
 		return Id == Other.Id && Hidden == Other.Hidden && FileLine == Other.FileLine && PartId == Other.PartId &&
             GroupId == Other.GroupId && ColorIndex == Other.ColorIndex && ColorCode == Other.ColorCode &&
             StepShow == Other.StepShow && StepHide == Other.StepHide && PivotMatrix == Other.PivotMatrix &&
-            PivotPointValid == Other.PivotPointValid && Joint == Other.Joint && ControlPoints == Other.ControlPoints &&
+            PivotPointValid == Other.PivotPointValid && Joints == Other.Joints && ControlPoints == Other.ControlPoints &&
             Position == Other.Position && Rotation == Other.Rotation;
 	}
 };
@@ -324,9 +324,18 @@ public:
 		mRotation.ChangeKey(Rotation, Step, AddKey);
 	}
 
-	// Turns the part about its joint.
-	swMatrix44 GetJointMatrix(const swVector3& Rotation) const;
-	void SetJointRotation(const swVector3& Rotation, swStep Step);
+	// Turns the part about its joints, the first innermost.
+	static swMatrix44 GetJointMatrix(const swPartJoint& Joint, const swVector3& Rotation);
+	swMatrix44 GetJointsMatrix(size_t Count) const;
+	swMatrix44 GetJointFrame(size_t Index) const;
+	void SetJointRotation(size_t Index, const swVector3& Rotation, swStep Step);
+	size_t SetJoint(const swPartJoint& Joint, swStep Step);
+	void RemoveJoint(size_t Index, swStep Step);
+
+	bool HasJoints() const
+	{
+		return !mJoints.empty();
+	}
 
 	swVector3 GetRotationCenter() const;
 	swMatrix33 GetRelativeRotation() const;
@@ -342,7 +351,7 @@ public:
 
 	swMatrix44 mModelWorld;
 	swMatrix44 mPivotMatrix = swMatrix44Identity();
-	swPartJoint mJoint;
+	std::vector<swPartJoint> mJoints;
 
 	// view only explode, never saved
 	swVector3 mExplodeOffset = swVector3(0.0f, 0.0f, 0.0f);

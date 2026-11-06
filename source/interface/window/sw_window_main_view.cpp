@@ -188,6 +188,7 @@ void swMainWindow::ToggleAxisIcon()
 void swMainWindow::ToggleGrid()
 {
 	swGetPreferences().mGridEnabled = !swGetPreferences().mGridEnabled;
+	swSetProfileInteger(SW_PROFILE_GRID_ENABLED, swGetPreferences().mGridEnabled);
 
 	swView::UpdateAllViews();
 }
@@ -487,24 +488,33 @@ void swMainWindow::ModelViewOptionsMenuAboutToShow()
 
 	const swPreferences& Preferences = swGetPreferences();
 
-	AddMenuCommand(Menu, tr("Fade Previous Steps"), SW_VIEW_FADE_PREVIOUS_STEPS, Preferences.mFadeSteps);
-	AddMenuCommand(Menu, tr("Highlight New Parts"), SW_VIEW_TOGGLE_HIGHLIGHT_NEW_PARTS, Preferences.mHighlightNewParts);
-	AddMenuCommand(Menu, tr("Insert First Part at Origin"), SW_PART_TOGGLE_FIRST_AT_ORIGIN, Preferences.mFirstPartAtOrigin);
-	AddMenuCommand(Menu, tr("Part Connections"), SW_EDIT_TOGGLE_SHADOW_LIBRARY, Preferences.mShadowLibraryEnabled)->setEnabled(swShadowLibrary::IsLoaded());
+	QMenu* StepsMenu = Menu->addMenu(tr("Steps and Highlighting"));
+	AddMenuCommand(StepsMenu, tr("Highlight New Parts"), SW_VIEW_TOGGLE_HIGHLIGHT_NEW_PARTS, Preferences.mHighlightNewParts);
+	AddMenuCommand(StepsMenu, tr("Fade Previous Steps"), SW_VIEW_FADE_PREVIOUS_STEPS, Preferences.mFadeSteps);
+	AddMenuCommand(StepsMenu, tr("Fade on Edit"), SW_VIEW_TOGGLE_FADE_ON_EDIT, Preferences.mFadeInline);
+	AddMenuCommand(StepsMenu, tr("Fade on Joint Set"), SW_VIEW_TOGGLE_FADE_ON_JOINT_SET, Preferences.mFadeJoint);
+
+	// moving fades only with joint set fading
+	AddMenuCommand(StepsMenu, tr("Fade on Joint Move and Rotate"), SW_VIEW_TOGGLE_FADE_ON_JOINT_MOVE, Preferences.mFadeJointMoving)->setEnabled(Preferences.mFadeJoint);
+
+	QMenu* GridMenu = Menu->addMenu(tr("Grid"));
+	AddMenuCommand(GridMenu, tr("All Grids"), SW_VIEW_GRID_TOGGLE_ALL, Preferences.mGridEnabled && Preferences.mDrawGridHeightXZ && Preferences.mDrawGridHeightYZ);
+	GridMenu->addSeparator();
+	AddMenuCommand(GridMenu, tr("Base Grid"), SW_VIEW_TOGGLE_GRID, Preferences.mGridEnabled);
+	AddMenuCommand(GridMenu, tr("XZ Height Grid"), SW_VIEW_GRID_TOGGLE_HEIGHT_XZ, Preferences.mDrawGridHeightXZ);
+	AddMenuCommand(GridMenu, tr("YZ Height Grid"), SW_VIEW_GRID_TOGGLE_HEIGHT_YZ, Preferences.mDrawGridHeightYZ);
+	AddMenuCommand(GridMenu, tr("Height Grids Behind Model"), SW_VIEW_GRID_TOGGLE_HEIGHT_BEHIND, Preferences.mGridHeightBehindModel);
+	GridMenu->addSeparator();
+	AddMenuCommand(GridMenu, tr("X Axis Line"), SW_VIEW_GRID_TOGGLE_AXIS_X, Preferences.mDrawGridAxisX);
+	AddMenuCommand(GridMenu, tr("Y Axis Line"), SW_VIEW_GRID_TOGGLE_AXIS_Y, Preferences.mDrawGridAxisY);
+	AddMenuCommand(GridMenu, tr("Z Axis Line"), SW_VIEW_GRID_TOGGLE_AXIS_Z, Preferences.mDrawGridAxisZ);
 
 	Menu->addSeparator();
 
+	AddMenuCommand(Menu, tr("Insert First Part at Origin"), SW_PART_TOGGLE_FIRST_AT_ORIGIN, Preferences.mFirstPartAtOrigin);
+	AddMenuCommand(Menu, tr("Part Connections"), SW_EDIT_TOGGLE_SHADOW_LIBRARY, Preferences.mShadowLibraryEnabled)->setEnabled(swShadowLibrary::IsLoaded());
 	AddMenuCommand(Menu, tr("View Cube"), SW_VIEW_TOGGLE_VIEW_CUBE, Preferences.mViewCubeEnabled);
 	AddMenuCommand(Menu, tr("Axis Icon"), SW_VIEW_TOGGLE_AXIS_ICON, Preferences.mDrawAxes);
-	AddMenuCommand(Menu, tr("Base Grid"), SW_VIEW_TOGGLE_GRID, Preferences.mGridEnabled);
-
-	// height grids draw only with the base grid
-	AddMenuCommand(Menu, tr("XZ Height Grid"), SW_VIEW_GRID_TOGGLE_HEIGHT_XZ, Preferences.mDrawGridHeightXZ)->setEnabled(Preferences.mGridEnabled);
-	AddMenuCommand(Menu, tr("YZ Height Grid"), SW_VIEW_GRID_TOGGLE_HEIGHT_YZ, Preferences.mDrawGridHeightYZ)->setEnabled(Preferences.mGridEnabled);
-	AddMenuCommand(Menu, tr("Height Grids Behind Model"), SW_VIEW_GRID_TOGGLE_HEIGHT_BEHIND, Preferences.mGridHeightBehindModel)->setEnabled(Preferences.mGridEnabled);
-	AddMenuCommand(Menu, tr("X Axis Line"), SW_VIEW_GRID_TOGGLE_AXIS_X, Preferences.mDrawGridAxisX);
-	AddMenuCommand(Menu, tr("Y Axis Line"), SW_VIEW_GRID_TOGGLE_AXIS_Y, Preferences.mDrawGridAxisY);
-	AddMenuCommand(Menu, tr("Z Axis Line"), SW_VIEW_GRID_TOGGLE_AXIS_Z, Preferences.mDrawGridAxisZ);
 
 	Menu->addSeparator();
 
@@ -861,6 +871,13 @@ void swMainWindow::SetActiveView(swView* ActiveView)
 void swMainWindow::SetTool(swTool Tool)
 {
 	mTool = Tool;
+
+	// another tool ends a joint pick
+
+	swModel* ActiveModel = GetActiveModel();
+
+	if (ActiveModel && Tool != swTool::Joints)
+		ActiveModel->SetJointPick(false);
 
 	QAction* Action = mActions[SW_EDIT_ACTION_FIRST + static_cast<int>(mTool)];
 

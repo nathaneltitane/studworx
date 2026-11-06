@@ -405,7 +405,7 @@ swTrackTool swView::GetOverrideTrackTool(Qt::MouseButton Button) const
 	    swTrackTool::RotateTrackBall,  // swTool::Rotate
 	    swTrackTool::Erase,           // swTool::Erase
 	    swTrackTool::Paint,            // swTool::Paint
-	    swTrackTool::Pose,             // swTool::Pose
+	    swTrackTool::Joints,             // swTool::Joints
 	    swTrackTool::ColorPicker,      // swTool::ColorPicker
 	    swTrackTool::Zoom,             // swTool::Zoom
 	    swTrackTool::Pan,              // swTool::Pan
@@ -491,6 +491,16 @@ swCursor swView::GetCursor() const
 			return swCursor::SelectRemove;
 	}
 
+	// set joint picks with its own pointer
+
+	if (mTrackTool == swTrackTool::Joints)
+	{
+		const swModel* ActiveModel = GetActiveModel();
+
+		if (ActiveModel && ActiveModel->IsJointPick())
+			return swCursor::JointPick;
+	}
+
 	constexpr swCursor CursorFromTrackTool[] =
 	{
 		swCursor::Select,           // swTrackTool::None
@@ -521,7 +531,7 @@ swCursor swView::GetCursor() const
 		swCursor::Move,             // swTrackTool::ScaleMinus
 		swCursor::Erase,           // swTrackTool::Erase
 		swCursor::Paint,            // swTrackTool::Paint
-		swCursor::Rotate,           // swTrackTool::Pose
+		swCursor::Rotate,           // swTrackTool::Joints
 		swCursor::ColorPicker,      // swTrackTool::ColorPicker
 		swCursor::Zoom,             // swTrackTool::Zoom
 		swCursor::Pan,              // swTrackTool::Pan
@@ -611,6 +621,7 @@ void swView::SetCursor(swCursor CursorType)
 		{  1,  1, swPaintedIcon::ActionSelect, swPaintedIcon::Count },       // swCursor::Select
 		{  1,  1, swPaintedIcon::ActionSelect, swPaintedIcon::BadgeAdd },    // swCursor::SelectAdd
 		{  1,  1, swPaintedIcon::ActionSelect, swPaintedIcon::BadgeRemove }, // swCursor::SelectRemove
+		{  1,  1, swPaintedIcon::ActionSelect, swPaintedIcon::ActionJoints }, // swCursor::JointPick
 		{ 16, 16, swPaintedIcon::CursorMove, swPaintedIcon::Count },         // swCursor::Move
 		{ 16, 16, swPaintedIcon::CursorMoveAxisX, swPaintedIcon::Count },    // swCursor::MoveAxisX
 		{ 16, 16, swPaintedIcon::CursorMoveAxisY, swPaintedIcon::Count },    // swCursor::MoveAxisY
@@ -768,7 +779,7 @@ swTool swView::GetCurrentTool() const
 		swTool::Move,             // swTrackTool::ScaleMinus
 		swTool::Erase,           // swTrackTool::Erase
 		swTool::Paint,            // swTrackTool::Paint
-		swTool::Pose,             // swTrackTool::Pose
+		swTool::Joints,             // swTrackTool::Joints
 		swTool::ColorPicker,      // swTrackTool::ColorPicker
 		swTool::Zoom,             // swTrackTool::Zoom
 		swTool::Pan,              // swTrackTool::Pan
@@ -884,8 +895,8 @@ void swView::UpdateTrackTool()
 		NewTrackTool = swTrackTool::Paint;
 		break;
 
-	case swTool::Pose:
-		NewTrackTool = swTrackTool::Pose;
+	case swTool::Joints:
+		NewTrackTool = swTrackTool::Joints;
 		break;
 
 	case swTool::ColorPicker:
@@ -1129,7 +1140,7 @@ void swView::StartTracking(swTrackButton TrackButton)
 
 		case swTool::Erase:
 		case swTool::Paint:
-		case swTool::Pose:
+		case swTool::Joints:
 		case swTool::ColorPicker:
 			break;
 
@@ -1196,8 +1207,8 @@ void swView::StopTracking(bool Accept)
 	case swTool::ColorPicker:
 		break;
 
-	case swTool::Pose:
-		ActiveModel->EndPoseTool(Accept);
+	case swTool::Joints:
+		ActiveModel->EndJointsTool(Accept);
 		break;
 
 	case swTool::Zoom:
@@ -1454,27 +1465,27 @@ void swView::OnButtonDown(swTrackButton TrackButton)
 		mToolClicked = true;
 		break;
 
-	case swTrackTool::Pose:
+	case swTrackTool::Joints:
 		{
-			swVector3 StartEnd[2] = { swVector3((float)mMouseX, (float)mMouseY, 0.0f), swVector3((float)mMouseX, (float)mMouseY, 1.0f) };
-			const swMatrix44 CameraWorld = swMatrix44AffineInverse(mCamera->mWorldView);
-			swVector3 Right = swMultiply30(swVector3(1.0f, 0.0f, 0.0f), CameraWorld);
-			swVector3 Up = swMultiply30(swVector3(0.0f, 1.0f, 0.0f), CameraWorld);
+			// right click is left to leave the tool
 
-			UnprojectPoints(StartEnd, 2);
+			if (TrackButton != swTrackButton::Left)
+				break;
 
-			if (ActiveModel != mModel)
-			{
-				const swMatrix44 Inverse = swMatrix44AffineInverse(mActiveSubmodelTransform);
+			swVector3 StartEnd[2], Right, Up;
+			GetJointsRay(StartEnd, Right, Up);
+			const bool Pick = ActiveModel->IsJointPick();
 
-				StartEnd[0] = swMultiply31(StartEnd[0], Inverse);
-				StartEnd[1] = swMultiply31(StartEnd[1], Inverse);
-				Right = swNormalize(swMultiply30(Right, Inverse));
-				Up = swNormalize(swMultiply30(Up, Inverse));
-			}
-
-			if (ActiveModel->PoseToolClicked(StartEnd[0], StartEnd[1], Right, Up))
+			if (ActiveModel->JointsToolClicked(StartEnd[0], StartEnd[1], Right, Up))
 				StartTracking(TrackButton);
+
+			// set joint goes back to select
+
+			if (Pick)
+			{
+				gMainWindow->SetTool(swTool::Select);
+				UpdateTrackTool();
+			}
 		}
 
 		mToolClicked = true;
@@ -1635,7 +1646,14 @@ void swView::OnRightButtonUp()
 	if (mTrackButton != swTrackButton::None)
 		StopTracking(mTrackButton == swTrackButton::Right);
 
-	if (ShowMenu)
+	// right click leaves the joints tool
+
+	if (ShowMenu && gMainWindow->GetTool() == swTool::Joints)
+	{
+		gMainWindow->SetTool(swTool::Select);
+		UpdateCursor();
+	}
+	else if (ShowMenu)
 		ShowContextMenu();
 }
 
@@ -1655,6 +1673,29 @@ void swView::OnForwardButtonDown()
 void swView::OnForwardButtonUp()
 {
 	gMainWindow->HandleCommand(SW_VIEW_TIME_NEXT);
+}
+
+// use to cast the pointer into the active model
+void swView::GetJointsRay(swVector3* StartEnd, swVector3& Right, swVector3& Up) const
+{
+	const swMatrix44 CameraWorld = swMatrix44AffineInverse(mCamera->mWorldView);
+
+	StartEnd[0] = swVector3((float)mMouseX, (float)mMouseY, 0.0f);
+	StartEnd[1] = swVector3((float)mMouseX, (float)mMouseY, 1.0f);
+	Right = swMultiply30(swVector3(1.0f, 0.0f, 0.0f), CameraWorld);
+	Up = swMultiply30(swVector3(0.0f, 1.0f, 0.0f), CameraWorld);
+
+	UnprojectPoints(StartEnd, 2);
+
+	if (GetActiveModel() != mModel)
+	{
+		const swMatrix44 Inverse = swMatrix44AffineInverse(mActiveSubmodelTransform);
+
+		StartEnd[0] = swMultiply31(StartEnd[0], Inverse);
+		StartEnd[1] = swMultiply31(StartEnd[1], Inverse);
+		Right = swNormalize(swMultiply30(Right, Inverse));
+		Up = swNormalize(swMultiply30(Up, Inverse));
+	}
 }
 
 void swView::OnMouseMove()
@@ -1698,6 +1739,17 @@ void swView::OnMouseMove()
 		}
 
 		UpdateTrackTool();
+
+		if (mTrackTool == swTrackTool::Joints)
+		{
+			swVector3 StartEnd[2], Right, Up;
+			GetJointsRay(StartEnd, Right, Up);
+
+			if (ActiveModel->UpdateJointHover(StartEnd[0], StartEnd[1]))
+				Redraw();
+
+			UpdateCursor();
+		}
 
 		if (mTrackTool == swTrackTool::Insert)
 		{
@@ -2086,8 +2138,8 @@ void swView::OnMouseMove()
 		ActiveModel->PaintToolClicked(FindObjectUnderPointer(true, false).Object);
 		break;
 
-	case swTrackTool::Pose:
-		ActiveModel->UpdatePoseTool((float)(mMouseX - mMouseDownX), (float)(mMouseY - mMouseDownY));
+	case swTrackTool::Joints:
+		ActiveModel->UpdateJointsTool((float)(mMouseX - mMouseDownX), (float)(mMouseY - mMouseDownY));
 		break;
 
 	case swTrackTool::ColorPicker:

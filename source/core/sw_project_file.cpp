@@ -493,6 +493,8 @@ bool Project::LoadDocument(const QByteArray& FileData, const QString& FileName, 
 		}
 	}
 
+	swModel::DistributePoses(mModels);
+
 	std::vector<swModel*> UpdatedModels;
 	UpdatedModels.reserve(mModels.size());
 

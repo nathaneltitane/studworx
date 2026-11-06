@@ -1057,6 +1057,29 @@
             </property>
            </widget>
           </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="JointRotationLabel">
+            <property name="toolTip">
+             <string>When the selected submodel has a joint, rotating it turns the joint around its own pivot and axis instead of the pivot point. Part &gt; Joint &gt; Rotate does the same for the current selection.</string>
+            </property>
+            <property name="text">
+             <string>Use Joint Rotation</string>
+            </property>
+            <property name="buddy">
+             <cstring>JointRotation</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QCheckBox" name="JointRotation">
+            <property name="accessibleName">
+             <string>Use Joint Rotation</string>
+            </property>
+            <property name="toolTip">
+             <string>When the selected submodel has a joint, rotating it turns the joint around its own pivot and axis instead of the pivot point. Part &gt; Joint &gt; Rotate does the same for the current selection.</string>
+            </property>
+           </widget>
+          </item>
           <item row="0" column="2">
            <spacer name="EditingSpacer">
             <property name="orientation">
@@ -1506,7 +1529,7 @@
           <string>Steps and Highlighting</string>
          </property>
          <layout class="QGridLayout" name="StepsLayout">
-          <item row="0" column="0">
+          <item row="1" column="0">
            <widget class="QLabel" name="FadeStepsLabel">
             <property name="toolTip">
              <string>Tint parts from previous building steps with the chosen fade color.</string>
@@ -1519,7 +1542,7 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
+          <item row="1" column="1">
            <layout class="QHBoxLayout" name="FadeStepsLayout" stretch="0,0,1">
             <item>
              <widget class="QCheckBox" name="FadeSteps">
@@ -1553,7 +1576,7 @@
             </item>
            </layout>
           </item>
-          <item row="1" column="0">
+          <item row="0" column="0">
            <widget class="QLabel" name="HighlightNewPartsLabel">
             <property name="toolTip">
              <string>Highlight parts introduced in the current building step.</string>
@@ -1566,7 +1589,7 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
+          <item row="0" column="1">
            <layout class="QHBoxLayout" name="HighlightNewPartsLayout" stretch="0,0,1">
             <item>
              <widget class="QCheckBox" name="HighlightNewParts">
@@ -1601,6 +1624,110 @@
            </layout>
           </item>
           <item row="2" column="0">
+           <widget class="QLabel" name="FadeInlineLabel">
+            <property name="toolTip">
+             <string>Tint the rest of the model with the chosen color while editing a submodel in place. When off, the rest of the model stays in its own colors, slightly translucent.</string>
+            </property>
+            <property name="text">
+             <string>Fade on Edit</string>
+            </property>
+            <property name="buddy">
+             <cstring>FadeInline</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <layout class="QHBoxLayout" name="FadeInlineLayout" stretch="0,0,1">
+            <item>
+             <widget class="QCheckBox" name="FadeInline">
+              <property name="accessibleName">
+               <string>Fade on Edit</string>
+              </property>
+              <property name="toolTip">
+               <string>Tint the rest of the model with the chosen color while editing a submodel in place. When off, the rest of the model stays in its own colors, slightly translucent.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="FadeInlineColor">
+              <property name="accessibleName">
+               <string>Edit Fade Color</string>
+              </property>
+              <property name="toolTip">
+               <string>Choose the tint used for the rest of the model while editing a submodel in place.</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="FadeInlineSpacer">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="FadeJointLabel">
+            <property name="toolTip">
+             <string>Tint all but the selected submodel with the chosen color while setting a joint.</string>
+            </property>
+            <property name="text">
+             <string>Fade on Joint Set</string>
+            </property>
+            <property name="buddy">
+             <cstring>FadeJoint</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <layout class="QHBoxLayout" name="FadeJointLayout" stretch="0,0,0,1">
+            <item>
+             <widget class="QCheckBox" name="FadeJoint">
+              <property name="accessibleName">
+               <string>Fade on Joint Set</string>
+              </property>
+              <property name="toolTip">
+               <string>Tint all but the selected submodel with the chosen color while setting a joint.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="FadeJointColor">
+              <property name="accessibleName">
+               <string>Joint Fade Color</string>
+              </property>
+              <property name="toolTip">
+               <string>Choose the tint used for all but the selected submodel while setting a joint.</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="FadeJointMoving">
+              <property name="toolTip">
+               <string>Keep the joint fade while moving or rotating a joint. Leave off to check parts for collisions in their own colors.</string>
+              </property>
+              <property name="text">
+               <string>Fade on Joint Move and Rotate</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="FadeJointSpacer">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item row="4" column="0">
            <widget class="QLabel" name="HighlightRenderModeLabel">
             <property name="whatsThis">
              <string>&lt;p&gt;&lt;b&gt;Highlight Style&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose how selected parts and parts added in the current step are highlighted in the viewport. Outline uses fading outlines in the selection, focus, or new-part highlight color. Selected parts also receive a faint fill over obscured portions. Tint and Edges uses tinted faces and colored edges for selection, and colored edges for new parts.&lt;/p&gt;&lt;p&gt;New-part highlighting requires Highlight New Parts. Wireframe views, image exports, and systems without outline support use Tint and Edges.&lt;/p&gt;</string>
@@ -1616,7 +1743,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item row="4" column="1">
            <widget class="QComboBox" name="HighlightRenderMode">
             <property name="accessibleName">
              <string>Highlight Style</string>
@@ -1639,7 +1766,7 @@
             </item>
            </widget>
           </item>
-          <item row="3" column="0">
+          <item row="5" column="0">
            <widget class="QLabel" name="SelectionOutlineWidthLabel">
             <property name="toolTip">
              <string>Choose the thickness of the outline drawn around selected parts and new parts.</string>
@@ -1652,7 +1779,7 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
+          <item row="5" column="1">
            <widget class="swRangeSpinBox" name="SelectionOutlineWidth">
             <property name="accessibleName">
              <string>Outline Width</string>
@@ -5132,7 +5259,7 @@
                  <string>Key Sequence</string>
                 </property>
                 <property name="whatsThis">
-                 <string>&lt;p&gt;&lt;b&gt;Key Sequence&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Click here and press the key combination you want to assign. Function keys, including F1, are recorded as shortcut candidates in this field. Use the What's This button in the title bar for guidance. Assign asks before replacing a shortcut already used by another command.&lt;/p&gt;</string>
+                 <string>&lt;p&gt;&lt;b&gt;Key Sequence&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Click here and press the key combination you want to assign. Function keys, including F1, are recorded as shortcut candidates in this field. Use the "What's This?" button in the title bar for guidance. Assign asks before replacing a shortcut already used by another command.&lt;/p&gt;</string>
                 </property>
                 <property name="toolTip">
                  <string>Press the key combination to assign, then choose Assign.</string>
@@ -5457,6 +5584,7 @@
   <tabstop>KMZGeometry</tabstop>
   <tabstop>fixedDirectionKeys</tabstop>
   <tabstop>FirstPartAtOrigin</tabstop>
+  <tabstop>JointRotation</tabstop>
   <tabstop>InsertColorMode</tabstop>
   <tabstop>FlexSpreadMode</tabstop>
   <tabstop>FlexClampNewControlPoints</tabstop>

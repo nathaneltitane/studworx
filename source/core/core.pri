@@ -15,7 +15,7 @@ SOURCES += \
 	$$PWD/sw_model_history.cpp \
 	$$PWD/sw_model_render.cpp \
 	$$PWD/sw_model_selection.cpp \
-	$$PWD/sw_model_pose.cpp \
+	$$PWD/sw_model_joints.cpp \
 	$$PWD/sw_model_tool.cpp \
 	$$PWD/sw_object.cpp \
 	$$PWD/sw_object_camera.cpp \

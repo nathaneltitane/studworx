@@ -1,5 +1,6 @@
 #include "sw_global.h"
 #include "sw_tests.h"
+#include "sw_commands.h"
 #include "sw_profile.h"
 
 // Writes inside a batch must stay readable at once and reach the settings file only when the batch
@@ -64,4 +65,50 @@ void swTests::ProfileBatchSavesOnce()
 	QCoreApplication::setOrganizationName(OrganizationName);
 	QCoreApplication::setApplicationName(ApplicationName);
 	QSettings::setDefaultFormat(Format);
+}
+
+// A first start must give every setting a line in the settings file, without replacing one already set.
+void swTests::ProfileWritesEveryKey()
+{
+	QTemporaryDir Directory;
+	QVERIFY(Directory.isValid());
+
+	const QString OrganizationName = QCoreApplication::organizationName();
+	const QString ApplicationName = QCoreApplication::applicationName();
+	const QSettings::Format Format = QSettings::defaultFormat();
+
+	QCoreApplication::setOrganizationName(QLatin1String("StudWorxTests"));
+	QCoreApplication::setApplicationName(QLatin1String("ProfileWriteMissing"));
+	QSettings::setDefaultFormat(QSettings::IniFormat);
+	QSettings::setPath(QSettings::IniFormat, QSettings::UserScope, Directory.path());
+
+	swSetProfileInteger(SW_PROFILE_ANTIALIASING_SAMPLES, 8);
+	swProfileWriteMissing();
+
+	QSettings Settings;
+
+	QCOMPARE(Settings.allKeys().size(), static_cast<int>(SW_PROFILE_KEY_COUNT));
+	QCOMPARE(Settings.value(QLatin1String("Settings/AASamples")).toInt(), 8);
+
+	QCoreApplication::setOrganizationName(OrganizationName);
+	QCoreApplication::setApplicationName(ApplicationName);
+	QSettings::setDefaultFormat(Format);
+}
+
+void swTests::ContextMenuDefaultResolves()
+{
+	for (const QString& Line : swGetDefaultContextMenu())
+	{
+		const QString Entry = Line.trimmed();
+
+		if (Entry == "-" || Entry.startsWith('>'))
+			continue;
+
+		if (Entry.startsWith('@'))
+			QVERIFY2(swGetContextMenuBuiltins().contains(Entry.mid(1)), qPrintable(Entry));
+		else
+			QVERIFY2(swFindCommand(Entry) >= 0, qPrintable(Entry));
+	}
+
+	QCOMPARE(swFindCommand("Missing.Command"), -1);
 }

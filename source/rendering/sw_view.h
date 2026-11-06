@@ -31,6 +31,7 @@ enum class swCursor
 	Select,
 	SelectAdd,
 	SelectRemove,
+	JointPick,
 	Move,
 	MoveAxisX,
 	MoveAxisY,
@@ -90,7 +91,7 @@ enum class swTrackTool
 	ScaleMinus,
 	Erase,
 	Paint,
-	Pose,
+	Joints,
 	ColorPicker,
 	Zoom,
 	Pan,
@@ -367,6 +368,7 @@ public:
 	swVector3 ProjectPoint(const swVector3& Point) const;
 	swVector3 UnprojectPoint(const swVector3& Point) const;
 	void UnprojectPoints(swVector3* Points, int NumPoints) const;
+	void GetJointsRay(swVector3* StartEnd, swVector3& Right, swVector3& Up) const;
 	swMatrix44 GetProjectionMatrix() const;
 
 	bool BeginRenderToImage(int Width, int Height);

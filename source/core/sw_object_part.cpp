@@ -51,7 +51,7 @@ swPart::swPart(const swPart& Other)
 
 	mPivotMatrix = Other.mPivotMatrix;
 	mPivotPointValid = Other.mPivotPointValid;
-	mJoint = Other.mJoint;
+	mJoints = Other.mJoints;
 
 	mPosition = Other.mPosition;
 	mRotation = Other.mRotation;
@@ -162,11 +162,11 @@ void swPart::SaveLDraw(QTextStream& Stream) const
 		Stream << LineEnding;
 	}
 
-	if (mJoint.Type != swJointType::None)
+	for (const swPartJoint& Joint : mJoints)
 	{
-		const swVector3 Values[3] = { mJoint.Pivot, mJoint.Axis, mJoint.Rotation };
+		const swVector3 Values[3] = { Joint.Pivot, Joint.Axis, Joint.Rotation };
 
-		Stream << QLatin1String("0 !SW JOINT PART ") << (mJoint.Type == swJointType::Hinge ? QLatin1String("HINGE") : QLatin1String("BALL"));
+		Stream << QLatin1String("0 !SW JOINT PART ") << (Joint.Type == swJointType::Hinge ? QLatin1String("HINGE") : QLatin1String("BALL"));
 
 		for (const swVector3& Value : Values)
 			Stream << ' ' << swFormatValue(Value[0], 4) << ' ' << swFormatValue(-Value[2], 4) << ' ' << swFormatValue(Value[1], 4);
@@ -225,10 +225,11 @@ bool swPart::ParseLDrawLine(QTextStream& Stream)
 				Stream >> Number;
 
 			// ldraw to internal axes
-			mJoint.Type = Type == QLatin1String("BALL") ? swJointType::Ball : swJointType::Hinge;
-			mJoint.Pivot = swVector3(Numbers[0], Numbers[2], -Numbers[1]);
-			mJoint.Axis = swVector3(Numbers[3], Numbers[5], -Numbers[4]);
-			mJoint.Rotation = swVector3(Numbers[6], Numbers[8], -Numbers[7]);
+			swPartJoint& Joint = mJoints.emplace_back();
+			Joint.Type = Type == QLatin1String("BALL") ? swJointType::Ball : swJointType::Hinge;
+			Joint.Pivot = swVector3(Numbers[0], Numbers[2], -Numbers[1]);
+			Joint.Axis = swVector3(Numbers[3], Numbers[5], -Numbers[4]);
+			Joint.Rotation = swVector3(Numbers[6], Numbers[8], -Numbers[7]);
 		}
 		else if (mPosition.Load(Stream, Token, "POSITION"))
 			continue;
@@ -1075,7 +1076,7 @@ swPartHistoryState swPart::GetHistoryState() const
 	State.StepHide = mStepHide;
 	State.PivotMatrix = mPivotMatrix;
 	State.PivotPointValid = mPivotPointValid;
-	State.Joint = mJoint;
+	State.Joints = mJoints;
 	State.ControlPoints = mControlPoints;
 	State.Position = mPosition;
 	State.Rotation = mRotation;
@@ -1096,7 +1097,7 @@ void swPart::SetHistoryState(const swPartHistoryState& State, Project* Project, 
 	mStepHide = State.StepHide;
 	mPivotMatrix = State.PivotMatrix;
 	mPivotPointValid = State.PivotPointValid;
-	mJoint = State.Joint;
+	mJoints = State.Joints;
 	mControlPoints = State.ControlPoints;
 	mPosition = State.Position;
 	mRotation = State.Rotation;
@@ -1138,7 +1139,17 @@ void swPart::AddMainModelRenderMeshes(swScene* Scene, bool Highlight, bool Fade)
 		else if (ActiveSubmodelInstance == this)
 			ParentActive = true;
 		else
-			RenderMeshState = swRenderMeshState::Faded;
+			RenderMeshState = swRenderMeshState::FadedInline;
+	}
+
+	// joints fade all but the jointed submodel
+	if (Scene->GetJointFadePart() && !Scene->GetActiveSubmodelInstance())
+	{
+		// the jointed submodel drops the step fade but keeps its selection
+		if (Scene->GetJointFadePart() != this)
+			RenderMeshState = swRenderMeshState::FadedJoint;
+		else if (RenderMeshState == swRenderMeshState::Faded)
+			RenderMeshState = swRenderMeshState::Default;
 	}
 
 	if (mPartData->GetSynthInfo() && !HasGeneratedMesh() && Scene->GetRequireGeneratedMeshes())
@@ -1171,6 +1182,9 @@ void swPart::AddSubModelRenderMeshes(swScene* Scene, const swMatrix44& WorldMatr
 		RenderMeshState = swRenderMeshState::Default;
 	else if (ParentActive)
 		RenderMeshState = IsFocused() ? swRenderMeshState::Focused : (IsSelected() ? swRenderMeshState::Selected : swRenderMeshState::Default);
+
+	if (ParentActive && Scene->GetJointFadePart() && Scene->GetJointFadePart() != this)
+		RenderMeshState = swRenderMeshState::FadedJoint;
 
 	if (mPartData->GetSynthInfo() && !HasGeneratedMesh() && Scene->GetRequireGeneratedMeshes())
 	{
@@ -1849,28 +1863,84 @@ swGroup* swPart::GetTopGroup()
 	return mGroup ? mGroup->GetTopGroup() : nullptr;
 }
 
-swMatrix44 swPart::GetJointMatrix(const swVector3& Rotation) const
+swMatrix44 swPart::GetJointMatrix(const swPartJoint& Joint, const swVector3& Rotation)
 {
 	const float Angle = swLength(Rotation);
 
 	if (Angle < 0.00001f)
 		return swMatrix44Identity();
 
-	return swMultiply(swMultiply(swMatrix44Translation(-mJoint.Pivot), swMatrix44FromAxisAngle(Rotation / Angle, Angle * SW_DEGREES_TO_RADIANS)), swMatrix44Translation(mJoint.Pivot));
+	return swMultiply(swMultiply(swMatrix44Translation(-Joint.Pivot), swMatrix44FromAxisAngle(Rotation / Angle, Angle * SW_DEGREES_TO_RADIANS)), swMatrix44Translation(Joint.Pivot));
 }
 
-// use to pose the part at a joint
-void swPart::SetJointRotation(const swVector3& Rotation, swStep Step)
+// use to chain the first joints
+swMatrix44 swPart::GetJointsMatrix(size_t Count) const
 {
-	swMatrix44 Posed = mModelWorld;
-	Posed.SetTranslation(Posed.GetTranslation() - mExplodeOffset);
+	swMatrix44 Matrix = swMatrix44Identity();
 
-	Posed = swMultiply(GetJointMatrix(Rotation), swMultiply(swMatrix44AffineInverse(GetJointMatrix(mJoint.Rotation)), Posed));
-	mJoint.Rotation = Rotation;
+	for (size_t Index = 0; Index < Count && Index < mJoints.size(); Index++)
+		Matrix = swMultiply(Matrix, GetJointMatrix(mJoints[Index], mJoints[Index].Rotation));
 
-	SetPosition(Posed.GetTranslation(), Step, false);
-	SetRotation(swMatrix33Clean(swMatrix33(Posed)), Step, false);
+	return Matrix;
+}
+
+// use to place a joint pivot and axis in the model
+swMatrix44 swPart::GetJointFrame(size_t Index) const
+{
+	return swMultiply(swMatrix44AffineInverse(GetJointsMatrix(Index)), mModelWorld);
+}
+
+// use to turn the part at a joint
+void swPart::SetJointRotation(size_t Index, const swVector3& Rotation, swStep Step)
+{
+	if (Index >= mJoints.size())
+		return;
+
+	swMatrix44 Turned = mModelWorld;
+	Turned.SetTranslation(Turned.GetTranslation() - mExplodeOffset);
+
+	const swMatrix44 Placed = swMultiply(swMatrix44AffineInverse(GetJointsMatrix(mJoints.size())), Turned);
+	mJoints[Index].Rotation = Rotation;
+	Turned = swMultiply(GetJointsMatrix(mJoints.size()), Placed);
+
+	SetPosition(Turned.GetTranslation(), Step, false);
+	SetRotation(swMatrix33Clean(swMatrix33(Turned)), Step, false);
 	UpdatePosition(Step);
+}
+
+// use to add a joint picked in model terms, or replace the one at its pivot
+size_t swPart::SetJoint(const swPartJoint& Joint, swStep Step)
+{
+	for (size_t Index = 0; Index < mJoints.size(); Index++)
+	{
+		const swMatrix44 Inner = GetJointsMatrix(Index);
+
+		if (swLength(swMultiply31(Joint.Pivot, Inner) - mJoints[Index].Pivot) >= 0.5f)
+			continue;
+
+		SetJointRotation(Index, swVector3(0.0f, 0.0f, 0.0f), Step);
+		mJoints[Index].Type = Joint.Type;
+		mJoints[Index].Axis = swNormalize(swMultiply30(Joint.Axis, Inner));
+
+		return Index;
+	}
+
+	const swMatrix44 Inner = GetJointsMatrix(mJoints.size());
+	swPartJoint& Added = mJoints.emplace_back(Joint);
+	Added.Pivot = swMultiply31(Joint.Pivot, Inner);
+	Added.Axis = swNormalize(swMultiply30(Joint.Axis, Inner));
+	Added.Rotation = swVector3(0.0f, 0.0f, 0.0f);
+
+	return mJoints.size() - 1;
+}
+
+void swPart::RemoveJoint(size_t Index, swStep Step)
+{
+	if (Index >= mJoints.size())
+		return;
+
+	SetJointRotation(Index, swVector3(0.0f, 0.0f, 0.0f), Step);
+	mJoints.erase(mJoints.begin() + Index);
 }
 
 void swPart::UpdatePosition(swStep Step)

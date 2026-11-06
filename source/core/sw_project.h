@@ -48,7 +48,7 @@ enum class swImageMotion
 {
 	Turntable,
 	Steps,
-	Poses
+	Joints
 };
 
 enum class swImageNextStep
@@ -84,7 +84,7 @@ struct swImageTurntable
 	// Steps share one file when the animation moves through them.
 	bool IsStepping() const
 	{
-		return Enabled && (Motion == swImageMotion::Steps || Motion == swImageMotion::Poses || NextStep != swImageNextStep::Off);
+		return Enabled && (Motion == swImageMotion::Steps || Motion == swImageMotion::Joints || NextStep != swImageNextStep::Off);
 	}
 
 	// Frames each step shows while the model turns.

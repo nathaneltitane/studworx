@@ -375,7 +375,7 @@ QVariant swPartSelectionListModel::data(const QModelIndex& Index, int Role) cons
 				if (PartData->mState == swAssetState::Failed)
 					return QVariant(tr("Could not load part '%1'.").arg(QString::fromLatin1(PartData->mFileName)));
 
-				QString ToolTip = tr("%1\nID: %2").arg(QString::fromLatin1(PartData->m_strDescription), QString::fromLatin1(PartData->mFileName));
+				QString ToolTip = tr("%1\nID: %2").arg(QString::fromLatin1(PartData->m_strDescription), PartData->IsModel() ? tr("N/A") : QString::fromLatin1(PartData->mFileName));
 				ToolTip.append(tr("\nWeight: %1").arg(swGetBrickLinkWeightText(PartData)));
 
 				return QVariant(ToolTip);

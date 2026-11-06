@@ -76,13 +76,38 @@ void swView::OnDraw()
 	if (mOverrideHighlightNewParts)
 		mScene->SetHighlightColor(mHighlightNewPartsColor);
 
+	// the joints tool outlines in red
+	swModel* JointsModel = GetActiveModel();
+	const bool DrawJoint = DrawInterface && mViewType == swViewType::View && JointsModel && gMainWindow && gMainWindow->GetTool() == swTool::Joints;
+
+	if (DrawJoint)
+		mScene->SetHighlightColor(SW_RGBA(255, 0, 0, 255));
+
 	mScene->SetActiveSubmodelInstance(mActiveSubmodelInstance, mActiveSubmodelTransform, GetModelEditingPath());
-	mScene->SetDrawInterface(DrawInterface);
+
+	// fade all but the jointed submodel
+	if (DrawInterface && mViewType == swViewType::View && JointsModel && gMainWindow && Preferences.mFadeJoint)
+	{
+		const swTool Tool = gMainWindow->GetTool();
+
+		// dragging with the joints tool turns the joint
+		if (Tool == swTool::Joints && (JointsModel->IsJointPick() || Preferences.mFadeJointMoving))
+			mScene->SetJointFadePart(JointsModel->GetJointPart());
+		else if ((Tool == swTool::Move || Tool == swTool::Rotate) && Preferences.mFadeJointMoving)
+			mScene->SetJointFadePart(JointsModel->GetRotateJoint());
+	}
+
+	// picking shows only the hovered part
+
+	mScene->SetDrawInterface(DrawInterface && !(DrawJoint && JointsModel->IsJointPick()));
 
 	bool DrawInsertPreview = DrawInterface && std::any_of(mViews.begin(), mViews.end(), [](swView* View){ return View->mTrackTool == swTrackTool::Insert; });
 	mScene->SetDrawInsertPreview(DrawInsertPreview);
 	
-	mModel->GetScene(mScene.get(), mCamera, mOverrideHighlightNewParts ? mHighlightNewParts : Preferences.mHighlightNewParts, (mOverrideFadeSteps ? mFadeSteps : Preferences.mFadeSteps) && mViewType == swViewType::View);
+	mModel->GetScene(mScene.get(), mCamera, !DrawJoint && (mOverrideHighlightNewParts ? mHighlightNewParts : Preferences.mHighlightNewParts), (mOverrideFadeSteps ? mFadeSteps : Preferences.mFadeSteps) && mViewType == swViewType::View);
+
+	if (DrawJoint)
+		JointsModel->AddJointHighlight(mScene.get(), JointsModel != mModel ? mActiveSubmodelTransform : swMatrix44Identity());
 
 	mScene->End();
 
@@ -1077,9 +1102,9 @@ void swView::DrawGrid()
 {
 	const swPreferences& Preferences = swGetPreferences();
 
-	// toggle hides the grids only
+	// each grid has its own toggle
 	const bool DrawBaseGrid = Preferences.mGridEnabled && (Preferences.mDrawGridStuds || Preferences.mDrawGridLines);
-	const bool DrawGridHeight = Preferences.mGridEnabled && (Preferences.mDrawGridHeightXZ || Preferences.mDrawGridHeightYZ);
+	const bool DrawGridHeight = Preferences.mDrawGridHeightXZ || Preferences.mDrawGridHeightYZ;
 	const bool DrawGridAxes = Preferences.mDrawGridOrigin && (Preferences.mDrawGridAxisX || Preferences.mDrawGridAxisY || Preferences.mDrawGridAxisZ);
 
 	if (!DrawBaseGrid && !DrawGridHeight && !DrawGridAxes)

@@ -2,12 +2,12 @@
 
 #include "sw_model.h"
 
-class swPosesWidget : public QWidget
+class swJointsWidget : public QWidget
 {
 	Q_OBJECT
 
 public:
-	swPosesWidget(QWidget* Parent);
+	swJointsWidget(QWidget* Parent);
 
 	void UpdateJoint();
 
@@ -18,11 +18,15 @@ private slots:
 	void DeleteClicked();
 	void AxisChanged(int Index);
 	void ClearClicked();
+	void TreeItemClicked(QTreeWidgetItem* Item);
 
 private:
+	void UpdateTree();
 	void UpdateList();
-	swModel* GetMainModel() const;
+	swModel* GetPoseModel() const;
 
+	QTreeWidget* mTree;
+	QLabel* mPoseLabel;
 	QListWidget* mList;
 	QLabel* mJointLabel;
 	QComboBox* mAxisCombo;

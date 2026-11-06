@@ -343,8 +343,8 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		ToggleDockWidget(mExplodeToolBar);
 		break;
 
-	case SW_VIEW_TOOLBAR_POSES:
-		ToggleDockWidget(mPosesToolBar);
+	case SW_VIEW_TOOLBAR_JOINTS:
+		ToggleDockWidget(mJointsToolBar);
 		break;
 
 	case SW_VIEW_FULL_SCREEN:
@@ -488,6 +488,18 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 			ActiveView->RemoveCutaway();
 		break;
 
+	case SW_VIEW_GRID_TOGGLE_ALL:
+	{
+		swPreferences& Preferences = swGetPreferences();
+		const bool Enable = !(Preferences.mGridEnabled && Preferences.mDrawGridHeightXZ && Preferences.mDrawGridHeightYZ);
+		Preferences.mGridEnabled = Preferences.mDrawGridHeightXZ = Preferences.mDrawGridHeightYZ = Enable;
+		swSetProfileInteger(SW_PROFILE_GRID_ENABLED, Enable);
+		swSetProfileInteger(SW_PROFILE_GRID_HEIGHT_XZ, Enable);
+		swSetProfileInteger(SW_PROFILE_GRID_HEIGHT_YZ, Enable);
+		swView::UpdateAllViews();
+	}
+		break;
+
 	case SW_VIEW_GRID_TOGGLE_HEIGHT_XZ:
 		swGetPreferences().mDrawGridHeightXZ = !swGetPreferences().mDrawGridHeightXZ;
 		swSetProfileInteger(SW_PROFILE_GRID_HEIGHT_XZ, swGetPreferences().mDrawGridHeightXZ);
@@ -591,6 +603,18 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 
 	case SW_VIEW_TOGGLE_HIGHLIGHT_NEW_PARTS:
 		swTogglePreference(swGetPreferences().mHighlightNewParts, SW_PROFILE_HIGHLIGHT_NEW_PARTS);
+		break;
+
+	case SW_VIEW_TOGGLE_FADE_ON_EDIT:
+		swTogglePreference(swGetPreferences().mFadeInline, SW_PROFILE_FADE_INLINE);
+		break;
+
+	case SW_VIEW_TOGGLE_FADE_ON_JOINT_SET:
+		swTogglePreference(swGetPreferences().mFadeJoint, SW_PROFILE_FADE_JOINT);
+		break;
+
+	case SW_VIEW_TOGGLE_FADE_ON_JOINT_MOVE:
+		swTogglePreference(swGetPreferences().mFadeJointMoving, SW_PROFILE_FADE_JOINT_MOVING);
 		break;
 
 	case SW_VIEW_TOGGLE_GRID_STUDS:
@@ -791,10 +815,18 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		break;
 
 	case SW_PART_SET_JOINT:
-		SetTool(swTool::Pose);
+		SetTool(swTool::Joints);
 
 		if (ActiveModel)
-			ActiveModel->StartJointPick();
+			ActiveModel->SetJointPick(true);
+		break;
+
+	case SW_PART_JOINT_MOVE:
+	case SW_PART_JOINT_ROTATE:
+		SetTool(CommandId == SW_PART_JOINT_MOVE ? swTool::Move : swTool::Rotate);
+
+		if (ActiveModel)
+			ActiveModel->SetJointRotate(true);
 		break;
 
 	case SW_PART_RESET_PIVOT_POINT:
@@ -1387,8 +1419,8 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		SetTool(swTool::Paint);
 		break;
 
-	case SW_EDIT_ACTION_POSE:
-		SetTool(swTool::Pose);
+	case SW_EDIT_ACTION_JOINTS:
+		SetTool(swTool::Joints);
 		break;
 
 	case SW_EDIT_ACTION_COLOR_PICKER:

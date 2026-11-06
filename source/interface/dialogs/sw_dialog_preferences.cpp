@@ -381,6 +381,8 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 
 	connect(ui->MeshLODSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::MeshLODSliderValueChanged);
 	connect(ui->FadeSteps, &QCheckBox::toggled, this, &swPreferencesDialog::FadeStepsToggled);
+	connect(ui->FadeInline, &QCheckBox::toggled, this, &swPreferencesDialog::FadeInlineToggled);
+	connect(ui->FadeJoint, &QCheckBox::toggled, this, &swPreferencesDialog::FadeJointToggled);
 	connect(ui->HighlightNewParts, &QCheckBox::toggled, this, &swPreferencesDialog::HighlightNewPartsToggled);
 	connect(ui->gridStuds, &QCheckBox::toggled, this, &swPreferencesDialog::GridStudsToggled);
 	connect(ui->gridLines, &QCheckBox::toggled, this, &swPreferencesDialog::GridLinesToggled);
@@ -421,6 +423,8 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->ElementAnchorColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->RulerPointerColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->FadeStepsColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
+	connect(ui->FadeInlineColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
+	connect(ui->FadeJointColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->HighlightNewPartsColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->gridStudColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->gridLineColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
@@ -498,6 +502,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->autoLoadMostRecent->setChecked(mOptions->Preferences.mAutoLoadMostRecent);
 	ui->RestoreTabLayout->setChecked(mOptions->Preferences.mRestoreTabLayout);
 	ui->FirstPartAtOrigin->setChecked(mOptions->Preferences.mFirstPartAtOrigin);
+	ui->JointRotation->setChecked(mOptions->Preferences.mJointRotation);
 	ui->PartsSnapToTiles->setChecked(mOptions->Preferences.mPartsSnapToTiles);
 	ui->InsertColorMode->setCurrentIndex(static_cast<int>(mOptions->Preferences.mInsertColorMode));
 	ui->FlexSpreadMode->setCurrentIndex(static_cast<int>(mOptions->Preferences.mFlexSpreadMode));
@@ -570,6 +575,9 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->MeshLODLabel->setMinimumWidth(ui->MeshLODLabel->fontMetrics().horizontalAdvance(MeshLODWidest) + 2 * ui->MeshLODLabel->margin());
 
 	ui->FadeSteps->setChecked(mOptions->Preferences.mFadeSteps);
+	ui->FadeInline->setChecked(mOptions->Preferences.mFadeInline);
+	ui->FadeJoint->setChecked(mOptions->Preferences.mFadeJoint);
+	ui->FadeJointMoving->setChecked(mOptions->Preferences.mFadeJointMoving);
 	ui->HighlightNewParts->setChecked(mOptions->Preferences.mHighlightNewParts);
 	ui->gridStuds->setChecked(mOptions->Preferences.mDrawGridStuds);
 	ui->gridLines->setChecked(mOptions->Preferences.mDrawGridLines);
@@ -728,6 +736,8 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	SetButtonPixmap(mOptions->Preferences.mActiveViewColor, ui->ActiveViewColorButton);
 	SetButtonPixmap(mOptions->Preferences.mInactiveViewColor, ui->InactiveViewColorButton);
 	SetButtonPixmap(mOptions->Preferences.mFadeStepsColor, ui->FadeStepsColor);
+	SetButtonPixmap(mOptions->Preferences.mFadeInlineColor, ui->FadeInlineColor);
+	SetButtonPixmap(mOptions->Preferences.mFadeJointColor, ui->FadeJointColor);
 	SetButtonPixmap(mOptions->Preferences.mHighlightNewPartsColor, ui->HighlightNewPartsColor);
 	SetButtonPixmap(mOptions->Preferences.mGridStudColor, ui->gridStudColor);
 	SetButtonPixmap(mOptions->Preferences.mGridLineColor, ui->gridLineColor);
@@ -760,6 +770,8 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	RenderTargetChanged();
 	MeshLODSliderValueChanged();
 	FadeStepsToggled();
+	FadeInlineToggled();
+	FadeJointToggled();
 	HighlightNewPartsToggled();
 	GridStudsToggled();
 	GridLinesToggled();
@@ -792,6 +804,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 			Label->setToolTip(Control->toolTip());
 
 	CreateInstructionsTab();
+	CreateContextMenuTab();
 }
 
 swPreferencesDialog::~swPreferencesDialog()
@@ -872,6 +885,8 @@ void swPreferencesDialog::accept()
 	mOptions->Preferences.mAutoLoadMostRecent = ui->autoLoadMostRecent->isChecked();
 	mOptions->Preferences.mRestoreTabLayout = ui->RestoreTabLayout->isChecked();
 	mOptions->Preferences.mFirstPartAtOrigin = ui->FirstPartAtOrigin->isChecked();
+	mOptions->Preferences.mJointRotation = ui->JointRotation->isChecked();
+	mOptions->Preferences.mContextMenu = GetContextMenuLayout();
 	mOptions->Preferences.mPartsSnapToTiles = ui->PartsSnapToTiles->isChecked();
 	mOptions->Preferences.mInsertColorMode = static_cast<swInsertColorMode>(ui->InsertColorMode->currentIndex());
 	mOptions->Preferences.mFlexSpreadMode = static_cast<swFlexSpreadMode>(ui->FlexSpreadMode->currentIndex());
@@ -911,6 +926,9 @@ void swPreferencesDialog::accept()
 	mOptions->Preferences.mAllowLOD = ui->MeshLOD->isChecked();
 	mOptions->Preferences.mMeshLODDistance = ui->MeshLODSlider->value() * mMeshLODMultiplier;
 	mOptions->Preferences.mFadeSteps = ui->FadeSteps->isChecked();
+	mOptions->Preferences.mFadeInline = ui->FadeInline->isChecked();
+	mOptions->Preferences.mFadeJoint = ui->FadeJoint->isChecked();
+	mOptions->Preferences.mFadeJointMoving = ui->FadeJointMoving->isChecked();
 	mOptions->Preferences.mHighlightNewParts = ui->HighlightNewParts->isChecked();
 
 	mOptions->Preferences.mDrawGridStuds = ui->gridStuds->isChecked();
@@ -1334,6 +1352,18 @@ void swPreferencesDialog::ColorButtonClicked()
 		Title = tr("Select Fade Color");
 		DialogOptions = QColorDialog::ShowAlphaChannel;
 	}
+	else if (Button == ui->FadeInlineColor)
+	{
+		Color = &mOptions->Preferences.mFadeInlineColor;
+		Title = tr("Select Edit Fade Color");
+		DialogOptions = QColorDialog::ShowAlphaChannel;
+	}
+	else if (Button == ui->FadeJointColor)
+	{
+		Color = &mOptions->Preferences.mFadeJointColor;
+		Title = tr("Select Joint Fade Color");
+		DialogOptions = QColorDialog::ShowAlphaChannel;
+	}
 	else if (Button == ui->HighlightNewPartsColor)
 	{
 		Color = &mOptions->Preferences.mHighlightNewPartsColor;
@@ -1466,7 +1496,7 @@ void swPreferencesDialog::ColorButtonClicked()
 	// hide too transparent highlights
 	if (Button == ui->HighlightNewPartsColor || Button == ui->FadeStepsColor)
 	{
-		*Color = swClampStepColorAlpha(*Color);
+		*Color = Button == ui->FadeStepsColor ? swClampFadeColorAlpha(*Color) : swClampStepColorAlpha(*Color);
 		NewColor.setAlpha(SW_RGBA_ALPHA(*Color));
 	}
 
@@ -1568,6 +1598,17 @@ void swPreferencesDialog::MeshLODSliderValueChanged()
 void swPreferencesDialog::FadeStepsToggled()
 {
 	ui->FadeStepsColor->setEnabled(ui->FadeSteps->isChecked());
+}
+
+void swPreferencesDialog::FadeInlineToggled()
+{
+	ui->FadeInlineColor->setEnabled(ui->FadeInline->isChecked());
+}
+
+void swPreferencesDialog::FadeJointToggled()
+{
+	ui->FadeJointColor->setEnabled(ui->FadeJoint->isChecked());
+	ui->FadeJointMoving->setEnabled(ui->FadeJoint->isChecked());
 }
 
 void swPreferencesDialog::HighlightNewPartsToggled()

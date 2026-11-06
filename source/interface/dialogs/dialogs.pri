@@ -25,6 +25,7 @@ SOURCES += \
 	$$PWD/sw_dialog_preferences_categories.cpp \
 	$$PWD/sw_dialog_preferences_instructions.cpp \
 	$$PWD/sw_dialog_preferences_shortcuts.cpp \
+	$$PWD/sw_dialog_preferences_context.cpp \
 	$$PWD/sw_dialog_properties.cpp \
 	$$PWD/sw_dialog_render.cpp \
 	$$PWD/sw_dialog_select.cpp \

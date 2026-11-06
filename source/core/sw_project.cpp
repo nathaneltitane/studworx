@@ -456,7 +456,6 @@ void Project::ShowModelListDialog()
 		InstructionNames[Rename.OldName] = Rename.NewName;
 
 	QStringList InstructionLines = GetMainModel() ? GetMainModel()->GetInstructionLines() : QStringList();
-	const std::vector<swPose> OldPoses = GetMainModel() ? GetMainModel()->GetPoses() : std::vector<swPose>();
 	swRenameInstructionsModels(InstructionLines, InstructionNames);
 
 	for (const swModelListDialogEntry& Entry : Results)
@@ -522,18 +521,6 @@ void Project::ShowModelListDialog()
 
 	for (const std::unique_ptr<swModel>& Model : mModels)
 		Model->SetInstructionLines(Model == mModels.front() ? InstructionLines : QStringList());
-
-	// saved poses follow renamed models
-	if (!mModels.empty())
-	{
-		std::vector<swPose> Poses = OldPoses;
-		for (swPose& Pose : Poses)
-			for (swPoseJoint& Joint : Pose.Joints)
-				if (InstructionNames.count(Joint.Model))
-					Joint.Model = InstructionNames[Joint.Model];
-
-		mModels.front()->SetPoses(Poses);
-	}
 
 	gMainWindow->UpdateTitle();
 
@@ -643,10 +630,13 @@ void Project::UpdateFileWatcher()
 
 void Project::SetFileName(const QString& FileName)
 {
-	if (mFileName == FileName)
+	// relative names break image paths
+	const QString AbsoluteName = FileName.isEmpty() ? FileName : QFileInfo(FileName).absoluteFilePath();
+
+	if (mFileName == AbsoluteName)
 		return;
 
-	mFileName = FileName;
+	mFileName = AbsoluteName;
 	UpdateFileWatcher();
 }
 

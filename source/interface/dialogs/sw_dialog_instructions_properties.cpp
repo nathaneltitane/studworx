@@ -904,8 +904,10 @@ void swInstructionsPropertiesWidget::ColorButtonClicked(swInstructionsPropertyTy
 	QColor SelectedColor = swPickColor(Button, GetColorValue(Type));
 
 	// hide too transparent highlights
-	if (SelectedColor.isValid() && (Type == swInstructionsPropertyType::HighlightColor || Type == swInstructionsPropertyType::FadeColor))
+	if (SelectedColor.isValid() && Type == swInstructionsPropertyType::HighlightColor)
 		SelectedColor = swQColorFromRGBA(swClampStepColorAlpha(swRGBAFromQColor(SelectedColor)));
+	else if (SelectedColor.isValid() && Type == swInstructionsPropertyType::FadeColor)
+		SelectedColor = swQColorFromRGBA(swClampFadeColorAlpha(swRGBAFromQColor(SelectedColor)));
 
 	if (SelectedColor.isValid())
 		SetColorValue(Type, SelectedColor);

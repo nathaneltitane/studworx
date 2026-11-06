@@ -246,6 +246,27 @@ static QString swGetBrickLinkPartName(const swPartData* PartData)
 // use to find the part weight in grams, empty when unlisted
 std::optional<double> swGetBrickLinkWeight(const swPartData* PartData)
 {
+	// submodels weigh their parts, all of them listed
+	if (PartData->IsModel())
+	{
+		swPartsList PartsList;
+		PartData->GetPartsList(0, true, false, PartsList);
+		std::optional<double> Total;
+
+		for (const auto& [Part, Colors] : PartsList)
+		{
+			const std::optional<double> PartWeight = swGetBrickLinkWeight(Part);
+
+			if (!PartWeight)
+				return std::nullopt;
+
+			for (const auto& [ColorIndex, Count] : Colors)
+				Total = Total.value_or(0.0) + *PartWeight * Count;
+		}
+
+		return Total;
+	}
+
 	static QString CachedPath;
 	static QJsonObject CachedParts;
 	static QJsonObject CachedWeights;

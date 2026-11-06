@@ -496,7 +496,7 @@ QMenu* swMainWindow::createPopupMenu()
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_PREVIEW]);
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_MINIFIGURE_BUILDER]);
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_EXPLODE]);
-	Menu->addAction(mActions[SW_VIEW_TOOLBAR_POSES]);
+	Menu->addAction(mActions[SW_VIEW_TOOLBAR_JOINTS]);
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_TERMINAL]);
 	Menu->addSeparator();
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_STANDARD]);
@@ -518,7 +518,7 @@ void swMainWindow::UpdateDockWidgetActions()
 	mActions[SW_VIEW_TOOLBAR_PREVIEW]->setChecked(mPreviewToolBar->isVisible());
 	mActions[SW_VIEW_TOOLBAR_MINIFIGURE_BUILDER]->setChecked(mMinifigureBuilderToolBar->isVisible());
 	mActions[SW_VIEW_TOOLBAR_EXPLODE]->setChecked(mExplodeToolBar->isVisible());
-	mActions[SW_VIEW_TOOLBAR_POSES]->setChecked(mPosesToolBar->isVisible());
+	mActions[SW_VIEW_TOOLBAR_JOINTS]->setChecked(mJointsToolBar->isVisible());
 	mActions[SW_VIEW_TOOLBAR_TERMINAL]->setChecked(mTerminalToolBar && mTerminalToolBar->isVisible());
 }
 

@@ -770,6 +770,13 @@ inline quint32 swClampStepColorAlpha(quint32 Color)
 	return SW_RGBA(SW_RGBA_RED(Color), SW_RGBA_GREEN(Color), SW_RGBA_BLUE(Color), Alpha);
 }
 
+// keep faded parts visible
+inline quint32 swClampFadeColorAlpha(quint32 Color)
+{
+	const int Alpha = qMax(26, static_cast<int>(SW_RGBA_ALPHA(Color)));
+	return SW_RGBA(SW_RGBA_RED(Color), SW_RGBA_GREEN(Color), SW_RGBA_BLUE(Color), Alpha);
+}
+
 inline quint32 swColorFromVector3(const swVector3& Color)
 {
 	return SW_RGB(roundf(Color[0] * 255), roundf(Color[1] * 255), roundf(Color[2] * 255));

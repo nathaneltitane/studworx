@@ -146,6 +146,8 @@ private slots:
 	void RenderTargetChanged();
 	void MeshLODSliderValueChanged();
 	void FadeStepsToggled();
+	void FadeInlineToggled();
+	void FadeJointToggled();
 	void HighlightNewPartsToggled();
 	void GridStudsToggled();
 	void GridLinesToggled();
@@ -194,6 +196,9 @@ private:
 	void SetShortcutModified(QTreeWidgetItem* TreeItem, bool Modified);
 	void UpdateShortcutConflicts();
 	void CreateInstructionsTab();
+	void CreateContextMenuTab();
+	void SetContextMenuTree(const QStringList& Layout);
+	QStringList GetContextMenuLayout() const;
 	void UpdateInstructionsPage();
 
 	QPushButton* mInstructionsPageButton = nullptr;
@@ -215,6 +220,8 @@ private:
 	QCheckBox* mInstructionsEditorNumbers = nullptr;
 	QCheckBox* mInstructionsEditorWrap = nullptr;
 	QCheckBox* mInstructionsEditorMarkers = nullptr;
+	QTreeWidget* mContextCommandTree = nullptr;
+	QTreeWidget* mContextMenuTree = nullptr;
 
 	struct swRenderTargetWidgets
 	{

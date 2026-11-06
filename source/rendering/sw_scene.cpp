@@ -24,6 +24,7 @@ void swScene::Begin(const swMatrix44& ViewMatrix)
 	mHighlightRenderMode = swHighlightRenderMode::Tint;
 	mViewMatrix = ViewMatrix;
 	mActiveSubmodelInstance = nullptr;
+	mJointFadePart = nullptr;
 	mModelEditingPath.clear();
 	mRenderMeshes.clear();
 	mOpaqueMeshes.clear();
@@ -32,9 +33,11 @@ void swScene::Begin(const swMatrix44& ViewMatrix)
 
 	const swPreferences& Preferences = swGetPreferences();
 	mHighlightColor = swVector4FromColor(swClampStepColorAlpha(Preferences.mHighlightNewPartsColor));
-	mFadeColor = swVector4FromColor(swClampStepColorAlpha(Preferences.mFadeStepsColor));
+	mFadeColor = swVector4FromColor(swClampFadeColorAlpha(Preferences.mFadeStepsColor));
+	mFadeInlineColor = Preferences.mFadeInline ? swVector4FromColor(Preferences.mFadeInlineColor) : swVector4(1.0f, 1.0f, 1.0f, 0.99f);
+	mFadeJointColor = swVector4FromColor(Preferences.mFadeJointColor);
 	mHasFadedParts = false;
-	mTranslucentFade = mFadeColor.w != 1.0f;
+	mTranslucentFade = false;
 }
 
 void swScene::End()
@@ -70,11 +73,19 @@ void swScene::AddMesh(swMesh* Mesh, const swMatrix44& WorldMatrix, int ColorInde
 	RenderMesh.WorldMatrix = WorldMatrix;
 	RenderMesh.Mesh = Mesh;
 	RenderMesh.ColorIndex = ColorIndex;
+
+	// inline editing and joints fade with their own colors
+	RenderMesh.FadeColor = State == swRenderMeshState::FadedInline ? mFadeInlineColor : State == swRenderMeshState::FadedJoint ? mFadeJointColor : mFadeColor;
+
+	if (State == swRenderMeshState::FadedInline || State == swRenderMeshState::FadedJoint)
+		State = swRenderMeshState::Faded;
+
 	RenderMesh.State = State;
 	const float Distance = fabsf(swMultiply31(WorldMatrix[3], mViewMatrix).z) - mMeshLODDistance;
 	RenderMesh.LodIndex = mAllowLOD ? RenderMesh.Mesh->GetLodIndex(Distance) : SW_MESH_LOD_HIGH;
 
-	const bool ForceTranslucent = (mTranslucentFade && State == swRenderMeshState::Faded);
+	const bool ForceTranslucent = (State == swRenderMeshState::Faded && RenderMesh.FadeColor.w != 1.0f);
+	mTranslucentFade |= ForceTranslucent;
 	const bool Translucent = swIsColorTranslucent(ColorIndex) || ForceTranslucent;
 	const swMeshFlags Flags = Mesh->mFlags;
 	mHasFadedParts |= State == swRenderMeshState::Faded;
@@ -215,9 +226,11 @@ void swScene::DrawOpaqueMeshes(swContext* Context, bool DrawLit, int PrimitiveTy
 					break;
 
 				case swRenderMeshState::Faded:
-					if (mTranslucentFade)
+				case swRenderMeshState::FadedInline:
+				case swRenderMeshState::FadedJoint:
+					if (RenderMesh.FadeColor.w != 1.0f)
 						continue;
-					Context->SetColorIndexTinted(ColorIndex, mFadeColor);
+					Context->SetColorIndexTinted(ColorIndex, RenderMesh.FadeColor);
 					break;
 				}
 			}
@@ -256,7 +269,9 @@ void swScene::DrawOpaqueMeshes(swContext* Context, bool DrawLit, int PrimitiveTy
 					break;
 
 				case swRenderMeshState::Faded:
-					Context->SetEdgeColorIndexTinted(ColorIndex, mFadeColor);
+				case swRenderMeshState::FadedInline:
+				case swRenderMeshState::FadedJoint:
+					Context->SetEdgeColorIndexTinted(ColorIndex, RenderMesh.FadeColor);
 					break;
 				}
 
@@ -392,7 +407,9 @@ void swScene::DrawTranslucentMeshes(swContext* Context, bool DrawLit, bool DrawF
 			break;
 
 		case swRenderMeshState::Faded:
-			Context->SetColorIndexTinted(ColorIndex, mFadeColor);
+		case swRenderMeshState::FadedInline:
+		case swRenderMeshState::FadedJoint:
+			Context->SetColorIndexTinted(ColorIndex, RenderMesh.FadeColor);
 			break;
 		}
 
@@ -608,7 +625,7 @@ void swScene::DrawOutlineGeometry(swContext* Context, swOutlineGeometry Geometry
 			(Geometry == swOutlineGeometry::Highlight && !Highlighted))
 			continue;
 
-		if (Geometry == swOutlineGeometry::Occluders && mTranslucentFade && RenderMesh.State == swRenderMeshState::Faded)
+		if (Geometry == swOutlineGeometry::Occluders && RenderMesh.State == swRenderMeshState::Faded && RenderMesh.FadeColor.w != 1.0f)
 			continue;
 
 		const swMesh* Mesh = RenderMesh.Mesh;

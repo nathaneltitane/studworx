@@ -281,7 +281,7 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 
 	// animation group
 	QGroupBox* TurntableGroup = new QGroupBox(tr("Animation"), this);
-	TurntableGroup->setWhatsThis(tr("<p><b>Animation</b></p><p>Animated GIF saves a looping animation. The animation loops forever.</p><p>Turntable turns the model around one axis through the Framing center, starting from the current view. Full Turn makes seamless revolutions. Angle swings between two angles from the current view and back again. Turns sets how many revolutions or swings make up the loop, so complex builds can be shown from every side more than once.</p><p>Next Step moves through the steps chosen in the Steps group while the model turns, one step every few turns or seconds. The loop ends on the last step and starts again.</p><p>Steps plays the chosen steps one per frame, for short animated instructions.</p><p>Poses blends through the poses saved in the Poses panel, in order and back to the first. Frames sets how many images go between two poses.</p><p>Frames sets how many images make up one turn and Frame Rate how many play each second. Hold Last keeps the finished model on screen before a loop through the steps restarts. Duration shows how long one loop plays.</p>"));
+	TurntableGroup->setWhatsThis(tr("<p><b>Animation</b></p><p>Animated GIF saves an animation that loops forever.</p><p>Turntable turns the model around one axis through the Framing center, starting from the current view. Full Turn makes seamless revolutions. Angle swings between two angles from the current view and back again. Turns sets how many revolutions or swings make up the loop, so complex builds can be shown from every side more than once.</p><p>Next Step moves through the steps chosen in the Steps group while the model turns, one step every few turns or seconds. The loop ends on the last step and starts again.</p><p>Steps plays the chosen steps one per frame, for short animated instructions.</p><p>Joints blends through the poses of the main model saved in the Joints panel, in order and back to the first. Frames sets how many images go between two poses.</p><p>Frames sets how many images make up one turn and Frame Rate how many play each second. Hold Last keeps the finished model on screen before a loop through the steps restarts. Duration shows how long one loop plays.</p>"));
 
 	QGridLayout* TurntableLayout = new QGridLayout(TurntableGroup);
 	mGridLayouts.append(TurntableLayout);
@@ -294,10 +294,10 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 	TurntableLayout->addWidget(MotionLabel, 1, 0);
 
 	mMotionComboBox = new QComboBox(TurntableGroup);
-	mMotionComboBox->setToolTip(tr("Turn the model, play the steps one per frame or play the saved poses."));
+	mMotionComboBox->setToolTip(tr("Turn the model, play the steps one per frame or play the saved poses of the main model."));
 	mMotionComboBox->addItem(tr("Turntable"));
 	mMotionComboBox->addItem(tr("Steps"));
-	mMotionComboBox->addItem(tr("Poses"));
+	mMotionComboBox->addItem(tr("Joints"));
 	mMotionComboBox->setCurrentIndex(static_cast<int>(Options->Turntable.Motion));
 	MotionLabel->setBuddy(mMotionComboBox);
 	TurntableLayout->addWidget(mMotionComboBox, 1, 1);
@@ -900,8 +900,8 @@ void swImageDialog::UpdateTurntable()
 {
 	const bool Animated = mAnimatedCheckBox->isChecked();
 	const bool StepMotion = IsStepMotion();
-	const bool PoseMotion = IsPoseMotion();
-	const bool Turning = Animated && !StepMotion && !PoseMotion;
+	const bool JointsMotion = IsJointsMotion();
+	const bool Turning = Animated && !StepMotion && !JointsMotion;
 	const swImageNextStep NextStep = GetNextStep();
 
 	mMotionComboBox->setEnabled(Animated);
@@ -913,7 +913,7 @@ void swImageDialog::UpdateTurntable()
 	mNextStepComboBox->setEnabled(Turning);
 	mNextStepSpinBox->setEnabled(Turning && NextStep != swImageNextStep::Off);
 	mTurnsSpinBox->setEnabled(Turning && NextStep == swImageNextStep::Off);
-	mFramesSpinBox->setEnabled(Turning || PoseMotion);
+	mFramesSpinBox->setEnabled(Turning || JointsMotion);
 
 	// interval in turns or seconds
 	{
@@ -940,7 +940,7 @@ void swImageDialog::UpdateTurntable()
 	}
 
 	mFrameRateSpinBox->setEnabled(Animated);
-	mHoldLastSpinBox->setEnabled(Animated && (StepMotion || PoseMotion || NextStep != swImageNextStep::Off));
+	mHoldLastSpinBox->setEnabled(Animated && (StepMotion || JointsMotion || NextStep != swImageNextStep::Off));
 	mPlayButton->setVisible(Animated);
 
 	// steps give one frame each
@@ -957,7 +957,7 @@ void swImageDialog::UpdateTurntable()
 		{
 			mFramesSpinBox->setRange(2, 360);
 			mFramesSpinBox->setValue(mTurntableFrames);
-			mFramesSpinBox->setToolTip(PoseMotion ? tr("Number of images between two poses (2 to 360).") : tr("Number of images in one turn (2 to 360)."));
+			mFramesSpinBox->setToolTip(JointsMotion ? tr("Number of images between two poses (2 to 360).") : tr("Number of images in one turn (2 to 360)."));
 		}
 	}
 
@@ -992,7 +992,7 @@ void swImageDialog::UpdateFraming()
 	const bool Fit = Framing.Fit != swImageFit::CurrentView;
 
 	// settings without effect stay off
-	const bool Turning = mAnimatedCheckBox->isChecked() && !IsStepMotion() && !IsPoseMotion();
+	const bool Turning = mAnimatedCheckBox->isChecked() && !IsStepMotion() && !IsJointsMotion();
 
 	mCenterComboBox->setEnabled(Turning);
 	mMarginSpinBox->setEnabled(Fit);
@@ -1039,15 +1039,15 @@ swImageNextStep swImageDialog::GetNextStep() const
 	return static_cast<swImageNextStep>(mNextStepComboBox->currentIndex());
 }
 
-bool swImageDialog::IsPoseMotion() const
+bool swImageDialog::IsJointsMotion() const
 {
-	return mAnimatedCheckBox->isChecked() && mMotionComboBox->currentIndex() == static_cast<int>(swImageMotion::Poses);
+	return mAnimatedCheckBox->isChecked() && mMotionComboBox->currentIndex() == static_cast<int>(swImageMotion::Joints);
 }
 
 // use to count steps or poses
 int swImageDialog::GetFrameStepCount() const
 {
-	if (IsPoseMotion())
+	if (IsJointsMotion())
 	{
 		swModel* Model = gMainWindow ? gMainWindow->GetActiveModel() : nullptr;
 		swModel* Main = Model && Model->GetProject() ? Model->GetProject()->GetMainModel() : nullptr;

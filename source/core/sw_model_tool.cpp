@@ -91,7 +91,7 @@ void swModel::BeginMouseTool(swTool Tool, swView* View)
 
 		case swTool::Erase:
 		case swTool::Paint:
-		case swTool::Pose:
+		case swTool::Joints:
 		case swTool::ColorPicker:
 			break;
 
@@ -199,7 +199,7 @@ void swModel::EndMouseTool(swTool Tool, swView* View, bool Accept)
 
 	case swTool::Erase:
 	case swTool::Paint:
-	case swTool::Pose:
+	case swTool::Joints:
 	case swTool::ColorPicker:
 		break;
 

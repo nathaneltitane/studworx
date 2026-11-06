@@ -44,7 +44,7 @@ protected:
 	void UpdateTurntable();
 	swImageTurntable GetTurntable() const;
 	bool IsStepMotion() const;
-	bool IsPoseMotion() const;
+	bool IsJointsMotion() const;
 	int GetFrameStepCount() const;
 	swImageNextStep GetNextStep() const;
 

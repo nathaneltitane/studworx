@@ -347,6 +347,8 @@ void swViewManipulator::DrawSelectMove(swTrackButton TrackButton, swTrackTool Tr
 	const float OverlayScale = mView->GetOverlayScale();
 	WorldMatrix = swMultiply(swMatrix44Scale(swVector3(OverlayScale, OverlayScale, OverlayScale)), WorldMatrix);
 
+	DrawCameraRotationRing(TrackButton, TrackTool, WorldMatrix, OverlayScale);
+
 	Context->SetWorldMatrix(WorldMatrix);
 	Context->SetLineWidth(1.0f);
 
@@ -852,7 +854,14 @@ bool swViewManipulator::DrawRotationDisc(swTrackButton TrackButton, const swVect
 
 void swViewManipulator::DrawCameraRotationRing(swTrackButton TrackButton, swTrackTool TrackTool, const swMatrix44& WorldMatrix, float OverlayScale) const
 {
-	if (gMainWindow->GetTool() != swTool::Rotate || (TrackButton != swTrackButton::None && TrackTool != swTrackTool::RotateCamera))
+	// the move gizmo only shows the red joint ring
+
+	const bool RotateTool = gMainWindow->GetTool() == swTool::Rotate;
+
+	if (!RotateTool && (!mView->GetActiveModel()->GetRotateJoint() || TrackButton != swTrackButton::None))
+		return;
+
+	if (RotateTool && TrackButton != swTrackButton::None && TrackTool != swTrackTool::RotateCamera)
 		return;
 
 	swContext* Context = mView->mContext;
@@ -860,8 +869,12 @@ void swViewManipulator::DrawCameraRotationRing(swTrackButton TrackButton, swTrac
 	Mat.SetTranslation(WorldMatrix.GetTranslation());
 
 	const float HalfWidth = OverlayScale * 0.035f;
-	constexpr int SegmentCount = 48;
-	swVector3 Verts[(SegmentCount + 1) * 2];
+
+	// a hexagon like a cube outline for the move gizmo
+
+	constexpr int MaxSegmentCount = 48;
+	const int SegmentCount = RotateTool ? MaxSegmentCount : 6;
+	swVector3 Verts[(MaxSegmentCount + 1) * 2];
 	int NumVerts = 0;
 
 	for (int SegmentIndex = 0; SegmentIndex <= SegmentCount; SegmentIndex++)
@@ -872,7 +885,12 @@ void swViewManipulator::DrawCameraRotationRing(swTrackButton TrackButton, swTrac
 		Verts[NumVerts++] = swMultiply31(swVector3(Sin * (mOverlayRotateCameraRadius * OverlayScale + HalfWidth), Cos * (mOverlayRotateCameraRadius * OverlayScale + HalfWidth), 0.0f), Mat);
 	}
 
-	Context->SetColor(TrackTool == swTrackTool::RotateCamera ? mColorCameraSelected : mColorCamera);
+	// joint rotation uses the joint highlight color
+
+	if (TrackTool != swTrackTool::RotateCamera && mView->GetActiveModel()->GetRotateJoint())
+		Context->SetColor(swVector4(1.0f, 0.0f, 0.0f, 1.0f));
+	else
+		Context->SetColor(TrackTool == swTrackTool::RotateCamera ? mColorCameraSelected : mColorCamera);
 	Context->SetWorldMatrix(swMatrix44Identity());
 	Context->SetVertexBufferPointer(Verts);
 	Context->SetVertexFormatPosition(3);
@@ -1211,7 +1229,7 @@ bool swViewManipulator::IsTrackToolAllowed(swTrackTool TrackTool, quint32 Allowe
 
 		case swTrackTool::Erase:
 		case swTrackTool::Paint:
-		case swTrackTool::Pose:
+		case swTrackTool::Joints:
 		case swTrackTool::ColorPicker:
 		case swTrackTool::Zoom:
 		case swTrackTool::Pan:
