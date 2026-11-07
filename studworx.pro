@@ -152,8 +152,10 @@ unix:!macx {
 	samples.files += resources/samples/sample-cutaway-sphere.ldr
 	samples.files += resources/samples/sample-explode.mpd
 	samples.files += resources/samples/sample-flex.ldr
+	samples.files += resources/samples/sample-joints.mpd
 	samples.files += resources/samples/sample-lights-cameras.ldr
 	samples.files += resources/samples/sample-minifigure.ldr
+	samples.files += resources/samples/sample-pov-ray.ldr
 
 	INSTALLS += target docs man desktop icons mime appdata thumbnailer samples
 
@@ -181,8 +183,10 @@ macx {
 	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-cutaway-sphere.ldr
 	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-explode.mpd
 	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-flex.ldr
+	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-joints.mpd
 	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-lights-cameras.ldr
 	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-minifigure.ldr
+	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-pov-ray.ldr
 	samples.path = Contents/Resources/samples
 	QMAKE_BUNDLE_DATA += samples
 

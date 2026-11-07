@@ -1,0 +1,66 @@
+0 FILE sample-joints.ldr
+0 Joints
+0 Name: sample-joints.ldr
+0 Author: Nathanel Titane // nathanel.titane@gmail.com // All Rights Reserved
+0 !SW JOINT MODEL "Stand" "sample-joints.ldr" 2 0 0 0
+0 !SW JOINT MODEL "Stand" "sample-joints.ldr" 3 0 0 0
+0 !SW JOINT MODEL "Stand" "sample-joints.ldr" 4 0 0 0
+0 !SW JOINT MODEL "Stand" "sample-joints.ldr" 5 0 0 0
+0 !SW JOINT MODEL "Stand" "sample-joints.ldr" 6 0 0 0
+0 !SW JOINT MODEL "Wave" "sample-joints.ldr" 2 0 0 0
+0 !SW JOINT MODEL "Wave" "sample-joints.ldr" 3 0 0 0
+0 !SW JOINT MODEL "Wave" "sample-joints.ldr" 4 -172.451 29.7596 0
+0 !SW JOINT MODEL "Wave" "sample-joints.ldr" 5 0 0 0
+0 !SW JOINT MODEL "Wave" "sample-joints.ldr" 6 0 -20 0
+0 !SW JOINT MODEL "Walk" "sample-joints.ldr" 2 30 0 0
+0 !SW JOINT MODEL "Walk" "sample-joints.ldr" 3 -30 0 0
+0 !SW JOINT MODEL "Walk" "sample-joints.ldr" 4 -29.563 5.1017 0
+0 !SW JOINT MODEL "Walk" "sample-joints.ldr" 5 29.563 5.1017 0
+0 !SW JOINT MODEL "Walk" "sample-joints.ldr" 6 0 0 0
+0 !SW JOINT MODEL "Work" "sample-joints.ldr" 2 0 0 0
+0 !SW JOINT MODEL "Work" "sample-joints.ldr" 3 0 0 0
+0 !SW JOINT MODEL "Work" "sample-joints.ldr" 4 -39.4174 6.8022 0
+0 !SW JOINT MODEL "Work" "sample-joints.ldr" 5 -78.8348 -13.6044 0
+0 !SW JOINT MODEL "Work" "sample-joints.ldr" 6 0 25 0
+1 71 0 -72 11 1 0 0 0 1 0 0 0 1 973.dat
+1 0 0 -40 11 1 0 0 0 1 0 0 0 1 3815b.dat
+0 !SW JOINT PART HINGE 0 -28 11 1 0 0 0 0 0
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 left-leg.ldr
+0 !SW JOINT PART HINGE 0 -28 11 1 0 0 0 0 0
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 right-leg.ldr
+0 !SW JOINT PART HINGE 15.552 -63.12 11 0.9854 -0.1701 0 0 0 0
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 left-arm.ldr
+0 !SW JOINT PART HINGE -15.552 -63.12 11 0.9854 0.1701 0 0 0 0
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 right-arm.ldr
+0 !SW JOINT PART HINGE 0 -96 11 0 -1 0 0 0 0
+1 16 0 0 0 1 0 0 0 1 0 0 0 1 head.ldr
+0 NOFILE
+0 FILE left-leg.ldr
+0 left-leg.ldr
+0 Name: left-leg.ldr
+1 0 0 -28 11 1 0 0 0 1 0 0 0 1 3816c.dat
+0 NOFILE
+0 FILE right-leg.ldr
+0 right-leg.ldr
+0 Name: right-leg.ldr
+1 0 0 -28 11 1 0 0 0 1 0 0 0 1 3817c.dat
+0 NOFILE
+0 FILE left-arm.ldr
+0 left-arm.ldr
+0 Name: left-arm.ldr
+1 71 15.552 -63.12 11 0.985435 0.170055 0 -0.170055 0.985435 0 0 0 1 3819.dat
+1 14 23.7102 -45.247 1 0.985435 0.120247 -0.120247 -0.170055 0.696808 -0.696808 0 0.707107 0.707107 3820.dat
+0 NOFILE
+0 FILE right-arm.ldr
+0 right-arm.ldr
+0 Name: right-arm.ldr
+1 71 -15.552 -63.12 11 0.985435 -0.170055 0 0.170055 0.985435 0 0 0 1 3818.dat
+1 14 -23.7102 -45.247 1 0.985435 -0.120247 0.120247 0.170055 0.696808 -0.696808 0 0.707107 0.707107 3820.dat
+1 72 -25.0725 -37.353 -3.625 0.985435 -0.085027 0.147272 0.170055 0.492717 -0.853411 0 0.866025 0.5 55299.dat
+0 NOFILE
+0 FILE head.ldr
+0 head.ldr
+0 Name: head.ldr
+1 14 0 -96 11 1 0 0 0 1 0 0 0 1 3626c.dat
+1 71 0 -96 11 1 0 0 0 1 0 0 0 1 4485b.dat
+0 NOFILE
