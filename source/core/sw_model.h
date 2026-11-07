@@ -667,7 +667,8 @@ public:
 
 protected:
 	swResult<QImage> RenderStepImageWithReadyAssets(bool Zoom, int Width, int Height, swStep Step, swCamera* OutputCamera, swImageBackground Background);
-	void SetImageCamera(swCamera* Camera, const swCamera* BaseCamera, const swImageFraming& Framing, const swImageTurntable& Turntable, int Frame, swStep Step, swStep LastStep, float Aspect) const;
+	void CollectImagePoints(swStep FitStep, std::vector<swVector3>& Points) const;
+	void SetImageCamera(swCamera* Camera, const swCamera* BaseCamera, const swImageFraming& Framing, const swImageTurntable& Turntable, int Frame, swStep Step, swStep LastStep, float Aspect, const std::vector<swVector3>* FitPoints = nullptr) const;
 
 	void DeleteModel();
 

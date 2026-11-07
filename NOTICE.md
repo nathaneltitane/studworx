@@ -5,7 +5,7 @@
 
   - Joints: Part > Joint > Set, also in the model view right-click menu, gives a submodel hinge or ball joints from the shadow library connections, several per submodel, with the picked part outlined in red, the Joints tool next to Rotate turns them with the mouse, and Part > Joint > Move and Rotate and the Use Joint Rotation preference turn them with the rotate keys and the Rotate tool
   - Joints: the Poses panel is now the Joints panel, listing every model, its submodels as `arm-right.ldr 006` and their joints as `Joint 001` in a tree with a left-aligned angle column, and saving, recalling, renaming and deleting named poses per model
-  - Image: File > Image plays the main model poses as an animated GIF with Motion Joints
+  - Image: File > Image plays the main model poses as an animated GIF with Motion Joints, framed once around every pose so the model holds still
   - Preferences: the new Context Menu tab lets you arrange the model view right-click menu, adding commands, separators and named submenus, renaming, reordering or resetting them
   - Views: the base and height grids each have their own toggle, and All Grids turns them on or off together
   - Views: Fade on Edit and Fade on Joint Set tint the rest of the model with their own colors, set under Steps and Highlighting in the view gear menu and in the preferences, and an empty step no longer fades the model

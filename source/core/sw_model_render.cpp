@@ -726,8 +726,26 @@ int swImageTurntable::GetFrameDelay(int Frame, int FrameCount) const
 	return Delay;
 }
 
+// use to list the corners of the visible part boxes
+void swModel::CollectImagePoints(swStep FitStep, std::vector<swVector3>& Points) const
+{
+	for (const std::unique_ptr<swPart>& Part : mParts)
+	{
+		if (!Part->IsVisible(FitStep))
+			continue;
+
+		swVector3 PartMin(FLT_MAX, FLT_MAX, FLT_MAX);
+		swVector3 PartMax(-FLT_MAX, -FLT_MAX, -FLT_MAX);
+
+		Part->CompareBoundingBox(PartMin, PartMax);
+
+		for (int Corner = 0; Corner < 8; Corner++)
+			Points.emplace_back(Corner & 1 ? PartMax.x : PartMin.x, Corner & 2 ? PartMax.y : PartMin.y, Corner & 4 ? PartMax.z : PartMin.z);
+	}
+}
+
 // use to place the image camera
-void swModel::SetImageCamera(swCamera* Camera, const swCamera* BaseCamera, const swImageFraming& Framing, const swImageTurntable& Turntable, int Frame, swStep Step, swStep LastStep, float Aspect) const
+void swModel::SetImageCamera(swCamera* Camera, const swCamera* BaseCamera, const swImageFraming& Framing, const swImageTurntable& Turntable, int Frame, swStep Step, swStep LastStep, float Aspect, const std::vector<swVector3>* FitPoints) const
 {
 	swStep FitStep = SW_STEP_MAXIMUM;
 
@@ -740,22 +758,16 @@ void swModel::SetImageCamera(swCamera* Camera, const swCamera* BaseCamera, const
 	swVector3 Min(FLT_MAX, FLT_MAX, FLT_MAX);
 	swVector3 Max(-FLT_MAX, -FLT_MAX, -FLT_MAX);
 
-	for (const std::unique_ptr<swPart>& Part : mParts)
+	// fixed points keep one framing for every frame
+	if (FitPoints)
+		Points = *FitPoints;
+	else
+		CollectImagePoints(FitStep, Points);
+
+	for (const swVector3& Point : Points)
 	{
-		if (!Part->IsVisible(FitStep))
-			continue;
-
-		swVector3 PartMin(FLT_MAX, FLT_MAX, FLT_MAX);
-		swVector3 PartMax(-FLT_MAX, -FLT_MAX, -FLT_MAX);
-
-		Part->CompareBoundingBox(PartMin, PartMax);
-
-		// corners of the part box
-		for (int Corner = 0; Corner < 8; Corner++)
-			Points.emplace_back(Corner & 1 ? PartMax.x : PartMin.x, Corner & 2 ? PartMax.y : PartMin.y, Corner & 4 ? PartMax.z : PartMin.z);
-
-		Min = swMinimum(Min, PartMin);
-		Max = swMaximum(Max, PartMax);
+		Min = swMinimum(Min, Point);
+		Max = swMaximum(Max, Point);
 	}
 
 	const swVector3 Position = BaseCamera->GetSectionPosition(SW_CAMERA_SECTION_POSITION);
@@ -994,13 +1006,24 @@ swResult<void> swModel::SaveFramedImages(const QString& BaseName, bool AddStepSu
 		const int Per = qMax(Turntable.Frames, 1);
 		const int FrameCount = Turntable.GetFrameCount(static_cast<int>(Poses.size()));
 		swResult<void> Result;
+		std::vector<swVector3> FitPoints;
+
+		// fit every pose once so the model holds still
+		for (int Frame = 0; Frame < FrameCount; Frame++)
+		{
+			const size_t From = Frame / Per;
+
+			Main->ApplyPoseBlend(Poses[From], Poses[(From + 1) % Poses.size()], static_cast<float>(Frame % Per) / Per);
+			CollectImagePoints(Framing.Fit == swImageFit::FitEachStep || Framing.Scope == swImageFitScope::ShownSteps ? End : SW_STEP_MAXIMUM, FitPoints);
+		}
+
+		SetImageCamera(&Camera, BaseCamera, Framing, Turntable, 0, End, End, Aspect, &FitPoints);
 
 		for (int Frame = 0; Frame < FrameCount && Result; Frame++)
 		{
 			const size_t From = Frame / Per;
 
 			Main->ApplyPoseBlend(Poses[From], Poses[(From + 1) % Poses.size()], static_cast<float>(Frame % Per) / Per);
-			SetImageCamera(&Camera, BaseCamera, Framing, Turntable, 0, End, End, Aspect);
 
 			const swResult<QImage> Image = RenderStepImageWithReadyAssets(false, Width, Height, End, &Camera, Background);
 
