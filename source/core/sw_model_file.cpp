@@ -797,7 +797,8 @@ void swModel::LoadLDraw(QIODevice& Device, Project* Project)
 		FirstLine = false;
 	}
 
-	mCurrentStep = CurrentStep;
+	// open on the empty step
+	mCurrentStep = HasParts() ? GetLastStep() + 1 : 1;
 	CalculateStep(mCurrentStep);
 
 	delete Part;
