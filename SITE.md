@@ -1,6 +1,6 @@
-# Features
+# Site
 
-Every StudWorx feature, by area. `tools/studworx-site` builds the feature sections of [studworx.app](https://studworx.app) from this file. Each `##` section starts with a comment that sets its page id, icon and heading, and its first paragraph is the lead. A `<!-- gallery class -->` comment turns the images and video links below it into one gallery, and the title of a single image sets its figure class. A `<!-- video -->` comment turns the link below it into a looping video, with the link text as its caption.
+Every section of [studworx.app](https://studworx.app), features first. `tools/studworx-site` builds the page from this file. Each `##` section starts with a comment that sets its page id, icon and heading, and its first paragraph is the lead. A `<!-- gallery class -->` comment turns the images and video links below it into one gallery, and the title of a single image sets its figure class. A `<!-- video -->` comment turns the link below it into a looping video, with the link text as its caption. A `<!-- include name -->` comment places generated content: the meta command list, the help search or the latest notices. A paragraph made of a single link ending in › becomes a more link, and `@VERSION@` and `@ENTRIES@` are filled with the release version and the help entry count.
 
 ## Interface
 
@@ -479,3 +479,73 @@ Nine pages with lined up label and control columns, checkboxes included, each la
 ![Keyboard](resources/images/preferences-window-08.png)
 ![Mouse](resources/images/preferences-window-09.png)
 ![About](resources/images/preferences-window-10.png)
+
+## Meta
+
+<!-- meta | edge | META COMMANDS // LDRAW LINE HANDLING -->
+
+Every meta command StudWorx reads, writes or keeps: the official LDraw ones, its own !SW commands, LeoCAD commands it migrates, and the commands of MLCad, LPub, LSynth, L3P, LDLite and Blender.
+
+<!-- include meta -->
+
+## Help
+
+<!-- help | purple | HELP // EVERY "WHAT'S THIS?" ENTRY -->
+
+The same help the app shows from Help > "What's This?", the title bar question mark or F1: @ENTRIES@ entries for every menu command, panel and dialog. Search them, or pick an area.
+
+<!-- include search -->
+
+## Install
+
+<!-- install | orange | INSTALL // DOWNLOAD, BUILD AND RUN -->
+
+Packages are rebuilt from every change and carry the date version of the release. They include their own Qt libraries and the LDraw parts library.
+
+| System | Package |
+| --- | --- |
+| Debian, Ubuntu | studworx_@VERSION@_amd64.deb / arm64.deb |
+| Fedora, Rocky Linux, RHEL, openSUSE | studworx-@VERSION@-x86_64.rpm / aarch64.rpm |
+| Any Linux based system | studworx-linux-@VERSION@-x86_64.appimage / aarch64.appimage |
+| Windows | studworx-windows-@VERSION@-x64.exe |
+| macOS | studworx-macos-@VERSION@-universal.dmg |
+
+[Download the latest release ›](https://github.com/nathaneltitane/studworx/releases/latest)
+
+- **Linux based systems.** The .deb and .rpm packages install to /opt/studworx. The AppImage runs from anywhere after chmod +x. Tested on Debian 12 and 13, Ubuntu 22.04 and 24.04, Rocky Linux 9, Fedora and openSUSE Tumbleweed.
+- **macOS.** The disk image is not notarized: on the first start, right click StudWorx and choose Open.
+- **Prepare.** To build, install a C++ compiler, Qt 5 (widgets, OpenGL, print support, network, xml and concurrent modules) and zlib development packages, listed below as build requirements. The optional packages add gamepad input, the terminal panel with KDE Frameworks KParts and a KDE Frameworks 5 Konsole, and the file manager thumbnails with KIO.
+
+| System | Build requirements | Optional |
+| --- | --- | --- |
+| Debian, Ubuntu | g++ make qtbase5-dev qttools5-dev-tools libqt5opengl5-dev libqt5svg5 qt5-image-formats-plugins zlib1g-dev | libqt5gamepad5-dev libkf5parts-dev libkf5kio-dev |
+| Fedora, Rocky Linux, RHEL | gcc-c++ make qt5-qtbase-devel qt5-linguist qt5-qtsvg qt5-qtimageformats zlib-devel | qt5-qtgamepad-devel kf5-kparts-devel kf5-kio-devel |
+| openSUSE | gcc-c++ make libqt5-qtbase-devel libqt5-linguist libqt5-qtsvg libqt5-qtimageformats zlib-devel | kparts-devel kio-devel |
+| Arch Linux | base-devel qt5-base qt5-tools qt5-svg qt5-imageformats zlib | qt5-gamepad kparts5 kio5 |
+
+```
+git clone https://github.com/nathaneltitane/studworx
+cd studworx
+qmake studworx.pro
+make -j"$(nproc)"
+```
+
+Or build and install with the thumbnail plugin, file types and associations registered. The prefix defaults to /usr/local, and ~/.local installs without superuser rights. Run it again after git pull to update.
+
+```
+git clone https://github.com/nathaneltitane/studworx
+studworx/tools/studworx-install [prefix] [build directory]
+```
+
+- **Run.** Start StudWorx and let it download the LDraw parts library on the first start, or point Preferences to one or set LDRAW_DIRECTORY or LDRAWDIR. Set Preferences > Part Connections to an LDCad shadow library folder to select connected parts.
+- **Package.** Run resources/packaging/deb/deb.sh, resources/packaging/rpm/rpm.sh or resources/packaging/appimage/appimage.sh, with an optional build directory.
+
+## News
+
+<!-- news | fuschia | NEWS // LATEST CHANGES -->
+
+The latest release notices from the StudWorx repository.
+
+<!-- include notice -->
+
+[Read every notice ›](https://github.com/nathaneltitane/studworx/blob/main/NOTICE.md)

@@ -24,7 +24,7 @@
   - Submodels: the menu now reads Open Selected Submodel, Inline Selected Submodels, Flatten Submodels and Move to New Submodel
   - Menus: Select Invert is now Invert Selection, Remove Step is now Delete Step, and the snap toggles read Move Snap, Rotation Snap and Camera Snap
   - Studs: the stud styles are named Thin-Line Logo and High Contrast Logo in the menus, preferences and command line help
-  - Interface: errors read "Could not …", file filters read "LDraw Models" and "All Files", menu, status bar, dialog and message wording is consistent, status bar text names toolbars and panels correctly, and the command line help, man page and FEATURES.md agree with the menus
+  - Interface: errors read "Could not …", file filters read "LDraw Models" and "All Files", menu, status bar, dialog and message wording is consistent, status bar text names toolbars and panels correctly, and the command line help, man page and SITE.md agree with the menus
 
   </details>
 

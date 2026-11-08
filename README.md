@@ -17,7 +17,7 @@ Useful? Star the repository - it helps others find it.
 StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the [LDraw](https://www.ldraw.org) parts library, built on [LeoCAD](https://github.com/leozide/leocad).
 It keeps LeoCAD's file format, so models open in either program, and copies LeoCAD's settings on the first start.
 
-Every feature, menu and panel is listed in [FEATURES.md](FEATURES.md) and shown on [studworx.app](https://studworx.app) - release notes are listed in [NOTICE.md](NOTICE.md).
+Every feature, menu and panel is listed in [SITE.md](SITE.md) and shown on [studworx.app](https://studworx.app) - release notes are listed in [NOTICE.md](NOTICE.md).
 
 ![Main window](https://raw.githubusercontent.com/nathaneltitane/studworx/main/resources/images/interface-window-01.png)
 
