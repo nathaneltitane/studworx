@@ -1,6 +1,13 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-08</summary>
+
+  - Steps: an opened model now starts on a new empty step after its last one, ready for new parts
+
+  </details>
+
+  <details>
   <summary>2026-11-06</summary>
 
   - Joints: Part > Joint > Set, also in the model view right-click menu, gives a submodel hinge or ball joints from the shadow library connections, several per submodel, with the picked part outlined in red, the Joints tool next to Rotate turns them with the mouse, and Part > Joint > Move and Rotate and the Use Joint Rotation preference turn them with the rotate keys and the Rotate tool
