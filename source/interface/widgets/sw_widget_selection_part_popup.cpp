@@ -148,7 +148,7 @@ void swPartSelectionPopup::Close()
 		Menu->close();
 }
 
-std::optional<swPartData*> swShowPartSelectionPopup(swPartData* InitialPart, const std::vector<std::pair<swPartData*, std::string>>& CustomParts, int ColorIndex, QWidget* Parent, QPoint Position)
+std::optional<swPartData*> swShowPartSelectionPopup(swPartData* InitialPart, const std::vector<std::pair<swPartData*, std::string>>& CustomParts, int ColorIndex, QWidget* Parent, QPoint Position, const std::vector<std::pair<int, bool>>& CustomColors)
 {
 	std::unique_ptr<QMenu> Menu(new QMenu(Parent));
 	QWidgetAction* Action = new QWidgetAction(Menu.get());
@@ -161,7 +161,7 @@ std::optional<swPartData*> swShowPartSelectionPopup(swPartData* InitialPart, con
 		PartSelectionWidget->SetColorIndex(ColorIndex);
 	}
 	else
-		PartSelectionWidget->SetCustomParts(CustomParts, ColorIndex);
+		PartSelectionWidget->SetCustomParts(CustomParts, ColorIndex, CustomColors);
 
 	QScreen* PopupScreen = QGuiApplication::primaryScreen();
 	for (QScreen* Screen : QGuiApplication::screens())

@@ -290,6 +290,12 @@ public:
 	void SetSubmodelActive(size_t Depth);
 	void SetTopSubmodelActive();
 	void SetSelectedSubmodelActive();
+	void SetSubmodelEditingPath(const std::vector<swPart*>& Path);
+	bool SetJointModelActive(swModel* Target);
+	void EndJointFocus();
+	void FocusSetJoint(const std::vector<swPart*>& Parts);
+	bool OpenSetJoint();
+	void SetJointPathDepth(size_t Index);
 
 	void OnDraw();
 	bool HasMissingAssets() const;
@@ -306,6 +312,7 @@ public:
 	void OnForwardButtonUp();
 	void OnMouseMove();
 	void OnMouseLeave();
+	void UpdateHoverOutline();
 	void OnMouseWheel(float Direction);
 	void BeginDrag(swDragState DragState);
 	void EndDrag(bool Accept);
@@ -512,6 +519,11 @@ protected:
 	swPart* mActiveSubmodelInstance = nullptr;
 	swMatrix44 mActiveSubmodelTransform;
 	std::vector<swPart*> mSubmodelEditingPath;
+	std::vector<swPart*> mJointReturnPath;
+	bool mJointReturn = false;
+	bool mJointSeen = false;
+	std::vector<swPart*> mContextPath;
+	std::vector<const swPart*> mHoverChain;
 
 	swCamera* mCamera = nullptr;
 

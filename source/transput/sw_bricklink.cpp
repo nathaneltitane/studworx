@@ -306,6 +306,43 @@ QString swGetBrickLinkWeightText(const swPartData* PartData)
 	return Weight ? QObject::tr("%1 g").arg(QLocale::system().toString(*Weight)) : QObject::tr("N/A");
 }
 
+// use to find the library part a bricklink number stands for
+swPartData* swFindBrickLinkLibraryPart(const QString& BrickLinkPart)
+{
+	static QString CachedPath;
+	static std::multimap<QString, QString> CachedParts;
+
+	const QString MappingPath = swGetBrickLinkMappingPath();
+	const QString FileName = !MappingPath.isEmpty() ? MappingPath : swBrickLinkMappingResource;
+
+	if (FileName != CachedPath)
+	{
+		const swResult<QJsonObject> Mapping = swLoadBrickLinkMapping(FileName);
+		const QJsonObject Parts = Mapping ? Mapping.value()[swBrickLinkMappingKeyParts].toObject() : QJsonObject();
+
+		CachedPath = FileName;
+		CachedParts.clear();
+
+		for (QJsonObject::const_iterator PartIt = Parts.begin(); PartIt != Parts.end(); ++PartIt)
+			CachedParts.emplace(PartIt.value().toString().toLower(), PartIt.key());
+	}
+
+	swPartsLibrary* Library = swGetPartsLibrary();
+	swPartData* Result = nullptr;
+	const auto [First, Last] = CachedParts.equal_range(BrickLinkPart.toLower());
+
+	// the shortest name is the plain part, not a print or mold variant
+	for (auto PartIt = First; PartIt != Last; ++PartIt)
+	{
+		swPartData* PartData = Library->FindPartData((PartIt->second + QLatin1String(".dat")).toLatin1().constData(), nullptr);
+
+		if (PartData && PartData->mState != swAssetState::Failed && (!Result || strlen(PartData->mFileName) < strlen(Result->mFileName)))
+			Result = PartData;
+	}
+
+	return Result;
+}
+
 swResult<int> swExportBrickLink(const QString& SaveFileName, const swPartsList& PartsList, const swBrickLinkOptions& Options)
 {
 	const QString MappingPath = swGetBrickLinkMappingPath();

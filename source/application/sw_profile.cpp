@@ -64,6 +64,8 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "FadeJoint", true),                                                        // SW_PROFILE_FADE_JOINT
 	swProfileEntry("Settings", "FadeJointColor", SW_RGBA(255, 255, 255, 77)),                             // SW_PROFILE_FADE_JOINT_COLOR #ffffff4d
 	swProfileEntry("Settings", "FadeJointMoving", false),                                                 // SW_PROFILE_FADE_JOINT_MOVING
+	swProfileEntry("Settings", "HoverOutline", true),                                                     // SW_PROFILE_HOVER_OUTLINE
+	swProfileEntry("Settings", "HoverOutlineColor", SW_RGBA(150, 230, 240, 255)),                         // SW_PROFILE_HOVER_OUTLINE_COLOR #96e6f0
 	swProfileEntry("Settings", "HighlightNewParts", 0),                                                   // SW_PROFILE_HIGHLIGHT_NEW_PARTS
 	swProfileEntry("Settings", "HighlightNewPartsColor", SW_RGBA(255, 85, 0, 217)),                       // SW_PROFILE_HIGHLIGHT_NEW_PARTS_COLOR #ff5500d9
 	swProfileEntry("Settings", "ShadingMode", static_cast<int>(swShadingMode::DefaultLights)),             // SW_PROFILE_SHADING_MODE
@@ -180,6 +182,7 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "FlexMiddleControlPoint", false),                               // SW_PROFILE_FLEX_MIDDLE_CONTROL_POINT
 	swProfileEntry("Settings", "WatchFileChanges", true),                                      // SW_PROFILE_WATCH_FILE_CHANGES
 	swProfileEntry("Settings", "LoadPartsBeforeShowing", false),                              // SW_PROFILE_LOAD_PARTS_BEFORE_SHOWING
+	swProfileEntry("Settings", "WarnPartsLoadFailure", true),                                 // SW_PROFILE_WARN_PARTS_LOAD_FAILURE
 	swProfileEntry("Settings", "MigrateMetaCommands", 0),                                      // SW_PROFILE_MIGRATE_META_COMMANDS
 	swProfileEntry("Settings", "MarkColladaTransparency", true),                               // SW_PROFILE_MARK_COLLADA_TRANSPARENCY
 	swProfileEntry("Settings", "KMZVisibleSurfaces", true),                                    // SW_PROFILE_KMZ_VISIBLE_SURFACES

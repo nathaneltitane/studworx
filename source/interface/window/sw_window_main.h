@@ -7,6 +7,7 @@
 #include "sw_commands.h"
 #include "sw_model.h"
 
+struct swMissingPart;
 class swPartSelectionWidget;
 class swViewWidget;
 class swInstructionsDialog;
@@ -94,6 +95,11 @@ public:
 	swTool GetTool() const
 	{
 		return mTool;
+	}
+
+	bool IsJointsPanelVisible() const
+	{
+		return mJointsToolBar && mJointsToolBar->isVisible();
 	}
 
 	swTransformType GetTransformType() const
@@ -376,6 +382,8 @@ protected:
 	void CreateToolBars();
 	void CreateStatusBar();
 	void UpdateAssets();
+	std::vector<swMissingPart> GetMissingParts() const;
+	void ShowMissingPartsDialog();
 	void UpdateConnectedPartActions(int Flags);
 	swView* CreateView(swModel* Model);
 	void SetActiveView(swView* ActiveView);
@@ -491,6 +499,7 @@ protected:
 	swSpinnerWidget* mStatusLoadSpinner = nullptr;
 	QLabel* mStatusLoadFailureLabel = nullptr;
 	const Project* mStatusProject = nullptr;
+	bool mStatusLoadFailureWarned = false;
 	std::unordered_set<const swPartData*> mStatusRequiredAssets;
 	bool mAssetUpdateScheduled = false;
 

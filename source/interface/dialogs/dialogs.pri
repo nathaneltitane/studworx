@@ -20,6 +20,7 @@ SOURCES += \
 	$$PWD/sw_dialog_instructions_print.cpp \
 	$$PWD/sw_dialog_instructions_properties.cpp \
 	$$PWD/sw_dialog_list_model.cpp \
+	$$PWD/sw_dialog_missing_parts.cpp \
 	$$PWD/sw_dialog_palette_part.cpp \
 	$$PWD/sw_dialog_preferences.cpp \
 	$$PWD/sw_dialog_preferences_categories.cpp \
@@ -49,6 +50,7 @@ HEADERS += \
 	$$PWD/sw_dialog_instructions_print.h \
 	$$PWD/sw_dialog_instructions_properties.h \
 	$$PWD/sw_dialog_list_model.h \
+	$$PWD/sw_dialog_missing_parts.h \
 	$$PWD/sw_dialog_palette_part.h \
 	$$PWD/sw_dialog_preferences.h \
 	$$PWD/sw_dialog_properties.h \

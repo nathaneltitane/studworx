@@ -1139,7 +1139,15 @@ void swPart::AddMainModelRenderMeshes(swScene* Scene, bool Highlight, bool Fade)
 		else if (ActiveSubmodelInstance == this)
 			ParentActive = true;
 		else
-			RenderMeshState = swRenderMeshState::FadedInline;
+			RenderMeshState = Scene->GetJointFadePart() ? swRenderMeshState::FadedJoint : swRenderMeshState::FadedInline;
+	}
+	else if (const swPart* ActiveSubmodelInstance = Scene->GetActiveSubmodelInstance(); ActiveSubmodelInstance && Scene->GetJointFadePart())
+	{
+		// picking a joint in place still fades the rest
+		if (ActiveSubmodelInstance == this)
+			ParentActive = true;
+		else
+			RenderMeshState = swRenderMeshState::FadedJoint;
 	}
 
 	// joints fade all but the jointed submodel
@@ -1180,8 +1188,10 @@ void swPart::AddSubModelRenderMeshes(swScene* Scene, const swMatrix44& WorldMatr
 
 	if (ActiveSubmodelInstance == this)
 		RenderMeshState = swRenderMeshState::Default;
-	else if (ParentActive)
+	else if (ParentActive && Scene->GetDrawInterface())
 		RenderMeshState = IsFocused() ? swRenderMeshState::Focused : (IsSelected() ? swRenderMeshState::Selected : swRenderMeshState::Default);
+	else if (ParentActive)
+		RenderMeshState = swRenderMeshState::Default;
 
 	if (ParentActive && Scene->GetJointFadePart() && Scene->GetJointFadePart() != this)
 		RenderMeshState = swRenderMeshState::FadedJoint;

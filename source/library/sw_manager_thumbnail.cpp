@@ -419,7 +419,8 @@ void swThumbnailManager::DrawThumbnail(swPartThumbnailId ThumbnailId, swPartThum
 	if (Icon.has_value())
 	{
 		QPainter Painter(&Image);
-		Painter.drawImage(QPoint(0, 0), swCreatePaintedIconImage(Icon.value(), qRound(32 * Thumbnail.DeviceScale), QApplication::palette().color(QPalette::WindowText)));
+		const int IconSize = qRound(32 * Thumbnail.DeviceScale);
+		Painter.drawImage(QPoint(Image.width() - IconSize, Image.height() - IconSize), swCreatePaintedIconImage(Icon.value(), IconSize, QApplication::palette().color(QPalette::WindowText)));
 		Painter.end();
 	}
 

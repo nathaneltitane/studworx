@@ -42,4 +42,4 @@ protected:
 	int mHeightLimit = QWIDGETSIZE_MAX;
 };
 
-std::optional<swPartData*> swShowPartSelectionPopup(swPartData* InitialPart, const std::vector<std::pair<swPartData*, std::string>>& CustomParts, int ColorIndex, QWidget* Parent, QPoint Position);
+std::optional<swPartData*> swShowPartSelectionPopup(swPartData* InitialPart, const std::vector<std::pair<swPartData*, std::string>>& CustomParts, int ColorIndex, QWidget* Parent, QPoint Position, const std::vector<std::pair<int, bool>>& CustomColors = {});

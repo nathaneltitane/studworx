@@ -396,12 +396,23 @@ public:
 	void SetJointPick(bool Pick);
 	void SetJointRotate(bool Rotate);
 	void UpdateJointRotate();
+	void SetJointFocus();
+	void EndJointFocus();
+	bool IsJointFocused() const
+	{
+		return mJointFocus || mJointRotate;
+	}
 	swPart* GetRotateJoint() const;
 	bool RotateJoint(swPart* Part, const swMatrix33& WorldRotation);
 	bool IsJointPick() const
 	{
 		return mJointPick;
 	}
+	std::vector<swPart*> TakeJointSetPath()
+	{
+		return std::exchange(mJointSetPath, {});
+	}
+	std::vector<swPart*> GetSubmodelPath(const swVector3& Start, const swVector3& End);
 	bool JointsToolClicked(const swVector3& Start, const swVector3& End, const swVector3& Right, const swVector3& Up);
 	void UpdateJointsTool(float DeltaX, float DeltaY);
 	void EndJointsTool(bool Accept);
@@ -414,8 +425,10 @@ public:
 	}
 	bool UpdateJointHover(const swVector3& Start, const swVector3& End);
 	void AddJointHighlight(swScene* Scene, const swMatrix44& Transform) const;
+	void AddHoverOutline(swScene* Scene, const swMatrix44& Transform, std::vector<const swPart*> Chain) const;
 	void SetJointAxisAction(swPart* Part, int Axis);
-	void ClearJointAction(swPart* Part);
+	void ClearJointAction(swPart* Part, size_t Index);
+	void ClearJointsAction(swPart* Part);
 
 	bool HasDirectGeometry() const
 	{
@@ -566,6 +579,7 @@ public:
 	void UnhideAllParts();
 
 	void FindReplacePart(bool SearchForward, bool FindAll, bool Replace);
+	int ReplacePartData(const std::map<swPartData*, swPartData*>& Replacements);
 
 	bool UndoAction();
 	void RedoAction();
@@ -771,7 +785,9 @@ protected:
 	std::vector<std::pair<swModel*, std::unique_ptr<swModelHistoryEdit>>> mJointsEdits;
 	bool mJointPick = false;
 	const swPart* mJointRotate = nullptr;
+	const swPart* mJointFocus = nullptr;
 	std::vector<const swPart*> mJointHover;
+	std::vector<swPart*> mJointSetPath;
 	swPart* mJointsJoint = nullptr;
 	size_t mJointsJointIndex = 0;
 	size_t mJointIndex = 0;

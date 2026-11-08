@@ -1331,399 +1331,404 @@
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2060"/>
-        <source>View.Grid.ToggleStuds</source>
+        <source>View.ToggleHoverOutline</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2069"/>
-        <source>View.Grid.ToggleLines</source>
+        <source>View.Grid.ToggleStuds</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2078"/>
-        <source>View.Grid.ToggleOrigin</source>
+        <source>View.Grid.ToggleLines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2087"/>
-        <source>View.ToggleAutomateEdgeColor</source>
+        <source>View.Grid.ToggleOrigin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2096"/>
-        <source>View.HighlightStyle.Outline</source>
+        <source>View.ToggleAutomateEdgeColor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2105"/>
-        <source>View.HighlightStyle.TintAndEdges</source>
+        <source>View.HighlightStyle.Outline</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2114"/>
-        <source>View.HighlightStyle.IncreaseOutlineWidth</source>
+        <source>View.HighlightStyle.TintAndEdges</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2123"/>
-        <source>View.HighlightStyle.DecreaseOutlineWidth</source>
+        <source>View.HighlightStyle.IncreaseOutlineWidth</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2132"/>
-        <source>View.StudStyle.Plain</source>
+        <source>View.HighlightStyle.DecreaseOutlineWidth</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2141"/>
-        <source>View.StudStyle.ThinLinesLogo</source>
+        <source>View.StudStyle.Plain</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2150"/>
-        <source>View.StudStyle.OutlineLogo</source>
+        <source>View.StudStyle.ThinLinesLogo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2159"/>
-        <source>View.StudStyle.SharpTopLogo</source>
+        <source>View.StudStyle.OutlineLogo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2168"/>
-        <source>View.StudStyle.RoundedTopLogo</source>
+        <source>View.StudStyle.SharpTopLogo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2177"/>
-        <source>View.StudStyle.FlattenedLogo</source>
+        <source>View.StudStyle.RoundedTopLogo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2186"/>
-        <source>View.StudStyle.HighContrast</source>
+        <source>View.StudStyle.FlattenedLogo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2195"/>
-        <source>View.StudStyle.HighContrastLogo</source>
+        <source>View.StudStyle.HighContrast</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2204"/>
-        <source>View.ToggleEdgeLines</source>
+        <source>View.StudStyle.HighContrastLogo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2213"/>
-        <source>View.ToggleConditionalLines</source>
+        <source>View.ToggleEdgeLines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2222"/>
-        <source>View.Preview.ToggleSyncRendering</source>
+        <source>View.ToggleConditionalLines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2231"/>
-        <source>View.Preview.Shade.Wireframe</source>
+        <source>View.Preview.ToggleSyncRendering</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2240"/>
-        <source>View.Preview.Shade.Flat</source>
+        <source>View.Preview.Shade.Wireframe</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2249"/>
-        <source>View.Preview.Shade.DefaultLights</source>
+        <source>View.Preview.Shade.Flat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2258"/>
-        <source>View.Preview.ToggleEdgeLines</source>
+        <source>View.Preview.Shade.DefaultLights</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2267"/>
-        <source>View.Preview.ToggleConditionalLines</source>
+        <source>View.Preview.ToggleEdgeLines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2276"/>
-        <source>View.Parts.ToggleSyncRendering</source>
+        <source>View.Preview.ToggleConditionalLines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2285"/>
-        <source>View.Parts.Shade.Wireframe</source>
+        <source>View.Parts.ToggleSyncRendering</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2294"/>
-        <source>View.Parts.Shade.Flat</source>
+        <source>View.Parts.Shade.Wireframe</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2303"/>
-        <source>View.Parts.Shade.DefaultLights</source>
+        <source>View.Parts.Shade.Flat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2312"/>
-        <source>View.Parts.ToggleEdgeLines</source>
+        <source>View.Parts.Shade.DefaultLights</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2321"/>
-        <source>View.Parts.ToggleConditionalLines</source>
+        <source>View.Parts.ToggleEdgeLines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2330"/>
-        <source>View.MinifigureBuilder.ToggleSyncRendering</source>
+        <source>View.Parts.ToggleConditionalLines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2339"/>
-        <source>View.MinifigureBuilder.Shade.Wireframe</source>
+        <source>View.MinifigureBuilder.ToggleSyncRendering</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2348"/>
-        <source>View.MinifigureBuilder.Shade.Flat</source>
+        <source>View.MinifigureBuilder.Shade.Wireframe</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2357"/>
-        <source>View.MinifigureBuilder.Shade.DefaultLights</source>
+        <source>View.MinifigureBuilder.Shade.Flat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2366"/>
-        <source>View.MinifigureBuilder.ToggleEdgeLines</source>
+        <source>View.MinifigureBuilder.Shade.DefaultLights</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2375"/>
-        <source>View.MinifigureBuilder.ToggleConditionalLines</source>
+        <source>View.MinifigureBuilder.ToggleEdgeLines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2384"/>
-        <source>View.Parts.ToggleSnapToTiles</source>
+        <source>View.MinifigureBuilder.ToggleConditionalLines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2393"/>
-        <source>View.Preview.ToggleViewCube</source>
+        <source>View.Parts.ToggleSnapToTiles</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2402"/>
-        <source>View.Preview.ToggleAxisIcon</source>
+        <source>View.Preview.ToggleViewCube</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2411"/>
-        <source>File.ToggleLoadPartsBeforeShowing</source>
+        <source>View.Preview.ToggleAxisIcon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2420"/>
-        <source>View.Preview.ToggleSquareViewport</source>
+        <source>File.ToggleLoadPartsBeforeShowing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2429"/>
-        <source>View.Preview.ToggleKeepSelection</source>
+        <source>View.Preview.ToggleSquareViewport</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2438"/>
+        <source>View.Preview.ToggleKeepSelection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2447"/>
         <source>Part.Insert</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.Insert</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2447"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2456"/>
         <source>Part.ToggleFirstPartAtOrigin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2456"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2465"/>
         <source>Part.Delete</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.Delete</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2465"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2474"/>
         <source>Part.Duplicate</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.Duplicate</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2474"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2483"/>
         <source>Part.PaintSelected</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.PaintSelected</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2483"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2492"/>
         <source>Part.SetJoint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2492"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2501"/>
         <source>Part.JointMove</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2501"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2510"/>
         <source>Part.JointRotate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2510"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2519"/>
         <source>Part.ResetPivotPoint</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.ResetPivotPoint</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2519"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2528"/>
         <source>Part.RemoveKeyFrames</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.RemoveKeyFrames</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2528"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2537"/>
         <source>Part.ControlPoint.Insert</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.ControlPoint.Insert</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2537"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2546"/>
         <source>Part.ControlPoint.Remove</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.ControlPoint.Remove</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2546"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2555"/>
         <source>Part.ControlPoint.Tangent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2555"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2564"/>
         <source>Part.ControlPoint.AlignTangent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2564"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2573"/>
         <source>Part.ControlPoint.AlignX</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2573"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2582"/>
         <source>Part.ControlPoint.AlignY</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2582"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2591"/>
         <source>Part.ControlPoint.AlignZ</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2591"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2600"/>
         <source>Part.TrainTrack.FocusNext</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.TrainTrack.FocusNext</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2600"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2609"/>
         <source>Part.TrainTrack.FocusPrevious</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.TrainTrack.FocusPrevious</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2609"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2618"/>
         <source>Part.TrainTrack.Rotate</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.TrainTrack.Rotate</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2618"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2627"/>
         <source>Part.Move.PlusX</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.Move.PlusX</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2627"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2636"/>
         <source>Part.Move.MinusX</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.Move.MinusX</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2636"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2645"/>
         <source>Part.Move.PlusY</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.Move.PlusY</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2645"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2654"/>
         <source>Part.Move.MinusY</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.Move.MinusY</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2654"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2663"/>
         <source>Part.Move.PlusZ</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.Move.PlusZ</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2663"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2672"/>
         <source>Part.Move.MinusZ</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.Move.MinusZ</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2672"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2681"/>
         <source>Part.Rotate.PlusX</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.Rotate.PlusX</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2681"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2690"/>
         <source>Part.Rotate.MinusX</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.Rotate.MinusX</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2690"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2699"/>
         <source>Part.Rotate.PlusY</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.Rotate.PlusY</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2699"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2708"/>
         <source>Part.Rotate.MinusY</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.Rotate.MinusY</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2708"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2717"/>
         <source>Part.Rotate.PlusZ</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.Rotate.PlusZ</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2717"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2726"/>
         <source>Part.Rotate.MinusZ</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.Rotate.MinusZ</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2726"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2735"/>
         <source>Part.MinifigureBuilder</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1733,384 +1738,384 @@
         <translation type="obsolete">Part.MinifigWizard</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2735"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2744"/>
         <source>Part.Array</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.Array</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2744"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2753"/>
         <source>Part.ViewSelectedModel</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.ViewSelectedModel</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2753"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2762"/>
         <source>Part.MoveSelectionToModel</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.MoveSelectionToModel</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2762"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2771"/>
         <source>Part.InlineSelectedModels</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.InlineSelectedModels</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2771"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2780"/>
         <source>Part.FlattenModel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2780"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2789"/>
         <source>Part.EditSelectedSubmodel</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.EditSelectedSubmodel</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2789"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2798"/>
         <source>Part.EditEndSubmodel</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.EditEndSubmodel</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2798"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2807"/>
         <source>Part.Group</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.Group</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2807"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2816"/>
         <source>Part.Ungroup</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.Ungroup</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2816"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2825"/>
         <source>Part.GroupAdd</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.GroupAdd</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2825"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2834"/>
         <source>Part.GroupRemove</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.GroupRemove</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2834"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2843"/>
         <source>Part.GroupEdit</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.GroupEdit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2843"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2852"/>
         <source>Part.HideSelected</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.HideSelected</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2852"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2861"/>
         <source>Part.HideUnselected</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.HideUnselected</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2861"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2870"/>
         <source>Part.UnhideSelected</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.UnhideSelected</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2870"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2879"/>
         <source>Part.UnhideAll</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.UnhideAll</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2879"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2888"/>
         <source>Part.ShowEarlier</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.ShowEarlier</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2888"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2897"/>
         <source>Part.ShowLater</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Part.ShowLater</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2897"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2906"/>
         <source>Model.New</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.New</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2906"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2915"/>
         <source>Model.Properties</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Properties</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2915"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2924"/>
         <source>Model.List</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.List</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2924"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2933"/>
         <source>Model.Model01</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model01</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2933"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2942"/>
         <source>Model.Model02</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model02</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2942"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2951"/>
         <source>Model.Model03</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model03</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2951"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2960"/>
         <source>Model.Model04</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model04</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2960"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2969"/>
         <source>Model.Model05</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model05</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2969"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2978"/>
         <source>Model.Model06</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model06</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2978"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2987"/>
         <source>Model.Model07</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model07</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2987"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2996"/>
         <source>Model.Model08</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model08</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2996"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3005"/>
         <source>Model.Model09</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model09</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3005"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3014"/>
         <source>Model.Model10</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model10</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3014"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3023"/>
         <source>Model.Model11</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model11</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3023"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3032"/>
         <source>Model.Model12</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model12</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3032"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3041"/>
         <source>Model.Model13</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model13</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3041"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3050"/>
         <source>Model.Model14</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model14</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3050"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3059"/>
         <source>Model.Model15</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model15</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3059"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3068"/>
         <source>Model.Model16</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model16</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3068"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3077"/>
         <source>Model.Model17</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model17</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3077"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3086"/>
         <source>Model.Model18</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model18</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3086"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3095"/>
         <source>Model.Model19</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model19</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3095"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3104"/>
         <source>Model.Model20</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model20</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3104"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3113"/>
         <source>Model.Model21</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model21</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3113"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3122"/>
         <source>Model.Model22</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model22</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3122"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3131"/>
         <source>Model.Model23</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model23</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3131"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3140"/>
         <source>Model.Model24</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model24</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3140"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3149"/>
         <source>Model.Model25</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model25</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3149"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3158"/>
         <source>Model.Model26</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model26</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3158"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3167"/>
         <source>Model.Model27</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model27</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3167"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3176"/>
         <source>Model.Model28</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model28</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3176"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3185"/>
         <source>Model.Model29</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model29</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3185"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3194"/>
         <source>Model.Model30</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model30</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3194"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3203"/>
         <source>Model.Model31</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model31</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3203"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3212"/>
         <source>Model.Model32</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model32</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3212"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3221"/>
         <source>Model.Model33</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model33</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3221"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3230"/>
         <source>Model.Model34</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model34</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3230"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3239"/>
         <source>Model.Model35</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model35</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3239"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3248"/>
         <source>Model.Model36</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model36</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3248"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3257"/>
         <source>Model.Model37</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model37</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3257"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3266"/>
         <source>Model.Model38</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model38</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3266"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3275"/>
         <source>Model.Model39</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model39</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3275"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3284"/>
         <source>Model.Model40</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Model.Model40</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3284"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3293"/>
         <source>Help.WhatsThis</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Help.WhatsThis</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3293"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3302"/>
         <source>Help.HomePage</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Help.HomePage</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3302"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3311"/>
         <source>Help.BugReport</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Help.BugReport</translation>
@@ -2121,7 +2126,7 @@
         <translation type="obsolete">Help.Updates</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3311"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3320"/>
         <source>Help.About</source>
         <translatorcomment>Technical identifier or nonlinguistic text; intentionally retained unchanged.</translatorcomment>
         <translation type="unfinished">Help.About</translation>
@@ -2304,97 +2309,97 @@
 <context>
     <name>ContextMenu</name>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3413"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3422"/>
         <source>Submodel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3414"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3423"/>
         <source>Control Points</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3415"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3424"/>
         <source>Align to Axis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3416"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3425"/>
         <source>View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3448"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3457"/>
         <source>Import</source>
         <translation type="unfinished">Importação</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3449"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3458"/>
         <source>Export</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3450"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3459"/>
         <source>Render</source>
         <translation type="unfinished">Devolver</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3451"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3460"/>
         <source>Selection Mode</source>
         <translation type="unfinished">Modo de seleção</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3452"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3461"/>
         <source>Transform</source>
         <translation type="unfinished">Transformar</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3453"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3462"/>
         <source>Tools</source>
         <translation type="unfinished">Ferramentas</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3454"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3463"/>
         <source>Toolbars</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3455"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3464"/>
         <source>Viewpoint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3456"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3465"/>
         <source>Cutaway</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3457"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3466"/>
         <source>Camera</source>
         <translation type="unfinished">Câmara</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3458"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3467"/>
         <source>Projection</source>
         <translation type="unfinished">Projecção</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3459"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3468"/>
         <source>Shading</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3460"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3469"/>
         <source>Joint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3461"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3470"/>
         <source>Group</source>
         <translation type="unfinished">Grupo</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3462"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3471"/>
         <source>Visibility</source>
         <translation type="unfinished">Visibilidade</translation>
     </message>
@@ -2619,12 +2624,12 @@
         <translation type="unfinished">Inserir depois</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2520"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2529"/>
         <source>Remove &amp;Keyframes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2727"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2736"/>
         <source>&amp;Minifigure Builder</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2634,19 +2639,19 @@
         <translation type="obsolete">Abrir modelo selecionado</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2781"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2790"/>
         <source>Edit Selected Submodel</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Editar submodelo selecionado</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2790"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2799"/>
         <source>End Submodel Editing</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Finalizar edição do submodelo</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2898"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2907"/>
         <source>New Submodel...</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Novo submodelo...</translation>
@@ -2834,82 +2839,60 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="540"/>
-        <location filename="../../source/application/sw_commands.cpp" line="630"/>
-        <location filename="../../source/application/sw_commands.cpp" line="729"/>
-        <location filename="../../source/application/sw_commands.cpp" line="1215"/>
         <source>None</source>
-        <translation>Nenhum</translation>
+        <translation type="vanished">Nenhum</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="549"/>
-        <location filename="../../source/application/sw_commands.cpp" line="639"/>
         <source>1/20 Stud</source>
-        <translation>1/20 Prego</translation>
+        <translation type="vanished">1/20 Prego</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="558"/>
-        <location filename="../../source/application/sw_commands.cpp" line="648"/>
         <source>1/4 Stud</source>
-        <translation>1/4 Prego</translation>
+        <translation type="vanished">1/4 Prego</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="567"/>
-        <location filename="../../source/application/sw_commands.cpp" line="657"/>
         <source>1 Flat</source>
-        <translation>1 Prato</translation>
+        <translation type="vanished">1 Prato</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="576"/>
-        <location filename="../../source/application/sw_commands.cpp" line="666"/>
         <source>1/2 Stud</source>
-        <translation>1/2 Prego</translation>
+        <translation type="vanished">1/2 Prego</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="585"/>
-        <location filename="../../source/application/sw_commands.cpp" line="675"/>
         <source>1 Stud</source>
-        <translation>1 Prego</translation>
+        <translation type="vanished">1 Prego</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="594"/>
         <source>2 Studs</source>
-        <translation>2 Pregos</translation>
+        <translation type="vanished">2 Pregos</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="603"/>
         <source>3 Studs</source>
-        <translation>3 Pregos</translation>
+        <translation type="vanished">3 Pregos</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="612"/>
         <source>4 Studs</source>
-        <translation>4 Pregos</translation>
+        <translation type="vanished">4 Pregos</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="621"/>
         <source>8 Studs</source>
-        <translation>8 Pregos</translation>
+        <translation type="vanished">8 Pregos</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="684"/>
         <source>1 Brick</source>
-        <translation>1 Tijolo</translation>
+        <translation type="vanished">1 Tijolo</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="693"/>
         <source>2 Bricks</source>
-        <translation>2 Tijolos</translation>
+        <translation type="vanished">2 Tijolos</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="702"/>
         <source>4 Bricks</source>
-        <translation>4 Tijolos</translation>
+        <translation type="vanished">4 Tijolos</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="711"/>
         <source>8 Bricks</source>
-        <translation>8 Tijolos</translation>
+        <translation type="vanished">8 Tijolos</translation>
     </message>
     <message>
         <source>Rotation Snap Enabled</source>
@@ -3315,61 +3298,38 @@
         <translation>Reini&amp;ciar Vistas</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1476"/>
         <source>Standard</source>
-        <translation type="unfinished">Standard</translation>
+        <translation type="obsolete">Standard</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1485"/>
         <source>Tools</source>
-        <translation type="unfinished">Ferramentas</translation>
+        <translation type="obsolete">Ferramentas</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1494"/>
         <source>Time</source>
-        <translation type="unfinished">Hora</translation>
+        <translation type="obsolete">Hora</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1503"/>
         <source>Parts</source>
-        <translation type="unfinished">Peças</translation>
+        <translation type="obsolete">Peças</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1512"/>
         <source>Colors</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Cores</translation>
+        <translation type="obsolete">Cores</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1521"/>
         <source>Properties</source>
-        <translation type="unfinished">Propriedades</translation>
+        <translation type="obsolete">Propriedades</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1530"/>
         <source>Timeline</source>
-        <translation type="unfinished">Linha Temporal</translation>
+        <translation type="obsolete">Linha Temporal</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1539"/>
         <source>Preview</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Visualização</translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1548"/>
-        <source>Terminal</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1557"/>
-        <source>Minifigure Builder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1566"/>
-        <source>Explode</source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Visualização</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1584"/>
@@ -3579,222 +3539,242 @@
         <translation type="unfinished">Cores Especiais</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2745"/>
-        <source>Open Selected Submodel</source>
+        <location filename="../../source/application/sw_commands.cpp" line="2448"/>
+        <source>&amp;Insert Part</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2493"/>
+        <source>&amp;Set Joint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2502"/>
+        <source>&amp;Move Joint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2511"/>
+        <source>&amp;Rotate Joint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2754"/>
-        <source>Move to New Submodel...</source>
+        <source>Open Selected Submodel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2763"/>
-        <source>Inline Selected Submodels</source>
+        <source>Move to New Submodel...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2772"/>
+        <source>Inline Selected Submodels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2781"/>
         <source>Flatten Submodels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2925"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2934"/>
         <source>Submodel 1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2934"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2943"/>
         <source>Submodel 2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2943"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2952"/>
         <source>Submodel 3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2952"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2961"/>
         <source>Submodel 4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2961"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2970"/>
         <source>Submodel 5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2970"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2979"/>
         <source>Submodel 6</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2979"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2988"/>
         <source>Submodel 7</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2988"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2997"/>
         <source>Submodel 8</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2997"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3006"/>
         <source>Submodel 9</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3006"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3015"/>
         <source>Submodel 10</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3015"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3024"/>
         <source>Submodel 11</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3024"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3033"/>
         <source>Submodel 12</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3033"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3042"/>
         <source>Submodel 13</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3042"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3051"/>
         <source>Submodel 14</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3051"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3060"/>
         <source>Submodel 15</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3060"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3069"/>
         <source>Submodel 16</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3069"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3078"/>
         <source>Submodel 17</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3078"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3087"/>
         <source>Submodel 18</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3087"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3096"/>
         <source>Submodel 19</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3096"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3105"/>
         <source>Submodel 20</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3105"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3114"/>
         <source>Submodel 21</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3114"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3123"/>
         <source>Submodel 22</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3123"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3132"/>
         <source>Submodel 23</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3132"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3141"/>
         <source>Submodel 24</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3141"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3150"/>
         <source>Submodel 25</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3150"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3159"/>
         <source>Submodel 26</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3159"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3168"/>
         <source>Submodel 27</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3168"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3177"/>
         <source>Submodel 28</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3177"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3186"/>
         <source>Submodel 29</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3186"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3195"/>
         <source>Submodel 30</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3195"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3204"/>
         <source>Submodel 31</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3204"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3213"/>
         <source>Submodel 32</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3213"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3222"/>
         <source>Submodel 33</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3222"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3231"/>
         <source>Submodel 34</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3231"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3240"/>
         <source>Submodel 35</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3240"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3249"/>
         <source>Submodel 36</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3249"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3258"/>
         <source>Submodel 37</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3258"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3267"/>
         <source>Submodel 38</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3267"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3276"/>
         <source>Submodel 39</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3276"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3285"/>
         <source>Submodel 40</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3805,7 +3785,6 @@
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="981"/>
-        <location filename="../../source/application/sw_commands.cpp" line="1575"/>
         <source>Joints</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3835,77 +3814,77 @@
         <translation type="unfinished">Destaque novas peças</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2061"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2070"/>
         <source>Grid Studs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2070"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2079"/>
         <source>Grid Lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2079"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2088"/>
         <source>Grid Origin Lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2142"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2151"/>
         <source>Thin-Line Logo Studs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2196"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2205"/>
         <source>High Contrast Logo Studs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2430"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2439"/>
         <source>Keep Last Selection</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2547"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2556"/>
         <source>Clamp Tangent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2556"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2565"/>
         <source>Align to Tangent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2565"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2574"/>
         <source>X Axis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2574"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2583"/>
         <source>Y Axis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2583"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2592"/>
         <source>Z Axis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3285"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3294"/>
         <source>&amp;What&apos;s This?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3294"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3303"/>
         <source>&amp;Home Page</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3303"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3312"/>
         <source>Report a &amp;Bug</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2088"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2097"/>
         <source>Automate Edge Color</source>
         <translation type="unfinished">Automatizar a cor das bordas</translation>
     </message>
@@ -3950,9 +3929,114 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="540"/>
+        <source>No XY Snap</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="549"/>
+        <source>XY 1/20 Stud</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="558"/>
+        <source>XY 1/4 Stud</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="567"/>
+        <source>XY 1 Flat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="576"/>
+        <source>XY 1/2 Stud</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="585"/>
+        <source>XY 1 Stud</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="594"/>
+        <source>XY 2 Studs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="603"/>
+        <source>XY 3 Studs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="612"/>
+        <source>XY 4 Studs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="621"/>
+        <source>XY 8 Studs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="630"/>
+        <source>No Z Snap</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="639"/>
+        <source>Z 1/20 Stud</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="648"/>
+        <source>Z 1/4 Stud</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="657"/>
+        <source>Z 1 Flat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="666"/>
+        <source>Z 1/2 Stud</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="675"/>
+        <source>Z 1 Stud</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="684"/>
+        <source>Z 1 Brick</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="693"/>
+        <source>Z 2 Bricks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="702"/>
+        <source>Z 4 Bricks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="711"/>
+        <source>Z 8 Bricks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="720"/>
         <source>Rotation Snap</source>
         <translation type="unfinished">Grelha de Rotação</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="729"/>
+        <source>No Rotation Snap</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="828"/>
@@ -3970,9 +4054,74 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1215"/>
+        <source>No Camera</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="1422"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3339"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3348"/>
         <source>Delete Step</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1476"/>
+        <source>Standard Toolbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1485"/>
+        <source>Tools Toolbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1494"/>
+        <source>Time Toolbar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1503"/>
+        <source>Parts Panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1512"/>
+        <source>Colors Panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1521"/>
+        <source>Properties Panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1530"/>
+        <source>Timeline Panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1539"/>
+        <source>Preview Panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1548"/>
+        <source>Terminal Panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1557"/>
+        <source>Minifigure Builder Panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1566"/>
+        <source>Explode Panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1575"/>
+        <source>Joints Panel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4011,224 +4160,213 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2097"/>
-        <source>Outline Highlight</source>
+        <location filename="../../source/application/sw_commands.cpp" line="2061"/>
+        <source>Submodel Hover Outline</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2106"/>
-        <source>Tint and Edges Highlight</source>
+        <source>Outline Highlight</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2115"/>
-        <source>Increase Outline Width</source>
+        <source>Tint and Edges Highlight</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2124"/>
-        <source>Decrease Outline Width</source>
+        <source>Increase Outline Width</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2133"/>
+        <source>Decrease Outline Width</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2142"/>
         <source>Plain Studs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2151"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2160"/>
         <source>Outline Logo Studs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2160"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2169"/>
         <source>Sharp Top Logo Studs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2169"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2178"/>
         <source>Rounded Top Logo Studs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2178"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2187"/>
         <source>Flattened Logo Studs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2187"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2196"/>
         <source>High Contrast Studs</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2205"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2214"/>
         <source>Edge Lines</source>
         <translation type="unfinished">Linhas de orla</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2214"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2223"/>
         <source>Conditional Lines</source>
         <translation type="unfinished">Linhas Condicionais</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2223"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2232"/>
         <source>Preview Uses Model View Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2232"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2241"/>
         <source>Preview Wireframe</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2241"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2250"/>
         <source>Preview Flat Shading</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2250"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2259"/>
         <source>Preview Default Lights</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2259"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2268"/>
         <source>Preview Edge Lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2268"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2277"/>
         <source>Preview Conditional Lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2277"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2286"/>
         <source>Parts Use Model View Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2286"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2295"/>
         <source>Parts Wireframe</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2295"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2304"/>
         <source>Parts Flat Shading</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2304"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2313"/>
         <source>Parts Default Lights</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2313"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2322"/>
         <source>Parts Edge Lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2322"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2331"/>
         <source>Parts Conditional Lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2331"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2340"/>
         <source>Minifigure Builder Uses Model View Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2340"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2349"/>
         <source>Minifigure Builder Wireframe</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2349"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2358"/>
         <source>Minifigure Builder Flat Shading</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2358"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2367"/>
         <source>Minifigure Builder Default Lights</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2367"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2376"/>
         <source>Minifigure Builder Edge Lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2376"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2385"/>
         <source>Minifigure Builder Conditional Lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2385"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2394"/>
         <source>Snap Panel Width to Tiles</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2394"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2403"/>
         <source>Preview View Cube</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2403"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2412"/>
         <source>Preview Axis Icon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2412"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2421"/>
         <source>Load All Parts Before Showing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2421"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2430"/>
         <source>Square Viewport</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2439"/>
         <source>&amp;Insert</source>
-        <translation>&amp;Inserir</translation>
+        <translation type="vanished">&amp;Inserir</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2448"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2457"/>
         <source>Insert First Part at Origin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2457"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2466"/>
         <source>&amp;Delete</source>
         <translation>&amp;Apagar</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2466"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2475"/>
         <source>&amp;Duplicate</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Duplicado</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2475"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2484"/>
         <source>&amp;Paint Selected</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Pintura selecionada</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2484"/>
-        <source>&amp;Set</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2493"/>
-        <source>&amp;Move</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2502"/>
-        <source>&amp;Rotate</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2511"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2520"/>
         <source>Reset &amp;Pivot Point</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Redefinir &amp;ponto dinâmico</translation>
@@ -4239,92 +4377,92 @@
         <translation type="obsolete">&amp;Remover quadros-chave</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2529"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2538"/>
         <source>Insert Control Point</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Inserir ponto de controlo</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2538"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2547"/>
         <source>Remove Control Point</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Remover ponto de controlo</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2592"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
         <source>Focus Next Connection</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Foco na próxima ligação</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2610"/>
         <source>Focus Previous Connection</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Foco na ligação anterior</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2610"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2619"/>
         <source>Rotate Train Track</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Girar carril do comboio</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2619"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2628"/>
         <source>Move +X</source>
         <translation>Mover +X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2628"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2637"/>
         <source>Move -X</source>
         <translation>Mover -X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2637"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2646"/>
         <source>Move +Y</source>
         <translation>Mover +Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2646"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2655"/>
         <source>Move -Y</source>
         <translation>Mover -Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2655"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2664"/>
         <source>Move +Z</source>
         <translation>Mover +Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2664"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2673"/>
         <source>Move -Z</source>
         <translation>Mover -Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2673"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2682"/>
         <source>Rotate +X</source>
         <translation>Rodar +X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2682"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2691"/>
         <source>Rotate -X</source>
         <translation>Rodar -X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2691"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2700"/>
         <source>Rotate +Y</source>
         <translation>Rodar +Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2700"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2709"/>
         <source>Rotate -Y</source>
         <translation>Rodar -Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2709"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2718"/>
         <source>Rotate +Z</source>
         <translation>Rodar +Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2718"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2727"/>
         <source>Rotate -Z</source>
         <translation>Rodar -Z</translation>
     </message>
@@ -4333,7 +4471,7 @@
         <translation type="vanished">&amp;Assistente Minifig...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2736"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2745"/>
         <source>A&amp;rray...</source>
         <translation>Quad&amp;ro...</translation>
     </message>
@@ -4348,67 +4486,67 @@
         <translation type="obsolete">Modelos Selecionados Inline</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2799"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2808"/>
         <source>&amp;Group...</source>
         <translation>&amp;Grupo...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2808"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2817"/>
         <source>&amp;Ungroup</source>
         <translation>Desagr&amp;upar</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2817"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2826"/>
         <source>&amp;Add to Group</source>
         <translation>&amp;Meter no Grupo</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2826"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2835"/>
         <source>Re&amp;move from Group</source>
         <translation>Re&amp;mover do Grupo</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2835"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2844"/>
         <source>&amp;Edit Groups...</source>
         <translation>&amp;Editar Grupos...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2844"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2853"/>
         <source>&amp;Hide Selected</source>
         <translation>&amp;Esconder Selecção</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2853"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2862"/>
         <source>Hide &amp;Unselected</source>
         <translation>E&amp;sconder não Seleccionados</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2862"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2871"/>
         <source>&amp;Unhide Selected</source>
         <translation>&amp;Mostrar Selecção</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2871"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2880"/>
         <source>U&amp;nhide All</source>
         <translation>Mostr&amp;ar Tudo</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2880"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2889"/>
         <source>Show Earlier</source>
         <translation>Mostrar Anteriores</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2889"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2898"/>
         <source>Show Later</source>
         <translation>Mostrar Seguintes</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2907"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2916"/>
         <source>Proper&amp;ties...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2916"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2925"/>
         <source>Submodels...</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Submodelos...</translation>
@@ -4624,37 +4762,37 @@
         <translation type="obsolete">Reportar um bug</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3321"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3330"/>
         <source>Insert Step Before</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Inserir etapa anterior</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3330"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3339"/>
         <source>Insert Step After</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Inserir passo depois</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3348"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3357"/>
         <source>Move Selection Here</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mover seleção aqui</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3357"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3366"/>
         <source>Move Selection Before</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mover seleção antes</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3366"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3375"/>
         <source>Move Selection After</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mover seleção depois</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3375"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3384"/>
         <source>Set Current Step</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Definir etapa atual</translation>
@@ -4704,7 +4842,7 @@
         <translation type="vanished">Procurar act&amp;ualizações...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3312"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3321"/>
         <source>&amp;About...</source>
         <translation>&amp;Acerca...</translation>
     </message>
@@ -4712,63 +4850,63 @@
 <context>
     <name>Mouse</name>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3386"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3395"/>
         <source>NewPart</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Nova peça</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3387"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3396"/>
         <source>NewPointLight</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Novo ponto de luz</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3388"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3397"/>
         <source>NewSpotLight</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Novo foco de luz</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3389"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3398"/>
         <source>NewDirectionalLight</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Nova luz direcional</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3390"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3399"/>
         <source>NewAreaLight</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Nova área de luz</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3391"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3400"/>
         <source>NewCamera</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Nova câmera</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3392"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3401"/>
         <source>Select</source>
         <translation>Seleccionar</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3393"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3402"/>
         <source>Move</source>
         <translation>Mover</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3394"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3403"/>
         <source>Rotate</source>
         <translation>Rodar</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3395"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3404"/>
         <source>Erase</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3397"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3406"/>
         <source>Joints</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4777,38 +4915,38 @@
         <translation type="vanished">Apagar</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3396"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3405"/>
         <source>Paint</source>
         <translation>Pintar</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3398"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3407"/>
         <source>ColorPicker</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Seletor de cores</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3399"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3408"/>
         <source>Zoom</source>
         <translation type="unfinished">Zoom</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3400"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3409"/>
         <source>Pan</source>
         <translation type="unfinished">Movimento Horizontal</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3401"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3410"/>
         <source>Orbit</source>
         <translation type="unfinished">Órbitar</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3402"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3411"/>
         <source>Roll</source>
         <translation type="unfinished">Inclinar</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3403"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3412"/>
         <source>ZoomRegion</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Região de zoom</translation>
@@ -5383,12 +5521,12 @@ The file format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="355"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="392"/>
         <source>Could not open file &apos;%1&apos; for writing.</source>
         <translation type="unfinished">Erro ao abrir o ficheiro &apos;%1&apos; para escrever.</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="403"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="440"/>
         <source>Reading the BrickLink numbers of the library parts...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5418,32 +5556,32 @@ The file format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="517"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="554"/>
         <source>Could not download the part numbers from Rebrickable.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="577"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="614"/>
         <source>Cancel</source>
         <translation type="unfinished">Cancelar</translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="578"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="615"/>
         <source>Update BrickLink Mapping</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="593"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="630"/>
         <source>Downloading the BrickLink part numbers from Rebrickable...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="620"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="657"/>
         <source>Downloading the BrickLink colors from Rebrickable...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/transput/sw_bricklink.cpp" line="694"/>
+        <location filename="../../source/transput/sw_bricklink.cpp" line="731"/>
         <source>Could not write the BrickLink mapping file &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7337,88 +7475,88 @@ The file format is not recognized.</source>
         <translation type="unfinished">Fechar separador atual</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2143"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2152"/>
         <source>Draw studs with the thin-line logo style</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2197"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2206"/>
         <source>Draw studs with the high contrast logo style</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2224"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2233"/>
         <source>Toggle using the model view rendering settings for the preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2233"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2242"/>
         <source>Display the preview as wireframe</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2242"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2251"/>
         <source>Display the preview without any shading or lights</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2251"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2260"/>
         <source>Display the preview with the default lights</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2260"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2269"/>
         <source>Toggle edge lines in the preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2269"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2278"/>
         <source>Toggle conditional lines in the preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2395"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2404"/>
         <source>Toggle the view cube in the preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2404"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2413"/>
         <source>Toggle the axis icon in the preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2422"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2431"/>
         <source>Keep the preview at a 1:1 ratio</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2521"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2530"/>
         <source>Remove all keyframes from the selected parts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2674"/>
         <location filename="../../source/application/sw_commands.cpp" line="2683"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2692"/>
         <source>Rotate selected objects around the X axis</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">Rodar os objetos selecionados em torno do eixo X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2692"/>
         <location filename="../../source/application/sw_commands.cpp" line="2701"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2710"/>
         <source>Rotate selected objects around the Y axis</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">Rodar os objetos selecionados em torno do eixo Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2710"/>
         <location filename="../../source/application/sw_commands.cpp" line="2719"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2728"/>
         <source>Rotate selected objects around the Z axis</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">Rodar os objetos selecionados em torno do eixo Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2728"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2737"/>
         <source>Show the Minifigure Builder panel to build a minifigure and add it to the model</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7428,37 +7566,36 @@ The file format is not recognized.</source>
         <translation type="obsolete">Abra o modelo referenciado pela peça selecionada num novo separador</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2782"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2791"/>
         <source>Edit the currently selected submodel in-place</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Edite o submodelo atualmente selecionado no local</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2791"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2800"/>
         <source>End in-place submodel editing</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Finalizar edição de submodelo no local</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2899"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2908"/>
         <source>Create a new submodel</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Crie um novo submodelo</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2908"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2917"/>
         <source>Display the properties of the current submodel</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Visualizar as propriedades do submodelo atual</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2917"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2926"/>
         <source>Show a list of all submodels</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mostrar uma lista de todos os submodelos</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2926"/>
         <location filename="../../source/application/sw_commands.cpp" line="2935"/>
         <location filename="../../source/application/sw_commands.cpp" line="2944"/>
         <location filename="../../source/application/sw_commands.cpp" line="2953"/>
@@ -7498,6 +7635,7 @@ The file format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="3259"/>
         <location filename="../../source/application/sw_commands.cpp" line="3268"/>
         <location filename="../../source/application/sw_commands.cpp" line="3277"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3286"/>
         <source>Switch to this submodel</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mudar para este submodelo</translation>
@@ -7508,25 +7646,25 @@ The file format is not recognized.</source>
         <translation type="obsolete">Abra o formulário de relatório de erros de StudWorx no seu navegador predefinido</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3349"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3358"/>
         <source>Move the selected parts into this step</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mova as peças selecionadas para esta etapa</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3358"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3367"/>
         <source>Move the selected parts into a new step before this</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mova as peças selecionadas para uma nova etapa antes desta</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3367"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3376"/>
         <source>Move the selected parts into a new step after this</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mova as peças selecionadas para uma nova etapa após esta</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3376"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3385"/>
         <source>View the model at this point in the timeline</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Veja o modelo neste ponto da linha do tempo</translation>
@@ -7647,21 +7785,21 @@ The file format is not recognized.</source>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1405"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3322"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3331"/>
         <source>Insert a new step before the current step</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Inserir uma nova etapa antes da etapa atual</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1414"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3331"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3340"/>
         <source>Insert a new step after the current step</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Inserir uma nova etapa após a etapa atual</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1423"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3340"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3349"/>
         <source>Delete the current step</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8058,66 +8196,71 @@ The file format is not recognized.</source>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2062"/>
-        <source>Toggle drawing studs on the base grid</source>
+        <source>Toggle outlining the innermost submodel under the pointer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2071"/>
-        <source>Toggle drawing lines on the base grid</source>
+        <source>Toggle drawing studs on the base grid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2080"/>
-        <source>Toggle drawing the base grid origin lines</source>
+        <source>Toggle drawing lines on the base grid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2089"/>
-        <source>Toggle automatically computing part edge colors</source>
+        <source>Toggle drawing the base grid origin lines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2098"/>
-        <source>Highlight selected and new parts with outlines</source>
+        <source>Toggle automatically computing part edge colors</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2107"/>
-        <source>Highlight selected and new parts with tinted faces and colored edges</source>
+        <source>Highlight selected and new parts with outlines</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2116"/>
-        <source>Make the selection outline thicker</source>
+        <source>Highlight selected and new parts with tinted faces and colored edges</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2125"/>
-        <source>Make the selection outline thinner</source>
+        <source>Make the selection outline thicker</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2134"/>
+        <source>Make the selection outline thinner</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2143"/>
         <source>Draw studs with the plain style</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2485"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2494"/>
         <source>Click a connection of the selected submodel to make it a joint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3295"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3304"/>
         <source>Open the StudWorx home page in your default web browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3304"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3313"/>
         <source>Open the StudWorx bug report form in your default web browser</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2152"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2161"/>
         <source>Draw studs with the outline logo style</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8127,195 +8270,195 @@ The file format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2161"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2170"/>
         <source>Draw studs with the sharp top logo style</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2170"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2179"/>
         <source>Draw studs with the rounded top logo style</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2179"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2188"/>
         <source>Draw studs with the flattened logo style</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2188"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2197"/>
         <source>Draw studs with the high contrast style</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2206"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2215"/>
         <source>Toggle edge lines in model views</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2215"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2224"/>
         <source>Toggle conditional lines in model views</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2278"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2287"/>
         <source>Toggle using the model view rendering settings for the parts list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2287"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2296"/>
         <source>Display the parts list as wireframe</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2296"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2305"/>
         <source>Display the parts list without any shading or lights</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2305"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2314"/>
         <source>Display the parts list with the default lights</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2314"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2323"/>
         <source>Toggle edge lines in the parts list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2323"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2332"/>
         <source>Toggle conditional lines in the parts list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2332"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2341"/>
         <source>Toggle using the model view rendering settings in the minifigure builder preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2341"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2350"/>
         <source>Display the minifigure builder preview as a wireframe</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2350"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2359"/>
         <source>Display the minifigure builder preview with flat shading</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2359"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2368"/>
         <source>Display the minifigure builder preview with the default lights</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2368"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2377"/>
         <source>Toggle edge lines in the minifigure builder preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2377"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2386"/>
         <source>Toggle conditional lines in the minifigure builder preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2386"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2395"/>
         <source>Toggle snapping the parts panel width to whole thumbnail tiles and the categories to the longest name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2413"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2422"/>
         <source>Toggle waiting for every part to load before showing a model</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2431"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2440"/>
         <source>Keep showing the last selected part after the selection is cleared</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2440"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2449"/>
         <source>Add a new part to the model</source>
         <translation>Adiciona ma nova peça ao modelo</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2449"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2458"/>
         <source>Toggle placing the first part of an empty model at 0, 0, 0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2458"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2467"/>
         <source>Delete selected objects</source>
         <translation>Apagar os objectos seleccionados</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2467"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2476"/>
         <source>Create a copy of the selected parts</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Crie uma cópia das peças selecionadas</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2476"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2485"/>
         <source>Change the color of the selected parts</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Altere a cor das peças selecionadas</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2494"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2503"/>
         <source>Move the selected submodel with the gizmo on its picked joint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2503"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2512"/>
         <source>Rotate the selected submodel around its picked joint instead of the pivot point</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2512"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2521"/>
         <source>Reset the pivot point of the selected parts to their origin</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Repor o ponto de articulação das peças selecionadas para a sua origem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2548"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2557"/>
         <source>Turn the selected control point along the path, or release it to rotate it freely</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2557"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2566"/>
         <source>Turn the selected control point along the path once and keep it released</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2566"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2575"/>
         <source>Turn the selected control point along the X axis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2575"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2584"/>
         <source>Turn the selected control point along the Y axis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2584"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2593"/>
         <source>Turn the selected control point along the Z axis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2746"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2755"/>
         <source>Open the submodel referenced by the selected part in a new tab</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2755"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2764"/>
         <source>Move the selected parts to a new submodel and replace them with a reference to it</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2764"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2773"/>
         <source>Insert the contents of the selected submodels into the current model</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2773"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2782"/>
         <source>Replace every submodel, and the submodels inside it, with its parts in one step</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8325,50 +8468,50 @@ The file format is not recognized.</source>
         <translation type="obsolete">Remova todos os fotogramas-chave das peças selecionadas</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2530"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2539"/>
         <source>Insert a new control point</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Introduza um novo ponto de controlo</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2539"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2548"/>
         <source>Remove the selected control point</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Remover o ponto de controlo selecionado</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2593"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2602"/>
         <source>Focus the next connection of the currently selected track</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Focar a próxima ligação da faixa atualmente selecionada</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2602"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2611"/>
         <source>Focus the previous connection of the currently selected track</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Focar a ligação anterior da faixa atualmente selecionada</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2611"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2620"/>
         <source>Rotate the focused train track around its last connection</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Rode o carril do comboio em foco em torno da sua última ligação</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2620"/>
         <location filename="../../source/application/sw_commands.cpp" line="2629"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2638"/>
         <source>Move selected objects along the X axis</source>
         <translation>Move os objectos seleccionados no eixo X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2638"/>
         <location filename="../../source/application/sw_commands.cpp" line="2647"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2656"/>
         <source>Move selected objects along the Y axis</source>
         <translation>Move os objectos seleccionados no eixo Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2656"/>
         <location filename="../../source/application/sw_commands.cpp" line="2665"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2674"/>
         <source>Move selected objects along the Z axis</source>
         <translation>Move os objectos seleccionados no eixo Z</translation>
     </message>
@@ -8389,7 +8532,7 @@ The file format is not recognized.</source>
         <translation type="vanished">Adiciona uma minifigura ao modelo</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2737"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2746"/>
         <source>Make copies of the selected parts</source>
         <translation>Duplica as peças seleccionadas</translation>
     </message>
@@ -8404,62 +8547,62 @@ The file format is not recognized.</source>
         <translation type="obsolete">Introduza o conteúdo das referências do modelo selecionado no modelo atual</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2800"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2809"/>
         <source>Group selected parts together</source>
         <translation>Agrupa as peças seleccionadas</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2809"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2818"/>
         <source>Ungroup selected group</source>
         <translation>Desagrupa o grupo seleccionado</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2818"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2827"/>
         <source>Add focused part to selected group</source>
         <translation>Adiciona a peça activa ao grupo seleccionado</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2827"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2836"/>
         <source>Remove focused part from group</source>
         <translation>Apaga a peça activa do grupo seleccionado</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2836"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2845"/>
         <source>Edit groups</source>
         <translation>Editar grupos</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2845"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2854"/>
         <source>Hide selected objects</source>
         <translation>Esconder os objectos seleccionados</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2854"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2863"/>
         <source>Hide objects that are not selected</source>
         <translation>Esconder os objectos não seleccionados</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2863"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2872"/>
         <source>Show hidden objects that are selected</source>
         <translation>Mostrar os objectos escondidos que estão seleccionados</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2872"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2881"/>
         <source>Show all hidden objects</source>
         <translation>Mostrar todos os objectos escondidos</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2881"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2890"/>
         <source>Show selected parts one step earlier</source>
         <translation>Mostrar as peças seleccionadas um passo antes</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2890"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2899"/>
         <source>Show selected parts one step later</source>
         <translation>Mostrar as peças seleccionadas um passo depois</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3286"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3295"/>
         <source>Click a control to read its contextual help</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Clique em um controle para ler sua ajuda contextual</translation>
@@ -8473,7 +8616,7 @@ The file format is not recognized.</source>
         <translation type="vanished">Verifica se uma nova versão do StudWorx ou da Biblioteca de peças estão disponiveis</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3313"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3322"/>
         <source>Display program version number and system information</source>
         <translation>Mostra o número de versão do programa e informações do sisitema</translation>
     </message>
@@ -8670,6 +8813,21 @@ The file format is not recognized.</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Ferramenta Girar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Selecione objetos e arraste uma alça de rotação na visualização do modelo. Rotation Snap define os incrementos de ângulo. As opções de transformação escolhem os eixos relativos ou do modelo e se as peças giram juntas ou separadamente.&lt;/p&gt;</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2045"/>
+        <source>&lt;p&gt;&lt;b&gt;Fade on Joint Set&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Tint all but the selected submodel with the chosen color while setting a joint or in joint mode.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2063"/>
+        <source>&lt;p&gt;&lt;b&gt;Submodel Hover Outline&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Outline the innermost submodel under the pointer with the hover outline color, or the submodel a joint would go on while setting a joint.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2495"/>
+        <source>&lt;p&gt;&lt;b&gt;Set Joint&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select one submodel, choose Part &amp;gt; Joint &amp;gt; Set Joint, also in the right-click menu of the model view, then click one of its connections with the Set Joint pointer, which outlines the part under it in red. The click sets the joint and goes back to the Select tool in joint mode on the new joint. Set Joint again at another connection adds a joint, and Set Joint at a joint already there resets it. A round connection makes a hinge on its axis and a sphere makes a ball. A part without shadow data gets a hinge on its origin. The joint shows in the Joints panel and setting it can be undone.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>&lt;p&gt;&lt;b&gt;Eraser Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use this tool to remove objects by clicking them in the model view. This is different from deleting the current selection as a single command. Undo restores an object removed by the tool.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Ferramenta Borracha&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use esta ferramenta para remover objetos clicando neles na visualização do modelo. Isso é diferente de excluir a seleção atual como um único comando. Desfazer restaura um objeto removido pela ferramenta.&lt;/p&gt;</translation>
@@ -8679,11 +8837,6 @@ The file format is not recognized.</source>
         <source>&lt;p&gt;&lt;b&gt;Paint Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the replacement color in the Colors dock, then click parts in the model view to recolor them. To recolor the current selection together, use the color button above the swatches.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Ferramenta de pintura&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Escolha a cor de substituição no encaixe Cores e clique nas peças na visualização do modelo para recolori-las. Para recolorir a seleção atual em conjunto, use o botão de cores acima das amostras.&lt;/p&gt;</translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_commands.cpp" line="983"/>
-        <source>&lt;p&gt;&lt;b&gt;Joints Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag a submodel that has a joint to turn it. Hinges turn about their axis with the horizontal drag, balls turn about the screen up and right directions. Rotation Snap sets the steps and one drag is one undo step. Use Part &amp;gt; Joint &amp;gt; Set to give a submodel a joint.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="992"/>
@@ -8767,11 +8920,6 @@ The file format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1577"/>
-        <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Joints panel. A tree lists every model with its jointed submodels and their joints, click a joint to select its submodel. Save stores the joint angles of the picked model as a named pose, Recall puts them back in one undo step, and the Joints motion in the image dialog plays the poses of the main model as an animation. The panel also shows the picked joint of the selected submodel, with its axis and Clear Joint.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/application/sw_commands.cpp" line="1685"/>
         <source>&lt;p&gt;&lt;b&gt;View Cube&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the view cube. Click its faces, edges and corners to turn the camera. With split views it shows on the top left view only.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -8797,32 +8945,22 @@ The file format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2045"/>
-        <source>&lt;p&gt;&lt;b&gt;Fade on Joint Set&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Tint all but the selected submodel with the chosen color while setting a joint.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/application/sw_commands.cpp" line="2054"/>
         <source>&lt;p&gt;&lt;b&gt;Fade on Joint Move and Rotate&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep the joint fade while moving or rotating a joint. Leave it off to check parts for collisions in their own colors.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2486"/>
-        <source>&lt;p&gt;&lt;b&gt;Set Joint&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select one submodel, choose Part &amp;gt; Joint &amp;gt; Set, also in the right-click menu of the model view, then click one of its connections with the Set Joint pointer, which outlines the part under it in red. The click sets the joint and goes back to the Select tool. Set again at another connection adds a joint, and Set at a joint already there resets it. A round connection makes a hinge on its axis and a sphere makes a ball. A part without shadow data gets a hinge on its origin. The joint shows in the Joints panel and setting it can be undone.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2495"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2504"/>
         <source>&lt;p&gt;&lt;b&gt;Joint Move&lt;/b&gt;&lt;/p&gt;&lt;p&gt;With one submodel with a joint selected, switches to the Move tool with the gizmo on the pivot of the picked joint, outlined by a red hexagon. Selecting something else goes back to the pivot point.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2504"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2513"/>
         <source>&lt;p&gt;&lt;b&gt;Joint Rotate&lt;/b&gt;&lt;/p&gt;&lt;p&gt;With one submodel with a joint selected, switches to the Rotate tool with the gizmo on the pivot of the picked joint, outlined in red, and the rotate keys and the Rotate tool turn the joint around its own pivot and axis. A hinge only turns about its axis. Selecting something else goes back to the pivot point. Use Joint Rotation in the preferences does this whenever a selected submodel has a joint.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2774"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2783"/>
         <source>&lt;p&gt;&lt;b&gt;Flatten Submodels&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace every submodel in the current model, and every submodel inside those, with its parts in one undo step. Each part keeps its place and color, and the groups inside the submodels are not kept.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8834,6 +8972,16 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="965"/>
         <source>&lt;p&gt;&lt;b&gt;Erase Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use this tool to remove objects by clicking them in the model view. This is different from deleting the current selection as a single command. Undo restores an object removed by the tool.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="983"/>
+        <source>&lt;p&gt;&lt;b&gt;Joints Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag a submodel that has a joint to turn it. Hinges turn about their axis with the horizontal drag, balls turn about the screen up and right directions. Rotation Snap sets the steps and one drag is one undo step. Use Part &amp;gt; Joint &amp;gt; Set Joint to give a submodel a joint.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1577"/>
+        <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Joints panel. A tree lists every model with its jointed submodels and their joints, click a joint to select its submodel, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. A joint inside a submodel opens it in place and a bar over the view points to the picked joint. A submodel button there selects that submodel and keeps joint mode when it has a joint, the main model button ends it; the close button clears the selection and returns to the Select tool. Save stores the joint angles of the picked model as a named pose, Recall puts them back in one undo step, and the Joints motion in the image dialog plays the poses of the main model as an animation. The panel also shows the picked joint of the selected submodel, with its axis, and Delete Joint deletes the joint picked in the tree.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -9089,383 +9237,383 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
 Veja https://github.com/nathaneltitane/studworx para saber como descarragar e instalar uma biblioteca.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="763"/>
-        <location filename="../../source/application/sw_application.cpp" line="788"/>
-        <location filename="../../source/application/sw_application.cpp" line="811"/>
-        <location filename="../../source/application/sw_application.cpp" line="834"/>
-        <location filename="../../source/application/sw_application.cpp" line="844"/>
-        <location filename="../../source/application/sw_application.cpp" line="867"/>
-        <location filename="../../source/application/sw_application.cpp" line="892"/>
+        <location filename="../../source/application/sw_application.cpp" line="769"/>
+        <location filename="../../source/application/sw_application.cpp" line="794"/>
+        <location filename="../../source/application/sw_application.cpp" line="817"/>
+        <location filename="../../source/application/sw_application.cpp" line="840"/>
+        <location filename="../../source/application/sw_application.cpp" line="850"/>
+        <location filename="../../source/application/sw_application.cpp" line="873"/>
+        <location filename="../../source/application/sw_application.cpp" line="898"/>
         <source>Not enough parameters for the &apos;%1&apos; option.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Parâmetros insuficientes para a opção &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="785"/>
-        <location filename="../../source/application/sw_application.cpp" line="808"/>
-        <location filename="../../source/application/sw_application.cpp" line="831"/>
-        <location filename="../../source/application/sw_application.cpp" line="864"/>
-        <location filename="../../source/application/sw_application.cpp" line="889"/>
-        <location filename="../../source/application/sw_application.cpp" line="946"/>
-        <location filename="../../source/application/sw_application.cpp" line="1005"/>
-        <location filename="../../source/application/sw_application.cpp" line="1084"/>
-        <location filename="../../source/application/sw_application.cpp" line="1105"/>
-        <location filename="../../source/application/sw_application.cpp" line="1116"/>
-        <location filename="../../source/application/sw_application.cpp" line="1173"/>
-        <location filename="../../source/application/sw_application.cpp" line="1204"/>
-        <location filename="../../source/application/sw_application.cpp" line="1220"/>
+        <location filename="../../source/application/sw_application.cpp" line="791"/>
+        <location filename="../../source/application/sw_application.cpp" line="814"/>
+        <location filename="../../source/application/sw_application.cpp" line="837"/>
+        <location filename="../../source/application/sw_application.cpp" line="870"/>
+        <location filename="../../source/application/sw_application.cpp" line="895"/>
+        <location filename="../../source/application/sw_application.cpp" line="952"/>
+        <location filename="../../source/application/sw_application.cpp" line="1011"/>
+        <location filename="../../source/application/sw_application.cpp" line="1090"/>
+        <location filename="../../source/application/sw_application.cpp" line="1111"/>
+        <location filename="../../source/application/sw_application.cpp" line="1122"/>
+        <location filename="../../source/application/sw_application.cpp" line="1179"/>
+        <location filename="../../source/application/sw_application.cpp" line="1210"/>
+        <location filename="../../source/application/sw_application.cpp" line="1226"/>
         <source>Invalid parameter value specified for the &apos;%1&apos; option: &apos;%2&apos;.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Valor de parâmetro inválido especificado para a opção &apos;%1&apos;: &apos;%2&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="903"/>
+        <location filename="../../source/application/sw_application.cpp" line="909"/>
         <source>The file &apos;%1&apos; is not readable.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">O ficheiro &apos;%1&apos; não é legível.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1274"/>
+        <location filename="../../source/application/sw_application.cpp" line="1280"/>
         <source>  -i, --image [outfile.ext]: Save a picture in the format specified by ext and exit.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1287"/>
+        <location filename="../../source/application/sw_application.cpp" line="1293"/>
         <source>  --projection &lt;perspective|orthographic&gt;: Render images with a perspective or an orthographic projection.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1288"/>
+        <location filename="../../source/application/sw_application.cpp" line="1294"/>
         <source>  --field-of-view &lt;degrees&gt;: Set the vertical field of view used to render images (&lt; 180).
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1289"/>
+        <location filename="../../source/application/sw_application.cpp" line="1295"/>
         <source>  --clip-planes &lt;near&gt; &lt;far&gt;: Set the near and far clipping planes used to render images (1 &lt;= &lt;near&gt; &lt; &lt;far&gt;).
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1290"/>
+        <location filename="../../source/application/sw_application.cpp" line="1296"/>
         <source>
 Rendering:
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1294"/>
+        <location filename="../../source/application/sw_application.cpp" line="1300"/>
         <source>  --antialiasing-samples &lt;samples&gt;: Anti-aliasing sample size (1, 2, 4, or 8).
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1297"/>
+        <location filename="../../source/application/sw_application.cpp" line="1303"/>
         <source>  --fade-color &lt;#AARRGGBB&gt;: Rendering color for prior step parts.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1301"/>
+        <location filename="../../source/application/sw_application.cpp" line="1307"/>
         <source>
 Studs and Edges:
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1303"/>
+        <location filename="../../source/application/sw_application.cpp" line="1309"/>
         <source>  --stud-cylinder-color &lt;#AARRGGBB&gt;: High contrast stud cylinder color.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1304"/>
+        <location filename="../../source/application/sw_application.cpp" line="1310"/>
         <source>  --no-stud-cylinder-color: Disable high contrast stud cylinder color.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1305"/>
+        <location filename="../../source/application/sw_application.cpp" line="1311"/>
         <source>  --edge-color &lt;#AARRGGBB&gt;: High contrast edge color.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1306"/>
+        <location filename="../../source/application/sw_application.cpp" line="1312"/>
         <source>  --no-edge-color: Disable high contrast edge color.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1307"/>
+        <location filename="../../source/application/sw_application.cpp" line="1313"/>
         <source>  --edge-color-black &lt;#AARRGGBB&gt;: High contrast edge color for black parts.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1308"/>
+        <location filename="../../source/application/sw_application.cpp" line="1314"/>
         <source>  --no-edge-color-black: Disable high contrast edge color for black parts.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1309"/>
+        <location filename="../../source/application/sw_application.cpp" line="1315"/>
         <source>  --edge-color-dark &lt;#AARRGGBB&gt;: High contrast edge color for dark color parts.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1310"/>
+        <location filename="../../source/application/sw_application.cpp" line="1316"/>
         <source>  --no-edge-color-dark: Disable high contrast edge color for dark color parts.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1311"/>
+        <location filename="../../source/application/sw_application.cpp" line="1317"/>
         <source>  --edge-color-automatic: Enable automatically adjusted edge colors.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1312"/>
+        <location filename="../../source/application/sw_application.cpp" line="1318"/>
         <source>  --edge-contrast &lt;contrast&gt;: Edge color contrast of automatic edge colors, between 0.0 and 1.0.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1313"/>
+        <location filename="../../source/application/sw_application.cpp" line="1319"/>
         <source>  --edge-light-dark &lt;value&gt;: Light/Dark color value of automatic edge colors, between 0.0 and 1.0.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1314"/>
+        <location filename="../../source/application/sw_application.cpp" line="1320"/>
         <source>
 Export:
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1315"/>
+        <location filename="../../source/application/sw_application.cpp" line="1321"/>
         <source>  --flatten &lt;outfile.ldr&gt;: Replace every submodel at all depths with its parts and save the model, before any other export.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1316"/>
+        <location filename="../../source/application/sw_application.cpp" line="1322"/>
         <source>  --undo &lt;outfile.ldr&gt;: Undo every command line edit and save the model, to check that undo restores it.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1322"/>
+        <location filename="../../source/application/sw_application.cpp" line="1328"/>
         <source>  --export-csv [outfile.csv]: Export the list of parts used in CSV format.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1323"/>
+        <location filename="../../source/application/sw_application.cpp" line="1329"/>
         <source>  --export-bricklink [outfile.xml]: Export the list of parts used as a BrickLink XML wanted list, translated through the BrickLink mapping file set in the preferences.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1328"/>
+        <location filename="../../source/application/sw_application.cpp" line="1334"/>
         <source>  --export-html [folder]: Create HTML instructions in a folder named after the model inside the folder.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1329"/>
+        <location filename="../../source/application/sw_application.cpp" line="1335"/>
         <source>  --export-povray [outfile.pov]: Export the model to POV-Ray format.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1330"/>
+        <location filename="../../source/application/sw_application.cpp" line="1336"/>
         <source>  --render-povray [outfile.png]: Render the model with POV-Ray using the POV-Ray window settings, the picture width and height, and the transparent background.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1324"/>
+        <location filename="../../source/application/sw_application.cpp" line="1330"/>
         <source>  --bricklink-condition &lt;any|new|used&gt;: Condition wanted in BrickLink exports.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1325"/>
+        <location filename="../../source/application/sw_application.cpp" line="1331"/>
         <source>  --bricklink-wanted-list &lt;id|url&gt;: BrickLink wanted list the exported parts are added to, by number or by the address of its page.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1326"/>
+        <location filename="../../source/application/sw_application.cpp" line="1332"/>
         <source>  --bricklink-notify: Ask BrickLink to notify new listings of the exported parts.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1327"/>
+        <location filename="../../source/application/sw_application.cpp" line="1333"/>
         <source>  --bricklink-exceptions &lt;file&gt;: Comma or tab separated file of parts and the BrickLink numbers that replace their mapping in BrickLink exports.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1331"/>
+        <location filename="../../source/application/sw_application.cpp" line="1337"/>
         <source>
 Settings:
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1340"/>
+        <location filename="../../source/application/sw_application.cpp" line="1346"/>
         <source>
 Information:
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1355"/>
+        <location filename="../../source/application/sw_application.cpp" line="1361"/>
         <source>High contrast stud and edge color settings are ignored when --edge-color-automatic is set.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1404"/>
+        <location filename="../../source/application/sw_application.cpp" line="1410"/>
         <source>--projection is ignored when --camera is set.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1635"/>
+        <location filename="../../source/application/sw_application.cpp" line="1641"/>
         <source>StudWorx could not find an LDraw parts library.
 
 Download one from %1 and pass it with --library.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1849"/>
+        <location filename="../../source/application/sw_application.cpp" line="1855"/>
         <source>The file &apos;%1&apos; has no parts to render.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">O arquivo &apos;%1&apos; não tem peças para renderizar.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="955"/>
+        <location filename="../../source/application/sw_application.cpp" line="961"/>
         <source>Invalid parameter values specified for the &apos;%1&apos; option: limits are +/- 360.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Valores de parâmetro inválidos especificados para a opção &apos;%1&apos;: os limites são +/- 360.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="593"/>
-        <location filename="../../source/application/sw_application.cpp" line="600"/>
-        <location filename="../../source/application/sw_application.cpp" line="610"/>
+        <location filename="../../source/application/sw_application.cpp" line="599"/>
+        <location filename="../../source/application/sw_application.cpp" line="606"/>
+        <location filename="../../source/application/sw_application.cpp" line="616"/>
         <source>Download Parts Library</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="593"/>
+        <location filename="../../source/application/sw_application.cpp" line="599"/>
         <source>Downloading the LDraw parts library...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="600"/>
+        <location filename="../../source/application/sw_application.cpp" line="606"/>
         <source>Could not download the parts library from %1.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="610"/>
+        <location filename="../../source/application/sw_application.cpp" line="616"/>
         <source>Could not save the parts library to &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="621"/>
+        <location filename="../../source/application/sw_application.cpp" line="627"/>
         <source>StudWorx could not find an LDraw parts library.
 
 Download the official library (about 140 MB) from library.ldraw.org into &apos;%1&apos;?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="628"/>
-        <location filename="../../source/application/sw_application.cpp" line="644"/>
-        <location filename="../../source/application/sw_application.cpp" line="2456"/>
+        <location filename="../../source/application/sw_application.cpp" line="634"/>
+        <location filename="../../source/application/sw_application.cpp" line="650"/>
+        <location filename="../../source/application/sw_application.cpp" line="2462"/>
         <source>Could not open the parts library &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="633"/>
+        <location filename="../../source/application/sw_application.cpp" line="639"/>
         <source>Open Parts Library Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="647"/>
+        <location filename="../../source/application/sw_application.cpp" line="653"/>
         <source>No parts library was downloaded or set.
 
 Download one from %1 and set it under Preferences › Parts Library the next time StudWorx is started.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1018"/>
+        <location filename="../../source/application/sw_application.cpp" line="1024"/>
         <source>Invalid parameter values specified for the &apos;%1&apos; option: requirements are: 1 &lt;= &lt;near&gt; &lt; &lt;far&gt;.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Valores de parâmetro inválidos especificados para a opção &apos;%1&apos;: os requisitos são: 1 &lt;= &lt;near&gt; &lt; &lt;far&gt;.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1269"/>
+        <location filename="../../source/application/sw_application.cpp" line="1275"/>
         <source>
 Library:
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1270"/>
+        <location filename="../../source/application/sw_application.cpp" line="1276"/>
         <source>  -l, --library &lt;path&gt;: Set the Parts Library location to path.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1273"/>
+        <location filename="../../source/application/sw_application.cpp" line="1279"/>
         <source>
 Pictures:
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1276"/>
+        <location filename="../../source/application/sw_application.cpp" line="1282"/>
         <source>  --height &lt;height&gt;: Set the picture height.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1281"/>
+        <location filename="../../source/application/sw_application.cpp" line="1287"/>
         <source>
 Camera:
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1282"/>
+        <location filename="../../source/application/sw_application.cpp" line="1288"/>
         <source>  -c, --camera &lt;camera name&gt;: Set the active camera.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  -c, --camera &lt;camera name&gt;: Defina a câmara ativa.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1283"/>
+        <location filename="../../source/application/sw_application.cpp" line="1289"/>
         <source>  --viewpoint &lt;viewpoint&gt;: Set the view to one of the preset viewpoints (front, back, left, right, top, bottom, home).
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  --viewpoint &lt;viewpoint&gt;: Defina a visualização para um dos pontos de vista predefinidos (frente, trás, esquerda, direita, superior, inferior, inicial).</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1280"/>
+        <location filename="../../source/application/sw_application.cpp" line="1286"/>
         <source>  --transparent: Render images with a transparent background (PNG and GIF only).
 </source>
         <translation type="unfinished"></translation>
@@ -9477,14 +9625,14 @@ Camera:
         <translation type="obsolete">  --fade-steps-color &lt;#AARRGGBB&gt;: Cor de renderização para as peças do passo anterior.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1300"/>
+        <location filename="../../source/application/sw_application.cpp" line="1306"/>
         <source>  --highlight-color &lt;#AARRGGBB&gt;: Rendering color for highlighted parts.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  --highlight-color &lt;#AARRGGBB&gt;: Cor de renderização para peças destacadas.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1291"/>
+        <location filename="../../source/application/sw_application.cpp" line="1297"/>
         <source>  --shading &lt;mode&gt;: Select shading mode for rendering (wireframe, flat, default, full).
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -9515,40 +9663,40 @@ Camera:
         <translation type="obsolete">  -ldv, --light-dark-value &lt;value&gt;: valor de cor clara/escura entre 0,0 e 1,0.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1371"/>
+        <location filename="../../source/application/sw_application.cpp" line="1377"/>
         <source>High contrast stud style is required for the &apos;%1&apos; option but is not enabled.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">O estilo de pino de alto contraste é necessário para a opção &apos;%1&apos;, mas não está ativado.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1360"/>
+        <location filename="../../source/application/sw_application.cpp" line="1366"/>
         <source>Automate edge color is required for the &apos;%1&apos; option but is not enabled.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">A automação da cor da borda é necessária para a opção &apos;%1&apos;, mas não está ativada.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="633"/>
+        <location filename="../../source/application/sw_application.cpp" line="639"/>
         <source>Parts Library Archives (*.zip);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="974"/>
+        <location filename="../../source/application/sw_application.cpp" line="980"/>
         <source>The camera position is too close to the camera target of the &apos;%1&apos; option.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">A posição da câmara está demasiado próxima do alvo da câmara da opção &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="979"/>
+        <location filename="../../source/application/sw_application.cpp" line="985"/>
         <source>Invalid up vector length specified for the &apos;%1&apos; option.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Comprimento de vetor ascendente inválido especificado para a opção &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="984"/>
+        <location filename="../../source/application/sw_application.cpp" line="990"/>
         <source>The up vector is parallel to the front vector specified for the &apos;%1&apos; option.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -9561,21 +9709,21 @@ Camera:
         <translation type="obsolete">StudWorx Compilação Contínua %1</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1262"/>
+        <location filename="../../source/application/sw_application.cpp" line="1268"/>
         <source>StudWorx Version %1
 </source>
         <translation type="unfinished">StudWorx Versão %1
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1263"/>
+        <location filename="../../source/application/sw_application.cpp" line="1269"/>
         <source>Compiled %1
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Compilado %1</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1268"/>
+        <location filename="../../source/application/sw_application.cpp" line="1274"/>
         <source>Usage: studworx [options] [file]
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -9594,13 +9742,13 @@ Camera:
         <translation type="obsolete">  -l, --libpath &lt;path&gt;: Defina a localização da Biblioteca de Peças como path.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1271"/>
+        <location filename="../../source/application/sw_application.cpp" line="1277"/>
         <source>  --unofficial-library &lt;path&gt;: Set the Unofficial Parts Library archive to path.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1272"/>
+        <location filename="../../source/application/sw_application.cpp" line="1278"/>
         <source>  --shadow-library &lt;path&gt;: Set the LDCad Shadow Library location to path.
 </source>
         <translation type="unfinished"></translation>
@@ -9612,7 +9760,7 @@ Camera:
         <translation type="obsolete">  -i, --image &lt;outfile.ext&gt;: Guarda uma imagem no formato especificado por ext e exit.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1275"/>
+        <location filename="../../source/application/sw_application.cpp" line="1281"/>
         <source>  -w, --width &lt;width&gt;: Set the picture width.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -9625,42 +9773,42 @@ Camera:
         <translation type="obsolete">  -h, --height &lt;height&gt;: Defina a altura da imagem.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1277"/>
+        <location filename="../../source/application/sw_application.cpp" line="1283"/>
         <source>  -f, --from &lt;step&gt;: Set the first step to save pictures.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  -f, --from &lt;step&gt;: Defina o primeiro passo para guardar as imagens.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1278"/>
+        <location filename="../../source/application/sw_application.cpp" line="1284"/>
         <source>  -t, --to &lt;step&gt;: Set the last step to save pictures.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  -t, --to &lt;step&gt;: Defina o último passo para guardar as imagens.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1279"/>
+        <location filename="../../source/application/sw_application.cpp" line="1285"/>
         <source>  -s, --submodel &lt;submodel&gt;: Set the active submodel.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  -s, --submodel &lt;submodel&gt;: Defina o submodelo ativo.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1284"/>
+        <location filename="../../source/application/sw_application.cpp" line="1290"/>
         <source>  --camera-angles &lt;latitude&gt; &lt;longitude&gt;: Set the camera angles in degrees around the model.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  --camera-angles &lt;latitude&gt; &lt;longitude&gt;: Defina os ângulos da câmara em graus em torno do modelo.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1285"/>
+        <location filename="../../source/application/sw_application.cpp" line="1291"/>
         <source>  --camera-position &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: Set the camera position, target and up vector.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  --camera-position &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: Defina a posição da câmara, o alvo e o vetor superior.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1286"/>
+        <location filename="../../source/application/sw_application.cpp" line="1292"/>
         <source>  --camera-position-ldraw &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: Set the camera position, target and up vector using LDraw coordinates.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -9692,41 +9840,41 @@ Camera:
         <translation type="obsolete">  --zplanes &lt;near&gt; &lt;far&gt;: Defina os planos de recorte próximo e distante utilizados para renderizar imagens (1 &lt;= &lt;near&gt; &lt; &lt;far&gt;).</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1295"/>
+        <location filename="../../source/application/sw_application.cpp" line="1301"/>
         <source>  --fade-steps: Render parts from prior steps faded.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  --fade-steps: Renderização de peças de etapas anteriores desbotadas.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1296"/>
+        <location filename="../../source/application/sw_application.cpp" line="1302"/>
         <source>  --no-fade-steps: Do not render parts from prior steps faded.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  --no-fade-steps: Não renderize peças desbotadas de passos anteriores.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1298"/>
+        <location filename="../../source/application/sw_application.cpp" line="1304"/>
         <source>  --highlight: Highlight parts in the steps they appear.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  --highlight: Realce as peças nos passos em que aparecem.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1299"/>
+        <location filename="../../source/application/sw_application.cpp" line="1305"/>
         <source>  --no-highlight: Do not highlight parts in the steps they appear.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  --no-highlight: Não destacar peças nos passos em que aparecem.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1292"/>
+        <location filename="../../source/application/sw_application.cpp" line="1298"/>
         <source>  --lighting &lt;style&gt;: Select the lighting style of the default shading (standard, studio, matte, toon).
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1293"/>
+        <location filename="../../source/application/sw_application.cpp" line="1299"/>
         <source>  --line-width &lt;width&gt;: Set the width of the edge lines.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -9819,55 +9967,55 @@ Camera:
         <translation type="obsolete">  -html, --export-html &lt;folder&gt;: Crie uma página HTML para o modelo.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1332"/>
+        <location filename="../../source/application/sw_application.cpp" line="1338"/>
         <source>  --import-settings &lt;infile.ini&gt;: Import the application settings and exit.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1333"/>
+        <location filename="../../source/application/sw_application.cpp" line="1339"/>
         <source>  --export-settings &lt;outfile.ini&gt;: Export the application settings and exit.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1334"/>
+        <location filename="../../source/application/sw_application.cpp" line="1340"/>
         <source>  --import-keyboard-shortcuts &lt;infile.txt&gt;: Import the keyboard shortcuts and exit.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1335"/>
+        <location filename="../../source/application/sw_application.cpp" line="1341"/>
         <source>  --export-keyboard-shortcuts &lt;outfile.txt&gt;: Export the keyboard shortcuts and exit.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1336"/>
+        <location filename="../../source/application/sw_application.cpp" line="1342"/>
         <source>  --import-mouse-shortcuts &lt;infile.txt&gt;: Import the mouse shortcuts and exit.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1337"/>
+        <location filename="../../source/application/sw_application.cpp" line="1343"/>
         <source>  --export-mouse-shortcuts &lt;outfile.txt&gt;: Export the mouse shortcuts and exit.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1338"/>
+        <location filename="../../source/application/sw_application.cpp" line="1344"/>
         <source>  --import-categories &lt;infile.txt&gt;: Import the part categories and exit.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1339"/>
+        <location filename="../../source/application/sw_application.cpp" line="1345"/>
         <source>  --export-categories &lt;outfile.txt&gt;: Export the part categories and exit.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1341"/>
+        <location filename="../../source/application/sw_application.cpp" line="1347"/>
         <source>  -v, --version: Output version information and exit.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -9880,7 +10028,7 @@ Camera:
         <translation type="obsolete">  -?, --help: Apresenta esta mensagem de ajuda e sai.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1348"/>
+        <location filename="../../source/application/sw_application.cpp" line="1354"/>
         <source>Unknown option: &apos;%1&apos;.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -9893,7 +10041,7 @@ Camera:
         <translation type="obsolete">As definições de cores de bordo e de alto contraste são ignoradas quando -aec ou --automate-edge-color é definido.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1401"/>
+        <location filename="../../source/application/sw_application.cpp" line="1407"/>
         <source>--viewpoint is ignored when --camera is set.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -9906,103 +10054,103 @@ Camera:
         <translation type="obsolete">--orthographic é ignorado quando --camera é definido.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1407"/>
+        <location filename="../../source/application/sw_application.cpp" line="1413"/>
         <source>--camera-angles is ignored when --camera is set.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">--camera-angles é ignorado quando --camera é definido.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1410"/>
+        <location filename="../../source/application/sw_application.cpp" line="1416"/>
         <source>--camera-position is ignored when --camera is set.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">--camera-position é ignorado quando --camera é definido.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1415"/>
+        <location filename="../../source/application/sw_application.cpp" line="1421"/>
         <source>--camera-angles is ignored when --viewpoint is set.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">--camera-angles é ignorado quando --viewpoint é definido.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1418"/>
+        <location filename="../../source/application/sw_application.cpp" line="1424"/>
         <source>--camera-position is ignored when --viewpoint is set.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">--camera-position é ignorado quando --viewpoint é definido.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1423"/>
+        <location filename="../../source/application/sw_application.cpp" line="1429"/>
         <source>--camera-position is ignored when --camera-angles is set.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">--camera-position é ignorado quando --camera-angles é definido.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1430"/>
+        <location filename="../../source/application/sw_application.cpp" line="1436"/>
         <source>No file name specified.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Sem nome de ficheiro especificado.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1575"/>
+        <location filename="../../source/application/sw_application.cpp" line="1581"/>
         <source>Command line image export is not supported on iOS.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">A exportação de imagens de linha de comandos não é compatível com o iOS.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1589"/>
-        <location filename="../../source/application/sw_application.cpp" line="2244"/>
+        <location filename="../../source/application/sw_application.cpp" line="1595"/>
+        <location filename="../../source/application/sw_application.cpp" line="2250"/>
         <source>Initialize Renderer</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">Inicializar o renderizador</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1803"/>
+        <location filename="../../source/application/sw_application.cpp" line="1809"/>
         <source>--transparent is ignored for &apos;%1&apos; files: only PNG and GIF files keep transparency.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1937"/>
+        <location filename="../../source/application/sw_application.cpp" line="1943"/>
         <source>Could not create a temporary folder for the POV-Ray scene.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1987"/>
+        <location filename="../../source/application/sw_application.cpp" line="1993"/>
         <source>Could not render &apos;%1&apos; with POV-Ray:
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2201"/>
+        <location filename="../../source/application/sw_application.cpp" line="2207"/>
         <source>Saved 1 lot to &apos;%1&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2201"/>
+        <location filename="../../source/application/sw_application.cpp" line="2207"/>
         <source>Saved %1 lots to &apos;%2&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2475"/>
+        <location filename="../../source/application/sw_application.cpp" line="2481"/>
         <source>The new language and antialiasing settings apply the next time you start StudWorx.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2477"/>
+        <location filename="../../source/application/sw_application.cpp" line="2483"/>
         <source>The new language applies the next time you start StudWorx.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2479"/>
+        <location filename="../../source/application/sw_application.cpp" line="2485"/>
         <source>The new antialiasing setting applies the next time you start StudWorx.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10015,167 +10163,167 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
 Veja https://github.com/nathaneltitane/studworx para saber como descarragar e instalar uma biblioteca.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="623"/>
-        <location filename="../../source/application/sw_application.cpp" line="628"/>
-        <location filename="../../source/application/sw_application.cpp" line="644"/>
-        <location filename="../../source/application/sw_application.cpp" line="647"/>
-        <location filename="../../source/application/sw_application.cpp" line="2431"/>
-        <location filename="../../source/application/sw_application.cpp" line="2448"/>
-        <location filename="../../source/application/sw_application.cpp" line="2456"/>
-        <location filename="../../source/application/sw_application.cpp" line="2460"/>
+        <location filename="../../source/application/sw_application.cpp" line="629"/>
+        <location filename="../../source/application/sw_application.cpp" line="634"/>
+        <location filename="../../source/application/sw_application.cpp" line="650"/>
+        <location filename="../../source/application/sw_application.cpp" line="653"/>
+        <location filename="../../source/application/sw_application.cpp" line="2437"/>
+        <location filename="../../source/application/sw_application.cpp" line="2454"/>
+        <location filename="../../source/application/sw_application.cpp" line="2462"/>
+        <location filename="../../source/application/sw_application.cpp" line="2466"/>
         <source>Load Parts Library</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">Carregar biblioteca de peças</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1302"/>
+        <location filename="../../source/application/sw_application.cpp" line="1308"/>
         <source>  --stud-style &lt;id&gt;: Set the stud style (0=Plain, 1=Thin-Line Logo, 2=Outline Logo, 3=Sharp Top Logo, 4=Rounded Top Logo, 5=Flattened Logo, 6=High Contrast, 7=High Contrast Logo).
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1317"/>
+        <location filename="../../source/application/sw_application.cpp" line="1323"/>
         <source>  --export-wavefront [outfile.obj]: Export the model to Wavefront OBJ format.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1318"/>
+        <location filename="../../source/application/sw_application.cpp" line="1324"/>
         <source>  --export-3ds [outfile.3ds]: Export the model to 3D Studio 3DS format.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1319"/>
+        <location filename="../../source/application/sw_application.cpp" line="1325"/>
         <source>  --export-collada [outfile.dae]: Export the model to COLLADA DAE format.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1320"/>
+        <location filename="../../source/application/sw_application.cpp" line="1326"/>
         <source>  --export-kmz [outfile.kmz]: Export the model to KMZ format.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1321"/>
+        <location filename="../../source/application/sw_application.cpp" line="1327"/>
         <source>  --kmz-geometry &lt;all|visible&gt;: Keep every part, or flatten to the visible surfaces with one mesh per color, in KMZ exports.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1342"/>
+        <location filename="../../source/application/sw_application.cpp" line="1348"/>
         <source>  -h, --help: Display this help message and exit.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1455"/>
+        <location filename="../../source/application/sw_application.cpp" line="1461"/>
         <source>Could not load settings file &apos;%1&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1471"/>
+        <location filename="../../source/application/sw_application.cpp" line="1477"/>
         <source>Could not load keyboard shortcuts file &apos;%1&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1479"/>
+        <location filename="../../source/application/sw_application.cpp" line="1485"/>
         <source>Could not load mouse shortcuts file &apos;%1&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1489"/>
+        <location filename="../../source/application/sw_application.cpp" line="1495"/>
         <source>Could not load categories file &apos;%1&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1511"/>
+        <location filename="../../source/application/sw_application.cpp" line="1517"/>
         <source>Could not save settings file &apos;%1&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1519"/>
+        <location filename="../../source/application/sw_application.cpp" line="1525"/>
         <source>Could not save keyboard shortcuts file &apos;%1&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1527"/>
+        <location filename="../../source/application/sw_application.cpp" line="1533"/>
         <source>Could not save mouse shortcuts file &apos;%1&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1535"/>
+        <location filename="../../source/application/sw_application.cpp" line="1541"/>
         <source>Could not save categories file &apos;%1&apos;.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1645"/>
-        <location filename="../../source/application/sw_application.cpp" line="2460"/>
+        <location filename="../../source/application/sw_application.cpp" line="1651"/>
+        <location filename="../../source/application/sw_application.cpp" line="2466"/>
         <source>Could not open the unofficial library archive &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1656"/>
+        <location filename="../../source/application/sw_application.cpp" line="1662"/>
         <source>The %1 file &apos;%2&apos; was not found, using the bundled copy.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1664"/>
-        <location filename="../../source/application/sw_application.cpp" line="2467"/>
+        <location filename="../../source/application/sw_application.cpp" line="1670"/>
+        <location filename="../../source/application/sw_application.cpp" line="2473"/>
         <source>Could not find a shadow library in &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1716"/>
+        <location filename="../../source/application/sw_application.cpp" line="1722"/>
         <source>Error: model &apos;%1&apos; does not exist.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Erro: o modelo &apos;%1&apos; não existe.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1767"/>
-        <location filename="../../source/application/sw_application.cpp" line="1782"/>
-        <location filename="../../source/application/sw_application.cpp" line="1865"/>
-        <location filename="../../source/application/sw_application.cpp" line="1899"/>
-        <location filename="../../source/application/sw_application.cpp" line="1994"/>
-        <location filename="../../source/application/sw_application.cpp" line="2023"/>
-        <location filename="../../source/application/sw_application.cpp" line="2057"/>
-        <location filename="../../source/application/sw_application.cpp" line="2091"/>
-        <location filename="../../source/application/sw_application.cpp" line="2128"/>
-        <location filename="../../source/application/sw_application.cpp" line="2162"/>
-        <location filename="../../source/application/sw_application.cpp" line="2222"/>
+        <location filename="../../source/application/sw_application.cpp" line="1773"/>
+        <location filename="../../source/application/sw_application.cpp" line="1788"/>
+        <location filename="../../source/application/sw_application.cpp" line="1871"/>
+        <location filename="../../source/application/sw_application.cpp" line="1905"/>
+        <location filename="../../source/application/sw_application.cpp" line="2000"/>
+        <location filename="../../source/application/sw_application.cpp" line="2029"/>
+        <location filename="../../source/application/sw_application.cpp" line="2063"/>
+        <location filename="../../source/application/sw_application.cpp" line="2097"/>
+        <location filename="../../source/application/sw_application.cpp" line="2134"/>
+        <location filename="../../source/application/sw_application.cpp" line="2168"/>
+        <location filename="../../source/application/sw_application.cpp" line="2228"/>
         <source>Saved &apos;%1&apos;.
 </source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Guardado &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1932"/>
+        <location filename="../../source/application/sw_application.cpp" line="1938"/>
         <source>LGEO parts need the standard POV-Ray include files such as colors.inc, which POV-Ray %1 could not find.
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2431"/>
+        <location filename="../../source/application/sw_application.cpp" line="2437"/>
         <source>Could not reload the parts library &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2448"/>
+        <location filename="../../source/application/sw_application.cpp" line="2454"/>
         <source>Could not find a default parts library. &apos;%1&apos; stays in use until StudWorx starts again and offers to download one.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2467"/>
+        <location filename="../../source/application/sw_application.cpp" line="2473"/>
         <source>Load Part Connections</source>
         <translation type="unfinished"></translation>
     </message>
@@ -10185,9 +10333,9 @@ Veja https://github.com/nathaneltitane/studworx para saber como descarragar e in
         <translation type="obsolete">Algumas alterações só entrarão em vigor na próxima vez que iniciar o StudWorx.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2475"/>
-        <location filename="../../source/application/sw_application.cpp" line="2477"/>
-        <location filename="../../source/application/sw_application.cpp" line="2479"/>
+        <location filename="../../source/application/sw_application.cpp" line="2481"/>
+        <location filename="../../source/application/sw_application.cpp" line="2483"/>
+        <location filename="../../source/application/sw_application.cpp" line="2485"/>
         <source>Preferences</source>
         <translatorcomment>Draft reused from an existing translation of this source text; requires review in this context.</translatorcomment>
         <translation type="unfinished">Preferências</translation>
@@ -12172,43 +12320,43 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swContext</name>
     <message>
-        <location filename="../../source/rendering/sw_context.cpp" line="151"/>
+        <location filename="../../source/rendering/sw_context.cpp" line="152"/>
         <source>OpenGL shader support is required.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">O suporte de shader OpenGL é necessário.</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_context.cpp" line="222"/>
+        <location filename="../../source/rendering/sw_context.cpp" line="223"/>
         <source>Could not create the OpenGL context.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Não foi possível criar o contexto OpenGL.</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_context.cpp" line="232"/>
+        <location filename="../../source/rendering/sw_context.cpp" line="233"/>
         <source>Could not create the offscreen OpenGL surface.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Não foi possível criar a superfície OpenGL fora do ecrã.</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_context.cpp" line="234"/>
+        <location filename="../../source/rendering/sw_context.cpp" line="235"/>
         <source>Could not make the offscreen OpenGL context current.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Não foi possível tornar o contexto fora do ecrã OpenGL atual.</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_context.cpp" line="408"/>
+        <location filename="../../source/rendering/sw_context.cpp" line="409"/>
         <source>Could not read shader %1: %2</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Não foi possível ler o shader %1: %2</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_context.cpp" line="416"/>
+        <location filename="../../source/rendering/sw_context.cpp" line="417"/>
         <source>Could not create shader %1.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Não foi possível criar o sombreador %1.</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_context.cpp" line="436"/>
+        <location filename="../../source/rendering/sw_context.cpp" line="437"/>
         <source>Could not compile shader %1:
 %2</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -12216,13 +12364,13 @@ Choose where to save it and download the latest %3 now?</source>
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_context.cpp" line="502"/>
+        <location filename="../../source/rendering/sw_context.cpp" line="503"/>
         <source>Could not create the shader program for %1 and %2.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Não foi possível criar o programa shader para %1 e %2.</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_context.cpp" line="548"/>
+        <location filename="../../source/rendering/sw_context.cpp" line="549"/>
         <source>Could not link the shader program for %1 and %2:
 %3</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
@@ -12662,21 +12810,16 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swFindReplaceWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="90"/>
+        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="92"/>
         <source>Toggle Replace</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Alternar substituição</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="89"/>
+        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="91"/>
         <source>Show or hide the replace options.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mostrar ou ocultar as opções de substituição.</translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="17"/>
-        <source>&lt;p&gt;&lt;b&gt;Find and Replace&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Find parts by color, part or both, then step through the matches or select them all. Open the replace options to swap the color or part of the matches, one at a time or all at once.&lt;/p&gt;&lt;p&gt;Include Submodels makes Replace All change the matching parts inside every submodel used by this model too.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Find:</source>
@@ -12684,13 +12827,13 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">Encontrar:</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="46"/>
+        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="47"/>
         <source>Search Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cor de pesquisa</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="51"/>
+        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="52"/>
         <source>Search Part</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Peça de pesquisa</translation>
@@ -12701,9 +12844,19 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">Substituir:</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="43"/>
+        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="44"/>
         <source>Find</source>
         <translation type="unfinished">Procurar</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="76"/>
+        <source>Configure how the part lists are filtered and displayed.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="77"/>
+        <source>Part List Options</source>
+        <translation type="unfinished">Opções de lista de peças</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="99"/>
@@ -12723,24 +12876,30 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Peça de substituição</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="143"/>
-        <source>Include Submodels</source>
+        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="146"/>
+        <source>Replace in Submodels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="144"/>
+        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="147"/>
         <source>Replace All also replaces the matching parts inside every submodel used by this model.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="58"/>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="128"/>
+        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="193"/>
+        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="217"/>
         <source>None</source>
         <translatorcomment>Draft reused from an existing translation of this source text; requires review in this context.</translatorcomment>
         <translation type="unfinished">Nenhum</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="38"/>
+        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="18"/>
+        <source>&lt;p&gt;&lt;b&gt;Find and Replace&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Find parts by color, part or both, then step through the matches or select them all. Open the replace options to swap the color or part of the matches, one at a time or all at once.&lt;/p&gt;&lt;p&gt;Replace in Submodels makes Replace All change the matching parts inside every submodel used by this model too.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="39"/>
         <source>Close</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Perto</translation>
@@ -13619,6 +13778,11 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="429"/>
+        <source>&lt;p&gt;&lt;b&gt;Framing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Current View saves exactly what the view shows. Fit Model aims at the model and moves the camera back until every part fits inside the image at every turntable angle and every pose, so animations turn in place without zooming and Joints animations hold still. Fit Each Step fits every step on its own parts. Fitted stills are centered on the model.&lt;/p&gt;&lt;p&gt;Center sets the point the turntable turns around and the camera aims at. World Origin is the 0, 0, 0 point of the scene, Model Origin is the middle of the model base and Model Center is the middle of the model.&lt;/p&gt;&lt;p&gt;Margin keeps empty space around the model. Bounds measures the fit on the whole model, so every step lines up, or only on the steps being saved.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="289"/>
         <source>Animated &amp;GIF</source>
         <translation type="unfinished"></translation>
@@ -13777,11 +13941,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="428"/>
         <source>Framing</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="429"/>
-        <source>&lt;p&gt;&lt;b&gt;Framing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Current View saves exactly what the view shows. Fit Model aims at the model and moves the camera back until every part fits inside the image at every turntable angle, so animations turn in place without zooming. Fit Each Step fits every step on its own parts. Fitted stills are centered on the model.&lt;/p&gt;&lt;p&gt;Center sets the point the turntable turns around and the camera aims at. World Origin is the 0, 0, 0 point of the scene, Model Origin is the middle of the model base and Model Center is the middle of the model.&lt;/p&gt;&lt;p&gt;Margin keeps empty space around the model. Bounds measures the fit on the whole model, so every step lines up, or only on the steps being saved.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -16391,205 +16550,226 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swJointsWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="42"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="47"/>
         <source>Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="43"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="48"/>
         <source>Recall</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="44"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="49"/>
         <source>Rename</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="45"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="50"/>
         <source>Delete</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="16"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="17"/>
         <source>Joint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="16"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="17"/>
         <source>Type</source>
         <translation type="unfinished">Tipo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="16"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="17"/>
         <source>Angle</source>
         <translation type="unfinished">Ângulo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="18"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="19"/>
         <source>Joints of the model and its submodels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="19"/>
-        <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Every model with joints, under it each jointed submodel by line index, and under that each of its joints with type and angle. Click a joint to select its submodel and make it the joint the panel and the rotate gizmo work on. Click a model to show its poses.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="27"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="32"/>
         <source>Saved poses of this model, played in this order by the Joints motion</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="28"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="33"/>
         <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The poses saved in the model picked above, each holding the angles of that model&apos;s joints only. The Joints motion of the image dialog plays the poses of the main model in this order. Pick one to recall, rename or delete it.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="42"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="47"/>
         <source>Save the joint angles of this model as a pose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="42"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="47"/>
         <source>&lt;p&gt;&lt;b&gt;Save&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Store the angles of the joints in this model under a name. Saving a name that already exists replaces that pose.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="43"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="48"/>
         <source>Put the joints of this model back in the picked pose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="43"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="48"/>
         <source>&lt;p&gt;&lt;b&gt;Recall&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the joints of this model back to the angles of the picked pose, in one undo step.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="44"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="49"/>
         <source>Rename the picked pose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="44"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="49"/>
         <source>&lt;p&gt;&lt;b&gt;Rename&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Give the picked pose a new name.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="45"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="50"/>
         <source>Delete the picked pose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="45"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="50"/>
         <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the picked pose from the model. The joints keep their angles.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="66"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="71"/>
         <source>Axis X</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="66"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="71"/>
         <source>Axis Y</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="66"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="71"/>
         <source>Axis Z</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="67"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="72"/>
         <source>Hinge axis, for parts without shadow data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="68"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="73"/>
         <source>&lt;p&gt;&lt;b&gt;Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The axis a hinge turns about, in the coordinates of the submodel. Use it for parts without shadow data, which get a hinge on their origin.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="73"/>
-        <source>Clear Joint</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="74"/>
-        <source>Remove the picked joint of the selected submodel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="75"/>
-        <source>&lt;p&gt;&lt;b&gt;Clear Joint&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the picked joint of the selected submodel and put that joint back at rest. This can be undone.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="152"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="155"/>
         <source>Joint %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="167"/>
-        <source>No joints, use Part &gt; Joint &gt; Set</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="215"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="293"/>
         <source>Poses of %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="215"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="293"/>
         <source>Poses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="236"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="314"/>
         <source>Joint %1, %2, angle %3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="260"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="338"/>
         <source>Save Pose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="260"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="338"/>
         <source>Pose %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="297"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="375"/>
         <source>Rename Pose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="236"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="314"/>
         <source>Select one submodel for a joint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="236"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="314"/>
         <source>No joint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="151"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="236"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="154"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="314"/>
         <source>Hinge</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="151"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="236"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="20"/>
+        <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Every model with joints, under it each jointed submodel by line index, and under that each of its joints with type and angle. Click a joint to select its submodel and make it the joint the panel and the rotate gizmo work on, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. Click a model to show its poses.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="78"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="273"/>
+        <source>Delete Joint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="79"/>
+        <source>Delete the joint picked in the list (Delete)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="80"/>
+        <source>&lt;p&gt;&lt;b&gt;Delete Joint&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Delete the joint picked in the joints list and put that joint back at rest. The Delete key does the same in the list. This can be undone.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="154"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="314"/>
         <source>Ball</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="260"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="297"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="170"/>
+        <source>No joints, use Part &gt; Joint &gt; Set Joint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="243"/>
+        <source>Edit Joints</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="245"/>
+        <source>Delete All Joints</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="270"/>
+        <source>Move Joint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="271"/>
+        <source>Rotate Joint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="338"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="375"/>
         <source>Name</source>
         <translation type="unfinished">Nome</translation>
     </message>
@@ -16598,10 +16778,10 @@ Choose where to save it and download the latest %3 now?</source>
     <name>swMainWindow</name>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="297"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="584"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="592"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="798"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="799"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="580"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="588"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="794"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="795"/>
         <source>Transform</source>
         <translation>Transformar</translation>
     </message>
@@ -16626,7 +16806,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>&amp;Editar</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="455"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="451"/>
         <source>&amp;View</source>
         <translation>&amp;Ver</translation>
     </message>
@@ -16644,98 +16824,98 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&amp;Passo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="456"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="452"/>
         <source>T&amp;oolbars</source>
         <translation>&amp;Barras de Ferramentas</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="488"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="484"/>
         <source>&amp;Part</source>
         <translation>&amp;Peça</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="543"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="539"/>
         <source>&amp;Help</source>
         <translation>A&amp;juda</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="580"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="576"/>
         <source>&lt;p&gt;&lt;b&gt;Selection Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the rule applied when you pick a part in the model view. Single selects that part; the other modes include matching part types, matching colors, or both. For example, color selection lets you pick matching red parts without selecting each one separately.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Modo de seleção&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Escolha a regra aplicada ao escolher uma peça na visualização do modelo. Single seleciona essa peça; os outros modos incluem tipos de peças correspondentes, cores correspondentes ou ambos. Por exemplo, a seleção de cores permite escolher peças vermelhas correspondentes sem selecionar cada uma delas separadamente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="593"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="589"/>
         <source>Transform Options</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Opções de transformação</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="595"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="591"/>
         <source>&lt;p&gt;&lt;b&gt;Transform Options&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the axes and pivot used for interactive transforms. Relative Transforms uses the focused object&apos;s orientation, so movement along X follows that object&apos;s local X axis. Absolute Transforms uses the model axes. Rotate Together rotates the selection around a shared pivot; Rotate Separately rotates each part around its own origin.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Opções de transformação&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Escolha os eixos e o pivô usados para transformações interativas. As Transformações Relativas usam a orientação do objeto em foco, de modo que o movimento ao longo de X segue o eixo X local desse objeto. Absolute Transforms usa os eixos do modelo. Girar Juntos gira a seleção em torno de um pivô compartilhado; Girar Gira separadamente cada peça em torno de sua própria origem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="599"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="595"/>
         <source>Snap XY</source>
         <translation>Fixa XY</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="603"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="599"/>
         <source>Snap Z</source>
         <translation>Fixa Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="607"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="603"/>
         <source>Snap Menu</source>
         <translation>Menu Fixar</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="613"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="609"/>
         <source>Movement Snap</source>
         <translation>Fixar Movimentos</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="614"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="610"/>
         <source>Snap translations to fixed intervals</source>
         <translation>Fixa translações por intervalos fixos</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="616"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="612"/>
         <source>&lt;p&gt;&lt;b&gt;Movement Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose how far objects move in each snapped increment. XY controls movement across the base plane; Z controls vertical movement, so they can use different intervals. Turn snapping off for free placement, then enable it again when you need consistent spacing.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Ajuste do movimento&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Escolha a distância que os objetos se movem em cada incremento ajustado. XY controla o movimento através do plano base; Z controla o movimento vertical, para que possam usar intervalos diferentes. Desative o encaixe para posicionamento livre e ative-o novamente quando precisar de espaçamento consistente.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="620"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="616"/>
         <source>Snap Angle Menu</source>
         <translation>Menu de fixação dos ângulos</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="628"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="624"/>
         <source>Rotation Snap</source>
         <translation>Grelha de Rotação</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="629"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="625"/>
         <source>Snap rotations to fixed intervals</source>
         <translation>Fixa as rotações por intervalos fixos</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="631"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="627"/>
         <source>&lt;p&gt;&lt;b&gt;Rotation Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose an angle increment for interactive rotation. For example, a 90-degree increment is useful for quarter turns, while smaller increments allow finer alignment. Turn snapping off for free rotation without fixed angle increments.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Ajuste de rotação&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Escolha um incremento de ângulo para rotação interativa. Por exemplo, um incremento de 90 graus é útil para quartos de volta, enquanto incrementos menores permitem um alinhamento mais preciso. Desative o encaixe para rotação livre sem incrementos de ângulo fixo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="635"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="631"/>
         <source>Standard</source>
         <translation>Standard</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="359"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="664"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="660"/>
         <source>Tools</source>
         <translation>Ferramentas</translation>
     </message>
@@ -16784,49 +16964,49 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">Sub&amp;modelo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="572"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="577"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="568"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="573"/>
         <source>Selection Mode</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Modo de seleção</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="578"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="574"/>
         <source>Change selection mode</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Alterar modo de seleção</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="579"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="575"/>
         <source>Choose which related parts are included when selecting a part.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Escolha quais peças relacionadas serão incluídas ao selecionar uma peça.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="594"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="590"/>
         <source>Choose coordinate axes and whether selected parts rotate together.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Escolha os eixos coordenados e se as peças selecionadas giram juntas.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="615"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="611"/>
         <source>Choose movement snapping intervals for XY and Z.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Escolha intervalos de ajuste de movimento para XY e Z.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="630"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="626"/>
         <source>Choose the rotation snapping interval.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Escolha o intervalo de ajuste da rotação.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="637"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="633"/>
         <source>&lt;p&gt;&lt;b&gt;Standard Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use file controls to create, open, and save models, and Undo or Redo to navigate edit history. Before moving or rotating objects, choose the selection rule, coordinate reference, and snapping increments from the four drop-down controls. Help &gt; &quot;What&apos;s This?&quot; explains individual controls.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="655"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="651"/>
         <source>Time</source>
         <translation>Hora</translation>
     </message>
@@ -16836,89 +17016,89 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Barra de ferramentas padrão&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use controles de arquivo para criar, abrir e salvar projetos e Desfazer ou Refazer para navegar pelo histórico de edições. Antes de mover ou girar objetos, escolha a regra de seleção, a referência de coordenadas e os incrementos de encaixe nos quatro controles suspensos. Ajuda &gt; O que é isso? explica os controles individuais.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="657"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="653"/>
         <source>&lt;p&gt;&lt;b&gt;Time Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Timeline for that. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Barra de ferramentas Tempo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Os botões de seta movem-se pelas etapas de construção para que você possa inspecionar como o modelo é montado. Não alteram o passo atribuído a uma peça; use a linha do tempo para isso. Adicionar chaves controla se as edições criam chaves de animação na etapa atual, permitindo que propriedades como posição variem entre as etapas.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="666"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="662"/>
         <source>&lt;p&gt;&lt;b&gt;Tools Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a tool, then use it in the model view. Insertion tools create parts, lights, or cameras. Editing tools select, transform, remove, or recolor objects. Navigation tools change the viewpoint without changing model geometry. Mouse assignments can be customized in Preferences.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Barra de ferramentas Ferramentas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Escolha uma ferramenta e use-a na visualização do modelo. As ferramentas de inserção criam peças, luzes ou câmeras. As ferramentas de edição selecionam, transformam, removem ou recolorem objetos. As ferramentas de navegação alteram o ponto de vista sem alterar a geometria do modelo. As atribuições do mouse podem ser personalizadas em Preferências.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="708"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="704"/>
         <source>Parts</source>
         <translation>Peças</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="711"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="707"/>
         <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a category or palette and filter its parts. Selecting a part prepares it for insertion; drag it into the model view to place it. Double-click a part to open its preview. Options controls filtering, thumbnails, and list display.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Peças&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Escolha uma categoria ou paleta e filtre suas peças. A seleção de uma peça a prepara para inserção; arraste-o para a visualização do modelo para posicioná-lo. Clique duas vezes em uma peça para abrir sua visualização. As opções controlam a filtragem, as miniaturas e a exibição da lista.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="721"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="717"/>
         <source>Colors</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cores</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="723"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="719"/>
         <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Cores&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Escolha a cor atual do LDraw nas amostras. Esta cor é utilizada na inserção ou pintura de peças. Para recolorir peças selecionadas, use o botão de cores acima das amostras. Passe o mouse sobre uma amostra para ver seu nome e código de cor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="739"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="735"/>
         <source>Apply the current color to selected parts.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Aplique a cor atual às peças selecionadas.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="740"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="736"/>
         <source>Change Selection Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Alterar cor de seleção</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="741"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="737"/>
         <source>&lt;p&gt;&lt;b&gt;Change Selection Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Apply the current color to selected parts. Choosing a swatch sets the current color; this button applies that color to the selection.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Alterar cor da seleção&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Aplica a cor atual às peças selecionadas. A escolha de uma amostra define a cor atual; este botão aplica essa cor à seleção.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="755"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="751"/>
         <source>LDraw Colors</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cores do LDraw</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="774"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="770"/>
         <source>Properties</source>
         <translation>Propriedades</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="776"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="772"/>
         <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit properties of the focused object or selection. Available fields depend on whether you select parts, a camera, or a light. Expand a section to see its fields. Keyframe controls mark properties at the current building step.&lt;/p&gt;&lt;p&gt;The transform fields at the bottom apply an X/Y/Z translation or rotation using the chosen transform mode. Press Enter to apply the values.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Propriedades&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edite as propriedades do objeto ou seleção em foco. Os campos disponíveis dependem de você selecionar peças, uma câmera ou uma luz. Expanda uma seção para ver seus campos. Os controles de quadro-chave marcam as propriedades na etapa de construção atual.&lt;/p&gt;&lt;p&gt;Os campos de transformação na parte inferior aplicam uma translação ou rotação X/Y/Z usando o modo de transformação escolhido. Pressione Enter para aplicar os valores.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="829"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="825"/>
         <source>Choose absolute or relative translation or rotation.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Escolha translação ou rotação absoluta ou relativa.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="830"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="826"/>
         <source>&lt;p&gt;&lt;b&gt;Apply Transform&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the translation or rotation mode, enter X/Y/Z values, and press Enter to apply them. Translation values use LDraw units; rotation values use degrees.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Aplicar transformação&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Escolha o modo de translação ou rotação, insira os valores X/Y/Z e pressione Enter para aplicá-los. Os valores de tradução usam unidades LDRaw; os valores de rotação usam graus.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="808"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="804"/>
         <source>Transform X</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Transformar X</translation>
@@ -16959,119 +17139,123 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="498"/>
+        <source>&amp;Find</source>
+        <translation type="obsolete">&amp;Encontrar</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="494"/>
         <source>&amp;Joint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="503"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="499"/>
         <source>&amp;Group</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="510"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="506"/>
         <source>&amp;Visibility</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="517"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="513"/>
         <source>&amp;Steps</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="527"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="523"/>
         <source>&amp;Models</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="751"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="747"/>
         <source>Choose how inserted parts are colored.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="751"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="747"/>
         <source>Color Options</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="797"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="793"/>
         <source>T</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="809"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="805"/>
         <source>Enter the X translation in LDraw units or rotation in degrees.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Insira a translação do X em unidades do LDraw ou a rotação em graus.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="814"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="810"/>
         <source>Transform Y</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Transformar Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="815"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="811"/>
         <source>Enter the Y translation in LDraw units or rotation in degrees.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Insira a translação Y em unidades LDraw ou a rotação em graus.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="820"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="816"/>
         <source>Transform Z</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Transformar Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="821"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="817"/>
         <source>Enter the Z translation in LDraw units or rotation in degrees.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Insira a translação Z em unidades LDraw ou a rotação em graus.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="881"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="877"/>
         <source>Timeline</source>
         <translation>Linha Temporal</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="883"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="879"/>
         <source>&lt;p&gt;&lt;b&gt;Timeline&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Linha do tempo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Selecione uma etapa para torná-la atual ou selecione linhas de peças para selecionar essas peças no modelo. Arraste peças entre etapas ou reordene-as dentro de uma etapa. Clique com o botão direito para comandos de inserção, remoção, movimentação e visibilidade de etapas.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="902"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="898"/>
         <source>Minifigure Builder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="904"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="900"/>
         <source>&lt;p&gt;&lt;b&gt;Minifigure Builder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the parts, colors and pose of a minifigure, then add it to the current model. The panel keeps its settings so you can add several variations.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="920"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="916"/>
         <source>Explode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="930"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="926"/>
         <source>Joints</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="117"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="119"/>
         <source>Terminal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="119"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="121"/>
         <source>&lt;p&gt;&lt;b&gt;Terminal&lt;/b&gt;&lt;/p&gt;&lt;p&gt;An embedded Konsole terminal that starts in the folder of the current model.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="191"/>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="192"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="193"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="194"/>
         <source>Preview</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Visualização</translation>
@@ -17082,37 +17266,38 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Visualização&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Inspecione uma peça sem colocá-la no modelo. Clique duas vezes em uma peça no encaixe Peças para visualizá-la. Bloquear visualização mantém a visualização atual quando a seleção da fonte é alterada; desbloqueie-o para permitir atualizações.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="984"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="981"/>
         <source>Asset loading failed</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Falha no carregamento de recursos</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="387"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="394"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="490"/>
         <source>Could not load part.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Não foi possível carregar a peça.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="409"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="416"/>
         <source>Could not generate geometry.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Não foi possível gerar geometria.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="423"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="430"/>
         <source>Regenerating synthesized part geometry.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Regenerando a geometria da peça sintetizada.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="425"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="432"/>
         <source>Loading model parts (%1 / %2).</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Carregamento de peças do modelo (%1 / %2).</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="432"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="439"/>
         <source>The model could not be fully loaded. Some parts may be missing.
 
 %1</source>
@@ -17125,7 +17310,7 @@ Choose where to save it and download the latest %3 now?</source>
 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="560"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="655"/>
         <source>Close Other Tabs</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Fechar outras guias</translation>
@@ -17185,7 +17370,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="664"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="759"/>
         <source>Export HTML</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Exportar HTML</translation>
@@ -17196,19 +17381,19 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">POV-Ray Exportar</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="875"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="970"/>
         <source>Save Image</source>
         <translatorcomment>Draft reused from an existing translation of this source text; requires review in this context.</translatorcomment>
         <translation type="unfinished">Gravar Imagem</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="887"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="982"/>
         <source>Nothing to select.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Nada a selecionar.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="887"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="982"/>
         <source>Select Objects</source>
         <translatorcomment>Draft reused from an existing translation of this source text; requires review in this context.</translatorcomment>
         <translation type="unfinished">Selecionar Objetos</translation>
@@ -17339,62 +17524,67 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="500"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="499"/>
+        <source>Submodel Hover Outline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="501"/>
         <source>Grid</source>
         <translation type="unfinished">Rede</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="501"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="502"/>
         <source>All Grids</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="515"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="516"/>
         <source>Part Connections</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="516"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="517"/>
         <source>View Cube</source>
         <translation type="unfinished">Ver Cubo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="517"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="518"/>
         <source>Axis Icon</source>
         <translation type="unfinished">Ícone do eixo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="503"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="504"/>
         <source>Base Grid</source>
         <translation type="unfinished">Grelha de Base</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="504"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="505"/>
         <source>XZ Height Grid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="505"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="506"/>
         <source>YZ Height Grid</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="506"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="507"/>
         <source>Height Grids Behind Model</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="508"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="509"/>
         <source>X Axis Line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="509"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="510"/>
         <source>Y Axis Line</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="510"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="511"/>
         <source>Z Axis Line</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17429,72 +17619,97 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="514"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="515"/>
         <source>Insert First Part at Origin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="194"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="196"/>
         <source>&lt;p&gt;&lt;b&gt;Preview&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Inspect a part or model without placing it in the model. Double-click a part in the Parts dock to preview it. Lock Preview keeps the current preview when the source selection changes; unlock it to allow updates.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="672"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="487"/>
+        <source>Found through BrickLink number %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="495"/>
+        <source>Marked as an alias in the parts library.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="496"/>
+        <source>The part the alias stands for</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="501"/>
+        <source>Marked as moved in the parts library.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="502"/>
+        <source>The part it moved to</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="767"/>
         <source>Export POV-Ray</source>
         <translation type="unfinished">Exportar POV-Ray</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="761"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="856"/>
         <source>Print</source>
         <translation type="unfinished">Imprimir</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="761"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="856"/>
         <source>Could not start the print job.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="794"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="889"/>
         <source>Preview...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1015"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1110"/>
         <source>Insert Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1017"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1112"/>
         <source>Current Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1018"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1113"/>
         <source>Selected Part Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1019"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1114"/>
         <source>Last Inserted Part Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1021"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1116"/>
         <source>Lock Parts Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1069"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1164"/>
         <source>Custom Rotation Snap</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1069"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1164"/>
         <source>Snap angle in degrees</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1081"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1176"/>
         <source>Custom (%1 Degrees)...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17518,80 +17733,84 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete"> - %1 (ID: %2)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="192"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="198"/>
         <source> in group &apos;%1&apos;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished"> no grupo &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="225"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="231"/>
         <source>Part</source>
         <translation type="unfinished">Peça</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="227"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="233"/>
         <source>Camera</source>
         <translation type="unfinished">Câmara</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="229"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="235"/>
         <source>Light</source>
         <translation type="unfinished">Luz</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="231"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="237"/>
         <source>Origin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="233"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="239"/>
         <source>%1 X: %2 Y: %3 Z: %4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="314"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="320"/>
         <source>Step %1</source>
         <translation>Passo %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="359"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="360"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="362"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="365"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="367"/>
         <source>free</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="361"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="365"/>
+        <source>%1, %2</source>
+        <translation type="unfinished">%1: %2 {1,?}</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="366"/>
         <source>relative</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="361"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="366"/>
         <source>absolute</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="362"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="367"/>
         <source>%1 deg.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="363"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="368"/>
         <source>separately</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="363"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="368"/>
         <source>together</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="365"/>
-        <source>Move XY: %1 Z: %2 - Axes: %3 - Rotate: %4 / %5</source>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="370"/>
+        <source>Move: %1 - Axes: %2 - Rotate: %3 / %4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="367"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="372"/>
         <source>Movement snap, rotation snap, transform axes and rotation pivot. Change them with the last buttons of the standard toolbar.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17671,22 +17890,22 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished"> M: %1 %2 R: %3 </translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="389"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="394"/>
         <source>&amp;Undo %1</source>
         <translation>&amp;Desfazer %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="394"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="399"/>
         <source>&amp;Undo</source>
         <translation>Desfa&amp;zer</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="400"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="405"/>
         <source>&amp;Redo %1</source>
         <translation>&amp;Refazer %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="405"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="410"/>
         <source>&amp;Redo</source>
         <translation>&amp;Refazer</translation>
     </message>
@@ -17829,85 +18048,85 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Gravar as modificações de &apos;%1&apos;?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>0</source>
         <translation>8x {0?}</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>1/20S</source>
         <translation>8x {1/20S?}</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>1/4S</source>
         <translation>8x {1/4S?}</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>1F</source>
         <translation>8x {1F?}</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>1/2S</source>
         <translation>8x {1/2S?}</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>1S</source>
         <translation>8x {1S?}</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <source>2S</source>
         <translation>8x {2S?}</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <source>3S</source>
         <translation>8x {3S?}</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <source>4S</source>
         <translation>8x {4S?}</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="139"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <source>8S</source>
         <translation>8x {8S?}</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1045"/>
-        <location filename="../../source/interface/window/sw_window_main.h" line="140"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1140"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="146"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="152"/>
         <source>None</source>
         <translation>Nenhum</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>1B</source>
         <translation>8x {1B?}</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>2B</source>
         <translation>8x {2B?}</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>4B</source>
         <translation>8x {4B?}</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
+        <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>8B</source>
         <translation>8x {8B?}</translation>
     </message>
@@ -17921,13 +18140,13 @@ Choose where to save it and download the latest %3 now?</source>
         </translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="274"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="280"/>
         <source>View: %1 deg. Lat. / %2 deg. Lon. / %3</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Vista: %1 graus Lat. / %2 graus Lon. / %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="273"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="279"/>
         <source>Perspective</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Perspetiva</translation>
@@ -17940,57 +18159,57 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="162"/>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="187"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="188"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="194"/>
         <source>N/A</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="187"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="190"/>
         <source>%1 g Total</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="187"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="192"/>
         <source>%1 g</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="188"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="194"/>
         <source> - %1 - ID: %2 - Weight: %3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="273"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="279"/>
         <source>Orthographic</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ortográfica</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1008"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1005"/>
         <source>Selection</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Seleção</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1009"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1006"/>
         <source>View Orientation</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Orientação da vista</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1010"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1007"/>
         <source>Position</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Posição</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1011"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1008"/>
         <source>Snap and Transform</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ajuste e transformação</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1012"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1009"/>
         <source>Step</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Passo</translation>
@@ -18521,6 +18740,115 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
 </context>
 <context>
+    <name>swMissingPartsDialog</name>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="33"/>
+        <source>1 part could not be loaded. It is left out of the model view and previews until replaced.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="33"/>
+        <source>%1 parts could not be loaded. They are left out of the model view and previews until replaced.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="44"/>
+        <source>Part</source>
+        <translation type="unfinished">Peça</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="44"/>
+        <source>Replacement</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="52"/>
+        <source>Check the parts to replace with the part found in the library.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="23"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="51"/>
+        <source>Missing and Moved Parts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="24"/>
+        <source>&lt;p&gt;&lt;b&gt;Missing and Moved Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Lists the parts of the model that could not be loaded, they are left out of the model view and the previews, and the parts the library marks as moved (~Moved to) or as an alias (=) of another part.&lt;/p&gt;&lt;p&gt;A missing part is looked up through the BrickLink mapping file set under Preferences &amp;gt; General &amp;gt; Reference Paths, for parts the library now files under another number. A moved part or an alias is offered the part it points to. Replace Checked swaps the checked parts in every submodel, keeping their colors and positions. It can be undone and the file changes only when saved.&lt;/p&gt;&lt;p&gt;The warning can be turned off under Preferences &amp;gt; General &amp;gt; Files, the status bar icon opens this list again.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="36"/>
+        <source>1 part is marked as moved or as an alias in the parts library.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="36"/>
+        <source>%1 parts are marked as moved or as an alias in the parts library.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="81"/>
+        <source>Used inside a library part, it can not be replaced here</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="81"/>
+        <source>No replacement found</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="88"/>
+        <source>Don&apos;t Warn Again</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="90"/>
+        <source>Stop showing this list when a model opens, the status bar icon still opens it.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="94"/>
+        <source>Copy List</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="95"/>
+        <source>Copy the list of parts not loaded to the clipboard.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="96"/>
+        <source>Replace Checked</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="97"/>
+        <source>Replace the checked parts in every submodel, it can be undone.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="131"/>
+        <source>%1× in %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="133"/>
+        <source>Used inside a library part</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="133"/>
+        <source>Used %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="182"/>
+        <source>, replacement %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>swModel</name>
     <message>
         <source>Pasting</source>
@@ -18669,7 +18997,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Modelo &apos;%1&apos;: a referência a &apos;%2&apos; foi ignorada porque criaria uma referência circular.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_file.cpp" line="1066"/>
+        <location filename="../../source/core/sw_model_file.cpp" line="1067"/>
         <location filename="../../source/core/sw_model_group.cpp" line="77"/>
         <source>Group </source>
         <translation type="unfinished"></translation>
@@ -18733,22 +19061,22 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/core/sw_model_render.cpp" line="658"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="991"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1010"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1016"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1027"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1043"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1047"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1077"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1085"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1097"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1101"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1003"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1033"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1039"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1050"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1066"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1070"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1100"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1108"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1120"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1124"/>
         <source>Could not write file &apos;%1&apos;:
 %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="985"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="997"/>
         <source>Save at least two poses of the main model first.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -18825,6 +19153,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model_selection.cpp" line="1137"/>
         <location filename="../../source/core/sw_model_selection.cpp" line="1144"/>
         <location filename="../../source/core/sw_model_selection.cpp" line="1550"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1611"/>
         <source>Selection</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Seleção</translation>
@@ -19174,6 +19503,7 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message numerus="yes">
         <location filename="../../source/core/sw_model_selection.cpp" line="1544"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1626"/>
         <source>Replace Parts</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">
@@ -19182,7 +19512,7 @@ Choose where to save it and download the latest %3 now?</source>
         </translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="469"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="517"/>
         <source>Set Joint</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19192,18 +19522,23 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="554"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="608"/>
         <source>Turn Joint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="571"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="625"/>
         <source>Joint Axis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="582"/>
-        <source>Clear Joint</source>
+        <location filename="../../source/core/sw_model_joints.cpp" line="636"/>
+        <source>Delete Joint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/core/sw_model_joints.cpp" line="649"/>
+        <source>Delete All Joints</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -19925,24 +20260,24 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swPartSelectionListModel</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="376"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="378"/>
         <source>Could not load part &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Não foi possível carregar a peça &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="378"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="380"/>
         <source>%1
 ID: %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="378"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="380"/>
         <source>N/A</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="379"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="381"/>
         <source>
 Weight: %1</source>
         <translation type="unfinished"></translation>
@@ -19951,24 +20286,24 @@ Weight: %1</source>
 <context>
     <name>swPartSelectionListView</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="634"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="652"/>
         <source>Add to Palette</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Adicionar à paleta</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="645"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="663"/>
         <source>None</source>
         <translation type="unfinished">Nenhum</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="649"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="667"/>
         <source>Remove from Palette</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Remover da paleta</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="655"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="673"/>
         <source>Open Submodel</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Submodelo aberto</translation>
@@ -19992,15 +20327,15 @@ Weight: %1</source>
 <context>
     <name>swPartSelectionWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1123"/>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1124"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1141"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1142"/>
         <source>Filter Categories</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Filtrar categorias</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1131"/>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1598"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1149"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1616"/>
         <source>Match Case</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Caso de partida</translation>
@@ -20011,191 +20346,191 @@ Weight: %1</source>
         <translation type="obsolete">Opções</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1512"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1530"/>
         <source>Edit Palettes...</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Editar paletas...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1541"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1559"/>
         <source>Icons</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ícones</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1545"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1563"/>
         <source>No Icons</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Sem ícones</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1550"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1568"/>
         <source>Extra Small Icons</source>
         <translation>Ícones extrapequenos</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1555"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1573"/>
         <source>Small Icons</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ícones pequenos</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1560"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1578"/>
         <source>Medium Icons</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ícones médios</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1565"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1583"/>
         <source>Large Icons</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ícones grandes</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1570"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1588"/>
         <source>Extra Large Icons</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ícones extragrandes</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1585"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1603"/>
         <source>Lock Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Bloquear cor</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1592"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1610"/>
         <source>Filter</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Filtro</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1594"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1612"/>
         <source>Regular Expression</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Expressão regular</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1604"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1622"/>
         <source>Part ID</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">ID da peça</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1609"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1627"/>
         <source>Part Description</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Descrição da peça</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1521"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1539"/>
         <source>Show Part Names</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mostrar nomes de peças</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1125"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1143"/>
         <source>Filter category names to narrow the category list.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Filtre os nomes das categorias para restringir a lista de categorias.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1140"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1158"/>
         <source>Part Categories</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Categorias de peças</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1141"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1159"/>
         <source>Choose a category or palette to display its parts.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Escolha uma categoria ou paleta para exibir suas peças.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1157"/>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1158"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1175"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1176"/>
         <source>Filter Parts</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Peças de filtro</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1159"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1177"/>
         <source>Filter the displayed parts using the matching options.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Filtre as peças exibidas usando as opções correspondentes.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1164"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1182"/>
         <source>Configure part filtering and list display.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Configure a filtragem de peças e a exibição da lista.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1164"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1182"/>
         <source>Part List Options</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Opções de lista de peças</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1168"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1186"/>
         <source>Available Parts</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Peças Disponíveis</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1169"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1187"/>
         <source>Select a part from the filtered list.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione uma peça da lista filtrada.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1526"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1544"/>
         <source>Show Decorated Parts</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mostrar peças decoradas</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1530"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1548"/>
         <source>Show Part Aliases</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mostrar aliases de peças</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1535"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1553"/>
         <source>Snap Panel Width to Tiles</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1579"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1597"/>
         <source>List Mode</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Modo de lista</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1616"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1634"/>
         <source>Rendering</source>
         <translation type="unfinished">Restituir</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1657"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1675"/>
         <source>Favorites</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Favoritos</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1790"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1808"/>
         <source>All Parts</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Todas as peças</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1796"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1814"/>
         <source>In Use</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Em uso</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1802"/>
+        <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1820"/>
         <source>Submodels</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Submodelos</translation>
@@ -20214,8 +20549,8 @@ Weight: %1</source>
         <translation type="obsolete">Não foi possível carregar o projeto externo &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="276"/>
-        <location filename="../../source/library/sw_library.cpp" line="721"/>
+        <location filename="../../source/library/sw_library.cpp" line="292"/>
+        <location filename="../../source/library/sw_library.cpp" line="737"/>
         <source>Could not find part &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Não foi possível encontrar a peça &apos;%1&apos;.</translation>
@@ -20236,48 +20571,48 @@ Weight: %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="313"/>
+        <location filename="../../source/library/sw_library.cpp" line="329"/>
         <source>Could not find external model file &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="527"/>
+        <location filename="../../source/library/sw_library.cpp" line="543"/>
         <source>Could not decode embedded texture &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Não foi possível descodificar a textura incorporada &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="557"/>
+        <location filename="../../source/library/sw_library.cpp" line="573"/>
         <source>Invalid Base64 data for embedded file &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Dados Base64 inválidos para o ficheiro incorporado &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="563"/>
+        <location filename="../../source/library/sw_library.cpp" line="579"/>
         <source>Could not read embedded file &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Não foi possível ler o ficheiro incorporado &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="574"/>
+        <location filename="../../source/library/sw_library.cpp" line="590"/>
         <source>Could not open file &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Não foi possível abrir o ficheiro &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="580"/>
+        <location filename="../../source/library/sw_library.cpp" line="596"/>
         <source>Invalid archive file source.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Origem do ficheiro comprimido inválida.</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="588"/>
+        <location filename="../../source/library/sw_library.cpp" line="604"/>
         <source>Could not read archive entry %1.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Não foi possível ler a entrada de ficheiro %1.</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="591"/>
+        <location filename="../../source/library/sw_library.cpp" line="607"/>
         <source>Could not read archive file &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Não foi possível ler o ficheiro &apos;%1&apos;.</translation>
@@ -20301,9 +20636,9 @@ Weight: %1</source>
         <translation type="unfinished">Não foi possível gerar a geometria da peça &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="1375"/>
-        <location filename="../../source/library/sw_library.cpp" line="1433"/>
-        <location filename="../../source/library/sw_library.cpp" line="1445"/>
+        <location filename="../../source/library/sw_library.cpp" line="1391"/>
+        <location filename="../../source/library/sw_library.cpp" line="1449"/>
+        <location filename="../../source/library/sw_library.cpp" line="1461"/>
         <location filename="../../source/library/sw_library_load.cpp" line="294"/>
         <location filename="../../source/library/sw_library_load.cpp" line="391"/>
         <source>Library loading was canceled.</source>
@@ -20336,13 +20671,13 @@ Weight: %1</source>
         <translation type="unfinished">Não foi possível abrir o ficheiro incluído &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="1395"/>
+        <location filename="../../source/library/sw_library.cpp" line="1411"/>
         <source>Primitive include cycle at &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ciclo de inclusão primitivo em &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/library/sw_library.cpp" line="1470"/>
+        <location filename="../../source/library/sw_library.cpp" line="1486"/>
         <source>Could not load included file &apos;%1&apos;.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Não foi possível carregar o ficheiro incluído &apos;%1&apos;.</translation>
@@ -22076,19 +22411,19 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
         <translation type="vanished">Escolher a Pasta LGEO</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1265"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1273"/>
         <source>Reset Colors</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Redefinir cores</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1265"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1273"/>
         <source>Would you like to also reset the interface colors to match the color theme?</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Gostaria também de repor as cores da interface para combinar com o tema de cores?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1279"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1287"/>
         <source>Select Background Color</source>
         <translation type="unfinished">Seleccionar a Cor do Fundo</translation>
     </message>
@@ -22103,285 +22438,290 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
         <translation type="obsolete">Selecione a cor inferior do gradiente</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="852"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="858"/>
         <source>&apos;%1&apos; did not run as Blender, so Blender rendering stays unavailable.
 
 %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1017"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1025"/>
         <source>Select Parts Library</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1033"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1041"/>
         <source>Select Unofficial Library Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1041"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1049"/>
         <source>Select Part Connections Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1152"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1160"/>
         <source>Choose Minifigure Builder Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1165"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1173"/>
         <source>Save Minifigure Builder Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1182"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1190"/>
         <source>Saved the latest minifigure builder settings to &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1187"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1195"/>
         <source>Select BrickLink Mapping File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1017"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1025"/>
         <source>Parts Library Files (*.zip *.bin LDConfig.ldr ldconfig.ldr);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1033"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1041"/>
         <source>Supported Archives (*.zip);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1152"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1165"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1160"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1173"/>
         <source>Settings Files (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1187"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1195"/>
         <source>Mapping Files (*.txt *.json);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1223"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1237"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1231"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1245"/>
         <source>Executable Files (*.exe);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1225"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1239"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1233"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1247"/>
         <source>All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1242"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1250"/>
         <source>Select Blender Executable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1250"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1258"/>
         <source>Select LGEO Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1284"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1292"/>
         <source>Select Text Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione a cor do texto</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1289"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1297"/>
         <source>Select Text Halo Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione a cor do texto Halo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1295"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1303"/>
         <source>Select Marquee Border Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione a cor da borda do letreiro</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1300"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1308"/>
         <source>Select Marquee Fill Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione a cor de preenchimento do letreiro</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1306"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1314"/>
         <source>Select Overlay Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione a cor da sobreposição</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1311"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1319"/>
         <source>Select Explode Lines Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1317"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1325"/>
         <source>Select Cutaway Shade Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1322"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1330"/>
         <source>Select Element Margin Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1327"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1335"/>
         <source>Select Element Padding Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1332"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1340"/>
         <source>Select Element Anchor Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1337"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1345"/>
         <source>Select Ruler Pointer Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1342"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1350"/>
         <source>Select Active View Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione a cor do Active View</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1347"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1355"/>
         <source>Select Inactive View Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione a cor da visualização inativa</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1352"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1360"/>
         <source>Select Fade Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione a cor do desvanecimento</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1358"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1366"/>
         <source>Select Edit Fade Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1364"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1372"/>
         <source>Select Joint Fade Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1370"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1378"/>
+        <source>Select Hover Outline Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1383"/>
         <source>Select Highlight Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione a cor de destaque</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1376"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1389"/>
         <source>Select Grid Stud Color</source>
         <translation>Cor dos Pregos na Grelha</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1382"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1395"/>
         <source>Select Grid Line Color</source>
         <translation>Cor das Linhas na Grelha</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1387"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1400"/>
         <source>Select View Cube Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione Exibir cor do cubo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1392"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1405"/>
         <source>Select View Cube Text Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione Ver cor do texto do cubo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1397"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1410"/>
         <source>Select View Cube Highlight Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione Exibir cor de destaque do cubo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1402"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1415"/>
         <source>Select X Axis Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1407"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1420"/>
         <source>Select Y Axis Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1412"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1425"/>
         <source>Select Z Axis Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1432"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1445"/>
         <source>Select Object Selected Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione a cor selecionada do objeto</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1437"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1450"/>
         <source>Select Object Focused Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione a cor do foco do objeto</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1442"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1455"/>
         <source>Select Camera Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione a cor da câmara</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1447"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1460"/>
         <source>Select Light Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione a cor clara</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1452"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1465"/>
         <source>Select Control Point Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione a cor do ponto de controlo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1458"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1471"/>
         <source>Select Control Point Focused Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione a cor focada no ponto de controlo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1464"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1477"/>
         <source>Select Control Point Seated Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1470"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1483"/>
         <source>Select Flex Path Spread Handle Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1476"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1489"/>
         <source>Select Flex Path Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1482"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1495"/>
         <source>Select Flex Path Out of Reach Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1530"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1543"/>
         <source>%n stud(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -22805,13 +23145,13 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
         <translation type="unfinished">Substituir atalho</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="644"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="649"/>
         <source>Default Lights is unavailable. Flat shading is used instead.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">As luzes padrão não estão disponíveis. Em vez disso, é utilizado sombreado plano.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="671"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="676"/>
         <source>View cube rendering is unavailable.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">A renderização do cubo de visualização não está disponível.</translation>
@@ -22822,7 +23162,7 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
         <translation type="obsolete">A renderização de contornos não está disponível. Serão utilizadas tonalidades faciais e bordas coloridas.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1228"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1236"/>
         <source>Select POV-Ray Executable</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecione POV-Ray Executável</translation>
@@ -22955,7 +23295,7 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="693"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="698"/>
         <source>Outline rendering is unavailable; the Tint and Edges style will be used.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -23653,7 +23993,7 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
         <translation type="unfinished">Cor do eixo X negativo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1417"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1430"/>
         <source>Select Negative X Axis Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecionar a cor do eixo X negativo</translation>
@@ -23671,7 +24011,7 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
         <translation type="unfinished">Cor do eixo Y negativo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1422"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1435"/>
         <source>Select Negative Y Axis Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecionar a cor do eixo Y negativo</translation>
@@ -23689,7 +24029,7 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
         <translation type="unfinished">Cor do eixo Z negativo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1427"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1440"/>
         <source>Select Negative Z Axis Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selecionar a cor do eixo Z negativo</translation>
@@ -23743,8 +24083,8 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
         <translation type="unfinished">Desenha as metades negativas das linhas de eixo nas cores dos eixos negativos, com a linha Z a estender-se abaixo da grelha base.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="574"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1595"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="577"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1608"/>
         <source>%1 ldu</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">%1 ldu</translation>
@@ -24292,7 +24632,7 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1160"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1168"/>
         <source>Update Minifigure Builder Settings</source>
         <translation type="unfinished"></translation>
     </message>
@@ -24373,7 +24713,7 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="852"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="858"/>
         <source>Blender Executable</source>
         <translation type="unfinished">Blender Executável</translation>
     </message>
@@ -24490,11 +24830,6 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Use Joint Rotation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <source>When the selected submodel has a joint, rotating it turns the joint around its own pivot and axis instead of the pivot point. Part &gt; Joint &gt; Rotate does the same for the current selection.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -24673,6 +25008,46 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Fade on Joint Move and Rotate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Show the parts that could not be loaded, and the parts the library marks as moved or as an alias, after a model opens, with a replacement from the library when one is found.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Warn About Missing and Moved Parts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>When the selected submodel has a joint, rotating it turns the joint around its own pivot and axis instead of the pivot point. Part &gt; Joint &gt; Rotate Joint does the same for the current selection.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Outline the innermost submodel under the pointer with the chosen color.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Submodel Hover Outline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Outline the innermost submodel under the pointer, or the submodel a joint would go on while setting a joint.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Hover Outline Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Choose the color of the submodel hover outline.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -25781,12 +26156,12 @@ N/A: %1 parts</source>
         <translation type="unfinished">Rotação</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1794"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1795"/>
         <source>Size </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1794"/>
+        <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1795"/>
         <source>Size X </source>
         <translation type="unfinished"></translation>
     </message>
@@ -27835,41 +28210,66 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
 <context>
     <name>swViewWidget</name>
     <message>
-        <location filename="../../source/rendering/sw_view_widget.cpp" line="53"/>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="55"/>
         <source>Stop looking through this camera.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Parar de olhar através desta câmera.</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_view_widget.cpp" line="52"/>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="54"/>
         <source>Free Camera</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Câmera livre</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_view_widget.cpp" line="166"/>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="198"/>
         <source>Camera: %1</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Câmera: %1</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_view_widget.cpp" line="76"/>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="78"/>
         <source>&lt;p&gt;&lt;b&gt;In-place Editing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The path shows the model being edited inside this view. The last name is the current editing target. Choose an earlier name to edit that ancestor, or the close button to return to the tab&apos;s model.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_view_widget.cpp" line="84"/>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="86"/>
         <source>End Editing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_view_widget.cpp" line="85"/>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="87"/>
         <source>Return to editing the tab&apos;s model.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_view_widget.cpp" line="185"/>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="112"/>
+        <source>&lt;p&gt;&lt;b&gt;Joint&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The path shows the joint picked in the Joints panel or being moved or rotated. A submodel name selects that submodel, staying in joint mode when it has a joint; the main model name ends joint mode. Choose the close button to clear the selection and return to the Select tool.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="121"/>
+        <source>End Joint</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="122"/>
+        <source>Clear the selection and return to the Select tool.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="217"/>
         <source>Editing model: %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="245"/>
+        <source>Joint %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="252"/>
+        <source>Joint: %1</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -1302,6 +1302,32 @@ void swView::OnButtonDown(swTrackButton TrackButton)
 		UpdateTrackTool();
 	};
 
+	// the joint bar ends the joint mode, not an empty click
+	if (ActiveModel && ActiveModel->IsJointFocused() && TrackButton == swTrackButton::Left && (mTrackTool == swTrackTool::None || mTrackTool == swTrackTool::Select) && !FindObjectUnderPointer(false, false).Object)
+	{
+		if (ActiveModel == mModel)
+			return;
+
+		swVector3 StartEnd[2] = { swVector3((float)mMouseX, (float)mMouseY, 0.0f), swVector3((float)mMouseX, (float)mMouseY, 1.0f) };
+		UnprojectPoints(StartEnd, 2);
+		swObjectRayTest TopRayTest;
+		TopRayTest.ViewCamera = mCamera;
+		TopRayTest.PartsOnly = false;
+		TopRayTest.IgnoreSelected = false;
+		TopRayTest.Start = StartEnd[0];
+		TopRayTest.End = StartEnd[1];
+		mModel->RayTest(TopRayTest);
+
+		// another submodel outside the one in place
+
+		if (!TopRayTest.ObjectSection.Object)
+			return;
+
+		EndJointFocus();
+		ActiveModel = GetActiveModel();
+		UpdateTrackTool();
+	}
+
 	switch (mTrackTool)
 	{
 	case swTrackTool::None:
@@ -1484,6 +1510,12 @@ void swView::OnButtonDown(swTrackButton TrackButton)
 			if (Pick)
 			{
 				gMainWindow->SetTool(swTool::Select);
+
+				if (const std::vector<swPart*> SetPath = ActiveModel->TakeJointSetPath(); !SetPath.empty())
+					FocusSetJoint(SetPath);
+				else if (mJointReturn && !ActiveModel->IsJointFocused())
+					EndJointFocus();
+
 				UpdateTrackTool();
 			}
 		}
@@ -1650,11 +1682,38 @@ void swView::OnRightButtonUp()
 
 	if (ShowMenu && gMainWindow->GetTool() == swTool::Joints)
 	{
+		swModel* ActiveModel = GetActiveModel();
+		const bool Pick = ActiveModel && ActiveModel->IsJointPick();
 		gMainWindow->SetTool(swTool::Select);
+
+		// a cancelled set joint goes back
+		if (Pick && mJointReturn && !ActiveModel->IsJointFocused())
+			EndJointFocus();
+
 		UpdateCursor();
 	}
 	else if (ShowMenu)
+	{
+		// the menu acts on what is under the pointer
+
+		swModel* ActiveModel = GetActiveModel();
+
+		if (const swObjectSection ObjectSection = FindObjectUnderPointer(false, false); ActiveModel && ObjectSection.Object && !ObjectSection.Object->IsSelected())
+			ActiveModel->SetSelectionAndFocusAction(std::vector<swObject*>(), ObjectSection.Object, ObjectSection.Section, gMainWindow->GetSelectionMode());
+
+		// set joint opens the submodel under the pointer
+		mContextPath.clear();
+
+		if (ActiveModel)
+		{
+			swVector3 StartEnd[2], Right, Up;
+			GetJointsRay(StartEnd, Right, Up);
+			mContextPath = ActiveModel->GetSubmodelPath(StartEnd[0], StartEnd[1]);
+		}
+
 		ShowContextMenu();
+		mContextPath.clear();
+	}
 }
 
 void swView::OnBackButtonDown()
@@ -1698,6 +1757,29 @@ void swView::GetJointsRay(swVector3* StartEnd, swVector3& Right, swVector3& Up) 
 	}
 }
 
+// use to follow the innermost submodel
+void swView::UpdateHoverOutline()
+{
+	std::vector<const swPart*> HoverChain;
+	const swTool Tool = gMainWindow ? gMainWindow->GetTool() : swTool::Select;
+	swModel* ActiveModel = GetActiveModel();
+
+	if (ActiveModel && swGetPreferences().mHoverOutline && mViewType == swViewType::View && !mTrackToolFromOverlay && (Tool == swTool::Select || Tool == swTool::Move || Tool == swTool::Rotate))
+	{
+		swVector3 StartEnd[2], Right, Up;
+		GetJointsRay(StartEnd, Right, Up);
+
+		for (const swPart* Part : ActiveModel->GetSubmodelPath(StartEnd[0], StartEnd[1]))
+			HoverChain.push_back(Part);
+	}
+
+	if (HoverChain == mHoverChain)
+		return;
+
+	mHoverChain = HoverChain;
+	Redraw();
+}
+
 void swView::OnMouseMove()
 {
 	swModel* ActiveModel = GetActiveModel();
@@ -1739,6 +1821,7 @@ void swView::OnMouseMove()
 		}
 
 		UpdateTrackTool();
+		UpdateHoverOutline();
 
 		if (mTrackTool == swTrackTool::Joints)
 		{
@@ -2186,6 +2269,12 @@ void swView::OnMouseMove()
 
 void swView::OnMouseLeave()
 {
+	if (!mHoverChain.empty())
+	{
+		mHoverChain.clear();
+		Redraw();
+	}
+
 	if (mCutawayHoverHandle != -1)
 	{
 		mCutawayHoverHandle = -1;

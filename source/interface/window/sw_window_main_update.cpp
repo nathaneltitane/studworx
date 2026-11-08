@@ -362,13 +362,12 @@ void swMainWindow::UpdateSnap()
 	};
 
 	const bool MoveSnapped = mMoveSnapEnabled && (mMoveXYSnapIndex || mMoveZSnapIndex);
-	const QString MoveXY = MoveSnapped ? MenuText(SW_EDIT_SNAP_MOVE_XY0 + mMoveXYSnapIndex) : tr("free");
-	const QString MoveZ = MoveSnapped ? MenuText(SW_EDIT_SNAP_MOVE_Z0 + mMoveZSnapIndex) : tr("free");
+	const QString Move = MoveSnapped ? tr("%1, %2").arg(MenuText(SW_EDIT_SNAP_MOVE_XY0 + mMoveXYSnapIndex), MenuText(SW_EDIT_SNAP_MOVE_Z0 + mMoveZSnapIndex)) : tr("free");
 	const QString Axes = mRelativeTransform ? tr("relative") : tr("absolute");
 	const QString Angle = GetAngleSnap() != 0.0f ? tr("%1 deg.").arg(swFormatDoubleLocalized(GetAngleSnap(), locale(), 'g', 6)) : tr("free");
 	const QString Pivot = GetSeparateTransform() ? tr("separately") : tr("together");
 
-	mStatusSnapText = tr("Move XY: %1 Z: %2 - Axes: %3 - Rotate: %4 / %5").arg(MoveXY, MoveZ, Axes, Angle, Pivot);
+	mStatusSnapText = tr("Move: %1 - Axes: %2 - Rotate: %3 / %4").arg(Move, Axes, Angle, Pivot);
 	UpdateStatusSegments();
 	mStatusSnapLabel->setToolTip(tr("Movement snap, rotation snap, transform axes and rotation pivot. Change them with the last buttons of the standard toolbar."));
 }

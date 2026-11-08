@@ -30,12 +30,15 @@ void swScene::Begin(const swMatrix44& ViewMatrix)
 	mOpaqueMeshes.clear();
 	mTranslucentMeshes.clear();
 	mInterfaceObjects.clear();
+	mHoverMeshes.clear();
+	mAddHover = false;
 
 	const swPreferences& Preferences = swGetPreferences();
 	mHighlightColor = swVector4FromColor(swClampStepColorAlpha(Preferences.mHighlightNewPartsColor));
 	mFadeColor = swVector4FromColor(swClampFadeColorAlpha(Preferences.mFadeStepsColor));
 	mFadeInlineColor = Preferences.mFadeInline ? swVector4FromColor(Preferences.mFadeInlineColor) : swVector4(1.0f, 1.0f, 1.0f, 0.99f);
 	mFadeJointColor = swVector4FromColor(Preferences.mFadeJointColor);
+	mHoverColor = swVector4FromColor(Preferences.mHoverOutlineColor);
 	mHasFadedParts = false;
 	mTranslucentFade = false;
 }
@@ -68,6 +71,14 @@ void swScene::End()
 
 void swScene::AddMesh(swMesh* Mesh, const swMatrix44& WorldMatrix, int ColorIndex, swRenderMeshState State)
 {
+	// hover meshes only feed the outline
+	if (mAddHover)
+	{
+		const float Distance = fabsf(swMultiply31(WorldMatrix[3], mViewMatrix).z) - mMeshLODDistance;
+		mHoverMeshes.push_back({ WorldMatrix, Mesh, ColorIndex, mAllowLOD ? Mesh->GetLodIndex(Distance) : SW_MESH_LOD_HIGH, swRenderMeshState::Default, mFadeColor });
+		return;
+	}
+
 	swRenderMesh& RenderMesh = mRenderMeshes.emplace_back();
 
 	RenderMesh.WorldMatrix = WorldMatrix;
@@ -603,6 +614,11 @@ void swScene::DrawHighlightMask(swContext* Context) const
 	DrawOutlineGeometry(Context, swOutlineGeometry::Highlight);
 }
 
+void swScene::DrawHoverMask(swContext* Context) const
+{
+	DrawOutlineGeometry(Context, swOutlineGeometry::Hover);
+}
+
 void swScene::DrawOutlineOccluders(swContext* Context) const
 {
 	DrawOutlineGeometry(Context, swOutlineGeometry::Occluders);
@@ -615,7 +631,7 @@ void swScene::DrawOutlineGeometry(swContext* Context, swOutlineGeometry Geometry
 	Context->ClearTexture2D();
 	Context->SetCutaway(mCutawayShape, mCutawayMatrix);
 
-	for (const swRenderMesh& RenderMesh : mRenderMeshes)
+	for (const swRenderMesh& RenderMesh : Geometry == swOutlineGeometry::Hover ? mHoverMeshes : mRenderMeshes)
 	{
 		const bool Selected = RenderMesh.State == swRenderMeshState::Selected || RenderMesh.State == swRenderMeshState::Focused;
 		const bool Highlighted = RenderMesh.State == swRenderMeshState::Highlighted;

@@ -1549,3 +1549,84 @@ void swModel::FindReplacePart(bool SearchForward, bool FindAll, bool Replace)
 	else
 		EndHistorySequence(tr("Selection"));
 }
+
+// use to swap parts in this model and every submodel it uses
+int swModel::ReplacePartData(const std::map<swPartData*, swPartData*>& Replacements)
+{
+	auto ReplaceParts = [&Replacements](swModel* Model)
+	{
+		int Count = 0;
+
+		for (const std::unique_ptr<swPart>& Part : Model->mParts)
+		{
+			const auto ReplacementIt = Replacements.find(Part->mPartData.Get());
+
+			if (ReplacementIt != Replacements.end())
+			{
+				Part->SetPartData(swPartDataReference(ReplacementIt->second), QString(), true, true);
+				Count++;
+			}
+		}
+
+		return Count;
+	};
+
+	std::vector<swModel*> SubModels;
+	std::set<swModel*> VisitedModels = { this };
+
+	for (size_t ModelIndex = 0; ModelIndex <= SubModels.size(); ModelIndex++)
+	{
+		std::set<swModel*> ChildModels;
+		(ModelIndex ? SubModels[ModelIndex - 1] : this)->GetSubModels(ChildModels);
+
+		for (swModel* ChildModel : ChildModels)
+			if (VisitedModels.insert(ChildModel).second)
+				SubModels.push_back(ChildModel);
+	}
+
+	BeginHistorySequence();
+	BeginEditHistory();
+
+	int ReplacedCount = ReplaceParts(this);
+
+	EndEditHistory();
+
+	for (swModel* SubModel : SubModels)
+	{
+		std::unique_ptr<swModelHistoryEdit> SubModelEdit = std::make_unique<swModelHistoryEdit>(swModelHistoryEditMergeKey{ swModelHistoryEditMerge::None, swObjectPropertyId::Count, SubModel->mCurrentStep, false });
+
+		SubModelEdit->SaveStartState(SubModel);
+		ReplacedCount += ReplaceParts(SubModel);
+		SubModelEdit->SaveEndState(SubModel);
+
+		if (SubModelEdit->StateChanged())
+		{
+			SubModel->CalculateStep(SubModel->mCurrentStep);
+			mHistorySequence.emplace_back(std::make_unique<swModelHistorySubModel>(SubModel->GetFileName(), std::move(SubModelEdit)));
+		}
+	}
+
+	if (!ReplacedCount)
+	{
+		EndHistorySequence(tr("Selection"));
+		return 0;
+	}
+
+	// update the bounds of parent models
+	if (mProject)
+	{
+		std::vector<swModel*> UpdatedModels;
+
+		for (const std::unique_ptr<swModel>& Model : mProject->GetModels())
+			Model->UpdatePartData(UpdatedModels);
+
+		gMainWindow->UpdateInUseCategory();
+	}
+
+	EndHistorySequence(tr("Replace Parts", nullptr, ReplacedCount));
+
+	gMainWindow->UpdateSelectedObjects(false);
+	gMainWindow->UpdateTimeline(false, true);
+
+	return ReplacedCount;
+}

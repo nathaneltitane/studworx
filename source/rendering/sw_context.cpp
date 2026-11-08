@@ -102,6 +102,7 @@ swContext::swContext()
 	mOutlineParams[1] = swVector4(0.0f, 0.0f, 0.0f, 0.0f);
 	mOutlineParams[2] = swVector4(0.0f, 0.0f, 0.0f, 0.0f);
 	mOutlineParams[3] = swVector4(0.0f, 0.0f, 0.0f, 0.0f);
+	mOutlineParams[4] = swVector4(0.0f, 0.0f, 0.0f, 0.0f);
 	mLightingStyle = swLightingStyle::Standard;
 	mCutawayShape = swCutawayShape::None;
 	mCutawayMatrix = swMatrix44Identity();
@@ -826,9 +827,30 @@ bool swContext::GenerateOutlineMasks(const swScene& Scene, QOpenGLFramebufferObj
 	SetDefaultState();
 	SetViewport(0, 0, FullFramebuffer.width(), FullFramebuffer.height());
 	ClearColorAndDepth(swVector4(0.0f, 0.0f, 0.0f, 0.0f));
-	Scene.DrawSelectionMask(this);
 
-	if (Scene.HasHighlightedMeshes())
+	// tint mode keeps only the hover outline
+	const bool DrawSelection = Scene.GetHighlightRenderMode() == swHighlightRenderMode::Outline;
+
+	// alpha holds the hover mask
+	glColorMask(GL_TRUE, GL_TRUE, GL_TRUE, GL_FALSE);
+
+	if (DrawSelection)
+		Scene.DrawSelectionMask(this);
+
+	glColorMask(GL_TRUE, GL_TRUE, GL_TRUE, GL_TRUE);
+
+	if (Scene.HasHoverMeshes())
+	{
+		EnableDepthTest(false);
+		glColorMask(GL_FALSE, GL_FALSE, GL_FALSE, GL_TRUE);
+
+		Scene.DrawHoverMask(this);
+
+		glColorMask(GL_TRUE, GL_TRUE, GL_TRUE, GL_TRUE);
+		EnableDepthTest(true);
+	}
+
+	if (DrawSelection && Scene.HasHighlightedMeshes())
 	{
 		// keep highlight and selection apart
 		EnableDepthTest(false);
@@ -842,7 +864,7 @@ bool swContext::GenerateOutlineMasks(const swScene& Scene, QOpenGLFramebufferObj
 
 	const bool Success = VisibleFramebuffer.bind() && glCheckFramebufferStatus(GL_FRAMEBUFFER) == GL_FRAMEBUFFER_COMPLETE;
 
-	if (Success && Scene.HasSelectedMeshes())
+	if (Success && DrawSelection && Scene.HasSelectedMeshes())
 	{
 		GLint OwnDepthBuffer = 0;
 
@@ -893,7 +915,7 @@ bool swContext::GenerateOutlineMasks(const swScene& Scene, QOpenGLFramebufferObj
 	return Success;
 }
 
-void swContext::DrawOutline(QOpenGLFramebufferObject& FullFramebuffer, QOpenGLFramebufferObject& VisibleFramebuffer, float DeviceScale, const swVector4& HighlightColor)
+void swContext::DrawOutline(QOpenGLFramebufferObject& FullFramebuffer, QOpenGLFramebufferObject& VisibleFramebuffer, float DeviceScale, const swVector4& HighlightColor, const swVector4& HoverColor)
 {
 	const swMatrix44 WorldMatrix = mWorldMatrix;
 	const swMatrix44 ViewMatrix = mViewMatrix;
@@ -911,7 +933,7 @@ void swContext::DrawOutline(QOpenGLFramebufferObject& FullFramebuffer, QOpenGLFr
 	const swPreferences& Preferences = swGetPreferences();
 
 	SetOutlineParams(swVector4(1.0f / FullFramebuffer.width(), 1.0f / FullFramebuffer.height(), static_cast<float>(Preferences.mSelectionOutlineWidth) * DeviceScale, 0.3f),
-		swVector4FromColor(Preferences.mObjectSelectedColor), swVector4FromColor(Preferences.mObjectFocusedColor), HighlightColor);
+		swVector4FromColor(Preferences.mObjectSelectedColor), swVector4FromColor(Preferences.mObjectFocusedColor), HighlightColor, HoverColor);
 
 	glActiveTexture(GL_TEXTURE1);
 	glBindTexture(GL_TEXTURE_2D, VisibleFramebuffer.texture());
@@ -1748,7 +1770,7 @@ void swContext::FlushState()
 
 	if (mOutlineParamsDirty && Program.OutlineParamsLocation != -1)
 	{
-		glUniform4fv(Program.OutlineParamsLocation, 4, mOutlineParams[0].GetFloats());
+		glUniform4fv(Program.OutlineParamsLocation, 5, mOutlineParams[0].GetFloats());
 		mOutlineParamsDirty = false;
 	}
 }

@@ -14,6 +14,8 @@
 #include "sw_window_utilities.h"
 #include "sw_view_cube.h"
 #include "sw_object_camera.h"
+#include "sw_object_part.h"
+#include "sw_data_part.h"
 
 swViewWidget::swViewWidget(QWidget* Parent, swView* View)
 	: QOpenGLWidget(Parent), mView(View)
@@ -101,6 +103,36 @@ swViewWidget::swViewWidget(QWidget* Parent, swView* View)
 
 		swSetupWidgetHelp(mModelEditingBar);
 		UpdateModelEditingPath();
+
+		// the joint being worked on
+		mJointBar = new QWidget(mOverlay);
+		mJointBar->setObjectName(QStringLiteral("JointBar"));
+		mJointBar->setAttribute(Qt::WA_StyledBackground, true);
+		mJointBar->setStyleSheet(QStringLiteral("#JointBar { background: palette(button); border: 1px solid palette(mid); border-radius: 3px; }"));
+		mJointBar->setWhatsThis(tr("<p><b>Joint</b></p><p>The path shows the joint picked in the Joints panel or being moved or rotated. A submodel name selects that submodel, staying in joint mode when it has a joint; the main model name ends joint mode. Choose the close button to clear the selection and return to the Select tool.</p>"));
+		mJointBar->setVisible(false);
+
+		QHBoxLayout* JointLayout = new QHBoxLayout(mJointBar);
+		JointLayout->setContentsMargins(5, 5, 5, 5);
+
+		// close button first
+		QToolButton* JointCloseButton = new QToolButton(mJointBar);
+		JointCloseButton->setIcon(swCreatePaintedIcon(swPaintedIcon::Close));
+		JointCloseButton->setAccessibleName(tr("End Joint"));
+		JointCloseButton->setToolTip(tr("Clear the selection and return to the Select tool."));
+		JointCloseButton->setAutoRaise(false);
+		JointCloseButton->setFocusPolicy(Qt::NoFocus);
+		JointCloseButton->setFixedSize(ButtonHeight, ButtonHeight);
+		JointLayout->addWidget(JointCloseButton);
+
+		mJointPathLayout = new QHBoxLayout();
+		mJointPathLayout->setContentsMargins(0, 0, 0, 0);
+		JointLayout->addLayout(mJointPathLayout, 1);
+		mOverlayLayout->addWidget(mJointBar, 0, Qt::AlignLeft);
+
+		connect(JointCloseButton, &QToolButton::clicked, this, &swViewWidget::EndJoint);
+
+		swSetupWidgetHelp(mJointBar);
 	}
 }
 
@@ -183,11 +215,52 @@ void swViewWidget::UpdateModelEditingPath()
 	{
 		mModelEditingNames = Names;
 		mModelEditingBar->setAccessibleName(tr("Editing model: %1").arg(Names.join(QStringLiteral(" \u203a "))));
-		mModelEditingBar->setVisible(Names.size() > 1);
 		UpdateModelEditingButtons();
 	}
 
+	mModelEditingBar->setVisible(Names.size() > 1 && mJointNames.isEmpty());
+
 	UpdateOverlayGeometry();
+}
+
+// use to show the joint path
+void swViewWidget::UpdateJointPath()
+{
+	if (!mOverlay || !mView)
+		return;
+
+	const swModel* Model = mView->GetActiveModel();
+	const swPart* Part = Model && Model->IsJointFocused() ? Model->GetJointPart() : nullptr;
+	QStringList Names;
+
+	if (Part && Part->HasJoints())
+	{
+		const std::vector<std::unique_ptr<swPart>>& Parts = Model->GetParts();
+		const auto Found = std::find_if(Parts.begin(), Parts.end(), [Part](const std::unique_ptr<swPart>& Entry) { return Entry.get() == Part; });
+		const int Index = static_cast<int>(Found - Parts.begin());
+
+		for (const swModel* EditingModel : mView->GetModelEditingPath())
+			Names << EditingModel->GetProperties().mFileName;
+
+		Names << QString("%1 %2").arg(Part->mPartData->GetModel()->GetFileName()).arg(Index + 1, 3, 10, QLatin1Char('0')) << tr("Joint %1").arg(Model->GetJointIndex() + 1, 3, 10, QLatin1Char('0'));
+	}
+
+	if (Names == mJointNames)
+		return;
+
+	mJointNames = Names;
+	mJointBar->setAccessibleName(tr("Joint: %1").arg(Names.join(QStringLiteral(" \u203a "))));
+	mJointBar->setVisible(!Names.isEmpty());
+	mModelEditingBar->setVisible(mModelEditingNames.size() > 1 && Names.isEmpty());
+	UpdateJointButtons();
+	UpdateOverlayGeometry();
+}
+
+// back to plain selection
+void swViewWidget::EndJoint()
+{
+	setFocus(Qt::OtherFocusReason);
+	mView->EndJointFocus();
 }
 
 void swViewWidget::SetFindReplaceWidget(QWidget* Widget)
@@ -205,12 +278,13 @@ void swViewWidget::UpdateOverlayGeometry()
 	if (!mOverlay)
 		return;
 
-	const bool Editing = mModelEditingNames.size() > 1;
+	const bool Editing = mModelEditingNames.size() > 1 && mJointNames.isEmpty();
 	const bool Camera = !mCameraName.isEmpty();
+	const bool Joint = !mJointNames.isEmpty();
 
-	mOverlay->setVisible(Editing || Camera || mFindReplaceWidget);
+	mOverlay->setVisible(Editing || Camera || Joint || mFindReplaceWidget);
 
-	if (!Editing && !Camera && !mFindReplaceWidget)
+	if (!Editing && !Camera && !Joint && !mFindReplaceWidget)
 		return;
 
 	int PreferredWidth = 0;
@@ -220,6 +294,9 @@ void swViewWidget::UpdateOverlayGeometry()
 
 	if (Camera)
 		PreferredWidth = swMaximum(PreferredWidth, mCameraBar->sizeHint().width());
+
+	if (Joint)
+		PreferredWidth = swMaximum(PreferredWidth, mJointBar->sizeHint().width());
 
 	if (mFindReplaceWidget)
 		PreferredWidth = swMaximum(PreferredWidth, mFindReplaceWidget->sizeHint().width());
@@ -294,6 +371,55 @@ std::array<int, 4> swViewWidget::GetOverlayCornerSizes() const
 }
 
 // use to show the editing path
+void swViewWidget::UpdateJointButtons()
+{
+	// clear the old entries later
+	while (QLayoutItem* Item = mJointPathLayout->takeAt(0))
+	{
+		Item->widget()->hide();
+		Item->widget()->deleteLater();
+		delete Item;
+	}
+
+	const int ButtonHeight = swGetPanelButtonSize().height();
+	const QPixmap Chevron = swCreateDisclosureIcon(false, mJointBar->palette()).pixmap(16, 16);
+
+	for (int Index = 0; Index < mJointNames.size(); Index++)
+	{
+		if (Index)
+		{
+			QLabel* ChevronLabel = new QLabel(mJointBar);
+			ChevronLabel->setPixmap(Chevron);
+			mJointPathLayout->addWidget(ChevronLabel);
+			ChevronLabel->show();
+		}
+
+		swModelEditingButton* Button = new swModelEditingButton(mJointBar);
+		Button->setText(mJointNames[Index]);
+		Button->setToolTip(mJointNames[Index]);
+		Button->setAutoRaise(false);
+		Button->setFocusPolicy(Qt::NoFocus);
+		Button->setFixedHeight(ButtonHeight);
+		mJointPathLayout->addWidget(Button);
+		Button->show();
+
+		// bold current joint
+		if (Index + 1 == mJointNames.size())
+		{
+			QFont Font = Button->font();
+			Font.setBold(true);
+			Button->setFont(Font);
+			continue;
+		}
+
+		connect(Button, &QToolButton::clicked, this, [this, Index]()
+		{
+			setFocus(Qt::OtherFocusReason);
+			mView->SetJointPathDepth(static_cast<size_t>(Index));
+		});
+	}
+}
+
 void swViewWidget::UpdateModelEditingButtons()
 {
 	// clear the old entries later

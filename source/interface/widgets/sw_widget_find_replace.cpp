@@ -3,6 +3,7 @@
 #include "sw_widget_picker_color.h"
 #include "sw_window_main.h"
 #include "sw_widget_selection_part_popup.h"
+#include "sw_widget_selection_part.h"
 #include "sw_data_part.h"
 #include "sw_object_part.h"
 #include "sw_model.h"
@@ -16,7 +17,7 @@ swFindReplaceWidget::swFindReplaceWidget(QWidget* Parent, swModel* Model, bool R
 	setObjectName(QStringLiteral("FindReplaceBar"));
 	setWhatsThis(tr("<p><b>Find and Replace</b></p><p>Find parts by color, part or both, then step through the matches or select them all. "
 		"Open the replace options to swap the color or part of the matches, one at a time or all at once.</p>"
-		"<p>Include Submodels makes Replace All change the matching parts inside every submodel used by this model too.</p>"));
+		"<p>Replace in Submodels makes Replace All change the matching parts inside every submodel used by this model too.</p>"));
 	setAttribute(Qt::WA_StyledBackground, true);
 	setStyleSheet(QStringLiteral("#FindReplaceBar { background: palette(button); border: 1px solid palette(mid); border-radius: 3px; }"));
 
@@ -45,29 +46,12 @@ swFindReplaceWidget::swFindReplaceWidget(QWidget* Parent, swModel* Model, bool R
 	swColorPicker* FindColorPicker = new swColorPicker(this, true);
 	FindColorPicker->setToolTip(tr("Search Color"));
 	FindColorPicker->setFixedSize(swGetPanelButtonSize());
-	Layout->addWidget(FindColorPicker, 0, 2);
+	Layout->addWidget(FindColorPicker, 0, 3);
 
-	mFindPartComboBox = new QComboBox(this);
-	mFindPartComboBox->setToolTip(tr("Search Part"));
-	mFindPartComboBox->setEditable(true);
-	mFindPartComboBox->setInsertPolicy(QComboBox::NoInsert);
-
-	// keep a steady box width
-	mFindPartComboBox->setSizeAdjustPolicy(QComboBox::AdjustToMinimumContentsLengthWithIcon);
-	mFindPartComboBox->setMinimumContentsLength(16);
-	mFindPartComboBox->lineEdit()->setPlaceholderText(tr("None"));
-
-	// center the placeholder
-	QLineEdit* FindLineEdit = mFindPartComboBox->lineEdit();
-	const auto SetFindAlignment = [FindLineEdit](const QString& Text)
-	{
-		FindLineEdit->setAlignment(Text.isEmpty() ? Qt::AlignCenter : Qt::AlignLeft | Qt::AlignVCenter);
-	};
-
-	connect(FindLineEdit, &QLineEdit::textChanged, this, SetFindAlignment);
-	SetFindAlignment(FindLineEdit->text());
-	SetupRowControl(mFindPartComboBox);
-	Layout->addWidget(mFindPartComboBox, 0, 3);
+	mFindPartButton = new swElidableToolButton(this);
+	mFindPartButton->setToolTip(tr("Search Part"));
+	SetupRowControl(mFindPartButton);
+	Layout->addWidget(mFindPartButton, 0, 2);
 
 	QToolButton* FindNextButton = new QToolButton(this);
 	FindNextButton->setAutoRaise(false);
@@ -81,6 +65,24 @@ swFindReplaceWidget::swFindReplaceWidget(QWidget* Parent, swModel* Model, bool R
 	SetupRowControl(FindAllButton);
 	Layout->addWidget(FindAllButton, 0, 5);
 
+	// same options as the part popups
+	swPartSelectionWidget* OptionsPartSelection = new swPartSelectionWidget(true, this);
+	OptionsPartSelection->hide();
+
+	QMenu* OptionsMenu = new QMenu(this);
+	QToolButton* OptionsButton = new QToolButton(this);
+	OptionsButton->setAutoRaise(false);
+	OptionsButton->setIcon(swCreatePaintedIcon(swPaintedIcon::Gear));
+	OptionsButton->setToolTip(tr("Configure how the part lists are filtered and displayed."));
+	OptionsButton->setAccessibleName(tr("Part List Options"));
+	OptionsButton->setPopupMode(QToolButton::InstantPopup);
+	OptionsButton->setMenu(OptionsMenu);
+	OptionsButton->setFocusPolicy(Qt::NoFocus);
+	OptionsButton->setFixedSize(ButtonHeight, ButtonHeight);
+	Layout->addWidget(OptionsButton, 0, 6);
+
+	connect(OptionsMenu, &QMenu::aboutToShow, OptionsPartSelection, &swPartSelectionWidget::OptionsMenuAboutToShow);
+
 	// chevron toggles the replace row
 	QToolButton* ReplaceToggleButton = new QToolButton(this);
 	ReplaceToggleButton->setAutoRaise(false);
@@ -88,12 +90,10 @@ swFindReplaceWidget::swFindReplaceWidget(QWidget* Parent, swModel* Model, bool R
 	ReplaceToggleButton->setFixedSize(ButtonHeight, ButtonHeight);
 	ReplaceToggleButton->setToolTip(tr("Show or hide the replace options."));
 	ReplaceToggleButton->setAccessibleName(tr("Toggle Replace"));
-	Layout->addWidget(ReplaceToggleButton, 0, 6);
+	Layout->addWidget(ReplaceToggleButton, 0, 7);
 
 	connect(FindColorPicker, &swColorPicker::ColorChanged, this, &swFindReplaceWidget::FindColorIndexChanged);
-	connect(mFindPartComboBox->lineEdit(), &QLineEdit::returnPressed, gMainWindow->mActions[SW_EDIT_FIND_NEXT], &QAction::trigger);
-	connect(mFindPartComboBox->lineEdit(), &QLineEdit::textEdited, this, &swFindReplaceWidget::FindTextEdited);
-	connect(mFindPartComboBox, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &swFindReplaceWidget::FindActivated);
+	connect(mFindPartButton, &swElidableToolButton::clicked, this, &swFindReplaceWidget::FindButtonClicked);
 	connect(CloseButton, &QToolButton::clicked, this, &QObject::deleteLater);
 
 	QLabel* ReplaceLabel = new QLabel(tr("Replace"), this);
@@ -102,12 +102,12 @@ swFindReplaceWidget::swFindReplaceWidget(QWidget* Parent, swModel* Model, bool R
 	swColorPicker* ReplaceColorPicker = new swColorPicker(this, true);
 	ReplaceColorPicker->setToolTip(tr("Replacement Color"));
 	ReplaceColorPicker->setFixedSize(swGetPanelButtonSize());
-	Layout->addWidget(ReplaceColorPicker, 1, 2);
+	Layout->addWidget(ReplaceColorPicker, 1, 3);
 
 	mReplacePartButton = new swElidableToolButton(this);
 	mReplacePartButton->setToolTip(tr("Replacement Part"));
 	SetupRowControl(mReplacePartButton);
-	Layout->addWidget(mReplacePartButton, 1, 3);
+	Layout->addWidget(mReplacePartButton, 1, 2);
 
 	QToolButton* ReplaceNextButton = new QToolButton(this);
 	ReplaceNextButton->setAutoRaise(false);
@@ -139,11 +139,14 @@ swFindReplaceWidget::swFindReplaceWidget(QWidget* Parent, swModel* Model, bool R
 		Layout->setColumnMinimumWidth(Column, ColumnWidth);
 	}
 
+	// part buttons elide, give them a steady width
+	Layout->setColumnMinimumWidth(2, fontMetrics().averageCharWidth() * 24);
+
 	// submodel option spans the replace row
-	QCheckBox* ReplaceSubModelsCheckBox = new QCheckBox(tr("Include Submodels"), this);
+	QCheckBox* ReplaceSubModelsCheckBox = new QCheckBox(tr("Replace in Submodels"), this);
 	ReplaceSubModelsCheckBox->setToolTip(tr("Replace All also replaces the matching parts inside every submodel used by this model."));
 	ReplaceSubModelsCheckBox->setFocusPolicy(Qt::NoFocus);
-	Layout->addWidget(ReplaceSubModelsCheckBox, 2, 3, 1, 3);
+	Layout->addWidget(ReplaceSubModelsCheckBox, 2, 2, 1, 4);
 
 	connect(ReplaceSubModelsCheckBox, &QCheckBox::toggled, this, [](bool Checked)
 	{
@@ -171,31 +174,24 @@ swFindReplaceWidget::swFindReplaceWidget(QWidget* Parent, swModel* Model, bool R
 	swPartsList PartsList;
 	Model->GetPartsList(gDefaultColor, false, true, PartsList);
 
-	for (const auto& PartIt : PartsList)
-		mFindPartComboBox->addItem(QString::fromLatin1(PartIt.first->m_strDescription), QVariant::fromValue((void*)PartIt.first));
-	mFindPartComboBox->model()->sort(0);
-	mFindPartComboBox->view()->setMinimumWidth(mFindPartComboBox->view()->sizeHintForColumn(0) + mFindPartComboBox->view()->verticalScrollBar()->sizeHint().width());
+	// one color shows as is, several use the main color
 
+	for (const auto& [PartData, ColorCounts] : PartsList)
+	{
+		mFindParts.emplace_back(const_cast<swPartData*>(PartData), PartData->m_strDescription);
+		mFindColors.emplace_back(ColorCounts.size() == 1 ? ColorCounts.begin()->first : gDefaultColor, ColorCounts.size() > 1);
+	}
+
+	swFindReplaceParameters& Params = swView::GetFindReplaceParams();
 	swPart* Focus = dynamic_cast<swPart*>(Model->GetFocusObject());
 
-	if (Focus)
-	{
-		swFindReplaceParameters& Params = swView::GetFindReplaceParams();
+	Params.FindString.clear();
+	Params.FindPartData = Focus ? Focus->mPartData.Get() : nullptr;
+	Params.FindColorIndex = Focus ? Focus->GetColorIndex() : swGetColorIndex(SW_COLOR_NO_COLOR);
 
-		Params.FindPartData = Focus->mPartData.Get();
-		Params.FindColorIndex = Focus->GetColorIndex();
-
-		FindColorPicker->SetCurrentColor(Params.FindColorIndex);
-		mFindPartComboBox->setCurrentIndex(mFindPartComboBox->findData(QVariant::fromValue((void*)Params.FindPartData)));
-
-	}
-	else
-	{
-		FindColorPicker->SetCurrentColor(swGetColorIndex(SW_COLOR_NO_COLOR));
-		mFindPartComboBox->setEditText(QString());
-	}
-
-	mFindPartComboBox->setFocus();
+	FindColorPicker->SetCurrentColor(Params.FindColorIndex);
+	mFindPartButton->setText(Params.FindPartData ? QString::fromLatin1(Params.FindPartData->m_strDescription) : tr("None"));
+	mFindPartButton->setFocus();
 	adjustSize();
 	show();
 }
@@ -207,20 +203,18 @@ void swFindReplaceWidget::FindColorIndexChanged(int ColorIndex)
 	Params.FindColorIndex = ColorIndex;
 }
 
-void swFindReplaceWidget::FindTextEdited(const QString& Text)
+void swFindReplaceWidget::FindButtonClicked()
 {
 	swFindReplaceParameters& Params = swView::GetFindReplaceParams();
+	const bool ColorChosen = swGetColorCode(Params.FindColorIndex) != SW_COLOR_NO_COLOR;
 
-	Params.FindString = Text;
-	Params.FindPartData = nullptr;
-}
+	std::optional<swPartData*> Result = swShowPartSelectionPopup(Params.FindPartData, mFindParts, ColorChosen ? Params.FindColorIndex : gDefaultColor, mFindPartButton, mFindPartButton->mapToGlobal(mFindPartButton->rect().bottomLeft()), ColorChosen ? std::vector<std::pair<int, bool>>() : mFindColors);
 
-void swFindReplaceWidget::FindActivated(int Index)
-{
-	swFindReplaceParameters& Params = swView::GetFindReplaceParams();
+	if (!Result.has_value())
+		return;
 
-	Params.FindString.clear();
-	Params.FindPartData = (swPartData*)mFindPartComboBox->itemData(Index).value<void*>();
+	Params.FindPartData = Result.value();
+	mFindPartButton->setText(Params.FindPartData ? QString::fromLatin1(Params.FindPartData->m_strDescription) : tr("None"));
 }
 
 void swFindReplaceWidget::ReplaceColorIndexChanged(int ColorIndex)

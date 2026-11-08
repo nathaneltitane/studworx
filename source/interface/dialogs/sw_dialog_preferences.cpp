@@ -383,6 +383,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->FadeSteps, &QCheckBox::toggled, this, &swPreferencesDialog::FadeStepsToggled);
 	connect(ui->FadeInline, &QCheckBox::toggled, this, &swPreferencesDialog::FadeInlineToggled);
 	connect(ui->FadeJoint, &QCheckBox::toggled, this, &swPreferencesDialog::FadeJointToggled);
+	connect(ui->HoverOutline, &QCheckBox::toggled, ui->HoverOutlineColor, &QWidget::setEnabled);
 	connect(ui->HighlightNewParts, &QCheckBox::toggled, this, &swPreferencesDialog::HighlightNewPartsToggled);
 	connect(ui->gridStuds, &QCheckBox::toggled, this, &swPreferencesDialog::GridStudsToggled);
 	connect(ui->gridLines, &QCheckBox::toggled, this, &swPreferencesDialog::GridLinesToggled);
@@ -425,6 +426,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->FadeStepsColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->FadeInlineColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->FadeJointColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
+	connect(ui->HoverOutlineColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->HighlightNewPartsColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->gridStudColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->gridLineColor, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
@@ -510,6 +512,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->FlexMiddleControlPoint->setChecked(mOptions->Preferences.mFlexMiddleControlPoint);
 	ui->WatchFileChanges->setChecked(mOptions->Preferences.mWatchFileChanges);
 	ui->LoadPartsBeforeShowing->setChecked(mOptions->Preferences.mLoadPartsBeforeShowing);
+	ui->WarnPartsLoadFailure->setChecked(mOptions->Preferences.mWarnPartsLoadFailure);
 	ui->MigrateMetaCommands->setCurrentIndex(static_cast<int>(mOptions->Preferences.mMigrateMetaCommands));
 	ui->MarkColladaTransparency->setChecked(mOptions->Preferences.mMarkColladaTransparency);
 	ui->KMZGeometry->setCurrentIndex(mOptions->Preferences.mKMZVisibleSurfaces ? 0 : 1);
@@ -578,6 +581,8 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->FadeInline->setChecked(mOptions->Preferences.mFadeInline);
 	ui->FadeJoint->setChecked(mOptions->Preferences.mFadeJoint);
 	ui->FadeJointMoving->setChecked(mOptions->Preferences.mFadeJointMoving);
+	ui->HoverOutline->setChecked(mOptions->Preferences.mHoverOutline);
+	ui->HoverOutlineColor->setEnabled(mOptions->Preferences.mHoverOutline);
 	ui->HighlightNewParts->setChecked(mOptions->Preferences.mHighlightNewParts);
 	ui->gridStuds->setChecked(mOptions->Preferences.mDrawGridStuds);
 	ui->gridLines->setChecked(mOptions->Preferences.mDrawGridLines);
@@ -738,6 +743,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	SetButtonPixmap(mOptions->Preferences.mFadeStepsColor, ui->FadeStepsColor);
 	SetButtonPixmap(mOptions->Preferences.mFadeInlineColor, ui->FadeInlineColor);
 	SetButtonPixmap(mOptions->Preferences.mFadeJointColor, ui->FadeJointColor);
+	SetButtonPixmap(mOptions->Preferences.mHoverOutlineColor, ui->HoverOutlineColor);
 	SetButtonPixmap(mOptions->Preferences.mHighlightNewPartsColor, ui->HighlightNewPartsColor);
 	SetButtonPixmap(mOptions->Preferences.mGridStudColor, ui->gridStudColor);
 	SetButtonPixmap(mOptions->Preferences.mGridLineColor, ui->gridLineColor);
@@ -894,6 +900,7 @@ void swPreferencesDialog::accept()
 	mOptions->Preferences.mFlexMiddleControlPoint = ui->FlexMiddleControlPoint->isChecked();
 	mOptions->Preferences.mWatchFileChanges = ui->WatchFileChanges->isChecked();
 	mOptions->Preferences.mLoadPartsBeforeShowing = ui->LoadPartsBeforeShowing->isChecked();
+	mOptions->Preferences.mWarnPartsLoadFailure = ui->WarnPartsLoadFailure->isChecked();
 	mOptions->Preferences.mMigrateMetaCommands = static_cast<swMigrateMetaCommandsMode>(ui->MigrateMetaCommands->currentIndex());
 	mOptions->Preferences.mMarkColladaTransparency = ui->MarkColladaTransparency->isChecked();
 	mOptions->Preferences.mKMZVisibleSurfaces = ui->KMZGeometry->currentIndex() == 0;
@@ -929,6 +936,7 @@ void swPreferencesDialog::accept()
 	mOptions->Preferences.mFadeInline = ui->FadeInline->isChecked();
 	mOptions->Preferences.mFadeJoint = ui->FadeJoint->isChecked();
 	mOptions->Preferences.mFadeJointMoving = ui->FadeJointMoving->isChecked();
+	mOptions->Preferences.mHoverOutline = ui->HoverOutline->isChecked();
 	mOptions->Preferences.mHighlightNewParts = ui->HighlightNewParts->isChecked();
 
 	mOptions->Preferences.mDrawGridStuds = ui->gridStuds->isChecked();
@@ -1363,6 +1371,11 @@ void swPreferencesDialog::ColorButtonClicked()
 		Color = &mOptions->Preferences.mFadeJointColor;
 		Title = tr("Select Joint Fade Color");
 		DialogOptions = QColorDialog::ShowAlphaChannel;
+	}
+	else if (Button == ui->HoverOutlineColor)
+	{
+		Color = &mOptions->Preferences.mHoverOutlineColor;
+		Title = tr("Select Hover Outline Color");
 	}
 	else if (Button == ui->HighlightNewPartsColor)
 	{

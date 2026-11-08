@@ -130,9 +130,19 @@ void swView::MakeCurrent()
 
 void swView::Redraw()
 {
+	// a plain selection keeps the editing
+	if (mJointReturn && mModel)
+	{
+		if (GetActiveModel()->IsJointFocused())
+			mJointSeen = true;
+		else if (mJointSeen)
+			mJointReturn = false;
+	}
+
 	if (mWidget)
 	{
 		mWidget->UpdateModelEditingPath();
+		mWidget->UpdateJointPath();
 		mWidget->update();
 	}
 }
@@ -208,6 +218,10 @@ void swView::SetSubmodelActive(size_t Depth)
 
 	StopTracking(true);
 
+	// another model in place keeps the camera
+	if (Depth != mSubmodelEditingPath.size())
+		mZoomExtentsCamera = nullptr;
+
 	const std::vector<swModel*> EditingModels = GetModelEditingPath();
 
 	for (size_t Index = EditingModels.size(); Index > Depth + 1; Index--)
@@ -246,6 +260,7 @@ void swView::SetSelectedSubmodelActive()
 		return;
 
 	// keep ancestor models at their steps
+	mZoomExtentsCamera = nullptr;
 	mSubmodelEditingPath.push_back(Part);
 	mActiveSubmodelInstance = Part;
 
@@ -256,6 +271,203 @@ void swView::SetSelectedSubmodelActive()
 	RemoveCamera();
 
 	GetActiveModel()->UpdateInterface();
+}
+
+// use to edit a chain of submodels in place
+void swView::SetSubmodelEditingPath(const std::vector<swPart*>& Path)
+{
+	SetSubmodelActive(0);
+
+	// stop where an instance is gone
+	swModel* Parent = mModel;
+
+	for (swPart* Part : Path)
+	{
+		const std::vector<std::unique_ptr<swPart>>& Parts = Parent->GetParts();
+
+		if (std::none_of(Parts.begin(), Parts.end(), [Part](const std::unique_ptr<swPart>& Entry) { return Entry.get() == Part; }) || !Part->mPartData->IsModel())
+			break;
+
+		mSubmodelEditingPath.push_back(Part);
+		Parent = Part->mPartData->GetModel();
+		Parent->SetTemporaryStep(Parent->GetLastStep());
+	}
+
+	mActiveSubmodelInstance = mSubmodelEditingPath.empty() ? nullptr : mSubmodelEditingPath.back();
+
+	if (mActiveSubmodelInstance)
+		mZoomExtentsCamera = nullptr;
+
+	RestoreModelEditingContext();
+	RemoveCamera();
+	GetActiveModel()->UpdateInterface();
+}
+
+// joints edit their model in place
+bool swView::SetJointModelActive(swModel* Target)
+{
+	swModel* ActiveModel = GetActiveModel();
+
+	if (!ActiveModel->IsJointFocused())
+	{
+		mJointReturnPath = mSubmodelEditingPath;
+		mJointReturn = true;
+	}
+
+	// focus is set after the switch
+	mJointSeen = false;
+
+	if (ActiveModel == Target)
+		return true;
+
+	if (ActiveModel->IsJointFocused())
+		ActiveModel->EndJointFocus();
+
+	// first instance of the target
+	std::vector<swPart*> Path;
+	std::function<bool(swModel*)> FindPath = [&](swModel* Model)
+	{
+		if (Model == Target)
+			return true;
+
+		for (const std::unique_ptr<swPart>& Part : Model->GetParts())
+		{
+			if (!Part->mPartData->IsModel())
+				continue;
+
+			Path.push_back(Part.get());
+
+			if (FindPath(Part->mPartData->GetModel()))
+				return true;
+
+			Path.pop_back();
+		}
+
+		return false;
+	};
+
+	if (!FindPath(mModel))
+		return false;
+
+	SetSubmodelEditingPath(Path);
+	return true;
+}
+
+// set joint from the menu picks on the submodel under the pointer
+bool swView::OpenSetJoint()
+{
+	if (mContextPath.empty())
+		return false;
+
+	swModel* ActiveModel = GetActiveModel();
+
+	if (!ActiveModel->IsJointFocused())
+	{
+		mJointReturnPath = mSubmodelEditingPath;
+		mJointReturn = true;
+	}
+
+	mJointSeen = false;
+	std::vector<swPart*> Path = mSubmodelEditingPath;
+	Path.insert(Path.end(), mContextPath.begin(), mContextPath.end() - 1);
+	swPart* Holder = mContextPath.back();
+	mContextPath.clear();
+
+	if (ActiveModel->IsJointFocused())
+		ActiveModel->EndJointFocus();
+
+	if (Path != mSubmodelEditingPath)
+	{
+		SetSubmodelEditingPath(Path);
+		ActiveModel = GetActiveModel();
+	}
+
+	ActiveModel->SetSelectionAndFocusAction({ Holder }, Holder, SW_PART_SECTION_POSITION, swSelectionMode::Single);
+	gMainWindow->SetTool(swTool::Joints);
+	ActiveModel->SetJointPick(true);
+	ActiveModel->UpdateInterface();
+	UpdateAllViews();
+	return true;
+}
+
+// set joint ends in joint mode on the new joint
+void swView::FocusSetJoint(const std::vector<swPart*>& Parts)
+{
+	swModel* ActiveModel = GetActiveModel();
+	std::vector<swPart*> Path = mSubmodelEditingPath;
+	Path.insert(Path.end(), Parts.begin(), Parts.end() - 1);
+
+	// a set joint from the menu already keeps its way back
+	if (!ActiveModel->IsJointFocused() && !mJointReturn)
+	{
+		mJointReturnPath = mSubmodelEditingPath;
+		mJointReturn = true;
+	}
+
+	if (Path != mSubmodelEditingPath)
+	{
+		if (ActiveModel->IsJointFocused())
+			ActiveModel->EndJointFocus();
+
+		SetSubmodelEditingPath(Path);
+		ActiveModel = GetActiveModel();
+	}
+
+	swPart* Holder = Parts.back();
+	ActiveModel->SetSelectionAndFocusAction({ Holder }, Holder, SW_PART_SECTION_POSITION, swSelectionMode::Single);
+	ActiveModel->SetJointFocus();
+	mJointSeen = true;
+	ActiveModel->UpdateInterface();
+	UpdateAllViews();
+}
+
+// back to where the joint started
+void swView::EndJointFocus()
+{
+	// the redraw from ending clears the flag
+	const bool Return = mJointReturn;
+	mJointReturn = false;
+	GetActiveModel()->EndJointFocus();
+
+	if (Return)
+		SetSubmodelEditingPath(mJointReturnPath);
+
+	gMainWindow->SetTool(swTool::Select);
+}
+
+// select the entry of a model on the joint path
+void swView::SetJointPathDepth(size_t Index)
+{
+	// the joint entry itself stays as it is
+	if (Index > mSubmodelEditingPath.size())
+		return;
+
+	// a model button stands for its own entry, the main model has none
+	const size_t Depth = Index ? Index - 1 : 0;
+	swModel* ActiveModel = GetActiveModel();
+	swPart* Part = Index ? mSubmodelEditingPath[Depth] : nullptr;
+	const bool Joint = Part && Part->HasJoints();
+	const bool Return = mJointReturn;
+	mJointReturn = false;
+	ActiveModel->EndJointFocus();
+	SetSubmodelActive(Depth);
+
+	if (!Part)
+		return gMainWindow->SetTool(swTool::Select);
+
+	ActiveModel = GetActiveModel();
+	ActiveModel->SetSelectionAndFocusAction({ Part }, Part, SW_PART_SECTION_POSITION, swSelectionMode::Single);
+
+	if (!Joint)
+		return gMainWindow->SetTool(swTool::Select);
+
+	// keep the joint mode on its joint
+	ActiveModel->SetJointIndex(Part, 0);
+	ActiveModel->SetJointFocus();
+	mJointReturn = Return;
+	mJointSeen = true;
+	ActiveModel->UpdateInterface();
+	UpdateAllViews();
 }
 
 void swView::CreateResources(swContext* Context)

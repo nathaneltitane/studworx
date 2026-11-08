@@ -183,6 +183,7 @@ enum class swPaintedIcon
 	RenderPlaceholder,
 	ThumbnailFlexible,
 	ThumbnailTrackTrain,
+	ThumbnailColors,
 	CursorBrick,
 	CursorMove,
 	CursorMoveAxisX,

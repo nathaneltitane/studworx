@@ -172,6 +172,23 @@ public:
 
 	void Draw(swContext* Context, const std::function<void()>& PreTranslucentCallback) const;
 	bool HasSelectedMeshes() const;
+	void DrawHoverMask(swContext* Context) const;
+
+	bool HasHoverMeshes() const
+	{
+		return !mHoverMeshes.empty();
+	}
+
+	void SetAddHover(bool AddHover)
+	{
+		mAddHover = AddHover;
+	}
+
+	const swVector4& GetHoverColor() const
+	{
+		return mHoverColor;
+	}
+
 	bool HasHighlightedMeshes() const;
 	bool CanReuseSceneDepth() const;
 	void DrawSelectionMask(swContext* Context) const;
@@ -209,7 +226,8 @@ protected:
 	{
 		Selection,
 		Highlight,
-		Occluders
+		Occluders,
+		Hover
 	};
 
 	void DrawOutlineGeometry(swContext* Context, swOutlineGeometry Geometry) const;
@@ -242,6 +260,9 @@ protected:
 	swVector4 mFadeColor;
 	swVector4 mFadeInlineColor;
 	swVector4 mFadeJointColor;
+	swVector4 mHoverColor;
+	std::vector<swRenderMesh> mHoverMeshes;
+	bool mAddHover = false;
 	swVector4 mHighlightColor;
 	bool mHasFadedParts = false;
 	bool mTranslucentFade = false;

@@ -168,6 +168,9 @@ public:
 	// Follows ~Moved to aliases to the library part they moved to.
 	const swPartData* FindMovedPart(const swPartData* PartData);
 
+	// Returns the part an = alias stands for.
+	swPartData* FindAliasPart(const swPartData* PartData);
+
 	// Merges the aliases of a parts list into the parts they moved to.
 	swPartsList ResolveMovedParts(const swPartsList& PartsList);
 

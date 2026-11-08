@@ -343,6 +343,61 @@ static bool swFindJointLeaf(const swModel* Model, const swMatrix44& Parent, cons
 	return false;
 }
 
+// use to drop a chain left by an edit
+static bool swIsChainLinked(const std::vector<const swPart*>& Chain)
+{
+	for (size_t Index = 1; Index < Chain.size(); Index++)
+	{
+		const auto& Data = Chain[Index - 1]->mPartData;
+		const auto IsLink = [&](const std::unique_ptr<swPart>& Part) { return Part.get() == Chain[Index]; };
+
+		if (!Data->IsModel() || std::none_of(Data->GetModel()->GetParts().begin(), Data->GetModel()->GetParts().end(), IsLink))
+			return false;
+	}
+
+	return true;
+}
+
+// use to add the last part of a chain
+static void swAddChainMeshes(swScene* Scene, const std::vector<const swPart*>& Chain, const swMatrix44& Transform, swRenderMeshState State)
+{
+	swMatrix44 World = swMatrix44Identity();
+	int ColorIndex = gDefaultColor;
+
+	// color 16 takes the color above
+	for (size_t Index = Chain.size(); Index-- > 0;)
+	{
+		World = swMultiply(World, Chain[Index]->mModelWorld);
+
+		if (ColorIndex == gDefaultColor)
+			ColorIndex = Chain[Index]->GetColorIndex();
+	}
+
+	Chain.back()->mPartData->AddRenderMeshes(Scene, swMultiply(World, Transform), ColorIndex, State, false);
+}
+
+// use to outline the submodel under the pointer
+void swModel::AddHoverOutline(swScene* Scene, const swMatrix44& Transform, std::vector<const swPart*> Chain) const
+{
+	// a joint goes on the holder of the hovered part
+	if (mJointPick)
+	{
+		Chain = mJointHover;
+
+		if (!Chain.empty())
+			Chain.pop_back();
+	}
+
+	const auto IsPart = [&](const std::unique_ptr<swPart>& Part) { return !Chain.empty() && Part.get() == Chain[0]; };
+
+	if (Chain.empty() || !Chain.back()->mPartData->IsModel() || std::none_of(mParts.begin(), mParts.end(), IsPart) || !swIsChainLinked(Chain))
+		return;
+
+	Scene->SetAddHover(true);
+	swAddChainMeshes(Scene, Chain, Transform, swRenderMeshState::Default);
+	Scene->SetAddHover(false);
+}
+
 // use to outline the hovered or joint part
 void swModel::AddJointHighlight(swScene* Scene, const swMatrix44& Transform) const
 {
@@ -356,17 +411,7 @@ void swModel::AddJointHighlight(swScene* Scene, const swMatrix44& Transform) con
 	{
 		Chain = mJointHover;
 
-		// drop a chain left by an edit
-		for (size_t Index = 1; Index < Chain.size(); Index++)
-		{
-			const auto& Data = Chain[Index - 1]->mPartData;
-			const auto IsLink = [&](const std::unique_ptr<swPart>& Part) { return Part.get() == Chain[Index]; };
-
-			if (!Data->IsModel() || std::none_of(Data->GetModel()->GetParts().begin(), Data->GetModel()->GetParts().end(), IsLink))
-				Chain.clear();
-		}
-
-		if (Chain.empty() || Chain[0] != Target)
+		if (Chain.empty() || Chain[0] != Target || !swIsChainLinked(Chain))
 			return;
 	}
 	else
@@ -383,19 +428,21 @@ void swModel::AddJointHighlight(swScene* Scene, const swMatrix44& Transform) con
 			return;
 	}
 
-	swMatrix44 World = swMatrix44Identity();
-	int ColorIndex = gDefaultColor;
+	swAddChainMeshes(Scene, Chain, Transform, swRenderMeshState::Highlighted);
+}
 
-	// color 16 takes the color above
-	for (size_t Index = Chain.size(); Index-- > 0;)
-	{
-		World = swMultiply(World, Chain[Index]->mModelWorld);
+// submodels down to the one holding the part under the ray
+std::vector<swPart*> swModel::GetSubmodelPath(const swVector3& Start, const swVector3& End)
+{
+	float Distance = FLT_MAX;
+	std::vector<std::pair<swModel*, swPart*>> Chain, Hit;
+	std::vector<swPart*> Path;
 
-		if (ColorIndex == gDefaultColor)
-			ColorIndex = Chain[Index]->GetColorIndex();
-	}
+	if (JointsRayTest(Start, End, Distance, Chain, Hit))
+		for (size_t Index = 0; Index + 1 < Hit.size(); Index++)
+			Path.push_back(Hit[Index].second);
 
-	Chain.back()->mPartData->AddRenderMeshes(Scene, swMultiply(World, Transform), ColorIndex, swRenderMeshState::Highlighted, false);
+	return Path;
 }
 
 bool swModel::JointsToolClicked(const swVector3& Start, const swVector3& End, const swVector3& Right, const swVector3& Up)
@@ -428,10 +475,13 @@ bool swModel::JointsToolClicked(const swVector3& Start, const swVector3& End, co
 		if (!Target || Hit[0].second != Target)
 			return false;
 
-		const swMatrix44 InverseWorld = swMatrix44AffineInverse(Target->mModelWorld);
+		// the joint goes on the submodel holding the clicked part
+		const size_t Owner = Hit.size() - 2;
+		swPart* Holder = Hit[Owner].second;
+		const swMatrix44 InverseWorld = swMatrix44AffineInverse(GetWorld(Owner + 1, 0));
 		const swVector3 LocalStart = swMultiply31(Start, InverseWorld);
 		const swVector3 Direction = swMultiply31(End, InverseWorld) - LocalStart;
-		const swMatrix44 Local = GetWorld(Hit.size(), 1);
+		const swMatrix44 Local = GetWorld(Hit.size(), Owner + 1);
 		const swPart* Leaf = Hit.back().second;
 		swPartJoint Joint;
 		float BestDistance = FLT_MAX;
@@ -462,11 +512,15 @@ bool swModel::JointsToolClicked(const swVector3& Start, const swVector3& End, co
 			Joint.Axis = swVector3(1.0f, 0.0f, 0.0f);
 		}
 
-		BeginHistorySequence();
-		BeginEditHistory();
-		SetJointIndex(Target, Target->SetJoint(Joint, mCurrentStep));
-		EndEditHistory();
-		EndHistorySequence(tr("Set Joint"));
+		BeginJointsEdit();
+		Hit[Owner].first->SetJointIndex(Holder, Holder->SetJoint(Joint, mCurrentStep));
+		EndJointsEdit(tr("Set Joint"), true);
+
+		// the view opens the new joint in joint mode
+		mJointSetPath.clear();
+
+		for (size_t Index = 0; Index <= Owner; Index++)
+			mJointSetPath.push_back(Hit[Index].second);
 
 		if (gMainWindow)
 			gMainWindow->UpdateSelectedObjects(false);
@@ -571,15 +625,28 @@ void swModel::SetJointAxisAction(swPart* Part, int Axis)
 	EndHistorySequence(tr("Joint Axis"));
 }
 
-void swModel::ClearJointAction(swPart* Part)
+void swModel::ClearJointAction(swPart* Part, size_t Index)
 {
 	BeginHistorySequence();
 	BeginEditHistory();
 
-	Part->RemoveJoint(Part == GetJointPart() ? GetJointIndex() : 0, mCurrentStep);
+	Part->RemoveJoint(Index, mCurrentStep);
 
 	EndEditHistory();
-	EndHistorySequence(tr("Clear Joint"));
+	EndHistorySequence(tr("Delete Joint"));
+}
+
+void swModel::ClearJointsAction(swPart* Part)
+{
+	BeginHistorySequence();
+	BeginEditHistory();
+
+	// last first keeps the indices
+	for (size_t Index = Part->mJoints.size(); Index > 0; Index--)
+		Part->RemoveJoint(Index - 1, mCurrentStep);
+
+	EndEditHistory();
+	EndHistorySequence(tr("Delete All Joints"));
 }
 
 // rotate commands turn this joint
@@ -593,8 +660,29 @@ void swModel::SetJointRotate(bool Rotate)
 // a new selection goes back to the pivot point
 void swModel::UpdateJointRotate()
 {
-	if (mJointRotate && mJointRotate != GetJointPart())
+	const swPart* Part = GetJointPart();
+
+	if (mJointRotate && mJointRotate != Part)
 		mJointRotate = nullptr;
+
+	if (mJointFocus && mJointFocus != Part)
+		mJointFocus = nullptr;
+}
+
+// joints picked in the list
+void swModel::SetJointFocus()
+{
+	swPart* Part = GetJointPart();
+
+	mJointFocus = Part && Part->HasJoints() ? Part : nullptr;
+}
+
+// back to plain selection
+void swModel::EndJointFocus()
+{
+	mJointFocus = nullptr;
+	mJointRotate = nullptr;
+	ClearSelectionAction();
 }
 
 swPart* swModel::GetRotateJoint() const

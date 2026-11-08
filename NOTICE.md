@@ -4,13 +4,19 @@
   <summary>2026-11-08</summary>
 
   - Steps: an opened model now starts on a new empty step after its last one, ready for new parts
+  - Files: a Missing and Moved Parts list opens with a model whose parts could not be loaded or are marked as moved or as an alias, offering the part each one points to or its BrickLink mapping, replacing the checked ones in every submodel in one undo step, with Copy List, Don't Warn Again, a status bar icon and the Warn About Missing and Moved Parts preference
+  - Find and Replace: the bar floats over the view, its part list shows the parts in the colors they are used in with a flag on parts used in more than one color, a gear button sets how the part lists are filtered and shown, and Replace in Submodels makes Replace All reach every submodel
+  - Views: Submodel Hover Outline draws a pastel cyan outline over the innermost submodel under the pointer, on top of the selection outline, with its color in the preferences
+  - Joints: the right-click menu of the Joints tree moves, rotates or deletes a joint, or edits or deletes all joints of a submodel, a joint inside a submodel opens it in place, and the joint bar over the view selects its submodels or ends joint mode
+  - Menus: snap and joint entries use full names, such as No XY Snap, XY 1/20 Stud, No Rotation Snap, Set Joint, Delete Joint and Joints Panel
+  - Thumbnails: part thumbnail icon badges sit in the bottom right corner
 
   </details>
 
   <details>
   <summary>2026-11-06</summary>
 
-  - Joints: Part > Joint > Set, also in the model view right-click menu, gives a submodel hinge or ball joints from the shadow library connections, several per submodel, with the picked part outlined in red, the Joints tool next to Rotate turns them with the mouse, and Part > Joint > Move and Rotate and the Use Joint Rotation preference turn them with the rotate keys and the Rotate tool
+  - Joints: Part > Joint > Set Joint, also in the model view right-click menu, gives a submodel hinge or ball joints from the shadow library connections, several per submodel, with the picked part outlined in red, the Joints tool next to Rotate turns them with the mouse, and Part > Joint > Move Joint and Rotate Joint and the Use Joint Rotation preference turn them with the rotate keys and the Rotate tool
   - Joints: the Poses panel is now the Joints panel, listing every model, its submodels as `arm-right.ldr 006` and their joints as `Joint 001` in a tree with a left-aligned angle column, and saving, recalling, renaming and deleting named poses per model
   - Image: File > Image plays the main model poses as an animated GIF with Motion Joints, framed once around every pose so the model holds still
   - Samples: sample-joints.mpd, a minifigure with Stand, Wave, Walk and Work poses, and sample-pov-ray.ldr, a scene with key, fill and rim lights, a floor and a camera for POV-Ray renders

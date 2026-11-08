@@ -537,7 +537,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_XY0
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY0"),
-		QT_TRANSLATE_NOOP("Menu", "None"),
+		QT_TRANSLATE_NOOP("Menu", "No XY Snap"),
 		QT_TRANSLATE_NOOP("Status", "Do not snap movement along the XY plane"),
 		"",
 		"0"
@@ -546,7 +546,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_XY1
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY1"),
-		QT_TRANSLATE_NOOP("Menu", "1/20 Stud"),
+		QT_TRANSLATE_NOOP("Menu", "XY 1/20 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the XY plane to 1/20 stud"),
 		"",
 		"1"
@@ -555,7 +555,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_XY2
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY2"),
-		QT_TRANSLATE_NOOP("Menu", "1/4 Stud"),
+		QT_TRANSLATE_NOOP("Menu", "XY 1/4 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the XY plane to 1/4 stud"),
 		"",
 		"2"
@@ -564,7 +564,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_XY3
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY3"),
-		QT_TRANSLATE_NOOP("Menu", "1 Flat"),
+		QT_TRANSLATE_NOOP("Menu", "XY 1 Flat"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the XY plane to 1 flat"),
 		"",
 		"3"
@@ -573,7 +573,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_XY4
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY4"),
-		QT_TRANSLATE_NOOP("Menu", "1/2 Stud"),
+		QT_TRANSLATE_NOOP("Menu", "XY 1/2 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the XY plane to 1/2 stud"),
 		"",
 		"4"
@@ -582,7 +582,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_XY5
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY5"),
-		QT_TRANSLATE_NOOP("Menu", "1 Stud"),
+		QT_TRANSLATE_NOOP("Menu", "XY 1 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the XY plane to 1 stud"),
 		"",
 		"5"
@@ -591,7 +591,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_XY6
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY6"),
-		QT_TRANSLATE_NOOP("Menu", "2 Studs"),
+		QT_TRANSLATE_NOOP("Menu", "XY 2 Studs"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the XY plane to 2 studs"),
 		"",
 		"6"
@@ -600,7 +600,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_XY7
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY7"),
-		QT_TRANSLATE_NOOP("Menu", "3 Studs"),
+		QT_TRANSLATE_NOOP("Menu", "XY 3 Studs"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the XY plane to 3 studs"),
 		"",
 		"7"
@@ -609,7 +609,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_XY8
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY8"),
-		QT_TRANSLATE_NOOP("Menu", "4 Studs"),
+		QT_TRANSLATE_NOOP("Menu", "XY 4 Studs"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the XY plane to 4 studs"),
 		"",
 		"8"
@@ -618,7 +618,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_XY9
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY9"),
-		QT_TRANSLATE_NOOP("Menu", "8 Studs"),
+		QT_TRANSLATE_NOOP("Menu", "XY 8 Studs"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the XY plane to 8 studs"),
 		"",
 		"9"
@@ -627,7 +627,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_Z0
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z0"),
-		QT_TRANSLATE_NOOP("Menu", "None"),
+		QT_TRANSLATE_NOOP("Menu", "No Z Snap"),
 		QT_TRANSLATE_NOOP("Status", "Do not snap movement along the Z axis"),
 		"",
 		"Alt+#"
@@ -636,7 +636,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_Z1
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z1"),
-		QT_TRANSLATE_NOOP("Menu", "1/20 Stud"),
+		QT_TRANSLATE_NOOP("Menu", "Z 1/20 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 1/20 stud"),
 		"",
 		"Alt+1"
@@ -645,7 +645,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_Z2
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z2"),
-		QT_TRANSLATE_NOOP("Menu", "1/4 Stud"),
+		QT_TRANSLATE_NOOP("Menu", "Z 1/4 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 1/4 stud"),
 		"",
 		"Alt+2"
@@ -654,7 +654,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_Z3
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z3"),
-		QT_TRANSLATE_NOOP("Menu", "1 Flat"),
+		QT_TRANSLATE_NOOP("Menu", "Z 1 Flat"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 1 flat"),
 		"",
 		"Alt+3"
@@ -663,7 +663,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_Z4
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z4"),
-		QT_TRANSLATE_NOOP("Menu", "1/2 Stud"),
+		QT_TRANSLATE_NOOP("Menu", "Z 1/2 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 1/2 stud"),
 		"",
 		"Alt+4"
@@ -672,7 +672,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_Z5
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z5"),
-		QT_TRANSLATE_NOOP("Menu", "1 Stud"),
+		QT_TRANSLATE_NOOP("Menu", "Z 1 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 1 stud"),
 		"",
 		"Alt+5"
@@ -681,7 +681,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_Z6
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z6"),
-		QT_TRANSLATE_NOOP("Menu", "1 Brick"),
+		QT_TRANSLATE_NOOP("Menu", "Z 1 Brick"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 1 brick"),
 		"",
 		"Alt+6"
@@ -690,7 +690,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_Z7
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z7"),
-		QT_TRANSLATE_NOOP("Menu", "2 Bricks"),
+		QT_TRANSLATE_NOOP("Menu", "Z 2 Bricks"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 2 bricks"),
 		"",
 		"Alt+7"
@@ -699,7 +699,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_Z8
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z8"),
-		QT_TRANSLATE_NOOP("Menu", "4 Bricks"),
+		QT_TRANSLATE_NOOP("Menu", "Z 4 Bricks"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 4 bricks"),
 		"",
 		"Alt+8"
@@ -708,7 +708,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_MOVE_Z9
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z9"),
-		QT_TRANSLATE_NOOP("Menu", "8 Bricks"),
+		QT_TRANSLATE_NOOP("Menu", "Z 8 Bricks"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 8 bricks"),
 		"",
 		"Alt+9"
@@ -726,7 +726,7 @@ const swCommand gCommands[] =
 	// SW_EDIT_SNAP_ANGLE0
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapAngle.Angle0"),
-		QT_TRANSLATE_NOOP("Menu", "None"),
+		QT_TRANSLATE_NOOP("Menu", "No Rotation Snap"),
 		QT_TRANSLATE_NOOP("Status", "Do not snap rotations"),
 		"",
 		"Ctrl+0"
@@ -980,7 +980,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.Tool.Joints"),
 		QT_TRANSLATE_NOOP("Menu", "Joints"),
 		QT_TRANSLATE_NOOP("Status", "Turn a joint"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joints Tool</b></p><p>Drag a submodel that has a joint to turn it. Hinges turn about their axis with the horizontal drag, balls turn about the screen up and right directions. Rotation Snap sets the steps and one drag is one undo step. Use Part &gt; Joint &gt; Set to give a submodel a joint.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joints Tool</b></p><p>Drag a submodel that has a joint to turn it. Hinges turn about their axis with the horizontal drag, balls turn about the screen up and right directions. Rotation Snap sets the steps and one drag is one undo step. Use Part &gt; Joint &gt; Set Joint to give a submodel a joint.</p>"),
 		"Shift+J"
 	},
 
@@ -1212,7 +1212,7 @@ const swCommand gCommands[] =
 	// SW_VIEW_CAMERA_NONE
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Cameras.None"),
-		QT_TRANSLATE_NOOP("Menu", "None"),
+		QT_TRANSLATE_NOOP("Menu", "No Camera"),
 		QT_TRANSLATE_NOOP("Status", "Do not use a camera"),
 		"",
 		""
@@ -1473,7 +1473,7 @@ const swCommand gCommands[] =
 	// SW_VIEW_TOOLBAR_STANDARD
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Standard"),
-		QT_TRANSLATE_NOOP("Menu", "Standard"),
+		QT_TRANSLATE_NOOP("Menu", "Standard Toolbar"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Standard toolbar"),
 		"",
 		"F4"
@@ -1482,7 +1482,7 @@ const swCommand gCommands[] =
 	// SW_VIEW_TOOLBAR_TOOLS
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Tools"),
-		QT_TRANSLATE_NOOP("Menu", "Tools"),
+		QT_TRANSLATE_NOOP("Menu", "Tools Toolbar"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Tools toolbar"),
 		"",
 		"F5"
@@ -1491,7 +1491,7 @@ const swCommand gCommands[] =
 	// SW_VIEW_TOOLBAR_TIME
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Time"),
-		QT_TRANSLATE_NOOP("Menu", "Time"),
+		QT_TRANSLATE_NOOP("Menu", "Time Toolbar"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Time toolbar"),
 		"",
 		"F6"
@@ -1500,7 +1500,7 @@ const swCommand gCommands[] =
 	// SW_VIEW_TOOLBAR_PARTS
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Parts"),
-		QT_TRANSLATE_NOOP("Menu", "Parts"),
+		QT_TRANSLATE_NOOP("Menu", "Parts Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Parts panel"),
 		"",
 		"F8"
@@ -1509,7 +1509,7 @@ const swCommand gCommands[] =
 	// SW_VIEW_TOOLBAR_COLORS
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Colors"),
-		QT_TRANSLATE_NOOP("Menu", "Colors"),
+		QT_TRANSLATE_NOOP("Menu", "Colors Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Colors panel"),
 		"",
 		"F7"
@@ -1518,7 +1518,7 @@ const swCommand gCommands[] =
 	// SW_VIEW_TOOLBAR_PROPERTIES
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Properties"),
-		QT_TRANSLATE_NOOP("Menu", "Properties"),
+		QT_TRANSLATE_NOOP("Menu", "Properties Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Properties panel"),
 		"",
 		"F9"
@@ -1527,7 +1527,7 @@ const swCommand gCommands[] =
 	// SW_VIEW_TOOLBAR_TIMELINE
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Timeline"),
-		QT_TRANSLATE_NOOP("Menu", "Timeline"),
+		QT_TRANSLATE_NOOP("Menu", "Timeline Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Timeline panel"),
 		"",
 		"F10"
@@ -1536,7 +1536,7 @@ const swCommand gCommands[] =
 	// SW_VIEW_TOOLBAR_PREVIEW
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Preview"),
-		QT_TRANSLATE_NOOP("Menu", "Preview"),
+		QT_TRANSLATE_NOOP("Menu", "Preview Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Preview panel"),
 		"",
 		"F11"
@@ -1545,7 +1545,7 @@ const swCommand gCommands[] =
 	// SW_VIEW_TOOLBAR_TERMINAL
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Terminal"),
-		QT_TRANSLATE_NOOP("Menu", "Terminal"),
+		QT_TRANSLATE_NOOP("Menu", "Terminal Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Terminal panel"),
 		"",
 		""
@@ -1554,7 +1554,7 @@ const swCommand gCommands[] =
 	// SW_VIEW_TOOLBAR_MINIFIGURE_BUILDER
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.MinifigureBuilder"),
-		QT_TRANSLATE_NOOP("Menu", "Minifigure Builder"),
+		QT_TRANSLATE_NOOP("Menu", "Minifigure Builder Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Minifigure Builder panel"),
 		"",
 		""
@@ -1563,7 +1563,7 @@ const swCommand gCommands[] =
 	// SW_VIEW_TOOLBAR_EXPLODE
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Explode"),
-		QT_TRANSLATE_NOOP("Menu", "Explode"),
+		QT_TRANSLATE_NOOP("Menu", "Explode Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Explode panel"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Explode</b></p><p>Show or hide the Explode panel, which spreads the parts on screen away from an anchor, the focused part or the first or last selected one, scaled along X, Y and Z. With Selected Parts Only, each group moves as one part. Each part slides straight out along the connection that holds it, a part without one along the nearest axis from the part beside it, and with Show Lines a line runs through each connection back to the socket it came off. Submodels, and the submodels inside them, flatten into their parts first in the same undo step. Collapse or Undo puts the parts and submodels back, and Save Copy saves the exploded model to a separate file named with -exploded.</p>"),
 		""
@@ -1572,9 +1572,9 @@ const swCommand gCommands[] =
 	// SW_VIEW_TOOLBAR_JOINTS
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Joints"),
-		QT_TRANSLATE_NOOP("Menu", "Joints"),
+		QT_TRANSLATE_NOOP("Menu", "Joints Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Joints panel"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joints</b></p><p>Show or hide the Joints panel. A tree lists every model with its jointed submodels and their joints, click a joint to select its submodel. Save stores the joint angles of the picked model as a named pose, Recall puts them back in one undo step, and the Joints motion in the image dialog plays the poses of the main model as an animation. The panel also shows the picked joint of the selected submodel, with its axis and Clear Joint.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joints</b></p><p>Show or hide the Joints panel. A tree lists every model with its jointed submodels and their joints, click a joint to select its submodel, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. A joint inside a submodel opens it in place and a bar over the view points to the picked joint. A submodel button there selects that submodel and keeps joint mode when it has a joint, the main model button ends it; the close button clears the selection and returns to the Select tool. Save stores the joint angles of the picked model as a named pose, Recall puts them back in one undo step, and the Joints motion in the image dialog plays the poses of the main model as an animation. The panel also shows the picked joint of the selected submodel, with its axis, and Delete Joint deletes the joint picked in the tree.</p>"),
 		""
 	},
 
@@ -2042,7 +2042,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.ToggleFadeOnJointSet"),
 		QT_TRANSLATE_NOOP("Menu", "Fade on Joint Set"),
 		QT_TRANSLATE_NOOP("Status", "Toggle tinting all but the selected submodel while setting a joint"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Fade on Joint Set</b></p><p>Tint all but the selected submodel with the chosen color while setting a joint.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Fade on Joint Set</b></p><p>Tint all but the selected submodel with the chosen color while setting a joint or in joint mode.</p>"),
 		""
 	},
 
@@ -2052,6 +2052,15 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Fade on Joint Move and Rotate"),
 		QT_TRANSLATE_NOOP("Status", "Toggle tinting all but the selected submodel while moving or rotating a joint"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Fade on Joint Move and Rotate</b></p><p>Keep the joint fade while moving or rotating a joint. Leave it off to check parts for collisions in their own colors.</p>"),
+		""
+	},
+
+	// SW_VIEW_TOGGLE_HOVER_OUTLINE
+	{
+		QT_TRANSLATE_NOOP("Action", "View.ToggleHoverOutline"),
+		QT_TRANSLATE_NOOP("Menu", "Submodel Hover Outline"),
+		QT_TRANSLATE_NOOP("Status", "Toggle outlining the innermost submodel under the pointer"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel Hover Outline</b></p><p>Outline the innermost submodel under the pointer with the hover outline color, or the submodel a joint would go on while setting a joint.</p>"),
 		""
 	},
 
@@ -2436,7 +2445,7 @@ const swCommand gCommands[] =
 	// SW_PART_INSERT
 	{
 		QT_TRANSLATE_NOOP("Action", "Part.Insert"),
-		QT_TRANSLATE_NOOP("Menu", "&Insert"),
+		QT_TRANSLATE_NOOP("Menu", "&Insert Part"),
 		QT_TRANSLATE_NOOP("Status", "Add a new part to the model"),
 		"",
 		"Insert"
@@ -2481,16 +2490,16 @@ const swCommand gCommands[] =
 	// SW_PART_SET_JOINT
 	{
 		QT_TRANSLATE_NOOP("Action", "Part.SetJoint"),
-		QT_TRANSLATE_NOOP("Menu", "&Set"),
+		QT_TRANSLATE_NOOP("Menu", "&Set Joint"),
 		QT_TRANSLATE_NOOP("Status", "Click a connection of the selected submodel to make it a joint"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Set Joint</b></p><p>Select one submodel, choose Part &gt; Joint &gt; Set, also in the right-click menu of the model view, then click one of its connections with the Set Joint pointer, which outlines the part under it in red. The click sets the joint and goes back to the Select tool. Set again at another connection adds a joint, and Set at a joint already there resets it. A round connection makes a hinge on its axis and a sphere makes a ball. A part without shadow data gets a hinge on its origin. The joint shows in the Joints panel and setting it can be undone.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Set Joint</b></p><p>Select one submodel, choose Part &gt; Joint &gt; Set Joint, also in the right-click menu of the model view, then click one of its connections with the Set Joint pointer, which outlines the part under it in red. The click sets the joint and goes back to the Select tool in joint mode on the new joint. Set Joint again at another connection adds a joint, and Set Joint at a joint already there resets it. A round connection makes a hinge on its axis and a sphere makes a ball. A part without shadow data gets a hinge on its origin. The joint shows in the Joints panel and setting it can be undone.</p>"),
 		""
 	},
 
 	// SW_PART_JOINT_MOVE
 	{
 		QT_TRANSLATE_NOOP("Action", "Part.JointMove"),
-		QT_TRANSLATE_NOOP("Menu", "&Move"),
+		QT_TRANSLATE_NOOP("Menu", "&Move Joint"),
 		QT_TRANSLATE_NOOP("Status", "Move the selected submodel with the gizmo on its picked joint"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joint Move</b></p><p>With one submodel with a joint selected, switches to the Move tool with the gizmo on the pivot of the picked joint, outlined by a red hexagon. Selecting something else goes back to the pivot point.</p>"),
 		""
@@ -2499,7 +2508,7 @@ const swCommand gCommands[] =
 	// SW_PART_JOINT_ROTATE
 	{
 		QT_TRANSLATE_NOOP("Action", "Part.JointRotate"),
-		QT_TRANSLATE_NOOP("Menu", "&Rotate"),
+		QT_TRANSLATE_NOOP("Menu", "&Rotate Joint"),
 		QT_TRANSLATE_NOOP("Status", "Rotate the selected submodel around its picked joint instead of the pivot point"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joint Rotate</b></p><p>With one submodel with a joint selected, switches to the Rotate tool with the gizmo on the pivot of the picked joint, outlined in red, and the rotate keys and the Rotate tool turn the joint around its own pivot and axis. A hinge only turns about its axis. Selecting something else goes back to the pivot point. Use Joint Rotation in the preferences does this whenever a selected submodel has a joint.</p>"),
 		""

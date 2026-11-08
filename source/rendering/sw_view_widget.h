@@ -32,6 +32,7 @@ public:
 
 	void UpdateMousePosition();
 	void UpdateModelEditingPath();
+	void UpdateJointPath();
 	void SetFindReplaceWidget(QWidget* Widget);
 
 	QSize sizeHint() const override;
@@ -70,6 +71,8 @@ protected:
 
 	void UpdateOverlayGeometry();
 	void UpdateModelEditingButtons();
+	void UpdateJointButtons();
+	void EndJoint();
 	void UpdateCameraName();
 	std::array<int, 4> GetOverlayCornerSizes() const;
 
@@ -82,6 +85,9 @@ protected:
 	QWidget* mModelEditingBar = nullptr;
 	QHBoxLayout* mModelEditingPathLayout = nullptr;
 	QToolButton* mEndEditingButton = nullptr;
+	QWidget* mJointBar = nullptr;
+	QHBoxLayout* mJointPathLayout = nullptr;
+	QStringList mJointNames;
 	QPointer<QWidget> mFindReplaceWidget;
 	QStringList mModelEditingNames;
 	std::array<int, 4> mOverlayCornerSizes = {};

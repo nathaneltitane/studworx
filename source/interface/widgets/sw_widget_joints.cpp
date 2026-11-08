@@ -4,6 +4,7 @@
 #include "sw_project.h"
 #include "sw_object_part.h"
 #include "sw_data_part.h"
+#include "sw_view.h"
 
 swJointsWidget::swJointsWidget(QWidget* Parent)
 	: QWidget(Parent)
@@ -16,8 +17,12 @@ swJointsWidget::swJointsWidget(QWidget* Parent)
 	mTree->setHeaderLabels({ tr("Joint"), tr("Type"), tr("Angle") });
 	mTree->setRootIsDecorated(true);
 	mTree->setToolTip(tr("Joints of the model and its submodels"));
-	mTree->setWhatsThis(tr("<p><b>Joints</b></p><p>Every model with joints, under it each jointed submodel by line index, and under that each of its joints with type and angle. Click a joint to select its submodel and make it the joint the panel and the rotate gizmo work on. Click a model to show its poses.</p>"));
+	mTree->setWhatsThis(tr("<p><b>Joints</b></p><p>Every model with joints, under it each jointed submodel by line index, and under that each of its joints with type and angle. Click a joint to select its submodel and make it the joint the panel and the rotate gizmo work on, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. Click a model to show its poses.</p>"));
 	connect(mTree, &QTreeWidget::itemClicked, this, &swJointsWidget::TreeItemClicked);
+	connect(mTree, &QTreeWidget::currentItemChanged, this, &swJointsWidget::UpdateClearButton);
+	mTree->installEventFilter(this);
+	mTree->setContextMenuPolicy(Qt::CustomContextMenu);
+	connect(mTree, &QTreeWidget::customContextMenuRequested, this, &swJointsWidget::TreeMenuRequested);
 	Layout->addWidget(mTree, 2);
 
 	mPoseLabel = new QLabel(this);
@@ -70,9 +75,9 @@ swJointsWidget::swJointsWidget(QWidget* Parent)
 	JointRow->addWidget(mAxisCombo);
 
 	mClearButton = new QToolButton(this);
-	mClearButton->setText(tr("Clear Joint"));
-	mClearButton->setToolTip(tr("Remove the picked joint of the selected submodel"));
-	mClearButton->setWhatsThis(tr("<p><b>Clear Joint</b></p><p>Remove the picked joint of the selected submodel and put that joint back at rest. This can be undone.</p>"));
+	mClearButton->setText(tr("Delete Joint"));
+	mClearButton->setToolTip(tr("Delete the joint picked in the list (Delete)"));
+	mClearButton->setWhatsThis(tr("<p><b>Delete Joint</b></p><p>Delete the joint picked in the joints list and put that joint back at rest. The Delete key does the same in the list. This can be undone.</p>"));
 	connect(mClearButton, &QToolButton::clicked, this, &swJointsWidget::ClearClicked);
 	JointRow->addWidget(mClearButton);
 	Layout->addLayout(JointRow);
@@ -128,7 +133,6 @@ void swJointsWidget::UpdateTree()
 					ModelItem->setData(0, Qt::UserRole, Model->GetFileName());
 					ModelItem->setData(0, Qt::UserRole + 1, -1);
 					ModelItem->setData(0, Qt::UserRole + 2, -1);
-					ModelItem->setFirstColumnSpanned(true);
 					ModelItem->setExpanded(true);
 
 					if (Model->GetFileName() == PreviousModel && PreviousIndex < 0)
@@ -139,7 +143,6 @@ void swJointsWidget::UpdateTree()
 				PartItem->setData(0, Qt::UserRole, Model->GetFileName());
 				PartItem->setData(0, Qt::UserRole + 1, static_cast<int>(Index));
 				PartItem->setData(0, Qt::UserRole + 2, -1);
-				PartItem->setFirstColumnSpanned(true);
 				PartItem->setExpanded(true);
 
 				if (!JointPart && Model->GetFileName() == PreviousModel && static_cast<int>(Index) == PreviousIndex && PreviousJoint < 0)
@@ -164,7 +167,7 @@ void swJointsWidget::UpdateTree()
 
 	if (!mTree->topLevelItemCount())
 	{
-		QTreeWidgetItem* Empty = new QTreeWidgetItem(mTree, { tr("No joints, use Part > Joint > Set") });
+		QTreeWidgetItem* Empty = new QTreeWidgetItem(mTree, { tr("No joints, use Part > Joint > Set Joint") });
 		Empty->setFlags(Qt::NoItemFlags);
 		Empty->setFirstColumnSpanned(true);
 	}
@@ -189,21 +192,96 @@ void swJointsWidget::TreeItemClicked(QTreeWidgetItem* Item)
 	// select later, the tree rebuilds on selection
 	QTimer::singleShot(0, this, [this, ModelName, Index, Joint]()
 	{
-		swModel* ActiveModel = gMainWindow ? gMainWindow->GetActiveModel() : nullptr;
-		Project* CurrentProject = ActiveModel ? ActiveModel->GetProject() : nullptr;
-		swModel* Model = CurrentProject ? CurrentProject->GetModel(ModelName) : nullptr;
+		SelectJoint(ModelName, Index, Joint);
+	});
+}
 
-		if (!Model || Index >= static_cast<int>(Model->GetParts().size()))
+void swJointsWidget::SelectJoint(const QString& ModelName, int Index, int Joint)
+{
+	swModel* ActiveModel = gMainWindow ? gMainWindow->GetActiveModel() : nullptr;
+	Project* CurrentProject = ActiveModel ? ActiveModel->GetProject() : nullptr;
+	swModel* Model = CurrentProject ? CurrentProject->GetModel(ModelName) : nullptr;
+
+	if (!Model || Index >= static_cast<int>(Model->GetParts().size()))
+		return;
+
+	// open it in place, tab switch when unreachable
+	swView* View = gMainWindow->GetActiveView();
+
+	if (!View || !View->SetJointModelActive(Model))
+		CurrentProject->SetActiveModel(Model, true);
+
+	swPart* Part = Model->GetParts()[Index].get();
+	Model->SetJointIndex(Part, static_cast<size_t>(Joint));
+	Model->SetSelectionAndFocusAction({ Part }, Part, SW_PART_SECTION_POSITION, swSelectionMode::Single);
+	Model->SetJointFocus();
+	UpdateJoint();
+
+	// same selection, another joint
+	swView::UpdateAllViews();
+
+	// keys stay on the list
+	mTree->setFocus();
+}
+
+void swJointsWidget::TreeMenuRequested(const QPoint& Position)
+{
+	const QTreeWidgetItem* Item = mTree->itemAt(Position);
+	const int Index = Item ? Item->data(0, Qt::UserRole + 1).toInt() : -1;
+	const int Joint = Item ? Item->data(0, Qt::UserRole + 2).toInt() : -1;
+
+	if (Index < 0)
+		return;
+
+	const QString ModelName = Item->data(0, Qt::UserRole).toString();
+	const QPoint MenuPosition = mTree->viewport()->mapToGlobal(Position);
+	QMenu Menu(this);
+
+	// submodel rows work on all its joints
+	if (Joint < 0)
+	{
+		QAction* EditAction = Menu.addAction(tr("Edit Joints"));
+		Menu.addSeparator();
+		Menu.addAction(tr("Delete All Joints"));
+		QAction* Chosen = Menu.exec(MenuPosition);
+
+		if (!Chosen)
 			return;
 
-		if (Model != ActiveModel)
-			CurrentProject->SetActiveModel(Model, true);
+		SelectJoint(ModelName, Index, 0);
 
-		swPart* Part = Model->GetParts()[Index].get();
-		Model->SetJointIndex(Part, static_cast<size_t>(Joint));
-		Model->SetSelectionAndFocusAction({ Part }, Part, SW_PART_SECTION_POSITION, swSelectionMode::Single);
+		if (Chosen == EditAction)
+		{
+			gMainWindow->mActions[SW_EDIT_ACTION_JOINTS]->trigger();
+			return;
+		}
+
+		swModel* Model = gMainWindow->GetActiveModel();
+		swPart* Part = Model ? Model->GetJointPart() : nullptr;
+
+		if (Part)
+			Model->ClearJointsAction(Part);
+
 		UpdateJoint();
-	});
+		swView::UpdateAllViews();
+		return;
+	}
+
+	QAction* MoveAction = Menu.addAction(tr("Move Joint"));
+	Menu.addAction(tr("Rotate Joint"));
+	Menu.addSeparator();
+	QAction* DeleteAction = Menu.addAction(tr("Delete Joint"));
+	QAction* Chosen = Menu.exec(MenuPosition);
+
+	if (!Chosen)
+		return;
+
+	SelectJoint(ModelName, Index, Joint);
+
+	if (Chosen == DeleteAction)
+		ClearClicked();
+	else
+		gMainWindow->mActions[Chosen == MoveAction ? SW_PART_JOINT_MOVE : SW_PART_JOINT_ROTATE]->trigger();
 }
 
 void swJointsWidget::UpdateList()
@@ -235,7 +313,7 @@ void swJointsWidget::UpdateJoint()
 
 	mJointLabel->setText(!Part ? tr("Select one submodel for a joint") : !HasJoint ? tr("No joint") : tr("Joint %1, %2, angle %3").arg(Model->GetJointIndex() + 1, 3, 10, QLatin1Char('0')).arg(Joint->Type == swJointType::Hinge ? tr("Hinge") : tr("Ball")).arg(swLength(Joint->Rotation), 0, 'f', 1));
 	mAxisCombo->setEnabled(HasJoint && Joint->Type == swJointType::Hinge);
-	mClearButton->setEnabled(HasJoint);
+	UpdateClearButton();
 
 	if (HasJoint)
 	{
@@ -332,13 +410,61 @@ void swJointsWidget::AxisChanged(int Index)
 	UpdateJoint();
 }
 
+// use to find the joint picked in the tree
+swPart* swJointsWidget::GetTreeJoint(swModel** Model, size_t* Joint) const
+{
+	swModel* ActiveModel = gMainWindow ? gMainWindow->GetActiveModel() : nullptr;
+	Project* CurrentProject = ActiveModel ? ActiveModel->GetProject() : nullptr;
+	const QTreeWidgetItem* Item = mTree->currentItem();
+
+	if (!Item || !CurrentProject || Item->data(0, Qt::UserRole + 2).toInt() < 0)
+		return nullptr;
+
+	swModel* JointModel = CurrentProject->GetModel(Item->data(0, Qt::UserRole).toString());
+	const int Index = Item->data(0, Qt::UserRole + 1).toInt();
+
+	if (!JointModel || Index < 0 || Index >= static_cast<int>(JointModel->GetParts().size()))
+		return nullptr;
+
+	*Model = JointModel;
+	*Joint = static_cast<size_t>(Item->data(0, Qt::UserRole + 2).toInt());
+
+	return JointModel->GetParts()[Index].get();
+}
+
+void swJointsWidget::UpdateClearButton()
+{
+	swModel* Model;
+	size_t Joint;
+
+	mClearButton->setEnabled(GetTreeJoint(&Model, &Joint) != nullptr);
+}
+
 void swJointsWidget::ClearClicked()
 {
-	swModel* Model = gMainWindow->GetActiveModel();
-	swPart* Part = Model ? Model->GetJointPart() : nullptr;
+	swModel* Model;
+	size_t Joint;
+	swPart* Part = GetTreeJoint(&Model, &Joint);
 
-	if (Part)
-		Model->ClearJointAction(Part);
+	if (!Part)
+		return;
 
+	Model->ClearJointAction(Part, Joint);
 	UpdateJoint();
+	swView::UpdateAllViews();
+}
+
+bool swJointsWidget::eventFilter(QObject* Object, QEvent* Event)
+{
+	// the delete key goes to the list, not the part delete
+	if (Object == mTree && (Event->type() == QEvent::ShortcutOverride || Event->type() == QEvent::KeyPress) && static_cast<QKeyEvent*>(Event)->key() == Qt::Key_Delete && mClearButton->isEnabled())
+	{
+		if (Event->type() == QEvent::KeyPress)
+			ClearClicked();
+
+		Event->accept();
+		return true;
+	}
+
+	return QWidget::eventFilter(Object, Event);
 }

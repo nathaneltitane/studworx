@@ -1861,6 +1861,14 @@ static void swDrawPaintedIcon(QPainter* Painter, swPaintedIcon Icon, const QSize
 		Draw.Stroke(swCreateIconLine({ { 4, 18 }, { 20, 18 } }));
 		break;
 
+	case swPaintedIcon::ThumbnailColors:
+		Draw.Fill(swCreateIconCircle(12, 12, 9));
+		Draw.Erase(swCreateIconCircle(8, 8.5, 1.75));
+		Draw.Erase(swCreateIconCircle(13, 6.5, 1.75));
+		Draw.Erase(swCreateIconCircle(17, 10, 1.75));
+		Draw.Erase(swCreateIconCircle(13.5, 16, 2.5));
+		break;
+
 	case swPaintedIcon::CursorBrick:
 		Draw.Stroke(swCreateIconLine({ { 12, 3 }, { 20, 7.5 }, { 20, 16.5 }, { 12, 21 }, { 4, 16.5 }, { 4, 7.5 } }, true));
 		Draw.Stroke(swCreateIconLine({ { 4, 7.5 }, { 12, 12 }, { 20, 7.5 } }));

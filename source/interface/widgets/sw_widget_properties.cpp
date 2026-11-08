@@ -314,8 +314,8 @@ void swPropertiesWidget::ChangeFloatValue(swObjectPropertyId PropertyId, float V
 
 		if (mLastRotation)
 			InitialRotation = mLastRotation.value();
-		else if (Part)
-			InitialRotation = swMatrix44ToEulerAngles(Part->mModelWorld) * SW_RADIANS_TO_DEGREES;
+		else if (Part || mRotationPart)
+			InitialRotation = swMatrix44ToEulerAngles((Part ? Part : mRotationPart)->mModelWorld) * SW_RADIANS_TO_DEGREES;
 		else if (Light)
 			InitialRotation = swMatrix44ToEulerAngles(Light->GetWorldMatrix()) * SW_RADIANS_TO_DEGREES;
 
@@ -1545,6 +1545,7 @@ void swPropertiesWidget::SetCategoryVisible(CategoryIndex Index, bool Visible)
 void swPropertiesWidget::SetEmpty()
 {
 	// keep disabled part rows shown
+	mRotationPart = nullptr;
 	SetPart({}, nullptr);
 	setEnabled(false);
 
@@ -1575,8 +1576,8 @@ void swPropertiesWidget::SetPart(const std::vector<swObject*>& Selection, swObje
 
 	swVector3 Rotation;
 
-	if (Part)
-		Rotation = swMatrix44ToEulerAngles(Part->mModelWorld) * SW_RADIANS_TO_DEGREES;
+	if (Part || mRotationPart)
+		Rotation = swMatrix44ToEulerAngles((Part ? Part : mRotationPart)->mModelWorld) * SW_RADIANS_TO_DEGREES;
 	else
 		Rotation = swVector3(0.0f, 0.0f, 0.0f);
 
@@ -1823,6 +1824,9 @@ void swPropertiesWidget::Update(const std::vector<swObject*>& Selection, swObjec
 	mFocusObject = nullptr;
 	mSelection.clear();
 	setEnabled(true);
+
+	// the focused part keeps showing its rotation
+	mRotationPart = dynamic_cast<swPart*>(Focus);
 
 	// edit the whole selection
 	if (Selection.size() > 1)

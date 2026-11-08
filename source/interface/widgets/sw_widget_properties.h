@@ -184,6 +184,7 @@ protected:
 
 	std::vector<swObject*> mSelection;
 	swObject* mFocusObject = nullptr;
+	swPart* mRotationPart = nullptr;
 	bool mDisableUpdates = false;
 	std::optional<swVector3> mLastRotation;
 

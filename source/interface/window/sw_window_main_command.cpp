@@ -617,6 +617,10 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		swTogglePreference(swGetPreferences().mFadeJointMoving, SW_PROFILE_FADE_JOINT_MOVING);
 		break;
 
+	case SW_VIEW_TOGGLE_HOVER_OUTLINE:
+		swTogglePreference(swGetPreferences().mHoverOutline, SW_PROFILE_HOVER_OUTLINE);
+		break;
+
 	case SW_VIEW_TOGGLE_GRID_STUDS:
 		swTogglePreference(swGetPreferences().mDrawGridStuds, SW_PROFILE_GRID_STUDS);
 		break;
@@ -815,6 +819,9 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		break;
 
 	case SW_PART_SET_JOINT:
+		if (swView* View = GetActiveView(); View && View->OpenSetJoint())
+			break;
+
 		SetTool(swTool::Joints);
 
 		if (ActiveModel)

@@ -224,6 +224,8 @@ public:
 	bool mFadeJoint;
 	quint32 mFadeJointColor;
 	bool mFadeJointMoving;
+	bool mHoverOutline;
+	quint32 mHoverOutlineColor;
 	bool mHighlightNewParts;
 	quint32 mHighlightNewPartsColor;
 	bool mGridEnabled = true;
@@ -268,6 +270,7 @@ public:
 	bool mFlexMiddleControlPoint;
 	bool mWatchFileChanges;
 	bool mLoadPartsBeforeShowing;
+	bool mWarnPartsLoadFailure;
 	swMigrateMetaCommandsMode mMigrateMetaCommands;
 	bool mMarkColladaTransparency;
 	bool mKMZVisibleSurfaces;

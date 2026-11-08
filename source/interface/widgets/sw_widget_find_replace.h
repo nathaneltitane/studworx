@@ -11,12 +11,13 @@ public:
 
 protected slots:
 	void FindColorIndexChanged(int ColorIndex);
-	void FindTextEdited(const QString& Text);
-	void FindActivated(int Index);
+	void FindButtonClicked();
 	void ReplaceColorIndexChanged(int ColorIndex);
 	void ReplaceButtonClicked();
 
 protected:
-	QComboBox* mFindPartComboBox = nullptr;
+	swElidableToolButton* mFindPartButton = nullptr;
+	std::vector<std::pair<swPartData*, std::string>> mFindParts;
+	std::vector<std::pair<int, bool>> mFindColors;
 	swElidableToolButton* mReplacePartButton = nullptr;
 };

@@ -18,6 +18,8 @@
 #include "sw_dialog_render.h"
 #include "sw_dialog_instructions.h"
 #include "sw_dialog_image.h"
+#include "sw_dialog_missing_parts.h"
+#include "sw_bricklink.h"
 #include "sw_profile.h"
 #include "sw_view.h"
 #include "sw_project.h"
@@ -201,6 +203,10 @@ void swMainWindow::CreatePreviewWidget()
 
 bool swMainWindow::eventFilter(QObject* Object, QEvent* Event)
 {
+	// the warning icon opens the parts not loaded
+	if (Object == mStatusLoadFailureLabel && Event->type() == QEvent::MouseButtonRelease)
+		ShowMissingPartsDialog();
+
 	// input ends the turntable
 	switch (Event->type())
 	{
@@ -332,6 +338,7 @@ void swMainWindow::UpdateAssets()
 	if (mStatusProject != Project)
 	{
 		mStatusProject = Project;
+		mStatusLoadFailureWarned = false;
 		mStatusRequiredAssets.clear();
 		mStatusLoadFailureLabel->hide();
 		mStatusLoadFailureLabel->setToolTip(QString());
@@ -443,6 +450,94 @@ void swMainWindow::UpdateAssets()
 	}
 
 	mStatusLoadSpinner->setVisible(Pending > 0);
+
+	// check once the model is done loading, alias lookups read files
+	if (!Pending && !mStatusLoadFailureWarned && swGetPreferences().mWarnPartsLoadFailure)
+	{
+		mStatusLoadFailureWarned = true;
+
+		if (!GetMissingParts().empty())
+			QTimer::singleShot(0, this, &swMainWindow::ShowMissingPartsDialog);
+	}
+}
+
+std::vector<swMissingPart> swMainWindow::GetMissingParts() const
+{
+	const Project* Project = swGetActiveProject();
+	std::vector<swMissingPart> MissingParts;
+
+	if (!Project)
+		return MissingParts;
+
+	swPartsLibrary* Library = swGetPartsLibrary();
+
+	for (const swPartDataReference& RequiredData : Project->GetRequiredPartData())
+	{
+		swPartData* PartData = RequiredData.Get();
+		swMissingPart MissingPart;
+		MissingPart.PartData = PartData;
+		MissingPart.ColorIndex = gDefaultColor;
+
+		if (PartData->mState == swAssetState::Failed)
+		{
+			const QString PartId = QFileInfo(QString::fromLatin1(PartData->mFileName)).completeBaseName();
+
+			MissingPart.Error = Library->GetPartDataLoadError(PartData);
+			MissingPart.Replacement = swFindBrickLinkLibraryPart(PartId);
+			MissingPart.Origin = tr("Found through BrickLink number %1").arg(PartId);
+
+			if (MissingPart.Error.isEmpty())
+				MissingPart.Error = tr("Could not load part.");
+		}
+		else if (PartData->IsAlias())
+		{
+			MissingPart.Replacement = Library->FindAliasPart(PartData);
+			MissingPart.Error = tr("Marked as an alias in the parts library.");
+			MissingPart.Origin = tr("The part the alias stands for");
+		}
+		else if (const swPartData* MovedPart = Library->FindMovedPart(PartData); MovedPart != PartData)
+		{
+			MissingPart.Replacement = const_cast<swPartData*>(MovedPart);
+			MissingPart.Error = tr("Marked as moved in the parts library.");
+			MissingPart.Origin = tr("The part it moved to");
+		}
+		else
+			continue;
+
+		for (const std::unique_ptr<swModel>& Model : Project->GetModels())
+		{
+			for (const std::unique_ptr<swPart>& Part : Model->GetParts())
+			{
+				if (Part->mPartData.Get() != PartData)
+					continue;
+
+				if (MissingPart.Models.empty())
+					MissingPart.ColorIndex = Part->GetColorIndex();
+
+				MissingPart.Models[Model->GetFileName()]++;
+			}
+		}
+
+		// moved parts inside library parts are left alone
+		if (MissingPart.Models.empty() && PartData->mState != swAssetState::Failed)
+			continue;
+
+		MissingParts.push_back(std::move(MissingPart));
+	}
+
+	return MissingParts;
+}
+
+void swMainWindow::ShowMissingPartsDialog()
+{
+	std::vector<swMissingPart> MissingParts = GetMissingParts();
+
+	if (MissingParts.empty())
+		return;
+
+	swMissingPartsDialog* Dialog = new swMissingPartsDialog(this, std::move(MissingParts));
+	Dialog->setAttribute(Qt::WA_DeleteOnClose);
+	Dialog->open();
 }
 
 void swMainWindow::closeEvent(QCloseEvent* Event)

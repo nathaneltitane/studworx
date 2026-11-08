@@ -899,6 +899,29 @@
             </item>
            </widget>
           </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="WarnPartsLoadFailureLabel">
+            <property name="toolTip">
+             <string>Show the parts that could not be loaded, and the parts the library marks as moved or as an alias, after a model opens, with a replacement from the library when one is found.</string>
+            </property>
+            <property name="text">
+             <string>Warn About Missing and Moved Parts</string>
+            </property>
+            <property name="buddy">
+             <cstring>WarnPartsLoadFailure</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QCheckBox" name="WarnPartsLoadFailure">
+            <property name="accessibleName">
+             <string>Warn About Missing and Moved Parts</string>
+            </property>
+            <property name="toolTip">
+             <string>Show the parts that could not be loaded, and the parts the library marks as moved or as an alias, after a model opens, with a replacement from the library when one is found.</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
        </item>
@@ -1060,7 +1083,7 @@
           <item row="3" column="0">
            <widget class="QLabel" name="JointRotationLabel">
             <property name="toolTip">
-             <string>When the selected submodel has a joint, rotating it turns the joint around its own pivot and axis instead of the pivot point. Part &gt; Joint &gt; Rotate does the same for the current selection.</string>
+             <string>When the selected submodel has a joint, rotating it turns the joint around its own pivot and axis instead of the pivot point. Part &gt; Joint &gt; Rotate Joint does the same for the current selection.</string>
             </property>
             <property name="text">
              <string>Use Joint Rotation</string>
@@ -1076,7 +1099,7 @@
              <string>Use Joint Rotation</string>
             </property>
             <property name="toolTip">
-             <string>When the selected submodel has a joint, rotating it turns the joint around its own pivot and axis instead of the pivot point. Part &gt; Joint &gt; Rotate does the same for the current selection.</string>
+             <string>When the selected submodel has a joint, rotating it turns the joint around its own pivot and axis instead of the pivot point. Part &gt; Joint &gt; Rotate Joint does the same for the current selection.</string>
             </property>
            </widget>
           </item>
@@ -1797,6 +1820,53 @@
              <number>8</number>
             </property>
            </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="HoverOutlineLabel">
+            <property name="toolTip">
+             <string>Outline the innermost submodel under the pointer with the chosen color.</string>
+            </property>
+            <property name="text">
+             <string>Submodel Hover Outline</string>
+            </property>
+            <property name="buddy">
+             <cstring>HoverOutline</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <layout class="QHBoxLayout" name="HoverOutlineLayout" stretch="0,0,1">
+            <item>
+             <widget class="QCheckBox" name="HoverOutline">
+              <property name="accessibleName">
+               <string>Submodel Hover Outline</string>
+              </property>
+              <property name="toolTip">
+               <string>Outline the innermost submodel under the pointer, or the submodel a joint would go on while setting a joint.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="HoverOutlineColor">
+              <property name="accessibleName">
+               <string>Hover Outline Color</string>
+              </property>
+              <property name="toolTip">
+               <string>Choose the color of the submodel hover outline.</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="HoverOutlineSpacer">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+             </spacer>
+            </item>
+           </layout>
           </item>
           <item row="0" column="3">
            <spacer name="StepsSpacer">
@@ -5580,6 +5650,7 @@
   <tabstop>WatchFileChanges</tabstop>
   <tabstop>LoadPartsBeforeShowing</tabstop>
   <tabstop>MigrateMetaCommands</tabstop>
+  <tabstop>WarnPartsLoadFailure</tabstop>
   <tabstop>MarkColladaTransparency</tabstop>
   <tabstop>KMZGeometry</tabstop>
   <tabstop>fixedDirectionKeys</tabstop>
@@ -5604,6 +5675,8 @@
   <tabstop>HighlightNewPartsColor</tabstop>
   <tabstop>HighlightRenderMode</tabstop>
   <tabstop>SelectionOutlineWidth</tabstop>
+  <tabstop>HoverOutline</tabstop>
+  <tabstop>HoverOutlineColor</tabstop>
   <tabstop>edgeLines</tabstop>
   <tabstop>ConditionalLinesCheckBox</tabstop>
   <tabstop>AutomateEdgeColor</tabstop>

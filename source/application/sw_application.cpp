@@ -78,6 +78,8 @@ void swPreferences::LoadDefaults()
 	mFadeJoint = swGetProfileInteger(SW_PROFILE_FADE_JOINT);
 	mFadeJointColor = swGetProfileUnsignedInteger(SW_PROFILE_FADE_JOINT_COLOR);
 	mFadeJointMoving = swGetProfileInteger(SW_PROFILE_FADE_JOINT_MOVING);
+	mHoverOutline = swGetProfileInteger(SW_PROFILE_HOVER_OUTLINE);
+	mHoverOutlineColor = swGetProfileUnsignedInteger(SW_PROFILE_HOVER_OUTLINE_COLOR);
 	mHighlightNewParts = swGetProfileInteger(SW_PROFILE_HIGHLIGHT_NEW_PARTS);
 	mHighlightNewPartsColor = swClampStepColorAlpha(swGetProfileUnsignedInteger(SW_PROFILE_HIGHLIGHT_NEW_PARTS_COLOR));
 	mDrawGridStuds = swGetProfileInteger(SW_PROFILE_GRID_STUDS);
@@ -121,6 +123,7 @@ void swPreferences::LoadDefaults()
 	mFlexMiddleControlPoint = swGetProfileInteger(SW_PROFILE_FLEX_MIDDLE_CONTROL_POINT);
 	mWatchFileChanges = swGetProfileInteger(SW_PROFILE_WATCH_FILE_CHANGES);
 	mLoadPartsBeforeShowing = swGetProfileInteger(SW_PROFILE_LOAD_PARTS_BEFORE_SHOWING);
+	mWarnPartsLoadFailure = swGetProfileInteger(SW_PROFILE_WARN_PARTS_LOAD_FAILURE);
 	mMigrateMetaCommands = static_cast<swMigrateMetaCommandsMode>(qBound(0, swGetProfileInteger(SW_PROFILE_MIGRATE_META_COMMANDS), static_cast<int>(swMigrateMetaCommandsMode::Keep)));
 	mMarkColladaTransparency = swGetProfileInteger(SW_PROFILE_MARK_COLLADA_TRANSPARENCY);
 	mKMZVisibleSurfaces = swGetProfileInteger(SW_PROFILE_KMZ_VISIBLE_SURFACES);
@@ -203,6 +206,8 @@ void swPreferences::SaveDefaults()
 	swSetProfileInteger(SW_PROFILE_FADE_JOINT, mFadeJoint);
 	swSetProfileUnsignedInteger(SW_PROFILE_FADE_JOINT_COLOR, mFadeJointColor);
 	swSetProfileInteger(SW_PROFILE_FADE_JOINT_MOVING, mFadeJointMoving);
+	swSetProfileInteger(SW_PROFILE_HOVER_OUTLINE, mHoverOutline);
+	swSetProfileUnsignedInteger(SW_PROFILE_HOVER_OUTLINE_COLOR, mHoverOutlineColor);
 	swSetProfileInteger(SW_PROFILE_HIGHLIGHT_NEW_PARTS, mHighlightNewParts);
 	swSetProfileUnsignedInteger(SW_PROFILE_HIGHLIGHT_NEW_PARTS_COLOR, mHighlightNewPartsColor);
 	swSetProfileInteger(SW_PROFILE_GRID_STUDS, mDrawGridStuds);
@@ -246,6 +251,7 @@ void swPreferences::SaveDefaults()
 	swSetProfileInteger(SW_PROFILE_FLEX_MIDDLE_CONTROL_POINT, mFlexMiddleControlPoint);
 	swSetProfileInteger(SW_PROFILE_WATCH_FILE_CHANGES, mWatchFileChanges);
 	swSetProfileInteger(SW_PROFILE_LOAD_PARTS_BEFORE_SHOWING, mLoadPartsBeforeShowing);
+	swSetProfileInteger(SW_PROFILE_WARN_PARTS_LOAD_FAILURE, mWarnPartsLoadFailure);
 	swSetProfileInteger(SW_PROFILE_MIGRATE_META_COMMANDS, static_cast<int>(mMigrateMetaCommands));
 	swSetProfileInteger(SW_PROFILE_MARK_COLLADA_TRANSPARENCY, mMarkColladaTransparency);
 	swSetProfileInteger(SW_PROFILE_KMZ_VISIBLE_SURFACES, mKMZVisibleSurfaces);

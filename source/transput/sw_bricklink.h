@@ -45,6 +45,7 @@ swResult<void> swSaveBrickLinkExceptions(const QString& FileName, const swBrickL
 
 std::optional<double> swGetBrickLinkWeight(const swPartData* PartData);
 QString swGetBrickLinkWeightText(const swPartData* PartData);
+swPartData* swFindBrickLinkLibraryPart(const QString& BrickLinkPart);
 
 swResult<int> swExportBrickLink(const QString& FileName, const swPartsList& PartsList, const swBrickLinkOptions& Options);
 swResult<int> swUpdateBrickLinkMapping(QWidget* Parent, const QString& FileName, const QString& ApiKey);

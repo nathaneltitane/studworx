@@ -61,6 +61,7 @@ struct swPartSelectionListModelEntry
 	swPartData* PartData = nullptr;
 	std::string Description;
 	int ColorIndex = -1;
+	bool MixedColors = false;
 	QPixmap Pixmap;
 	swPartThumbnailId ThumbnailId = swPartThumbnailId::Invalid;
 };
@@ -153,7 +154,7 @@ public:
 	void SetModelsCategory();
 	void SetPaletteCategory(int SetIndex);
 	void SetCurrentModelCategory();
-	void SetCustomParts(const std::vector<std::pair<swPartData*, std::string>>& Parts, int ColorIndex);
+	void SetCustomParts(const std::vector<std::pair<swPartData*, std::string>>& Parts, int ColorIndex, const std::vector<std::pair<int, bool>>& PartColors = {});
 	void SetFilter(const QString& FilterString);
 	void RequestThumbnail(int PartIndex);
 	void SetShowDecoratedParts(bool Show);
@@ -212,7 +213,7 @@ public:
 	void SnapPanel();
 
 	void SetCategory(swPartCategoryType Type, int Index);
-	void SetCustomParts(const std::vector<std::pair<swPartData*, std::string>>& Parts, int ColorIndex);
+	void SetCustomParts(const std::vector<std::pair<swPartData*, std::string>>& Parts, int ColorIndex, const std::vector<std::pair<int, bool>>& PartColors = {});
 	void SetCurrentPart(swPartData* PartData);
 
 	swPartData* GetCurrentPart() const
@@ -300,7 +301,7 @@ public:
 	void SnapCategories();
 	void SetCurrentPart(swPartData* PartData);
 	void SetCategory(swPartCategoryType Type, int Index);
-	void SetCustomParts(const std::vector<std::pair<swPartData*, std::string>>& Parts, int ColorIndex);
+	void SetCustomParts(const std::vector<std::pair<swPartData*, std::string>>& Parts, int ColorIndex, const std::vector<std::pair<int, bool>>& PartColors = {});
 
 	bool GetIsPopup() const
 	{
@@ -364,6 +365,7 @@ signals:
 	void LayoutChanged();
 
 public slots:
+	void OptionsMenuAboutToShow();
 	void AddToPalette();
 	void RemoveFromPalette();
 	void OpenSubmodel();
@@ -378,7 +380,6 @@ protected slots:
 	void CategoryChanged(QTreeWidgetItem* Current, QTreeWidgetItem* Previous);
 	void PartViewSelectionChanged(const QModelIndex& Current, const QModelIndex& Previous);
 	void PartViewPartPicked(swPartData* PartData);
-	void OptionsMenuAboutToShow();
 	void EditPartPalettes();
 
 protected:

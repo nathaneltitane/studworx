@@ -274,7 +274,7 @@ void swPartSelectionListModel::SetCurrentModelCategory()
 	SetFilter(mFilterString);
 }
 
-void swPartSelectionListModel::SetCustomParts(const std::vector<std::pair<swPartData*, std::string>>& Parts, int ColorIndex)
+void swPartSelectionListModel::SetCustomParts(const std::vector<std::pair<swPartData*, std::string>>& Parts, int ColorIndex, const std::vector<std::pair<int, bool>>& PartColors)
 {
 	beginResetModel();
 
@@ -291,7 +291,9 @@ void swPartSelectionListModel::SetCustomParts(const std::vector<std::pair<swPart
 		Entry.PartData = PartData;
 		Entry.Description = Description;
 
-		if (PartData && PartData->GetTrainTrackInfo())
+		if (mParts.size() <= PartColors.size())
+			std::tie(Entry.ColorIndex, Entry.MixedColors) = PartColors[mParts.size() - 1];
+		else if (PartData && PartData->GetTrainTrackInfo())
 			Entry.ColorIndex = mColorIndex;
 	}
 
@@ -438,6 +440,22 @@ void swPartSelectionListModel::ReleaseThumbnails()
 	}
 }
 
+// mark parts used in several colors, beside a flex or track mark
+
+static QPixmap swMarkMixedColors(QPixmap Pixmap, const swPartData* PartData)
+{
+	const int Offset = PartData->GetSynthInfo() || PartData->GetTrainTrackInfo() ? 32 : 16;
+	const qreal DeviceScale = Pixmap.devicePixelRatio();
+	QImage Icon = swCreatePaintedIconImage(swPaintedIcon::ThumbnailColors, qRound(16 * DeviceScale), QApplication::palette().color(QPalette::WindowText));
+	Icon.setDevicePixelRatio(DeviceScale);
+
+	QPainter Painter(&Pixmap);
+	Painter.drawImage(QPointF(Pixmap.width() / DeviceScale - Offset, Pixmap.height() / DeviceScale - 16), Icon);
+	Painter.end();
+
+	return Pixmap;
+}
+
 void swPartSelectionListModel::RequestThumbnail(int PartIndex)
 {
 	if (!mIconSize || !mParts[PartIndex].Pixmap.isNull() || mParts[PartIndex].ThumbnailId != swPartThumbnailId::Invalid)
@@ -456,7 +474,7 @@ void swPartSelectionListModel::RequestThumbnail(int PartIndex)
 
 	if (!Thumbnail.isNull())
 	{
-		mParts[PartIndex].Pixmap = Thumbnail;
+		mParts[PartIndex].Pixmap = mParts[PartIndex].MixedColors ? swMarkMixedColors(Thumbnail, PartData) : Thumbnail;
 
 		emit dataChanged(index(PartIndex, 0), index(PartIndex, 0), { Qt::DecorationRole });
 	}
@@ -468,7 +486,7 @@ void swPartSelectionListModel::ThumbnailReady(swPartThumbnailId ThumbnailId, QPi
 	{
 		if (mParts[PartIndex].ThumbnailId == ThumbnailId)
 		{
-			mParts[PartIndex].Pixmap = Pixmap;
+			mParts[PartIndex].Pixmap = mParts[PartIndex].MixedColors ? swMarkMixedColors(Pixmap, mParts[PartIndex].PartData) : Pixmap;
 
 			emit dataChanged(index(PartIndex, 0), index(PartIndex, 0), { Qt::DecorationRole });
 		}
@@ -713,11 +731,11 @@ void swPartSelectionListView::SetCategory(swPartCategoryType Type, int Index)
 	}
 }
 
-void swPartSelectionListView::SetCustomParts(const std::vector<std::pair<swPartData*, std::string>>& Parts, int ColorIndex)
+void swPartSelectionListView::SetCustomParts(const std::vector<std::pair<swPartData*, std::string>>& Parts, int ColorIndex, const std::vector<std::pair<int, bool>>& PartColors)
 {
 	mCategoryType = swPartCategoryType::Custom;
 
-	mListModel->SetCustomParts(Parts, ColorIndex);
+	mListModel->SetCustomParts(Parts, ColorIndex, PartColors);
 
 	setCurrentIndex(mListModel->index(0, 0));
 }
@@ -1281,11 +1299,11 @@ void swPartSelectionWidget::SetCategory(swPartCategoryType Type, int Index)
 	}
 }
 
-void swPartSelectionWidget::SetCustomParts(const std::vector<std::pair<swPartData*, std::string>>& Parts, int ColorIndex)
+void swPartSelectionWidget::SetCustomParts(const std::vector<std::pair<swPartData*, std::string>>& Parts, int ColorIndex, const std::vector<std::pair<int, bool>>& PartColors)
 {
 	mSplitter->widget(0)->setVisible(false);
 
-	mPartsWidget->SetCustomParts(Parts, ColorIndex);
+	mPartsWidget->SetCustomParts(Parts, ColorIndex, PartColors);
 }
 
 void swPartSelectionWidget::SetOrientation(Qt::Orientation Orientation)

@@ -434,10 +434,6 @@ void swMainWindow::CreateMenus()
 	EditMenu->addAction(mActions[SW_EDIT_PASTE_STEPS]);
 	EditMenu->addSeparator();
 	EditMenu->addAction(mActions[SW_EDIT_FIND]);
-	EditMenu->addAction(mActions[SW_EDIT_FIND_NEXT]);
-	EditMenu->addAction(mActions[SW_EDIT_FIND_PREVIOUS]);
-	EditMenu->addAction(mActions[SW_EDIT_REPLACE]);
-	EditMenu->addAction(mActions[SW_EDIT_REPLACE_NEXT]);
 	EditMenu->addSeparator();
 	EditMenu->addAction(mActions[SW_EDIT_SELECT_ALL]);
 	EditMenu->addAction(mActions[SW_EDIT_SELECT_NONE]);
@@ -945,6 +941,7 @@ void swMainWindow::CreateToolBars()
 	connect(mMinifigureBuilderToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 	connect(mExplodeToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 	connect(mJointsToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
+	connect(mJointsToolBar, &QDockWidget::visibilityChanged, this, []() { swView::UpdateAllViews(); });
 
 	mPartsToolBar->raise();
 }

@@ -79,6 +79,7 @@
     <name>swModel</name>
     <message numerus="yes">
         <location filename="../../source/core/sw_model_selection.cpp" line="1544"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1626"/>
         <source>Replace Parts</source>
         <translation>
             <numerusform>Replace Part</numerusform>
@@ -100,7 +101,7 @@
 <context>
     <name>swPreferencesDialog</name>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1530"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1543"/>
         <source>%n stud(s)</source>
         <translation>
             <numerusform>%n stud</numerusform>

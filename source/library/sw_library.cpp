@@ -219,6 +219,22 @@ const swPartData* swPartsLibrary::FindMovedPart(const swPartData* PartData)
 	return PartData;
 }
 
+// use to find the part an = alias stands for
+swPartData* swPartsLibrary::FindAliasPart(const swPartData* PartData)
+{
+	if (!PartData->IsAlias())
+		return nullptr;
+
+	swResult<std::unique_ptr<swFile>> File = OpenPartDataFile(PartData->mFileName);
+
+	if (!File)
+		return nullptr;
+
+	const std::string Target = ReadAliasTarget(*File.value());
+
+	return Target.empty() ? nullptr : FindPartData(Target.c_str(), nullptr);
+}
+
 // use to merge moved part aliases into the parts they moved to
 swPartsList swPartsLibrary::ResolveMovedParts(const swPartsList& PartsList)
 {

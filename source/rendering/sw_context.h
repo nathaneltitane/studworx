@@ -192,7 +192,7 @@ public:
 	int GetMaxTextureSize();
 	std::unique_ptr<QOpenGLFramebufferObject> CreateFramebuffer(int Width, int Height);
 	bool GenerateOutlineMasks(const swScene& Scene, QOpenGLFramebufferObject& FullFramebuffer, QOpenGLFramebufferObject& VisibleFramebuffer);
-	void DrawOutline(QOpenGLFramebufferObject& FullFramebuffer, QOpenGLFramebufferObject& VisibleFramebuffer, float DeviceScale, const swVector4& HighlightColor);
+	void DrawOutline(QOpenGLFramebufferObject& FullFramebuffer, QOpenGLFramebufferObject& VisibleFramebuffer, float DeviceScale, const swVector4& HighlightColor, const swVector4& HoverColor);
 
 	void SetWorldMatrix(const swMatrix44& WorldMatrix)
 	{
@@ -286,12 +286,13 @@ public:
 		mHighlightParamsDirty = true;
 	}
 
-	void SetOutlineParams(const swVector4& PixelSizeRadiusOpacity, const swVector4& SelectedColor, const swVector4& FocusedColor, const swVector4& HighlightedColor)
+	void SetOutlineParams(const swVector4& PixelSizeRadiusOpacity, const swVector4& SelectedColor, const swVector4& FocusedColor, const swVector4& HighlightedColor, const swVector4& HoverColor)
 	{
 		mOutlineParams[0] = PixelSizeRadiusOpacity;
 		mOutlineParams[1] = SelectedColor;
 		mOutlineParams[2] = FocusedColor;
 		mOutlineParams[3] = HighlightedColor;
+		mOutlineParams[4] = HoverColor;
 		mOutlineParamsDirty = true;
 	}
 
@@ -370,7 +371,7 @@ protected:
 	swMatrix44 mProjectionMatrix;
 	swMatrix44 mViewProjectionMatrix;
 	swVector4 mHighlightParams[4];
-	swVector4 mOutlineParams[4];
+	swVector4 mOutlineParams[5];
 	swLightingStyle mLightingStyle;
 	swCutawayShape mCutawayShape;
 	swMatrix44 mCutawayMatrix;

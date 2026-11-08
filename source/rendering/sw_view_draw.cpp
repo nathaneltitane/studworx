@@ -78,7 +78,7 @@ void swView::OnDraw()
 
 	// the joints tool outlines in red
 	swModel* JointsModel = GetActiveModel();
-	const bool DrawJoint = DrawInterface && mViewType == swViewType::View && JointsModel && gMainWindow && gMainWindow->GetTool() == swTool::Joints;
+	const bool DrawJoint = DrawInterface && mViewType == swViewType::View && JointsModel && gMainWindow && (gMainWindow->GetTool() == swTool::Joints || gMainWindow->IsJointsPanelVisible() || JointsModel->IsJointFocused());
 
 	if (DrawJoint)
 		mScene->SetHighlightColor(SW_RGBA(255, 0, 0, 255));
@@ -93,8 +93,8 @@ void swView::OnDraw()
 		// dragging with the joints tool turns the joint
 		if (Tool == swTool::Joints && (JointsModel->IsJointPick() || Preferences.mFadeJointMoving))
 			mScene->SetJointFadePart(JointsModel->GetJointPart());
-		else if ((Tool == swTool::Move || Tool == swTool::Rotate) && Preferences.mFadeJointMoving)
-			mScene->SetJointFadePart(JointsModel->GetRotateJoint());
+		else if (JointsModel->IsJointFocused() && (Preferences.mFadeJointMoving || (Tool != swTool::Move && Tool != swTool::Rotate)))
+			mScene->SetJointFadePart(JointsModel->GetJointPart());
 	}
 
 	// picking shows only the hovered part
@@ -108,6 +108,9 @@ void swView::OnDraw()
 
 	if (DrawJoint)
 		JointsModel->AddJointHighlight(mScene.get(), JointsModel != mModel ? mActiveSubmodelTransform : swMatrix44Identity());
+
+	if (DrawInterface && mViewType == swViewType::View && JointsModel && Preferences.mHoverOutline && mTrackButton == swTrackButton::None)
+		JointsModel->AddHoverOutline(mScene.get(), JointsModel != mModel ? mActiveSubmodelTransform : swMatrix44Identity(), mHoverChain);
 
 	mScene->End();
 
@@ -169,13 +172,13 @@ void swView::OnDraw()
 
 			// outline the new parts
 			const bool OutlineImage = mViewType == swViewType::View && mRenderFramebuffer && !mRenderImage.isNull() && mScene->HasHighlightedMeshes();
+			const bool SelectionOutline = Preferences.mHighlightRenderMode == swHighlightRenderMode::Outline && (mScene->HasSelectedMeshes() || mScene->HasHighlightedMeshes());
 			const bool OutlineEnabled = ((DrawInterface && !mRenderFramebuffer && mRenderImage.isNull()) || OutlineImage) &&
-				ShadingMode != swShadingMode::Wireframe && Preferences.mHighlightRenderMode == swHighlightRenderMode::Outline &&
-				(mScene->HasSelectedMeshes() || mScene->HasHighlightedMeshes()) && PrepareOutlineFramebuffers();
+				ShadingMode != swShadingMode::Wireframe && (SelectionOutline || mScene->HasHoverMeshes()) && PrepareOutlineFramebuffers();
 			
 			bool OutlineMasksReady = false;
 
-			mScene->SetHighlightRenderMode(OutlineEnabled ? swHighlightRenderMode::Outline : swHighlightRenderMode::Tint);
+			mScene->SetHighlightRenderMode(OutlineEnabled && Preferences.mHighlightRenderMode == swHighlightRenderMode::Outline ? swHighlightRenderMode::Outline : swHighlightRenderMode::Tint);
 			mScene->Draw(mContext, [this, OutlineEnabled, DrawInterface, &OutlineMasksReady]()
 			{
 				if (OutlineEnabled)
@@ -186,7 +189,7 @@ void swView::OnDraw()
 			});
 
 			if (OutlineEnabled && OutlineMasksReady)
-				mContext->DrawOutline(*mOutlineFullFramebuffer, *mOutlineVisibleFramebuffer, mWidget ? mWidget->GetDeviceScale() : mLineWidthScale, mScene->GetHighlightColor());
+				mContext->DrawOutline(*mOutlineFullFramebuffer, *mOutlineVisibleFramebuffer, mWidget ? mWidget->GetDeviceScale() : mLineWidthScale, mScene->GetHighlightColor(), mScene->GetHoverColor());
 
 			if (OutlineEnabled && !OutlineMasksReady)
 			{
