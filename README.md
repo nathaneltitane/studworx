@@ -33,13 +33,13 @@ Download the Debian, Ubuntu, Fedora, openSUSE, AppImage, Windows or macOS packag
 
 Install the build requirements - a C++ compiler, Qt 5 and zlib development packages:
 
-Debian, Ubuntu:
+Debian / Ubuntu:
 
 ```
 sudo apt install g++ make qtbase5-dev qttools5-dev-tools libqt5opengl5-dev libqt5svg5 qt5-image-formats-plugins zlib1g-dev
 ```
 
-Fedora, Rocky Linux, RHEL:
+Fedora / Rocky Linux / RHEL:
 
 ```
 sudo dnf install gcc-c++ make qt5-qtbase-devel qt5-linguist qt5-qtsvg qt5-qtimageformats zlib-devel
@@ -59,13 +59,13 @@ sudo pacman -S base-devel qt5-base qt5-tools qt5-svg qt5-imageformats zlib
 
 Optional - gamepad input, the terminal panel with KParts and a KDE Frameworks 5 Konsole, and file manager thumbnails with KIO:
 
-Debian, Ubuntu:
+Debian / Ubuntu:
 
 ```
 sudo apt install libqt5gamepad5-dev libkf5parts-dev libkf5kio-dev
 ```
 
-Fedora, Rocky Linux, RHEL:
+Fedora / Rocky Linux / RHEL:
 
 ```
 sudo dnf install qt5-qtgamepad-devel kf5-kparts-devel kf5-kio-devel
