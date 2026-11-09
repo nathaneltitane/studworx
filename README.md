@@ -25,71 +25,74 @@ Every feature, menu and panel is listed in [SITE.md](SITE.md) and shown on [stud
 
 ### TL;DR
 
-  - Install ↴
-    - Download the Debian, Ubuntu, Fedora, openSUSE, AppImage, Windows or macOS package from the [latest release](https://github.com/nathaneltitane/studworx/releases/latest).
+**Install ↴**
 
-  - Build ↴
-    - Install the build requirements - a C++ compiler, Qt 5 and zlib development packages:
+Download the Debian, Ubuntu, Fedora, openSUSE, AppImage, Windows or macOS package from the [latest release](https://github.com/nathaneltitane/studworx/releases/latest).
 
-      Debian, Ubuntu:
+**Build ↴**
 
-      ```
-      sudo apt install g++ make qtbase5-dev qttools5-dev-tools libqt5opengl5-dev libqt5svg5 qt5-image-formats-plugins zlib1g-dev
-      ```
+Install the build requirements - a C++ compiler, Qt 5 and zlib development packages:
 
-      Fedora, Rocky Linux, RHEL:
+Debian, Ubuntu:
 
-      ```
-      sudo dnf install gcc-c++ make qt5-qtbase-devel qt5-linguist qt5-qtsvg qt5-qtimageformats zlib-devel
-      ```
+```
+sudo apt install g++ make qtbase5-dev qttools5-dev-tools libqt5opengl5-dev libqt5svg5 qt5-image-formats-plugins zlib1g-dev
+```
 
-      openSUSE:
+Fedora, Rocky Linux, RHEL:
 
-      ```
-      sudo zypper install gcc-c++ make libqt5-qtbase-devel libqt5-linguist libqt5-qtsvg libqt5-qtimageformats zlib-devel
-      ```
+```
+sudo dnf install gcc-c++ make qt5-qtbase-devel qt5-linguist qt5-qtsvg qt5-qtimageformats zlib-devel
+```
 
-      Arch Linux:
+openSUSE:
 
-      ```
-      sudo pacman -S base-devel qt5-base qt5-tools qt5-svg qt5-imageformats zlib
-      ```
+```
+sudo zypper install gcc-c++ make libqt5-qtbase-devel libqt5-linguist libqt5-qtsvg libqt5-qtimageformats zlib-devel
+```
 
-    - Optional - gamepad input, the terminal panel with KParts and a KDE Frameworks 5 Konsole, and file manager thumbnails with KIO:
+Arch Linux:
 
-      Debian, Ubuntu:
+```
+sudo pacman -S base-devel qt5-base qt5-tools qt5-svg qt5-imageformats zlib
+```
 
-      ```
-      sudo apt install libqt5gamepad5-dev libkf5parts-dev libkf5kio-dev
-      ```
+Optional - gamepad input, the terminal panel with KParts and a KDE Frameworks 5 Konsole, and file manager thumbnails with KIO:
 
-      Fedora, Rocky Linux, RHEL:
+Debian, Ubuntu:
 
-      ```
-      sudo dnf install qt5-qtgamepad-devel kf5-kparts-devel kf5-kio-devel
-      ```
+```
+sudo apt install libqt5gamepad5-dev libkf5parts-dev libkf5kio-dev
+```
 
-      openSUSE:
+Fedora, Rocky Linux, RHEL:
 
-      ```
-      sudo zypper install kparts-devel kio-devel
-      ```
+```
+sudo dnf install qt5-qtgamepad-devel kf5-kparts-devel kf5-kio-devel
+```
 
-      Arch Linux:
+openSUSE:
 
-      ```
-      sudo pacman -S qt5-gamepad kparts5 kio5
-      ```
+```
+sudo zypper install kparts-devel kio-devel
+```
 
-    - Build and install without a package - a prefix and a build directory can follow the install command, the prefix defaults to '/usr/local', '~/.local' needs no superuser rights:
+Arch Linux:
 
-      ```
-      git clone https://github.com/nathaneltitane/studworx
-      studworx/tools/studworx-install
-      ```
+```
+sudo pacman -S qt5-gamepad kparts5 kio5
+```
 
-  - Run ↴
-    - Start StudWorx and let it download the [LDraw parts library](https://library.ldraw.org/updates?latest) on the first start.
+Build and install without a package - a prefix and a build directory can follow the install command, the prefix defaults to '/usr/local', '~/.local' needs no superuser rights:
+
+```
+git clone https://github.com/nathaneltitane/studworx
+studworx/tools/studworx-install
+```
+
+**Run ↴**
+
+Start StudWorx and let it download the [LDraw parts library](https://library.ldraw.org/updates?latest) on the first start.
 
 ---
 
