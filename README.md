@@ -31,7 +31,7 @@ Download the [latest release](https://github.com/nathaneltitane/studworx/release
 
 **Build ↴**
 
-Install the build requirements - a C++ compiler, Qt 5 and zlib development packages:
+Install a C++ compiler and the Qt 5 and zlib development packages:
 
 Debian / Ubuntu:
 
