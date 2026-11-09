@@ -57,7 +57,7 @@ Arch Linux:
 sudo pacman -S base-devel qt5-base qt5-tools qt5-svg qt5-imageformats zlib
 ```
 
-Optional - gamepad input, the terminal panel with KParts and a KDE Frameworks 5 Konsole, and file manager thumbnails with KIO:
+Optionally, install these packages for gamepad input, the terminal panel and file manager thumbnails:
 
 Debian / Ubuntu:
 
@@ -83,7 +83,7 @@ Arch Linux:
 sudo pacman -S qt5-gamepad kparts5 kio5
 ```
 
-Build and install without a package - a prefix and a build directory can follow the install command, the prefix defaults to '/usr/local', '~/.local' needs no superuser rights:
+Build and install from source - add a prefix (default '/usr/local', '~/.local' needs no superuser rights) and a build directory after the install command if needed:
 
 ```
 git clone https://github.com/nathaneltitane/studworx
