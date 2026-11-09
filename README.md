@@ -27,7 +27,7 @@ Every feature, menu and panel is listed in [SITE.md](SITE.md) and shown on [stud
 
 **Install ↴**
 
-Download the Debian, Ubuntu, Fedora, openSUSE, AppImage, Windows or macOS package from the [latest release](https://github.com/nathaneltitane/studworx/releases/latest).
+Download the [latest release](https://github.com/nathaneltitane/studworx/releases/latest) for Debian, Ubuntu, Fedora, openSUSE, Windows or macOS, or the AppImage.
 
 **Build ↴**
 
