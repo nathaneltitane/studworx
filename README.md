@@ -104,15 +104,21 @@ Part connections come from the [LDCad shadow library](https://github.com/RolandM
 
 POV-Ray renders can use the [LGEO library](https://github.com/jncraton/lgeo) by Lutz Uhlmann, high detail LEGO® part models for POV-Ray that may be redistributed freely - it is not bundled with StudWorx.
 
+---
+
 ### License:
 
 StudWorx is free software released under the GNU General Public License version 3 - see 'LICENSE.md'.
 
 LEGO® is a trademark of the LEGO® Group, which does not sponsor, authorize or endorse this project.
 
+---
+
 ### Reports:
 
 [Submit bug report or feature request](https://github.com/nathaneltitane/studworx/issues)
+
+---
 
 ### Projects:
 
