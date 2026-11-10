@@ -73,7 +73,7 @@
 	<key>CFBundleIconFile</key>
 	<string>studworx.icns</string>
 	<key>CFBundleIdentifier</key>
-	<string>app.studworx.StudWorx</string>
+	<string>io.github.nathaneltitane.studworx</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>

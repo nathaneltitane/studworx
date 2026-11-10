@@ -223,9 +223,9 @@ version_move () {
 
 	version_replace resources/packaging/arch/PKGBUILD "pkgver=*" "${version_compact_old}" "${version_compact_new}"
 
-	if ! version_has resources/packaging/common/app.studworx.StudWorx.appdata.xml $'\t\t'"<release version=\"${version_new}\" date=\"${version_new}\" />"
+	if ! version_has resources/packaging/common/io.github.nathaneltitane.StudWorx.appdata.xml $'\t\t'"<release version=\"${version_new}\" date=\"${version_new}\" />"
 	then
-		version_insert resources/packaging/common/app.studworx.StudWorx.appdata.xml "*<release version=*" $'\t\t'"<release version=\"${version_new}\" date=\"${version_new}\" />"
+		version_insert resources/packaging/common/io.github.nathaneltitane.StudWorx.appdata.xml "*<release version=*" $'\t\t'"<release version=\"${version_new}\" date=\"${version_new}\" />"
 	fi
 
 	version_replace platform/Info.plist "*<string>${version_old}</string>*" "${version_old}" "${version_new}"

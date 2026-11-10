@@ -7,7 +7,7 @@ confinement: strict
 
 apps:
   studworx:
-    common-id: app.studworx.StudWorx
+    common-id: io.github.nathaneltitane.StudWorx
     command: studworx
     plugs:
       - home
@@ -35,4 +35,4 @@ parts:
       - libqt5svg5
       - qt5-image-formats-plugins
     source: https://github.com/nathaneltitane/studworx/archive/refs/tags/2026-11-10.tar.gz
-    parse-info: [usr/share/metainfo/app.studworx.StudWorx.appdata.xml]
+    parse-info: [usr/share/metainfo/io.github.nathaneltitane.StudWorx.appdata.xml]

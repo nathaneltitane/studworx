@@ -303,6 +303,9 @@ jobs:
     - name: Build package
       shell: bash
       run: resources/packaging/windows/windows.sh build/windows
+    - name: Build portable package
+      shell: bash
+      run: resources/packaging/windows/windows-portable.sh build/windows
     - name: Upload package
       uses: actions/upload-artifact@v7
       with:

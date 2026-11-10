@@ -143,7 +143,7 @@ unix:!macx {
 	mime.path = $$MIME_DIR
 	mime.files = platform/studworx.xml
 	appdata.path = $$APPDATA_DIR
-	appdata.files = resources/packaging/common/app.studworx.StudWorx.appdata.xml
+	appdata.files = resources/packaging/common/io.github.nathaneltitane.StudWorx.appdata.xml
 	thumbnailer.path = $$THUMBNAILER_DIR
 	thumbnailer.files = platform/studworx.thumbnailer
 	samples.path = $$SAMPLES_DIR
