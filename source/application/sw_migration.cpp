@@ -17,14 +17,16 @@ static void swCopyFolder(const QString& Source, const QString& Destination)
 }
 
 // use to take over settings and data stored under an earlier name
-static bool swTakeOverSettings(const QString& EarlierOrganization, const QString& EarlierApplication, bool MoveData)
+static bool swTakeOverSettings(const QString& EarlierDomain, const QString& EarlierOrganization, const QString& EarlierApplication, bool MoveData)
 {
 	QSettings Settings;
 
+	const QString OrganizationDomain = QCoreApplication::organizationDomain();
 	const QString OrganizationName = QCoreApplication::organizationName();
 	const QString ApplicationName = QCoreApplication::applicationName();
 	const QString DataPath = QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation);
 
+	QCoreApplication::setOrganizationDomain(EarlierDomain);
 	QCoreApplication::setOrganizationName(EarlierOrganization);
 	QCoreApplication::setApplicationName(EarlierApplication);
 
@@ -35,6 +37,7 @@ static bool swTakeOverSettings(const QString& EarlierOrganization, const QString
 	for (const QString& Key : OldKeys)
 		Settings.setValue(Key, OldSettings.value(Key));
 
+	QCoreApplication::setOrganizationDomain(OrganizationDomain);
 	QCoreApplication::setOrganizationName(OrganizationName);
 	QCoreApplication::setApplicationName(ApplicationName);
 
@@ -60,8 +63,14 @@ static void swMigrateEarlierSettings()
 	if (!Settings.allKeys().isEmpty())
 		return;
 
-	if (!swTakeOverSettings(QLatin1String("StudWorks"), QLatin1String("StudWorks"), true))
-		swTakeOverSettings(QLatin1String("LeoCAD Software"), QLatin1String("LeoCAD"), false);
+	// the domain names the settings on macos
+	const QString EarlierDomain = QLatin1String("nathaneltitane.github.io");
+
+	if (swTakeOverSettings(EarlierDomain, QLatin1String("StudWorx"), QLatin1String("StudWorx"), false))
+		return;
+
+	if (!swTakeOverSettings(EarlierDomain, QLatin1String("StudWorks"), QLatin1String("StudWorks"), true))
+		swTakeOverSettings(EarlierDomain, QLatin1String("LeoCAD Software"), QLatin1String("LeoCAD"), false);
 }
 
 // short minifig names not yet spelled out

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-	<id>io.github.nathaneltitane.StudWorx</id>
+	<id>app.studworx.StudWorx</id>
+	<replaces>
+		<id>io.github.nathaneltitane.StudWorx</id>
+	</replaces>
 	<metadata_license>CC0-1.0</metadata_license>
 	<project_license>GPL-3.0-only</project_license>
 	<content_rating type="oars-1.1" />
@@ -12,7 +15,7 @@
 	<launchable type="desktop-id">studworx.desktop</launchable>
 	<url type="homepage">https://github.com/nathaneltitane/studworx/</url>
 	<url type="bugtracker">https://github.com/nathaneltitane/studworx/issues</url>
-	<developer id="org.studworx"><name>StudWorx.org</name></developer>
+	<developer id="app.studworx"><name>StudWorx.app</name></developer>
 	<screenshots>
 		<screenshot type="default">
 			<image>https://github.com/nathaneltitane/studworx/towerbridge.png</image>

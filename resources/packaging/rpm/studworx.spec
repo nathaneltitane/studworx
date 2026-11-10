@@ -33,7 +33,7 @@ cp -a %{sw_root}/. %{buildroot}/
 %{_datadir}/icons/hicolor/*/apps/*
 %{_datadir}/icons/hicolor/*/mimetypes/*
 %{_datadir}/mime/packages/studworx.xml
-%{_datadir}/metainfo/io.github.nathaneltitane.StudWorx.appdata.xml
+%{_datadir}/metainfo/app.studworx.StudWorx.appdata.xml
 %{_datadir}/thumbnailers/studworx.thumbnailer
 %{?sw_thumbnailer}
 %{_datadir}/doc/studworx

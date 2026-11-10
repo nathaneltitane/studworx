@@ -107,6 +107,25 @@ static void swRegisterShellFileTypes()
 		RegSetValue(HKEY_CLASSES_ROOT, TEXT(".lcd"), REG_SZ, TEXT("StudWorx.Project"), lstrlen(TEXT("StudWorx.Project")) * sizeof(TCHAR));
 }
 
+// use to keep settings beside the program
+static bool swSetupPortableSettings()
+{
+	wchar_t ModulePath[_MAX_PATH];
+
+	if (!GetModuleFileNameW(nullptr, ModulePath, _MAX_PATH))
+		return false;
+
+	const QString SettingsPath = QFileInfo(QString::fromWCharArray(ModulePath)).absoluteDir().filePath(QLatin1String("settings"));
+
+	if (!QFileInfo(SettingsPath).isDir())
+		return false;
+
+	QSettings::setDefaultFormat(QSettings::IniFormat);
+	QSettings::setPath(QSettings::IniFormat, QSettings::UserScope, SettingsPath);
+
+	return true;
+}
+
 #endif
 
 static void swInitializeSurfaceFormat(int argc, char* argv[])
@@ -145,11 +164,15 @@ static void swInitializeSurfaceFormat(int argc, char* argv[])
 
 int main(int argc, char *argv[])
 {
-	QCoreApplication::setOrganizationDomain(QLatin1String("nathaneltitane.github.io"));
+	QCoreApplication::setOrganizationDomain(QLatin1String("studworx.app"));
 	QCoreApplication::setOrganizationName(QLatin1String("StudWorx"));
 	QCoreApplication::setApplicationName(QLatin1String("StudWorx"));
 	QCoreApplication::setApplicationVersion(QLatin1String(SW_VERSION_TEXT));
 	QGuiApplication::setDesktopFileName(QLatin1String("studworx"));
+
+#ifdef Q_OS_WIN
+	const bool Portable = swSetupPortableSettings();
+#endif
 
 	swMigrateSettings();
 	swInitializeSurfaceFormat(argc, argv);
@@ -200,7 +223,12 @@ int main(int argc, char *argv[])
 	QList<QPair<QString, bool>> LibraryPaths;
 
 #ifdef Q_OS_WIN
-	swRegisterShellFileTypes();
+
+	// portable copies leave the registry alone
+
+	if (!Portable)
+		swRegisterShellFileTypes();
+
 	swSehInitialize();
 #endif
 

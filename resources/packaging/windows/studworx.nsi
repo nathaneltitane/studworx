@@ -89,7 +89,7 @@ Section "Application Files" SecStudWorx
   ;Create uninstaller
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\StudWorx" "DisplayName" "StudWorx"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\StudWorx" "DisplayVersion" $%VERSION%
-  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\StudWorx" "Publisher" "StudWorx.org"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\StudWorx" "Publisher" "StudWorx.app"
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\StudWorx" "DisplayIcon" '"$INSTDIR\StudWorx.exe"'
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\StudWorx" "UninstallString" '"$INSTDIR\Uninstall.exe"'
   WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\StudWorx" "URLUpdateInfo" "https://github.com/nathaneltitane/studworx"
