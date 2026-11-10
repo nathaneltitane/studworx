@@ -38,6 +38,7 @@ swKeyframesWidget::swKeyframesWidget(QWidget* Parent)
 	QToolButton* RewindButton = new QToolButton(this);
 	RewindButton->setIcon(style()->standardIcon(QStyle::SP_MediaSkipBackward));
 	RewindButton->setToolTip(tr("Go to the first step"));
+	RewindButton->setWhatsThis(tr("<p><b>Rewind</b></p><p>Go to the first step of the model.</p>"));
 	connect(RewindButton, &QToolButton::clicked, this, [this]() { SetPlaying(false); mView->SetCurrentStep(1); });
 	Buttons->addWidget(RewindButton);
 
@@ -51,12 +52,14 @@ swKeyframesWidget::swKeyframesWidget(QWidget* Parent)
 	QToolButton* StopButton = new QToolButton(this);
 	StopButton->setIcon(style()->standardIcon(QStyle::SP_MediaStop));
 	StopButton->setToolTip(tr("Stop and go back to the step playing started from"));
+	StopButton->setWhatsThis(tr("<p><b>Stop</b></p><p>Stop playing through the steps and go back to the step playing started from.</p>"));
 	connect(StopButton, &QToolButton::clicked, this, &swKeyframesWidget::StopClicked);
 	Buttons->addWidget(StopButton);
 
 	QToolButton* ForwardButton = new QToolButton(this);
 	ForwardButton->setIcon(style()->standardIcon(QStyle::SP_MediaSkipForward));
 	ForwardButton->setToolTip(tr("Go to the last step"));
+	ForwardButton->setWhatsThis(tr("<p><b>Forward</b></p><p>Go to the last step of the model.</p>"));
 	connect(ForwardButton, &QToolButton::clicked, this, [this]()
 	{
 		SetPlaying(false);
@@ -79,12 +82,14 @@ swKeyframesWidget::swKeyframesWidget(QWidget* Parent)
 	mSelectedButton->setText(tr("Selected"));
 	mSelectedButton->setCheckable(true);
 	mSelectedButton->setToolTip(tr("Show the keys of the selected objects"));
+	mSelectedButton->setWhatsThis(tr("<p><b>Selected</b></p><p>List only the selected objects in the timeline, with or without keys.</p>"));
 	Buttons->addWidget(mSelectedButton);
 
 	mAllButton = new QToolButton(this);
 	mAllButton->setText(tr("All"));
 	mAllButton->setCheckable(true);
 	mAllButton->setToolTip(tr("Show the keys of every object that has keys"));
+	mAllButton->setWhatsThis(tr("<p><b>All</b></p><p>List the selected objects and every other object of the model that has keys.</p>"));
 	Buttons->addWidget(mAllButton);
 
 	QButtonGroup* ShowGroup = new QButtonGroup(this);

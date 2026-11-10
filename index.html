@@ -1610,8 +1610,8 @@
 				<li><b>Options menus.</b> A gear button opens the settings that belong to its place: grids, <a href="#steps">steps</a> and highlighting and view overlays on the model view, list display and filtering on Parts, the insert color on Colors, overlays and selection on Preview, shading and lines on the Minifigure Builder, the model folder on Terminal, editing on the Editor and page setup on the <a href="#instructions">instructions</a> Properties.</li>
 				<li><b>Lock Interface.</b> At the end of the same menu, also on a right click on any toolbar or panel title. Panel title bars are hidden to save space, panels and toolbars stay where they are with no dragging, floating or redocking, and the choice is remembered. Panels still resize, the menu still shows or hides them, and model tabs still move.</li>
 				<li><b>Menus by task.</b> File, Edit, View, Part, Steps, Models and <a href="#help">Help</a>, with clean labels and a unique mnemonic in each menu. Edit holds the Selection Mode, Transform and <a href="#tools">Tools</a> submenus, View the Toolbars, Viewpoints, Cutaway, Cameras, Projection and Shading submenus, and Part the Joint, Group and Visibility submenus.</li>
+				<li><b>Toolbars and panels on demand.</b> View &gt; Toolbars shows or hides each toolbar and panel: Standard Toolbar, Tools Toolbar, Time Toolbar, Parts Panel, Colors Panel, Properties Panel, Timeline Panel, Preview Panel, Terminal Panel, Minifigure Builder Panel, Explode Panel, Joints Panel, Poses Panel and Keyframes Panel.</li>
 				<li><b>Contextual help.</b> Choose Help &gt; &quot;What&#x27;s This?&quot; or click the question mark in a title bar, then click any control to read what it does. F1 explains the focused control, Shift+F1 starts &quot;What&#x27;s This?&quot; inside a dialog, and every entry is listed in the Help index below.</li>
-				<li><b>Toolbars and panels on demand.</b> View &gt; Toolbars shows or hides each toolbar and panel, such as Standard Toolbar, Colors Panel, Preview Panel and Minifigure Builder Panel: Standard, Tools, Time, Parts, Colors, Properties, Timeline, Preview, Terminal, Minifigure Builder, Explode, Joints, Poses and Keyframes.</li>
 				<li><b>Split views.</b> Split Horizontal and Split Vertical divide the current view as often as you like, Remove View closes one, or Reset Views back to one. Each view keeps its own camera and projection, a border marks the active one, and the view cube and axis icon stay on the top left view.</li>
 				<li><b>Transform toolbar.</b> Type a position or rotation for the selection and apply it, as absolute coordinates or relative to where it is now. It has no entry of its own: its fields sit at the bottom of the Properties panel, shown with View &gt; Toolbars &gt; Properties Panel.</li>
 				<li><b>Undo and clipboard.</b> Undo and Redo every change, and Cut, Copy and Paste parts between models and tabs. Paste with Steps keeps the steps of the copied parts.</li>
@@ -1622,9 +1622,9 @@
 			</ul>
 
 			<div class="gallery scroll">
-				<figure style="--width-image: 582; --height-image: 499">
+				<figure style="--width-image: 459; --height-image: 499">
 					<button class="shot" data-full="resources/images/interface-menu-file.png" aria-label="Enlarge File">
-						<img src="resources/images/interface-menu-file.png" alt="File" width="582" height="499" loading="lazy">
+						<img src="resources/images/interface-menu-file.png" alt="File" width="459" height="499" loading="lazy">
 					</button>
 
 					<figcaption>File</figcaption>
@@ -1823,7 +1823,7 @@
 				<li><b>LDraw models.</b> .ldr, .mpd and .dat files, with New, Open, Merge, Save, Save As, Reload and the four most recent files. Save As follows the LDraw file specification and adds the extension when it is left out: .ldr for a single model, .mpd for a model with submodels or embedded data. Files are written with Unix line endings, and a model loaded with Windows line endings keeps them when saved. Watch for File Changes reloads a model edited in another program. Sample models, a minifigure, cube, sphere and cylinder cutaways of it, an exploded model, a flexible part, a posable minifigure with joints, lights and cameras, and a scene with POV-Ray lights, floor and camera, <a href="#install">install</a> to /usr/share/studworx/samples, the samples folder beside the program on Windows, or the application bundle resources on macOS.</li>
 				<li><b>Export.</b> 3D Studio, COLLADA, Wavefront, KMZ, POV-Ray, HTML pages from the Instructions window, BrickLink wanted lists and CSV parts lists. BrickLink exports pick the condition, the wanted list by its number or the address of its page, and new listing notices, copy the XML and open the BrickLink upload page in one step, and translate part numbers and colors through a bundled mapping of over 55,000 parts or a file built from the library and Rebrickable, with Rebrickable numbers taking the lead over stale part keywords. BrickLink and CSV exports list parts the library moved to a new number under that number, and Part Exceptions in the BrickLink export keeps a comma or tab separated list of parts whose BrickLink number you set by hand.</li>
 				<li><b>Missing and moved parts.</b> Opening a model lists the parts that could not be loaded and the parts the library marks as moved or as an alias, with where each is used. Moved parts and aliases are offered the part they point to, missing parts are looked up through the BrickLink mapping, and Replace Checked swaps the checked ones in every submodel, keeping colors and positions, in one undo step. Copy List copies the list, Don&#x27;t Warn Again or the Warn About Missing and Moved Parts preference stops the list on open, and the status bar icon opens it again.</li>
-				<li><b>Import.</b> LEGO® Digital Designer models (.lxf and .lxfml), also opened with Open, recent files, drag and drop and the command line as an untitled project, with a bundled part and color mapping, and official set inventories. Set inventories use your own free Rebrickable API key, asked for once or set under Online Services in the <a href="#preferences">preferences</a>, and are searched by set name or number.</li>
+				<li><b>Import.</b> LEGO® Digital Designer models (.lxf and .lxfml), also opened with Open, recent files, drag and drop and the command line as an untitled project, with a bundled part and color mapping, and official set inventories with File &gt; Set Inventory. Set inventories use your own free Rebrickable API key, asked for once or set under Online Services in the <a href="#preferences">preferences</a>, and are searched by set name or number.</li>
 				<li><b>Command line.</b> Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx. <a href="https://l2cu.app">L²CU</a>, the LDraw command line utility for Linux based systems, drives these renders and exports for whole folders of models.</li>
 				<li><b>LeoCAD models.</b> Models saved by LeoCAD open as they are, and their LeoCAD <a href="#meta">meta</a> commands are migrated to StudWorx ones, automatically when you choose so in Preferences. Older LeoCAD projects (.lcd) open and merge too, and save as LDraw.</li>
 				<li><b>Startup.</b> Open Most Recent File on Startup reopens the last model, Restore Tab Layout brings back its tabs and split <a href="#views">views</a>, and Load All Parts Before Showing waits until every part is loaded before the model appears.</li>
@@ -1870,17 +1870,17 @@
 			</div>
 
 			<div class="gallery scroll">
-				<figure style="--width-image: 775; --height-image: 499">
+				<figure style="--width-image: 664; --height-image: 499">
 					<button class="shot" data-full="resources/images/files-menu-import.png" aria-label="Enlarge Import menu">
-						<img src="resources/images/files-menu-import.png" alt="Import menu" width="775" height="499" loading="lazy">
+						<img src="resources/images/files-menu-import.png" alt="Import menu" width="664" height="499" loading="lazy">
 					</button>
 
 					<figcaption>Import menu</figcaption>
 				</figure>
 
-				<figure style="--width-image: 775; --height-image: 499">
+				<figure style="--width-image: 662; --height-image: 499">
 					<button class="shot" data-full="resources/images/files-menu-export.png" aria-label="Enlarge Export menu">
-						<img src="resources/images/files-menu-export.png" alt="Export menu" width="775" height="499" loading="lazy">
+						<img src="resources/images/files-menu-export.png" alt="Export menu" width="662" height="499" loading="lazy">
 					</button>
 
 					<figcaption>Export menu</figcaption>
@@ -2149,24 +2149,24 @@
 			</div>
 
 			<ul class="points">
-				<li><b>Separate settings.</b> The model view, the preview, the parts list and the Minifigure Builder each keep their own rendering settings. Each can follow the model view instead, with Preview Uses Model View Settings, Parts Use Model View Settings and Minifigure Builder Uses Model View Settings, or set its own Wireframe, Flat Shading, Default Lights, Edge Lines, Conditional Lines and line width. The preview also turns its View Cube and Axis Icon on and off, and the parts list has Snap Panel Width to Tiles.</li>
+				<li><b>Separate settings.</b> The model view, the preview, the parts list and the Minifigure Builder each keep their own rendering settings. Each can follow the model view instead, with Preview Uses Model View Settings, Parts Use Model View Settings and Minifigure Builder Uses Model View Settings, or set its own Wireframe, Flat Shading, Default Lights, Edge Lines, Conditional Lines and line width: Preview Wireframe, Preview Flat Shading, Preview Default Lights, Preview Edge Lines and Preview Conditional Lines, Parts Wireframe, Parts Flat Shading, Parts Default Lights, Parts Edge Lines and Parts Conditional Lines, and Minifigure Builder Wireframe, Minifigure Builder Flat Shading, Minifigure Builder Default Lights, Minifigure Builder Edge Lines and Minifigure Builder Conditional Lines. Preview View Cube and Preview Axis Icon turn the preview overlays on and off, and the parts list has Snap Panel Width to Tiles.</li>
 				<li><b>Lighting styles.</b> Standard Lighting, Studio Lighting, Matte Lighting and Toon Lighting, from the View menu or the command line with --lighting. Standard uses one light with soft highlights, Studio key, fill and rim lights, Matte no highlights, and Toon banded cel shading.</li>
 				<li><b>Blender.</b> Render with the bundled Blender LDraw add-ons, with the output, <a href="#image">image</a>, scene, parts and editing settings in <a href="#panels">panels</a> of the render window, or Open in Blender to keep working on the scene there. The Blender executable is set in <a href="#preferences">Preferences</a>.</li>
 				<li><b>POV-Ray.</b> Found on its own in the PATH, Flatpak or Snap and checked for version 3.7. LGEO high detail parts are found beside the parts library or downloaded on request, with a Parts choice between LDraw and LGEO.</li>
 				<li><b>Edge colors.</b> Automate Edge Color computes edge colors from each part color, with edge contrast, saturation and light to dark settings, or set the stud cylinder, edge, black edge and dark edge colors yourself.</li>
 				<li><b>Studs.</b> Eight stud styles: Plain Studs, Thin-Line Logo Studs, Outline Logo Studs, Sharp Top Logo Studs, Rounded Top Logo Studs, Flattened Logo Studs, High Contrast Studs and High Contrast Logo Studs.</li>
 				<li><b>Color configurations.</b> Colors come from the parts library, the LDraw color configuration or the alternate configuration with more realistic edge line colors for rendering, chosen under Rendering &gt; Colors.</li>
+				<li><b>Render window.</b> POV-Ray Render and Blender Render open the Render window. Choose the output file, follow the progress, and watch the image appear in the preview as it renders.</li>
 				<li><b>Selection highlight.</b> Outline Highlight or Tint and Edges Highlight, with Increase Outline Width, Decrease Outline Width and an adjustable transparency.</li>
 				<li><b>Mesh level of detail.</b> Distant parts draw with simpler meshes, from a distance set in Preferences, so large <a href="#models">models</a> stay smooth.</li>
 				<li><b>Shading.</b> Wireframe, Flat Shading, Default Lights, Edge Lines, Conditional Lines and Mesh LOD (level of detail).</li>
-				<li><b>Render window.</b> Choose the output file, follow the progress, and watch the image appear in the preview as it renders.</li>
 				<li><b>Anti-aliasing.</b> 2x, 4x or 8x samples, and an adjustable line width.</li>
 			</ul>
 
 			<div class="gallery scroll">
-				<figure style="--width-image: 811; --height-image: 499">
+				<figure style="--width-image: 701; --height-image: 499">
 					<button class="shot" data-full="resources/images/rendering-menu-render.png" aria-label="Enlarge Render menu">
-						<img src="resources/images/rendering-menu-render.png" alt="Render menu" width="811" height="499" loading="lazy">
+						<img src="resources/images/rendering-menu-render.png" alt="Render menu" width="701" height="499" loading="lazy">
 					</button>
 
 					<figcaption>Render menu</figcaption>
@@ -2196,9 +2196,9 @@
 					<figcaption>Edge colors</figcaption>
 				</figure>
 
-				<figure style="--width-image: 920; --height-image: 235">
+				<figure style="--width-image: 920; --height-image: 252">
 					<button class="shot" data-full="resources/images/rendering-window-stud-styles.png" aria-label="Enlarge Stud styles">
-						<img src="resources/images/rendering-window-stud-styles.png" alt="Stud styles" width="920" height="235" loading="lazy">
+						<img src="resources/images/rendering-window-stud-styles.png" alt="Stud styles" width="920" height="252" loading="lazy">
 					</button>
 
 					<figcaption>Stud styles</figcaption>
@@ -2263,11 +2263,11 @@
 				<li><b>Transforms.</b> Relative Transforms move and rotate the selection around the part that has focus, Absolute Transforms in model coordinates. Rotate Separately turns each part around its own pivot, Rotate Together turns the selection as one. Toggle Relative Transforms and Toggle Separate Transforms switch each pair from the keyboard. The Transform toolbar sets Absolute Translation, Relative Translation, Absolute Rotation or Relative Rotation.</li>
 				<li><b>Keyboard moves.</b> Move +X, Move -X, Move +Y, Move -Y, Move +Z and Move -Z, and Rotate +X, Rotate -X, Rotate +Y, Rotate -Y, Rotate +Z and Rotate -Z, move and rotate the selection by the snap steps. Fixed Direction Keys keeps the arrow keys on the model axes instead of following the view.</li>
 				<li><b>Control points.</b> Insert Control Point and Remove Control Point, Clamp Tangent to hold a point along the path or release it to rotate freely, Align to Tangent once, or turn it along the X Axis, Y Axis or Z Axis. New points can start clamped, and the spread handle shapes the curve.</li>
-				<li><b>Rotation snap.</b> 1, 5, 15, 22.5, 30, 45, 60, 90 or 180 degrees, a custom angle, or No Rotation Snap. Camera Snap orbits the view in the same steps. Turns in any step land exactly on square angles, so later moves keep whole coordinates.</li>
+				<li><b>Move snap.</b> Horizontal steps of 1/20 stud, 1/4 stud, 1 flat, 1/2 stud and 1, 2, 3, 4 or 8 studs, vertical steps of 1/20 stud, 1/4 stud, 1 flat, 1/2 stud, 1 stud and 1, 2, 4 or 8 bricks, or No XY Snap and No Z Snap. Move Snap turns move snapping on and off.</li>
+				<li><b>Rotation snap.</b> 1, 5, 15, 22.5, 30, 45, 60, 90 or 180 degrees, a Custom angle, or No Rotation Snap. Camera Snap orbits the view in the same steps. Turns in any step land exactly on square angles, so later moves keep whole coordinates.</li>
 				<li><b>Insert colors.</b> Insert with the Current Color, the Selected Part Color or the Last Inserted Part Color, from Solid Colors, Translucent Colors or Special Colors, or Lock Parts Color to keep the Parts panel on one color.</li>
-				<li><b>Move snap.</b> Horizontal steps of 1/20 stud, 1/4 stud, 1 flat, 1/2 stud and 1, 2, 3, 4 or 8 studs, vertical steps of 1/20 stud, 1/4 stud, 1 flat, 1/2 stud, 1 stud and 1, 2, 4 or 8 bricks, or No XY Snap and No Z Snap.</li>
 				<li><b>Selection.</b> Select All, Select None, Invert Selection, Select Adjacent Parts, by Name, and by part, color or both. Select Connected Parts follows the connection shapes of the LDCad shadow library.</li>
-				<li><b>Parts.</b> Insert, delete, duplicate, paint, hide and group parts, with Insert Part, Paint Selected, and Insert First Part at Origin to place the first part at the origin.</li>
+				<li><b>Parts.</b> Insert, Delete, Duplicate, paint, hide and group parts, with Insert Part, Paint Selected, and Insert First Part at Origin to place the first part at the origin.</li>
 				<li><b>Selection modes.</b> Single Selection picks one part, Part Selection every part of the same type, Color Selection every part of the same color, and Part and Color Selection both.</li>
 				<li><b>Groups.</b> Group the selection under a unique name, Ungroup, Add to Group and Remove from Group for the focused part, and Edit Groups in a tree of parts and groups.</li>
 				<li><b>Train track.</b> Rotate Train Track turns a track part to its next connection, and Focus Next Connection and Focus Previous Connection choose where the next part joins.</li>
@@ -2623,8 +2623,8 @@
 				<li><b>Animation keys.</b> Add Keys records new animation keys for parts, lights and cameras as you change them. The round button at the end of each Properties row is filled when that property has a key at the current step, and clicking it adds or removes that key. The Keyframes panel shows every key on a timeline.</li>
 				<li><b>Steps menu.</b> Go to the first, previous, next or last step, Insert Before, Insert After or Delete Step, turn on Add Keys (Alt+K), Set Keys (K) or Remove Keys (Shift+K) on the selected objects at the current step, and Play or Pause (Ctrl+K) or Stop (Ctrl+Shift+K) a run through the steps.</li>
 				<li><b>Move and paste.</b> Move Selection Here, Move Selection Before and Move Selection After move the selection to the current, previous or next step, Insert Step Before and Insert Step After add a step from the Timeline, and Paste with Steps pastes with its steps.</li>
+				<li><b>Timeline.</b> Shows the step each part is added in and removed in. An empty removal step reads Never. Drag parts between steps or reorder them, and Set Current Step from a step&#x27;s right-click menu.</li>
 				<li><b>Step view commands.</b> Step View sets the view rotation of the current step, Remove Step View clears it, and Follow Step <a href="#views">Views</a> turns the view to each step&#x27;s rotation as you change steps.</li>
-				<li><b>Timeline.</b> Shows the step each part is added in and removed in. An empty removal step reads Never. Drag parts between steps or reorder them.</li>
 				<li><b>Step views.</b> MLCad ROTSTEP step views are shown, edited and followed in the Timeline.</li>
 			</ul>
 
@@ -2793,9 +2793,9 @@
 			<p class="lead">File &gt; Instructions lays the <a href="#steps">steps</a> out on pages with a cover, parts lists and a bill of materials. Every page element can be styled and placed, and everything is saved in the model file as !SW INSTRUCTION <a href="#meta">meta</a> commands.</p>
 
 			<div class="gallery three">
-				<figure style="--width-image: 2673; --height-image: 1543">
+				<figure style="--width-image: 1639; --height-image: 946">
 					<button class="shot" data-full="resources/images/instructions-feature-cover-page.png" aria-label="Enlarge Cover page">
-						<img src="resources/images/instructions-feature-cover-page.png" alt="Cover page" width="2673" height="1543" loading="lazy">
+						<img src="resources/images/instructions-feature-cover-page.png" alt="Cover page" width="1639" height="946" loading="lazy">
 					</button>
 
 					<figcaption>Cover page</figcaption>
@@ -2975,81 +2975,81 @@
 			</ul>
 
 			<div class="gallery scroll">
-				<figure style="--width-image: 960; --height-image: 2051">
+				<figure style="--width-image: 960; --height-image: 2107">
 					<button class="shot" data-full="resources/images/preferences-window-general.png" aria-label="Enlarge General">
-						<img src="resources/images/preferences-window-general.png" alt="General" width="960" height="2051" loading="lazy">
+						<img src="resources/images/preferences-window-general.png" alt="General" width="960" height="2107" loading="lazy">
 					</button>
 
 					<figcaption>General</figcaption>
 				</figure>
 
-				<figure style="--width-image: 960; --height-image: 2051">
+				<figure style="--width-image: 960; --height-image: 2107">
 					<button class="shot" data-full="resources/images/preferences-window-rendering.png" aria-label="Enlarge Rendering">
-						<img src="resources/images/preferences-window-rendering.png" alt="Rendering" width="960" height="2051" loading="lazy">
+						<img src="resources/images/preferences-window-rendering.png" alt="Rendering" width="960" height="2107" loading="lazy">
 					</button>
 
 					<figcaption>Rendering</figcaption>
 				</figure>
 
-				<figure style="--width-image: 960; --height-image: 2051">
+				<figure style="--width-image: 960; --height-image: 2107">
 					<button class="shot" data-full="resources/images/preferences-window-views.png" aria-label="Enlarge Views">
-						<img src="resources/images/preferences-window-views.png" alt="Views" width="960" height="2051" loading="lazy">
+						<img src="resources/images/preferences-window-views.png" alt="Views" width="960" height="2107" loading="lazy">
 					</button>
 
 					<figcaption>Views</figcaption>
 				</figure>
 
-				<figure style="--width-image: 960; --height-image: 2051">
+				<figure style="--width-image: 960; --height-image: 2107">
 					<button class="shot" data-full="resources/images/preferences-window-interface.png" aria-label="Enlarge Interface">
-						<img src="resources/images/preferences-window-interface.png" alt="Interface" width="960" height="2051" loading="lazy">
+						<img src="resources/images/preferences-window-interface.png" alt="Interface" width="960" height="2107" loading="lazy">
 					</button>
 
 					<figcaption>Interface</figcaption>
 				</figure>
 
-				<figure style="--width-image: 960; --height-image: 2051">
+				<figure style="--width-image: 960; --height-image: 2107">
 					<button class="shot" data-full="resources/images/preferences-window-instructions.png" aria-label="Enlarge Instructions">
-						<img src="resources/images/preferences-window-instructions.png" alt="Instructions" width="960" height="2051" loading="lazy">
+						<img src="resources/images/preferences-window-instructions.png" alt="Instructions" width="960" height="2107" loading="lazy">
 					</button>
 
 					<figcaption>Instructions</figcaption>
 				</figure>
 
-				<figure style="--width-image: 960; --height-image: 2051">
+				<figure style="--width-image: 960; --height-image: 2107">
 					<button class="shot" data-full="resources/images/preferences-window-categories.png" aria-label="Enlarge Categories">
-						<img src="resources/images/preferences-window-categories.png" alt="Categories" width="960" height="2051" loading="lazy">
+						<img src="resources/images/preferences-window-categories.png" alt="Categories" width="960" height="2107" loading="lazy">
 					</button>
 
 					<figcaption>Categories</figcaption>
 				</figure>
 
-				<figure style="--width-image: 960; --height-image: 2051">
+				<figure style="--width-image: 960; --height-image: 2107">
 					<button class="shot" data-full="resources/images/preferences-window-context-menu.png" aria-label="Enlarge Context Menu">
-						<img src="resources/images/preferences-window-context-menu.png" alt="Context Menu" width="960" height="2051" loading="lazy">
+						<img src="resources/images/preferences-window-context-menu.png" alt="Context Menu" width="960" height="2107" loading="lazy">
 					</button>
 
 					<figcaption>Context Menu</figcaption>
 				</figure>
 
-				<figure style="--width-image: 960; --height-image: 2051">
+				<figure style="--width-image: 960; --height-image: 2107">
 					<button class="shot" data-full="resources/images/preferences-window-keyboard.png" aria-label="Enlarge Keyboard">
-						<img src="resources/images/preferences-window-keyboard.png" alt="Keyboard" width="960" height="2051" loading="lazy">
+						<img src="resources/images/preferences-window-keyboard.png" alt="Keyboard" width="960" height="2107" loading="lazy">
 					</button>
 
 					<figcaption>Keyboard</figcaption>
 				</figure>
 
-				<figure style="--width-image: 960; --height-image: 2051">
+				<figure style="--width-image: 960; --height-image: 2107">
 					<button class="shot" data-full="resources/images/preferences-window-mouse.png" aria-label="Enlarge Mouse">
-						<img src="resources/images/preferences-window-mouse.png" alt="Mouse" width="960" height="2051" loading="lazy">
+						<img src="resources/images/preferences-window-mouse.png" alt="Mouse" width="960" height="2107" loading="lazy">
 					</button>
 
 					<figcaption>Mouse</figcaption>
 				</figure>
 
-				<figure style="--width-image: 960; --height-image: 575">
+				<figure style="--width-image: 960; --height-image: 641">
 					<button class="shot" data-full="resources/images/preferences-window-about.png" aria-label="Enlarge About">
-						<img src="resources/images/preferences-window-about.png" alt="About" width="960" height="575" loading="lazy">
+						<img src="resources/images/preferences-window-about.png" alt="About" width="960" height="641" loading="lazy">
 					</button>
 
 					<figcaption>About</figcaption>
@@ -3578,7 +3578,7 @@
 				<h2>HELP // EVERY &quot;WHAT&#x27;S THIS?&quot; ENTRY</h2>
 			</header>
 
-			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 513 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
+			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 461 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
 			<div class="tools-search">
 				<input id="search" type="search" placeholder="Search help" aria-label="Search help">
@@ -3673,6 +3673,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Keyframes: View &gt; Toolbars &gt; Keyframes Panel docks a full-width timeline at the bottom or top, with Selected or All objects expandable to their properties, a diamond per key joined by a line, click a step to go to it, double-click to add or remove a key, drag a key to another step, a right-click menu, full and hollow diamonds to add or remove the selection&#x27;s keys, Add Keys, and rewind, play or pause, stop and forward buttons</li>
 					<li>Keyframes: <a href="#steps">Steps</a> &gt; Set Keys (K), Remove Keys (Shift+K), Add Keys (Alt+K), Play or Pause (Ctrl+K) and Stop (Ctrl+Shift+K) have keyboard shortcuts</li>
 					<li>Properties: the key buttons are small round dots again, filled when the property has a key at the current step</li>
+					<li><a href="#help">Help</a>: every command, the Explode, Joints, Poses and Keyframes panels and the remaining buttons explain themselves in What&#x27;s This? (Shift+F1) and F1</li>
 				</ul>
 			</details>
 
@@ -3715,7 +3716,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Import: File &gt; Import takes .lxfml as well as .lxf</li>
 					<li>Submodels: the menu now reads Open Selected Submodel, Inline Selected Submodels, Flatten Submodels and Move to New Submodel</li>
 					<li>Menus: Select Invert is now Invert Selection, Remove Step is now Delete Step, and the snap toggles read Move Snap, Rotation Snap and Camera Snap</li>
-					<li>Studs: the stud styles are named Thin-Line Logo and High Contrast Logo in the menus, preferences and command line <a href="#help">help</a></li>
+					<li>Studs: the stud styles are named Thin-Line Logo and High Contrast Logo in the menus, preferences and command line help</li>
 					<li>Interface: errors read &quot;Could not …&quot;, file filters read &quot;LDraw Models&quot; and &quot;All Files&quot;, menu, status bar, dialog and message wording is consistent, status bar text names toolbars and panels correctly, and the command line help, man page and SITE.md agree with the menus</li>
 				</ul>
 			</details>
@@ -3890,11 +3891,14 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Model Properties","title":"Export BrickLink","paragraphs":["Saves the parts listed in this table as a BrickLink XML wanted list, the same format as File > Export > BrickLink. Only the model shown in this dialog and its submodels are included."]},
 				{"group":"Model Properties","title":"Export CSV","paragraphs":["Saves the parts listed in this table as comma separated values with name, color, quantity, ID and color code, the same format as File > Export > CSV. Only the model shown in this dialog and its submodels are included."]},
 				{"group":"Render","title":"Output Image","paragraphs":["Choose where to save the rendered image and its format, such as PNG, JPEG, or BMP. The output path applies to image rendering; Open in Blender does not use it."]},
+				{"group":"Render","title":"Choose Render Output","paragraphs":["Pick the folder, name and format of the rendered image in a file dialog. The path appears in the output field beside it."]},
 				{"group":"Render","title":"Render Preview","paragraphs":["The preview is scaled to fit this area. Changing the dialog size does not change the output resolution; use Settings to change the image dimensions."]},
 				{"group":"Select Objects","title":"Select Objects","paragraphs":["Use the checkboxes to choose visible parts, cameras, and lights in the current model. Choose OK to replace the current selection with the checked objects, or Cancel to keep the current selection.","Parts in the same top-level group are selected together. All, None, and Invert change the checkboxes in this dialog."]},
 				{"group":"Select Objects","title":"Object List","paragraphs":["The list includes parts visible in the current step and visible cameras and lights. Expand groups to see their parts. Checking or clearing a grouped part applies the same state to all parts in its top-level group."]},
 				{"group":"Instructions","title":"Page Setup","paragraphs":["Set the size, orientation and margins of the instruction pages. The pages are laid out again when you click OK."]},
 				{"group":"Instructions","title":"Page Size","paragraphs":["Choose a standard paper or screen size from Preset, or Custom to type a width and height. Units sets how the size is shown, and Portrait or Landscape turns the page on its side."]},
+				{"group":"Instructions","title":"Portrait","paragraphs":["Lay out each instruction page upright, taller than it is wide."]},
+				{"group":"Instructions","title":"Landscape","paragraphs":["Lay out each instruction page on its side, wider than it is tall."]},
 				{"group":"Instructions","title":"Page Margins","paragraphs":["Set the empty border kept on each side of the page. Step content, numbers and parts lists stay inside the margins. The margins must leave room for the page contents."]},
 				{"group":"Minifigure Builder","title":"Minifigure Builder","paragraphs":["Build a minifigure by choosing its parts, colors, and pose. The preview updates as you make changes. Choose Add to Model to insert the minifigure into the current model.","Templates let you reuse a configuration. Saved, deleted, and imported templates are kept as soon as you change them."]},
 				{"group":"Minifigure Builder","title":"Minifigure Parts","paragraphs":["Each section has a part selector and a color button. Some sections also have a rotation control in degrees. Choose None in a part selector to omit that part, the selector then shows the name of the section."]},
@@ -3995,7 +3999,12 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Main Window","title":"Delete","paragraphs":["Remove the picked pose from the model. The joints keep their angles."]},
 				{"group":"Main Window","title":"Add Keys","paragraphs":["Add position and rotation keys to the selected objects at the current step, holding their values at that step."]},
 				{"group":"Main Window","title":"Remove Keys","paragraphs":["Remove every key the selected objects have at the current step."]},
+				{"group":"Main Window","title":"Rewind","paragraphs":["Go to the first step of the model."]},
 				{"group":"Main Window","title":"Play","paragraphs":["Step through the model one step at a time to the last step, showing the keyed motion. Click again to pause."]},
+				{"group":"Main Window","title":"Stop","paragraphs":["Stop playing through the steps and go back to the step playing started from."]},
+				{"group":"Main Window","title":"Forward","paragraphs":["Go to the last step of the model."]},
+				{"group":"Main Window","title":"Selected","paragraphs":["List only the selected objects in the timeline, with or without keys."]},
+				{"group":"Main Window","title":"All","paragraphs":["List the selected objects and every other object of the model that has keys."]},
 				{"group":"Main Window","title":"Keyframes","paragraphs":["One column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel."]},
 				{"group":"Main Window","title":"Lock Preview","paragraphs":["Keep the current preview while you browse. Unlock Preview allows the display to update again. An empty preview cannot be locked."]},
 				{"group":"Main Window","title":"Property Keyframe","paragraphs":["Enable or remove a keyframe for this property at the current building step. Keyframes let the property's value change between steps."]},
@@ -4016,104 +4025,81 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Main Window","title":"Apply Transform","paragraphs":["Choose the translation or rotation mode, enter X/Y/Z values, and press Enter to apply them. Translation values use LDraw units; rotation values use degrees."]},
 				{"group":"Main Window","title":"Timeline","paragraphs":["Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Right-click for step insertion, removal, movement, and visibility commands."]},
 				{"group":"Main Window","title":"Minifigure Builder","paragraphs":["Choose the parts, colors and pose of a minifigure, then add it to the current model. The panel keeps its settings so you can add several variations."]},
+				{"group":"Main Window","title":"Explode","paragraphs":["Spread every other visible part, or only the selected ones, away from an anchor by an X, Y and Z percentage of its distance. Each part slides out along the connection that holds it. Collapse or Undo puts the parts back, and Save Copy saves the exploded model to a separate file."]},
+				{"group":"Main Window","title":"Joints","paragraphs":["The joint picked on the selected submodel with its axis, and a tree of every model with joints, its jointed submodels and their joints. Pick a joint to move or rotate it, and delete one to put it back at rest."]},
+				{"group":"Main Window","title":"Poses","paragraphs":["The poses of the model picked in the Joints panel. Save the joint angles as a named pose, then recall, rename or delete it. Poses are saved with the model."]},
+				{"group":"Main Window","title":"Keyframes","paragraphs":["A full-width timeline of the animation keys of the selected or all objects, one column per step. Add or remove keys at the current step, and play through the steps to watch the keyed motion."]},
 				{"group":"Main Window","title":"Close Model Tab","paragraphs":["Close this tab. The model stays in the file; open it again from the Models menu."]},
 				{"group":"Main Window","title":"Choose Color","paragraphs":["Pick a color using the swatches or enter its component values. Choose OK to use the selected color, or Cancel to keep the original color. Editing the controls alone does not apply the color."]},
 				{"group":"Main Window","title":"In-place Editing","paragraphs":["The path shows the model being edited inside this view. The last name is the current editing target. Choose an earlier name to edit that ancestor, or the close button to return to the tab's model."]},
 				{"group":"Main Window","title":"Joint","paragraphs":["The path shows the joint picked in the Joints panel or being moved or rotated. A submodel name selects that submodel, staying in joint mode when it has a joint; the main model name ends joint mode. Choose the close button to clear the selection and return to the Select tool."]},
 				{"group":"File Menu","title":"New Model","paragraphs":["Create a new, empty model. If the current model has unsaved changes, StudWorx asks whether to save them before replacing it."]},
 				{"group":"File Menu","title":"Open Model","paragraphs":["Choose an existing model file to work on. If the current model has unsaved changes, save or discard those changes before opening the chosen file."]},
-				{"group":"File Menu","title":"Merge","paragraphs":["Merge the contents of another file with the current one."]},
+				{"group":"File Menu","title":"Merge","paragraphs":["Choose one or more model files and add their models to the current file as submodels, renamed when a name is already taken."]},
 				{"group":"File Menu","title":"Reload Model","paragraphs":["Read the current model file again from disk, replacing the model in StudWorx. If the model has unsaved changes, StudWorx asks before discarding them."]},
 				{"group":"File Menu","title":"Reload Library","paragraphs":["Read the parts library and the unofficial library archive again from disk without restarting. Open models keep their parts, parts that no longer exist become missing parts, and new parts appear in the Parts panel."]},
-				{"group":"File Menu","title":"Watch for File Changes","paragraphs":["Toggle asking to reload the model when another application changes its file."]},
+				{"group":"File Menu","title":"Watch for File Changes","paragraphs":["When another program changes the file of an open model, StudWorx asks whether to reload it. Turn this off to keep working without being asked."]},
 				{"group":"File Menu","title":"Save Model","paragraphs":["Save the model and its submodels to disk. The first save asks for a filename. Use Save As to save a separate copy under another name."]},
-				{"group":"File Menu","title":"Save As","paragraphs":["Save the current model with a new name."]},
-				{"group":"File Menu","title":"Image","paragraphs":["Export an image of the current view."]},
-				{"group":"File Menu","title":"LEGO® Digital Designer","paragraphs":["Import a file in LEGO® Digital Designer LXF or LXFML format."]},
-				{"group":"File Menu","title":"Set Inventory","paragraphs":["Import all parts from an official set."]},
-				{"group":"File Menu","title":"3D Studio","paragraphs":["Export the current model in 3D Studio 3DS format."]},
-				{"group":"File Menu","title":"COLLADA","paragraphs":["Export the current model in COLLADA DAE format."]},
-				{"group":"File Menu","title":"HTML","paragraphs":["Create an HTML page for the current model."]},
-				{"group":"File Menu","title":"KMZ","paragraphs":["Export the current model in KMZ format."]},
-				{"group":"File Menu","title":"BrickLink","paragraphs":["Export a list of parts used in BrickLink XML format."]},
-				{"group":"File Menu","title":"CSV","paragraphs":["Export a list of parts used in comma delimited file format."]},
-				{"group":"File Menu","title":"POV-Ray","paragraphs":["Export the current model in POV-Ray format."]},
-				{"group":"File Menu","title":"Wavefront","paragraphs":["Export the current model in Wavefront OBJ format."]},
-				{"group":"File Menu","title":"POV-Ray Render","paragraphs":["Render the current model using POV-Ray."]},
-				{"group":"File Menu","title":"Blender Render","paragraphs":["Render the current model using Blender."]},
-				{"group":"File Menu","title":"Instructions","paragraphs":["Configure instructions layout."]},
-				{"group":"File Menu","title":"Print","paragraphs":["Print the current model view."]},
-				{"group":"File Menu","title":"Recent Files","paragraphs":["Open this model."]},
-				{"group":"File Menu","title":"Exit","paragraphs":["Quit the application; prompts to save model."]},
+				{"group":"File Menu","title":"Save As","paragraphs":["Save the current model under a new name or in a new folder. The extension is added when left out: .ldr for a single model, .mpd for a model with submodels or embedded data."]},
+				{"group":"File Menu","title":"Image","paragraphs":["Save the model as a still image, a series of step images or an animated GIF, with the background, steps, framing, size and file chosen in the Image dialog."]},
+				{"group":"File Menu","title":"LEGO® Digital Designer","paragraphs":["Open a LEGO® Digital Designer model (.lxf or .lxfml) as a new untitled project. Parts and colors are translated through the bundled mapping."]},
+				{"group":"File Menu","title":"Set Inventory","paragraphs":["Search an official set by name or number and open all of its parts as a new model, after saving the current one. It uses your own free Rebrickable API key, asked for once or set under Online Services in Preferences."]},
+				{"group":"File Menu","title":"3D Studio","paragraphs":["Export the current model as a 3D Studio .3ds file for other 3D programs."]},
+				{"group":"File Menu","title":"COLLADA","paragraphs":["Export the current model as a COLLADA .dae file. Translucent colors can be marked as transparent materials."]},
+				{"group":"File Menu","title":"HTML","paragraphs":["Open the Instructions window to export the building instructions as styled HTML pages in a folder named after the model."]},
+				{"group":"File Menu","title":"KMZ","paragraphs":["Export the current model as a KMZ file for Google Earth and SketchUp, with the visible surfaces only or every part's geometry."]},
+				{"group":"File Menu","title":"BrickLink","paragraphs":["Export the parts of the model as a BrickLink wanted list in XML, with part numbers and colors translated to BrickLink numbers, ready to copy and upload."]},
+				{"group":"File Menu","title":"CSV","paragraphs":["Export the parts of the model as a comma separated list, with part numbers, colors and counts, for a spreadsheet."]},
+				{"group":"File Menu","title":"POV-Ray","paragraphs":["Export the current model as a POV-Ray scene file, with LGEO high detail parts when they are set up."]},
+				{"group":"File Menu","title":"Wavefront","paragraphs":["Export the current model as a Wavefront .obj file with its materials for other 3D programs."]},
+				{"group":"File Menu","title":"POV-Ray Render","paragraphs":["Render the current model with POV-Ray in the Render window: choose the output file, follow the progress and watch the image appear as it renders."]},
+				{"group":"File Menu","title":"Blender Render","paragraphs":["Render the current model with Blender and the bundled LDraw add-ons, or open the scene in Blender. The Blender executable is set in Preferences."]},
+				{"group":"File Menu","title":"Instructions","paragraphs":["Open the Instructions window to lay out, style, export and print the building instructions of the model."]},
+				{"group":"File Menu","title":"Print","paragraphs":["Print the current model view through the system print dialog, with a preview where the dialog allows it."]},
+				{"group":"File Menu","title":"Recent File","paragraphs":["Open this recently used model again. The File menu keeps the four most recent files."]},
+				{"group":"File Menu","title":"Exit","paragraphs":["Close StudWorx. Each model with unsaved changes asks to be saved first."]},
 				{"group":"Edit Menu","title":"Undo","paragraphs":["Reverse the most recent model edit, such as inserting, moving, painting, or deleting an object. Repeat Undo to move backward through the edit history."]},
 				{"group":"Edit Menu","title":"Redo","paragraphs":["Reapply an edit that was reversed with Undo. Making a new edit after Undo replaces the redo history with the new sequence of edits."]},
-				{"group":"Edit Menu","title":"Cut","paragraphs":["Cut the selection and put it on the Clipboard."]},
-				{"group":"Edit Menu","title":"Copy","paragraphs":["Copy the selection and put it on the Clipboard."]},
-				{"group":"Edit Menu","title":"Paste","paragraphs":["Insert Clipboard contents in the current step."]},
-				{"group":"Edit Menu","title":"Paste with Steps","paragraphs":["Insert Clipboard contents in their original steps."]},
-				{"group":"Edit Menu","title":"Find","paragraphs":["Find part."]},
-				{"group":"Edit Menu","title":"Find Next","paragraphs":["Find next part."]},
-				{"group":"Edit Menu","title":"Find Previous","paragraphs":["Find previous part."]},
-				{"group":"Edit Menu","title":"Find All","paragraphs":["Find all parts that match the search criteria."]},
-				{"group":"Edit Menu","title":"Replace","paragraphs":["Replace part."]},
-				{"group":"Edit Menu","title":"Replace Next","paragraphs":["Replace next part."]},
-				{"group":"Edit Menu","title":"Replace All","paragraphs":["Replace all parts that match the search criteria."]},
-				{"group":"Edit Menu","title":"Select All","paragraphs":["Select all parts in the model."]},
-				{"group":"Edit Menu","title":"Select None","paragraphs":["Deselect everything."]},
-				{"group":"Edit Menu","title":"Invert Selection","paragraphs":["Invert the current selection set."]},
+				{"group":"Edit Menu","title":"Cut","paragraphs":["Remove the selected parts from the model and put them on the clipboard, to paste in this or another model."]},
+				{"group":"Edit Menu","title":"Copy","paragraphs":["Put a copy of the selected parts on the clipboard, to paste in this or another model."]},
+				{"group":"Edit Menu","title":"Paste","paragraphs":["Insert the parts on the clipboard in the current step and select them."]},
+				{"group":"Edit Menu","title":"Paste with Steps","paragraphs":["Insert the parts on the clipboard in the steps they were copied from, and select the ones shown at the current step."]},
+				{"group":"Edit Menu","title":"Find","paragraphs":["Show the Find and Replace bar over the view to find parts by part, color or both."]},
+				{"group":"Edit Menu","title":"Find Next","paragraphs":["Select the next part that matches the Find and Replace bar."]},
+				{"group":"Edit Menu","title":"Find Previous","paragraphs":["Select the previous part that matches the Find and Replace bar."]},
+				{"group":"Edit Menu","title":"Find All","paragraphs":["Select every part that matches the Find and Replace bar."]},
+				{"group":"Edit Menu","title":"Replace","paragraphs":["Show the Find and Replace bar with its replace fields, to change the part or color of matching parts."]},
+				{"group":"Edit Menu","title":"Replace Next","paragraphs":["Replace the part or color of the next matching part."]},
+				{"group":"Edit Menu","title":"Replace All","paragraphs":["Replace the part or color of every matching part. With Replace in Submodels it reaches every submodel the model uses."]},
+				{"group":"Edit Menu","title":"Select All","paragraphs":["Select every visible part of the current model."]},
+				{"group":"Edit Menu","title":"Select None","paragraphs":["Clear the selection."]},
+				{"group":"Edit Menu","title":"Invert Selection","paragraphs":["Select the parts that are not selected and clear the ones that are."]},
 				{"group":"Edit Menu","title":"Select Adjacent Parts","paragraphs":["Add every visible part connected directly to a selected part by a stud, anti stud, hole, axle or bar. Repeat to grow the selection one part further each time. Connections come from the LDCad shadow library set as Part Connections in Preferences, parts without shadow data never connect."]},
 				{"group":"Edit Menu","title":"Select Connected Parts","paragraphs":["Add every visible part connected to a selected part, directly or through other parts, by a stud, anti stud, hole, axle or bar. Use it to pick up a whole assembly from one of its parts. Connections come from the LDCad shadow library set as Part Connections in Preferences, parts without shadow data never connect."]},
-				{"group":"Edit Menu","title":"Part Connections","paragraphs":["Toggle finding connected parts with the LDCad shadow library."]},
-				{"group":"Edit Menu","title":"Select by Name","paragraphs":["Select objects by name."]},
-				{"group":"Edit Menu","title":"Single Selection","paragraphs":["Select one part at a time."]},
-				{"group":"Edit Menu","title":"Part Selection","paragraphs":["Select all parts of the same type."]},
-				{"group":"Edit Menu","title":"Color Selection","paragraphs":["Select all parts of the same color."]},
-				{"group":"Edit Menu","title":"Part and Color Selection","paragraphs":["Select all parts of the same type and color."]},
-				{"group":"Edit Menu","title":"Relative Transforms","paragraphs":["Move and rotate objects relative to the one that has focus."]},
-				{"group":"Edit Menu","title":"Absolute Transforms","paragraphs":["Move and rotate objects in absolute coordinates."]},
-				{"group":"Edit Menu","title":"Toggle Relative Transforms","paragraphs":["Toggle moving and rotating objects relative to the one that has focus."]},
-				{"group":"Edit Menu","title":"Rotate Separately","paragraphs":["Rotate selected parts separately."]},
-				{"group":"Edit Menu","title":"Rotate Together","paragraphs":["Rotate selected parts together."]},
-				{"group":"Edit Menu","title":"Toggle Separate Transforms","paragraphs":["Toggle rotating selected parts separately."]},
-				{"group":"Edit Menu","title":"Move Snap","paragraphs":["Toggle movement snapping."]},
-				{"group":"Edit Menu","title":"No XY Snap","paragraphs":["Do not snap movement along the XY plane."]},
-				{"group":"Edit Menu","title":"XY 1/20 Stud","paragraphs":["Snap movement along the XY plane to 1/20 stud."]},
-				{"group":"Edit Menu","title":"XY 1/4 Stud","paragraphs":["Snap movement along the XY plane to 1/4 stud."]},
-				{"group":"Edit Menu","title":"XY 1 Flat","paragraphs":["Snap movement along the XY plane to 1 flat."]},
-				{"group":"Edit Menu","title":"XY 1/2 Stud","paragraphs":["Snap movement along the XY plane to 1/2 stud."]},
-				{"group":"Edit Menu","title":"XY 1 Stud","paragraphs":["Snap movement along the XY plane to 1 stud."]},
-				{"group":"Edit Menu","title":"XY 2 Studs","paragraphs":["Snap movement along the XY plane to 2 studs."]},
-				{"group":"Edit Menu","title":"XY 3 Studs","paragraphs":["Snap movement along the XY plane to 3 studs."]},
-				{"group":"Edit Menu","title":"XY 4 Studs","paragraphs":["Snap movement along the XY plane to 4 studs."]},
-				{"group":"Edit Menu","title":"XY 8 Studs","paragraphs":["Snap movement along the XY plane to 8 studs."]},
-				{"group":"Edit Menu","title":"No Z Snap","paragraphs":["Do not snap movement along the Z axis."]},
-				{"group":"Edit Menu","title":"Z 1/20 Stud","paragraphs":["Snap movement along the Z axis to 1/20 stud."]},
-				{"group":"Edit Menu","title":"Z 1/4 Stud","paragraphs":["Snap movement along the Z axis to 1/4 stud."]},
-				{"group":"Edit Menu","title":"Z 1 Flat","paragraphs":["Snap movement along the Z axis to 1 flat."]},
-				{"group":"Edit Menu","title":"Z 1/2 Stud","paragraphs":["Snap movement along the Z axis to 1/2 stud."]},
-				{"group":"Edit Menu","title":"Z 1 Stud","paragraphs":["Snap movement along the Z axis to 1 stud."]},
-				{"group":"Edit Menu","title":"Z 1 Brick","paragraphs":["Snap movement along the Z axis to 1 brick."]},
-				{"group":"Edit Menu","title":"Z 2 Bricks","paragraphs":["Snap movement along the Z axis to 2 bricks."]},
-				{"group":"Edit Menu","title":"Z 4 Bricks","paragraphs":["Snap movement along the Z axis to 4 bricks."]},
-				{"group":"Edit Menu","title":"Z 8 Bricks","paragraphs":["Snap movement along the Z axis to 8 bricks."]},
-				{"group":"Edit Menu","title":"Rotation Snap","paragraphs":["Snap rotations to fixed intervals."]},
-				{"group":"Edit Menu","title":"No Rotation Snap","paragraphs":["Do not snap rotations."]},
-				{"group":"Edit Menu","title":"1 Degree","paragraphs":["Snap rotations to 1 degree."]},
-				{"group":"Edit Menu","title":"5 Degrees","paragraphs":["Snap rotations to 5 degrees."]},
-				{"group":"Edit Menu","title":"15 Degrees","paragraphs":["Snap rotations to 15 degrees."]},
-				{"group":"Edit Menu","title":"22.5 Degrees","paragraphs":["Snap rotations to 22.5 degrees."]},
-				{"group":"Edit Menu","title":"30 Degrees","paragraphs":["Snap rotations to 30 degrees."]},
-				{"group":"Edit Menu","title":"45 Degrees","paragraphs":["Snap rotations to 45 degrees."]},
-				{"group":"Edit Menu","title":"60 Degrees","paragraphs":["Snap rotations to 60 degrees."]},
-				{"group":"Edit Menu","title":"90 Degrees","paragraphs":["Snap rotations to 90 degrees."]},
-				{"group":"Edit Menu","title":"180 Degrees","paragraphs":["Snap rotations to 180 degrees."]},
-				{"group":"Edit Menu","title":"Custom","paragraphs":["Snap rotations to a custom angle."]},
-				{"group":"Edit Menu","title":"Camera Snap","paragraphs":["Toggle orbiting the camera in steps of the rotation snap angle."]},
-				{"group":"Edit Menu","title":"Transform","paragraphs":["Apply transform to selected objects."]},
-				{"group":"Edit Menu","title":"Absolute Translation","paragraphs":["Switch to absolute translation mode when applying transforms."]},
-				{"group":"Edit Menu","title":"Relative Translation","paragraphs":["Switch to relative translation mode when applying transforms."]},
-				{"group":"Edit Menu","title":"Absolute Rotation","paragraphs":["Switch to absolute rotation mode when applying transforms."]},
-				{"group":"Edit Menu","title":"Relative Rotation","paragraphs":["Switch to relative rotation mode when applying transforms."]},
+				{"group":"Edit Menu","title":"Part Connections","paragraphs":["Use the connection shapes of the LDCad shadow library to find connected parts, for Select Connected Parts, joints and Explode. The shadow library folder is chosen in Preferences."]},
+				{"group":"Edit Menu","title":"Select by Name","paragraphs":["Open a checklist of every object in the model and select them by name, with All, None and Invert."]},
+				{"group":"Edit Menu","title":"Single Selection","paragraphs":["A click selects only the part under the pointer."]},
+				{"group":"Edit Menu","title":"Part Selection","paragraphs":["A click selects every part of the same type as the one under the pointer."]},
+				{"group":"Edit Menu","title":"Color Selection","paragraphs":["A click selects every part of the same color as the one under the pointer."]},
+				{"group":"Edit Menu","title":"Part and Color Selection","paragraphs":["A click selects every part of the same type and color as the one under the pointer."]},
+				{"group":"Edit Menu","title":"Relative Transforms","paragraphs":["Move and rotate the selection along the axes of the part that has focus."]},
+				{"group":"Edit Menu","title":"Absolute Transforms","paragraphs":["Move and rotate the selection along the model axes."]},
+				{"group":"Edit Menu","title":"Toggle Relative Transforms","paragraphs":["Switch between relative and absolute transforms."]},
+				{"group":"Edit Menu","title":"Rotate Separately","paragraphs":["Turn each selected part around its own pivot point."]},
+				{"group":"Edit Menu","title":"Rotate Together","paragraphs":["Turn the selection as one around the pivot of the part that has focus."]},
+				{"group":"Edit Menu","title":"Toggle Separate Transforms","paragraphs":["Switch between rotating the selected parts separately and together."]},
+				{"group":"Edit Menu","title":"Move Snap","paragraphs":["Turn move snapping on or off. With it on, moves go in the horizontal and vertical steps chosen below."]},
+				{"group":"Edit Menu","title":"Horizontal Move Snap","paragraphs":["Move parts across the horizontal plane in this step, or freely with No XY Snap."]},
+				{"group":"Edit Menu","title":"Vertical Move Snap","paragraphs":["Move parts up and down in this step, or freely with No Z Snap."]},
+				{"group":"Edit Menu","title":"Rotation Snap","paragraphs":["Turn rotation snapping on or off. With it on, rotations go in the angle chosen below."]},
+				{"group":"Edit Menu","title":"Rotation Snap Angle","paragraphs":["Rotate parts in steps of this angle, or freely with No Rotation Snap. Turns land exactly on square angles, so later moves keep whole coordinates."]},
+				{"group":"Edit Menu","title":"Custom Angle","paragraphs":["Type your own rotation snap angle in degrees."]},
+				{"group":"Edit Menu","title":"Camera Snap","paragraphs":["Orbit the view in steps of the rotation snap angle."]},
+				{"group":"Edit Menu","title":"Transform","paragraphs":["Apply the position or rotation typed in the Transform toolbar to the selection."]},
+				{"group":"Edit Menu","title":"Absolute Translation","paragraphs":["The Transform toolbar moves the selection to the typed position in model coordinates."]},
+				{"group":"Edit Menu","title":"Relative Translation","paragraphs":["The Transform toolbar moves the selection by the typed distance."]},
+				{"group":"Edit Menu","title":"Absolute Rotation","paragraphs":["The Transform toolbar turns the selection to the typed angles."]},
+				{"group":"Edit Menu","title":"Relative Rotation","paragraphs":["The Transform toolbar turns the selection by the typed angles."]},
 				{"group":"Tools","title":"Insert Part Tool","paragraphs":["Choose a part in the Parts dock and a color in Colors, then use this tool in the model view to place the part. Movement snapping controls placement increments. Use the preview to check placement before inserting the part."]},
 				{"group":"Tools","title":"Point Light Tool","paragraphs":["Use the model view to place a light that emits in all directions from a point. Select the light afterward to edit its color, shadow settings, and renderer-specific power in Properties."]},
 				{"group":"Tools","title":"Spotlight Tool","paragraphs":["Use the model view to create a directed cone of light. In Properties, adjust its position and target, cone angle, penumbra, and renderer-specific power."]},
@@ -4132,76 +4118,55 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Tools","title":"Orbit Tool","paragraphs":["Drag to orbit the view around its center and inspect the model from another direction. This rotates the viewpoint rather than the selected parts; use Rotate for object edits."]},
 				{"group":"Tools","title":"Roll Tool","paragraphs":["Drag to turn the view around its viewing axis, tilting what appears upright on screen. Model parts keep their positions and orientations."]},
 				{"group":"Tools","title":"Zoom Region Tool","paragraphs":["Drag a rectangle around the area you want to inspect. The view zooms to frame that region without changing model geometry."]},
-				{"group":"Edit Menu","title":"Cancel Action","paragraphs":["Cancel current mouse action."]},
-				{"group":"View Menu","title":"Preferences","paragraphs":["Change program settings."]},
-				{"group":"View Menu","title":"Zoom In","paragraphs":["Zoom in."]},
-				{"group":"View Menu","title":"Zoom Out","paragraphs":["Zoom out."]},
-				{"group":"View Menu","title":"Zoom Extents","paragraphs":["Fit all parts in the current view."]},
-				{"group":"View Menu","title":"Look At","paragraphs":["Rotate view so selected parts are at center."]},
-				{"group":"View Menu","title":"Move Forward","paragraphs":["Move the current view forward."]},
-				{"group":"View Menu","title":"Move Backward","paragraphs":["Move the current view backward."]},
-				{"group":"View Menu","title":"Move Left","paragraphs":["Move the current view to the left."]},
-				{"group":"View Menu","title":"Move Right","paragraphs":["Move the current view to the right."]},
-				{"group":"View Menu","title":"Move Up","paragraphs":["Move the current view up."]},
-				{"group":"View Menu","title":"Move Down","paragraphs":["Move the current view down."]},
-				{"group":"View Menu","title":"Front","paragraphs":["View model from the front."]},
-				{"group":"View Menu","title":"Back","paragraphs":["View model from the back."]},
-				{"group":"View Menu","title":"Top","paragraphs":["View model from the top."]},
-				{"group":"View Menu","title":"Bottom","paragraphs":["View model from the bottom."]},
-				{"group":"View Menu","title":"Left","paragraphs":["View model from the left."]},
-				{"group":"View Menu","title":"Right","paragraphs":["View model from the right."]},
-				{"group":"View Menu","title":"Home","paragraphs":["View model from the default position."]},
-				{"group":"View Menu","title":"No Camera","paragraphs":["Do not use a camera."]},
-				{"group":"View Menu","title":"Cameras","paragraphs":["Use this camera."]},
+				{"group":"Edit Menu","title":"Cancel Action","paragraphs":["Cancel the current mouse action, a face or cutaway pick or a cutaway resize, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway."]},
+				{"group":"View Menu","title":"Preferences","paragraphs":["Open the program settings: General, Rendering, Views, Interface, Instructions, Categories, Context Menu, Keyboard and Mouse."]},
+				{"group":"View Menu","title":"Zoom In","paragraphs":["Move the camera closer to the model."]},
+				{"group":"View Menu","title":"Zoom Out","paragraphs":["Move the camera away from the model."]},
+				{"group":"View Menu","title":"Zoom Extents","paragraphs":["Move the camera until every part fits in the view."]},
+				{"group":"View Menu","title":"Look At","paragraphs":["Turn the view so the selected parts are at its center."]},
+				{"group":"View Menu","title":"Move View","paragraphs":["Move the camera of the current view, keeping its direction, from the keyboard or a gamepad."]},
+				{"group":"View Menu","title":"Viewpoint","paragraphs":["Look at the model from this side, or from the default angle with Home."]},
+				{"group":"View Menu","title":"No Camera","paragraphs":["Leave the model's cameras and use the free view."]},
+				{"group":"View Menu","title":"Camera","paragraphs":["Look through this camera of the model. The menu lists the first sixteen cameras."]},
 				{"group":"Steps Menu","title":"First Step","paragraphs":["Display the model at its first building step. Step navigation changes which parts are visible; it does not move parts to a different step."]},
 				{"group":"Steps Menu","title":"Previous Step","paragraphs":["Display the model one building step earlier. Parts introduced in later steps are hidden so you can inspect the earlier stage of construction."]},
 				{"group":"Steps Menu","title":"Next Step","paragraphs":["Display the next building step to reveal the next stage of the model. Use the Timeline to change which step introduces a part."]},
 				{"group":"Steps Menu","title":"Last Step","paragraphs":["Display the last building step of the current model. Use this to return to the completed model after inspecting earlier steps."]},
-				{"group":"Steps Menu","title":"Insert Before","paragraphs":["Insert a new step before the current step."]},
-				{"group":"Steps Menu","title":"Insert After","paragraphs":["Insert a new step after the current step."]},
-				{"group":"Steps Menu","title":"Delete Step","paragraphs":["Delete the current step."]},
+				{"group":"Steps Menu","title":"Insert Before","paragraphs":["Add an empty step before the current step. The current step and the ones after it move one step later."]},
+				{"group":"Steps Menu","title":"Insert After","paragraphs":["Add an empty step after the current step. The steps after it move one step later."]},
+				{"group":"Steps Menu","title":"Delete Step","paragraphs":["Remove the current step. Its parts join the step before it and later steps move one step earlier."]},
 				{"group":"Steps Menu","title":"Add Keys","paragraphs":["Enable this when an edit should create a new animation key at the current step. For example, moving a part at a later step can give it a different position there. The round key buttons in Properties show and toggle keys for individual properties."]},
 				{"group":"Steps Menu","title":"Set Keys","paragraphs":["Add position and rotation keys to the selected objects at the current step, holding their values at that step. The full diamond in the Keyframes panel does the same."]},
 				{"group":"Steps Menu","title":"Remove Keys","paragraphs":["Remove every key the selected objects have at the current step. The hollow diamond in the Keyframes panel does the same."]},
 				{"group":"Steps Menu","title":"Play or Pause","paragraphs":["Step through the model one step at a time to the last step, showing the keyed motion. Use it again to pause."]},
-				{"group":"Steps Menu","title":"Stop","paragraphs":["Stop playing and go back to the step playing started from."]},
 				{"group":"View Menu","title":"Split Horizontal","paragraphs":["Split the current view into two views stacked one above the other, each with its own camera. The view cube and axis icon stay on the top left view."]},
 				{"group":"View Menu","title":"Split Vertical","paragraphs":["Split the current view into two views side by side, each with its own camera. The view cube and axis icon stay on the top left view."]},
-				{"group":"View Menu","title":"Remove View","paragraphs":["Remove the current view."]},
-				{"group":"View Menu","title":"Reset Views","paragraphs":["Reset all views."]},
-				{"group":"View Menu","title":"Standard Toolbar","paragraphs":["Toggle the Standard toolbar."]},
-				{"group":"View Menu","title":"Tools Toolbar","paragraphs":["Toggle the Tools toolbar."]},
-				{"group":"View Menu","title":"Time Toolbar","paragraphs":["Toggle the Time toolbar."]},
-				{"group":"View Menu","title":"Parts Panel","paragraphs":["Toggle the Parts panel."]},
-				{"group":"View Menu","title":"Colors Panel","paragraphs":["Toggle the Colors panel."]},
-				{"group":"View Menu","title":"Properties Panel","paragraphs":["Toggle the Properties panel."]},
-				{"group":"View Menu","title":"Timeline Panel","paragraphs":["Toggle the Timeline panel."]},
-				{"group":"View Menu","title":"Preview Panel","paragraphs":["Toggle the Preview panel."]},
-				{"group":"View Menu","title":"Terminal Panel","paragraphs":["Toggle the Terminal panel."]},
-				{"group":"View Menu","title":"Minifigure Builder Panel","paragraphs":["Toggle the Minifigure Builder panel."]},
+				{"group":"View Menu","title":"Remove View","paragraphs":["Close the active split view."]},
+				{"group":"View Menu","title":"Reset Views","paragraphs":["Remove every split and go back to one view."]},
+				{"group":"View Menu","title":"Show or Hide","paragraphs":["Show or hide this toolbar or panel. A right click on any toolbar or panel title gives the same list."]},
 				{"group":"View Menu","title":"Explode","paragraphs":["Show or hide the Explode panel, which spreads the parts on screen away from an anchor, the focused part or the first or last selected one, scaled along X, Y and Z. With Selected Parts Only, each group moves as one part. Each part slides straight out along the connection that holds it, a part without one along the nearest axis from the part beside it, and with Show Lines a line runs through each connection back to the socket it came off. Submodels, and the submodels inside them, flatten into their parts first in the same undo step. Collapse or Undo puts the parts and submodels back, and Save Copy saves the exploded model to a separate file named with -exploded."]},
 				{"group":"View Menu","title":"Joints","paragraphs":["Show or hide the Joints panel. A tree lists every model with its jointed submodels and their joints, click a joint to select its submodel, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. A joint inside a submodel opens it in place and a bar over the view points to the picked joint. A submodel button there selects that submodel and keeps joint mode when it has a joint, the main model button ends it; the close button clears the selection and returns to the Select tool. Clicking a model shows its poses in the Poses panel. The panel also shows the picked joint of the selected submodel, with its axis, and Delete Joint deletes the joint picked in the tree."]},
 				{"group":"View Menu","title":"Poses","paragraphs":["Show or hide the Poses panel, which lists the poses of the model picked in the Joints panel, or of the current model. Save stores the joint angles of that model as a named pose, Recall puts them back in one undo step, Rename and Delete change the picked pose, and the Joints motion in the image dialog plays the poses of the main model as an animation."]},
 				{"group":"View Menu","title":"Keyframes","paragraphs":["Show or hide the Keyframes panel, a timeline with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a key to another step and right-click for more. Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons rewind, play or pause, stop and go to the last step. Values are edited in the Properties panel."]},
 				{"group":"View Menu","title":"Lock Interface","paragraphs":["Keep the panels and toolbars where they are: panel title bars are hidden to save space, and panels and toolbars can no longer be dragged, floated or docked elsewhere. Panels still resize, and they can still be shown or hidden from this menu. Right-click a toolbar, or use View, Toolbars, to lock or unlock."]},
-				{"group":"View Menu","title":"Full Screen","paragraphs":["Toggle full screen mode."]},
-				{"group":"View Menu","title":"Close Tab","paragraphs":["Close current tab."]},
-				{"group":"View Menu","title":"Wireframe","paragraphs":["Display the scene as wireframe."]},
-				{"group":"View Menu","title":"Flat Shading","paragraphs":["Display the scene without any shading or lights."]},
-				{"group":"View Menu","title":"Default Lights","paragraphs":["Display the scene with the default lights."]},
+				{"group":"View Menu","title":"Full Screen","paragraphs":["Fill the whole screen with the StudWorx window, or go back to a normal window."]},
+				{"group":"View Menu","title":"Close Tab","paragraphs":["Close the current model tab, asking to save its changes first."]},
+				{"group":"View Menu","title":"Wireframe","paragraphs":["Draw the model view as lines only, without faces."]},
+				{"group":"View Menu","title":"Flat Shading","paragraphs":["Draw the model view in plain colors, without shading or lights."]},
+				{"group":"View Menu","title":"Default Lights","paragraphs":["Light the model view with the built-in lights instead of the lights placed in the model."]},
 				{"group":"View Menu","title":"Standard Lighting","paragraphs":["Light parts drawn with the Default Lights shading mode using one light above the camera with a soft highlight. This is the classic look."]},
 				{"group":"View Menu","title":"Studio Lighting","paragraphs":["Light parts drawn with the Default Lights shading mode using a key light, a fill light from the camera and a rim light that brightens silhouette edges, for a softer, more photographic look."]},
 				{"group":"View Menu","title":"Matte Lighting","paragraphs":["Light parts drawn with the Default Lights shading mode without specular highlights, so colors stay flat and true while surfaces keep their shading."]},
 				{"group":"View Menu","title":"Toon Lighting","paragraphs":["Light parts drawn with the Default Lights shading mode in a few flat brightness bands with a sharp highlight, for a cartoon look that pairs well with edge lines."]},
-				{"group":"View Menu","title":"Perspective","paragraphs":["Set the current camera to use a perspective projection."]},
-				{"group":"View Menu","title":"Orthographic","paragraphs":["Set the current camera to use an orthographic projection."]},
+				{"group":"View Menu","title":"Perspective","paragraphs":["Show the view with perspective, distant parts smaller."]},
+				{"group":"View Menu","title":"Orthographic","paragraphs":["Show the view without perspective, parallel lines staying parallel."]},
 				{"group":"View Menu","title":"View Cube","paragraphs":["Show or hide the view cube. Click its faces, edges and corners to turn the camera. With split views it shows on the top left view only."]},
 				{"group":"View Menu","title":"Axis Icon","paragraphs":["Show or hide the X, Y and Z axis icon. With split views it shows on the top left view only."]},
 				{"group":"View Menu","title":"Base Grid","paragraphs":["Show or hide the base grid. The height grids have their own toggles."]},
 				{"group":"View Menu","title":"Fade Previous Steps","paragraphs":["Tint parts from previous building steps with the chosen fade color, so the parts of the current step stand out."]},
-				{"group":"Steps Menu","title":"Step View","paragraphs":["Set the view rotation of the current step."]},
-				{"group":"Steps Menu","title":"Remove Step View","paragraphs":["Remove the view rotation of the current step."]},
-				{"group":"Steps Menu","title":"Follow Step Views","paragraphs":["Toggle turning the view to each step's view rotation when changing steps."]},
+				{"group":"Steps Menu","title":"Step View","paragraphs":["Set the view rotation of the current step, saved as an MLCad ROTSTEP."]},
+				{"group":"Steps Menu","title":"Remove Step View","paragraphs":["Clear the view rotation of the current step."]},
+				{"group":"Steps Menu","title":"Follow Step Views","paragraphs":["Turn the view to each step's view rotation when the step changes."]},
 				{"group":"View Menu","title":"Normal to Face","paragraphs":["Click a face of any part, including parts inside submodels, to point the camera straight at it. The model is not changed. Press Esc to cancel."]},
 				{"group":"View Menu","title":"Cube Cutaway","paragraphs":["Click a face of any part to hide everything inside a cube centered on it, so you can see inside the model. Clicking empty space centers the cube on the view target. The model is not changed. Press Esc to cancel."]},
 				{"group":"View Menu","title":"Sphere Cutaway","paragraphs":["Click a face of any part to hide everything inside a sphere centered on it, so you can see inside the model. Clicking empty space centers the sphere on the view target. The model is not changed. Press Esc to cancel."]},
@@ -4210,141 +4175,125 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"View Menu","title":"Shrink","paragraphs":["Make the cutaway smaller."]},
 				{"group":"View Menu","title":"Push In","paragraphs":["Move the cutaway one plate deeper into the model."]},
 				{"group":"View Menu","title":"Pull Out","paragraphs":["Move the cutaway one plate back out of the model."]},
-				{"group":"View Menu","title":"Shade Color","paragraphs":["Choose the light shade on the cutaway faces."]},
-				{"group":"View Menu","title":"Remove","paragraphs":["Show the whole model again, or press Esc with nothing selected."]},
+				{"group":"View Menu","title":"Shade Color","paragraphs":["Choose the light shade drawn on the cut faces."]},
+				{"group":"View Menu","title":"Remove","paragraphs":["Remove the cutaway and show the whole model again. Esc with nothing selected does the same."]},
 				{"group":"View Menu","title":"All Grids","paragraphs":["Turn the base grid and both height grids on together, or off when they are all on. The axis lines are not changed."]},
 				{"group":"View Menu","title":"XZ Height Grid","paragraphs":["Show or hide the vertical XZ height grid sized around the model."]},
 				{"group":"View Menu","title":"YZ Height Grid","paragraphs":["Show or hide the vertical YZ height grid sized around the model."]},
 				{"group":"View Menu","title":"Height Grids Behind Model","paragraphs":["Draw the height grids behind the model instead of through the origin axes."]},
-				{"group":"View Menu","title":"X Axis Line","paragraphs":["Toggle the x axis line on the grid origin."]},
-				{"group":"View Menu","title":"Y Axis Line","paragraphs":["Toggle the y axis line on the grid origin."]},
-				{"group":"View Menu","title":"Z Axis Line","paragraphs":["Toggle the z axis line on the grid origin and the height grids."]},
-				{"group":"View Menu","title":"Follow Model Folder","paragraphs":["Toggle changing the terminal to the folder of each model that is opened."]},
-				{"group":"View Menu","title":"Go to Model Folder","paragraphs":["Change the terminal to the folder of the current model."]},
+				{"group":"View Menu","title":"X Axis Line","paragraphs":["Show or hide the X axis line through the grid origin."]},
+				{"group":"View Menu","title":"Y Axis Line","paragraphs":["Show or hide the Y axis line through the grid origin."]},
+				{"group":"View Menu","title":"Z Axis Line","paragraphs":["Show or hide the Z axis line through the grid origin and the height grids."]},
+				{"group":"View Menu","title":"Follow Model Folder","paragraphs":["Move the terminal to the folder of each model you open."]},
+				{"group":"View Menu","title":"Go to Model Folder","paragraphs":["Move the terminal to the folder of the current model."]},
 				{"group":"View Menu","title":"Open Model Folder","paragraphs":["Open the folder of the current model in the file manager. The button is unavailable until the model is saved to a file."]},
-				{"group":"View Menu","title":"Solid Colors","paragraphs":["Expand or collapse the solid colors."]},
-				{"group":"View Menu","title":"Translucent Colors","paragraphs":["Expand or collapse the translucent colors."]},
-				{"group":"View Menu","title":"Special Colors","paragraphs":["Expand or collapse the special colors."]},
-				{"group":"Part Menu","title":"Current Color","paragraphs":["Insert new parts with the current color."]},
-				{"group":"Part Menu","title":"Selected Part Color","paragraphs":["Insert new parts with the color of the selected part."]},
-				{"group":"Part Menu","title":"Last Inserted Part Color","paragraphs":["Insert new parts with the color of the last inserted part."]},
-				{"group":"View Menu","title":"Lock Parts Color","paragraphs":["Toggle keeping the parts list in a fixed color instead of following the insert color."]},
-				{"group":"File Menu","title":"Open Most Recent File on Startup","paragraphs":["Toggle opening the most recently used file when StudWorx starts."]},
-				{"group":"File Menu","title":"Restore Tab Layout","paragraphs":["Toggle restoring saved model tabs and view layouts when opening a model."]},
-				{"group":"Edit Menu","title":"Fixed Direction Keys","paragraphs":["Toggle moving parts along fixed model axes instead of view-relative directions."]},
-				{"group":"View Menu","title":"Mesh LOD","paragraphs":["Toggle using simpler meshes for distant parts."]},
+				{"group":"View Menu","title":"Solid Colors","paragraphs":["Expand or collapse the solid colors in the Colors panel."]},
+				{"group":"View Menu","title":"Translucent Colors","paragraphs":["Expand or collapse the translucent colors in the Colors panel."]},
+				{"group":"View Menu","title":"Special Colors","paragraphs":["Expand or collapse the special colors in the Colors panel."]},
+				{"group":"Part Menu","title":"Current Color","paragraphs":["Insert new parts in the color chosen in the Colors panel."]},
+				{"group":"Part Menu","title":"Selected Part Color","paragraphs":["Insert new parts in the color of the selected part."]},
+				{"group":"Part Menu","title":"Last Inserted Part Color","paragraphs":["Insert new parts in the color of the last part inserted."]},
+				{"group":"View Menu","title":"Lock Parts Color","paragraphs":["Keep the Parts panel thumbnails in one color instead of following the insert color."]},
+				{"group":"File Menu","title":"Open Most Recent File on Startup","paragraphs":["Reopen the last model you worked on each time StudWorx starts."]},
+				{"group":"File Menu","title":"Restore Tab Layout","paragraphs":["Bring back the saved model tabs and view splits of a model when it opens."]},
+				{"group":"Edit Menu","title":"Fixed Direction Keys","paragraphs":["Keep the arrow keys on the model axes instead of following the direction of the view."]},
+				{"group":"View Menu","title":"Mesh LOD","paragraphs":["Draw distant parts with simpler meshes (level of detail), from a distance set in Preferences, so large models stay smooth."]},
 				{"group":"View Menu","title":"Highlight New Parts","paragraphs":["Highlight the parts added in the current building step with the chosen highlight color."]},
 				{"group":"View Menu","title":"Fade on Edit","paragraphs":["Tint the rest of the model with the chosen color while editing a submodel in place. When off, the rest of the model stays in its own colors, slightly translucent."]},
 				{"group":"View Menu","title":"Fade on Joint Set","paragraphs":["Tint all but the selected submodel with the chosen color while setting a joint or in joint mode."]},
 				{"group":"View Menu","title":"Fade on Joint Move and Rotate","paragraphs":["Keep the joint fade while moving or rotating a joint. Leave it off to check parts for collisions in their own colors."]},
 				{"group":"View Menu","title":"Submodel Hover Outline","paragraphs":["Outline the innermost submodel under the pointer with the hover outline color, or the submodel a joint would go on while setting a joint."]},
-				{"group":"View Menu","title":"Grid Studs","paragraphs":["Toggle drawing studs on the base grid."]},
-				{"group":"View Menu","title":"Grid Lines","paragraphs":["Toggle drawing lines on the base grid."]},
-				{"group":"View Menu","title":"Grid Origin Lines","paragraphs":["Toggle drawing the base grid origin lines."]},
-				{"group":"View Menu","title":"Automate Edge Color","paragraphs":["Toggle automatically computing part edge colors."]},
-				{"group":"View Menu","title":"Outline Highlight","paragraphs":["Highlight selected and new parts with outlines."]},
-				{"group":"View Menu","title":"Tint and Edges Highlight","paragraphs":["Highlight selected and new parts with tinted faces and colored edges."]},
+				{"group":"View Menu","title":"Grid Studs","paragraphs":["Show or hide the studs of the base grid."]},
+				{"group":"View Menu","title":"Grid Lines","paragraphs":["Show or hide the lines of the base grid."]},
+				{"group":"View Menu","title":"Grid Origin Lines","paragraphs":["Show or hide the origin lines of the base grid."]},
+				{"group":"View Menu","title":"Automate Edge Color","paragraphs":["Compute edge colors from each part color, with the edge contrast, saturation and light to dark settings in Preferences."]},
+				{"group":"View Menu","title":"Outline Highlight","paragraphs":["Mark selected and new parts with an outline."]},
+				{"group":"View Menu","title":"Tint and Edges Highlight","paragraphs":["Mark selected and new parts with tinted faces and colored edges."]},
 				{"group":"View Menu","title":"Increase Outline Width","paragraphs":["Make the selection outline thicker."]},
 				{"group":"View Menu","title":"Decrease Outline Width","paragraphs":["Make the selection outline thinner."]},
-				{"group":"View Menu","title":"Plain Studs","paragraphs":["Draw studs with the plain style."]},
-				{"group":"View Menu","title":"Thin-Line Logo Studs","paragraphs":["Draw studs with the thin-line logo style."]},
-				{"group":"View Menu","title":"Outline Logo Studs","paragraphs":["Draw studs with the outline logo style."]},
-				{"group":"View Menu","title":"Sharp Top Logo Studs","paragraphs":["Draw studs with the sharp top logo style."]},
-				{"group":"View Menu","title":"Rounded Top Logo Studs","paragraphs":["Draw studs with the rounded top logo style."]},
-				{"group":"View Menu","title":"Flattened Logo Studs","paragraphs":["Draw studs with the flattened logo style."]},
-				{"group":"View Menu","title":"High Contrast Studs","paragraphs":["Draw studs with the high contrast style."]},
-				{"group":"View Menu","title":"High Contrast Logo Studs","paragraphs":["Draw studs with the high contrast logo style."]},
-				{"group":"View Menu","title":"Edge Lines","paragraphs":["Toggle edge lines in model views."]},
-				{"group":"View Menu","title":"Conditional Lines","paragraphs":["Toggle conditional lines in model views."]},
-				{"group":"View Menu","title":"Preview Uses Model View Settings","paragraphs":["Toggle using the model view rendering settings for the preview."]},
-				{"group":"View Menu","title":"Preview Wireframe","paragraphs":["Display the preview as wireframe."]},
-				{"group":"View Menu","title":"Preview Flat Shading","paragraphs":["Display the preview without any shading or lights."]},
-				{"group":"View Menu","title":"Preview Default Lights","paragraphs":["Display the preview with the default lights."]},
-				{"group":"View Menu","title":"Preview Edge Lines","paragraphs":["Toggle edge lines in the preview."]},
-				{"group":"View Menu","title":"Preview Conditional Lines","paragraphs":["Toggle conditional lines in the preview."]},
-				{"group":"View Menu","title":"Parts Use Model View Settings","paragraphs":["Toggle using the model view rendering settings for the parts list."]},
-				{"group":"View Menu","title":"Parts Wireframe","paragraphs":["Display the parts list as wireframe."]},
-				{"group":"View Menu","title":"Parts Flat Shading","paragraphs":["Display the parts list without any shading or lights."]},
-				{"group":"View Menu","title":"Parts Default Lights","paragraphs":["Display the parts list with the default lights."]},
-				{"group":"View Menu","title":"Parts Edge Lines","paragraphs":["Toggle edge lines in the parts list."]},
-				{"group":"View Menu","title":"Parts Conditional Lines","paragraphs":["Toggle conditional lines in the parts list."]},
-				{"group":"View Menu","title":"Minifigure Builder Uses Model View Settings","paragraphs":["Toggle using the model view rendering settings in the minifigure builder preview."]},
-				{"group":"View Menu","title":"Minifigure Builder Wireframe","paragraphs":["Display the minifigure builder preview as a wireframe."]},
-				{"group":"View Menu","title":"Minifigure Builder Flat Shading","paragraphs":["Display the minifigure builder preview with flat shading."]},
-				{"group":"View Menu","title":"Minifigure Builder Default Lights","paragraphs":["Display the minifigure builder preview with the default lights."]},
-				{"group":"View Menu","title":"Minifigure Builder Edge Lines","paragraphs":["Toggle edge lines in the minifigure builder preview."]},
-				{"group":"View Menu","title":"Minifigure Builder Conditional Lines","paragraphs":["Toggle conditional lines in the minifigure builder preview."]},
-				{"group":"View Menu","title":"Snap Panel Width to Tiles","paragraphs":["Toggle snapping the parts panel width to whole thumbnail tiles and the categories to the longest name."]},
-				{"group":"View Menu","title":"Preview View Cube","paragraphs":["Toggle the view cube in the preview."]},
-				{"group":"View Menu","title":"Preview Axis Icon","paragraphs":["Toggle the axis icon in the preview."]},
-				{"group":"File Menu","title":"Load All Parts Before Showing","paragraphs":["Toggle waiting for every part to load before showing a model."]},
-				{"group":"View Menu","title":"Square Viewport","paragraphs":["Keep the preview at a 1:1 ratio."]},
-				{"group":"View Menu","title":"Keep Last Selection","paragraphs":["Keep showing the last selected part after the selection is cleared."]},
-				{"group":"Part Menu","title":"Insert Part","paragraphs":["Add a new part to the model."]},
-				{"group":"Part Menu","title":"Insert First Part at Origin","paragraphs":["Toggle placing the first part of an empty model at 0, 0, 0."]},
-				{"group":"Part Menu","title":"Delete","paragraphs":["Delete selected objects."]},
-				{"group":"Part Menu","title":"Duplicate","paragraphs":["Create a copy of the selected parts."]},
-				{"group":"Part Menu","title":"Paint Selected","paragraphs":["Change the color of the selected parts."]},
+				{"group":"View Menu","title":"Stud Style","paragraphs":["Draw studs in this style: plain, with one of the logo styles, or in high contrast."]},
+				{"group":"View Menu","title":"Edge Lines","paragraphs":["Show or hide the edge lines of parts in the model view."]},
+				{"group":"View Menu","title":"Conditional Lines","paragraphs":["Show or hide the conditional lines that outline curved surfaces in the model view."]},
+				{"group":"View Menu","title":"Preview Uses Model View Settings","paragraphs":["Draw the preview with the rendering settings of the model view instead of its own."]},
+				{"group":"View Menu","title":"Preview Wireframe","paragraphs":["Draw the preview as lines only, without faces."]},
+				{"group":"View Menu","title":"Preview Flat Shading","paragraphs":["Draw the preview in plain colors, without shading or lights."]},
+				{"group":"View Menu","title":"Preview Default Lights","paragraphs":["Light the preview with the built-in lights."]},
+				{"group":"View Menu","title":"Preview Edge Lines","paragraphs":["Show or hide edge lines in the preview."]},
+				{"group":"View Menu","title":"Preview Conditional Lines","paragraphs":["Show or hide conditional lines in the preview."]},
+				{"group":"View Menu","title":"Parts Use Model View Settings","paragraphs":["Draw the parts list with the rendering settings of the model view instead of its own."]},
+				{"group":"View Menu","title":"Parts Wireframe","paragraphs":["Draw the parts list as lines only, without faces."]},
+				{"group":"View Menu","title":"Parts Flat Shading","paragraphs":["Draw the parts list in plain colors, without shading or lights."]},
+				{"group":"View Menu","title":"Parts Default Lights","paragraphs":["Light the parts list with the built-in lights."]},
+				{"group":"View Menu","title":"Parts Edge Lines","paragraphs":["Show or hide edge lines in the parts list."]},
+				{"group":"View Menu","title":"Parts Conditional Lines","paragraphs":["Show or hide conditional lines in the parts list."]},
+				{"group":"View Menu","title":"Minifigure Builder Uses Model View Settings","paragraphs":["Draw the Minifigure Builder preview with the rendering settings of the model view instead of its own."]},
+				{"group":"View Menu","title":"Minifigure Builder Wireframe","paragraphs":["Draw the Minifigure Builder preview as lines only, without faces."]},
+				{"group":"View Menu","title":"Minifigure Builder Flat Shading","paragraphs":["Draw the Minifigure Builder preview in plain colors, without shading or lights."]},
+				{"group":"View Menu","title":"Minifigure Builder Default Lights","paragraphs":["Light the Minifigure Builder preview with the built-in lights."]},
+				{"group":"View Menu","title":"Minifigure Builder Edge Lines","paragraphs":["Show or hide edge lines in the Minifigure Builder preview."]},
+				{"group":"View Menu","title":"Minifigure Builder Conditional Lines","paragraphs":["Show or hide conditional lines in the Minifigure Builder preview."]},
+				{"group":"View Menu","title":"Snap Panel Width to Tiles","paragraphs":["Snap the Parts panel width to whole thumbnail tiles, and the categories to the longest name."]},
+				{"group":"View Menu","title":"Preview View Cube","paragraphs":["Show or hide the view cube in the preview."]},
+				{"group":"View Menu","title":"Preview Axis Icon","paragraphs":["Show or hide the axis icon in the preview."]},
+				{"group":"File Menu","title":"Load All Parts Before Showing","paragraphs":["Wait until every part of a model has loaded before showing it, instead of showing parts as they load."]},
+				{"group":"View Menu","title":"Square Viewport","paragraphs":["Keep the preview square, at a 1:1 ratio."]},
+				{"group":"View Menu","title":"Keep Last Selection","paragraphs":["Keep showing the last selected part in the preview after the selection is cleared."]},
+				{"group":"Part Menu","title":"Insert Part","paragraphs":["Add the part chosen in the Parts panel to the model, next to the part that has focus or the last part added."]},
+				{"group":"Part Menu","title":"Insert First Part at Origin","paragraphs":["Place the first part of an empty model at 0, 0, 0."]},
+				{"group":"Part Menu","title":"Delete","paragraphs":["Remove the selected objects from the model."]},
+				{"group":"Part Menu","title":"Duplicate","paragraphs":["Add a copy of each selected part in the same place, with copies of their groups, and select the copies."]},
+				{"group":"Part Menu","title":"Paint Selected","paragraphs":["Change the selected parts to the color chosen in the Colors panel."]},
 				{"group":"Part Menu","title":"Set Joint","paragraphs":["Select one submodel, choose Part > Joint > Set Joint, also in the right-click menu of the model view, then click one of its connections with the Set Joint pointer, which outlines the part under it in red. The click sets the joint and goes back to the Select tool in joint mode on the new joint. Set Joint again at another connection adds a joint, and Set Joint at a joint already there resets it. A round connection makes a hinge on its axis and a sphere makes a ball. A part without shadow data gets a hinge on its origin. The joint shows in the Joints panel and setting it can be undone."]},
 				{"group":"Part Menu","title":"Joint Move","paragraphs":["With one submodel with a joint selected, switches to the Move tool with the gizmo on the pivot of the picked joint, outlined by a red hexagon. Selecting something else goes back to the pivot point."]},
 				{"group":"Part Menu","title":"Joint Rotate","paragraphs":["With one submodel with a joint selected, switches to the Rotate tool with the gizmo on the pivot of the picked joint, outlined in red, and the rotate keys and the Rotate tool turn the joint around its own pivot and axis. A hinge only turns about its axis. Selecting something else goes back to the pivot point. Use Joint Rotation in the preferences does this whenever a selected submodel has a joint."]},
-				{"group":"Part Menu","title":"Reset Pivot Point","paragraphs":["Reset the pivot point of the selected parts to their origin."]},
-				{"group":"Part Menu","title":"Remove Keyframes","paragraphs":["Remove all keyframes from the selected parts."]},
-				{"group":"Part Menu","title":"Insert Control Point","paragraphs":["Insert a new control point."]},
-				{"group":"Part Menu","title":"Remove Control Point","paragraphs":["Remove the selected control point."]},
-				{"group":"Part Menu","title":"Clamp Tangent","paragraphs":["Turn the selected control point along the path, or release it to rotate it freely."]},
+				{"group":"Part Menu","title":"Reset Pivot Point","paragraphs":["Put the pivot point of each selected part back at its origin."]},
+				{"group":"Part Menu","title":"Remove Keyframes","paragraphs":["Remove every animation key from the selected parts, lights and cameras."]},
+				{"group":"Part Menu","title":"Insert Control Point","paragraphs":["Add a control point to the selected flexible part, where it bends."]},
+				{"group":"Part Menu","title":"Remove Control Point","paragraphs":["Remove the selected control point of a flexible part."]},
+				{"group":"Part Menu","title":"Clamp Tangent","paragraphs":["Hold the selected control point along the path, or release it to rotate freely."]},
 				{"group":"Part Menu","title":"Align to Tangent","paragraphs":["Turn the selected control point along the path once and keep it released."]},
 				{"group":"Part Menu","title":"X Axis","paragraphs":["Turn the selected control point along the X axis."]},
 				{"group":"Part Menu","title":"Y Axis","paragraphs":["Turn the selected control point along the Y axis."]},
 				{"group":"Part Menu","title":"Z Axis","paragraphs":["Turn the selected control point along the Z axis."]},
-				{"group":"Part Menu","title":"Focus Next Connection","paragraphs":["Focus the next connection of the currently selected track."]},
-				{"group":"Part Menu","title":"Focus Previous Connection","paragraphs":["Focus the previous connection of the currently selected track."]},
-				{"group":"Part Menu","title":"Rotate Train Track","paragraphs":["Rotate the focused train track around its last connection."]},
-				{"group":"Part Menu","title":"Move +X","paragraphs":["Move selected objects along the X axis."]},
-				{"group":"Part Menu","title":"Move -X","paragraphs":["Move selected objects along the X axis."]},
-				{"group":"Part Menu","title":"Move +Y","paragraphs":["Move selected objects along the Y axis."]},
-				{"group":"Part Menu","title":"Move -Y","paragraphs":["Move selected objects along the Y axis."]},
-				{"group":"Part Menu","title":"Move +Z","paragraphs":["Move selected objects along the Z axis."]},
-				{"group":"Part Menu","title":"Move -Z","paragraphs":["Move selected objects along the Z axis."]},
-				{"group":"Part Menu","title":"Rotate +X","paragraphs":["Rotate selected objects around the X axis."]},
-				{"group":"Part Menu","title":"Rotate -X","paragraphs":["Rotate selected objects around the X axis."]},
-				{"group":"Part Menu","title":"Rotate +Y","paragraphs":["Rotate selected objects around the Y axis."]},
-				{"group":"Part Menu","title":"Rotate -Y","paragraphs":["Rotate selected objects around the Y axis."]},
-				{"group":"Part Menu","title":"Rotate +Z","paragraphs":["Rotate selected objects around the Z axis."]},
-				{"group":"Part Menu","title":"Rotate -Z","paragraphs":["Rotate selected objects around the Z axis."]},
-				{"group":"Part Menu","title":"Minifigure Builder","paragraphs":["Show the Minifigure Builder panel to build a minifigure and add it to the model."]},
-				{"group":"Part Menu","title":"Array","paragraphs":["Make copies of the selected parts."]},
-				{"group":"Part Menu","title":"Open Selected Submodel","paragraphs":["Open the submodel referenced by the selected part in a new tab."]},
-				{"group":"Part Menu","title":"Move to New Submodel","paragraphs":["Move the selected parts to a new submodel and replace them with a reference to it."]},
-				{"group":"Part Menu","title":"Inline Selected Submodels","paragraphs":["Insert the contents of the selected submodels into the current model."]},
+				{"group":"Part Menu","title":"Focus Next Connection","paragraphs":["Move the focus to the next connection of the selected track, where the next part joins."]},
+				{"group":"Part Menu","title":"Focus Previous Connection","paragraphs":["Move the focus to the previous connection of the selected track, where the next part joins."]},
+				{"group":"Part Menu","title":"Rotate Train Track","paragraphs":["Turn the focused track part to its next connection."]},
+				{"group":"Part Menu","title":"Move Selection","paragraphs":["Move the selected objects one move snap step along this axis."]},
+				{"group":"Part Menu","title":"Rotate Selection","paragraphs":["Rotate the selected objects one rotation snap step around this axis."]},
+				{"group":"Part Menu","title":"Minifigure Builder","paragraphs":["Show the Minifigure Builder panel to build a minifigure from templates and add it to the model."]},
+				{"group":"Part Menu","title":"Array","paragraphs":["Repeat the selection along one, two or three axes, with a count, offset and rotation for each."]},
+				{"group":"Part Menu","title":"Open Selected Submodel","paragraphs":["Open the submodel used by the selected part in its own tab, to edit it on its own."]},
+				{"group":"Part Menu","title":"Move to New Submodel","paragraphs":["Move the selected parts into a new submodel and put one reference to it in their place."]},
+				{"group":"Part Menu","title":"Inline Selected Submodels","paragraphs":["Replace each selected submodel with its parts, in place."]},
 				{"group":"Part Menu","title":"Flatten Submodels","paragraphs":["Replace every submodel in the current model, and every submodel inside those, with its parts in one undo step. Each part keeps its place and color, and the groups inside the submodels are not kept."]},
-				{"group":"Part Menu","title":"Edit Selected Submodel","paragraphs":["Edit the currently selected submodel in-place."]},
-				{"group":"Part Menu","title":"End Submodel Editing","paragraphs":["End in-place submodel editing."]},
-				{"group":"Part Menu","title":"Group","paragraphs":["Group selected parts together."]},
-				{"group":"Part Menu","title":"Ungroup","paragraphs":["Ungroup selected group."]},
-				{"group":"Part Menu","title":"Add to Group","paragraphs":["Add focused part to selected group."]},
-				{"group":"Part Menu","title":"Remove from Group","paragraphs":["Remove focused part from group."]},
-				{"group":"Part Menu","title":"Edit Groups","paragraphs":["Edit groups."]},
-				{"group":"Part Menu","title":"Hide Selected","paragraphs":["Hide selected objects."]},
-				{"group":"Part Menu","title":"Hide Unselected","paragraphs":["Hide objects that are not selected."]},
-				{"group":"Part Menu","title":"Unhide Selected","paragraphs":["Show hidden objects that are selected."]},
-				{"group":"Part Menu","title":"Unhide All","paragraphs":["Show all hidden objects."]},
-				{"group":"Part Menu","title":"Show Earlier","paragraphs":["Show selected parts one step earlier."]},
-				{"group":"Part Menu","title":"Show Later","paragraphs":["Show selected parts one step later."]},
-				{"group":"Models Menu","title":"New Submodel","paragraphs":["Create a new submodel."]},
-				{"group":"Models Menu","title":"Properties","paragraphs":["Display the properties of the current submodel."]},
-				{"group":"Models Menu","title":"Submodels","paragraphs":["Show a list of all submodels."]},
-				{"group":"Models Menu","title":"Submodel 1","paragraphs":["Switch to this submodel."]},
-				{"group":"Help Menu","title":"What's This?","paragraphs":["Click a control to read its contextual help."]},
-				{"group":"Help Menu","title":"Home Page","paragraphs":["Open the StudWorx home page in your default web browser."]},
-				{"group":"Help Menu","title":"Report a Bug","paragraphs":["Open the StudWorx bug report form in your default web browser."]},
-				{"group":"Help Menu","title":"About","paragraphs":["Display program version number and system information."]},
-				{"group":"Timeline","title":"Insert Step Before","paragraphs":["Insert a new step before the current step."]},
-				{"group":"Timeline","title":"Insert Step After","paragraphs":["Insert a new step after the current step."]},
+				{"group":"Part Menu","title":"Edit Selected Submodel","paragraphs":["Edit the selected submodel in place, inside its parent. A path bar shows where you are."]},
+				{"group":"Part Menu","title":"End Submodel Editing","paragraphs":["Leave in-place editing and go back to the parent model."]},
+				{"group":"Part Menu","title":"Group","paragraphs":["Group the selected parts under a unique name, so they select and move as one."]},
+				{"group":"Part Menu","title":"Ungroup","paragraphs":["Remove the selected group, keeping its parts."]},
+				{"group":"Part Menu","title":"Add to Group","paragraphs":["Add the part that has focus to the selected group."]},
+				{"group":"Part Menu","title":"Remove from Group","paragraphs":["Take the part that has focus out of its group."]},
+				{"group":"Part Menu","title":"Edit Groups","paragraphs":["Create, rename and nest groups and drag parts between them in a tree of parts and groups."]},
+				{"group":"Part Menu","title":"Hide Selected","paragraphs":["Hide the selected objects."]},
+				{"group":"Part Menu","title":"Hide Unselected","paragraphs":["Hide every object that is not selected."]},
+				{"group":"Part Menu","title":"Unhide Selected","paragraphs":["Show the selected hidden objects again."]},
+				{"group":"Part Menu","title":"Unhide All","paragraphs":["Show every hidden object again."]},
+				{"group":"Part Menu","title":"Show Earlier","paragraphs":["Move the selected parts one step earlier."]},
+				{"group":"Part Menu","title":"Show Later","paragraphs":["Move the selected parts one step later."]},
+				{"group":"Models Menu","title":"New Submodel","paragraphs":["Add a new, empty submodel to the file and switch to it."]},
+				{"group":"Models Menu","title":"Properties","paragraphs":["Edit the name, author, description and comments of the current submodel, and see its parts, counts, size and weight, with BrickLink and CSV export."]},
+				{"group":"Models Menu","title":"Submodels","paragraphs":["Create, rename, duplicate, delete, reorder and export the submodels of the file, and set the active one."]},
+				{"group":"Models Menu","title":"Submodel","paragraphs":["Switch to this submodel. The Models menu lists up to forty submodels of the file."]},
+				{"group":"Help Menu","title":"What's This?","paragraphs":["Click any control after this to read what it does. F1 explains the focused control."]},
+				{"group":"Help Menu","title":"Home Page","paragraphs":["Open the StudWorx repository on GitHub in your web browser."]},
+				{"group":"Help Menu","title":"Report a Bug","paragraphs":["Open the StudWorx issues on GitHub in your web browser to report a problem."]},
+				{"group":"Help Menu","title":"About","paragraphs":["Show the StudWorx version, a link to its home page, and system information to copy into a bug report."]},
+				{"group":"Timeline","title":"Insert Step Before","paragraphs":["Add an empty step before this step in the Timeline."]},
+				{"group":"Timeline","title":"Insert Step After","paragraphs":["Add an empty step after this step in the Timeline."]},
+				{"group":"Timeline","title":"Delete Step","paragraphs":["Remove this step. Its parts join the step before it and later steps move one step earlier."]},
 				{"group":"Timeline","title":"Move Selection Here","paragraphs":["Move the selected parts into this step."]},
-				{"group":"Timeline","title":"Move Selection Before","paragraphs":["Move the selected parts into a new step before this."]},
-				{"group":"Timeline","title":"Move Selection After","paragraphs":["Move the selected parts into a new step after this."]},
-				{"group":"Timeline","title":"Set Current Step","paragraphs":["View the model at this point in the timeline."]}
+				{"group":"Timeline","title":"Move Selection Before","paragraphs":["Move the selected parts into a new step before this one."]},
+				{"group":"Timeline","title":"Move Selection After","paragraphs":["Move the selected parts into a new step after this one."]},
+				{"group":"Timeline","title":"Set Current Step","paragraphs":["Show the model at this step."]}
 			] ;
 
 			const groups_help = [

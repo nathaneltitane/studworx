@@ -907,22 +907,22 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1439"/>
         <source>View.Time.SetKeys</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">View.Time.SetKeys</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1448"/>
         <source>View.Time.RemoveKeys</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">View.Time.RemoveKeys</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1457"/>
         <source>View.Time.Play</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">View.Time.Play</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1466"/>
         <source>View.Time.Stop</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">View.Time.Stop</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1610"/>
@@ -932,17 +932,17 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1619"/>
         <source>View.Toolbars.Poses</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">View.Toolbars.Poses</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1627"/>
         <source>View.Toolbars.Keyframes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">View.Toolbars.Keyframes</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1636"/>
         <source>View.LockInterface</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">View.LockInterface</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1645"/>
@@ -2121,7 +2121,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3487"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">视图</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3519"/>
@@ -2186,7 +2186,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3531"/>
         <source>Joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">关节</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3532"/>
@@ -3529,7 +3529,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="981"/>
         <source>Joints</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">关节</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2051"/>
@@ -3599,17 +3599,17 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2636"/>
         <source>X Axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">X 轴</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2645"/>
         <source>Y Axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Y 轴</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2654"/>
         <source>Z Axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Z 轴</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3356"/>
@@ -3810,22 +3810,22 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1440"/>
         <source>Set Keys</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">设置关键帧</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1449"/>
         <source>Remove Keys</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">移除关键帧</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1458"/>
         <source>Play or Pause</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">播放或暂停</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1467"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">停止</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1512"/>
@@ -3890,17 +3890,17 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1620"/>
         <source>Poses Panel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">姿势面板</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1628"/>
         <source>Keyframes Panel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">关键帧面板</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1637"/>
         <source>Lock Interface</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">锁定界面</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1898"/>
@@ -4620,7 +4620,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3468"/>
         <source>Joints</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">关节</translation>
     </message>
     <message>
         <source>Delete</source>
@@ -7924,12 +7924,12 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1450"/>
         <source>Remove the keys of the selected objects at the current step</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">移除所选对象在当前步骤的关键帧</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1459"/>
         <source>Play or pause the steps</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">播放或暂停步骤</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1468"/>
@@ -8377,6 +8377,11 @@ File format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="29"/>
+        <source>&lt;p&gt;&lt;b&gt;Merge&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose one or more model files and add their models to the current file as submodels, renamed when a name is already taken.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;合并&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择一个或多个模型文件，并将其中的模型作为子模型添加到当前文件；名称已被占用时会自动重命名。&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="38"/>
         <source>&lt;p&gt;&lt;b&gt;Reload Model&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Read the current model file again from disk, replacing the model in StudWorx. If the model has unsaved changes, StudWorx asks before discarding them.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -8387,9 +8392,107 @@ File format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="56"/>
+        <source>&lt;p&gt;&lt;b&gt;Watch for File Changes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;When another program changes the file of an open model, StudWorx asks whether to reload it. Turn this off to keep working without being asked.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;监视文件更改&lt;/b&gt;&lt;/p&gt;&lt;p&gt;当其他程序更改了已打开模型的文件时，StudWorx 会询问是否重新加载。关闭此项可继续工作而不被询问。&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="65"/>
         <source>&lt;p&gt;&lt;b&gt;Save Model&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Save the model and its submodels to disk. The first save asks for a filename. Use Save As to save a separate copy under another name.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="74"/>
+        <source>&lt;p&gt;&lt;b&gt;Save As&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Save the current model under a new name or in a new folder. The extension is added when left out: .ldr for a single model, .mpd for a model with submodels or embedded data.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;另存为&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将当前模型以新名称或保存到新文件夹。若未填写扩展名则自动添加：单个模型为 .ldr，含子模型或嵌入数据的模型为 .mpd。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="83"/>
+        <source>&lt;p&gt;&lt;b&gt;Image&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Save the model as a still image, a series of step images or an animated GIF, with the background, steps, framing, size and file chosen in the Image dialog.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;图像&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将模型保存为静态图像、一系列步骤图像或动画 GIF，背景、步骤、取景、尺寸和文件均在图像对话框中选择。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="92"/>
+        <source>&lt;p&gt;&lt;b&gt;LEGO® Digital Designer&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open a LEGO® Digital Designer model (.lxf or .lxfml) as a new untitled project. Parts and colors are translated through the bundled mapping.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;LEGO® Digital Designer&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将 LEGO® Digital Designer 模型（.lxf 或 .lxfml）作为新的未命名项目打开。零件和颜色通过内置映射转换。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="101"/>
+        <source>&lt;p&gt;&lt;b&gt;Set Inventory&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Search an official set by name or number and open all of its parts as a new model, after saving the current one. It uses your own free Rebrickable API key, asked for once or set under Online Services in Preferences.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;套装零件清单&lt;/b&gt;&lt;/p&gt;&lt;p&gt;按名称或编号搜索官方套装，并在保存当前模型后将其全部零件打开为新模型。使用您自己的免费 Rebrickable API 密钥，首次会询问，也可在首选项的在线服务中设置。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="110"/>
+        <source>&lt;p&gt;&lt;b&gt;3D Studio&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Export the current model as a 3D Studio .3ds file for other 3D programs.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;3D Studio&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将当前模型导出为 3D Studio .3ds 文件，供其他 3D 程序使用。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="119"/>
+        <source>&lt;p&gt;&lt;b&gt;COLLADA&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Export the current model as a COLLADA .dae file. Translucent colors can be marked as transparent materials.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;COLLADA&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将当前模型导出为 COLLADA .dae 文件。半透明颜色可标记为透明材质。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="128"/>
+        <source>&lt;p&gt;&lt;b&gt;HTML&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the Instructions window to export the building instructions as styled HTML pages in a folder named after the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;HTML&lt;/b&gt;&lt;/p&gt;&lt;p&gt;打开说明书窗口，将搭建说明导出为带样式的 HTML 页面，保存在以模型命名的文件夹中。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="137"/>
+        <source>&lt;p&gt;&lt;b&gt;KMZ&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Export the current model as a KMZ file for Google Earth and SketchUp, with the visible surfaces only or every part&apos;s geometry.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;KMZ&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将当前模型导出为适用于 Google Earth 和 SketchUp 的 KMZ 文件，可仅含可见表面，或包含每个零件的几何体。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="146"/>
+        <source>&lt;p&gt;&lt;b&gt;BrickLink&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Export the parts of the model as a BrickLink wanted list in XML, with part numbers and colors translated to BrickLink numbers, ready to copy and upload.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;BrickLink&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将模型的零件导出为 XML 格式的 BrickLink 需求清单，零件编号和颜色已转换为 BrickLink 编号，可直接复制并上传。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="155"/>
+        <source>&lt;p&gt;&lt;b&gt;CSV&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Export the parts of the model as a comma separated list, with part numbers, colors and counts, for a spreadsheet.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;CSV&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将模型的零件导出为逗号分隔列表，包含零件编号、颜色和数量，可用于电子表格。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="164"/>
+        <source>&lt;p&gt;&lt;b&gt;POV-Ray&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Export the current model as a POV-Ray scene file, with LGEO high detail parts when they are set up.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;POV-Ray&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将当前模型导出为 POV-Ray 场景文件；若已设置 LGEO，则使用其高细节零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="173"/>
+        <source>&lt;p&gt;&lt;b&gt;Wavefront&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Export the current model as a Wavefront .obj file with its materials for other 3D programs.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Wavefront&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将当前模型连同材质导出为 Wavefront .obj 文件，供其他 3D 程序使用。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="182"/>
+        <source>&lt;p&gt;&lt;b&gt;POV-Ray Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the current model with POV-Ray in the Render window: choose the output file, follow the progress and watch the image appear as it renders.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;POV-Ray 渲染&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在渲染窗口中使用 POV-Ray 渲染当前模型：选择输出文件、查看进度，并在渲染时观看图像逐步出现。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="191"/>
+        <source>&lt;p&gt;&lt;b&gt;Blender Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the current model with Blender and the bundled LDraw add-ons, or open the scene in Blender. The Blender executable is set in Preferences.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Blender 渲染&lt;/b&gt;&lt;/p&gt;&lt;p&gt;使用 Blender 和内置的 LDraw 插件渲染当前模型，或在 Blender 中打开场景。Blender 可执行文件在首选项中设置。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="200"/>
+        <source>&lt;p&gt;&lt;b&gt;Instructions&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the Instructions window to lay out, style, export and print the building instructions of the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;说明书&lt;/b&gt;&lt;/p&gt;&lt;p&gt;打开说明书窗口，对模型的搭建说明进行排版、设置样式、导出和打印。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="209"/>
+        <source>&lt;p&gt;&lt;b&gt;Print&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Print the current model view through the system print dialog, with a preview where the dialog allows it.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;打印&lt;/b&gt;&lt;/p&gt;&lt;p&gt;通过系统打印对话框打印当前模型视图；对话框支持时可预览。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="218"/>
+        <location filename="../../source/application/sw_commands.cpp" line="227"/>
+        <location filename="../../source/application/sw_commands.cpp" line="236"/>
+        <location filename="../../source/application/sw_commands.cpp" line="245"/>
+        <source>&lt;p&gt;&lt;b&gt;Recent File&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open this recently used model again. The File menu keeps the four most recent files.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;最近的文件&lt;/b&gt;&lt;/p&gt;&lt;p&gt;再次打开这个最近使用的模型。文件菜单保留最近的四个文件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="254"/>
+        <source>&lt;p&gt;&lt;b&gt;Exit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Close StudWorx. Each model with unsaved changes asks to be saved first.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;退出&lt;/b&gt;&lt;/p&gt;&lt;p&gt;关闭 StudWorx。每个有未保存更改的模型会先询问是否保存。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="263"/>
@@ -8404,6 +8507,76 @@ File format is not recognized.</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;重做&lt;/b&gt;&lt;/p&gt;&lt;p&gt;重新应用通过撤消撤销的编辑。撤消后进行新编辑会用新的编辑序列替换重做历史记录。&lt;/p&gt;</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="281"/>
+        <source>&lt;p&gt;&lt;b&gt;Cut&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected parts from the model and put them on the clipboard, to paste in this or another model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;剪切&lt;/b&gt;&lt;/p&gt;&lt;p&gt;从模型中移除所选零件并放入剪贴板，以便粘贴到本模型或其他模型。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="290"/>
+        <source>&lt;p&gt;&lt;b&gt;Copy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Put a copy of the selected parts on the clipboard, to paste in this or another model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;复制&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将所选零件的副本放入剪贴板，以便粘贴到本模型或其他模型。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="299"/>
+        <source>&lt;p&gt;&lt;b&gt;Paste&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Insert the parts on the clipboard in the current step and select them.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;粘贴&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将剪贴板中的零件插入当前步骤并选中它们。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="308"/>
+        <source>&lt;p&gt;&lt;b&gt;Paste with Steps&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Insert the parts on the clipboard in the steps they were copied from, and select the ones shown at the current step.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;按步骤粘贴&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将剪贴板中的零件插入其被复制时所在的步骤，并选中显示在当前步骤的零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="317"/>
+        <source>&lt;p&gt;&lt;b&gt;Find&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the Find and Replace bar over the view to find parts by part, color or both.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;查找&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在视图上方显示查找和替换栏，可按零件、颜色或两者查找零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="326"/>
+        <source>&lt;p&gt;&lt;b&gt;Find Next&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select the next part that matches the Find and Replace bar.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;查找下一个&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选中与查找和替换栏匹配的下一个零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="335"/>
+        <source>&lt;p&gt;&lt;b&gt;Find Previous&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select the previous part that matches the Find and Replace bar.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;查找上一个&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选中与查找和替换栏匹配的上一个零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="344"/>
+        <source>&lt;p&gt;&lt;b&gt;Find All&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select every part that matches the Find and Replace bar.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;全部查找&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选中与查找和替换栏匹配的所有零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="353"/>
+        <source>&lt;p&gt;&lt;b&gt;Replace&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the Find and Replace bar with its replace fields, to change the part or color of matching parts.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;替换&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示带替换字段的查找和替换栏，用于更改匹配零件的零件或颜色。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="362"/>
+        <source>&lt;p&gt;&lt;b&gt;Replace Next&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace the part or color of the next matching part.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;替换下一个&lt;/b&gt;&lt;/p&gt;&lt;p&gt;替换下一个匹配零件的零件或颜色。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="371"/>
+        <source>&lt;p&gt;&lt;b&gt;Replace All&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace the part or color of every matching part. With Replace in Submodels it reaches every submodel the model uses.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;全部替换&lt;/b&gt;&lt;/p&gt;&lt;p&gt;替换每个匹配零件的零件或颜色。启用在子模型中替换时，会涉及模型所用的每个子模型。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="380"/>
+        <source>&lt;p&gt;&lt;b&gt;Select All&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select every visible part of the current model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;全选&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选中当前模型的所有可见零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="389"/>
+        <source>&lt;p&gt;&lt;b&gt;Select None&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Clear the selection.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;全不选&lt;/b&gt;&lt;/p&gt;&lt;p&gt;清除选择。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="398"/>
+        <source>&lt;p&gt;&lt;b&gt;Invert Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select the parts that are not selected and clear the ones that are.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;反选&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选中未被选中的零件，并取消选中已选中的零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="407"/>
         <source>&lt;p&gt;&lt;b&gt;Select Adjacent Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add every visible part connected directly to a selected part by a stud, anti stud, hole, axle or bar. Repeat to grow the selection one part further each time. Connections come from the LDCad shadow library set as Part Connections in Preferences, parts without shadow data never connect.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -8412,6 +8585,153 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="416"/>
         <source>&lt;p&gt;&lt;b&gt;Select Connected Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add every visible part connected to a selected part, directly or through other parts, by a stud, anti stud, hole, axle or bar. Use it to pick up a whole assembly from one of its parts. Connections come from the LDCad shadow library set as Part Connections in Preferences, parts without shadow data never connect.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="425"/>
+        <source>&lt;p&gt;&lt;b&gt;Part Connections&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use the connection shapes of the LDCad shadow library to find connected parts, for Select Connected Parts, joints and Explode. The shadow library folder is chosen in Preferences.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;零件连接&lt;/b&gt;&lt;/p&gt;&lt;p&gt;使用 LDCad 阴影库的连接形状查找相连的零件，供选择相连零件、关节和分解使用。阴影库文件夹在首选项中选择。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="434"/>
+        <source>&lt;p&gt;&lt;b&gt;Select by Name&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open a checklist of every object in the model and select them by name, with All, None and Invert.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;按名称选择&lt;/b&gt;&lt;/p&gt;&lt;p&gt;打开包含模型中所有对象的清单，按名称选择，并提供全部、无和反选。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="443"/>
+        <source>&lt;p&gt;&lt;b&gt;Single Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A click selects only the part under the pointer.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;单个选择&lt;/b&gt;&lt;/p&gt;&lt;p&gt;单击只选中指针下的零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="452"/>
+        <source>&lt;p&gt;&lt;b&gt;Part Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A click selects every part of the same type as the one under the pointer.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;按零件选择&lt;/b&gt;&lt;/p&gt;&lt;p&gt;单击选中所有与指针下零件类型相同的零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="461"/>
+        <source>&lt;p&gt;&lt;b&gt;Color Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A click selects every part of the same color as the one under the pointer.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;按颜色选择&lt;/b&gt;&lt;/p&gt;&lt;p&gt;单击选中所有与指针下零件颜色相同的零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="470"/>
+        <source>&lt;p&gt;&lt;b&gt;Part and Color Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A click selects every part of the same type and color as the one under the pointer.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;按零件和颜色选择&lt;/b&gt;&lt;/p&gt;&lt;p&gt;单击选中所有与指针下零件类型和颜色都相同的零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="479"/>
+        <source>&lt;p&gt;&lt;b&gt;Relative Transforms&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move and rotate the selection along the axes of the part that has focus.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;相对变换&lt;/b&gt;&lt;/p&gt;&lt;p&gt;沿获得焦点的零件的轴移动和旋转所选内容。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="488"/>
+        <source>&lt;p&gt;&lt;b&gt;Absolute Transforms&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move and rotate the selection along the model axes.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;绝对变换&lt;/b&gt;&lt;/p&gt;&lt;p&gt;沿模型轴移动和旋转所选内容。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="497"/>
+        <source>&lt;p&gt;&lt;b&gt;Toggle Relative Transforms&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Switch between relative and absolute transforms.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;切换相对变换&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在相对变换和绝对变换之间切换。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="506"/>
+        <source>&lt;p&gt;&lt;b&gt;Rotate Separately&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn each selected part around its own pivot point.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;分别旋转&lt;/b&gt;&lt;/p&gt;&lt;p&gt;每个所选零件绕各自的枢轴点旋转。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="515"/>
+        <source>&lt;p&gt;&lt;b&gt;Rotate Together&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selection as one around the pivot of the part that has focus.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;一起旋转&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将所选内容作为整体绕获得焦点的零件的枢轴旋转。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="524"/>
+        <source>&lt;p&gt;&lt;b&gt;Toggle Separate Transforms&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Switch between rotating the selected parts separately and together.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;切换分别变换&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在分别旋转和一起旋转所选零件之间切换。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="533"/>
+        <source>&lt;p&gt;&lt;b&gt;Move Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn move snapping on or off. With it on, moves go in the horizontal and vertical steps chosen below.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;移动吸附&lt;/b&gt;&lt;/p&gt;&lt;p&gt;打开或关闭移动吸附。开启后，移动将按下方选择的水平和垂直步长进行。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="542"/>
+        <location filename="../../source/application/sw_commands.cpp" line="551"/>
+        <location filename="../../source/application/sw_commands.cpp" line="560"/>
+        <location filename="../../source/application/sw_commands.cpp" line="569"/>
+        <location filename="../../source/application/sw_commands.cpp" line="578"/>
+        <location filename="../../source/application/sw_commands.cpp" line="587"/>
+        <location filename="../../source/application/sw_commands.cpp" line="596"/>
+        <location filename="../../source/application/sw_commands.cpp" line="605"/>
+        <location filename="../../source/application/sw_commands.cpp" line="614"/>
+        <location filename="../../source/application/sw_commands.cpp" line="623"/>
+        <source>&lt;p&gt;&lt;b&gt;Horizontal Move Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move parts across the horizontal plane in this step, or freely with No XY Snap.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;水平移动吸附&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在此步长内沿水平面移动零件，或选择无 XY 吸附以自由移动。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="632"/>
+        <location filename="../../source/application/sw_commands.cpp" line="641"/>
+        <location filename="../../source/application/sw_commands.cpp" line="650"/>
+        <location filename="../../source/application/sw_commands.cpp" line="659"/>
+        <location filename="../../source/application/sw_commands.cpp" line="668"/>
+        <location filename="../../source/application/sw_commands.cpp" line="677"/>
+        <location filename="../../source/application/sw_commands.cpp" line="686"/>
+        <location filename="../../source/application/sw_commands.cpp" line="695"/>
+        <location filename="../../source/application/sw_commands.cpp" line="704"/>
+        <location filename="../../source/application/sw_commands.cpp" line="713"/>
+        <source>&lt;p&gt;&lt;b&gt;Vertical Move Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move parts up and down in this step, or freely with No Z Snap.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;垂直移动吸附&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在此步长内上下移动零件，或选择无 Z 吸附以自由移动。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="722"/>
+        <source>&lt;p&gt;&lt;b&gt;Rotation Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn rotation snapping on or off. With it on, rotations go in the angle chosen below.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;旋转吸附&lt;/b&gt;&lt;/p&gt;&lt;p&gt;打开或关闭旋转吸附。开启后，旋转将按下方选择的角度进行。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="731"/>
+        <location filename="../../source/application/sw_commands.cpp" line="740"/>
+        <location filename="../../source/application/sw_commands.cpp" line="749"/>
+        <location filename="../../source/application/sw_commands.cpp" line="758"/>
+        <location filename="../../source/application/sw_commands.cpp" line="767"/>
+        <location filename="../../source/application/sw_commands.cpp" line="776"/>
+        <location filename="../../source/application/sw_commands.cpp" line="785"/>
+        <location filename="../../source/application/sw_commands.cpp" line="794"/>
+        <location filename="../../source/application/sw_commands.cpp" line="803"/>
+        <location filename="../../source/application/sw_commands.cpp" line="812"/>
+        <source>&lt;p&gt;&lt;b&gt;Rotation Snap Angle&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Rotate parts in steps of this angle, or freely with No Rotation Snap. Turns land exactly on square angles, so later moves keep whole coordinates.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;旋转吸附角度&lt;/b&gt;&lt;/p&gt;&lt;p&gt;按此角度的步长旋转零件，或选择无旋转吸附以自由旋转。转动会精确落在方角上，因此之后的移动仍保持整数坐标。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="821"/>
+        <source>&lt;p&gt;&lt;b&gt;Custom Angle&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Type your own rotation snap angle in degrees.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;自定义角度&lt;/b&gt;&lt;/p&gt;&lt;p&gt;输入您自己的旋转吸附角度，单位为度。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="830"/>
+        <source>&lt;p&gt;&lt;b&gt;Camera Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Orbit the view in steps of the rotation snap angle.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;相机吸附&lt;/b&gt;&lt;/p&gt;&lt;p&gt;按旋转吸附角度的步长环绕视图。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="839"/>
+        <source>&lt;p&gt;&lt;b&gt;Transform&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Apply the position or rotation typed in the Transform toolbar to the selection.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;变换&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将变换工具栏中输入的位置或旋转应用到所选内容。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="848"/>
+        <source>&lt;p&gt;&lt;b&gt;Absolute Translation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The Transform toolbar moves the selection to the typed position in model coordinates.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;绝对平移&lt;/b&gt;&lt;/p&gt;&lt;p&gt;变换工具栏将所选内容移动到以模型坐标输入的位置。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="857"/>
+        <source>&lt;p&gt;&lt;b&gt;Relative Translation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The Transform toolbar moves the selection by the typed distance.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;相对平移&lt;/b&gt;&lt;/p&gt;&lt;p&gt;变换工具栏将所选内容移动输入的距离。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="866"/>
+        <source>&lt;p&gt;&lt;b&gt;Absolute Rotation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The Transform toolbar turns the selection to the typed angles.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;绝对旋转&lt;/b&gt;&lt;/p&gt;&lt;p&gt;变换工具栏将所选内容转到输入的角度。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="875"/>
+        <source>&lt;p&gt;&lt;b&gt;Relative Rotation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The Transform toolbar turns the selection by the typed angles.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;相对旋转&lt;/b&gt;&lt;/p&gt;&lt;p&gt;变换工具栏将所选内容转动输入的角度。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="884"/>
@@ -8468,6 +8788,97 @@ File format is not recognized.</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;旋转工具&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择对象，然后在模型视图中拖动旋转手柄。旋转捕捉设置角度增量。变换选项选择相对轴或模型轴以及零件是一起旋转还是单独旋转。&lt;/p&gt;</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1046"/>
+        <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cancel the current mouse action, a face or cutaway pick or a cutaway resize, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;取消操作&lt;/b&gt;&lt;/p&gt;&lt;p&gt;取消当前的鼠标操作、面或剖切选取、剖切调整大小，关闭查找和替换栏，或清除选择。没有选择时会移除剖切。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1055"/>
+        <source>&lt;p&gt;&lt;b&gt;Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the program settings: General, Rendering, Views, Interface, Instructions, Categories, Context Menu, Keyboard and Mouse.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;首选项&lt;/b&gt;&lt;/p&gt;&lt;p&gt;打开程序设置：常规、渲染、视图、界面、说明书、类别、上下文菜单、键盘和鼠标。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1064"/>
+        <source>&lt;p&gt;&lt;b&gt;Zoom In&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the camera closer to the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;放大&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将相机移近模型。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1073"/>
+        <source>&lt;p&gt;&lt;b&gt;Zoom Out&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the camera away from the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;缩小&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将相机移离模型。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1082"/>
+        <source>&lt;p&gt;&lt;b&gt;Zoom Extents&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the camera until every part fits in the view.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;缩放至全部&lt;/b&gt;&lt;/p&gt;&lt;p&gt;移动相机，直到所有零件都适合视图。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1091"/>
+        <source>&lt;p&gt;&lt;b&gt;Look At&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the view so the selected parts are at its center.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;对准&lt;/b&gt;&lt;/p&gt;&lt;p&gt;转动视图，使所选零件位于视图中心。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1100"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1109"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1118"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1127"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1136"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1145"/>
+        <source>&lt;p&gt;&lt;b&gt;Move View&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the camera of the current view, keeping its direction, from the keyboard or a gamepad.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;移动视图&lt;/b&gt;&lt;/p&gt;&lt;p&gt;通过键盘或游戏手柄移动当前视图的相机，保持其方向不变。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1154"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1163"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1172"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1181"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1190"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1199"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1208"/>
+        <source>&lt;p&gt;&lt;b&gt;Viewpoint&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Look at the model from this side, or from the default angle with Home.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;视点&lt;/b&gt;&lt;/p&gt;&lt;p&gt;从此侧观察模型，或按 Home 键回到默认角度。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1217"/>
+        <source>&lt;p&gt;&lt;b&gt;No Camera&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Leave the model&apos;s cameras and use the free view.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;无相机&lt;/b&gt;&lt;/p&gt;&lt;p&gt;离开模型的相机，使用自由视图。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1226"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1235"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1244"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1253"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1262"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1271"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1280"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1289"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1298"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1307"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1316"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1325"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1334"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1343"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1352"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1361"/>
+        <source>&lt;p&gt;&lt;b&gt;Camera&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Look through this camera of the model. The menu lists the first sixteen cameras.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;相机&lt;/b&gt;&lt;/p&gt;&lt;p&gt;透过模型的这个相机观看。菜单列出前十六个相机。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1406"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step before the current step. The current step and the ones after it move one step later.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;在前面插入&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在当前步骤之前添加一个空步骤。当前步骤及其后的步骤各后移一步。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1415"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step after the current step. The steps after it move one step later.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;在后面插入&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在当前步骤之后添加一个空步骤。其后的步骤各后移一步。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1424"/>
+        <source>&lt;p&gt;&lt;b&gt;Delete Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the current step. Its parts join the step before it and later steps move one step earlier.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;删除步骤&lt;/b&gt;&lt;/p&gt;&lt;p&gt;移除当前步骤。其零件并入前一步骤，后面的步骤各前移一步。&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="1433"/>
         <source>&lt;p&gt;&lt;b&gt;Add Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Enable this when an edit should create a new animation key at the current step. For example, moving a part at a later step can give it a different position there. The round key buttons in Properties show and toggle keys for individual properties.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -8475,27 +8886,216 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1442"/>
         <source>&lt;p&gt;&lt;b&gt;Set Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add position and rotation keys to the selected objects at the current step, holding their values at that step. The full diamond in the Keyframes panel does the same.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;设置关键帧&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在当前步骤为所选对象添加位置和旋转关键帧，保持其在该步骤的值。关键帧面板中的实心菱形作用相同。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1451"/>
         <source>&lt;p&gt;&lt;b&gt;Remove Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove every key the selected objects have at the current step. The hollow diamond in the Keyframes panel does the same.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;移除关键帧&lt;/b&gt;&lt;/p&gt;&lt;p&gt;移除所选对象在当前步骤的所有关键帧。关键帧面板中的空心菱形作用相同。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1460"/>
         <source>&lt;p&gt;&lt;b&gt;Play or Pause&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Step through the model one step at a time to the last step, showing the keyed motion. Use it again to pause.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;播放或暂停&lt;/b&gt;&lt;/p&gt;&lt;p&gt;逐步浏览模型直到最后一步，并显示关键帧运动。再次使用可暂停。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1469"/>
+        <source>&lt;p&gt;&lt;b&gt;Stop&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Stop playing through the steps and go back to the step playing started from.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;停止&lt;/b&gt;&lt;/p&gt;&lt;p&gt;停止逐步播放，并回到开始播放时所在的步骤。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1496"/>
+        <source>&lt;p&gt;&lt;b&gt;Remove View&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Close the active split view.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;移除视图&lt;/b&gt;&lt;/p&gt;&lt;p&gt;关闭活动的拆分视图。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1505"/>
+        <source>&lt;p&gt;&lt;b&gt;Reset Views&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove every split and go back to one view.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;重置视图&lt;/b&gt;&lt;/p&gt;&lt;p&gt;移除所有拆分并回到单一视图。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1514"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1523"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1532"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1541"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1550"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1559"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1568"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1577"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1586"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1595"/>
+        <source>&lt;p&gt;&lt;b&gt;Show or Hide&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide this toolbar or panel. A right click on any toolbar or panel title gives the same list.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;显示或隐藏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示或隐藏此工具栏或面板。在任何工具栏或面板标题上右键单击可得到同样的列表。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1630"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Keyframes panel, a timeline with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a key to another step and right-click for more. Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons rewind, play or pause, stop and go to the last step. Values are edited in the Properties panel.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;关键帧&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示或隐藏关键帧面板，这是一条时间轴，每个步骤一列、每个对象一行，可展开查看其属性。菱形表示一个关键帧，连线连接同一属性的关键帧。单击步骤可跳转到该步骤，双击单元格可添加或移除关键帧，拖动关键帧可移到另一步骤，右键单击可查看更多操作。已选择列出所选对象，全部列出所有带关键帧的对象。实心和空心菱形在当前步骤添加或移除所选对象的关键帧，添加关键帧使编辑时创建关键帧，播放按钮用于倒回、播放或暂停、停止以及跳到最后一步。数值在属性面板中编辑。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1639"/>
         <source>&lt;p&gt;&lt;b&gt;Lock Interface&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep the panels and toolbars where they are: panel title bars are hidden to save space, and panels and toolbars can no longer be dragged, floated or docked elsewhere. Panels still resize, and they can still be shown or hidden from this menu. Right-click a toolbar, or use View, Toolbars, to lock or unlock.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;锁定界面&lt;/b&gt;&lt;/p&gt;&lt;p&gt;保持面板和工具栏的位置不变：面板标题栏被隐藏以节省空间，面板和工具栏不能再被拖动、浮动或停靠到别处。面板仍可调整大小，也仍可从此菜单显示或隐藏。右键单击工具栏，或使用视图、工具栏，可锁定或解锁。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1648"/>
+        <source>&lt;p&gt;&lt;b&gt;Full Screen&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Fill the whole screen with the StudWorx window, or go back to a normal window.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;全屏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;让 StudWorx 窗口占满整个屏幕，或回到普通窗口。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1657"/>
+        <source>&lt;p&gt;&lt;b&gt;Close Tab&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Close the current model tab, asking to save its changes first.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;关闭标签页&lt;/b&gt;&lt;/p&gt;&lt;p&gt;关闭当前模型标签页，并先询问是否保存其更改。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1666"/>
+        <source>&lt;p&gt;&lt;b&gt;Wireframe&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the model view as lines only, without faces.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;线框&lt;/b&gt;&lt;/p&gt;&lt;p&gt;仅用线条绘制模型视图，不绘制面。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1675"/>
+        <source>&lt;p&gt;&lt;b&gt;Flat Shading&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the model view in plain colors, without shading or lights.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;平面着色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;用纯色绘制模型视图，不使用阴影或灯光。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1684"/>
+        <source>&lt;p&gt;&lt;b&gt;Default Lights&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Light the model view with the built-in lights instead of the lights placed in the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;默认灯光&lt;/b&gt;&lt;/p&gt;&lt;p&gt;用内置灯光而非模型中放置的灯光照亮模型视图。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1729"/>
+        <source>&lt;p&gt;&lt;b&gt;Perspective&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the view with perspective, distant parts smaller.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;透视&lt;/b&gt;&lt;/p&gt;&lt;p&gt;以透视方式显示视图，远处的零件更小。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1738"/>
+        <source>&lt;p&gt;&lt;b&gt;Orthographic&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the view without perspective, parallel lines staying parallel.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;正交&lt;/b&gt;&lt;/p&gt;&lt;p&gt;不带透视显示视图，平行线保持平行。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1783"/>
+        <source>&lt;p&gt;&lt;b&gt;Step View&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the view rotation of the current step, saved as an MLCad ROTSTEP.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;步骤视图&lt;/b&gt;&lt;/p&gt;&lt;p&gt;设置当前步骤的视图旋转，保存为 MLCad ROTSTEP。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1792"/>
+        <source>&lt;p&gt;&lt;b&gt;Remove Step View&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Clear the view rotation of the current step.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;移除步骤视图&lt;/b&gt;&lt;/p&gt;&lt;p&gt;清除当前步骤的视图旋转。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1801"/>
+        <source>&lt;p&gt;&lt;b&gt;Follow Step Views&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the view to each step&apos;s view rotation when the step changes.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;跟随步骤视图&lt;/b&gt;&lt;/p&gt;&lt;p&gt;步骤变化时，将视图转到每个步骤的视图旋转。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1846"/>
+        <source>&lt;p&gt;&lt;b&gt;Grow&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Make the cutaway larger.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;扩大&lt;/b&gt;&lt;/p&gt;&lt;p&gt;使剖切变大。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1855"/>
+        <source>&lt;p&gt;&lt;b&gt;Shrink&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Make the cutaway smaller.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;收缩&lt;/b&gt;&lt;/p&gt;&lt;p&gt;使剖切变小。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1864"/>
+        <source>&lt;p&gt;&lt;b&gt;Push In&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the cutaway one plate deeper into the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;推入&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将剖切向模型内部深入一个薄板。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1873"/>
+        <source>&lt;p&gt;&lt;b&gt;Pull Out&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the cutaway one plate back out of the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;拉出&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将剖切从模型中向外退出一个薄板。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1882"/>
+        <source>&lt;p&gt;&lt;b&gt;Shade Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the light shade drawn on the cut faces.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;阴影颜色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择绘制在切面上的浅色阴影。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1891"/>
+        <source>&lt;p&gt;&lt;b&gt;Remove&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the cutaway and show the whole model again. Esc with nothing selected does the same.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;移除&lt;/b&gt;&lt;/p&gt;&lt;p&gt;移除剖切并重新显示整个模型。没有选择时按 Esc 效果相同。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1936"/>
+        <source>&lt;p&gt;&lt;b&gt;X Axis Line&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the X axis line through the grid origin.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;X 轴线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示或隐藏经过网格原点的 X 轴线。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1945"/>
+        <source>&lt;p&gt;&lt;b&gt;Y Axis Line&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Y axis line through the grid origin.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Y 轴线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示或隐藏经过网格原点的 Y 轴线。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1954"/>
+        <source>&lt;p&gt;&lt;b&gt;Z Axis Line&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Z axis line through the grid origin and the height grids.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Z 轴线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示或隐藏经过网格原点和高度网格的 Z 轴线。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1963"/>
+        <source>&lt;p&gt;&lt;b&gt;Follow Model Folder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the terminal to the folder of each model you open.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;跟随模型文件夹&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将终端移到您打开的每个模型所在的文件夹。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1972"/>
+        <source>&lt;p&gt;&lt;b&gt;Go to Model Folder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the terminal to the folder of the current model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;转到模型文件夹&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将终端移到当前模型所在的文件夹。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1990"/>
+        <source>&lt;p&gt;&lt;b&gt;Solid Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Expand or collapse the solid colors in the Colors panel.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;纯色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;展开或折叠颜色面板中的纯色。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1999"/>
+        <source>&lt;p&gt;&lt;b&gt;Translucent Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Expand or collapse the translucent colors in the Colors panel.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;半透明色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;展开或折叠颜色面板中的半透明色。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2008"/>
+        <source>&lt;p&gt;&lt;b&gt;Special Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Expand or collapse the special colors in the Colors panel.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;特殊颜色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;展开或折叠颜色面板中的特殊颜色。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2017"/>
+        <source>&lt;p&gt;&lt;b&gt;Current Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Insert new parts in the color chosen in the Colors panel.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;当前颜色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;用颜色面板中选择的颜色插入新零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2026"/>
+        <source>&lt;p&gt;&lt;b&gt;Selected Part Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Insert new parts in the color of the selected part.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;所选零件颜色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;用所选零件的颜色插入新零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2035"/>
+        <source>&lt;p&gt;&lt;b&gt;Last Inserted Part Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Insert new parts in the color of the last part inserted.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;上次插入零件的颜色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;用上一个插入零件的颜色插入新零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2044"/>
+        <source>&lt;p&gt;&lt;b&gt;Lock Parts Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep the Parts panel thumbnails in one color instead of following the insert color.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;锁定零件颜色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;让零件面板的缩略图保持同一种颜色，而不跟随插入颜色。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2053"/>
+        <source>&lt;p&gt;&lt;b&gt;Open Most Recent File on Startup&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reopen the last model you worked on each time StudWorx starts.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;启动时打开最近的文件&lt;/b&gt;&lt;/p&gt;&lt;p&gt;每次 StudWorx 启动时重新打开您上次处理的模型。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2062"/>
+        <source>&lt;p&gt;&lt;b&gt;Restore Tab Layout&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Bring back the saved model tabs and view splits of a model when it opens.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;恢复标签页布局&lt;/b&gt;&lt;/p&gt;&lt;p&gt;打开模型时，恢复该模型已保存的模型标签页和视图拆分。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2071"/>
+        <source>&lt;p&gt;&lt;b&gt;Fixed Direction Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep the arrow keys on the model axes instead of following the direction of the view.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;固定方向键&lt;/b&gt;&lt;/p&gt;&lt;p&gt;让方向键保持沿模型轴，而不跟随视图的方向。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2080"/>
+        <source>&lt;p&gt;&lt;b&gt;Mesh LOD&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw distant parts with simpler meshes (level of detail), from a distance set in Preferences, so large models stay smooth.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;网格细节层次&lt;/b&gt;&lt;/p&gt;&lt;p&gt;用更简单的网格绘制远处的零件（细节层次），距离在首选项中设置，使大型模型保持流畅。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2107"/>
@@ -8508,9 +9108,395 @@ File format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2134"/>
+        <source>&lt;p&gt;&lt;b&gt;Grid Studs&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the studs of the base grid.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;网格凸点&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示或隐藏基础网格的凸点。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2143"/>
+        <source>&lt;p&gt;&lt;b&gt;Grid Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the lines of the base grid.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;网格线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示或隐藏基础网格的线条。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2152"/>
+        <source>&lt;p&gt;&lt;b&gt;Grid Origin Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the origin lines of the base grid.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;网格原点线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示或隐藏基础网格的原点线。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2161"/>
+        <source>&lt;p&gt;&lt;b&gt;Automate Edge Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Compute edge colors from each part color, with the edge contrast, saturation and light to dark settings in Preferences.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;自动边缘颜色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;根据每个零件的颜色计算边缘颜色，对比度、饱和度和明暗设置在首选项中。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2170"/>
+        <source>&lt;p&gt;&lt;b&gt;Outline Highlight&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mark selected and new parts with an outline.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;轮廓高亮&lt;/b&gt;&lt;/p&gt;&lt;p&gt;用轮廓标记所选和新增的零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2179"/>
+        <source>&lt;p&gt;&lt;b&gt;Tint and Edges Highlight&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mark selected and new parts with tinted faces and colored edges.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;着色和边缘高亮&lt;/b&gt;&lt;/p&gt;&lt;p&gt;用着色的面和彩色的边缘标记所选和新增的零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2188"/>
+        <source>&lt;p&gt;&lt;b&gt;Increase Outline Width&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Make the selection outline thicker.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;增加轮廓宽度&lt;/b&gt;&lt;/p&gt;&lt;p&gt;使选择轮廓更粗。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2197"/>
+        <source>&lt;p&gt;&lt;b&gt;Decrease Outline Width&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Make the selection outline thinner.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;减小轮廓宽度&lt;/b&gt;&lt;/p&gt;&lt;p&gt;使选择轮廓更细。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2206"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2215"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2224"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2233"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2242"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2251"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2260"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2269"/>
+        <source>&lt;p&gt;&lt;b&gt;Stud Style&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw studs in this style: plain, with one of the logo styles, or in high contrast.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;凸点样式&lt;/b&gt;&lt;/p&gt;&lt;p&gt;以此样式绘制凸点：普通、某种标志样式或高对比度。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2278"/>
+        <source>&lt;p&gt;&lt;b&gt;Edge Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the edge lines of parts in the model view.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;边缘线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在模型视图中显示或隐藏零件的边缘线。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2287"/>
+        <source>&lt;p&gt;&lt;b&gt;Conditional Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the conditional lines that outline curved surfaces in the model view.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;条件线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在模型视图中显示或隐藏勾勒曲面轮廓的条件线。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2296"/>
+        <source>&lt;p&gt;&lt;b&gt;Preview Uses Model View Settings&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the preview with the rendering settings of the model view instead of its own.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;预览使用模型视图设置&lt;/b&gt;&lt;/p&gt;&lt;p&gt;预览使用模型视图的渲染设置，而不是自己的设置。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2305"/>
+        <source>&lt;p&gt;&lt;b&gt;Preview Wireframe&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the preview as lines only, without faces.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;预览线框&lt;/b&gt;&lt;/p&gt;&lt;p&gt;仅用线条绘制预览，不绘制面。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2314"/>
+        <source>&lt;p&gt;&lt;b&gt;Preview Flat Shading&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the preview in plain colors, without shading or lights.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;预览平面着色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;用纯色绘制预览，不使用阴影或灯光。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2323"/>
+        <source>&lt;p&gt;&lt;b&gt;Preview Default Lights&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Light the preview with the built-in lights.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;预览默认灯光&lt;/b&gt;&lt;/p&gt;&lt;p&gt;用内置灯光照亮预览。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2332"/>
+        <source>&lt;p&gt;&lt;b&gt;Preview Edge Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide edge lines in the preview.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;预览边缘线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在预览中显示或隐藏边缘线。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2341"/>
+        <source>&lt;p&gt;&lt;b&gt;Preview Conditional Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide conditional lines in the preview.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;预览条件线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在预览中显示或隐藏条件线。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2350"/>
+        <source>&lt;p&gt;&lt;b&gt;Parts Use Model View Settings&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the parts list with the rendering settings of the model view instead of its own.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;零件使用模型视图设置&lt;/b&gt;&lt;/p&gt;&lt;p&gt;零件列表使用模型视图的渲染设置，而不是自己的设置。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2359"/>
+        <source>&lt;p&gt;&lt;b&gt;Parts Wireframe&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the parts list as lines only, without faces.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;零件线框&lt;/b&gt;&lt;/p&gt;&lt;p&gt;仅用线条绘制零件列表，不绘制面。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2368"/>
+        <source>&lt;p&gt;&lt;b&gt;Parts Flat Shading&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the parts list in plain colors, without shading or lights.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;零件平面着色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;用纯色绘制零件列表，不使用阴影或灯光。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2377"/>
+        <source>&lt;p&gt;&lt;b&gt;Parts Default Lights&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Light the parts list with the built-in lights.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;零件默认灯光&lt;/b&gt;&lt;/p&gt;&lt;p&gt;用内置灯光照亮零件列表。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2386"/>
+        <source>&lt;p&gt;&lt;b&gt;Parts Edge Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide edge lines in the parts list.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;零件边缘线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在零件列表中显示或隐藏边缘线。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2395"/>
+        <source>&lt;p&gt;&lt;b&gt;Parts Conditional Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide conditional lines in the parts list.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;零件条件线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在零件列表中显示或隐藏条件线。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2404"/>
+        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder Uses Model View Settings&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the Minifigure Builder preview with the rendering settings of the model view instead of its own.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;小人仔构建器使用模型视图设置&lt;/b&gt;&lt;/p&gt;&lt;p&gt;小人仔构建器预览使用模型视图的渲染设置，而不是自己的设置。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2413"/>
+        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder Wireframe&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the Minifigure Builder preview as lines only, without faces.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;小人仔构建器线框&lt;/b&gt;&lt;/p&gt;&lt;p&gt;仅用线条绘制小人仔构建器预览，不绘制面。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2422"/>
+        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder Flat Shading&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the Minifigure Builder preview in plain colors, without shading or lights.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;小人仔构建器平面着色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;用纯色绘制小人仔构建器预览，不使用阴影或灯光。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2431"/>
+        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder Default Lights&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Light the Minifigure Builder preview with the built-in lights.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;小人仔构建器默认灯光&lt;/b&gt;&lt;/p&gt;&lt;p&gt;用内置灯光照亮小人仔构建器预览。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2440"/>
+        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder Edge Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide edge lines in the Minifigure Builder preview.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;小人仔构建器边缘线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在小人仔构建器预览中显示或隐藏边缘线。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2449"/>
+        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder Conditional Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide conditional lines in the Minifigure Builder preview.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;小人仔构建器条件线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在小人仔构建器预览中显示或隐藏条件线。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2458"/>
+        <source>&lt;p&gt;&lt;b&gt;Snap Panel Width to Tiles&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Snap the Parts panel width to whole thumbnail tiles, and the categories to the longest name.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;面板宽度吸附到图块&lt;/b&gt;&lt;/p&gt;&lt;p&gt;让零件面板的宽度吸附到完整的缩略图图块，类别吸附到最长的名称。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2467"/>
+        <source>&lt;p&gt;&lt;b&gt;Preview View Cube&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the view cube in the preview.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;预览视图立方体&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在预览中显示或隐藏视图立方体。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2476"/>
+        <source>&lt;p&gt;&lt;b&gt;Preview Axis Icon&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the axis icon in the preview.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;预览坐标轴图标&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在预览中显示或隐藏坐标轴图标。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2485"/>
+        <source>&lt;p&gt;&lt;b&gt;Load All Parts Before Showing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wait until every part of a model has loaded before showing it, instead of showing parts as they load.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;显示前加载所有零件&lt;/b&gt;&lt;/p&gt;&lt;p&gt;等模型的所有零件都加载完成后再显示，而不是边加载边显示。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2494"/>
+        <source>&lt;p&gt;&lt;b&gt;Square Viewport&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep the preview square, at a 1:1 ratio.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;方形视口&lt;/b&gt;&lt;/p&gt;&lt;p&gt;保持预览为方形，比例为 1:1。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2503"/>
+        <source>&lt;p&gt;&lt;b&gt;Keep Last Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep showing the last selected part in the preview after the selection is cleared.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;保留上次选择&lt;/b&gt;&lt;/p&gt;&lt;p&gt;清除选择后，仍在预览中显示上次选中的零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2512"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert Part&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add the part chosen in the Parts panel to the model, next to the part that has focus or the last part added.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;插入零件&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将零件面板中选择的零件添加到模型，位置在获得焦点的零件或上次添加的零件旁边。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2521"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert First Part at Origin&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Place the first part of an empty model at 0, 0, 0.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;在原点插入第一个零件&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将空模型的第一个零件放在 0, 0, 0。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2530"/>
+        <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected objects from the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;删除&lt;/b&gt;&lt;/p&gt;&lt;p&gt;从模型中移除所选对象。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2539"/>
+        <source>&lt;p&gt;&lt;b&gt;Duplicate&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add a copy of each selected part in the same place, with copies of their groups, and select the copies.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;复制副本&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在原位置为每个所选零件添加一个副本，包括其组的副本，并选中这些副本。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2548"/>
+        <source>&lt;p&gt;&lt;b&gt;Paint Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Change the selected parts to the color chosen in the Colors panel.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;涂色所选&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将所选零件改为颜色面板中选择的颜色。&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="2557"/>
         <source>&lt;p&gt;&lt;b&gt;Set Joint&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select one submodel, choose Part &amp;gt; Joint &amp;gt; Set Joint, also in the right-click menu of the model view, then click one of its connections with the Set Joint pointer, which outlines the part under it in red. The click sets the joint and goes back to the Select tool in joint mode on the new joint. Set Joint again at another connection adds a joint, and Set Joint at a joint already there resets it. A round connection makes a hinge on its axis and a sphere makes a ball. A part without shadow data gets a hinge on its origin. The joint shows in the Joints panel and setting it can be undone.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2854"/>
+        <source>&lt;p&gt;&lt;b&gt;Edit Selected Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit the selected submodel in place, inside its parent. A path bar shows where you are.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;编辑所选子模型&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在其父模型内就地编辑所选子模型。路径栏显示您所在的位置。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2863"/>
+        <source>&lt;p&gt;&lt;b&gt;End Submodel Editing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Leave in-place editing and go back to the parent model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;结束子模型编辑&lt;/b&gt;&lt;/p&gt;&lt;p&gt;离开就地编辑并回到父模型。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2872"/>
+        <source>&lt;p&gt;&lt;b&gt;Group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Group the selected parts under a unique name, so they select and move as one.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;编组&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将所选零件以唯一名称编为一组，使它们作为一个整体被选择和移动。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2881"/>
+        <source>&lt;p&gt;&lt;b&gt;Ungroup&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected group, keeping its parts.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;取消编组&lt;/b&gt;&lt;/p&gt;&lt;p&gt;移除所选组，保留其中的零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2890"/>
+        <source>&lt;p&gt;&lt;b&gt;Add to Group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add the part that has focus to the selected group.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;添加到组&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将获得焦点的零件添加到所选组。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2899"/>
+        <source>&lt;p&gt;&lt;b&gt;Remove from Group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Take the part that has focus out of its group.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;从组中移除&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将获得焦点的零件从其组中取出。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2908"/>
+        <source>&lt;p&gt;&lt;b&gt;Edit Groups&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create, rename and nest groups and drag parts between them in a tree of parts and groups.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;编辑组&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在零件和组的树中创建、重命名和嵌套组，并在组之间拖动零件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2917"/>
+        <source>&lt;p&gt;&lt;b&gt;Hide Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Hide the selected objects.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;隐藏所选&lt;/b&gt;&lt;/p&gt;&lt;p&gt;隐藏所选对象。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2926"/>
+        <source>&lt;p&gt;&lt;b&gt;Hide Unselected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Hide every object that is not selected.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;隐藏未选&lt;/b&gt;&lt;/p&gt;&lt;p&gt;隐藏所有未被选中的对象。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2935"/>
+        <source>&lt;p&gt;&lt;b&gt;Unhide Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the selected hidden objects again.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;显示所选&lt;/b&gt;&lt;/p&gt;&lt;p&gt;重新显示所选的隐藏对象。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2944"/>
+        <source>&lt;p&gt;&lt;b&gt;Unhide All&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show every hidden object again.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;全部显示&lt;/b&gt;&lt;/p&gt;&lt;p&gt;重新显示所有隐藏的对象。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2953"/>
+        <source>&lt;p&gt;&lt;b&gt;Show Earlier&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts one step earlier.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;提前显示&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将所选零件提前一步。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2962"/>
+        <source>&lt;p&gt;&lt;b&gt;Show Later&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts one step later.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;延后显示&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将所选零件延后一步。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2971"/>
+        <source>&lt;p&gt;&lt;b&gt;New Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add a new, empty submodel to the file and switch to it.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;新建子模型&lt;/b&gt;&lt;/p&gt;&lt;p&gt;向文件添加一个新的空子模型并切换到它。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2980"/>
+        <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit the name, author, description and comments of the current submodel, and see its parts, counts, size and weight, with BrickLink and CSV export.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;属性&lt;/b&gt;&lt;/p&gt;&lt;p&gt;编辑当前子模型的名称、作者、描述和注释，并查看其零件、数量、尺寸和重量，支持 BrickLink 和 CSV 导出。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2989"/>
+        <source>&lt;p&gt;&lt;b&gt;Submodels&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create, rename, duplicate, delete, reorder and export the submodels of the file, and set the active one.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;子模型&lt;/b&gt;&lt;/p&gt;&lt;p&gt;创建、重命名、复制、删除、重新排序和导出文件中的子模型，并设置活动子模型。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2998"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3007"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3016"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3025"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3034"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3043"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3052"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3061"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3070"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3079"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3088"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3097"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3106"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3115"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3124"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3133"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3142"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3151"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3160"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3169"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3178"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3187"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3196"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3205"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3214"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3223"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3232"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3241"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3250"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3259"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3268"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3277"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3286"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3295"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3304"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3313"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3322"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3331"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3340"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3349"/>
+        <source>&lt;p&gt;&lt;b&gt;Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Switch to this submodel. The Models menu lists up to forty submodels of the file.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;子模型&lt;/b&gt;&lt;/p&gt;&lt;p&gt;切换到此子模型。模型菜单最多列出文件中的四十个子模型。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3358"/>
+        <source>&lt;p&gt;&lt;b&gt;What&apos;s This?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Click any control after this to read what it does. F1 explains the focused control.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;这是什么？&lt;/b&gt;&lt;/p&gt;&lt;p&gt;点击此后的任意控件即可了解其作用。按 F1 可说明获得焦点的控件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3367"/>
+        <source>&lt;p&gt;&lt;b&gt;Home Page&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the StudWorx repository on GitHub in your web browser.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;主页&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在网页浏览器中打开 GitHub 上的 StudWorx 仓库。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3376"/>
+        <source>&lt;p&gt;&lt;b&gt;Report a Bug&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the StudWorx issues on GitHub in your web browser to report a problem.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;报告错误&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在网页浏览器中打开 GitHub 上的 StudWorx 问题页面以报告问题。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3385"/>
+        <source>&lt;p&gt;&lt;b&gt;About&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the StudWorx version, a link to its home page, and system information to copy into a bug report.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;关于&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示 StudWorx 版本、主页链接，以及可复制到错误报告中的系统信息。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3394"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert Step Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step before this step in the Timeline.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;在前面插入步骤&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在时间轴中此步骤之前添加一个空步骤。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3403"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert Step After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step after this step in the Timeline.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;在后面插入步骤&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在时间轴中此步骤之后添加一个空步骤。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3412"/>
+        <source>&lt;p&gt;&lt;b&gt;Delete Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove this step. Its parts join the step before it and later steps move one step earlier.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;删除步骤&lt;/b&gt;&lt;/p&gt;&lt;p&gt;移除此步骤。其零件并入前一步骤，后面的步骤各前移一步。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3421"/>
+        <source>&lt;p&gt;&lt;b&gt;Move Selection Here&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into this step.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;将所选移到此处&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将所选零件移入此步骤。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3430"/>
+        <source>&lt;p&gt;&lt;b&gt;Move Selection Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into a new step before this one.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;将所选移到之前&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将所选零件移入此步骤之前的新步骤。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3439"/>
+        <source>&lt;p&gt;&lt;b&gt;Move Selection After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into a new step after this one.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;将所选移到之后&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将所选零件移入此步骤之后的新步骤。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3448"/>
+        <source>&lt;p&gt;&lt;b&gt;Set Current Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the model at this step.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;设为当前步骤&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示模型在此步骤的状态。&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Eraser Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use this tool to remove objects by clicking them in the model view. This is different from deleting the current selection as a single command. Undo restores an object removed by the tool.&lt;/p&gt;</source>
@@ -8606,12 +9592,12 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1613"/>
         <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Joints panel. A tree lists every model with its jointed submodels and their joints, click a joint to select its submodel, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. A joint inside a submodel opens it in place and a bar over the view points to the picked joint. A submodel button there selects that submodel and keeps joint mode when it has a joint, the main model button ends it; the close button clears the selection and returns to the Select tool. Clicking a model shows its poses in the Poses panel. The panel also shows the picked joint of the selected submodel, with its axis, and Delete Joint deletes the joint picked in the tree.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;关节&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示或隐藏关节面板。树中列出每个模型及其带关节的子模型和关节，单击关节可选中其子模型，右键单击可移动、旋转或删除它，右键单击子模型可编辑或删除其所有关节。子模型内的关节会就地打开，视图上方的栏指向选取的关节。栏中的子模型按钮会选中该子模型，并在其有关节时保持关节模式，主模型按钮则结束关节模式；关闭按钮清除选择并回到选择工具。单击模型会在姿势面板中显示其姿势。面板还显示所选子模型选取的关节及其轴，删除关节会删除在树中选取的关节。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1622"/>
         <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Poses panel, which lists the poses of the model picked in the Joints panel, or of the current model. Save stores the joint angles of that model as a named pose, Recall puts them back in one undo step, Rename and Delete change the picked pose, and the Joints motion in the image dialog plays the poses of the main model as an animation.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;姿势&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示或隐藏姿势面板，其中列出在关节面板中选取的模型或当前模型的姿势。保存将该模型的关节角度存为命名姿势，调用可在一次撤销步骤中恢复这些角度，重命名和删除用于更改选取的姿势，图像对话框中的关节运动会将主模型的姿势作为动画播放。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1747"/>
@@ -8652,6 +9638,111 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="2575"/>
         <source>&lt;p&gt;&lt;b&gt;Joint Rotate&lt;/b&gt;&lt;/p&gt;&lt;p&gt;With one submodel with a joint selected, switches to the Rotate tool with the gizmo on the pivot of the picked joint, outlined in red, and the rotate keys and the Rotate tool turn the joint around its own pivot and axis. A hinge only turns about its axis. Selecting something else goes back to the pivot point. Use Joint Rotation in the preferences does this whenever a selected submodel has a joint.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2584"/>
+        <source>&lt;p&gt;&lt;b&gt;Reset Pivot Point&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Put the pivot point of each selected part back at its origin.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;重置枢轴点&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将每个所选零件的枢轴点放回其原点。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2593"/>
+        <source>&lt;p&gt;&lt;b&gt;Remove Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove every animation key from the selected parts, lights and cameras.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;移除关键帧&lt;/b&gt;&lt;/p&gt;&lt;p&gt;移除所选零件、灯光和相机的所有动画关键帧。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2602"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert Control Point&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add a control point to the selected flexible part, where it bends.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;插入控制点&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在所选柔性零件弯曲处添加一个控制点。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2611"/>
+        <source>&lt;p&gt;&lt;b&gt;Remove Control Point&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected control point of a flexible part.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;移除控制点&lt;/b&gt;&lt;/p&gt;&lt;p&gt;移除柔性零件所选的控制点。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2620"/>
+        <source>&lt;p&gt;&lt;b&gt;Clamp Tangent&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Hold the selected control point along the path, or release it to rotate freely.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;固定切线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;让所选控制点保持沿路径，或解除固定使其可自由旋转。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2629"/>
+        <source>&lt;p&gt;&lt;b&gt;Align to Tangent&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the path once and keep it released.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;对齐到切线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将所选控制点沿路径转动一次并保持解除固定。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2638"/>
+        <source>&lt;p&gt;&lt;b&gt;X Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the X axis.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;X 轴&lt;/b&gt;&lt;/p&gt;&lt;p&gt;沿 X 轴转动所选控制点。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2647"/>
+        <source>&lt;p&gt;&lt;b&gt;Y Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the Y axis.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Y 轴&lt;/b&gt;&lt;/p&gt;&lt;p&gt;沿 Y 轴转动所选控制点。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2656"/>
+        <source>&lt;p&gt;&lt;b&gt;Z Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the Z axis.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Z 轴&lt;/b&gt;&lt;/p&gt;&lt;p&gt;沿 Z 轴转动所选控制点。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2665"/>
+        <source>&lt;p&gt;&lt;b&gt;Focus Next Connection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the focus to the next connection of the selected track, where the next part joins.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;聚焦下一个连接&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将焦点移到所选轨道的下一个连接处，即下一个零件的连接位置。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2674"/>
+        <source>&lt;p&gt;&lt;b&gt;Focus Previous Connection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the focus to the previous connection of the selected track, where the next part joins.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;聚焦上一个连接&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将焦点移到所选轨道的上一个连接处，即下一个零件的连接位置。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2683"/>
+        <source>&lt;p&gt;&lt;b&gt;Rotate Train Track&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the focused track part to its next connection.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;旋转火车轨道&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将获得焦点的轨道零件转到其下一个连接。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2692"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2701"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2710"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2719"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2728"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2737"/>
+        <source>&lt;p&gt;&lt;b&gt;Move Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected objects one move snap step along this axis.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;移动所选&lt;/b&gt;&lt;/p&gt;&lt;p&gt;沿此轴将所选对象移动一个移动吸附步长。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2746"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2755"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2764"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2773"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2782"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2791"/>
+        <source>&lt;p&gt;&lt;b&gt;Rotate Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Rotate the selected objects one rotation snap step around this axis.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;旋转所选&lt;/b&gt;&lt;/p&gt;&lt;p&gt;绕此轴将所选对象旋转一个旋转吸附步长。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2800"/>
+        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the Minifigure Builder panel to build a minifigure from templates and add it to the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;小人仔构建器&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示小人仔构建器面板，用模板构建小人仔并添加到模型。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2809"/>
+        <source>&lt;p&gt;&lt;b&gt;Array&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Repeat the selection along one, two or three axes, with a count, offset and rotation for each.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;阵列&lt;/b&gt;&lt;/p&gt;&lt;p&gt;沿一个、两个或三个轴重复所选内容，每个轴可设置数量、偏移和旋转。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2818"/>
+        <source>&lt;p&gt;&lt;b&gt;Open Selected Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the submodel used by the selected part in its own tab, to edit it on its own.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;打开所选子模型&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在单独的标签页中打开所选零件所用的子模型，以便单独编辑。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2827"/>
+        <source>&lt;p&gt;&lt;b&gt;Move to New Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into a new submodel and put one reference to it in their place.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;移到新子模型&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将所选零件移入新的子模型，并在原位置放入一个对它的引用。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2836"/>
+        <source>&lt;p&gt;&lt;b&gt;Inline Selected Submodels&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace each selected submodel with its parts, in place.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;内联所选子模型&lt;/b&gt;&lt;/p&gt;&lt;p&gt;就地用其零件替换每个所选子模型。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2845"/>
@@ -10655,7 +11746,7 @@ Download one from %1 and pass it with --library.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Count</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">数量</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -11954,7 +13045,7 @@ Download one from %1 and pass it with --library.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="60"/>
         <source>Any</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">任意</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="61"/>
@@ -12041,7 +13132,7 @@ Download one from %1 and pass it with --library.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="122"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">添加</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="123"/>
@@ -12566,7 +13657,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/widgets/sw_widget_explode.ui"/>
         <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="34"/>
         <source>Explode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">分解</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_explode.ui"/>
@@ -12606,7 +13697,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_explode.ui"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> %</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_explode.ui"/>
@@ -13178,7 +14269,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.cpp" line="79"/>
         <source>Fade</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">淡化</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.cpp" line="79"/>
@@ -13344,12 +14435,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">宽度</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">高度</translation>
     </message>
     <message>
         <source>Transparent Background</source>
@@ -13569,9 +14660,9 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="124"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="348"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="349"/>
         <source>Next Step</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">下一步</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="129"/>
@@ -13611,196 +14702,196 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">保存</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="165"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="166"/>
         <source>Cancel</source>
         <translation type="unfinished">取消</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="169"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="170"/>
         <source>Size</source>
         <translation type="unfinished">尺寸</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="170"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="171"/>
         <source>&lt;p&gt;&lt;b&gt;Size&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the saved image width and height in pixels. Each value must be between 1 and 32768. Larger images use more memory and may exceed the graphics hardware limits.&lt;/p&gt;&lt;p&gt;Ratio links width and height so changing one updates the other. View uses the shape of the current view and Free unlinks them. Landscape and Portrait turn the image on its side.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="175"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="176"/>
         <source>Rati&amp;o</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="179"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="180"/>
         <source>Shape of the saved image, width to height.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="180"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="181"/>
         <source>Free</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="181"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="182"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">视图</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="183"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="184"/>
         <source>1:1 Square</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="193"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="194"/>
         <source>&amp;Width</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="217"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="218"/>
         <source>&amp;Landscape</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="219"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="220"/>
         <source>Make the image wider than it is tall.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="224"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="225"/>
         <source>&amp;Portrait</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="226"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="227"/>
         <source>Make the image taller than it is wide.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="242"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="299"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="243"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="300"/>
         <source>Steps</source>
         <translation type="unfinished">步骤</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="243"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="244"/>
         <source>&lt;p&gt;&lt;b&gt;Steps&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose Current Step, All Steps, or Range. The range fields are used only for Range. Both ends are included, and they may be equal to save just one step.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="248"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="249"/>
         <source>&amp;Current Step</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="253"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="254"/>
         <source>&amp;All Steps</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="258"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="259"/>
         <source>&amp;Range</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="259"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="260"/>
         <source>Save the steps between the first and last step, including both.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="269"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="270"/>
         <source>First step to save.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="277"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="278"/>
         <source>Last step to save.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="297"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="298"/>
         <source>Turn the model, play the steps one per frame or play the saved poses of the main model.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="298"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="299"/>
         <source>Turntable</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">转盘</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="424"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="425"/>
         <source>Time one loop takes to play, from the frames, frame rate and hold.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="429"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="430"/>
         <source>&lt;p&gt;&lt;b&gt;Framing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Current View saves exactly what the view shows. Fit Model aims at the model and moves the camera back until every part fits inside the image at every turntable angle and every pose, so animations turn in place without zooming and Joints animations hold still. Fit Each Step fits every step on its own parts. Fitted stills are centered on the model.&lt;/p&gt;&lt;p&gt;Center sets the point the turntable turns around and the camera aims at. World Origin is the 0, 0, 0 point of the scene, Model Origin is the middle of the model base and Model Center is the middle of the model.&lt;/p&gt;&lt;p&gt;Margin keeps empty space around the model. Bounds measures the fit on the whole model, so every step lines up, or only on the steps being saved.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="289"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="290"/>
         <source>Animated &amp;GIF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="305"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="306"/>
         <source>A&amp;xis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="309"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="310"/>
         <source>Axis the model turns around.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="317"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="318"/>
         <source>&amp;Full Turn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="318"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="319"/>
         <source>Turn the model once all the way around.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="322"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="323"/>
         <source>A&amp;ngle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="323"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="324"/>
         <source>Swing the model between two angles and back.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="334"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="335"/>
         <source>First angle, measured from the current view.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="335"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="336"/>
         <source>First Angle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="343"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="344"/>
         <source>Last angle, measured from the current view.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="344"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="345"/>
         <source>Last Angle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="383"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="384"/>
         <source>Fra&amp;mes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="414"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="927"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="415"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="928"/>
         <source> s</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> 秒</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="141"/>
@@ -13808,273 +14899,278 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="283"/>
-        <source>Animation</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="163"/>
+        <source>Save the image to the chosen file.</source>
+        <translation type="unfinished">将图像保存到所选文件。</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="284"/>
-        <source>&lt;p&gt;&lt;b&gt;Animation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Animated GIF saves an animation that loops forever.&lt;/p&gt;&lt;p&gt;Turntable turns the model around one axis through the Framing center, starting from the current view. Full Turn makes seamless revolutions. Angle swings between two angles from the current view and back again. Turns sets how many revolutions or swings make up the loop, so complex builds can be shown from every side more than once.&lt;/p&gt;&lt;p&gt;Next Step moves through the steps chosen in the Steps group while the model turns, one step every few turns or seconds. The loop ends on the last step and starts again.&lt;/p&gt;&lt;p&gt;Steps plays the chosen steps one per frame, for short animated instructions.&lt;/p&gt;&lt;p&gt;Joints blends through the poses of the main model saved in the Poses panel, in order and back to the first. Frames sets how many images go between two poses.&lt;/p&gt;&lt;p&gt;Frames sets how many images make up one turn and Frame Rate how many play each second. Hold Last keeps the finished model on screen before a loop through the steps restarts. Duration shows how long one loop plays.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <source>Animation</source>
+        <translation type="unfinished">动画</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="290"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="285"/>
+        <source>&lt;p&gt;&lt;b&gt;Animation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Animated GIF saves an animation that loops forever.&lt;/p&gt;&lt;p&gt;Turntable turns the model around one axis through the Framing center, starting from the current view. Full Turn makes seamless revolutions. Angle swings between two angles from the current view and back again. Turns sets how many revolutions or swings make up the loop, so complex builds can be shown from every side more than once.&lt;/p&gt;&lt;p&gt;Next Step moves through the steps chosen in the Steps group while the model turns, one step every few turns or seconds. The loop ends on the last step and starts again.&lt;/p&gt;&lt;p&gt;Steps plays the chosen steps one per frame, for short animated instructions.&lt;/p&gt;&lt;p&gt;Joints blends through the poses of the main model saved in the Poses panel, in order and back to the first. Frames sets how many images go between two poses.&lt;/p&gt;&lt;p&gt;Frames sets how many images make up one turn and Frame Rate how many play each second. Hold Last keeps the finished model on screen before a loop through the steps restarts. Duration shows how long one loop plays.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;动画&lt;/b&gt;&lt;/p&gt;&lt;p&gt;动画 GIF 保存一个无限循环的动画。&lt;/p&gt;&lt;p&gt;转盘从当前视图开始，让模型绕一根轴经过取景中心旋转。整圈产生无缝的旋转。角度在当前视图起的两个角度之间来回摆动。圈数设置循环由多少次旋转或摆动组成，因此复杂的搭建可以从各个方向展示多次。&lt;/p&gt;&lt;p&gt;下一步在模型旋转时依次浏览步骤组中选择的步骤，每隔几圈或几秒前进一步。循环在最后一步结束，然后重新开始。&lt;/p&gt;&lt;p&gt;步骤每帧播放一个所选步骤，适合制作简短的动画说明。&lt;/p&gt;&lt;p&gt;关节依次混合过渡到姿势面板中保存的主模型姿势，最后回到第一个姿势。帧数设置两个姿势之间有多少张图像。&lt;/p&gt;&lt;p&gt;帧数设置一圈由多少张图像组成，帧率设置每秒播放多少张。保持末帧在步骤循环重新开始之前，让完成的模型停留在屏幕上。时长显示一次循环播放多久。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="291"/>
         <source>Save a looping GIF of the model turning or of the steps.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="293"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="294"/>
         <source>Motion</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="300"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="301"/>
         <source>Joints</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">关节</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="355"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="356"/>
         <source>Move to the next step while the model turns.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="356"/>
-        <source>Off</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="357"/>
-        <source>Turns</source>
-        <translation type="unfinished"></translation>
+        <source>Off</source>
+        <translation type="unfinished">关</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="358"/>
+        <source>Turns</source>
+        <translation type="unfinished">圈数</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="359"/>
         <source>Seconds</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="368"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="369"/>
         <source>Next Step Interval</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="372"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="373"/>
         <source>T&amp;urns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="379"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="380"/>
         <source>Number of revolutions or swings in one loop (1 to 10).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="394"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="395"/>
         <source>Frame Rate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">帧率</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="401"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="402"/>
         <source> fps</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="403"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="404"/>
         <source>Frames shown each second (0.5 to 50).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="407"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="408"/>
         <source>Hol&amp;d Last</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="416"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="417"/>
         <source>Seconds the last step stays on screen before the loop restarts (0 to 10).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="420"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="421"/>
         <source>Duration</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">时长</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="428"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="429"/>
         <source>Framing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">取景</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="434"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="435"/>
         <source>Fram&amp;ing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="438"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="439"/>
         <source>How the camera frames the model.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="439"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="440"/>
         <source>Current View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="440"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="441"/>
         <source>Fit Model</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="441"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="442"/>
         <source>Fit Each Step</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="446"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="447"/>
         <source>C&amp;enter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="450"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="451"/>
         <source>Point the camera aims at and the turntable turns around.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="451"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="452"/>
         <source>World Origin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="452"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="453"/>
         <source>Model Origin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="453"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="454"/>
         <source>Model Center</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="458"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="459"/>
         <source>Margin</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">边距</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="463"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="464"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> %</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="465"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="466"/>
         <source>Empty space around the model, in percent of the image (0 to 50).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="469"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="470"/>
         <source>&amp;Bounds</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="473"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="474"/>
         <source>Parts the fit and center are measured on.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="474"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="475"/>
         <source>Whole Model</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="475"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="476"/>
         <source>Shown Steps</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="481"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="482"/>
         <source>Background</source>
         <translation type="unfinished">背景</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="482"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="483"/>
         <source>&lt;p&gt;&lt;b&gt;Background&lt;/b&gt;&lt;/p&gt;&lt;p&gt;View Color fills the background with the view background. Transparent leaves it empty so the model can be placed over other images.&lt;/p&gt;&lt;p&gt;Only PNG and GIF files keep transparency. GIF edges are hard, without smoothing.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="487"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="488"/>
         <source>&amp;View Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="488"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="489"/>
         <source>Fill the background with the view background.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="493"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="494"/>
         <source>&amp;Transparent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="701"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="702"/>
         <source>Supported Image Files (*.bmp *.png *.jpg *.gif);;BMP Files (*.bmp);;PNG Files (*.png);;JPEG Files (*.jpg);;Animated GIF Files (*.gif);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="879"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="880"/>
         <source>Leave the background transparent.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="881"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="882"/>
         <source>Transparent backgrounds need a PNG or GIF file.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="929"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="930"/>
         <source>Seconds each step shows (0.1 to 60).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="938"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="939"/>
         <source>Turns each step shows (1 to 10).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="954"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="955"/>
         <source>Steps play one per frame, set by the Steps group.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="960"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="961"/>
         <source>Number of images in one turn (2 to 360).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="960"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="961"/>
         <source>Number of images between two poses (2 to 360).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="984"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="985"/>
         <source>%1 s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1076"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1156"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1077"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1157"/>
         <source>Step %1 of %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1086"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1087"/>
         <source>%1 frames</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1178"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1179"/>
         <source>Pause the animation.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1186"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1187"/>
         <source>Play the animation.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14088,18 +15184,18 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">尺寸</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="199"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="200"/>
         <source>Width of the saved image, in pixels (1 to 32768).</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">已保存图像的宽度，以像素为单位（1 到 32768）。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="203"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="204"/>
         <source>&amp;Height</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="209"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="210"/>
         <source>Height of the saved image, in pixels (1 to 32768).</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">已保存图像的高度，以像素为单位（1 到 32768）。</translation>
@@ -14114,7 +15210,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">步骤范围</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="254"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="255"/>
         <source>Save an image for every step in the active model.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">为活动模型中的每个步骤保存图像。</translation>
@@ -14124,7 +15220,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">所有步骤</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="249"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="250"/>
         <source>Save only the current step.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">仅保存当前步骤。</translation>
@@ -14152,7 +15248,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">选择自定义范围时保存的第一步。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="270"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="271"/>
         <source>First Step</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">第一步</translation>
@@ -14167,7 +15263,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">选择“自定义范围”时要保存的最后一步。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="278"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="279"/>
         <source>Last Step</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">最后一步</translation>
@@ -14190,7 +15286,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="680"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="681"/>
         <source>Output file cannot be empty.</source>
         <oldsource>Output File cannot be empty.</oldsource>
         <translation type="unfinished">输出文件不能为空。</translation>
@@ -14224,7 +15320,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">请输入 1 到 32768 之间的高度。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="701"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="702"/>
         <source>Save Image File</source>
         <translation>保存图像文件</translation>
     </message>
@@ -14263,7 +15359,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/transput/sw_instructions.cpp" line="44"/>
         <source>mm</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">mm</translation>
     </message>
     <message>
         <location filename="../../source/transput/sw_instructions.cpp" line="47"/>
@@ -14273,7 +15369,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/transput/sw_instructions.cpp" line="50"/>
         <source>in</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">英寸</translation>
     </message>
 </context>
 <context>
@@ -14545,7 +15641,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="317"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">保存</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="469"/>
@@ -14786,7 +15882,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1656"/>
         <source>Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">线</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1656"/>
@@ -14796,7 +15892,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1661"/>
         <source>Tip</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">尖端</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1661"/>
@@ -14806,7 +15902,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1661"/>
         <source>Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">箭头</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1671"/>
@@ -15153,7 +16249,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_print.cpp" line="83"/>
         <source>to</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">至</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_print.cpp" line="86"/>
@@ -15679,7 +16775,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="510"/>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="563"/>
         <source>Rows</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">行数</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="495"/>
@@ -15706,7 +16802,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="416"/>
         <source>Page</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">页面</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="140"/>
@@ -16002,7 +17098,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="612"/>
         <source>Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">箭头</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="618"/>
@@ -16198,7 +17294,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="610"/>
         <source>Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">线</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="610"/>
@@ -16243,7 +17339,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="623"/>
         <source>Box</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">框</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="623"/>
@@ -16284,7 +17380,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="645"/>
         <source>Margin</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">边距</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="645"/>
@@ -16483,7 +17579,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="17"/>
         <source>Joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">关节</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="17"/>
@@ -16513,54 +17609,54 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="118"/>
         <source>Joint %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">关节 %1</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="133"/>
         <source>None: Part &gt; Joint &gt; Set Joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">无：零件 &gt; 关节 &gt; 设置关节</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
         <source>Joint %1, %2, angle %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">关节 %1，%2，角度 %3</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
         <source>No joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">无关节</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="117"/>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
         <source>Hinge</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">铰链</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="20"/>
         <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Every model with joints, under it each jointed submodel by line index, and under that each of its joints with type and angle. Click a joint to select its submodel and make it the joint the panel and the rotate gizmo work on, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. Click a model to show its poses in the Poses panel.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;关节&lt;/b&gt;&lt;/p&gt;&lt;p&gt;每个带关节的模型，其下按行索引列出每个带关节的子模型，再往下是它的每个关节，含类型和角度。单击关节可选中其子模型，并使其成为面板和旋转控件所操作的关节，右键单击可移动、旋转或删除它，右键单击子模型可编辑或删除其所有关节。单击模型可在姿势面板中显示其姿势。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="34"/>
         <source>X Axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">X 轴</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="34"/>
         <source>Y Axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Y 轴</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="34"/>
         <source>Z Axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Z 轴</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="41"/>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="236"/>
         <source>Delete Joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">删除关节</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="42"/>
@@ -16576,7 +17672,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="117"/>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
         <source>Ball</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">球形</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="206"/>
@@ -16601,7 +17697,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
         <source>None: select a jointed submodel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">无：请选择带关节的子模型</translation>
     </message>
     <message>
         <source>Name</source>
@@ -16611,144 +17707,144 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swKeyframesView</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="211"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="216"/>
         <source>Keys of each object per step: click a step to go there, double-click to add or remove a key, drag a key to move it</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="212"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="217"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;One column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;关键帧&lt;/b&gt;&lt;/p&gt;&lt;p&gt;每个步骤一列、每个对象一行，可展开查看其属性。菱形表示一个关键帧，连线连接同一属性的关键帧。单击步骤可跳转到该步骤，双击单元格可添加或移除关键帧，拖动菱形可将关键帧移到另一步骤，右键单击可查看更多操作。数值在属性面板中编辑。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="274"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="279"/>
         <source>Position</source>
         <translation type="unfinished">位置</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="275"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="280"/>
         <source>Rotation</source>
         <translation type="unfinished">旋转</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="280"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="285"/>
         <source>Target</source>
         <translation type="unfinished">目标点</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="281"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="286"/>
         <source>Up</source>
         <translation type="unfinished">向上</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="287"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="292"/>
         <source>Color</source>
         <translation type="unfinished">颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="288"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="293"/>
         <source>Power</source>
         <translation type="unfinished">力量</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="289"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="294"/>
         <source>POV-Ray Power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="290"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="295"/>
         <source>Fade Distance</source>
         <translation type="unfinished">淡入淡出距离</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="291"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="296"/>
         <source>Fade Power</source>
         <translation type="unfinished">淡入淡出功率</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="292"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="297"/>
         <source>Radius</source>
         <translation type="unfinished">半径</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="293"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="298"/>
         <source>Angle</source>
         <translation type="unfinished">角度</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="294"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="299"/>
         <source>Area Width</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="295"/>
-        <source>Area Height</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="296"/>
-        <source>Spot Cone</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="297"/>
-        <source>Spot Penumbra</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="298"/>
-        <source>Spot Tightness</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="299"/>
-        <source>Area Grid X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="300"/>
+        <source>Area Height</source>
+        <translation type="unfinished">区域高度</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="301"/>
+        <source>Spot Cone</source>
+        <translation type="unfinished">聚光锥角</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="302"/>
+        <source>Spot Penumbra</source>
+        <translation type="unfinished">聚光半影</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="303"/>
+        <source>Spot Tightness</source>
+        <translation type="unfinished">聚光紧度</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="304"/>
+        <source>Area Grid X</source>
+        <translation type="unfinished">区域网格 X</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="305"/>
         <source>Area Grid Y</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">区域网格 Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="420"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="425"/>
         <source>Remove Keyframes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">移除关键帧</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="503"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="508"/>
         <source>Move Keyframe</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">移动关键帧</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="519"/>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="553"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="524"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="558"/>
         <source>Remove Keyframe</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">移除关键帧</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="521"/>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="551"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="526"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="556"/>
         <source>Add Keyframe</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">添加关键帧</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="533"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="538"/>
         <source>Add Key</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">添加关键帧</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="534"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="539"/>
         <source>Remove Key</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">移除关键帧</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="536"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="541"/>
         <source>Remove All Keys</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">移除所有关键帧</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="655"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="660"/>
         <source>Step</source>
         <translation type="unfinished">步骤</translation>
     </message>
@@ -16763,72 +17859,97 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="20"/>
         <source>&lt;p&gt;&lt;b&gt;Add Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add position and rotation keys to the selected objects at the current step, holding their values at that step.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;添加关键帧&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在当前步骤为所选对象添加位置和旋转关键帧，保持其在该步骤的值。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="26"/>
         <source>Remove the keys of the selected objects at the current step</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">移除所选对象在当前步骤的关键帧</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="27"/>
         <source>&lt;p&gt;&lt;b&gt;Remove Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove every key the selected objects have at the current step.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;移除关键帧&lt;/b&gt;&lt;/p&gt;&lt;p&gt;移除所选对象在当前步骤的所有关键帧。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="40"/>
         <source>Go to the first step</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">转到第一步</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="46"/>
-        <source>Play or pause the steps</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="41"/>
+        <source>&lt;p&gt;&lt;b&gt;Rewind&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first step of the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;倒回&lt;/b&gt;&lt;/p&gt;&lt;p&gt;转到模型的第一步。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="47"/>
+        <source>Play or pause the steps</source>
+        <translation type="unfinished">播放或暂停步骤</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="48"/>
         <source>&lt;p&gt;&lt;b&gt;Play&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Step through the model one step at a time to the last step, showing the keyed motion. Click again to pause.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;播放&lt;/b&gt;&lt;/p&gt;&lt;p&gt;逐步浏览模型直到最后一步，并显示关键帧运动。再次单击可暂停。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="53"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="54"/>
         <source>Stop and go back to the step playing started from</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">停止并回到开始播放时所在的步骤</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="59"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="55"/>
+        <source>&lt;p&gt;&lt;b&gt;Stop&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Stop playing through the steps and go back to the step playing started from.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;停止&lt;/b&gt;&lt;/p&gt;&lt;p&gt;停止逐步播放，并回到开始播放时所在的步骤。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="61"/>
         <source>Go to the last step</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">转到最后一步</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="79"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="62"/>
+        <source>&lt;p&gt;&lt;b&gt;Forward&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the last step of the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;前进&lt;/b&gt;&lt;/p&gt;&lt;p&gt;转到模型的最后一步。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="82"/>
         <source>Selected</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">已选择</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="81"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="84"/>
         <source>Show the keys of the selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">显示所选对象的关键帧</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="85"/>
+        <source>&lt;p&gt;&lt;b&gt;Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;List only the selected objects in the timeline, with or without keys.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;已选择&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在时间轴中仅列出所选对象，无论是否带关键帧。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="89"/>
         <source>All</source>
         <translation type="unfinished">全部</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="87"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="91"/>
         <source>Show the keys of every object that has keys</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="204"/>
-        <source>Add Keyframe</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="92"/>
+        <source>&lt;p&gt;&lt;b&gt;All&lt;/b&gt;&lt;/p&gt;&lt;p&gt;List the selected objects and every other object of the model that has keys.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;全部&lt;/b&gt;&lt;/p&gt;&lt;p&gt;列出所选对象以及模型中其他所有带关键帧的对象。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="204"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="209"/>
+        <source>Add Keyframe</source>
+        <translation type="unfinished">添加关键帧</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="209"/>
         <source>Remove Keyframe</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">移除关键帧</translation>
     </message>
 </context>
 <context>
@@ -17228,7 +18349,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="827"/>
         <source>T</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">T</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="839"/>
@@ -17284,27 +18405,47 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="950"/>
         <source>Explode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">分解</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="961"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="952"/>
+        <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Spread every other visible part, or only the selected ones, away from an anchor by an X, Y and Z percentage of its distance. Each part slides out along the connection that holds it. Collapse or Undo puts the parts back, and Save Copy saves the exploded model to a separate file.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;分解&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将其他每个可见零件（或仅所选零件）按其到锚点距离的 X、Y、Z 百分比远离锚点散开。每个零件沿固定它的连接滑出。收拢或撤销可将零件放回，保存副本会将分解后的模型保存到单独的文件。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="963"/>
         <source>Joints</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">关节</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="968"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="965"/>
+        <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The joint picked on the selected submodel with its axis, and a tree of every model with joints, its jointed submodels and their joints. Pick a joint to move or rotate it, and delete one to put it back at rest.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;关节&lt;/b&gt;&lt;/p&gt;&lt;p&gt;所选子模型上选取的关节及其轴，以及一棵树，列出每个带关节的模型、其带关节的子模型和它们的关节。选取关节可移动或旋转它，删除关节可使其恢复静止。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="972"/>
         <source>Poses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="975"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="974"/>
+        <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The poses of the model picked in the Joints panel. Save the joint angles as a named pose, then recall, rename or delete it. Poses are saved with the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;姿势&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在关节面板中选取的模型的姿势。将关节角度保存为命名姿势，然后可调用、重命名或删除。姿势随模型一起保存。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="981"/>
         <source>Keyframes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">关键帧</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="983"/>
+        <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A full-width timeline of the animation keys of the selected or all objects, one column per step. Add or remove keys at the current step, and play through the steps to watch the keyed motion.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;关键帧&lt;/b&gt;&lt;/p&gt;&lt;p&gt;全宽时间轴，显示所选或所有对象的动画关键帧，每个步骤一列。可在当前步骤添加或移除关键帧，并逐步播放以观看关键帧运动。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="119"/>
         <source>Terminal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">终端</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="121"/>
@@ -17323,7 +18464,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;预览&lt;/b&gt;&lt;/p&gt;&lt;p&gt;检查零件而不将其放入模型中。双击零件停靠区中的零件进行预览。当源选择发生变化时，锁定预览保持当前预览；解锁它以允许更新。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1034"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1042"/>
         <source>Asset loading failed</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">资源加载失败</translation>
@@ -17615,12 +18756,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="825"/>
         <source>Close Model Tab</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">关闭模型标签页</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="826"/>
         <source>&lt;p&gt;&lt;b&gt;Close Model Tab&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Close this tab. The model stays in the file; open it again from the Models menu.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;关闭模型标签页&lt;/b&gt;&lt;/p&gt;&lt;p&gt;关闭此标签页。模型仍保留在文件中；可从模型菜单再次打开。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="504"/>
@@ -18010,7 +19151,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="290"/>
         <source>Keep</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">保留</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="292"/>
@@ -18250,31 +19391,31 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">正交</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1058"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1066"/>
         <source>Selection</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">选择</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1059"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1067"/>
         <source>View Orientation</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">视图方向</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1060"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1068"/>
         <source>Position</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">位置</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1061"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1069"/>
         <source>Snap and Transform</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">吸附与变换</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1062"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1070"/>
         <source>Step</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">步骤</translation>
@@ -18287,27 +19428,27 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="862"/>
         <source>Scroll the model tabs right.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">向右滚动模型标签页。</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="863"/>
         <source>Scroll Tabs Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">向左滚动标签页</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="863"/>
         <source>Scroll Tabs Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">向右滚动标签页</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="864"/>
         <source>&lt;p&gt;&lt;b&gt;Scroll Tabs Left&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the model tabs hidden on the left when they do not all fit.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;向左滚动标签页&lt;/b&gt;&lt;/p&gt;&lt;p&gt;当模型标签页无法全部容纳时，显示左侧隐藏的标签页。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="864"/>
         <source>&lt;p&gt;&lt;b&gt;Scroll Tabs Right&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the model tabs hidden on the right when they do not all fit.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;向右滚动标签页&lt;/b&gt;&lt;/p&gt;&lt;p&gt;当模型标签页无法全部容纳时，显示右侧隐藏的标签页。&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -19063,7 +20204,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="861"/>
         <source>Explode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">分解</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="1084"/>
@@ -19265,7 +20406,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="513"/>
         <source>Remove Keyframes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">移除关键帧</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1012"/>
@@ -19281,12 +20422,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1541"/>
         <source>Add Keyframe</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">添加关键帧</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1541"/>
         <source>Remove Keyframe</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">移除关键帧</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="314"/>
@@ -19684,7 +20825,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_joints.cpp" line="636"/>
         <source>Delete Joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">删除关节</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_joints.cpp" line="649"/>
@@ -20205,12 +21346,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">宽度</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">高度</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
@@ -20241,6 +21382,26 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
         <source>Bottom</source>
         <translation type="unfinished">下</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
+        <source>Make the page taller than it is wide.</source>
+        <translation type="unfinished">使页面高大于宽。</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Portrait&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Lay out each instruction page upright, taller than it is wide.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;纵向&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将每个说明页竖直排版，高大于宽。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
+        <source>Make the page wider than it is tall.</source>
+        <translation type="unfinished">使页面宽大于高。</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Landscape&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Lay out each instruction page on its side, wider than it is tall.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;横向&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将每个说明页横向排版，宽大于高。&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -20800,57 +21961,57 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="356"/>
         <source>Saved poses of this model, played in this order by the Joints motion</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">此模型已保存的姿势，按此顺序由关节运动播放</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="357"/>
         <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The poses saved in the model picked in the Joints panel, each holding the angles of that model&apos;s joints only. The Joints motion of the image dialog plays the poses of the main model in this order. Pick one to recall, rename or delete it.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;姿势&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在关节面板中选取的模型中保存的姿势，每个姿势只保存该模型关节的角度。图像对话框的关节运动按此顺序播放主模型的姿势。选取一个姿势即可调用、重命名或删除它。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="371"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">保存</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="371"/>
         <source>Save the joint angles of this model as a pose</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">将此模型的关节角度保存为姿势</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="371"/>
         <source>&lt;p&gt;&lt;b&gt;Save&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Store the angles of the joints in this model under a name. Saving a name that already exists replaces that pose.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;保存&lt;/b&gt;&lt;/p&gt;&lt;p&gt;以名称存储此模型中关节的角度。保存已存在的名称会替换该姿势。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="372"/>
         <source>Recall</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">调用</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="372"/>
         <source>Put the joints of this model back in the picked pose</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">将此模型的关节恢复到选取的姿势</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="372"/>
         <source>&lt;p&gt;&lt;b&gt;Recall&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the joints of this model back to the angles of the picked pose, in one undo step.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;调用&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在一次撤销步骤中，将此模型的关节转回选取姿势的角度。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="373"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">重命名</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="373"/>
         <source>Rename the picked pose</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">重命名选取的姿势</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="373"/>
         <source>&lt;p&gt;&lt;b&gt;Rename&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Give the picked pose a new name.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;重命名&lt;/b&gt;&lt;/p&gt;&lt;p&gt;为选取的姿势指定新名称。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="374"/>
@@ -20865,7 +22026,7 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="374"/>
         <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the picked pose from the model. The joints keep their angles.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;删除&lt;/b&gt;&lt;/p&gt;&lt;p&gt;从模型中移除选取的姿势。关节保持其角度。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="416"/>
@@ -20881,12 +22042,12 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="416"/>
         <source>Pose %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">姿势 %1</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="453"/>
         <source>Rename Pose</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">重命名姿势</translation>
     </message>
 </context>
 <context>
@@ -22930,7 +24091,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="461"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">视图</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="600"/>
@@ -22977,7 +24138,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="121"/>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="154"/>
         <source>Page</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">页面</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="122"/>
@@ -23787,7 +24948,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Tool</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">工具</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -23882,7 +25043,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Turntable</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">转盘</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -23907,7 +25068,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source> s</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> 秒</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -23917,7 +25078,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Selected</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">已选择</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -24048,7 +25209,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Model</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">模型</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -24268,7 +25429,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">正常</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -24343,17 +25504,17 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>X Axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">X 轴</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Y Axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Y 轴</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Z Axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Z 轴</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -24910,7 +26071,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Keep</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">保留</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25032,7 +26193,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_context.cpp" line="207"/>
         <source>Separator</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">分隔符</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_context.cpp" line="208"/>
@@ -25567,7 +26728,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">描述</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
@@ -25623,7 +26784,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">公制</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
@@ -25993,7 +27154,7 @@ N/A: %1 parts</source>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1412"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1462"/>
         <source>F</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">F</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1412"/>
@@ -26012,7 +27173,7 @@ N/A: %1 parts</source>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1421"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1476"/>
         <source>P</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">P</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1421"/>
@@ -26065,7 +27226,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1435"/>
         <source>Cone</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">锥角</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1435"/>
@@ -26075,7 +27236,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1436"/>
         <source>Penumbra</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">半影</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1436"/>
@@ -26178,7 +27339,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1456"/>
         <source>POV-Ray</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1458"/>
@@ -26194,7 +27355,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1462"/>
         <source>Fade</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">淡化</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1464"/>
@@ -26228,7 +27389,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1468"/>
         <source>Area Grid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">区域网格</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1470"/>
@@ -26243,7 +27404,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1477"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">R</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1477"/>
@@ -26751,12 +27912,12 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="405"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">宽度</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="409"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">高度</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="579"/>
@@ -26781,7 +27942,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="582"/>
         <source>Area</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">区域</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="582"/>
@@ -26806,7 +27967,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="587"/>
         <source>Model</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">模型</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="587"/>
@@ -26836,7 +27997,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="591"/>
         <source>Cameras</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">相机</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="591"/>
@@ -26895,7 +28056,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="480"/>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="541"/>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">关</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="492"/>
@@ -26941,7 +28102,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="507"/>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="523"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> %</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="509"/>
@@ -27076,7 +28237,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="541"/>
         <source>Rounded</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">圆角</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="541"/>
@@ -27231,7 +28392,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="602"/>
         <source>Lights</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">灯光</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="602"/>
@@ -27311,7 +28472,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="623"/>
         <source>Visible</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">可见</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="623"/>
@@ -27440,7 +28601,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1031"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">视图</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1038"/>
@@ -27830,7 +28991,7 @@ Download it from %1 and set it under Preferences › General › LGEO Library.</
     <message>
         <location filename="../../source/core/sw_renderer_povray.cpp" line="353"/>
         <source>POV-Ray</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_renderer_povray.cpp" line="354"/>
@@ -27863,6 +29024,11 @@ Download it from %1 and set it under Preferences › General › LGEO Library.</
 
 Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General › POV-Ray Executable.</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Choose Render Output&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pick the folder, name and format of the rendered image in a file dialog. The path appears in the output field beside it.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;选择渲染输出&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在文件对话框中选择渲染图像的文件夹、名称和格式。路径会显示在旁边的输出字段中。&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -28422,7 +29588,7 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/rendering/sw_view_widget.cpp" line="245"/>
         <source>Joint %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">关节 %1</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_view_widget.cpp" line="252"/>

@@ -160,6 +160,7 @@ swImageDialog::swImageDialog(QWidget* Parent, swImageDialogOptions* Options, swM
 
 	QPushButton* SaveButton = new QPushButton(tr("&Save"), FileGroup);
 	SaveButton->setDefault(true);
+	SaveButton->setToolTip(tr("Save the image to the chosen file."));
 	PathLayout->addWidget(SaveButton);
 
 	QPushButton* CancelButton = new QPushButton(tr("Cancel"), FileGroup);

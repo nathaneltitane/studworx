@@ -10,6 +10,8 @@ greaterThan(QT_MAJOR_VERSION, 5) {
 	QT += openglwidgets
 }
 
+DEFINES += SW_SOURCE_ROOT=\\\"$$PWD/../..\\\"
+
 INCLUDEPATH += ../application ../core ../library ../rendering ../transput ../interface/dialogs ../interface/widgets ../interface/window
 
 HEADERS += \
@@ -26,6 +28,7 @@ SOURCES += \
 	../library/sw_parser_shadow.cpp \
 	sw_command_meta_test.cpp \
 	sw_connectivity_test.cpp \
+	sw_documentation_test.cpp \
 	sw_math_test.cpp \
 	sw_model_flatten_test.cpp \
 	sw_object_history_test.cpp \

@@ -44,4 +44,7 @@ private slots:
 	void ProfileWritesEveryKey();
 	void ContextMenuDefaultResolves();
 	void OpenLXFMLImportsModel();
+	void DocumentationNamesEveryCommand();
+	void DocumentationHelpsEveryCommand();
+	void DocumentationLinksEveryImage();
 };

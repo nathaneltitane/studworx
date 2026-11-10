@@ -26,7 +26,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Merge"),
 		QT_TRANSLATE_NOOP("Menu", "&Merge..."),
 		QT_TRANSLATE_NOOP("Status", "Merge the contents of another file with the current one"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Merge</b></p><p>Choose one or more model files and add their models to the current file as submodels, renamed when a name is already taken.</p>"),
 		"Ctrl+M"
 	},
 
@@ -53,7 +53,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.ToggleWatchFileChanges"),
 		QT_TRANSLATE_NOOP("Menu", "Watch for File Changes"),
 		QT_TRANSLATE_NOOP("Status", "Toggle asking to reload the model when another application changes its file"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Watch for File Changes</b></p><p>When another program changes the file of an open model, StudWorx asks whether to reload it. Turn this off to keep working without being asked.</p>"),
 		""
 	},
 
@@ -71,7 +71,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.SaveAs"),
 		QT_TRANSLATE_NOOP("Menu", "Save &As..."),
 		QT_TRANSLATE_NOOP("Status", "Save the current model with a new name"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Save As</b></p><p>Save the current model under a new name or in a new folder. The extension is added when left out: .ldr for a single model, .mpd for a model with submodels or embedded data.</p>"),
 		"Alt+S"
 	},
 
@@ -80,7 +80,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.SaveImage"),
 		QT_TRANSLATE_NOOP("Menu", "Ima&ge..."),
 		QT_TRANSLATE_NOOP("Status", "Export an image of the current view"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Image</b></p><p>Save the model as a still image, a series of step images or an animated GIF, with the background, steps, framing, size and file chosen in the Image dialog.</p>"),
 		"Alt+Shift+I"
 	},
 
@@ -89,7 +89,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Import.LDD"),
 		QT_TRANSLATE_NOOP("Menu", "&LEGO® Digital Designer..."),
 		QT_TRANSLATE_NOOP("Status", "Import a file in LEGO® Digital Designer LXF or LXFML format"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>LEGO® Digital Designer</b></p><p>Open a LEGO® Digital Designer model (.lxf or .lxfml) as a new untitled project. Parts and colors are translated through the bundled mapping.</p>"),
 		""
 	},
 
@@ -98,7 +98,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Import.Inventory"),
 		QT_TRANSLATE_NOOP("Menu", "Set &Inventory..."),
 		QT_TRANSLATE_NOOP("Status", "Import all parts from an official set"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Set Inventory</b></p><p>Search an official set by name or number and open all of its parts as a new model, after saving the current one. It uses your own free Rebrickable API key, asked for once or set under Online Services in Preferences.</p>"),
 		""
 	},
 
@@ -107,7 +107,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Export.3DS"),
 		QT_TRANSLATE_NOOP("Menu", "3D &Studio..."),
 		QT_TRANSLATE_NOOP("Status", "Export the current model in 3D Studio 3DS format"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>3D Studio</b></p><p>Export the current model as a 3D Studio .3ds file for other 3D programs.</p>"),
 		""
 	},
 
@@ -116,7 +116,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Export.COLLADA"),
 		QT_TRANSLATE_NOOP("Menu", "&COLLADA..."),
 		QT_TRANSLATE_NOOP("Status", "Export the current model in COLLADA DAE format"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>COLLADA</b></p><p>Export the current model as a COLLADA .dae file. Translucent colors can be marked as transparent materials.</p>"),
 		""
 	},
 
@@ -125,7 +125,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Export.HTML"),
 		QT_TRANSLATE_NOOP("Menu", "&HTML..."),
 		QT_TRANSLATE_NOOP("Status", "Create an HTML page for the current model"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>HTML</b></p><p>Open the Instructions window to export the building instructions as styled HTML pages in a folder named after the model.</p>"),
 		""
 	},
 
@@ -134,7 +134,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Export.KMZ"),
 		QT_TRANSLATE_NOOP("Menu", "&KMZ..."),
 		QT_TRANSLATE_NOOP("Status", "Export the current model in KMZ format"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>KMZ</b></p><p>Export the current model as a KMZ file for Google Earth and SketchUp, with the visible surfaces only or every part's geometry.</p>"),
 		""
 	},
 
@@ -143,7 +143,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Export.BrickLink"),
 		QT_TRANSLATE_NOOP("Menu", "&BrickLink..."),
 		QT_TRANSLATE_NOOP("Status", "Export a list of parts used in BrickLink XML format"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>BrickLink</b></p><p>Export the parts of the model as a BrickLink wanted list in XML, with part numbers and colors translated to BrickLink numbers, ready to copy and upload.</p>"),
 		"Ctrl+Shift+B"
 	},
 
@@ -152,7 +152,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Export.CSV"),
 		QT_TRANSLATE_NOOP("Menu", "CS&V..."),
 		QT_TRANSLATE_NOOP("Status", "Export a list of parts used in comma delimited file format"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>CSV</b></p><p>Export the parts of the model as a comma separated list, with part numbers, colors and counts, for a spreadsheet.</p>"),
 		""
 	},
 
@@ -161,7 +161,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Export.POVRay"),
 		QT_TRANSLATE_NOOP("Menu", "&POV-Ray..."),
 		QT_TRANSLATE_NOOP("Status", "Export the current model in POV-Ray format"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>POV-Ray</b></p><p>Export the current model as a POV-Ray scene file, with LGEO high detail parts when they are set up.</p>"),
 		""
 	},
 
@@ -170,7 +170,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Export.Wavefront"),
 		QT_TRANSLATE_NOOP("Menu", "&Wavefront..."),
 		QT_TRANSLATE_NOOP("Status", "Export the current model in Wavefront OBJ format"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Wavefront</b></p><p>Export the current model as a Wavefront .obj file with its materials for other 3D programs.</p>"),
 		""
 	},
 
@@ -179,7 +179,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Render.POVRay"),
 		QT_TRANSLATE_NOOP("Menu", "&POV-Ray Render..."),
 		QT_TRANSLATE_NOOP("Status", "Render the current model using POV-Ray"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>POV-Ray Render</b></p><p>Render the current model with POV-Ray in the Render window: choose the output file, follow the progress and watch the image appear as it renders.</p>"),
 		"Alt+Shift+P"
 	},
 
@@ -188,7 +188,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Render.Blender"),
 		QT_TRANSLATE_NOOP("Menu", "&Blender Render..."),
 		QT_TRANSLATE_NOOP("Status", "Render the current model using Blender"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Blender Render</b></p><p>Render the current model with Blender and the bundled LDraw add-ons, or open the scene in Blender. The Blender executable is set in Preferences.</p>"),
 		"Alt+Shift+B"
 	},
 
@@ -197,7 +197,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Instructions"),
 		QT_TRANSLATE_NOOP("Menu", "Instr&uctions..."),
 		QT_TRANSLATE_NOOP("Status", "Configure instructions layout"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Instructions</b></p><p>Open the Instructions window to lay out, style, export and print the building instructions of the model.</p>"),
 		"Alt+Shift+U"
 	},
 
@@ -206,7 +206,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Print"),
 		QT_TRANSLATE_NOOP("Menu", "&Print..."),
 		QT_TRANSLATE_NOOP("Status", "Print the current model view"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Print</b></p><p>Print the current model view through the system print dialog, with a preview where the dialog allows it.</p>"),
 		"Ctrl+P"
 	},
 
@@ -215,7 +215,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Recent1"),
 		QT_TRANSLATE_NOOP("Menu", "&Recent 1"),
 		QT_TRANSLATE_NOOP("Status", "Open this model"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Recent File</b></p><p>Open this recently used model again. The File menu keeps the four most recent files.</p>"),
 		""
 	},
 
@@ -224,7 +224,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Recent2"),
 		QT_TRANSLATE_NOOP("Menu", "&Recent 2"),
 		QT_TRANSLATE_NOOP("Status", "Open this model"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Recent File</b></p><p>Open this recently used model again. The File menu keeps the four most recent files.</p>"),
 		""
 	},
 
@@ -233,7 +233,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Recent3"),
 		QT_TRANSLATE_NOOP("Menu", "&Recent 3"),
 		QT_TRANSLATE_NOOP("Status", "Open this model"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Recent File</b></p><p>Open this recently used model again. The File menu keeps the four most recent files.</p>"),
 		""
 	},
 
@@ -242,7 +242,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Recent4"),
 		QT_TRANSLATE_NOOP("Menu", "&Recent 4"),
 		QT_TRANSLATE_NOOP("Status", "Open this model"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Recent File</b></p><p>Open this recently used model again. The File menu keeps the four most recent files.</p>"),
 		""
 	},
 
@@ -251,7 +251,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.Exit"),
 		QT_TRANSLATE_NOOP("Menu", "E&xit"),
 		QT_TRANSLATE_NOOP("Status", "Quit the application; prompts to save model"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Exit</b></p><p>Close StudWorx. Each model with unsaved changes asks to be saved first.</p>"),
 		"Ctrl+Q"
 	},
 
@@ -278,7 +278,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.Cut"),
 		QT_TRANSLATE_NOOP("Menu", "Cu&t"),
 		QT_TRANSLATE_NOOP("Status", "Cut the selection and put it on the Clipboard"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Cut</b></p><p>Remove the selected parts from the model and put them on the clipboard, to paste in this or another model.</p>"),
 		"Ctrl+X"
 	},
 
@@ -287,7 +287,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.Copy"),
 		QT_TRANSLATE_NOOP("Menu", "&Copy"),
 		QT_TRANSLATE_NOOP("Status", "Copy the selection and put it on the Clipboard"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Copy</b></p><p>Put a copy of the selected parts on the clipboard, to paste in this or another model.</p>"),
 		"Ctrl+C"
 	},
 
@@ -296,7 +296,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.Paste"),
 		QT_TRANSLATE_NOOP("Menu", "&Paste"),
 		QT_TRANSLATE_NOOP("Status", "Insert Clipboard contents in the current step"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Paste</b></p><p>Insert the parts on the clipboard in the current step and select them.</p>"),
 		"Ctrl+V"
 	},
 
@@ -305,7 +305,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.PasteSteps"),
 		QT_TRANSLATE_NOOP("Menu", "Paste with Steps"),
 		QT_TRANSLATE_NOOP("Status", "Insert Clipboard contents in their original steps"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Paste with Steps</b></p><p>Insert the parts on the clipboard in the steps they were copied from, and select the ones shown at the current step.</p>"),
 		"Ctrl+Shift+V"
 	},
 
@@ -314,7 +314,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.Find"),
 		QT_TRANSLATE_NOOP("Menu", "&Find"),
 		QT_TRANSLATE_NOOP("Status", "Find part"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Find</b></p><p>Show the Find and Replace bar over the view to find parts by part, color or both.</p>"),
 		"Ctrl+F"
 	},
 
@@ -323,7 +323,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.FindNext"),
 		QT_TRANSLATE_NOOP("Menu", "Find Ne&xt"),
 		QT_TRANSLATE_NOOP("Status", "Find next part"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Find Next</b></p><p>Select the next part that matches the Find and Replace bar.</p>"),
 		""
 	},
 
@@ -332,7 +332,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.FindPrevious"),
 		QT_TRANSLATE_NOOP("Menu", "Find Pre&vious"),
 		QT_TRANSLATE_NOOP("Status", "Find previous part"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Find Previous</b></p><p>Select the previous part that matches the Find and Replace bar.</p>"),
 		""
 	},
 
@@ -341,7 +341,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.FindAll"),
 		QT_TRANSLATE_NOOP("Menu", "Find All"),
 		QT_TRANSLATE_NOOP("Status", "Find all parts that match the search criteria"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Find All</b></p><p>Select every part that matches the Find and Replace bar.</p>"),
 		"Ctrl+Alt+F"
 	},
 
@@ -350,7 +350,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.Replace"),
 		QT_TRANSLATE_NOOP("Menu", "Rep&lace"),
 		QT_TRANSLATE_NOOP("Status", "Replace part"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Replace</b></p><p>Show the Find and Replace bar with its replace fields, to change the part or color of matching parts.</p>"),
 		""
 	},
 
@@ -359,7 +359,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.ReplaceNext"),
 		QT_TRANSLATE_NOOP("Menu", "Replace Next"),
 		QT_TRANSLATE_NOOP("Status", "Replace next part"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Replace Next</b></p><p>Replace the part or color of the next matching part.</p>"),
 		""
 	},
 
@@ -368,7 +368,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.ReplaceAll"),
 		QT_TRANSLATE_NOOP("Menu", "Replace All"),
 		QT_TRANSLATE_NOOP("Status", "Replace all parts that match the search criteria"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Replace All</b></p><p>Replace the part or color of every matching part. With Replace in Submodels it reaches every submodel the model uses.</p>"),
 		""
 	},
 
@@ -377,7 +377,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SelectAll"),
 		QT_TRANSLATE_NOOP("Menu", "Select &All"),
 		QT_TRANSLATE_NOOP("Status", "Select all parts in the model"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Select All</b></p><p>Select every visible part of the current model.</p>"),
 		"Ctrl+A"
 	},
 
@@ -386,7 +386,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SelectNone"),
 		QT_TRANSLATE_NOOP("Menu", "Select &None"),
 		QT_TRANSLATE_NOOP("Status", "Deselect everything"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Select None</b></p><p>Clear the selection.</p>"),
 		""
 	},
 
@@ -395,7 +395,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SelectInvert"),
 		QT_TRANSLATE_NOOP("Menu", "&Invert Selection"),
 		QT_TRANSLATE_NOOP("Status", "Invert the current selection set"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Invert Selection</b></p><p>Select the parts that are not selected and clear the ones that are.</p>"),
 		"Ctrl+I"
 	},
 
@@ -422,7 +422,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.ToggleShadowLibrary"),
 		QT_TRANSLATE_NOOP("Menu", "Part Connections"),
 		QT_TRANSLATE_NOOP("Status", "Toggle finding connected parts with the LDCad shadow library"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Part Connections</b></p><p>Use the connection shapes of the LDCad shadow library to find connected parts, for Select Connected Parts, joints and Explode. The shadow library folder is chosen in Preferences.</p>"),
 		"Ctrl+Alt+Shift+C"
 	},
 
@@ -431,7 +431,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SelectByName"),
 		QT_TRANSLATE_NOOP("Menu", "Select by Na&me..."),
 		QT_TRANSLATE_NOOP("Status", "Select objects by name"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Select by Name</b></p><p>Open a checklist of every object in the model and select them by name, with All, None and Invert.</p>"),
 		""
 	},
 
@@ -440,7 +440,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SelectSingle"),
 		QT_TRANSLATE_NOOP("Menu", "Single Selection"),
 		QT_TRANSLATE_NOOP("Status", "Select one part at a time"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Single Selection</b></p><p>A click selects only the part under the pointer.</p>"),
 		"Ctrl+Shift+S"
 	},
 
@@ -449,7 +449,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SelectPart"),
 		QT_TRANSLATE_NOOP("Menu", "Part Selection"),
 		QT_TRANSLATE_NOOP("Status", "Select all parts of the same type"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Part Selection</b></p><p>A click selects every part of the same type as the one under the pointer.</p>"),
 		"Ctrl+Shift+P"
 	},
 
@@ -458,7 +458,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SelectColor"),
 		QT_TRANSLATE_NOOP("Menu", "Color Selection"),
 		QT_TRANSLATE_NOOP("Status", "Select all parts of the same color"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Color Selection</b></p><p>A click selects every part of the same color as the one under the pointer.</p>"),
 		"Ctrl+Shift+C"
 	},
 
@@ -467,7 +467,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SelectPartColor"),
 		QT_TRANSLATE_NOOP("Menu", "Part and Color Selection"),
 		QT_TRANSLATE_NOOP("Status", "Select all parts of the same type and color"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Part and Color Selection</b></p><p>A click selects every part of the same type and color as the one under the pointer.</p>"),
 		"Ctrl+Shift+A"
 	},
 
@@ -476,7 +476,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.TransformRelative"),
 		QT_TRANSLATE_NOOP("Menu", "Relative Transforms"),
 		QT_TRANSLATE_NOOP("Status", "Move and rotate objects relative to the one that has focus"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Relative Transforms</b></p><p>Move and rotate the selection along the axes of the part that has focus.</p>"),
 		"-"
 	},
 
@@ -485,7 +485,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.TransformAbsolute"),
 		QT_TRANSLATE_NOOP("Menu", "Absolute Transforms"),
 		QT_TRANSLATE_NOOP("Status", "Move and rotate objects in absolute coordinates"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Absolute Transforms</b></p><p>Move and rotate the selection along the model axes.</p>"),
 		"+"
 	},
 
@@ -494,7 +494,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.TransformToggleRelative"),
 		QT_TRANSLATE_NOOP("Menu", "Toggle Relative Transforms"),
 		QT_TRANSLATE_NOOP("Status", "Toggle moving and rotating objects relative to the one that has focus"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Toggle Relative Transforms</b></p><p>Switch between relative and absolute transforms.</p>"),
 		"/"
 	},
 
@@ -503,7 +503,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.TransformSeparately"),
 		QT_TRANSLATE_NOOP("Menu", "Rotate Separately"),
 		QT_TRANSLATE_NOOP("Status", "Rotate selected parts separately"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotate Separately</b></p><p>Turn each selected part around its own pivot point.</p>"),
 		"Ctrl+-"
 	},
 
@@ -512,7 +512,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.TransformTogether"),
 		QT_TRANSLATE_NOOP("Menu", "Rotate Together"),
 		QT_TRANSLATE_NOOP("Status", "Rotate selected parts together"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotate Together</b></p><p>Turn the selection as one around the pivot of the part that has focus.</p>"),
 		"Ctrl+="
 	},
 
@@ -521,7 +521,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.TransformToggleSeparate"),
 		QT_TRANSLATE_NOOP("Menu", "Toggle Separate Transforms"),
 		QT_TRANSLATE_NOOP("Status", "Toggle rotating selected parts separately"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Toggle Separate Transforms</b></p><p>Switch between rotating the selected parts separately and together.</p>"),
 		"Ctrl+T"
 	},
 
@@ -530,7 +530,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.Snap.Toggle"),
 		QT_TRANSLATE_NOOP("Menu", "Move Snap"),
 		QT_TRANSLATE_NOOP("Status", "Toggle movement snapping"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Move Snap</b></p><p>Turn move snapping on or off. With it on, moves go in the horizontal and vertical steps chosen below.</p>"),
 		"Ctrl+Shift+M"
 	},
 
@@ -539,7 +539,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY0"),
 		QT_TRANSLATE_NOOP("Menu", "No XY Snap"),
 		QT_TRANSLATE_NOOP("Status", "Do not snap movement along the XY plane"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Horizontal Move Snap</b></p><p>Move parts across the horizontal plane in this step, or freely with No XY Snap.</p>"),
 		"0"
 	},
 
@@ -548,7 +548,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY1"),
 		QT_TRANSLATE_NOOP("Menu", "XY 1/20 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the XY plane to 1/20 stud"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Horizontal Move Snap</b></p><p>Move parts across the horizontal plane in this step, or freely with No XY Snap.</p>"),
 		"1"
 	},
 
@@ -557,7 +557,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY2"),
 		QT_TRANSLATE_NOOP("Menu", "XY 1/4 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the XY plane to 1/4 stud"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Horizontal Move Snap</b></p><p>Move parts across the horizontal plane in this step, or freely with No XY Snap.</p>"),
 		"2"
 	},
 
@@ -566,7 +566,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY3"),
 		QT_TRANSLATE_NOOP("Menu", "XY 1 Flat"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the XY plane to 1 flat"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Horizontal Move Snap</b></p><p>Move parts across the horizontal plane in this step, or freely with No XY Snap.</p>"),
 		"3"
 	},
 
@@ -575,7 +575,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY4"),
 		QT_TRANSLATE_NOOP("Menu", "XY 1/2 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the XY plane to 1/2 stud"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Horizontal Move Snap</b></p><p>Move parts across the horizontal plane in this step, or freely with No XY Snap.</p>"),
 		"4"
 	},
 
@@ -584,7 +584,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY5"),
 		QT_TRANSLATE_NOOP("Menu", "XY 1 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the XY plane to 1 stud"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Horizontal Move Snap</b></p><p>Move parts across the horizontal plane in this step, or freely with No XY Snap.</p>"),
 		"5"
 	},
 
@@ -593,7 +593,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY6"),
 		QT_TRANSLATE_NOOP("Menu", "XY 2 Studs"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the XY plane to 2 studs"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Horizontal Move Snap</b></p><p>Move parts across the horizontal plane in this step, or freely with No XY Snap.</p>"),
 		"6"
 	},
 
@@ -602,7 +602,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY7"),
 		QT_TRANSLATE_NOOP("Menu", "XY 3 Studs"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the XY plane to 3 studs"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Horizontal Move Snap</b></p><p>Move parts across the horizontal plane in this step, or freely with No XY Snap.</p>"),
 		"7"
 	},
 
@@ -611,7 +611,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY8"),
 		QT_TRANSLATE_NOOP("Menu", "XY 4 Studs"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the XY plane to 4 studs"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Horizontal Move Snap</b></p><p>Move parts across the horizontal plane in this step, or freely with No XY Snap.</p>"),
 		"8"
 	},
 
@@ -620,7 +620,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.XY9"),
 		QT_TRANSLATE_NOOP("Menu", "XY 8 Studs"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the XY plane to 8 studs"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Horizontal Move Snap</b></p><p>Move parts across the horizontal plane in this step, or freely with No XY Snap.</p>"),
 		"9"
 	},
 
@@ -629,7 +629,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z0"),
 		QT_TRANSLATE_NOOP("Menu", "No Z Snap"),
 		QT_TRANSLATE_NOOP("Status", "Do not snap movement along the Z axis"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Vertical Move Snap</b></p><p>Move parts up and down in this step, or freely with No Z Snap.</p>"),
 		"Alt+#"
 	},
 
@@ -638,7 +638,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z1"),
 		QT_TRANSLATE_NOOP("Menu", "Z 1/20 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 1/20 stud"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Vertical Move Snap</b></p><p>Move parts up and down in this step, or freely with No Z Snap.</p>"),
 		"Alt+1"
 	},
 
@@ -647,7 +647,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z2"),
 		QT_TRANSLATE_NOOP("Menu", "Z 1/4 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 1/4 stud"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Vertical Move Snap</b></p><p>Move parts up and down in this step, or freely with No Z Snap.</p>"),
 		"Alt+2"
 	},
 
@@ -656,7 +656,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z3"),
 		QT_TRANSLATE_NOOP("Menu", "Z 1 Flat"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 1 flat"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Vertical Move Snap</b></p><p>Move parts up and down in this step, or freely with No Z Snap.</p>"),
 		"Alt+3"
 	},
 
@@ -665,7 +665,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z4"),
 		QT_TRANSLATE_NOOP("Menu", "Z 1/2 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 1/2 stud"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Vertical Move Snap</b></p><p>Move parts up and down in this step, or freely with No Z Snap.</p>"),
 		"Alt+4"
 	},
 
@@ -674,7 +674,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z5"),
 		QT_TRANSLATE_NOOP("Menu", "Z 1 Stud"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 1 stud"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Vertical Move Snap</b></p><p>Move parts up and down in this step, or freely with No Z Snap.</p>"),
 		"Alt+5"
 	},
 
@@ -683,7 +683,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z6"),
 		QT_TRANSLATE_NOOP("Menu", "Z 1 Brick"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 1 brick"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Vertical Move Snap</b></p><p>Move parts up and down in this step, or freely with No Z Snap.</p>"),
 		"Alt+6"
 	},
 
@@ -692,7 +692,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z7"),
 		QT_TRANSLATE_NOOP("Menu", "Z 2 Bricks"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 2 bricks"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Vertical Move Snap</b></p><p>Move parts up and down in this step, or freely with No Z Snap.</p>"),
 		"Alt+7"
 	},
 
@@ -701,7 +701,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z8"),
 		QT_TRANSLATE_NOOP("Menu", "Z 4 Bricks"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 4 bricks"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Vertical Move Snap</b></p><p>Move parts up and down in this step, or freely with No Z Snap.</p>"),
 		"Alt+8"
 	},
 
@@ -710,7 +710,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapMove.Z9"),
 		QT_TRANSLATE_NOOP("Menu", "Z 8 Bricks"),
 		QT_TRANSLATE_NOOP("Status", "Snap movement along the Z axis to 8 bricks"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Vertical Move Snap</b></p><p>Move parts up and down in this step, or freely with No Z Snap.</p>"),
 		"Alt+9"
 	},
 
@@ -719,7 +719,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapAngle.Toggle"),
 		QT_TRANSLATE_NOOP("Menu", "Rotation Snap"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to fixed intervals"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotation Snap</b></p><p>Turn rotation snapping on or off. With it on, rotations go in the angle chosen below.</p>"),
 		"Alt+R"
 	},
 
@@ -728,7 +728,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapAngle.Angle0"),
 		QT_TRANSLATE_NOOP("Menu", "No Rotation Snap"),
 		QT_TRANSLATE_NOOP("Status", "Do not snap rotations"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotation Snap Angle</b></p><p>Rotate parts in steps of this angle, or freely with No Rotation Snap. Turns land exactly on square angles, so later moves keep whole coordinates.</p>"),
 		"Ctrl+0"
 	},
 
@@ -737,7 +737,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapAngle.Angle1"),
 		QT_TRANSLATE_NOOP("Menu", "1 Degree"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to 1 degree"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotation Snap Angle</b></p><p>Rotate parts in steps of this angle, or freely with No Rotation Snap. Turns land exactly on square angles, so later moves keep whole coordinates.</p>"),
 		"Ctrl+1"
 	},
 
@@ -746,7 +746,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapAngle.Angle2"),
 		QT_TRANSLATE_NOOP("Menu", "5 Degrees"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to 5 degrees"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotation Snap Angle</b></p><p>Rotate parts in steps of this angle, or freely with No Rotation Snap. Turns land exactly on square angles, so later moves keep whole coordinates.</p>"),
 		"Ctrl+2"
 	},
 
@@ -755,7 +755,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapAngle.Angle3"),
 		QT_TRANSLATE_NOOP("Menu", "15 Degrees"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to 15 degrees"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotation Snap Angle</b></p><p>Rotate parts in steps of this angle, or freely with No Rotation Snap. Turns land exactly on square angles, so later moves keep whole coordinates.</p>"),
 		"Ctrl+3"
 	},
 
@@ -764,7 +764,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapAngle.Angle4"),
 		QT_TRANSLATE_NOOP("Menu", "22.5 Degrees"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to 22.5 degrees"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotation Snap Angle</b></p><p>Rotate parts in steps of this angle, or freely with No Rotation Snap. Turns land exactly on square angles, so later moves keep whole coordinates.</p>"),
 		"Ctrl+4"
 	},
 
@@ -773,7 +773,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapAngle.Angle5"),
 		QT_TRANSLATE_NOOP("Menu", "30 Degrees"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to 30 degrees"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotation Snap Angle</b></p><p>Rotate parts in steps of this angle, or freely with No Rotation Snap. Turns land exactly on square angles, so later moves keep whole coordinates.</p>"),
 		"Ctrl+5"
 	},
 
@@ -782,7 +782,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapAngle.Angle6"),
 		QT_TRANSLATE_NOOP("Menu", "45 Degrees"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to 45 degrees"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotation Snap Angle</b></p><p>Rotate parts in steps of this angle, or freely with No Rotation Snap. Turns land exactly on square angles, so later moves keep whole coordinates.</p>"),
 		"Ctrl+6"
 	},
 
@@ -791,7 +791,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapAngle.Angle7"),
 		QT_TRANSLATE_NOOP("Menu", "60 Degrees"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to 60 degrees"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotation Snap Angle</b></p><p>Rotate parts in steps of this angle, or freely with No Rotation Snap. Turns land exactly on square angles, so later moves keep whole coordinates.</p>"),
 		"Ctrl+7"
 	},
 
@@ -800,7 +800,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapAngle.Angle8"),
 		QT_TRANSLATE_NOOP("Menu", "90 Degrees"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to 90 degrees"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotation Snap Angle</b></p><p>Rotate parts in steps of this angle, or freely with No Rotation Snap. Turns land exactly on square angles, so later moves keep whole coordinates.</p>"),
 		"Ctrl+8"
 	},
 
@@ -809,7 +809,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapAngle.Angle9"),
 		QT_TRANSLATE_NOOP("Menu", "180 Degrees"),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to 180 degrees"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotation Snap Angle</b></p><p>Rotate parts in steps of this angle, or freely with No Rotation Snap. Turns land exactly on square angles, so later moves keep whole coordinates.</p>"),
 		"Ctrl+9"
 	},
 
@@ -818,7 +818,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapAngle.Custom"),
 		QT_TRANSLATE_NOOP("Menu", "Custom..."),
 		QT_TRANSLATE_NOOP("Status", "Snap rotations to a custom angle"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Custom Angle</b></p><p>Type your own rotation snap angle in degrees.</p>"),
 		""
 	},
 
@@ -827,7 +827,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.SnapAngle.ToggleOrbit"),
 		QT_TRANSLATE_NOOP("Menu", "Camera Snap"),
 		QT_TRANSLATE_NOOP("Status", "Toggle orbiting the camera in steps of the rotation snap angle"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Camera Snap</b></p><p>Orbit the view in steps of the rotation snap angle.</p>"),
 		""
 	},
 
@@ -836,7 +836,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.Transform"),
 		QT_TRANSLATE_NOOP("Menu", "Transform"),
 		QT_TRANSLATE_NOOP("Status", "Apply transform to selected objects"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Transform</b></p><p>Apply the position or rotation typed in the Transform toolbar to the selection.</p>"),
 		""
 	},
 
@@ -845,7 +845,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.TransformAbsoluteTranslation"),
 		QT_TRANSLATE_NOOP("Menu", "Absolute Translation"),
 		QT_TRANSLATE_NOOP("Status", "Switch to absolute translation mode when applying transforms"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Absolute Translation</b></p><p>The Transform toolbar moves the selection to the typed position in model coordinates.</p>"),
 		"Alt+Shift+T"
 	},
 
@@ -854,7 +854,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.TransformRelativeTranslation"),
 		QT_TRANSLATE_NOOP("Menu", "Relative Translation"),
 		QT_TRANSLATE_NOOP("Status", "Switch to relative translation mode when applying transforms"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Relative Translation</b></p><p>The Transform toolbar moves the selection by the typed distance.</p>"),
 		"Ctrl+Alt+T"
 	},
 
@@ -863,7 +863,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.TransformAbsoluteRotation"),
 		QT_TRANSLATE_NOOP("Menu", "Absolute Rotation"),
 		QT_TRANSLATE_NOOP("Status", "Switch to absolute rotation mode when applying transforms"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Absolute Rotation</b></p><p>The Transform toolbar turns the selection to the typed angles.</p>"),
 		"Alt+Shift+R"
 	},
 
@@ -872,7 +872,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.TransformRelativeRotation"),
 		QT_TRANSLATE_NOOP("Menu", "Relative Rotation"),
 		QT_TRANSLATE_NOOP("Status", "Switch to relative rotation mode when applying transforms"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Relative Rotation</b></p><p>The Transform toolbar turns the selection by the typed angles.</p>"),
 		"Ctrl+Alt+R"
 	},
 
@@ -1043,7 +1043,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.Cancel"),
 		QT_TRANSLATE_NOOP("Menu", "Cancel Action"),
 		QT_TRANSLATE_NOOP("Status", "Cancel current mouse action"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Cancel Action</b></p><p>Cancel the current mouse action, a face or cutaway pick or a cutaway resize, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.</p>"),
 		"Esc"
 	},
 
@@ -1052,7 +1052,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Preferences"),
 		QT_TRANSLATE_NOOP("Menu", "Preference&s..."),
 		QT_TRANSLATE_NOOP("Status", "Change program settings"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Preferences</b></p><p>Open the program settings: General, Rendering, Views, Interface, Instructions, Categories, Context Menu, Keyboard and Mouse.</p>"),
 		"Ctrl+Alt+Shift+P"
 	},
 
@@ -1061,7 +1061,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.ZoomIn"),
 		QT_TRANSLATE_NOOP("Menu", "Zoom In"),
 		QT_TRANSLATE_NOOP("Status", "Zoom in"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Zoom In</b></p><p>Move the camera closer to the model.</p>"),
 		""
 	},
 
@@ -1070,7 +1070,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.ZoomOut"),
 		QT_TRANSLATE_NOOP("Menu", "Zoom Out"),
 		QT_TRANSLATE_NOOP("Status", "Zoom out"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Zoom Out</b></p><p>Move the camera away from the model.</p>"),
 		""
 	},
 
@@ -1079,7 +1079,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.ZoomExtents"),
 		QT_TRANSLATE_NOOP("Menu", "Zoom E&xtents"),
 		QT_TRANSLATE_NOOP("Status", "Fit all parts in the current view"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Zoom Extents</b></p><p>Move the camera until every part fits in the view.</p>"),
 		"#"
 	},
 
@@ -1088,7 +1088,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.LookAt"),
 		QT_TRANSLATE_NOOP("Menu", "Look At"),
 		QT_TRANSLATE_NOOP("Status", "Rotate view so selected parts are at center"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Look At</b></p><p>Turn the view so the selected parts are at its center.</p>"),
 		""
 	},
 
@@ -1097,7 +1097,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.MoveForward"),
 		QT_TRANSLATE_NOOP("Menu", "Move Forward"),
 		QT_TRANSLATE_NOOP("Status", "Move the current view forward"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Move View</b></p><p>Move the camera of the current view, keeping its direction, from the keyboard or a gamepad.</p>"),
 		""
 	},
 
@@ -1106,7 +1106,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.MoveBackward"),
 		QT_TRANSLATE_NOOP("Menu", "Move Backward"),
 		QT_TRANSLATE_NOOP("Status", "Move the current view backward"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Move View</b></p><p>Move the camera of the current view, keeping its direction, from the keyboard or a gamepad.</p>"),
 		""
 	},
 
@@ -1115,7 +1115,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.MoveLeft"),
 		QT_TRANSLATE_NOOP("Menu", "Move Left"),
 		QT_TRANSLATE_NOOP("Status", "Move the current view to the left"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Move View</b></p><p>Move the camera of the current view, keeping its direction, from the keyboard or a gamepad.</p>"),
 		"Ctrl+Alt+Left"
 	},
 
@@ -1124,7 +1124,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.MoveRight"),
 		QT_TRANSLATE_NOOP("Menu", "Move Right"),
 		QT_TRANSLATE_NOOP("Status", "Move the current view to the right"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Move View</b></p><p>Move the camera of the current view, keeping its direction, from the keyboard or a gamepad.</p>"),
 		"Ctrl+Alt+Right"
 	},
 
@@ -1133,7 +1133,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.MoveUp"),
 		QT_TRANSLATE_NOOP("Menu", "Move Up"),
 		QT_TRANSLATE_NOOP("Status", "Move the current view up"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Move View</b></p><p>Move the camera of the current view, keeping its direction, from the keyboard or a gamepad.</p>"),
 		"Ctrl+Alt+Up"
 	},
 
@@ -1142,7 +1142,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.MoveDown"),
 		QT_TRANSLATE_NOOP("Menu", "Move Down"),
 		QT_TRANSLATE_NOOP("Status", "Move the current view down"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Move View</b></p><p>Move the camera of the current view, keeping its direction, from the keyboard or a gamepad.</p>"),
 		"Ctrl+Alt+Down"
 	},
 
@@ -1151,7 +1151,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Viewpoint.Front"),
 		QT_TRANSLATE_NOOP("Menu", "&Front"),
 		QT_TRANSLATE_NOOP("Status", "View model from the front"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Viewpoint</b></p><p>Look at the model from this side, or from the default angle with Home.</p>"),
 		"F"
 	},
 
@@ -1160,7 +1160,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Viewpoint.Back"),
 		QT_TRANSLATE_NOOP("Menu", "&Back"),
 		QT_TRANSLATE_NOOP("Status", "View model from the back"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Viewpoint</b></p><p>Look at the model from this side, or from the default angle with Home.</p>"),
 		"B"
 	},
 
@@ -1169,7 +1169,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Viewpoint.Top"),
 		QT_TRANSLATE_NOOP("Menu", "&Top"),
 		QT_TRANSLATE_NOOP("Status", "View model from the top"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Viewpoint</b></p><p>Look at the model from this side, or from the default angle with Home.</p>"),
 		"T"
 	},
 
@@ -1178,7 +1178,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Viewpoint.Bottom"),
 		QT_TRANSLATE_NOOP("Menu", "B&ottom"),
 		QT_TRANSLATE_NOOP("Status", "View model from the bottom"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Viewpoint</b></p><p>Look at the model from this side, or from the default angle with Home.</p>"),
 		"O"
 	},
 
@@ -1187,7 +1187,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Viewpoint.Left"),
 		QT_TRANSLATE_NOOP("Menu", "&Left"),
 		QT_TRANSLATE_NOOP("Status", "View model from the left"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Viewpoint</b></p><p>Look at the model from this side, or from the default angle with Home.</p>"),
 		"L"
 	},
 
@@ -1196,7 +1196,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Viewpoint.Right"),
 		QT_TRANSLATE_NOOP("Menu", "&Right"),
 		QT_TRANSLATE_NOOP("Status", "View model from the right"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Viewpoint</b></p><p>Look at the model from this side, or from the default angle with Home.</p>"),
 		"R"
 	},
 
@@ -1205,7 +1205,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Viewpoint.Home"),
 		QT_TRANSLATE_NOOP("Menu", "&Home"),
 		QT_TRANSLATE_NOOP("Status", "View model from the default position"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Viewpoint</b></p><p>Look at the model from this side, or from the default angle with Home.</p>"),
 		"H"
 	},
 
@@ -1214,7 +1214,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cameras.None"),
 		QT_TRANSLATE_NOOP("Menu", "No Camera"),
 		QT_TRANSLATE_NOOP("Status", "Do not use a camera"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>No Camera</b></p><p>Leave the model's cameras and use the free view.</p>"),
 		""
 	},
 
@@ -1223,7 +1223,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cameras.Camera01"),
 		QT_TRANSLATE_NOOP("Menu", "Camera 1"),
 		QT_TRANSLATE_NOOP("Status", "Use this camera"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Camera</b></p><p>Look through this camera of the model. The menu lists the first sixteen cameras.</p>"),
 		""
 	},
 
@@ -1232,7 +1232,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cameras.Camera02"),
 		QT_TRANSLATE_NOOP("Menu", "Camera 2"),
 		QT_TRANSLATE_NOOP("Status", "Use this camera"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Camera</b></p><p>Look through this camera of the model. The menu lists the first sixteen cameras.</p>"),
 		""
 	},
 
@@ -1241,7 +1241,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cameras.Camera03"),
 		QT_TRANSLATE_NOOP("Menu", "Camera 3"),
 		QT_TRANSLATE_NOOP("Status", "Use this camera"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Camera</b></p><p>Look through this camera of the model. The menu lists the first sixteen cameras.</p>"),
 		""
 	},
 
@@ -1250,7 +1250,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cameras.Camera04"),
 		QT_TRANSLATE_NOOP("Menu", "Camera 4"),
 		QT_TRANSLATE_NOOP("Status", "Use this camera"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Camera</b></p><p>Look through this camera of the model. The menu lists the first sixteen cameras.</p>"),
 		""
 	},
 
@@ -1259,7 +1259,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cameras.Camera05"),
 		QT_TRANSLATE_NOOP("Menu", "Camera 5"),
 		QT_TRANSLATE_NOOP("Status", "Use this camera"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Camera</b></p><p>Look through this camera of the model. The menu lists the first sixteen cameras.</p>"),
 		""
 	},
 
@@ -1268,7 +1268,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cameras.Camera06"),
 		QT_TRANSLATE_NOOP("Menu", "Camera 6"),
 		QT_TRANSLATE_NOOP("Status", "Use this camera"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Camera</b></p><p>Look through this camera of the model. The menu lists the first sixteen cameras.</p>"),
 		""
 	},
 
@@ -1277,7 +1277,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cameras.Camera07"),
 		QT_TRANSLATE_NOOP("Menu", "Camera 7"),
 		QT_TRANSLATE_NOOP("Status", "Use this camera"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Camera</b></p><p>Look through this camera of the model. The menu lists the first sixteen cameras.</p>"),
 		""
 	},
 
@@ -1286,7 +1286,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cameras.Camera08"),
 		QT_TRANSLATE_NOOP("Menu", "Camera 8"),
 		QT_TRANSLATE_NOOP("Status", "Use this camera"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Camera</b></p><p>Look through this camera of the model. The menu lists the first sixteen cameras.</p>"),
 		""
 	},
 
@@ -1295,7 +1295,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cameras.Camera09"),
 		QT_TRANSLATE_NOOP("Menu", "Camera 9"),
 		QT_TRANSLATE_NOOP("Status", "Use this camera"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Camera</b></p><p>Look through this camera of the model. The menu lists the first sixteen cameras.</p>"),
 		""
 	},
 
@@ -1304,7 +1304,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cameras.Camera10"),
 		QT_TRANSLATE_NOOP("Menu", "Camera 10"),
 		QT_TRANSLATE_NOOP("Status", "Use this camera"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Camera</b></p><p>Look through this camera of the model. The menu lists the first sixteen cameras.</p>"),
 		""
 	},
 
@@ -1313,7 +1313,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cameras.Camera11"),
 		QT_TRANSLATE_NOOP("Menu", "Camera 11"),
 		QT_TRANSLATE_NOOP("Status", "Use this camera"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Camera</b></p><p>Look through this camera of the model. The menu lists the first sixteen cameras.</p>"),
 		""
 	},
 
@@ -1322,7 +1322,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cameras.Camera12"),
 		QT_TRANSLATE_NOOP("Menu", "Camera 12"),
 		QT_TRANSLATE_NOOP("Status", "Use this camera"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Camera</b></p><p>Look through this camera of the model. The menu lists the first sixteen cameras.</p>"),
 		""
 	},
 
@@ -1331,7 +1331,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cameras.Camera13"),
 		QT_TRANSLATE_NOOP("Menu", "Camera 13"),
 		QT_TRANSLATE_NOOP("Status", "Use this camera"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Camera</b></p><p>Look through this camera of the model. The menu lists the first sixteen cameras.</p>"),
 		""
 	},
 
@@ -1340,7 +1340,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cameras.Camera14"),
 		QT_TRANSLATE_NOOP("Menu", "Camera 14"),
 		QT_TRANSLATE_NOOP("Status", "Use this camera"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Camera</b></p><p>Look through this camera of the model. The menu lists the first sixteen cameras.</p>"),
 		""
 	},
 
@@ -1349,7 +1349,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cameras.Camera15"),
 		QT_TRANSLATE_NOOP("Menu", "Camera 15"),
 		QT_TRANSLATE_NOOP("Status", "Use this camera"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Camera</b></p><p>Look through this camera of the model. The menu lists the first sixteen cameras.</p>"),
 		""
 	},
 
@@ -1358,7 +1358,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cameras.Camera16"),
 		QT_TRANSLATE_NOOP("Menu", "Camera 16"),
 		QT_TRANSLATE_NOOP("Status", "Use this camera"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Camera</b></p><p>Look through this camera of the model. The menu lists the first sixteen cameras.</p>"),
 		""
 	},
 
@@ -1403,7 +1403,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Time.InsertBefore"),
 		QT_TRANSLATE_NOOP("Menu", "Insert Before"),
 		QT_TRANSLATE_NOOP("Status", "Insert a new step before the current step"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Insert Before</b></p><p>Add an empty step before the current step. The current step and the ones after it move one step later.</p>"),
 		""
 	},
 
@@ -1412,7 +1412,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Time.InsertAfter"),
 		QT_TRANSLATE_NOOP("Menu", "Insert After"),
 		QT_TRANSLATE_NOOP("Status", "Insert a new step after the current step"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Insert After</b></p><p>Add an empty step after the current step. The steps after it move one step later.</p>"),
 		""
 	},
 
@@ -1421,7 +1421,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Time.Delete"),
 		QT_TRANSLATE_NOOP("Menu", "Delete Step"),
 		QT_TRANSLATE_NOOP("Status", "Delete the current step"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Delete Step</b></p><p>Remove the current step. Its parts join the step before it and later steps move one step earlier.</p>"),
 		"Shift+Del"
 	},
 
@@ -1466,7 +1466,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Time.Stop"),
 		QT_TRANSLATE_NOOP("Menu", "Stop"),
 		QT_TRANSLATE_NOOP("Status", "Stop playing and go back to the step playing started from"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Stop</b></p><p>Stop playing through the steps and go back to the step playing started from.</p>"),
 		"Ctrl+Shift+K"
 	},
 
@@ -1493,7 +1493,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.RemoveView"),
 		QT_TRANSLATE_NOOP("Menu", "Re&move View"),
 		QT_TRANSLATE_NOOP("Status", "Remove the current view"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Remove View</b></p><p>Close the active split view.</p>"),
 		""
 	},
 
@@ -1502,7 +1502,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.ResetViews"),
 		QT_TRANSLATE_NOOP("Menu", "Rese&t Views"),
 		QT_TRANSLATE_NOOP("Status", "Reset all views"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Reset Views</b></p><p>Remove every split and go back to one view.</p>"),
 		""
 	},
 
@@ -1511,7 +1511,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Standard"),
 		QT_TRANSLATE_NOOP("Menu", "Standard Toolbar"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Standard toolbar"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Show or Hide</b></p><p>Show or hide this toolbar or panel. A right click on any toolbar or panel title gives the same list.</p>"),
 		"F4"
 	},
 
@@ -1520,7 +1520,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Tools"),
 		QT_TRANSLATE_NOOP("Menu", "Tools Toolbar"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Tools toolbar"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Show or Hide</b></p><p>Show or hide this toolbar or panel. A right click on any toolbar or panel title gives the same list.</p>"),
 		"F5"
 	},
 
@@ -1529,7 +1529,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Time"),
 		QT_TRANSLATE_NOOP("Menu", "Time Toolbar"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Time toolbar"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Show or Hide</b></p><p>Show or hide this toolbar or panel. A right click on any toolbar or panel title gives the same list.</p>"),
 		"F6"
 	},
 
@@ -1538,7 +1538,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Parts"),
 		QT_TRANSLATE_NOOP("Menu", "Parts Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Parts panel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Show or Hide</b></p><p>Show or hide this toolbar or panel. A right click on any toolbar or panel title gives the same list.</p>"),
 		"F8"
 	},
 
@@ -1547,7 +1547,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Colors"),
 		QT_TRANSLATE_NOOP("Menu", "Colors Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Colors panel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Show or Hide</b></p><p>Show or hide this toolbar or panel. A right click on any toolbar or panel title gives the same list.</p>"),
 		"F7"
 	},
 
@@ -1556,7 +1556,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Properties"),
 		QT_TRANSLATE_NOOP("Menu", "Properties Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Properties panel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Show or Hide</b></p><p>Show or hide this toolbar or panel. A right click on any toolbar or panel title gives the same list.</p>"),
 		"F9"
 	},
 
@@ -1565,7 +1565,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Timeline"),
 		QT_TRANSLATE_NOOP("Menu", "Timeline Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Timeline panel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Show or Hide</b></p><p>Show or hide this toolbar or panel. A right click on any toolbar or panel title gives the same list.</p>"),
 		"F10"
 	},
 
@@ -1574,7 +1574,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Preview"),
 		QT_TRANSLATE_NOOP("Menu", "Preview Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Preview panel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Show or Hide</b></p><p>Show or hide this toolbar or panel. A right click on any toolbar or panel title gives the same list.</p>"),
 		"F11"
 	},
 
@@ -1583,7 +1583,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Terminal"),
 		QT_TRANSLATE_NOOP("Menu", "Terminal Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Terminal panel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Show or Hide</b></p><p>Show or hide this toolbar or panel. A right click on any toolbar or panel title gives the same list.</p>"),
 		""
 	},
 
@@ -1592,7 +1592,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.MinifigureBuilder"),
 		QT_TRANSLATE_NOOP("Menu", "Minifigure Builder Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Minifigure Builder panel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Show or Hide</b></p><p>Show or hide this toolbar or panel. A right click on any toolbar or panel title gives the same list.</p>"),
 		""
 	},
 
@@ -1645,7 +1645,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.FullScreen"),
 		QT_TRANSLATE_NOOP("Menu", "&Full Screen"),
 		QT_TRANSLATE_NOOP("Status", "Toggle full screen mode"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Full Screen</b></p><p>Fill the whole screen with the StudWorx window, or go back to a normal window.</p>"),
 		"Alt+F11"
 	},
 
@@ -1654,7 +1654,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.CloseCurrentTab"),
 		QT_TRANSLATE_NOOP("Menu", "Close &Tab"),
 		QT_TRANSLATE_NOOP("Status", "Close current tab"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Close Tab</b></p><p>Close the current model tab, asking to save its changes first.</p>"),
 		"Ctrl+W"
 	},
 
@@ -1663,7 +1663,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Shade.Wireframe"),
 		QT_TRANSLATE_NOOP("Menu", "&Wireframe"),
 		QT_TRANSLATE_NOOP("Status", "Display the scene as wireframe"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Wireframe</b></p><p>Draw the model view as lines only, without faces.</p>"),
 		"Shift+W"
 	},
 
@@ -1672,7 +1672,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Shade.Flat"),
 		QT_TRANSLATE_NOOP("Menu", "&Flat Shading"),
 		QT_TRANSLATE_NOOP("Status", "Display the scene without any shading or lights"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Flat Shading</b></p><p>Draw the model view in plain colors, without shading or lights.</p>"),
 		"Shift+F"
 	},
 
@@ -1681,7 +1681,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Shade.DefaultLights"),
 		QT_TRANSLATE_NOOP("Menu", "&Default Lights"),
 		QT_TRANSLATE_NOOP("Status", "Display the scene with the default lights"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Default Lights</b></p><p>Light the model view with the built-in lights instead of the lights placed in the model.</p>"),
 		""
 	},
 
@@ -1726,7 +1726,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Projection.Perspective"),
 		QT_TRANSLATE_NOOP("Menu", "&Perspective"),
 		QT_TRANSLATE_NOOP("Status", "Set the current camera to use a perspective projection"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Perspective</b></p><p>Show the view with perspective, distant parts smaller.</p>"),
 		"F3"
 	},
 
@@ -1735,7 +1735,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Projection.Orthographic"),
 		QT_TRANSLATE_NOOP("Menu", "&Orthographic"),
 		QT_TRANSLATE_NOOP("Status", "Set the current camera to use an orthographic projection"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Orthographic</b></p><p>Show the view without perspective, parallel lines staying parallel.</p>"),
 		"F2"
 	},
 
@@ -1780,7 +1780,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.StepView.Edit"),
 		QT_TRANSLATE_NOOP("Menu", "Step View..."),
 		QT_TRANSLATE_NOOP("Status", "Set the view rotation of the current step"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Step View</b></p><p>Set the view rotation of the current step, saved as an MLCad ROTSTEP.</p>"),
 		""
 	},
 
@@ -1789,7 +1789,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.StepView.Remove"),
 		QT_TRANSLATE_NOOP("Menu", "Remove Step View"),
 		QT_TRANSLATE_NOOP("Status", "Remove the view rotation of the current step"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Remove Step View</b></p><p>Clear the view rotation of the current step.</p>"),
 		""
 	},
 
@@ -1798,7 +1798,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.StepView.ToggleFollow"),
 		QT_TRANSLATE_NOOP("Menu", "Follow Step Views"),
 		QT_TRANSLATE_NOOP("Status", "Toggle turning the view to each step's view rotation when changing steps"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Follow Step Views</b></p><p>Turn the view to each step's view rotation when the step changes.</p>"),
 		""
 	},
 
@@ -1843,7 +1843,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cutaway.Grow"),
 		QT_TRANSLATE_NOOP("Menu", "&Grow"),
 		QT_TRANSLATE_NOOP("Status", "Make the cutaway larger"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Grow</b></p><p>Make the cutaway larger.</p>"),
 		""
 	},
 
@@ -1852,7 +1852,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cutaway.Shrink"),
 		QT_TRANSLATE_NOOP("Menu", "S&hrink"),
 		QT_TRANSLATE_NOOP("Status", "Make the cutaway smaller"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Shrink</b></p><p>Make the cutaway smaller.</p>"),
 		""
 	},
 
@@ -1861,7 +1861,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cutaway.PushIn"),
 		QT_TRANSLATE_NOOP("Menu", "Push &In"),
 		QT_TRANSLATE_NOOP("Status", "Move the cutaway one plate deeper into the model"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Push In</b></p><p>Move the cutaway one plate deeper into the model.</p>"),
 		""
 	},
 
@@ -1870,7 +1870,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cutaway.PullOut"),
 		QT_TRANSLATE_NOOP("Menu", "Pull &Out"),
 		QT_TRANSLATE_NOOP("Status", "Move the cutaway one plate back out of the model"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Pull Out</b></p><p>Move the cutaway one plate back out of the model.</p>"),
 		""
 	},
 
@@ -1879,7 +1879,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cutaway.ShadeColor"),
 		QT_TRANSLATE_NOOP("Menu", "Sh&ade Color..."),
 		QT_TRANSLATE_NOOP("Status", "Choose the light shade on the cutaway faces"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Shade Color</b></p><p>Choose the light shade drawn on the cut faces.</p>"),
 		""
 	},
 
@@ -1888,7 +1888,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cutaway.Remove"),
 		QT_TRANSLATE_NOOP("Menu", "&Remove"),
 		QT_TRANSLATE_NOOP("Status", "Show the whole model again, or press Esc with nothing selected"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Remove</b></p><p>Remove the cutaway and show the whole model again. Esc with nothing selected does the same.</p>"),
 		""
 	},
 
@@ -1933,7 +1933,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Grid.ToggleAxisX"),
 		QT_TRANSLATE_NOOP("Menu", "X Axis Line"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the x axis line on the grid origin"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>X Axis Line</b></p><p>Show or hide the X axis line through the grid origin.</p>"),
 		""
 	},
 
@@ -1942,7 +1942,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Grid.ToggleAxisY"),
 		QT_TRANSLATE_NOOP("Menu", "Y Axis Line"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the y axis line on the grid origin"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Y Axis Line</b></p><p>Show or hide the Y axis line through the grid origin.</p>"),
 		""
 	},
 
@@ -1951,7 +1951,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Grid.ToggleAxisZ"),
 		QT_TRANSLATE_NOOP("Menu", "Z Axis Line"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the z axis line on the grid origin and the height grids"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Z Axis Line</b></p><p>Show or hide the Z axis line through the grid origin and the height grids.</p>"),
 		""
 	},
 
@@ -1960,7 +1960,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Terminal.ToggleFollowModel"),
 		QT_TRANSLATE_NOOP("Menu", "Follow Model Folder"),
 		QT_TRANSLATE_NOOP("Status", "Toggle changing the terminal to the folder of each model that is opened"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Follow Model Folder</b></p><p>Move the terminal to the folder of each model you open.</p>"),
 		""
 	},
 
@@ -1969,7 +1969,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Terminal.GoToModelFolder"),
 		QT_TRANSLATE_NOOP("Menu", "Go to Model Folder"),
 		QT_TRANSLATE_NOOP("Status", "Change the terminal to the folder of the current model"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Go to Model Folder</b></p><p>Move the terminal to the folder of the current model.</p>"),
 		""
 	},
 
@@ -1987,7 +1987,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Colors.ToggleSolid"),
 		QT_TRANSLATE_NOOP("Menu", "Solid Colors"),
 		QT_TRANSLATE_NOOP("Status", "Expand or collapse the solid colors"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Solid Colors</b></p><p>Expand or collapse the solid colors in the Colors panel.</p>"),
 		""
 	},
 
@@ -1996,7 +1996,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Colors.ToggleTranslucent"),
 		QT_TRANSLATE_NOOP("Menu", "Translucent Colors"),
 		QT_TRANSLATE_NOOP("Status", "Expand or collapse the translucent colors"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Translucent Colors</b></p><p>Expand or collapse the translucent colors in the Colors panel.</p>"),
 		""
 	},
 
@@ -2005,7 +2005,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Colors.ToggleSpecial"),
 		QT_TRANSLATE_NOOP("Menu", "Special Colors"),
 		QT_TRANSLATE_NOOP("Status", "Expand or collapse the special colors"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Special Colors</b></p><p>Expand or collapse the special colors in the Colors panel.</p>"),
 		""
 	},
 
@@ -2014,7 +2014,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.InsertColor.Current"),
 		QT_TRANSLATE_NOOP("Menu", "Current Color"),
 		QT_TRANSLATE_NOOP("Status", "Insert new parts with the current color"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Current Color</b></p><p>Insert new parts in the color chosen in the Colors panel.</p>"),
 		""
 	},
 
@@ -2023,7 +2023,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.InsertColor.Selected"),
 		QT_TRANSLATE_NOOP("Menu", "Selected Part Color"),
 		QT_TRANSLATE_NOOP("Status", "Insert new parts with the color of the selected part"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Selected Part Color</b></p><p>Insert new parts in the color of the selected part.</p>"),
 		""
 	},
 
@@ -2032,7 +2032,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.InsertColor.LastInserted"),
 		QT_TRANSLATE_NOOP("Menu", "Last Inserted Part Color"),
 		QT_TRANSLATE_NOOP("Status", "Insert new parts with the color of the last inserted part"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Last Inserted Part Color</b></p><p>Insert new parts in the color of the last part inserted.</p>"),
 		""
 	},
 
@@ -2041,7 +2041,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Parts.ToggleLockColor"),
 		QT_TRANSLATE_NOOP("Menu", "Lock Parts Color"),
 		QT_TRANSLATE_NOOP("Status", "Toggle keeping the parts list in a fixed color instead of following the insert color"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Lock Parts Color</b></p><p>Keep the Parts panel thumbnails in one color instead of following the insert color.</p>"),
 		""
 	},
 
@@ -2050,7 +2050,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.ToggleOpenMostRecent"),
 		QT_TRANSLATE_NOOP("Menu", "Open Most Recent File on Startup"),
 		QT_TRANSLATE_NOOP("Status", "Toggle opening the most recently used file when StudWorx starts"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Open Most Recent File on Startup</b></p><p>Reopen the last model you worked on each time StudWorx starts.</p>"),
 		""
 	},
 
@@ -2059,7 +2059,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.ToggleRestoreTabLayout"),
 		QT_TRANSLATE_NOOP("Menu", "Restore Tab Layout"),
 		QT_TRANSLATE_NOOP("Status", "Toggle restoring saved model tabs and view layouts when opening a model"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Restore Tab Layout</b></p><p>Bring back the saved model tabs and view splits of a model when it opens.</p>"),
 		""
 	},
 
@@ -2068,7 +2068,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.ToggleFixedDirectionKeys"),
 		QT_TRANSLATE_NOOP("Menu", "Fixed Direction Keys"),
 		QT_TRANSLATE_NOOP("Status", "Toggle moving parts along fixed model axes instead of view-relative directions"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Fixed Direction Keys</b></p><p>Keep the arrow keys on the model axes instead of following the direction of the view.</p>"),
 		""
 	},
 
@@ -2077,7 +2077,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.ToggleMeshLOD"),
 		QT_TRANSLATE_NOOP("Menu", "Mesh LOD"),
 		QT_TRANSLATE_NOOP("Status", "Toggle using simpler meshes for distant parts"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Mesh LOD</b></p><p>Draw distant parts with simpler meshes (level of detail), from a distance set in Preferences, so large models stay smooth.</p>"),
 		""
 	},
 
@@ -2131,7 +2131,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Grid.ToggleStuds"),
 		QT_TRANSLATE_NOOP("Menu", "Grid Studs"),
 		QT_TRANSLATE_NOOP("Status", "Toggle drawing studs on the base grid"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Grid Studs</b></p><p>Show or hide the studs of the base grid.</p>"),
 		""
 	},
 
@@ -2140,7 +2140,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Grid.ToggleLines"),
 		QT_TRANSLATE_NOOP("Menu", "Grid Lines"),
 		QT_TRANSLATE_NOOP("Status", "Toggle drawing lines on the base grid"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Grid Lines</b></p><p>Show or hide the lines of the base grid.</p>"),
 		""
 	},
 
@@ -2149,7 +2149,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Grid.ToggleOrigin"),
 		QT_TRANSLATE_NOOP("Menu", "Grid Origin Lines"),
 		QT_TRANSLATE_NOOP("Status", "Toggle drawing the base grid origin lines"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Grid Origin Lines</b></p><p>Show or hide the origin lines of the base grid.</p>"),
 		""
 	},
 
@@ -2158,7 +2158,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.ToggleAutomateEdgeColor"),
 		QT_TRANSLATE_NOOP("Menu", "Automate Edge Color"),
 		QT_TRANSLATE_NOOP("Status", "Toggle automatically computing part edge colors"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Automate Edge Color</b></p><p>Compute edge colors from each part color, with the edge contrast, saturation and light to dark settings in Preferences.</p>"),
 		""
 	},
 
@@ -2167,7 +2167,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.HighlightStyle.Outline"),
 		QT_TRANSLATE_NOOP("Menu", "Outline Highlight"),
 		QT_TRANSLATE_NOOP("Status", "Highlight selected and new parts with outlines"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Outline Highlight</b></p><p>Mark selected and new parts with an outline.</p>"),
 		""
 	},
 
@@ -2176,7 +2176,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.HighlightStyle.TintAndEdges"),
 		QT_TRANSLATE_NOOP("Menu", "Tint and Edges Highlight"),
 		QT_TRANSLATE_NOOP("Status", "Highlight selected and new parts with tinted faces and colored edges"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Tint and Edges Highlight</b></p><p>Mark selected and new parts with tinted faces and colored edges.</p>"),
 		""
 	},
 
@@ -2185,7 +2185,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.HighlightStyle.IncreaseOutlineWidth"),
 		QT_TRANSLATE_NOOP("Menu", "Increase Outline Width"),
 		QT_TRANSLATE_NOOP("Status", "Make the selection outline thicker"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Increase Outline Width</b></p><p>Make the selection outline thicker.</p>"),
 		""
 	},
 
@@ -2194,7 +2194,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.HighlightStyle.DecreaseOutlineWidth"),
 		QT_TRANSLATE_NOOP("Menu", "Decrease Outline Width"),
 		QT_TRANSLATE_NOOP("Status", "Make the selection outline thinner"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Decrease Outline Width</b></p><p>Make the selection outline thinner.</p>"),
 		""
 	},
 
@@ -2203,7 +2203,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.StudStyle.Plain"),
 		QT_TRANSLATE_NOOP("Menu", "Plain Studs"),
 		QT_TRANSLATE_NOOP("Status", "Draw studs with the plain style"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Stud Style</b></p><p>Draw studs in this style: plain, with one of the logo styles, or in high contrast.</p>"),
 		""
 	},
 
@@ -2212,7 +2212,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.StudStyle.ThinLinesLogo"),
 		QT_TRANSLATE_NOOP("Menu", "Thin-Line Logo Studs"),
 		QT_TRANSLATE_NOOP("Status", "Draw studs with the thin-line logo style"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Stud Style</b></p><p>Draw studs in this style: plain, with one of the logo styles, or in high contrast.</p>"),
 		""
 	},
 
@@ -2221,7 +2221,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.StudStyle.OutlineLogo"),
 		QT_TRANSLATE_NOOP("Menu", "Outline Logo Studs"),
 		QT_TRANSLATE_NOOP("Status", "Draw studs with the outline logo style"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Stud Style</b></p><p>Draw studs in this style: plain, with one of the logo styles, or in high contrast.</p>"),
 		""
 	},
 
@@ -2230,7 +2230,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.StudStyle.SharpTopLogo"),
 		QT_TRANSLATE_NOOP("Menu", "Sharp Top Logo Studs"),
 		QT_TRANSLATE_NOOP("Status", "Draw studs with the sharp top logo style"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Stud Style</b></p><p>Draw studs in this style: plain, with one of the logo styles, or in high contrast.</p>"),
 		""
 	},
 
@@ -2239,7 +2239,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.StudStyle.RoundedTopLogo"),
 		QT_TRANSLATE_NOOP("Menu", "Rounded Top Logo Studs"),
 		QT_TRANSLATE_NOOP("Status", "Draw studs with the rounded top logo style"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Stud Style</b></p><p>Draw studs in this style: plain, with one of the logo styles, or in high contrast.</p>"),
 		""
 	},
 
@@ -2248,7 +2248,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.StudStyle.FlattenedLogo"),
 		QT_TRANSLATE_NOOP("Menu", "Flattened Logo Studs"),
 		QT_TRANSLATE_NOOP("Status", "Draw studs with the flattened logo style"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Stud Style</b></p><p>Draw studs in this style: plain, with one of the logo styles, or in high contrast.</p>"),
 		""
 	},
 
@@ -2257,7 +2257,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.StudStyle.HighContrast"),
 		QT_TRANSLATE_NOOP("Menu", "High Contrast Studs"),
 		QT_TRANSLATE_NOOP("Status", "Draw studs with the high contrast style"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Stud Style</b></p><p>Draw studs in this style: plain, with one of the logo styles, or in high contrast.</p>"),
 		""
 	},
 
@@ -2266,7 +2266,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.StudStyle.HighContrastLogo"),
 		QT_TRANSLATE_NOOP("Menu", "High Contrast Logo Studs"),
 		QT_TRANSLATE_NOOP("Status", "Draw studs with the high contrast logo style"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Stud Style</b></p><p>Draw studs in this style: plain, with one of the logo styles, or in high contrast.</p>"),
 		""
 	},
 
@@ -2275,7 +2275,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.ToggleEdgeLines"),
 		QT_TRANSLATE_NOOP("Menu", "Edge Lines"),
 		QT_TRANSLATE_NOOP("Status", "Toggle edge lines in model views"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Edge Lines</b></p><p>Show or hide the edge lines of parts in the model view.</p>"),
 		""
 	},
 
@@ -2284,7 +2284,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.ToggleConditionalLines"),
 		QT_TRANSLATE_NOOP("Menu", "Conditional Lines"),
 		QT_TRANSLATE_NOOP("Status", "Toggle conditional lines in model views"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Conditional Lines</b></p><p>Show or hide the conditional lines that outline curved surfaces in the model view.</p>"),
 		""
 	},
 
@@ -2293,7 +2293,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Preview.ToggleSyncRendering"),
 		QT_TRANSLATE_NOOP("Menu", "Preview Uses Model View Settings"),
 		QT_TRANSLATE_NOOP("Status", "Toggle using the model view rendering settings for the preview"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Preview Uses Model View Settings</b></p><p>Draw the preview with the rendering settings of the model view instead of its own.</p>"),
 		""
 	},
 
@@ -2302,7 +2302,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Preview.Shade.Wireframe"),
 		QT_TRANSLATE_NOOP("Menu", "Preview Wireframe"),
 		QT_TRANSLATE_NOOP("Status", "Display the preview as wireframe"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Preview Wireframe</b></p><p>Draw the preview as lines only, without faces.</p>"),
 		""
 	},
 
@@ -2311,7 +2311,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Preview.Shade.Flat"),
 		QT_TRANSLATE_NOOP("Menu", "Preview Flat Shading"),
 		QT_TRANSLATE_NOOP("Status", "Display the preview without any shading or lights"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Preview Flat Shading</b></p><p>Draw the preview in plain colors, without shading or lights.</p>"),
 		""
 	},
 
@@ -2320,7 +2320,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Preview.Shade.DefaultLights"),
 		QT_TRANSLATE_NOOP("Menu", "Preview Default Lights"),
 		QT_TRANSLATE_NOOP("Status", "Display the preview with the default lights"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Preview Default Lights</b></p><p>Light the preview with the built-in lights.</p>"),
 		""
 	},
 
@@ -2329,7 +2329,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Preview.ToggleEdgeLines"),
 		QT_TRANSLATE_NOOP("Menu", "Preview Edge Lines"),
 		QT_TRANSLATE_NOOP("Status", "Toggle edge lines in the preview"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Preview Edge Lines</b></p><p>Show or hide edge lines in the preview.</p>"),
 		""
 	},
 
@@ -2338,7 +2338,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Preview.ToggleConditionalLines"),
 		QT_TRANSLATE_NOOP("Menu", "Preview Conditional Lines"),
 		QT_TRANSLATE_NOOP("Status", "Toggle conditional lines in the preview"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Preview Conditional Lines</b></p><p>Show or hide conditional lines in the preview.</p>"),
 		""
 	},
 
@@ -2347,7 +2347,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Parts.ToggleSyncRendering"),
 		QT_TRANSLATE_NOOP("Menu", "Parts Use Model View Settings"),
 		QT_TRANSLATE_NOOP("Status", "Toggle using the model view rendering settings for the parts list"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Parts Use Model View Settings</b></p><p>Draw the parts list with the rendering settings of the model view instead of its own.</p>"),
 		""
 	},
 
@@ -2356,7 +2356,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Parts.Shade.Wireframe"),
 		QT_TRANSLATE_NOOP("Menu", "Parts Wireframe"),
 		QT_TRANSLATE_NOOP("Status", "Display the parts list as wireframe"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Parts Wireframe</b></p><p>Draw the parts list as lines only, without faces.</p>"),
 		""
 	},
 
@@ -2365,7 +2365,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Parts.Shade.Flat"),
 		QT_TRANSLATE_NOOP("Menu", "Parts Flat Shading"),
 		QT_TRANSLATE_NOOP("Status", "Display the parts list without any shading or lights"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Parts Flat Shading</b></p><p>Draw the parts list in plain colors, without shading or lights.</p>"),
 		""
 	},
 
@@ -2374,7 +2374,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Parts.Shade.DefaultLights"),
 		QT_TRANSLATE_NOOP("Menu", "Parts Default Lights"),
 		QT_TRANSLATE_NOOP("Status", "Display the parts list with the default lights"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Parts Default Lights</b></p><p>Light the parts list with the built-in lights.</p>"),
 		""
 	},
 
@@ -2383,7 +2383,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Parts.ToggleEdgeLines"),
 		QT_TRANSLATE_NOOP("Menu", "Parts Edge Lines"),
 		QT_TRANSLATE_NOOP("Status", "Toggle edge lines in the parts list"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Parts Edge Lines</b></p><p>Show or hide edge lines in the parts list.</p>"),
 		""
 	},
 
@@ -2392,7 +2392,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Parts.ToggleConditionalLines"),
 		QT_TRANSLATE_NOOP("Menu", "Parts Conditional Lines"),
 		QT_TRANSLATE_NOOP("Status", "Toggle conditional lines in the parts list"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Parts Conditional Lines</b></p><p>Show or hide conditional lines in the parts list.</p>"),
 		""
 	},
 
@@ -2401,7 +2401,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.MinifigureBuilder.ToggleSyncRendering"),
 		QT_TRANSLATE_NOOP("Menu", "Minifigure Builder Uses Model View Settings"),
 		QT_TRANSLATE_NOOP("Status", "Toggle using the model view rendering settings in the minifigure builder preview"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Minifigure Builder Uses Model View Settings</b></p><p>Draw the Minifigure Builder preview with the rendering settings of the model view instead of its own.</p>"),
 		""
 	},
 
@@ -2410,7 +2410,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.MinifigureBuilder.Shade.Wireframe"),
 		QT_TRANSLATE_NOOP("Menu", "Minifigure Builder Wireframe"),
 		QT_TRANSLATE_NOOP("Status", "Display the minifigure builder preview as a wireframe"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Minifigure Builder Wireframe</b></p><p>Draw the Minifigure Builder preview as lines only, without faces.</p>"),
 		""
 	},
 
@@ -2419,7 +2419,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.MinifigureBuilder.Shade.Flat"),
 		QT_TRANSLATE_NOOP("Menu", "Minifigure Builder Flat Shading"),
 		QT_TRANSLATE_NOOP("Status", "Display the minifigure builder preview with flat shading"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Minifigure Builder Flat Shading</b></p><p>Draw the Minifigure Builder preview in plain colors, without shading or lights.</p>"),
 		""
 	},
 
@@ -2428,7 +2428,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.MinifigureBuilder.Shade.DefaultLights"),
 		QT_TRANSLATE_NOOP("Menu", "Minifigure Builder Default Lights"),
 		QT_TRANSLATE_NOOP("Status", "Display the minifigure builder preview with the default lights"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Minifigure Builder Default Lights</b></p><p>Light the Minifigure Builder preview with the built-in lights.</p>"),
 		""
 	},
 
@@ -2437,7 +2437,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.MinifigureBuilder.ToggleEdgeLines"),
 		QT_TRANSLATE_NOOP("Menu", "Minifigure Builder Edge Lines"),
 		QT_TRANSLATE_NOOP("Status", "Toggle edge lines in the minifigure builder preview"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Minifigure Builder Edge Lines</b></p><p>Show or hide edge lines in the Minifigure Builder preview.</p>"),
 		""
 	},
 
@@ -2446,7 +2446,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.MinifigureBuilder.ToggleConditionalLines"),
 		QT_TRANSLATE_NOOP("Menu", "Minifigure Builder Conditional Lines"),
 		QT_TRANSLATE_NOOP("Status", "Toggle conditional lines in the minifigure builder preview"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Minifigure Builder Conditional Lines</b></p><p>Show or hide conditional lines in the Minifigure Builder preview.</p>"),
 		""
 	},
 
@@ -2455,7 +2455,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Parts.ToggleSnapToTiles"),
 		QT_TRANSLATE_NOOP("Menu", "Snap Panel Width to Tiles"),
 		QT_TRANSLATE_NOOP("Status", "Toggle snapping the parts panel width to whole thumbnail tiles and the categories to the longest name"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Snap Panel Width to Tiles</b></p><p>Snap the Parts panel width to whole thumbnail tiles, and the categories to the longest name.</p>"),
 		""
 	},
 
@@ -2464,7 +2464,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Preview.ToggleViewCube"),
 		QT_TRANSLATE_NOOP("Menu", "Preview View Cube"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the view cube in the preview"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Preview View Cube</b></p><p>Show or hide the view cube in the preview.</p>"),
 		""
 	},
 
@@ -2473,7 +2473,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Preview.ToggleAxisIcon"),
 		QT_TRANSLATE_NOOP("Menu", "Preview Axis Icon"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the axis icon in the preview"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Preview Axis Icon</b></p><p>Show or hide the axis icon in the preview.</p>"),
 		""
 	},
 
@@ -2482,7 +2482,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "File.ToggleLoadPartsBeforeShowing"),
 		QT_TRANSLATE_NOOP("Menu", "Load All Parts Before Showing"),
 		QT_TRANSLATE_NOOP("Status", "Toggle waiting for every part to load before showing a model"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Load All Parts Before Showing</b></p><p>Wait until every part of a model has loaded before showing it, instead of showing parts as they load.</p>"),
 		""
 	},
 
@@ -2491,7 +2491,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Preview.ToggleSquareViewport"),
 		QT_TRANSLATE_NOOP("Menu", "Square Viewport"),
 		QT_TRANSLATE_NOOP("Status", "Keep the preview at a 1:1 ratio"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Square Viewport</b></p><p>Keep the preview square, at a 1:1 ratio.</p>"),
 		""
 	},
 
@@ -2500,7 +2500,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Preview.ToggleKeepSelection"),
 		QT_TRANSLATE_NOOP("Menu", "Keep Last Selection"),
 		QT_TRANSLATE_NOOP("Status", "Keep showing the last selected part after the selection is cleared"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Keep Last Selection</b></p><p>Keep showing the last selected part in the preview after the selection is cleared.</p>"),
 		""
 	},
 
@@ -2509,7 +2509,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.Insert"),
 		QT_TRANSLATE_NOOP("Menu", "&Insert Part"),
 		QT_TRANSLATE_NOOP("Status", "Add a new part to the model"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Insert Part</b></p><p>Add the part chosen in the Parts panel to the model, next to the part that has focus or the last part added.</p>"),
 		"Insert"
 	},
 
@@ -2518,7 +2518,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.ToggleFirstPartAtOrigin"),
 		QT_TRANSLATE_NOOP("Menu", "Insert First Part at Origin"),
 		QT_TRANSLATE_NOOP("Status", "Toggle placing the first part of an empty model at 0, 0, 0"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Insert First Part at Origin</b></p><p>Place the first part of an empty model at 0, 0, 0.</p>"),
 		""
 	},
 
@@ -2527,7 +2527,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.Delete"),
 		QT_TRANSLATE_NOOP("Menu", "&Delete"),
 		QT_TRANSLATE_NOOP("Status", "Delete selected objects"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Delete</b></p><p>Remove the selected objects from the model.</p>"),
 		"Delete"
 	},
 
@@ -2536,7 +2536,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.Duplicate"),
 		QT_TRANSLATE_NOOP("Menu", "&Duplicate"),
 		QT_TRANSLATE_NOOP("Status", "Create a copy of the selected parts"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Duplicate</b></p><p>Add a copy of each selected part in the same place, with copies of their groups, and select the copies.</p>"),
 		"Ctrl+D"
 	},
 
@@ -2545,7 +2545,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.PaintSelected"),
 		QT_TRANSLATE_NOOP("Menu", "&Paint Selected"),
 		QT_TRANSLATE_NOOP("Status", "Change the color of the selected parts"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Paint Selected</b></p><p>Change the selected parts to the color chosen in the Colors panel.</p>"),
 		""
 	},
 
@@ -2581,7 +2581,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.ResetPivotPoint"),
 		QT_TRANSLATE_NOOP("Menu", "Reset &Pivot Point"),
 		QT_TRANSLATE_NOOP("Status", "Reset the pivot point of the selected parts to their origin"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Reset Pivot Point</b></p><p>Put the pivot point of each selected part back at its origin.</p>"),
 		"Ctrl+#"
 	},
 
@@ -2590,7 +2590,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.RemoveKeyFrames"),
 		QT_TRANSLATE_NOOP("Menu", "Remove &Keyframes"),
 		QT_TRANSLATE_NOOP("Status", "Remove all keyframes from the selected parts"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Remove Keyframes</b></p><p>Remove every animation key from the selected parts, lights and cameras.</p>"),
 		""
 	},
 
@@ -2599,7 +2599,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.ControlPoint.Insert"),
 		QT_TRANSLATE_NOOP("Menu", "Insert Control Point"),
 		QT_TRANSLATE_NOOP("Status", "Insert a new control point"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Insert Control Point</b></p><p>Add a control point to the selected flexible part, where it bends.</p>"),
 		"Ctrl+["
 	},
 
@@ -2608,7 +2608,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.ControlPoint.Remove"),
 		QT_TRANSLATE_NOOP("Menu", "Remove Control Point"),
 		QT_TRANSLATE_NOOP("Status", "Remove the selected control point"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Remove Control Point</b></p><p>Remove the selected control point of a flexible part.</p>"),
 		"Ctrl+]"
 	},
 
@@ -2617,7 +2617,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.ControlPoint.Tangent"),
 		QT_TRANSLATE_NOOP("Menu", "Clamp Tangent"),
 		QT_TRANSLATE_NOOP("Status", "Turn the selected control point along the path, or release it to rotate it freely"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Clamp Tangent</b></p><p>Hold the selected control point along the path, or release it to rotate freely.</p>"),
 		""
 	},
 
@@ -2626,7 +2626,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.ControlPoint.AlignTangent"),
 		QT_TRANSLATE_NOOP("Menu", "Align to Tangent"),
 		QT_TRANSLATE_NOOP("Status", "Turn the selected control point along the path once and keep it released"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Align to Tangent</b></p><p>Turn the selected control point along the path once and keep it released.</p>"),
 		""
 	},
 
@@ -2635,7 +2635,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.ControlPoint.AlignX"),
 		QT_TRANSLATE_NOOP("Menu", "X Axis"),
 		QT_TRANSLATE_NOOP("Status", "Turn the selected control point along the X axis"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>X Axis</b></p><p>Turn the selected control point along the X axis.</p>"),
 		""
 	},
 
@@ -2644,7 +2644,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.ControlPoint.AlignY"),
 		QT_TRANSLATE_NOOP("Menu", "Y Axis"),
 		QT_TRANSLATE_NOOP("Status", "Turn the selected control point along the Y axis"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Y Axis</b></p><p>Turn the selected control point along the Y axis.</p>"),
 		""
 	},
 
@@ -2653,7 +2653,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.ControlPoint.AlignZ"),
 		QT_TRANSLATE_NOOP("Menu", "Z Axis"),
 		QT_TRANSLATE_NOOP("Status", "Turn the selected control point along the Z axis"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Z Axis</b></p><p>Turn the selected control point along the Z axis.</p>"),
 		""
 	},
 
@@ -2662,7 +2662,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.TrainTrack.FocusNext"),
 		QT_TRANSLATE_NOOP("Menu", "Focus Next Connection"),
 		QT_TRANSLATE_NOOP("Status", "Focus the next connection of the currently selected track"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Focus Next Connection</b></p><p>Move the focus to the next connection of the selected track, where the next part joins.</p>"),
 		""
 	},
 
@@ -2671,7 +2671,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.TrainTrack.FocusPrevious"),
 		QT_TRANSLATE_NOOP("Menu", "Focus Previous Connection"),
 		QT_TRANSLATE_NOOP("Status", "Focus the previous connection of the currently selected track"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Focus Previous Connection</b></p><p>Move the focus to the previous connection of the selected track, where the next part joins.</p>"),
 		""
 	},
 
@@ -2680,7 +2680,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.TrainTrack.Rotate"),
 		QT_TRANSLATE_NOOP("Menu", "Rotate Train Track"),
 		QT_TRANSLATE_NOOP("Status", "Rotate the focused train track around its last connection"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotate Train Track</b></p><p>Turn the focused track part to its next connection.</p>"),
 		""
 	},
 
@@ -2689,7 +2689,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.Move.PlusX"),
 		QT_TRANSLATE_NOOP("Menu", "Move +X"),
 		QT_TRANSLATE_NOOP("Status", "Move selected objects along the X axis"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Move Selection</b></p><p>Move the selected objects one move snap step along this axis.</p>"),
 		"Right"
 	},
 
@@ -2698,7 +2698,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.Move.MinusX"),
 		QT_TRANSLATE_NOOP("Menu", "Move -X"),
 		QT_TRANSLATE_NOOP("Status", "Move selected objects along the X axis"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Move Selection</b></p><p>Move the selected objects one move snap step along this axis.</p>"),
 		"Left"
 	},
 
@@ -2707,7 +2707,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.Move.PlusY"),
 		QT_TRANSLATE_NOOP("Menu", "Move +Y"),
 		QT_TRANSLATE_NOOP("Status", "Move selected objects along the Y axis"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Move Selection</b></p><p>Move the selected objects one move snap step along this axis.</p>"),
 		"Up"
 	},
 
@@ -2716,7 +2716,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.Move.MinusY"),
 		QT_TRANSLATE_NOOP("Menu", "Move -Y"),
 		QT_TRANSLATE_NOOP("Status", "Move selected objects along the Y axis"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Move Selection</b></p><p>Move the selected objects one move snap step along this axis.</p>"),
 		"Down"
 	},
 
@@ -2725,7 +2725,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.Move.PlusZ"),
 		QT_TRANSLATE_NOOP("Menu", "Move +Z"),
 		QT_TRANSLATE_NOOP("Status", "Move selected objects along the Z axis"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Move Selection</b></p><p>Move the selected objects one move snap step along this axis.</p>"),
 		"Alt+Up"
 	},
 
@@ -2734,7 +2734,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.Move.MinusZ"),
 		QT_TRANSLATE_NOOP("Menu", "Move -Z"),
 		QT_TRANSLATE_NOOP("Status", "Move selected objects along the Z axis"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Move Selection</b></p><p>Move the selected objects one move snap step along this axis.</p>"),
 		"Alt+Down"
 	},
 
@@ -2743,7 +2743,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.Rotate.PlusX"),
 		QT_TRANSLATE_NOOP("Menu", "Rotate +X"),
 		QT_TRANSLATE_NOOP("Status", "Rotate selected objects around the X axis"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotate Selection</b></p><p>Rotate the selected objects one rotation snap step around this axis.</p>"),
 		"Ctrl+Down"
 	},
 
@@ -2752,7 +2752,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.Rotate.MinusX"),
 		QT_TRANSLATE_NOOP("Menu", "Rotate -X"),
 		QT_TRANSLATE_NOOP("Status", "Rotate selected objects around the X axis"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotate Selection</b></p><p>Rotate the selected objects one rotation snap step around this axis.</p>"),
 		"Ctrl+Up"
 	},
 
@@ -2761,7 +2761,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.Rotate.PlusY"),
 		QT_TRANSLATE_NOOP("Menu", "Rotate +Y"),
 		QT_TRANSLATE_NOOP("Status", "Rotate selected objects around the Y axis"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotate Selection</b></p><p>Rotate the selected objects one rotation snap step around this axis.</p>"),
 		"Ctrl+Shift+Left"
 	},
 
@@ -2770,7 +2770,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.Rotate.MinusY"),
 		QT_TRANSLATE_NOOP("Menu", "Rotate -Y"),
 		QT_TRANSLATE_NOOP("Status", "Rotate selected objects around the Y axis"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotate Selection</b></p><p>Rotate the selected objects one rotation snap step around this axis.</p>"),
 		"Ctrl+Shift+Right"
 	},
 
@@ -2779,7 +2779,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.Rotate.PlusZ"),
 		QT_TRANSLATE_NOOP("Menu", "Rotate +Z"),
 		QT_TRANSLATE_NOOP("Status", "Rotate selected objects around the Z axis"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotate Selection</b></p><p>Rotate the selected objects one rotation snap step around this axis.</p>"),
 		"Ctrl+Left"
 	},
 
@@ -2788,7 +2788,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.Rotate.MinusZ"),
 		QT_TRANSLATE_NOOP("Menu", "Rotate -Z"),
 		QT_TRANSLATE_NOOP("Status", "Rotate selected objects around the Z axis"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Rotate Selection</b></p><p>Rotate the selected objects one rotation snap step around this axis.</p>"),
 		"Ctrl+Right"
 	},
 
@@ -2797,7 +2797,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.MinifigureBuilder"),
 		QT_TRANSLATE_NOOP("Menu", "&Minifigure Builder"),
 		QT_TRANSLATE_NOOP("Status", "Show the Minifigure Builder panel to build a minifigure and add it to the model"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Minifigure Builder</b></p><p>Show the Minifigure Builder panel to build a minifigure from templates and add it to the model.</p>"),
 		""
 	},
 
@@ -2806,16 +2806,16 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.Array"),
 		QT_TRANSLATE_NOOP("Menu", "A&rray..."),
 		QT_TRANSLATE_NOOP("Status", "Make copies of the selected parts"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Array</b></p><p>Repeat the selection along one, two or three axes, with a count, offset and rotation for each.</p>"),
 		""
 	},
 
-	//  SW_PART_VIEW_SELECTED_MODEL
+	// SW_PART_VIEW_SELECTED_MODEL
 	{
 		QT_TRANSLATE_NOOP("Action", "Part.ViewSelectedModel"),
 		QT_TRANSLATE_NOOP("Menu", "Open Selected Submodel"),
 		QT_TRANSLATE_NOOP("Status", "Open the submodel referenced by the selected part in a new tab"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Open Selected Submodel</b></p><p>Open the submodel used by the selected part in its own tab, to edit it on its own.</p>"),
 		"Ctrl+Shift+O"
 	},
 
@@ -2824,7 +2824,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.MoveSelectionToModel"),
 		QT_TRANSLATE_NOOP("Menu", "Move to New Submodel..."),
 		QT_TRANSLATE_NOOP("Status", "Move the selected parts to a new submodel and replace them with a reference to it"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Move to New Submodel</b></p><p>Move the selected parts into a new submodel and put one reference to it in their place.</p>"),
 		"Ctrl+Alt+N"
 	},
 
@@ -2833,7 +2833,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.InlineSelectedModels"),
 		QT_TRANSLATE_NOOP("Menu", "Inline Selected Submodels"),
 		QT_TRANSLATE_NOOP("Status", "Insert the contents of the selected submodels into the current model"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Inline Selected Submodels</b></p><p>Replace each selected submodel with its parts, in place.</p>"),
 		"Ctrl+Shift+I"
 	},
 
@@ -2851,7 +2851,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.EditSelectedSubmodel"),
 		QT_TRANSLATE_NOOP("Menu", "Edit Selected Submodel"),
 		QT_TRANSLATE_NOOP("Status", "Edit the currently selected submodel in-place"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Edit Selected Submodel</b></p><p>Edit the selected submodel in place, inside its parent. A path bar shows where you are.</p>"),
 		"Ctrl+Shift+E"
 	},
 
@@ -2860,7 +2860,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.EditEndSubmodel"),
 		QT_TRANSLATE_NOOP("Menu", "End Submodel Editing"),
 		QT_TRANSLATE_NOOP("Status", "End in-place submodel editing"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>End Submodel Editing</b></p><p>Leave in-place editing and go back to the parent model.</p>"),
 		"Ctrl+Shift+W"
 	},
 
@@ -2869,7 +2869,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.Group"),
 		QT_TRANSLATE_NOOP("Menu", "&Group..."),
 		QT_TRANSLATE_NOOP("Status", "Group selected parts together"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Group</b></p><p>Group the selected parts under a unique name, so they select and move as one.</p>"),
 		"Ctrl+G"
 	},
 
@@ -2878,7 +2878,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.Ungroup"),
 		QT_TRANSLATE_NOOP("Menu", "&Ungroup"),
 		QT_TRANSLATE_NOOP("Status", "Ungroup selected group"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Ungroup</b></p><p>Remove the selected group, keeping its parts.</p>"),
 		"Ctrl+Shift+G"
 	},
 
@@ -2887,7 +2887,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.GroupAdd"),
 		QT_TRANSLATE_NOOP("Menu", "&Add to Group"),
 		QT_TRANSLATE_NOOP("Status", "Add focused part to selected group"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Add to Group</b></p><p>Add the part that has focus to the selected group.</p>"),
 		""
 	},
 
@@ -2896,7 +2896,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.GroupRemove"),
 		QT_TRANSLATE_NOOP("Menu", "Re&move from Group"),
 		QT_TRANSLATE_NOOP("Status", "Remove focused part from group"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Remove from Group</b></p><p>Take the part that has focus out of its group.</p>"),
 		""
 	},
 
@@ -2905,7 +2905,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.GroupEdit"),
 		QT_TRANSLATE_NOOP("Menu", "&Edit Groups..."),
 		QT_TRANSLATE_NOOP("Status", "Edit groups"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Edit Groups</b></p><p>Create, rename and nest groups and drag parts between them in a tree of parts and groups.</p>"),
 		"Ctrl+Alt+Shift+G"
 	},
 
@@ -2914,7 +2914,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.HideSelected"),
 		QT_TRANSLATE_NOOP("Menu", "&Hide Selected"),
 		QT_TRANSLATE_NOOP("Status", "Hide selected objects"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Hide Selected</b></p><p>Hide the selected objects.</p>"),
 		"Ctrl+H"
 	},
 
@@ -2923,7 +2923,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.HideUnselected"),
 		QT_TRANSLATE_NOOP("Menu", "Hide &Unselected"),
 		QT_TRANSLATE_NOOP("Status", "Hide objects that are not selected"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Hide Unselected</b></p><p>Hide every object that is not selected.</p>"),
 		"Ctrl+Alt+Shift+H"
 	},
 
@@ -2932,7 +2932,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.UnhideSelected"),
 		QT_TRANSLATE_NOOP("Menu", "&Unhide Selected"),
 		QT_TRANSLATE_NOOP("Status", "Show hidden objects that are selected"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Unhide Selected</b></p><p>Show the selected hidden objects again.</p>"),
 		"Ctrl+Shift+H"
 	},
 
@@ -2941,7 +2941,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.UnhideAll"),
 		QT_TRANSLATE_NOOP("Menu", "U&nhide All"),
 		QT_TRANSLATE_NOOP("Status", "Show all hidden objects"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Unhide All</b></p><p>Show every hidden object again.</p>"),
 		"Ctrl+Alt+H"
 	},
 
@@ -2950,7 +2950,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.ShowEarlier"),
 		QT_TRANSLATE_NOOP("Menu", "Show Earlier"),
 		QT_TRANSLATE_NOOP("Status", "Show selected parts one step earlier"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Show Earlier</b></p><p>Move the selected parts one step earlier.</p>"),
 		""
 	},
 
@@ -2959,7 +2959,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.ShowLater"),
 		QT_TRANSLATE_NOOP("Menu", "Show Later"),
 		QT_TRANSLATE_NOOP("Status", "Show selected parts one step later"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Show Later</b></p><p>Move the selected parts one step later.</p>"),
 		""
 	},
 
@@ -2968,7 +2968,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.New"),
 		QT_TRANSLATE_NOOP("Menu", "New Submodel..."),
 		QT_TRANSLATE_NOOP("Status", "Create a new submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>New Submodel</b></p><p>Add a new, empty submodel to the file and switch to it.</p>"),
 		"Alt+Shift+N"
 	},
 
@@ -2977,7 +2977,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Properties"),
 		QT_TRANSLATE_NOOP("Menu", "Proper&ties..."),
 		QT_TRANSLATE_NOOP("Status", "Display the properties of the current submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Properties</b></p><p>Edit the name, author, description and comments of the current submodel, and see its parts, counts, size and weight, with BrickLink and CSV export.</p>"),
 		""
 	},
 
@@ -2986,7 +2986,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.List"),
 		QT_TRANSLATE_NOOP("Menu", "Submodels..."),
 		QT_TRANSLATE_NOOP("Status", "Show a list of all submodels"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodels</b></p><p>Create, rename, duplicate, delete, reorder and export the submodels of the file, and set the active one.</p>"),
 		"Alt+Shift+M"
 	},
 
@@ -2995,7 +2995,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model01"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 1"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3004,7 +3004,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model02"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 2"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3013,7 +3013,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model03"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 3"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3022,7 +3022,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model04"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 4"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3031,7 +3031,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model05"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 5"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3040,7 +3040,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model06"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 6"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3049,7 +3049,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model07"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 7"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3058,7 +3058,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model08"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 8"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3067,7 +3067,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model09"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 9"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3076,7 +3076,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model10"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 10"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3085,7 +3085,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model11"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 11"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3094,7 +3094,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model12"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 12"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3103,7 +3103,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model13"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 13"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3112,7 +3112,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model14"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 14"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3121,7 +3121,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model15"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 15"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3130,7 +3130,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model16"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 16"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3139,7 +3139,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model17"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 17"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3148,7 +3148,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model18"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 18"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3157,7 +3157,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model19"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 19"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3166,7 +3166,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model20"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 20"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3175,7 +3175,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model21"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 21"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3184,7 +3184,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model22"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 22"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3193,7 +3193,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model23"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 23"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3202,7 +3202,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model24"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 24"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3211,7 +3211,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model25"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 25"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3220,7 +3220,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model26"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 26"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3229,7 +3229,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model27"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 27"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3238,7 +3238,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model28"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 28"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3247,7 +3247,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model29"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 29"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3256,7 +3256,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model30"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 30"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3265,7 +3265,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model31"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 31"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3274,7 +3274,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model32"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 32"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3283,7 +3283,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model33"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 33"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3292,7 +3292,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model34"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 34"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3301,7 +3301,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model35"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 35"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3310,7 +3310,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model36"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 36"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3319,7 +3319,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model37"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 37"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3328,7 +3328,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model38"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 38"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3337,7 +3337,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model39"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 39"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3346,7 +3346,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Model.Model40"),
 		QT_TRANSLATE_NOOP("Menu", "Submodel 40"),
 		QT_TRANSLATE_NOOP("Status", "Switch to this submodel"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel</b></p><p>Switch to this submodel. The Models menu lists up to forty submodels of the file.</p>"),
 		""
 	},
 
@@ -3355,7 +3355,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Help.WhatsThis"),
 		QT_TRANSLATE_NOOP("Menu", "&What's This?"),
 		QT_TRANSLATE_NOOP("Status", "Click a control to read its contextual help"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>What's This?</b></p><p>Click any control after this to read what it does. F1 explains the focused control.</p>"),
 		"Shift+F1"
 	},
 
@@ -3364,7 +3364,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Help.HomePage"),
 		QT_TRANSLATE_NOOP("Menu", "&Home Page"),
 		QT_TRANSLATE_NOOP("Status", "Open the StudWorx home page in your default web browser"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Home Page</b></p><p>Open the StudWorx repository on GitHub in your web browser.</p>"),
 		""
 	},
 
@@ -3373,7 +3373,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Help.BugReport"),
 		QT_TRANSLATE_NOOP("Menu", "Report a &Bug"),
 		QT_TRANSLATE_NOOP("Status", "Open the StudWorx bug report form in your default web browser"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Report a Bug</b></p><p>Open the StudWorx issues on GitHub in your web browser to report a problem.</p>"),
 		""
 	},
 
@@ -3382,7 +3382,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Help.About"),
 		QT_TRANSLATE_NOOP("Menu", "&About..."),
 		QT_TRANSLATE_NOOP("Status", "Display program version number and system information"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>About</b></p><p>Show the StudWorx version, a link to its home page, and system information to copy into a bug report.</p>"),
 		""
 	},
 
@@ -3391,7 +3391,7 @@ const swCommand gCommands[] =
 		"",
 		QT_TRANSLATE_NOOP("Menu", "Insert Step Before"),
 		QT_TRANSLATE_NOOP("Status", "Insert a new step before the current step"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Insert Step Before</b></p><p>Add an empty step before this step in the Timeline.</p>"),
 		""
 	},
 
@@ -3400,7 +3400,7 @@ const swCommand gCommands[] =
 		"",
 		QT_TRANSLATE_NOOP("Menu", "Insert Step After"),
 		QT_TRANSLATE_NOOP("Status", "Insert a new step after the current step"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Insert Step After</b></p><p>Add an empty step after this step in the Timeline.</p>"),
 		""
 	},
 
@@ -3409,7 +3409,7 @@ const swCommand gCommands[] =
 		"",
 		QT_TRANSLATE_NOOP("Menu", "Delete Step"),
 		QT_TRANSLATE_NOOP("Status", "Delete the current step"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Delete Step</b></p><p>Remove this step. Its parts join the step before it and later steps move one step earlier.</p>"),
 		""
 	},
 
@@ -3418,7 +3418,7 @@ const swCommand gCommands[] =
 		"",
 		QT_TRANSLATE_NOOP("Menu", "Move Selection Here"),
 		QT_TRANSLATE_NOOP("Status", "Move the selected parts into this step"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Move Selection Here</b></p><p>Move the selected parts into this step.</p>"),
 		""
 	},
 
@@ -3427,7 +3427,7 @@ const swCommand gCommands[] =
 		"",
 		QT_TRANSLATE_NOOP("Menu", "Move Selection Before"),
 		QT_TRANSLATE_NOOP("Status", "Move the selected parts into a new step before this"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Move Selection Before</b></p><p>Move the selected parts into a new step before this one.</p>"),
 		""
 	},
 
@@ -3436,7 +3436,7 @@ const swCommand gCommands[] =
 		"",
 		QT_TRANSLATE_NOOP("Menu", "Move Selection After"),
 		QT_TRANSLATE_NOOP("Status", "Move the selected parts into a new step after this"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Move Selection After</b></p><p>Move the selected parts into a new step after this one.</p>"),
 		""
 	},
 
@@ -3445,7 +3445,7 @@ const swCommand gCommands[] =
 		"",
 		QT_TRANSLATE_NOOP("Menu", "Set Current Step"),
 		QT_TRANSLATE_NOOP("Status", "View the model at this point in the timeline"),
-		"",
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Set Current Step</b></p><p>Show the model at this step.</p>"),
 		""
 	}
 };

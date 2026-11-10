@@ -1051,22 +1051,22 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1439"/>
         <source>View.Time.SetKeys</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">View.Time.SetKeys</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1448"/>
         <source>View.Time.RemoveKeys</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">View.Time.RemoveKeys</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1457"/>
         <source>View.Time.Play</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">View.Time.Play</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1466"/>
         <source>View.Time.Stop</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">View.Time.Stop</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1610"/>
@@ -1076,17 +1076,17 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1619"/>
         <source>View.Toolbars.Poses</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">View.Toolbars.Poses</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1627"/>
         <source>View.Toolbars.Keyframes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">View.Toolbars.Keyframes</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1636"/>
         <source>View.LockInterface</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">View.LockInterface</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1645"/>
@@ -2361,7 +2361,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3487"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вигляд</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3519"/>
@@ -2426,7 +2426,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3531"/>
         <source>Joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Шарнір</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3532"/>
@@ -3760,22 +3760,22 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1440"/>
         <source>Set Keys</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Задати ключі</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1449"/>
         <source>Remove Keys</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Видалити ключі</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1458"/>
         <source>Play or Pause</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Грати або пауза</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1467"/>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Стоп</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1512"/>
@@ -3840,17 +3840,17 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1620"/>
         <source>Poses Panel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Панель поз</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1628"/>
         <source>Keyframes Panel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Панель ключових кадрів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1637"/>
         <source>Lock Interface</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Заблокувати інтерфейс</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2051"/>
@@ -3945,17 +3945,17 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2636"/>
         <source>X Axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вісь X</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2645"/>
         <source>Y Axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вісь Y</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2654"/>
         <source>Z Axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вісь Z</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2978"/>
@@ -4245,7 +4245,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="981"/>
         <source>Joints</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Шарніри</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1053"/>
@@ -5060,7 +5060,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3468"/>
         <source>Joints</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Шарніри</translation>
     </message>
     <message>
         <source>Delete</source>
@@ -8315,12 +8315,12 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1450"/>
         <source>Remove the keys of the selected objects at the current step</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Видалити ключі вибраних об&apos;єктів на поточному кроці</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1459"/>
         <source>Play or pause the steps</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Грати або призупинити кроки</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1468"/>
@@ -8980,6 +8980,11 @@ File format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="29"/>
+        <source>&lt;p&gt;&lt;b&gt;Merge&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose one or more model files and add their models to the current file as submodels, renamed when a name is already taken.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Об&apos;єднати&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть один або кілька файлів моделей і додайте їхні моделі до поточного файлу як підмоделі; якщо назва вже зайнята, їх буде перейменовано.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="38"/>
         <source>&lt;p&gt;&lt;b&gt;Reload Model&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Read the current model file again from disk, replacing the model in StudWorx. If the model has unsaved changes, StudWorx asks before discarding them.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -8990,9 +8995,107 @@ File format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="56"/>
+        <source>&lt;p&gt;&lt;b&gt;Watch for File Changes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;When another program changes the file of an open model, StudWorx asks whether to reload it. Turn this off to keep working without being asked.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Стежити за змінами файлу&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Коли інша програма змінює файл відкритої моделі, StudWorx питає, чи перезавантажити його. Вимкніть, щоб працювати без запитів.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="65"/>
         <source>&lt;p&gt;&lt;b&gt;Save Model&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Save the model and its submodels to disk. The first save asks for a filename. Use Save As to save a separate copy under another name.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="74"/>
+        <source>&lt;p&gt;&lt;b&gt;Save As&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Save the current model under a new name or in a new folder. The extension is added when left out: .ldr for a single model, .mpd for a model with submodels or embedded data.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Зберегти як&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Зберегти поточну модель під новою назвою або в новій теці. Якщо розширення не вказано, воно додається: .ldr для однієї моделі, .mpd для моделі з підмоделями або вбудованими даними.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="83"/>
+        <source>&lt;p&gt;&lt;b&gt;Image&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Save the model as a still image, a series of step images or an animated GIF, with the background, steps, framing, size and file chosen in the Image dialog.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Зображення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Зберегти модель як нерухоме зображення, серію зображень кроків або анімований GIF з тлом, кроками, кадруванням, розміром і файлом, вибраними в діалозі зображення.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="92"/>
+        <source>&lt;p&gt;&lt;b&gt;LEGO® Digital Designer&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open a LEGO® Digital Designer model (.lxf or .lxfml) as a new untitled project. Parts and colors are translated through the bundled mapping.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;LEGO® Digital Designer&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Відкрити модель LEGO® Digital Designer (.lxf або .lxfml) як новий безіменний проєкт. Деталі й кольори перекладаються через вбудовану таблицю відповідностей.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="101"/>
+        <source>&lt;p&gt;&lt;b&gt;Set Inventory&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Search an official set by name or number and open all of its parts as a new model, after saving the current one. It uses your own free Rebrickable API key, asked for once or set under Online Services in Preferences.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інвентар набору&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Знайти офіційний набір за назвою або номером і відкрити всі його деталі як нову модель після збереження поточної. Використовує ваш безкоштовний ключ API Rebrickable, який запитується один раз або задається в налаштуваннях у розділі «Онлайн-сервіси».&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="110"/>
+        <source>&lt;p&gt;&lt;b&gt;3D Studio&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Export the current model as a 3D Studio .3ds file for other 3D programs.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;3D Studio&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Експортувати поточну модель як файл 3D Studio .3ds для інших 3D-програм.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="119"/>
+        <source>&lt;p&gt;&lt;b&gt;COLLADA&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Export the current model as a COLLADA .dae file. Translucent colors can be marked as transparent materials.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;COLLADA&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Експортувати поточну модель як файл COLLADA .dae. Напівпрозорі кольори можна позначити як прозорі матеріали.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="128"/>
+        <source>&lt;p&gt;&lt;b&gt;HTML&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the Instructions window to export the building instructions as styled HTML pages in a folder named after the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;HTML&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Відкрити вікно інструкцій, щоб експортувати інструкції зі збирання як стильні сторінки HTML у теку з назвою моделі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="137"/>
+        <source>&lt;p&gt;&lt;b&gt;KMZ&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Export the current model as a KMZ file for Google Earth and SketchUp, with the visible surfaces only or every part&apos;s geometry.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;KMZ&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Експортувати поточну модель як файл KMZ для Google Earth і SketchUp, лише з видимими поверхнями або з геометрією кожної деталі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="146"/>
+        <source>&lt;p&gt;&lt;b&gt;BrickLink&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Export the parts of the model as a BrickLink wanted list in XML, with part numbers and colors translated to BrickLink numbers, ready to copy and upload.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;BrickLink&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Експортувати деталі моделі як список бажаного BrickLink у XML, з номерами деталей і кольорами, перекладеними на номери BrickLink, готовий для копіювання та завантаження.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="155"/>
+        <source>&lt;p&gt;&lt;b&gt;CSV&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Export the parts of the model as a comma separated list, with part numbers, colors and counts, for a spreadsheet.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;CSV&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Експортувати деталі моделі як список, розділений комами, з номерами деталей, кольорами та кількістю, для електронної таблиці.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="164"/>
+        <source>&lt;p&gt;&lt;b&gt;POV-Ray&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Export the current model as a POV-Ray scene file, with LGEO high detail parts when they are set up.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;POV-Ray&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Експортувати поточну модель як файл сцени POV-Ray, з детальними деталями LGEO, якщо їх налаштовано.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="173"/>
+        <source>&lt;p&gt;&lt;b&gt;Wavefront&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Export the current model as a Wavefront .obj file with its materials for other 3D programs.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Wavefront&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Експортувати поточну модель як файл Wavefront .obj з матеріалами для інших 3D-програм.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="182"/>
+        <source>&lt;p&gt;&lt;b&gt;POV-Ray Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the current model with POV-Ray in the Render window: choose the output file, follow the progress and watch the image appear as it renders.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Рендер POV-Ray&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Відрендерити поточну модель за допомогою POV-Ray у вікні рендеру: виберіть вихідний файл, стежте за ходом і дивіться, як з&apos;являється зображення.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="191"/>
+        <source>&lt;p&gt;&lt;b&gt;Blender Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the current model with Blender and the bundled LDraw add-ons, or open the scene in Blender. The Blender executable is set in Preferences.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Рендер Blender&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Відрендерити поточну модель за допомогою Blender і вбудованих додатків LDraw або відкрити сцену в Blender. Виконуваний файл Blender задається в налаштуваннях.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="200"/>
+        <source>&lt;p&gt;&lt;b&gt;Instructions&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the Instructions window to lay out, style, export and print the building instructions of the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструкції&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Відкрити вікно інструкцій, щоб скласти, оформити, експортувати та надрукувати інструкції зі збирання моделі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="209"/>
+        <source>&lt;p&gt;&lt;b&gt;Print&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Print the current model view through the system print dialog, with a preview where the dialog allows it.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Друк&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Надрукувати поточний вигляд моделі через системний діалог друку, з попереднім переглядом, де діалог це дозволяє.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="218"/>
+        <location filename="../../source/application/sw_commands.cpp" line="227"/>
+        <location filename="../../source/application/sw_commands.cpp" line="236"/>
+        <location filename="../../source/application/sw_commands.cpp" line="245"/>
+        <source>&lt;p&gt;&lt;b&gt;Recent File&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open this recently used model again. The File menu keeps the four most recent files.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Нещодавній файл&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Знову відкрити цю нещодавно використану модель. У меню «Файл» зберігаються чотири останні файли.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="254"/>
+        <source>&lt;p&gt;&lt;b&gt;Exit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Close StudWorx. Each model with unsaved changes asks to be saved first.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вийти&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Закрити StudWorx. Кожна модель із незбереженими змінами спершу запропонує зберегти їх.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="263"/>
@@ -9007,6 +9110,76 @@ File format is not recognized.</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Повторити&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Повторно застосувати редагування, яке було скасовано за допомогою функції «Скасувати». Внесення нової правки після скасування замінює історію повторень новою послідовністю редагувань.&lt;/p&gt;</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="281"/>
+        <source>&lt;p&gt;&lt;b&gt;Cut&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected parts from the model and put them on the clipboard, to paste in this or another model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вирізати&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Видалити вибрані деталі з моделі та помістити їх у буфер обміну, щоб вставити в цій або іншій моделі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="290"/>
+        <source>&lt;p&gt;&lt;b&gt;Copy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Put a copy of the selected parts on the clipboard, to paste in this or another model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Копіювати&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Помістити копію вибраних деталей у буфер обміну, щоб вставити в цій або іншій моделі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="299"/>
+        <source>&lt;p&gt;&lt;b&gt;Paste&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Insert the parts on the clipboard in the current step and select them.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вставити&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вставити деталі з буфера обміну на поточний крок і вибрати їх.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="308"/>
+        <source>&lt;p&gt;&lt;b&gt;Paste with Steps&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Insert the parts on the clipboard in the steps they were copied from, and select the ones shown at the current step.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вставити з кроками&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вставити деталі з буфера обміну на ті кроки, з яких їх скопійовано, і вибрати ті, що показані на поточному кроці.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="317"/>
+        <source>&lt;p&gt;&lt;b&gt;Find&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the Find and Replace bar over the view to find parts by part, color or both.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Знайти&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати над виглядом панель пошуку й заміни, щоб шукати деталі за деталлю, кольором або обома.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="326"/>
+        <source>&lt;p&gt;&lt;b&gt;Find Next&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select the next part that matches the Find and Replace bar.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Знайти далі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вибрати наступну деталь, що відповідає панелі пошуку й заміни.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="335"/>
+        <source>&lt;p&gt;&lt;b&gt;Find Previous&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select the previous part that matches the Find and Replace bar.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Знайти попереднє&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вибрати попередню деталь, що відповідає панелі пошуку й заміни.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="344"/>
+        <source>&lt;p&gt;&lt;b&gt;Find All&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select every part that matches the Find and Replace bar.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Знайти все&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вибрати кожну деталь, що відповідає панелі пошуку й заміни.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="353"/>
+        <source>&lt;p&gt;&lt;b&gt;Replace&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the Find and Replace bar with its replace fields, to change the part or color of matching parts.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Замінити&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати панель пошуку й заміни з полями заміни, щоб змінити деталь або колір відповідних деталей.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="362"/>
+        <source>&lt;p&gt;&lt;b&gt;Replace Next&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace the part or color of the next matching part.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Замінити далі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Замінити деталь або колір наступної відповідної деталі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="371"/>
+        <source>&lt;p&gt;&lt;b&gt;Replace All&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace the part or color of every matching part. With Replace in Submodels it reaches every submodel the model uses.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Замінити все&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Замінити деталь або колір кожної відповідної деталі. З параметром «Замінювати в підмоделях» охоплює кожну підмодель, яку використовує модель.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="380"/>
+        <source>&lt;p&gt;&lt;b&gt;Select All&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select every visible part of the current model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вибрати все&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вибрати кожну видиму деталь поточної моделі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="389"/>
+        <source>&lt;p&gt;&lt;b&gt;Select None&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Clear the selection.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Зняти виділення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Очистити виділення.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="398"/>
+        <source>&lt;p&gt;&lt;b&gt;Invert Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select the parts that are not selected and clear the ones that are.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інвертувати виділення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вибрати деталі, які не вибрано, і зняти виділення з вибраних.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="407"/>
         <source>&lt;p&gt;&lt;b&gt;Select Adjacent Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add every visible part connected directly to a selected part by a stud, anti stud, hole, axle or bar. Repeat to grow the selection one part further each time. Connections come from the LDCad shadow library set as Part Connections in Preferences, parts without shadow data never connect.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -9015,6 +9188,153 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="416"/>
         <source>&lt;p&gt;&lt;b&gt;Select Connected Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add every visible part connected to a selected part, directly or through other parts, by a stud, anti stud, hole, axle or bar. Use it to pick up a whole assembly from one of its parts. Connections come from the LDCad shadow library set as Part Connections in Preferences, parts without shadow data never connect.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="425"/>
+        <source>&lt;p&gt;&lt;b&gt;Part Connections&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use the connection shapes of the LDCad shadow library to find connected parts, for Select Connected Parts, joints and Explode. The shadow library folder is chosen in Preferences.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;З&apos;єднання деталей&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Використовувати форми з&apos;єднань тіньової бібліотеки LDCad, щоб знаходити з&apos;єднані деталі для вибору з&apos;єднаних деталей, шарнірів і розсування. Тека тіньової бібліотеки вибирається в налаштуваннях.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="434"/>
+        <source>&lt;p&gt;&lt;b&gt;Select by Name&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open a checklist of every object in the model and select them by name, with All, None and Invert.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вибрати за назвою&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Відкрити список усіх об&apos;єктів моделі та вибрати їх за назвою, з кнопками «Усі», «Жодного» та «Інвертувати».&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="443"/>
+        <source>&lt;p&gt;&lt;b&gt;Single Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A click selects only the part under the pointer.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Одиночний вибір&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Клацання вибирає лише деталь під вказівником.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="452"/>
+        <source>&lt;p&gt;&lt;b&gt;Part Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A click selects every part of the same type as the one under the pointer.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вибір за деталлю&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Клацання вибирає кожну деталь того самого типу, що й під вказівником.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="461"/>
+        <source>&lt;p&gt;&lt;b&gt;Color Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A click selects every part of the same color as the one under the pointer.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вибір за кольором&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Клацання вибирає кожну деталь того самого кольору, що й під вказівником.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="470"/>
+        <source>&lt;p&gt;&lt;b&gt;Part and Color Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A click selects every part of the same type and color as the one under the pointer.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вибір за деталлю та кольором&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Клацання вибирає кожну деталь того самого типу й кольору, що й під вказівником.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="479"/>
+        <source>&lt;p&gt;&lt;b&gt;Relative Transforms&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move and rotate the selection along the axes of the part that has focus.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Відносні перетворення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Переміщувати й обертати виділення вздовж осей деталі, що має фокус.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="488"/>
+        <source>&lt;p&gt;&lt;b&gt;Absolute Transforms&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move and rotate the selection along the model axes.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Абсолютні перетворення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Переміщувати й обертати виділення вздовж осей моделі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="497"/>
+        <source>&lt;p&gt;&lt;b&gt;Toggle Relative Transforms&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Switch between relative and absolute transforms.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Перемкнути відносні перетворення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перемикати між відносними й абсолютними перетвореннями.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="506"/>
+        <source>&lt;p&gt;&lt;b&gt;Rotate Separately&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn each selected part around its own pivot point.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Обертати окремо&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Обертати кожну вибрану деталь навколо її власної точки повороту.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="515"/>
+        <source>&lt;p&gt;&lt;b&gt;Rotate Together&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selection as one around the pivot of the part that has focus.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Обертати разом&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Обертати виділення як одне ціле навколо точки повороту деталі, що має фокус.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="524"/>
+        <source>&lt;p&gt;&lt;b&gt;Toggle Separate Transforms&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Switch between rotating the selected parts separately and together.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Перемкнути окремі перетворення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перемикати між обертанням вибраних деталей окремо та разом.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="533"/>
+        <source>&lt;p&gt;&lt;b&gt;Move Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn move snapping on or off. With it on, moves go in the horizontal and vertical steps chosen below.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Прив&apos;язка переміщення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Увімкнути або вимкнути прив&apos;язку переміщення. Коли вона ввімкнена, переміщення відбуваються горизонтальними й вертикальними кроками, вибраними нижче.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="542"/>
+        <location filename="../../source/application/sw_commands.cpp" line="551"/>
+        <location filename="../../source/application/sw_commands.cpp" line="560"/>
+        <location filename="../../source/application/sw_commands.cpp" line="569"/>
+        <location filename="../../source/application/sw_commands.cpp" line="578"/>
+        <location filename="../../source/application/sw_commands.cpp" line="587"/>
+        <location filename="../../source/application/sw_commands.cpp" line="596"/>
+        <location filename="../../source/application/sw_commands.cpp" line="605"/>
+        <location filename="../../source/application/sw_commands.cpp" line="614"/>
+        <location filename="../../source/application/sw_commands.cpp" line="623"/>
+        <source>&lt;p&gt;&lt;b&gt;Horizontal Move Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move parts across the horizontal plane in this step, or freely with No XY Snap.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Горизонтальна прив&apos;язка переміщення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Переміщувати деталі горизонтальною площиною цим кроком або вільно з параметром «Без прив&apos;язки XY».&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="632"/>
+        <location filename="../../source/application/sw_commands.cpp" line="641"/>
+        <location filename="../../source/application/sw_commands.cpp" line="650"/>
+        <location filename="../../source/application/sw_commands.cpp" line="659"/>
+        <location filename="../../source/application/sw_commands.cpp" line="668"/>
+        <location filename="../../source/application/sw_commands.cpp" line="677"/>
+        <location filename="../../source/application/sw_commands.cpp" line="686"/>
+        <location filename="../../source/application/sw_commands.cpp" line="695"/>
+        <location filename="../../source/application/sw_commands.cpp" line="704"/>
+        <location filename="../../source/application/sw_commands.cpp" line="713"/>
+        <source>&lt;p&gt;&lt;b&gt;Vertical Move Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move parts up and down in this step, or freely with No Z Snap.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вертикальна прив&apos;язка переміщення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Переміщувати деталі вгору й вниз цим кроком або вільно з параметром «Без прив&apos;язки Z».&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="722"/>
+        <source>&lt;p&gt;&lt;b&gt;Rotation Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn rotation snapping on or off. With it on, rotations go in the angle chosen below.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Прив&apos;язка обертання&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Увімкнути або вимкнути прив&apos;язку обертання. Коли вона ввімкнена, обертання відбувається на кут, вибраний нижче.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="731"/>
+        <location filename="../../source/application/sw_commands.cpp" line="740"/>
+        <location filename="../../source/application/sw_commands.cpp" line="749"/>
+        <location filename="../../source/application/sw_commands.cpp" line="758"/>
+        <location filename="../../source/application/sw_commands.cpp" line="767"/>
+        <location filename="../../source/application/sw_commands.cpp" line="776"/>
+        <location filename="../../source/application/sw_commands.cpp" line="785"/>
+        <location filename="../../source/application/sw_commands.cpp" line="794"/>
+        <location filename="../../source/application/sw_commands.cpp" line="803"/>
+        <location filename="../../source/application/sw_commands.cpp" line="812"/>
+        <source>&lt;p&gt;&lt;b&gt;Rotation Snap Angle&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Rotate parts in steps of this angle, or freely with No Rotation Snap. Turns land exactly on square angles, so later moves keep whole coordinates.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Кут прив&apos;язки обертання&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Обертати деталі кроками цього кута або вільно з параметром «Без прив&apos;язки обертання». Повороти точно потрапляють на прямі кути, тому подальші переміщення зберігають цілі координати.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="821"/>
+        <source>&lt;p&gt;&lt;b&gt;Custom Angle&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Type your own rotation snap angle in degrees.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Власний кут&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Введіть власний кут прив&apos;язки обертання в градусах.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="830"/>
+        <source>&lt;p&gt;&lt;b&gt;Camera Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Orbit the view in steps of the rotation snap angle.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Прив&apos;язка камери&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Обертати вигляд навколо моделі кроками кута прив&apos;язки обертання.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="839"/>
+        <source>&lt;p&gt;&lt;b&gt;Transform&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Apply the position or rotation typed in the Transform toolbar to the selection.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Перетворити&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Застосувати до виділення позицію або обертання, введені на панелі інструментів перетворення.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="848"/>
+        <source>&lt;p&gt;&lt;b&gt;Absolute Translation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The Transform toolbar moves the selection to the typed position in model coordinates.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Абсолютне переміщення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Панель інструментів перетворення переміщує виділення в уведену позицію в координатах моделі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="857"/>
+        <source>&lt;p&gt;&lt;b&gt;Relative Translation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The Transform toolbar moves the selection by the typed distance.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Відносне переміщення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Панель інструментів перетворення переміщує виділення на введену відстань.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="866"/>
+        <source>&lt;p&gt;&lt;b&gt;Absolute Rotation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The Transform toolbar turns the selection to the typed angles.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Абсолютне обертання&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Панель інструментів перетворення повертає виділення на введені кути.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="875"/>
+        <source>&lt;p&gt;&lt;b&gt;Relative Rotation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The Transform toolbar turns the selection by the typed angles.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Відносне обертання&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Панель інструментів перетворення повертає виділення на введені кути відносно поточного положення.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="884"/>
@@ -9071,6 +9391,97 @@ File format is not recognized.</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент обертання&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть об’єкти, а потім перетягніть ручку обертання у вікні моделі. Rotation Snap встановлює кроки кута. Параметри трансформації вибирають відносні осі чи осі моделі та обертають частини разом чи окремо.&lt;/p&gt;</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1046"/>
+        <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cancel the current mouse action, a face or cutaway pick or a cutaway resize, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Скасувати дію&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Скасувати поточну дію мишею, вибір грані чи розрізу або зміну розміру розрізу, закрити панель пошуку й заміни або очистити виділення. Якщо нічого не вибрано, вилучає розріз.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1055"/>
+        <source>&lt;p&gt;&lt;b&gt;Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the program settings: General, Rendering, Views, Interface, Instructions, Categories, Context Menu, Keyboard and Mouse.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Налаштування&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Відкрити налаштування програми: Загальні, Рендеринг, Вигляди, Інтерфейс, Інструкції, Категорії, Контекстне меню, Клавіатура та Миша.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1064"/>
+        <source>&lt;p&gt;&lt;b&gt;Zoom In&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the camera closer to the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Збільшити&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Наблизити камеру до моделі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1073"/>
+        <source>&lt;p&gt;&lt;b&gt;Zoom Out&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the camera away from the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Зменшити&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Віддалити камеру від моделі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1082"/>
+        <source>&lt;p&gt;&lt;b&gt;Zoom Extents&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the camera until every part fits in the view.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Показати все&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Рухати камеру, доки кожна деталь не вміститься у вигляді.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1091"/>
+        <source>&lt;p&gt;&lt;b&gt;Look At&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the view so the selected parts are at its center.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Дивитися на&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Повернути вигляд так, щоб вибрані деталі були в його центрі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1100"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1109"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1118"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1127"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1136"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1145"/>
+        <source>&lt;p&gt;&lt;b&gt;Move View&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the camera of the current view, keeping its direction, from the keyboard or a gamepad.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Рухати вигляд&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Рухати камеру поточного вигляду, зберігаючи її напрямок, з клавіатури або геймпада.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1154"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1163"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1172"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1181"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1190"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1199"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1208"/>
+        <source>&lt;p&gt;&lt;b&gt;Viewpoint&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Look at the model from this side, or from the default angle with Home.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Точка огляду&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Дивитися на модель з цього боку або під типовим кутом клавішею Home.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1217"/>
+        <source>&lt;p&gt;&lt;b&gt;No Camera&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Leave the model&apos;s cameras and use the free view.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Без камери&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Залишити камери моделі й використовувати вільний вигляд.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1226"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1235"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1244"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1253"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1262"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1271"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1280"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1289"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1298"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1307"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1316"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1325"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1334"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1343"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1352"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1361"/>
+        <source>&lt;p&gt;&lt;b&gt;Camera&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Look through this camera of the model. The menu lists the first sixteen cameras.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Камера&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Дивитися крізь цю камеру моделі. У меню показано перші шістнадцять камер.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1406"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step before the current step. The current step and the ones after it move one step later.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вставити перед&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Додати порожній крок перед поточним. Поточний крок і наступні зсуваються на один крок далі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1415"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step after the current step. The steps after it move one step later.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вставити після&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Додати порожній крок після поточного. Наступні кроки зсуваються на один крок далі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1424"/>
+        <source>&lt;p&gt;&lt;b&gt;Delete Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the current step. Its parts join the step before it and later steps move one step earlier.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Видалити крок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Видалити поточний крок. Його деталі переходять до попереднього кроку, а пізніші кроки зсуваються на один крок раніше.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="1433"/>
         <source>&lt;p&gt;&lt;b&gt;Add Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Enable this when an edit should create a new animation key at the current step. For example, moving a part at a later step can give it a different position there. The round key buttons in Properties show and toggle keys for individual properties.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
@@ -9078,27 +9489,216 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1442"/>
         <source>&lt;p&gt;&lt;b&gt;Set Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add position and rotation keys to the selected objects at the current step, holding their values at that step. The full diamond in the Keyframes panel does the same.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Задати ключі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Додати ключі позиції й обертання вибраним об&apos;єктам на поточному кроці, зберігаючи їхні значення на цьому кроці. Повний ромб на панелі ключових кадрів робить те саме.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1451"/>
         <source>&lt;p&gt;&lt;b&gt;Remove Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove every key the selected objects have at the current step. The hollow diamond in the Keyframes panel does the same.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Видалити ключі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Видалити кожен ключ, який вибрані об&apos;єкти мають на поточному кроці. Порожній ромб на панелі ключових кадрів робить те саме.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1460"/>
         <source>&lt;p&gt;&lt;b&gt;Play or Pause&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Step through the model one step at a time to the last step, showing the keyed motion. Use it again to pause.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Грати або пауза&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Проходити модель крок за кроком до останнього кроку, показуючи анімований рух. Використайте ще раз, щоб призупинити.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1469"/>
+        <source>&lt;p&gt;&lt;b&gt;Stop&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Stop playing through the steps and go back to the step playing started from.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Стоп&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Зупинити проходження кроків і повернутися до кроку, з якого почалося відтворення.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1496"/>
+        <source>&lt;p&gt;&lt;b&gt;Remove View&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Close the active split view.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Прибрати вигляд&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Закрити активний розділений вигляд.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1505"/>
+        <source>&lt;p&gt;&lt;b&gt;Reset Views&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove every split and go back to one view.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Скинути вигляди&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Прибрати всі розділення й повернутися до одного вигляду.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1514"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1523"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1532"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1541"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1550"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1559"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1568"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1577"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1586"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1595"/>
+        <source>&lt;p&gt;&lt;b&gt;Show or Hide&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide this toolbar or panel. A right click on any toolbar or panel title gives the same list.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Показати або сховати&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати цю панель інструментів чи панель. Клацання правою кнопкою на заголовку будь-якої панелі інструментів чи панелі показує той самий список.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1630"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Keyframes panel, a timeline with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a key to another step and right-click for more. Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons rewind, play or pause, stop and go to the last step. Values are edited in the Properties panel.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Ключові кадри&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати панель ключових кадрів, часову шкалу з одним стовпцем на крок і одним рядком на об&apos;єкт, яку можна розгорнути до його властивостей. Ромб позначає ключ, а лінія з&apos;єднує ключі однієї властивості. Клацніть крок, щоб перейти до нього, двічі клацніть клітинку, щоб додати чи видалити ключ, перетягніть ключ на інший крок, а правою кнопкою відкрийте більше дій. «Вибрані» перелічує вибрані об&apos;єкти, «Усі» — кожен об&apos;єкт із ключами. Повний і порожній ромби додають або видаляють ключі вибраних об&apos;єктів на поточному кроці, «Додавати ключі» змушує редагування створювати ключі, а кнопки відтворення перемотують, грають або призупиняють, зупиняють і переходять до останнього кроку. Значення редагуються на панелі властивостей.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1639"/>
         <source>&lt;p&gt;&lt;b&gt;Lock Interface&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep the panels and toolbars where they are: panel title bars are hidden to save space, and panels and toolbars can no longer be dragged, floated or docked elsewhere. Panels still resize, and they can still be shown or hidden from this menu. Right-click a toolbar, or use View, Toolbars, to lock or unlock.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Заблокувати інтерфейс&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Залишити панелі й панелі інструментів на місці: заголовки панелей приховано для економії місця, а панелі й панелі інструментів більше не можна перетягувати, робити плаваючими чи закріплювати деінде. Розмір панелей усе ще змінюється, і їх можна показувати чи ховати з цього меню. Клацніть правою кнопкою на панелі інструментів або скористайтеся «Вигляд, Панелі інструментів», щоб заблокувати чи розблокувати.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1648"/>
+        <source>&lt;p&gt;&lt;b&gt;Full Screen&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Fill the whole screen with the StudWorx window, or go back to a normal window.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Повний екран&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Заповнити вікном StudWorx весь екран або повернутися до звичайного вікна.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1657"/>
+        <source>&lt;p&gt;&lt;b&gt;Close Tab&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Close the current model tab, asking to save its changes first.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Закрити вкладку&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Закрити поточну вкладку моделі, спершу запропонувавши зберегти її зміни.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1666"/>
+        <source>&lt;p&gt;&lt;b&gt;Wireframe&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the model view as lines only, without faces.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Каркас&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Малювати вигляд моделі лише лініями, без граней.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1675"/>
+        <source>&lt;p&gt;&lt;b&gt;Flat Shading&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the model view in plain colors, without shading or lights.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Пласке затінення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Малювати вигляд моделі однотонними кольорами, без затінення й освітлення.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1684"/>
+        <source>&lt;p&gt;&lt;b&gt;Default Lights&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Light the model view with the built-in lights instead of the lights placed in the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Типове освітлення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Освітлювати вигляд моделі вбудованими джерелами світла замість тих, що розміщені в моделі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1729"/>
+        <source>&lt;p&gt;&lt;b&gt;Perspective&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the view with perspective, distant parts smaller.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Перспектива&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показувати вигляд із перспективою, віддалені деталі менші.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1738"/>
+        <source>&lt;p&gt;&lt;b&gt;Orthographic&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the view without perspective, parallel lines staying parallel.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Ортографічний&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показувати вигляд без перспективи, паралельні лінії лишаються паралельними.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1783"/>
+        <source>&lt;p&gt;&lt;b&gt;Step View&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the view rotation of the current step, saved as an MLCad ROTSTEP.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вигляд кроку&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Задати обертання вигляду поточного кроку, збережене як MLCad ROTSTEP.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1792"/>
+        <source>&lt;p&gt;&lt;b&gt;Remove Step View&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Clear the view rotation of the current step.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Прибрати вигляд кроку&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Очистити обертання вигляду поточного кроку.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1801"/>
+        <source>&lt;p&gt;&lt;b&gt;Follow Step Views&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the view to each step&apos;s view rotation when the step changes.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Стежити за виглядами кроків&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Повертати вигляд до обертання вигляду кожного кроку, коли крок змінюється.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1846"/>
+        <source>&lt;p&gt;&lt;b&gt;Grow&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Make the cutaway larger.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Збільшити&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Зробити розріз більшим.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1855"/>
+        <source>&lt;p&gt;&lt;b&gt;Shrink&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Make the cutaway smaller.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Зменшити&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Зробити розріз меншим.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1864"/>
+        <source>&lt;p&gt;&lt;b&gt;Push In&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the cutaway one plate deeper into the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Углиб&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Посунути розріз на одну пластину глибше в модель.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1873"/>
+        <source>&lt;p&gt;&lt;b&gt;Pull Out&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the cutaway one plate back out of the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Назовні&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Посунути розріз на одну пластину назад із моделі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1882"/>
+        <source>&lt;p&gt;&lt;b&gt;Shade Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the light shade drawn on the cut faces.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Колір тіні&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вибрати світлу тінь, якою малюються зрізані грані.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1891"/>
+        <source>&lt;p&gt;&lt;b&gt;Remove&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the cutaway and show the whole model again. Esc with nothing selected does the same.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Прибрати&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вилучити розріз і знову показати всю модель. Esc без виділення робить те саме.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1936"/>
+        <source>&lt;p&gt;&lt;b&gt;X Axis Line&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the X axis line through the grid origin.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Лінія осі X&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати лінію осі X через початок сітки.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1945"/>
+        <source>&lt;p&gt;&lt;b&gt;Y Axis Line&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Y axis line through the grid origin.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Лінія осі Y&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати лінію осі Y через початок сітки.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1954"/>
+        <source>&lt;p&gt;&lt;b&gt;Z Axis Line&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Z axis line through the grid origin and the height grids.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Лінія осі Z&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати лінію осі Z через початок сітки та сітки висоти.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1963"/>
+        <source>&lt;p&gt;&lt;b&gt;Follow Model Folder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the terminal to the folder of each model you open.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Стежити за текою моделі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Переходити в терміналі до теки кожної відкритої моделі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1972"/>
+        <source>&lt;p&gt;&lt;b&gt;Go to Model Folder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the terminal to the folder of the current model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Перейти до теки моделі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перейти в терміналі до теки поточної моделі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1990"/>
+        <source>&lt;p&gt;&lt;b&gt;Solid Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Expand or collapse the solid colors in the Colors panel.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Суцільні кольори&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Розгорнути або згорнути суцільні кольори на панелі кольорів.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1999"/>
+        <source>&lt;p&gt;&lt;b&gt;Translucent Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Expand or collapse the translucent colors in the Colors panel.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Прозорі кольори&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Розгорнути або згорнути прозорі кольори на панелі кольорів.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2008"/>
+        <source>&lt;p&gt;&lt;b&gt;Special Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Expand or collapse the special colors in the Colors panel.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Спеціальні кольори&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Розгорнути або згорнути спеціальні кольори на панелі кольорів.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2017"/>
+        <source>&lt;p&gt;&lt;b&gt;Current Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Insert new parts in the color chosen in the Colors panel.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Поточний колір&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вставляти нові деталі кольором, вибраним на панелі кольорів.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2026"/>
+        <source>&lt;p&gt;&lt;b&gt;Selected Part Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Insert new parts in the color of the selected part.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Колір вибраної деталі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вставляти нові деталі кольором вибраної деталі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2035"/>
+        <source>&lt;p&gt;&lt;b&gt;Last Inserted Part Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Insert new parts in the color of the last part inserted.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Колір останньої вставленої деталі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вставляти нові деталі кольором останньої вставленої деталі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2044"/>
+        <source>&lt;p&gt;&lt;b&gt;Lock Parts Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep the Parts panel thumbnails in one color instead of following the insert color.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Заблокувати колір деталей&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Тримати мініатюри панелі деталей в одному кольорі замість кольору вставлення.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2053"/>
+        <source>&lt;p&gt;&lt;b&gt;Open Most Recent File on Startup&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reopen the last model you worked on each time StudWorx starts.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Відкривати останній файл при запуску&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Знову відкривати останню модель, над якою ви працювали, щоразу при запуску StudWorx.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2062"/>
+        <source>&lt;p&gt;&lt;b&gt;Restore Tab Layout&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Bring back the saved model tabs and view splits of a model when it opens.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Відновлювати розкладку вкладок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Повертати збережені вкладки моделей і розділення виглядів моделі під час її відкриття.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2071"/>
+        <source>&lt;p&gt;&lt;b&gt;Fixed Direction Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep the arrow keys on the model axes instead of following the direction of the view.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Фіксовані клавіші напрямку&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Тримати клавіші зі стрілками вздовж осей моделі замість напрямку вигляду.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2080"/>
+        <source>&lt;p&gt;&lt;b&gt;Mesh LOD&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw distant parts with simpler meshes (level of detail), from a distance set in Preferences, so large models stay smooth.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;LOD сітки&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Малювати віддалені деталі простішими сітками (рівень деталізації) з відстані, заданої в налаштуваннях, щоб великі моделі лишалися плавними.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2107"/>
@@ -9111,9 +9711,395 @@ File format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2134"/>
+        <source>&lt;p&gt;&lt;b&gt;Grid Studs&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the studs of the base grid.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Шипи сітки&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати шипи базової сітки.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2143"/>
+        <source>&lt;p&gt;&lt;b&gt;Grid Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the lines of the base grid.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Лінії сітки&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати лінії базової сітки.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2152"/>
+        <source>&lt;p&gt;&lt;b&gt;Grid Origin Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the origin lines of the base grid.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Лінії початку сітки&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати лінії початку базової сітки.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2161"/>
+        <source>&lt;p&gt;&lt;b&gt;Automate Edge Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Compute edge colors from each part color, with the edge contrast, saturation and light to dark settings in Preferences.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Автоматичний колір ребер&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Обчислювати кольори ребер із кольору кожної деталі за налаштуваннями контрасту ребер, насиченості та від світлого до темного в налаштуваннях.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2170"/>
+        <source>&lt;p&gt;&lt;b&gt;Outline Highlight&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mark selected and new parts with an outline.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Підсвічування контуром&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Позначати вибрані й нові деталі контуром.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2179"/>
+        <source>&lt;p&gt;&lt;b&gt;Tint and Edges Highlight&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mark selected and new parts with tinted faces and colored edges.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Підсвічування відтінком і ребрами&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Позначати вибрані й нові деталі відтінком граней і кольоровими ребрами.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2188"/>
+        <source>&lt;p&gt;&lt;b&gt;Increase Outline Width&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Make the selection outline thicker.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Збільшити товщину контуру&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Зробити контур виділення товстішим.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2197"/>
+        <source>&lt;p&gt;&lt;b&gt;Decrease Outline Width&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Make the selection outline thinner.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Зменшити товщину контуру&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Зробити контур виділення тоншим.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2206"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2215"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2224"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2233"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2242"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2251"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2260"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2269"/>
+        <source>&lt;p&gt;&lt;b&gt;Stud Style&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw studs in this style: plain, with one of the logo styles, or in high contrast.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Стиль шипів&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Малювати шипи в цьому стилі: звичайному, з одним зі стилів логотипа або з високим контрастом.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2278"/>
+        <source>&lt;p&gt;&lt;b&gt;Edge Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the edge lines of parts in the model view.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Лінії ребер&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати лінії ребер деталей на вигляді моделі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2287"/>
+        <source>&lt;p&gt;&lt;b&gt;Conditional Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the conditional lines that outline curved surfaces in the model view.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Умовні лінії&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати умовні лінії, що окреслюють криві поверхні на вигляді моделі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2296"/>
+        <source>&lt;p&gt;&lt;b&gt;Preview Uses Model View Settings&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the preview with the rendering settings of the model view instead of its own.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Попередній перегляд за налаштуваннями вигляду моделі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Малювати попередній перегляд за налаштуваннями рендерингу вигляду моделі замість власних.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2305"/>
+        <source>&lt;p&gt;&lt;b&gt;Preview Wireframe&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the preview as lines only, without faces.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Каркас попереднього перегляду&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Малювати попередній перегляд лише лініями, без граней.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2314"/>
+        <source>&lt;p&gt;&lt;b&gt;Preview Flat Shading&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the preview in plain colors, without shading or lights.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Пласке затінення попереднього перегляду&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Малювати попередній перегляд однотонними кольорами, без затінення й освітлення.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2323"/>
+        <source>&lt;p&gt;&lt;b&gt;Preview Default Lights&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Light the preview with the built-in lights.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Типове освітлення попереднього перегляду&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Освітлювати попередній перегляд вбудованими джерелами світла.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2332"/>
+        <source>&lt;p&gt;&lt;b&gt;Preview Edge Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide edge lines in the preview.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Лінії ребер попереднього перегляду&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати лінії ребер у попередньому перегляді.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2341"/>
+        <source>&lt;p&gt;&lt;b&gt;Preview Conditional Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide conditional lines in the preview.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Умовні лінії попереднього перегляду&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати умовні лінії в попередньому перегляді.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2350"/>
+        <source>&lt;p&gt;&lt;b&gt;Parts Use Model View Settings&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the parts list with the rendering settings of the model view instead of its own.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Деталі за налаштуваннями вигляду моделі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Малювати список деталей за налаштуваннями рендерингу вигляду моделі замість власних.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2359"/>
+        <source>&lt;p&gt;&lt;b&gt;Parts Wireframe&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the parts list as lines only, without faces.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Каркас деталей&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Малювати список деталей лише лініями, без граней.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2368"/>
+        <source>&lt;p&gt;&lt;b&gt;Parts Flat Shading&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the parts list in plain colors, without shading or lights.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Пласке затінення деталей&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Малювати список деталей однотонними кольорами, без затінення й освітлення.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2377"/>
+        <source>&lt;p&gt;&lt;b&gt;Parts Default Lights&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Light the parts list with the built-in lights.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Типове освітлення деталей&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Освітлювати список деталей вбудованими джерелами світла.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2386"/>
+        <source>&lt;p&gt;&lt;b&gt;Parts Edge Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide edge lines in the parts list.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Лінії ребер деталей&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати лінії ребер у списку деталей.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2395"/>
+        <source>&lt;p&gt;&lt;b&gt;Parts Conditional Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide conditional lines in the parts list.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Умовні лінії деталей&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати умовні лінії в списку деталей.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2404"/>
+        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder Uses Model View Settings&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the Minifigure Builder preview with the rendering settings of the model view instead of its own.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Конструктор мініфігурок за налаштуваннями вигляду моделі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Малювати попередній перегляд конструктора мініфігурок за налаштуваннями рендерингу вигляду моделі замість власних.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2413"/>
+        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder Wireframe&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the Minifigure Builder preview as lines only, without faces.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Каркас конструктора мініфігурок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Малювати попередній перегляд конструктора мініфігурок лише лініями, без граней.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2422"/>
+        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder Flat Shading&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Draw the Minifigure Builder preview in plain colors, without shading or lights.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Пласке затінення конструктора мініфігурок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Малювати попередній перегляд конструктора мініфігурок однотонними кольорами, без затінення й освітлення.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2431"/>
+        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder Default Lights&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Light the Minifigure Builder preview with the built-in lights.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Типове освітлення конструктора мініфігурок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Освітлювати попередній перегляд конструктора мініфігурок вбудованими джерелами світла.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2440"/>
+        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder Edge Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide edge lines in the Minifigure Builder preview.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Лінії ребер конструктора мініфігурок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати лінії ребер у попередньому перегляді конструктора мініфігурок.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2449"/>
+        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder Conditional Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide conditional lines in the Minifigure Builder preview.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Умовні лінії конструктора мініфігурок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати умовні лінії в попередньому перегляді конструктора мініфігурок.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2458"/>
+        <source>&lt;p&gt;&lt;b&gt;Snap Panel Width to Tiles&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Snap the Parts panel width to whole thumbnail tiles, and the categories to the longest name.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Прив&apos;язувати ширину панелі до плиток&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Прив&apos;язувати ширину панелі деталей до цілих плиток мініатюр, а категорії — до найдовшої назви.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2467"/>
+        <source>&lt;p&gt;&lt;b&gt;Preview View Cube&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the view cube in the preview.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Куб вигляду попереднього перегляду&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати куб вигляду в попередньому перегляді.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2476"/>
+        <source>&lt;p&gt;&lt;b&gt;Preview Axis Icon&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the axis icon in the preview.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Значок осей попереднього перегляду&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати значок осей у попередньому перегляді.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2485"/>
+        <source>&lt;p&gt;&lt;b&gt;Load All Parts Before Showing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wait until every part of a model has loaded before showing it, instead of showing parts as they load.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Завантажити всі деталі перед показом&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Чекати, доки завантажаться всі деталі моделі, перш ніж показувати її, замість показу деталей у міру завантаження.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2494"/>
+        <source>&lt;p&gt;&lt;b&gt;Square Viewport&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep the preview square, at a 1:1 ratio.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Квадратне поле перегляду&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Тримати попередній перегляд квадратним, у співвідношенні 1:1.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2503"/>
+        <source>&lt;p&gt;&lt;b&gt;Keep Last Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep showing the last selected part in the preview after the selection is cleared.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Зберігати останнє виділення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Продовжувати показувати останню вибрану деталь у попередньому перегляді після зняття виділення.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2512"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert Part&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add the part chosen in the Parts panel to the model, next to the part that has focus or the last part added.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вставити деталь&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Додати до моделі деталь, вибрану на панелі деталей, поруч із деталлю, що має фокус, або з останньою доданою деталлю.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2521"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert First Part at Origin&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Place the first part of an empty model at 0, 0, 0.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вставляти першу деталь на початку координат&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Розмістити першу деталь порожньої моделі в точці 0, 0, 0.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2530"/>
+        <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected objects from the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Видалити&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Видалити вибрані об&apos;єкти з моделі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2539"/>
+        <source>&lt;p&gt;&lt;b&gt;Duplicate&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add a copy of each selected part in the same place, with copies of their groups, and select the copies.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Дублювати&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Додати копію кожної вибраної деталі на тому самому місці, з копіями їхніх груп, і вибрати копії.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2548"/>
+        <source>&lt;p&gt;&lt;b&gt;Paint Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Change the selected parts to the color chosen in the Colors panel.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Зафарбувати вибране&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Змінити вибрані деталі на колір, вибраний на панелі кольорів.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="2557"/>
         <source>&lt;p&gt;&lt;b&gt;Set Joint&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select one submodel, choose Part &amp;gt; Joint &amp;gt; Set Joint, also in the right-click menu of the model view, then click one of its connections with the Set Joint pointer, which outlines the part under it in red. The click sets the joint and goes back to the Select tool in joint mode on the new joint. Set Joint again at another connection adds a joint, and Set Joint at a joint already there resets it. A round connection makes a hinge on its axis and a sphere makes a ball. A part without shadow data gets a hinge on its origin. The joint shows in the Joints panel and setting it can be undone.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2854"/>
+        <source>&lt;p&gt;&lt;b&gt;Edit Selected Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit the selected submodel in place, inside its parent. A path bar shows where you are.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Редагувати вибрану підмодель&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Редагувати вибрану підмодель на місці, всередині її батьківської. Панель шляху показує, де ви перебуваєте.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2863"/>
+        <source>&lt;p&gt;&lt;b&gt;End Submodel Editing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Leave in-place editing and go back to the parent model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Завершити редагування підмоделі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вийти з редагування на місці та повернутися до батьківської моделі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2872"/>
+        <source>&lt;p&gt;&lt;b&gt;Group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Group the selected parts under a unique name, so they select and move as one.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Згрупувати&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Згрупувати вибрані деталі під унікальною назвою, щоб вони вибиралися й переміщувалися як одне ціле.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2881"/>
+        <source>&lt;p&gt;&lt;b&gt;Ungroup&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected group, keeping its parts.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Розгрупувати&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вилучити вибрану групу, зберігши її деталі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2890"/>
+        <source>&lt;p&gt;&lt;b&gt;Add to Group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add the part that has focus to the selected group.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Додати до групи&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Додати деталь, що має фокус, до вибраної групи.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2899"/>
+        <source>&lt;p&gt;&lt;b&gt;Remove from Group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Take the part that has focus out of its group.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вилучити з групи&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вийняти деталь, що має фокус, з її групи.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2908"/>
+        <source>&lt;p&gt;&lt;b&gt;Edit Groups&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create, rename and nest groups and drag parts between them in a tree of parts and groups.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Редагувати групи&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Створювати, перейменовувати й вкладати групи та перетягувати деталі між ними в дереві деталей і груп.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2917"/>
+        <source>&lt;p&gt;&lt;b&gt;Hide Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Hide the selected objects.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Сховати вибране&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Сховати вибрані об&apos;єкти.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2926"/>
+        <source>&lt;p&gt;&lt;b&gt;Hide Unselected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Hide every object that is not selected.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Сховати невибране&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Сховати кожен об&apos;єкт, який не вибрано.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2935"/>
+        <source>&lt;p&gt;&lt;b&gt;Unhide Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the selected hidden objects again.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Показати вибране&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Знову показати вибрані приховані об&apos;єкти.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2944"/>
+        <source>&lt;p&gt;&lt;b&gt;Unhide All&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show every hidden object again.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Показати все&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Знову показати кожен прихований об&apos;єкт.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2953"/>
+        <source>&lt;p&gt;&lt;b&gt;Show Earlier&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts one step earlier.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Показати раніше&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перемістити вибрані деталі на один крок раніше.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2962"/>
+        <source>&lt;p&gt;&lt;b&gt;Show Later&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts one step later.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Показати пізніше&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перемістити вибрані деталі на один крок пізніше.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2971"/>
+        <source>&lt;p&gt;&lt;b&gt;New Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add a new, empty submodel to the file and switch to it.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Нова підмодель&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Додати до файлу нову порожню підмодель і перейти до неї.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2980"/>
+        <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit the name, author, description and comments of the current submodel, and see its parts, counts, size and weight, with BrickLink and CSV export.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Властивості&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Редагувати назву, автора, опис і коментарі поточної підмоделі та переглядати її деталі, кількості, розмір і вагу, з експортом у BrickLink і CSV.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2989"/>
+        <source>&lt;p&gt;&lt;b&gt;Submodels&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create, rename, duplicate, delete, reorder and export the submodels of the file, and set the active one.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Підмоделі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Створювати, перейменовувати, дублювати, видаляти, впорядковувати й експортувати підмоделі файлу та задавати активну.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2998"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3007"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3016"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3025"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3034"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3043"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3052"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3061"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3070"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3079"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3088"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3097"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3106"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3115"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3124"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3133"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3142"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3151"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3160"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3169"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3178"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3187"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3196"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3205"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3214"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3223"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3232"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3241"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3250"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3259"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3268"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3277"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3286"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3295"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3304"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3313"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3322"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3331"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3340"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3349"/>
+        <source>&lt;p&gt;&lt;b&gt;Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Switch to this submodel. The Models menu lists up to forty submodels of the file.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Підмодель&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перейти до цієї підмоделі. У меню «Моделі» перелічено до сорока підмоделей файлу.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3358"/>
+        <source>&lt;p&gt;&lt;b&gt;What&apos;s This?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Click any control after this to read what it does. F1 explains the focused control.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Що це?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Клацніть будь-який елемент керування після цього, щоб прочитати, що він робить. F1 пояснює елемент у фокусі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3367"/>
+        <source>&lt;p&gt;&lt;b&gt;Home Page&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the StudWorx repository on GitHub in your web browser.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Домашня сторінка&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Відкрити репозиторій StudWorx на GitHub у вашому браузері.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3376"/>
+        <source>&lt;p&gt;&lt;b&gt;Report a Bug&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the StudWorx issues on GitHub in your web browser to report a problem.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Повідомити про помилку&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Відкрити задачі StudWorx на GitHub у вашому браузері, щоб повідомити про проблему.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3385"/>
+        <source>&lt;p&gt;&lt;b&gt;About&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the StudWorx version, a link to its home page, and system information to copy into a bug report.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Про програму&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати версію StudWorx, посилання на його домашню сторінку та відомості про систему, які можна скопіювати у звіт про помилку.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3394"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert Step Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step before this step in the Timeline.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вставити крок перед&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Додати порожній крок перед цим кроком на часовій шкалі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3403"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert Step After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step after this step in the Timeline.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вставити крок після&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Додати порожній крок після цього кроку на часовій шкалі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3412"/>
+        <source>&lt;p&gt;&lt;b&gt;Delete Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove this step. Its parts join the step before it and later steps move one step earlier.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Видалити крок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Видалити цей крок. Його деталі переходять до попереднього кроку, а пізніші кроки зсуваються на один крок раніше.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3421"/>
+        <source>&lt;p&gt;&lt;b&gt;Move Selection Here&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into this step.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Перемістити вибране сюди&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перемістити вибрані деталі на цей крок.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3430"/>
+        <source>&lt;p&gt;&lt;b&gt;Move Selection Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into a new step before this one.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Перемістити вибране перед&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перемістити вибрані деталі на новий крок перед цим.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3439"/>
+        <source>&lt;p&gt;&lt;b&gt;Move Selection After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into a new step after this one.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Перемістити вибране після&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перемістити вибрані деталі на новий крок після цього.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3448"/>
+        <source>&lt;p&gt;&lt;b&gt;Set Current Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the model at this step.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Задати поточний крок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати модель на цьому кроці.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Eraser Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use this tool to remove objects by clicking them in the model view. This is different from deleting the current selection as a single command. Undo restores an object removed by the tool.&lt;/p&gt;</source>
@@ -9209,12 +10195,12 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1613"/>
         <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Joints panel. A tree lists every model with its jointed submodels and their joints, click a joint to select its submodel, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. A joint inside a submodel opens it in place and a bar over the view points to the picked joint. A submodel button there selects that submodel and keeps joint mode when it has a joint, the main model button ends it; the close button clears the selection and returns to the Select tool. Clicking a model shows its poses in the Poses panel. The panel also shows the picked joint of the selected submodel, with its axis, and Delete Joint deletes the joint picked in the tree.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Шарніри&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати панель шарнірів. Дерево перелічує кожну модель з її підмоделями із шарнірами та їхніми шарнірами: клацніть шарнір, щоб вибрати його підмодель, клацніть його правою кнопкою, щоб перемістити, повернути чи видалити, або клацніть правою кнопкою підмодель, щоб редагувати чи видалити всі її шарніри. Шарнір усередині підмоделі відкриває її на місці, а панель над виглядом вказує на вибраний шарнір. Кнопка підмоделі там вибирає цю підмодель і зберігає режим шарнірів, коли вона має шарнір, кнопка головної моделі завершує його; кнопка закриття очищає виділення й повертає до інструмента вибору. Клацання моделі показує її пози на панелі поз. Панель також показує вибраний шарнір вибраної підмоделі з його віссю, а «Видалити шарнір» видаляє шарнір, вибраний у дереві.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1622"/>
         <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Poses panel, which lists the poses of the model picked in the Joints panel, or of the current model. Save stores the joint angles of that model as a named pose, Recall puts them back in one undo step, Rename and Delete change the picked pose, and the Joints motion in the image dialog plays the poses of the main model as an animation.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Пози&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати або сховати панель поз, що перелічує пози моделі, вибраної на панелі шарнірів, або поточної моделі. «Зберегти» зберігає кути шарнірів цієї моделі як іменовану позу, «Відновити» повертає їх одним кроком скасування, «Перейменувати» і «Видалити» змінюють вибрану позу, а рух шарнірів у діалозі зображення програє пози головної моделі як анімацію.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1747"/>
@@ -9255,6 +10241,111 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="2575"/>
         <source>&lt;p&gt;&lt;b&gt;Joint Rotate&lt;/b&gt;&lt;/p&gt;&lt;p&gt;With one submodel with a joint selected, switches to the Rotate tool with the gizmo on the pivot of the picked joint, outlined in red, and the rotate keys and the Rotate tool turn the joint around its own pivot and axis. A hinge only turns about its axis. Selecting something else goes back to the pivot point. Use Joint Rotation in the preferences does this whenever a selected submodel has a joint.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2584"/>
+        <source>&lt;p&gt;&lt;b&gt;Reset Pivot Point&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Put the pivot point of each selected part back at its origin.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Скинути точку повороту&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Повернути точку повороту кожної вибраної деталі до її початку.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2593"/>
+        <source>&lt;p&gt;&lt;b&gt;Remove Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove every animation key from the selected parts, lights and cameras.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Видалити ключові кадри&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Видалити кожен ключ анімації з вибраних деталей, світла й камер.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2602"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert Control Point&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add a control point to the selected flexible part, where it bends.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вставити контрольну точку&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Додати контрольну точку до вибраної гнучкої деталі там, де вона згинається.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2611"/>
+        <source>&lt;p&gt;&lt;b&gt;Remove Control Point&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected control point of a flexible part.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Видалити контрольну точку&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Видалити вибрану контрольну точку гнучкої деталі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2620"/>
+        <source>&lt;p&gt;&lt;b&gt;Clamp Tangent&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Hold the selected control point along the path, or release it to rotate freely.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Зафіксувати дотичну&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Утримувати вибрану контрольну точку вздовж траєкторії або відпустити її для вільного обертання.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2629"/>
+        <source>&lt;p&gt;&lt;b&gt;Align to Tangent&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the path once and keep it released.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вирівняти за дотичною&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Один раз повернути вибрану контрольну точку вздовж траєкторії та залишити її відпущеною.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2638"/>
+        <source>&lt;p&gt;&lt;b&gt;X Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the X axis.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вісь X&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Повернути вибрану контрольну точку вздовж осі X.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2647"/>
+        <source>&lt;p&gt;&lt;b&gt;Y Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the Y axis.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вісь Y&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Повернути вибрану контрольну точку вздовж осі Y.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2656"/>
+        <source>&lt;p&gt;&lt;b&gt;Z Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the Z axis.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вісь Z&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Повернути вибрану контрольну точку вздовж осі Z.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2665"/>
+        <source>&lt;p&gt;&lt;b&gt;Focus Next Connection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the focus to the next connection of the selected track, where the next part joins.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Фокус на наступне з&apos;єднання&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перемістити фокус на наступне з&apos;єднання вибраної колії, де приєднується наступна деталь.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2674"/>
+        <source>&lt;p&gt;&lt;b&gt;Focus Previous Connection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the focus to the previous connection of the selected track, where the next part joins.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Фокус на попереднє з&apos;єднання&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перемістити фокус на попереднє з&apos;єднання вибраної колії, де приєднується наступна деталь.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2683"/>
+        <source>&lt;p&gt;&lt;b&gt;Rotate Train Track&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the focused track part to its next connection.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Повернути залізничну колію&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Повернути деталь колії у фокусі до її наступного з&apos;єднання.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2692"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2701"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2710"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2719"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2728"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2737"/>
+        <source>&lt;p&gt;&lt;b&gt;Move Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected objects one move snap step along this axis.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Перемістити вибране&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перемістити вибрані об&apos;єкти на один крок прив&apos;язки переміщення вздовж цієї осі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2746"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2755"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2764"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2773"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2782"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2791"/>
+        <source>&lt;p&gt;&lt;b&gt;Rotate Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Rotate the selected objects one rotation snap step around this axis.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Повернути вибране&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Повернути вибрані об&apos;єкти на один крок прив&apos;язки обертання навколо цієї осі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2800"/>
+        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the Minifigure Builder panel to build a minifigure from templates and add it to the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Конструктор мініфігурок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати панель конструктора мініфігурок, щоб зібрати мініфігурку із шаблонів і додати її до моделі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2809"/>
+        <source>&lt;p&gt;&lt;b&gt;Array&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Repeat the selection along one, two or three axes, with a count, offset and rotation for each.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Масив&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Повторити виділення вздовж однієї, двох або трьох осей, з кількістю, зсувом і обертанням для кожної.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2818"/>
+        <source>&lt;p&gt;&lt;b&gt;Open Selected Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the submodel used by the selected part in its own tab, to edit it on its own.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Відкрити вибрану підмодель&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Відкрити підмодель, яку використовує вибрана деталь, у її власній вкладці, щоб редагувати її окремо.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2827"/>
+        <source>&lt;p&gt;&lt;b&gt;Move to New Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into a new submodel and put one reference to it in their place.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Перемістити в нову підмодель&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перемістити вибрані деталі в нову підмодель і поставити на їхнє місце одне посилання на неї.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2836"/>
+        <source>&lt;p&gt;&lt;b&gt;Inline Selected Submodels&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace each selected submodel with its parts, in place.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Розгорнути вибрані підмоделі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Замінити кожну вибрану підмодель її деталями на місці.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2845"/>
@@ -10974,7 +12065,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Count</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Кількість</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -12297,7 +13388,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="60"/>
         <source>Any</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Будь-який</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="61"/>
@@ -12384,7 +13475,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="122"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Додати</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="123"/>
@@ -12915,7 +14006,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/widgets/sw_widget_explode.ui"/>
         <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="34"/>
         <source>Explode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Розсунути</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_explode.ui"/>
@@ -12955,7 +14046,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_explode.ui"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> %</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_explode.ui"/>
@@ -13529,7 +14620,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.cpp" line="79"/>
         <source>Fade</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Згасання</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.cpp" line="79"/>
@@ -13695,12 +14786,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ширина</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Висота</translation>
     </message>
     <message>
         <source>Transparent Background</source>
@@ -13925,9 +15016,9 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="124"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="348"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="349"/>
         <source>Next Step</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Наступний крок</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="129"/>
@@ -13967,201 +15058,201 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">&amp;зберегти</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="165"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="166"/>
         <source>Cancel</source>
         <translation type="unfinished">Скасувати</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="169"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="170"/>
         <source>Size</source>
         <translation type="unfinished">Розмір</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="170"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="171"/>
         <source>&lt;p&gt;&lt;b&gt;Size&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the saved image width and height in pixels. Each value must be between 1 and 32768. Larger images use more memory and may exceed the graphics hardware limits.&lt;/p&gt;&lt;p&gt;Ratio links width and height so changing one updates the other. View uses the shape of the current view and Free unlinks them. Landscape and Portrait turn the image on its side.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="175"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="176"/>
         <source>Rati&amp;o</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="179"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="180"/>
         <source>Shape of the saved image, width to height.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="180"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="181"/>
         <source>Free</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="181"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="182"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вигляд</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="183"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="184"/>
         <source>1:1 Square</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="193"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="194"/>
         <source>&amp;Width</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="203"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="204"/>
         <source>&amp;Height</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="217"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="218"/>
         <source>&amp;Landscape</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="219"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="220"/>
         <source>Make the image wider than it is tall.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="224"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="225"/>
         <source>&amp;Portrait</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="226"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="227"/>
         <source>Make the image taller than it is wide.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="242"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="299"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="243"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="300"/>
         <source>Steps</source>
         <translation type="unfinished">Кроки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="243"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="244"/>
         <source>&lt;p&gt;&lt;b&gt;Steps&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose Current Step, All Steps, or Range. The range fields are used only for Range. Both ends are included, and they may be equal to save just one step.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="248"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="249"/>
         <source>&amp;Current Step</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="253"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="254"/>
         <source>&amp;All Steps</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="258"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="259"/>
         <source>&amp;Range</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="259"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="260"/>
         <source>Save the steps between the first and last step, including both.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="269"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="270"/>
         <source>First step to save.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="277"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="278"/>
         <source>Last step to save.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="297"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="298"/>
         <source>Turn the model, play the steps one per frame or play the saved poses of the main model.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="298"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="299"/>
         <source>Turntable</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Поворотний стіл</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="424"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="425"/>
         <source>Time one loop takes to play, from the frames, frame rate and hold.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="429"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="430"/>
         <source>&lt;p&gt;&lt;b&gt;Framing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Current View saves exactly what the view shows. Fit Model aims at the model and moves the camera back until every part fits inside the image at every turntable angle and every pose, so animations turn in place without zooming and Joints animations hold still. Fit Each Step fits every step on its own parts. Fitted stills are centered on the model.&lt;/p&gt;&lt;p&gt;Center sets the point the turntable turns around and the camera aims at. World Origin is the 0, 0, 0 point of the scene, Model Origin is the middle of the model base and Model Center is the middle of the model.&lt;/p&gt;&lt;p&gt;Margin keeps empty space around the model. Bounds measures the fit on the whole model, so every step lines up, or only on the steps being saved.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="289"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="290"/>
         <source>Animated &amp;GIF</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="305"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="306"/>
         <source>A&amp;xis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="309"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="310"/>
         <source>Axis the model turns around.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="317"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="318"/>
         <source>&amp;Full Turn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="318"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="319"/>
         <source>Turn the model once all the way around.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="322"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="323"/>
         <source>A&amp;ngle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="323"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="324"/>
         <source>Swing the model between two angles and back.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="334"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="335"/>
         <source>First angle, measured from the current view.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="335"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="336"/>
         <source>First Angle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="343"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="344"/>
         <source>Last angle, measured from the current view.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="344"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="345"/>
         <source>Last Angle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="383"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="384"/>
         <source>Fra&amp;mes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="414"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="927"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="415"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="928"/>
         <source> s</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> с</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="141"/>
@@ -14169,273 +15260,278 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="283"/>
-        <source>Animation</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="163"/>
+        <source>Save the image to the chosen file.</source>
+        <translation type="unfinished">Зберегти зображення у вибраний файл.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="284"/>
-        <source>&lt;p&gt;&lt;b&gt;Animation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Animated GIF saves an animation that loops forever.&lt;/p&gt;&lt;p&gt;Turntable turns the model around one axis through the Framing center, starting from the current view. Full Turn makes seamless revolutions. Angle swings between two angles from the current view and back again. Turns sets how many revolutions or swings make up the loop, so complex builds can be shown from every side more than once.&lt;/p&gt;&lt;p&gt;Next Step moves through the steps chosen in the Steps group while the model turns, one step every few turns or seconds. The loop ends on the last step and starts again.&lt;/p&gt;&lt;p&gt;Steps plays the chosen steps one per frame, for short animated instructions.&lt;/p&gt;&lt;p&gt;Joints blends through the poses of the main model saved in the Poses panel, in order and back to the first. Frames sets how many images go between two poses.&lt;/p&gt;&lt;p&gt;Frames sets how many images make up one turn and Frame Rate how many play each second. Hold Last keeps the finished model on screen before a loop through the steps restarts. Duration shows how long one loop plays.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <source>Animation</source>
+        <translation type="unfinished">Анімація</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="290"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="285"/>
+        <source>&lt;p&gt;&lt;b&gt;Animation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Animated GIF saves an animation that loops forever.&lt;/p&gt;&lt;p&gt;Turntable turns the model around one axis through the Framing center, starting from the current view. Full Turn makes seamless revolutions. Angle swings between two angles from the current view and back again. Turns sets how many revolutions or swings make up the loop, so complex builds can be shown from every side more than once.&lt;/p&gt;&lt;p&gt;Next Step moves through the steps chosen in the Steps group while the model turns, one step every few turns or seconds. The loop ends on the last step and starts again.&lt;/p&gt;&lt;p&gt;Steps plays the chosen steps one per frame, for short animated instructions.&lt;/p&gt;&lt;p&gt;Joints blends through the poses of the main model saved in the Poses panel, in order and back to the first. Frames sets how many images go between two poses.&lt;/p&gt;&lt;p&gt;Frames sets how many images make up one turn and Frame Rate how many play each second. Hold Last keeps the finished model on screen before a loop through the steps restarts. Duration shows how long one loop plays.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Анімація&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Анімований GIF зберігає анімацію, що повторюється нескінченно.&lt;/p&gt;&lt;p&gt;«Поворотний стіл» обертає модель навколо однієї осі через центр кадрування, починаючи з поточного вигляду. «Повний оберт» робить безшовні оберти. «Кут» хитає між двома кутами від поточного вигляду й назад. «Оберти» задає, скільки обертів чи погойдувань складають цикл, щоб складні конструкції можна було показати з усіх боків не раз.&lt;/p&gt;&lt;p&gt;«Наступний крок» проходить кроки, вибрані в групі «Кроки», поки модель обертається, по одному кроку за кілька обертів чи секунд. Цикл закінчується на останньому кроці й починається знову.&lt;/p&gt;&lt;p&gt;«Кроки» програє вибрані кроки по одному на кадр, для коротких анімованих інструкцій.&lt;/p&gt;&lt;p&gt;«Шарніри» плавно проходить через пози головної моделі, збережені на панелі поз, по порядку й назад до першої. «Кадри» задає, скільки зображень між двома позами.&lt;/p&gt;&lt;p&gt;«Кадри» задає, скільки зображень складають один оберт, а «Частота кадрів» — скільки відтворюється за секунду. «Утримувати останній» тримає готову модель на екрані перед перезапуском циклу кроків. «Тривалість» показує, як довго грає один цикл.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="291"/>
         <source>Save a looping GIF of the model turning or of the steps.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="293"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="294"/>
         <source>Motion</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="300"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="301"/>
         <source>Joints</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Шарніри</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="355"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="356"/>
         <source>Move to the next step while the model turns.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="356"/>
-        <source>Off</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="357"/>
-        <source>Turns</source>
-        <translation type="unfinished"></translation>
+        <source>Off</source>
+        <translation type="unfinished">Вимк.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="358"/>
+        <source>Turns</source>
+        <translation type="unfinished">Оберти</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="359"/>
         <source>Seconds</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="368"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="369"/>
         <source>Next Step Interval</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="372"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="373"/>
         <source>T&amp;urns</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="379"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="380"/>
         <source>Number of revolutions or swings in one loop (1 to 10).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="394"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="395"/>
         <source>Frame Rate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Частота кадрів</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="401"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="402"/>
         <source> fps</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="403"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="404"/>
         <source>Frames shown each second (0.5 to 50).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="407"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="408"/>
         <source>Hol&amp;d Last</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="416"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="417"/>
         <source>Seconds the last step stays on screen before the loop restarts (0 to 10).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="420"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="421"/>
         <source>Duration</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Тривалість</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="428"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="429"/>
         <source>Framing</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Кадрування</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="434"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="435"/>
         <source>Fram&amp;ing</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="438"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="439"/>
         <source>How the camera frames the model.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="439"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="440"/>
         <source>Current View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="440"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="441"/>
         <source>Fit Model</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="441"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="442"/>
         <source>Fit Each Step</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="446"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="447"/>
         <source>C&amp;enter</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="450"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="451"/>
         <source>Point the camera aims at and the turntable turns around.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="451"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="452"/>
         <source>World Origin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="452"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="453"/>
         <source>Model Origin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="453"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="454"/>
         <source>Model Center</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="458"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="459"/>
         <source>Margin</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Поле</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="463"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="464"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> %</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="465"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="466"/>
         <source>Empty space around the model, in percent of the image (0 to 50).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="469"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="470"/>
         <source>&amp;Bounds</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="473"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="474"/>
         <source>Parts the fit and center are measured on.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="474"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="475"/>
         <source>Whole Model</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="475"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="476"/>
         <source>Shown Steps</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="481"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="482"/>
         <source>Background</source>
         <translation type="unfinished">Фон</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="482"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="483"/>
         <source>&lt;p&gt;&lt;b&gt;Background&lt;/b&gt;&lt;/p&gt;&lt;p&gt;View Color fills the background with the view background. Transparent leaves it empty so the model can be placed over other images.&lt;/p&gt;&lt;p&gt;Only PNG and GIF files keep transparency. GIF edges are hard, without smoothing.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="487"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="488"/>
         <source>&amp;View Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="488"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="489"/>
         <source>Fill the background with the view background.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="493"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="494"/>
         <source>&amp;Transparent</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="701"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="702"/>
         <source>Supported Image Files (*.bmp *.png *.jpg *.gif);;BMP Files (*.bmp);;PNG Files (*.png);;JPEG Files (*.jpg);;Animated GIF Files (*.gif);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="879"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="880"/>
         <source>Leave the background transparent.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="881"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="882"/>
         <source>Transparent backgrounds need a PNG or GIF file.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="929"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="930"/>
         <source>Seconds each step shows (0.1 to 60).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="938"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="939"/>
         <source>Turns each step shows (1 to 10).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="954"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="955"/>
         <source>Steps play one per frame, set by the Steps group.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="960"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="961"/>
         <source>Number of images in one turn (2 to 360).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="960"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="961"/>
         <source>Number of images between two poses (2 to 360).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="984"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="985"/>
         <source>%1 s</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1076"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1156"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1077"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1157"/>
         <source>Step %1 of %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1086"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1087"/>
         <source>%1 frames</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1178"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1179"/>
         <source>Pause the animation.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1186"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="1187"/>
         <source>Play the animation.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -14457,7 +15553,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">Ширина:</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="199"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="200"/>
         <source>Width of the saved image, in pixels (1 to 32768).</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ширина збереженого зображення в пікселях (від 1 до 32768).</translation>
@@ -14467,7 +15563,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">Висота:</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="209"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="210"/>
         <source>Height of the saved image, in pixels (1 to 32768).</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Висота збереженого зображення в пікселях (від 1 до 32768).</translation>
@@ -14482,7 +15578,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">Діапазон кроків</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="254"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="255"/>
         <source>Save an image for every step in the active model.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Збережіть зображення для кожного кроку в активній моделі.</translation>
@@ -14492,7 +15588,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">Усі кроки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="249"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="250"/>
         <source>Save only the current step.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Зберегти лише поточний крок.</translation>
@@ -14520,7 +15616,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">Перший крок для збереження, коли вибрано користувацький діапазон.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="270"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="271"/>
         <source>First Step</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перший крок</translation>
@@ -14535,7 +15631,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">Останній крок для збереження, коли вибрано спеціальний діапазон.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="278"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="279"/>
         <source>Last Step</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Останній крок</translation>
@@ -14545,7 +15641,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">Помилка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="680"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="681"/>
         <source>Output file cannot be empty.</source>
         <oldsource>Output File cannot be empty.</oldsource>
         <translation type="unfinished">Вихідний файл не може бути порожнім.</translation>
@@ -14571,7 +15667,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">Кінцевий крок має бути більшим за початковий крок.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="701"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="702"/>
         <source>Save Image File</source>
         <translation>Зберегти файл зображення</translation>
     </message>
@@ -14619,7 +15715,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/transput/sw_instructions.cpp" line="44"/>
         <source>mm</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">мм</translation>
     </message>
     <message>
         <location filename="../../source/transput/sw_instructions.cpp" line="47"/>
@@ -14629,7 +15725,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/transput/sw_instructions.cpp" line="50"/>
         <source>in</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">дюйм</translation>
     </message>
 </context>
 <context>
@@ -14909,7 +16005,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="317"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Зберегти</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="469"/>
@@ -15154,7 +16250,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1656"/>
         <source>Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Лінія</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1656"/>
@@ -15164,7 +16260,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1661"/>
         <source>Tip</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Підказка</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1661"/>
@@ -15174,7 +16270,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1661"/>
         <source>Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Стрілка</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1671"/>
@@ -15521,7 +16617,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_print.cpp" line="83"/>
         <source>to</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">до</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_print.cpp" line="86"/>
@@ -16060,7 +17156,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="510"/>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="563"/>
         <source>Rows</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Рядки</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="495"/>
@@ -16087,7 +17183,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="416"/>
         <source>Page</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Сторінка</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="140"/>
@@ -16383,7 +17479,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="612"/>
         <source>Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Стрілка</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="618"/>
@@ -16579,7 +17675,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="610"/>
         <source>Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Лінія</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="610"/>
@@ -16624,7 +17720,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="623"/>
         <source>Box</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Рамка</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="623"/>
@@ -16665,7 +17761,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="645"/>
         <source>Margin</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Поле</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="645"/>
@@ -16867,7 +17963,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="17"/>
         <source>Joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Шарнір</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="17"/>
@@ -16897,54 +17993,54 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="118"/>
         <source>Joint %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Шарнір %1</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="133"/>
         <source>None: Part &gt; Joint &gt; Set Joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Немає: Деталь &gt; Шарнір &gt; Задати шарнір</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
         <source>Joint %1, %2, angle %3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Шарнір %1, %2, кут %3</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
         <source>No joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Без шарніра</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="117"/>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
         <source>Hinge</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Петля</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="20"/>
         <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Every model with joints, under it each jointed submodel by line index, and under that each of its joints with type and angle. Click a joint to select its submodel and make it the joint the panel and the rotate gizmo work on, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. Click a model to show its poses in the Poses panel.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Шарніри&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Кожна модель із шарнірами, під нею кожна підмодель із шарнірами за індексом рядка, а під нею кожен її шарнір із типом і кутом. Клацніть шарнір, щоб вибрати його підмодель і зробити його шарніром, з яким працюють панель і гізмо обертання; клацніть його правою кнопкою, щоб перемістити, повернути чи видалити, або клацніть правою кнопкою підмодель, щоб редагувати чи видалити всі її шарніри. Клацніть модель, щоб показати її пози на панелі поз.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="34"/>
         <source>X Axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вісь X</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="34"/>
         <source>Y Axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вісь Y</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="34"/>
         <source>Z Axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вісь Z</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="41"/>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="236"/>
         <source>Delete Joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Видалити шарнір</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="42"/>
@@ -16960,7 +18056,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="117"/>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
         <source>Ball</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Кульовий</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="206"/>
@@ -16985,7 +18081,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
         <source>None: select a jointed submodel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Немає: виберіть підмодель із шарніром</translation>
     </message>
     <message>
         <source>Name</source>
@@ -16995,144 +18091,144 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swKeyframesView</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="211"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="216"/>
         <source>Keys of each object per step: click a step to go there, double-click to add or remove a key, drag a key to move it</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="212"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="217"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;One column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Ключові кадри&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Один стовпець на крок і один рядок на об&apos;єкт, який можна розгорнути до його властивостей. Ромб позначає ключ, а лінія з&apos;єднує ключі однієї властивості. Клацніть крок, щоб перейти до нього, двічі клацніть клітинку, щоб додати чи видалити ключ, перетягніть ромб, щоб перемістити ключ на інший крок, а правою кнопкою відкрийте більше дій. Значення редагуються на панелі властивостей.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="274"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="279"/>
         <source>Position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="275"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="280"/>
         <source>Rotation</source>
         <translation type="unfinished">Обертання</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="280"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="285"/>
         <source>Target</source>
         <translation type="unfinished">Ціль</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="281"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="286"/>
         <source>Up</source>
         <translation type="unfinished">Верх</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="287"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="292"/>
         <source>Color</source>
         <translation type="unfinished">Колір</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="288"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="293"/>
         <source>Power</source>
         <translation type="unfinished">потужність</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="289"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="294"/>
         <source>POV-Ray Power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="290"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="295"/>
         <source>Fade Distance</source>
         <translation type="unfinished">Відстань зникнення</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="291"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="296"/>
         <source>Fade Power</source>
         <translation type="unfinished">Fade Power</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="292"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="297"/>
         <source>Radius</source>
         <translation type="unfinished">Радіус</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="293"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="298"/>
         <source>Angle</source>
         <translation type="unfinished">Кут</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="294"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="299"/>
         <source>Area Width</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="295"/>
-        <source>Area Height</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="296"/>
-        <source>Spot Cone</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="297"/>
-        <source>Spot Penumbra</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="298"/>
-        <source>Spot Tightness</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="299"/>
-        <source>Area Grid X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="300"/>
+        <source>Area Height</source>
+        <translation type="unfinished">Висота області</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="301"/>
+        <source>Spot Cone</source>
+        <translation type="unfinished">Конус прожектора</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="302"/>
+        <source>Spot Penumbra</source>
+        <translation type="unfinished">Півтінь прожектора</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="303"/>
+        <source>Spot Tightness</source>
+        <translation type="unfinished">Різкість прожектора</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="304"/>
+        <source>Area Grid X</source>
+        <translation type="unfinished">Сітка області X</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="305"/>
         <source>Area Grid Y</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Сітка області Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="420"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="425"/>
         <source>Remove Keyframes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Видалити ключові кадри</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="503"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="508"/>
         <source>Move Keyframe</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Перемістити ключовий кадр</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="519"/>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="553"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="524"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="558"/>
         <source>Remove Keyframe</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Видалити ключовий кадр</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="521"/>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="551"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="526"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="556"/>
         <source>Add Keyframe</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Додати ключовий кадр</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="533"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="538"/>
         <source>Add Key</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Додати ключ</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="534"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="539"/>
         <source>Remove Key</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Видалити ключ</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="536"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="541"/>
         <source>Remove All Keys</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Видалити всі ключі</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="655"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="660"/>
         <source>Step</source>
         <translation type="unfinished">Крок</translation>
     </message>
@@ -17147,72 +18243,97 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="20"/>
         <source>&lt;p&gt;&lt;b&gt;Add Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add position and rotation keys to the selected objects at the current step, holding their values at that step.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Додати ключі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Додати ключі позиції й обертання вибраним об&apos;єктам на поточному кроці, зберігаючи їхні значення на цьому кроці.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="26"/>
         <source>Remove the keys of the selected objects at the current step</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Видалити ключі вибраних об&apos;єктів на поточному кроці</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="27"/>
         <source>&lt;p&gt;&lt;b&gt;Remove Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove every key the selected objects have at the current step.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Видалити ключі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Видалити кожен ключ, який вибрані об&apos;єкти мають на поточному кроці.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="40"/>
         <source>Go to the first step</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Перейти до першого кроку</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="46"/>
-        <source>Play or pause the steps</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="41"/>
+        <source>&lt;p&gt;&lt;b&gt;Rewind&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first step of the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Перемотати&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перейти до першого кроку моделі.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="47"/>
+        <source>Play or pause the steps</source>
+        <translation type="unfinished">Грати або призупинити кроки</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="48"/>
         <source>&lt;p&gt;&lt;b&gt;Play&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Step through the model one step at a time to the last step, showing the keyed motion. Click again to pause.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Грати&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Проходити модель крок за кроком до останнього кроку, показуючи анімований рух. Клацніть ще раз, щоб призупинити.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="53"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="54"/>
         <source>Stop and go back to the step playing started from</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Зупинити й повернутися до кроку, з якого почалося відтворення</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="59"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="55"/>
+        <source>&lt;p&gt;&lt;b&gt;Stop&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Stop playing through the steps and go back to the step playing started from.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Стоп&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Зупинити проходження кроків і повернутися до кроку, з якого почалося відтворення.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="61"/>
         <source>Go to the last step</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Перейти до останнього кроку</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="79"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="62"/>
+        <source>&lt;p&gt;&lt;b&gt;Forward&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the last step of the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вперед&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перейти до останнього кроку моделі.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="82"/>
         <source>Selected</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вибрані</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="81"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="84"/>
         <source>Show the keys of the selected objects</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Показати ключі вибраних об&apos;єктів</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="85"/>
+        <source>&lt;p&gt;&lt;b&gt;Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;List only the selected objects in the timeline, with or without keys.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вибрані&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перелічити на часовій шкалі лише вибрані об&apos;єкти, з ключами або без.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="89"/>
         <source>All</source>
         <translation type="unfinished">Усі</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="87"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="91"/>
         <source>Show the keys of every object that has keys</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="204"/>
-        <source>Add Keyframe</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="92"/>
+        <source>&lt;p&gt;&lt;b&gt;All&lt;/b&gt;&lt;/p&gt;&lt;p&gt;List the selected objects and every other object of the model that has keys.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Усі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перелічити вибрані об&apos;єкти та кожен інший об&apos;єкт моделі, що має ключі.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="204"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="209"/>
+        <source>Add Keyframe</source>
+        <translation type="unfinished">Додати ключовий кадр</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="209"/>
         <source>Remove Keyframe</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Видалити ключовий кадр</translation>
     </message>
 </context>
 <context>
@@ -17427,14 +18548,34 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">час</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="968"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="952"/>
+        <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Spread every other visible part, or only the selected ones, away from an anchor by an X, Y and Z percentage of its distance. Each part slides out along the connection that holds it. Collapse or Undo puts the parts back, and Save Copy saves the exploded model to a separate file.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Розсунути&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Розсунути кожну іншу видиму деталь або лише вибрані від опорної на відсоток X, Y і Z її відстані. Кожна деталь висувається вздовж з&apos;єднання, що її тримає. «Згорнути» або «Скасувати» повертає деталі на місце, а «Зберегти копію» зберігає розсунуту модель в окремий файл.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="965"/>
+        <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The joint picked on the selected submodel with its axis, and a tree of every model with joints, its jointed submodels and their joints. Pick a joint to move or rotate it, and delete one to put it back at rest.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Шарніри&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Шарнір, вибраний на вибраній підмоделі, з його віссю, і дерево кожної моделі із шарнірами, її підмоделей із шарнірами та їхніх шарнірів. Виберіть шарнір, щоб перемістити чи повернути його, а видаліть його, щоб повернути у стан спокою.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="972"/>
         <source>Poses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="975"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="974"/>
+        <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The poses of the model picked in the Joints panel. Save the joint angles as a named pose, then recall, rename or delete it. Poses are saved with the model.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Пози&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Пози моделі, вибраної на панелі шарнірів. Збережіть кути шарнірів як іменовану позу, а потім відновіть, перейменуйте чи видаліть її. Пози зберігаються разом із моделлю.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="981"/>
         <source>Keyframes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ключові кадри</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="983"/>
+        <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A full-width timeline of the animation keys of the selected or all objects, one column per step. Add or remove keys at the current step, and play through the steps to watch the keyed motion.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Ключові кадри&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Часова шкала на всю ширину з ключами анімації вибраних або всіх об&apos;єктів, один стовпець на крок. Додавайте чи видаляйте ключі на поточному кроці та проходьте кроки, щоб побачити анімований рух.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Standard Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use file controls to create, open, and save projects, and Undo or Redo to navigate edit history. Before moving or rotating objects, choose the selection rule, coordinate reference, and snapping increments from the four drop-down controls. Help &gt; What&apos;s This? explains individual controls.&lt;/p&gt;</source>
@@ -17630,7 +18771,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="827"/>
         <source>T</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">T</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="839"/>
@@ -17687,17 +18828,17 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="950"/>
         <source>Explode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Розсунути</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="961"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="963"/>
         <source>Joints</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Шарніри</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="119"/>
         <source>Terminal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Термінал</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="121"/>
@@ -17717,7 +18858,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Попередній перегляд&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перегляньте деталь, не поміщаючи її в модель. Двічі клацніть деталь у док-станції Parts, щоб переглянути його. Lock Preview зберігає поточний попередній перегляд, коли змінюється вибір джерела; розблокуйте його, щоб дозволити оновлення.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1034"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1042"/>
         <source>Asset loading failed</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося завантажити ресурс</translation>
@@ -18012,12 +19153,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="825"/>
         <source>Close Model Tab</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Закрити вкладку моделі</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="826"/>
         <source>&lt;p&gt;&lt;b&gt;Close Model Tab&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Close this tab. The model stays in the file; open it again from the Models menu.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Закрити вкладку моделі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Закрити цю вкладку. Модель лишається у файлі; відкрийте її знову з меню «Моделі».&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="504"/>
@@ -18343,7 +19484,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="290"/>
         <source>Keep</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Залишити</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="292"/>
@@ -18655,31 +19796,31 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Ортографічна</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1058"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1066"/>
         <source>Selection</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виділення</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1059"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1067"/>
         <source>View Orientation</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Орієнтація вигляду</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1060"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1068"/>
         <source>Position</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Положення</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1061"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1069"/>
         <source>Snap and Transform</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Прив’язка та перетворення</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1062"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1070"/>
         <source>Step</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Крок</translation>
@@ -18692,27 +19833,27 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="862"/>
         <source>Scroll the model tabs right.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Прокрутити вкладки моделей праворуч.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="863"/>
         <source>Scroll Tabs Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Прокрутити вкладки ліворуч</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="863"/>
         <source>Scroll Tabs Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Прокрутити вкладки праворуч</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="864"/>
         <source>&lt;p&gt;&lt;b&gt;Scroll Tabs Left&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the model tabs hidden on the left when they do not all fit.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Прокрутити вкладки ліворуч&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати вкладки моделей, приховані ліворуч, коли вони не вміщуються всі.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="864"/>
         <source>&lt;p&gt;&lt;b&gt;Scroll Tabs Right&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the model tabs hidden on the right when they do not all fit.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Прокрутити вкладки праворуч&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати вкладки моделей, приховані праворуч, коли вони не вміщуються всі.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -19436,7 +20577,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="861"/>
         <source>Explode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Розсунути</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="1084"/>
@@ -19638,7 +20779,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="513"/>
         <source>Remove Keyframes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Видалити ключові кадри</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1012"/>
@@ -19654,12 +20795,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1541"/>
         <source>Add Keyframe</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Додати ключовий кадр</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1541"/>
         <source>Remove Keyframe</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Видалити ключовий кадр</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="314"/>
@@ -19959,7 +21100,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_joints.cpp" line="636"/>
         <source>Delete Joint</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Видалити шарнір</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_joints.cpp" line="649"/>
@@ -20497,12 +21638,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ширина</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Висота</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
@@ -20533,6 +21674,26 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
         <source>Bottom</source>
         <translation type="unfinished">Знизу</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
+        <source>Make the page taller than it is wide.</source>
+        <translation type="unfinished">Зробити сторінку вищою, ніж вона широка.</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Portrait&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Lay out each instruction page upright, taller than it is wide.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Книжкова&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Розташувати кожну сторінку інструкції вертикально, вищою, ніж вона широка.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
+        <source>Make the page wider than it is tall.</source>
+        <translation type="unfinished">Зробити сторінку ширшою, ніж вона висока.</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Landscape&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Lay out each instruction page on its side, wider than it is tall.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Альбомна&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Розташувати кожну сторінку інструкції на боці, ширшою, ніж вона висока.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -21151,57 +22312,57 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="356"/>
         <source>Saved poses of this model, played in this order by the Joints motion</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Збережені пози цієї моделі, які рух шарнірів програє в цьому порядку</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="357"/>
         <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The poses saved in the model picked in the Joints panel, each holding the angles of that model&apos;s joints only. The Joints motion of the image dialog plays the poses of the main model in this order. Pick one to recall, rename or delete it.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Пози&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Пози, збережені в моделі, вибраній на панелі шарнірів, кожна з яких містить кути лише шарнірів цієї моделі. Рух шарнірів у діалозі зображення програє пози головної моделі в цьому порядку. Виберіть одну, щоб відновити, перейменувати чи видалити її.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="371"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Зберегти</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="371"/>
         <source>Save the joint angles of this model as a pose</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Зберегти кути шарнірів цієї моделі як позу</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="371"/>
         <source>&lt;p&gt;&lt;b&gt;Save&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Store the angles of the joints in this model under a name. Saving a name that already exists replaces that pose.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Зберегти&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Зберегти кути шарнірів цієї моделі під назвою. Збереження вже наявної назви замінює цю позу.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="372"/>
         <source>Recall</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Відновити</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="372"/>
         <source>Put the joints of this model back in the picked pose</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Повернути шарніри цієї моделі у вибрану позу</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="372"/>
         <source>&lt;p&gt;&lt;b&gt;Recall&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the joints of this model back to the angles of the picked pose, in one undo step.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Відновити&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Повернути шарніри цієї моделі до кутів вибраної пози одним кроком скасування.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="373"/>
         <source>Rename</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Перейменувати</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="373"/>
         <source>Rename the picked pose</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Перейменувати вибрану позу</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="373"/>
         <source>&lt;p&gt;&lt;b&gt;Rename&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Give the picked pose a new name.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Перейменувати&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Дати вибраній позі нову назву.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="374"/>
@@ -21216,7 +22377,7 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="374"/>
         <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the picked pose from the model. The joints keep their angles.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Видалити&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Видалити вибрану позу з моделі. Шарніри зберігають свої кути.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="416"/>
@@ -21232,12 +22393,12 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="416"/>
         <source>Pose %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Поза %1</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="453"/>
         <source>Rename Pose</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Перейменувати позу</translation>
     </message>
 </context>
 <context>
@@ -23336,7 +24497,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="461"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вигляд</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="600"/>
@@ -23383,7 +24544,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="121"/>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="154"/>
         <source>Page</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Сторінка</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="122"/>
@@ -24198,7 +25359,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Tool</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Інструмент</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -24293,7 +25454,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Turntable</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Поворотний стіл</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -24318,7 +25479,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source> s</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> с</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -24328,7 +25489,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Selected</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вибрані</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -24459,7 +25620,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Model</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Модель</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -24679,7 +25840,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Звичайний</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -24754,17 +25915,17 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>X Axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вісь X</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Y Axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вісь Y</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Z Axis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вісь Z</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25321,7 +26482,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Keep</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Залишити</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25443,7 +26604,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_context.cpp" line="207"/>
         <source>Separator</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Роздільник</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_context.cpp" line="208"/>
@@ -26000,7 +27161,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Опис</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
@@ -26056,7 +27217,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Metric</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Метричні</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
@@ -26426,7 +27587,7 @@ N/A: %1 parts</source>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1412"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1462"/>
         <source>F</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ф</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1412"/>
@@ -26445,7 +27606,7 @@ N/A: %1 parts</source>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1421"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1476"/>
         <source>P</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">П</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1421"/>
@@ -26498,7 +27659,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1435"/>
         <source>Cone</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Конус</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1435"/>
@@ -26508,7 +27669,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1436"/>
         <source>Penumbra</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Півтінь</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1436"/>
@@ -26611,7 +27772,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1456"/>
         <source>POV-Ray</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1458"/>
@@ -26627,7 +27788,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1462"/>
         <source>Fade</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Згасання</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1464"/>
@@ -26661,7 +27822,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1468"/>
         <source>Area Grid</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Сітка області</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1470"/>
@@ -26676,7 +27837,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1477"/>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Р</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1477"/>
@@ -27162,12 +28323,12 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="405"/>
         <source>Width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ширина</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="409"/>
         <source>Height</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Висота</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="579"/>
@@ -27192,7 +28353,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="582"/>
         <source>Area</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Область</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="582"/>
@@ -27217,7 +28378,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="587"/>
         <source>Model</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Модель</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="587"/>
@@ -27247,7 +28408,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="591"/>
         <source>Cameras</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Камери</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="591"/>
@@ -27306,7 +28467,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="480"/>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="541"/>
         <source>Off</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вимк.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="492"/>
@@ -27352,7 +28513,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="507"/>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="523"/>
         <source> %</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> %</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="509"/>
@@ -27487,7 +28648,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="541"/>
         <source>Rounded</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Закруглений</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="541"/>
@@ -27642,7 +28803,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="602"/>
         <source>Lights</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Освітлення</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="602"/>
@@ -27722,7 +28883,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="623"/>
         <source>Visible</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Видимий</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="623"/>
@@ -27851,7 +29012,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1031"/>
         <source>View</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вигляд</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1038"/>
@@ -28235,7 +29396,7 @@ Download it from %1 and set it under Preferences › General › LGEO Library.</
     <message>
         <location filename="../../source/core/sw_renderer_povray.cpp" line="353"/>
         <source>POV-Ray</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_renderer_povray.cpp" line="354"/>
@@ -28268,6 +29429,11 @@ Download it from %1 and set it under Preferences › General › LGEO Library.</
 
 Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General › POV-Ray Executable.</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Choose Render Output&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pick the folder, name and format of the rendered image in a file dialog. The path appears in the output field beside it.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вибрати вихід рендеру&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть теку, назву й формат відрендереного зображення в діалозі файлу. Шлях з&apos;явиться в полі виходу поруч.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -28818,7 +29984,7 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/rendering/sw_view_widget.cpp" line="245"/>
         <source>Joint %1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Шарнір %1</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_view_widget.cpp" line="252"/>

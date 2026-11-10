@@ -97,6 +97,12 @@
        <layout class="QHBoxLayout" name="OrientationLayout">
         <item>
          <widget class="QRadioButton" name="PortraitButton">
+          <property name="toolTip">
+           <string>Make the page taller than it is wide.</string>
+          </property>
+          <property name="whatsThis">
+           <string>&lt;p&gt;&lt;b&gt;Portrait&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Lay out each instruction page upright, taller than it is wide.&lt;/p&gt;</string>
+          </property>
           <property name="text">
            <string>Portrait</string>
           </property>
@@ -104,6 +110,12 @@
         </item>
         <item>
          <widget class="QRadioButton" name="LandscapeButton">
+          <property name="toolTip">
+           <string>Make the page wider than it is tall.</string>
+          </property>
+          <property name="whatsThis">
+           <string>&lt;p&gt;&lt;b&gt;Landscape&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Lay out each instruction page on its side, wider than it is tall.&lt;/p&gt;</string>
+          </property>
           <property name="text">
            <string>Landscape</string>
           </property>

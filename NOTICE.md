@@ -13,6 +13,7 @@
   - Keyframes: View > Toolbars > Keyframes Panel docks a full-width timeline at the bottom or top, with Selected or All objects expandable to their properties, a diamond per key joined by a line, click a step to go to it, double-click to add or remove a key, drag a key to another step, a right-click menu, full and hollow diamonds to add or remove the selection's keys, Add Keys, and rewind, play or pause, stop and forward buttons
   - Keyframes: Steps > Set Keys (K), Remove Keys (Shift+K), Add Keys (Alt+K), Play or Pause (Ctrl+K) and Stop (Ctrl+Shift+K) have keyboard shortcuts
   - Properties: the key buttons are small round dots again, filled when the property has a key at the current step
+  - Help: every command, the Explode, Joints, Poses and Keyframes panels and the remaining buttons explain themselves in What's This? (Shift+F1) and F1
 
   </details>
 

@@ -49,6 +49,9 @@
          <property name="toolTip">
           <string>Choose the rendered image file and format.</string>
          </property>
+         <property name="whatsThis">
+          <string>&lt;p&gt;&lt;b&gt;Choose Render Output&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pick the folder, name and format of the rendered image in a file dialog. The path appears in the output field beside it.&lt;/p&gt;</string>
+         </property>
          <property name="accessibleName">
           <string>Choose Render Output</string>
          </property>
