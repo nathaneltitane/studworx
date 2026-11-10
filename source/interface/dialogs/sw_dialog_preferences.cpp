@@ -811,6 +811,41 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 
 	CreateInstructionsTab();
 	CreateContextMenuTab();
+
+	// scroll pages taller than the screen
+
+	mContentSize = minimumSizeHint();
+
+	// wide enough for every tab
+
+	const int TabMargin = mContentSize.width() - ui->tabWidget->minimumSizeHint().width();
+	const int TabWidth = ui->tabWidget->tabBar()->sizeHint().width() + ui->tabWidget->style()->pixelMetric(QStyle::PM_DefaultFrameWidth) * 2;
+	mContentSize.setWidth(qMax(mContentSize.width(), TabWidth + TabMargin));
+
+	const int CurrentIndex = ui->tabWidget->currentIndex();
+
+	for (int PageIndex = 0; PageIndex < ui->tabWidget->count(); PageIndex++)
+	{
+		QWidget* Page = ui->tabWidget->widget(PageIndex);
+		const QString Title = ui->tabWidget->tabText(PageIndex);
+		QScrollArea* ScrollArea = new QScrollArea(ui->tabWidget);
+
+		ScrollArea->setFrameShape(QFrame::NoFrame);
+		ScrollArea->setWidgetResizable(true);
+		ScrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+		ui->tabWidget->removeTab(PageIndex);
+		ScrollArea->setWidget(Page);
+		ui->tabWidget->insertTab(PageIndex, ScrollArea, Title);
+	}
+
+	ui->tabWidget->setCurrentIndex(CurrentIndex);
+}
+
+QSize swPreferencesDialog::sizeHint() const
+{
+	// open showing the tallest page
+
+	return mContentSize.isValid() ? mContentSize : QDialog::sizeHint();
 }
 
 swPreferencesDialog::~swPreferencesDialog()
@@ -1130,7 +1165,9 @@ bool swPreferencesDialog::EnsureColorConfiguration()
 
 	if (FileName.isEmpty())
 	{
-		ui->tabWidget->setCurrentWidget(ui->tabRendering);
+		// the scroll area holding the page
+
+		ui->tabWidget->setCurrentWidget(ui->tabRendering->parentWidget()->parentWidget());
 		ui->ColorSourceCombo->setFocus();
 		return false;
 	}

@@ -993,15 +993,6 @@ void swMainWindow::CreateToolBars()
 	tabifyDockWidget(mExplodeToolBar, mJointsToolBar);
 	tabifyDockWidget(mJointsToolBar, mPosesToolBar);
 
-	connect(mPropertiesToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
-	connect(mTimelineToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
-	connect(mPartsToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
-	connect(mColorsToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
-	connect(mMinifigureBuilderToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
-	connect(mExplodeToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
-	connect(mJointsToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
-	connect(mPosesToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
-	connect(mKeyframesToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 	connect(mJointsToolBar, &QDockWidget::visibilityChanged, this, []() { swView::UpdateAllViews(); });
 
 	mPartsToolBar->raise();

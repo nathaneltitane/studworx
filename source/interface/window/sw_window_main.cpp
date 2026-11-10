@@ -123,8 +123,6 @@ void swMainWindow::CreateTerminalWidget()
 	mTerminalToolBar->setWidget(new swTerminalWidget(mTerminalToolBar));
 	addDockWidget(Qt::BottomDockWidgetArea, mTerminalToolBar);
 	mTerminalToolBar->hide();
-
-	connect(mTerminalToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 #else
 
 	// no terminal without kde frameworks
@@ -197,8 +195,6 @@ void swMainWindow::CreatePreviewWidget()
 	swSetupWidgetHelp(mPreviewToolBar);
 	mPreviewToolBar->setWidget(mPreviewWidget);
 	addDockWidget(Qt::RightDockWidgetArea, mPreviewToolBar);
-
-	connect(mPreviewToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 
 	// created late, follows the lock
 	if (mActions[SW_VIEW_LOCK_INTERFACE]->isChecked())
@@ -311,19 +307,6 @@ void swMainWindow::TogglePreviewWidget(bool Visible)
 	else if (Visible)
 	{
 		CreatePreviewWidget();
-	}
-}
-
-void swMainWindow::EnableWindowFlags(bool Detached)
-{
-	if (Detached)
-	{
-		QDockWidget* DockWidget = qobject_cast<QDockWidget*>(sender());
-
-		DockWidget->setWindowFlags(Qt::CustomizeWindowHint | Qt::Window | Qt::WindowMinimizeButtonHint | Qt::WindowMaximizeButtonHint | Qt::WindowCloseButtonHint);
-
-		if (isVisible())
-			DockWidget->show();
 	}
 }
 

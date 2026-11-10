@@ -105,6 +105,7 @@ public:
 	};
 
 	bool eventFilter(QObject* Object, QEvent* Event) override;
+	QSize sizeHint() const override;
 
 protected:
 	void showEvent(QShowEvent* Event) override;
@@ -180,6 +181,7 @@ private slots:
 
 private:
 	Ui::swPreferencesDialog* ui;
+	QSize mContentSize;
 
 	QLineEdit* GetColorConfigurationEdit(swColorSource Source) const;
 	QString GetMinifigureBuilderSettingsStartPath() const;

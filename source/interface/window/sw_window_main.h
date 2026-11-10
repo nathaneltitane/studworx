@@ -369,7 +369,6 @@ protected slots:
 	void ColorChanged(int ColorIndex);
 	void PartListPicked(swPartData* PartData);
 	void ColorButtonClicked();
-	void EnableWindowFlags(bool);
 
 protected:
 	void closeEvent(QCloseEvent *event) override;
