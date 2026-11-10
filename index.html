@@ -32,7 +32,7 @@
 					"description": "StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library.",
 					"applicationCategory": "DesignApplication",
 					"operatingSystem": "Linux, Windows, macOS",
-					"softwareVersion": "2026-11-09",
+					"softwareVersion": "2026-11-10",
 					"license": "https://www.gnu.org/licenses/gpl-3.0.html",
 					"downloadUrl": "https://github.com/nathaneltitane/studworx/releases/latest",
 					"image": "https://studworx.app/resources/social/social.png",
@@ -3611,11 +3611,11 @@
 					</thead>
 
 					<tbody>
-						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-09_amd64.deb / arm64.deb</td></tr>
-						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-09-x86_64.rpm / aarch64.rpm</td></tr>
-						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-09-x86_64.appimage / aarch64.appimage</td></tr>
-						<tr><td>Windows</td><td>studworx-windows-2026-11-09-x64.exe</td></tr>
-						<tr><td>macOS</td><td>studworx-macos-2026-11-09-universal.dmg</td></tr>
+						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-10_amd64.deb / arm64.deb</td></tr>
+						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-10-x86_64.rpm / aarch64.rpm</td></tr>
+						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-10-x86_64.appimage / aarch64.appimage</td></tr>
+						<tr><td>Windows</td><td>studworx-windows-2026-11-10-x64.exe</td></tr>
+						<tr><td>macOS</td><td>studworx-macos-2026-11-10-universal.dmg</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -3672,6 +3672,9 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 				<ul>
 					<li>Site: the <a href="#views">Views</a> gallery shows the view cubes and axis icon on their own row, then Perspective, Orthographic and a new Wireframe view in matching captures, the cutaways, and the camera bar, height grids and idle turntable</li>
+					<li><a href="#help">Help</a>: the Explode, Joints, Poses, Keyframes and Minifigure Builder <a href="#panels">panels</a> each have one overview, shown on the panel and its title bar, the View menu entries only name the panel they show, the full diamond of the Keyframes panel is called Set Keys like its command, and the Render window panels name Blender or POV-Ray</li>
+					<li>Translations: the Log button of the Render window is translated, Render reads Renderizar in Portuguese and Rendu in French, Add Keys reads Adicionar chaves in Portuguese and 添加關鍵影格 in Traditional Chinese, and Set Keys reads Schlüssel setzen in German</li>
+					<li>Site: help search groups the panel controls under Explode Panel, Joints and Poses Panels and Keyframes Panel, and the Export BrickLink and Missing and Moved Parts help under their window names, instead of Main Window</li>
 				</ul>
 			</details>
 
@@ -3681,7 +3684,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<ul>
 					<li>Tabs: model tabs line up with the view gear button, each ending in a square close button behind a divider, and the tab scroll arrows are framed like the gear button</li>
 					<li>Poses: the poses move out of the Joints panel into their own Poses panel, View &gt; Toolbars &gt; Poses Panel, listed under a Pose header like the joints tree</li>
-					<li><a href="#interface">Interface</a>: Lock Interface, at the end of the toolbar and panel right-click menu and View &gt; Toolbars, hides the panel title bars to save space and keeps <a href="#panels">panels</a> and toolbars from being dragged, floated or redocked, while panels still resize and model tabs still move</li>
+					<li><a href="#interface">Interface</a>: Lock Interface, at the end of the toolbar and panel right-click menu and View &gt; Toolbars, hides the panel title bars to save space and keeps panels and toolbars from being dragged, floated or redocked, while panels still resize and model tabs still move</li>
 					<li>Joints: an empty joints tree reads None: Part &gt; Joint &gt; Set Joint</li>
 					<li>Joints: with no joint picked the panel reads None: select a jointed submodel, and the axis list reads X Axis, Y Axis, Z Axis</li>
 					<li>Joints: the red joint outline runs inside the submodel edge like the hover line, so it shows next to the selection outline</li>
@@ -3689,7 +3692,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Keyframes: View &gt; Toolbars &gt; Keyframes Panel docks a full-width timeline at the bottom or top, with Selected or All objects expandable to their properties, a diamond per key joined by a line, click a step to go to it, double-click to add or remove a key, drag a key to another step, a right-click menu, full and hollow diamonds to add or remove the selection&#x27;s keys, Add Keys, and rewind, play or pause, stop and forward buttons</li>
 					<li>Keyframes: <a href="#steps">Steps</a> &gt; Set Keys (K), Remove Keys (Shift+K), Add Keys (Alt+K), Play or Pause (Ctrl+K) and Stop (Ctrl+Shift+K) have keyboard shortcuts</li>
 					<li>Properties: the key buttons are small round dots again, filled when the property has a key at the current step</li>
-					<li><a href="#help">Help</a>: every command, the Explode, Joints, Poses and Keyframes panels and the remaining buttons explain themselves in What&#x27;s This? (Shift+F1) and F1</li>
+					<li>Help: every command, the Explode, Joints, Poses and Keyframes panels and the remaining buttons explain themselves in What&#x27;s This? (Shift+F1) and F1</li>
 				</ul>
 			</details>
 
@@ -3764,7 +3767,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p>LEGO® is a trademark of the LEGO® Group, which does not sponsor, authorize or endorse this project.</p>
 			<div class="authorship">
 				<a class="avatar" href="https://nathaneltitane.com" aria-label="N Λ T H Λ N E L"><img src="resources/avatar/avatar-bird.png" alt="" width="64" height="64"></a>
-				<p>Version // 2026-11-09<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
+				<p>Version // 2026-11-10<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
 			</div>
 		</div>
 
