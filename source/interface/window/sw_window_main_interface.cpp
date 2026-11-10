@@ -2,6 +2,7 @@
 #include "sw_window_main.h"
 #include "sw_widget_explode.h"
 #include "sw_widget_joints.h"
+#include "sw_widget_keyframes.h"
 #include "sw_widget_builder_minifigure.h"
 #include "sw_widget_spin_box_double.h"
 #include "sw_widget_selection_part.h"
@@ -100,7 +101,21 @@ void swMainWindow::CreateWidgets()
 	resize(QSize(800, 600));
 	move(QPoint(200, 200));
 	restoreGeometry(Settings.value("Geometry").toByteArray());
-	restoreState(Settings.value("State").toByteArray());
+	const QByteArray State = Settings.value("State").toByteArray();
+	restoreState(State);
+
+	// new keyframes panel goes under the terminal
+
+	QByteArray KeyframesName;
+
+	for (QChar Character : QString(mKeyframesToolBar->objectName()))
+		KeyframesName.append('\0').append(Character.toLatin1());
+
+	if (mTerminalToolBar && !State.contains(KeyframesName) && dockWidgetArea(mTerminalToolBar) == Qt::BottomDockWidgetArea && !mTerminalToolBar->isFloating())
+		splitDockWidget(mTerminalToolBar, mKeyframesToolBar, Qt::Vertical);
+
+	mActions[SW_VIEW_LOCK_INTERFACE]->setChecked(Settings.value("LockInterface", false).toBool());
+	SetInterfaceLocked(mActions[SW_VIEW_LOCK_INTERFACE]->isChecked());
 	mPartSelectionWidget->LoadState(Settings);
 	Settings.endGroup();
 }
@@ -191,6 +206,7 @@ void swMainWindow::CreateActions()
 	mActions[SW_PART_TOGGLE_FIRST_AT_ORIGIN]->setCheckable(true);
 	mActions[SW_PART_CONTROL_POINT_TANGENT]->setCheckable(true);
 	mActions[SW_EDIT_TOGGLE_SHADOW_LIBRARY]->setCheckable(true);
+	mActions[SW_VIEW_LOCK_INTERFACE]->setCheckable(true);
 	UpdateShadowLibraryAction();
 
 	for (int ActionIndex = SW_VIEW_TOOLBAR_FIRST; ActionIndex <= SW_VIEW_TOOLBAR_LAST; ActionIndex++)
@@ -461,11 +477,15 @@ void swMainWindow::CreateMenus()
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_MINIFIGURE_BUILDER]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_EXPLODE]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_JOINTS]);
+	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_POSES]);
+	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_KEYFRAMES]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_TERMINAL]);
 	ToolBarsMenu->addSeparator();
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_STANDARD]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_TOOLS]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_TIME]);
+	ToolBarsMenu->addSeparator();
+	ToolBarsMenu->addAction(mActions[SW_VIEW_LOCK_INTERFACE]);
 	ViewMenu->addSeparator();
 	ViewMenu->addAction(mActions[SW_VIEW_ZOOM_EXTENTS]);
 	ViewMenu->addAction(mActions[SW_VIEW_LOOK_AT]);
@@ -520,6 +540,13 @@ void swMainWindow::CreateMenus()
 	StepMenu->addAction(mActions[SW_VIEW_TIME_INSERT_BEFORE]);
 	StepMenu->addAction(mActions[SW_VIEW_TIME_INSERT_AFTER]);
 	StepMenu->addAction(mActions[SW_VIEW_TIME_DELETE]);
+	StepMenu->addSeparator();
+	StepMenu->addAction(mActions[SW_VIEW_TIME_ADD_KEYS]);
+	StepMenu->addAction(mActions[SW_VIEW_TIME_SET_KEYS]);
+	StepMenu->addAction(mActions[SW_VIEW_TIME_REMOVE_KEYS]);
+	StepMenu->addSeparator();
+	StepMenu->addAction(mActions[SW_VIEW_TIME_PLAY]);
+	StepMenu->addAction(mActions[SW_VIEW_TIME_STOP]);
 
 	QMenu* ModelMenu = menuBar()->addMenu(tr("&Models"));
 	ModelMenu->addAction(mActions[SW_PART_MINIFIGURE_BUILDER]);
@@ -752,20 +779,26 @@ void swMainWindow::CreateToolBars()
 	mColorList->setAccessibleName(tr("LDraw Colors"));
 
 	// as tall as the button and tiles
-	connect(mColorList, &swColorList::HeightChanged, this, [this, ColorWidget, ColorLayout]()
+	const auto FitColors = [this, ColorWidget, ColorLayout]()
 	{
 		// recompute and let the dock follow
 		ColorLayout->invalidate();
-		const int Height = ColorLayout->sizeHint().height();
-		const int TitleHeight = mColorsToolBar->height() - ColorWidget->height();
+		ColorWidget->setFixedHeight(ColorLayout->sizeHint().height());
 
-		ColorWidget->setFixedHeight(Height);
+		// after layout, title bar height is current
+		QTimer::singleShot(0, this, [this]()
+		{
+			if (!mColorsToolBar->isFloating() && mColorsToolBar->isVisible())
+				resizeDocks({ mColorsToolBar }, { mColorsToolBar->sizeHint().height() }, Qt::Vertical);
+		});
+	};
 
-		if (!mColorsToolBar->isFloating() && mColorsToolBar->isVisible())
-			resizeDocks({ mColorsToolBar }, { Height + TitleHeight }, Qt::Vertical);
-	});
+	connect(mColorList, &swColorList::HeightChanged, this, FitColors);
 
-	mColorsToolBar->setWidget(ColorWidget);
+	// locking changes the title bar height
+	connect(mColorsToolBar, &QDockWidget::featuresChanged, this, FitColors);
+
+	mColorsToolBar->setWidget(swScrollWhenCramped(ColorWidget, mColorsToolBar));
 	addDockWidget(Qt::RightDockWidgetArea, mColorsToolBar);
 
 	mPropertiesToolBar = new QDockWidget(tr("Properties"), this);
@@ -910,7 +943,7 @@ void swMainWindow::CreateToolBars()
 			// as tall as the editor
 			swMinifigureBuilderWidget* MinifigureBuilderWidget = new swMinifigureBuilderWidget(mMinifigureBuilderToolBar);
 			swFitHeightToContents(MinifigureBuilderWidget);
-			mMinifigureBuilderToolBar->setWidget(MinifigureBuilderWidget);
+			mMinifigureBuilderToolBar->setWidget(swScrollWhenCramped(MinifigureBuilderWidget, mMinifigureBuilderToolBar));
 		}
 	});
 
@@ -918,7 +951,7 @@ void swMainWindow::CreateToolBars()
 	mExplodeToolBar->setObjectName("ExplodeToolbar");
 	mExplodeWidget = new swExplodeWidget(mExplodeToolBar);
 	swFitHeightToContents(mExplodeWidget);
-	mExplodeToolBar->setWidget(mExplodeWidget);
+	mExplodeToolBar->setWidget(swScrollWhenCramped(mExplodeWidget, mExplodeToolBar));
 	addDockWidget(Qt::RightDockWidgetArea, mExplodeToolBar);
 	mExplodeToolBar->hide();
 
@@ -932,9 +965,25 @@ void swMainWindow::CreateToolBars()
 	addDockWidget(Qt::RightDockWidgetArea, mJointsToolBar);
 	mJointsToolBar->hide();
 
+	mPosesToolBar = new QDockWidget(tr("Poses"), this);
+	mPosesToolBar->setObjectName("PosesToolbar");
+	mPosesToolBar->setWidget(new swPosesWidget(mJointsWidget, mPosesToolBar));
+	addDockWidget(Qt::RightDockWidgetArea, mPosesToolBar);
+	mPosesToolBar->hide();
+
+	mKeyframesWidget = new swKeyframesWidget(nullptr);
+	mKeyframesToolBar = new QDockWidget(tr("Keyframes"), this);
+	mKeyframesToolBar->setObjectName("KeyframesToolbar");
+	mKeyframesToolBar->setAllowedAreas(Qt::TopDockWidgetArea | Qt::BottomDockWidgetArea);
+	mKeyframesToolBar->setWidget(mKeyframesWidget);
+	addDockWidget(Qt::BottomDockWidgetArea, mKeyframesToolBar, Qt::Vertical);
+	mKeyframesToolBar->hide();
+	connect(mKeyframesToolBar, &QDockWidget::visibilityChanged, mKeyframesWidget, [this](bool Visible) { if (Visible) mKeyframesWidget->Update(); });
+
 	tabifyDockWidget(mPreviewToolBar, mMinifigureBuilderToolBar);
 	tabifyDockWidget(mMinifigureBuilderToolBar, mExplodeToolBar);
 	tabifyDockWidget(mExplodeToolBar, mJointsToolBar);
+	tabifyDockWidget(mJointsToolBar, mPosesToolBar);
 
 	connect(mPropertiesToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 	connect(mTimelineToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
@@ -943,6 +992,8 @@ void swMainWindow::CreateToolBars()
 	connect(mMinifigureBuilderToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 	connect(mExplodeToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 	connect(mJointsToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
+	connect(mPosesToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
+	connect(mKeyframesToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
 	connect(mJointsToolBar, &QDockWidget::visibilityChanged, this, []() { swView::UpdateAllViews(); });
 
 	mPartsToolBar->raise();
@@ -951,7 +1002,7 @@ void swMainWindow::CreateToolBars()
 // use to refresh the builder parts from the library
 void swMainWindow::UpdateMinifigureBuilder()
 {
-	swMinifigureBuilderWidget* MinifigureBuilderWidget = qobject_cast<swMinifigureBuilderWidget*>(mMinifigureBuilderToolBar->widget());
+	swMinifigureBuilderWidget* MinifigureBuilderWidget = mMinifigureBuilderToolBar->findChild<swMinifigureBuilderWidget*>();
 
 	if (MinifigureBuilderWidget)
 		MinifigureBuilderWidget->ReloadParts();

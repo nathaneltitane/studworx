@@ -1,5 +1,6 @@
 #include "sw_global.h"
 #include "sw_window_main.h"
+#include "sw_widget_keyframes.h"
 #include "sw_widget_explode.h"
 #include "sw_widget_joints.h"
 #include "sw_widget_builder_minifigure.h"
@@ -134,6 +135,9 @@ void swMainWindow::UpdateSelectedObjects(bool SelectionChanged)
 
 	if (mJointsWidget)
 		mJointsWidget->UpdateJoint();
+
+	if (mKeyframesToolBar && mKeyframesToolBar->isVisible())
+		mKeyframesWidget->Update();
 
 	swPart* JointPart = ActiveModel ? ActiveModel->GetJointPart() : nullptr;
 	const bool HasJoint = JointPart && JointPart->HasJoints();
@@ -290,6 +294,9 @@ void swMainWindow::UpdateTimeline(bool Clear, bool UpdateItems)
 {
 	mTimelineWidget->Update(Clear, UpdateItems);
 
+	if (mKeyframesToolBar && mKeyframesToolBar->isVisible())
+		mKeyframesWidget->Update();
+
 	emit ModelContentsChanged();
 }
 
@@ -387,6 +394,11 @@ void swMainWindow::UpdateUndoRedo(const QString& UndoText, const QString& RedoTe
 {
 	QAction* UndoAction = mActions[SW_EDIT_UNDO];
 	QAction* RedoAction = mActions[SW_EDIT_REDO];
+
+	// undo can change keys
+
+	if (mKeyframesToolBar && mKeyframesToolBar->isVisible())
+		mKeyframesWidget->Update();
 
 	if (!UndoText.isEmpty())
 	{

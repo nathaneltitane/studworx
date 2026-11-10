@@ -4,7 +4,15 @@
   <summary>2026-11-09</summary>
 
   - Tabs: model tabs line up with the view gear button, each ending in a square close button behind a divider, and the tab scroll arrows are framed like the gear button
-  - Joints: the pose list is titled Poses
+  - Poses: the poses move out of the Joints panel into their own Poses panel, View > Toolbars > Poses Panel, listed under a Pose header like the joints tree
+  - Interface: Lock Interface, at the end of the toolbar and panel right-click menu and View > Toolbars, hides the panel title bars to save space and keeps panels and toolbars from being dragged, floated or redocked, while panels still resize and model tabs still move
+  - Joints: an empty joints tree reads None: Part > Joint > Set Joint
+  - Joints: with no joint picked the panel reads None: select a jointed submodel, and the axis list reads X Axis, Y Axis, Z Axis
+  - Joints: the red joint outline runs inside the submodel edge like the hover line, so it shows next to the selection outline
+  - Interface: the Colors, Minifigure Builder and Explode panels scroll when the window is too short instead of overlapping the panels below, so the window resizes down from its bottom edge and the status bar stays on screen
+  - Keyframes: View > Toolbars > Keyframes Panel docks a full-width timeline at the bottom or top, with Selected or All objects expandable to their properties, a diamond per key joined by a line, click a step to go to it, double-click to add or remove a key, drag a key to another step, a right-click menu, full and hollow diamonds to add or remove the selection's keys, Add Keys, and rewind, play or pause, stop and forward buttons
+  - Keyframes: Steps > Set Keys (K), Remove Keys (Shift+K), Add Keys (Alt+K), Play or Pause (Ctrl+K) and Stop (Ctrl+Shift+K) have keyboard shortcuts
+  - Properties: the key buttons are small round dots again, filled when the property has a key at the current step
 
   </details>
 
@@ -25,7 +33,7 @@
   <summary>2026-11-06</summary>
 
   - Joints: Part > Joint > Set Joint, also in the model view right-click menu, gives a submodel hinge or ball joints from the shadow library connections, several per submodel, with the picked part outlined in red, the Joints tool next to Rotate turns them with the mouse, and Part > Joint > Move Joint and Rotate Joint and the Use Joint Rotation preference turn them with the rotate keys and the Rotate tool
-  - Joints: the Poses panel is now the Joints panel, listing every model, its submodels as `arm-right.ldr 006` and their joints as `Joint 001` in a tree with a left-aligned angle column, and saving, recalling, renaming and deleting named poses per model
+  - Joints: the Poses panel is now the Joints panel, listing every model, its submodels as `arm-right.ldr 006` and their joints as `Joint 001` in a tree with a left-aligned angle column, with named poses per model saved, recalled, renamed and deleted in what is now the Poses panel
   - Image: File > Image plays the main model poses as an animated GIF with Motion Joints, framed once around every pose so the model holds still
   - Samples: sample-joints.mpd, a minifigure with Stand, Wave, Walk and Work poses, and sample-pov-ray.ldr, a scene with key, fill and rim lights, a floor and a camera for POV-Ray renders
   - Preferences: the new Context Menu tab lets you arrange the model view right-click menu, adding commands, separators and named submenus, renaming, reordering or resetting them

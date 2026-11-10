@@ -388,6 +388,7 @@ protected:
 	swView* CreateView(swModel* Model);
 	void SetActiveView(swView* ActiveView);
 	void ToggleDockWidget(QWidget* DockWidget);
+	void SetInterfaceLocked(bool Locked);
 	void SplitView(Qt::Orientation Orientation);
 	void LayoutNewView(QWidget* TabWidget, swViewWidget* ViewWidget);
 	void ShowAboutDialog();
@@ -474,6 +475,9 @@ protected:
 	class swExplodeWidget* mExplodeWidget = nullptr;
 	QDockWidget* mJointsToolBar = nullptr;
 	class swJointsWidget* mJointsWidget = nullptr;
+	QDockWidget* mPosesToolBar = nullptr;
+	QDockWidget* mKeyframesToolBar = nullptr;
+	class swKeyframesWidget* mKeyframesWidget = nullptr;
 
 	swPartSelectionWidget* mPartSelectionWidget = nullptr;
 	swColorList* mColorList = nullptr;

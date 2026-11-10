@@ -199,6 +199,13 @@ void swMainWindow::CreatePreviewWidget()
 	addDockWidget(Qt::RightDockWidgetArea, mPreviewToolBar);
 
 	connect(mPreviewToolBar, &QDockWidget::topLevelChanged, this, &swMainWindow::EnableWindowFlags);
+
+	// created late, follows the lock
+	if (mActions[SW_VIEW_LOCK_INTERFACE]->isChecked())
+	{
+		mPreviewToolBar->setTitleBarWidget(new QWidget(mPreviewToolBar));
+		mPreviewToolBar->setFeatures(QDockWidget::NoDockWidgetFeatures);
+	}
 }
 
 bool swMainWindow::eventFilter(QObject* Object, QEvent* Event)
@@ -596,13 +603,45 @@ QMenu* swMainWindow::createPopupMenu()
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_MINIFIGURE_BUILDER]);
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_EXPLODE]);
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_JOINTS]);
+	Menu->addAction(mActions[SW_VIEW_TOOLBAR_POSES]);
+	Menu->addAction(mActions[SW_VIEW_TOOLBAR_KEYFRAMES]);
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_TERMINAL]);
 	Menu->addSeparator();
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_STANDARD]);
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_TOOLS]);
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_TIME]);
+	Menu->addSeparator();
+	Menu->addAction(mActions[SW_VIEW_LOCK_INTERFACE]);
 
 	return Menu;
+}
+
+void swMainWindow::SetInterfaceLocked(bool Locked)
+{
+	// panels keep resizing while locked
+	const QDockWidget::DockWidgetFeatures Features = Locked ? QDockWidget::NoDockWidgetFeatures : QDockWidget::DockWidgetClosable | QDockWidget::DockWidgetMovable | QDockWidget::DockWidgetFloatable;
+
+	for (QDockWidget* DockWidget : findChildren<QDockWidget*>(QString(), Qt::FindDirectChildrenOnly))
+	{
+		// empty title bar collapses the title
+		QWidget* TitleBar = DockWidget->titleBarWidget();
+
+		if (Locked && !TitleBar)
+			DockWidget->setTitleBarWidget(new QWidget(DockWidget));
+		else if (!Locked && TitleBar)
+		{
+			DockWidget->setTitleBarWidget(nullptr);
+			delete TitleBar;
+		}
+
+		DockWidget->setFeatures(Features);
+	}
+
+	for (QToolBar* ToolBar : findChildren<QToolBar*>(QString(), Qt::FindDirectChildrenOnly))
+		ToolBar->setMovable(!Locked);
+
+	QSettings Settings;
+	Settings.setValue("MainWindow/LockInterface", Locked);
 }
 
 void swMainWindow::UpdateDockWidgetActions()
@@ -618,6 +657,8 @@ void swMainWindow::UpdateDockWidgetActions()
 	mActions[SW_VIEW_TOOLBAR_MINIFIGURE_BUILDER]->setChecked(mMinifigureBuilderToolBar->isVisible());
 	mActions[SW_VIEW_TOOLBAR_EXPLODE]->setChecked(mExplodeToolBar->isVisible());
 	mActions[SW_VIEW_TOOLBAR_JOINTS]->setChecked(mJointsToolBar->isVisible());
+	mActions[SW_VIEW_TOOLBAR_POSES]->setChecked(mPosesToolBar->isVisible());
+	mActions[SW_VIEW_TOOLBAR_KEYFRAMES]->setChecked(mKeyframesToolBar->isVisible());
 	mActions[SW_VIEW_TOOLBAR_TERMINAL]->setChecked(mTerminalToolBar && mTerminalToolBar->isVisible());
 }
 

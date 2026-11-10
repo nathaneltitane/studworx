@@ -13,9 +13,10 @@ StudWorx is built from standard Qt widgets: panels, dialogs and windows follow y
 - **Toolbars.** Standard, Tools and Time toolbars. Move and rotate cursors show the axis they work on.
 - **Transform toolbar.** Type a position or rotation for the selection and apply it, as absolute coordinates or relative to where it is now. It has no entry of its own: its fields sit at the bottom of the Properties panel, shown with View > Toolbars > Properties Panel.
 - **Tabs, splits and status bar.** Open several models in tabs, close one with the close button at the end of its tab or Close Tab (Ctrl+W), or the others from the tab's right-click menu, split the view and go Full Screen. The status bar shows the selection, the view orientation and projection, the focus position, the snap and transform settings and the current step. The selection reads the name, ID and weight of the selected part, a submodel reading ID N/A and the total weight of its parts when all of them have one, and the total weight of two or more selected parts. Right click the status bar to show or hide each segment.
-- **Split views.** Split the current view horizontally or vertically, as often as you like, remove one view, or Reset Views back to one. Each view keeps its own camera and projection, a border marks the active one, and the view cube and axis icon stay on the top left view.
-- **Toolbars and panels on demand.** View > Toolbars shows or hides each toolbar and panel: Standard, Tools, Time, Parts, Colors, Properties, Timeline, Preview, Terminal, Minifigure Builder, Explode and Joints.
-- **Undo and clipboard.** Undo and Redo every change, and Cut, Copy and Paste parts between models and tabs.
+- **Split views.** Split Horizontal and Split Vertical divide the current view as often as you like, Remove View closes one, or Reset Views back to one. Each view keeps its own camera and projection, a border marks the active one, and the view cube and axis icon stay on the top left view.
+- **Toolbars and panels on demand.** View > Toolbars shows or hides each toolbar and panel, such as Standard Toolbar, Colors Panel, Preview Panel and Minifigure Builder Panel: Standard, Tools, Time, Parts, Colors, Properties, Timeline, Preview, Terminal, Minifigure Builder, Explode, Joints, Poses and Keyframes.
+- **Lock Interface.** At the end of the same menu, also on a right click on any toolbar or panel title. Panel title bars are hidden to save space, panels and toolbars stay where they are with no dragging, floating or redocking, and the choice is remembered. Panels still resize, the menu still shows or hides them, and model tabs still move.
+- **Undo and clipboard.** Undo and Redo every change, and Cut, Copy and Paste parts between models and tabs. Paste with Steps keeps the steps of the copied parts.
 - **Contextual help.** Choose Help > "What's This?" or click the question mark in a title bar, then click any control to read what it does. F1 explains the focused control, Shift+F1 starts "What's This?" inside a dialog, and every entry is listed in the Help index below.
 - **Help menu.** Home Page opens the StudWorx repository on GitHub, Report a Bug its issues, and About shows the version and system information.
 - **Ten languages.** English, French, German, Spanish, Portuguese, Czech, Ukrainian, Russian, Simplified Chinese and Traditional Chinese.
@@ -23,26 +24,28 @@ StudWorx is built from standard Qt widgets: panels, dialogs and windows follow y
 
 <!-- gallery scroll -->
 
-![File](resources/images/interface-menu-01.png)
-![Edit](resources/images/interface-menu-02.png)
-![View](resources/images/interface-menu-03.png)
-![Part](resources/images/interface-menu-04.png)
-![Steps](resources/images/interface-menu-05.png)
-![Models](resources/images/interface-menu-06.png)
-![Help](resources/images/interface-menu-07.png)
-![Viewpoints](resources/images/interface-menu-08.png)
-![Cutaway](resources/images/interface-menu-09.png)
-![Projection](resources/images/interface-menu-10.png)
-![Shading](resources/images/interface-menu-11.png)
-![View options](resources/images/interface-menu-12.png)
-![Preview options](resources/images/interface-menu-13.png)
-![Parts options](resources/images/interface-menu-14.png)
-![Colors options](resources/images/interface-menu-15.png)
-![Minifigure Builder options](resources/images/interface-menu-16.png)
-![The main window with the model view, Parts, Colors, Properties and Timeline panels](resources/images/interface-window-01.png)
-![Standard, Tools and Time toolbars](resources/images/interface-window-02.png)
-![Status bar with the selected part](resources/images/interface-window-03.png)
-![Split views](resources/images/interface-window-04.png)
+![File](resources/images/interface-menu-file.png)
+![Edit](resources/images/interface-menu-edit.png)
+![View](resources/images/interface-menu-view.png)
+![Part](resources/images/interface-menu-part.png)
+![Steps](resources/images/interface-menu-steps.png)
+![Models](resources/images/interface-menu-models.png)
+![Help](resources/images/interface-menu-help.png)
+![Viewpoints](resources/images/interface-menu-viewpoints.png)
+![Cutaway](resources/images/interface-menu-cutaway.png)
+![Projection](resources/images/interface-menu-projection.png)
+![Shading](resources/images/interface-menu-shading.png)
+![View options](resources/images/interface-menu-view-options.png)
+![Preview options](resources/images/interface-menu-preview-options.png)
+![Parts options](resources/images/interface-menu-parts-options.png)
+![Colors options](resources/images/interface-menu-colors-options.png)
+![Minifigure Builder options](resources/images/interface-menu-minifigure-builder-options.png)
+![Toolbars](resources/images/interface-menu-toolbars.png)
+![The main window with the model view, Parts, Preview, Minifigure Builder, Timeline, Colors, Properties, Joints and Terminal panels](resources/images/interface-window-main.png)
+![Lock Interface hides the panel title bars](resources/images/interface-feature-lock-interface.png)
+![Standard, Tools and Time toolbars](resources/images/interface-widget-toolbars.png)
+![Status bar with the selected part](resources/images/interface-widget-status-bar.png)
+![Split views](resources/images/interface-feature-split-views.png)
 
 ## Files
 
@@ -52,7 +55,7 @@ Models are plain LDraw text files in LeoCAD's format, so they open in either pro
 
 <!-- gallery one -->
 
-![Model thumbnails in Dolphin](resources/images/files-example-01.png)
+![Model thumbnails in Dolphin](resources/images/files-feature-thumbnails.png)
 
 - **LDraw models.** .ldr, .mpd and .dat files, with New, Open, Merge, Save, Save As, Reload and the four most recent files. Save As follows the LDraw file specification and adds the extension when it is left out: .ldr for a single model, .mpd for a model with submodels or embedded data. Files are written with Unix line endings, and a model loaded with Windows line endings keeps them when saved. Watch for File Changes reloads a model edited in another program. Sample models, a minifigure, cube, sphere and cylinder cutaways of it, an exploded model, a flexible part, a posable minifigure with joints, lights and cameras, and a scene with POV-Ray lights, floor and camera, install to /usr/share/studworx/samples, the samples folder beside the program on Windows, or the application bundle resources on macOS.
 - **Startup.** Open Most Recent File on Startup reopens the last model, Restore Tab Layout brings back its tabs and split views, and Load All Parts Before Showing waits until every part is loaded before the model appears.
@@ -65,7 +68,7 @@ Models are plain LDraw text files in LeoCAD's format, so they open in either pro
 - **Print.** File > Print prints the current model view through the system print dialog, with a Preview button where the dialog allows it.
 - **Missing and moved parts.** Opening a model lists the parts that could not be loaded and the parts the library marks as moved or as an alias, with where each is used. Moved parts and aliases are offered the part they point to, missing parts are looked up through the BrickLink mapping, and Replace Checked swaps the checked ones in every submodel, keeping colors and positions, in one undo step. Copy List copies the list, Don't Warn Again or the Warn About Missing and Moved Parts preference stops the list on open, and the status bar icon opens it again.
 - **Thumbnails.** Model thumbnails in file managers, from a KDE thumbnail plugin or the desktop thumbnailer.
-- **Parts library.** Downloaded on the first start as the official LDraw complete.zip, or chosen from an archive you already have, and reloaded from the File menu. An unofficial parts folder can be added beside it.
+- **Parts library.** Downloaded on the first start as the official LDraw complete.zip, or chosen from an archive you already have, and reloaded with File > Reload Library. An unofficial parts folder can be added beside it.
 - **Command line.** Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx. [L²CU](https://l2cu.app), the LDraw command line utility for Linux based systems, drives these renders and exports for whole folders of models.
 - **Exit.** File > Exit asks to save each changed model before StudWorx closes.
 
@@ -98,16 +101,16 @@ studworx model.ldr opens a model. The options below work without opening a windo
 
 <!-- gallery scroll -->
 
-![Import menu](resources/images/files-menu-01.png)
-![Export menu](resources/images/files-menu-02.png)
-![LeoCAD meta command migration](resources/images/files-window-01.png)
-![Print](resources/images/files-window-02.png)
-![Rebrickable API key](resources/images/files-window-03.png)
-![Set inventory import](resources/images/files-window-04.png)
-![BrickLink export](resources/images/files-window-05.png)
-![HTML export](resources/images/files-window-06.png)
-![HTML style sheet](resources/images/files-window-07.png)
-![Missing and moved parts](resources/images/files-window-08.png)
+![Import menu](resources/images/files-menu-import.png)
+![Export menu](resources/images/files-menu-export.png)
+![LeoCAD meta command migration](resources/images/files-window-meta-migration.png)
+![Print](resources/images/files-window-print.png)
+![Rebrickable API key](resources/images/files-window-rebrickable-api-key.png)
+![Set inventory import](resources/images/files-window-set-inventory-import.png)
+![BrickLink export](resources/images/files-window-bricklink-export.png)
+![HTML export](resources/images/files-window-html-export.png)
+![HTML style sheet](resources/images/files-window-html-style-sheet.png)
+![Missing and moved parts](resources/images/files-window-missing-parts.png)
 
 ## Image
 
@@ -117,9 +120,9 @@ File > Image saves still images and animated GIFs of the active model. The previ
 
 <!-- gallery three -->
 
-![Turntable](resources/images/image-example-01.gif)
-![Steps](resources/images/image-example-02.gif)
-![Next Step, six steps, one turn each](resources/images/image-example-03.gif)
+![Turntable](resources/images/image-feature-turntable.gif)
+![Steps](resources/images/image-feature-steps.gif)
+![Next Step, six steps, one turn each](resources/images/image-feature-next-step.gif)
 
 - **Background.** View Color saves the view background opaque. Transparent leaves it empty so the model can be placed over other images. Only PNG and GIF files keep transparency.
 - **Steps.** Current Step, All Steps or a Range. Saving several still steps writes one numbered file per step: model.png becomes model01.png, model02.png and so on. The arrows under the preview look through the steps first.
@@ -166,10 +169,10 @@ The dialog keeps its settings in the [Settings] group of ~/.config/StudWorx/Stud
 
 <!-- gallery scroll -->
 
-![Still image: background, steps, framing, size and file](resources/images/image-window-01.png)
-![Animated GIF turntable](resources/images/image-window-02.png)
-![Steps: one step per frame](resources/images/image-window-03.png)
-![Next Step: steps while turning](resources/images/image-window-04.png)
+![Still image: background, steps, framing, size and file](resources/images/image-window-still-image.png)
+![Animated GIF turntable](resources/images/image-window-turntable.png)
+![Steps: one step per frame](resources/images/image-window-steps.png)
+![Next Step: steps while turning](resources/images/image-window-next-step.png)
 
 ## Rendering
 
@@ -179,34 +182,34 @@ The model view draws fast with OpenGL in four lighting styles, and File > Render
 
 <!-- gallery four -->
 
-![A POV-Ray render](resources/images/rendering-example-01.png)
-![Standard](resources/images/rendering-example-02.png)
-![Studio](resources/images/rendering-example-03.png)
-![Matte](resources/images/rendering-example-04.png)
-![Toon](resources/images/rendering-example-05.png)
-![Outline selection](resources/images/rendering-example-06.png)
-![Tint selection](resources/images/rendering-example-07.png)
+![A POV-Ray render](resources/images/rendering-feature-pov-ray.png)
+![Standard](resources/images/rendering-feature-standard.png)
+![Studio](resources/images/rendering-feature-studio.png)
+![Matte](resources/images/rendering-feature-matte.png)
+![Toon](resources/images/rendering-feature-toon.png)
+![Outline selection](resources/images/rendering-feature-outline-selection.png)
+![Tint selection](resources/images/rendering-feature-tint-selection.png)
 
 - **POV-Ray.** Found on its own in the PATH, Flatpak or Snap and checked for version 3.7. LGEO high detail parts are found beside the parts library or downloaded on request, with a Parts choice between LDraw and LGEO.
 - **Render window.** Choose the output file, follow the progress, and watch the image appear in the preview as it renders.
 - **Blender.** Render with the bundled Blender LDraw add-ons, with the output, image, scene, parts and editing settings in panels of the render window, or Open in Blender to keep working on the scene there. The Blender executable is set in Preferences.
-- **Lighting styles.** Standard, Studio, Matte and Toon, from the View menu or the command line with --lighting. Standard uses one light with soft highlights, Studio key, fill and rim lights, Matte no highlights, and Toon banded cel shading.
-- **Shading.** Wireframe, flat shading, default lights, edge lines, conditional lines and mesh level of detail.
+- **Lighting styles.** Standard Lighting, Studio Lighting, Matte Lighting and Toon Lighting, from the View menu or the command line with --lighting. Standard uses one light with soft highlights, Studio key, fill and rim lights, Matte no highlights, and Toon banded cel shading.
+- **Shading.** Wireframe, Flat Shading, Default Lights, Edge Lines, Conditional Lines and Mesh LOD (level of detail).
 - **Mesh level of detail.** Distant parts draw with simpler meshes, from a distance set in Preferences, so large models stay smooth.
-- **Studs.** Eight stud styles: Plain, Thin-Line Logo, Outline Logo, Sharp Top Logo, Rounded Top Logo, Flattened Logo, High Contrast and High Contrast Logo.
+- **Studs.** Eight stud styles: Plain Studs, Thin-Line Logo Studs, Outline Logo Studs, Sharp Top Logo Studs, Rounded Top Logo Studs, Flattened Logo Studs, High Contrast Studs and High Contrast Logo Studs.
 - **Color configurations.** Colors come from the parts library, the LDraw color configuration or the alternate configuration with more realistic edge line colors for rendering, chosen under Rendering > Colors.
 - **Edge colors.** Automate Edge Color computes edge colors from each part color, with edge contrast, saturation and light to dark settings, or set the stud cylinder, edge, black edge and dark edge colors yourself.
-- **Separate settings.** The model view, the preview, the parts list and the Minifigure Builder each keep their own rendering settings. Each can follow the model view instead, or set its own wireframe, flat shading, default lights, edge lines, conditional lines and line width.
-- **Selection highlight.** Outline or tint and edges, with an adjustable outline width and transparency.
+- **Separate settings.** The model view, the preview, the parts list and the Minifigure Builder each keep their own rendering settings. Each can follow the model view instead, with Preview Uses Model View Settings, Parts Use Model View Settings and Minifigure Builder Uses Model View Settings, or set its own Wireframe, Flat Shading, Default Lights, Edge Lines, Conditional Lines and line width. The preview also turns its View Cube and Axis Icon on and off, and the parts list has Snap Panel Width to Tiles.
+- **Selection highlight.** Outline Highlight or Tint and Edges Highlight, with Increase Outline Width, Decrease Outline Width and an adjustable transparency.
 - **Anti-aliasing.** 2x, 4x or 8x samples, and an adjustable line width.
 
 <!-- gallery scroll -->
 
-![Render menu](resources/images/rendering-menu-01.png)
-![Render window](resources/images/rendering-window-01.png)
-![Blender render window](resources/images/rendering-window-02.png)
-![Edge colors](resources/images/rendering-window-03.png)
-![Stud styles](resources/images/rendering-window-04.png)
+![Render menu](resources/images/rendering-menu-render.png)
+![Render window](resources/images/rendering-window-render.png)
+![Blender render window](resources/images/rendering-window-blender-render.png)
+![Edge colors](resources/images/rendering-window-edge-colors.png)
+![Stud styles](resources/images/rendering-window-stud-styles.png)
 
 ## Modeling
 
@@ -216,9 +219,9 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 
 <!-- gallery three -->
 
-![Flex Path control points](resources/images/modeling-example-01.png)
-![Train track](resources/images/modeling-example-02.png)
-![Explode](resources/images/modeling-example-03.png)
+![Flex Path control points](resources/images/modeling-feature-flex-path.png)
+![Train track](resources/images/modeling-feature-train-track.png)
+![Explode](resources/images/modeling-feature-explode.png)
 
 <!-- gallery three -->
 
@@ -226,40 +229,40 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 [A hose end seated on a newly placed brick, the path bending to reach it](resources/videos/studworx-flex-02.mp4)
 [A hose seated on the side of a brick, following it as the bricks move](resources/videos/studworx-flex-03.mp4)
 
-- **Parts.** Insert, delete, duplicate, paint, hide and group parts, with the first part placed at the origin as an option.
-- **Insert colors.** Insert with the current color, the selected part's color or the last inserted color, or lock the Parts panel to one color.
+- **Parts.** Insert, delete, duplicate, paint, hide and group parts, with Insert Part, Paint Selected, and Insert First Part at Origin to place the first part at the origin.
+- **Insert colors.** Insert with the Current Color, the Selected Part Color or the Last Inserted Part Color, from Solid Colors, Translucent Colors or Special Colors, or Lock Parts Color to keep the Parts panel on one color.
 - **Snapping.** Move in studs, flats and bricks, rotate in degrees with a custom angle, with relative or absolute transforms and separate or shared rotation.
 - **Move snap.** Horizontal steps of 1/20 stud, 1/4 stud, 1 flat, 1/2 stud and 1, 2, 3, 4 or 8 studs, vertical steps of 1/20 stud, 1/4 stud, 1 flat, 1/2 stud, 1 stud and 1, 2, 4 or 8 bricks, or No XY Snap and No Z Snap.
 - **Rotation snap.** 1, 5, 15, 22.5, 30, 45, 60, 90 or 180 degrees, a custom angle, or No Rotation Snap. Camera Snap orbits the view in the same steps. Turns in any step land exactly on square angles, so later moves keep whole coordinates.
-- **Transforms.** Relative Transforms move and rotate the selection around the part that has focus, Absolute Transforms in model coordinates. Rotate Separately turns each part around its own pivot, Rotate Together turns the selection as one. Each pair has a toggle shortcut.
-- **Keyboard moves.** Move and rotate the selection along +X, -X, +Y, -Y, +Z and -Z by the snap steps. Fixed Direction Keys keeps the arrow keys on the model axes instead of following the view.
-- **Selection.** Select All, Select None, Invert Selection, Adjacent Parts, by Name, and by part, color or both. Select Connected Parts follows the connection shapes of the LDCad shadow library.
+- **Transforms.** Relative Transforms move and rotate the selection around the part that has focus, Absolute Transforms in model coordinates. Rotate Separately turns each part around its own pivot, Rotate Together turns the selection as one. Toggle Relative Transforms and Toggle Separate Transforms switch each pair from the keyboard. The Transform toolbar sets Absolute Translation, Relative Translation, Absolute Rotation or Relative Rotation.
+- **Keyboard moves.** Move +X, Move -X, Move +Y, Move -Y, Move +Z and Move -Z, and Rotate +X, Rotate -X, Rotate +Y, Rotate -Y, Rotate +Z and Rotate -Z, move and rotate the selection by the snap steps. Fixed Direction Keys keeps the arrow keys on the model axes instead of following the view.
+- **Selection.** Select All, Select None, Invert Selection, Select Adjacent Parts, by Name, and by part, color or both. Select Connected Parts follows the connection shapes of the LDCad shadow library.
 - **Selection modes.** Single Selection picks one part, Part Selection every part of the same type, Color Selection every part of the same color, and Part and Color Selection both.
 - **Select by Name.** A checklist of every object in the model, with All, None and Invert.
 - **Part connections.** Use Part Connections turns connected part selection on and off, with the shadow library folder chosen in Preferences.
-- **Find and Replace.** A bar over the view finds parts by part, color or both, steps through the matches or selects them all, and replaces the color or part of one or all of them. The part list shows the parts of the model in the colors they are used in, with a flag on parts used in more than one color, and the gear button sets how the part lists are filtered and shown. Replace in Submodels makes Replace All reach every submodel the model uses.
+- **Find and Replace.** A bar over the view finds parts by part, color or both, steps through the matches with Find Next and Find Previous or selects them with Find All, and replaces the color or part with Replace Next or Replace All. The part list shows the parts of the model in the colors they are used in, with a flag on parts used in more than one color, and the gear button sets how the part lists are filtered and shown. Replace in Submodels makes Replace All reach every submodel the model uses.
 - **Array.** Repeat the selection along one, two or three axes, with a count, an X, Y and Z offset and an X, Y and Z rotation for each.
 - **Explode.** The Explode panel, shown from the panel context menu or View > Toolbars, spreads every other visible part, or only the selected ones with each group moving as one part, away from an anchor, the focused part or the first or last selected one, by an X, Y and Z percentage of its distance, or one value for all three with Uniform following the chosen axis. Each part slides straight out along the stud, pin or socket that holds it, a part without one along the nearest X, Y or Z axis from the part beside it, and with Show Lines a line in the Explode Lines color from Preferences runs through the connection, from the socket on the part it came off to the moved part. Submodels in the spread, and the submodels inside them, flatten into their parts first, so everything spreads, and the flatten and spread are one undo step. Changing a setting spreads the parts again, Collapse or Undo puts the parts and the submodels back, and any other edit only puts the parts back. Save Copy saves the whole exploded project to a separate file named with -exploded before the extension, and the open file is not saved.
 - **Flex Path.** Hoses, cables and other flexible parts bend along control points that stop at the part length.
-- **Control points.** Insert and remove control points, clamp a point along the path or release it to rotate freely, align it to the path once, or turn it along the X, Y or Z axis. New points can start clamped, and the spread handle shapes the curve.
-- **Groups.** Group the selection under a unique name, Ungroup, add the focused part to a group or remove it, and Edit Groups in a tree of parts and groups.
+- **Control points.** Insert Control Point and Remove Control Point, Clamp Tangent to hold a point along the path or release it to rotate freely, Align to Tangent once, or turn it along the X Axis, Y Axis or Z Axis. New points can start clamped, and the spread handle shapes the curve.
+- **Groups.** Group the selection under a unique name, Ungroup, Add to Group and Remove from Group for the focused part, and Edit Groups in a tree of parts and groups.
 - **Hide and show.** Hide Selected or Hide Unselected, then Unhide Selected or Unhide All.
-- **Show Earlier and Later.** Move the selected parts one step earlier or later.
-- **Train track.** Rotate Train Track turns a track part to its next connection, and Focus Next and Previous Connection choose where the next part joins.
+- **Show Earlier and Later.** Show Earlier and Show Later move the selected parts one step earlier or later.
+- **Train track.** Rotate Train Track turns a track part to its next connection, and Focus Next Connection and Focus Previous Connection choose where the next part joins.
 - **Pivot points and keyframes.** Reset Pivot Point puts the pivot back at each part's origin, and Remove Keyframes clears the animation of the selected parts.
 - **Lights and cameras.** Lights and cameras are placed in the model and saved with it, see Tools.
 
 <!-- gallery scroll -->
 
-![Move snap](resources/images/modeling-menu-01.png)
-![Rotation snap](resources/images/modeling-menu-02.png)
-![Control point menu](resources/images/modeling-menu-03.png)
-![Part connections](resources/images/interface-menu-12.png)
-![Group](resources/images/modeling-window-01.png)
-![Select by Name](resources/images/modeling-window-02.png)
-![Edit Groups](resources/images/modeling-window-03.png)
-![The Find and Replace bar](resources/images/modeling-window-04.png)
-![The Array dialog](resources/images/modeling-window-05.png)
+![Move snap](resources/images/modeling-menu-move-snap.png)
+![Rotation snap](resources/images/modeling-menu-rotation-snap.png)
+![Control point menu](resources/images/modeling-menu-control-point.png)
+![Part connections](resources/images/interface-menu-view-options.png)
+![Group](resources/images/modeling-window-group.png)
+![Select by Name](resources/images/modeling-window-select-by-name.png)
+![Edit Groups](resources/images/modeling-window-edit-groups.png)
+![The Find and Replace bar](resources/images/modeling-widget-find-replace.png)
+![The Array dialog](resources/images/modeling-window-array.png)
 
 ## Tools
 
@@ -269,12 +272,12 @@ The Tools toolbar sets what the mouse does in the model view. Every tool has a k
 
 <!-- gallery two -->
 
-![Lights and cameras](resources/images/tools-example-01.png)
-![Joints animation of a minifigure](resources/images/tools-example-02.gif)
+![Lights and cameras](resources/images/tools-feature-lights-cameras.png)
+![Joints animation of a minifigure](resources/images/tools-feature-joints-animation.gif)
 
 - **Edit tools.** Insert adds the part chosen in the Parts panel, Select picks objects, with Ctrl or a drag for several, Move and Rotate change the selection, Erase removes what you click, Paint colors a part, and Color Picker takes a part's color.
 - **View tools.** Zoom, Pan, Rotate View and Roll change the camera, and Zoom Region zooms into a rectangle you drag.
-- **Keyboard and gamepad view.** Zoom In and Zoom Out, and Move Forward, Backward, Left, Right, Up and Down. In builds with gamepad support, the left stick of a gamepad moves the camera.
+- **Keyboard and gamepad view.** Zoom In and Zoom Out, and Move Forward, Move Backward, Move Left, Move Right, Move Up and Move Down. In builds with gamepad support, the left stick of a gamepad moves the camera.
 - **Lights.** Point Light, Spotlight, Directional Light and Area Light tools place lights in the model, with named properties and units, saved in the model file.
 - **Cameras.** The Camera tool places a camera. View > Cameras switches between the first sixteen cameras, or No Camera for the free view.
 - **Cancel Action.** Esc cancels the current mouse action, a face or cutaway pick or a cutaway resize, closes the Find and Replace bar, clears the selection, and with nothing selected removes the cutaway.
@@ -288,16 +291,17 @@ Give a placed submodel a joint, turn it with the mouse and save the angles as po
 - **Set Joint.** Part > Joint > Set Joint with one submodel selected, or from the right-click menu of the model view, which opens the submodel under the pointer in place and fades everything else in the joint fade color while you pick, then click a connection of the submodel with the Joints tool, which shows the Set Joint pointer and outlines the part under it in red. The click sets the joint and goes back to the Select tool in joint mode on the new joint, with the joint bar over the view and every other submodel faded, opening the holding submodel in place when it sits inside the selected one. A submodel can hold several joints: Set Joint again at another connection adds one, and Set Joint at a joint already there resets it. During the pick only the selected submodel takes clicks, so you can pick through other submodels in front of it. A round shape makes a hinge on its axis, a sphere makes a ball, and a part without shadow data gets a hinge on its origin. The joint goes on the submodel that holds the clicked part, even when that submodel sits inside the selected one, so it shows in the Joints tree under its own model. The Joints panel shows the joint, with an X, Y or Z axis choice, the angle and Delete Joint, which deletes the joint picked in the tree, also with the Delete key. Each joint is saved before the placed submodel, one line per joint, as `0 !SW JOINT PART <HINGE|BALL> <pivot x y z> <axis x y z> <rotation x y z>` in LDraw coordinates, and setting and deleting it is undoable.
 - **Joints tool.** Next to Rotate in the Tools toolbar, and the Joint menu is also in the right-click menu of the model view. With one submodel selected, the parts holding its joints are outlined in red, and a right click goes back to the Select tool. Click down into submodels to take the innermost one with a joint and drag; on a submodel with several joints, the joint nearest the click turns. A hinge turns about its axis by the horizontal drag, a ball turns about the screen up and right directions. Rotation Snap applies and one drag is one undo step.
 - **Joint Move and Rotate.** Part > Joint > Move Joint or Rotate Joint, also in the right-click menu of the model view, switches to the Move or Rotate tool with the gizmo on the pivot of the selected submodel's picked joint, lined up with a hinge axis in relative mode. The move gizmo gets a red hexagon like a cube outline and the rotate gizmo a red outer ring. The rotate keys and the Rotate tool then turn the joint around its pivot and axis instead of the pivot point, saving the turn as the joint angle; a hinge only turns about its axis. Selecting something else goes back to the pivot point. A bar over the view shows the path to the joint as buttons, as it does for a joint picked in the Joints panel. A joint inside a submodel opens that submodel in place, like Edit Selected Submodel, without a new tab. A submodel button selects that submodel in its parent model, and stays in joint mode on its first joint when it has one; the main model button ends joint mode. The bar's close button clears the selection and returns to the Select tool and to the model you were editing before. Clicking a part outside the opened submodel does the same and selects that part. Use Joint Rotation under General > Editing in the preferences does this whenever a selected submodel has a joint.
-- **Joints panel.** View > Toolbars > Joints Panel shows a tree of every model with joints, under it each jointed submodel by name and position (`arm-right.ldr 006`), and under that each of its joints (`Joint 001`) with type and angle. Clicking a joint selects its submodel, in its own model, and makes it the joint the panel and the Move and Rotate gizmos work on. Below the tree are the poses of the picked model, which hold that model's joints only. Save stores them under a name, saving a name again replaces it, Recall puts the angles back in one undo step, and Rename and Delete edit the list. Poses are saved in their own model's file as `0 !SW JOINT MODEL "<name>" "<model file>" <part index> <rx ry rz> [joint number]`, one line per joint, the joint number counting from 0 and left out for the first joint. Older project-wide sets and `0 !SW POSE` lines still load, split into the models they belong to.
+- **Joints panel.** View > Toolbars > Joints Panel shows a tree of every model with joints, under it each jointed submodel by name and position (`arm-right.ldr 006`), and under that each of its joints (`Joint 001`) with type and angle. Clicking a joint selects its submodel, in its own model, and makes it the joint the panel and the Move and Rotate gizmos work on. Clicking a model shows its poses in the Poses panel.
+- **Poses panel.** View > Toolbars > Poses Panel lists the poses of the model picked in the Joints panel, under a Pose header, each holding that model's joints only. Save stores them under a name, saving a name again replaces it, Recall puts the angles back in one undo step, and Rename and Delete edit the list. Poses are saved in their own model's file as `0 !SW JOINT MODEL "<name>" "<model file>" <part index> <rx ry rz> [joint number]`, one line per joint, the joint number counting from 0 and left out for the first joint. Older project-wide sets and `0 !SW POSE` lines still load, split into the models they belong to.
 - **Joints motion.** File > Image > Animated GIF with Motion Joints blends through the poses of the main model in order and back to the first, with Frames between two poses, Frame Rate and Hold Last. Hinges blend their angle, balls blend along the shortest turn.
 
 <!-- gallery scroll -->
 
-![Tools menu](resources/images/tools-menu-01.png)
-![Part > Joint](resources/images/interface-menu-04.png)
-![Tools toolbar](resources/images/tools-window-01.png)
-![Light properties](resources/images/tools-window-02.png)
-![Save Image with Motion Joints](resources/images/tools-window-03.png)
+![Tools menu](resources/images/tools-menu-tools.png)
+![Part > Joint](resources/images/interface-menu-part.png)
+![Tools toolbar](resources/images/tools-widget-toolbar.png)
+![Light properties](resources/images/tools-widget-light-properties.png)
+![Save Image with Motion Joints](resources/images/tools-window-motion-joints.png)
 
 ## Views
 
@@ -307,17 +311,17 @@ Look at a model from any side, see inside it without changing it, and measure it
 
 <!-- gallery four -->
 
-![View cube small labels](resources/images/views-example-01.png)
-![View cube large abbreviations](resources/images/views-example-02.png)
-![Axis icon](resources/images/views-example-03.png)
-![Camera bar](resources/images/views-example-04.png)
-![Perspective](resources/images/views-example-05.png)
-![Orthographic](resources/images/views-example-06.png)
-![Cube cutaway](resources/images/views-example-07.png)
-![Sphere cutaway](resources/images/views-example-08.png)
-![Cylinder cutaway](resources/images/views-example-09.png)
-![XZ and YZ height grids](resources/images/views-example-10.png)
-![Idle turntable](resources/images/views-example-11.gif)
+![View cube small labels](resources/images/views-feature-view-cube-small-labels.png)
+![View cube large abbreviations](resources/images/views-feature-view-cube-large-abbreviations.png)
+![Axis icon](resources/images/views-feature-axis-icon.png)
+![Camera bar](resources/images/views-feature-camera-bar.png)
+![Perspective](resources/images/views-feature-perspective.png)
+![Orthographic](resources/images/views-feature-orthographic.png)
+![Cube cutaway](resources/images/views-feature-cube-cutaway.png)
+![Sphere cutaway](resources/images/views-feature-sphere-cutaway.png)
+![Cylinder cutaway](resources/images/views-feature-cylinder-cutaway.png)
+![XZ and YZ height grids](resources/images/views-feature-height-grids.png)
+![Idle turntable](resources/images/views-feature-idle-turntable.gif)
 
 - **View cube.** Chamfered edges and corners: click any of its 6 faces, 12 edges or 8 corners for that view.
 - **View cube settings.** Shown in any corner of the view, in Extra Small to Extra Large, with its own face, highlight and text colors, and small full names or large abbreviations (TP, BT, LT, RT, FT, BK) on its faces.
@@ -330,15 +334,15 @@ Look at a model from any side, see inside it without changing it, and measure it
 - **Cutaways.** Cube, sphere and cylinder cutaways with solid cut surfaces, a shaded cut and resize knobs, pushed in or pulled out by one plate. The cutaway is saved with the model and comes back when the file opens, and the parts themselves are never changed.
 - **Cutaway controls.** Grow and Shrink resize the cutaway, Push In and Pull Out move it one plate, Shade Color sets the light shade on the cut faces, and Remove shows the whole model again.
 - **Cut edges.** With edge lines on, the cut draws edge lines in each part's edge color where it meets the outer faces, and thinner lines along the corners of the cut faces. Cut Edges in Preferences > Views > Cutaway turns them off.
-- **Grids.** A base grid with studs, lines and origin lines, vertical XZ and YZ height grids sized around the model, each grid with its own toggle and All Grids to turn them on or off together, and a toggle for each axis line.
+- **Grids.** A Base Grid with Grid Studs, Grid Lines and Grid Origin Lines, vertical XZ Height Grid and YZ Height Grid sized around the model, each grid with its own toggle and All Grids to turn them on or off together, and X Axis Line, Y Axis Line and Z Axis Line toggles.
 - **Grid settings.** Line spacing, stud and line colors, and Height Grids Behind Model to keep the height grids behind the parts.
 - **Idle turntable.** The model turns full screen around the X, Y or Z axis when you leave StudWorx idle. Any input ends it. The idle time and the time for one turn are set in Preferences.
 
 <!-- gallery scroll -->
 
-![Grids with the base grid off](resources/images/views-menu-01.png)
-![Viewpoints](resources/images/interface-menu-08.png)
-![Grids](resources/images/interface-menu-12.png)
+![Grids with the base grid off](resources/images/views-menu-grids.png)
+![Viewpoints](resources/images/interface-menu-viewpoints.png)
+![Grids](resources/images/interface-menu-view-options.png)
 
 ## Steps
 
@@ -348,23 +352,25 @@ Every part belongs to a building step. Steps drive the model view, the instructi
 
 <!-- gallery two -->
 
-![Fade and highlight](resources/images/steps-example-01.png)
-![Submodel hover outline over a selection](resources/images/steps-example-02.png)
+![Fade and highlight](resources/images/steps-feature-fade-highlight.png)
+![Submodel hover outline over a selection](resources/images/steps-feature-hover-outline.png)
 
-- **Steps menu.** Go to the first, previous, next or last step, and insert or remove steps.
+- **Steps menu.** Go to the first, previous, next or last step, Insert Before, Insert After or Delete Step, turn on Add Keys (Alt+K), Set Keys (K) or Remove Keys (Shift+K) on the selected objects at the current step, and Play or Pause (Ctrl+K) or Stop (Ctrl+Shift+K) a run through the steps.
 - **Timeline.** Shows the step each part is added in and removed in. An empty removal step reads Never. Drag parts between steps or reorder them.
-- **Move and paste.** Move the selection to the current, previous or next step, and paste with its steps.
+- **Move and paste.** Move Selection Here, Move Selection Before and Move Selection After move the selection to the current, previous or next step, Insert Step Before and Insert Step After add a step from the Timeline, and Paste with Steps pastes with its steps.
 - **Step views.** MLCad ROTSTEP step views are shown, edited and followed in the Timeline.
 - **Step view commands.** Step View sets the view rotation of the current step, Remove Step View clears it, and Follow Step Views turns the view to each step's rotation as you change steps.
 - **Emphasis.** Highlight New Parts and Fade Previous Steps in the model view and the instructions, with a color for each, and an empty step fades nothing. Fade on Edit tints the rest of the model with the edit fade color while you edit a submodel in place. When it is off, the rest of the model keeps its own colors, slightly translucent. Fade on Joint Set tints every other submodel while you pick a joint, select one in the Joints panel, inside and outside a submodel edited in place, and Fade on Joint Move and Rotate keeps it on while you move or rotate in that mode. Submodel Hover Outline draws a pastel cyan outline around the innermost submodel under the pointer, or the submodel a joint would go on while you pick one, with its color in Preferences. All six are under Steps and Highlighting in the view gear menu.
-- **Animation keys.** Add Keys records new animation keys for parts, lights and cameras as you change them.
+- **Animation keys.** Add Keys records new animation keys for parts, lights and cameras as you change them. The round button at the end of each Properties row is filled when that property has a key at the current step, and clicking it adds or removes that key. The Keyframes panel shows every key on a timeline.
+- **Keyframes panel.** View > Toolbars > Keyframes Panel docks a full-width timeline at the bottom or top of the window, one column per step and one row per object, expandable to its properties, with a diamond per key and a line joining the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a key to another step or right-click for more. The full and hollow diamonds add or remove the selected objects' keys at the current step, Add Keys makes edits create keys, and rewind, play or pause, stop and forward run through the steps. Selected or All picks which objects are listed. Steps > Set Keys (K), Remove Keys (Shift+K), Add Keys (Alt+K), Play or Pause (Ctrl+K) and Stop (Ctrl+Shift+K) work with the panel hidden too.
 
 <!-- gallery scroll -->
 
-![Steps and Highlighting](resources/images/steps-menu-01.png)
-![Steps menu](resources/images/interface-menu-05.png)
-![Timeline panel](resources/images/steps-window-01.png)
-![Step view](resources/images/steps-window-02.png)
+![Steps and Highlighting](resources/images/steps-menu-steps-highlighting.png)
+![Steps menu](resources/images/interface-menu-steps.png)
+![Timeline panel](resources/images/steps-widget-timeline.png)
+![Step view](resources/images/steps-window-step-view.png)
+![Keyframes panel](resources/images/steps-widget-keyframes.png)
 
 ## Panels
 
@@ -375,25 +381,28 @@ Panels dock side by side in any area of the main window, with uniform headers, b
 - **Parts.** Categories and palettes with a filter. The panel snaps to whole thumbnail tiles and rows, docked or floating, and the tooltip of each part shows its name, ID and weight.
 - **Part palettes.** Create, rename, reorder and delete palettes, import them, or build one from an online set inventory.
 - **Colors.** Collapsible solid, translucent and special color groups with square color tiles.
-- **Properties.** Compact position, rotation and transform rows and a spanning color swatch. Lights and cameras get named rows with units.
+- **Properties.** Compact position, rotation and transform rows and a spanning color swatch. Lights and cameras get named rows with units. A round key button ends each animated row, filled when the property has a key at the current step.
 - **Minifigure Builder.** Build a minifigure from templates and add several variations to the model.
 - **Preview.** Parts and models, in a Square Viewport when you choose, with Keep Last Selection.
-- **Joints.** The picked joint of the selected submodel with its axis, the tree of models, submodels and their joints with Delete Joint for the picked one a right click menu to move, rotate or delete a joint, and one on a submodel to edit or delete all its joints, and the poses of the picked model with Save, Recall, Rename and Delete.
+- **Joints.** The picked joint of the selected submodel with its axis, the tree of models, submodels and their joints with Delete Joint for the picked one, a right-click menu to move, rotate or delete a joint, and one on a submodel to edit or delete all its joints.
+- **Poses.** The poses of the model picked in the Joints panel with Save, Recall, Rename and Delete.
+- **Keyframes.** A full-width timeline of the keys of the selected or all objects per step, with buttons to add or remove keys, Add Keys and playback.
 - **Terminal.** An embedded terminal sized to whole rows and columns, with Open Model Folder.
 - **Terminal folders.** Follow Model Folder moves the terminal to the folder of each model you open, and Go to Model Folder moves it there once.
 
 <!-- gallery scroll -->
 
-![Terminal folders](resources/images/panels-menu-01.png)
-![A selected part with its Properties](resources/images/panels-window-01.png)
-![Preview](resources/images/panels-window-02.png)
-![Parts](resources/images/panels-window-03.png)
-![Part tooltip](resources/images/panels-window-04.png)
-![Minifigure Builder](resources/images/panels-window-05.png)
-![Colors](resources/images/panels-window-06.png)
-![Properties](resources/images/panels-window-07.png)
-![Joints](resources/images/panels-window-08.png)
-![Terminal](resources/images/panels-window-09.png)
+![Terminal folders](resources/images/panels-menu-terminal.png)
+![A selected part with its Properties](resources/images/panels-window-selected-part.png)
+![Preview](resources/images/panels-widget-preview.png)
+![Parts](resources/images/panels-widget-parts.png)
+![Part tooltip](resources/images/panels-widget-part-tooltip.png)
+![Minifigure Builder](resources/images/panels-widget-minifigure-builder.png)
+![Colors](resources/images/panels-widget-colors.png)
+![Properties](resources/images/panels-widget-properties.png)
+![Joints](resources/images/panels-widget-joints.png)
+![Terminal](resources/images/panels-widget-terminal.png)
+![Poses](resources/images/panels-widget-poses.png)
 
 ## Instructions
 
@@ -403,9 +412,9 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 
 <!-- gallery three -->
 
-![Cover page](resources/images/instructions-example-01.png)
-![Step page](resources/images/instructions-example-02.png)
-![Bill of materials](resources/images/instructions-example-03.png)
+![Cover page](resources/images/instructions-feature-cover-page.png)
+![Step page](resources/images/instructions-feature-step-page.png)
+![Bill of materials](resources/images/instructions-feature-bill-of-materials.png)
 
 - **Page setup.** Paper and screen presets, metric or imperial units, margins and orientation.
 - **Page bar.** First, Previous, Next and Last buttons under the page, Cover and Bill of Materials jumps that grey out while those pages are off, Step Page and Blank Page to insert an empty step or a blank page before the current page, Remove Page for blank pages and pages of empty steps, and a page box to type the page to go to. Every button has its own mnemonic, and the timeline First, Previous, Next and Last shortcuts turn the pages.
@@ -420,14 +429,14 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 
 <!-- gallery scroll -->
 
-![Properties options](resources/images/instructions-menu-01.png)
-![The Instructions window](resources/images/instructions-window-01.png)
-![Element margins, padding and anchors](resources/images/instructions-window-02.png)
-![Properties](resources/images/instructions-window-03.png)
-![Grid](resources/images/instructions-window-04.png)
-![Placement](resources/images/instructions-window-05.png)
-![Print](resources/images/instructions-window-06.png)
-![Editor](resources/images/instructions-window-07.png)
+![Properties options](resources/images/instructions-menu-properties-options.png)
+![The Instructions window](resources/images/instructions-window-instructions.png)
+![Element margins, padding and anchors](resources/images/instructions-feature-element-layout.png)
+![Properties](resources/images/instructions-widget-properties.png)
+![Grid](resources/images/instructions-widget-grid.png)
+![Placement](resources/images/instructions-widget-placement.png)
+![Print](resources/images/instructions-widget-print.png)
+![Editor](resources/images/instructions-widget-editor.png)
 
 ## Models
 
@@ -437,7 +446,7 @@ Large builds split into submodels that you can edit on their own or in place, in
 
 <!-- gallery one -->
 
-![Editing a submodel in place](resources/images/models-example-01.png)
+![Editing a submodel in place](resources/images/models-feature-edit-in-place.png)
 
 - **Properties.** Part IDs, thumbnails and counts, with BrickLink or CSV export, and the size and weight of the model in metric and imperial units. A Weight column gives each part's weight in grams or ounces, chosen with the units box below the table, from the BrickLink part weights, and parts without a known weight show N/A.
 - **Submodels.** New Submodel, the Submodels list, Open Selected Submodel, Inline Selected Submodels, Flatten Submodels, which replaces every submodel at all depths with its parts in one undo step, also run from the command line with --flatten, and Move to New Submodel.
@@ -449,9 +458,9 @@ Large builds split into submodels that you can edit on their own or in place, in
 
 <!-- gallery scroll -->
 
-![Model properties](resources/images/models-window-01.png)
-![Parts](resources/images/models-window-02.png)
-![Submodels](resources/images/models-window-03.png)
+![Model properties](resources/images/models-window-properties.png)
+![Parts](resources/images/models-window-parts.png)
+![Submodels](resources/images/models-window-submodels.png)
 
 ## Preferences
 
@@ -472,16 +481,16 @@ Nine pages with lined up label and control columns, checkboxes included, each la
 
 <!-- gallery scroll -->
 
-![General](resources/images/preferences-window-01.png)
-![Rendering](resources/images/preferences-window-02.png)
-![Views](resources/images/preferences-window-03.png)
-![Interface](resources/images/preferences-window-04.png)
-![Instructions](resources/images/preferences-window-05.png)
-![Categories](resources/images/preferences-window-06.png)
-![Context Menu](resources/images/preferences-window-07.png)
-![Keyboard](resources/images/preferences-window-08.png)
-![Mouse](resources/images/preferences-window-09.png)
-![About](resources/images/preferences-window-10.png)
+![General](resources/images/preferences-window-general.png)
+![Rendering](resources/images/preferences-window-rendering.png)
+![Views](resources/images/preferences-window-views.png)
+![Interface](resources/images/preferences-window-interface.png)
+![Instructions](resources/images/preferences-window-instructions.png)
+![Categories](resources/images/preferences-window-categories.png)
+![Context Menu](resources/images/preferences-window-context-menu.png)
+![Keyboard](resources/images/preferences-window-keyboard.png)
+![Mouse](resources/images/preferences-window-mouse.png)
+![About](resources/images/preferences-window-about.png)
 
 ## Meta
 

@@ -169,7 +169,7 @@
 			.backdrop {
 				position: absolute;
 				inset: 0px;
-				background: url("resources/images/interface-window-01.png") center / cover no-repeat;
+				background: url("resources/images/interface-window-main.png") center / cover no-repeat;
 				opacity: 0;
 				animation: reveal-backdrop 2s ease forwards;
 			}
@@ -1608,174 +1608,191 @@
 			<ul class="points">
 				<li><b>Tabs, splits and status bar.</b> Open several <a href="#models">models</a> in tabs, close one with the close button at the end of its tab or Close Tab (Ctrl+W), or the others from the tab&#x27;s right-click menu, split the view and go Full Screen. The status bar shows the selection, the view orientation and projection, the focus position, the snap and transform settings and the current step. The selection reads the name, ID and weight of the selected part, a submodel reading ID N/A and the total weight of its parts when all of them have one, and the total weight of two or more selected parts. Right click the status bar to show or hide each segment.</li>
 				<li><b>Options menus.</b> A gear button opens the settings that belong to its place: grids, <a href="#steps">steps</a> and highlighting and view overlays on the model view, list display and filtering on Parts, the insert color on Colors, overlays and selection on Preview, shading and lines on the Minifigure Builder, the model folder on Terminal, editing on the Editor and page setup on the <a href="#instructions">instructions</a> Properties.</li>
+				<li><b>Lock Interface.</b> At the end of the same menu, also on a right click on any toolbar or panel title. Panel title bars are hidden to save space, panels and toolbars stay where they are with no dragging, floating or redocking, and the choice is remembered. Panels still resize, the menu still shows or hides them, and model tabs still move.</li>
 				<li><b>Menus by task.</b> File, Edit, View, Part, Steps, Models and <a href="#help">Help</a>, with clean labels and a unique mnemonic in each menu. Edit holds the Selection Mode, Transform and <a href="#tools">Tools</a> submenus, View the Toolbars, Viewpoints, Cutaway, Cameras, Projection and Shading submenus, and Part the Joint, Group and Visibility submenus.</li>
 				<li><b>Contextual help.</b> Choose Help &gt; &quot;What&#x27;s This?&quot; or click the question mark in a title bar, then click any control to read what it does. F1 explains the focused control, Shift+F1 starts &quot;What&#x27;s This?&quot; inside a dialog, and every entry is listed in the Help index below.</li>
-				<li><b>Split views.</b> Split the current view horizontally or vertically, as often as you like, remove one view, or Reset Views back to one. Each view keeps its own camera and projection, a border marks the active one, and the view cube and axis icon stay on the top left view.</li>
+				<li><b>Toolbars and panels on demand.</b> View &gt; Toolbars shows or hides each toolbar and panel, such as Standard Toolbar, Colors Panel, Preview Panel and Minifigure Builder Panel: Standard, Tools, Time, Parts, Colors, Properties, Timeline, Preview, Terminal, Minifigure Builder, Explode, Joints, Poses and Keyframes.</li>
+				<li><b>Split views.</b> Split Horizontal and Split Vertical divide the current view as often as you like, Remove View closes one, or Reset Views back to one. Each view keeps its own camera and projection, a border marks the active one, and the view cube and axis icon stay on the top left view.</li>
 				<li><b>Transform toolbar.</b> Type a position or rotation for the selection and apply it, as absolute coordinates or relative to where it is now. It has no entry of its own: its fields sit at the bottom of the Properties panel, shown with View &gt; Toolbars &gt; Properties Panel.</li>
-				<li><b>Toolbars and panels on demand.</b> View &gt; Toolbars shows or hides each toolbar and panel: Standard, Tools, Time, Parts, Colors, Properties, Timeline, Preview, Terminal, Minifigure Builder, Explode and Joints.</li>
+				<li><b>Undo and clipboard.</b> Undo and Redo every change, and Cut, Copy and Paste parts between models and tabs. Paste with Steps keeps the steps of the copied parts.</li>
 				<li><b>Help menu.</b> Home Page opens the StudWorx repository on GitHub, Report a Bug its issues, and About shows the version and system information.</li>
 				<li><b>Ten languages.</b> English, French, German, Spanish, Portuguese, Czech, Ukrainian, Russian, Simplified Chinese and Traditional Chinese.</li>
 				<li><b>Toolbars.</b> Standard, Tools and Time toolbars. Move and rotate cursors show the axis they work on.</li>
-				<li><b>Undo and clipboard.</b> Undo and Redo every change, and Cut, Copy and Paste parts between models and tabs.</li>
 				<li><b>Color theme.</b> Follow the system, or force the light or dark theme, from <a href="#preferences">Preferences</a>.</li>
 			</ul>
 
 			<div class="gallery scroll">
 				<figure style="--width-image: 582; --height-image: 499">
-					<button class="shot" data-full="resources/images/interface-menu-01.png" aria-label="Enlarge File">
-						<img src="resources/images/interface-menu-01.png" alt="File" width="582" height="499" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-menu-file.png" aria-label="Enlarge File">
+						<img src="resources/images/interface-menu-file.png" alt="File" width="582" height="499" loading="lazy">
 					</button>
 
 					<figcaption>File</figcaption>
 				</figure>
 
 				<figure style="--width-image: 318; --height-image: 485">
-					<button class="shot" data-full="resources/images/interface-menu-02.png" aria-label="Enlarge Edit">
-						<img src="resources/images/interface-menu-02.png" alt="Edit" width="318" height="485" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-menu-edit.png" aria-label="Enlarge Edit">
+						<img src="resources/images/interface-menu-edit.png" alt="Edit" width="318" height="485" loading="lazy">
 					</button>
 
 					<figcaption>Edit</figcaption>
 				</figure>
 
 				<figure style="--width-image: 184; --height-image: 367">
-					<button class="shot" data-full="resources/images/interface-menu-03.png" aria-label="Enlarge View">
-						<img src="resources/images/interface-menu-03.png" alt="View" width="184" height="367" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-menu-view.png" aria-label="Enlarge View">
+						<img src="resources/images/interface-menu-view.png" alt="View" width="184" height="367" loading="lazy">
 					</button>
 
 					<figcaption>View</figcaption>
 				</figure>
 
 				<figure style="--width-image: 309; --height-image: 282">
-					<button class="shot" data-full="resources/images/interface-menu-04.png" aria-label="Enlarge Part">
-						<img src="resources/images/interface-menu-04.png" alt="Part" width="309" height="282" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-menu-part.png" aria-label="Enlarge Part">
+						<img src="resources/images/interface-menu-part.png" alt="Part" width="309" height="282" loading="lazy">
 					</button>
 
 					<figcaption>Part</figcaption>
 				</figure>
 
-				<figure style="--width-image: 207; --height-image: 197">
-					<button class="shot" data-full="resources/images/interface-menu-05.png" aria-label="Enlarge Steps">
-						<img src="resources/images/interface-menu-05.png" alt="Steps" width="207" height="197" loading="lazy">
+				<figure style="--width-image: 297; --height-image: 339">
+					<button class="shot" data-full="resources/images/interface-menu-steps.png" aria-label="Enlarge Steps">
+						<img src="resources/images/interface-menu-steps.png" alt="Steps" width="297" height="339" loading="lazy">
 					</button>
 
 					<figcaption>Steps</figcaption>
 				</figure>
 
 				<figure style="--width-image: 319; --height-image: 315">
-					<button class="shot" data-full="resources/images/interface-menu-06.png" aria-label="Enlarge Models">
-						<img src="resources/images/interface-menu-06.png" alt="Models" width="319" height="315" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-menu-models.png" aria-label="Enlarge Models">
+						<img src="resources/images/interface-menu-models.png" alt="Models" width="319" height="315" loading="lazy">
 					</button>
 
 					<figcaption>Models</figcaption>
 				</figure>
 
 				<figure style="--width-image: 182; --height-image: 126">
-					<button class="shot" data-full="resources/images/interface-menu-07.png" aria-label="Enlarge Help">
-						<img src="resources/images/interface-menu-07.png" alt="Help" width="182" height="126" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-menu-help.png" aria-label="Enlarge Help">
+						<img src="resources/images/interface-menu-help.png" alt="Help" width="182" height="126" loading="lazy">
 					</button>
 
 					<figcaption>Help</figcaption>
 				</figure>
 
 				<figure style="--width-image: 367; --height-image: 367">
-					<button class="shot" data-full="resources/images/interface-menu-08.png" aria-label="Enlarge Viewpoints">
-						<img src="resources/images/interface-menu-08.png" alt="Viewpoints" width="367" height="367" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-menu-viewpoints.png" aria-label="Enlarge Viewpoints">
+						<img src="resources/images/interface-menu-viewpoints.png" alt="Viewpoints" width="367" height="367" loading="lazy">
 					</button>
 
 					<figcaption>Viewpoints</figcaption>
 				</figure>
 
 				<figure style="--width-image: 308; --height-image: 367">
-					<button class="shot" data-full="resources/images/interface-menu-09.png" aria-label="Enlarge Cutaway">
-						<img src="resources/images/interface-menu-09.png" alt="Cutaway" width="308" height="367" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-menu-cutaway.png" aria-label="Enlarge Cutaway">
+						<img src="resources/images/interface-menu-cutaway.png" alt="Cutaway" width="308" height="367" loading="lazy">
 					</button>
 
 					<figcaption>Cutaway</figcaption>
 				</figure>
 
 				<figure style="--width-image: 362; --height-image: 367">
-					<button class="shot" data-full="resources/images/interface-menu-10.png" aria-label="Enlarge Projection">
-						<img src="resources/images/interface-menu-10.png" alt="Projection" width="362" height="367" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-menu-projection.png" aria-label="Enlarge Projection">
+						<img src="resources/images/interface-menu-projection.png" alt="Projection" width="362" height="367" loading="lazy">
 					</button>
 
 					<figcaption>Projection</figcaption>
 				</figure>
 
 				<figure style="--width-image: 406; --height-image: 386">
-					<button class="shot" data-full="resources/images/interface-menu-11.png" aria-label="Enlarge Shading">
-						<img src="resources/images/interface-menu-11.png" alt="Shading" width="406" height="386" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-menu-shading.png" aria-label="Enlarge Shading">
+						<img src="resources/images/interface-menu-shading.png" alt="Shading" width="406" height="386" loading="lazy">
 					</button>
 
 					<figcaption>Shading</figcaption>
 				</figure>
 
 				<figure style="--width-image: 541; --height-image: 256">
-					<button class="shot" data-full="resources/images/interface-menu-12.png" aria-label="Enlarge View options">
-						<img src="resources/images/interface-menu-12.png" alt="View options" width="541" height="256" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-menu-view-options.png" aria-label="Enlarge View options">
+						<img src="resources/images/interface-menu-view-options.png" alt="View options" width="541" height="256" loading="lazy">
 					</button>
 
 					<figcaption>View options</figcaption>
 				</figure>
 
 				<figure style="--width-image: 216; --height-image: 223">
-					<button class="shot" data-full="resources/images/interface-menu-13.png" aria-label="Enlarge Preview options">
-						<img src="resources/images/interface-menu-13.png" alt="Preview options" width="216" height="223" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-menu-preview-options.png" aria-label="Enlarge Preview options">
+						<img src="resources/images/interface-menu-preview-options.png" alt="Preview options" width="216" height="223" loading="lazy">
 					</button>
 
 					<figcaption>Preview options</figcaption>
 				</figure>
 
 				<figure style="--width-image: 220; --height-image: 230">
-					<button class="shot" data-full="resources/images/interface-menu-14.png" aria-label="Enlarge Parts options">
-						<img src="resources/images/interface-menu-14.png" alt="Parts options" width="220" height="230" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-menu-parts-options.png" aria-label="Enlarge Parts options">
+						<img src="resources/images/interface-menu-parts-options.png" alt="Parts options" width="220" height="230" loading="lazy">
 					</button>
 
 					<figcaption>Parts options</figcaption>
 				</figure>
 
 				<figure style="--width-image: 166; --height-image: 60">
-					<button class="shot" data-full="resources/images/interface-menu-15.png" aria-label="Enlarge Colors options">
-						<img src="resources/images/interface-menu-15.png" alt="Colors options" width="166" height="60" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-menu-colors-options.png" aria-label="Enlarge Colors options">
+						<img src="resources/images/interface-menu-colors-options.png" alt="Colors options" width="166" height="60" loading="lazy">
 					</button>
 
 					<figcaption>Colors options</figcaption>
 				</figure>
 
 				<figure style="--width-image: 216; --height-image: 112">
-					<button class="shot" data-full="resources/images/interface-menu-16.png" aria-label="Enlarge Minifigure Builder options">
-						<img src="resources/images/interface-menu-16.png" alt="Minifigure Builder options" width="216" height="112" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-menu-minifigure-builder-options.png" aria-label="Enlarge Minifigure Builder options">
+						<img src="resources/images/interface-menu-minifigure-builder-options.png" alt="Minifigure Builder options" width="216" height="112" loading="lazy">
 					</button>
 
 					<figcaption>Minifigure Builder options</figcaption>
 				</figure>
 
-				<figure style="--width-image: 3840; --height-image: 2131">
-					<button class="shot" data-full="resources/images/interface-window-01.png" aria-label="Enlarge The main window with the model view, Parts, Colors, Properties and Timeline panels">
-						<img src="resources/images/interface-window-01.png" alt="The main window with the model view, Parts, Colors, Properties and Timeline panels" width="3840" height="2131" loading="lazy">
+				<figure style="--width-image: 266; --height-image: 422">
+					<button class="shot" data-full="resources/images/interface-menu-toolbars.png" aria-label="Enlarge Toolbars">
+						<img src="resources/images/interface-menu-toolbars.png" alt="Toolbars" width="266" height="422" loading="lazy">
 					</button>
 
-					<figcaption>The main window with the model view, Parts, Colors, Properties and Timeline panels</figcaption>
+					<figcaption>Toolbars</figcaption>
+				</figure>
+
+				<figure style="--width-image: 3840; --height-image: 2131">
+					<button class="shot" data-full="resources/images/interface-window-main.png" aria-label="Enlarge The main window with the model view, Parts, Preview, Minifigure Builder, Timeline, Colors, Properties, Joints and Terminal panels">
+						<img src="resources/images/interface-window-main.png" alt="The main window with the model view, Parts, Preview, Minifigure Builder, Timeline, Colors, Properties, Joints and Terminal panels" width="3840" height="2131" loading="lazy">
+					</button>
+
+					<figcaption>The main window with the model view, Parts, Preview, Minifigure Builder, Timeline, Colors, Properties, Joints and Terminal panels</figcaption>
+				</figure>
+
+				<figure style="--width-image: 3840; --height-image: 2131">
+					<button class="shot" data-full="resources/images/interface-feature-lock-interface.png" aria-label="Enlarge Lock Interface hides the panel title bars">
+						<img src="resources/images/interface-feature-lock-interface.png" alt="Lock Interface hides the panel title bars" width="3840" height="2131" loading="lazy">
+					</button>
+
+					<figcaption>Lock Interface hides the panel title bars</figcaption>
 				</figure>
 
 				<figure style="--width-image: 1184; --height-image: 44">
-					<button class="shot" data-full="resources/images/interface-window-02.png" aria-label="Enlarge Standard, Tools and Time toolbars">
-						<img src="resources/images/interface-window-02.png" alt="Standard, Tools and Time toolbars" width="1184" height="44" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-widget-toolbars.png" aria-label="Enlarge Standard, Tools and Time toolbars">
+						<img src="resources/images/interface-widget-toolbars.png" alt="Standard, Tools and Time toolbars" width="1184" height="44" loading="lazy">
 					</button>
 
 					<figcaption>Standard, Tools and Time toolbars</figcaption>
 				</figure>
 
 				<figure style="--width-image: 640; --height-image: 29">
-					<button class="shot" data-full="resources/images/interface-window-03.png" aria-label="Enlarge Status bar with the selected part">
-						<img src="resources/images/interface-window-03.png" alt="Status bar with the selected part" width="640" height="29" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-widget-status-bar.png" aria-label="Enlarge Status bar with the selected part">
+						<img src="resources/images/interface-widget-status-bar.png" alt="Status bar with the selected part" width="640" height="29" loading="lazy">
 					</button>
 
 					<figcaption>Status bar with the selected part</figcaption>
 				</figure>
 
 				<figure style="--width-image: 3840; --height-image: 2131">
-					<button class="shot" data-full="resources/images/interface-window-04.png" aria-label="Enlarge Split views">
-						<img src="resources/images/interface-window-04.png" alt="Split views" width="3840" height="2131" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-feature-split-views.png" aria-label="Enlarge Split views">
+						<img src="resources/images/interface-feature-split-views.png" alt="Split views" width="3840" height="2131" loading="lazy">
 					</button>
 
 					<figcaption>Split views</figcaption>
@@ -1793,8 +1810,8 @@
 
 			<div class="gallery one">
 				<figure style="--width-image: 952; --height-image: 952">
-					<button class="shot" data-full="resources/images/files-example-01.png" aria-label="Enlarge Model thumbnails in Dolphin">
-						<img src="resources/images/files-example-01.png" alt="Model thumbnails in Dolphin" width="952" height="952" loading="lazy">
+					<button class="shot" data-full="resources/images/files-feature-thumbnails.png" aria-label="Enlarge Model thumbnails in Dolphin">
+						<img src="resources/images/files-feature-thumbnails.png" alt="Model thumbnails in Dolphin" width="952" height="952" loading="lazy">
 					</button>
 
 					<figcaption>Model thumbnails in Dolphin</figcaption>
@@ -1810,7 +1827,7 @@
 				<li><b>Command line.</b> Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx. <a href="https://l2cu.app">L²CU</a>, the LDraw command line utility for Linux based systems, drives these renders and exports for whole folders of models.</li>
 				<li><b>LeoCAD models.</b> Models saved by LeoCAD open as they are, and their LeoCAD <a href="#meta">meta</a> commands are migrated to StudWorx ones, automatically when you choose so in Preferences. Older LeoCAD projects (.lcd) open and merge too, and save as LDraw.</li>
 				<li><b>Startup.</b> Open Most Recent File on Startup reopens the last model, Restore Tab Layout brings back its tabs and split <a href="#views">views</a>, and Load All Parts Before Showing waits until every part is loaded before the model appears.</li>
-				<li><b>Parts library.</b> Downloaded on the first start as the official LDraw complete.zip, or chosen from an archive you already have, and reloaded from the File menu. An unofficial parts folder can be added beside it.</li>
+				<li><b>Parts library.</b> Downloaded on the first start as the official LDraw complete.zip, or chosen from an archive you already have, and reloaded with File &gt; Reload Library. An unofficial parts folder can be added beside it.</li>
 				<li><b>Print.</b> File &gt; Print prints the current model view through the system print dialog, with a Preview button where the dialog allows it.</li>
 				<li><b>KMZ.</b> Google Earth and SketchUp models, with the visible surfaces only or every part&#x27;s geometry, set in Preferences.</li>
 				<li><b>Thumbnails.</b> Model thumbnails in file managers, from a KDE thumbnail plugin or the desktop thumbnailer.</li>
@@ -1854,80 +1871,80 @@
 
 			<div class="gallery scroll">
 				<figure style="--width-image: 775; --height-image: 499">
-					<button class="shot" data-full="resources/images/files-menu-01.png" aria-label="Enlarge Import menu">
-						<img src="resources/images/files-menu-01.png" alt="Import menu" width="775" height="499" loading="lazy">
+					<button class="shot" data-full="resources/images/files-menu-import.png" aria-label="Enlarge Import menu">
+						<img src="resources/images/files-menu-import.png" alt="Import menu" width="775" height="499" loading="lazy">
 					</button>
 
 					<figcaption>Import menu</figcaption>
 				</figure>
 
 				<figure style="--width-image: 775; --height-image: 499">
-					<button class="shot" data-full="resources/images/files-menu-02.png" aria-label="Enlarge Export menu">
-						<img src="resources/images/files-menu-02.png" alt="Export menu" width="775" height="499" loading="lazy">
+					<button class="shot" data-full="resources/images/files-menu-export.png" aria-label="Enlarge Export menu">
+						<img src="resources/images/files-menu-export.png" alt="Export menu" width="775" height="499" loading="lazy">
 					</button>
 
 					<figcaption>Export menu</figcaption>
 				</figure>
 
 				<figure style="--width-image: 500; --height-image: 234">
-					<button class="shot" data-full="resources/images/files-window-01.png" aria-label="Enlarge LeoCAD meta command migration">
-						<img src="resources/images/files-window-01.png" alt="LeoCAD meta command migration" width="500" height="234" loading="lazy">
+					<button class="shot" data-full="resources/images/files-window-meta-migration.png" aria-label="Enlarge LeoCAD meta command migration">
+						<img src="resources/images/files-window-meta-migration.png" alt="LeoCAD meta command migration" width="500" height="234" loading="lazy">
 					</button>
 
 					<figcaption>LeoCAD meta command migration</figcaption>
 				</figure>
 
 				<figure style="--width-image: 374; --height-image: 253">
-					<button class="shot" data-full="resources/images/files-window-02.png" aria-label="Enlarge Print">
-						<img src="resources/images/files-window-02.png" alt="Print" width="374" height="253" loading="lazy">
+					<button class="shot" data-full="resources/images/files-window-print.png" aria-label="Enlarge Print">
+						<img src="resources/images/files-window-print.png" alt="Print" width="374" height="253" loading="lazy">
 					</button>
 
 					<figcaption>Print</figcaption>
 				</figure>
 
 				<figure style="--width-image: 525; --height-image: 183">
-					<button class="shot" data-full="resources/images/files-window-03.png" aria-label="Enlarge Rebrickable API key">
-						<img src="resources/images/files-window-03.png" alt="Rebrickable API key" width="525" height="183" loading="lazy">
+					<button class="shot" data-full="resources/images/files-window-rebrickable-api-key.png" aria-label="Enlarge Rebrickable API key">
+						<img src="resources/images/files-window-rebrickable-api-key.png" alt="Rebrickable API key" width="525" height="183" loading="lazy">
 					</button>
 
 					<figcaption>Rebrickable API key</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 569">
-					<button class="shot" data-full="resources/images/files-window-04.png" aria-label="Enlarge Set inventory import">
-						<img src="resources/images/files-window-04.png" alt="Set inventory import" width="960" height="569" loading="lazy">
+					<button class="shot" data-full="resources/images/files-window-set-inventory-import.png" aria-label="Enlarge Set inventory import">
+						<img src="resources/images/files-window-set-inventory-import.png" alt="Set inventory import" width="960" height="569" loading="lazy">
 					</button>
 
 					<figcaption>Set inventory import</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 569">
-					<button class="shot" data-full="resources/images/files-window-05.png" aria-label="Enlarge BrickLink export">
-						<img src="resources/images/files-window-05.png" alt="BrickLink export" width="960" height="569" loading="lazy">
+					<button class="shot" data-full="resources/images/files-window-bricklink-export.png" aria-label="Enlarge BrickLink export">
+						<img src="resources/images/files-window-bricklink-export.png" alt="BrickLink export" width="960" height="569" loading="lazy">
 					</button>
 
 					<figcaption>BrickLink export</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 1242">
-					<button class="shot" data-full="resources/images/files-window-06.png" aria-label="Enlarge HTML export">
-						<img src="resources/images/files-window-06.png" alt="HTML export" width="960" height="1242" loading="lazy">
+					<button class="shot" data-full="resources/images/files-window-html-export.png" aria-label="Enlarge HTML export">
+						<img src="resources/images/files-window-html-export.png" alt="HTML export" width="960" height="1242" loading="lazy">
 					</button>
 
 					<figcaption>HTML export</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 540">
-					<button class="shot" data-full="resources/images/files-window-07.png" aria-label="Enlarge HTML style sheet">
-						<img src="resources/images/files-window-07.png" alt="HTML style sheet" width="960" height="540" loading="lazy">
+					<button class="shot" data-full="resources/images/files-window-html-style-sheet.png" aria-label="Enlarge HTML style sheet">
+						<img src="resources/images/files-window-html-style-sheet.png" alt="HTML style sheet" width="960" height="540" loading="lazy">
 					</button>
 
 					<figcaption>HTML style sheet</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 569">
-					<button class="shot" data-full="resources/images/files-window-08.png" aria-label="Enlarge Missing and moved parts">
-						<img src="resources/images/files-window-08.png" alt="Missing and moved parts" width="960" height="569" loading="lazy">
+					<button class="shot" data-full="resources/images/files-window-missing-parts.png" aria-label="Enlarge Missing and moved parts">
+						<img src="resources/images/files-window-missing-parts.png" alt="Missing and moved parts" width="960" height="569" loading="lazy">
 					</button>
 
 					<figcaption>Missing and moved parts</figcaption>
@@ -1945,24 +1962,24 @@
 
 			<div class="gallery three">
 				<figure style="--width-image: 512; --height-image: 512">
-					<button class="shot" data-full="resources/images/image-example-01.gif" aria-label="Enlarge Turntable">
-						<img src="resources/images/image-example-01.gif" alt="Turntable" width="512" height="512" loading="lazy">
+					<button class="shot" data-full="resources/images/image-feature-turntable.gif" aria-label="Enlarge Turntable">
+						<img src="resources/images/image-feature-turntable.gif" alt="Turntable" width="512" height="512" loading="lazy">
 					</button>
 
 					<figcaption>Turntable</figcaption>
 				</figure>
 
 				<figure style="--width-image: 512; --height-image: 512">
-					<button class="shot" data-full="resources/images/image-example-02.gif" aria-label="Enlarge Steps">
-						<img src="resources/images/image-example-02.gif" alt="Steps" width="512" height="512" loading="lazy">
+					<button class="shot" data-full="resources/images/image-feature-steps.gif" aria-label="Enlarge Steps">
+						<img src="resources/images/image-feature-steps.gif" alt="Steps" width="512" height="512" loading="lazy">
 					</button>
 
 					<figcaption><a href="#steps">Steps</a></figcaption>
 				</figure>
 
 				<figure style="--width-image: 512; --height-image: 512">
-					<button class="shot" data-full="resources/images/image-example-03.gif" aria-label="Enlarge Next Step, six steps, one turn each">
-						<img src="resources/images/image-example-03.gif" alt="Next Step, six steps, one turn each" width="512" height="512" loading="lazy">
+					<button class="shot" data-full="resources/images/image-feature-next-step.gif" aria-label="Enlarge Next Step, six steps, one turn each">
+						<img src="resources/images/image-feature-next-step.gif" alt="Next Step, six steps, one turn each" width="512" height="512" loading="lazy">
 					</button>
 
 					<figcaption>Next Step, six steps, one turn each</figcaption>
@@ -2032,32 +2049,32 @@
 
 			<div class="gallery scroll">
 				<figure style="--width-image: 1305; --height-image: 1178">
-					<button class="shot" data-full="resources/images/image-window-01.png" aria-label="Enlarge Still image: background, steps, framing, size and file">
-						<img src="resources/images/image-window-01.png" alt="Still image: background, steps, framing, size and file" width="1305" height="1178" loading="lazy">
+					<button class="shot" data-full="resources/images/image-window-still-image.png" aria-label="Enlarge Still image: background, steps, framing, size and file">
+						<img src="resources/images/image-window-still-image.png" alt="Still image: background, steps, framing, size and file" width="1305" height="1178" loading="lazy">
 					</button>
 
 					<figcaption>Still image: background, steps, framing, size and file</figcaption>
 				</figure>
 
 				<figure style="--width-image: 1305; --height-image: 1178">
-					<button class="shot" data-full="resources/images/image-window-02.png" aria-label="Enlarge Animated GIF turntable">
-						<img src="resources/images/image-window-02.png" alt="Animated GIF turntable" width="1305" height="1178" loading="lazy">
+					<button class="shot" data-full="resources/images/image-window-turntable.png" aria-label="Enlarge Animated GIF turntable">
+						<img src="resources/images/image-window-turntable.png" alt="Animated GIF turntable" width="1305" height="1178" loading="lazy">
 					</button>
 
 					<figcaption>Animated GIF turntable</figcaption>
 				</figure>
 
 				<figure style="--width-image: 1305; --height-image: 1178">
-					<button class="shot" data-full="resources/images/image-window-03.png" aria-label="Enlarge Steps: one step per frame">
-						<img src="resources/images/image-window-03.png" alt="Steps: one step per frame" width="1305" height="1178" loading="lazy">
+					<button class="shot" data-full="resources/images/image-window-steps.png" aria-label="Enlarge Steps: one step per frame">
+						<img src="resources/images/image-window-steps.png" alt="Steps: one step per frame" width="1305" height="1178" loading="lazy">
 					</button>
 
 					<figcaption>Steps: one step per frame</figcaption>
 				</figure>
 
 				<figure style="--width-image: 1305; --height-image: 1178">
-					<button class="shot" data-full="resources/images/image-window-04.png" aria-label="Enlarge Next Step: steps while turning">
-						<img src="resources/images/image-window-04.png" alt="Next Step: steps while turning" width="1305" height="1178" loading="lazy">
+					<button class="shot" data-full="resources/images/image-window-next-step.png" aria-label="Enlarge Next Step: steps while turning">
+						<img src="resources/images/image-window-next-step.png" alt="Next Step: steps while turning" width="1305" height="1178" loading="lazy">
 					</button>
 
 					<figcaption>Next Step: steps while turning</figcaption>
@@ -2075,56 +2092,56 @@
 
 			<div class="gallery four">
 				<figure style="--width-image: 3840; --height-image: 2123">
-					<button class="shot" data-full="resources/images/rendering-example-01.png" aria-label="Enlarge A POV-Ray render">
-						<img src="resources/images/rendering-example-01.png" alt="A POV-Ray render" width="3840" height="2123" loading="lazy">
+					<button class="shot" data-full="resources/images/rendering-feature-pov-ray.png" aria-label="Enlarge A POV-Ray render">
+						<img src="resources/images/rendering-feature-pov-ray.png" alt="A POV-Ray render" width="3840" height="2123" loading="lazy">
 					</button>
 
 					<figcaption>A POV-Ray render</figcaption>
 				</figure>
 
 				<figure style="--width-image: 3840; --height-image: 2131">
-					<button class="shot" data-full="resources/images/rendering-example-02.png" aria-label="Enlarge Standard">
-						<img src="resources/images/rendering-example-02.png" alt="Standard" width="3840" height="2131" loading="lazy">
+					<button class="shot" data-full="resources/images/rendering-feature-standard.png" aria-label="Enlarge Standard">
+						<img src="resources/images/rendering-feature-standard.png" alt="Standard" width="3840" height="2131" loading="lazy">
 					</button>
 
 					<figcaption>Standard</figcaption>
 				</figure>
 
 				<figure style="--width-image: 3840; --height-image: 2131">
-					<button class="shot" data-full="resources/images/rendering-example-03.png" aria-label="Enlarge Studio">
-						<img src="resources/images/rendering-example-03.png" alt="Studio" width="3840" height="2131" loading="lazy">
+					<button class="shot" data-full="resources/images/rendering-feature-studio.png" aria-label="Enlarge Studio">
+						<img src="resources/images/rendering-feature-studio.png" alt="Studio" width="3840" height="2131" loading="lazy">
 					</button>
 
 					<figcaption>Studio</figcaption>
 				</figure>
 
 				<figure style="--width-image: 3840; --height-image: 2131">
-					<button class="shot" data-full="resources/images/rendering-example-04.png" aria-label="Enlarge Matte">
-						<img src="resources/images/rendering-example-04.png" alt="Matte" width="3840" height="2131" loading="lazy">
+					<button class="shot" data-full="resources/images/rendering-feature-matte.png" aria-label="Enlarge Matte">
+						<img src="resources/images/rendering-feature-matte.png" alt="Matte" width="3840" height="2131" loading="lazy">
 					</button>
 
 					<figcaption>Matte</figcaption>
 				</figure>
 
 				<figure style="--width-image: 3840; --height-image: 2131">
-					<button class="shot" data-full="resources/images/rendering-example-05.png" aria-label="Enlarge Toon">
-						<img src="resources/images/rendering-example-05.png" alt="Toon" width="3840" height="2131" loading="lazy">
+					<button class="shot" data-full="resources/images/rendering-feature-toon.png" aria-label="Enlarge Toon">
+						<img src="resources/images/rendering-feature-toon.png" alt="Toon" width="3840" height="2131" loading="lazy">
 					</button>
 
 					<figcaption>Toon</figcaption>
 				</figure>
 
 				<figure style="--width-image: 1200; --height-image: 1200">
-					<button class="shot" data-full="resources/images/rendering-example-06.png" aria-label="Enlarge Outline selection">
-						<img src="resources/images/rendering-example-06.png" alt="Outline selection" width="1200" height="1200" loading="lazy">
+					<button class="shot" data-full="resources/images/rendering-feature-outline-selection.png" aria-label="Enlarge Outline selection">
+						<img src="resources/images/rendering-feature-outline-selection.png" alt="Outline selection" width="1200" height="1200" loading="lazy">
 					</button>
 
 					<figcaption>Outline selection</figcaption>
 				</figure>
 
 				<figure style="--width-image: 1200; --height-image: 1200">
-					<button class="shot" data-full="resources/images/rendering-example-07.png" aria-label="Enlarge Tint selection">
-						<img src="resources/images/rendering-example-07.png" alt="Tint selection" width="1200" height="1200" loading="lazy">
+					<button class="shot" data-full="resources/images/rendering-feature-tint-selection.png" aria-label="Enlarge Tint selection">
+						<img src="resources/images/rendering-feature-tint-selection.png" alt="Tint selection" width="1200" height="1200" loading="lazy">
 					</button>
 
 					<figcaption>Tint selection</figcaption>
@@ -2132,56 +2149,56 @@
 			</div>
 
 			<ul class="points">
-				<li><b>Separate settings.</b> The model view, the preview, the parts list and the Minifigure Builder each keep their own rendering settings. Each can follow the model view instead, or set its own wireframe, flat shading, default lights, edge lines, conditional lines and line width.</li>
+				<li><b>Separate settings.</b> The model view, the preview, the parts list and the Minifigure Builder each keep their own rendering settings. Each can follow the model view instead, with Preview Uses Model View Settings, Parts Use Model View Settings and Minifigure Builder Uses Model View Settings, or set its own Wireframe, Flat Shading, Default Lights, Edge Lines, Conditional Lines and line width. The preview also turns its View Cube and Axis Icon on and off, and the parts list has Snap Panel Width to Tiles.</li>
+				<li><b>Lighting styles.</b> Standard Lighting, Studio Lighting, Matte Lighting and Toon Lighting, from the View menu or the command line with --lighting. Standard uses one light with soft highlights, Studio key, fill and rim lights, Matte no highlights, and Toon banded cel shading.</li>
 				<li><b>Blender.</b> Render with the bundled Blender LDraw add-ons, with the output, <a href="#image">image</a>, scene, parts and editing settings in <a href="#panels">panels</a> of the render window, or Open in Blender to keep working on the scene there. The Blender executable is set in <a href="#preferences">Preferences</a>.</li>
-				<li><b>Lighting styles.</b> Standard, Studio, Matte and Toon, from the View menu or the command line with --lighting. Standard uses one light with soft highlights, Studio key, fill and rim lights, Matte no highlights, and Toon banded cel shading.</li>
 				<li><b>POV-Ray.</b> Found on its own in the PATH, Flatpak or Snap and checked for version 3.7. LGEO high detail parts are found beside the parts library or downloaded on request, with a Parts choice between LDraw and LGEO.</li>
 				<li><b>Edge colors.</b> Automate Edge Color computes edge colors from each part color, with edge contrast, saturation and light to dark settings, or set the stud cylinder, edge, black edge and dark edge colors yourself.</li>
+				<li><b>Studs.</b> Eight stud styles: Plain Studs, Thin-Line Logo Studs, Outline Logo Studs, Sharp Top Logo Studs, Rounded Top Logo Studs, Flattened Logo Studs, High Contrast Studs and High Contrast Logo Studs.</li>
 				<li><b>Color configurations.</b> Colors come from the parts library, the LDraw color configuration or the alternate configuration with more realistic edge line colors for rendering, chosen under Rendering &gt; Colors.</li>
-				<li><b>Studs.</b> Eight stud styles: Plain, Thin-Line Logo, Outline Logo, Sharp Top Logo, Rounded Top Logo, Flattened Logo, High Contrast and High Contrast Logo.</li>
+				<li><b>Selection highlight.</b> Outline Highlight or Tint and Edges Highlight, with Increase Outline Width, Decrease Outline Width and an adjustable transparency.</li>
 				<li><b>Mesh level of detail.</b> Distant parts draw with simpler meshes, from a distance set in Preferences, so large <a href="#models">models</a> stay smooth.</li>
+				<li><b>Shading.</b> Wireframe, Flat Shading, Default Lights, Edge Lines, Conditional Lines and Mesh LOD (level of detail).</li>
 				<li><b>Render window.</b> Choose the output file, follow the progress, and watch the image appear in the preview as it renders.</li>
-				<li><b>Shading.</b> Wireframe, flat shading, default lights, edge lines, conditional lines and mesh level of detail.</li>
-				<li><b>Selection highlight.</b> Outline or tint and edges, with an adjustable outline width and transparency.</li>
 				<li><b>Anti-aliasing.</b> 2x, 4x or 8x samples, and an adjustable line width.</li>
 			</ul>
 
 			<div class="gallery scroll">
 				<figure style="--width-image: 811; --height-image: 499">
-					<button class="shot" data-full="resources/images/rendering-menu-01.png" aria-label="Enlarge Render menu">
-						<img src="resources/images/rendering-menu-01.png" alt="Render menu" width="811" height="499" loading="lazy">
+					<button class="shot" data-full="resources/images/rendering-menu-render.png" aria-label="Enlarge Render menu">
+						<img src="resources/images/rendering-menu-render.png" alt="Render menu" width="811" height="499" loading="lazy">
 					</button>
 
 					<figcaption>Render menu</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 914">
-					<button class="shot" data-full="resources/images/rendering-window-01.png" aria-label="Enlarge Render window">
-						<img src="resources/images/rendering-window-01.png" alt="Render window" width="960" height="914" loading="lazy">
+					<button class="shot" data-full="resources/images/rendering-window-render.png" aria-label="Enlarge Render window">
+						<img src="resources/images/rendering-window-render.png" alt="Render window" width="960" height="914" loading="lazy">
 					</button>
 
 					<figcaption>Render window</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 1089">
-					<button class="shot" data-full="resources/images/rendering-window-02.png" aria-label="Enlarge Blender render window">
-						<img src="resources/images/rendering-window-02.png" alt="Blender render window" width="960" height="1089" loading="lazy">
+					<button class="shot" data-full="resources/images/rendering-window-blender-render.png" aria-label="Enlarge Blender render window">
+						<img src="resources/images/rendering-window-blender-render.png" alt="Blender render window" width="960" height="1089" loading="lazy">
 					</button>
 
 					<figcaption>Blender render window</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 540">
-					<button class="shot" data-full="resources/images/rendering-window-03.png" aria-label="Enlarge Edge colors">
-						<img src="resources/images/rendering-window-03.png" alt="Edge colors" width="960" height="540" loading="lazy">
+					<button class="shot" data-full="resources/images/rendering-window-edge-colors.png" aria-label="Enlarge Edge colors">
+						<img src="resources/images/rendering-window-edge-colors.png" alt="Edge colors" width="960" height="540" loading="lazy">
 					</button>
 
 					<figcaption>Edge colors</figcaption>
 				</figure>
 
 				<figure style="--width-image: 920; --height-image: 235">
-					<button class="shot" data-full="resources/images/rendering-window-04.png" aria-label="Enlarge Stud styles">
-						<img src="resources/images/rendering-window-04.png" alt="Stud styles" width="920" height="235" loading="lazy">
+					<button class="shot" data-full="resources/images/rendering-window-stud-styles.png" aria-label="Enlarge Stud styles">
+						<img src="resources/images/rendering-window-stud-styles.png" alt="Stud styles" width="920" height="235" loading="lazy">
 					</button>
 
 					<figcaption>Stud styles</figcaption>
@@ -2199,24 +2216,24 @@
 
 			<div class="gallery three">
 				<figure style="--width-image: 1600; --height-image: 1600">
-					<button class="shot" data-full="resources/images/modeling-example-01.png" aria-label="Enlarge Flex Path control points">
-						<img src="resources/images/modeling-example-01.png" alt="Flex Path control points" width="1600" height="1600" loading="lazy">
+					<button class="shot" data-full="resources/images/modeling-feature-flex-path.png" aria-label="Enlarge Flex Path control points">
+						<img src="resources/images/modeling-feature-flex-path.png" alt="Flex Path control points" width="1600" height="1600" loading="lazy">
 					</button>
 
 					<figcaption>Flex Path control points</figcaption>
 				</figure>
 
 				<figure style="--width-image: 1700; --height-image: 1700">
-					<button class="shot" data-full="resources/images/modeling-example-02.png" aria-label="Enlarge Train track">
-						<img src="resources/images/modeling-example-02.png" alt="Train track" width="1700" height="1700" loading="lazy">
+					<button class="shot" data-full="resources/images/modeling-feature-train-track.png" aria-label="Enlarge Train track">
+						<img src="resources/images/modeling-feature-train-track.png" alt="Train track" width="1700" height="1700" loading="lazy">
 					</button>
 
 					<figcaption>Train track</figcaption>
 				</figure>
 
 				<figure style="--width-image: 1700; --height-image: 1700">
-					<button class="shot" data-full="resources/images/modeling-example-03.png" aria-label="Enlarge Explode">
-						<img src="resources/images/modeling-example-03.png" alt="Explode" width="1700" height="1700" loading="lazy">
+					<button class="shot" data-full="resources/images/modeling-feature-explode.png" aria-label="Enlarge Explode">
+						<img src="resources/images/modeling-feature-explode.png" alt="Explode" width="1700" height="1700" loading="lazy">
 					</button>
 
 					<figcaption>Explode</figcaption>
@@ -2242,97 +2259,97 @@
 
 			<ul class="points">
 				<li><b>Explode.</b> The Explode panel, shown from the panel context menu or View &gt; Toolbars, spreads every other visible part, or only the selected ones with each group moving as one part, away from an anchor, the focused part or the first or last selected one, by an X, Y and Z percentage of its distance, or one value for all three with Uniform following the chosen axis. Each part slides straight out along the stud, pin or socket that holds it, a part without one along the nearest X, Y or Z axis from the part beside it, and with Show Lines a line in the Explode Lines color from <a href="#preferences">Preferences</a> runs through the connection, from the socket on the part it came off to the moved part. Submodels in the spread, and the submodels inside them, flatten into their parts first, so everything spreads, and the flatten and spread are one undo step. Changing a setting spreads the parts again, Collapse or Undo puts the parts and the submodels back, and any other edit only puts the parts back. Save Copy saves the whole exploded project to a separate file named with -exploded before the extension, and the open file is not saved.</li>
-				<li><b>Find and Replace.</b> A bar over the view finds parts by part, color or both, <a href="#steps">steps</a> through the matches or selects them all, and replaces the color or part of one or all of them. The part list shows the parts of the model in the colors they are used in, with a flag on parts used in more than one color, and the gear button sets how the part lists are filtered and shown. Replace in Submodels makes Replace All reach every submodel the model uses.</li>
-				<li><b>Transforms.</b> Relative Transforms move and rotate the selection around the part that has focus, Absolute Transforms in model coordinates. Rotate Separately turns each part around its own pivot, Rotate Together turns the selection as one. Each pair has a toggle shortcut.</li>
-				<li><b>Control points.</b> Insert and remove control points, clamp a point along the path or release it to rotate freely, align it to the path once, or turn it along the X, Y or Z axis. New points can start clamped, and the spread handle shapes the curve.</li>
+				<li><b>Find and Replace.</b> A bar over the view finds parts by part, color or both, <a href="#steps">steps</a> through the matches with Find Next and Find Previous or selects them with Find All, and replaces the color or part with Replace Next or Replace All. The part list shows the parts of the model in the colors they are used in, with a flag on parts used in more than one color, and the gear button sets how the part lists are filtered and shown. Replace in Submodels makes Replace All reach every submodel the model uses.</li>
+				<li><b>Transforms.</b> Relative Transforms move and rotate the selection around the part that has focus, Absolute Transforms in model coordinates. Rotate Separately turns each part around its own pivot, Rotate Together turns the selection as one. Toggle Relative Transforms and Toggle Separate Transforms switch each pair from the keyboard. The Transform toolbar sets Absolute Translation, Relative Translation, Absolute Rotation or Relative Rotation.</li>
+				<li><b>Keyboard moves.</b> Move +X, Move -X, Move +Y, Move -Y, Move +Z and Move -Z, and Rotate +X, Rotate -X, Rotate +Y, Rotate -Y, Rotate +Z and Rotate -Z, move and rotate the selection by the snap steps. Fixed Direction Keys keeps the arrow keys on the model axes instead of following the view.</li>
+				<li><b>Control points.</b> Insert Control Point and Remove Control Point, Clamp Tangent to hold a point along the path or release it to rotate freely, Align to Tangent once, or turn it along the X Axis, Y Axis or Z Axis. New points can start clamped, and the spread handle shapes the curve.</li>
 				<li><b>Rotation snap.</b> 1, 5, 15, 22.5, 30, 45, 60, 90 or 180 degrees, a custom angle, or No Rotation Snap. Camera Snap orbits the view in the same steps. Turns in any step land exactly on square angles, so later moves keep whole coordinates.</li>
+				<li><b>Insert colors.</b> Insert with the Current Color, the Selected Part Color or the Last Inserted Part Color, from Solid Colors, Translucent Colors or Special Colors, or Lock Parts Color to keep the Parts panel on one color.</li>
 				<li><b>Move snap.</b> Horizontal steps of 1/20 stud, 1/4 stud, 1 flat, 1/2 stud and 1, 2, 3, 4 or 8 studs, vertical steps of 1/20 stud, 1/4 stud, 1 flat, 1/2 stud, 1 stud and 1, 2, 4 or 8 bricks, or No XY Snap and No Z Snap.</li>
-				<li><b>Selection.</b> Select All, Select None, Invert Selection, Adjacent Parts, by Name, and by part, color or both. Select Connected Parts follows the connection shapes of the LDCad shadow library.</li>
-				<li><b>Keyboard moves.</b> Move and rotate the selection along +X, -X, +Y, -Y, +Z and -Z by the snap steps. Fixed Direction Keys keeps the arrow keys on the model axes instead of following the view.</li>
+				<li><b>Selection.</b> Select All, Select None, Invert Selection, Select Adjacent Parts, by Name, and by part, color or both. Select Connected Parts follows the connection shapes of the LDCad shadow library.</li>
+				<li><b>Parts.</b> Insert, delete, duplicate, paint, hide and group parts, with Insert Part, Paint Selected, and Insert First Part at Origin to place the first part at the origin.</li>
 				<li><b>Selection modes.</b> Single Selection picks one part, Part Selection every part of the same type, Color Selection every part of the same color, and Part and Color Selection both.</li>
-				<li><b>Groups.</b> Group the selection under a unique name, Ungroup, add the focused part to a group or remove it, and Edit Groups in a tree of parts and groups.</li>
+				<li><b>Groups.</b> Group the selection under a unique name, Ungroup, Add to Group and Remove from Group for the focused part, and Edit Groups in a tree of parts and groups.</li>
+				<li><b>Train track.</b> Rotate Train Track turns a track part to its next connection, and Focus Next Connection and Focus Previous Connection choose where the next part joins.</li>
 				<li><b>Snapping.</b> Move in studs, flats and bricks, rotate in degrees with a custom angle, with relative or absolute transforms and separate or shared rotation.</li>
-				<li><b>Train track.</b> Rotate Train Track turns a track part to its next connection, and Focus Next and Previous Connection choose where the next part joins.</li>
 				<li><b>Pivot points and keyframes.</b> Reset Pivot Point puts the pivot back at each part&#x27;s origin, and Remove Keyframes clears the animation of the selected parts.</li>
-				<li><b>Insert colors.</b> Insert with the current color, the selected part&#x27;s color or the last inserted color, or lock the Parts panel to one color.</li>
 				<li><b>Array.</b> Repeat the selection along one, two or three axes, with a count, an X, Y and Z offset and an X, Y and Z rotation for each.</li>
 				<li><b>Part connections.</b> Use Part Connections turns connected part selection on and off, with the shadow library folder chosen in Preferences.</li>
-				<li><b>Parts.</b> Insert, delete, duplicate, paint, hide and group parts, with the first part placed at the origin as an option.</li>
 				<li><b>Flex Path.</b> Hoses, cables and other flexible parts bend along control points that stop at the part length.</li>
+				<li><b>Show Earlier and Later.</b> Show Earlier and Show Later move the selected parts one step earlier or later.</li>
 				<li><b>Lights and cameras.</b> Lights and cameras are placed in the model and saved with it, see <a href="#tools">Tools</a>.</li>
 				<li><b>Hide and show.</b> Hide Selected or Hide Unselected, then Unhide Selected or Unhide All.</li>
 				<li><b>Select by Name.</b> A checklist of every object in the model, with All, None and Invert.</li>
-				<li><b>Show Earlier and Later.</b> Move the selected parts one step earlier or later.</li>
 			</ul>
 
 			<div class="gallery scroll">
 				<figure style="--width-image: 388; --height-image: 301">
-					<button class="shot" data-full="resources/images/modeling-menu-01.png" aria-label="Enlarge Move snap">
-						<img src="resources/images/modeling-menu-01.png" alt="Move snap" width="388" height="301" loading="lazy">
+					<button class="shot" data-full="resources/images/modeling-menu-move-snap.png" aria-label="Enlarge Move snap">
+						<img src="resources/images/modeling-menu-move-snap.png" alt="Move snap" width="388" height="301" loading="lazy">
 					</button>
 
 					<figcaption>Move snap</figcaption>
 				</figure>
 
 				<figure style="--width-image: 225; --height-image: 360">
-					<button class="shot" data-full="resources/images/modeling-menu-02.png" aria-label="Enlarge Rotation snap">
-						<img src="resources/images/modeling-menu-02.png" alt="Rotation snap" width="225" height="360" loading="lazy">
+					<button class="shot" data-full="resources/images/modeling-menu-rotation-snap.png" aria-label="Enlarge Rotation snap">
+						<img src="resources/images/modeling-menu-rotation-snap.png" alt="Rotation snap" width="225" height="360" loading="lazy">
 					</button>
 
 					<figcaption>Rotation snap</figcaption>
 				</figure>
 
 				<figure style="--width-image: 548; --height-image: 485">
-					<button class="shot" data-full="resources/images/modeling-menu-03.png" aria-label="Enlarge Control point menu">
-						<img src="resources/images/modeling-menu-03.png" alt="Control point menu" width="548" height="485" loading="lazy">
+					<button class="shot" data-full="resources/images/modeling-menu-control-point.png" aria-label="Enlarge Control point menu">
+						<img src="resources/images/modeling-menu-control-point.png" alt="Control point menu" width="548" height="485" loading="lazy">
 					</button>
 
 					<figcaption>Control point menu</figcaption>
 				</figure>
 
 				<figure style="--width-image: 541; --height-image: 256">
-					<button class="shot" data-full="resources/images/interface-menu-12.png" aria-label="Enlarge Part connections">
-						<img src="resources/images/interface-menu-12.png" alt="Part connections" width="541" height="256" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-menu-view-options.png" aria-label="Enlarge Part connections">
+						<img src="resources/images/interface-menu-view-options.png" alt="Part connections" width="541" height="256" loading="lazy">
 					</button>
 
 					<figcaption>Part connections</figcaption>
 				</figure>
 
 				<figure style="--width-image: 376; --height-image: 123">
-					<button class="shot" data-full="resources/images/modeling-window-01.png" aria-label="Enlarge Group">
-						<img src="resources/images/modeling-window-01.png" alt="Group" width="376" height="123" loading="lazy">
+					<button class="shot" data-full="resources/images/modeling-window-group.png" aria-label="Enlarge Group">
+						<img src="resources/images/modeling-window-group.png" alt="Group" width="376" height="123" loading="lazy">
 					</button>
 
 					<figcaption>Group</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 569">
-					<button class="shot" data-full="resources/images/modeling-window-02.png" aria-label="Enlarge Select by Name">
-						<img src="resources/images/modeling-window-02.png" alt="Select by Name" width="960" height="569" loading="lazy">
+					<button class="shot" data-full="resources/images/modeling-window-select-by-name.png" aria-label="Enlarge Select by Name">
+						<img src="resources/images/modeling-window-select-by-name.png" alt="Select by Name" width="960" height="569" loading="lazy">
 					</button>
 
 					<figcaption>Select by Name</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 569">
-					<button class="shot" data-full="resources/images/modeling-window-03.png" aria-label="Enlarge Edit Groups">
-						<img src="resources/images/modeling-window-03.png" alt="Edit Groups" width="960" height="569" loading="lazy">
+					<button class="shot" data-full="resources/images/modeling-window-edit-groups.png" aria-label="Enlarge Edit Groups">
+						<img src="resources/images/modeling-window-edit-groups.png" alt="Edit Groups" width="960" height="569" loading="lazy">
 					</button>
 
 					<figcaption>Edit Groups</figcaption>
 				</figure>
 
 				<figure style="--width-image: 2100; --height-image: 480">
-					<button class="shot" data-full="resources/images/modeling-window-04.png" aria-label="Enlarge The Find and Replace bar">
-						<img src="resources/images/modeling-window-04.png" alt="The Find and Replace bar" width="2100" height="480" loading="lazy">
+					<button class="shot" data-full="resources/images/modeling-widget-find-replace.png" aria-label="Enlarge The Find and Replace bar">
+						<img src="resources/images/modeling-widget-find-replace.png" alt="The Find and Replace bar" width="2100" height="480" loading="lazy">
 					</button>
 
 					<figcaption>The Find and Replace bar</figcaption>
 				</figure>
 
 				<figure style="--width-image: 1063; --height-image: 269">
-					<button class="shot" data-full="resources/images/modeling-window-05.png" aria-label="Enlarge The Array dialog">
-						<img src="resources/images/modeling-window-05.png" alt="The Array dialog" width="1063" height="269" loading="lazy">
+					<button class="shot" data-full="resources/images/modeling-window-array.png" aria-label="Enlarge The Array dialog">
+						<img src="resources/images/modeling-window-array.png" alt="The Array dialog" width="1063" height="269" loading="lazy">
 					</button>
 
 					<figcaption>The Array dialog</figcaption>
@@ -2350,16 +2367,16 @@
 
 			<div class="gallery two">
 				<figure style="--width-image: 1780; --height-image: 1780">
-					<button class="shot" data-full="resources/images/tools-example-01.png" aria-label="Enlarge Lights and cameras">
-						<img src="resources/images/tools-example-01.png" alt="Lights and cameras" width="1780" height="1780" loading="lazy">
+					<button class="shot" data-full="resources/images/tools-feature-lights-cameras.png" aria-label="Enlarge Lights and cameras">
+						<img src="resources/images/tools-feature-lights-cameras.png" alt="Lights and cameras" width="1780" height="1780" loading="lazy">
 					</button>
 
 					<figcaption>Lights and cameras</figcaption>
 				</figure>
 
 				<figure style="--width-image: 600; --height-image: 600">
-					<button class="shot" data-full="resources/images/tools-example-02.gif" aria-label="Enlarge Joints animation of a minifigure">
-						<img src="resources/images/tools-example-02.gif" alt="Joints animation of a minifigure" width="600" height="600" loading="lazy">
+					<button class="shot" data-full="resources/images/tools-feature-joints-animation.gif" aria-label="Enlarge Joints animation of a minifigure">
+						<img src="resources/images/tools-feature-joints-animation.gif" alt="Joints animation of a minifigure" width="600" height="600" loading="lazy">
 					</button>
 
 					<figcaption>Joints animation of a minifigure</figcaption>
@@ -2369,7 +2386,7 @@
 			<ul class="points">
 				<li><b>Edit tools.</b> Insert adds the part chosen in the Parts panel, Select picks objects, with Ctrl or a drag for several, Move and Rotate change the selection, Erase removes what you click, Paint colors a part, and Color Picker takes a part&#x27;s color.</li>
 				<li><b>Cancel Action.</b> Esc cancels the current mouse action, a face or cutaway pick or a cutaway resize, closes the Find and Replace bar, clears the selection, and with nothing selected removes the cutaway.</li>
-				<li><b>Keyboard and gamepad view.</b> Zoom In and Zoom Out, and Move Forward, Backward, Left, Right, Up and Down. In builds with gamepad support, the left stick of a gamepad moves the camera.</li>
+				<li><b>Keyboard and gamepad view.</b> Zoom In and Zoom Out, and Move Forward, Move Backward, Move Left, Move Right, Move Up and Move Down. In builds with gamepad support, the left stick of a gamepad moves the camera.</li>
 				<li><b>Lights.</b> Point Light, Spotlight, Directional Light and Area Light tools place lights in the model, with named properties and units, saved in the model file.</li>
 				<li><b>Cameras.</b> The Camera tool places a camera. View &gt; Cameras switches between the first sixteen cameras, or No Camera for the free view.</li>
 				<li><b>View tools.</b> Zoom, Pan, Rotate View and Roll change the camera, and Zoom Region zooms into a rectangle you drag.</li>
@@ -2382,48 +2399,49 @@
 			<ul class="points">
 				<li><b>Set Joint.</b> Part &gt; Joint &gt; Set Joint with one submodel selected, or from the right-click menu of the model view, which opens the submodel under the pointer in place and fades everything else in the joint fade color while you pick, then click a connection of the submodel with the Joints tool, which shows the Set Joint pointer and outlines the part under it in red. The click sets the joint and goes back to the Select tool in joint mode on the new joint, with the joint bar over the view and every other submodel faded, opening the holding submodel in place when it sits inside the selected one. A submodel can hold several joints: Set Joint again at another connection adds one, and Set Joint at a joint already there resets it. During the pick only the selected submodel takes clicks, so you can pick through other submodels in front of it. A round shape makes a hinge on its axis, a sphere makes a ball, and a part without shadow data gets a hinge on its origin. The joint goes on the submodel that holds the clicked part, even when that submodel sits inside the selected one, so it shows in the Joints tree under its own model. The Joints panel shows the joint, with an X, Y or Z axis choice, the angle and Delete Joint, which deletes the joint picked in the tree, also with the Delete key. Each joint is saved before the placed submodel, one line per joint, as <code>0 !SW JOINT PART &lt;HINGE|BALL&gt; &lt;pivot x y z&gt; &lt;axis x y z&gt; &lt;rotation x y z&gt;</code> in LDraw coordinates, and setting and deleting it is undoable.</li>
 				<li><b>Joint Move and Rotate.</b> Part &gt; Joint &gt; Move Joint or Rotate Joint, also in the right-click menu of the model view, switches to the Move or Rotate tool with the gizmo on the pivot of the selected submodel&#x27;s picked joint, lined up with a hinge axis in relative mode. The move gizmo gets a red hexagon like a cube outline and the rotate gizmo a red outer ring. The rotate keys and the Rotate tool then turn the joint around its pivot and axis instead of the pivot point, saving the turn as the joint angle; a hinge only turns about its axis. Selecting something else goes back to the pivot point. A bar over the view shows the path to the joint as buttons, as it does for a joint picked in the Joints panel. A joint inside a submodel opens that submodel in place, like Edit Selected Submodel, without a new tab. A submodel button selects that submodel in its parent model, and stays in joint mode on its first joint when it has one; the main model button ends joint mode. The bar&#x27;s close button clears the selection and returns to the Select tool and to the model you were editing before. Clicking a part outside the opened submodel does the same and selects that part. Use Joint Rotation under General &gt; Editing in the preferences does this whenever a selected submodel has a joint.</li>
-				<li><b>Joints panel.</b> View &gt; Toolbars &gt; Joints Panel shows a tree of every model with joints, under it each jointed submodel by name and position (<code>arm-right.ldr 006</code>), and under that each of its joints (<code>Joint 001</code>) with type and angle. Clicking a joint selects its submodel, in its own model, and makes it the joint the panel and the Move and Rotate gizmos work on. Below the tree are the poses of the picked model, which hold that model&#x27;s joints only. Save stores them under a name, saving a name again replaces it, Recall puts the angles back in one undo step, and Rename and Delete edit the list. Poses are saved in their own model&#x27;s file as <code>0 !SW JOINT MODEL &quot;&lt;name&gt;&quot; &quot;&lt;model file&gt;&quot; &lt;part index&gt; &lt;rx ry rz&gt; [joint number]</code>, one line per joint, the joint number counting from 0 and left out for the first joint. Older project-wide sets and <code>0 !SW POSE</code> lines still load, split into the <a href="#models">models</a> they belong to.</li>
+				<li><b>Poses panel.</b> View &gt; Toolbars &gt; Poses Panel lists the poses of the model picked in the Joints panel, under a Pose header, each holding that model&#x27;s joints only. Save stores them under a name, saving a name again replaces it, Recall puts the angles back in one undo step, and Rename and Delete edit the list. Poses are saved in their own model&#x27;s file as <code>0 !SW JOINT MODEL &quot;&lt;name&gt;&quot; &quot;&lt;model file&gt;&quot; &lt;part index&gt; &lt;rx ry rz&gt; [joint number]</code>, one line per joint, the joint number counting from 0 and left out for the first joint. Older project-wide sets and <code>0 !SW POSE</code> lines still load, split into the <a href="#models">models</a> they belong to.</li>
 				<li><b>Joints tool.</b> Next to Rotate in the Tools toolbar, and the Joint menu is also in the right-click menu of the model view. With one submodel selected, the parts holding its joints are outlined in red, and a right click goes back to the Select tool. Click down into submodels to take the innermost one with a joint and drag; on a submodel with several joints, the joint nearest the click turns. A hinge turns about its axis by the horizontal drag, a ball turns about the screen up and right directions. Rotation Snap applies and one drag is one undo step.</li>
+				<li><b>Joints panel.</b> View &gt; Toolbars &gt; Joints Panel shows a tree of every model with joints, under it each jointed submodel by name and position (<code>arm-right.ldr 006</code>), and under that each of its joints (<code>Joint 001</code>) with type and angle. Clicking a joint selects its submodel, in its own model, and makes it the joint the panel and the Move and Rotate gizmos work on. Clicking a model shows its poses in the Poses panel.</li>
 				<li><b>Joints from the shadow library.</b> SNAP_CYL round shapes become hinges, and SNAP_CLP clips, SNAP_FGR fingers and SNAP_GEN spheres (<code>bounding=sph</code>) are read as well. Only SNAP_CYL shapes take part in part connections. Shapes in sub-files of a part, and their placement and mirroring, are followed the same way.</li>
 				<li><b>Joints motion.</b> File &gt; <a href="#image">Image</a> &gt; Animated GIF with Motion Joints blends through the poses of the main model in order and back to the first, with Frames between two poses, Frame Rate and Hold Last. Hinges blend their angle, balls blend along the shortest turn.</li>
 			</ul>
 
 			<div class="gallery scroll">
 				<figure style="--width-image: 478; --height-image: 719">
-					<button class="shot" data-full="resources/images/tools-menu-01.png" aria-label="Enlarge Tools menu">
-						<img src="resources/images/tools-menu-01.png" alt="Tools menu" width="478" height="719" loading="lazy">
+					<button class="shot" data-full="resources/images/tools-menu-tools.png" aria-label="Enlarge Tools menu">
+						<img src="resources/images/tools-menu-tools.png" alt="Tools menu" width="478" height="719" loading="lazy">
 					</button>
 
 					<figcaption>Tools menu</figcaption>
 				</figure>
 
 				<figure style="--width-image: 309; --height-image: 282">
-					<button class="shot" data-full="resources/images/interface-menu-04.png" aria-label="Enlarge Part &gt; Joint">
-						<img src="resources/images/interface-menu-04.png" alt="Part &gt; Joint" width="309" height="282" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-menu-part.png" aria-label="Enlarge Part &gt; Joint">
+						<img src="resources/images/interface-menu-part.png" alt="Part &gt; Joint" width="309" height="282" loading="lazy">
 					</button>
 
 					<figcaption>Part &gt; Joint</figcaption>
 				</figure>
 
 				<figure style="--width-image: 624; --height-image: 40">
-					<button class="shot" data-full="resources/images/tools-window-01.png" aria-label="Enlarge Tools toolbar">
-						<img src="resources/images/tools-window-01.png" alt="Tools toolbar" width="624" height="40" loading="lazy">
+					<button class="shot" data-full="resources/images/tools-widget-toolbar.png" aria-label="Enlarge Tools toolbar">
+						<img src="resources/images/tools-widget-toolbar.png" alt="Tools toolbar" width="624" height="40" loading="lazy">
 					</button>
 
 					<figcaption>Tools toolbar</figcaption>
 				</figure>
 
 				<figure style="--width-image: 480; --height-image: 438">
-					<button class="shot" data-full="resources/images/tools-window-02.png" aria-label="Enlarge Light properties">
-						<img src="resources/images/tools-window-02.png" alt="Light properties" width="480" height="438" loading="lazy">
+					<button class="shot" data-full="resources/images/tools-widget-light-properties.png" aria-label="Enlarge Light properties">
+						<img src="resources/images/tools-widget-light-properties.png" alt="Light properties" width="480" height="438" loading="lazy">
 					</button>
 
 					<figcaption>Light properties</figcaption>
 				</figure>
 
 				<figure style="--width-image: 1305; --height-image: 1178">
-					<button class="shot" data-full="resources/images/tools-window-03.png" aria-label="Enlarge Save Image with Motion Joints">
-						<img src="resources/images/tools-window-03.png" alt="Save Image with Motion Joints" width="1305" height="1178" loading="lazy">
+					<button class="shot" data-full="resources/images/tools-window-motion-joints.png" aria-label="Enlarge Save Image with Motion Joints">
+						<img src="resources/images/tools-window-motion-joints.png" alt="Save Image with Motion Joints" width="1305" height="1178" loading="lazy">
 					</button>
 
 					<figcaption>Save Image with Motion Joints</figcaption>
@@ -2441,88 +2459,88 @@
 
 			<div class="gallery four">
 				<figure style="--width-image: 136; --height-image: 136">
-					<button class="shot" data-full="resources/images/views-example-01.png" aria-label="Enlarge View cube small labels">
-						<img src="resources/images/views-example-01.png" alt="View cube small labels" width="136" height="136" loading="lazy">
+					<button class="shot" data-full="resources/images/views-feature-view-cube-small-labels.png" aria-label="Enlarge View cube small labels">
+						<img src="resources/images/views-feature-view-cube-small-labels.png" alt="View cube small labels" width="136" height="136" loading="lazy">
 					</button>
 
 					<figcaption>View cube small labels</figcaption>
 				</figure>
 
 				<figure style="--width-image: 136; --height-image: 136">
-					<button class="shot" data-full="resources/images/views-example-02.png" aria-label="Enlarge View cube large abbreviations">
-						<img src="resources/images/views-example-02.png" alt="View cube large abbreviations" width="136" height="136" loading="lazy">
+					<button class="shot" data-full="resources/images/views-feature-view-cube-large-abbreviations.png" aria-label="Enlarge View cube large abbreviations">
+						<img src="resources/images/views-feature-view-cube-large-abbreviations.png" alt="View cube large abbreviations" width="136" height="136" loading="lazy">
 					</button>
 
 					<figcaption>View cube large abbreviations</figcaption>
 				</figure>
 
 				<figure style="--width-image: 136; --height-image: 136">
-					<button class="shot" data-full="resources/images/views-example-03.png" aria-label="Enlarge Axis icon">
-						<img src="resources/images/views-example-03.png" alt="Axis icon" width="136" height="136" loading="lazy">
+					<button class="shot" data-full="resources/images/views-feature-axis-icon.png" aria-label="Enlarge Axis icon">
+						<img src="resources/images/views-feature-axis-icon.png" alt="Axis icon" width="136" height="136" loading="lazy">
 					</button>
 
 					<figcaption>Axis icon</figcaption>
 				</figure>
 
 				<figure style="--width-image: 3579; --height-image: 1986">
-					<button class="shot" data-full="resources/images/views-example-04.png" aria-label="Enlarge Camera bar">
-						<img src="resources/images/views-example-04.png" alt="Camera bar" width="3579" height="1986" loading="lazy">
+					<button class="shot" data-full="resources/images/views-feature-camera-bar.png" aria-label="Enlarge Camera bar">
+						<img src="resources/images/views-feature-camera-bar.png" alt="Camera bar" width="3579" height="1986" loading="lazy">
 					</button>
 
 					<figcaption>Camera bar</figcaption>
 				</figure>
 
 				<figure style="--width-image: 3840; --height-image: 2131">
-					<button class="shot" data-full="resources/images/views-example-05.png" aria-label="Enlarge Perspective">
-						<img src="resources/images/views-example-05.png" alt="Perspective" width="3840" height="2131" loading="lazy">
+					<button class="shot" data-full="resources/images/views-feature-perspective.png" aria-label="Enlarge Perspective">
+						<img src="resources/images/views-feature-perspective.png" alt="Perspective" width="3840" height="2131" loading="lazy">
 					</button>
 
 					<figcaption>Perspective</figcaption>
 				</figure>
 
 				<figure style="--width-image: 3840; --height-image: 2131">
-					<button class="shot" data-full="resources/images/views-example-06.png" aria-label="Enlarge Orthographic">
-						<img src="resources/images/views-example-06.png" alt="Orthographic" width="3840" height="2131" loading="lazy">
+					<button class="shot" data-full="resources/images/views-feature-orthographic.png" aria-label="Enlarge Orthographic">
+						<img src="resources/images/views-feature-orthographic.png" alt="Orthographic" width="3840" height="2131" loading="lazy">
 					</button>
 
 					<figcaption>Orthographic</figcaption>
 				</figure>
 
 				<figure style="--width-image: 3840; --height-image: 2131">
-					<button class="shot" data-full="resources/images/views-example-07.png" aria-label="Enlarge Cube cutaway">
-						<img src="resources/images/views-example-07.png" alt="Cube cutaway" width="3840" height="2131" loading="lazy">
+					<button class="shot" data-full="resources/images/views-feature-cube-cutaway.png" aria-label="Enlarge Cube cutaway">
+						<img src="resources/images/views-feature-cube-cutaway.png" alt="Cube cutaway" width="3840" height="2131" loading="lazy">
 					</button>
 
 					<figcaption>Cube cutaway</figcaption>
 				</figure>
 
 				<figure style="--width-image: 3840; --height-image: 2131">
-					<button class="shot" data-full="resources/images/views-example-08.png" aria-label="Enlarge Sphere cutaway">
-						<img src="resources/images/views-example-08.png" alt="Sphere cutaway" width="3840" height="2131" loading="lazy">
+					<button class="shot" data-full="resources/images/views-feature-sphere-cutaway.png" aria-label="Enlarge Sphere cutaway">
+						<img src="resources/images/views-feature-sphere-cutaway.png" alt="Sphere cutaway" width="3840" height="2131" loading="lazy">
 					</button>
 
 					<figcaption>Sphere cutaway</figcaption>
 				</figure>
 
 				<figure style="--width-image: 3840; --height-image: 2131">
-					<button class="shot" data-full="resources/images/views-example-09.png" aria-label="Enlarge Cylinder cutaway">
-						<img src="resources/images/views-example-09.png" alt="Cylinder cutaway" width="3840" height="2131" loading="lazy">
+					<button class="shot" data-full="resources/images/views-feature-cylinder-cutaway.png" aria-label="Enlarge Cylinder cutaway">
+						<img src="resources/images/views-feature-cylinder-cutaway.png" alt="Cylinder cutaway" width="3840" height="2131" loading="lazy">
 					</button>
 
 					<figcaption>Cylinder cutaway</figcaption>
 				</figure>
 
 				<figure style="--width-image: 3840; --height-image: 2131">
-					<button class="shot" data-full="resources/images/views-example-10.png" aria-label="Enlarge XZ and YZ height grids">
-						<img src="resources/images/views-example-10.png" alt="XZ and YZ height grids" width="3840" height="2131" loading="lazy">
+					<button class="shot" data-full="resources/images/views-feature-height-grids.png" aria-label="Enlarge XZ and YZ height grids">
+						<img src="resources/images/views-feature-height-grids.png" alt="XZ and YZ height grids" width="3840" height="2131" loading="lazy">
 					</button>
 
 					<figcaption>XZ and YZ height grids</figcaption>
 				</figure>
 
 				<figure style="--width-image: 3840; --height-image: 2160">
-					<button class="shot" data-full="resources/images/views-example-11.gif" aria-label="Enlarge Idle turntable">
-						<img src="resources/images/views-example-11.gif" alt="Idle turntable" width="3840" height="2160" loading="lazy">
+					<button class="shot" data-full="resources/images/views-feature-idle-turntable.gif" aria-label="Enlarge Idle turntable">
+						<img src="resources/images/views-feature-idle-turntable.gif" alt="Idle turntable" width="3840" height="2160" loading="lazy">
 					</button>
 
 					<figcaption>Idle turntable</figcaption>
@@ -2530,9 +2548,9 @@
 			</div>
 
 			<ul class="points">
+				<li><b>Grids.</b> A Base Grid with Grid Studs, Grid Lines and Grid Origin Lines, vertical XZ Height Grid and YZ Height Grid sized around the model, each grid with its own toggle and All Grids to turn them on or off together, and X Axis Line, Y Axis Line and Z Axis Line toggles.</li>
 				<li><b>Cutaways.</b> Cube, sphere and cylinder cutaways with solid cut surfaces, a shaded cut and resize knobs, pushed in or pulled out by one plate. The cutaway is saved with the model and comes back when the file opens, and the parts themselves are never changed.</li>
 				<li><b>Cut edges.</b> With edge lines on, the cut draws edge lines in each part&#x27;s edge color where it meets the outer faces, and thinner lines along the corners of the cut faces. Cut Edges in <a href="#preferences">Preferences</a> &gt; Views &gt; Cutaway turns them off.</li>
-				<li><b>Grids.</b> A base grid with studs, lines and origin lines, vertical XZ and YZ height grids sized around the model, each grid with its own toggle and All Grids to turn them on or off together, and a toggle for each axis line.</li>
 				<li><b>View cube settings.</b> Shown in any corner of the view, in Extra Small to Extra Large, with its own face, highlight and text colors, and small full names or large abbreviations (TP, BT, LT, RT, FT, BK) on its faces.</li>
 				<li><b>Cutaway controls.</b> Grow and Shrink resize the cutaway, Push In and Pull Out move it one plate, Shade Color sets the light shade on the cut faces, and Remove shows the whole model again.</li>
 				<li><b>Idle turntable.</b> The model turns full screen around the X, Y or Z axis when you leave StudWorx idle. Any input ends it. The idle time and the time for one turn are set in Preferences.</li>
@@ -2548,24 +2566,24 @@
 
 			<div class="gallery scroll">
 				<figure style="--width-image: 541; --height-image: 256">
-					<button class="shot" data-full="resources/images/views-menu-01.png" aria-label="Enlarge Grids with the base grid off">
-						<img src="resources/images/views-menu-01.png" alt="Grids with the base grid off" width="541" height="256" loading="lazy">
+					<button class="shot" data-full="resources/images/views-menu-grids.png" aria-label="Enlarge Grids with the base grid off">
+						<img src="resources/images/views-menu-grids.png" alt="Grids with the base grid off" width="541" height="256" loading="lazy">
 					</button>
 
 					<figcaption>Grids with the base grid off</figcaption>
 				</figure>
 
 				<figure style="--width-image: 367; --height-image: 367">
-					<button class="shot" data-full="resources/images/interface-menu-08.png" aria-label="Enlarge Viewpoints">
-						<img src="resources/images/interface-menu-08.png" alt="Viewpoints" width="367" height="367" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-menu-viewpoints.png" aria-label="Enlarge Viewpoints">
+						<img src="resources/images/interface-menu-viewpoints.png" alt="Viewpoints" width="367" height="367" loading="lazy">
 					</button>
 
 					<figcaption>Viewpoints</figcaption>
 				</figure>
 
 				<figure style="--width-image: 541; --height-image: 256">
-					<button class="shot" data-full="resources/images/interface-menu-12.png" aria-label="Enlarge Grids">
-						<img src="resources/images/interface-menu-12.png" alt="Grids" width="541" height="256" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-menu-view-options.png" aria-label="Enlarge Grids">
+						<img src="resources/images/interface-menu-view-options.png" alt="Grids" width="541" height="256" loading="lazy">
 					</button>
 
 					<figcaption>Grids</figcaption>
@@ -2583,16 +2601,16 @@
 
 			<div class="gallery two">
 				<figure style="--width-image: 1720; --height-image: 1720">
-					<button class="shot" data-full="resources/images/steps-example-01.png" aria-label="Enlarge Fade and highlight">
-						<img src="resources/images/steps-example-01.png" alt="Fade and highlight" width="1720" height="1720" loading="lazy">
+					<button class="shot" data-full="resources/images/steps-feature-fade-highlight.png" aria-label="Enlarge Fade and highlight">
+						<img src="resources/images/steps-feature-fade-highlight.png" alt="Fade and highlight" width="1720" height="1720" loading="lazy">
 					</button>
 
 					<figcaption>Fade and highlight</figcaption>
 				</figure>
 
 				<figure style="--width-image: 1720; --height-image: 1720">
-					<button class="shot" data-full="resources/images/steps-example-02.png" aria-label="Enlarge Submodel hover outline over a selection">
-						<img src="resources/images/steps-example-02.png" alt="Submodel hover outline over a selection" width="1720" height="1720" loading="lazy">
+					<button class="shot" data-full="resources/images/steps-feature-hover-outline.png" aria-label="Enlarge Submodel hover outline over a selection">
+						<img src="resources/images/steps-feature-hover-outline.png" alt="Submodel hover outline over a selection" width="1720" height="1720" loading="lazy">
 					</button>
 
 					<figcaption>Submodel hover outline over a selection</figcaption>
@@ -2601,45 +2619,54 @@
 
 			<ul class="points">
 				<li><b>Emphasis.</b> Highlight New Parts and Fade Previous Steps in the model view and the instructions, with a color for each, and an empty step fades nothing. Fade on Edit tints the rest of the model with the edit fade color while you edit a submodel in place. When it is off, the rest of the model keeps its own colors, slightly translucent. Fade on Joint Set tints every other submodel while you pick a joint, select one in the Joints panel, inside and outside a submodel edited in place, and Fade on Joint Move and Rotate keeps it on while you move or rotate in that mode. Submodel Hover Outline draws a pastel cyan outline around the innermost submodel under the pointer, or the submodel a joint would go on while you pick one, with its color in <a href="#preferences">Preferences</a>. All six are under Steps and Highlighting in the view gear menu.</li>
+				<li><b>Keyframes panel.</b> View &gt; Toolbars &gt; Keyframes Panel docks a full-width timeline at the bottom or top of the window, one column per step and one row per object, expandable to its properties, with a diamond per key and a line joining the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a key to another step or right-click for more. The full and hollow diamonds add or remove the selected objects&#x27; keys at the current step, Add Keys makes edits create keys, and rewind, play or pause, stop and forward run through the steps. Selected or All picks which objects are listed. Steps &gt; Set Keys (K), Remove Keys (Shift+K), Add Keys (Alt+K), Play or Pause (Ctrl+K) and Stop (Ctrl+Shift+K) work with the panel hidden too.</li>
+				<li><b>Animation keys.</b> Add Keys records new animation keys for parts, lights and cameras as you change them. The round button at the end of each Properties row is filled when that property has a key at the current step, and clicking it adds or removes that key. The Keyframes panel shows every key on a timeline.</li>
+				<li><b>Steps menu.</b> Go to the first, previous, next or last step, Insert Before, Insert After or Delete Step, turn on Add Keys (Alt+K), Set Keys (K) or Remove Keys (Shift+K) on the selected objects at the current step, and Play or Pause (Ctrl+K) or Stop (Ctrl+Shift+K) a run through the steps.</li>
+				<li><b>Move and paste.</b> Move Selection Here, Move Selection Before and Move Selection After move the selection to the current, previous or next step, Insert Step Before and Insert Step After add a step from the Timeline, and Paste with Steps pastes with its steps.</li>
 				<li><b>Step view commands.</b> Step View sets the view rotation of the current step, Remove Step View clears it, and Follow Step <a href="#views">Views</a> turns the view to each step&#x27;s rotation as you change steps.</li>
 				<li><b>Timeline.</b> Shows the step each part is added in and removed in. An empty removal step reads Never. Drag parts between steps or reorder them.</li>
-				<li><b>Animation keys.</b> Add Keys records new animation keys for parts, lights and cameras as you change them.</li>
-				<li><b>Move and paste.</b> Move the selection to the current, previous or next step, and paste with its steps.</li>
-				<li><b>Steps menu.</b> Go to the first, previous, next or last step, and insert or remove steps.</li>
 				<li><b>Step views.</b> MLCad ROTSTEP step views are shown, edited and followed in the Timeline.</li>
 			</ul>
 
 			<div class="gallery scroll">
 				<figure style="--width-image: 563; --height-image: 256">
-					<button class="shot" data-full="resources/images/steps-menu-01.png" aria-label="Enlarge Steps and Highlighting">
-						<img src="resources/images/steps-menu-01.png" alt="Steps and Highlighting" width="563" height="256" loading="lazy">
+					<button class="shot" data-full="resources/images/steps-menu-steps-highlighting.png" aria-label="Enlarge Steps and Highlighting">
+						<img src="resources/images/steps-menu-steps-highlighting.png" alt="Steps and Highlighting" width="563" height="256" loading="lazy">
 					</button>
 
 					<figcaption>Steps and Highlighting</figcaption>
 				</figure>
 
-				<figure style="--width-image: 207; --height-image: 197">
-					<button class="shot" data-full="resources/images/interface-menu-05.png" aria-label="Enlarge Steps menu">
-						<img src="resources/images/interface-menu-05.png" alt="Steps menu" width="207" height="197" loading="lazy">
+				<figure style="--width-image: 297; --height-image: 339">
+					<button class="shot" data-full="resources/images/interface-menu-steps.png" aria-label="Enlarge Steps menu">
+						<img src="resources/images/interface-menu-steps.png" alt="Steps menu" width="297" height="339" loading="lazy">
 					</button>
 
 					<figcaption>Steps menu</figcaption>
 				</figure>
 
 				<figure style="--width-image: 533; --height-image: 514">
-					<button class="shot" data-full="resources/images/steps-window-01.png" aria-label="Enlarge Timeline panel">
-						<img src="resources/images/steps-window-01.png" alt="Timeline panel" width="533" height="514" loading="lazy">
+					<button class="shot" data-full="resources/images/steps-widget-timeline.png" aria-label="Enlarge Timeline panel">
+						<img src="resources/images/steps-widget-timeline.png" alt="Timeline panel" width="533" height="514" loading="lazy">
 					</button>
 
 					<figcaption>Timeline panel</figcaption>
 				</figure>
 
 				<figure style="--width-image: 512; --height-image: 283">
-					<button class="shot" data-full="resources/images/steps-window-02.png" aria-label="Enlarge Step view">
-						<img src="resources/images/steps-window-02.png" alt="Step view" width="512" height="283" loading="lazy">
+					<button class="shot" data-full="resources/images/steps-window-step-view.png" aria-label="Enlarge Step view">
+						<img src="resources/images/steps-window-step-view.png" alt="Step view" width="512" height="283" loading="lazy">
 					</button>
 
 					<figcaption>Step view</figcaption>
+				</figure>
+
+				<figure style="--width-image: 1920; --height-image: 300">
+					<button class="shot" data-full="resources/images/steps-widget-keyframes.png" aria-label="Enlarge Keyframes panel">
+						<img src="resources/images/steps-widget-keyframes.png" alt="Keyframes panel" width="1920" height="300" loading="lazy">
+					</button>
+
+					<figcaption>Keyframes panel</figcaption>
 				</figure>
 			</div>
 		</section>
@@ -2653,11 +2680,13 @@
 			<p class="lead">Panels dock side by side in any area of the main window, with uniform headers, buttons and text boxes sized from their options button.</p>
 
 			<ul class="points">
-				<li><b>Joints.</b> The picked joint of the selected submodel with its axis, the tree of <a href="#models">models</a>, submodels and their joints with Delete Joint for the picked one a right click menu to move, rotate or delete a joint, and one on a submodel to edit or delete all its joints, and the poses of the picked model with Save, Recall, Rename and Delete.</li>
+				<li><b>Joints.</b> The picked joint of the selected submodel with its axis, the tree of <a href="#models">models</a>, submodels and their joints with Delete Joint for the picked one, a right-click menu to move, rotate or delete a joint, and one on a submodel to edit or delete all its joints.</li>
+				<li><b>Properties.</b> Compact position, rotation and transform rows and a spanning color swatch. Lights and cameras get named rows with units. A round key button ends each animated row, filled when the property has a key at the current step.</li>
 				<li><b>Parts.</b> Categories and palettes with a filter. The panel snaps to whole thumbnail tiles and rows, docked or floating, and the tooltip of each part shows its name, ID and weight.</li>
-				<li><b>Properties.</b> Compact position, rotation and transform rows and a spanning color swatch. Lights and cameras get named rows with units.</li>
+				<li><b>Keyframes.</b> A full-width timeline of the keys of the selected or all objects per step, with buttons to add or remove keys, Add Keys and playback.</li>
 				<li><b>Terminal folders.</b> Follow Model Folder moves the terminal to the folder of each model you open, and Go to Model Folder moves it there once.</li>
 				<li><b>Part palettes.</b> Create, rename, reorder and delete palettes, import them, or build one from an online set inventory.</li>
+				<li><b>Poses.</b> The poses of the model picked in the Joints panel with Save, Recall, Rename and Delete.</li>
 				<li><b>Preview.</b> Parts and models, in a Square Viewport when you choose, with Keep Last Selection.</li>
 				<li><b>Colors.</b> Collapsible solid, translucent and special color groups with square color tiles.</li>
 				<li><b>Terminal.</b> An embedded terminal sized to whole rows and columns, with Open Model Folder.</li>
@@ -2666,83 +2695,91 @@
 
 			<div class="gallery scroll">
 				<figure style="--width-image: 190; --height-image: 60">
-					<button class="shot" data-full="resources/images/panels-menu-01.png" aria-label="Enlarge Terminal folders">
-						<img src="resources/images/panels-menu-01.png" alt="Terminal folders" width="190" height="60" loading="lazy">
+					<button class="shot" data-full="resources/images/panels-menu-terminal.png" aria-label="Enlarge Terminal folders">
+						<img src="resources/images/panels-menu-terminal.png" alt="Terminal folders" width="190" height="60" loading="lazy">
 					</button>
 
 					<figcaption>Terminal folders</figcaption>
 				</figure>
 
 				<figure style="--width-image: 3840; --height-image: 2131">
-					<button class="shot" data-full="resources/images/panels-window-01.png" aria-label="Enlarge A selected part with its Properties">
-						<img src="resources/images/panels-window-01.png" alt="A selected part with its Properties" width="3840" height="2131" loading="lazy">
+					<button class="shot" data-full="resources/images/panels-window-selected-part.png" aria-label="Enlarge A selected part with its Properties">
+						<img src="resources/images/panels-window-selected-part.png" alt="A selected part with its Properties" width="3840" height="2131" loading="lazy">
 					</button>
 
 					<figcaption>A selected part with its Properties</figcaption>
 				</figure>
 
 				<figure style="--width-image: 346; --height-image: 456">
-					<button class="shot" data-full="resources/images/panels-window-02.png" aria-label="Enlarge Preview">
-						<img src="resources/images/panels-window-02.png" alt="Preview" width="346" height="456" loading="lazy">
+					<button class="shot" data-full="resources/images/panels-widget-preview.png" aria-label="Enlarge Preview">
+						<img src="resources/images/panels-widget-preview.png" alt="Preview" width="346" height="456" loading="lazy">
 					</button>
 
 					<figcaption>Preview</figcaption>
 				</figure>
 
 				<figure style="--width-image: 346; --height-image: 1566">
-					<button class="shot" data-full="resources/images/panels-window-03.png" aria-label="Enlarge Parts">
-						<img src="resources/images/panels-window-03.png" alt="Parts" width="346" height="1566" loading="lazy">
+					<button class="shot" data-full="resources/images/panels-widget-parts.png" aria-label="Enlarge Parts">
+						<img src="resources/images/panels-widget-parts.png" alt="Parts" width="346" height="1566" loading="lazy">
 					</button>
 
 					<figcaption>Parts</figcaption>
 				</figure>
 
 				<figure style="--width-image: 345; --height-image: 330">
-					<button class="shot" data-full="resources/images/panels-window-04.png" aria-label="Enlarge Part tooltip">
-						<img src="resources/images/panels-window-04.png" alt="Part tooltip" width="345" height="330" loading="lazy">
+					<button class="shot" data-full="resources/images/panels-widget-part-tooltip.png" aria-label="Enlarge Part tooltip">
+						<img src="resources/images/panels-widget-part-tooltip.png" alt="Part tooltip" width="345" height="330" loading="lazy">
 					</button>
 
 					<figcaption>Part tooltip</figcaption>
 				</figure>
 
 				<figure style="--width-image: 533; --height-image: 558">
-					<button class="shot" data-full="resources/images/panels-window-05.png" aria-label="Enlarge Minifigure Builder">
-						<img src="resources/images/panels-window-05.png" alt="Minifigure Builder" width="533" height="558" loading="lazy">
+					<button class="shot" data-full="resources/images/panels-widget-minifigure-builder.png" aria-label="Enlarge Minifigure Builder">
+						<img src="resources/images/panels-widget-minifigure-builder.png" alt="Minifigure Builder" width="533" height="558" loading="lazy">
 					</button>
 
 					<figcaption>Minifigure Builder</figcaption>
 				</figure>
 
 				<figure style="--width-image: 533; --height-image: 706">
-					<button class="shot" data-full="resources/images/panels-window-06.png" aria-label="Enlarge Colors">
-						<img src="resources/images/panels-window-06.png" alt="Colors" width="533" height="706" loading="lazy">
+					<button class="shot" data-full="resources/images/panels-widget-colors.png" aria-label="Enlarge Colors">
+						<img src="resources/images/panels-widget-colors.png" alt="Colors" width="533" height="706" loading="lazy">
 					</button>
 
 					<figcaption>Colors</figcaption>
 				</figure>
 
-				<figure style="--width-image: 533; --height-image: 238">
-					<button class="shot" data-full="resources/images/panels-window-07.png" aria-label="Enlarge Properties">
-						<img src="resources/images/panels-window-07.png" alt="Properties" width="533" height="238" loading="lazy">
+				<figure style="--width-image: 540; --height-image: 232">
+					<button class="shot" data-full="resources/images/panels-widget-properties.png" aria-label="Enlarge Properties">
+						<img src="resources/images/panels-widget-properties.png" alt="Properties" width="540" height="232" loading="lazy">
 					</button>
 
 					<figcaption>Properties</figcaption>
 				</figure>
 
-				<figure style="--width-image: 373; --height-image: 757">
-					<button class="shot" data-full="resources/images/panels-window-08.png" aria-label="Enlarge Joints">
-						<img src="resources/images/panels-window-08.png" alt="Joints" width="373" height="757" loading="lazy">
+				<figure style="--width-image: 373; --height-image: 420">
+					<button class="shot" data-full="resources/images/panels-widget-joints.png" aria-label="Enlarge Joints">
+						<img src="resources/images/panels-widget-joints.png" alt="Joints" width="373" height="420" loading="lazy">
 					</button>
 
 					<figcaption>Joints</figcaption>
 				</figure>
 
 				<figure style="--width-image: 1920; --height-image: 196">
-					<button class="shot" data-full="resources/images/panels-window-09.png" aria-label="Enlarge Terminal">
-						<img src="resources/images/panels-window-09.png" alt="Terminal" width="1920" height="196" loading="lazy">
+					<button class="shot" data-full="resources/images/panels-widget-terminal.png" aria-label="Enlarge Terminal">
+						<img src="resources/images/panels-widget-terminal.png" alt="Terminal" width="1920" height="196" loading="lazy">
 					</button>
 
 					<figcaption>Terminal</figcaption>
+				</figure>
+
+				<figure style="--width-image: 373; --height-image: 260">
+					<button class="shot" data-full="resources/images/panels-widget-poses.png" aria-label="Enlarge Poses">
+						<img src="resources/images/panels-widget-poses.png" alt="Poses" width="373" height="260" loading="lazy">
+					</button>
+
+					<figcaption>Poses</figcaption>
 				</figure>
 			</div>
 		</section>
@@ -2757,24 +2794,24 @@
 
 			<div class="gallery three">
 				<figure style="--width-image: 2673; --height-image: 1543">
-					<button class="shot" data-full="resources/images/instructions-example-01.png" aria-label="Enlarge Cover page">
-						<img src="resources/images/instructions-example-01.png" alt="Cover page" width="2673" height="1543" loading="lazy">
+					<button class="shot" data-full="resources/images/instructions-feature-cover-page.png" aria-label="Enlarge Cover page">
+						<img src="resources/images/instructions-feature-cover-page.png" alt="Cover page" width="2673" height="1543" loading="lazy">
 					</button>
 
 					<figcaption>Cover page</figcaption>
 				</figure>
 
 				<figure style="--width-image: 2673; --height-image: 1543">
-					<button class="shot" data-full="resources/images/instructions-example-02.png" aria-label="Enlarge Step page">
-						<img src="resources/images/instructions-example-02.png" alt="Step page" width="2673" height="1543" loading="lazy">
+					<button class="shot" data-full="resources/images/instructions-feature-step-page.png" aria-label="Enlarge Step page">
+						<img src="resources/images/instructions-feature-step-page.png" alt="Step page" width="2673" height="1543" loading="lazy">
 					</button>
 
 					<figcaption>Step page</figcaption>
 				</figure>
 
 				<figure style="--width-image: 2084; --height-image: 1203">
-					<button class="shot" data-full="resources/images/instructions-example-03.png" aria-label="Enlarge Bill of materials">
-						<img src="resources/images/instructions-example-03.png" alt="Bill of materials" width="2084" height="1203" loading="lazy">
+					<button class="shot" data-full="resources/images/instructions-feature-bill-of-materials.png" aria-label="Enlarge Bill of materials">
+						<img src="resources/images/instructions-feature-bill-of-materials.png" alt="Bill of materials" width="2084" height="1203" loading="lazy">
 					</button>
 
 					<figcaption>Bill of materials</figcaption>
@@ -2796,64 +2833,64 @@
 
 			<div class="gallery scroll">
 				<figure style="--width-image: 231; --height-image: 341">
-					<button class="shot" data-full="resources/images/instructions-menu-01.png" aria-label="Enlarge Properties options">
-						<img src="resources/images/instructions-menu-01.png" alt="Properties options" width="231" height="341" loading="lazy">
+					<button class="shot" data-full="resources/images/instructions-menu-properties-options.png" aria-label="Enlarge Properties options">
+						<img src="resources/images/instructions-menu-properties-options.png" alt="Properties options" width="231" height="341" loading="lazy">
 					</button>
 
 					<figcaption>Properties options</figcaption>
 				</figure>
 
 				<figure style="--width-image: 3840; --height-image: 2131">
-					<button class="shot" data-full="resources/images/instructions-window-01.png" aria-label="Enlarge The Instructions window">
-						<img src="resources/images/instructions-window-01.png" alt="The Instructions window" width="3840" height="2131" loading="lazy">
+					<button class="shot" data-full="resources/images/instructions-window-instructions.png" aria-label="Enlarge The Instructions window">
+						<img src="resources/images/instructions-window-instructions.png" alt="The Instructions window" width="3840" height="2131" loading="lazy">
 					</button>
 
 					<figcaption>The Instructions window</figcaption>
 				</figure>
 
 				<figure style="--width-image: 3840; --height-image: 2131">
-					<button class="shot" data-full="resources/images/instructions-window-02.png" aria-label="Enlarge Element margins, padding and anchors">
-						<img src="resources/images/instructions-window-02.png" alt="Element margins, padding and anchors" width="3840" height="2131" loading="lazy">
+					<button class="shot" data-full="resources/images/instructions-feature-element-layout.png" aria-label="Enlarge Element margins, padding and anchors">
+						<img src="resources/images/instructions-feature-element-layout.png" alt="Element margins, padding and anchors" width="3840" height="2131" loading="lazy">
 					</button>
 
 					<figcaption>Element margins, padding and anchors</figcaption>
 				</figure>
 
 				<figure style="--width-image: 396; --height-image: 1196">
-					<button class="shot" data-full="resources/images/instructions-window-03.png" aria-label="Enlarge Properties">
-						<img src="resources/images/instructions-window-03.png" alt="Properties" width="396" height="1196" loading="lazy">
+					<button class="shot" data-full="resources/images/instructions-widget-properties.png" aria-label="Enlarge Properties">
+						<img src="resources/images/instructions-widget-properties.png" alt="Properties" width="396" height="1196" loading="lazy">
 					</button>
 
 					<figcaption>Properties</figcaption>
 				</figure>
 
 				<figure style="--width-image: 396; --height-image: 360">
-					<button class="shot" data-full="resources/images/instructions-window-04.png" aria-label="Enlarge Grid">
-						<img src="resources/images/instructions-window-04.png" alt="Grid" width="396" height="360" loading="lazy">
+					<button class="shot" data-full="resources/images/instructions-widget-grid.png" aria-label="Enlarge Grid">
+						<img src="resources/images/instructions-widget-grid.png" alt="Grid" width="396" height="360" loading="lazy">
 					</button>
 
 					<figcaption>Grid</figcaption>
 				</figure>
 
 				<figure style="--width-image: 396; --height-image: 328">
-					<button class="shot" data-full="resources/images/instructions-window-05.png" aria-label="Enlarge Placement">
-						<img src="resources/images/instructions-window-05.png" alt="Placement" width="396" height="328" loading="lazy">
+					<button class="shot" data-full="resources/images/instructions-widget-placement.png" aria-label="Enlarge Placement">
+						<img src="resources/images/instructions-widget-placement.png" alt="Placement" width="396" height="328" loading="lazy">
 					</button>
 
 					<figcaption>Placement</figcaption>
 				</figure>
 
 				<figure style="--width-image: 396; --height-image: 240">
-					<button class="shot" data-full="resources/images/instructions-window-06.png" aria-label="Enlarge Print">
-						<img src="resources/images/instructions-window-06.png" alt="Print" width="396" height="240" loading="lazy">
+					<button class="shot" data-full="resources/images/instructions-widget-print.png" aria-label="Enlarge Print">
+						<img src="resources/images/instructions-widget-print.png" alt="Print" width="396" height="240" loading="lazy">
 					</button>
 
 					<figcaption>Print</figcaption>
 				</figure>
 
 				<figure style="--width-image: 1041; --height-image: 455">
-					<button class="shot" data-full="resources/images/instructions-window-07.png" aria-label="Enlarge Editor">
-						<img src="resources/images/instructions-window-07.png" alt="Editor" width="1041" height="455" loading="lazy">
+					<button class="shot" data-full="resources/images/instructions-widget-editor.png" aria-label="Enlarge Editor">
+						<img src="resources/images/instructions-widget-editor.png" alt="Editor" width="1041" height="455" loading="lazy">
 					</button>
 
 					<figcaption>Editor</figcaption>
@@ -2871,8 +2908,8 @@
 
 			<div class="gallery one">
 				<figure style="--width-image: 3140; --height-image: 2010">
-					<button class="shot" data-full="resources/images/models-example-01.png" aria-label="Enlarge Editing a submodel in place">
-						<img src="resources/images/models-example-01.png" alt="Editing a submodel in place" width="3140" height="2010" loading="lazy">
+					<button class="shot" data-full="resources/images/models-feature-edit-in-place.png" aria-label="Enlarge Editing a submodel in place">
+						<img src="resources/images/models-feature-edit-in-place.png" alt="Editing a submodel in place" width="3140" height="2010" loading="lazy">
 					</button>
 
 					<figcaption>Editing a submodel in place</figcaption>
@@ -2891,24 +2928,24 @@
 
 			<div class="gallery scroll">
 				<figure style="--width-image: 960; --height-image: 569">
-					<button class="shot" data-full="resources/images/models-window-01.png" aria-label="Enlarge Model properties">
-						<img src="resources/images/models-window-01.png" alt="Model properties" width="960" height="569" loading="lazy">
+					<button class="shot" data-full="resources/images/models-window-properties.png" aria-label="Enlarge Model properties">
+						<img src="resources/images/models-window-properties.png" alt="Model properties" width="960" height="569" loading="lazy">
 					</button>
 
 					<figcaption>Model properties</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 569">
-					<button class="shot" data-full="resources/images/models-window-02.png" aria-label="Enlarge Parts">
-						<img src="resources/images/models-window-02.png" alt="Parts" width="960" height="569" loading="lazy">
+					<button class="shot" data-full="resources/images/models-window-parts.png" aria-label="Enlarge Parts">
+						<img src="resources/images/models-window-parts.png" alt="Parts" width="960" height="569" loading="lazy">
 					</button>
 
 					<figcaption>Parts</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 569">
-					<button class="shot" data-full="resources/images/models-window-03.png" aria-label="Enlarge Submodels">
-						<img src="resources/images/models-window-03.png" alt="Submodels" width="960" height="569" loading="lazy">
+					<button class="shot" data-full="resources/images/models-window-submodels.png" aria-label="Enlarge Submodels">
+						<img src="resources/images/models-window-submodels.png" alt="Submodels" width="960" height="569" loading="lazy">
 					</button>
 
 					<figcaption>Submodels</figcaption>
@@ -2939,80 +2976,80 @@
 
 			<div class="gallery scroll">
 				<figure style="--width-image: 960; --height-image: 2051">
-					<button class="shot" data-full="resources/images/preferences-window-01.png" aria-label="Enlarge General">
-						<img src="resources/images/preferences-window-01.png" alt="General" width="960" height="2051" loading="lazy">
+					<button class="shot" data-full="resources/images/preferences-window-general.png" aria-label="Enlarge General">
+						<img src="resources/images/preferences-window-general.png" alt="General" width="960" height="2051" loading="lazy">
 					</button>
 
 					<figcaption>General</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 2051">
-					<button class="shot" data-full="resources/images/preferences-window-02.png" aria-label="Enlarge Rendering">
-						<img src="resources/images/preferences-window-02.png" alt="Rendering" width="960" height="2051" loading="lazy">
+					<button class="shot" data-full="resources/images/preferences-window-rendering.png" aria-label="Enlarge Rendering">
+						<img src="resources/images/preferences-window-rendering.png" alt="Rendering" width="960" height="2051" loading="lazy">
 					</button>
 
 					<figcaption>Rendering</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 2051">
-					<button class="shot" data-full="resources/images/preferences-window-03.png" aria-label="Enlarge Views">
-						<img src="resources/images/preferences-window-03.png" alt="Views" width="960" height="2051" loading="lazy">
+					<button class="shot" data-full="resources/images/preferences-window-views.png" aria-label="Enlarge Views">
+						<img src="resources/images/preferences-window-views.png" alt="Views" width="960" height="2051" loading="lazy">
 					</button>
 
 					<figcaption>Views</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 2051">
-					<button class="shot" data-full="resources/images/preferences-window-04.png" aria-label="Enlarge Interface">
-						<img src="resources/images/preferences-window-04.png" alt="Interface" width="960" height="2051" loading="lazy">
+					<button class="shot" data-full="resources/images/preferences-window-interface.png" aria-label="Enlarge Interface">
+						<img src="resources/images/preferences-window-interface.png" alt="Interface" width="960" height="2051" loading="lazy">
 					</button>
 
 					<figcaption>Interface</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 2051">
-					<button class="shot" data-full="resources/images/preferences-window-05.png" aria-label="Enlarge Instructions">
-						<img src="resources/images/preferences-window-05.png" alt="Instructions" width="960" height="2051" loading="lazy">
+					<button class="shot" data-full="resources/images/preferences-window-instructions.png" aria-label="Enlarge Instructions">
+						<img src="resources/images/preferences-window-instructions.png" alt="Instructions" width="960" height="2051" loading="lazy">
 					</button>
 
 					<figcaption>Instructions</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 2051">
-					<button class="shot" data-full="resources/images/preferences-window-06.png" aria-label="Enlarge Categories">
-						<img src="resources/images/preferences-window-06.png" alt="Categories" width="960" height="2051" loading="lazy">
+					<button class="shot" data-full="resources/images/preferences-window-categories.png" aria-label="Enlarge Categories">
+						<img src="resources/images/preferences-window-categories.png" alt="Categories" width="960" height="2051" loading="lazy">
 					</button>
 
 					<figcaption>Categories</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 2051">
-					<button class="shot" data-full="resources/images/preferences-window-07.png" aria-label="Enlarge Context Menu">
-						<img src="resources/images/preferences-window-07.png" alt="Context Menu" width="960" height="2051" loading="lazy">
+					<button class="shot" data-full="resources/images/preferences-window-context-menu.png" aria-label="Enlarge Context Menu">
+						<img src="resources/images/preferences-window-context-menu.png" alt="Context Menu" width="960" height="2051" loading="lazy">
 					</button>
 
 					<figcaption>Context Menu</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 2051">
-					<button class="shot" data-full="resources/images/preferences-window-08.png" aria-label="Enlarge Keyboard">
-						<img src="resources/images/preferences-window-08.png" alt="Keyboard" width="960" height="2051" loading="lazy">
+					<button class="shot" data-full="resources/images/preferences-window-keyboard.png" aria-label="Enlarge Keyboard">
+						<img src="resources/images/preferences-window-keyboard.png" alt="Keyboard" width="960" height="2051" loading="lazy">
 					</button>
 
 					<figcaption>Keyboard</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 2051">
-					<button class="shot" data-full="resources/images/preferences-window-09.png" aria-label="Enlarge Mouse">
-						<img src="resources/images/preferences-window-09.png" alt="Mouse" width="960" height="2051" loading="lazy">
+					<button class="shot" data-full="resources/images/preferences-window-mouse.png" aria-label="Enlarge Mouse">
+						<img src="resources/images/preferences-window-mouse.png" alt="Mouse" width="960" height="2051" loading="lazy">
 					</button>
 
 					<figcaption>Mouse</figcaption>
 				</figure>
 
 				<figure style="--width-image: 960; --height-image: 575">
-					<button class="shot" data-full="resources/images/preferences-window-10.png" aria-label="Enlarge About">
-						<img src="resources/images/preferences-window-10.png" alt="About" width="960" height="575" loading="lazy">
+					<button class="shot" data-full="resources/images/preferences-window-about.png" aria-label="Enlarge About">
+						<img src="resources/images/preferences-window-about.png" alt="About" width="960" height="575" loading="lazy">
 					</button>
 
 					<figcaption>About</figcaption>
@@ -3541,7 +3578,7 @@
 				<h2>HELP // EVERY &quot;WHAT&#x27;S THIS?&quot; ENTRY</h2>
 			</header>
 
-			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 502 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
+			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 513 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
 			<div class="tools-search">
 				<input id="search" type="search" placeholder="Search help" aria-label="Search help">
@@ -3627,7 +3664,15 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 				<ul>
 					<li>Tabs: model tabs line up with the view gear button, each ending in a square close button behind a divider, and the tab scroll arrows are framed like the gear button</li>
-					<li>Joints: the pose list is titled Poses</li>
+					<li>Poses: the poses move out of the Joints panel into their own Poses panel, View &gt; Toolbars &gt; Poses Panel, listed under a Pose header like the joints tree</li>
+					<li><a href="#interface">Interface</a>: Lock Interface, at the end of the toolbar and panel right-click menu and View &gt; Toolbars, hides the panel title bars to save space and keeps <a href="#panels">panels</a> and toolbars from being dragged, floated or redocked, while panels still resize and model tabs still move</li>
+					<li>Joints: an empty joints tree reads None: Part &gt; Joint &gt; Set Joint</li>
+					<li>Joints: with no joint picked the panel reads None: select a jointed submodel, and the axis list reads X Axis, Y Axis, Z Axis</li>
+					<li>Joints: the red joint outline runs inside the submodel edge like the hover line, so it shows next to the selection outline</li>
+					<li>Interface: the Colors, Minifigure Builder and Explode panels scroll when the window is too short instead of overlapping the panels below, so the window resizes down from its bottom edge and the status bar stays on screen</li>
+					<li>Keyframes: View &gt; Toolbars &gt; Keyframes Panel docks a full-width timeline at the bottom or top, with Selected or All objects expandable to their properties, a diamond per key joined by a line, click a step to go to it, double-click to add or remove a key, drag a key to another step, a right-click menu, full and hollow diamonds to add or remove the selection&#x27;s keys, Add Keys, and rewind, play or pause, stop and forward buttons</li>
+					<li>Keyframes: <a href="#steps">Steps</a> &gt; Set Keys (K), Remove Keys (Shift+K), Add Keys (Alt+K), Play or Pause (Ctrl+K) and Stop (Ctrl+Shift+K) have keyboard shortcuts</li>
+					<li>Properties: the key buttons are small round dots again, filled when the property has a key at the current step</li>
 				</ul>
 			</details>
 
@@ -3635,7 +3680,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<summary>2026-11-08</summary>
 
 				<ul>
-					<li><a href="#steps">Steps</a>: an opened model now starts on a new empty step after its last one, ready for new parts</li>
+					<li>Steps: an opened model now starts on a new empty step after its last one, ready for new parts</li>
 					<li><a href="#files">Files</a>: a Missing and Moved Parts list opens with a model whose parts could not be loaded or are marked as moved or as an alias, offering the part each one points to or its BrickLink mapping, replacing the checked ones in every submodel in one undo step, with Copy List, Don&#x27;t Warn Again, a status bar icon and the Warn About Missing and Moved Parts preference</li>
 					<li>Find and Replace: the bar floats over the view, its part list shows the parts in the colors they are used in with a flag on parts used in more than one color, a gear button sets how the part lists are filtered and shown, and Replace in Submodels makes Replace All reach every submodel</li>
 					<li><a href="#views">Views</a>: Submodel Hover Outline draws a pastel cyan outline over the innermost submodel under the pointer, on top of the selection outline, with its color in the <a href="#preferences">preferences</a></li>
@@ -3650,7 +3695,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 				<ul>
 					<li>Joints: Part &gt; Joint &gt; Set Joint, also in the model view right-click menu, gives a submodel hinge or ball joints from the shadow library connections, several per submodel, with the picked part outlined in red, the Joints tool next to Rotate turns them with the mouse, and Part &gt; Joint &gt; Move Joint and Rotate Joint and the Use Joint Rotation preference turn them with the rotate keys and the Rotate tool</li>
-					<li>Joints: the Poses panel is now the Joints panel, listing every model, its submodels as `arm-right.ldr 006` and their joints as `Joint 001` in a tree with a left-aligned angle column, and saving, recalling, renaming and deleting named poses per model</li>
+					<li>Joints: the Poses panel is now the Joints panel, listing every model, its submodels as `arm-right.ldr 006` and their joints as `Joint 001` in a tree with a left-aligned angle column, with named poses per model saved, recalled, renamed and deleted in what is now the Poses panel</li>
 					<li><a href="#image">Image</a>: File &gt; Image plays the main model poses as an animated GIF with Motion Joints, framed once around every pose so the model holds still</li>
 					<li>Samples: sample-joints.mpd, a minifigure with Stand, Wave, Walk and Work poses, and sample-pov-ray.ldr, a scene with key, fill and rim lights, a floor and a camera for POV-Ray renders</li>
 					<li>Preferences: the new Context Menu tab lets you arrange the model view right-click menu, adding commands, separators and named submenus, renaming, reordering or resetting them</li>
@@ -3671,7 +3716,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Submodels: the menu now reads Open Selected Submodel, Inline Selected Submodels, Flatten Submodels and Move to New Submodel</li>
 					<li>Menus: Select Invert is now Invert Selection, Remove Step is now Delete Step, and the snap toggles read Move Snap, Rotation Snap and Camera Snap</li>
 					<li>Studs: the stud styles are named Thin-Line Logo and High Contrast Logo in the menus, preferences and command line <a href="#help">help</a></li>
-					<li><a href="#interface">Interface</a>: errors read &quot;Could not …&quot;, file filters read &quot;LDraw Models&quot; and &quot;All Files&quot;, menu, status bar, dialog and message wording is consistent, status bar text names toolbars and <a href="#panels">panels</a> correctly, and the command line help, man page and SITE.md agree with the menus</li>
+					<li>Interface: errors read &quot;Could not …&quot;, file filters read &quot;LDraw Models&quot; and &quot;All Files&quot;, menu, status bar, dialog and message wording is consistent, status bar text names toolbars and panels correctly, and the command line help, man page and SITE.md agree with the menus</li>
 				</ul>
 			</details>
 
@@ -3880,7 +3925,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Save Model Image","title":"File","paragraphs":["Choose an output folder, file name, and image extension, such as .png, .jpg, .bmp, or .gif for an animation.","When saving several steps, the step number is added before the extension. For example, 'model.png' becomes 'model01.png', 'model02.png', and so on."]},
 				{"group":"Save Model Image","title":"Size","paragraphs":["Set the saved image width and height in pixels. Each value must be between 1 and 32768. Larger images use more memory and may exceed the graphics hardware limits.","Ratio links width and height so changing one updates the other. View uses the shape of the current view and Free unlinks them. Landscape and Portrait turn the image on its side."]},
 				{"group":"Save Model Image","title":"Steps","paragraphs":["Choose Current Step, All Steps, or Range. The range fields are used only for Range. Both ends are included, and they may be equal to save just one step."]},
-				{"group":"Save Model Image","title":"Animation","paragraphs":["Animated GIF saves an animation that loops forever.","Turntable turns the model around one axis through the Framing center, starting from the current view. Full Turn makes seamless revolutions. Angle swings between two angles from the current view and back again. Turns sets how many revolutions or swings make up the loop, so complex builds can be shown from every side more than once.","Next Step moves through the steps chosen in the Steps group while the model turns, one step every few turns or seconds. The loop ends on the last step and starts again.","Steps plays the chosen steps one per frame, for short animated instructions.","Joints blends through the poses of the main model saved in the Joints panel, in order and back to the first. Frames sets how many images go between two poses.","Frames sets how many images make up one turn and Frame Rate how many play each second. Hold Last keeps the finished model on screen before a loop through the steps restarts. Duration shows how long one loop plays."]},
+				{"group":"Save Model Image","title":"Animation","paragraphs":["Animated GIF saves an animation that loops forever.","Turntable turns the model around one axis through the Framing center, starting from the current view. Full Turn makes seamless revolutions. Angle swings between two angles from the current view and back again. Turns sets how many revolutions or swings make up the loop, so complex builds can be shown from every side more than once.","Next Step moves through the steps chosen in the Steps group while the model turns, one step every few turns or seconds. The loop ends on the last step and starts again.","Steps plays the chosen steps one per frame, for short animated instructions.","Joints blends through the poses of the main model saved in the Poses panel, in order and back to the first. Frames sets how many images go between two poses.","Frames sets how many images make up one turn and Frame Rate how many play each second. Hold Last keeps the finished model on screen before a loop through the steps restarts. Duration shows how long one loop plays."]},
 				{"group":"Save Model Image","title":"Framing","paragraphs":["Current View saves exactly what the view shows. Fit Model aims at the model and moves the camera back until every part fits inside the image at every turntable angle and every pose, so animations turn in place without zooming and Joints animations hold still. Fit Each Step fits every step on its own parts. Fitted stills are centered on the model.","Center sets the point the turntable turns around and the camera aims at. World Origin is the 0, 0, 0 point of the scene, Model Origin is the middle of the model base and Model Center is the middle of the model.","Margin keeps empty space around the model. Bounds measures the fit on the whole model, so every step lines up, or only on the steps being saved."]},
 				{"group":"Save Model Image","title":"Background","paragraphs":["View Color fills the background with the view background. Transparent leaves it empty so the model can be placed over other images.","Only PNG and GIF files keep transparency. GIF edges are hard, without smoothing."]},
 				{"group":"Instructions","title":"Page Bar","paragraphs":["Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The timeline First, Previous, Next and Last shortcuts turn the pages too while the page or the Pages panel has focus."]},
@@ -3940,14 +3985,18 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Main Window","title":"Collapse","paragraphs":["Put the exploded parts back where they were and the flattened submodels back together, like Undo. Any edit to the model puts the parts back too and keeps the submodels flattened."]},
 				{"group":"Main Window","title":"Save Copy","paragraphs":["Explode the parts and save the whole project to a separate file, named after the open file with -exploded before the extension. The open file keeps its name, Collapse puts its submodels back, and the copy cannot replace it."]},
 				{"group":"Main Window","title":"Find and Replace","paragraphs":["Find parts by color, part or both, then step through the matches or select them all. Open the replace options to swap the color or part of the matches, one at a time or all at once.","Replace in Submodels makes Replace All change the matching parts inside every submodel used by this model too."]},
-				{"group":"Main Window","title":"Joints","paragraphs":["Every model with joints, under it each jointed submodel by line index, and under that each of its joints with type and angle. Click a joint to select its submodel and make it the joint the panel and the rotate gizmo work on, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. Click a model to show its poses."]},
-				{"group":"Main Window","title":"Poses","paragraphs":["The poses saved in the model picked above, each holding the angles of that model's joints only. The Joints motion of the image dialog plays the poses of the main model in this order. Pick one to recall, rename or delete it."]},
+				{"group":"Main Window","title":"Joints","paragraphs":["Every model with joints, under it each jointed submodel by line index, and under that each of its joints with type and angle. Click a joint to select its submodel and make it the joint the panel and the rotate gizmo work on, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. Click a model to show its poses in the Poses panel."]},
+				{"group":"Main Window","title":"Axis","paragraphs":["The axis a hinge turns about, in the coordinates of the submodel. Use it for parts without shadow data, which get a hinge on their origin."]},
+				{"group":"Main Window","title":"Delete Joint","paragraphs":["Delete the joint picked in the joints list and put that joint back at rest. The Delete key does the same in the list. This can be undone."]},
+				{"group":"Main Window","title":"Poses","paragraphs":["The poses saved in the model picked in the Joints panel, each holding the angles of that model's joints only. The Joints motion of the image dialog plays the poses of the main model in this order. Pick one to recall, rename or delete it."]},
 				{"group":"Main Window","title":"Save","paragraphs":["Store the angles of the joints in this model under a name. Saving a name that already exists replaces that pose."]},
 				{"group":"Main Window","title":"Recall","paragraphs":["Turn the joints of this model back to the angles of the picked pose, in one undo step."]},
 				{"group":"Main Window","title":"Rename","paragraphs":["Give the picked pose a new name."]},
 				{"group":"Main Window","title":"Delete","paragraphs":["Remove the picked pose from the model. The joints keep their angles."]},
-				{"group":"Main Window","title":"Axis","paragraphs":["The axis a hinge turns about, in the coordinates of the submodel. Use it for parts without shadow data, which get a hinge on their origin."]},
-				{"group":"Main Window","title":"Delete Joint","paragraphs":["Delete the joint picked in the joints list and put that joint back at rest. The Delete key does the same in the list. This can be undone."]},
+				{"group":"Main Window","title":"Add Keys","paragraphs":["Add position and rotation keys to the selected objects at the current step, holding their values at that step."]},
+				{"group":"Main Window","title":"Remove Keys","paragraphs":["Remove every key the selected objects have at the current step."]},
+				{"group":"Main Window","title":"Play","paragraphs":["Step through the model one step at a time to the last step, showing the keyed motion. Click again to pause."]},
+				{"group":"Main Window","title":"Keyframes","paragraphs":["One column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel."]},
 				{"group":"Main Window","title":"Lock Preview","paragraphs":["Keep the current preview while you browse. Unlock Preview allows the display to update again. An empty preview cannot be locked."]},
 				{"group":"Main Window","title":"Property Keyframe","paragraphs":["Enable or remove a keyframe for this property at the current building step. Keyframes let the property's value change between steps."]},
 				{"group":"Main Window","title":"Choose Part","paragraphs":["Select a part, then choose OK or double-click it to use it. Cancel keeps the original choice. Filter the list to find a part; Options controls matching and list display. When None is available, select it to omit the part."]},
@@ -4111,7 +4160,11 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Steps Menu","title":"Insert Before","paragraphs":["Insert a new step before the current step."]},
 				{"group":"Steps Menu","title":"Insert After","paragraphs":["Insert a new step after the current step."]},
 				{"group":"Steps Menu","title":"Delete Step","paragraphs":["Delete the current step."]},
-				{"group":"Steps Menu","title":"Add Keys","paragraphs":["Enable this when an edit should create a new animation key at the current step. For example, moving a part at a later step can give it a different position there. The diamond controls in Properties show and toggle keys for individual properties."]},
+				{"group":"Steps Menu","title":"Add Keys","paragraphs":["Enable this when an edit should create a new animation key at the current step. For example, moving a part at a later step can give it a different position there. The round key buttons in Properties show and toggle keys for individual properties."]},
+				{"group":"Steps Menu","title":"Set Keys","paragraphs":["Add position and rotation keys to the selected objects at the current step, holding their values at that step. The full diamond in the Keyframes panel does the same."]},
+				{"group":"Steps Menu","title":"Remove Keys","paragraphs":["Remove every key the selected objects have at the current step. The hollow diamond in the Keyframes panel does the same."]},
+				{"group":"Steps Menu","title":"Play or Pause","paragraphs":["Step through the model one step at a time to the last step, showing the keyed motion. Use it again to pause."]},
+				{"group":"Steps Menu","title":"Stop","paragraphs":["Stop playing and go back to the step playing started from."]},
 				{"group":"View Menu","title":"Split Horizontal","paragraphs":["Split the current view into two views stacked one above the other, each with its own camera. The view cube and axis icon stay on the top left view."]},
 				{"group":"View Menu","title":"Split Vertical","paragraphs":["Split the current view into two views side by side, each with its own camera. The view cube and axis icon stay on the top left view."]},
 				{"group":"View Menu","title":"Remove View","paragraphs":["Remove the current view."]},
@@ -4127,7 +4180,10 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"View Menu","title":"Terminal Panel","paragraphs":["Toggle the Terminal panel."]},
 				{"group":"View Menu","title":"Minifigure Builder Panel","paragraphs":["Toggle the Minifigure Builder panel."]},
 				{"group":"View Menu","title":"Explode","paragraphs":["Show or hide the Explode panel, which spreads the parts on screen away from an anchor, the focused part or the first or last selected one, scaled along X, Y and Z. With Selected Parts Only, each group moves as one part. Each part slides straight out along the connection that holds it, a part without one along the nearest axis from the part beside it, and with Show Lines a line runs through each connection back to the socket it came off. Submodels, and the submodels inside them, flatten into their parts first in the same undo step. Collapse or Undo puts the parts and submodels back, and Save Copy saves the exploded model to a separate file named with -exploded."]},
-				{"group":"View Menu","title":"Joints","paragraphs":["Show or hide the Joints panel. A tree lists every model with its jointed submodels and their joints, click a joint to select its submodel, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. A joint inside a submodel opens it in place and a bar over the view points to the picked joint. A submodel button there selects that submodel and keeps joint mode when it has a joint, the main model button ends it; the close button clears the selection and returns to the Select tool. Save stores the joint angles of the picked model as a named pose, Recall puts them back in one undo step, and the Joints motion in the image dialog plays the poses of the main model as an animation. The panel also shows the picked joint of the selected submodel, with its axis, and Delete Joint deletes the joint picked in the tree."]},
+				{"group":"View Menu","title":"Joints","paragraphs":["Show or hide the Joints panel. A tree lists every model with its jointed submodels and their joints, click a joint to select its submodel, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. A joint inside a submodel opens it in place and a bar over the view points to the picked joint. A submodel button there selects that submodel and keeps joint mode when it has a joint, the main model button ends it; the close button clears the selection and returns to the Select tool. Clicking a model shows its poses in the Poses panel. The panel also shows the picked joint of the selected submodel, with its axis, and Delete Joint deletes the joint picked in the tree."]},
+				{"group":"View Menu","title":"Poses","paragraphs":["Show or hide the Poses panel, which lists the poses of the model picked in the Joints panel, or of the current model. Save stores the joint angles of that model as a named pose, Recall puts them back in one undo step, Rename and Delete change the picked pose, and the Joints motion in the image dialog plays the poses of the main model as an animation."]},
+				{"group":"View Menu","title":"Keyframes","paragraphs":["Show or hide the Keyframes panel, a timeline with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a key to another step and right-click for more. Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons rewind, play or pause, stop and go to the last step. Values are edited in the Properties panel."]},
+				{"group":"View Menu","title":"Lock Interface","paragraphs":["Keep the panels and toolbars where they are: panel title bars are hidden to save space, and panels and toolbars can no longer be dragged, floated or docked elsewhere. Panels still resize, and they can still be shown or hidden from this menu. Right-click a toolbar, or use View, Toolbars, to lock or unlock."]},
 				{"group":"View Menu","title":"Full Screen","paragraphs":["Toggle full screen mode."]},
 				{"group":"View Menu","title":"Close Tab","paragraphs":["Close current tab."]},
 				{"group":"View Menu","title":"Wireframe","paragraphs":["Display the scene as wireframe."]},

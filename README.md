@@ -19,7 +19,7 @@ It keeps LeoCAD's file format, so models open in either program, and copies LeoC
 
 Every feature, menu and panel is listed in [SITE.md](SITE.md) and shown on [studworx.app](https://studworx.app) - release notes are listed in [NOTICE.md](NOTICE.md).
 
-![Main window](https://raw.githubusercontent.com/nathaneltitane/studworx/main/resources/images/interface-window-01.png)
+![Main window](https://raw.githubusercontent.com/nathaneltitane/studworx/main/resources/images/interface-window-main.png)
 
 ---
 

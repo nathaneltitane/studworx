@@ -1430,8 +1430,44 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Time.AddKeys"),
 		QT_TRANSLATE_NOOP("Menu", "Add Keys"),
 		QT_TRANSLATE_NOOP("Status", "Toggle adding new animation keys"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Add Keys</b></p><p>Enable this when an edit should create a new animation key at the current step. For example, moving a part at a later step can give it a different position there. The diamond controls in Properties show and toggle keys for individual properties.</p>"),
-		""
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Add Keys</b></p><p>Enable this when an edit should create a new animation key at the current step. For example, moving a part at a later step can give it a different position there. The round key buttons in Properties show and toggle keys for individual properties.</p>"),
+		"Alt+K"
+	},
+
+	// SW_VIEW_TIME_SET_KEYS
+	{
+		QT_TRANSLATE_NOOP("Action", "View.Time.SetKeys"),
+		QT_TRANSLATE_NOOP("Menu", "Set Keys"),
+		QT_TRANSLATE_NOOP("Status", "Add keys to the selected objects at the current step"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Set Keys</b></p><p>Add position and rotation keys to the selected objects at the current step, holding their values at that step. The full diamond in the Keyframes panel does the same.</p>"),
+		"K"
+	},
+
+	// SW_VIEW_TIME_REMOVE_KEYS
+	{
+		QT_TRANSLATE_NOOP("Action", "View.Time.RemoveKeys"),
+		QT_TRANSLATE_NOOP("Menu", "Remove Keys"),
+		QT_TRANSLATE_NOOP("Status", "Remove the keys of the selected objects at the current step"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Remove Keys</b></p><p>Remove every key the selected objects have at the current step. The hollow diamond in the Keyframes panel does the same.</p>"),
+		"Shift+K"
+	},
+
+	// SW_VIEW_TIME_PLAY
+	{
+		QT_TRANSLATE_NOOP("Action", "View.Time.Play"),
+		QT_TRANSLATE_NOOP("Menu", "Play or Pause"),
+		QT_TRANSLATE_NOOP("Status", "Play or pause the steps"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Play or Pause</b></p><p>Step through the model one step at a time to the last step, showing the keyed motion. Use it again to pause.</p>"),
+		"Ctrl+K"
+	},
+
+	// SW_VIEW_TIME_STOP
+	{
+		QT_TRANSLATE_NOOP("Action", "View.Time.Stop"),
+		QT_TRANSLATE_NOOP("Menu", "Stop"),
+		QT_TRANSLATE_NOOP("Status", "Stop playing and go back to the step playing started from"),
+		"",
+		"Ctrl+Shift+K"
 	},
 
 	// SW_VIEW_SPLIT_HORIZONTAL
@@ -1574,7 +1610,33 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Joints"),
 		QT_TRANSLATE_NOOP("Menu", "Joints Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Joints panel"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joints</b></p><p>Show or hide the Joints panel. A tree lists every model with its jointed submodels and their joints, click a joint to select its submodel, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. A joint inside a submodel opens it in place and a bar over the view points to the picked joint. A submodel button there selects that submodel and keeps joint mode when it has a joint, the main model button ends it; the close button clears the selection and returns to the Select tool. Save stores the joint angles of the picked model as a named pose, Recall puts them back in one undo step, and the Joints motion in the image dialog plays the poses of the main model as an animation. The panel also shows the picked joint of the selected submodel, with its axis, and Delete Joint deletes the joint picked in the tree.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joints</b></p><p>Show or hide the Joints panel. A tree lists every model with its jointed submodels and their joints, click a joint to select its submodel, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. A joint inside a submodel opens it in place and a bar over the view points to the picked joint. A submodel button there selects that submodel and keeps joint mode when it has a joint, the main model button ends it; the close button clears the selection and returns to the Select tool. Clicking a model shows its poses in the Poses panel. The panel also shows the picked joint of the selected submodel, with its axis, and Delete Joint deletes the joint picked in the tree.</p>"),
+		""
+	},
+
+	// SW_VIEW_TOOLBAR_POSES
+	{
+		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Poses"),
+		QT_TRANSLATE_NOOP("Menu", "Poses Panel"),
+		QT_TRANSLATE_NOOP("Status", "Toggle the Poses panel"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Poses</b></p><p>Show or hide the Poses panel, which lists the poses of the model picked in the Joints panel, or of the current model. Save stores the joint angles of that model as a named pose, Recall puts them back in one undo step, Rename and Delete change the picked pose, and the Joints motion in the image dialog plays the poses of the main model as an animation.</p>"),
+		""
+	},
+	// SW_VIEW_TOOLBAR_KEYFRAMES
+	{
+		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Keyframes"),
+		QT_TRANSLATE_NOOP("Menu", "Keyframes Panel"),
+		QT_TRANSLATE_NOOP("Status", "Toggle the Keyframes panel"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Keyframes</b></p><p>Show or hide the Keyframes panel, a timeline with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a key to another step and right-click for more. Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons rewind, play or pause, stop and go to the last step. Values are edited in the Properties panel.</p>"),
+		""
+	},
+
+	// SW_VIEW_LOCK_INTERFACE
+	{
+		QT_TRANSLATE_NOOP("Action", "View.LockInterface"),
+		QT_TRANSLATE_NOOP("Menu", "Lock Interface"),
+		QT_TRANSLATE_NOOP("Status", "Lock the panels and toolbars in place"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Lock Interface</b></p><p>Keep the panels and toolbars where they are: panel title bars are hidden to save space, and panels and toolbars can no longer be dragged, floated or docked elsewhere. Panels still resize, and they can still be shown or hidden from this menu. Right-click a toolbar, or use View, Toolbars, to lock or unlock.</p>"),
 		""
 	},
 

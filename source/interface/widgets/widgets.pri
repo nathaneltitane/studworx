@@ -8,6 +8,7 @@ SOURCES += \
 	$$PWD/sw_widget_editor.cpp \
 	$$PWD/sw_widget_explode.cpp \
 	$$PWD/sw_widget_joints.cpp \
+	$$PWD/sw_widget_keyframes.cpp \
 	$$PWD/sw_widget_find_replace.cpp \
 	$$PWD/sw_widget_keyframe.cpp \
 	$$PWD/sw_widget_label_elided.cpp \
@@ -28,6 +29,7 @@ HEADERS += \
 	$$PWD/sw_widget_editor.h \
 	$$PWD/sw_widget_explode.h \
 	$$PWD/sw_widget_joints.h \
+	$$PWD/sw_widget_keyframes.h \
 	$$PWD/sw_widget_find_replace.h \
 	$$PWD/sw_widget_keyframe.h \
 	$$PWD/sw_widget_label_elided.h \

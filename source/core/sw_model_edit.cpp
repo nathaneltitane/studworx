@@ -1548,6 +1548,54 @@ void swModel::SetObjectsKeyFrame(const std::vector<swObject*>& Objects, swObject
 	}
 }
 
+void swModel::EditKeyFrames(const std::vector<swKeyFrameEdit>& Edits, const QString& Description)
+{
+	BeginHistorySequence();
+	BeginEditHistory();
+
+	bool Modified = false;
+
+	for (const swKeyFrameEdit& Edit : Edits)
+	{
+		const swStep RemoveStep = Edit.RemoveStep;
+		const swStep AddStep = Edit.AddStep;
+
+		// moves never overwrite a key
+
+		if (RemoveStep && !Edit.Object->HasKeyFrame(Edit.PropertyId, RemoveStep))
+			continue;
+
+		if (RemoveStep && AddStep && Edit.Object->HasKeyFrame(Edit.PropertyId, AddStep))
+			continue;
+
+		// new key keeps the step value
+
+		Edit.Object->UpdatePosition(RemoveStep ? RemoveStep : AddStep);
+
+		if (RemoveStep)
+			Modified |= Edit.Object->SetKeyFrame(Edit.PropertyId, RemoveStep, false);
+
+		if (AddStep)
+			Modified |= Edit.Object->SetKeyFrame(Edit.PropertyId, AddStep, true);
+	}
+
+	for (const swKeyFrameEdit& Edit : Edits)
+		Edit.Object->UpdatePosition(mCurrentStep);
+
+	if (Modified)
+	{
+		EndEditHistory();
+		EndHistorySequence(Description);
+
+		gMainWindow->UpdateSelectedObjects(false);
+		UpdateAllViews();
+	}
+	else
+	{
+		DiscardHistorySequence();
+	}
+}
+
 void swModel::SetSelectedPartsColorIndex(int ColorIndex)
 {
 	BeginHistorySequence();

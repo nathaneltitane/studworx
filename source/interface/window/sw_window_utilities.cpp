@@ -603,6 +603,52 @@ void swFitHeightToContents(QWidget* Widget)
 	Widget->installEventFilter(new swFitHeightFilter(Widget));
 }
 
+class swCrampedScrollArea : public QScrollArea
+{
+public:
+	explicit swCrampedScrollArea(QWidget* Parent)
+		: QScrollArea(Parent)
+	{
+	}
+
+	QSize sizeHint() const override
+	{
+		// full height of the contents
+		return QSize(QScrollArea::sizeHint().width(), widget() ? widget()->minimumHeight() : 0);
+	}
+
+	QSize minimumSizeHint() const override
+	{
+		// the window may shrink below the contents
+		return QSize(QScrollArea::minimumSizeHint().width(), 0);
+	}
+
+protected:
+	bool eventFilter(QObject* Object, QEvent* Event) override
+	{
+		if (Object == widget() && Event->type() == QEvent::Resize)
+		{
+			// never taller than the contents
+			setMaximumHeight(widget()->minimumHeight());
+			updateGeometry();
+		}
+
+		return QScrollArea::eventFilter(Object, Event);
+	}
+};
+
+QScrollArea* swScrollWhenCramped(QWidget* Widget, QWidget* Parent)
+{
+	swCrampedScrollArea* ScrollArea = new swCrampedScrollArea(Parent);
+	ScrollArea->setFrameShape(QFrame::NoFrame);
+	ScrollArea->setWidgetResizable(true);
+	ScrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+	ScrollArea->setWidget(Widget);
+	ScrollArea->setMaximumHeight(Widget->minimumHeight());
+
+	return ScrollArea;
+}
+
 void swSetInputPrompt(QDialog* Dialog)
 {
 	Dialog->setProperty("swInputPrompt", true);

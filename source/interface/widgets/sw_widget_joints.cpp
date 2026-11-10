@@ -17,7 +17,7 @@ swJointsWidget::swJointsWidget(QWidget* Parent)
 	mTree->setHeaderLabels({ tr("Joint"), tr("Type"), tr("Angle") });
 	mTree->setRootIsDecorated(true);
 	mTree->setToolTip(tr("Joints of the model and its submodels"));
-	mTree->setWhatsThis(tr("<p><b>Joints</b></p><p>Every model with joints, under it each jointed submodel by line index, and under that each of its joints with type and angle. Click a joint to select its submodel and make it the joint the panel and the rotate gizmo work on, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. Click a model to show its poses.</p>"));
+	mTree->setWhatsThis(tr("<p><b>Joints</b></p><p>Every model with joints, under it each jointed submodel by line index, and under that each of its joints with type and angle. Click a joint to select its submodel and make it the joint the panel and the rotate gizmo work on, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. Click a model to show its poses in the Poses panel.</p>"));
 	connect(mTree, &QTreeWidget::itemClicked, this, &swJointsWidget::TreeItemClicked);
 	connect(mTree, &QTreeWidget::currentItemChanged, this, &swJointsWidget::UpdateClearButton);
 	mTree->installEventFilter(this);
@@ -25,50 +25,13 @@ swJointsWidget::swJointsWidget(QWidget* Parent)
 	connect(mTree, &QTreeWidget::customContextMenuRequested, this, &swJointsWidget::TreeMenuRequested);
 	Layout->addWidget(mTree, 2);
 
-	mPoseLabel = new QLabel(tr("Poses"), this);
-	Layout->addWidget(mPoseLabel);
-
-	mList = new QListWidget(this);
-	mList->setToolTip(tr("Saved poses of this model, played in this order by the Joints motion"));
-	mList->setWhatsThis(tr("<p><b>Poses</b></p><p>The poses saved in the model picked above, each holding the angles of that model's joints only. The Joints motion of the image dialog plays the poses of the main model in this order. Pick one to recall, rename or delete it.</p>"));
-	Layout->addWidget(mList, 1);
-
-	QHBoxLayout* Buttons = new QHBoxLayout();
-	struct swJointsButton
-	{
-		QString Text;
-		QString ToolTip;
-		QString WhatsThis;
-		void (swJointsWidget::*Slot)();
-	};
-
-	const swJointsButton Entries[] =
-	{
-		{ tr("Save"), tr("Save the joint angles of this model as a pose"), tr("<p><b>Save</b></p><p>Store the angles of the joints in this model under a name. Saving a name that already exists replaces that pose.</p>"), &swJointsWidget::SaveClicked },
-		{ tr("Recall"), tr("Put the joints of this model back in the picked pose"), tr("<p><b>Recall</b></p><p>Turn the joints of this model back to the angles of the picked pose, in one undo step.</p>"), &swJointsWidget::RecallClicked },
-		{ tr("Rename"), tr("Rename the picked pose"), tr("<p><b>Rename</b></p><p>Give the picked pose a new name.</p>"), &swJointsWidget::RenameClicked },
-		{ tr("Delete"), tr("Delete the picked pose"), tr("<p><b>Delete</b></p><p>Remove the picked pose from the model. The joints keep their angles.</p>"), &swJointsWidget::DeleteClicked }
-	};
-
-	for (const swJointsButton& Entry : Entries)
-	{
-		QToolButton* Button = new QToolButton(this);
-		Button->setText(Entry.Text);
-		Button->setToolTip(Entry.ToolTip);
-		Button->setWhatsThis(Entry.WhatsThis);
-		connect(Button, &QToolButton::clicked, this, Entry.Slot);
-		Buttons->addWidget(Button);
-	}
-
-	Layout->addLayout(Buttons);
-
 	// joint of the selected submodel
 	mJointLabel = new QLabel(this);
 	Layout->addWidget(mJointLabel);
 
 	QHBoxLayout* JointRow = new QHBoxLayout();
 	mAxisCombo = new QComboBox(this);
-	mAxisCombo->addItems({ tr("Axis X"), tr("Axis Y"), tr("Axis Z") });
+	mAxisCombo->addItems({ tr("X Axis"), tr("Y Axis"), tr("Z Axis") });
 	mAxisCombo->setToolTip(tr("Hinge axis, for parts without shadow data"));
 	mAxisCombo->setWhatsThis(tr("<p><b>Axis</b></p><p>The axis a hinge turns about, in the coordinates of the submodel. Use it for parts without shadow data, which get a hinge on their origin.</p>"));
 	connect(mAxisCombo, QOverload<int>::of(&QComboBox::activated), this, &swJointsWidget::AxisChanged);
@@ -167,7 +130,7 @@ void swJointsWidget::UpdateTree()
 
 	if (!mTree->topLevelItemCount())
 	{
-		QTreeWidgetItem* Empty = new QTreeWidgetItem(mTree, { tr("No joints, use Part > Joint > Set Joint") });
+		QTreeWidgetItem* Empty = new QTreeWidgetItem(mTree, { tr("None: Part > Joint > Set Joint") });
 		Empty->setFlags(Qt::NoItemFlags);
 		Empty->setFirstColumnSpanned(true);
 	}
@@ -184,7 +147,7 @@ void swJointsWidget::TreeItemClicked(QTreeWidgetItem* Item)
 	const int Index = Item->data(0, Qt::UserRole + 1).toInt();
 	const int Joint = std::max(Item->data(0, Qt::UserRole + 2).toInt(), 0);
 
-	UpdateList();
+	emit PoseModelChanged();
 
 	if (Index < 0)
 		return;
@@ -284,33 +247,18 @@ void swJointsWidget::TreeMenuRequested(const QPoint& Position)
 		gMainWindow->mActions[Chosen == MoveAction ? SW_PART_JOINT_MOVE : SW_PART_JOINT_ROTATE]->trigger();
 }
 
-void swJointsWidget::UpdateList()
-{
-	const int Row = mList->currentRow();
-	swModel* Model = GetPoseModel();
-
-	mList->clear();
-
-	if (Model)
-		for (const swPose& Pose : Model->GetPoses())
-			mList->addItem(Pose.Name);
-
-	if (Row < mList->count())
-		mList->setCurrentRow(Row);
-}
-
 // use to refresh the tree, poses and joint
 void swJointsWidget::UpdateJoint()
 {
 	UpdateTree();
-	UpdateList();
+	emit PoseModelChanged();
 
 	swModel* Model = gMainWindow ? gMainWindow->GetActiveModel() : nullptr;
 	swPart* Part = Model ? Model->GetJointPart() : nullptr;
 	const swPartJoint* Joint = Part && Part->HasJoints() ? &Part->mJoints[Model->GetJointIndex()] : nullptr;
 	const bool HasJoint = Joint != nullptr;
 
-	mJointLabel->setText(!Part ? tr("Select one submodel for a joint") : !HasJoint ? tr("No joint") : tr("Joint %1, %2, angle %3").arg(Model->GetJointIndex() + 1, 3, 10, QLatin1Char('0')).arg(Joint->Type == swJointType::Hinge ? tr("Hinge") : tr("Ball")).arg(swLength(Joint->Rotation), 0, 'f', 1));
+	mJointLabel->setText(!Part ? tr("None: select a jointed submodel") : !HasJoint ? tr("No joint") : tr("Joint %1, %2, angle %3").arg(Model->GetJointIndex() + 1, 3, 10, QLatin1Char('0')).arg(Joint->Type == swJointType::Hinge ? tr("Hinge") : tr("Ball")).arg(swLength(Joint->Rotation), 0, 'f', 1));
 	mAxisCombo->setEnabled(HasJoint && Joint->Type == swJointType::Hinge);
 	UpdateClearButton();
 
@@ -324,78 +272,6 @@ void swJointsWidget::UpdateJoint()
 
 		mAxisCombo->setCurrentIndex(Axis);
 	}
-}
-
-void swJointsWidget::SaveClicked()
-{
-	swModel* Owner = GetPoseModel();
-
-	if (!Owner)
-		return;
-
-	bool Ok;
-	const QString Name = QInputDialog::getText(this, tr("Save Pose"), tr("Name"), QLineEdit::Normal, tr("Pose %1").arg(Owner->GetPoses().size() + 1), &Ok).trimmed();
-
-	if (!Ok || Name.isEmpty())
-		return;
-
-	std::vector<swPose> Poses = Owner->GetPoses();
-	const swPose Pose = Owner->GetCurrentPose(Name);
-	const auto Existing = std::find_if(Poses.begin(), Poses.end(), [&Name](const swPose& Other) { return Other.Name == Name; });
-
-	if (Existing != Poses.end())
-		*Existing = Pose;
-	else
-		Poses.push_back(Pose);
-
-	Owner->SetPoses(Poses);
-	Owner->GetProject()->MarkAsModified();
-	UpdateList();
-}
-
-void swJointsWidget::RecallClicked()
-{
-	swModel* Owner = GetPoseModel();
-	const int Row = mList->currentRow();
-
-	if (Owner && Row >= 0 && Row < static_cast<int>(Owner->GetPoses().size()))
-		gMainWindow->GetActiveModel()->RecallPoseAction(Owner, Owner->GetPoses()[Row]);
-}
-
-void swJointsWidget::RenameClicked()
-{
-	swModel* Owner = GetPoseModel();
-	const int Row = mList->currentRow();
-
-	if (!Owner || Row < 0)
-		return;
-
-	bool Ok;
-	const QString Name = QInputDialog::getText(this, tr("Rename Pose"), tr("Name"), QLineEdit::Normal, mList->currentItem()->text(), &Ok).trimmed();
-
-	if (!Ok || Name.isEmpty())
-		return;
-
-	std::vector<swPose> Poses = Owner->GetPoses();
-	Poses[Row].Name = Name;
-	Owner->SetPoses(Poses);
-	Owner->GetProject()->MarkAsModified();
-	UpdateList();
-}
-
-void swJointsWidget::DeleteClicked()
-{
-	swModel* Owner = GetPoseModel();
-	const int Row = mList->currentRow();
-
-	if (!Owner || Row < 0)
-		return;
-
-	std::vector<swPose> Poses = Owner->GetPoses();
-	Poses.erase(Poses.begin() + Row);
-	Owner->SetPoses(Poses);
-	Owner->GetProject()->MarkAsModified();
-	UpdateList();
 }
 
 void swJointsWidget::AxisChanged(int Index)
@@ -466,4 +342,137 @@ bool swJointsWidget::eventFilter(QObject* Object, QEvent* Event)
 	}
 
 	return QWidget::eventFilter(Object, Event);
+}
+
+swPosesWidget::swPosesWidget(swJointsWidget* JointsWidget, QWidget* Parent)
+	: QWidget(Parent), mJointsWidget(JointsWidget)
+{
+	QVBoxLayout* Layout = new QVBoxLayout(this);
+
+	// poses under a header like the joints
+	mList = new QTreeWidget(this);
+	mList->setHeaderLabels({ tr("Pose") });
+	mList->setRootIsDecorated(false);
+	mList->setToolTip(tr("Saved poses of this model, played in this order by the Joints motion"));
+	mList->setWhatsThis(tr("<p><b>Poses</b></p><p>The poses saved in the model picked in the Joints panel, each holding the angles of that model's joints only. The Joints motion of the image dialog plays the poses of the main model in this order. Pick one to recall, rename or delete it.</p>"));
+	Layout->addWidget(mList, 1);
+
+	QHBoxLayout* Buttons = new QHBoxLayout();
+	struct swPosesButton
+	{
+		QString Text;
+		QString ToolTip;
+		QString WhatsThis;
+		void (swPosesWidget::*Slot)();
+	};
+
+	const swPosesButton Entries[] =
+	{
+		{ tr("Save"), tr("Save the joint angles of this model as a pose"), tr("<p><b>Save</b></p><p>Store the angles of the joints in this model under a name. Saving a name that already exists replaces that pose.</p>"), &swPosesWidget::SaveClicked },
+		{ tr("Recall"), tr("Put the joints of this model back in the picked pose"), tr("<p><b>Recall</b></p><p>Turn the joints of this model back to the angles of the picked pose, in one undo step.</p>"), &swPosesWidget::RecallClicked },
+		{ tr("Rename"), tr("Rename the picked pose"), tr("<p><b>Rename</b></p><p>Give the picked pose a new name.</p>"), &swPosesWidget::RenameClicked },
+		{ tr("Delete"), tr("Delete the picked pose"), tr("<p><b>Delete</b></p><p>Remove the picked pose from the model. The joints keep their angles.</p>"), &swPosesWidget::DeleteClicked }
+	};
+
+	for (const swPosesButton& Entry : Entries)
+	{
+		QToolButton* Button = new QToolButton(this);
+		Button->setText(Entry.Text);
+		Button->setToolTip(Entry.ToolTip);
+		Button->setWhatsThis(Entry.WhatsThis);
+		connect(Button, &QToolButton::clicked, this, Entry.Slot);
+		Buttons->addWidget(Button);
+	}
+
+	Layout->addLayout(Buttons);
+
+	connect(mJointsWidget, &swJointsWidget::PoseModelChanged, this, &swPosesWidget::UpdateList);
+	UpdateList();
+}
+
+void swPosesWidget::UpdateList()
+{
+	const int Row = mList->indexOfTopLevelItem(mList->currentItem());
+	swModel* Model = mJointsWidget->GetPoseModel();
+
+	mList->clear();
+
+	if (Model)
+		for (const swPose& Pose : Model->GetPoses())
+			new QTreeWidgetItem(mList, { Pose.Name });
+
+	if (Row < mList->topLevelItemCount())
+		mList->setCurrentItem(mList->topLevelItem(Row));
+}
+
+void swPosesWidget::SaveClicked()
+{
+	swModel* Owner = mJointsWidget->GetPoseModel();
+
+	if (!Owner)
+		return;
+
+	bool Ok;
+	const QString Name = QInputDialog::getText(this, tr("Save Pose"), tr("Name"), QLineEdit::Normal, tr("Pose %1").arg(Owner->GetPoses().size() + 1), &Ok).trimmed();
+
+	if (!Ok || Name.isEmpty())
+		return;
+
+	std::vector<swPose> Poses = Owner->GetPoses();
+	const swPose Pose = Owner->GetCurrentPose(Name);
+	const auto Existing = std::find_if(Poses.begin(), Poses.end(), [&Name](const swPose& Other) { return Other.Name == Name; });
+
+	if (Existing != Poses.end())
+		*Existing = Pose;
+	else
+		Poses.push_back(Pose);
+
+	Owner->SetPoses(Poses);
+	Owner->GetProject()->MarkAsModified();
+	UpdateList();
+}
+
+void swPosesWidget::RecallClicked()
+{
+	swModel* Owner = mJointsWidget->GetPoseModel();
+	const int Row = mList->indexOfTopLevelItem(mList->currentItem());
+
+	if (Owner && Row >= 0 && Row < static_cast<int>(Owner->GetPoses().size()))
+		gMainWindow->GetActiveModel()->RecallPoseAction(Owner, Owner->GetPoses()[Row]);
+}
+
+void swPosesWidget::RenameClicked()
+{
+	swModel* Owner = mJointsWidget->GetPoseModel();
+	const int Row = mList->indexOfTopLevelItem(mList->currentItem());
+
+	if (!Owner || Row < 0)
+		return;
+
+	bool Ok;
+	const QString Name = QInputDialog::getText(this, tr("Rename Pose"), tr("Name"), QLineEdit::Normal, mList->currentItem()->text(0), &Ok).trimmed();
+
+	if (!Ok || Name.isEmpty())
+		return;
+
+	std::vector<swPose> Poses = Owner->GetPoses();
+	Poses[Row].Name = Name;
+	Owner->SetPoses(Poses);
+	Owner->GetProject()->MarkAsModified();
+	UpdateList();
+}
+
+void swPosesWidget::DeleteClicked()
+{
+	swModel* Owner = mJointsWidget->GetPoseModel();
+	const int Row = mList->indexOfTopLevelItem(mList->currentItem());
+
+	if (!Owner || Row < 0)
+		return;
+
+	std::vector<swPose> Poses = Owner->GetPoses();
+	Poses.erase(Poses.begin() + Row);
+	Owner->SetPoses(Poses);
+	Owner->GetProject()->MarkAsModified();
+	UpdateList();
 }

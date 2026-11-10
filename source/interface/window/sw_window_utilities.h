@@ -80,6 +80,9 @@ void swFitFloatingDock(QDockWidget* DockWidget);
 // Keeps a panel as tall as its contents.
 void swFitHeightToContents(QWidget* Widget);
 
+// Scrolls a panel only when the window is too short for it.
+QScrollArea* swScrollWhenCramped(QWidget* Widget, QWidget* Parent);
+
 // Marks a dialog as an input prompt.
 void swSetInputPrompt(QDialog* Dialog);
 

@@ -31,6 +31,7 @@
 #include "sw_widget_preview.h"
 #include "sw_model_history.h"
 #include "sw_widget_spinner.h"
+#include "sw_widget_keyframes.h"
 
 #if SW_ENABLE_GAMEPAD
 #include <QtGamepad/QGamepad>
@@ -345,6 +346,18 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 
 	case SW_VIEW_TOOLBAR_JOINTS:
 		ToggleDockWidget(mJointsToolBar);
+		break;
+
+	case SW_VIEW_TOOLBAR_POSES:
+		ToggleDockWidget(mPosesToolBar);
+		break;
+
+	case SW_VIEW_TOOLBAR_KEYFRAMES:
+		ToggleDockWidget(mKeyframesToolBar);
+		break;
+
+	case SW_VIEW_LOCK_INTERFACE:
+		SetInterfaceLocked(mActions[SW_VIEW_LOCK_INTERFACE]->isChecked());
 		break;
 
 	case SW_VIEW_FULL_SCREEN:
@@ -1273,6 +1286,22 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 
 	case SW_VIEW_TIME_ADD_KEYS:
 		SetAddKeys(!GetAddKeys());
+		break;
+
+	case SW_VIEW_TIME_SET_KEYS:
+		mKeyframesWidget->AddKeysClicked();
+		break;
+
+	case SW_VIEW_TIME_REMOVE_KEYS:
+		mKeyframesWidget->RemoveKeysClicked();
+		break;
+
+	case SW_VIEW_TIME_PLAY:
+		mKeyframesWidget->PlayClicked();
+		break;
+
+	case SW_VIEW_TIME_STOP:
+		mKeyframesWidget->StopClicked();
 		break;
 
 	case SW_EDIT_TRANSFORM_RELATIVE:

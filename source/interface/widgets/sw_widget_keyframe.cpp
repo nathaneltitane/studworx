@@ -34,26 +34,18 @@ void swKeyFrameWidget::paintEvent(QPaintEvent* PaintEvent)
 
 	style()->drawComplexControl(QStyle::CC_ToolButton, &Option, &Painter, this);
 
+	// small dot, filled when keyed
+
 	Qt::CheckState State = checkState();
 	Painter.setRenderHint(QPainter::Antialiasing);
-	Painter.setPen(palette().color(QPalette::Shadow));
+	Painter.setPen(palette().color(QPalette::Text));
 
-	if (State != Qt::PartiallyChecked)
+	if (State == Qt::Checked)
 		Painter.setBrush(palette().color(QPalette::Text));
+	else if (State == Qt::PartiallyChecked)
+		Painter.setBrush(palette().color(QPalette::Mid));
 
-	const QPoint ButtonCenter = rect().center();
-	const int Size = (State != Qt::Unchecked) ? 13 : 7;
-	QRect Rect(0, 0, Size, Size);
-	Rect.moveCenter(ButtonCenter);
-	const QPoint Center = Rect.center();
-
-	QPoint Points[4] =
-	{
-		QPoint(Rect.left(), Center.y()),
-		QPoint(Center.x(), Rect.bottom()),
-		QPoint(Rect.right(), Center.y()),
-		QPoint(Center.x(), Rect.top())
-	};
-
-	Painter.drawPolygon(Points, 4);
+	QRectF Rect(0, 0, 7, 7);
+	Rect.moveCenter(QRectF(rect()).center());
+	Painter.drawEllipse(Rect);
 }

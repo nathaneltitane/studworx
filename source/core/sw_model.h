@@ -61,6 +61,15 @@ struct swExplodeSettings
 enum class swCameraProjection;
 enum class swCutawayShape;
 struct swImageTurntable;
+
+struct swKeyFrameEdit
+{
+	swObject* Object;
+	swObjectPropertyId PropertyId;
+	swStep RemoveStep;
+	swStep AddStep;
+};
+
 struct swImageFraming;
 struct swSetInventoryItem;
 struct swModelHistoryEditState;
@@ -641,6 +650,7 @@ public:
 	void ScaleSelectedParts(const float Scale);
 	void TransformSelectedObjects(swTransformType TransformType, const swVector3& Transform);
 	void SetObjectsKeyFrame(const std::vector<swObject*>& Objects, swObjectPropertyId PropertyId, bool KeyFrame);
+	void EditKeyFrames(const std::vector<swKeyFrameEdit>& Edits, const QString& Description);
 	void SetSelectedPartsColorIndex(int ColorIndex);
 	void SetSelectedPartsStepShow(swStep Step);
 	void SetSelectedPartsStepHide(swStep Step);
