@@ -1,6 +1,13 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-09</summary>
+
+  - Tabs: model tabs line up with the view gear button, each ending in a square close button behind a divider, and the tab scroll arrows are framed like the gear button
+
+  </details>
+
+  <details>
   <summary>2026-11-08</summary>
 
   - Steps: an opened model now starts on a new empty step after its last one, ready for new parts

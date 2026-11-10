@@ -242,6 +242,15 @@ void swInterfaceStyle::drawControl(ControlElement Element, const QStyleOption* O
 	Painter->restore();
 }
 
+int swInterfaceStyle::pixelMetric(PixelMetric Metric, const QStyleOption* Option, const QWidget* Widget) const
+{
+	// tab scroll arrows are as wide as panel buttons
+	if (Metric == PM_TabBarScrollButtonWidth)
+		return swGetPanelButtonSize().width() + 2;
+
+	return QProxyStyle::pixelMetric(Metric, Option, Widget);
+}
+
 QSize swInterfaceStyle::sizeFromContents(ContentsType Type, const QStyleOption* Option, const QSize& Size, const QWidget* Widget) const
 {
 	QSize Result = QProxyStyle::sizeFromContents(Type, Option, Size, Widget);
@@ -721,6 +730,15 @@ QSize swGetBrowseButtonSize()
 	return ButtonSize;
 }
 
+QColor swGetButtonOutlineColor(const QPalette& Palette)
+{
+	// same outline the style gives buttons
+	const QColor Back = Palette.color(QPalette::Button);
+	const QColor Fore = Palette.color(QPalette::ButtonText);
+
+	return QColor::fromRgbF(Back.redF() * 0.7 + Fore.redF() * 0.3, Back.greenF() * 0.7 + Fore.greenF() * 0.3, Back.blueF() * 0.7 + Fore.blueF() * 0.3);
+}
+
 void swSetupPanelButton(QToolButton* Button)
 {
 	// outline panel buttons
@@ -738,6 +756,143 @@ void swSetupPanelButton(QToolButton* Button)
 		Button->setMaximumWidth(QWIDGETSIZE_MAX);
 		Button->setFixedHeight(ButtonSize.height());
 	}
+}
+
+// use to draw tab scroll arrows like panel buttons
+class swTabScrollFilter : public QObject
+{
+public:
+	using QObject::QObject;
+
+	bool eventFilter(QObject* Object, QEvent* Event) override
+	{
+		if (Event->type() != QEvent::Paint)
+			return false;
+
+		QToolButton* Button = static_cast<QToolButton*>(Object);
+		// framed like the gear, level with the tabs, 2px gap on the left
+		const int Height = swGetPanelButtonSize().height();
+		const QRect Area(0, (Button->height() - Height + 1) / 2, Button->width(), Height);
+		const QRectF Frame = QRectF(Area).adjusted(2.5, 1.5, -0.5, -1.5);
+		const QPalette& Palette = Button->palette();
+
+		QPainter Painter(Button);
+		// right arrow overlaps the left one, keep its edge
+		Painter.fillRect(Button->property("swTabScroll").toBool() ? Area : Area.adjusted(2, 0, 0, 0), Palette.color(QPalette::Window));
+		Painter.setRenderHint(QPainter::Antialiasing);
+
+		QColor Shade = Palette.color(QPalette::WindowText);
+		Shade.setAlpha(Button->isDown() ? 40 : 30);
+
+		Painter.setPen(swGetButtonOutlineColor(Palette));
+		Painter.setBrush(Button->isEnabled() && (Button->isDown() || Button->underMouse()) ? QBrush(Shade) : QBrush(Palette.color(QPalette::Button)));
+		Painter.drawRoundedRect(Frame, 3, 3);
+
+		const QRect IconRect = QStyle::alignedRect(Qt::LeftToRight, Qt::AlignCenter, Button->iconSize(), Frame.toAlignedRect());
+		Button->icon().paint(&Painter, IconRect, Qt::AlignCenter, Button->isEnabled() ? QIcon::Normal : QIcon::Disabled);
+
+		return true;
+	}
+};
+
+void swSetupTabScrollButtons(QTabBar* TabBar)
+{
+	// scroll arrows match the gear button
+	const QList<QToolButton*> Buttons = TabBar->findChildren<QToolButton*>(QString(), Qt::FindDirectChildrenOnly);
+
+	for (QToolButton* Button : Buttons)
+	{
+		if (Button->property("swTabScroll").isValid() || Button->arrowType() == Qt::NoArrow)
+			continue;
+
+		const bool Left = Button->arrowType() == Qt::LeftArrow;
+
+		Button->setProperty("swTabScroll", Left);
+		Button->setArrowType(Qt::NoArrow);
+		Button->setIcon(swCreatePaintedIcon(Left ? swPaintedIcon::ArrowLeft : swPaintedIcon::ArrowRight));
+		Button->setAutoRaise(false);
+		Button->setFocusPolicy(Qt::NoFocus);
+		Button->setAttribute(Qt::WA_Hover);
+		Button->setToolTip(Left ? QCoreApplication::translate("swMainWindow", "Scroll the model tabs left.") : QCoreApplication::translate("swMainWindow", "Scroll the model tabs right."));
+		Button->setAccessibleName(Left ? QCoreApplication::translate("swMainWindow", "Scroll Tabs Left") : QCoreApplication::translate("swMainWindow", "Scroll Tabs Right"));
+		Button->setWhatsThis(Left ? QCoreApplication::translate("swMainWindow", "<p><b>Scroll Tabs Left</b></p><p>Show the model tabs hidden on the left when they do not all fit.</p>") : QCoreApplication::translate("swMainWindow", "<p><b>Scroll Tabs Right</b></p><p>Show the model tabs hidden on the right when they do not all fit.</p>"));
+		Button->installEventFilter(new swTabScrollFilter(Button));
+	}
+}
+
+// use as the right end of a tab, divided from the title
+class swTabCloseButton : public QToolButton
+{
+public:
+	using QToolButton::QToolButton;
+
+	// square filling the tab inside its outline
+	QSize sizeHint() const override
+	{
+		// tab bar adds its vertical space around the button
+		const int Height = swGetPanelButtonSize().height() - 4;
+
+		return QSize(Height + 2 + Gap, Height);
+	}
+
+	// gap pads the label, not clickable
+	static constexpr int Gap = 6;
+
+	bool hitButton(const QPoint& Position) const override
+	{
+		return Position.x() > Gap && rect().contains(Position);
+	}
+
+protected:
+	// shortcut: tab bar places the button 2px left and 1px up of the tab inside, offset measured on stylesheet tabs
+	void moveEvent(QMoveEvent* Event) override
+	{
+		QToolButton::moveEvent(Event);
+
+		if (pos() == mPlaced)
+			return;
+
+		mPlaced = pos() + QPoint(2, 1);
+		move(mPlaced);
+	}
+
+	void paintEvent(QPaintEvent*) override
+	{
+		QPainter Painter(this);
+
+		// shade on hover and press
+		if (isDown() || underMouse())
+		{
+			QColor Color = palette().color(QPalette::WindowText);
+			Color.setAlpha(isDown() ? 40 : 30);
+
+			Painter.setRenderHint(QPainter::Antialiasing);
+			Painter.setPen(Qt::NoPen);
+			Painter.setBrush(Color);
+			Painter.drawRoundedRect(QRectF(rect()).adjusted(Gap + 1, 0, 0, 0), 2, 2);
+			Painter.setRenderHint(QPainter::Antialiasing, false);
+		}
+
+		// divider shares the tab outline
+		Painter.setPen(swGetButtonOutlineColor(palette()));
+		Painter.drawLine(Gap, 0, Gap, height() - 1);
+
+		const QRect IconRect = QStyle::alignedRect(Qt::LeftToRight, Qt::AlignCenter, iconSize(), rect().adjusted(Gap + 1, 0, 0, 0));
+		icon().paint(&Painter, IconRect, Qt::AlignCenter, isEnabled() ? QIcon::Normal : QIcon::Disabled);
+	}
+
+	QPoint mPlaced;
+};
+
+QToolButton* swCreateTabCloseButton(QWidget* Parent)
+{
+	QToolButton* Button = new swTabCloseButton(Parent);
+
+	Button->setIcon(swCreatePaintedIcon(swPaintedIcon::Close));
+	Button->setFocusPolicy(Qt::NoFocus);
+	Button->setAttribute(Qt::WA_Hover);
+
+	return Button;
 }
 
 void swSetupPanelEdit(QWidget* Edit)
@@ -1935,6 +2090,14 @@ static void swDrawPaintedIcon(QPainter* Painter, swPaintedIcon Icon, const QSize
 	case swPaintedIcon::Close:
 		Draw.Stroke(swCreateIconLine({ { 6, 6 }, { 18, 18 } }));
 		Draw.Stroke(swCreateIconLine({ { 18, 6 }, { 6, 18 } }));
+		break;
+
+	case swPaintedIcon::ArrowLeft:
+		Draw.Stroke(swCreateIconLine({ { 16, 4 }, { 7, 12 }, { 16, 20 } }));
+		break;
+
+	case swPaintedIcon::ArrowRight:
+		Draw.Stroke(swCreateIconLine({ { 8, 4 }, { 17, 12 }, { 8, 20 } }));
 		break;
 
 	case swPaintedIcon::Undock:

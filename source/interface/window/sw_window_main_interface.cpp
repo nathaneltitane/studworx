@@ -53,25 +53,26 @@ void swMainWindow::CreateWidgets()
 	mModelTabWidget->tabBar()->installEventFilter(this);
 	qApp->installEventFilter(this);
 	mModelTabWidget->tabBar()->setMovable(true);
-	mModelTabWidget->tabBar()->setTabsClosable(true);
 	mModelTabWidget->tabBar()->setContextMenuPolicy(Qt::CustomContextMenu);
 	setCentralWidget(mModelTabWidget);
 
 	// outline both tabs and view
 	const int TabHeight = swGetPanelButtonSize().height();
 	const int TitleBarHeight = mModelTabWidget->fontMetrics().height() + 2 * style()->pixelMetric(QStyle::PM_DockWidgetTitleMargin);
-	const int TabMargin = qMax((TitleBarHeight - TabHeight) / 2, 0);
+	const int TabMargin = qMax((TitleBarHeight - TabHeight) / 2, 2);
 
 	mModelTabWidget->setStyleSheet(QString(
 		"QTabWidget::pane { border: 1px solid palette(mid); }"
-		"QTabBar::tab { border: 1px solid palette(mid); border-radius: 3px; padding: 0px 8px; min-height: %1px; margin: %2px 2px %2px 0px; }"
+		"QTabBar::tab { border: 1px solid %3; border-radius: 3px; padding: 0px 0px 0px 8px; min-height: %1px; margin: %2px 2px %4px 0px; }"
 		"QTabBar::tab:selected { background: palette(button); }"
-		"QTabBar::tab:!selected { background: palette(window); }").arg(TabHeight - 2).arg(TabMargin));
+		"QTabBar::tab:!selected { background: palette(window); }").arg(TabHeight - 4).arg(TabMargin + 1).arg(swGetButtonOutlineColor(mModelTabWidget->palette()).name()).arg(TabMargin - 1));
+
+	swSetupTabScrollButtons(mModelTabWidget->tabBar());
 
 	// options button lines up with the tabs
 	QWidget* ModelViewCorner = new QWidget(mModelTabWidget);
 	QHBoxLayout* ModelViewCornerLayout = new QHBoxLayout(ModelViewCorner);
-	ModelViewCornerLayout->setContentsMargins(0, TabMargin, TabMargin, TabMargin);
+	ModelViewCornerLayout->setContentsMargins(2, TabMargin, TabMargin, TabMargin);
 
 	QToolButton* ModelViewOptionsButton = new QToolButton(ModelViewCorner);
 	ModelViewOptionsButton->setIcon(swCreatePaintedIcon(swPaintedIcon::Gear));

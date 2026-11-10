@@ -1602,7 +1602,7 @@
 			<p class="lead">StudWorx is built from standard Qt widgets: <a href="#panels">panels</a>, dialogs and windows follow your system style and light or dark theme, and only the model <a href="#views">views</a> draw with OpenGL. Menus are grouped by task, every icon and cursor is drawn in code so it stays sharp at any size, and every dialog and panel explains itself.</p>
 
 			<ul class="points">
-				<li><b>Tabs, splits and status bar.</b> Open several <a href="#models">models</a> in tabs, close one with Close Tab (Ctrl+W) or the others from the tab&#x27;s right-click menu, split the view and go Full Screen. The status bar shows the selection, the view orientation and projection, the focus position, the snap and transform settings and the current step. The selection reads the name, ID and weight of the selected part, a submodel reading ID N/A and the total weight of its parts when all of them have one, and the total weight of two or more selected parts. Right click the status bar to show or hide each segment.</li>
+				<li><b>Tabs, splits and status bar.</b> Open several <a href="#models">models</a> in tabs, close one with the close button at the end of its tab or Close Tab (Ctrl+W), or the others from the tab&#x27;s right-click menu, split the view and go Full Screen. The status bar shows the selection, the view orientation and projection, the focus position, the snap and transform settings and the current step. The selection reads the name, ID and weight of the selected part, a submodel reading ID N/A and the total weight of its parts when all of them have one, and the total weight of two or more selected parts. Right click the status bar to show or hide each segment.</li>
 				<li><b>Options menus.</b> A gear button opens the settings that belong to its place: grids, <a href="#steps">steps</a> and highlighting and view overlays on the model view, list display and filtering on Parts, the insert color on Colors, overlays and selection on Preview, shading and lines on the Minifigure Builder, the model folder on Terminal, editing on the Editor and page setup on the <a href="#instructions">instructions</a> Properties.</li>
 				<li><b>Menus by task.</b> File, Edit, View, Part, Steps, Models and <a href="#help">Help</a>, with clean labels and a unique mnemonic in each menu. Edit holds the Selection Mode, Transform and <a href="#tools">Tools</a> submenus, View the Toolbars, Viewpoints, Cutaway, Cameras, Projection and Shading submenus, and Part the Joint, Group and Visibility submenus.</li>
 				<li><b>Contextual help.</b> Choose Help &gt; &quot;What&#x27;s This?&quot; or click the question mark in a title bar, then click any control to read what it does. F1 explains the focused control, Shift+F1 starts &quot;What&#x27;s This?&quot; inside a dialog, and every entry is listed in the Help index below.</li>
@@ -3537,7 +3537,7 @@
 				<h2>HELP // EVERY &quot;WHAT&#x27;S THIS?&quot; ENTRY</h2>
 			</header>
 
-			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 501 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
+			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 502 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
 			<div class="tools-search">
 				<input id="search" type="search" placeholder="Search help" aria-label="Search help">
@@ -3619,6 +3619,14 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p class="lead">The latest release notices from the StudWorx repository.</p>
 
 			<details open>
+				<summary>2026-11-09</summary>
+
+				<ul>
+					<li>Tabs: model tabs line up with the view gear button, each ending in a square close button behind a divider, and the tab scroll arrows are framed like the gear button</li>
+				</ul>
+			</details>
+
+			<details>
 				<summary>2026-11-08</summary>
 
 				<ul>
@@ -3716,51 +3724,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Rotation: turning parts or pivots in angle steps lands exactly on square angles again, so later moves keep whole coordinates</li>
 					<li>Thumbnails: model thumbnails show again in file managers, and leftovers from the old StudWorks name are removed on <a href="#install">install</a></li>
 					<li>Properties and Import Set Inventory: light settings scroll without a sideways scroll bar, and long set names show in full</li>
-				</ul>
-			</details>
-
-			<details>
-				<summary>2026-11-02</summary>
-
-				<ul>
-					<li>Preferences: LDraw Color Configuration, LDraw Alternate Color Configuration, Minifigure Builder Settings and BrickLink Mapping each have an Update button that downloads the latest file from library.ldraw.org, ldraw.org or Rebrickable, the minifigure part list is saved as <code>minifigure.ini</code></li>
-					<li>Preferences: the bundled color configurations and minifigure part list are used until you set your own file, a set file that went missing is asked for again at startup</li>
-					<li>Preferences: a new Online Services group on the General page holds the Rebrickable API key with a Get Key button to its page, a key Rebrickable rejects is cleared so you are asked again</li>
-					<li>Dialogs: the Help buttons are gone, the question mark in the title bar and F1 explain every control</li>
-					<li>Rotation: turning parts or pivots in angle steps lands exactly on square angles again, so later moves keep whole coordinates</li>
-					<li>Preferences: commands that share a keyboard shortcut show in red, and assigning a taken shortcut asks before moving it, your shortcuts are left as they are</li>
-					<li>Preferences: a new Highlight Style shows on the selection as soon as you press OK, and closing the dialog no longer pauses while settings are saved</li>
-					<li>Array: the dialog has X, Y and Z column headers and numbered rows for each dimension</li>
-					<li>Edge Colors and Export HTML: the dialogs are laid out in clear groups with labels to the left and controls to the right</li>
-					<li>Properties: the light settings scroll without a sideways scroll bar and always keep one setting row in view</li>
-					<li>Thumbnails: model thumbnails show again in file managers that use the desktop thumbnailer, without step highlight or fading, and leftovers from the old StudWorks name are removed on install</li>
-					<li>Preferences: Colors From moved into a new Colors group on the Rendering page, the Colors page is now Interface</li>
-					<li>Export BrickLink: choose the condition, the wanted list and new listing notices, the choices are remembered, also as <code>--bricklink-condition</code>, <code>--bricklink-wanted-list</code> and <code>--bricklink-notify</code> on the command line</li>
-					<li>Command line: <code>--kmz-geometry all</code> or <code>visible</code> chooses the KMZ geometry and replaces <code>--kmz-all-parts</code></li>
-					<li>Command line: <code>-h</code> now shows the help like <code>--help</code>, the picture height is set with <code>--height</code></li>
-					<li>Command line: options follow the usual style, one letter after a single dash and full words after two, so <code>-obj</code> is now <code>--export-wavefront</code>, <code>--libpath</code> is <code>--library</code>, <code>--fov</code> is <code>--field-of-view</code>, <code>--zplanes</code> is <code>--clip-planes</code>, <code>--orthographic</code> is <code>--projection orthographic</code>, <code>--aa-samples</code> is <code>--antialiasing-samples</code>, the edge colors are <code>--edge-color</code>, <code>--edge-color-black</code>, <code>--edge-color-dark</code>, <code>--edge-color-automatic</code>, <code>--edge-contrast</code> and <code>--edge-light-dark</code> with <code>--no-</code> forms, <code>--povray-render</code> is <code>--render-povray</code>, and the help is grouped by topic</li>
-					<li>Export BrickLink: paste the address of a wanted list page instead of its number, after saving, Copy XML and Open BrickLink puts the list on the clipboard and opens the BrickLink upload page</li>
-					<li>Minifigure Builder: templates export as <code>.minifigure</code> files and <code>.minifig</code> files still import, settings, toolbar and category names carry over on the first start</li>
-					<li>Site: the author avatar in the footer is now a sharper 1024 pixel image</li>
-					<li>The license is now formatted as Markdown, so it is easier to read on GitHub</li>
-					<li>Preferences and Timeline: commands with a shared shortcut stay red while selected, until the conflict is resolved</li>
-					<li>Render: the preset buttons line up with the fields beside them</li>
-					<li>Save Model Image: the file path row now runs along the bottom of the dialog</li>
-					<li>Dialogs: labels sit in one column on the left without colons, fields reach the right edge instead of narrow inputs</li>
-					<li>Blender Settings: every group shares one label column</li>
-					<li>Array: the X, Y and Z columns are equally wide</li>
-					<li>Page Setup: one field per row with a shared label column</li>
-					<li>Prompts: name and value prompts widen to fit their text</li>
-					<li>Find and Replace: the bar labels read Find and Replace</li>
-					<li>Import Set Inventory: the Name column takes the free width, so long set names show in full</li>
-					<li>Step View: the dialog fits its fields, with labels on the left and fields to the right edge</li>
-					<li>Site: the Rendering, Views, Keyboard and Mouse preference screenshots show the shared slider value column and a selected shortcut conflict in red, and the Steps section shows the Step View dialog</li>
-					<li>Site: the Import Set Inventory screenshot shows search results</li>
-					<li>Export BrickLink: a current mapping of over 55,000 parts and 236 colors ships with StudWorx and is used until you set your own file, so exports work without building one first</li>
-					<li>Preferences: updating the BrickLink mapping now starts a new file from the bundled one and takes the Rebrickable numbers over outdated BrickLink numbers in the part files</li>
-					<li>Export BrickLink and Export CSV: parts the library has moved to a new number, such as 60470 to 60470a, are listed under the new number and counted together with it</li>
-					<li>Export BrickLink: Part Exceptions lists parts and the BrickLink numbers that replace their mapping, kept in a comma or tab separated file you can edit by hand, also as <code>--bricklink-exceptions</code> on the command line</li>
-					<li>Preferences: updating the BrickLink mapping keeps the old BrickLink number of parts moved to a lettered variant BrickLink never took, such as 3660a staying 3660</li>
 				</ul>
 			</details>
 
@@ -3999,6 +3962,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Main Window","title":"Apply Transform","paragraphs":["Choose the translation or rotation mode, enter X/Y/Z values, and press Enter to apply them. Translation values use LDraw units; rotation values use degrees."]},
 				{"group":"Main Window","title":"Timeline","paragraphs":["Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Right-click for step insertion, removal, movement, and visibility commands."]},
 				{"group":"Main Window","title":"Minifigure Builder","paragraphs":["Choose the parts, colors and pose of a minifigure, then add it to the current model. The panel keeps its settings so you can add several variations."]},
+				{"group":"Main Window","title":"Close Model Tab","paragraphs":["Close this tab. The model stays in the file; open it again from the Models menu."]},
 				{"group":"Main Window","title":"Choose Color","paragraphs":["Pick a color using the swatches or enter its component values. Choose OK to use the selected color, or Cancel to keep the original color. Editing the controls alone does not apply the color."]},
 				{"group":"Main Window","title":"In-place Editing","paragraphs":["The path shows the model being edited inside this view. The last name is the current editing target. Choose an earlier name to edit that ancestor, or the close button to return to the tab's model."]},
 				{"group":"Main Window","title":"Joint","paragraphs":["The path shows the joint picked in the Joints panel or being moved or rotated. A submodel name selects that submodel, staying in joint mode when it has a joint; the main model name ends joint mode. Choose the close button to clear the selection and return to the Select tool."]},

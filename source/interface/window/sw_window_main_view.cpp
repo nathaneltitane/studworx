@@ -817,6 +817,22 @@ void swMainWindow::SetCurrentModelTab(swModel* Model, bool AdjustFarPlane)
 	swModelTabWidget* TabWidget = new swModelTabWidget(Model);
 	mModelTabWidget->addTab(TabWidget, Model->GetProperties().mFileName);
 
+	// close button is the right end of the tab
+	QTabBar* TabBar = mModelTabWidget->tabBar();
+
+	QToolButton* CloseButton = swCreateTabCloseButton(TabBar);
+	CloseButton->setToolTip(tr("Close this model tab."));
+	CloseButton->setAccessibleName(tr("Close Model Tab"));
+	CloseButton->setWhatsThis(tr("<p><b>Close Model Tab</b></p><p>Close this tab. The model stays in the file; open it again from the Models menu.</p>"));
+	TabBar->setTabButton(TabBar->count() - 1, QTabBar::RightSide, CloseButton);
+
+	connect(CloseButton, &QToolButton::clicked, this, [TabBar, CloseButton]()
+	{
+		for (int TabIdx = 0; TabIdx < TabBar->count(); TabIdx++)
+			if (TabBar->tabButton(TabIdx, QTabBar::RightSide) == CloseButton)
+				emit TabBar->tabCloseRequested(TabIdx);
+	});
+
 	QVBoxLayout* CentralLayout = new QVBoxLayout(TabWidget);
 	CentralLayout->setContentsMargins(0, 0, 0, 0);
 

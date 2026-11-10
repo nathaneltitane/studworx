@@ -268,6 +268,10 @@ bool swMainWindow::eventFilter(QObject* Object, QEvent* Event)
 
 	if (TabBar && Object == TabBar)
 	{
+		// tab bar resets its scroll arrows when restyled
+		if (Event->type() == QEvent::Show || Event->type() == QEvent::StyleChange || Event->type() == QEvent::LayoutRequest)
+			QTimer::singleShot(0, TabBar, [TabBar]() { swSetupTabScrollButtons(TabBar); });
+
 		if (Event->type() == QEvent::MouseButtonPress)
 		{
 			QMouseEvent* MouseEvent = static_cast<QMouseEvent*>(Event);

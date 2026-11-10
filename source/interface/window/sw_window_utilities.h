@@ -63,6 +63,7 @@ public:
 	}
 
 	void drawControl(ControlElement Element, const QStyleOption* Option, QPainter* Painter, const QWidget* Widget) const override;
+	int pixelMetric(PixelMetric Metric, const QStyleOption* Option, const QWidget* Widget) const override;
 	QSize sizeFromContents(ContentsType Type, const QStyleOption* Option, const QSize& Size, const QWidget* Widget) const override;
 	void drawPrimitive(PrimitiveElement Element, const QStyleOption* Option, QPainter* Painter, const QWidget* Widget) const override;
 	QIcon standardIcon(StandardPixmap Pixmap, const QStyleOption* Option, const QWidget* Widget) const override;
@@ -126,7 +127,10 @@ protected:
 QSize swGetPanelButtonSize();
 QSize swGetBrowseButtonSize();
 int swGetLayoutSpacing(const QWidget* Widget, Qt::Orientation Orientation);
+QColor swGetButtonOutlineColor(const QPalette& Palette);
 void swSetupPanelButton(QToolButton* Button);
+void swSetupTabScrollButtons(QTabBar* TabBar);
+QToolButton* swCreateTabCloseButton(QWidget* Parent);
 void swSetupPanelEdit(QWidget* Edit);
 void swSetupSpinBoxSelection(QAbstractSpinBox* SpinBox);
 void swSetupPanelSpinBox(QAbstractSpinBox* SpinBox);
@@ -199,6 +203,8 @@ enum class swPaintedIcon
 	Close,
 	Undock,
 	Refresh,
+	ArrowLeft,
+	ArrowRight,
 	Count
 };
 
