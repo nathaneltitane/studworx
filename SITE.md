@@ -309,17 +309,18 @@ Give a placed submodel a joint, turn it with the mouse and save the angles as po
 
 Look at a model from any side, see inside it without changing it, and measure it against the grid.
 
-<!-- gallery four -->
+<!-- gallery three -->
 
 ![View cube small labels](resources/images/views-feature-view-cube-small-labels.png)
 ![View cube large abbreviations](resources/images/views-feature-view-cube-large-abbreviations.png)
 ![Axis icon](resources/images/views-feature-axis-icon.png)
-![Camera bar](resources/images/views-feature-camera-bar.png)
 ![Perspective](resources/images/views-feature-perspective.png)
 ![Orthographic](resources/images/views-feature-orthographic.png)
+![Wireframe](resources/images/views-feature-wireframe.png)
 ![Cube cutaway](resources/images/views-feature-cube-cutaway.png)
 ![Sphere cutaway](resources/images/views-feature-sphere-cutaway.png)
 ![Cylinder cutaway](resources/images/views-feature-cylinder-cutaway.png)
+![Camera bar](resources/images/views-feature-camera-bar.png)
 ![XZ and YZ height grids](resources/images/views-feature-height-grids.png)
 ![Idle turntable](resources/images/views-feature-idle-turntable.gif)
 

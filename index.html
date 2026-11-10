@@ -2457,7 +2457,7 @@
 
 			<p class="lead">Look at a model from any side, see inside it without changing it, and measure it against the grid.</p>
 
-			<div class="gallery four">
+			<div class="gallery three">
 				<figure style="--width-image: 136; --height-image: 136">
 					<button class="shot" data-full="resources/images/views-feature-view-cube-small-labels.png" aria-label="Enlarge View cube small labels">
 						<img src="resources/images/views-feature-view-cube-small-labels.png" alt="View cube small labels" width="136" height="136" loading="lazy">
@@ -2482,14 +2482,6 @@
 					<figcaption>Axis icon</figcaption>
 				</figure>
 
-				<figure style="--width-image: 3579; --height-image: 1986">
-					<button class="shot" data-full="resources/images/views-feature-camera-bar.png" aria-label="Enlarge Camera bar">
-						<img src="resources/images/views-feature-camera-bar.png" alt="Camera bar" width="3579" height="1986" loading="lazy">
-					</button>
-
-					<figcaption>Camera bar</figcaption>
-				</figure>
-
 				<figure style="--width-image: 3840; --height-image: 2131">
 					<button class="shot" data-full="resources/images/views-feature-perspective.png" aria-label="Enlarge Perspective">
 						<img src="resources/images/views-feature-perspective.png" alt="Perspective" width="3840" height="2131" loading="lazy">
@@ -2504,6 +2496,14 @@
 					</button>
 
 					<figcaption>Orthographic</figcaption>
+				</figure>
+
+				<figure style="--width-image: 3840; --height-image: 2131">
+					<button class="shot" data-full="resources/images/views-feature-wireframe.png" aria-label="Enlarge Wireframe">
+						<img src="resources/images/views-feature-wireframe.png" alt="Wireframe" width="3840" height="2131" loading="lazy">
+					</button>
+
+					<figcaption>Wireframe</figcaption>
 				</figure>
 
 				<figure style="--width-image: 3840; --height-image: 2131">
@@ -2528,6 +2528,14 @@
 					</button>
 
 					<figcaption>Cylinder cutaway</figcaption>
+				</figure>
+
+				<figure style="--width-image: 3579; --height-image: 1986">
+					<button class="shot" data-full="resources/images/views-feature-camera-bar.png" aria-label="Enlarge Camera bar">
+						<img src="resources/images/views-feature-camera-bar.png" alt="Camera bar" width="3579" height="1986" loading="lazy">
+					</button>
+
+					<figcaption>Camera bar</figcaption>
 				</figure>
 
 				<figure style="--width-image: 3840; --height-image: 2131">
@@ -3660,6 +3668,14 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p class="lead">The latest release notices from the StudWorx repository.</p>
 
 			<details open>
+				<summary>2026-11-10</summary>
+
+				<ul>
+					<li>Site: the <a href="#views">Views</a> gallery shows the view cubes and axis icon on their own row, then Perspective, Orthographic and a new Wireframe view in matching captures, the cutaways, and the camera bar, height grids and idle turntable</li>
+				</ul>
+			</details>
+
+			<details>
 				<summary>2026-11-09</summary>
 
 				<ul>
@@ -3684,7 +3700,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Steps: an opened model now starts on a new empty step after its last one, ready for new parts</li>
 					<li><a href="#files">Files</a>: a Missing and Moved Parts list opens with a model whose parts could not be loaded or are marked as moved or as an alias, offering the part each one points to or its BrickLink mapping, replacing the checked ones in every submodel in one undo step, with Copy List, Don&#x27;t Warn Again, a status bar icon and the Warn About Missing and Moved Parts preference</li>
 					<li>Find and Replace: the bar floats over the view, its part list shows the parts in the colors they are used in with a flag on parts used in more than one color, a gear button sets how the part lists are filtered and shown, and Replace in Submodels makes Replace All reach every submodel</li>
-					<li><a href="#views">Views</a>: Submodel Hover Outline draws a pastel cyan outline over the innermost submodel under the pointer, on top of the selection outline, with its color in the <a href="#preferences">preferences</a></li>
+					<li>Views: Submodel Hover Outline draws a pastel cyan outline over the innermost submodel under the pointer, on top of the selection outline, with its color in the <a href="#preferences">preferences</a></li>
 					<li>Joints: the right-click menu of the Joints tree moves, rotates or deletes a joint, or edits or deletes all joints of a submodel, a joint inside a submodel opens it in place, and the joint bar over the view selects its submodels or ends joint mode</li>
 					<li>Menus: snap and joint entries use full names, such as No XY Snap, XY 1/20 Stud, No Rotation Snap, Set Joint, Delete Joint and Joints Panel</li>
 					<li>Thumbnails: part thumbnail icon badges sit in the bottom right corner</li>
@@ -3735,46 +3751,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Status bar: hints such as the face pick and cutaway messages no longer overlap the selection text and stay shown after the menu closes</li>
 					<li>Views: the height grid entries of the view options are greyed out while the base grid is off</li>
 					<li>Views: with split views the view cube and axis icon show on the top left view only</li>
-				</ul>
-			</details>
-
-			<details>
-				<summary>2026-11-03</summary>
-
-				<ul>
-					<li>Cutaway: edge lines in the part edge color outline where the cutaway cuts through parts, with thinner lines along the corners of the cut, and Cut Edges in Preferences &gt; Views &gt; Cutaway turns them off</li>
-					<li>Explode: the Explode panel, shown from the panel context menu or View &gt; Toolbars, spreads the parts on screen away from an anchor part, straight out of their connections with lines back to where they connect, submodels at all depths flatten first in the same undo step and Collapse puts them back, and Save Copy saves the exploded model to a separate -exploded file</li>
-					<li>Submodels: Flatten Model in the Model menu and the Submodel context menu replaces every submodel at all depths with its parts in one undo step</li>
-					<li>Command line: --flatten &lt;outfile.ldr&gt; replaces every submodel at all depths with its parts and saves the model, before any other export</li>
-					<li>Command line: --undo &lt;outfile.ldr&gt; undoes every command line edit and saves the model, to check that undo restores it</li>
-					<li>Lights: point lights and light targets draw as wireframe spheres like the other lights, and spot, directional and area light outlines use more segments</li>
-					<li><a href="#tools">Tools</a>: the Delete tool is now Erase, so it no longer shares a name with Part &gt; Delete</li>
-					<li>Defaults: new view colors and keyboard and mouse shortcuts, with Orbit on the right button and Pan on the middle button</li>
-					<li>Keyboard shortcuts: categories in Preferences show readable names such as Snap (Angle)</li>
-					<li>View cube: a Labels setting in Preferences shows Small Labels or Large Abbreviations (TP, BT, LT, RT, FT, BK) on its faces</li>
-					<li><a href="#instructions">Instructions</a>: a bar under the page goes to the first, previous, cover, bill of materials, next and last pages, inserts a Step Page or Blank Page, removes blank or empty pages and has a page box to type the page, each button with its own mnemonic, and the timeline shortcuts turn the pages</li>
-					<li>Instructions: Submodel Background in the Page category colors the pages of submodel steps apart from the main model pages</li>
-					<li>Instructions: Apply to All Pages in the Page and Parts List categories gives every page the background or thumbnails of the current page, the Arrowhead pointer tip is now Arrow and Pointer Tip is greyed out for callout wedges</li>
-					<li>Instructions: the Bill of Materials page shows a Parts List title in place of the step number, with its own BOM Title Font and BOM Title Color, and the cover author has its own Cover Author Font and Cover Author Color</li>
-					<li>Export HTML: Transparent Background is gone, a Background Color with zero alpha leaves the step images clear</li>
-					<li>Instructions: every element box has a Corner Radius in the Box category of the Properties panel, 0 keeps its corners square</li>
-					<li>Export HTML: Single Page cards round their corners like the step model box, and Edit Style Sheet opens the CSS of the pages in an editor with the options and find and replace of the Editor panel, comments name the feature of each block, and Restore Defaults brings back the built-in one</li>
-					<li>Blender Render: StudWorx brings its own LDraw import and render add-ons, the output, image, scene, parts and editing settings sit in panels of the render window, and Open in Blender opens the model there to keep working on the scene</li>
-					<li>Render menu: Blender Render and POV-Ray Render are listed alphabetically</li>
-					<li>Preferences: the Blender executable is set on the General page with the other program and library locations</li>
-					<li>Export HTML: pages go into a folder named after the model inside the chosen folder, open at index.html and are styled with light and dark colors that follow the browser</li>
-					<li>Export HTML moved from File &gt; Export to the Instructions window, between Editor and Print</li>
-					<li>Export HTML: Single Page shows the Instructions window pages on one scrolling index.html that stops at each page, with #page-N and #step-N links and First, Previous, Next and Last Page arrows on the right, left or bottom edge set by Arrows</li>
-					<li>Export HTML: Display lays the Single Page pages out for the Instructions Page or a Landscape Display (1920 x 1080), Portrait Display (1080 x 1920) or Tablet (2048 x 1536), filling Width and Height, and pages are saved at twice their shown size for high density screens</li>
-					<li>Export HTML: Background Color fills the step images and their rounded frames, and a transparent color leaves them clear, and Override Instructions Settings applies it, the Parts List choices and the Settings Overrides colors (page, cover, Bill of Materials, step, text, divider, pointer, fade, highlight and element boxes) to the Single Page export without changing the model</li>
-					<li>Export BrickLink: a mapping of over 55,000 parts and 236 colors now ships with StudWorx, so exports work without building one first, and Part Exceptions lets you replace the BrickLink number of any part, also as <code>--bricklink-exceptions</code> on the command line</li>
-					<li>Export BrickLink and Export CSV: parts the library moved to a new number, such as 60470 to 60470a, are listed and counted under the new number</li>
-					<li>Preferences: updating the BrickLink mapping starts from the bundled file, prefers Rebrickable numbers over outdated ones and keeps the old number of lettered variants BrickLink never took, the Rebrickable API key sits in a new Online Services group on the General page</li>
-					<li>Preferences and Timeline: commands that share a shortcut show in red, and assigning a taken shortcut asks before moving it, a new Highlight Style shows as soon as you press OK</li>
-					<li>Dialogs: the Help buttons are gone, the question mark in the title bar and F1 explain every control, labels sit in one column on the left and fields reach the right edge</li>
-					<li>Rotation: turning parts or pivots in angle steps lands exactly on square angles again, so later moves keep whole coordinates</li>
-					<li>Thumbnails: model thumbnails show again in file managers, and leftovers from the old StudWorks name are removed on <a href="#install">install</a></li>
-					<li>Properties and Import Set Inventory: light settings scroll without a sideways scroll bar, and long set names show in full</li>
 				</ul>
 			</details>
 
