@@ -89,7 +89,8 @@ int swColorList::GetGroupHeaderHeight(const swColorListGroup& Group, bool FirstG
 {
 	// space headers like layout rows
 	const int Spacing = swGetLayoutSpacing(this, Qt::Vertical);
-	const int ButtonHeight = Group.Button ? Group.Button->sizeHint().height() : QFontMetrics(font()).height();
+	// headers keep a fixed height
+	const int ButtonHeight = Group.Button ? Group.Button->height() : QFontMetrics(font()).height();
 
 	return (FirstGroup ? 0 : Spacing) + ButtonHeight + (Group.Collapsed ? 0 : Spacing);
 }
@@ -98,14 +99,30 @@ void swColorList::UpdateRects()
 {
 	mPreferredHeight = GetHeightForWidth(width(), &mColumns, &mRows);
 
-	const float CellWidth = (float)width() / (float)mColumns;
-	const float CellHeight = CellWidth;
+	// a toggling scroll bar would recurse here
 
-	if (height() != mPreferredHeight)
+	if (height() != mPreferredHeight && !mFitting)
 	{
+		mFitting = true;
 		setFixedHeight(mPreferredHeight);
 		emit HeightChanged();
+
+		// the width may have changed meanwhile, keep the taller to never clip
+
+		const int Height = GetHeightForWidth(width());
+
+		if (Height > height())
+		{
+			setFixedHeight(Height);
+			emit HeightChanged();
+		}
+
+		mFitting = false;
+		mPreferredHeight = GetHeightForWidth(width(), &mColumns, &mRows);
 	}
+
+	const float CellWidth = (float)width() / (float)mColumns;
+	const float CellHeight = CellWidth;
 
 	int CurCell = 0;
 	float GroupY = 0.0f;
@@ -122,7 +139,7 @@ void swColorList::UpdateRects()
 		if (Group.Button)
 		{
 			const int Top = Group.Rect.top() + (GroupIdx == 0 ? 0 : swGetLayoutSpacing(this, Qt::Vertical));
-			Group.Button->setGeometry(QRect(0, Top, width(), Group.Button->sizeHint().height()));
+			Group.Button->setGeometry(QRect(0, Top, width(), Group.Button->height()));
 			Group.Button->show();
 		}
 

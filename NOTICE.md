@@ -5,6 +5,7 @@
 
   - Preferences: each tab scrolls when the window is taller than the screen, and the window opens wide enough to show every tab, so OK and Cancel stay in reach on low resolution screens
   - Interface: floating panels keep their own title bar, so a double click or a drag back onto the window docks them again
+  - Colors: squeezing the panel no longer crashes StudWorx, the floating panel follows its contents height as groups open and close, and the last group header and color row are no longer cut off
   - Site: the Views gallery shows the view cubes and axis icon on their own row, then Perspective, Orthographic and a new Wireframe view in matching captures, the cutaways, and the camera bar, height grids and idle turntable
   - Help: the Explode, Joints, Poses, Keyframes and Minifigure Builder panels each have one overview, shown on the panel and its title bar, the View menu entries only name the panel they show, the full diamond of the Keyframes panel is called Set Keys like its command, and the Render window panels name Blender or POV-Ray
   - Translations: the Log button of the Render window is translated, Render reads Renderizar in Portuguese and Rendu in French, Add Keys reads Adicionar chaves in Portuguese and 添加關鍵影格 in Traditional Chinese, and Set Keys reads Schlüssel setzen in German

@@ -631,6 +631,13 @@ protected:
 			// never taller than the contents
 			setMaximumHeight(widget()->minimumHeight());
 			updateGeometry();
+
+			// floating panels follow their contents
+
+			QDockWidget* Dock = qobject_cast<QDockWidget*>(parentWidget());
+
+			if (Dock && Dock->isFloating())
+				QTimer::singleShot(0, Dock, [Dock]() { swFitFloatingDock(Dock); });
 		}
 
 		return QScrollArea::eventFilter(Object, Event);

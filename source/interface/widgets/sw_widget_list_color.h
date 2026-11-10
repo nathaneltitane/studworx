@@ -64,6 +64,7 @@ protected:
 	int mWidth = 0;
 	int mHeight = 0;
 	int mPreferredHeight = 0;
+	bool mFitting = false;
 	bool mAllowNoColor;
 
 	QPoint mDragStartPosition;
