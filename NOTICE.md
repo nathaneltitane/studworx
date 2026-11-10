@@ -4,6 +4,7 @@
   <summary>2026-11-09</summary>
 
   - Tabs: model tabs line up with the view gear button, each ending in a square close button behind a divider, and the tab scroll arrows are framed like the gear button
+  - Joints: the pose list is titled Poses
 
   </details>
 

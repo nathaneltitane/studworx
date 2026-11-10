@@ -16458,48 +16458,43 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="293"/>
-        <source>Poses of %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="293"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="28"/>
         <source>Poses</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="314"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="313"/>
         <source>Joint %1, %2, angle %3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="338"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="337"/>
         <source>Save Pose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="338"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="337"/>
         <source>Pose %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="375"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="374"/>
         <source>Rename Pose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="314"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="313"/>
         <source>Select one submodel for a joint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="314"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="313"/>
         <source>No joint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="154"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="314"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="313"/>
         <source>Hinge</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16526,7 +16521,7 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="154"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="314"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="313"/>
         <source>Ball</source>
         <translation type="unfinished"></translation>
     </message>
@@ -16556,8 +16551,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="338"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="375"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="337"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="374"/>
         <source>Name</source>
         <translation type="unfinished">名称</translation>
     </message>

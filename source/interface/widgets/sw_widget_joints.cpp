@@ -25,7 +25,7 @@ swJointsWidget::swJointsWidget(QWidget* Parent)
 	connect(mTree, &QTreeWidget::customContextMenuRequested, this, &swJointsWidget::TreeMenuRequested);
 	Layout->addWidget(mTree, 2);
 
-	mPoseLabel = new QLabel(this);
+	mPoseLabel = new QLabel(tr("Poses"), this);
 	Layout->addWidget(mPoseLabel);
 
 	mList = new QListWidget(this);
@@ -290,7 +290,6 @@ void swJointsWidget::UpdateList()
 	swModel* Model = GetPoseModel();
 
 	mList->clear();
-	mPoseLabel->setText(Model ? tr("Poses of %1").arg(Model->GetFileName()) : tr("Poses"));
 
 	if (Model)
 		for (const swPose& Pose : Model->GetPoses())

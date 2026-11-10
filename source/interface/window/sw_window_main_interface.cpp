@@ -917,6 +917,7 @@ void swMainWindow::CreateToolBars()
 	mExplodeToolBar = new QDockWidget(tr("Explode"), this);
 	mExplodeToolBar->setObjectName("ExplodeToolbar");
 	mExplodeWidget = new swExplodeWidget(mExplodeToolBar);
+	swFitHeightToContents(mExplodeWidget);
 	mExplodeToolBar->setWidget(mExplodeWidget);
 	addDockWidget(Qt::RightDockWidgetArea, mExplodeToolBar);
 	mExplodeToolBar->hide();
