@@ -3,7 +3,7 @@
  <class>swMinifigureBuilderWidget</class>
  <widget class="QWidget" name="swMinifigureBuilderWidget">
   <property name="whatsThis">
-   <string>&lt;p&gt;&lt;b&gt;Minifigure Builder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Build a minifigure by choosing its parts, colors, and pose. The preview updates as you make changes. Choose Add to Model to insert the minifigure into the current model.&lt;/p&gt;&lt;p&gt;Templates let you reuse a configuration. Saved, deleted, and imported templates are kept as soon as you change them.&lt;/p&gt;</string>
+   <string>&lt;p&gt;&lt;b&gt;Minifigure Builder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Build a minifigure by choosing its parts, colors, and pose. The preview updates as you make changes. Choose Add to Model to insert the minifigure into the current model. The panel keeps its settings so you can add several variations.&lt;/p&gt;&lt;p&gt;Templates let you reuse a configuration. Saved, deleted, and imported templates are kept as soon as you change them.&lt;/p&gt;</string>
   </property>
   <property name="geometry">
    <rect>

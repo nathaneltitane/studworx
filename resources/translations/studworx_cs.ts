@@ -9046,9 +9046,8 @@ Formát souboru není rozpoznán.</translation>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Zobrazit nebo skrýt&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje tento panel nástrojů nebo panel. Klik pravým tlačítkem na název libovolného panelu nástrojů nebo panelu zobrazí stejný seznam.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1630"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Keyframes panel, a timeline with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a key to another step and right-click for more. Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons rewind, play or pause, stop and go to the last step. Values are edited in the Properties panel.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje panel Klíčové snímky, časovou osu s jedním sloupcem na krok a jedním řádkem na objekt, rozbalitelným na jeho vlastnosti. Kosočtverec označuje klíč a čára spojuje klíče jedné vlastnosti. Kliknutím na krok na něj přejdete, dvojklikem na buňku klíč přidáte nebo odeberete, tažením klíče jej přesunete do jiného kroku a pravým tlačítkem otevřete další možnosti. Vybrané uvádí vybrané objekty, Všechny každý objekt s klíči. Plný a prázdný kosočtverec přidávají nebo odebírají klíče vybraných objektů v aktuálním kroku, Přidávat klíče způsobí, že úpravy vytvářejí klíče, a tlačítka přehrávání přetáčejí, přehrávají nebo pozastavují, zastavují a přecházejí na poslední krok. Hodnoty se upravují v panelu Vlastnosti.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje panel Klíčové snímky, časovou osu s jedním sloupcem na krok a jedním řádkem na objekt, rozbalitelným na jeho vlastnosti. Kosočtverec označuje klíč a čára spojuje klíče jedné vlastnosti. Kliknutím na krok na něj přejdete, dvojklikem na buňku klíč přidáte nebo odeberete, tažením klíče jej přesunete do jiného kroku a pravým tlačítkem otevřete další možnosti. Vybrané uvádí vybrané objekty, Všechny každý objekt s klíči. Plný a prázdný kosočtverec přidávají nebo odebírají klíče vybraných objektů v aktuálním kroku, Přidávat klíče způsobí, že úpravy vytvářejí klíče, a tlačítka přehrávání přetáčejí, přehrávají nebo pozastavují, zastavují a přecházejí na poslední krok. Hodnoty se upravují v panelu Vlastnosti.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1639"/>
@@ -9703,19 +9702,12 @@ Formát souboru není rozpoznán.</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1604"/>
-        <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Explode panel, which spreads the parts on screen away from an anchor, the focused part or the first or last selected one, scaled along X, Y and Z. With Selected Parts Only, each group moves as one part. Each part slides straight out along the connection that holds it, a part without one along the nearest axis from the part beside it, and with Show Lines a line runs through each connection back to the socket it came off. Submodels, and the submodels inside them, flatten into their parts first in the same undo step. Collapse or Undo puts the parts and submodels back, and Save Copy saves the exploded model to a separate file named with -exploded.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1613"/>
         <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Joints panel. A tree lists every model with its jointed submodels and their joints, click a joint to select its submodel, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. A joint inside a submodel opens it in place and a bar over the view points to the picked joint. A submodel button there selects that submodel and keeps joint mode when it has a joint, the main model button ends it; the close button clears the selection and returns to the Select tool. Clicking a model shows its poses in the Poses panel. The panel also shows the picked joint of the selected submodel, with its axis, and Delete Joint deletes the joint picked in the tree.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Klouby&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje panel Klouby. Strom uvádí každý model s jeho podmodely s klouby a jejich klouby; kliknutím na kloub vyberete jeho podmodel, pravým tlačítkem jej přesunete, otočíte nebo smažete, nebo pravým tlačítkem na podmodel upravíte či smažete všechny jeho klouby. Kloub uvnitř podmodelu jej otevře na místě a lišta nad pohledem ukazuje na vybraný kloub. Tlačítko podmodelu tam vybere tento podmodel a zachová režim kloubů, pokud má kloub, tlačítko hlavního modelu jej ukončí; tlačítko zavřít zruší výběr a vrátí se k nástroji Výběr. Kliknutí na model zobrazí jeho pózy v panelu Pózy. Panel také ukazuje vybraný kloub vybraného podmodelu s jeho osou a Smazat kloub smaže kloub vybraný ve stromu.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Klouby&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje panel Klouby. Strom uvádí každý model s jeho podmodely s klouby a jejich klouby; kliknutím na kloub vyberete jeho podmodel, pravým tlačítkem jej přesunete, otočíte nebo smažete, nebo pravým tlačítkem na podmodel upravíte či smažete všechny jeho klouby. Kloub uvnitř podmodelu jej otevře na místě a lišta nad pohledem ukazuje na vybraný kloub. Tlačítko podmodelu tam vybere tento podmodel a zachová režim kloubů, pokud má kloub, tlačítko hlavního modelu jej ukončí; tlačítko zavřít zruší výběr a vrátí se k nástroji Výběr. Kliknutí na model zobrazí jeho pózy v panelu Pózy. Panel také ukazuje vybraný kloub vybraného podmodelu s jeho osou a Smazat kloub smaže kloub vybraný ve stromu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1622"/>
         <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Poses panel, which lists the poses of the model picked in the Joints panel, or of the current model. Save stores the joint angles of that model as a named pose, Recall puts them back in one undo step, Rename and Delete change the picked pose, and the Joints motion in the image dialog plays the poses of the main model as an animation.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Pózy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje panel Pózy, který uvádí pózy modelu vybraného v panelu Klouby, nebo aktuálního modelu. Uložit uloží úhly kloubů tohoto modelu jako pojmenovanou pózu, Vyvolat je vrátí v jednom kroku zpět, Přejmenovat a Smazat mění vybranou pózu a pohyb Klouby v dialogu obrázku přehraje pózy hlavního modelu jako animaci.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Pózy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje panel Pózy, který uvádí pózy modelu vybraného v panelu Klouby, nebo aktuálního modelu. Uložit uloží úhly kloubů tohoto modelu jako pojmenovanou pózu, Vyvolat je vrátí v jednom kroku zpět, Přejmenovat a Smazat mění vybranou pózu a pohyb Klouby v dialogu obrázku přehraje pózy hlavního modelu jako animaci.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1747"/>
@@ -9881,6 +9873,26 @@ Formát souboru není rozpoznán.</translation>
         <location filename="../../source/application/sw_commands.cpp" line="983"/>
         <source>&lt;p&gt;&lt;b&gt;Joints Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag a submodel that has a joint to turn it. Hinges turn about their axis with the horizontal drag, balls turn about the screen up and right directions. Rotation Snap sets the steps and one drag is one undo step. Use Part &amp;gt; Joint &amp;gt; Set Joint to give a submodel a joint.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1604"/>
+        <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Explode panel, which spreads the parts on screen away from an anchor to show how they connect.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Rozložit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje panel Rozložit, který odsouvá díly na obrazovce od kotvy, aby ukázal, jak do sebe zapadají.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1613"/>
+        <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Joints panel, which lists the joints of every model and moves, rotates or deletes them.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Klouby&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje panel Klouby, který vypisuje klouby každého modelu a přesouvá je, otáčí nebo odstraňuje.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1622"/>
+        <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Poses panel, which saves and recalls named sets of joint angles.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Pózy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje panel Pózy, který ukládá a vyvolává pojmenované sady úhlů kloubů.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1630"/>
+        <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Keyframes panel, a timeline of the animation keys of the objects per step.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje panel Klíčové snímky, časovou osu animačních klíčů objektů po krocích.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1702"/>
@@ -13503,11 +13515,6 @@ Choose where to save it and download the latest %3 now?</source>
     <name>swExplodeWidget</name>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_explode.ui"/>
-        <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Spread the parts on screen away from the chosen anchor part, which stays in place. Each part slides straight out along the stud, pin or socket that holds it, and a line joins it back to where it connects. Set how far along X, Y and Z, then choose Explode. While the parts are spread, changing a setting spreads them again. Collapse or any edit puts them back, and the file never changes. Save Copy saves the exploded model to a separate file named with -exploded, and the open file stays as it is.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_explode.ui"/>
         <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="34"/>
         <source>Explode</source>
         <translation type="unfinished">Rozložit</translation>
@@ -13711,6 +13718,11 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="114"/>
         <source>No part is selected</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_explode.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Spread the parts on screen away from an anchor, the focused part or the first or last selected one, which stays in place. Each part slides straight out along the stud, pin or socket that holds it, a part without one along the nearest axis from the part beside it. Set how far along X, Y and Z, then choose Explode. While the parts are spread, changing a setting spreads them again. Collapse, Undo or any edit puts them back, and the file never changes. Save Copy saves the exploded model to a separate file named with -exploded, and the open file stays as it is.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Rozložit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odsune díly na obrazovce od kotvy, aktivního dílu nebo prvního či posledního vybraného, který zůstane na místě. Každý díl vyjede přímo podél čepu, kolíku nebo patice, která jej drží, díl bez ní podél nejbližší osy od sousedního dílu. Nastavte vzdálenost v X, Y a Z a zvolte Rozložit. Dokud jsou díly rozloženy, změna nastavení je rozloží znovu. Sbalit, Zpět nebo jakákoli úprava je vrátí na místo a soubor se nikdy nezmění. Uložit kopii uloží rozložený model do samostatného souboru s -exploded v názvu a otevřený soubor zůstane beze změny.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -17463,125 +17475,129 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">Odstranit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="17"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="21"/>
         <source>Joint</source>
         <translation type="unfinished">Kloub</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="17"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="21"/>
         <source>Type</source>
         <translation type="unfinished">Typ</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="17"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="21"/>
         <source>Angle</source>
         <translation type="unfinished">Úhel</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="19"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="23"/>
         <source>Joints of the model and its submodels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="35"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="38"/>
         <source>Hinge axis, for parts without shadow data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="36"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="39"/>
         <source>&lt;p&gt;&lt;b&gt;Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The axis a hinge turns about, in the coordinates of the submodel. Use it for parts without shadow data, which get a hinge on their origin.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="118"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="121"/>
         <source>Joint %1</source>
         <translation type="unfinished">Kloub %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="133"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="136"/>
         <source>None: Part &gt; Joint &gt; Set Joint</source>
         <translation type="unfinished">Žádný: Díl &gt; Kloub &gt; Nastavit kloub</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
         <source>Joint %1, %2, angle %3</source>
         <translation type="unfinished">Kloub %1, %2, úhel %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
         <source>No joint</source>
         <translation type="unfinished">Žádný kloub</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="117"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="120"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
         <source>Hinge</source>
         <translation type="unfinished">Závěs</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="20"/>
         <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Every model with joints, under it each jointed submodel by line index, and under that each of its joints with type and angle. Click a joint to select its submodel and make it the joint the panel and the rotate gizmo work on, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. Click a model to show its poses in the Poses panel.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Klouby&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Každý model s klouby, pod ním každý podmodel s klouby podle indexu řádku a pod ním každý z jeho kloubů s typem a úhlem. Kliknutím na kloub vyberete jeho podmodel a nastavíte jej jako kloub, se kterým pracují panel a rotační gizmo; pravým tlačítkem jej přesunete, otočíte nebo smažete, nebo pravým tlačítkem na podmodel upravíte či smažete všechny jeho klouby. Kliknutím na model zobrazíte jeho pózy v panelu Pózy.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Klouby&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Každý model s klouby, pod ním každý podmodel s klouby podle indexu řádku a pod ním každý z jeho kloubů s typem a úhlem. Kliknutím na kloub vyberete jeho podmodel a nastavíte jej jako kloub, se kterým pracují panel a rotační gizmo; pravým tlačítkem jej přesunete, otočíte nebo smažete, nebo pravým tlačítkem na podmodel upravíte či smažete všechny jeho klouby. Kliknutím na model zobrazíte jeho pózy v panelu Pózy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="34"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="14"/>
+        <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A tree lists every model with joints, under it each jointed submodel by line index, and under that each of its joints with type and angle. Click a joint to select its submodel and make it the joint the panel and the rotate gizmo work on, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. Click a model to show its poses in the Poses panel.&lt;/p&gt;&lt;p&gt;Below the tree the panel shows the joint picked on the selected submodel with its axis. A joint inside a submodel opens it in place, and a bar over the view points to the picked joint.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Klouby&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Strom vypisuje každý model s klouby, pod ním každý podmodel s klouby podle indexu řádku a pod ním každý jeho kloub s typem a úhlem. Klepnutím na kloub vyberete jeho podmodel a uděláte z něj kloub, se kterým pracují panel a otáčecí úchyt, pravým tlačítkem jej přesunete, otočíte nebo odstraníte, nebo pravým tlačítkem na podmodelu upravíte či odstraníte všechny jeho klouby. Klepnutím na model zobrazíte jeho pózy v panelu Pózy.&lt;/p&gt;&lt;p&gt;Pod stromem panel ukazuje vybraný kloub vybraného podmodelu s jeho osou. Kloub uvnitř podmodelu jej otevře na místě a lišta nad pohledem ukazuje na vybraný kloub.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="37"/>
         <source>X Axis</source>
         <translation type="unfinished">Osa X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="34"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="37"/>
         <source>Y Axis</source>
         <translation type="unfinished">Osa Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="34"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="37"/>
         <source>Z Axis</source>
         <translation type="unfinished">Osa Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="41"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="236"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="44"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="239"/>
         <source>Delete Joint</source>
         <translation type="unfinished">Smazat kloub</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="42"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="45"/>
         <source>Delete the joint picked in the list (Delete)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="43"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="46"/>
         <source>&lt;p&gt;&lt;b&gt;Delete Joint&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Delete the joint picked in the joints list and put that joint back at rest. The Delete key does the same in the list. This can be undone.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="117"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="120"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
         <source>Ball</source>
         <translation type="unfinished">Kulový</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="206"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="209"/>
         <source>Edit Joints</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="208"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="211"/>
         <source>Delete All Joints</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="233"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="236"/>
         <source>Move Joint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="234"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="237"/>
         <source>Rotate Joint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
         <source>None: select a jointed submodel</source>
         <translation type="unfinished">Žádný: vyberte podmodel s klouby</translation>
     </message>
@@ -17593,144 +17609,143 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swKeyframesView</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="216"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="220"/>
         <source>Keys of each object per step: click a step to go there, double-click to add or remove a key, drag a key to move it</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="217"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;One column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Jeden sloupec na krok a jeden řádek na objekt, rozbalitelný na jeho vlastnosti. Kosočtverec označuje klíč a čára spojuje klíče jedné vlastnosti. Kliknutím na krok na něj přejdete, dvojklikem na buňku klíč přidáte nebo odeberete, tažením kosočtverce klíč přesunete do jiného kroku a pravým tlačítkem otevřete další možnosti. Hodnoty se upravují v panelu Vlastnosti.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Jeden sloupec na krok a jeden řádek na objekt, rozbalitelný na jeho vlastnosti. Kosočtverec označuje klíč a čára spojuje klíče jedné vlastnosti. Kliknutím na krok na něj přejdete, dvojklikem na buňku klíč přidáte nebo odeberete, tažením kosočtverce klíč přesunete do jiného kroku a pravým tlačítkem otevřete další možnosti. Hodnoty se upravují v panelu Vlastnosti.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="279"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="282"/>
         <source>Position</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="280"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="283"/>
         <source>Rotation</source>
         <translation type="unfinished">Rotace</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="285"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="288"/>
         <source>Target</source>
         <translation type="unfinished">Cíl</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="286"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="289"/>
         <source>Up</source>
         <translation type="unfinished">Nahoru</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="292"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="295"/>
         <source>Color</source>
         <translation type="unfinished">Barva</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="293"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="296"/>
         <source>Power</source>
         <translation type="unfinished">Moc</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="294"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="297"/>
         <source>POV-Ray Power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="295"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="298"/>
         <source>Fade Distance</source>
         <translation type="unfinished">Fade Distance</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="296"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="299"/>
         <source>Fade Power</source>
         <translation type="unfinished">Fade Power</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="297"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="300"/>
         <source>Radius</source>
         <translation type="unfinished">Poloměr</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="298"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="301"/>
         <source>Angle</source>
         <translation type="unfinished">Úhel</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="299"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="302"/>
         <source>Area Width</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="300"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="303"/>
         <source>Area Height</source>
         <translation type="unfinished">Výška plochy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="301"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="304"/>
         <source>Spot Cone</source>
         <translation type="unfinished">Kužel reflektoru</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="302"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="305"/>
         <source>Spot Penumbra</source>
         <translation type="unfinished">Polostín reflektoru</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="303"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="306"/>
         <source>Spot Tightness</source>
         <translation type="unfinished">Sevřenost reflektoru</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="304"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="307"/>
         <source>Area Grid X</source>
         <translation type="unfinished">Mřížka plochy X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="305"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="308"/>
         <source>Area Grid Y</source>
         <translation type="unfinished">Mřížka plochy Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="425"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="428"/>
         <source>Remove Keyframes</source>
         <translation type="unfinished">Odebrat klíčové snímky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="508"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="511"/>
         <source>Move Keyframe</source>
         <translation type="unfinished">Přesunout klíčový snímek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="524"/>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="558"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="527"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="561"/>
         <source>Remove Keyframe</source>
         <translation type="unfinished">Odebrat klíčový snímek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="526"/>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="556"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="529"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="559"/>
         <source>Add Keyframe</source>
         <translation type="unfinished">Přidat klíčový snímek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="538"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="541"/>
         <source>Add Key</source>
         <translation type="unfinished">Přidat klíč</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="539"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="542"/>
         <source>Remove Key</source>
         <translation type="unfinished">Odebrat klíč</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="541"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="544"/>
         <source>Remove All Keys</source>
         <translation type="unfinished">Odebrat všechny klíče</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="660"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="663"/>
         <source>Step</source>
         <translation type="unfinished">Krok</translation>
     </message>
@@ -17738,102 +17753,111 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swKeyframesWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="19"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="23"/>
         <source>Add keys to the selected objects at the current step</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="20"/>
         <source>&lt;p&gt;&lt;b&gt;Add Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add position and rotation keys to the selected objects at the current step, holding their values at that step.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Přidat klíče&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá klíče polohy a rotace vybraným objektům v aktuálním kroku a zachytí jejich hodnoty v tomto kroku.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Přidat klíče&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá klíče polohy a rotace vybraným objektům v aktuálním kroku a zachytí jejich hodnoty v tomto kroku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="26"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="14"/>
+        <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;&lt;p&gt;Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Časová osa animačních klíčů s jedním sloupcem na krok a jedním řádkem na objekt, rozbalitelným do jeho vlastností. Kosočtverec označuje klíč a čára spojuje klíče jedné vlastnosti. Klepnutím na krok na něj přejdete, dvojitým klepnutím na buňku klíč přidáte nebo odeberete, tažením kosočtverce přesunete klíč do jiného kroku a pravým tlačítkem zobrazíte další možnosti. Hodnoty se upravují v panelu Vlastnosti.&lt;/p&gt;&lt;p&gt;Vybrané vypisuje vybrané objekty, Vše každý objekt s klíči. Plný a prázdný kosočtverec přidávají nebo odebírají klíče vybraných objektů v aktuálním kroku, Přidat klíče způsobí, že úpravy vytvářejí klíče, a tlačítka přehrávání procházejí kroky a ukazují pohyb podle klíčů.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="24"/>
+        <source>&lt;p&gt;&lt;b&gt;Set Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add position and rotation keys to the selected objects at the current step, holding their values at that step.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Nastavit klíče&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá klíče polohy a natočení vybraným objektům v aktuálním kroku a zachová jejich hodnoty v tomto kroku.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="30"/>
         <source>Remove the keys of the selected objects at the current step</source>
         <translation type="unfinished">Odebere klíče vybraných objektů v aktuálním kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="27"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="31"/>
         <source>&lt;p&gt;&lt;b&gt;Remove Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove every key the selected objects have at the current step.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Odebrat klíče&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odebere všechny klíče, které mají vybrané objekty v aktuálním kroku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="40"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="44"/>
         <source>Go to the first step</source>
         <translation type="unfinished">Přejít na první krok</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="41"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="45"/>
         <source>&lt;p&gt;&lt;b&gt;Rewind&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first step of the model.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Přetočit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přejde na první krok modelu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="47"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="51"/>
         <source>Play or pause the steps</source>
         <translation type="unfinished">Přehrát nebo pozastavit kroky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="48"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="52"/>
         <source>&lt;p&gt;&lt;b&gt;Play&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Step through the model one step at a time to the last step, showing the keyed motion. Click again to pause.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Přehrát&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Prochází model krok po kroku až do posledního kroku a ukazuje klíčovaný pohyb. Dalším kliknutím pozastavíte.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="54"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="58"/>
         <source>Stop and go back to the step playing started from</source>
         <translation type="unfinished">Zastaví a vrátí se ke kroku, ze kterého přehrávání začalo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="55"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="59"/>
         <source>&lt;p&gt;&lt;b&gt;Stop&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Stop playing through the steps and go back to the step playing started from.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Zastavit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zastaví procházení kroků a vrátí se ke kroku, ze kterého přehrávání začalo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="61"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="65"/>
         <source>Go to the last step</source>
         <translation type="unfinished">Přejít na poslední krok</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="62"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="66"/>
         <source>&lt;p&gt;&lt;b&gt;Forward&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the last step of the model.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Vpřed&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přejde na poslední krok modelu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="82"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="86"/>
         <source>Selected</source>
         <translation type="unfinished">Vybrané</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="84"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="88"/>
         <source>Show the keys of the selected objects</source>
         <translation type="unfinished">Zobrazí klíče vybraných objektů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="85"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="89"/>
         <source>&lt;p&gt;&lt;b&gt;Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;List only the selected objects in the timeline, with or without keys.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Vybrané&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Uvede na časové ose jen vybrané objekty, s klíči nebo bez nich.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="89"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="93"/>
         <source>All</source>
         <translation type="unfinished">Vše</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="91"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="95"/>
         <source>Show the keys of every object that has keys</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="92"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="96"/>
         <source>&lt;p&gt;&lt;b&gt;All&lt;/b&gt;&lt;/p&gt;&lt;p&gt;List the selected objects and every other object of the model that has keys.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Všechny&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Uvede vybrané objekty a každý další objekt modelu, který má klíče.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="209"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="213"/>
         <source>Add Keyframe</source>
         <translation type="unfinished">Přidat klíčový snímek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="209"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="213"/>
         <source>Remove Keyframe</source>
         <translation type="unfinished">Odebrat klíčový snímek</translation>
     </message>
@@ -18208,9 +18232,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Rozložit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="952"/>
         <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Spread every other visible part, or only the selected ones, away from an anchor by an X, Y and Z percentage of its distance. Each part slides out along the connection that holds it. Collapse or Undo puts the parts back, and Save Copy saves the exploded model to a separate file.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Rozložit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odsune každý další viditelný díl, nebo jen vybrané, od kotvy o procento vzdálenosti v X, Y a Z. Každý díl vyjede podél spojení, které jej drží. Sbalit nebo Zpět vrátí díly na místo a Uložit kopii uloží rozložený model do samostatného souboru.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Rozložit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odsune každý další viditelný díl, nebo jen vybrané, od kotvy o procento vzdálenosti v X, Y a Z. Každý díl vyjede podél spojení, které jej drží. Sbalit nebo Zpět vrátí díly na místo a Uložit kopii uloží rozložený model do samostatného souboru.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="963"/>
@@ -18218,9 +18241,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Klouby</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="965"/>
         <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The joint picked on the selected submodel with its axis, and a tree of every model with joints, its jointed submodels and their joints. Pick a joint to move or rotate it, and delete one to put it back at rest.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Klouby&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kloub vybraný na vybraném podmodelu s jeho osou a strom každého modelu s klouby, jeho podmodelů s klouby a jejich kloubů. Vyberte kloub pro posun nebo otočení a smažte jej pro návrat do klidové polohy.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Klouby&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kloub vybraný na vybraném podmodelu s jeho osou a strom každého modelu s klouby, jeho podmodelů s klouby a jejich kloubů. Vyberte kloub pro posun nebo otočení a smažte jej pro návrat do klidové polohy.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="972"/>
@@ -18228,9 +18250,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="974"/>
         <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The poses of the model picked in the Joints panel. Save the joint angles as a named pose, then recall, rename or delete it. Poses are saved with the model.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Pózy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pózy modelu vybraného v panelu Klouby. Uložte úhly kloubů jako pojmenovanou pózu, pak ji vyvolejte, přejmenujte nebo smažte. Pózy se ukládají s modelem.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Pózy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pózy modelu vybraného v panelu Klouby. Uložte úhly kloubů jako pojmenovanou pózu, pak ji vyvolejte, přejmenujte nebo smažte. Pózy se ukládají s modelem.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="981"/>
@@ -18238,9 +18259,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Klíčové snímky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="983"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A full-width timeline of the animation keys of the selected or all objects, one column per step. Add or remove keys at the current step, and play through the steps to watch the keyed motion.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Časová osa v plné šířce s animačními klíči vybraných nebo všech objektů, jeden sloupec na krok. Přidávejte nebo odebírejte klíče v aktuálním kroku a přehráváním kroků sledujte klíčovaný pohyb.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Časová osa v plné šířce s animačními klíči vybraných nebo všech objektů, jeden sloupec na krok. Přidávejte nebo odebírejte klíče v aktuálním kroku a přehráváním kroků sledujte klíčovaný pohyb.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="838"/>
@@ -18327,11 +18347,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="932"/>
         <source>Minifigure Builder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="934"/>
-        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the parts, colors and pose of a minifigure, then add it to the current model. The panel keeps its settings so you can add several variations.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -19823,11 +19838,6 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
-        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Build a minifigure by choosing its parts, colors, and pose. The preview updates as you make changes. Choose Add to Model to insert the minifigure into the current model.&lt;/p&gt;&lt;p&gt;Templates let you reuse a configuration. Saved, deleted, and imported templates are kept as soon as you change them.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>Minifigure Builder</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19860,6 +19870,11 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Export Templates&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Write all templates to a .minifigure file for backup or sharing. Export includes the entire collection, not just the selected template.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Build a minifigure by choosing its parts, colors, and pose. The preview updates as you make changes. Choose Add to Model to insert the minifigure into the current model. The panel keeps its settings so you can add several variations.&lt;/p&gt;&lt;p&gt;Templates let you reuse a configuration. Saved, deleted, and imported templates are kept as soon as you change them.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Minifigure Builder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Sestavte minifigurku výběrem jejích dílů, barev a pózy. Náhled se při změnách aktualizuje. Volbou Přidat do modelu vložíte minifigurku do aktuálního modelu. Panel si pamatuje nastavení, takže můžete přidat několik variant.&lt;/p&gt;&lt;p&gt;Šablony umožňují znovu použít konfiguraci. Uložené, odstraněné a importované šablony se zachovají hned po změně.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -21876,98 +21891,102 @@ Weight: %1</source>
 <context>
     <name>swPosesWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="354"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="361"/>
         <source>Pose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="356"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="363"/>
         <source>Saved poses of this model, played in this order by the Joints motion</source>
         <translation type="unfinished">Uložené pózy tohoto modelu, přehrávané v tomto pořadí pohybem Klouby</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="357"/>
         <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The poses saved in the model picked in the Joints panel, each holding the angles of that model&apos;s joints only. The Joints motion of the image dialog plays the poses of the main model in this order. Pick one to recall, rename or delete it.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Pózy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pózy uložené v modelu vybraném v panelu Klouby, každá obsahuje jen úhly kloubů tohoto modelu. Pohyb Klouby v dialogu obrázku přehrává pózy hlavního modelu v tomto pořadí. Vyberte jednu pro vyvolání, přejmenování nebo smazání.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Pózy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pózy uložené v modelu vybraném v panelu Klouby, každá obsahuje jen úhly kloubů tohoto modelu. Pohyb Klouby v dialogu obrázku přehrává pózy hlavního modelu v tomto pořadí. Vyberte jednu pro vyvolání, přejmenování nebo smazání.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="371"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="355"/>
+        <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The poses saved in the model picked in the Joints panel, or in the current model, each holding the angles of that model&apos;s joints only. Save stores the joint angles as a named pose, Recall puts them back in one undo step, and Rename and Delete change the picked pose. Poses are saved with the model, and the Joints motion of the image dialog plays the poses of the main model in this order.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Pózy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pózy uložené v modelu vybraném v panelu Klouby nebo v aktuálním modelu, každá obsahuje pouze úhly kloubů tohoto modelu. Uložit uloží úhly kloubů jako pojmenovanou pózu, Vyvolat je vrátí jedním krokem zpět a Přejmenovat a Odstranit mění vybranou pózu. Pózy se ukládají s modelem a pohyb Klouby v dialogu obrázku přehrává pózy hlavního modelu v tomto pořadí.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="377"/>
         <source>Save</source>
         <translation type="unfinished">Uložit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="371"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="377"/>
         <source>Save the joint angles of this model as a pose</source>
         <translation type="unfinished">Uloží úhly kloubů tohoto modelu jako pózu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="371"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="377"/>
         <source>&lt;p&gt;&lt;b&gt;Save&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Store the angles of the joints in this model under a name. Saving a name that already exists replaces that pose.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Uložit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Uloží úhly kloubů v tomto modelu pod názvem. Uložení existujícího názvu nahradí danou pózu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="372"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="378"/>
         <source>Recall</source>
         <translation type="unfinished">Vyvolat</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="372"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="378"/>
         <source>Put the joints of this model back in the picked pose</source>
         <translation type="unfinished">Vrátí klouby tohoto modelu do vybrané pózy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="372"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="378"/>
         <source>&lt;p&gt;&lt;b&gt;Recall&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the joints of this model back to the angles of the picked pose, in one undo step.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Vyvolat&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Natočí klouby tohoto modelu zpět na úhly vybrané pózy, v jednom kroku zpět.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="373"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="379"/>
         <source>Rename</source>
         <translation type="unfinished">Přejmenovat</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="373"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="379"/>
         <source>Rename the picked pose</source>
         <translation type="unfinished">Přejmenuje vybranou pózu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="373"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="379"/>
         <source>&lt;p&gt;&lt;b&gt;Rename&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Give the picked pose a new name.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Přejmenovat&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Dá vybrané póze nový název.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="374"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="380"/>
         <source>Delete</source>
         <translation type="unfinished">Odstranit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="374"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="380"/>
         <source>Delete the picked pose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="374"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="380"/>
         <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the picked pose from the model. The joints keep their angles.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Smazat&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odebere vybranou pózu z modelu. Klouby si ponechají své úhly.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="416"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="453"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="422"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="459"/>
         <source>Name</source>
         <translation type="unfinished">Název</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="416"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="422"/>
         <source>Save Pose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="416"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="422"/>
         <source>Pose %1</source>
         <translation type="unfinished">Póza %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="453"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="459"/>
         <source>Rename Pose</source>
         <translation type="unfinished">Přejmenovat pózu</translation>
     </message>
@@ -27980,6 +27999,16 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="unfinished">Výška</translation>
     </message>
     <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="536"/>
+        <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set how much detail Blender gives the parts. More detail looks better and takes longer to import and render.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Části&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Nastavte, kolik detailu dá Blender dílům. Více detailu vypadá lépe a import i vykreslení trvají déle.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="573"/>
+        <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the image or open the model in Blender, then follow the progress here. Log shows the Blender output below the preview.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Vykreslit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vykreslete obrázek nebo otevřete model v Blenderu a sledujte průběh zde. Protokol zobrazuje výstup Blenderu pod náhledem.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="579"/>
         <source>Quality</source>
         <translation type="unfinished"></translation>
@@ -28074,11 +28103,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="594"/>
         <source>Scene</source>
         <translation type="unfinished">Scéna</translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="594"/>
-        <source>&lt;p&gt;&lt;b&gt;Scene&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the lights, floor and surroundings the model is rendered in.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="597"/>
@@ -28280,11 +28304,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="536"/>
-        <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set how much detail the parts get. More detail looks better and takes longer to import and render.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="538"/>
         <source>Primitives</source>
         <translation type="unfinished"></translation>
@@ -28435,11 +28454,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="573"/>
-        <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the image or open the model in Blender and follow the progress. While rendering, Render becomes Cancel so you can stop it. Log shows the Blender output below the preview.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="600"/>
         <source>Studio</source>
         <translation type="unfinished"></translation>
@@ -28550,11 +28564,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="627"/>
-        <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Start the render and follow its progress. While rendering, Render becomes Cancel so you can stop it. Log shows the renderer output below the preview.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="710"/>
         <source>Select Environment Image</source>
         <translation type="unfinished"></translation>
@@ -28600,6 +28609,16 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="735"/>
         <source>&lt;p&gt;&lt;b&gt;Open in Blender&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Import the current model step into Blender with the Scene, Parts and Editing settings and open it there for editing. No image is saved.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="594"/>
+        <source>&lt;p&gt;&lt;b&gt;Scene&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the lights, floor and surroundings POV-Ray renders the model in.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Scéna&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Nastavte světla, podlahu a okolí, ve kterých POV-Ray model vykresluje.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="627"/>
+        <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Start the POV-Ray render, then follow its progress here. Log shows the POV-Ray output below the preview.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Vykreslit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Spusťte vykreslování v POV-Ray a sledujte jeho průběh zde. Protokol zobrazuje výstup POV-Ray pod náhledem.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="765"/>
@@ -28870,7 +28889,7 @@ Install the povray-includes package or the include files of your POV-Ray version
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="208"/>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="784"/>
         <source>Log</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Protokol</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="710"/>

@@ -1601,7 +1601,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Explode"),
 		QT_TRANSLATE_NOOP("Menu", "Explode Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Explode panel"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Explode</b></p><p>Show or hide the Explode panel, which spreads the parts on screen away from an anchor, the focused part or the first or last selected one, scaled along X, Y and Z. With Selected Parts Only, each group moves as one part. Each part slides straight out along the connection that holds it, a part without one along the nearest axis from the part beside it, and with Show Lines a line runs through each connection back to the socket it came off. Submodels, and the submodels inside them, flatten into their parts first in the same undo step. Collapse or Undo puts the parts and submodels back, and Save Copy saves the exploded model to a separate file named with -exploded.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Explode</b></p><p>Show or hide the Explode panel, which spreads the parts on screen away from an anchor to show how they connect.</p>"),
 		""
 	},
 
@@ -1610,7 +1610,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Joints"),
 		QT_TRANSLATE_NOOP("Menu", "Joints Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Joints panel"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joints</b></p><p>Show or hide the Joints panel. A tree lists every model with its jointed submodels and their joints, click a joint to select its submodel, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. A joint inside a submodel opens it in place and a bar over the view points to the picked joint. A submodel button there selects that submodel and keeps joint mode when it has a joint, the main model button ends it; the close button clears the selection and returns to the Select tool. Clicking a model shows its poses in the Poses panel. The panel also shows the picked joint of the selected submodel, with its axis, and Delete Joint deletes the joint picked in the tree.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joints</b></p><p>Show or hide the Joints panel, which lists the joints of every model and moves, rotates or deletes them.</p>"),
 		""
 	},
 
@@ -1619,7 +1619,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Poses"),
 		QT_TRANSLATE_NOOP("Menu", "Poses Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Poses panel"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Poses</b></p><p>Show or hide the Poses panel, which lists the poses of the model picked in the Joints panel, or of the current model. Save stores the joint angles of that model as a named pose, Recall puts them back in one undo step, Rename and Delete change the picked pose, and the Joints motion in the image dialog plays the poses of the main model as an animation.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Poses</b></p><p>Show or hide the Poses panel, which saves and recalls named sets of joint angles.</p>"),
 		""
 	},
 	// SW_VIEW_TOOLBAR_KEYFRAMES
@@ -1627,7 +1627,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Keyframes"),
 		QT_TRANSLATE_NOOP("Menu", "Keyframes Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Keyframes panel"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Keyframes</b></p><p>Show or hide the Keyframes panel, a timeline with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a key to another step and right-click for more. Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons rewind, play or pause, stop and go to the last step. Values are edited in the Properties panel.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Keyframes</b></p><p>Show or hide the Keyframes panel, a timeline of the animation keys of the objects per step.</p>"),
 		""
 	},
 

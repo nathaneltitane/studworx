@@ -931,7 +931,6 @@ void swMainWindow::CreateToolBars()
 	// fill the builder when first shown
 	mMinifigureBuilderToolBar = new QDockWidget(tr("Minifigure Builder"), this);
 	mMinifigureBuilderToolBar->setObjectName("MinifigureToolbar");
-	mMinifigureBuilderToolBar->setWhatsThis(tr("<p><b>Minifigure Builder</b></p><p>Choose the parts, colors and pose of a minifigure, then add it to the current model. The panel keeps its settings so you can add several variations.</p>"));
 	swSetupWidgetHelp(mMinifigureBuilderToolBar);
 	addDockWidget(Qt::RightDockWidgetArea, mMinifigureBuilderToolBar);
 	mMinifigureBuilderToolBar->hide();
@@ -944,16 +943,17 @@ void swMainWindow::CreateToolBars()
 			swMinifigureBuilderWidget* MinifigureBuilderWidget = new swMinifigureBuilderWidget(mMinifigureBuilderToolBar);
 			swFitHeightToContents(MinifigureBuilderWidget);
 			mMinifigureBuilderToolBar->setWidget(swScrollWhenCramped(MinifigureBuilderWidget, mMinifigureBuilderToolBar));
+			mMinifigureBuilderToolBar->setWhatsThis(MinifigureBuilderWidget->whatsThis());
 		}
 	});
 
 	mExplodeToolBar = new QDockWidget(tr("Explode"), this);
 	mExplodeToolBar->setObjectName("ExplodeToolbar");
-	mExplodeToolBar->setWhatsThis(tr("<p><b>Explode</b></p><p>Spread every other visible part, or only the selected ones, away from an anchor by an X, Y and Z percentage of its distance. Each part slides out along the connection that holds it. Collapse or Undo puts the parts back, and Save Copy saves the exploded model to a separate file.</p>"));
 	swSetupWidgetHelp(mExplodeToolBar);
 	mExplodeWidget = new swExplodeWidget(mExplodeToolBar);
 	swFitHeightToContents(mExplodeWidget);
 	mExplodeToolBar->setWidget(swScrollWhenCramped(mExplodeWidget, mExplodeToolBar));
+	mExplodeToolBar->setWhatsThis(mExplodeWidget->whatsThis());
 	addDockWidget(Qt::RightDockWidgetArea, mExplodeToolBar);
 	mExplodeToolBar->hide();
 
@@ -962,28 +962,28 @@ void swMainWindow::CreateToolBars()
 	tabifyDockWidget(mTimelineToolBar, mPreviewToolBar);
 	mJointsToolBar = new QDockWidget(tr("Joints"), this);
 	mJointsToolBar->setObjectName("JointsToolbar");
-	mJointsToolBar->setWhatsThis(tr("<p><b>Joints</b></p><p>The joint picked on the selected submodel with its axis, and a tree of every model with joints, its jointed submodels and their joints. Pick a joint to move or rotate it, and delete one to put it back at rest.</p>"));
 	swSetupWidgetHelp(mJointsToolBar);
 	mJointsWidget = new swJointsWidget(mJointsToolBar);
 	mJointsToolBar->setWidget(mJointsWidget);
+	mJointsToolBar->setWhatsThis(mJointsWidget->whatsThis());
 	addDockWidget(Qt::RightDockWidgetArea, mJointsToolBar);
 	mJointsToolBar->hide();
 
 	mPosesToolBar = new QDockWidget(tr("Poses"), this);
 	mPosesToolBar->setObjectName("PosesToolbar");
-	mPosesToolBar->setWhatsThis(tr("<p><b>Poses</b></p><p>The poses of the model picked in the Joints panel. Save the joint angles as a named pose, then recall, rename or delete it. Poses are saved with the model.</p>"));
 	swSetupWidgetHelp(mPosesToolBar);
 	mPosesToolBar->setWidget(new swPosesWidget(mJointsWidget, mPosesToolBar));
+	mPosesToolBar->setWhatsThis(mPosesToolBar->widget()->whatsThis());
 	addDockWidget(Qt::RightDockWidgetArea, mPosesToolBar);
 	mPosesToolBar->hide();
 
 	mKeyframesWidget = new swKeyframesWidget(nullptr);
 	mKeyframesToolBar = new QDockWidget(tr("Keyframes"), this);
 	mKeyframesToolBar->setObjectName("KeyframesToolbar");
-	mKeyframesToolBar->setWhatsThis(tr("<p><b>Keyframes</b></p><p>A full-width timeline of the animation keys of the selected or all objects, one column per step. Add or remove keys at the current step, and play through the steps to watch the keyed motion.</p>"));
 	swSetupWidgetHelp(mKeyframesToolBar);
 	mKeyframesToolBar->setAllowedAreas(Qt::TopDockWidgetArea | Qt::BottomDockWidgetArea);
 	mKeyframesToolBar->setWidget(mKeyframesWidget);
+	mKeyframesToolBar->setWhatsThis(mKeyframesWidget->whatsThis());
 	addDockWidget(Qt::BottomDockWidgetArea, mKeyframesToolBar, Qt::Vertical);
 	mKeyframesToolBar->hide();
 	connect(mKeyframesToolBar, &QDockWidget::visibilityChanged, mKeyframesWidget, [this](bool Visible) { if (Visible) mKeyframesWidget->Update(); });

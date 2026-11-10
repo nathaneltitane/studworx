@@ -9,6 +9,10 @@
 swKeyframesWidget::swKeyframesWidget(QWidget* Parent)
 	: QWidget(Parent)
 {
+	// panel overview
+
+	setWhatsThis(tr("<p><b>Keyframes</b></p><p>A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.</p><p>Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.</p>"));
+
 	QVBoxLayout* Layout = new QVBoxLayout(this);
 	QHBoxLayout* Buttons = new QHBoxLayout();
 
@@ -17,7 +21,7 @@ swKeyframesWidget::swKeyframesWidget(QWidget* Parent)
 	QToolButton* AddButton = new QToolButton(this);
 	AddButton->setText(QString::fromUtf8("◆"));
 	AddButton->setToolTip(tr("Add keys to the selected objects at the current step"));
-	AddButton->setWhatsThis(tr("<p><b>Add Keys</b></p><p>Add position and rotation keys to the selected objects at the current step, holding their values at that step.</p>"));
+	AddButton->setWhatsThis(tr("<p><b>Set Keys</b></p><p>Add position and rotation keys to the selected objects at the current step, holding their values at that step.</p>"));
 	connect(AddButton, &QToolButton::clicked, this, &swKeyframesWidget::AddKeysClicked);
 	Buttons->addWidget(AddButton);
 
@@ -214,7 +218,6 @@ swKeyframesView::swKeyframesView(QWidget* Parent)
 {
 	setMouseTracking(false);
 	setToolTip(tr("Keys of each object per step: click a step to go there, double-click to add or remove a key, drag a key to move it"));
-	setWhatsThis(tr("<p><b>Keyframes</b></p><p>One column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.</p>"));
 
 	const int TextHeight = fontMetrics().height();
 	mRowHeight = TextHeight + 6;

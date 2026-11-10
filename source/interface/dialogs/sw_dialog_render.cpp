@@ -533,7 +533,7 @@ void swRenderDialog::CreatePanels()
 		CreateSettingCheckBox(ScenePanel, tr("Import Cameras"), "importcameras", tr("Use the cameras of the model."), QString());
 		CreateSettingCheckBox(ScenePanel, tr("Import Lights"), "importlights", tr("Use the lights of the model."), QString());
 
-		QWidget* PartsPanel = CreatePanel(tr("Parts"), "RenderParts", tr("<p><b>Parts</b></p><p>Set how much detail the parts get. More detail looks better and takes longer to import and render.</p>"));
+		QWidget* PartsPanel = CreatePanel(tr("Parts"), "RenderParts", tr("<p><b>Parts</b></p><p>Set how much detail Blender gives the parts. More detail looks better and takes longer to import and render.</p>"));
 
 		CreateSettingComboBox(PartsPanel, tr("Primitives"), { tr("Standard"), tr("High"), tr("Low") }, { "Standard", "High", "Low" }, "resolution", tr("Choose the resolution of the part primitives, how round curved surfaces are."), QString());
 
@@ -570,7 +570,7 @@ void swRenderDialog::CreatePanels()
 		PanelWindow->tabifyDockWidget(qobject_cast<QDockWidget*>(PartsPanel->parentWidget()), qobject_cast<QDockWidget*>(EditingPanel->parentWidget()));
 		ScenePanel->parentWidget()->raise();
 
-		RenderPanel = CreatePanel(tr("Render"), "RenderRender", tr("<p><b>Render</b></p><p>Render the image or open the model in Blender and follow the progress. While rendering, Render becomes Cancel so you can stop it. Log shows the Blender output below the preview.</p>"));
+		RenderPanel = CreatePanel(tr("Render"), "RenderRender", tr("<p><b>Render</b></p><p>Render the image or open the model in Blender, then follow the progress here. Log shows the Blender output below the preview.</p>"));
 	}
 	else
 	{
@@ -591,7 +591,7 @@ void swRenderDialog::CreatePanels()
 		CreateRow(BatchPanel, tr("Cameras"), mCamerasComboBox, tr("Choose the view or a camera of the model to render from, or every camera."), tr("<p><b>Cameras</b></p><p>View renders from the view of the main window. A camera renders from that camera of the model. All Cameras renders one image for every camera, named after the camera.</p>"));
 		UpdateCameras();
 
-		QWidget* ScenePanel = CreatePanel(tr("Scene"), "RenderScene", tr("<p><b>Scene</b></p><p>Set the lights, floor and surroundings the model is rendered in.</p>"));
+		QWidget* ScenePanel = CreatePanel(tr("Scene"), "RenderScene", tr("<p><b>Scene</b></p><p>Set the lights, floor and surroundings POV-Ray renders the model in.</p>"));
 		StretchPanel = ScenePanel;
 
 		QComboBox* PartsComboBox = CreateComboBox({ tr("LDraw"), tr("LGEO") }, swGetProfileInteger(SW_PROFILE_RENDER_PARTS));
@@ -624,7 +624,7 @@ void swRenderDialog::CreatePanels()
 		QComboBox* BackgroundComboBox = mBackgroundComboBox;
 		CreateRow(ScenePanel, tr("Background"), BackgroundComboBox, tr("Choose whether the background and floor are rendered or left as transparent pixels for compositing."), QString());
 
-		RenderPanel = CreatePanel(tr("Render"), "RenderRender", tr("<p><b>Render</b></p><p>Start the render and follow its progress. While rendering, Render becomes Cancel so you can stop it. Log shows the renderer output below the preview.</p>"));
+		RenderPanel = CreatePanel(tr("Render"), "RenderRender", tr("<p><b>Render</b></p><p>Start the POV-Ray render, then follow its progress here. Log shows the POV-Ray output below the preview.</p>"));
 
 		connect(QualityComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int Index)
 		{

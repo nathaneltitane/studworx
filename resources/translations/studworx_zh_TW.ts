@@ -822,7 +822,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1430"/>
         <source>View.Time.AddKeys</source>
-        <translation>視圖.時間線.添加關鍵格</translation>
+        <translation>視圖.時間線.添加關鍵影格</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1475"/>
@@ -3027,7 +3027,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1431"/>
         <source>Add Keys</source>
-        <translation>添加關鍵格</translation>
+        <translation>添加關鍵影格</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1476"/>
@@ -5436,7 +5436,7 @@ File format is not recognized.</source>
     <message>
         <source>Adds a keyframe that shows the part at the moment in the timeline</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
-        <translation type="obsolete">添加關鍵格，使零件在時間軸中的指定時刻出現</translation>
+        <translation type="obsolete">添加關鍵影格，使零件在時間軸中的指定時刻出現</translation>
     </message>
     <message>
         <source>Amount of space between each part (default 0.2mm)</source>
@@ -8928,9 +8928,8 @@ File format is not recognized.</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;顯示或隱藏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;顯示或隱藏此工具列或面板。在任何工具列或面板標題上按右鍵可得到相同的清單。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1630"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Keyframes panel, a timeline with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a key to another step and right-click for more. Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons rewind, play or pause, stop and go to the last step. Values are edited in the Properties panel.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;關鍵影格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;顯示或隱藏關鍵影格面板，這是一條時間軸，每個步驟一欄、每個物件一列，可展開至其屬性。菱形代表關鍵影格，連線連接同一屬性的關鍵影格。點擊步驟可跳至該步驟，連按兩下儲存格可新增或移除關鍵影格，拖曳關鍵影格可移到其他步驟，按右鍵可取得更多選項。「已選取」列出所選物件，「全部」列出所有含關鍵影格的物件。實心和空心菱形可在目前步驟為所選物件新增或移除關鍵影格，「新增關鍵影格」讓編輯時建立關鍵影格，播放按鈕可倒轉、播放或暫停、停止，以及跳至最後一步。數值請在屬性面板中編輯。&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;關鍵影格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;顯示或隱藏關鍵影格面板，這是一條時間軸，每個步驟一欄、每個物件一列，可展開至其屬性。菱形代表關鍵影格，連線連接同一屬性的關鍵影格。點擊步驟可跳至該步驟，連按兩下儲存格可新增或移除關鍵影格，拖曳關鍵影格可移到其他步驟，按右鍵可取得更多選項。「已選取」列出所選物件，「全部」列出所有含關鍵影格的物件。實心和空心菱形可在目前步驟為所選物件新增或移除關鍵影格，「新增關鍵影格」讓編輯時建立關鍵影格，播放按鈕可倒轉、播放或暫停、停止，以及跳至最後一步。數值請在屬性面板中編輯。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1639"/>
@@ -9572,7 +9571,7 @@ File format is not recognized.</source>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Add Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Enable this when an edit should create a new animation key at the current step. For example, moving a part at a later step can give it a different position there. The diamond controls in Properties show and toggle keys for individual properties.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="obsolete">&lt;p&gt;&lt;b&gt;添加關鍵格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;若希望編輯操作在目前步驟創建新的動畫關鍵格，請啟用此功能。例如，在後續步驟中移動零件，可以使其在該步驟具有不同的位置。“屬性”中的菱形控件用於顯示和切換各個屬性的關鍵格。&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;添加關鍵影格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;若希望編輯操作在目前步驟創建新的動畫關鍵格，請啟用此功能。例如，在後續步驟中移動零件，可以使其在該步驟具有不同的位置。“屬性”中的菱形控件用於顯示和切換各個屬性的關鍵格。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1478"/>
@@ -9585,19 +9584,12 @@ File format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1604"/>
-        <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Explode panel, which spreads the parts on screen away from an anchor, the focused part or the first or last selected one, scaled along X, Y and Z. With Selected Parts Only, each group moves as one part. Each part slides straight out along the connection that holds it, a part without one along the nearest axis from the part beside it, and with Show Lines a line runs through each connection back to the socket it came off. Submodels, and the submodels inside them, flatten into their parts first in the same undo step. Collapse or Undo puts the parts and submodels back, and Save Copy saves the exploded model to a separate file named with -exploded.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1613"/>
         <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Joints panel. A tree lists every model with its jointed submodels and their joints, click a joint to select its submodel, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. A joint inside a submodel opens it in place and a bar over the view points to the picked joint. A submodel button there selects that submodel and keeps joint mode when it has a joint, the main model button ends it; the close button clears the selection and returns to the Select tool. Clicking a model shows its poses in the Poses panel. The panel also shows the picked joint of the selected submodel, with its axis, and Delete Joint deletes the joint picked in the tree.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;關節&lt;/b&gt;&lt;/p&gt;&lt;p&gt;顯示或隱藏關節面板。樹狀結構列出每個模型及其含關節的子模型和關節；點擊關節可選取其子模型，按右鍵可移動、旋轉或刪除，或在子模型上按右鍵以編輯或刪除其所有關節。子模型內的關節會就地開啟，檢視上方的列會指向選取的關節。其中的子模型按鈕會選取該子模型，若有關節則保持關節模式，主模型按鈕則結束關節模式；關閉按鈕會清除選取並回到選取工具。點擊模型會在姿勢面板中顯示其姿勢。面板也會顯示所選子模型的已選取關節及其軸，「刪除關節」會刪除在樹狀結構中選取的關節。&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;關節&lt;/b&gt;&lt;/p&gt;&lt;p&gt;顯示或隱藏關節面板。樹狀結構列出每個模型及其含關節的子模型和關節；點擊關節可選取其子模型，按右鍵可移動、旋轉或刪除，或在子模型上按右鍵以編輯或刪除其所有關節。子模型內的關節會就地開啟，檢視上方的列會指向選取的關節。其中的子模型按鈕會選取該子模型，若有關節則保持關節模式，主模型按鈕則結束關節模式；關閉按鈕會清除選取並回到選取工具。點擊模型會在姿勢面板中顯示其姿勢。面板也會顯示所選子模型的已選取關節及其軸，「刪除關節」會刪除在樹狀結構中選取的關節。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1622"/>
         <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Poses panel, which lists the poses of the model picked in the Joints panel, or of the current model. Save stores the joint angles of that model as a named pose, Recall puts them back in one undo step, Rename and Delete change the picked pose, and the Joints motion in the image dialog plays the poses of the main model as an animation.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;姿勢&lt;/b&gt;&lt;/p&gt;&lt;p&gt;顯示或隱藏姿勢面板，列出在關節面板中選取之模型或目前模型的姿勢。「儲存」將該模型的關節角度存為具名姿勢，「還原」以一次復原步驟將其套回，「重新命名」和「刪除」變更所選姿勢，影像對話框中的關節動作會將主模型的姿勢播放為動畫。&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;姿勢&lt;/b&gt;&lt;/p&gt;&lt;p&gt;顯示或隱藏姿勢面板，列出在關節面板中選取之模型或目前模型的姿勢。「儲存」將該模型的關節角度存為具名姿勢，「還原」以一次復原步驟將其套回，「重新命名」和「刪除」變更所選姿勢，影像對話框中的關節動作會將主模型的姿勢播放為動畫。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1747"/>
@@ -9763,6 +9755,26 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="983"/>
         <source>&lt;p&gt;&lt;b&gt;Joints Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag a submodel that has a joint to turn it. Hinges turn about their axis with the horizontal drag, balls turn about the screen up and right directions. Rotation Snap sets the steps and one drag is one undo step. Use Part &amp;gt; Joint &amp;gt; Set Joint to give a submodel a joint.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1604"/>
+        <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Explode panel, which spreads the parts on screen away from an anchor to show how they connect.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;分解&lt;/b&gt;&lt;/p&gt;&lt;p&gt;顯示或隱藏分解面板，該面板會將螢幕上的零件從錨點向外展開，以展示它們如何連接。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1613"/>
+        <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Joints panel, which lists the joints of every model and moves, rotates or deletes them.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;關節&lt;/b&gt;&lt;/p&gt;&lt;p&gt;顯示或隱藏關節面板，該面板列出每個模型的關節，並可移動、旋轉或刪除它們。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1622"/>
+        <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Poses panel, which saves and recalls named sets of joint angles.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;姿勢&lt;/b&gt;&lt;/p&gt;&lt;p&gt;顯示或隱藏姿勢面板，該面板儲存並還原具名的關節角度組。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1630"/>
+        <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Keyframes panel, a timeline of the animation keys of the objects per step.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;關鍵影格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;顯示或隱藏關鍵影格面板，這是依步驟顯示物件動畫關鍵影格的時間軸。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1702"/>
@@ -13650,11 +13662,6 @@ Choose where to save it and download the latest %3 now?</source>
     <name>swExplodeWidget</name>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_explode.ui"/>
-        <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Spread the parts on screen away from the chosen anchor part, which stays in place. Each part slides straight out along the stud, pin or socket that holds it, and a line joins it back to where it connects. Set how far along X, Y and Z, then choose Explode. While the parts are spread, changing a setting spreads them again. Collapse or any edit puts them back, and the file never changes. Save Copy saves the exploded model to a separate file named with -exploded, and the open file stays as it is.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_explode.ui"/>
         <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="34"/>
         <source>Explode</source>
         <translation type="unfinished">分解</translation>
@@ -13858,6 +13865,11 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="114"/>
         <source>No part is selected</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_explode.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Spread the parts on screen away from an anchor, the focused part or the first or last selected one, which stays in place. Each part slides straight out along the stud, pin or socket that holds it, a part without one along the nearest axis from the part beside it. Set how far along X, Y and Z, then choose Explode. While the parts are spread, changing a setting spreads them again. Collapse, Undo or any edit puts them back, and the file never changes. Save Copy saves the exploded model to a separate file named with -exploded, and the open file stays as it is.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;分解&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將螢幕上的零件從錨點（焦點零件，或第一個或最後一個所選零件）向外展開，錨點保持不動。每個零件沿著固定它的凸點、銷或插槽筆直滑出，沒有這些的零件則沿著相鄰零件起的最近軸滑出。設定 X、Y、Z 方向的距離，然後選擇「分解」。零件展開期間，變更任何設定都會重新展開。「收合」、復原或任何編輯都會將零件放回，檔案始終不會改變。「儲存副本」會將分解後的模型存成名稱帶有 -exploded 的另一個檔案，已開啟的檔案保持不變。&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -17577,125 +17589,129 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">刪除</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="17"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="21"/>
         <source>Joint</source>
         <translation type="unfinished">關節</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="17"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="21"/>
         <source>Type</source>
         <translation type="unfinished">類型</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="17"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="21"/>
         <source>Angle</source>
         <translation type="unfinished">角度</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="19"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="23"/>
         <source>Joints of the model and its submodels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="35"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="38"/>
         <source>Hinge axis, for parts without shadow data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="36"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="39"/>
         <source>&lt;p&gt;&lt;b&gt;Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The axis a hinge turns about, in the coordinates of the submodel. Use it for parts without shadow data, which get a hinge on their origin.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="118"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="121"/>
         <source>Joint %1</source>
         <translation type="unfinished">關節 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="133"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="136"/>
         <source>None: Part &gt; Joint &gt; Set Joint</source>
         <translation type="unfinished">無：零件 &gt; 關節 &gt; 設定關節</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
         <source>Joint %1, %2, angle %3</source>
         <translation type="unfinished">關節 %1、%2，角度 %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
         <source>No joint</source>
         <translation type="unfinished">無關節</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="117"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="120"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
         <source>Hinge</source>
         <translation type="unfinished">鉸鏈</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="20"/>
         <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Every model with joints, under it each jointed submodel by line index, and under that each of its joints with type and angle. Click a joint to select its submodel and make it the joint the panel and the rotate gizmo work on, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. Click a model to show its poses in the Poses panel.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;關節&lt;/b&gt;&lt;/p&gt;&lt;p&gt;列出每個含關節的模型，其下依行索引列出每個含關節的子模型，再其下列出各關節的類型和角度。點擊關節可選取其子模型，並使其成為面板和旋轉控制軸所作用的關節，按右鍵可移動、旋轉或刪除，或在子模型上按右鍵以編輯或刪除其所有關節。點擊模型可在姿勢面板中顯示其姿勢。&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;關節&lt;/b&gt;&lt;/p&gt;&lt;p&gt;列出每個含關節的模型，其下依行索引列出每個含關節的子模型，再其下列出各關節的類型和角度。點擊關節可選取其子模型，並使其成為面板和旋轉控制軸所作用的關節，按右鍵可移動、旋轉或刪除，或在子模型上按右鍵以編輯或刪除其所有關節。點擊模型可在姿勢面板中顯示其姿勢。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="34"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="14"/>
+        <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A tree lists every model with joints, under it each jointed submodel by line index, and under that each of its joints with type and angle. Click a joint to select its submodel and make it the joint the panel and the rotate gizmo work on, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. Click a model to show its poses in the Poses panel.&lt;/p&gt;&lt;p&gt;Below the tree the panel shows the joint picked on the selected submodel with its axis. A joint inside a submodel opens it in place, and a bar over the view points to the picked joint.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;關節&lt;/b&gt;&lt;/p&gt;&lt;p&gt;樹狀清單列出每個有關節的模型，其下依行索引列出每個有關節的子模型，再其下列出它的每個關節及其類型和角度。按一下關節可選取其子模型，並使其成為面板和旋轉控制點所操作的關節；在關節上按右鍵可移動、旋轉或刪除它；在子模型上按右鍵可編輯或刪除其所有關節。按一下模型可在姿勢面板中顯示其姿勢。&lt;/p&gt;&lt;p&gt;樹狀清單下方，面板顯示所選子模型上選取的關節及其軸。子模型內的關節會就地開啟該子模型，檢視上方的列指向選取的關節。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="37"/>
         <source>X Axis</source>
         <translation type="unfinished">X 軸</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="34"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="37"/>
         <source>Y Axis</source>
         <translation type="unfinished">Y 軸</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="34"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="37"/>
         <source>Z Axis</source>
         <translation type="unfinished">Z 軸</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="41"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="236"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="44"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="239"/>
         <source>Delete Joint</source>
         <translation type="unfinished">刪除關節</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="42"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="45"/>
         <source>Delete the joint picked in the list (Delete)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="43"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="46"/>
         <source>&lt;p&gt;&lt;b&gt;Delete Joint&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Delete the joint picked in the joints list and put that joint back at rest. The Delete key does the same in the list. This can be undone.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="117"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="120"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
         <source>Ball</source>
         <translation type="unfinished">球形</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="206"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="209"/>
         <source>Edit Joints</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="208"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="211"/>
         <source>Delete All Joints</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="233"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="236"/>
         <source>Move Joint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="234"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="237"/>
         <source>Rotate Joint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
         <source>None: select a jointed submodel</source>
         <translation type="unfinished">無：請選取含關節的子模型</translation>
     </message>
@@ -17707,144 +17723,143 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swKeyframesView</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="216"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="220"/>
         <source>Keys of each object per step: click a step to go there, double-click to add or remove a key, drag a key to move it</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="217"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;One column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;關鍵影格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;每個步驟一欄、每個物件一列，可展開至其屬性。菱形代表關鍵影格，連線連接同一屬性的關鍵影格。點擊步驟可跳至該步驟，連按兩下儲存格可新增或移除關鍵影格，拖曳菱形可將關鍵影格移到其他步驟，按右鍵可取得更多選項。數值請在屬性面板中編輯。&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;關鍵影格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;每個步驟一欄、每個物件一列，可展開至其屬性。菱形代表關鍵影格，連線連接同一屬性的關鍵影格。點擊步驟可跳至該步驟，連按兩下儲存格可新增或移除關鍵影格，拖曳菱形可將關鍵影格移到其他步驟，按右鍵可取得更多選項。數值請在屬性面板中編輯。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="279"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="282"/>
         <source>Position</source>
         <translation type="unfinished">位置</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="280"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="283"/>
         <source>Rotation</source>
         <translation type="unfinished">旋轉</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="285"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="288"/>
         <source>Target</source>
         <translation type="unfinished">目標點</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="286"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="289"/>
         <source>Up</source>
         <translation type="unfinished">向上</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="292"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="295"/>
         <source>Color</source>
         <translation type="unfinished">顏色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="293"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="296"/>
         <source>Power</source>
         <translation type="unfinished">力量</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="294"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="297"/>
         <source>POV-Ray Power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="295"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="298"/>
         <source>Fade Distance</source>
         <translation type="unfinished">淡入淡出距離</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="296"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="299"/>
         <source>Fade Power</source>
         <translation type="unfinished">淡入淡出功率</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="297"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="300"/>
         <source>Radius</source>
         <translation type="unfinished">半徑</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="298"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="301"/>
         <source>Angle</source>
         <translation type="unfinished">角度</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="299"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="302"/>
         <source>Area Width</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="300"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="303"/>
         <source>Area Height</source>
         <translation type="unfinished">區域光高度</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="301"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="304"/>
         <source>Spot Cone</source>
         <translation type="unfinished">聚光燈錐角</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="302"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="305"/>
         <source>Spot Penumbra</source>
         <translation type="unfinished">聚光燈半影</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="303"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="306"/>
         <source>Spot Tightness</source>
         <translation type="unfinished">聚光燈緊度</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="304"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="307"/>
         <source>Area Grid X</source>
         <translation type="unfinished">區域光格線 X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="305"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="308"/>
         <source>Area Grid Y</source>
         <translation type="unfinished">區域光格線 Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="425"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="428"/>
         <source>Remove Keyframes</source>
         <translation type="unfinished">移除關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="508"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="511"/>
         <source>Move Keyframe</source>
         <translation type="unfinished">移動關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="524"/>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="558"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="527"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="561"/>
         <source>Remove Keyframe</source>
         <translation type="unfinished">移除關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="526"/>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="556"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="529"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="559"/>
         <source>Add Keyframe</source>
         <translation type="unfinished">新增關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="538"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="541"/>
         <source>Add Key</source>
         <translation type="unfinished">新增關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="539"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="542"/>
         <source>Remove Key</source>
         <translation type="unfinished">移除關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="541"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="544"/>
         <source>Remove All Keys</source>
         <translation type="unfinished">移除所有關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="660"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="663"/>
         <source>Step</source>
         <translation type="unfinished">步驟</translation>
     </message>
@@ -17852,102 +17867,111 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swKeyframesWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="19"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="23"/>
         <source>Add keys to the selected objects at the current step</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="20"/>
         <source>&lt;p&gt;&lt;b&gt;Add Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add position and rotation keys to the selected objects at the current step, holding their values at that step.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;新增關鍵影格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在目前步驟為所選物件加入位置和旋轉關鍵影格，保持其在該步驟的值。&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;新增關鍵影格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在目前步驟為所選物件加入位置和旋轉關鍵影格，保持其在該步驟的值。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="26"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="14"/>
+        <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;&lt;p&gt;Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;關鍵影格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;動畫關鍵影格的時間軸，每個步驟一欄，每個物件一列，可展開到其屬性。菱形標記一個關鍵影格，線條連接同一屬性的關鍵影格。按一下步驟可前往該步驟，按兩下儲存格可新增或移除關鍵影格，拖曳菱形可將關鍵影格移到另一步驟，按右鍵可查看更多選項。數值在屬性面板中編輯。&lt;/p&gt;&lt;p&gt;「已選取」列出所選物件，「全部」列出所有有關鍵影格的物件。實心與空心菱形會在目前步驟新增或移除所選物件的關鍵影格，「添加關鍵影格」使編輯建立關鍵影格，播放按鈕會依序播放各步驟以顯示關鍵影格動作。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="24"/>
+        <source>&lt;p&gt;&lt;b&gt;Set Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add position and rotation keys to the selected objects at the current step, holding their values at that step.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;設定關鍵影格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在目前步驟為所選物件新增位置和旋轉關鍵影格，保留其在該步驟的值。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="30"/>
         <source>Remove the keys of the selected objects at the current step</source>
         <translation type="unfinished">移除目前步驟中所選物件的關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="27"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="31"/>
         <source>&lt;p&gt;&lt;b&gt;Remove Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove every key the selected objects have at the current step.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;移除關鍵影格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;移除所選物件在目前步驟的每個關鍵影格。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="40"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="44"/>
         <source>Go to the first step</source>
         <translation type="unfinished">跳至第一步</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="41"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="45"/>
         <source>&lt;p&gt;&lt;b&gt;Rewind&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first step of the model.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;倒轉&lt;/b&gt;&lt;/p&gt;&lt;p&gt;跳至模型的第一步。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="47"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="51"/>
         <source>Play or pause the steps</source>
         <translation type="unfinished">播放或暫停步驟</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="48"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="52"/>
         <source>&lt;p&gt;&lt;b&gt;Play&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Step through the model one step at a time to the last step, showing the keyed motion. Click again to pause.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;播放&lt;/b&gt;&lt;/p&gt;&lt;p&gt;逐步瀏覽模型直到最後一步，並顯示關鍵影格動作。再次點擊即可暫停。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="54"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="58"/>
         <source>Stop and go back to the step playing started from</source>
         <translation type="unfinished">停止並回到開始播放時的步驟</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="55"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="59"/>
         <source>&lt;p&gt;&lt;b&gt;Stop&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Stop playing through the steps and go back to the step playing started from.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;停止&lt;/b&gt;&lt;/p&gt;&lt;p&gt;停止逐步播放，並回到開始播放時的步驟。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="61"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="65"/>
         <source>Go to the last step</source>
         <translation type="unfinished">跳至最後一步</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="62"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="66"/>
         <source>&lt;p&gt;&lt;b&gt;Forward&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the last step of the model.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;快轉&lt;/b&gt;&lt;/p&gt;&lt;p&gt;跳至模型的最後一步。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="82"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="86"/>
         <source>Selected</source>
         <translation type="unfinished">已選取</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="84"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="88"/>
         <source>Show the keys of the selected objects</source>
         <translation type="unfinished">顯示所選物件的關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="85"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="89"/>
         <source>&lt;p&gt;&lt;b&gt;Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;List only the selected objects in the timeline, with or without keys.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;已選取&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在時間軸中只列出所選物件，不論有無關鍵影格。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="89"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="93"/>
         <source>All</source>
         <translation type="unfinished">全部</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="91"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="95"/>
         <source>Show the keys of every object that has keys</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="92"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="96"/>
         <source>&lt;p&gt;&lt;b&gt;All&lt;/b&gt;&lt;/p&gt;&lt;p&gt;List the selected objects and every other object of the model that has keys.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;全部&lt;/b&gt;&lt;/p&gt;&lt;p&gt;列出所選物件，以及模型中其他每個含關鍵影格的物件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="209"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="213"/>
         <source>Add Keyframe</source>
         <translation type="unfinished">新增關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="209"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="213"/>
         <source>Remove Keyframe</source>
         <translation type="unfinished">移除關鍵影格</translation>
     </message>
@@ -18189,7 +18213,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="681"/>
         <source>&lt;p&gt;&lt;b&gt;Time Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Timeline for that. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;時間工具欄&lt;/b&gt;&lt;/p&gt;&lt;p&gt;使用箭頭按鈕切換搭建步驟，查看模型的組裝過程。這不會改變零件所屬的步驟；如需更改，請使用“時間軸”。“添加關鍵格”控制編輯操作是否在目前步驟創建動畫關鍵格，使位置等屬性可隨步驟變化。&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;時間工具欄&lt;/b&gt;&lt;/p&gt;&lt;p&gt;使用箭頭按鈕切換搭建步驟，查看模型的組裝過程。這不會改變零件所屬的步驟；如需更改，請使用“時間軸”。“添加關鍵影格”控制編輯操作是否在目前步驟創建動畫關鍵格，使位置等屬性可隨步驟變化。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="690"/>
@@ -18398,19 +18422,13 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="934"/>
-        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the parts, colors and pose of a minifigure, then add it to the current model. The panel keeps its settings so you can add several variations.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="950"/>
         <source>Explode</source>
         <translation type="unfinished">分解</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="952"/>
         <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Spread every other visible part, or only the selected ones, away from an anchor by an X, Y and Z percentage of its distance. Each part slides out along the connection that holds it. Collapse or Undo puts the parts back, and Save Copy saves the exploded model to a separate file.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;分解&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將其他每個可見零件，或僅所選零件，依其與錨點距離的 X、Y、Z 百分比向外展開。每個零件會沿著固定它的連接滑出。「收合」或復原會將零件放回，「儲存副本」會將分解後的模型存成另一個檔案。&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;分解&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將其他每個可見零件，或僅所選零件，依其與錨點距離的 X、Y、Z 百分比向外展開。每個零件會沿著固定它的連接滑出。「收合」或復原會將零件放回，「儲存副本」會將分解後的模型存成另一個檔案。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="963"/>
@@ -18418,9 +18436,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">關節</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="965"/>
         <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The joint picked on the selected submodel with its axis, and a tree of every model with joints, its jointed submodels and their joints. Pick a joint to move or rotate it, and delete one to put it back at rest.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;關節&lt;/b&gt;&lt;/p&gt;&lt;p&gt;顯示所選子模型上已選取的關節及其軸，以及一個樹狀結構，列出每個含關節的模型、其含關節的子模型和關節。選取關節即可移動或旋轉，刪除關節則使其回到靜止狀態。&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;關節&lt;/b&gt;&lt;/p&gt;&lt;p&gt;顯示所選子模型上已選取的關節及其軸，以及一個樹狀結構，列出每個含關節的模型、其含關節的子模型和關節。選取關節即可移動或旋轉，刪除關節則使其回到靜止狀態。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="972"/>
@@ -18428,9 +18445,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="974"/>
         <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The poses of the model picked in the Joints panel. Save the joint angles as a named pose, then recall, rename or delete it. Poses are saved with the model.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;姿勢&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在關節面板中選取之模型的姿勢。將關節角度儲存為具名姿勢，然後可還原、重新命名或刪除。姿勢會隨模型一起儲存。&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;姿勢&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在關節面板中選取之模型的姿勢。將關節角度儲存為具名姿勢，然後可還原、重新命名或刪除。姿勢會隨模型一起儲存。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="981"/>
@@ -18438,9 +18454,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="983"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A full-width timeline of the animation keys of the selected or all objects, one column per step. Add or remove keys at the current step, and play through the steps to watch the keyed motion.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;關鍵影格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;全寬時間軸，顯示所選或所有物件的動畫關鍵影格，每個步驟一欄。可在目前步驟新增或移除關鍵影格，並逐步播放以觀看關鍵影格動作。&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;關鍵影格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;全寬時間軸，顯示所選或所有物件的動畫關鍵影格，每個步驟一欄。可在目前步驟新增或移除關鍵影格，並逐步播放以觀看關鍵影格動作。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="119"/>
@@ -19934,11 +19949,6 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
-        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Build a minifigure by choosing its parts, colors, and pose. The preview updates as you make changes. Choose Add to Model to insert the minifigure into the current model.&lt;/p&gt;&lt;p&gt;Templates let you reuse a configuration. Saved, deleted, and imported templates are kept as soon as you change them.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>Minifigure Builder</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19971,6 +19981,11 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Export Templates&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Write all templates to a .minifigure file for backup or sharing. Export includes the entire collection, not just the selected template.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Build a minifigure by choosing its parts, colors, and pose. The preview updates as you make changes. Choose Add to Model to insert the minifigure into the current model. The panel keeps its settings so you can add several variations.&lt;/p&gt;&lt;p&gt;Templates let you reuse a configuration. Saved, deleted, and imported templates are kept as soon as you change them.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;人偶建構器&lt;/b&gt;&lt;/p&gt;&lt;p&gt;透過選擇零件、顏色和姿勢來組出人偶。預覽會隨變更而更新。選擇「加入模型」可將人偶插入目前模型。面板會保留其設定，因此可以加入多個變體。&lt;/p&gt;&lt;p&gt;範本可讓您重複使用組態。已儲存、已刪除和已匯入的範本在變更後立即保留。&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -20536,7 +20551,7 @@ Choose where to save it and download the latest %3 now?</source>
         <source>Add Key Frame</source>
         <oldsource>Add KeyFrame</oldsource>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="obsolete">添加關鍵格</translation>
+        <translation type="obsolete">添加關鍵影格</translation>
     </message>
     <message>
         <source>Remove Key Frame</source>
@@ -21954,98 +21969,102 @@ Weight: %1</source>
 <context>
     <name>swPosesWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="354"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="361"/>
         <source>Pose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="356"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="363"/>
         <source>Saved poses of this model, played in this order by the Joints motion</source>
         <translation type="unfinished">此模型的已儲存姿勢，依此順序由關節動作播放</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="357"/>
         <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The poses saved in the model picked in the Joints panel, each holding the angles of that model&apos;s joints only. The Joints motion of the image dialog plays the poses of the main model in this order. Pick one to recall, rename or delete it.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;姿勢&lt;/b&gt;&lt;/p&gt;&lt;p&gt;儲存在關節面板中選取之模型內的姿勢，每個姿勢只記錄該模型關節的角度。影像對話框的關節動作會依此順序播放主模型的姿勢。選取一個姿勢即可還原、重新命名或刪除。&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;姿勢&lt;/b&gt;&lt;/p&gt;&lt;p&gt;儲存在關節面板中選取之模型內的姿勢，每個姿勢只記錄該模型關節的角度。影像對話框的關節動作會依此順序播放主模型的姿勢。選取一個姿勢即可還原、重新命名或刪除。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="371"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="355"/>
+        <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The poses saved in the model picked in the Joints panel, or in the current model, each holding the angles of that model&apos;s joints only. Save stores the joint angles as a named pose, Recall puts them back in one undo step, and Rename and Delete change the picked pose. Poses are saved with the model, and the Joints motion of the image dialog plays the poses of the main model in this order.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;姿勢&lt;/b&gt;&lt;/p&gt;&lt;p&gt;儲存在關節面板中選取之模型（或目前模型）中的姿勢，每個姿勢僅包含該模型關節的角度。「儲存」會將關節角度存為具名姿勢，「還原」會在一個復原步驟中還原它們，「重新命名」和「刪除」會變更選取的姿勢。姿勢會隨模型一起儲存，影像對話方塊的關節動作會依此順序播放主模型的姿勢。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="377"/>
         <source>Save</source>
         <translation type="unfinished">儲存</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="371"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="377"/>
         <source>Save the joint angles of this model as a pose</source>
         <translation type="unfinished">將此模型的關節角度儲存為姿勢</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="371"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="377"/>
         <source>&lt;p&gt;&lt;b&gt;Save&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Store the angles of the joints in this model under a name. Saving a name that already exists replaces that pose.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;儲存&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將此模型的關節角度以名稱儲存。儲存已存在的名稱會取代該姿勢。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="372"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="378"/>
         <source>Recall</source>
         <translation type="unfinished">還原</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="372"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="378"/>
         <source>Put the joints of this model back in the picked pose</source>
         <translation type="unfinished">將此模型的關節放回所選姿勢</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="372"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="378"/>
         <source>&lt;p&gt;&lt;b&gt;Recall&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the joints of this model back to the angles of the picked pose, in one undo step.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;還原&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將此模型的關節轉回所選姿勢的角度，只需一次復原步驟。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="373"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="379"/>
         <source>Rename</source>
         <translation type="unfinished">重新命名</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="373"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="379"/>
         <source>Rename the picked pose</source>
         <translation type="unfinished">重新命名所選姿勢</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="373"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="379"/>
         <source>&lt;p&gt;&lt;b&gt;Rename&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Give the picked pose a new name.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;重新命名&lt;/b&gt;&lt;/p&gt;&lt;p&gt;為所選姿勢指定新名稱。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="374"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="380"/>
         <source>Delete</source>
         <translation type="unfinished">刪除</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="374"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="380"/>
         <source>Delete the picked pose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="374"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="380"/>
         <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the picked pose from the model. The joints keep their angles.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;刪除&lt;/b&gt;&lt;/p&gt;&lt;p&gt;從模型中移除所選姿勢。關節保持其角度。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="416"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="453"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="422"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="459"/>
         <source>Name</source>
         <translation type="unfinished">名稱</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="416"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="422"/>
         <source>Save Pose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="416"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="422"/>
         <source>Pose %1</source>
         <translation type="unfinished">姿勢 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="453"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="459"/>
         <source>Rename Pose</source>
         <translation type="unfinished">重新命名姿勢</translation>
     </message>
@@ -27920,6 +27939,16 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="unfinished">高度</translation>
     </message>
     <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="536"/>
+        <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set how much detail Blender gives the parts. More detail looks better and takes longer to import and render.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;零件&lt;/b&gt;&lt;/p&gt;&lt;p&gt;設定 Blender 賦予零件的細節程度。細節越多外觀越好，但匯入和算繪所需時間越長。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="573"/>
+        <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the image or open the model in Blender, then follow the progress here. Log shows the Blender output below the preview.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;渲染&lt;/b&gt;&lt;/p&gt;&lt;p&gt;渲染影像或在 Blender 中開啟模型，然後在此追蹤進度。「記錄」會在預覽下方顯示 Blender 的輸出。&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="579"/>
         <source>Quality</source>
         <translation type="unfinished"></translation>
@@ -28014,11 +28043,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="594"/>
         <source>Scene</source>
         <translation type="unfinished">場景</translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="594"/>
-        <source>&lt;p&gt;&lt;b&gt;Scene&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the lights, floor and surroundings the model is rendered in.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="597"/>
@@ -28220,11 +28244,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="536"/>
-        <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set how much detail the parts get. More detail looks better and takes longer to import and render.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="538"/>
         <source>Primitives</source>
         <translation type="unfinished"></translation>
@@ -28375,11 +28394,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="573"/>
-        <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the image or open the model in Blender and follow the progress. While rendering, Render becomes Cancel so you can stop it. Log shows the Blender output below the preview.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="600"/>
         <source>Studio</source>
         <translation type="unfinished"></translation>
@@ -28490,11 +28504,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="627"/>
-        <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Start the render and follow its progress. While rendering, Render becomes Cancel so you can stop it. Log shows the renderer output below the preview.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="710"/>
         <source>Select Environment Image</source>
         <translation type="unfinished"></translation>
@@ -28540,6 +28549,16 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="735"/>
         <source>&lt;p&gt;&lt;b&gt;Open in Blender&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Import the current model step into Blender with the Scene, Parts and Editing settings and open it there for editing. No image is saved.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="594"/>
+        <source>&lt;p&gt;&lt;b&gt;Scene&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the lights, floor and surroundings POV-Ray renders the model in.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;場景&lt;/b&gt;&lt;/p&gt;&lt;p&gt;設定 POV-Ray 渲染模型時使用的燈光、地面和周圍環境。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="627"/>
+        <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Start the POV-Ray render, then follow its progress here. Log shows the POV-Ray output below the preview.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;渲染&lt;/b&gt;&lt;/p&gt;&lt;p&gt;開始 POV-Ray 渲染，然後在此追蹤進度。「記錄」會在預覽下方顯示 POV-Ray 的輸出。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="765"/>
@@ -28806,7 +28825,7 @@ Install the povray-includes package or the include files of your POV-Ray version
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="208"/>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="784"/>
         <source>Log</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">記錄</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="710"/>

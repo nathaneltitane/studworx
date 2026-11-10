@@ -2376,7 +2376,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3521"/>
         <source>Render</source>
-        <translation type="unfinished">Rendre</translation>
+        <translation type="unfinished">Rendu</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3522"/>
@@ -9375,9 +9375,8 @@ The file format is not recognized.</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Afficher ou masquer&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Affiche ou masque cette barre d’outils ou ce panneau. Un clic droit sur le titre d’une barre d’outils ou d’un panneau donne la même liste.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1630"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Keyframes panel, a timeline with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a key to another step and right-click for more. Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons rewind, play or pause, stop and go to the last step. Values are edited in the Properties panel.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Images clés&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Affiche ou masque le panneau Images clés, une chronologie avec une colonne par étape et une ligne par objet, dépliable jusqu’à ses propriétés. Un losange marque une clé et une ligne relie les clés d’une même propriété. Cliquez sur une étape pour y aller, double-cliquez sur une cellule pour ajouter ou supprimer une clé, faites glisser une clé vers une autre étape et faites un clic droit pour plus d’options. Sélection liste les objets sélectionnés, Tout tous les objets ayant des clés. Les losanges plein et creux ajoutent ou suppriment les clés des objets sélectionnés à l’étape courante, Ajouter des clés fait créer des clés par les modifications, et les boutons de lecture rembobinent, lisent ou mettent en pause, arrêtent et vont à la dernière étape. Les valeurs se modifient dans le panneau Propriétés.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Images clés&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Affiche ou masque le panneau Images clés, une chronologie avec une colonne par étape et une ligne par objet, dépliable jusqu’à ses propriétés. Un losange marque une clé et une ligne relie les clés d’une même propriété. Cliquez sur une étape pour y aller, double-cliquez sur une cellule pour ajouter ou supprimer une clé, faites glisser une clé vers une autre étape et faites un clic droit pour plus d’options. Sélection liste les objets sélectionnés, Tout tous les objets ayant des clés. Les losanges plein et creux ajoutent ou suppriment les clés des objets sélectionnés à l’étape courante, Ajouter des clés fait créer des clés par les modifications, et les boutons de lecture rembobinent, lisent ou mettent en pause, arrêtent et vont à la dernière étape. Les valeurs se modifient dans le panneau Propriétés.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1639"/>
@@ -10032,19 +10031,12 @@ The file format is not recognized.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1604"/>
-        <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Explode panel, which spreads the parts on screen away from an anchor, the focused part or the first or last selected one, scaled along X, Y and Z. With Selected Parts Only, each group moves as one part. Each part slides straight out along the connection that holds it, a part without one along the nearest axis from the part beside it, and with Show Lines a line runs through each connection back to the socket it came off. Submodels, and the submodels inside them, flatten into their parts first in the same undo step. Collapse or Undo puts the parts and submodels back, and Save Copy saves the exploded model to a separate file named with -exploded.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1613"/>
         <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Joints panel. A tree lists every model with its jointed submodels and their joints, click a joint to select its submodel, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. A joint inside a submodel opens it in place and a bar over the view points to the picked joint. A submodel button there selects that submodel and keeps joint mode when it has a joint, the main model button ends it; the close button clears the selection and returns to the Select tool. Clicking a model shows its poses in the Poses panel. The panel also shows the picked joint of the selected submodel, with its axis, and Delete Joint deletes the joint picked in the tree.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Articulations&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Affiche ou masque le panneau Articulations. Une arborescence liste chaque modèle avec ses sous-modèles articulés et leurs articulations ; cliquez sur une articulation pour sélectionner son sous-modèle, faites un clic droit dessus pour la déplacer, la faire pivoter ou la supprimer, ou faites un clic droit sur un sous-modèle pour modifier ou supprimer toutes ses articulations. Une articulation à l’intérieur d’un sous-modèle l’ouvre sur place et une barre sur la vue désigne l’articulation choisie. Un bouton de sous-modèle y sélectionne ce sous-modèle et garde le mode articulation lorsqu’il en a une, le bouton du modèle principal y met fin ; le bouton de fermeture efface la sélection et revient à l’outil Sélection. Cliquer sur un modèle affiche ses poses dans le panneau Poses. Le panneau affiche aussi l’articulation choisie du sous-modèle sélectionné, avec son axe, et Supprimer l’articulation supprime l’articulation choisie dans l’arborescence.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Articulations&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Affiche ou masque le panneau Articulations. Une arborescence liste chaque modèle avec ses sous-modèles articulés et leurs articulations ; cliquez sur une articulation pour sélectionner son sous-modèle, faites un clic droit dessus pour la déplacer, la faire pivoter ou la supprimer, ou faites un clic droit sur un sous-modèle pour modifier ou supprimer toutes ses articulations. Une articulation à l’intérieur d’un sous-modèle l’ouvre sur place et une barre sur la vue désigne l’articulation choisie. Un bouton de sous-modèle y sélectionne ce sous-modèle et garde le mode articulation lorsqu’il en a une, le bouton du modèle principal y met fin ; le bouton de fermeture efface la sélection et revient à l’outil Sélection. Cliquer sur un modèle affiche ses poses dans le panneau Poses. Le panneau affiche aussi l’articulation choisie du sous-modèle sélectionné, avec son axe, et Supprimer l’articulation supprime l’articulation choisie dans l’arborescence.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1622"/>
         <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Poses panel, which lists the poses of the model picked in the Joints panel, or of the current model. Save stores the joint angles of that model as a named pose, Recall puts them back in one undo step, Rename and Delete change the picked pose, and the Joints motion in the image dialog plays the poses of the main model as an animation.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Affiche ou masque le panneau Poses, qui liste les poses du modèle choisi dans le panneau Articulations, ou du modèle courant. Enregistrer stocke les angles d’articulation de ce modèle sous forme de pose nommée, Rappeler les remet en une seule étape d’annulation, Renommer et Supprimer modifient la pose choisie, et le mouvement Articulations de la boîte de dialogue Image joue les poses du modèle principal comme une animation.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Affiche ou masque le panneau Poses, qui liste les poses du modèle choisi dans le panneau Articulations, ou du modèle courant. Enregistrer stocke les angles d’articulation de ce modèle sous forme de pose nommée, Rappeler les remet en une seule étape d’annulation, Renommer et Supprimer modifient la pose choisie, et le mouvement Articulations de la boîte de dialogue Image joue les poses du modèle principal comme une animation.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1747"/>
@@ -10210,6 +10202,26 @@ The file format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="983"/>
         <source>&lt;p&gt;&lt;b&gt;Joints Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag a submodel that has a joint to turn it. Hinges turn about their axis with the horizontal drag, balls turn about the screen up and right directions. Rotation Snap sets the steps and one drag is one undo step. Use Part &amp;gt; Joint &amp;gt; Set Joint to give a submodel a joint.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1604"/>
+        <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Explode panel, which spreads the parts on screen away from an anchor to show how they connect.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Éclater&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Affiche ou masque le panneau Éclater, qui écarte les pièces à l’écran d’une ancre pour montrer comment elles s’assemblent.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1613"/>
+        <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Joints panel, which lists the joints of every model and moves, rotates or deletes them.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Articulations&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Affiche ou masque le panneau Articulations, qui liste les articulations de chaque modèle et permet de les déplacer, les faire pivoter ou les supprimer.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1622"/>
+        <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Poses panel, which saves and recalls named sets of joint angles.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Affiche ou masque le panneau Poses, qui enregistre et rappelle des ensembles nommés d’angles d’articulation.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1630"/>
+        <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Keyframes panel, a timeline of the animation keys of the objects per step.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Images clés&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Affiche ou masque le panneau Images clés, une chronologie des clés d’animation des objets par étape.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1702"/>
@@ -13824,11 +13836,6 @@ Choose where to save it and download the latest %3 now?</source>
     <name>swExplodeWidget</name>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_explode.ui"/>
-        <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Spread the parts on screen away from the chosen anchor part, which stays in place. Each part slides straight out along the stud, pin or socket that holds it, and a line joins it back to where it connects. Set how far along X, Y and Z, then choose Explode. While the parts are spread, changing a setting spreads them again. Collapse or any edit puts them back, and the file never changes. Save Copy saves the exploded model to a separate file named with -exploded, and the open file stays as it is.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_explode.ui"/>
         <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="34"/>
         <source>Explode</source>
         <translation type="unfinished">Éclater</translation>
@@ -14032,6 +14039,11 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/widgets/sw_widget_explode.cpp" line="114"/>
         <source>No part is selected</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_explode.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Spread the parts on screen away from an anchor, the focused part or the first or last selected one, which stays in place. Each part slides straight out along the stud, pin or socket that holds it, a part without one along the nearest axis from the part beside it. Set how far along X, Y and Z, then choose Explode. While the parts are spread, changing a setting spreads them again. Collapse, Undo or any edit puts them back, and the file never changes. Save Copy saves the exploded model to a separate file named with -exploded, and the open file stays as it is.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Éclater&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Écarte les pièces à l’écran d’une ancre, la pièce active ou la première ou dernière sélectionnée, qui reste en place. Chaque pièce glisse tout droit le long du tenon, de la broche ou de l’emboîtement qui la retient, une pièce sans connexion le long de l’axe le plus proche depuis la pièce voisine. Réglez la distance selon X, Y et Z, puis choisissez Éclater. Tant que les pièces sont écartées, modifier un réglage les écarte de nouveau. Replier, Annuler ou toute modification les remet en place, et le fichier ne change jamais. Enregistrer une copie enregistre le modèle éclaté dans un fichier séparé nommé avec -exploded, et le fichier ouvert reste tel quel.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -17785,125 +17797,129 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">Effacer</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="17"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="21"/>
         <source>Joint</source>
         <translation type="unfinished">Articulation</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="17"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="21"/>
         <source>Type</source>
         <translation type="unfinished">Taper</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="17"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="21"/>
         <source>Angle</source>
         <translation type="unfinished">Angle</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="19"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="23"/>
         <source>Joints of the model and its submodels</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="35"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="38"/>
         <source>Hinge axis, for parts without shadow data</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="36"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="39"/>
         <source>&lt;p&gt;&lt;b&gt;Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The axis a hinge turns about, in the coordinates of the submodel. Use it for parts without shadow data, which get a hinge on their origin.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="118"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="121"/>
         <source>Joint %1</source>
         <translation type="unfinished">Articulation %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="133"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="136"/>
         <source>None: Part &gt; Joint &gt; Set Joint</source>
         <translation type="unfinished">Aucune : Pièce &gt; Articulation &gt; Définir l’articulation</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
         <source>Joint %1, %2, angle %3</source>
         <translation type="unfinished">Articulation %1, %2, angle %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
         <source>No joint</source>
         <translation type="unfinished">Aucune articulation</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="117"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="120"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
         <source>Hinge</source>
         <translation type="unfinished">Charnière</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="20"/>
         <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Every model with joints, under it each jointed submodel by line index, and under that each of its joints with type and angle. Click a joint to select its submodel and make it the joint the panel and the rotate gizmo work on, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. Click a model to show its poses in the Poses panel.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Articulations&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Chaque modèle avec articulations, sous lui chaque sous-modèle articulé par numéro de ligne, et sous celui-ci chacune de ses articulations avec type et angle. Cliquez sur une articulation pour sélectionner son sous-modèle et en faire l’articulation sur laquelle travaillent le panneau et le manipulateur de rotation, faites un clic droit dessus pour la déplacer, la faire pivoter ou la supprimer, ou faites un clic droit sur un sous-modèle pour modifier ou supprimer toutes ses articulations. Cliquez sur un modèle pour afficher ses poses dans le panneau Poses.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Articulations&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Chaque modèle avec articulations, sous lui chaque sous-modèle articulé par numéro de ligne, et sous celui-ci chacune de ses articulations avec type et angle. Cliquez sur une articulation pour sélectionner son sous-modèle et en faire l’articulation sur laquelle travaillent le panneau et le manipulateur de rotation, faites un clic droit dessus pour la déplacer, la faire pivoter ou la supprimer, ou faites un clic droit sur un sous-modèle pour modifier ou supprimer toutes ses articulations. Cliquez sur un modèle pour afficher ses poses dans le panneau Poses.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="34"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="14"/>
+        <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A tree lists every model with joints, under it each jointed submodel by line index, and under that each of its joints with type and angle. Click a joint to select its submodel and make it the joint the panel and the rotate gizmo work on, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. Click a model to show its poses in the Poses panel.&lt;/p&gt;&lt;p&gt;Below the tree the panel shows the joint picked on the selected submodel with its axis. A joint inside a submodel opens it in place, and a bar over the view points to the picked joint.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Articulations&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Une arborescence liste chaque modèle avec articulations, sous lui chaque sous-modèle articulé par numéro de ligne, et sous celui-ci chacune de ses articulations avec type et angle. Cliquez sur une articulation pour sélectionner son sous-modèle et en faire l’articulation sur laquelle travaillent le panneau et le manipulateur de rotation, faites un clic droit dessus pour la déplacer, la faire pivoter ou la supprimer, ou faites un clic droit sur un sous-modèle pour modifier ou supprimer toutes ses articulations. Cliquez sur un modèle pour afficher ses poses dans le panneau Poses.&lt;/p&gt;&lt;p&gt;Sous l’arborescence, le panneau affiche l’articulation choisie du sous-modèle sélectionné avec son axe. Une articulation à l’intérieur d’un sous-modèle l’ouvre sur place, et une barre sur la vue désigne l’articulation choisie.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="37"/>
         <source>X Axis</source>
         <translation type="unfinished">Axe X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="34"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="37"/>
         <source>Y Axis</source>
         <translation type="unfinished">Axe Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="34"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="37"/>
         <source>Z Axis</source>
         <translation type="unfinished">Axe Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="41"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="236"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="44"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="239"/>
         <source>Delete Joint</source>
         <translation type="unfinished">Supprimer l’articulation</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="42"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="45"/>
         <source>Delete the joint picked in the list (Delete)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="43"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="46"/>
         <source>&lt;p&gt;&lt;b&gt;Delete Joint&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Delete the joint picked in the joints list and put that joint back at rest. The Delete key does the same in the list. This can be undone.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="117"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="120"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
         <source>Ball</source>
         <translation type="unfinished">Rotule</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="206"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="209"/>
         <source>Edit Joints</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="208"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="211"/>
         <source>Delete All Joints</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="233"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="236"/>
         <source>Move Joint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="234"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="237"/>
         <source>Rotate Joint</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="261"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
         <source>None: select a jointed submodel</source>
         <translation type="unfinished">Aucune : sélectionnez un sous-modèle articulé</translation>
     </message>
@@ -17915,144 +17931,143 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swKeyframesView</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="216"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="220"/>
         <source>Keys of each object per step: click a step to go there, double-click to add or remove a key, drag a key to move it</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="217"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;One column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Images clés&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Une colonne par étape et une ligne par objet, dépliable jusqu’à ses propriétés. Un losange marque une clé et une ligne relie les clés d’une même propriété. Cliquez sur une étape pour y aller, double-cliquez sur une cellule pour ajouter ou supprimer une clé, faites glisser un losange pour déplacer la clé vers une autre étape et faites un clic droit pour plus d’options. Les valeurs se modifient dans le panneau Propriétés.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Images clés&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Une colonne par étape et une ligne par objet, dépliable jusqu’à ses propriétés. Un losange marque une clé et une ligne relie les clés d’une même propriété. Cliquez sur une étape pour y aller, double-cliquez sur une cellule pour ajouter ou supprimer une clé, faites glisser un losange pour déplacer la clé vers une autre étape et faites un clic droit pour plus d’options. Les valeurs se modifient dans le panneau Propriétés.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="279"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="282"/>
         <source>Position</source>
         <translation type="unfinished">Position</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="280"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="283"/>
         <source>Rotation</source>
         <translation type="unfinished">Rotation</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="285"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="288"/>
         <source>Target</source>
         <translation type="unfinished">Cible</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="286"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="289"/>
         <source>Up</source>
         <translation type="unfinished">Haut</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="292"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="295"/>
         <source>Color</source>
         <translation type="unfinished">Couleur</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="293"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="296"/>
         <source>Power</source>
         <translation type="unfinished">Pouvoir</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="294"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="297"/>
         <source>POV-Ray Power</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="295"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="298"/>
         <source>Fade Distance</source>
         <translation type="unfinished">Distance de fondu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="296"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="299"/>
         <source>Fade Power</source>
         <translation type="unfinished">Puissance de fondu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="297"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="300"/>
         <source>Radius</source>
         <translation type="unfinished">Rayon</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="298"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="301"/>
         <source>Angle</source>
         <translation type="unfinished">Angle</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="299"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="302"/>
         <source>Area Width</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="300"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="303"/>
         <source>Area Height</source>
         <translation type="unfinished">Hauteur de la zone</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="301"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="304"/>
         <source>Spot Cone</source>
         <translation type="unfinished">Cône du spot</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="302"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="305"/>
         <source>Spot Penumbra</source>
         <translation type="unfinished">Pénombre du spot</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="303"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="306"/>
         <source>Spot Tightness</source>
         <translation type="unfinished">Concentration du spot</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="304"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="307"/>
         <source>Area Grid X</source>
         <translation type="unfinished">Grille de zone X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="305"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="308"/>
         <source>Area Grid Y</source>
         <translation type="unfinished">Grille de zone Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="425"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="428"/>
         <source>Remove Keyframes</source>
         <translation type="unfinished">Supprimer les images clés</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="508"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="511"/>
         <source>Move Keyframe</source>
         <translation type="unfinished">Déplacer l’image clé</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="524"/>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="558"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="527"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="561"/>
         <source>Remove Keyframe</source>
         <translation type="unfinished">Supprimer l’image clé</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="526"/>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="556"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="529"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="559"/>
         <source>Add Keyframe</source>
         <translation type="unfinished">Ajouter une image clé</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="538"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="541"/>
         <source>Add Key</source>
         <translation type="unfinished">Ajouter une clé</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="539"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="542"/>
         <source>Remove Key</source>
         <translation type="unfinished">Supprimer la clé</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="541"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="544"/>
         <source>Remove All Keys</source>
         <translation type="unfinished">Supprimer toutes les clés</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="660"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="663"/>
         <source>Step</source>
         <translation type="unfinished">Étape</translation>
     </message>
@@ -18060,102 +18075,111 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swKeyframesWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="19"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="23"/>
         <source>Add keys to the selected objects at the current step</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="20"/>
         <source>&lt;p&gt;&lt;b&gt;Add Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add position and rotation keys to the selected objects at the current step, holding their values at that step.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Ajouter des clés&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ajoute des clés de position et de rotation aux objets sélectionnés à l’étape courante, en conservant leurs valeurs à cette étape.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Ajouter des clés&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ajoute des clés de position et de rotation aux objets sélectionnés à l’étape courante, en conservant leurs valeurs à cette étape.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="26"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="14"/>
+        <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;&lt;p&gt;Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Images clés&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Une chronologie des clés d’animation avec une colonne par étape et une ligne par objet, dépliable jusqu’à ses propriétés. Un losange marque une clé et une ligne relie les clés d’une même propriété. Cliquez sur une étape pour y aller, double-cliquez sur une cellule pour ajouter ou supprimer une clé, faites glisser un losange pour déplacer la clé vers une autre étape et faites un clic droit pour plus d’options. Les valeurs se modifient dans le panneau Propriétés.&lt;/p&gt;&lt;p&gt;Sélection liste les objets sélectionnés, Tous chaque objet ayant des clés. Les losanges plein et creux ajoutent ou suppriment les clés des objets sélectionnés à l’étape courante, Ajouter des clés fait créer des clés par les modifications, et les boutons de lecture parcourent les étapes pour montrer le mouvement par clés.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="24"/>
+        <source>&lt;p&gt;&lt;b&gt;Set Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add position and rotation keys to the selected objects at the current step, holding their values at that step.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Définir les clés&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ajoute des clés de position et de rotation aux objets sélectionnés à l’étape courante, en conservant leurs valeurs à cette étape.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="30"/>
         <source>Remove the keys of the selected objects at the current step</source>
         <translation type="unfinished">Supprimer les clés des objets sélectionnés à l’étape courante</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="27"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="31"/>
         <source>&lt;p&gt;&lt;b&gt;Remove Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove every key the selected objects have at the current step.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Supprimer les clés&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Supprime toutes les clés des objets sélectionnés à l’étape courante.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="40"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="44"/>
         <source>Go to the first step</source>
         <translation type="unfinished">Aller à la première étape</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="41"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="45"/>
         <source>&lt;p&gt;&lt;b&gt;Rewind&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first step of the model.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Rembobiner&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Va à la première étape du modèle.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="47"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="51"/>
         <source>Play or pause the steps</source>
         <translation type="unfinished">Lire ou mettre en pause les étapes</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="48"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="52"/>
         <source>&lt;p&gt;&lt;b&gt;Play&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Step through the model one step at a time to the last step, showing the keyed motion. Click again to pause.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Lecture&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Parcourt le modèle étape par étape jusqu’à la dernière, en montrant le mouvement par clés. Cliquez à nouveau pour mettre en pause.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="54"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="58"/>
         <source>Stop and go back to the step playing started from</source>
         <translation type="unfinished">Arrêter et revenir à l’étape d’où la lecture est partie</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="55"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="59"/>
         <source>&lt;p&gt;&lt;b&gt;Stop&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Stop playing through the steps and go back to the step playing started from.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Arrêt&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Arrête la lecture des étapes et revient à l’étape d’où elle est partie.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="61"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="65"/>
         <source>Go to the last step</source>
         <translation type="unfinished">Aller à la dernière étape</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="62"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="66"/>
         <source>&lt;p&gt;&lt;b&gt;Forward&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the last step of the model.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Avance rapide&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Va à la dernière étape du modèle.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="82"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="86"/>
         <source>Selected</source>
         <translation type="unfinished">Sélection</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="84"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="88"/>
         <source>Show the keys of the selected objects</source>
         <translation type="unfinished">Afficher les clés des objets sélectionnés</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="85"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="89"/>
         <source>&lt;p&gt;&lt;b&gt;Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;List only the selected objects in the timeline, with or without keys.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Sélection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Liste uniquement les objets sélectionnés dans la chronologie, avec ou sans clés.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="89"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="93"/>
         <source>All</source>
         <translation type="unfinished">Tous</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="91"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="95"/>
         <source>Show the keys of every object that has keys</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="92"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="96"/>
         <source>&lt;p&gt;&lt;b&gt;All&lt;/b&gt;&lt;/p&gt;&lt;p&gt;List the selected objects and every other object of the model that has keys.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Tout&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Liste les objets sélectionnés et tous les autres objets du modèle qui ont des clés.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="209"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="213"/>
         <source>Add Keyframe</source>
         <translation type="unfinished">Ajouter une image clé</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="209"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="213"/>
         <source>Remove Keyframe</source>
         <translation type="unfinished">Supprimer l’image clé</translation>
     </message>
@@ -18449,14 +18473,12 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Appliquer la transformation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choisissez le mode de translation ou de rotation, saisissez les valeurs X/Y/Z et appuyez sur Entrée pour les appliquer. Les valeurs de traduction utilisent des unités LDraw&#xa0;; les valeurs de rotation utilisent des degrés.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="952"/>
         <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Spread every other visible part, or only the selected ones, away from an anchor by an X, Y and Z percentage of its distance. Each part slides out along the connection that holds it. Collapse or Undo puts the parts back, and Save Copy saves the exploded model to a separate file.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Éclater&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Écarte toutes les autres pièces visibles, ou seulement les pièces sélectionnées, d’une ancre selon un pourcentage X, Y et Z de leur distance. Chaque pièce glisse hors du modèle le long de la connexion qui la retient. Replier ou Annuler remet les pièces en place, et Enregistrer une copie enregistre le modèle éclaté dans un fichier séparé.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Éclater&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Écarte toutes les autres pièces visibles, ou seulement les pièces sélectionnées, d’une ancre selon un pourcentage X, Y et Z de leur distance. Chaque pièce glisse hors du modèle le long de la connexion qui la retient. Replier ou Annuler remet les pièces en place, et Enregistrer une copie enregistre le modèle éclaté dans un fichier séparé.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="965"/>
         <source>&lt;p&gt;&lt;b&gt;Joints&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The joint picked on the selected submodel with its axis, and a tree of every model with joints, its jointed submodels and their joints. Pick a joint to move or rotate it, and delete one to put it back at rest.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Articulations&lt;/b&gt;&lt;/p&gt;&lt;p&gt;L’articulation choisie sur le sous-modèle sélectionné avec son axe, et une arborescence de chaque modèle avec articulations, ses sous-modèles articulés et leurs articulations. Choisissez une articulation pour la déplacer ou la faire pivoter, et supprimez-en une pour la remettre au repos.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Articulations&lt;/b&gt;&lt;/p&gt;&lt;p&gt;L’articulation choisie sur le sous-modèle sélectionné avec son axe, et une arborescence de chaque modèle avec articulations, ses sous-modèles articulés et leurs articulations. Choisissez une articulation pour la déplacer ou la faire pivoter, et supprimez-en une pour la remettre au repos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="972"/>
@@ -18464,9 +18486,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="974"/>
         <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The poses of the model picked in the Joints panel. Save the joint angles as a named pose, then recall, rename or delete it. Poses are saved with the model.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Les poses du modèle choisi dans le panneau Articulations. Enregistrez les angles d’articulation sous forme de pose nommée, puis rappelez-la, renommez-la ou supprimez-la. Les poses sont enregistrées avec le modèle.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Les poses du modèle choisi dans le panneau Articulations. Enregistrez les angles d’articulation sous forme de pose nommée, puis rappelez-la, renommez-la ou supprimez-la. Les poses sont enregistrées avec le modèle.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="981"/>
@@ -18474,9 +18495,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Images clés</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="983"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A full-width timeline of the animation keys of the selected or all objects, one column per step. Add or remove keys at the current step, and play through the steps to watch the keyed motion.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Images clés&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Une chronologie pleine largeur des clés d’animation des objets sélectionnés ou de tous les objets, une colonne par étape. Ajoutez ou supprimez des clés à l’étape courante, et parcourez les étapes pour voir le mouvement par clés.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Images clés&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Une chronologie pleine largeur des clés d’animation des objets sélectionnés ou de tous les objets, une colonne par étape. Ajoutez ou supprimez des clés à l’étape courante, et parcourez les étapes pour voir le mouvement par clés.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="838"/>
@@ -18607,11 +18627,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="932"/>
         <source>Minifigure Builder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="934"/>
-        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the parts, colors and pose of a minifigure, then add it to the current model. The panel keeps its settings so you can add several variations.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -20157,11 +20172,6 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
-        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Build a minifigure by choosing its parts, colors, and pose. The preview updates as you make changes. Choose Add to Model to insert the minifigure into the current model.&lt;/p&gt;&lt;p&gt;Templates let you reuse a configuration. Saved, deleted, and imported templates are kept as soon as you change them.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>Minifigure Builder</source>
         <translation type="unfinished"></translation>
     </message>
@@ -20194,6 +20204,11 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Export Templates&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Write all templates to a .minifigure file for backup or sharing. Export includes the entire collection, not just the selected template.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
+        <source>&lt;p&gt;&lt;b&gt;Minifigure Builder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Build a minifigure by choosing its parts, colors, and pose. The preview updates as you make changes. Choose Add to Model to insert the minifigure into the current model. The panel keeps its settings so you can add several variations.&lt;/p&gt;&lt;p&gt;Templates let you reuse a configuration. Saved, deleted, and imported templates are kept as soon as you change them.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Constructeur de minifigurines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Assemblez une minifigurine en choisissant ses pièces, ses couleurs et sa pose. L’aperçu se met à jour au fil de vos modifications. Choisissez Ajouter au modèle pour insérer la minifigurine dans le modèle courant. Le panneau conserve ses réglages afin que vous puissiez ajouter plusieurs variantes.&lt;/p&gt;&lt;p&gt;Les modèles permettent de réutiliser une configuration. Les modèles enregistrés, supprimés et importés sont conservés dès que vous les modifiez.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -22171,98 +22186,102 @@ Weight: %1</source>
 <context>
     <name>swPosesWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="354"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="361"/>
         <source>Pose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="356"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="363"/>
         <source>Saved poses of this model, played in this order by the Joints motion</source>
         <translation type="unfinished">Poses enregistrées de ce modèle, jouées dans cet ordre par le mouvement Articulations</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="357"/>
         <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The poses saved in the model picked in the Joints panel, each holding the angles of that model&apos;s joints only. The Joints motion of the image dialog plays the poses of the main model in this order. Pick one to recall, rename or delete it.&lt;/p&gt;</source>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Les poses enregistrées dans le modèle choisi dans le panneau Articulations, chacune contenant uniquement les angles des articulations de ce modèle. Le mouvement Articulations de la boîte de dialogue Image joue les poses du modèle principal dans cet ordre. Choisissez-en une pour la rappeler, la renommer ou la supprimer.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Les poses enregistrées dans le modèle choisi dans le panneau Articulations, chacune contenant uniquement les angles des articulations de ce modèle. Le mouvement Articulations de la boîte de dialogue Image joue les poses du modèle principal dans cet ordre. Choisissez-en une pour la rappeler, la renommer ou la supprimer.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="371"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="355"/>
+        <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The poses saved in the model picked in the Joints panel, or in the current model, each holding the angles of that model&apos;s joints only. Save stores the joint angles as a named pose, Recall puts them back in one undo step, and Rename and Delete change the picked pose. Poses are saved with the model, and the Joints motion of the image dialog plays the poses of the main model in this order.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Les poses enregistrées dans le modèle choisi dans le panneau Articulations, ou dans le modèle courant, chacune contenant uniquement les angles des articulations de ce modèle. Enregistrer stocke les angles d’articulation sous forme de pose nommée, Rappeler les remet en une seule étape d’annulation, et Renommer et Supprimer modifient la pose choisie. Les poses sont enregistrées avec le modèle, et le mouvement Articulations de la boîte de dialogue Image joue les poses du modèle principal dans cet ordre.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="377"/>
         <source>Save</source>
         <translation type="unfinished">Enregistrer</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="371"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="377"/>
         <source>Save the joint angles of this model as a pose</source>
         <translation type="unfinished">Enregistrer les angles d’articulation de ce modèle comme pose</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="371"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="377"/>
         <source>&lt;p&gt;&lt;b&gt;Save&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Store the angles of the joints in this model under a name. Saving a name that already exists replaces that pose.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Enregistrer&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Stocke sous un nom les angles des articulations de ce modèle. Enregistrer un nom déjà existant remplace cette pose.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="372"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="378"/>
         <source>Recall</source>
         <translation type="unfinished">Rappeler</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="372"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="378"/>
         <source>Put the joints of this model back in the picked pose</source>
         <translation type="unfinished">Remettre les articulations de ce modèle dans la pose choisie</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="372"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="378"/>
         <source>&lt;p&gt;&lt;b&gt;Recall&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the joints of this model back to the angles of the picked pose, in one undo step.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Rappeler&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remet les articulations de ce modèle aux angles de la pose choisie, en une seule étape d’annulation.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="373"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="379"/>
         <source>Rename</source>
         <translation type="unfinished">Renommer</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="373"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="379"/>
         <source>Rename the picked pose</source>
         <translation type="unfinished">Renommer la pose choisie</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="373"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="379"/>
         <source>&lt;p&gt;&lt;b&gt;Rename&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Give the picked pose a new name.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Renommer&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Donne un nouveau nom à la pose choisie.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="374"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="380"/>
         <source>Delete</source>
         <translation type="unfinished">Effacer</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="374"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="380"/>
         <source>Delete the picked pose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="374"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="380"/>
         <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the picked pose from the model. The joints keep their angles.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Supprimer&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Supprime la pose choisie du modèle. Les articulations gardent leurs angles.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="416"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="453"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="422"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="459"/>
         <source>Name</source>
         <translation type="unfinished">Nom</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="416"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="422"/>
         <source>Save Pose</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="416"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="422"/>
         <source>Pose %1</source>
         <translation type="unfinished">Pose %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="453"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="459"/>
         <source>Rename Pose</source>
         <translation type="unfinished">Renommer la pose</translation>
     </message>
@@ -27918,7 +27937,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1146"/>
         <source>Render</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Rendre</translation>
+        <translation type="unfinished">Rendu</translation>
     </message>
     <message>
         <source>Settings...</source>
@@ -28169,6 +28188,16 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="unfinished">Hauteur</translation>
     </message>
     <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="536"/>
+        <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set how much detail Blender gives the parts. More detail looks better and takes longer to import and render.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Pièces&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Réglez le niveau de détail que Blender donne aux pièces. Plus de détails donnent un meilleur aspect mais allongent l’importation et le rendu.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="573"/>
+        <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the image or open the model in Blender, then follow the progress here. Log shows the Blender output below the preview.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Rendu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Lancez le rendu de l’image ou ouvrez le modèle dans Blender, puis suivez la progression ici. Journal affiche la sortie de Blender sous l’aperçu.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="579"/>
         <source>Quality</source>
         <translation type="unfinished"></translation>
@@ -28263,11 +28292,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="594"/>
         <source>Scene</source>
         <translation type="unfinished">Scène</translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="594"/>
-        <source>&lt;p&gt;&lt;b&gt;Scene&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the lights, floor and surroundings the model is rendered in.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="597"/>
@@ -28469,11 +28493,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="536"/>
-        <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set how much detail the parts get. More detail looks better and takes longer to import and render.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="538"/>
         <source>Primitives</source>
         <translation type="unfinished"></translation>
@@ -28624,11 +28643,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="573"/>
-        <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the image or open the model in Blender and follow the progress. While rendering, Render becomes Cancel so you can stop it. Log shows the Blender output below the preview.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="600"/>
         <source>Studio</source>
         <translation type="unfinished"></translation>
@@ -28739,11 +28753,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="627"/>
-        <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Start the render and follow its progress. While rendering, Render becomes Cancel so you can stop it. Log shows the renderer output below the preview.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="710"/>
         <source>Select Environment Image</source>
         <translation type="unfinished"></translation>
@@ -28789,6 +28798,16 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="735"/>
         <source>&lt;p&gt;&lt;b&gt;Open in Blender&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Import the current model step into Blender with the Scene, Parts and Editing settings and open it there for editing. No image is saved.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="594"/>
+        <source>&lt;p&gt;&lt;b&gt;Scene&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the lights, floor and surroundings POV-Ray renders the model in.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Scène&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Réglez les lumières, le sol et l’environnement dans lesquels POV-Ray rend le modèle.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="627"/>
+        <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Start the POV-Ray render, then follow its progress here. Log shows the POV-Ray output below the preview.&lt;/p&gt;</source>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Rendu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Lancez le rendu POV-Ray, puis suivez sa progression ici. Journal affiche la sortie de POV-Ray sous l’aperçu.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="765"/>
@@ -29059,7 +29078,7 @@ Install the povray-includes package or the include files of your POV-Ray version
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="208"/>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="784"/>
         <source>Log</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Journal</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="710"/>

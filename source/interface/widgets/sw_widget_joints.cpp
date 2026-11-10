@@ -9,6 +9,10 @@
 swJointsWidget::swJointsWidget(QWidget* Parent)
 	: QWidget(Parent)
 {
+	// panel overview
+
+	setWhatsThis(tr("<p><b>Joints</b></p><p>A tree lists every model with joints, under it each jointed submodel by line index, and under that each of its joints with type and angle. Click a joint to select its submodel and make it the joint the panel and the rotate gizmo work on, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. Click a model to show its poses in the Poses panel.</p><p>Below the tree the panel shows the joint picked on the selected submodel with its axis. A joint inside a submodel opens it in place, and a bar over the view points to the picked joint.</p>"));
+
 	QVBoxLayout* Layout = new QVBoxLayout(this);
 
 	// joints of every model
@@ -17,7 +21,6 @@ swJointsWidget::swJointsWidget(QWidget* Parent)
 	mTree->setHeaderLabels({ tr("Joint"), tr("Type"), tr("Angle") });
 	mTree->setRootIsDecorated(true);
 	mTree->setToolTip(tr("Joints of the model and its submodels"));
-	mTree->setWhatsThis(tr("<p><b>Joints</b></p><p>Every model with joints, under it each jointed submodel by line index, and under that each of its joints with type and angle. Click a joint to select its submodel and make it the joint the panel and the rotate gizmo work on, right click it to move, rotate or delete it, or right click a submodel to edit or delete all its joints. Click a model to show its poses in the Poses panel.</p>"));
 	connect(mTree, &QTreeWidget::itemClicked, this, &swJointsWidget::TreeItemClicked);
 	connect(mTree, &QTreeWidget::currentItemChanged, this, &swJointsWidget::UpdateClearButton);
 	mTree->installEventFilter(this);
@@ -347,6 +350,10 @@ bool swJointsWidget::eventFilter(QObject* Object, QEvent* Event)
 swPosesWidget::swPosesWidget(swJointsWidget* JointsWidget, QWidget* Parent)
 	: QWidget(Parent), mJointsWidget(JointsWidget)
 {
+	// panel overview
+
+	setWhatsThis(tr("<p><b>Poses</b></p><p>The poses saved in the model picked in the Joints panel, or in the current model, each holding the angles of that model's joints only. Save stores the joint angles as a named pose, Recall puts them back in one undo step, and Rename and Delete change the picked pose. Poses are saved with the model, and the Joints motion of the image dialog plays the poses of the main model in this order.</p>"));
+
 	QVBoxLayout* Layout = new QVBoxLayout(this);
 
 	// poses under a header like the joints
@@ -354,7 +361,6 @@ swPosesWidget::swPosesWidget(swJointsWidget* JointsWidget, QWidget* Parent)
 	mList->setHeaderLabels({ tr("Pose") });
 	mList->setRootIsDecorated(false);
 	mList->setToolTip(tr("Saved poses of this model, played in this order by the Joints motion"));
-	mList->setWhatsThis(tr("<p><b>Poses</b></p><p>The poses saved in the model picked in the Joints panel, each holding the angles of that model's joints only. The Joints motion of the image dialog plays the poses of the main model in this order. Pick one to recall, rename or delete it.</p>"));
 	Layout->addWidget(mList, 1);
 
 	QHBoxLayout* Buttons = new QHBoxLayout();
