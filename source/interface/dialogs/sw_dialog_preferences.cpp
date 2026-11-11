@@ -629,7 +629,6 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->ViewCubeSizeCombo->setCurrentIndex(mOptions->Preferences.mViewCubeEnabled ? swSizeIndex(mOptions->Preferences.mViewCubeSize, SW_VIEW_CUBE_SIZES) : 0);
 
 	ui->PreviewAxisIconSizeCombo->setCurrentIndex(mOptions->Preferences.mDrawPreviewAxis ? swSizeIndex(mOptions->Preferences.mPreviewAxisIconSize, SW_AXIS_ICON_SIZES) : 0);
-	ui->PreviewSquareViewportCheckBox->setChecked(mOptions->Preferences.mPreviewSquareViewport);
 
 	ui->PreviewViewCubeLocationCombo->setCurrentIndex((int)mOptions->Preferences.mPreviewViewCubeLocation);
 
@@ -1023,7 +1022,6 @@ void swPreferencesDialog::accept()
 	if (ui->PreviewAxisIconSizeCombo->currentIndex() > 0)
 		mOptions->Preferences.mPreviewAxisIconSize = SW_AXIS_ICON_SIZES[ui->PreviewAxisIconSizeCombo->currentIndex() - 1];
 
-	mOptions->Preferences.mPreviewSquareViewport = ui->PreviewSquareViewportCheckBox->isChecked();
 	mOptions->Preferences.mPreviewViewCubeEnabled = ui->PreviewViewCubeSizeCombo->currentIndex() > 0;
 	mOptions->Preferences.mPreviewViewCubeLocation = (swViewCubeLocation)ui->PreviewViewCubeLocationCombo->currentIndex();
 

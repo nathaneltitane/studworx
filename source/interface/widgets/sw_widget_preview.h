@@ -12,6 +12,8 @@ class swPreviewDockWidget : public QWidget
 public:
 	explicit swPreviewDockWidget(QWidget* Parent);
 
+	QSize minimumSizeHint() const override;
+
 	bool SetCurrentPart(swPartData* PartData, int ColorCode);
 	void ClearPreview();
 	void UpdatePreview();
@@ -25,20 +27,15 @@ public:
 	void RefreshModel(const swModel* Model);
 	void RefreshAfterAssetChange(const std::vector<swPartData*>& ChangedParts);
 	void RebindPartData(swPartData* Previous, swPartData* Replacement);
-	void SetSquareViewport(bool SquareViewport);
-	void UpdateSquareViewport();
 
 protected slots:
 	void SetPreviewLock();
 	void OptionsMenuAboutToShow();
 
 protected:
-	bool eventFilter(QObject* Object, QEvent* Event) override;
 	void RefreshPendingAssets();
-	void UpdateViewGeometry();
 
 	QAction* mLockAction;
-	QWidget* mViewContainer;
 	swPreviewNameEdit* mLabel;
 	swPreview* mPreview;
 	swViewWidget* mViewWidget;

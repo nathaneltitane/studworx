@@ -102,7 +102,13 @@ void swMainWindow::CreateWidgets()
 	move(QPoint(200, 200));
 	restoreGeometry(Settings.value("Geometry").toByteArray());
 	const QByteArray State = Settings.value("State").toByteArray();
+
+	// squeezable before the saved heights come back
+	for (QDockWidget* DockWidget : findChildren<QDockWidget*>(QString(), Qt::FindDirectChildrenOnly))
+		swFitFloatingDock(DockWidget);
+
 	restoreState(State);
+	mRestoreState = State;
 
 	// new keyframes panel goes under the terminal
 
@@ -788,7 +794,8 @@ void swMainWindow::CreateToolBars()
 		// after layout, title bar height is current
 		QTimer::singleShot(0, this, [this]()
 		{
-			if (!mColorsToolBar->isFloating() && mColorsToolBar->isVisible())
+			// unless squeezed to the title bar
+			if (!mColorsToolBar->isFloating() && mColorsToolBar->isVisible() && mColorsToolBar->height() > mColorsToolBar->minimumSizeHint().height())
 				resizeDocks({ mColorsToolBar }, { mColorsToolBar->sizeHint().height() }, Qt::Vertical);
 		});
 	};
@@ -888,11 +895,10 @@ void swMainWindow::CreateToolBars()
 		PropertiesScrollArea->setVisible(ShowList);
 		PropertiesScrollArea->setMinimumHeight(MinimumListHeight);
 		PropertiesScrollArea->setMaximumHeight(ListHeight);
-		PropertiesWidget->setMinimumHeight(PanelHeight - ListHeight + MinimumListHeight);
 		PropertiesWidget->setMaximumHeight(PanelHeight);
 
-		// ask for the full height
-		if (!mPropertiesToolBar->isFloating() && mPropertiesToolBar->isVisible())
+		// ask for the full height unless squeezed to the title bar
+		if (!mPropertiesToolBar->isFloating() && mPropertiesToolBar->isVisible() && mPropertiesToolBar->height() > mPropertiesToolBar->minimumSizeHint().height())
 			resizeDocks({ mPropertiesToolBar }, { PanelHeight + mPropertiesToolBar->height() - PropertiesWidget->height() }, Qt::Vertical);
 	};
 

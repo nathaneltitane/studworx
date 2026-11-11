@@ -3426,29 +3426,6 @@
            </widget>
           </item>
           <item row="3" column="0">
-           <widget class="QLabel" name="PreviewSquareViewportLabel">
-            <property name="toolTip">
-             <string>Keep the preview square, with a 1:1 width to height ratio, whatever the panel size.</string>
-            </property>
-            <property name="text">
-             <string>Square Viewport</string>
-            </property>
-            <property name="buddy">
-             <cstring>PreviewSquareViewportCheckBox</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1" colspan="2">
-           <widget class="QCheckBox" name="PreviewSquareViewportCheckBox">
-            <property name="accessibleName">
-             <string>Square Viewport</string>
-            </property>
-            <property name="toolTip">
-             <string>Keep the preview square, with a 1:1 width to height ratio, whatever the panel size.</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="0">
            <widget class="QLabel" name="PreviewSyncRenderingLabel">
             <property name="toolTip">
              <string>Use the model view rendering settings for the preview.</string>
@@ -3461,7 +3438,7 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="1" colspan="2">
+          <item row="3" column="1" colspan="2">
            <widget class="QCheckBox" name="PreviewSyncRendering">
             <property name="accessibleName">
              <string>Use Model Settings</string>
@@ -3471,7 +3448,7 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="0">
+          <item row="4" column="0">
            <widget class="QLabel" name="PreviewShadingModeLabel">
             <property name="toolTip">
              <string>Choose how parts are drawn in the preview.</string>
@@ -3484,7 +3461,7 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="1">
+          <item row="4" column="1">
            <widget class="QComboBox" name="PreviewShadingMode">
             <property name="accessibleName">
              <string>Preview Shading Mode</string>
@@ -3509,7 +3486,7 @@
             </item>
            </widget>
           </item>
-          <item row="6" column="0">
+          <item row="5" column="0">
            <widget class="QLabel" name="PreviewEdgeLinesLabel">
             <property name="toolTip">
              <string>Draw edge lines on parts in the preview.</string>
@@ -3522,7 +3499,7 @@
             </property>
            </widget>
           </item>
-          <item row="6" column="1" colspan="2">
+          <item row="5" column="1" colspan="2">
            <widget class="QCheckBox" name="PreviewEdgeLines">
             <property name="accessibleName">
              <string>Edge Lines</string>
@@ -3532,7 +3509,7 @@
             </property>
            </widget>
           </item>
-          <item row="7" column="0">
+          <item row="6" column="0">
            <widget class="QLabel" name="PreviewConditionalLinesLabel">
             <property name="toolTip">
              <string>Draw conditional lines on parts in the preview.</string>
@@ -3545,7 +3522,7 @@
             </property>
            </widget>
           </item>
-          <item row="7" column="1" colspan="2">
+          <item row="6" column="1" colspan="2">
            <widget class="QCheckBox" name="PreviewConditionalLines">
             <property name="accessibleName">
              <string>Conditional Lines</string>
@@ -3555,7 +3532,7 @@
             </property>
            </widget>
           </item>
-          <item row="8" column="0">
+          <item row="7" column="0">
            <widget class="QLabel" name="PreviewLineWidthTitle">
             <property name="toolTip">
              <string>Set the line width used in the preview.</string>
@@ -3568,7 +3545,7 @@
             </property>
            </widget>
           </item>
-          <item row="8" column="1">
+          <item row="7" column="1">
            <widget class="QSlider" name="PreviewLineWidthSlider">
             <property name="accessibleName">
              <string>Preview Line Width</string>
@@ -3581,7 +3558,7 @@
             </property>
            </widget>
           </item>
-          <item row="8" column="2">
+          <item row="7" column="2">
            <widget class="QLabel" name="PreviewLineWidthLabel">
             <property name="text">
              <string />
@@ -5725,7 +5702,6 @@
   <tabstop>PreviewEdgeLines</tabstop>
   <tabstop>PreviewConditionalLines</tabstop>
   <tabstop>PreviewLineWidthSlider</tabstop>
-  <tabstop>PreviewSquareViewportCheckBox</tabstop>
   <tabstop>BackgroundSolidColorButton</tabstop>
   <tabstop>ObjectSelectedColorButton</tabstop>
   <tabstop>ObjectFocusedColorButton</tabstop>

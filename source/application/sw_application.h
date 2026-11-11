@@ -293,7 +293,6 @@ public:
 	swViewCubeLocation mPreviewViewCubeLocation;
 	int mDrawPreviewAxis;
 	int mPreviewAxisIconSize;
-	bool mPreviewSquareViewport;
 	bool mPreviewKeepSelection;
 
 	bool mStudCylinderColorEnabled;

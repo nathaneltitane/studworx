@@ -5,6 +5,8 @@
 
   - Preferences: each tab scrolls when the window is taller than the screen, and the window opens wide enough to show every tab, so OK and Cancel stay in reach on low resolution screens
   - Interface: floating panels keep their own title bar, so a double click or a drag back onto the window docks them again
+  - Interface: every floating panel opens at its smallest contents size and can be enlarged but never shrunk below it, forms like Properties, Explode, Minifigure Builder and Colors stay as tall as their contents as groups open and close, and the terminal counts as a resizable view
+  - Interface: every docked panel can be squeezed down to its title bar, Preview included, which floats and docks with a square view and resizes like any other panel, and title-only panels keep their height when a panel beside them floats, closes or shrinks to its contents, Properties included as the selection changes, and squeezed panels stay squeezed after a restart or when the window is maximized and restored
   - Colors: squeezing the panel no longer crashes StudWorx, the floating panel follows its contents height as groups open and close, and the last group header and color row are no longer cut off
   - Site: the Views gallery shows the view cubes and axis icon on their own row, then Perspective, Orthographic and a new Wireframe view in matching captures, the cutaways, and the camera bar, height grids and idle turntable
   - Help: the Explode, Joints, Poses, Keyframes and Minifigure Builder panels each have one overview, shown on the panel and its title bar, the View menu entries only name the panel they show, the full diamond of the Keyframes panel is called Set Keys like its command, and the Render window panels name Blender or POV-Ray
@@ -312,7 +314,7 @@
   - Instructions: cover page, bill of materials, blank page breaks, step dividers, document font and full page background
   - Instructions: steps per page set for each page, parts list counts, sort order and border
   - Minifigure Builder panel: build a minifigure, dock the builder and add several variations to the model
-  - Preview: optional square viewport that sizes the panel to fit
+  - Preview: floats and docks with a square view
   - Models menu: 'Configure Minifigure...', Preferences and Instructions moved to the Edit menu
 
   </details>

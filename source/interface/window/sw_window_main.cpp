@@ -166,10 +166,15 @@ void swMainWindow::SnapPartsDock()
 	if (!Delta && !RowDelta)
 		return;
 
+	// our own snap resize starts no new snap
 	if (mPartsToolBar->isFloating())
-		mPartsToolBar->resize(mPartsToolBar->width() + Delta, mPartsToolBar->height() + RowDelta);
-	else
-		resizeDocks({ mPartsToolBar }, { mPartsToolBar->width() + Delta }, Qt::Horizontal);
+	{
+		mPartsSnapSize = QSize(mPartsToolBar->width() + Delta, mPartsToolBar->height() + RowDelta);
+		mPartsToolBar->resize(mPartsSnapSize);
+		return;
+	}
+
+	resizeDocks({ mPartsToolBar }, { mPartsToolBar->width() + Delta }, Qt::Horizontal);
 
 	// check again after relayout
 	if (!mPartsSnapRetried)
@@ -210,6 +215,16 @@ bool swMainWindow::eventFilter(QObject* Object, QEvent* Event)
 	if (Object == mStatusLoadFailureLabel && Event->type() == QEvent::MouseButtonRelease)
 		ShowMissingPartsDialog();
 
+	// growing to the final size hands squeezed panels their height back
+	// so the saved layout comes back until the first input
+	if (!mRestoreState.isEmpty())
+	{
+		if (Object == this && Event->type() == QEvent::Resize && isVisible())
+			QTimer::singleShot(0, this, [this]() { if (!mRestoreState.isEmpty()) restoreState(mRestoreState); });
+		else if (Event->type() == QEvent::MouseButtonPress || Event->type() == QEvent::KeyPress)
+			mRestoreState.clear();
+	}
+
 	// input ends the turntable
 	switch (Event->type())
 	{
@@ -249,7 +264,12 @@ bool swMainWindow::eventFilter(QObject* Object, QEvent* Event)
 
 	// snap to whole tiles on release
 	if (Object == mPartsToolBar && Event->type() == QEvent::Resize && mPartsToolBar->isFloating())
-		mPartsSnapTimer.start();
+	{
+		if (static_cast<QResizeEvent*>(Event)->size() != mPartsSnapSize)
+			mPartsSnapTimer.start();
+
+		mPartsSnapSize = QSize();
+	}
 	else if (Object == mPartsToolBar && Event->type() == QEvent::Resize && QApplication::mouseButtons() != Qt::NoButton)
 		mPartsSnapPending = true;
 	else if (Event->type() == QEvent::MouseButtonRelease && mPartsSnapPending)

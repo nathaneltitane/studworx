@@ -2486,15 +2486,6 @@ const swCommand gCommands[] =
 		""
 	},
 
-	// SW_VIEW_PREVIEW_TOGGLE_SQUARE
-	{
-		QT_TRANSLATE_NOOP("Action", "View.Preview.ToggleSquareViewport"),
-		QT_TRANSLATE_NOOP("Menu", "Square Viewport"),
-		QT_TRANSLATE_NOOP("Status", "Keep the preview at a 1:1 ratio"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Square Viewport</b></p><p>Keep the preview square, at a 1:1 ratio.</p>"),
-		""
-	},
-
 	// SW_VIEW_PREVIEW_TOGGLE_KEEP_SELECTION
 	{
 		QT_TRANSLATE_NOOP("Action", "View.Preview.ToggleKeepSelection"),

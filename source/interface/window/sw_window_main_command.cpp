@@ -796,11 +796,6 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		ToggleLoadPartsBeforeShowing();
 		break;
 
-	case SW_VIEW_PREVIEW_TOGGLE_SQUARE:
-		if (mPreviewWidget)
-			mPreviewWidget->SetSquareViewport(!swGetPreferences().mPreviewSquareViewport);
-		break;
-
 	case SW_VIEW_PREVIEW_TOGGLE_KEEP_SELECTION:
 		swGetPreferences().mPreviewKeepSelection = !swGetPreferences().mPreviewKeepSelection;
 		swSetProfileInteger(SW_PROFILE_PREVIEW_KEEP_SELECTION, swGetPreferences().mPreviewKeepSelection);

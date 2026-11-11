@@ -331,7 +331,6 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("InstructionsDefaults", "GridSize", 72.0f),                                 // SW_PROFILE_INSTRUCTIONS_DEFAULT_GRID_SIZE
 	swProfileEntry("InstructionsDefaults", "GridWithinMargins", 1),                            // SW_PROFILE_INSTRUCTIONS_DEFAULT_GRID_WITHIN_MARGINS
 	swProfileEntry("InstructionsDefaults", "GridDivisions", 8),                                // SW_PROFILE_INSTRUCTIONS_DEFAULT_GRID_DIVISIONS
-	swProfileEntry("Settings", "PreviewSquareViewport", 0),                                    // SW_PROFILE_PREVIEW_SQUARE_VIEWPORT
 	swProfileEntry("Settings", "PreviewKeepSelection", 0),                                     // SW_PROFILE_PREVIEW_KEEP_SELECTION
 	swProfileEntry("Settings", "MinifigureSyncRendering", 1),                                     // SW_PROFILE_MINIFIGURE_BUILDER_SYNCHRONIZED_RENDERING
 	swProfileEntry("Settings", "MinifigureShadingMode", static_cast<int>(swShadingMode::DefaultLights)), // SW_PROFILE_MINIFIGURE_BUILDER_SHADING_MODE

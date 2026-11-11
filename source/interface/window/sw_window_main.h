@@ -454,6 +454,8 @@ protected:
 	bool mPartsSnapPending = false;
 	bool mFitUpdatePending = false;
 	bool mPartsSnapRetried = false;
+	QSize mPartsSnapSize;
+	QByteArray mRestoreState;
 	QTimer mPartsSnapTimer;
 	QTimer mIdleTimer;
 	QTimer mTurntableTimer;

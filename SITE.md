@@ -384,7 +384,7 @@ Panels dock side by side in any area of the main window, with uniform headers, b
 - **Colors.** Collapsible solid, translucent and special color groups with square color tiles.
 - **Properties.** Compact position, rotation and transform rows and a spanning color swatch. Lights and cameras get named rows with units. A round key button ends each animated row, filled when the property has a key at the current step.
 - **Minifigure Builder.** Build a minifigure from templates and add several variations to the model.
-- **Preview.** Parts and models, in a Square Viewport when you choose, with Keep Last Selection.
+- **Preview.** Parts and models, floating or docking with a square view, with Keep Last Selection.
 - **Joints.** The picked joint of the selected submodel with its axis, the tree of models, submodels and their joints with Delete Joint for the picked one, a right-click menu to move, rotate or delete a joint, and one on a submodel to edit or delete all its joints.
 - **Poses.** The poses of the model picked in the Joints panel with Save, Recall, Rename and Delete.
 - **Keyframes.** A full-width timeline of the keys of the selected or all objects per step, with buttons to add or remove keys, Add Keys and playback.

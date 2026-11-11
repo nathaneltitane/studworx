@@ -133,7 +133,6 @@ void swPreferences::LoadDefaults()
 	mPreviewViewCubeLocation = swGetProfilePreviewViewCubeLocation();
 	mDrawPreviewAxis = swGetProfileInteger(SW_PROFILE_PREVIEW_DRAW_AXES);
 	mPreviewAxisIconSize = swSnapSize(swGetProfileInteger(SW_PROFILE_PREVIEW_AXIS_ICON_SIZE), SW_AXIS_ICON_SIZES);
-	mPreviewSquareViewport = swGetProfileInteger(SW_PROFILE_PREVIEW_SQUARE_VIEWPORT);
 	mPreviewKeepSelection = swGetProfileInteger(SW_PROFILE_PREVIEW_KEEP_SELECTION);
 	mStudCylinderColorEnabled = swGetProfileInteger(SW_PROFILE_STUD_CYLINDER_COLOR_ENABLED);
 	mStudCylinderColor = swGetProfileUnsignedInteger(SW_PROFILE_STUD_CYLINDER_COLOR);
@@ -261,7 +260,6 @@ void swPreferences::SaveDefaults()
 	swSetProfilePreviewViewCubeLocation(mPreviewViewCubeLocation);
 	swSetProfileInteger(SW_PROFILE_PREVIEW_DRAW_AXES, mDrawPreviewAxis);
 	swSetProfileInteger(SW_PROFILE_PREVIEW_AXIS_ICON_SIZE, mPreviewAxisIconSize);
-	swSetProfileInteger(SW_PROFILE_PREVIEW_SQUARE_VIEWPORT, mPreviewSquareViewport);
 	swSetProfileInteger(SW_PROFILE_PREVIEW_KEEP_SELECTION, mPreviewKeepSelection);
 	swSetProfileInteger(SW_PROFILE_STUD_CYLINDER_COLOR_ENABLED, mStudCylinderColorEnabled);
 	swSetProfileUnsignedInteger(SW_PROFILE_STUD_CYLINDER_COLOR, mStudCylinderColor);
@@ -2398,8 +2396,6 @@ void swApplication::ShowPreferencesDialog()
 					Part->SetControlPoints(Part->GetControlPoints());
 	if (PartsRenderingChanged && gMainWindow && gMainWindow->GetPartSelectionWidget())
 		gMainWindow->GetPartSelectionWidget()->UpdateThumbnails();
-	if (gMainWindow && gMainWindow->GetPreviewWidget())
-		gMainWindow->GetPreviewWidget()->UpdateSquareViewport();
 
 	swSetProfileString(SW_PROFILE_DEFAULT_AUTHOR_NAME, Options.DefaultAuthorName);
 	swSetProfileString(SW_PROFILE_DEFAULT_AUTHOR_EMAIL, Options.DefaultAuthorEmail);

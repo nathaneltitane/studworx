@@ -385,6 +385,68 @@ QIcon swInterfaceStyle::standardIcon(StandardPixmap Pixmap, const QStyleOption* 
 	return QProxyStyle::standardIcon(Pixmap, Option, Widget);
 }
 
+static bool swIsViewDock(const QDockWidget* DockWidget);
+
+// use to bring floating panels back within their limits
+// window managers refuse during their own resizes, so ask again for a while
+static void swClampFloatingDock(QDockWidget* DockWidget)
+{
+	QTimer* Timer = DockWidget->findChild<QTimer*>("swClampTimer", Qt::FindDirectChildrenOnly);
+
+	if (!Timer)
+	{
+		Timer = new QTimer(DockWidget);
+		Timer->setObjectName("swClampTimer");
+		Timer->setInterval(250);
+
+		QObject::connect(Timer, &QTimer::timeout, DockWidget, [DockWidget, Timer]()
+		{
+			const int Tries = DockWidget->property("swClampTries").toInt() + 1;
+			DockWidget->setProperty("swClampTries", Tries);
+
+			// shortcut: gives up after ten seconds, a drag held longer stays tall until the next resize
+			const int Height = qBound(DockWidget->minimumHeight(), DockWidget->height(), DockWidget->maximumHeight());
+
+			if (!DockWidget->isFloating() || DockWidget->height() == Height || Tries > 40)
+				Timer->stop();
+			else
+				DockWidget->resize(DockWidget->width(), Height);
+		});
+	}
+
+	// refused answers come back as resizes, asking at once again would loop
+	const int Height = qBound(DockWidget->minimumHeight(), DockWidget->height(), DockWidget->maximumHeight());
+
+	if (Timer->isActive() || !DockWidget->isFloating() || DockWidget->height() == Height)
+		return;
+
+	DockWidget->setProperty("swClampTries", 0);
+	DockWidget->resize(DockWidget->width(), Height);
+	Timer->start();
+}
+
+// use to hold title-only panels when one leaves or the window grows
+static void swKeepSqueezedDocks(QMainWindow* MainWindow, const QDockWidget* Leaving = nullptr)
+{
+	if (!MainWindow)
+		return;
+
+	QList<QDockWidget*> DockWidgets;
+	QList<int> Heights;
+
+	for (QDockWidget* DockWidget : MainWindow->findChildren<QDockWidget*>(QString(), Qt::FindDirectChildrenOnly))
+	{
+		if (DockWidget != Leaving && !DockWidget->isFloating() && DockWidget->isVisible() && DockWidget->height() <= DockWidget->minimumSizeHint().height())
+		{
+			DockWidgets.append(DockWidget);
+			Heights.append(DockWidget->minimumSizeHint().height());
+		}
+	}
+
+	if (!DockWidgets.isEmpty())
+		QTimer::singleShot(0, MainWindow, [MainWindow, DockWidgets, Heights]() { MainWindow->resizeDocks(DockWidgets, Heights, Qt::Vertical); });
+}
+
 bool swInterfaceFitFilter::eventFilter(QObject* Object, QEvent* Event)
 {
 	if (!Object->isWidgetType())
@@ -392,8 +454,34 @@ bool swInterfaceFitFilter::eventFilter(QObject* Object, QEvent* Event)
 
 	const QEvent::Type Type = Event->type();
 
-	if (Type != QEvent::Polish && Type != QEvent::Show && Type != QEvent::FontChange && Type != QEvent::StyleChange && Type != QEvent::LayoutRequest)
+	if (Type != QEvent::Polish && Type != QEvent::Show && Type != QEvent::FontChange && Type != QEvent::StyleChange && Type != QEvent::LayoutRequest && Type != QEvent::Hide && Type != QEvent::Resize)
 		return false;
+
+	// window managers keep the limits from the start of a resize
+	// panels still have their old heights before the window lays them out
+	if (Type == QEvent::Resize)
+	{
+		if (QMainWindow* MainWindow = qobject_cast<QMainWindow*>(Object))
+			swKeepSqueezedDocks(MainWindow);
+
+		QDockWidget* DockWidget = qobject_cast<QDockWidget*>(Object);
+
+		if (DockWidget && DockWidget->isFloating() && (DockWidget->height() > DockWidget->maximumHeight() || DockWidget->height() < DockWidget->minimumHeight()))
+			QTimer::singleShot(0, DockWidget, [DockWidget]() { swClampFloatingDock(DockWidget); });
+
+		return false;
+	}
+
+	// panels leaving the stack free no space for squeezed ones
+	if (Type == QEvent::Hide)
+	{
+		QDockWidget* DockWidget = qobject_cast<QDockWidget*>(Object);
+
+		if (DockWidget && !DockWidget->isFloating())
+			swKeepSqueezedDocks(qobject_cast<QMainWindow*>(DockWidget->parentWidget()), DockWidget);
+
+		return false;
+	}
 
 	QWidget* Widget = static_cast<QWidget*>(Object);
 
@@ -407,7 +495,7 @@ bool swInterfaceFitFilter::eventFilter(QObject* Object, QEvent* Event)
 	}
 
 	// never cut unscrolled rows
-	if (Type == QEvent::LayoutRequest)
+	if (Type == QEvent::LayoutRequest && !qobject_cast<QDockWidget*>(Widget))
 	{
 		QWidget* Viewport = Widget->parentWidget();
 		QScrollArea* ScrollArea = Viewport ? qobject_cast<QScrollArea*>(Viewport->parentWidget()) : nullptr;
@@ -438,15 +526,42 @@ bool swInterfaceFitFilter::eventFilter(QObject* Object, QEvent* Event)
 	// floating panels fit their contents
 	if (QDockWidget* DockWidget = qobject_cast<QDockWidget*>(Widget))
 	{
-		// undock at the floating size
+		// open at the contents size when first shown floating
 		if (Type == QEvent::Show)
 		{
-			const QSize FloatingSize = DockWidget->property("swFloatingSize").toSize();
-
-			if (FloatingSize.isValid() && DockWidget->isFloating() && !DockWidget->property("swShownFloating").toBool())
-				DockWidget->resize(FloatingSize.expandedTo(DockWidget->minimumSizeHint()));
+			if (DockWidget->isFloating() && !DockWidget->property("swShownFloating").toBool())
+				swFitFloatingDock(DockWidget, true);
 
 			DockWidget->setProperty("swShownFloating", DockWidget->isFloating());
+
+			return false;
+		}
+
+		// follow contents and widths that change
+		if (Type == QEvent::LayoutRequest)
+		{
+			// capped contents shrinking free no space for squeezed panels
+			if (!DockWidget->isFloating() && DockWidget->widget())
+			{
+				const int MaximumHeight = DockWidget->widget()->maximumHeight();
+
+				if (MaximumHeight < DockWidget->property("swContentsHeight").toInt())
+					swKeepSqueezedDocks(qobject_cast<QMainWindow*>(DockWidget->parentWidget()), DockWidget);
+
+				DockWidget->setProperty("swContentsHeight", MaximumHeight);
+			}
+
+			// views size their scroll bars and lines from the panel, following them would loop
+			if (DockWidget->isFloating() && !swIsViewDock(DockWidget) && !DockWidget->property("swFitQueued").toBool())
+			{
+				DockWidget->setProperty("swFitQueued", true);
+
+				QTimer::singleShot(0, DockWidget, [DockWidget]()
+				{
+					DockWidget->setProperty("swFitQueued", false);
+					swFitFloatingDock(DockWidget);
+				});
+			}
 
 			return false;
 		}
@@ -456,21 +571,20 @@ bool swInterfaceFitFilter::eventFilter(QObject* Object, QEvent* Event)
 
 		DockWidget->setProperty("swFitFloating", true);
 
-		auto FitDock = [DockWidget]()
+		QObject::connect(DockWidget, &QDockWidget::topLevelChanged, DockWidget, [DockWidget](bool Floating)
 		{
-			QTimer::singleShot(0, DockWidget, [DockWidget]()
-			{
-				swFitFloatingDock(DockWidget);
-			});
-		};
+			if (Floating)
+				swKeepSqueezedDocks(qobject_cast<QMainWindow*>(DockWidget->parentWidget()), DockWidget);
 
-		QObject::connect(DockWidget, &QDockWidget::topLevelChanged, DockWidget, FitDock);
-		QObject::connect(DockWidget, &QDockWidget::dockLocationChanged, DockWidget, FitDock);
-
-		QTimer::singleShot(0, DockWidget, [DockWidget]()
-		{
-			swFitFloatingDock(DockWidget);
+			QTimer::singleShot(0, DockWidget, [DockWidget]() { swFitFloatingDock(DockWidget, true); });
 		});
+
+		QObject::connect(DockWidget, &QDockWidget::dockLocationChanged, DockWidget, [DockWidget]()
+		{
+			QTimer::singleShot(0, DockWidget, [DockWidget]() { swFitFloatingDock(DockWidget); });
+		});
+
+		QTimer::singleShot(0, DockWidget, [DockWidget]() { swFitFloatingDock(DockWidget); });
 	}
 
 	return false;
@@ -484,25 +598,33 @@ static bool swIsViewDock(const QDockWidget* DockWidget)
 	for (const QWidget* Child : Children)
 	{
 		// dropdown lists are separate popups
-		if (Child->window() != DockWidget->window())
+		if (Child->window() != DockWidget->window() || !Child->isVisibleTo(DockWidget))
 			continue;
 
 		const QAbstractScrollArea* View = qobject_cast<const QAbstractScrollArea*>(Child);
 
 		if ((View && !qobject_cast<const QScrollArea*>(View)) || qobject_cast<const QOpenGLWidget*>(Child) || Child->inherits("QWindowContainer"))
 			return true;
+
+		// scrolling views like the terminal, not the bars of scroll areas
+		if (qobject_cast<const QScrollBar*>(Child) && !qobject_cast<const QAbstractScrollArea*>(Child->parentWidget()) && !qobject_cast<const QAbstractScrollArea*>(Child->parentWidget()->parentWidget()))
+			return true;
 	}
 
 	return false;
 }
 
-void swFitFloatingDock(QDockWidget* DockWidget)
+void swFitFloatingDock(QDockWidget* DockWidget, bool Open)
 {
-	DockWidget->setMinimumSize(0, 0);
-	DockWidget->setMaximumSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX);
-
 	if (!DockWidget->isFloating())
 	{
+		DockWidget->setMinimumSize(0, 0);
+		DockWidget->setMaximumSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX);
+
+		// a set minimum wins over the size hint, so docked panels squeeze to the title bar
+		if (DockWidget->widget() && DockWidget->widget()->minimumHeight() == 0)
+			DockWidget->widget()->setMinimumHeight(1);
+
 		// keep the widest row width
 		const QMainWindow* MainWindow = qobject_cast<const QMainWindow*>(DockWidget->parentWidget());
 
@@ -529,34 +651,88 @@ void swFitFloatingDock(QDockWidget* DockWidget)
 				AreaDockWidget->setMaximumWidth(Width);
 		}
 
+		// marked views dock square
+		if (Open && DockWidget->layout())
+			DockWidget->layout()->activate();
+
+		if (Open && DockWidget->widget() && DockWidget->widget()->layout())
+			DockWidget->widget()->layout()->activate();
+
+		for (const QWidget* View : DockWidget->findChildren<QWidget*>())
+		{
+			if (!Open || !View->property("swOpenSquare").toBool() || !View->isVisibleTo(DockWidget))
+				continue;
+
+			// panels left unsized share the difference, so the tallest one beside takes it
+			QList<QDockWidget*> DockWidgets = { DockWidget };
+			QList<int> Heights = { DockWidget->height() - View->height() + View->width() };
+			int Tallest = -1;
+
+			for (QDockWidget* Other : MainWindow->findChildren<QDockWidget*>(QString(), Qt::FindDirectChildrenOnly))
+			{
+				if (Other == DockWidget || Other->isFloating() || !Other->isVisible() || Other->x() != DockWidget->x() || Other->width() != DockWidget->width() || MainWindow->tabifiedDockWidgets(DockWidget).contains(Other))
+					continue;
+
+				if (Tallest < 0 || Other->height() > Heights[Tallest])
+					Tallest = DockWidgets.size();
+
+				DockWidgets.append(Other);
+				Heights.append(Other->height());
+			}
+
+			if (Tallest > 0)
+				Heights[Tallest] -= Heights[0] - DockWidget->height();
+
+			const_cast<QMainWindow*>(MainWindow)->resizeDocks(DockWidgets, Heights, Qt::Vertical);
+		}
+
 		return;
 	}
 
-	// float back at the floating size
-	const QSize FloatingSize = DockWidget->property("swFloatingSize").toSize();
+	QWidget* Contents = DockWidget->widget();
 
-	if (FloatingSize.isValid())
+	if (!Contents)
+		return;
+
+	// floating panels open at their contents size
+	if (Contents->minimumHeight() == 1)
+		Contents->setMinimumHeight(0);
+
+	// title and frame around the contents, centred contents leave equal gaps
+	// contents taller than the panel are cut at the bottom instead
+	if (DockWidget->layout())
+		DockWidget->layout()->activate();
+
+	const QRect ContentsRect = Contents->geometry();
+	const int BottomGap = DockWidget->height() - ContentsRect.bottom() - 1;
+	const int FrameHeight = ContentsRect.top() + ContentsRect.left() - qMax(BottomGap - ContentsRect.left(), 0);
+
+	// least height with every scroll area unrolled
+	// a set minimum height wins over the size hint
+	const auto MinimumHeight = [](const QWidget* Widget)
 	{
-		DockWidget->setMinimumSize(DockWidget->minimumSizeHint());
-		DockWidget->resize(FloatingSize.expandedTo(DockWidget->minimumSizeHint()));
-		return;
-	}
+		if (Widget->minimumHeight() > 0)
+			return Widget->minimumHeight();
 
-	// keep the least size, stay resizable
-	if (swIsViewDock(DockWidget))
-	{
-		DockWidget->setMinimumSize(DockWidget->minimumSizeHint());
-		return;
-	}
-
-	// measure rows inside the scroll area
-	int Height = DockWidget->sizeHint().height();
+		// panels that squeeze when docked still open at their layout size
+		return qMax(Widget->layout() ? Widget->layout()->totalMinimumSize().height() : 0, Widget->minimumSizeHint().height());
+	};
+	int Height = FrameHeight + MinimumHeight(Contents);
 	int Width = DockWidget->minimumSizeHint().width();
 	const QList<QScrollArea*> ScrollAreas = DockWidget->findChildren<QScrollArea*>();
 
+	// hidden lists take no room
 	for (const QScrollArea* ScrollArea : ScrollAreas)
-		if (ScrollArea->widget())
-			Height += qMax(ScrollArea->widget()->sizeHint().height() - ScrollArea->sizeHint().height() + 2 * ScrollArea->frameWidth(), 0);
+		if (ScrollArea->widget() && ScrollArea->isVisibleTo(DockWidget))
+			Height += qMax(MinimumHeight(ScrollArea->widget()) + 2 * ScrollArea->frameWidth() - ScrollArea->minimumSizeHint().height(), 0);
+
+	// capped contents hold their height, forms never stretch, views grow
+	int MaximumHeight = QWIDGETSIZE_MAX;
+
+	if (Contents->maximumHeight() < QWIDGETSIZE_MAX)
+		MaximumHeight = qMax(FrameHeight + Contents->maximumHeight(), Height);
+	else if (!swIsViewDock(DockWidget))
+		MaximumHeight = Height;
 
 	if (const QScreen* Screen = DockWidget->screen())
 	{
@@ -568,12 +744,37 @@ void swFitFloatingDock(QDockWidget* DockWidget)
 			Height = ScreenHeight;
 
 			for (const QScrollArea* ScrollArea : ScrollAreas)
-				if (ScrollArea->widget())
+				if (ScrollArea->widget() && ScrollArea->isVisibleTo(DockWidget))
 					Width += qMax(ScrollArea->widget()->minimumSizeHint().width() + ScrollArea->verticalScrollBar()->sizeHint().width() + 2 * ScrollArea->frameWidth() - ScrollArea->minimumSizeHint().expandedTo(ScrollArea->minimumSize()).width(), 0);
 		}
+
+		if (MaximumHeight < QWIDGETSIZE_MAX)
+			MaximumHeight = qMax(qMin(MaximumHeight, ScreenHeight), Height);
 	}
 
-	DockWidget->setFixedSize(Width, qMax(Height, DockWidget->minimumSizeHint().height()));
+	DockWidget->setMaximumSize(QWIDGETSIZE_MAX, MaximumHeight);
+	DockWidget->setMinimumSize(Width, Height);
+
+	// follow the contents even without a window manager
+	if (DockWidget->height() > MaximumHeight || DockWidget->height() < Height)
+		QTimer::singleShot(0, DockWidget, [DockWidget]() { swClampFloatingDock(DockWidget); });
+
+	if (!Open)
+		return;
+
+	// open at the least contents size
+	// views keep their docked width, marked ones open square
+	const int OpenWidth = swIsViewDock(DockWidget) ? qMax(Width, DockWidget->width()) : Width;
+	int OpenHeight = Height;
+
+	for (const QWidget* View : DockWidget->findChildren<QWidget*>())
+		if (View->property("swOpenSquare").toBool() && View->isVisibleTo(DockWidget))
+			OpenHeight = qMax(Height, DockWidget->height() - View->height() + OpenWidth - DockWidget->width() + View->width());
+
+	if (const QScreen* Screen = DockWidget->screen())
+		OpenHeight = qMin(OpenHeight, qMax(Screen->availableGeometry().height() - DockWidget->frameGeometry().height() + DockWidget->height(), Height));
+
+	DockWidget->resize(OpenWidth, OpenHeight);
 }
 
 class swFitHeightFilter : public QObject
@@ -627,20 +828,30 @@ protected:
 	bool eventFilter(QObject* Object, QEvent* Event) override
 	{
 		if (Object == widget() && Event->type() == QEvent::Resize)
-		{
-			// never taller than the contents
-			setMaximumHeight(widget()->minimumHeight());
-			updateGeometry();
-
-			// floating panels follow their contents
-
-			QDockWidget* Dock = qobject_cast<QDockWidget*>(parentWidget());
-
-			if (Dock && Dock->isFloating())
-				QTimer::singleShot(0, Dock, [Dock]() { swFitFloatingDock(Dock); });
-		}
+			FitContents();
 
 		return QScrollArea::eventFilter(Object, Event);
+	}
+
+	bool viewportEvent(QEvent* Event) override
+	{
+		// a stretched widget only reports a smaller height here
+		if (Event->type() == QEvent::LayoutRequest && widget())
+			FitContents();
+
+		return QScrollArea::viewportEvent(Event);
+	}
+
+private:
+	void FitContents()
+	{
+		// never taller than the contents
+		setMaximumHeight(widget()->minimumHeight());
+		updateGeometry();
+
+		// floating panels follow the new height
+		if (QDockWidget* DockWidget = qobject_cast<QDockWidget*>(window()))
+			QCoreApplication::postEvent(DockWidget, new QEvent(QEvent::LayoutRequest));
 	}
 };
 

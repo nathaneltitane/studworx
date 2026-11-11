@@ -58,19 +58,18 @@ swPreviewDockWidget::swPreviewDockWidget(QWidget* Parent)
 {
 	mPreview = new swPreview();
 
-	// container keeps the view square
-	mViewContainer = new QWidget(this);
-	mViewContainer->installEventFilter(this);
+	mViewWidget = new swViewWidget(this, mPreview);
 
-	mViewWidget = new swViewWidget(mViewContainer, mPreview);
+	// panels open and dock with a square view
+	mViewWidget->setProperty("swOpenSquare", true);
 
 	// no viewport border
 	mPreview->SetDrawViewportBorder(false);
 	mViewWidget->setAccessibleName(tr("Preview"));
 	mViewWidget->setToolTip(tr("Inspect the previewed part or model without placing it in the model."));
 
-	// small enough to stack panels
-	setMinimumSize(200, 4 * swGetPanelButtonSize().height());
+	// the panel handler sets the height
+	setMinimumSize(200, 0);
 
 	mLockAction = new QAction(tr("Lock Preview"), this);
 	mLockAction->setWhatsThis(tr("<p><b>Lock Preview</b></p><p>Keep the current preview while you browse. Unlock Preview allows the display to update again. An empty preview cannot be locked.</p>"));
@@ -119,7 +118,7 @@ swPreviewDockWidget::swPreviewDockWidget(QWidget* Parent)
 	connect(OptionsMenu, &QMenu::aboutToShow, this, &swPreviewDockWidget::OptionsMenuAboutToShow);
 
 	Layout->addWidget(mLabel);
-	Layout->addWidget(mViewContainer, 1);
+	Layout->addWidget(mViewWidget, 1);
 }
 
 void swPreviewDockWidget::OptionsMenuAboutToShow()
@@ -131,7 +130,6 @@ void swPreviewDockWidget::OptionsMenuAboutToShow()
 
 	gMainWindow->AddMenuCommand(Menu, tr("View Cube"), SW_VIEW_TOGGLE_PREVIEW_VIEW_CUBE, Preferences.mPreviewViewCubeEnabled);
 	gMainWindow->AddMenuCommand(Menu, tr("Axis Icon"), SW_VIEW_TOGGLE_PREVIEW_AXIS_ICON, Preferences.mDrawPreviewAxis);
-	gMainWindow->AddMenuCommand(Menu, tr("Square Viewport"), SW_VIEW_PREVIEW_TOGGLE_SQUARE, Preferences.mPreviewSquareViewport);
 	gMainWindow->AddMenuCommand(Menu, tr("Keep Last Selection"), SW_VIEW_PREVIEW_TOGGLE_KEEP_SELECTION, Preferences.mPreviewKeepSelection);
 
 	Menu->addSeparator();
@@ -139,41 +137,10 @@ void swPreviewDockWidget::OptionsMenuAboutToShow()
 	gMainWindow->AddRenderTargetActions(Menu, swRenderTarget::Preview);
 }
 
-void swPreviewDockWidget::SetSquareViewport(bool SquareViewport)
+QSize swPreviewDockWidget::minimumSizeHint() const
 {
-	swPreferences& Preferences = swGetPreferences();
-
-	Preferences.mPreviewSquareViewport = SquareViewport;
-	swSetProfileInteger(SW_PROFILE_PREVIEW_SQUARE_VIEWPORT, SquareViewport);
-
-	UpdateSquareViewport();
-}
-
-void swPreviewDockWidget::UpdateSquareViewport()
-{
-	UpdateViewGeometry();
-}
-
-void swPreviewDockWidget::UpdateViewGeometry()
-{
-	// height follows the width
-	if (swGetPreferences().mPreviewSquareViewport)
-		setFixedHeight(height() - mViewContainer->height() + mViewContainer->width());
-	else
-	{
-		setMinimumHeight(4 * swGetPanelButtonSize().height());
-		setMaximumHeight(QWIDGETSIZE_MAX);
-	}
-
-	mViewWidget->setGeometry(mViewContainer->rect());
-}
-
-bool swPreviewDockWidget::eventFilter(QObject* Object, QEvent* Event)
-{
-	if (Object == mViewContainer && Event->type() == QEvent::Resize)
-		UpdateViewGeometry();
-
-	return QWidget::eventFilter(Object, Event);
+	// small enough to stack panels, view still visible
+	return QWidget::minimumSizeHint().expandedTo(QSize(0, 4 * swGetPanelButtonSize().height()));
 }
 
 bool swPreviewDockWidget::SetCurrentPart(swPartData* PartData, int ColorCode)
