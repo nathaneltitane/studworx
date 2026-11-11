@@ -234,7 +234,6 @@ public:
 	bool mDrawGridLines;
 	int mGridLineSpacing;
 	quint32 mGridLineColor;
-	bool mDrawGridOrigin;
 	bool mDrawGridNegativeAxes;
 	bool mDrawGridHeightXZ;
 	bool mDrawGridHeightYZ;

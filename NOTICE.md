@@ -3,7 +3,14 @@
   <details open>
   <summary>2026-11-11</summary>
 
+  - Views: the X, Y and Z Axis Line toggles draw their lines on their own, and the Grid Origin Lines setting that silently hid them is gone
+  - Views: the negative Z axis line follows the height grids when they stand behind the model and only shows once the model has parts
   - Keyframes: the rewind, play, pause, stop and forward buttons are painted in the color theme, so they no longer stay black on a dark interface
+  - Interface: floating panels keep the StudWorx title bar with its painted float and close buttons on every system, instead of the small Windows tool window frame
+  - Keyframes: Add Keys is a square icon button like its toolbar button, and every panel button runs the same command as the matching toolbar button
+  - Time toolbar: Set Keys, Remove Keys, Play and Stop join Add Keys and the step buttons, so the toolbar does everything the Keyframes panel buttons do
+  - Timeline: each step with animation keys lists a Keys row per keyed object, so steps made by keys are no longer empty, and a double click selects that object at that step and shows the Keyframes panel
+  - Keyframes: clicking an object name selects it in the model view like the Timeline, Ctrl+click adds or removes it, the arrow still folds its properties, and selected objects are highlighted
 
   </details>
 

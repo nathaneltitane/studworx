@@ -134,6 +134,7 @@ QColor swGetButtonOutlineColor(const QPalette& Palette);
 void swSetupPanelButton(QToolButton* Button);
 void swSetupTabScrollButtons(QTabBar* TabBar);
 QToolButton* swCreateTabCloseButton(QWidget* Parent);
+QWidget* swCreateDockTitleBar(QDockWidget* DockWidget);
 void swSetupPanelEdit(QWidget* Edit);
 void swSetupSpinBoxSelection(QAbstractSpinBox* SpinBox);
 void swSetupPanelSpinBox(QAbstractSpinBox* SpinBox);
@@ -179,6 +180,8 @@ enum class swPaintedIcon
 	TimePause,
 	TimeStop,
 	TimeKeysAdd,
+	TimeKeysSet,
+	TimeKeysRemove,
 	TransformTranslationAbsolute,
 	TransformTranslationRelative,
 	TransformRotationAbsolute,

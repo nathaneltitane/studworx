@@ -589,7 +589,6 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->gridLineSpacing->setRange(1, SW_MAXIMUM_GRID_LINE_SPACING);
 	ui->gridLineSpacing->setValue(mOptions->Preferences.mGridLineSpacing);
 	UpdateStudSuffix(ui->gridLineSpacing);
-	ui->GridOriginCheckBox->setChecked(mOptions->Preferences.mDrawGridOrigin);
 	ui->GridNegativeAxesCheckBox->setChecked(mOptions->Preferences.mDrawGridNegativeAxes);
 	ui->GridHeightXZCheckBox->setChecked(mOptions->Preferences.mDrawGridHeightXZ);
 	ui->GridHeightYZCheckBox->setChecked(mOptions->Preferences.mDrawGridHeightYZ);
@@ -976,7 +975,6 @@ void swPreferencesDialog::accept()
 	mOptions->Preferences.mDrawGridStuds = ui->gridStuds->isChecked();
 	mOptions->Preferences.mDrawGridLines = ui->gridLines->isChecked();
 	mOptions->Preferences.mGridLineSpacing = GridLineSpacing;
-	mOptions->Preferences.mDrawGridOrigin = ui->GridOriginCheckBox->isChecked();
 	mOptions->Preferences.mDrawGridNegativeAxes = ui->GridNegativeAxesCheckBox->isChecked();
 	mOptions->Preferences.mDrawGridHeightXZ = ui->GridHeightXZCheckBox->isChecked();
 	mOptions->Preferences.mDrawGridHeightYZ = ui->GridHeightYZCheckBox->isChecked();

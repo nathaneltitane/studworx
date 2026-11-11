@@ -571,6 +571,10 @@ bool swInterfaceFitFilter::eventFilter(QObject* Object, QEvent* Event)
 
 		DockWidget->setProperty("swFitFloating", true);
 
+		// locked panels already carry an empty title bar
+		if (!DockWidget->titleBarWidget())
+			DockWidget->setTitleBarWidget(swCreateDockTitleBar(DockWidget));
+
 		QObject::connect(DockWidget, &QDockWidget::topLevelChanged, DockWidget, [DockWidget](bool Floating)
 		{
 			if (Floating)
@@ -1157,6 +1161,109 @@ QToolButton* swCreateTabCloseButton(QWidget* Parent)
 	Button->setAttribute(Qt::WA_Hover);
 
 	return Button;
+}
+
+// use to draw the title bar buttons of panels
+class swDockTitleButton : public QToolButton
+{
+public:
+	swDockTitleButton(swPaintedIcon Icon, QWidget* Parent)
+		: QToolButton(Parent)
+	{
+		setIcon(swCreatePaintedIcon(Icon));
+		setFixedSize(16, 16);
+		setFocusPolicy(Qt::NoFocus);
+		setAttribute(Qt::WA_Hover);
+	}
+
+protected:
+	void paintEvent(QPaintEvent*) override
+	{
+		QPainter Painter(this);
+
+		if (underMouse() || isDown())
+		{
+			QColor Color = palette().color(QPalette::WindowText);
+			Color.setAlpha(isDown() ? 40 : 30);
+
+			Painter.setRenderHint(QPainter::Antialiasing);
+			Painter.setPen(Qt::NoPen);
+			Painter.setBrush(Color);
+			Painter.drawRoundedRect(QRectF(rect()), 3, 3);
+		}
+
+		icon().paint(&Painter, rect(), Qt::AlignCenter, isEnabled() ? QIcon::Normal : QIcon::Disabled);
+	}
+};
+
+// use to give panels one title bar, docked and floating
+// platform frames of floating panels ignore the color theme
+class swDockTitleBar : public QWidget
+{
+public:
+	swDockTitleBar(QDockWidget* DockWidget)
+		: QWidget(DockWidget), mDockWidget(DockWidget)
+	{
+		QHBoxLayout* Layout = new QHBoxLayout(this);
+		Layout->setContentsMargins(4, 4, 8, 4);
+		Layout->setSpacing(2);
+		Layout->addStretch(1);
+
+		QToolButton* FloatButton = new swDockTitleButton(swPaintedIcon::Undock, this);
+		FloatButton->setToolTip(QDockWidget::tr("Float"));
+		Layout->addWidget(FloatButton);
+
+		QToolButton* CloseButton = new swDockTitleButton(swPaintedIcon::Close, this);
+		CloseButton->setToolTip(QDockWidget::tr("Close"));
+		Layout->addWidget(CloseButton);
+
+		connect(FloatButton, &QToolButton::clicked, DockWidget, [DockWidget]() { DockWidget->setFloating(!DockWidget->isFloating()); });
+		connect(CloseButton, &QToolButton::clicked, DockWidget, &QDockWidget::close);
+		connect(DockWidget, &QDockWidget::windowTitleChanged, this, QOverload<>::of(&QWidget::update));
+
+		const auto UpdateButtons = [FloatButton, CloseButton](QDockWidget::DockWidgetFeatures Features)
+		{
+			FloatButton->setVisible(Features & QDockWidget::DockWidgetFloatable);
+			CloseButton->setVisible(Features & QDockWidget::DockWidgetClosable);
+		};
+
+		UpdateButtons(DockWidget->features());
+		connect(DockWidget, &QDockWidget::featuresChanged, this, UpdateButtons);
+	}
+
+	QSize sizeHint() const override
+	{
+		return QSize(0, qMax(fontMetrics().height() + 16, 28));
+	}
+
+	QSize minimumSizeHint() const override
+	{
+		return sizeHint();
+	}
+
+protected:
+	void paintEvent(QPaintEvent*) override
+	{
+		QPainter Painter(this);
+		int Right = width();
+
+		for (const QWidget* Button : findChildren<QToolButton*>(QString(), Qt::FindDirectChildrenOnly))
+			if (Button->isVisible())
+				Right = qMin(Right, Button->x());
+
+		const QRect TextRect = QRect(4, 0, Right - 4, height());
+		const QString Title = fontMetrics().elidedText(mDockWidget->windowTitle(), Qt::ElideRight, TextRect.width());
+
+		Painter.setPen(palette().color(QPalette::WindowText));
+		Painter.drawText(TextRect, Qt::AlignCenter, Title);
+	}
+
+	QDockWidget* mDockWidget;
+};
+
+QWidget* swCreateDockTitleBar(QDockWidget* DockWidget)
+{
+	return new swDockTitleBar(DockWidget);
 }
 
 void swSetupPanelEdit(QWidget* Edit)
@@ -2199,6 +2306,14 @@ static void swDrawPaintedIcon(QPainter* Painter, swPaintedIcon Icon, const QSize
 		Draw.Stroke(swCreateIconLine({ { 10, 8 }, { 16, 14 }, { 10, 20 }, { 4, 14 } }, true));
 		Draw.Stroke(swCreateIconLine({ { 18, 2 }, { 18, 9 } }));
 		Draw.Stroke(swCreateIconLine({ { 14.5, 5.5 }, { 21.5, 5.5 } }));
+		break;
+
+	case swPaintedIcon::TimeKeysSet:
+		Draw.Fill(swCreateIconLine({ { 12, 4 }, { 20, 12 }, { 12, 20 }, { 4, 12 } }, true));
+		break;
+
+	case swPaintedIcon::TimeKeysRemove:
+		Draw.Stroke(swCreateIconLine({ { 12, 5 }, { 19, 12 }, { 12, 19 }, { 5, 12 } }, true));
 		break;
 
 	case swPaintedIcon::TransformTranslationAbsolute:

@@ -1951,7 +1951,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Grid.ToggleAxisZ"),
 		QT_TRANSLATE_NOOP("Menu", "Z Axis Line"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the z axis line on the grid origin and the height grids"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Z Axis Line</b></p><p>Show or hide the Z axis line through the grid origin and the height grids.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Z Axis Line</b></p><p>Show or hide the Z axis line through the grid origin or along the height grids, reaching below the base grid when Draw Negative Axes is on and the model has parts.</p>"),
 		""
 	},
 
@@ -2141,15 +2141,6 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "Grid Lines"),
 		QT_TRANSLATE_NOOP("Status", "Toggle drawing lines on the base grid"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Grid Lines</b></p><p>Show or hide the lines of the base grid.</p>"),
-		""
-	},
-
-	// SW_VIEW_TOGGLE_GRID_ORIGIN
-	{
-		QT_TRANSLATE_NOOP("Action", "View.Grid.ToggleOrigin"),
-		QT_TRANSLATE_NOOP("Menu", "Grid Origin Lines"),
-		QT_TRANSLATE_NOOP("Status", "Toggle drawing the base grid origin lines"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Grid Origin Lines</b></p><p>Show or hide the origin lines of the base grid.</p>"),
 		""
 	},
 

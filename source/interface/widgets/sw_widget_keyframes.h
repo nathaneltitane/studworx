@@ -17,6 +17,7 @@ struct swKeyframesObject
 	swObject* Object;
 	QString Name;
 	bool Selected;
+	bool HasKeys;
 	std::vector<swKeyframesTrack> Tracks;
 };
 
@@ -49,7 +50,6 @@ private:
 	void SetPlaying(bool Playing);
 
 	swKeyframesView* mView;
-	QToolButton* mPlayButton;
 	QTimer* mPlayTimer;
 	swStep mPlayStart = 0;
 	QToolButton* mSelectedButton;
@@ -77,6 +77,7 @@ public:
 		return mObjects;
 	}
 
+	static std::vector<swKeyframesObject> GetModelObjects(swModel* Model, swStep StepCount);
 	static bool HasStep(const std::vector<swStep>& Steps, swStep Step);
 
 	QSize sizeHint() const override
@@ -100,6 +101,7 @@ protected:
 	std::vector<const swKeyframesTrack*> GetRowTracks(int RowIndex, bool CoreOnly) const;
 	void EditRow(int RowIndex, swStep RemoveStep, swStep AddStep, const QString& Description);
 	void RemoveRowKeys(int RowIndex);
+	void SelectRowObject(int RowIndex, bool Toggle);
 
 	std::vector<swKeyframesObject> mObjects;
 	std::vector<swKeyframesRow> mRows;

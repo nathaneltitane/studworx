@@ -1108,7 +1108,7 @@ void swView::DrawGrid()
 	// each grid has its own toggle
 	const bool DrawBaseGrid = Preferences.mGridEnabled && (Preferences.mDrawGridStuds || Preferences.mDrawGridLines);
 	const bool DrawGridHeight = Preferences.mDrawGridHeightXZ || Preferences.mDrawGridHeightYZ;
-	const bool DrawGridAxes = Preferences.mDrawGridOrigin && (Preferences.mDrawGridAxisX || Preferences.mDrawGridAxisY || Preferences.mDrawGridAxisZ);
+	const bool DrawGridAxes = (Preferences.mDrawGridAxisX || Preferences.mDrawGridAxisY || Preferences.mDrawGridAxisZ);
 
 	if (!DrawBaseGrid && !DrawGridHeight && !DrawGridAxes)
 		return;
@@ -1312,6 +1312,9 @@ void swView::DrawGrid()
 	const float Top = PlateMax * PlateHeight;
 	std::vector<swGridVertex> AxisVerts;
 
+	// negative z reaches below parts
+	const float AxisBottom = Preferences.mDrawGridNegativeAxes && GridSizeValid && Bottom >= 0.0f ? -Top : Bottom;
+
 	// use to add a two color axis line
 	const auto AddAxisLine = [&AxisVerts, &Preferences](const swVector3& Start, const swVector3& End, int Axis)
 	{
@@ -1367,7 +1370,7 @@ void swView::DrawGrid()
 			}
 
 			if (Preferences.mDrawGridAxisZ)
-				AddAxisLine(swVector3(0.0f, Y, Bottom), swVector3(0.0f, Y, Top), 2);
+				AddAxisLine(swVector3(0.0f, Y, AxisBottom), swVector3(0.0f, Y, Top), 2);
 		}
 
 		if (Preferences.mDrawGridHeightYZ)
@@ -1388,7 +1391,7 @@ void swView::DrawGrid()
 
 			// skip the drawn z axis line
 			if (Preferences.mDrawGridAxisZ && (BehindModel || !Preferences.mDrawGridHeightXZ))
-				AddAxisLine(swVector3(X, 0.0f, Bottom), swVector3(X, 0.0f, Top), 2);
+				AddAxisLine(swVector3(X, 0.0f, AxisBottom), swVector3(X, 0.0f, Top), 2);
 		}
 
 		mContext->SetLineWidth(1.0f);
@@ -1399,24 +1402,17 @@ void swView::DrawGrid()
 		mContext->DrawPrimitives(GL_LINES, 0, static_cast<int>(Lines.size()));
 	}
 
-	if (Preferences.mDrawGridOrigin)
-	{
-		const float Scale = 20.0f * Spacing;
+	const float Scale = 20.0f * Spacing;
 
-		if (Preferences.mDrawGridAxisY)
-			AddAxisLine(swVector3(0.0f, MinY * Scale, 0.0f), swVector3(0.0f, MaxY * Scale, 0.0f), 1);
+	if (Preferences.mDrawGridAxisY)
+		AddAxisLine(swVector3(0.0f, MinY * Scale, 0.0f), swVector3(0.0f, MaxY * Scale, 0.0f), 1);
 
-		if (Preferences.mDrawGridAxisX)
-			AddAxisLine(swVector3(MinX * Scale, 0.0f, 0.0f), swVector3(MaxX * Scale, 0.0f, 0.0f), 0);
+	if (Preferences.mDrawGridAxisX)
+		AddAxisLine(swVector3(MinX * Scale, 0.0f, 0.0f), swVector3(MaxX * Scale, 0.0f, 0.0f), 0);
 
-		// height grids own their z lines
-		if (Preferences.mDrawGridAxisZ && !DrawGridHeight)
-			AddAxisLine(swVector3(0.0f, 0.0f, Bottom), swVector3(0.0f, 0.0f, Top), 2);
-	}
-
-	// negative z reaches below the grid
-	if (Preferences.mDrawGridNegativeAxes && Preferences.mDrawGridAxisZ && Bottom >= 0.0f && (Preferences.mDrawGridOrigin || DrawGridHeight))
-		AddAxisLine(swVector3(0.0f, 0.0f, -Top), swVector3(0.0f, 0.0f, 0.0f), 2);
+	// height grids own their z lines
+	if (Preferences.mDrawGridAxisZ && !DrawGridHeight)
+		AddAxisLine(swVector3(0.0f, 0.0f, AxisBottom), swVector3(0.0f, 0.0f, Top), 2);
 
 	if (!AxisVerts.empty())
 	{

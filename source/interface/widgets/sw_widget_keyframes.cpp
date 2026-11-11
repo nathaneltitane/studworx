@@ -12,30 +12,23 @@ swKeyframesWidget::swKeyframesWidget(QWidget* Parent)
 {
 	// panel overview
 
-	setWhatsThis(tr("<p><b>Keyframes</b></p><p>A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.</p><p>Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.</p>"));
+	setWhatsThis(tr("<p><b>Keyframes</b></p><p>A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.</p><p>Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.</p>"));
 
 	QVBoxLayout* Layout = new QVBoxLayout(this);
 	QHBoxLayout* Buttons = new QHBoxLayout();
 
 	// key buttons for the selection
 
-	QToolButton* AddButton = new QToolButton(this);
-	AddButton->setText(QString::fromUtf8("◆"));
-	AddButton->setToolTip(tr("Add keys to the selected objects at the current step"));
-	AddButton->setWhatsThis(tr("<p><b>Set Keys</b></p><p>Add position and rotation keys to the selected objects at the current step, holding their values at that step.</p>"));
-	connect(AddButton, &QToolButton::clicked, this, &swKeyframesWidget::AddKeysClicked);
-	Buttons->addWidget(AddButton);
+	QToolButton* SetKeysButton = new QToolButton(this);
+	SetKeysButton->setDefaultAction(gMainWindow->mActions[SW_VIEW_TIME_SET_KEYS]);
+	Buttons->addWidget(SetKeysButton);
 
-	QToolButton* RemoveButton = new QToolButton(this);
-	RemoveButton->setText(QString::fromUtf8("◇"));
-	RemoveButton->setToolTip(tr("Remove the keys of the selected objects at the current step"));
-	RemoveButton->setWhatsThis(tr("<p><b>Remove Keys</b></p><p>Remove every key the selected objects have at the current step.</p>"));
-	connect(RemoveButton, &QToolButton::clicked, this, &swKeyframesWidget::RemoveKeysClicked);
-	Buttons->addWidget(RemoveButton);
+	QToolButton* RemoveKeysButton = new QToolButton(this);
+	RemoveKeysButton->setDefaultAction(gMainWindow->mActions[SW_VIEW_TIME_REMOVE_KEYS]);
+	Buttons->addWidget(RemoveKeysButton);
 
 	QToolButton* AddKeysButton = new QToolButton(this);
 	AddKeysButton->setDefaultAction(gMainWindow->mActions[SW_VIEW_TIME_ADD_KEYS]);
-	AddKeysButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
 	Buttons->addWidget(AddKeysButton);
 
 	// playback through the steps
@@ -47,18 +40,12 @@ swKeyframesWidget::swKeyframesWidget(QWidget* Parent)
 	connect(RewindButton, &QToolButton::clicked, this, [this]() { SetPlaying(false); mView->SetCurrentStep(1); });
 	Buttons->addWidget(RewindButton);
 
-	mPlayButton = new QToolButton(this);
-	mPlayButton->setIcon(swCreatePaintedIcon(swPaintedIcon::TimePlay));
-	mPlayButton->setToolTip(tr("Play or pause the steps"));
-	mPlayButton->setWhatsThis(tr("<p><b>Play</b></p><p>Step through the model one step at a time to the last step, showing the keyed motion. Click again to pause.</p>"));
-	connect(mPlayButton, &QToolButton::clicked, this, &swKeyframesWidget::PlayClicked);
-	Buttons->addWidget(mPlayButton);
+	QToolButton* PlayButton = new QToolButton(this);
+	PlayButton->setDefaultAction(gMainWindow->mActions[SW_VIEW_TIME_PLAY]);
+	Buttons->addWidget(PlayButton);
 
 	QToolButton* StopButton = new QToolButton(this);
-	StopButton->setIcon(swCreatePaintedIcon(swPaintedIcon::TimeStop));
-	StopButton->setToolTip(tr("Stop and go back to the step playing started from"));
-	StopButton->setWhatsThis(tr("<p><b>Stop</b></p><p>Stop playing through the steps and go back to the step playing started from.</p>"));
-	connect(StopButton, &QToolButton::clicked, this, &swKeyframesWidget::StopClicked);
+	StopButton->setDefaultAction(gMainWindow->mActions[SW_VIEW_TIME_STOP]);
 	Buttons->addWidget(StopButton);
 
 	QToolButton* ForwardButton = new QToolButton(this);
@@ -131,7 +118,7 @@ void swKeyframesWidget::SetPlaying(bool Playing)
 	else
 		mPlayTimer->stop();
 
-	mPlayButton->setIcon(swCreatePaintedIcon(Playing ? swPaintedIcon::TimePause : swPaintedIcon::TimePlay));
+	gMainWindow->mActions[SW_VIEW_TIME_PLAY]->setIcon(swCreatePaintedIcon(Playing ? swPaintedIcon::TimePause : swPaintedIcon::TimePlay));
 }
 
 void swKeyframesWidget::PlayClicked()
@@ -259,25 +246,34 @@ void swKeyframesView::Update()
 
 	mStepCount = LastStep + 1;
 
-	const auto AddObject = [this](swObject* Object, std::initializer_list<swKeyframesTrack> Tracks)
+	for (swKeyframesObject& Entry : GetModelObjects(Model, mStepCount))
+		if (Entry.Selected || (mShowAll && Entry.HasKeys))
+			mObjects.push_back(std::move(Entry));
+
+	UpdateRows();
+}
+
+std::vector<swKeyframesObject> swKeyframesView::GetModelObjects(swModel* Model, swStep StepCount)
+{
+	std::vector<swKeyframesObject> Objects;
+
+	const auto AddObject = [&Objects, StepCount](swObject* Object, std::initializer_list<swKeyframesTrack> Tracks)
 	{
-		swKeyframesObject Entry{ Object, Object->GetName(), Object->IsSelected(), {} };
-		bool HasKeys = false;
+		swKeyframesObject Entry{ Object, Object->GetName(), Object->IsSelected(), false, {} };
 
 		for (swKeyframesTrack Track : Tracks)
 		{
-			for (swStep Step = 1; Step <= mStepCount; Step++)
+			for (swStep Step = 1; Step <= StepCount; Step++)
 				if (Object->HasKeyFrame(Track.PropertyId, Step))
 					Track.Steps.push_back(Step);
 
-			HasKeys |= !Track.Steps.empty();
+			Entry.HasKeys |= !Track.Steps.empty();
 
 			if (Track.Core || !Track.Steps.empty())
 				Entry.Tracks.push_back(Track);
 		}
 
-		if (Entry.Selected || (mShowAll && HasKeys))
-			mObjects.push_back(std::move(Entry));
+		Objects.push_back(std::move(Entry));
 	};
 
 	const QString Position = tr("Position");
@@ -313,7 +309,7 @@ void swKeyframesView::Update()
 			{ swObjectPropertyId::ObjectPositionX, Position, true, {} },
 			{ swObjectPropertyId::ObjectRotationX, Rotation, true, {} } });
 
-	UpdateRows();
+	return Objects;
 }
 
 void swKeyframesView::UpdateRows()
@@ -429,6 +425,31 @@ void swKeyframesView::RemoveRowKeys(int RowIndex)
 	Model->EditKeyFrames(Edits, tr("Remove Keyframes"));
 }
 
+void swKeyframesView::SelectRowObject(int RowIndex, bool Toggle)
+{
+	swModel* Model = gMainWindow->GetActiveModel();
+
+	if (!Model)
+		return;
+
+	// copied before rows rebuild
+
+	swObject* Object = mObjects[mRows[RowIndex].ObjectIndex].Object;
+	const bool Selected = mObjects[mRows[RowIndex].ObjectIndex].Selected;
+
+	// a part shows from its first step
+
+	if (Object->IsPart() && ((swPart*)Object)->GetStepShow() > Model->GetCurrentStep())
+		SetCurrentStep(((swPart*)Object)->GetStepShow());
+
+	if (!Toggle)
+		Model->SetSelectionAndFocusAction({ Object }, Object, 0, swSelectionMode::Single);
+	else if (Selected)
+		Model->RemoveFromSelectionAction({ Object });
+	else
+		Model->AddToSelectionAction({ Object });
+}
+
 void swKeyframesView::SetCurrentStep(swStep Step)
 {
 	swModel* Model = gMainWindow->GetActiveModel();
@@ -452,11 +473,14 @@ void swKeyframesView::mousePressEvent(QMouseEvent* Event)
 	if (!HitTest(Event->pos(), &RowIndex, &Step))
 		return;
 
-	// name column folds objects
+	// arrow folds, name selects
 
 	if (!Step)
 	{
-		if (RowIndex >= 0 && mRows[RowIndex].TrackIndex < 0)
+		if (RowIndex < 0)
+			return;
+
+		if (mRows[RowIndex].TrackIndex < 0 && Event->pos().x() < 4 + fontMetrics().horizontalAdvance(QString::fromUtf8("▸ ")))
 		{
 			swObject* Object = mObjects[mRows[RowIndex].ObjectIndex].Object;
 
@@ -467,6 +491,8 @@ void swKeyframesView::mousePressEvent(QMouseEvent* Event)
 
 			UpdateRows();
 		}
+		else
+			SelectRowObject(RowIndex, Event->modifiers() & Qt::ControlModifier);
 
 		return;
 	}
@@ -619,6 +645,14 @@ void swKeyframesView::paintEvent(QPaintEvent* Event)
 		Font.setBold(Row.TrackIndex < 0 && Object.Selected);
 		Painter.setFont(Font);
 		Painter.setPen(KeyColor);
+
+		// selected objects highlighted like lists
+
+		if (Row.TrackIndex < 0 && Object.Selected)
+		{
+			Painter.fillRect(QRect(0, Y, mNameWidth, mRowHeight), Palette.highlight());
+			Painter.setPen(Palette.color(QPalette::HighlightedText));
+		}
 
 		QString Name;
 

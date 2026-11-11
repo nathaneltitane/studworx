@@ -629,13 +629,8 @@ void swMainWindow::SetInterfaceLocked(bool Locked)
 		// empty title bar collapses the title
 		QWidget* TitleBar = DockWidget->titleBarWidget();
 
-		if (Locked && !TitleBar)
-			DockWidget->setTitleBarWidget(new QWidget(DockWidget));
-		else if (!Locked && TitleBar)
-		{
-			DockWidget->setTitleBarWidget(nullptr);
-			delete TitleBar;
-		}
+		DockWidget->setTitleBarWidget(Locked ? new QWidget(DockWidget) : swCreateDockTitleBar(DockWidget));
+		delete TitleBar;
 
 		DockWidget->setFeatures(Features);
 	}

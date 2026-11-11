@@ -642,10 +642,6 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		swTogglePreference(swGetPreferences().mDrawGridLines, SW_PROFILE_GRID_LINES);
 		break;
 
-	case SW_VIEW_TOGGLE_GRID_ORIGIN:
-		swTogglePreference(swGetPreferences().mDrawGridOrigin, SW_PROFILE_GRID_ORIGIN);
-		break;
-
 	case SW_VIEW_TOGGLE_AUTOMATE_EDGE_COLOR:
 		ToggleAutomateEdgeColor();
 		break;

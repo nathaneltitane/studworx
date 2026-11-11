@@ -113,7 +113,6 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "GridLines", 1),                                                            // SW_PROFILE_GRID_LINES
 	swProfileEntry("Settings", "GridLineSpacing", 5),                                                      // SW_PROFILE_GRID_LINE_SPACING
 	swProfileEntry("Settings", "GridLineColor", SW_RGBA(42, 46, 50, 255)),                                 // SW_PROFILE_GRID_LINE_COLOR #2a2e32ff
-	swProfileEntry("Settings", "GridOrigin", 0),                                                           // SW_PROFILE_GRID_ORIGIN
 	swProfileEntry("Settings", "GridNegativeAxes", 1),                                                     // SW_PROFILE_GRID_NEGATIVE_AXES
 	swProfileEntry("Settings", "GridEnabled", true),                                                       // SW_PROFILE_GRID_ENABLED
 	swProfileEntry("Settings", "GridHeightXZ", 0),                                                         // SW_PROFILE_GRID_HEIGHT_XZ

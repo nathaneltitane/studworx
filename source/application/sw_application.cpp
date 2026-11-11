@@ -87,7 +87,6 @@ void swPreferences::LoadDefaults()
 	mDrawGridLines = swGetProfileInteger(SW_PROFILE_GRID_LINES);
 	mGridLineSpacing = swGetProfileInteger(SW_PROFILE_GRID_LINE_SPACING);
 	mGridLineColor = swGetProfileUnsignedInteger(SW_PROFILE_GRID_LINE_COLOR);
-	mDrawGridOrigin = swGetProfileInteger(SW_PROFILE_GRID_ORIGIN);
 	mDrawGridNegativeAxes = swGetProfileInteger(SW_PROFILE_GRID_NEGATIVE_AXES);
 	mGridEnabled = swGetProfileInteger(SW_PROFILE_GRID_ENABLED);
 	mDrawGridHeightXZ = swGetProfileInteger(SW_PROFILE_GRID_HEIGHT_XZ);
@@ -214,7 +213,6 @@ void swPreferences::SaveDefaults()
 	swSetProfileInteger(SW_PROFILE_GRID_LINES, mDrawGridLines);
 	swSetProfileInteger(SW_PROFILE_GRID_LINE_SPACING, mGridLineSpacing);
 	swSetProfileUnsignedInteger(SW_PROFILE_GRID_LINE_COLOR, mGridLineColor);
-	swSetProfileInteger(SW_PROFILE_GRID_ORIGIN, mDrawGridOrigin);
 	swSetProfileInteger(SW_PROFILE_GRID_NEGATIVE_AXES, mDrawGridNegativeAxes);
 	swSetProfileInteger(SW_PROFILE_GRID_ENABLED, mGridEnabled);
 	swSetProfileInteger(SW_PROFILE_GRID_HEIGHT_XZ, mDrawGridHeightXZ);

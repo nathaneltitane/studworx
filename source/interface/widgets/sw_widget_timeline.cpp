@@ -5,6 +5,7 @@
 #include "sw_data_part.h"
 #include "sw_window_main.h"
 #include "sw_window_utilities.h"
+#include "sw_widget_keyframes.h"
 
 swTimelineWidget::swTimelineWidget(QWidget* Parent)
 	: QTreeWidget(Parent)
@@ -29,6 +30,33 @@ swTimelineWidget::swTimelineWidget(QWidget* Parent)
 	connect(this, &QWidget::customContextMenuRequested, this, &swTimelineWidget::CustomMenuRequested);
 	connect(this, &QTreeWidget::itemDoubleClicked, this, [](QTreeWidgetItem* Item)
 	{
+		swModel* KeysModel = gMainWindow->GetActiveModel();
+		swObject* KeysObject = Item && KeysModel ? (swObject*)Item->data(0, Qt::UserRole + 2).value<uintptr_t>() : nullptr;
+
+		// key row selects its object at its step
+
+		if (KeysObject)
+		{
+			const swStep KeysStep = Item->data(0, Qt::UserRole + 3).toUInt();
+			KeysModel->SetCurrentStep(KeysStep);
+			gMainWindow->UpdateCurrentStep();
+			KeysModel->SetSelectionAndFocusAction({ KeysObject }, KeysObject, 0, swSelectionMode::Single);
+
+			swKeyframesWidget* Keyframes = gMainWindow->findChild<swKeyframesWidget*>();
+			QDockWidget* KeyframesDock = nullptr;
+
+			for (QWidget* Parent = Keyframes; Parent && !KeyframesDock; Parent = Parent->parentWidget())
+				KeyframesDock = qobject_cast<QDockWidget*>(Parent);
+
+			if (KeyframesDock)
+			{
+				KeyframesDock->show();
+				KeyframesDock->raise();
+			}
+
+			return;
+		}
+
 		const QVariant ViewStep = Item ? Item->data(0, Qt::UserRole + 1) : QVariant();
 		swModel* Model = gMainWindow->GetActiveModel();
 
@@ -128,7 +156,7 @@ void swTimelineWidget::Update(bool Clear, bool UpdateItems)
 		QTreeWidgetItem* StepItem = topLevelItem(TopLevelItemIdx);
 
 		for (int ChildIdx = StepItem->childCount() - 1; ChildIdx >= 0; ChildIdx--)
-			if (StepItem->child(ChildIdx)->data(0, Qt::UserRole + 1).isValid())
+			if (!StepItem->child(ChildIdx)->data(0, Qt::UserRole).isValid())
 				delete StepItem->child(ChildIdx);
 	}
 
@@ -284,6 +312,27 @@ void swTimelineWidget::Update(bool Clear, bool UpdateItems)
 		Step++;
 		StepItem = topLevelItem(Step - 1);
 		PartItemIndex = 0;
+	}
+
+	// key rows name the keyed objects
+
+	for (const swKeyframesObject& Object : swKeyframesView::GetModelObjects(Model, topLevelItemCount()))
+	{
+		std::map<swStep, QStringList> StepTracks;
+
+		for (const swKeyframesTrack& Track : Object.Tracks)
+			for (swStep Step : Track.Steps)
+				StepTracks[Step].append(Track.Name.toLower());
+
+		for (const std::pair<const swStep, QStringList>& Keys : StepTracks)
+		{
+			QTreeWidgetItem* KeysItem = new QTreeWidgetItem(QStringList(tr("Keys: %1 (%2)").arg(Object.Name, Keys.second.join(QLatin1String(", ")))));
+			KeysItem->setFlags(Qt::ItemIsEnabled);
+			KeysItem->setData(0, Qt::UserRole + 2, QVariant::fromValue<uintptr_t>((uintptr_t)Object.Object));
+			KeysItem->setData(0, Qt::UserRole + 3, QVariant::fromValue<uint>(Keys.first));
+			KeysItem->setToolTip(0, tr("Animation keys of this object at this step. Double-click to select it and show the Keyframes panel."));
+			topLevelItem(Keys.first - 1)->addChild(KeysItem);
+		}
 	}
 
 	// step view row closes the step

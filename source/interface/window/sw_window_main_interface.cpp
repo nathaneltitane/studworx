@@ -201,7 +201,11 @@ void swMainWindow::CreateActions()
 	mActions[SW_VIEW_TIME_PREVIOUS]->setIcon(swCreatePaintedIcon(swPaintedIcon::TimePrevious));
 	mActions[SW_VIEW_TIME_NEXT]->setIcon(swCreatePaintedIcon(swPaintedIcon::TimeNext));
 	mActions[SW_VIEW_TIME_LAST]->setIcon(swCreatePaintedIcon(swPaintedIcon::TimeLast));
+	mActions[SW_VIEW_TIME_PLAY]->setIcon(swCreatePaintedIcon(swPaintedIcon::TimePlay));
+	mActions[SW_VIEW_TIME_STOP]->setIcon(swCreatePaintedIcon(swPaintedIcon::TimeStop));
 	mActions[SW_VIEW_TIME_ADD_KEYS]->setIcon(swCreatePaintedIcon(swPaintedIcon::TimeKeysAdd));
+	mActions[SW_VIEW_TIME_SET_KEYS]->setIcon(swCreatePaintedIcon(swPaintedIcon::TimeKeysSet));
+	mActions[SW_VIEW_TIME_REMOVE_KEYS]->setIcon(swCreatePaintedIcon(swPaintedIcon::TimeKeysRemove));
 
 	mActions[SW_EDIT_SNAP_MOVE_TOGGLE]->setCheckable(true);
 	mActions[SW_EDIT_SNAP_ANGLE_TOGGLE]->setCheckable(true);
@@ -684,12 +688,16 @@ void swMainWindow::CreateToolBars()
 
 	mTimeToolBar = addToolBar(tr("Time"));
 	mTimeToolBar->setObjectName("TimeToolbar");
-	mTimeToolBar->setWhatsThis(tr("<p><b>Time Toolbar</b></p><p>The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Timeline for that. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.</p>"));
+	mTimeToolBar->setWhatsThis(tr("<p><b>Time Toolbar</b></p><p>The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Timeline for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.</p>"));
+	mTimeToolBar->addAction(mActions[SW_VIEW_TIME_SET_KEYS]);
+	mTimeToolBar->addAction(mActions[SW_VIEW_TIME_REMOVE_KEYS]);
+	mTimeToolBar->addAction(mActions[SW_VIEW_TIME_ADD_KEYS]);
 	mTimeToolBar->addAction(mActions[SW_VIEW_TIME_FIRST]);
 	mTimeToolBar->addAction(mActions[SW_VIEW_TIME_PREVIOUS]);
+	mTimeToolBar->addAction(mActions[SW_VIEW_TIME_PLAY]);
+	mTimeToolBar->addAction(mActions[SW_VIEW_TIME_STOP]);
 	mTimeToolBar->addAction(mActions[SW_VIEW_TIME_NEXT]);
 	mTimeToolBar->addAction(mActions[SW_VIEW_TIME_LAST]);
-	mTimeToolBar->addAction(mActions[SW_VIEW_TIME_ADD_KEYS]);
 
 	mToolsToolBar = addToolBar(tr("Tools"));
 	mToolsToolBar->setObjectName("ToolsToolbar");
@@ -916,7 +924,7 @@ void swMainWindow::CreateToolBars()
 
 	mTimelineToolBar = new QDockWidget(tr("Timeline"), this);
 	mTimelineToolBar->setObjectName("TimelineToolbar");
-	mTimelineToolBar->setWhatsThis(tr("<p><b>Timeline</b></p><p>Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Right-click for step insertion, removal, movement, and visibility commands.</p>"));
+	mTimelineToolBar->setWhatsThis(tr("<p><b>Timeline</b></p><p>Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.</p>"));
 	swSetupWidgetHelp(mTimelineToolBar);
 	mTimelineToolBar->setAcceptDrops(true);
 

@@ -2876,29 +2876,6 @@
            </layout>
           </item>
           <item row="2" column="0">
-           <widget class="QLabel" name="GridOriginLabel">
-            <property name="toolTip">
-             <string>Emphasize the base-grid lines through the model origin.</string>
-            </property>
-            <property name="text">
-             <string>Draw Origin Lines</string>
-            </property>
-            <property name="buddy">
-             <cstring>GridOriginCheckBox</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1" colspan="2">
-           <widget class="QCheckBox" name="GridOriginCheckBox">
-            <property name="accessibleName">
-             <string>Draw Origin Lines</string>
-            </property>
-            <property name="toolTip">
-             <string>Emphasize the base-grid lines through the model origin.</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
            <widget class="QLabel" name="GridHeightXZLabel">
             <property name="toolTip">
              <string>Draw a vertical grid on the XZ plane through the X axis with lines every plate height.</string>
@@ -2911,7 +2888,7 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="1" colspan="2">
+          <item row="2" column="1" colspan="2">
            <widget class="QCheckBox" name="GridHeightXZCheckBox">
             <property name="accessibleName">
              <string>Draw XZ Height Grid</string>
@@ -2921,7 +2898,7 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="0">
+          <item row="3" column="0">
            <widget class="QLabel" name="GridHeightYZLabel">
             <property name="toolTip">
              <string>Draw a vertical grid on the YZ plane through the Y axis with lines every plate height.</string>
@@ -2934,7 +2911,7 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="1" colspan="2">
+          <item row="3" column="1" colspan="2">
            <widget class="QCheckBox" name="GridHeightYZCheckBox">
             <property name="accessibleName">
              <string>Draw YZ Height Grid</string>
@@ -2944,7 +2921,7 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="0">
+          <item row="4" column="0">
            <widget class="QLabel" name="GridHeightBehindLabel">
             <property name="toolTip">
              <string>Draw the height grids on the side of the model facing away from the camera instead of through the origin axes.</string>
@@ -2957,7 +2934,7 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="1" colspan="2">
+          <item row="4" column="1" colspan="2">
            <widget class="QCheckBox" name="GridHeightBehindCheckBox">
             <property name="accessibleName">
              <string>Draw Height Grids Behind the Model</string>
@@ -2967,7 +2944,7 @@
             </property>
            </widget>
           </item>
-          <item row="6" column="0">
+          <item row="5" column="0">
            <widget class="QLabel" name="GridAxisXLabel">
             <property name="toolTip">
              <string>Draw the x axis line at the grid origin.</string>
@@ -2980,7 +2957,7 @@
             </property>
            </widget>
           </item>
-          <item row="6" column="1" colspan="2">
+          <item row="5" column="1" colspan="2">
            <widget class="QCheckBox" name="GridAxisXCheckBox">
             <property name="accessibleName">
              <string>Draw X Axis Line</string>
@@ -2990,7 +2967,7 @@
             </property>
            </widget>
           </item>
-          <item row="7" column="0">
+          <item row="6" column="0">
            <widget class="QLabel" name="GridAxisYLabel">
             <property name="toolTip">
              <string>Draw the y axis line at the grid origin.</string>
@@ -3003,7 +2980,7 @@
             </property>
            </widget>
           </item>
-          <item row="7" column="1" colspan="2">
+          <item row="6" column="1" colspan="2">
            <widget class="QCheckBox" name="GridAxisYCheckBox">
             <property name="accessibleName">
              <string>Draw Y Axis Line</string>
@@ -3013,7 +2990,7 @@
             </property>
            </widget>
           </item>
-          <item row="8" column="0">
+          <item row="7" column="0">
            <widget class="QLabel" name="GridAxisZLabel">
             <property name="toolTip">
              <string>Draw the z axis line at the grid origin, or along the height grids when they are shown.</string>
@@ -3026,7 +3003,7 @@
             </property>
            </widget>
           </item>
-          <item row="8" column="1" colspan="2">
+          <item row="7" column="1" colspan="2">
            <widget class="QCheckBox" name="GridAxisZCheckBox">
             <property name="accessibleName">
              <string>Draw Z Axis Line</string>
@@ -3036,7 +3013,7 @@
             </property>
            </widget>
           </item>
-          <item row="9" column="0">
+          <item row="8" column="0">
            <widget class="QLabel" name="GridNegativeAxesLabel">
             <property name="toolTip">
              <string>Draw the negative halves of the axis lines in the negative axis colors, with the Z line reaching below the base grid.</string>
@@ -3049,7 +3026,7 @@
             </property>
            </widget>
           </item>
-          <item row="9" column="1" colspan="2">
+          <item row="8" column="1" colspan="2">
            <widget class="QCheckBox" name="GridNegativeAxesCheckBox">
             <property name="accessibleName">
              <string>Draw Negative Axes</string>
@@ -4531,7 +4508,7 @@
           <item row="0" column="0">
            <widget class="QLabel" name="AxisXColorLabel">
             <property name="toolTip">
-             <string>Choose the X axis color used by the axis icon, grid origin lines and transform handles.</string>
+             <string>Choose the X axis color used by the axis icon, axis lines and transform handles.</string>
             </property>
             <property name="buddy">
              <cstring>AxisXColorButton</cstring>
@@ -4547,7 +4524,7 @@
              <string>X Axis Color</string>
             </property>
             <property name="toolTip">
-             <string>Choose the X axis color used by the axis icon, grid origin lines and transform handles.</string>
+             <string>Choose the X axis color used by the axis icon, axis lines and transform handles.</string>
             </property>
             <property name="text">
              <string />
@@ -4557,7 +4534,7 @@
           <item row="1" column="0">
            <widget class="QLabel" name="AxisYColorLabel">
             <property name="toolTip">
-             <string>Choose the Y axis color used by the axis icon, grid origin lines and transform handles.</string>
+             <string>Choose the Y axis color used by the axis icon, axis lines and transform handles.</string>
             </property>
             <property name="buddy">
              <cstring>AxisYColorButton</cstring>
@@ -4573,7 +4550,7 @@
              <string>Y Axis Color</string>
             </property>
             <property name="toolTip">
-             <string>Choose the Y axis color used by the axis icon, grid origin lines and transform handles.</string>
+             <string>Choose the Y axis color used by the axis icon, axis lines and transform handles.</string>
             </property>
             <property name="text">
              <string />
@@ -4583,7 +4560,7 @@
           <item row="2" column="0">
            <widget class="QLabel" name="AxisZColorLabel">
             <property name="toolTip">
-             <string>Choose the Z axis color used by the axis icon, grid origin lines and transform handles.</string>
+             <string>Choose the Z axis color used by the axis icon, axis lines and transform handles.</string>
             </property>
             <property name="buddy">
              <cstring>AxisZColorButton</cstring>
@@ -4599,7 +4576,7 @@
              <string>Z Axis Color</string>
             </property>
             <property name="toolTip">
-             <string>Choose the Z axis color used by the axis icon, grid origin lines and transform handles.</string>
+             <string>Choose the Z axis color used by the axis icon, axis lines and transform handles.</string>
             </property>
             <property name="text">
              <string />
@@ -5681,7 +5658,6 @@
   <tabstop>gridStuds</tabstop>
   <tabstop>gridLines</tabstop>
   <tabstop>gridLineSpacing</tabstop>
-  <tabstop>GridOriginCheckBox</tabstop>
   <tabstop>GridHeightXZCheckBox</tabstop>
   <tabstop>GridHeightYZCheckBox</tabstop>
   <tabstop>GridHeightBehindCheckBox</tabstop>
