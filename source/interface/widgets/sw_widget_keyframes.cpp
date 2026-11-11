@@ -1,6 +1,7 @@
 #include "sw_global.h"
 #include "sw_widget_keyframes.h"
 #include "sw_window_main.h"
+#include "sw_window_utilities.h"
 #include "sw_model.h"
 #include "sw_object_part.h"
 #include "sw_object_camera.h"
@@ -40,28 +41,28 @@ swKeyframesWidget::swKeyframesWidget(QWidget* Parent)
 	// playback through the steps
 
 	QToolButton* RewindButton = new QToolButton(this);
-	RewindButton->setIcon(style()->standardIcon(QStyle::SP_MediaSkipBackward));
+	RewindButton->setIcon(swCreatePaintedIcon(swPaintedIcon::TimeFirst));
 	RewindButton->setToolTip(tr("Go to the first step"));
 	RewindButton->setWhatsThis(tr("<p><b>Rewind</b></p><p>Go to the first step of the model.</p>"));
 	connect(RewindButton, &QToolButton::clicked, this, [this]() { SetPlaying(false); mView->SetCurrentStep(1); });
 	Buttons->addWidget(RewindButton);
 
 	mPlayButton = new QToolButton(this);
-	mPlayButton->setIcon(style()->standardIcon(QStyle::SP_MediaPlay));
+	mPlayButton->setIcon(swCreatePaintedIcon(swPaintedIcon::TimePlay));
 	mPlayButton->setToolTip(tr("Play or pause the steps"));
 	mPlayButton->setWhatsThis(tr("<p><b>Play</b></p><p>Step through the model one step at a time to the last step, showing the keyed motion. Click again to pause.</p>"));
 	connect(mPlayButton, &QToolButton::clicked, this, &swKeyframesWidget::PlayClicked);
 	Buttons->addWidget(mPlayButton);
 
 	QToolButton* StopButton = new QToolButton(this);
-	StopButton->setIcon(style()->standardIcon(QStyle::SP_MediaStop));
+	StopButton->setIcon(swCreatePaintedIcon(swPaintedIcon::TimeStop));
 	StopButton->setToolTip(tr("Stop and go back to the step playing started from"));
 	StopButton->setWhatsThis(tr("<p><b>Stop</b></p><p>Stop playing through the steps and go back to the step playing started from.</p>"));
 	connect(StopButton, &QToolButton::clicked, this, &swKeyframesWidget::StopClicked);
 	Buttons->addWidget(StopButton);
 
 	QToolButton* ForwardButton = new QToolButton(this);
-	ForwardButton->setIcon(style()->standardIcon(QStyle::SP_MediaSkipForward));
+	ForwardButton->setIcon(swCreatePaintedIcon(swPaintedIcon::TimeLast));
 	ForwardButton->setToolTip(tr("Go to the last step"));
 	ForwardButton->setWhatsThis(tr("<p><b>Forward</b></p><p>Go to the last step of the model.</p>"));
 	connect(ForwardButton, &QToolButton::clicked, this, [this]()
@@ -130,7 +131,7 @@ void swKeyframesWidget::SetPlaying(bool Playing)
 	else
 		mPlayTimer->stop();
 
-	mPlayButton->setIcon(style()->standardIcon(Playing ? QStyle::SP_MediaPause : QStyle::SP_MediaPlay));
+	mPlayButton->setIcon(swCreatePaintedIcon(Playing ? swPaintedIcon::TimePause : swPaintedIcon::TimePlay));
 }
 
 void swKeyframesWidget::PlayClicked()

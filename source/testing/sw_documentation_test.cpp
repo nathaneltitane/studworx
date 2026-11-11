@@ -117,3 +117,21 @@ void swTests::DocumentationLinksEveryImage()
 	QVERIFY2(Unlinked.isEmpty(), qPrintable(QStringLiteral("Not linked in SITE.md: ") + Unlinked.join(QStringLiteral(", "))));
 	QVERIFY2(Missing.isEmpty(), qPrintable(QStringLiteral("Linked but missing: ") + Missing.join(QStringLiteral(", "))));
 }
+
+// Style and theme icons keep platform colors, so every interface icon is painted.
+void swTests::InterfaceUsesPaintedIcons()
+{
+	const QRegularExpression Pattern(QStringLiteral("(->|\\.)standardIcon\\(|QIcon::fromTheme\\("));
+	QStringList Found;
+	QDirIterator Files(QStringLiteral(SW_SOURCE_ROOT "/source"), QStringList() << QStringLiteral("*.cpp") << QStringLiteral("*.h"), QDir::Files, QDirIterator::Subdirectories);
+
+	while (Files.hasNext())
+	{
+		const QString FileName = Files.next();
+
+		if (!FileName.contains(QLatin1String("/testing/")) && Pattern.match(ReadSourceFile(FileName.mid(QStringLiteral(SW_SOURCE_ROOT "/").size()))).hasMatch())
+			Found.append(QFileInfo(FileName).fileName());
+	}
+
+	QVERIFY2(Found.isEmpty(), qPrintable(QStringLiteral("Unpainted icons in: ") + Found.join(QStringLiteral(", "))));
+}

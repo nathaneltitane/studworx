@@ -1,6 +1,13 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-11</summary>
+
+  - Keyframes: the rewind, play, pause, stop and forward buttons are painted in the color theme, so they no longer stay black on a dark interface
+
+  </details>
+
+  <details>
   <summary>2026-11-10</summary>
 
   - Preferences: each tab scrolls when the window is taller than the screen, and the window opens wide enough to show every tab, so OK and Cancel stay in reach on low resolution screens

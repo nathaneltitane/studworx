@@ -3668,11 +3668,19 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p class="lead">The latest release notices from the StudWorx repository.</p>
 
 			<details open>
+				<summary>2026-11-11</summary>
+
+				<ul>
+					<li>Keyframes: the rewind, play, pause, stop and forward buttons are painted in the color theme, so they no longer stay black on a dark <a href="#interface">interface</a></li>
+				</ul>
+			</details>
+
+			<details>
 				<summary>2026-11-10</summary>
 
 				<ul>
 					<li><a href="#preferences">Preferences</a>: each tab scrolls when the window is taller than the screen, and the window opens wide enough to show every tab, so OK and Cancel stay in reach on low resolution screens</li>
-					<li><a href="#interface">Interface</a>: floating <a href="#panels">panels</a> keep their own title bar, so a double click or a drag back onto the window docks them again</li>
+					<li>Interface: floating <a href="#panels">panels</a> keep their own title bar, so a double click or a drag back onto the window docks them again</li>
 					<li>Interface: every floating panel opens at its smallest contents size and can be enlarged but never shrunk below it, forms like Properties, Explode, Minifigure Builder and Colors stay as tall as their contents as groups open and close, and the terminal counts as a resizable view</li>
 					<li>Interface: every docked panel can be squeezed down to its title bar, Preview included, which floats and docks with a square view and resizes like any other panel, and title-only panels keep their height when a panel beside them floats, closes or shrinks to its contents, Properties included as the selection changes, and squeezed panels stay squeezed after a restart or when the window is maximized and restored</li>
 					<li>Colors: squeezing the panel no longer crashes StudWorx, the floating panel follows its contents height as groups open and close, and the last group header and color row are no longer cut off</li>
@@ -3744,23 +3752,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Menus: Select Invert is now Invert Selection, Remove Step is now Delete Step, and the snap toggles read Move Snap, Rotation Snap and Camera Snap</li>
 					<li>Studs: the stud styles are named Thin-Line Logo and High Contrast Logo in the menus, preferences and command line help</li>
 					<li>Interface: errors read &quot;Could not …&quot;, file filters read &quot;LDraw Models&quot; and &quot;All Files&quot;, menu, status bar, dialog and message wording is consistent, status bar text names toolbars and panels correctly, and the command line help, man page and SITE.md agree with the menus</li>
-				</ul>
-			</details>
-
-			<details>
-				<summary>2026-11-04</summary>
-
-				<ul>
-					<li>Cutaway: the cutaway of a view is saved with the model and comes back when the file opens, the parts themselves are never changed</li>
-					<li>Samples: cube, sphere and cylinder cutaway samples of the minifigure join the explode, flexible part, lights and cameras and minifigure samples</li>
-					<li>Weights: part weights from BrickLink ship with StudWorx, the Properties dialog shows the model weight in grams and ounces and a Weight column with Metric or Imperial units, and the part tooltip and status bar show the weight of a part, or N/A when it is unknown</li>
-					<li>Properties: the measurements and weight are listed one unit per line</li>
-					<li>Import: LEGO® Digital Designer models use a bundled part, color and placement mapping converted from the ldraw.xml of slswww.free.fr, an ldraw.xml in the parts library is no longer read</li>
-					<li>Preferences: Migrate Files on Load chooses Ask, Migrate or Keep for models with LeoCAD <a href="#meta">meta</a> commands, and Remember this choice in the question sets it</li>
-					<li>Preferences: every checkbox sits in the control column with its label on the left, and the label greys out with its checkbox</li>
-					<li>Status bar: hints such as the face pick and cutaway messages no longer overlap the selection text and stay shown after the menu closes</li>
-					<li>Views: the height grid entries of the view options are greyed out while the base grid is off</li>
-					<li>Views: with split views the view cube and axis icon show on the top left view only</li>
 				</ul>
 			</details>
 

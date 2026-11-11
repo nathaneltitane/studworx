@@ -47,4 +47,5 @@ private slots:
 	void DocumentationNamesEveryCommand();
 	void DocumentationHelpsEveryCommand();
 	void DocumentationLinksEveryImage();
+	void InterfaceUsesPaintedIcons();
 };
