@@ -910,11 +910,15 @@ void swView::DrawConnectionMarkers() const
 
 		const bool Male = Marker.Gender == swConnectionGender::Male;
 
-		// a stud sized cylinder out of the opening
-		if (Marker.Kind == swConnectionKind::Cylinder)
+		// joints fill their own size, seen through the part
+		const bool Joint = Marker.Kind == swConnectionKind::Clip || Marker.Kind == swConnectionKind::Finger || Marker.Kind == swConnectionKind::Ball;
+		mContext->EnableDepthTest(!Joint);
+
+		// a stud sized cylinder out of the opening, clips and fingers at their size
+		if (Marker.Kind == swConnectionKind::Cylinder || Marker.Kind == swConnectionKind::Clip || Marker.Kind == swConnectionKind::Finger)
 		{
-			const float StudRadius = 6.0f;
-			const float StudHeight = 4.0f;
+			const float StudRadius = Joint ? Marker.Radius : 6.0f;
+			const float StudHeight = Joint ? Marker.Length : 4.0f;
 			const swVector3 Axis = swNormalize(Marker.Direction);
 			const swVector3 Side = swNormalize(swCross(Axis, fabsf(Axis.z) < 0.9f ? swVector3(0.0f, 0.0f, 1.0f) : swVector3(1.0f, 0.0f, 0.0f)));
 			const swVector3 Front = swCross(Axis, Side);
@@ -933,8 +937,10 @@ void swView::DrawConnectionMarkers() const
 
 				Lines.insert(Lines.end(), { Base + Spoke, Base + NextSpoke, Top + Spoke, Top + NextSpoke });
 
-				// filled for male, hollow for female
-				if (Male)
+				// filled for male and joints, hollow for female
+				if (Joint)
+					Triangles.insert(Triangles.end(), { Base + Spoke, Base + NextSpoke, Top + Spoke, Top + Spoke, Base + NextSpoke, Top + NextSpoke });
+				else if (Male)
 					Triangles.insert(Triangles.end(), { Base + Spoke, Base + NextSpoke, Top + Spoke, Top + Spoke, Base + NextSpoke, Top + NextSpoke, Top, Top + Spoke, Top + NextSpoke });
 				else if (Segment % (CircleSegments / 4) == 0)
 					Lines.insert(Lines.end(), { Base + Spoke, Top + Spoke });
@@ -955,9 +961,9 @@ void swView::DrawConnectionMarkers() const
 			continue;
 		}
 
-		// lift off the surface so depth testing hides only covered points
-		const float Size = SymbolPixels * Pixel;
-		const swVector3 Center = Marker.Position + ToCamera * ((Marker.TwoSided ? Marker.Radius : 0.0f) + Size);
+		// a ball at its size
+		const float Size = Marker.Kind == swConnectionKind::Ball ? Marker.Radius : SymbolPixels * Pixel;
+		const swVector3 Center = Marker.Kind == swConnectionKind::Ball ? Marker.Position : Marker.Position + ToCamera * ((Marker.TwoSided ? Marker.Radius : 0.0f) + Size);
 		std::vector<swVector2> Outline, Inner;
 		bool Closed = true;
 
@@ -1031,14 +1037,15 @@ void swView::DrawConnectionMarkers() const
 			}
 		}
 
-		mContext->SetColor(swVector4(Color.x, Color.y, Color.z, Color.w * Alpha));
-
 		if (!Triangles.empty())
 		{
+			mContext->SetColor(swVector4(Color.x, Color.y, Color.z, Color.w * Alpha * 0.5f));
 			mContext->SetVertexBufferPointer(Triangles.data());
 			mContext->SetVertexFormatPosition(3);
 			mContext->DrawPrimitives(GL_TRIANGLES, 0, static_cast<GLsizei>(Triangles.size()));
 		}
+
+		mContext->SetColor(swVector4(Color.x, Color.y, Color.z, Color.w * Alpha));
 
 		if (!Lines.empty())
 		{
@@ -1048,6 +1055,7 @@ void swView::DrawConnectionMarkers() const
 		}
 	}
 
+	mContext->EnableDepthTest(true);
 	mContext->SetDepthWrite(true);
 	mContext->EnableColorBlend(false);
 }

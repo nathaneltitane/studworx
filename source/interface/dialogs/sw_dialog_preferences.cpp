@@ -289,6 +289,9 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->setupUi(this);
 	swSetupDialogHelp(this);
 
+	// a normal window like instructions
+	setWindowFlags(Qt::Window);
+
 	// labels follow their checkbox state
 	for (QLabel* Label : findChildren<QLabel*>())
 		if (QCheckBox* CheckBox = qobject_cast<QCheckBox*>(Label->buddy()))

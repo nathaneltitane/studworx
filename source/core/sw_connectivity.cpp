@@ -119,7 +119,10 @@ std::vector<std::pair<float, float>> swConnectivity::GetInsertRanges(const swCon
 
 bool swConnectivity::AreCompatible(const swConnectionCylinder& a, const swConnectionCylinder& b)
 {
-	if (a.Kind != swConnectionKind::Cylinder || b.Kind != swConnectionKind::Cylinder || a.Gender == b.Gender || a.Group.compare(b.Group, Qt::CaseInsensitive) != 0)
+	// clips take bars, finger and ball shapes never seat
+	const auto IsSeatable = [](const swConnectionCylinder& Cylinder) { return Cylinder.Kind == swConnectionKind::Cylinder || Cylinder.Kind == swConnectionKind::Clip; };
+
+	if (!IsSeatable(a) || !IsSeatable(b) || a.Gender == b.Gender || a.Group.compare(b.Group, Qt::CaseInsensitive) != 0)
 		return false;
 
 	const swConnectionCylinder& Male = a.Gender == swConnectionGender::Male ? a : b;
@@ -279,7 +282,7 @@ std::vector<swConnectionMarker> swConnectivity::GetMarkers(const swConnectionSha
 				const float Distance = swLength(Position - Point);
 
 				if (Distance <= Range)
-					Found.push_back({ Distance, { Position, Direction, Cylinder.Gender, Cylinder.Kind, swGetEndShape(Cylinder, AtStart), Cylinder.GetRadius(), TwoSided } });
+					Found.push_back({ Distance, { Position, Direction, Cylinder.Gender, Cylinder.Kind, swGetEndShape(Cylinder, AtStart), Cylinder.GetRadius(), Cylinder.GetLength(), TwoSided } });
 			};
 
 			// joints and closed shapes show once at their middle

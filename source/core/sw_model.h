@@ -784,6 +784,7 @@ protected:
 	bool mMouseToolMovePositionValid = false;
 	bool mMouseToolMoveUsesFocus = false;
 	bool mMouseToolFirstMove;
+	bool mMouseToolSeated = false;
 	std::vector<swPreviewInsertPartInformation> mPreviewInsertPartInfo;
 
 	std::vector<std::unique_ptr<swPart>> mParts;

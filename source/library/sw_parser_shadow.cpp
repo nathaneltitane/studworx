@@ -384,7 +384,9 @@ std::vector<swConnectionCylinder> swShadowParser::ParseJoint(const std::map<QStr
 		if (!Radius || !Length)
 			return {};
 
+		// clips take bars
 		Joint.Kind = swConnectionKind::Clip;
+		Joint.Gender = swConnectionGender::Female;
 		Joint.Sections.push_back({ swConnectionShape::Round, (*Radius)[0], (*Length)[0] });
 	}
 	else if (Keyword == QLatin1String("SNAP_FGR"))

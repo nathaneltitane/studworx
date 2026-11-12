@@ -1035,7 +1035,7 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="0">
+          <item row="4" column="0">
            <widget class="QLabel" name="InsertColorModeLabel">
             <property name="toolTip">
              <string>Choose the color given to newly inserted parts: the current color, the color of the selected part, or the color of the last inserted part.</string>
@@ -1048,7 +1048,7 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
+          <item row="4" column="1">
            <widget class="QComboBox" name="InsertColorMode">
             <property name="accessibleName">
              <string>Insert Color</string>
@@ -1073,7 +1073,7 @@
             </item>
            </widget>
           </item>
-          <item row="2" column="0">
+          <item row="3" column="0">
            <widget class="QLabel" name="FirstPartAtOriginLabel">
             <property name="toolTip">
              <string>Place the first part of an empty model at 0, 0, 0 instead of where it is dropped.</string>
@@ -1086,7 +1086,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item row="3" column="1">
            <widget class="QCheckBox" name="FirstPartAtOrigin">
             <property name="accessibleName">
              <string>Insert First Part at Origin</string>
@@ -1096,7 +1096,7 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
+          <item row="2" column="0">
            <widget class="QLabel" name="JointRotationLabel">
             <property name="toolTip">
              <string>When the selected submodel has a joint, rotating it turns the joint around its own pivot and axis instead of the pivot point. Part &gt; Joint &gt; Rotate Joint does the same for the current selection.</string>
@@ -1109,7 +1109,7 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
+          <item row="2" column="1">
            <widget class="QCheckBox" name="JointRotation">
             <property name="accessibleName">
              <string>Use Joint Rotation</string>
@@ -1119,7 +1119,7 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="0">
+          <item row="1" column="0">
            <widget class="QLabel" name="ShadowLibraryEnabledLabel">
             <property name="toolTip">
              <string>Turn part connections from the LDCad shadow library on or off. The library folder is set under Reference Paths.</string>
@@ -1132,7 +1132,7 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
+          <item row="1" column="1">
            <widget class="QCheckBox" name="ShadowLibraryEnabled">
             <property name="accessibleName">
              <string>Use Part Connections</string>
@@ -5590,10 +5590,10 @@
   <tabstop>MarkColladaTransparency</tabstop>
   <tabstop>KMZGeometry</tabstop>
   <tabstop>fixedDirectionKeys</tabstop>
+  <tabstop>ShadowLibraryEnabled</tabstop>
   <tabstop>JointRotation</tabstop>
   <tabstop>FirstPartAtOrigin</tabstop>
   <tabstop>InsertColorMode</tabstop>
-  <tabstop>ShadowLibraryEnabled</tabstop>
   <tabstop>FlexSpreadMode</tabstop>
   <tabstop>FlexClampNewControlPoints</tabstop>
   <tabstop>FlexMiddleControlPoint</tabstop>

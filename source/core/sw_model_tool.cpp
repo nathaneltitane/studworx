@@ -139,6 +139,7 @@ void swModel::BeginMouseTool(swTool Tool, swView* View)
 	}
 
 	mMouseToolFirstMove = true;
+	mMouseToolSeated = false;
 }
 
 void swModel::EndMouseTool(swTool Tool, swView* View, bool Accept)
@@ -424,7 +425,10 @@ void swModel::UpdateFreeMoveTool(swPart* MousePart, const swMatrix44& StartTrans
 	swMatrix33 NewRotation = IsConnection ? swMatrix33(NewTransform) : swMatrix33(StartTransform);
 	swMatrix33 CurrentRotation = swMatrix33(MousePart->mModelWorld);
 
-	if (!swMatrix33Similar(CurrentRotation, NewRotation))
+	// seats and grid points after a seat go exactly
+	mMouseToolSeated = mMouseToolSeated || IsConnection;
+
+	if (mMouseToolSeated || !swMatrix33Similar(CurrentRotation, NewRotation))
 	{
 		const swVector3 Distance = NewTransform.GetTranslation() - MousePart->mModelWorld.GetTranslation();
 

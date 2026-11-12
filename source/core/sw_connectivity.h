@@ -34,7 +34,7 @@ enum class swConnectionScale
 	LengthOrRadius
 };
 
-// Clip, finger and ball shapes only mark joints.
+// Clips take bars, finger and ball shapes only mark joints.
 enum class swConnectionKind
 {
 	Cylinder,
@@ -106,6 +106,7 @@ struct swConnectionMarker
 	swConnectionKind Kind;
 	swConnectionShape Shape;
 	float Radius;
+	float Length;
 
 	// Closed at both ends, seen from either side.
 	bool TwoSided;

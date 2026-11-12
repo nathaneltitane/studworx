@@ -355,4 +355,15 @@ void swTests::ConnectivitySnapsDraggedParts()
 	QVERIFY(swConnectivity::FindSnap({ { &Bar, swMatrix44Identity() } }, Across, { { &Hole, swMatrix44Identity() } }, swVector3LDrawToStudWorx(swVector3(0.0f, 30.0f, 0.0f)), 40.0f, Snap));
 	QVERIFY(swConnectivity::AreConnected(Bar, Snap.Transform, Hole, swMatrix44Identity()));
 	QVERIFY(Snap.Hinge);
+
+	// A 3L bar dropped beside a clip, as the library writes it without a gender, seats in the clip.
+	const std::vector<swConnectionCylinder> Clip = MakePart({ "0 !LDCAD SNAP_CLP [radius=4] [length=8] [center=true] [pos=0 0 -10] [ori=0 -1 0 -1 0 0 0 0 -1]" });
+	swMatrix44 Beside = swMatrix44RotationX(0.4f);
+	Beside.SetTranslation(swVector3(-4.0f, 9.0f, 3.0f));
+
+	QCOMPARE(Clip.size(), size_t(1));
+	QVERIFY(Clip[0].Gender == swConnectionGender::Female);
+	QVERIFY(swConnectivity::FindSnap({ { &Bar, swMatrix44Identity() } }, Beside, { { &Clip, swMatrix44Identity() } }, swVector3LDrawToStudWorx(swVector3(0.0f, 0.0f, -10.0f)), 20.0f, Snap));
+	QVERIFY(swConnectivity::AreConnected(Bar, Snap.Transform, Clip, swMatrix44Identity()));
+	QVERIFY(Snap.Hinge);
 }
