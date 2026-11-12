@@ -20,6 +20,8 @@
   - POV-Ray: Editor beside Log shows the scene file with syntax colors, renders your edits when Render using this configuration instead of the model configuration is ticked, greys out the settings it ignores, writes the scene again with Reset, opens a scene file with Open and saves a copy with Save As
   - POV-Ray: the render window is a normal window with minimize and maximize like the Instructions window, and its buttons read Editor, Render, Log
   - Render and Instructions windows: panels use the main window title bar with Float and Close, follow Lock Interface and reopen from the right-click panel list, where the Render panel stays greyed out as the one that never closes
+  - Preferences: Download beside Part Connections and LGEO Library fetches the LDCad shadow library and the LGEO library from GitHub into the folder named there or the StudWorx data folder, with a download icon that turns into Update with the refresh icon once the library is there, and the Part Connections checkbox now sits inside its path field
+  - Connection Points: with Part Connections on, the part under the pointer shows its connection points within a 2x2 stud area, filled for male and hollow for female, shaped after the connection, only where they face the camera, toggled under Steps and Highlighting in the view gear menu, with its color in Preferences
   - Render: the Log panel shows renderer progress on one line updated in place, as in a terminal, instead of running every update together
 
   </details>

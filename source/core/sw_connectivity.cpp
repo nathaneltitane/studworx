@@ -244,3 +244,74 @@ bool swConnectivity::GetConnectionAxis(const swConnectionShapes& Shapes, const s
 
 	return false;
 }
+
+// use to name the shape at an end
+static swConnectionShape swGetEndShape(const swConnectionCylinder& Cylinder, bool AtStart)
+{
+	const auto Find = [](auto First, auto Last)
+	{
+		for (auto Section = First; Section != Last; ++Section)
+			if (!swIsExtension(*Section))
+				return Section->Shape;
+
+		return swConnectionShape::Round;
+	};
+
+	return AtStart ? Find(Cylinder.Sections.begin(), Cylinder.Sections.end()) : Find(Cylinder.Sections.rbegin(), Cylinder.Sections.rend());
+}
+
+// use to mark the hovered part
+std::vector<swConnectionMarker> swConnectivity::GetMarkers(const swConnectionShapes& Shapes, const swVector3& Point, float Range, size_t Count)
+{
+	std::vector<std::pair<float, swConnectionMarker>> Found;
+
+	for (const auto& [Cylinders, Transform] : Shapes)
+	{
+		for (const swConnectionCylinder& Cylinder : *Cylinders)
+		{
+			const swMatrix44 Frame = swMultiply(swMatrix44LDrawToStudWorx(Cylinder.Transform), Transform);
+			const swVector3 Axis = swNormalize(swMultiply30(swVector3(0.0f, 0.0f, 1.0f), Frame));
+			const auto [Start, End] = Cylinder.GetExtent();
+
+			const auto AddMarker = [&](float Along, const swVector3& Direction, bool AtStart, bool TwoSided)
+			{
+				const swVector3 Position = Frame.GetTranslation() + Axis * Along;
+				const float Distance = swLength(Position - Point);
+
+				if (Distance <= Range)
+					Found.push_back({ Distance, { Position, Direction, Cylinder.Gender, Cylinder.Kind, swGetEndShape(Cylinder, AtStart), Cylinder.GetRadius(), TwoSided } });
+			};
+
+			// joints and closed shapes show once at their middle
+			if (Cylinder.Kind != swConnectionKind::Cylinder || (Cylinder.ClosedStart && Cylinder.ClosedEnd))
+			{
+				AddMarker((Start + End) / 2.0f, Axis, true, true);
+				continue;
+			}
+
+			if (!Cylinder.ClosedStart)
+				AddMarker(Start, -Axis, true, false);
+
+			if (!Cylinder.ClosedEnd)
+				AddMarker(End, Axis, false, false);
+		}
+	}
+
+	std::stable_sort(Found.begin(), Found.end(), [](const auto& a, const auto& b) { return a.first < b.first; });
+
+	std::vector<swConnectionMarker> Markers;
+	size_t MaleCount = 0, FemaleCount = 0;
+
+	for (const auto& [Distance, Marker] : Found)
+	{
+		size_t& GenderCount = Marker.Gender == swConnectionGender::Male ? MaleCount : FemaleCount;
+
+		if (GenderCount < Count)
+		{
+			GenderCount++;
+			Markers.push_back(Marker);
+		}
+	}
+
+	return Markers;
+}

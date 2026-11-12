@@ -30,6 +30,11 @@ QString swFindLGEOPath();
 // Offers to get a missing LGEO.
 QString swSetupLGEO(QWidget* Parent);
 
+// Downloads LGEO into a folder and sets it.
+bool swDownloadLGEO(QWidget* Parent, const QString& Path);
+QString swGetDownloadLGEOPath();
+bool swIsLGEOPath(const QString& Path);
+
 // Arguments shared by every render.
 QStringList swGetPOVRayArguments(const swPOVRayProgram& Program, swPOVRayRenderQuality Quality, bool UseLGEO);
 QStringList swGetPOVRayEnvironment();

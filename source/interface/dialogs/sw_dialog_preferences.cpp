@@ -11,6 +11,9 @@
 #include "sw_window_main.h"
 #include "sw_view_widget.h"
 #include "sw_view.h"
+#include "sw_renderer_povray.h"
+#include "sw_file_zip.h"
+#include "sw_http.h"
 
 static const char* gLanguageLocales[] =
 {
@@ -306,6 +309,18 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->UnofficialLibraryBrowseButton, &QPushButton::clicked, this, &swPreferencesDialog::UnofficialLibraryBrowseButtonClicked);
 	connect(ui->ShadowLibraryEnabled, &QCheckBox::toggled, this, &swPreferencesDialog::ShadowLibraryEnabledToggled);
 	connect(ui->ShadowLibraryBrowseButton, &QPushButton::clicked, this, &swPreferencesDialog::ShadowLibraryBrowseButtonClicked);
+	connect(ui->ShadowLibraryDownloadButton, &QToolButton::clicked, this, &swPreferencesDialog::ShadowLibraryDownloadButtonClicked);
+	connect(ui->lgeoPathDownloadButton, &QToolButton::clicked, this, &swPreferencesDialog::LgeoPathDownloadButtonClicked);
+	connect(ui->ShadowLibraryEdit, &QLineEdit::textChanged, this, &swPreferencesDialog::UpdateDownloadButtons);
+	connect(ui->lgeoPath, &QLineEdit::textChanged, this, &swPreferencesDialog::UpdateDownloadButtons);
+	UpdateDownloadButtons();
+
+	// checkbox sits inside the path field
+	QHBoxLayout* ShadowLibraryEditLayout = new QHBoxLayout(ui->ShadowLibraryEdit);
+	ShadowLibraryEditLayout->setContentsMargins(4, 0, 0, 0);
+	ShadowLibraryEditLayout->addWidget(ui->ShadowLibraryEnabled);
+	ShadowLibraryEditLayout->addStretch();
+	ui->ShadowLibraryEdit->setTextMargins(ui->ShadowLibraryEnabled->sizeHint().width() + 4, 0, 0, 0);
 	connect(ui->ColorConfigBrowseButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorConfigBrowseButtonClicked);
 	connect(ui->ColorConfigUpdateButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorConfigUpdateButtonClicked);
 	connect(ui->ColorConfigAlternateBrowseButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorConfigAlternateBrowseButtonClicked);
@@ -323,9 +338,17 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->RebrickableApiKeyButton, &QToolButton::clicked, this, &swPreferencesDialog::RebrickableApiKeyButtonClicked);
 
 	// path fields end where the update buttons begin
-	const int UpdateButtonWidth = ui->ColorConfigUpdateButton->sizeHint().width();
+	const QList<QToolButton*> UpdateButtons = { ui->ColorConfigUpdateButton, ui->ColorConfigAlternateUpdateButton, ui->MinifigureBuilderSettingsUpdateButton, ui->BrickLinkMappingUpdateButton, ui->ShadowLibraryDownloadButton, ui->lgeoPathDownloadButton };
+	int UpdateButtonWidth = 0;
+
+	for (QToolButton* UpdateButton : UpdateButtons)
+		UpdateButtonWidth = qMax(UpdateButtonWidth, UpdateButton->sizeHint().width());
+
+	for (QToolButton* UpdateButton : UpdateButtons)
+		UpdateButton->setFixedWidth(UpdateButtonWidth);
+
 	const int ButtonSpacing = ui->ColorConfigLayout->spacing() >= 0 ? ui->ColorConfigLayout->spacing() : swGetLayoutSpacing(this, Qt::Horizontal);
-	QList<QHBoxLayout*> BrowseLayouts = { ui->horizontalLayout_3, ui->UnofficialLibraryLayout, ui->ShadowLibraryLayout, ui->BlenderExecutableLayout, ui->horizontalLayout_10, ui->povrayLayout };
+	QList<QHBoxLayout*> BrowseLayouts = { ui->horizontalLayout_3, ui->UnofficialLibraryLayout, ui->BlenderExecutableLayout, ui->povrayLayout };
 
 	for (QHBoxLayout* BrowseLayout : BrowseLayouts)
 	{
@@ -399,6 +422,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->InactiveViewColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->TextHaloColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->TextColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
+	connect(ui->ConnectionPointColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->MarqueeBorderColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->MarqueeFillColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->OverlayColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
@@ -710,6 +734,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 
 	SetButtonPixmap(mOptions->Preferences.mBackgroundSolidColor, ui->BackgroundSolidColorButton);
 	SetButtonPixmap(mOptions->Preferences.mTextColor, ui->TextColorButton);
+	SetButtonPixmap(mOptions->Preferences.mConnectionPointColor, ui->ConnectionPointColorButton);
 	SetButtonPixmap(mOptions->Preferences.mTextHaloColor, ui->TextHaloColorButton);
 	SetButtonPixmap(mOptions->Preferences.mMarqueeBorderColor, ui->MarqueeBorderColorButton);
 	SetButtonPixmap(mOptions->Preferences.mMarqueeFillColor, ui->MarqueeFillColorButton);
@@ -1064,9 +1089,61 @@ void swPreferencesDialog::ShadowLibraryBrowseButtonClicked()
 		ui->ShadowLibraryEdit->setText(QDir::toNativeSeparators(Result));
 }
 
+// use to get the shadow library from github
+void swPreferencesDialog::ShadowLibraryDownloadButtonClicked()
+{
+	const QString Title = tr("Download Part Connections");
+	const QString Url = QLatin1String("https://github.com/RolandMelkert/LDCadShadowLibrary/archive/refs/heads/main.zip");
+	const QString Path = ui->ShadowLibraryEdit->text().isEmpty() ? QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + QLatin1String("/shadow-library") : QDir::fromNativeSeparators(ui->ShadowLibraryEdit->text());
+	const std::optional<QByteArray> Data = swDownloadWithProgress(this, Url, Title, tr("Downloading the LDCad shadow library..."));
+
+	if (!Data)
+		return;
+
+	if (Data->isEmpty() || !swExtractArchive(*Data, QDir::cleanPath(Path), [](const QString& Folder) { return QFileInfo(Folder + QLatin1String("/parts")).isDir(); }))
+	{
+		QMessageBox::warning(this, Title, tr("Could not download the LDCad shadow library from %1.").arg(Url));
+		return;
+	}
+
+	ui->ShadowLibraryEdit->setText(QDir::toNativeSeparators(QDir::cleanPath(Path)));
+	ui->ShadowLibraryEnabled->setChecked(true);
+}
+
+// use to offer update once a library is there
+void swPreferencesDialog::UpdateDownloadButtons()
+{
+	const QString ShadowPath = QDir::fromNativeSeparators(ui->ShadowLibraryEdit->text());
+	const QString LGEOPath = QDir::fromNativeSeparators(ui->lgeoPath->text());
+	const std::pair<QToolButton*, bool> Buttons[] =
+	{
+		{ ui->ShadowLibraryDownloadButton, !ShadowPath.isEmpty() && QFileInfo(ShadowPath + QLatin1String("/parts")).isDir() },
+		{ ui->lgeoPathDownloadButton, !LGEOPath.isEmpty() && swIsLGEOPath(LGEOPath) }
+	};
+
+	for (const auto& [Button, Present] : Buttons)
+	{
+		Button->setIcon(swCreatePaintedIcon(Present ? swPaintedIcon::Refresh : swPaintedIcon::Download));
+		Button->setText(Present ? tr("Update") : tr("Download"));
+	}
+}
+
+// use to get lgeo from github
+void swPreferencesDialog::LgeoPathDownloadButtonClicked()
+{
+	const QString Path = QDir::cleanPath(ui->lgeoPath->text().isEmpty() ? swGetDownloadLGEOPath() : QDir::fromNativeSeparators(ui->lgeoPath->text()));
+
+	if (swDownloadLGEO(this, Path))
+		ui->lgeoPath->setText(QDir::toNativeSeparators(Path));
+}
+
 void swPreferencesDialog::ShadowLibraryEnabledToggled(bool Checked)
 {
-	ui->ShadowLibraryEdit->setEnabled(Checked);
+	// read only keeps the checkbox inside clickable
+	ui->ShadowLibraryEdit->setReadOnly(!Checked);
+	QPalette Palette = ui->ShadowLibraryEdit->palette();
+	Palette.setColor(QPalette::Text, palette().color(Checked ? QPalette::Active : QPalette::Disabled, QPalette::Text));
+	ui->ShadowLibraryEdit->setPalette(Palette);
 	ui->ShadowLibraryBrowseButton->setEnabled(Checked);
 }
 
@@ -1304,6 +1381,11 @@ void swPreferencesDialog::ColorButtonClicked()
 	{
 		Color = &mOptions->Preferences.mTextColor;
 		Title = tr("Select Text Color");
+	}
+	else if (Button == ui->ConnectionPointColorButton)
+	{
+		Color = &mOptions->Preferences.mConnectionPointColor;
+		Title = tr("Select Connection Points Color");
 	}
 	else if (Button == ui->TextHaloColorButton)
 	{

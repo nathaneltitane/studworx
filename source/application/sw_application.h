@@ -225,6 +225,7 @@ public:
 	bool mFadeJointMoving;
 	bool mHoverOutline;
 	quint32 mHoverOutlineColor;
+	bool mConnectionPoints;
 	bool mHighlightNewParts;
 	quint32 mHighlightNewPartsColor;
 	bool mGridEnabled = true;
@@ -286,6 +287,7 @@ public:
 	quint32 mPathOutOfReachColor;
 	quint32 mSpreadHandleColor;
 	quint32 mExplodeLineColor;
+	quint32 mConnectionPointColor;
 
 
 	int mPreviewViewCubeEnabled;

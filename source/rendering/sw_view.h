@@ -3,6 +3,7 @@
 #include "sw_types_asset.h"
 #include "sw_context.h"
 #include "sw_math.h"
+#include "sw_connectivity.h"
 #include "sw_commands.h"
 #include "sw_result.h"
 
@@ -313,6 +314,7 @@ public:
 	void OnMouseMove();
 	void OnMouseLeave();
 	void UpdateHoverOutline();
+	void UpdateConnectionMarkers();
 	void OnMouseWheel(float Direction);
 	void BeginDrag(swDragState DragState);
 	void EndDrag(bool Accept);
@@ -401,6 +403,7 @@ protected:
 	void DrawAxes() const;
 	void DrawCutaway() const;
 	void DrawExplodeLines() const;
+	void DrawConnectionMarkers() const;
 	void DrawCutawayGizmo() const;
 
 	void DrawSelectZoomRegionOverlay();
@@ -524,6 +527,7 @@ protected:
 	bool mJointSeen = false;
 	std::vector<swPart*> mContextPath;
 	std::vector<const swPart*> mHoverChain;
+	std::vector<swConnectionMarker> mConnectionMarkers;
 
 	swCamera* mCamera = nullptr;
 

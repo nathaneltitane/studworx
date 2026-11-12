@@ -79,6 +79,7 @@ void swPreferences::LoadDefaults()
 	mFadeJointMoving = swGetProfileInteger(SW_PROFILE_FADE_JOINT_MOVING);
 	mHoverOutline = swGetProfileInteger(SW_PROFILE_HOVER_OUTLINE);
 	mHoverOutlineColor = swGetProfileUnsignedInteger(SW_PROFILE_HOVER_OUTLINE_COLOR);
+	mConnectionPoints = swGetProfileInteger(SW_PROFILE_CONNECTION_POINTS);
 	mHighlightNewParts = swGetProfileInteger(SW_PROFILE_HIGHLIGHT_NEW_PARTS);
 	mHighlightNewPartsColor = swClampStepColorAlpha(swGetProfileUnsignedInteger(SW_PROFILE_HIGHLIGHT_NEW_PARTS_COLOR));
 	mDrawGridStuds = swGetProfileInteger(SW_PROFILE_GRID_STUDS);
@@ -156,6 +157,7 @@ void swPreferences::LoadDefaults()
 	mPathOutOfReachColor = swGetProfileUnsignedInteger(SW_PROFILE_PATH_OUT_OF_REACH_COLOR);
 	mSpreadHandleColor = swGetProfileUnsignedInteger(SW_PROFILE_SPREAD_HANDLE_COLOR);
 	mExplodeLineColor = swGetProfileUnsignedInteger(SW_PROFILE_EXPLODE_LINE_COLOR);
+	mConnectionPointColor = swGetProfileUnsignedInteger(SW_PROFILE_CONNECTION_POINT_COLOR);
 }
 
 void swPreferences::SaveDefaults()
@@ -206,6 +208,7 @@ void swPreferences::SaveDefaults()
 	swSetProfileInteger(SW_PROFILE_FADE_JOINT_MOVING, mFadeJointMoving);
 	swSetProfileInteger(SW_PROFILE_HOVER_OUTLINE, mHoverOutline);
 	swSetProfileUnsignedInteger(SW_PROFILE_HOVER_OUTLINE_COLOR, mHoverOutlineColor);
+	swSetProfileInteger(SW_PROFILE_CONNECTION_POINTS, mConnectionPoints);
 	swSetProfileInteger(SW_PROFILE_HIGHLIGHT_NEW_PARTS, mHighlightNewParts);
 	swSetProfileUnsignedInteger(SW_PROFILE_HIGHLIGHT_NEW_PARTS_COLOR, mHighlightNewPartsColor);
 	swSetProfileInteger(SW_PROFILE_GRID_STUDS, mDrawGridStuds);
@@ -283,6 +286,7 @@ void swPreferences::SaveDefaults()
 	swSetProfileUnsignedInteger(SW_PROFILE_PATH_OUT_OF_REACH_COLOR, mPathOutOfReachColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_SPREAD_HANDLE_COLOR, mSpreadHandleColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_EXPLODE_LINE_COLOR, mExplodeLineColor);
+	swSetProfileUnsignedInteger(SW_PROFILE_CONNECTION_POINT_COLOR, mConnectionPointColor);
 }
 
 struct swRenderTargetProfileKeys

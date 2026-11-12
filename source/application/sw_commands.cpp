@@ -2125,6 +2125,14 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Submodel Hover Outline</b></p><p>Outline the innermost submodel under the pointer with the hover outline color, or the submodel a joint would go on while setting a joint.</p>"),
 		""
 	},
+	// SW_VIEW_TOGGLE_CONNECTION_POINTS
+	{
+		QT_TRANSLATE_NOOP("Action", "View.ToggleConnectionPoints"),
+		QT_TRANSLATE_NOOP("Menu", "Connection Points"),
+		QT_TRANSLATE_NOOP("Status", "Toggle marking the connection points near the pointer"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Connection Points</b></p><p>Mark the studs, tubes, axle holes, clips and other connection points of the hovered part within a 2x2 stud area of the pointer, when Part Connections is on in the preferences. Filled marks are male points, hollow marks are female points, and only the points facing the camera show.</p>"),
+		""
+	},
 
 	// SW_VIEW_TOGGLE_GRID_STUDS
 	{

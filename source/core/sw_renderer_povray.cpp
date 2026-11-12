@@ -213,13 +213,13 @@ bool swPOVRayHasIncludeFiles(const swPOVRayProgram& Program)
 }
 
 // use to tell an lgeo folder
-static bool swIsLGEOPath(const QString& Path)
+bool swIsLGEOPath(const QString& Path)
 {
 	return !Path.isEmpty() && QFileInfo::exists(QDir(Path).filePath(QLatin1String("lg_elements.lst"))) && QFileInfo::exists(QDir(Path).filePath(QLatin1String("lg/lg_defs.inc")));
 }
 
 // use to name the lgeo folder
-static QString swGetDownloadLGEOPath()
+QString swGetDownloadLGEOPath()
 {
 	return QDir::cleanPath(QStandardPaths::writableLocation(QStandardPaths::AppLocalDataLocation) + QLatin1String("/lgeo"));
 }
@@ -267,50 +267,22 @@ QString swFindLGEOPath()
 	return QString();
 }
 
-// use to unpack the lgeo archive
-static bool swExtractLGEO(const QByteArray& Data, const QString& Path)
+// use to download lgeo into a folder
+bool swDownloadLGEO(QWidget* Parent, const QString& Path)
 {
-	std::unique_ptr<swMemoryFile> ArchiveFile = std::make_unique<swMemoryFile>();
-	ArchiveFile->WriteBuffer(Data.constData(), Data.size());
-	ArchiveFile->Seek(0, SEEK_SET);
+	const QString Title = QCoreApplication::translate("swRenderDialog", "LGEO Library");
+	const std::optional<QByteArray> Data = swDownloadWithProgress(Parent, QLatin1String(SW_LGEO_DOWNLOAD_URL), Title, QCoreApplication::translate("swRenderDialog", "Downloading the LGEO part library..."));
 
-	swZipFile Archive;
-
-	if (!Archive.OpenRead(std::move(ArchiveFile)))
-		return false;
-
-	const QString TemporaryPath = Path + QLatin1String(".part");
-	QDir(TemporaryPath).removeRecursively();
-
-	for (quint32 FileIndex = 0; FileIndex < Archive.mFiles.size(); FileIndex++)
+	if (Data && !Data->isEmpty() && swExtractArchive(*Data, Path, swIsLGEOPath))
 	{
-		const QString Name = QString::fromUtf8(Archive.mFiles[FileIndex].file_name);
-		const int Separator = Name.indexOf(QLatin1Char('/'));
-		const QString RelativeName = Separator >= 0 ? Name.mid(Separator + 1) : Name;
-
-		if (RelativeName.isEmpty() || RelativeName.endsWith(QLatin1Char('/')) || RelativeName.contains(QLatin1String("..")))
-			continue;
-
-		swMemoryFile EntryFile;
-
-		if (!Archive.ExtractFile(FileIndex, EntryFile))
-			return false;
-
-		const QString FileName = TemporaryPath + QLatin1Char('/') + RelativeName;
-		QDir().mkpath(QFileInfo(FileName).absolutePath());
-
-		QFile File(FileName);
-
-		if (!File.open(QIODevice::WriteOnly) || File.write(reinterpret_cast<const char*>(EntryFile.mBuffer), EntryFile.GetLength()) != static_cast<qint64>(EntryFile.GetLength()))
-			return false;
+		swSetProfileString(SW_PROFILE_POVRAY_LGEO_PATH, Path);
+		return true;
 	}
 
-	if (!swIsLGEOPath(TemporaryPath))
-		return false;
+	if (Data)
+		QMessageBox::warning(Parent, Title, QCoreApplication::translate("swRenderDialog", "Could not download the LGEO part library from %1.").arg(QLatin1String(SW_LGEO_DOWNLOAD_URL)));
 
-	QDir(Path).removeRecursively();
-
-	return QDir().rename(TemporaryPath, Path);
+	return false;
 }
 
 // use to get a missing lgeo
@@ -320,19 +292,8 @@ QString swSetupLGEO(QWidget* Parent)
 	const QString DownloadPath = swGetDownloadLGEOPath();
 	const QString Question = QCoreApplication::translate("swRenderDialog", "StudWorx could not find the LGEO part library.\n\nDownload it (about 7 MB) from %1 into '%2'?").arg(QLatin1String(SW_LGEO_PROJECT_URL), QDir::toNativeSeparators(DownloadPath));
 
-	if (QMessageBox::question(Parent, Title, Question, QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes)
-	{
-		const std::optional<QByteArray> Data = swDownloadWithProgress(Parent, QLatin1String(SW_LGEO_DOWNLOAD_URL), Title, QCoreApplication::translate("swRenderDialog", "Downloading the LGEO part library..."));
-
-		if (Data && !Data->isEmpty() && swExtractLGEO(*Data, DownloadPath))
-		{
-			swSetProfileString(SW_PROFILE_POVRAY_LGEO_PATH, DownloadPath);
-			return DownloadPath;
-		}
-
-		if (Data)
-			QMessageBox::warning(Parent, Title, QCoreApplication::translate("swRenderDialog", "Could not download the LGEO part library from %1.").arg(QLatin1String(SW_LGEO_DOWNLOAD_URL)));
-	}
+	if (QMessageBox::question(Parent, Title, Question, QMessageBox::Yes | QMessageBox::No) == QMessageBox::Yes && swDownloadLGEO(Parent, DownloadPath))
+		return DownloadPath;
 
 	for (;;)
 	{

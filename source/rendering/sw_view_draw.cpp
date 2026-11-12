@@ -249,7 +249,10 @@ void swView::OnDraw()
 		DrawCutaway();
 
 	if (DrawInterface)
+	{
 		DrawExplodeLines();
+		DrawConnectionMarkers();
+	}
 
 	if (DrawOverlays)
 		DrawAxes();
@@ -851,6 +854,168 @@ void swView::DrawExplodeLines() const
 	mContext->SetVertexBufferPointer(Lines.data());
 	mContext->SetVertexFormatPosition(3);
 	mContext->DrawPrimitives(GL_LINES, 0, static_cast<GLsizei>(Lines.size()));
+	mContext->EnableColorBlend(false);
+}
+
+// use to show the hovered connections
+void swView::DrawConnectionMarkers() const
+{
+	const swPreferences& Preferences = swGetPreferences();
+
+	if (mConnectionMarkers.empty() || !Preferences.mConnectionPoints || !Preferences.mShadowLibraryEnabled)
+		return;
+
+	const int CircleSegments = 16;
+	const float SymbolPixels = 6.0f * GetUIScale();
+	const float TickPixels = 14.0f * GetUIScale();
+	const swMatrix44 CameraWorld = swMatrix44AffineInverse(mCamera->mWorldView);
+	const swVector3 Right = swNormalize(swMultiply30(swVector3(1.0f, 0.0f, 0.0f), CameraWorld));
+	const swVector3 Up = swNormalize(swMultiply30(swVector3(0.0f, 1.0f, 0.0f), CameraWorld));
+	const swVector4 Color = swVector4FromColor(Preferences.mConnectionPointColor);
+
+	const auto AddCircle = [](std::vector<swVector2>& Outline, float Radius, float From, float To, int Segments)
+	{
+		for (int Segment = 0; Segment <= Segments; Segment++)
+		{
+			const float Angle = From + (To - From) * Segment / Segments;
+			Outline.emplace_back(cosf(Angle) * Radius, sinf(Angle) * Radius);
+		}
+	};
+
+	mContext->SetLineWidth(Preferences.mLineWidth);
+	mContext->SetMaterial(swMaterialType::UnlitColor);
+	mContext->SetWorldMatrix(swMatrix44Identity());
+	mContext->SetViewMatrix(mCamera->mWorldView);
+	mContext->SetProjectionMatrix(GetProjectionMatrix());
+	mContext->EnableColorBlend(true);
+	mContext->SetDepthWrite(false);
+	mContext->SetVertexFormatPosition(3);
+
+	for (const swConnectionMarker& Marker : mConnectionMarkers)
+	{
+		swVector3 Screen = ProjectPoint(Marker.Position);
+		const swVector3 ToCamera = swNormalize(UnprojectPoint(swVector3(Screen.x, Screen.y, 0.0f)) - UnprojectPoint(swVector3(Screen.x, Screen.y, 1.0f)));
+		Screen.x += 1.0f;
+		const float Pixel = swLength(UnprojectPoint(Screen) - Marker.Position);
+
+		// edge-on openings fade out, back facing ones hide
+		float Alpha = 1.0f;
+
+		if (Marker.Kind == swConnectionKind::Cylinder)
+		{
+			const float Facing = swDot(Marker.Direction, ToCamera);
+			Alpha = std::clamp((Marker.TwoSided ? fabsf(Facing) : Facing) * 3.0f, 0.0f, 1.0f);
+		}
+
+		if (Alpha <= 0.01f)
+			continue;
+
+		// lift off the surface so depth testing hides only covered points
+		const float Size = SymbolPixels * Pixel;
+		const swVector3 Center = Marker.Position + ToCamera * ((Marker.TwoSided ? Marker.Radius : 0.0f) + Size);
+		const bool Male = Marker.Gender == swConnectionGender::Male;
+		std::vector<swVector2> Outline, Inner;
+		bool Closed = true;
+
+		switch (Marker.Kind)
+		{
+		case swConnectionKind::Ball:
+			AddCircle(Outline, 1.0f, 0.0f, 2.0f * SW_PI, CircleSegments);
+			AddCircle(Inner, 0.5f, 0.0f, 2.0f * SW_PI, CircleSegments);
+			break;
+
+		case swConnectionKind::Finger:
+			Outline = { { 1.0f, 0.35f }, { -1.0f, 0.35f }, { -1.0f, -0.35f }, { 1.0f, -0.35f } };
+			break;
+
+		case swConnectionKind::Clip:
+			AddCircle(Outline, 1.0f, SW_PI / 4.0f, 7.0f * SW_PI / 4.0f, CircleSegments);
+			AddCircle(Inner, 0.55f, SW_PI / 4.0f, 7.0f * SW_PI / 4.0f, CircleSegments);
+			Closed = false;
+			break;
+
+		case swConnectionKind::Cylinder:
+			if (Marker.Shape == swConnectionShape::Axle)
+				Outline = { { 0.3f, 1.0f }, { -0.3f, 1.0f }, { -0.3f, 0.3f }, { -1.0f, 0.3f }, { -1.0f, -0.3f }, { -0.3f, -0.3f }, { -0.3f, -1.0f }, { 0.3f, -1.0f }, { 0.3f, -0.3f }, { 1.0f, -0.3f }, { 1.0f, 0.3f }, { 0.3f, 0.3f } };
+			else if (Marker.Shape == swConnectionShape::Square)
+				Outline = { { 0.85f, 0.85f }, { -0.85f, 0.85f }, { -0.85f, -0.85f }, { 0.85f, -0.85f } };
+			else
+				AddCircle(Outline, 1.0f, 0.0f, 2.0f * SW_PI, CircleSegments);
+			break;
+		}
+
+		const auto ToWorld = [&](const swVector2& Point)
+		{
+			return Center + Right * (Point.x * Size) + Up * (Point.y * Size);
+		};
+
+		std::vector<swVector3> Triangles, Lines;
+
+		const auto AddOutline = [&](const std::vector<swVector2>& Points, bool Loop)
+		{
+			const size_t Count = Loop ? Points.size() : Points.size() - 1;
+
+			for (size_t Index = 0; Index < Count; Index++)
+			{
+				Lines.push_back(ToWorld(Points[Index]));
+				Lines.push_back(ToWorld(Points[(Index + 1) % Points.size()]));
+			}
+		};
+
+		// filled for male, hollow for female
+		if (!Male)
+		{
+			AddOutline(Outline, Closed);
+
+			if (!Inner.empty())
+				AddOutline(Inner, Closed);
+		}
+		else if (Closed)
+		{
+			const std::vector<swVector2>& Fill = Inner.empty() ? Outline : Inner;
+
+			for (size_t Index = 0; Index < Fill.size(); Index++)
+			{
+				Triangles.push_back(Center);
+				Triangles.push_back(ToWorld(Fill[Index]));
+				Triangles.push_back(ToWorld(Fill[(Index + 1) % Fill.size()]));
+			}
+
+			if (!Inner.empty())
+				AddOutline(Outline, true);
+		}
+		else
+		{
+			for (size_t Index = 0; Index + 1 < Outline.size(); Index++)
+			{
+				const swVector3 Corners[4] = { ToWorld(Outline[Index]), ToWorld(Outline[Index + 1]), ToWorld(Inner[Index]), ToWorld(Inner[Index + 1]) };
+				Triangles.insert(Triangles.end(), { Corners[0], Corners[1], Corners[2], Corners[2], Corners[1], Corners[3] });
+			}
+		}
+
+		// a short tick along the opening
+		if (Marker.Kind == swConnectionKind::Cylinder)
+		{
+			Lines.push_back(Center);
+			Lines.push_back(Center + Marker.Direction * (TickPixels * Pixel));
+		}
+
+		mContext->SetColor(swVector4(Color.x, Color.y, Color.z, Color.w * Alpha));
+
+		if (!Triangles.empty())
+		{
+			mContext->SetVertexBufferPointer(Triangles.data());
+			mContext->DrawPrimitives(GL_TRIANGLES, 0, static_cast<GLsizei>(Triangles.size()));
+		}
+
+		if (!Lines.empty())
+		{
+			mContext->SetVertexBufferPointer(Lines.data());
+			mContext->DrawPrimitives(GL_LINES, 0, static_cast<GLsizei>(Lines.size()));
+		}
+	}
+
+	mContext->SetDepthWrite(true);
 	mContext->EnableColorBlend(false);
 }
 

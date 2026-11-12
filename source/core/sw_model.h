@@ -689,6 +689,9 @@ public:
 	swVector3 mCutawayNormal;
 	float mCutawaySize = 0.0f;
 
+	// Collects the placed shapes of a part and its submodels.
+	static void AddPartShapes(const swPart* Part, const swMatrix44& Transform, swConnectionShapes& Shapes);
+
 protected:
 	swResult<QImage> RenderStepImageWithReadyAssets(bool Zoom, int Width, int Height, swStep Step, swCamera* OutputCamera, swImageBackground Background);
 	void CollectImagePoints(swStep FitStep, std::vector<swVector3>& Points) const;
@@ -708,7 +711,6 @@ protected:
 	void SelectAllParts();
 	void InvertPartSelection();
 	std::vector<swObject*> FindConnectedParts(bool AllConnected) const;
-	static void AddPartShapes(const swPart* Part, const swMatrix44& Transform, swConnectionShapes& Shapes);
 
 	// Seats a dropped end on a connection.
 	bool SnapControlPointToConnection(swPart* Part, quint32 ControlPointIndex) const;

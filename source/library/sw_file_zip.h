@@ -128,3 +128,5 @@ protected:
 	quint64 mCentralPos;
 };
 
+// Unpacks a downloaded archive into a folder, dropping its top folder, and keeps the old folder unless IsValid accepts the result.
+bool swExtractArchive(const QByteArray& Data, const QString& Path, const std::function<bool(const QString&)>& IsValid);

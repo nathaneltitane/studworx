@@ -852,3 +852,49 @@ bool swZipFile::ExtractFile(quint32 FileIndex, swMemoryFile& File, quint32 MaxLe
 
 	return true;
 }
+
+// use to unpack a downloaded archive
+bool swExtractArchive(const QByteArray& Data, const QString& Path, const std::function<bool(const QString&)>& IsValid)
+{
+	std::unique_ptr<swMemoryFile> ArchiveFile = std::make_unique<swMemoryFile>();
+	ArchiveFile->WriteBuffer(Data.constData(), Data.size());
+	ArchiveFile->Seek(0, SEEK_SET);
+
+	swZipFile Archive;
+
+	if (!Archive.OpenRead(std::move(ArchiveFile)))
+		return false;
+
+	const QString TemporaryPath = Path + QLatin1String(".part");
+	QDir(TemporaryPath).removeRecursively();
+
+	for (quint32 FileIndex = 0; FileIndex < Archive.mFiles.size(); FileIndex++)
+	{
+		const QString Name = QString::fromUtf8(Archive.mFiles[FileIndex].file_name);
+		const int Separator = Name.indexOf(QLatin1Char('/'));
+		const QString RelativeName = Separator >= 0 ? Name.mid(Separator + 1) : Name;
+
+		if (RelativeName.isEmpty() || RelativeName.endsWith(QLatin1Char('/')) || RelativeName.contains(QLatin1String("..")))
+			continue;
+
+		swMemoryFile EntryFile;
+
+		if (!Archive.ExtractFile(FileIndex, EntryFile))
+			return false;
+
+		const QString FileName = TemporaryPath + QLatin1Char('/') + RelativeName;
+		QDir().mkpath(QFileInfo(FileName).absolutePath());
+
+		QFile File(FileName);
+
+		if (!File.open(QIODevice::WriteOnly) || File.write(reinterpret_cast<const char*>(EntryFile.mBuffer), EntryFile.GetLength()) != static_cast<qint64>(EntryFile.GetLength()))
+			return false;
+	}
+
+	if (!IsValid(TemporaryPath))
+		return false;
+
+	QDir(Path).removeRecursively();
+
+	return QDir().rename(TemporaryPath, Path);
+}

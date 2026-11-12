@@ -95,10 +95,34 @@ struct swConnectionCylinder
 // The shapes of each library part.
 typedef std::vector<std::pair<const std::vector<swConnectionCylinder>*, swMatrix44>> swConnectionShapes;
 
+// A connection point shown on the hovered part.
+struct swConnectionMarker
+{
+	swVector3 Position;
+
+	// Points out of the opening.
+	swVector3 Direction;
+	swConnectionGender Gender;
+	swConnectionKind Kind;
+	swConnectionShape Shape;
+	float Radius;
+
+	// Closed at both ends, seen from either side.
+	bool TwoSided;
+
+	bool operator==(const swConnectionMarker& Other) const
+	{
+		return Position == Other.Position && Direction == Other.Direction && Gender == Other.Gender && Kind == Other.Kind && Shape == Other.Shape && TwoSided == Other.TwoSided;
+	}
+};
+
 // How connection shapes fit together.
 class swConnectivity
 {
 public:
+	// The open ends within Range of Point, at most Count of each gender, nearest first.
+	static std::vector<swConnectionMarker> GetMarkers(const swConnectionShapes& Shapes, const swVector3& Point, float Range, size_t Count);
+
 	static bool AreCompatible(const swConnectionCylinder& a, const swConnectionCylinder& b);
 
 	// Tells if any shapes are seated together.

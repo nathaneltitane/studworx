@@ -114,6 +114,8 @@ private slots:
 	void UnofficialLibraryBrowseButtonClicked();
 	void ShadowLibraryBrowseButtonClicked();
 	void ShadowLibraryEnabledToggled(bool Checked);
+	void ShadowLibraryDownloadButtonClicked();
+	void UpdateDownloadButtons();
 	void ColorConfigBrowseButtonClicked();
 	void ColorConfigUpdateButtonClicked();
 	void ColorConfigAlternateBrowseButtonClicked();
@@ -125,6 +127,7 @@ private slots:
 	void RebrickableApiKeyButtonClicked();
 	void PovrayExecutableBrowseClicked();
 	void LgeoPathBrowseClicked();
+	void LgeoPathDownloadButtonClicked();
 	void AuthorChanged();
 	void ColorThemeCurrentIndexChanged(int Index);
 	void ColorButtonClicked();

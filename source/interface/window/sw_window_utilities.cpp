@@ -2535,6 +2535,12 @@ static void swDrawPaintedIcon(QPainter* Painter, swPaintedIcon Icon, const QSize
 	case swPaintedIcon::Refresh:
 		Draw.Stroke(swCreateIconArc(12, 12, 8, 8, -30, 290, 0, 4.5));
 		break;
+
+	case swPaintedIcon::Download:
+		Draw.Stroke(swCreateIconLine({ { 12, 4 }, { 12, 15 } }));
+		Draw.Stroke(swCreateIconLine({ { 7, 10 }, { 12, 15 }, { 17, 10 } }));
+		Draw.Stroke(swCreateIconLine({ { 4, 16 }, { 4, 20 }, { 20, 20 }, { 20, 16 } }));
+		break;
 	}
 
 	Painter->restore();

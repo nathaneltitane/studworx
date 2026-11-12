@@ -634,6 +634,10 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		swTogglePreference(swGetPreferences().mHoverOutline, SW_PROFILE_HOVER_OUTLINE);
 		break;
 
+	case SW_VIEW_TOGGLE_CONNECTION_POINTS:
+		swTogglePreference(swGetPreferences().mConnectionPoints, SW_PROFILE_CONNECTION_POINTS);
+		break;
+
 	case SW_VIEW_TOGGLE_GRID_STUDS:
 		swTogglePreference(swGetPreferences().mDrawGridStuds, SW_PROFILE_GRID_STUDS);
 		break;

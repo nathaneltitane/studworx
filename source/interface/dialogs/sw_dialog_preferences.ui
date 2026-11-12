@@ -158,6 +158,19 @@
               </property>
              </widget>
             </item>
+            <item>
+             <widget class="QToolButton" name="ShadowLibraryDownloadButton">
+              <property name="accessibleName">
+               <string>Download Part Connections</string>
+              </property>
+              <property name="toolTip">
+               <string>Download the latest LDCad shadow library by Roland Melkert from GitHub into the folder named here, or into the StudWorx data folder when none is named.</string>
+              </property>
+              <property name="text">
+               <string>Download</string>
+              </property>
+             </widget>
+            </item>
            </layout>
           </item>
           <item row="3" column="0">
@@ -475,6 +488,19 @@
               </property>
               <property name="text">
                <string>...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QToolButton" name="lgeoPathDownloadButton">
+              <property name="accessibleName">
+               <string>Download LGEO Library</string>
+              </property>
+              <property name="toolTip">
+               <string>Download the LGEO part library by Lutz Uhlmann from GitHub into the folder named here, or into the StudWorx data folder when none is named.</string>
+              </property>
+              <property name="text">
+               <string>Download</string>
               </property>
              </widget>
             </item>
@@ -3868,6 +3894,32 @@
             </property>
            </widget>
           </item>
+          <item row="10" column="0">
+           <widget class="QLabel" name="ConnectionPointColorLabel">
+            <property name="toolTip">
+             <string>Choose the display color for the connection point markers on the hovered part.</string>
+            </property>
+            <property name="buddy">
+             <cstring>ConnectionPointColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Connection Points</string>
+            </property>
+           </widget>
+          </item>
+          <item row="10" column="1">
+           <widget class="QToolButton" name="ConnectionPointColorButton">
+            <property name="accessibleName">
+             <string>Connection Points Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the display color for the connection point markers on the hovered part.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
           <item row="0" column="2">
            <spacer name="horizontalSpacer_16">
             <property name="orientation">
@@ -5488,6 +5540,7 @@
   <tabstop>ShadowLibraryEnabled</tabstop>
   <tabstop>ShadowLibraryEdit</tabstop>
   <tabstop>ShadowLibraryBrowseButton</tabstop>
+  <tabstop>ShadowLibraryDownloadButton</tabstop>
   <tabstop>ColorConfigEdit</tabstop>
   <tabstop>ColorConfigBrowseButton</tabstop>
   <tabstop>ColorConfigUpdateButton</tabstop>
@@ -5506,6 +5559,7 @@
   <tabstop>povrayExecutableBrowse</tabstop>
   <tabstop>lgeoPath</tabstop>
   <tabstop>lgeoPathBrowse</tabstop>
+  <tabstop>lgeoPathDownloadButton</tabstop>
   <tabstop>RebrickableApiKeyEdit</tabstop>
   <tabstop>RebrickableApiKeyButton</tabstop>
   <tabstop>AuthorName</tabstop>
@@ -5604,6 +5658,7 @@
   <tabstop>MarqueeBorderColorButton</tabstop>
   <tabstop>TextHaloColorButton</tabstop>
   <tabstop>TextColorButton</tabstop>
+  <tabstop>ConnectionPointColorButton</tabstop>
   <tabstop>gridLineColor</tabstop>
   <tabstop>gridStudColor</tabstop>
   <tabstop>ObjectSelectedColorButton</tabstop>

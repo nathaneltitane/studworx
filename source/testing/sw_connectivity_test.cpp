@@ -285,3 +285,39 @@ void swTests::ConnectivityConnectsSeatedShapes()
 	QVERIFY(swLength(Box.Min - swVector3(6.0f, -4.0f, -64.0f)) < 0.01f);
 	QVERIFY(swLength(Box.Max - swVector3(14.0f, 4.0f, 4.0f)) < 0.01f);
 }
+
+void swTests::ConnectivityMarksNearbyOpenEnds()
+{
+	// A 6x8 plate hovered at a stud tip marks four of the five stud tips within a stud, pointing
+	// up, and the anti stud right below at the bottom, pointing down, each at its open end.
+	const std::vector<swConnectionCylinder> Plate = MakePlate(6, 8);
+	const swConnectionShapes Shapes = { { &Plate, swMatrix44Identity() } };
+	const swVector3 Up = swVector3LDrawToStudWorx(swVector3(0.0f, -1.0f, 0.0f));
+	const swVector3 Tip = swVector3LDrawToStudWorx(swVector3(-10.0f, -4.0f, -10.0f));
+	const std::vector<swConnectionMarker> Markers = swConnectivity::GetMarkers(Shapes, Tip, 20.0f, 4);
+
+	QCOMPARE(Markers.size(), size_t(5));
+	QCOMPARE(std::count_if(Markers.begin(), Markers.end(), [](const swConnectionMarker& Marker) { return Marker.Gender == swConnectionGender::Female; }), 1);
+
+	for (const swConnectionMarker& Marker : Markers)
+	{
+		const bool Male = Marker.Gender == swConnectionGender::Male;
+
+		QVERIFY(!Marker.TwoSided);
+		QVERIFY(swLength(Marker.Direction - (Male ? Up : -Up)) < 0.001f);
+		QCOMPARE(Marker.Shape, Male ? swConnectionShape::Round : swConnectionShape::Square);
+		QVERIFY(swLength(Marker.Position - Tip) <= 20.0f);
+	}
+
+	QVERIFY(swLength(Markers.front().Position - Tip) < 0.001f);
+
+	// A hole open at both ends marks both openings, a closed bar its middle, and far ends nothing.
+	const std::vector<swConnectionCylinder> Hole = MakePart({ "0 !LDCAD SNAP_CYL [gender=F] [caps=none] [secs=A 4 16] [center=true]" });
+	const std::vector<swConnectionCylinder> Pin = MakePart({ "0 !LDCAD SNAP_CYL [gender=M] [caps=two] [secs=R 4 16] [center=true]" });
+
+	QCOMPARE(swConnectivity::GetMarkers({ { &Hole, swMatrix44Identity() } }, swVector3(0.0f, 0.0f, 0.0f), 20.0f, 4).size(), size_t(2));
+	QCOMPARE(swConnectivity::GetMarkers({ { &Hole, swMatrix44Identity() } }, swVector3(0.0f, 0.0f, 0.0f), 20.0f, 4).front().Shape, swConnectionShape::Axle);
+	QCOMPARE(swConnectivity::GetMarkers({ { &Pin, swMatrix44Identity() } }, swVector3(0.0f, 0.0f, 0.0f), 20.0f, 4).size(), size_t(1));
+	QVERIFY(swConnectivity::GetMarkers({ { &Pin, swMatrix44Identity() } }, swVector3(0.0f, 0.0f, 0.0f), 20.0f, 4).front().TwoSided);
+	QVERIFY(swConnectivity::GetMarkers({ { &Pin, swMatrix44Identity() } }, swVector3(100.0f, 0.0f, 0.0f), 20.0f, 4).empty());
+}

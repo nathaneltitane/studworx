@@ -213,6 +213,7 @@ enum class swPaintedIcon
 	Close,
 	Undock,
 	Refresh,
+	Download,
 	ArrowLeft,
 	ArrowRight,
 	Count

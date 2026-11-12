@@ -66,6 +66,7 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "FadeJointMoving", false),                                                 // SW_PROFILE_FADE_JOINT_MOVING
 	swProfileEntry("Settings", "HoverOutline", true),                                                     // SW_PROFILE_HOVER_OUTLINE
 	swProfileEntry("Settings", "HoverOutlineColor", SW_RGBA(150, 230, 240, 255)),                         // SW_PROFILE_HOVER_OUTLINE_COLOR #96e6f0
+	swProfileEntry("Settings", "ConnectionPoints", true),                                                 // SW_PROFILE_CONNECTION_POINTS
 	swProfileEntry("Settings", "HighlightNewParts", 0),                                                   // SW_PROFILE_HIGHLIGHT_NEW_PARTS
 	swProfileEntry("Settings", "HighlightNewPartsColor", SW_RGBA(255, 85, 0, 217)),                       // SW_PROFILE_HIGHLIGHT_NEW_PARTS_COLOR #ff5500d9
 	swProfileEntry("Settings", "ShadingMode", static_cast<int>(swShadingMode::DefaultLights)),             // SW_PROFILE_SHADING_MODE
@@ -147,6 +148,7 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "PathOutOfReachColor", static_cast<uint>(SW_RGBA(229, 76, 76, 255))),       // SW_PROFILE_PATH_OUT_OF_REACH_COLOR #e54c4cff
 	swProfileEntry("Settings", "SpreadHandleColor", static_cast<uint>(SW_RGBA(0, 85, 255, 255))),          // SW_PROFILE_SPREAD_HANDLE_COLOR #0055ffff
 	swProfileEntry("Settings", "ExplodeLineColor", static_cast<uint>(SW_RGBA(255, 85, 0, 255))),         // SW_PROFILE_EXPLODE_LINE_COLOR #ff5500ff
+	swProfileEntry("Settings", "ConnectionPointColor", static_cast<uint>(SW_RGBA(0, 200, 120, 255))),     // SW_PROFILE_CONNECTION_POINT_COLOR #00c878ff
 
 	swProfileEntry("Settings", "Language", ""),                                                // SW_PROFILE_LANGUAGE
 	swProfileEntry("Settings", "ColorTheme", static_cast<int>(swColorTheme::Dark)),            // SW_PROFILE_COLOR_THEME

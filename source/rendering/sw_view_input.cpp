@@ -10,6 +10,7 @@
 #include "sw_view_manipulator.h"
 #include "sw_view_cube.h"
 #include "sw_library.h"
+#include "sw_library_shadow.h"
 #include "sw_window_utilities.h"
 
 swVector3 swView::GetMoveDirection(const swVector3& Direction) const
@@ -1780,6 +1781,38 @@ void swView::UpdateHoverOutline()
 	Redraw();
 }
 
+// use to mark the connections under the pointer
+void swView::UpdateConnectionMarkers()
+{
+	std::vector<swConnectionMarker> Markers;
+	const swPreferences& Preferences = swGetPreferences();
+	swModel* ActiveModel = GetActiveModel();
+
+	if (ActiveModel && Preferences.mConnectionPoints && Preferences.mShadowLibraryEnabled && swShadowLibrary::IsLoaded() && mViewType == swViewType::View && mTrackButton == swTrackButton::None)
+	{
+		const swObjectRayTest ObjectRayTest = RayTest(true, false);
+		const swObject* Object = ObjectRayTest.ObjectSection.Object;
+
+		if (Object && Object->IsPart())
+		{
+			const swMatrix44 Transform = ActiveModel != mModel ? mActiveSubmodelTransform : swMatrix44Identity();
+			const swVector3 Point = ObjectRayTest.Start + swNormalize(ObjectRayTest.End - ObjectRayTest.Start) * ObjectRayTest.Distance;
+			swConnectionShapes Shapes;
+
+			swModel::AddPartShapes(static_cast<const swPart*>(Object), Transform, Shapes);
+
+			// a 2x2 stud area around the pointer
+			Markers = swConnectivity::GetMarkers(Shapes, swMultiply31(Point, Transform), 20.0f, 4);
+		}
+	}
+
+	if (Markers == mConnectionMarkers)
+		return;
+
+	mConnectionMarkers = std::move(Markers);
+	Redraw();
+}
+
 void swView::OnMouseMove()
 {
 	swModel* ActiveModel = GetActiveModel();
@@ -1822,6 +1855,7 @@ void swView::OnMouseMove()
 
 		UpdateTrackTool();
 		UpdateHoverOutline();
+		UpdateConnectionMarkers();
 
 		if (mTrackTool == swTrackTool::Joints)
 		{
@@ -2269,9 +2303,10 @@ void swView::OnMouseMove()
 
 void swView::OnMouseLeave()
 {
-	if (!mHoverChain.empty())
+	if (!mHoverChain.empty() || !mConnectionMarkers.empty())
 	{
 		mHoverChain.clear();
+		mConnectionMarkers.clear();
 		Redraw();
 	}
 
