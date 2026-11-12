@@ -517,6 +517,8 @@ protected:
 	QMenu* mProjectionMenu = nullptr;
 	QMenu* mShadingMenu = nullptr;
 	QMenu* mSelectionModeMenu = nullptr;
+	QMenu* mMovementSnapMenu = nullptr;
+	QMenu* mRotationSnapMenu = nullptr;
 
 	std::array<QString, 4> mRecentFiles;
 };

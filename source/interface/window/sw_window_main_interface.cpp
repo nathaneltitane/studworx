@@ -473,6 +473,8 @@ void swMainWindow::CreateMenus()
 	EditMenu->addMenu(mSelectionModeMenu);
 	EditMenu->addSeparator();
 	EditMenu->addMenu(mTransformMenu);
+	EditMenu->addMenu(mMovementSnapMenu);
+	EditMenu->addMenu(mRotationSnapMenu);
 	EditMenu->addMenu(mToolsMenu);
 	EditMenu->addSeparator();
 	EditMenu->addAction(mActions[SW_VIEW_PREFERENCES]);
@@ -640,36 +642,36 @@ void swMainWindow::CreateToolBars()
 	for (int actionIdx = SW_EDIT_SNAP_MOVE_Z0; actionIdx <= SW_EDIT_SNAP_MOVE_Z9; actionIdx++)
 		SnapZMenu->addAction(mActions[actionIdx]);
 
-	QMenu* SnapMenu = new QMenu(tr("Snap Menu"), this);
-	SnapMenu->addAction(mActions[SW_EDIT_SNAP_MOVE_TOGGLE]);
-	SnapMenu->addSeparator();
-	SnapMenu->addMenu(SnapXYMenu);
-	SnapMenu->addMenu(SnapZMenu);
-	SnapMenu->addSeparator();
-	SnapMenu->addAction(mActions[SW_EDIT_SNAP_CONNECTION_TOGGLE]);
-	SnapMenu->addAction(mActions[SW_EDIT_SNAP_CONNECTION_JOINT_TOGGLE]);
+	mMovementSnapMenu = new QMenu(tr("Movement Snap"), this);
+	mMovementSnapMenu->addAction(mActions[SW_EDIT_SNAP_MOVE_TOGGLE]);
+	mMovementSnapMenu->addSeparator();
+	mMovementSnapMenu->addMenu(SnapXYMenu);
+	mMovementSnapMenu->addMenu(SnapZMenu);
+	mMovementSnapMenu->addSeparator();
+	mMovementSnapMenu->addAction(mActions[SW_EDIT_SNAP_CONNECTION_TOGGLE]);
+	mMovementSnapMenu->addAction(mActions[SW_EDIT_SNAP_CONNECTION_JOINT_TOGGLE]);
 
 	QAction* MoveAction = new QAction(tr("Movement Snap"), this);
 	MoveAction->setStatusTip(tr("Snap translations to fixed intervals"));
 	MoveAction->setToolTip(tr("Choose movement snapping intervals for XY and Z."));
 	MoveAction->setWhatsThis(tr("<p><b>Movement Snap</b></p><p>Choose how far objects move in each snapped increment. XY controls movement across the base plane; Z controls vertical movement, so they can use different intervals. Turn snapping off for free placement, then enable it again when you need consistent spacing.</p>"));
 	MoveAction->setIcon(swCreatePaintedIcon(swPaintedIcon::SnapMove));
-	MoveAction->setMenu(SnapMenu);
+	MoveAction->setMenu(mMovementSnapMenu);
 
-	QMenu* SnapAngleMenu = new QMenu(tr("Snap Angle Menu"), this);
-	SnapAngleMenu->addAction(mActions[SW_EDIT_SNAP_ANGLE_TOGGLE]);
-	SnapAngleMenu->addSeparator();
+	mRotationSnapMenu = new QMenu(tr("Rotation Snap"), this);
+	mRotationSnapMenu->addAction(mActions[SW_EDIT_SNAP_ANGLE_TOGGLE]);
+	mRotationSnapMenu->addSeparator();
 	for (int actionIdx = SW_EDIT_SNAP_ANGLE0; actionIdx <= SW_EDIT_SNAP_ANGLE_CUSTOM; actionIdx++)
-		SnapAngleMenu->addAction(mActions[actionIdx]);
-	SnapAngleMenu->addSeparator();
-	SnapAngleMenu->addAction(mActions[SW_EDIT_SNAP_ORBIT_TOGGLE]);
+		mRotationSnapMenu->addAction(mActions[actionIdx]);
+	mRotationSnapMenu->addSeparator();
+	mRotationSnapMenu->addAction(mActions[SW_EDIT_SNAP_ORBIT_TOGGLE]);
 
 	QAction* AngleAction = new QAction(tr("Rotation Snap"), this);
 	AngleAction->setStatusTip(tr("Snap rotations to fixed intervals"));
 	AngleAction->setToolTip(tr("Choose the rotation snapping interval."));
 	AngleAction->setWhatsThis(tr("<p><b>Rotation Snap</b></p><p>Choose an angle increment for interactive rotation. For example, a 90-degree increment is useful for quarter turns, while smaller increments allow finer alignment. Turn snapping off for free rotation without fixed angle increments.</p>"));
 	AngleAction->setIcon(swCreatePaintedIcon(swPaintedIcon::SnapAngle));
-	AngleAction->setMenu(SnapAngleMenu);
+	AngleAction->setMenu(mRotationSnapMenu);
 
 	mStandardToolBar = addToolBar(tr("Standard"));
 	mStandardToolBar->setObjectName("StandardToolbar");
