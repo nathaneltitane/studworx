@@ -288,9 +288,10 @@ jobs:
         cd povray-source
         sed -i 's|^// #define _CONSOLE|#define _CONSOLE|' windows/povconfig/syspovconfig.h
         sed -i 's|^#define BUILT_BY .*|#define BUILT_BY "StudWorx continuous integration"|; /Please fill in BUILT_BY/d' source/base/build.h
-        msbuild windows/vs2015/console.vcxproj -m -nologo -verbosity:minimal -p:Configuration=Release -p:Platform=x64 -p:PlatformToolset=v143 -p:WindowsTargetPlatformVersion=10.0
+        # msbuild is not on the path
+        msbuild="$("/c/Program Files (x86)/Microsoft Visual Studio/Installer/vswhere.exe" -latest -requires Microsoft.Component.MSBuild -find 'MSBuild\**\Bin\MSBuild.exe' | head -n 1 | tr -d '\r')"
+        "${msbuild}" windows/vs2015/console.vcxproj -m -nologo -verbosity:minimal -p:Configuration=Release -p:Platform=x64 -p:PlatformToolset=v143 -p:WindowsTargetPlatformVersion=10.0
         cp windows/vs2015/bin64/povconsole64.exe ../povconsole64.exe
-        ../povconsole64.exe --version 2>&1 | head -3 || true
     - name: Generate Makefile
       run: qmake -spec win32-msvc CONFIG+=release CONFIG-=debug CONFIG-=debug_and_release
     - name: Build
