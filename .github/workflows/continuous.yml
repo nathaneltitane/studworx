@@ -271,17 +271,32 @@ jobs:
       uses: actions/cache@v6
       id: cache-povray
       with:
-        path: povconsole32-sse2.exe
-        key: povray-windows-build1
-    - name: Download POV-Ray
+        path: povconsole64.exe
+        key: povray-windows64-207b3a57
+    # 64 bit console with the shared memory preview
+    - name: Check out POV-Ray
       if: steps.cache-povray.outputs.cache-hit != 'true'
-      run: curl -fsSL https://github.com/leozide/povray/releases/download/build1/povconsole32-sse2.exe -o povconsole32-sse2.exe
+      uses: actions/checkout@v7
+      with:
+        repository: leozide/povray
+        ref: 207b3a57d5daf9a4330484434a06c98b5d014781
+        path: povray-source
+    - name: Build POV-Ray
+      if: steps.cache-povray.outputs.cache-hit != 'true'
+      shell: bash
+      run: |
+        cd povray-source
+        sed -i 's|^// #define _CONSOLE|#define _CONSOLE|' windows/povconfig/syspovconfig.h
+        sed -i 's|^#define BUILT_BY .*|#define BUILT_BY "StudWorx continuous integration"|; /Please fill in BUILT_BY/d' source/base/build.h
+        msbuild windows/vs2015/console.vcxproj -m -nologo -verbosity:minimal -p:Configuration=Release -p:Platform=x64 -p:PlatformToolset=v143 -p:WindowsTargetPlatformVersion=10.0
+        cp windows/vs2015/bin64/povconsole64.exe ../povconsole64.exe
+        ../povconsole64.exe --version 2>&1 | head -3 || true
     - name: Generate Makefile
       run: qmake -spec win32-msvc CONFIG+=release CONFIG-=debug CONFIG-=debug_and_release
     - name: Build
       run: |
         nmake /NOLOGO
-        if not exist build\release\povconsole32-sse2.exe exit /b 1
+        if not exist build\release\povconsole64.exe exit /b 1
     - name: Generate test Makefile
       run: |
         mkdir build\testing

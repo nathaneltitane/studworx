@@ -192,7 +192,7 @@ The model view draws fast with OpenGL in four lighting styles, and File > Render
 ![Outline selection](resources/images/rendering-feature-outline-selection.png)
 ![Tint selection](resources/images/rendering-feature-tint-selection.png)
 
-- **POV-Ray.** Found on its own in the PATH, Flatpak or Snap and checked for version 3.7. LGEO high detail parts are found beside the parts library or downloaded on request, with a Parts choice between LDraw and LGEO.
+- **POV-Ray.** Found on its own in the PATH, Flatpak or Snap, or bundled on Windows and macOS, and checked for version 3.7. The POV-Ray path in Preferences picks another POV-Ray on every system. LGEO high detail parts are found beside the parts library or downloaded on request, with a Parts choice between LDraw and LGEO.
 - **Render window.** POV-Ray Render and Blender Render open the Render window. Choose the output file, follow the progress, and watch the image appear in the preview as it renders.
 - **Blender.** Render with the bundled Blender LDraw add-ons, with the output, image, scene, parts and editing settings in panels of the render window, or Open in Blender to keep working on the scene there. The Blender executable is set in Preferences.
 - **Lighting styles.** Standard Lighting, Studio Lighting, Matte Lighting and Toon Lighting, from the View menu or the command line with --lighting. Standard uses one light with soft highlights, Studio key, fill and rim lights, Matte no highlights, and Toon banded cel shading.

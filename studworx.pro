@@ -104,8 +104,8 @@ UI_DIR = $$DESTDIR/.ui
 
 win32 {
 	# povray is copied beside the executable only when present
-	exists($$_PRO_FILE_PWD_/povconsole32-sse2.exe) {
-		povray.files = $$_PRO_FILE_PWD_/povconsole32-sse2.exe
+	exists($$_PRO_FILE_PWD_/povconsole64.exe) {
+		povray.files = $$_PRO_FILE_PWD_/povconsole64.exe
 		povray.path = $$OUT_PWD/$$DESTDIR
 		COPIES += povray
 	}

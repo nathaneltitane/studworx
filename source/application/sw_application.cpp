@@ -1975,10 +1975,12 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 						Arguments.append("+UA");
 
 					Arguments.append(swGetPOVRayArguments(Program, swGetProfileRenderQuality(), UseLGEO));
-#ifndef Q_OS_LINUX
-					Arguments.append("+FN");
-					Arguments.append("-D");
-#endif
+
+					if (Program.Bundled)
+					{
+						Arguments.append("+FN");
+						Arguments.append("-D");
+					}
 
 					QProcess Process;
 

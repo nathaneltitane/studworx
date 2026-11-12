@@ -33,6 +33,19 @@ static QString swRunPOVRay(const QString& Path, const QStringList& Arguments, in
 	return QString::fromLocal8Bit(Process.readAll());
 }
 
+#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
+
+// use to find the console beside the program
+static QString swGetPOVRayBundledPath()
+{
+#if defined(Q_OS_WIN)
+	return QDir::cleanPath(QCoreApplication::applicationDirPath() + QLatin1String("/povconsole64.exe"));
+#else
+	return QDir::cleanPath(QCoreApplication::applicationDirPath() + QLatin1String("/povray"));
+#endif
+}
+#endif
+
 // use to read a program version
 swPOVRayProgram swGetPOVRayProgram(const QString& Path)
 {
@@ -52,11 +65,19 @@ swPOVRayProgram swGetPOVRayProgram(const QString& Path)
 #if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
 
 	// the bundled console is supported
-	Program.Version = QLatin1String("3.7");
-	Program.VersionMajor = 3;
-	Program.VersionMinor = 7;
-	Program.Supported = true;
-#else
+	if (QFileInfo(Path) == QFileInfo(swGetPOVRayBundledPath()))
+	{
+		Program.Version = QLatin1String("3.7");
+		Program.VersionMajor = 3;
+		Program.VersionMinor = 7;
+		Program.Supported = true;
+		Program.Bundled = true;
+		Programs[Path] = Program;
+
+		return Program;
+	}
+#endif
+
 	int ExitCode = 0;
 	const QString Output = swRunPOVRay(Path, { QLatin1String("--version") }, ExitCode);
 	const QRegularExpressionMatch Match = QRegularExpression(QLatin1String("POV-Ray\\s+((\\d+)\\.(\\d+)[\\w.+-]*)")).match(Output);
@@ -68,7 +89,6 @@ swPOVRayProgram swGetPOVRayProgram(const QString& Path)
 		Program.VersionMinor = Match.captured(3).toInt();
 		Program.Supported = Program.VersionMajor > 3 || (Program.VersionMajor == 3 && Program.VersionMinor >= 7);
 	}
-#endif
 
 	Programs[Path] = Program;
 
@@ -80,12 +100,11 @@ static QStringList swGetPOVRayCandidates()
 {
 	QStringList Candidates;
 
-#if defined(Q_OS_WIN)
-	Candidates.append(QDir::cleanPath(QCoreApplication::applicationDirPath() + QLatin1String("/povconsole32-sse2.exe")));
-#elif defined(Q_OS_MACOS)
-	Candidates.append(QDir::cleanPath(QCoreApplication::applicationDirPath() + QLatin1String("/povray")));
-#else
 	Candidates.append(swGetProfileString(SW_PROFILE_POVRAY_PATH));
+
+#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
+	Candidates.append(swGetPOVRayBundledPath());
+#else
 
 	for (const QString& Name : { QLatin1String("povray"), QLatin1String("povray3.7"), QLatin1String("povray37") })
 		Candidates.append(QStandardPaths::findExecutable(Name));
@@ -119,10 +138,8 @@ swPOVRayProgram swFindPOVRay()
 
 		if (Program.Supported)
 		{
-#if !defined(Q_OS_WIN) && !defined(Q_OS_MACOS)
 			if (Program.Path != swGetProfileString(SW_PROFILE_POVRAY_PATH))
 				swSetProfileString(SW_PROFILE_POVRAY_PATH, Program.Path);
-#endif
 
 			return Program;
 		}
@@ -411,10 +428,12 @@ QStringList swGetPOVRayArguments(const swPOVRayProgram& Program, swPOVRayRenderQ
 		break;
 	}
 
-#ifdef Q_OS_LINUX
-	Arguments.append("+FN");
-	Arguments.append("-D");
-#endif
+	// the bundled console writes to shared memory
+	if (!Program.Bundled)
+	{
+		Arguments.append("+FN");
+		Arguments.append("-D");
+	}
 
 	const QString IncludePath = swGetPOVRayIncludePath(Program);
 

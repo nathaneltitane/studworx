@@ -10,6 +10,7 @@ struct swPOVRayProgram
 	int VersionMajor = 0;
 	int VersionMinor = 0;
 	bool Supported = false;
+	bool Bundled = false;
 };
 
 // Finds a supported POV-Ray.

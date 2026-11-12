@@ -291,14 +291,6 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 		if (QCheckBox* CheckBox = qobject_cast<QCheckBox*>(Label->buddy()))
 			CheckBox->installEventFilter(this);
 
-#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
-	ui->povrayLabel->hide();
-	ui->povrayExecutable->hide();
-	ui->povrayExecutableBrowse->hide();
-	delete ui->povrayLabel;
-	delete ui->povrayLayout;
-#endif
-
 	ui->Language->addItem("\u010cesky");
 	ui->Language->addItem("Deutsch");
 	ui->Language->addItem("English");
@@ -333,11 +325,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	// path fields end where the update buttons begin
 	const int UpdateButtonWidth = ui->ColorConfigUpdateButton->sizeHint().width();
 	const int ButtonSpacing = ui->ColorConfigLayout->spacing() >= 0 ? ui->ColorConfigLayout->spacing() : swGetLayoutSpacing(this, Qt::Horizontal);
-	QList<QHBoxLayout*> BrowseLayouts = { ui->horizontalLayout_3, ui->UnofficialLibraryLayout, ui->ShadowLibraryLayout, ui->BlenderExecutableLayout, ui->horizontalLayout_10 };
-
-#if !defined(Q_OS_WIN) && !defined(Q_OS_MACOS)
-	BrowseLayouts.append(ui->povrayLayout);
-#endif
+	QList<QHBoxLayout*> BrowseLayouts = { ui->horizontalLayout_3, ui->UnofficialLibraryLayout, ui->ShadowLibraryLayout, ui->BlenderExecutableLayout, ui->horizontalLayout_10, ui->povrayLayout };
 
 	for (QHBoxLayout* BrowseLayout : BrowseLayouts)
 	{

@@ -41,7 +41,7 @@ cp "${directory_source}/README.md" "${directory_package}/readme.txt"
 mkdir -p "${directory_package}/samples"
 cp "${directory_source}/resources/samples/"*.ldr "${directory_source}/resources/samples/"*.mpd "${directory_package}/samples/"
 
-for file_extra in povconsole32-sse2.exe
+for file_extra in povconsole64.exe
 do
 	if [ -f "${directory_source}/${file_extra}" ]
 	then

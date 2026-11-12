@@ -35,6 +35,8 @@ Makefile
 studworx_plugin_import.cpp
 studworx_resource.*
 povray
+povray-source
+povconsole64.exe
 uic_wrapper.bat
 /resources/packaging/windows/*.exe
 appdir

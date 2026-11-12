@@ -19,9 +19,6 @@
 #define SW_RENDER_WINDOW_STATE_VERSION 3
 #define SW_RENDER_PANEL_WIDTH 380
 #define SW_RENDER_LOG_HEIGHT 240
-#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
-#define SW_POVRAY_MEMORY_MAPPED_FILE 1
-#endif
 
 void swRenderPreviewWidget::resizeEvent(QResizeEvent* Event)
 {
@@ -1132,13 +1129,14 @@ void swRenderDialog::CloseProcess()
 
 	if (mDialogMode == swRenderDialogMode::RenderPOVRay)
 	{
-#if SW_POVRAY_MEMORY_MAPPED_FILE
-		mOutputFile.unmap((uchar*)mOutputBuffer);
-		mOutputBuffer = nullptr;
-		mOutputFile.close();
+		if (mPOVRayProgram.Bundled)
+		{
+			mOutputFile.unmap((uchar*)mOutputBuffer);
+			mOutputBuffer = nullptr;
+			mOutputFile.close();
 
-		QFile::remove(GetStdOutFileName());
-#endif
+			QFile::remove(GetStdOutFileName());
+		}
 
 		QFile::remove(GetPOVFileName());
 	}
@@ -1345,17 +1343,15 @@ void swRenderDialog::RenderPOVRay()
 		Arguments.append("+ER" + QString::number(mJobRegion.bottom() + 1));
 	}
 
-#if SW_POVRAY_MEMORY_MAPPED_FILE
-	Arguments.append(QString::fromLatin1("+SM\"%1\"").arg(GetStdOutFileName()));
-#endif
+	if (mPOVRayProgram.Bundled)
+		Arguments.append(QString::fromLatin1("+SM\"%1\"").arg(GetStdOutFileName()));
 
 	const bool UseLGEO = swGetActiveProject()->GetModels()[0]->GetPOVRayOptions().UseLGEO || swGetProfileInteger(SW_PROFILE_RENDER_PARTS) == 1;
 	Arguments.append(swGetPOVRayArguments(mPOVRayProgram, mQuality, UseLGEO));
 
 	swRenderProcess* Process = new swRenderProcess(this);
-#ifdef Q_OS_LINUX
-	connect(Process, &QProcess::readyReadStandardError, this, [this]() { bool Error; ReadStdErr(Error); });
-#endif
+	if (!mPOVRayProgram.Bundled)
+		connect(Process, &QProcess::readyReadStandardError, this, [this]() { bool Error; ReadStdErr(Error); });
 	Process->setEnvironment(swGetPOVRayEnvironment());
 	Process->setStandardErrorFile(GetStdErrFileName());
 	Process->start(mPOVRayProgram.Path, Arguments);
@@ -1613,9 +1609,8 @@ void swRenderDialog::Update()
 
 	const bool ProcessFinished = mProcess->state() == QProcess::NotRunning;
 
-	if (mDialogMode == swRenderDialogMode::RenderPOVRay)
+	if (mDialogMode == swRenderDialogMode::RenderPOVRay && mPOVRayProgram.Bundled)
 	{
-#if SW_POVRAY_MEMORY_MAPPED_FILE
 		if (!mOutputBuffer)
 		{
 			mOutputFile.setFileName(GetStdOutFileName());
@@ -1688,15 +1683,12 @@ void swRenderDialog::Update()
 			ui->RenderProgress->setValue(ui->RenderProgress->maximum());
 
 		ui->preview->SetImage(mImage.scaled(mPreviewWidth, mPreviewHeight, Qt::KeepAspectRatio, Qt::SmoothTransformation));
-#endif
 	}
 
 	if (ProcessFinished)
 	{
-#ifdef Q_OS_LINUX
-		QByteArray Output = mProcess->readAllStandardOutput();
-		mImage = QImage::fromData(Output);
-#endif
+		if (mDialogMode == swRenderDialogMode::RenderPOVRay && !mPOVRayProgram.Bundled)
+			mImage = QImage::fromData(mProcess->readAllStandardOutput());
 
 		ShowResult();
 		CloseProcess();
