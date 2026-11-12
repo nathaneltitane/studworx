@@ -214,8 +214,6 @@ protected:
 	std::vector<swRenderJob> mJobs;
 	size_t mJobIndex = 0;
 	QRect mJobRegion;
-	QImage mResultImage;
-	QString mResultFileName;
 	QString mPresetName;
 
 	int mWidth = 1280;

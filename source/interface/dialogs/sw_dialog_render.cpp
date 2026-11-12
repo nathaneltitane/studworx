@@ -117,6 +117,14 @@ void swRenderPreviewWidget::paintEvent(QPaintEvent* PaintEvent)
 	// empty canvas is a blank sheet
 	Painter.fillRect(CanvasRect, Qt::white);
 
+	// faded model behind a region render
+	if (!mGuideImage.isNull())
+	{
+		Painter.setOpacity(0.5);
+		Painter.drawImage(CanvasRect, mGuideImage);
+		Painter.setOpacity(1.0);
+	}
+
 	if (!mImage.isNull())
 	{
 		if (mScaledImage.size() != CanvasRect.size())
@@ -124,14 +132,7 @@ void swRenderPreviewWidget::paintEvent(QPaintEvent* PaintEvent)
 
 		Painter.drawImage(CanvasRect.topLeft(), mScaledImage);
 	}
-	else if (!mGuideImage.isNull())
-	{
-		// faded so it never reads as a render
-		Painter.setOpacity(0.5);
-		Painter.drawImage(CanvasRect, mGuideImage);
-		Painter.setOpacity(1.0);
-	}
-	else if (mPlaceholderSize > 0)
+	else if (mGuideImage.isNull() && mPlaceholderSize > 0)
 	{
 		// paint the placeholder at its size
 		const int IconSize = qMin(mPlaceholderSize, qMin(CanvasRect.width(), CanvasRect.height()) / 2);
@@ -1818,36 +1819,22 @@ void swRenderDialog::ShowResult()
 	{
 		if (mJobRegion.isValid() && !mImage.isNull())
 		{
-			// place regions into the saved image
+			// keep only the region, never an older image
 			const QSize ImageSize(mWidth, mHeight);
-			QImage BaseImage = mResultFileName == FileName && mResultImage.size() == ImageSize ? mResultImage : QImage();
+			QImage BaseImage(ImageSize, QImage::Format_ARGB32);
+			BaseImage.fill(Qt::transparent);
+			QPainter Painter(&BaseImage);
+			Painter.setCompositionMode(QPainter::CompositionMode_Source);
 
-			if (BaseImage.isNull() && !FileName.isEmpty())
-			{
-				QImageReader Reader(FileName);
+			if (mImage.size() == ImageSize)
+				Painter.drawImage(mJobRegion, mImage, mJobRegion);
+			else if (mImage.size() == mJobRegion.size())
+				Painter.drawImage(mJobRegion.topLeft(), mImage);
 
-				if (Reader.size() == ImageSize)
-					BaseImage = Reader.read();
-			}
-
-			if (BaseImage.size() == ImageSize)
-			{
-				BaseImage = BaseImage.convertToFormat(QImage::Format_ARGB32);
-				QPainter Painter(&BaseImage);
-				Painter.setCompositionMode(QPainter::CompositionMode_Source);
-
-				if (mImage.size() == ImageSize)
-					Painter.drawImage(mJobRegion, mImage, mJobRegion);
-				else if (mImage.size() == mJobRegion.size())
-					Painter.drawImage(mJobRegion.topLeft(), mImage);
-
-				Painter.end();
-				mImage = BaseImage;
-			}
+			Painter.end();
+			mImage = BaseImage;
 		}
 
-		mResultImage = mImage;
-		mResultFileName = FileName;
 		ui->preview->SetImage(mImage.scaled(mPreviewWidth, mPreviewHeight, Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
 		if (!FileName.isEmpty())
