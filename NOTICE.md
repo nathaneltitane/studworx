@@ -1,6 +1,20 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-12</summary>
+
+  - Views: the X, Y and Z axis lines draw on their own, the Grid Origin Lines setting is gone, and the negative Z line shows only once parts go below the base grid
+  - Views: the base grid starts at 2 × 2 studs and the height grids one brick high, and they grow past the parts by a Grid Margin in studs and a Height Margin in plates
+  - Views: Split Horizontal, Split Vertical and Remove View no longer crash when the model view doesn't have keyboard focus
+  - Preferences: Rendering, Views and Interface sort their settings into clearer groups, the colors move to Interface, and color alpha is set in the color picker
+  - Explode: the X, Y and Z spreads are multiples from 1.0 to 10.0 instead of percentages, and Explode is greyed out while every spread is 1.0
+  - Keyframes: panel buttons are painted in the color theme and run the same commands as the Time toolbar, which gains Set Keys, Remove Keys, Play and Stop
+  - Timeline: steps with animation keys list a Keys row per keyed object, and clicking an object in Keyframes or Timeline selects it in the model view
+  - Samples: sample-train-tracks.ldr, an S-curve of 9V curved track joined at its train track connections
+
+  </details>
+
+  <details>
   <summary>2026-11-11</summary>
 
   - Views: the X, Y and Z Axis Line toggles draw their lines on their own, and the Grid Origin Lines setting that silently hid them is gone

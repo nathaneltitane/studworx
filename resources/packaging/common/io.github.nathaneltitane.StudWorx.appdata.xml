@@ -22,6 +22,7 @@
 		<id>studworx.desktop</id>
 	</provides>
 	<releases>
+		<release version="2026-11-12" date="2026-11-12" />
 		<release version="2026-11-11" date="2026-11-11" />
 		<release version="2026-11-10" date="2026-11-10" />
 		<release version="2026-11-09" date="2026-11-09" />
