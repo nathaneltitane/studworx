@@ -2166,14 +2166,14 @@
 
 			<ul class="points">
 				<li><b>Separate settings.</b> The model view, the preview, the parts list and the Minifigure Builder each keep their own rendering settings. Each can follow the model view instead, with Preview Uses Model View Settings, Parts Use Model View Settings and Minifigure Builder Uses Model View Settings, or set its own Wireframe, Flat Shading, Default Lights, Edge Lines, Conditional Lines and line width: Preview Wireframe, Preview Flat Shading, Preview Default Lights, Preview Edge Lines and Preview Conditional Lines, Parts Wireframe, Parts Flat Shading, Parts Default Lights, Parts Edge Lines and Parts Conditional Lines, and Minifigure Builder Wireframe, Minifigure Builder Flat Shading, Minifigure Builder Default Lights, Minifigure Builder Edge Lines and Minifigure Builder Conditional Lines. Preview View Cube and Preview Axis Icon turn the preview overlays on and off, and the parts list has Snap Panel Width to Tiles.</li>
+				<li><b>Render window.</b> POV-Ray Render and Blender Render open the Render window. Choose the output file, follow the progress, and watch the <a href="#image">image</a> appear in the preview as it renders. For POV-Ray, Focal Blur keeps the camera target sharp and blurs the parts in front of and behind it, and a Region drawn before the first render shows a faded view of the model to draw on. Hold Ctrl to draw a square region, drag its edges or corners to resize it, drag inside it to move it, and drag outside it to draw a new one. Editor shows the POV-Ray scene file with every part, color and position; tick Render using this configuration instead of the model configuration to render your edits, Reset to write it again from the model, Open to load a scene file, or Save As to keep a copy.</li>
 				<li><b>POV-Ray.</b> Found on its own in the PATH, Flatpak or Snap, or bundled on Windows and macOS, and checked for version 3.7. The POV-Ray path in <a href="#preferences">Preferences</a> picks another POV-Ray on every system. LGEO high detail parts are found beside the parts library or downloaded on request, with a Parts choice between LDraw and LGEO.</li>
 				<li><b>Shading.</b> Wireframe, Flat Shading and Default Lights in View &gt; Shading, and with Edge Lines, Conditional Lines and Mesh Detail Control in the options menu of the model view, Mesh Detail Control drawing distant parts with simpler meshes past the Mesh Level of Detail distance.</li>
 				<li><b>Lighting styles.</b> Standard Lighting, Studio Lighting, Matte Lighting and Toon Lighting, from the View menu or the command line with --lighting. Standard uses one light with soft highlights, Studio key, fill and rim lights, Matte no highlights, and Toon banded cel shading.</li>
-				<li><b>Blender.</b> Render with the bundled Blender LDraw add-ons, with the output, <a href="#image">image</a>, scene, parts and editing settings in <a href="#panels">panels</a> of the render window, or Open in Blender to keep working on the scene there. The Blender executable is set in Preferences.</li>
+				<li><b>Blender.</b> Render with the bundled Blender LDraw add-ons, with the output, image, scene, parts and editing settings in <a href="#panels">panels</a> of the render window, or Open in Blender to keep working on the scene there. The Blender executable is set in Preferences.</li>
 				<li><b>Edge colors.</b> Automate Edge Color computes edge colors from each part color, with edge contrast, saturation and light to dark settings, or set the stud cylinder, edge, black edge and dark edge colors yourself.</li>
 				<li><b>Studs.</b> Eight stud styles: Plain Studs, Thin-Line Logo Studs, Outline Logo Studs, Sharp Top Logo Studs, Rounded Top Logo Studs, Flattened Logo Studs, High Contrast Studs and High Contrast Logo Studs.</li>
 				<li><b>Color configurations.</b> Colors come from the parts library, the LDraw color configuration or the alternate configuration with more realistic edge line colors for rendering, chosen under Rendering &gt; Colors.</li>
-				<li><b>Render window.</b> POV-Ray Render and Blender Render open the Render window. Choose the output file, follow the progress, and watch the image appear in the preview as it renders.</li>
 				<li><b>Selection highlight.</b> Outline Highlight or Tint and Edges Highlight, with Increase Outline Width, Decrease Outline Width and an adjustable transparency.</li>
 				<li><b>Mesh level of detail.</b> Distant parts draw with simpler meshes, from a distance set in Preferences, so large <a href="#models">models</a> stay smooth.</li>
 				<li><b>Anti-aliasing.</b> 2x, 4x or 8x samples, and an adjustable line width.</li>
@@ -3860,7 +3860,7 @@
 				<h2>HELP // EVERY &quot;WHAT&#x27;S THIS?&quot; ENTRY</h2>
 			</header>
 
-			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 453 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
+			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 460 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
 			<div class="tools-search">
 				<input id="search" type="search" placeholder="Search help" aria-label="Search help">
@@ -3953,7 +3953,14 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Keyframes: panel buttons are painted in the color theme and run the same commands as the Time toolbar, which gains Set Keys, Remove Keys, Play and Stop</li>
 					<li>Timeline: <a href="#steps">steps</a> with animation keys list a Keys row per keyed object, and clicking an object in Keyframes or Timeline selects it in the model view</li>
 					<li>Samples: sample-train-tracks.ldr, an S-curve of 9V curved track joined at its train track connections</li>
-					<li>POV-Ray: the POV-Ray path shows in Preferences on Windows and macOS too, so any POV-Ray 3.7 console can replace the bundled one, which stays the fallback</li>
+					<li>POV-Ray: the POV-Ray path shows in Preferences on Windows and macOS too, so any POV-Ray 3.7 console can replace the bundled one, which stays the fallback, and starts at the bundled console there in place of the Linux path</li>
+					<li>POV-Ray: Windows builds bundle a 64 bit POV-Ray console in place of the 32 bit one</li>
+					<li>POV-Ray: Focal Blur in the <a href="#image">Image</a> panel turns the depth of field on or off at any quality, off by default, where High quality always used it, and render presets keep it</li>
+					<li>POV-Ray: Region shows a faded view of the model from the render camera and step until the first render, so the region can be drawn on the model</li>
+					<li>POV-Ray: a Region render keeps only the region, over the faded view of the model, where it was placed into an older image of the same file</li>
+					<li>POV-Ray: Region draws a square with Ctrl held, resizes from its edges and corners, moves when dragged from inside, and is drawn anew when dragged from outside</li>
+					<li>POV-Ray: Editor beside Log shows the scene file with syntax colors, renders your edits when Render using this configuration instead of the model configuration is ticked, greys out the settings it ignores, writes the scene again with Reset, opens a scene file with Open and saves a copy with Save As</li>
+					<li>Render: the Log panel shows renderer progress on one line updated in place, as in a terminal, instead of running every update together</li>
 				</ul>
 			</details>
 
@@ -3976,7 +3983,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Preferences: Interface groups the colors from the farthest back to the closest, Interface, Grid, Objects, Steps and Highlighting, Flexible Parts, Axes, View Cube and Instructions, and the background joins the Interface group, whose rows run from the background to the text</li>
 					<li>Preferences: the page margin and grid line colors of the Instructions page moved to Interface, Instructions as Page Margins, Page Grid Primary Lines and Page Grid Secondary Lines, and the <a href="#help">help</a> of the General, Rendering, Views and Interface pages names their new groups</li>
 					<li>Explode: the X, Y and Z spreads are multiples from 1.0 to 10.0 instead of percentages, 1.0 leaving the parts in place and 2.0 doubling their distance, and Explode is greyed out while every spread is 1.0</li>
-					<li>Site: the <a href="#panels">Panels</a> section lists the Explode panel with its own <a href="#image">image</a></li>
+					<li>Site: the <a href="#panels">Panels</a> section lists the Explode panel with its own image</li>
 					<li>Interface: group titles such as Base Grid are no longer cut short at the right with some fonts</li>
 					<li>Samples: sample-train-tracks.ldr, an S-curve of 9V curved track joined at its train track connections</li>
 					<li>Site: the Interface, Steps, Rendering, Panels, Views, <a href="#tools">Tools</a>, <a href="#modeling">Modeling</a> (including Train Track) and <a href="#models">Models</a> galleries show the new grid and axis lines in fresh captures, and the Preferences Views page shows the Axis Lines group</li>
@@ -4251,7 +4258,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Render","title":"Editing","paragraphs":["Set how the model is built up in Blender, which matters most when you edit it after Open in Blender."]},
 				{"group":"Render","title":"Render","paragraphs":["Render the image or open the model in Blender, then follow the progress here. Log shows the Blender output below the preview."]},
 				{"group":"Render","title":"Quality","paragraphs":["Low uses POV-Ray's default quality without additional antialiasing options. Medium uses quality level 5 with antialiasing and fast radiosity. High uses quality level 11 with additional antialiasing settings and full radiosity."]},
-				{"group":"Render","title":"Area","paragraphs":["Full Image renders the whole image. Region renders only the part outlined on the preview, drag on the preview to draw it. A region rendered at the size of the last image is placed into that image so a detail can be refined without rendering everything again."]},
+				{"group":"Render","title":"Focal Blur","paragraphs":["On keeps the camera target sharp and blurs the parts in front of it and behind it, like the depth of field of a real camera lens, at any quality. It takes several times longer to render. Orthographic cameras are never blurred."]},
+				{"group":"Render","title":"Area","paragraphs":["Full Image renders the whole image. Region renders only the part outlined on the preview and leaves the rest of the image transparent. Drag on the preview to draw the region, hold Ctrl to draw a square, drag its edges or corners to resize it, drag inside it to move it, and drag outside it to draw a new one."]},
 				{"group":"Render","title":"Batch","paragraphs":["Render several images in one go, one for each building step or each camera of the model. Each image is saved next to the output file with the step number or camera name added to its name."]},
 				{"group":"Render","title":"Steps","paragraphs":["Model renders the finished model. Current Step renders the model as built up to the step shown in the main window. All Steps renders one image for every step, numbered after the step."]},
 				{"group":"Render","title":"Cameras","paragraphs":["View renders from the view of the main window. A camera renders from that camera of the model. All Cameras renders one image for every camera, named after the camera."]},
@@ -4260,9 +4268,15 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Render","title":"Lights","paragraphs":["Standard uses four point lights with crisp shadows. Studio uses a large soft key light, a fill light and a rim light behind the model. Matte uses a wide overhead light and a shadowless light from the camera for even, soft lighting. Lights placed in the model replace these."]},
 				{"group":"Render","title":"Floor","paragraphs":["Plain uses the floor color of the model. Shadow Catcher takes the background color so only the shadows show. Reflective adds a glossy mirror finish. Cyclorama fades the floor into the background with distance for a seamless backdrop."]},
 				{"group":"Render","title":"Environment","paragraphs":["Choose an equirectangular panorama, ideally an HDR or EXR image, that wraps around the scene as its sky and lights it through radiosity at Medium and High quality. Leave empty to use the background color."]},
-				{"group":"Render","title":"Render","paragraphs":["Start the POV-Ray render, then follow its progress here. Log shows the POV-Ray output below the preview."]},
+				{"group":"Render","title":"Render","paragraphs":["Start the POV-Ray render, then follow its progress here. Editor shows the POV-Ray scene and Log the POV-Ray output below the preview."]},
 				{"group":"Render","title":"Open in Blender","paragraphs":["Import the current model step into Blender with the Scene, Parts and Editing settings and open it there for editing. No image is saved."]},
 				{"group":"Render","title":"Log","paragraphs":["The output of the renderer, updated while it renders. Read it to investigate warnings or a failed render, select text and copy it with the standard keyboard shortcut when reporting a problem."]},
+				{"group":"Render","title":"Editor","paragraphs":["The POV-Ray scene written from the model and the current settings, with every part, color and position, the camera and the lights. Edit it and tick Render using this configuration instead of the model configuration to render your edits."]},
+				{"group":"Render","title":"Render using this configuration instead of the model configuration","paragraphs":["Render renders the text of the editor as it is, so your edits show in the image. The size, quality, scene, preset and batch settings have no effect and are greyed out. Output and Area still apply."]},
+				{"group":"Render","title":"Reset","paragraphs":["Replace the text with the scene written again from the model and the current settings, from the camera and step of the first image. Your edits are lost."]},
+				{"group":"Render","title":"Open...","paragraphs":["Replace the text with a POV-Ray scene file, such as one saved with Save As, and tick Render using this configuration instead of the model configuration so Render uses it."]},
+				{"group":"Render","title":"Save As...","paragraphs":["Save the text of the editor as a POV-Ray scene file to render or edit outside StudWorx."]},
+				{"group":"Render","title":"Editor","paragraphs":["Show or hide the Editor panel below the preview to read and edit the POV-Ray scene, render your edits or save a copy."]},
 				{"group":"Render","title":"Log","paragraphs":["Show or hide the Log panel below the preview with the renderer output and diagnostic messages."]},
 				{"group":"Minifigure Builder","title":"Choose Part","paragraphs":["Choose a part for this section of the minifigure. Select None to omit it, the selector then shows the name of the section. The preview updates when you select a different part."]},
 				{"group":"Minifigure Builder","title":"Choose Color","paragraphs":["Change the color of this minifigure part. The preview updates immediately, and saving a template includes the chosen color."]},

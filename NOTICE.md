@@ -16,6 +16,8 @@
   - POV-Ray: Focal Blur in the Image panel turns the depth of field on or off at any quality, off by default, where High quality always used it, and render presets keep it
   - POV-Ray: Region shows a faded view of the model from the render camera and step until the first render, so the region can be drawn on the model
   - POV-Ray: a Region render keeps only the region, over the faded view of the model, where it was placed into an older image of the same file
+  - POV-Ray: Region draws a square with Ctrl held, resizes from its edges and corners, moves when dragged from inside, and is drawn anew when dragged from outside
+  - POV-Ray: Editor beside Log shows the scene file with syntax colors, renders your edits when Render using this configuration instead of the model configuration is ticked, greys out the settings it ignores, writes the scene again with Reset, opens a scene file with Open and saves a copy with Save As
   - Render: the Log panel shows renderer progress on one line updated in place, as in a terminal, instead of running every update together
 
   </details>

@@ -38,6 +38,8 @@ namespace Ui {
 class swRenderDialog;
 }
 
+class swEditorTextEdit;
+
 class swRenderProcess : public QProcess
 {
 	Q_OBJECT
@@ -92,6 +94,7 @@ public:
 	void SetRegionMode(bool RegionMode)
 	{
 		mRegionMode = RegionMode;
+		setMouseTracking(RegionMode);
 		setCursor(RegionMode ? Qt::CrossCursor : Qt::ArrowCursor);
 		update();
 	}
@@ -119,6 +122,9 @@ protected:
 	void mouseReleaseEvent(QMouseEvent* MouseEvent) override;
 	QRect GetCanvasRect() const;
 	QPointF GetCanvasPoint(const QPoint& Position) const;
+	QRectF GetDrawnRegion(const QPoint& Position, Qt::KeyboardModifiers Modifiers) const;
+	bool IsInsideRegion(const QPointF& Point) const;
+	Qt::Edges GetRegionEdges(const QPoint& Position) const;
 
 	QImage mImage;
 	QImage mScaledImage;
@@ -127,6 +133,8 @@ protected:
 	QSize mCanvasSize;
 	bool mRegionMode = false;
 	bool mRegionDragging = false;
+	bool mRegionMoving = false;
+	Qt::Edges mRegionEdges;
 	QPointF mRegionStart;
 	QRectF mRegion = QRectF(0.25, 0.25, 0.5, 0.5);
 };
@@ -183,6 +191,9 @@ protected:
 	void DeletePresetClicked();
 	void UpdateCameras();
 	void UpdateGuideImage();
+	swCamera* GetFirstCamera(swModel* Model) const;
+	void LoadEditorScene();
+	bool IsEditedScene() const;
 
 	QTimer mUpdateTimer;
 	QTimer mGuideTimer;
@@ -194,9 +205,14 @@ protected:
 	QStringList mStdOutList;
 	QAbstractButton* mRenderButton = nullptr;
 	QAbstractButton* mLogButton = nullptr;
+	QAbstractButton* mEditorButton = nullptr;
 	QMainWindow* mPanelWindow = nullptr;
 	QDockWidget* mLogPanel = nullptr;
 	QPlainTextEdit* mLogEdit = nullptr;
+	QDockWidget* mEditorPanel = nullptr;
+	swEditorTextEdit* mEditorEdit = nullptr;
+	QCheckBox* mEditorCheckBox = nullptr;
+	QList<QWidget*> mEditorDisabledWidgets;
 	swRenderProcess* mProcess = nullptr;
 	QComboBox* mPresetComboBox = nullptr;
 	QAbstractButton* mPresetDeleteButton = nullptr;

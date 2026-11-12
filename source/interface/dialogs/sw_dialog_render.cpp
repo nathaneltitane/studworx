@@ -9,6 +9,80 @@
 #include "sw_window_utilities.h"
 #include "sw_renderer_povray.h"
 #include "sw_renderer_blender.h"
+#include "sw_widget_text_edit.h"
+#include "sw_widget_editor.h"
+
+// use to tint pov-ray scene text
+class swPOVRayHighlighter : public QSyntaxHighlighter
+{
+public:
+	explicit swPOVRayHighlighter(QObject* Parent)
+		: QSyntaxHighlighter(Parent)
+	{
+		// tints for dark and light themes
+		const bool DarkTheme = gApplication && gApplication->IsDarkTheme();
+
+		mCommentFormat = swGetEditorTextFormat(swEditorTextFormat::Comment, DarkTheme);
+		mKeywordFormat = swGetEditorTextFormat(swEditorTextFormat::Keyword, DarkTheme);
+		mValueFormat = swGetEditorTextFormat(swEditorTextFormat::Value, DarkTheme);
+		mNumberFormat = swGetEditorTextFormat(swEditorTextFormat::Number, DarkTheme);
+		mTypeFormat = swGetEditorTextFormat(swEditorTextFormat::Type, DarkTheme);
+	}
+
+protected:
+	void highlightBlock(const QString& Text) override
+	{
+		static const QRegularExpression NumberExpression(R"(\b\d+(\.\d*)?([eE][-+]?\d+)?\b)");
+		static const QRegularExpression TypeExpression(R"(\b(camera|light_source|object|union|merge|difference|intersection|mesh|mesh2|triangle|smooth_triangle|sphere|box|cylinder|cone|torus|disc|plane|texture|pigment|finish|normal|interior|material|global_settings|radiosity|background|sky_sphere|matrix|translate|rotate|scale)\b)");
+		static const QRegularExpression KeywordExpression(R"(#\w+)");
+		static const QRegularExpression StringExpression(R"("(\\.|[^"\\])*")");
+
+		const std::pair<const QRegularExpression*, const QTextCharFormat*> Rules[] = { { &NumberExpression, &mNumberFormat }, { &TypeExpression, &mTypeFormat }, { &KeywordExpression, &mKeywordFormat }, { &StringExpression, &mValueFormat } };
+
+		for (const auto& [Expression, Format] : Rules)
+		{
+			QRegularExpressionMatchIterator Matches = Expression->globalMatch(Text);
+
+			while (Matches.hasNext())
+			{
+				const QRegularExpressionMatch Match = Matches.next();
+				setFormat(Match.capturedStart(), Match.capturedLength(), *Format);
+			}
+		}
+
+		// block comments span lines
+		setCurrentBlockState(0);
+		int Start = previousBlockState() == 1 ? 0 : Text.indexOf("/*");
+		int Skip = previousBlockState() == 1 ? 0 : 2;
+
+		while (Start >= 0)
+		{
+			const int End = Text.indexOf("*/", Start + Skip);
+
+			if (End < 0)
+			{
+				setFormat(Start, Text.size() - Start, mCommentFormat);
+				setCurrentBlockState(1);
+				return;
+			}
+
+			setFormat(Start, End + 2 - Start, mCommentFormat);
+			Start = Text.indexOf("/*", End + 2);
+			Skip = 2;
+		}
+
+		const int LineComment = Text.indexOf("//");
+
+		if (LineComment >= 0)
+			setFormat(LineComment, Text.size() - LineComment, mCommentFormat);
+	}
+
+	QTextCharFormat mCommentFormat;
+	QTextCharFormat mKeywordFormat;
+	QTextCharFormat mValueFormat;
+	QTextCharFormat mNumberFormat;
+	QTextCharFormat mTypeFormat;
+};
 
 #ifndef SW_DISABLE_RENDER_DIALOG
 
@@ -54,6 +128,59 @@ QPointF swRenderPreviewWidget::GetCanvasPoint(const QPoint& Position) const
 	return QPointF(std::clamp(qreal(Position.x() - CanvasRect.left()) / CanvasRect.width(), 0.0, 1.0), std::clamp(qreal(Position.y() - CanvasRect.top()) / CanvasRect.height(), 0.0, 1.0));
 }
 
+// use to get the region drawn from the press point
+QRectF swRenderPreviewWidget::GetDrawnRegion(const QPoint& Position, Qt::KeyboardModifiers Modifiers) const
+{
+	QPointF End = GetCanvasPoint(Position);
+
+	if (Modifiers & Qt::ControlModifier)
+	{
+		// square in pixels, kept on the canvas
+		const QRect CanvasRect = GetCanvasRect();
+		const qreal Width = CanvasRect.width();
+		const qreal Height = CanvasRect.height();
+		const qreal DeltaX = (End.x() - mRegionStart.x()) * Width;
+		const qreal DeltaY = (End.y() - mRegionStart.y()) * Height;
+		const qreal LimitX = (DeltaX < 0 ? mRegionStart.x() : 1.0 - mRegionStart.x()) * Width;
+		const qreal LimitY = (DeltaY < 0 ? mRegionStart.y() : 1.0 - mRegionStart.y()) * Height;
+		const qreal Side = std::min({ std::max(std::abs(DeltaX), std::abs(DeltaY)), LimitX, LimitY });
+
+		End = QPointF(mRegionStart.x() + std::copysign(Side, DeltaX) / Width, mRegionStart.y() + std::copysign(Side, DeltaY) / Height);
+	}
+
+	return QRectF(mRegionStart, End).normalized();
+}
+
+// use to tell a press that moves the region
+bool swRenderPreviewWidget::IsInsideRegion(const QPointF& Point) const
+{
+	return mRegion != QRectF(0.0, 0.0, 1.0, 1.0) && mRegion.contains(Point);
+}
+
+// use to find the region edges under the cursor
+Qt::Edges swRenderPreviewWidget::GetRegionEdges(const QPoint& Position) const
+{
+	const QRect CanvasRect = GetCanvasRect();
+	const QRectF RegionRect(CanvasRect.left() + mRegion.left() * CanvasRect.width(), CanvasRect.top() + mRegion.top() * CanvasRect.height(), mRegion.width() * CanvasRect.width(), mRegion.height() * CanvasRect.height());
+	const qreal Margin = 6.0;
+	Qt::Edges Edges;
+
+	if (CanvasRect.isEmpty() || !RegionRect.adjusted(-Margin, -Margin, Margin, Margin).contains(Position))
+		return Edges;
+
+	if (std::abs(Position.x() - RegionRect.left()) <= Margin)
+		Edges |= Qt::LeftEdge;
+	else if (std::abs(Position.x() - RegionRect.right()) <= Margin)
+		Edges |= Qt::RightEdge;
+
+	if (std::abs(Position.y() - RegionRect.top()) <= Margin)
+		Edges |= Qt::TopEdge;
+	else if (std::abs(Position.y() - RegionRect.bottom()) <= Margin)
+		Edges |= Qt::BottomEdge;
+
+	return Edges;
+}
+
 void swRenderPreviewWidget::mousePressEvent(QMouseEvent* MouseEvent)
 {
 	if (!mRegionMode || MouseEvent->button() != Qt::LeftButton || GetCanvasRect().isEmpty())
@@ -62,38 +189,123 @@ void swRenderPreviewWidget::mousePressEvent(QMouseEvent* MouseEvent)
 		return;
 	}
 
+	const QPointF Point = GetCanvasPoint(MouseEvent->pos());
+	const Qt::Edges Edges = GetRegionEdges(MouseEvent->pos());
+
+	if ((Edges & (Qt::LeftEdge | Qt::RightEdge)) && (Edges & (Qt::TopEdge | Qt::BottomEdge)))
+	{
+		// a corner draws from the opposite corner
+		mRegionDragging = true;
+		mRegionStart = QPointF(Edges & Qt::LeftEdge ? mRegion.right() : mRegion.left(), Edges & Qt::TopEdge ? mRegion.bottom() : mRegion.top());
+		return;
+	}
+
+	if (Edges)
+	{
+		mRegionEdges = Edges;
+		return;
+	}
+
+	if (IsInsideRegion(Point))
+	{
+		// grab offset inside the region
+		mRegionMoving = true;
+		mRegionStart = Point - mRegion.topLeft();
+		return;
+	}
+
 	mRegionDragging = true;
-	mRegionStart = GetCanvasPoint(MouseEvent->pos());
+	mRegionStart = Point;
 	mRegion = QRectF(mRegionStart, QSizeF());
 	update();
 }
 
 void swRenderPreviewWidget::mouseMoveEvent(QMouseEvent* MouseEvent)
 {
+	if (mRegionMoving)
+	{
+		QRectF Region = mRegion;
+		Region.moveTopLeft(GetCanvasPoint(MouseEvent->pos()) - mRegionStart);
+		Region.moveTo(std::clamp(Region.left(), 0.0, 1.0 - Region.width()), std::clamp(Region.top(), 0.0, 1.0 - Region.height()));
+		mRegion = Region;
+		update();
+		return;
+	}
+
+	if (mRegionEdges)
+	{
+		// move only the dragged side
+		const QPointF Point = GetCanvasPoint(MouseEvent->pos());
+		QRectF Region = mRegion;
+
+		if (mRegionEdges & Qt::LeftEdge)
+			Region.setLeft(Point.x());
+		else if (mRegionEdges & Qt::RightEdge)
+			Region.setRight(Point.x());
+		else if (mRegionEdges & Qt::TopEdge)
+			Region.setTop(Point.y());
+		else
+			Region.setBottom(Point.y());
+
+		mRegion = Region;
+		update();
+		return;
+	}
+
 	if (!mRegionDragging)
 	{
+		if (mRegionMode)
+		{
+			const Qt::Edges Edges = GetRegionEdges(MouseEvent->pos());
+
+			if (Edges == (Qt::LeftEdge | Qt::TopEdge) || Edges == (Qt::RightEdge | Qt::BottomEdge))
+				setCursor(Qt::SizeFDiagCursor);
+			else if (Edges == (Qt::RightEdge | Qt::TopEdge) || Edges == (Qt::LeftEdge | Qt::BottomEdge))
+				setCursor(Qt::SizeBDiagCursor);
+			else if (Edges & (Qt::LeftEdge | Qt::RightEdge))
+				setCursor(Qt::SizeHorCursor);
+			else if (Edges)
+				setCursor(Qt::SizeVerCursor);
+			else
+				setCursor(IsInsideRegion(GetCanvasPoint(MouseEvent->pos())) ? Qt::SizeAllCursor : Qt::CrossCursor);
+		}
+
 		QWidget::mouseMoveEvent(MouseEvent);
 		return;
 	}
 
-	mRegion = QRectF(mRegionStart, GetCanvasPoint(MouseEvent->pos())).normalized();
+	mRegion = GetDrawnRegion(MouseEvent->pos(), MouseEvent->modifiers());
 	update();
 }
 
 void swRenderPreviewWidget::mouseReleaseEvent(QMouseEvent* MouseEvent)
 {
-	if (!mRegionDragging || MouseEvent->button() != Qt::LeftButton)
+	if ((!mRegionDragging && !mRegionMoving && !mRegionEdges) || MouseEvent->button() != Qt::LeftButton)
 	{
 		QWidget::mouseReleaseEvent(MouseEvent);
 		return;
 	}
 
-	mRegionDragging = false;
-	mRegion = QRectF(mRegionStart, GetCanvasPoint(MouseEvent->pos())).normalized();
+	if (mRegionMoving)
+		mRegionMoving = false;
+	else if (mRegionEdges)
+	{
+		mRegionEdges = Qt::Edges();
+		mRegion = mRegion.normalized();
 
-	// a click keeps the whole image
-	if (mRegion.width() < 0.01 || mRegion.height() < 0.01)
-		mRegion = QRectF(0.0, 0.0, 1.0, 1.0);
+		// a side dragged flat keeps the whole image
+		if (mRegion.width() < 0.01 || mRegion.height() < 0.01)
+			mRegion = QRectF(0.0, 0.0, 1.0, 1.0);
+	}
+	else
+	{
+		mRegionDragging = false;
+		mRegion = GetDrawnRegion(MouseEvent->pos(), MouseEvent->modifiers());
+
+		// a click keeps the whole image
+		if (mRegion.width() < 0.01 || mRegion.height() < 0.01)
+			mRegion = QRectF(0.0, 0.0, 1.0, 1.0);
+	}
 
 	update();
 
@@ -211,6 +423,12 @@ swRenderDialog::swRenderDialog(QWidget* Parent, swRenderDialogMode RenderDialogM
 	mRenderButton->setText(tr("Render"));
 	mLogButton = new QToolButton(this);
 	mLogButton->setText(tr("Log"));
+
+	if (mDialogMode == swRenderDialogMode::RenderPOVRay)
+	{
+		mEditorButton = new QToolButton(this);
+		mEditorButton->setText(tr("Editor"));
+	}
 
 	mRenderButton->setWhatsThis(tr("<p><b>Render</b></p><p>Start the render using the current settings. While rendering, this button becomes Cancel so you can stop the operation.</p>"));
 
@@ -588,7 +806,7 @@ void swRenderDialog::CreatePanels()
 		CreateRow(ImagePanel, tr("Focal Blur"), FocalBlurComboBox, tr("Blur parts nearer or farther than the camera target, like a real camera lens. Takes several times longer to render."), tr("<p><b>Focal Blur</b></p><p>On keeps the camera target sharp and blurs the parts in front of it and behind it, like the depth of field of a real camera lens, at any quality. It takes several times longer to render. Orthographic cameras are never blurred.</p>"));
 
 		mAreaComboBox = CreateComboBox({ tr("Full Image"), tr("Region") }, swGetProfileInteger(SW_PROFILE_RENDER_AREA));
-		CreateRow(ImagePanel, tr("Area"), mAreaComboBox, tr("Choose whether the whole image is rendered or only a region drawn on the preview."), tr("<p><b>Area</b></p><p>Full Image renders the whole image. Region renders only the part outlined on the preview, drag on the preview to draw it. A region rendered at the size of the last image is placed into that image so a detail can be refined without rendering everything again.</p>"));
+		CreateRow(ImagePanel, tr("Area"), mAreaComboBox, tr("Choose whether the whole image is rendered or only a region drawn on the preview."), tr("<p><b>Area</b></p><p>Full Image renders the whole image. Region renders only the part outlined on the preview and leaves the rest of the image transparent. Drag on the preview to draw the region, hold Ctrl to draw a square, drag its edges or corners to resize it, drag inside it to move it, and drag outside it to draw a new one.</p>"));
 
 		QWidget* BatchPanel = CreatePanel(tr("Batch"), "RenderBatch", tr("<p><b>Batch</b></p><p>Render several images in one go, one for each building step or each camera of the model. Each image is saved next to the output file with the step number or camera name added to its name.</p>"));
 		CompactPanels.append(BatchPanel);
@@ -633,7 +851,10 @@ void swRenderDialog::CreatePanels()
 		QComboBox* BackgroundComboBox = mBackgroundComboBox;
 		CreateRow(ScenePanel, tr("Background"), BackgroundComboBox, tr("Choose whether the background and floor are rendered or left as transparent pixels for compositing."), QString());
 
-		RenderPanel = CreatePanel(tr("Render"), "RenderRender", tr("<p><b>Render</b></p><p>Start the POV-Ray render, then follow its progress here. Log shows the POV-Ray output below the preview.</p>"));
+		// settings the edited scene ignores
+		mEditorDisabledWidgets = { PresetsPanel, ScenePanel, BatchPanel, WidthSpinBox->parentWidget(), HeightSpinBox->parentWidget(), QualityComboBox->parentWidget(), FocalBlurComboBox->parentWidget() };
+
+		RenderPanel = CreatePanel(tr("Render"), "RenderRender", tr("<p><b>Render</b></p><p>Start the POV-Ray render, then follow its progress here. Editor shows the POV-Ray scene and Log the POV-Ray output below the preview.</p>"));
 
 		connect(QualityComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [this](int Index)
 		{
@@ -770,6 +991,9 @@ void swRenderDialog::CreatePanels()
 	}
 
 	RenderButtons.append(static_cast<QToolButton*>(mRenderButton));
+	if (mEditorButton)
+		RenderButtons.append(static_cast<QToolButton*>(mEditorButton));
+
 	RenderButtons.append(static_cast<QToolButton*>(mLogButton));
 
 	for (QToolButton* Button : RenderButtons)
@@ -835,6 +1059,131 @@ void swRenderDialog::CreatePanels()
 		EdgePanel->setAllowedAreas(Qt::TopDockWidgetArea | Qt::BottomDockWidgetArea);
 
 	mLogPanel->hide();
+
+	if (mEditorButton)
+	{
+		// scene editor shares the log edge
+		mEditorPanel = new QDockWidget(tr("Editor"), PanelWindow);
+		mEditorPanel->setObjectName("RenderEditor");
+		mEditorPanel->setProperty("swFloatingSize", QSize(2 * SW_RENDER_PANEL_WIDTH, 2 * SW_RENDER_LOG_HEIGHT));
+		mEditorPanel->setWhatsThis(tr("<p><b>Editor</b></p><p>The POV-Ray scene written from the model and the current settings, with every part, color and position, the camera and the lights. Edit it and tick Render using this configuration instead of the model configuration to render your edits.</p>"));
+
+		QWidget* EditorWidget = new QWidget(mEditorPanel);
+		QVBoxLayout* EditorLayout = new QVBoxLayout(EditorWidget);
+		mEditorPanel->setWidget(EditorWidget);
+
+		swEditorWidget* Editor = new swEditorWidget(EditorWidget, new swPOVRayHighlighter(this));
+		mEditorEdit = Editor->GetTextEdit();
+		mEditorEdit->setToolTip(tr("Text of the POV-Ray scene."));
+		mEditorEdit->setAccessibleName(tr("Scene"));
+		EditorLayout->addWidget(Editor, 1);
+
+		QLabel* EditorNote = new QLabel(tr("Rendering the edited scene. Reset to pick up model changes."), EditorWidget);
+		EditorNote->setWordWrap(true);
+		EditorNote->hide();
+		EditorLayout->addWidget(EditorNote);
+
+		QWidget* CheckBoxRow = swCreatePanelRow(EditorWidget);
+		EditorLayout->addWidget(CheckBoxRow);
+
+		mEditorCheckBox = new QCheckBox(tr("Render using this configuration instead of the model configuration"), CheckBoxRow);
+		mEditorCheckBox->setToolTip(tr("Render the text of the editor instead of the scene written from the model and the settings."));
+		mEditorCheckBox->setWhatsThis(tr("<p><b>Render using this configuration instead of the model configuration</b></p><p>Render renders the text of the editor as it is, so your edits show in the image. The size, quality, scene, preset and batch settings have no effect and are greyed out. Output and Area still apply.</p>"));
+		swSetupPanelEdit(mEditorCheckBox);
+		CheckBoxRow->layout()->addWidget(mEditorCheckBox);
+
+		QWidget* EditorButtonRow = swCreatePanelRow(EditorWidget);
+		EditorLayout->addWidget(EditorButtonRow);
+
+		auto CreateEditorButton = [EditorButtonRow](const QString& Text, const QString& ToolTip, const QString& WhatsThis)
+		{
+			QToolButton* Button = new QToolButton(EditorButtonRow);
+			Button->setText(Text);
+			Button->setToolTip(ToolTip);
+			Button->setWhatsThis(WhatsThis);
+			Button->setAccessibleName(Text);
+			Button->setToolButtonStyle(Qt::ToolButtonTextOnly);
+			swSetupPanelButton(Button);
+			Button->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+			static_cast<QHBoxLayout*>(EditorButtonRow->layout())->addWidget(Button, 1);
+
+			return Button;
+		};
+
+		QToolButton* ResetButton = CreateEditorButton(tr("Reset"), tr("Write the scene again from the model and the current settings."), tr("<p><b>Reset</b></p><p>Replace the text with the scene written again from the model and the current settings, from the camera and step of the first image. Your edits are lost.</p>"));
+		QToolButton* OpenButton = CreateEditorButton(tr("Open..."), tr("Open a POV-Ray scene file in the editor."), tr("<p><b>Open...</b></p><p>Replace the text with a POV-Ray scene file, such as one saved with Save As, and tick Render using this configuration instead of the model configuration so Render uses it.</p>"));
+		QToolButton* SaveAsButton = CreateEditorButton(tr("Save As..."), tr("Save the scene as a POV-Ray file."), tr("<p><b>Save As...</b></p><p>Save the text of the editor as a POV-Ray scene file to render or edit outside StudWorx.</p>"));
+
+		swSetupWidgetHelp(mEditorPanel);
+		PanelWindow->addDockWidget(Qt::BottomDockWidgetArea, mEditorPanel);
+		PanelWindow->tabifyDockWidget(mLogPanel, mEditorPanel);
+		mEditorPanel->setAllowedAreas(Qt::TopDockWidgetArea | Qt::BottomDockWidgetArea);
+		mEditorPanel->hide();
+
+		connect(mEditorCheckBox, &QCheckBox::toggled, this, [this, EditorNote](bool Checked)
+		{
+			for (QWidget* Widget : mEditorDisabledWidgets)
+				if (Widget)
+					Widget->setEnabled(!Checked);
+
+			EditorNote->setVisible(Checked);
+		});
+
+		connect(ResetButton, &QToolButton::clicked, this, &swRenderDialog::LoadEditorScene);
+
+		connect(OpenButton, &QToolButton::clicked, this, [this]()
+		{
+			const QString FileName = QFileDialog::getOpenFileName(this, tr("Open Scene"), QFileInfo(ui->OutputEdit->text()).path(), tr("POV-Ray Scenes (*.pov);;All Files (*)"));
+
+			if (FileName.isEmpty())
+				return;
+
+			QFile File(FileName);
+
+			if (!File.open(QIODevice::ReadOnly | QIODevice::Text))
+			{
+				QMessageBox::warning(this, windowTitle(), tr("Could not open the scene %1.").arg(QDir::toNativeSeparators(FileName)));
+				return;
+			}
+
+			mEditorEdit->setPlainText(QString::fromUtf8(File.readAll()));
+			mEditorCheckBox->setChecked(true);
+		});
+
+		connect(SaveAsButton, &QToolButton::clicked, this, [this]()
+		{
+			const QFileInfo OutputInfo(ui->OutputEdit->text());
+			const QString DefaultName = OutputInfo.completeBaseName().isEmpty() ? QString() : QDir(OutputInfo.path()).filePath(OutputInfo.completeBaseName() + ".pov");
+			const QString FileName = QFileDialog::getSaveFileName(this, tr("Save Scene As"), DefaultName, tr("POV-Ray Scenes (*.pov);;All Files (*)"));
+
+			if (FileName.isEmpty())
+				return;
+
+			QFile File(FileName);
+
+			if (!File.open(QIODevice::WriteOnly | QIODevice::Text) || File.write(mEditorEdit->toPlainText().toUtf8()) < 0)
+				QMessageBox::warning(this, windowTitle(), tr("Could not save the scene to %1.").arg(QDir::toNativeSeparators(FileName)));
+		});
+
+		// editor button toggles the editor panel
+		mEditorButton->setCheckable(true);
+		mEditorButton->setToolTip(tr("Show or hide the Editor panel with the POV-Ray scene."));
+		mEditorButton->setWhatsThis(tr("<p><b>Editor</b></p><p>Show or hide the Editor panel below the preview to read and edit the POV-Ray scene, render your edits or save a copy.</p>"));
+
+		connect(mEditorButton, &QAbstractButton::toggled, mEditorPanel, &QDockWidget::setVisible);
+		connect(mEditorPanel, &QDockWidget::visibilityChanged, this, [this](bool Visible)
+		{
+			if (mEditorPanel->isHidden())
+				mEditorButton->setChecked(false);
+			else if (Visible)
+			{
+				mEditorButton->setChecked(true);
+
+				if (mEditorEdit->document()->isEmpty())
+					LoadEditorScene();
+			}
+		});
+	}
 
 	// log button toggles the log panel
 	mLogButton->setCheckable(true);
@@ -918,10 +1267,13 @@ void swRenderDialog::CreatePanels()
 
 	// keep untoggled panels visible
 	for (QDockWidget* Panel : PanelWindow->findChildren<QDockWidget*>(QString(), Qt::FindDirectChildrenOnly))
-		if (Panel != mLogPanel)
+		if (Panel != mLogPanel && Panel != mEditorPanel)
 			Panel->show();
 
 	mLogButton->setChecked(!mLogPanel->isHidden());
+
+	if (mEditorPanel)
+		mEditorButton->setChecked(!mEditorPanel->isHidden());
 
 	// restore squeezed saved layouts
 	QTimer::singleShot(0, PanelWindow, FitPanels);
@@ -1073,14 +1425,7 @@ void swRenderDialog::UpdateGuideImage()
 	}
 
 	// the camera and step of the first image
-	swCamera* Camera = nullptr;
-	const int CameraIndex = mCamerasComboBox->currentData().toString() == QLatin1String("*") ? 1 : mCamerasComboBox->currentIndex();
-	const QString CameraName = mCamerasComboBox->itemData(CameraIndex).toString();
-
-	for (const std::unique_ptr<swCamera>& ModelCamera : Model->GetCameras())
-		if (!CameraName.isEmpty() && ModelCamera->GetName() == CameraName)
-			Camera = ModelCamera.get();
-
+	swCamera* Camera = GetFirstCamera(Model);
 	const swStep Step = mStepsComboBox->currentIndex() == 1 ? Model->GetCurrentStep() : SW_STEP_MAXIMUM;
 
 	// a small copy is enough for a guide
@@ -1089,6 +1434,56 @@ void swRenderDialog::UpdateGuideImage()
 	const int Height = std::max(1, qRound(mHeight * Scale));
 
 	ui->preview->SetGuideImage(Model->GetStepImage(false, Width, Height, Step, swImageBackground::Default, Camera));
+}
+
+// use to find the camera of the first image, null for the view
+swCamera* swRenderDialog::GetFirstCamera(swModel* Model) const
+{
+	const int CameraIndex = mCamerasComboBox->currentData().toString() == QLatin1String("*") ? 1 : mCamerasComboBox->currentIndex();
+	const QString CameraName = mCamerasComboBox->itemData(CameraIndex).toString();
+
+	for (const std::unique_ptr<swCamera>& ModelCamera : Model->GetCameras())
+		if (!CameraName.isEmpty() && ModelCamera->GetName() == CameraName)
+			return ModelCamera.get();
+
+	return nullptr;
+}
+
+// use to fill the editor with the scene of the first image
+void swRenderDialog::LoadEditorScene()
+{
+	swModel* Model = swGetActiveModel();
+
+	if (!Model)
+		return;
+
+	const QString FileName = QDir(QDir::tempPath()).absoluteFilePath("studworx-render-editor.pov");
+	const swStep Step = mStepsComboBox->currentIndex() == 1 ? Model->GetCurrentStep() : SW_STEP_MAXIMUM;
+
+	QApplication::setOverrideCursor(Qt::WaitCursor);
+	swResult<void> ExportResult = swGetActiveProject()->ExportPOVRay(FileName, GetFirstCamera(Model), Step);
+	QGuiApplication::restoreOverrideCursor();
+
+	if (!ExportResult)
+	{
+		if (!ExportResult.error().isEmpty())
+			QMessageBox::warning(this, windowTitle(), ExportResult.error());
+
+		return;
+	}
+
+	QFile File(FileName);
+
+	if (File.open(QIODevice::ReadOnly | QIODevice::Text))
+		mEditorEdit->setPlainText(QString::fromUtf8(File.readAll()));
+
+	File.close();
+	QFile::remove(FileName);
+}
+
+bool swRenderDialog::IsEditedScene() const
+{
+	return mEditorCheckBox && mEditorCheckBox->isChecked();
 }
 
 // use to list views and cameras
@@ -1360,6 +1755,10 @@ void swRenderDialog::RenderButtonClicked()
 		}
 	}
 
+	// the edited scene is one image
+	if (IsEditedScene())
+		mJobs = { { SW_STEP_MAXIMUM, QString(), QDir::toNativeSeparators(OutputName) } };
+
 	StartNextJob();
 }
 
@@ -1389,7 +1788,18 @@ void swRenderDialog::RenderPOVRay()
 
 	QApplication::setOverrideCursor(Qt::WaitCursor);
 
-	swResult<void> ExportResult = swGetActiveProject()->ExportPOVRay(FileName, Camera, Job.Step);
+	// the edited scene replaces the export
+	swResult<void> ExportResult;
+
+	if (IsEditedScene())
+	{
+		QFile File(FileName);
+
+		if (!File.open(QIODevice::WriteOnly | QIODevice::Text) || File.write(mEditorEdit->toPlainText().toUtf8()) < 0)
+			ExportResult = swUnexpected(tr("Could not write the edited scene to %1.").arg(QDir::toNativeSeparators(FileName)));
+	}
+	else
+		ExportResult = swGetActiveProject()->ExportPOVRay(FileName, Camera, Job.Step);
 
 	QGuiApplication::restoreOverrideCursor();
 
