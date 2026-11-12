@@ -23528,17 +23528,17 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">Открытие папки LGEO</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1364"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1354"/>
         <source>Reset Colors</source>
         <translation>Сброс цветов</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1364"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1354"/>
         <source>Would you like to also reset the interface colors to match the color theme?</source>
         <translation>Сбросить также цвета интерфейса, чтобы они соответствовали цветовой теме?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1378"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1368"/>
         <source>Select Background Color</source>
         <translation>Выберите цвет фона</translation>
     </message>
@@ -23555,54 +23555,54 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">Выберите цвет осей</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="901"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="895"/>
         <source>&apos;%1&apos; did not run as Blender, so Blender rendering stays unavailable.
 
 %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1062"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1056"/>
         <source>Select Parts Library</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1078"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1072"/>
         <source>Select Unofficial Library Archive</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1086"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1080"/>
         <source>Select Part Connections Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1251"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1241"/>
         <source>Choose Minifigure Builder Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1264"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1254"/>
         <source>Save Minifigure Builder Settings</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1281"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1271"/>
         <source>Saved the latest minifigure builder settings to &apos;%1&apos;.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1286"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1276"/>
         <source>Select BrickLink Mapping File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1062"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1056"/>
         <source>Parts Library Files (*.zip *.bin LDConfig.ldr ldconfig.ldr);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="608"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="602"/>
         <source>%n plate(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -23611,246 +23611,246 @@ Unsupported video cards use face tint and colored edges.</source>
         </translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1078"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1072"/>
         <source>Supported Archives (*.zip);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1098"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1092"/>
         <source>Downloading the LDCad shadow library...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1105"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1099"/>
         <source>Could not download the LDCad shadow library from %1.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1251"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1264"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1241"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1254"/>
         <source>Settings Files (*.ini);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1286"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1276"/>
         <source>Mapping Files (*.txt *.json);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1322"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1336"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1312"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1326"/>
         <source>Executable Files (*.exe);;All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1324"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1338"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1314"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1328"/>
         <source>All Files (*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1341"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1331"/>
         <source>Select Blender Executable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1349"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1339"/>
         <source>Select LGEO Folder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1383"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1373"/>
         <source>Select Text Color</source>
         <translation>Выберите цвет текста</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1388"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1378"/>
         <source>Select Connection Points Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1393"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1383"/>
         <source>Select Text Halo Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите цвет ореола текста</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1399"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1389"/>
         <source>Select Marquee Border Color</source>
         <translation>Выберите цвет границы области выделения</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1404"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1394"/>
         <source>Select Marquee Fill Color</source>
         <translation>Выберите цвет заполнения области выделения</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1410"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1400"/>
         <source>Select Overlay Color</source>
         <translation>Выберите цвет наложения</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1415"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1405"/>
         <source>Select Explode Lines Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1421"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1411"/>
         <source>Select Axis Icon Outline Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1427"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1417"/>
         <source>Select Cutaway Shade Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1433"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1423"/>
         <source>Select Element Margin Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1439"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1429"/>
         <source>Select Element Padding Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1445"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1435"/>
         <source>Select Element Anchor Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1451"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1441"/>
         <source>Select Ruler Pointer Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1457"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1447"/>
         <source>Select Active View Color</source>
         <translation>Выберите цвет отображения активного объекта</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1462"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1452"/>
         <source>Select Inactive View Color</source>
         <translation>Выберите цвет отображения неактивного объекта</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1467"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1457"/>
         <source>Select Fade Color</source>
         <translation>Выберите цвет затухания</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1473"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1463"/>
         <source>Select Edit Fade Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1479"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1469"/>
         <source>Select Joint Fade Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1485"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1475"/>
         <source>Select Hover Outline Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1490"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1480"/>
         <source>Select Highlight Color</source>
         <translation>Выберите цвет подсветки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1496"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1486"/>
         <source>Select Grid Stud Color</source>
         <translation>Выберите цвет шипов сетки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1502"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1492"/>
         <source>Select Grid Line Color</source>
         <translation>Выберите цвет линий сетки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1507"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1497"/>
         <source>Select View Cube Color</source>
         <translation>Выберите цвет куба просмотра</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1512"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1502"/>
         <source>Select View Cube Text Color</source>
         <translation>Выберите цвет текста куба просмотра</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1517"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1507"/>
         <source>Select View Cube Highlight Color</source>
         <translation>Выберите цвет подсветки куба просмотра</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1522"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1512"/>
         <source>Select X Axis Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1527"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1517"/>
         <source>Select Y Axis Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1532"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1522"/>
         <source>Select Z Axis Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1552"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1542"/>
         <source>Select Object Selected Color</source>
         <translation>Выберите цвет выделенного объекта</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1557"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1547"/>
         <source>Select Object Focused Color</source>
         <translation>Выберите цвет активного объекта</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1562"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1552"/>
         <source>Select Camera Color</source>
         <translation>Выберите цвет камеры</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1567"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1557"/>
         <source>Select Light Color</source>
         <translation>Выберите цвет источника света</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1572"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1562"/>
         <source>Select Control Point Color</source>
         <translation>Выберите цвет контрольной точки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1578"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1568"/>
         <source>Select Control Point Focused Color</source>
         <translation>Выберите цвет активной контрольной точки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1584"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1574"/>
         <source>Select Control Point Seated Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1590"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1580"/>
         <source>Select Flex Path Spread Handle Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1596"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1586"/>
         <source>Select Flex Path Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1602"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1592"/>
         <source>Select Flex Path Out of Reach Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1650"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1640"/>
         <source>%n stud(s)</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -24270,13 +24270,13 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>Перезапись сочетания клавиш</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="655"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="649"/>
         <source>Default Lights is unavailable. Flat shading is used instead.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Индикаторы по умолчанию недоступны. Вместо этого используется плоская штриховка.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="682"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="676"/>
         <source>View cube rendering is unavailable.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Рендеринг куба обзора недоступен.</translation>
@@ -24287,7 +24287,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="obsolete">Контурный рендеринг недоступен. Будут использоваться оттенок лица и цветные края.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1327"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1317"/>
         <source>Select POV-Ray Executable</source>
         <translation>Выбор исполняемого файла POV-Ray</translation>
     </message>
@@ -24413,7 +24413,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="704"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="698"/>
         <source>Outline rendering is unavailable; the Tint and Edges style will be used.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25056,7 +25056,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="unfinished">Цвет отрицательной оси X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1537"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1527"/>
         <source>Select Negative X Axis Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выбрать цвет отрицательной оси X</translation>
@@ -25074,7 +25074,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="unfinished">Цвет отрицательной оси Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1542"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1532"/>
         <source>Select Negative Y Axis Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выбрать цвет отрицательной оси Y</translation>
@@ -25092,7 +25092,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="unfinished">Цвет отрицательной оси Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1547"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1537"/>
         <source>Select Negative Z Axis Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выбрать цвет отрицательной оси Z</translation>
@@ -25140,8 +25140,8 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="unfinished">Рисует отрицательные половины линий осей цветами отрицательных осей, а линия Z уходит ниже базовой сетки.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="590"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1695"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="584"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1685"/>
         <source>%1 ldu</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">%1 ldu</translation>
@@ -25190,11 +25190,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Use Part Connections</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <source>Turn part connections from the LDCad shadow library on or off.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -25559,7 +25554,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1127"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1121"/>
         <source>Update</source>
         <translation type="unfinished">Обновлять</translation>
     </message>
@@ -25630,7 +25625,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1259"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1249"/>
         <source>Update Minifigure Builder Settings</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25711,7 +25706,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="901"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="895"/>
         <source>Blender Executable</source>
         <translation type="unfinished">Blender Исполняемый файл</translation>
     </message>
@@ -26178,7 +26173,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1095"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1089"/>
         <source>Download Part Connections</source>
         <translation type="unfinished"></translation>
     </message>
@@ -26189,7 +26184,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1127"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1121"/>
         <source>Download</source>
         <translation type="unfinished"></translation>
     </message>
@@ -26216,6 +26211,11 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Connection Points Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Turn part connections from the LDCad shadow library on or off. The library folder is set under Reference Paths.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

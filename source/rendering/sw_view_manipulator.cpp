@@ -78,8 +78,10 @@ const GLushort swViewManipulator::mRotateMoveIndices[mIndexCount] =
 	259, 260, 261, 261, 262, 260, 261, 262, 263, 263, 264, 262, 263, 264, 265, 265, 266, 264, 265, 266, 267, 267, 268, 266, 267, 268, 269, 269, 270, 268, 269, 270, 271, 271, 272, 270,
 
 	// train track insert
-	273, 274, 275, 275, 276, 274, 275, 276, 277, 277, 278, 276, 277, 278, 279, 279, 280, 278, 279, 280, 281, 281, 282, 280, 281, 282, 283, 283, 284, 282, 283, 284, 285, 285, 286, 284,
-	287, 288, 289, 289, 290, 288, 289, 290, 291, 291, 292, 290, 291, 292, 293, 293, 294, 292, 293, 294, 295, 295, 296, 294, 295, 296, 297, 297, 298, 296, 297, 298, 299, 299, 300, 298,
+	273, 274, 275, 273, 275, 276,
+	277, 278, 279, 277, 279, 280,
+	281, 282, 283, 281, 283, 284, 285, 286, 287, 285, 287, 288, 289, 290, 291, 289, 291, 292,
+	293, 294, 295, 293, 295, 296, 297, 298, 299, 297, 299, 300,
 
 	// train track connection
 	301, 302, 303, 301, 303, 304, 308, 307, 306, 308, 306, 305, 306, 302, 301, 305, 306, 301,
@@ -265,40 +267,24 @@ void swViewManipulator::CreateResources(swContext* Context)
 		*CurVert = *(CurVert - 111); CurVert++;
 	}
 
-	const float OverlayTrainTrackInsertDistance = OverlayTrainTrackEnd + 0.1f;
-	const float OverlayTrainTrackInsertLength = 0.3f;
-	const float OverlayTrainTrackInsertWidth = 0.07f;
+	// ghost track with plus badge
 
-	// train track insert
-	for (int EdgeIndex = 0; EdgeIndex < 7; EdgeIndex++)
+	const auto AddTrainTrackQuad = [&CurVert](float Left, float Bottom, float Right, float Top)
 	{
-		const float Radius = OverlayTrainTrackInsertWidth;
-		float x = cosf(SW_TWO_PI * EdgeIndex / 6);
-		float y = sinf(SW_TWO_PI * EdgeIndex / 6);
+		*CurVert++ = Left; *CurVert++ = Bottom; *CurVert++ = 0.0f;
+		*CurVert++ = Right; *CurVert++ = Bottom; *CurVert++ = 0.0f;
+		*CurVert++ = Right; *CurVert++ = Top; *CurVert++ = 0.0f;
+		*CurVert++ = Left; *CurVert++ = Top; *CurVert++ = 0.0f;
+	};
 
-		*CurVert++ = x * Radius + OverlayTrainTrackInsertDistance;
-		*CurVert++ = OverlayTrainTrackInsertLength;
-		*CurVert++ = y * Radius;
+	AddTrainTrackQuad(0.2f, 0.2f, 1.0f, 0.25f);
+	AddTrainTrackQuad(0.2f, -0.25f, 1.0f, -0.2f);
 
-		*CurVert++ = x * Radius + OverlayTrainTrackInsertDistance;
-		*CurVert++ = -OverlayTrainTrackInsertLength;
-		*CurVert++ = y * Radius;
-	}
+	for (float TieCenter : { 0.35f, 0.6f, 0.85f })
+		AddTrainTrackQuad(TieCenter - 0.04f, -0.32f, TieCenter + 0.04f, 0.32f);
 
-	for (int EdgeIndex = 0; EdgeIndex < 7; EdgeIndex++)
-	{
-		const float Radius = OverlayTrainTrackInsertWidth;
-		float x = cosf(SW_TWO_PI * EdgeIndex / 6);
-		float y = sinf(SW_TWO_PI * EdgeIndex / 6);
-
-		*CurVert++ = OverlayTrainTrackInsertLength + OverlayTrainTrackInsertDistance;
-		*CurVert++ = x * Radius;
-		*CurVert++ = y * Radius;
-
-		*CurVert++ = -OverlayTrainTrackInsertLength + OverlayTrainTrackInsertDistance;
-		*CurVert++ = x * Radius;
-		*CurVert++ = y * Radius;
-	}
+	AddTrainTrackQuad(0.85f, -0.455f, 1.09f, -0.385f);
+	AddTrainTrackQuad(0.935f, -0.54f, 1.005f, -0.3f);
 
 	const float OverlayTrainTrackBoxSize = 0.15f;
 
@@ -310,6 +296,11 @@ void swViewManipulator::CreateResources(swContext* Context)
 	*CurVert++ = -OverlayTrainTrackBoxSize; *CurVert++ =  OverlayTrainTrackBoxSize; *CurVert++ =  OverlayTrainTrackBoxSize;
 	*CurVert++ =  OverlayTrainTrackBoxSize; *CurVert++ =  OverlayTrainTrackBoxSize; *CurVert++ =  OverlayTrainTrackBoxSize;
 	*CurVert++ =  OverlayTrainTrackBoxSize; *CurVert++ = -OverlayTrainTrackBoxSize; *CurVert++ =  OverlayTrainTrackBoxSize;
+
+	// train track gizmo scale
+
+	for (int VertIdx = 199; VertIdx < 309; VertIdx++)
+		mRotateMoveVertices[VertIdx] *= 1.5f;
 
 	mRotateMoveVertexBuffer = Context->CreateVertexBuffer(sizeof(mRotateMoveVertices), mRotateMoveVertices[0].GetFloats());
 	mRotateMoveIndexBuffer = Context->CreateIndexBuffer(sizeof(mRotateMoveIndices), mRotateMoveIndices);
@@ -548,40 +539,40 @@ void swViewManipulator::DrawTrainTrack(swPart* Part, swContext* Context, swTrack
 
 		if (TrackTool == swTrackTool::RotateTrainTrackRight)
 		{
-			Context->DrawIndexedPrimitives(GL_TRIANGLES, 96, GL_UNSIGNED_SHORT, (108 + 360 + 12 + 96) * 2);
+			Context->DrawIndexedPrimitives(GL_TRIANGLES, mTrainTrackRotateIndexCount, GL_UNSIGNED_SHORT, (mTrainTrackRotateIndexStart + mTrainTrackRotateIndexCount) * 2);
 
 			if (CanAdd)
-				Context->DrawIndexedPrimitives(GL_TRIANGLES, 72, GL_UNSIGNED_SHORT, (108 + 360 + 12 + 192) * 2);
+				Context->DrawIndexedPrimitives(GL_TRIANGLES, mTrainTrackInsertIndexCount, GL_UNSIGNED_SHORT, mTrainTrackInsertIndexStart * 2);
 
 			Context->SetColor(0.8f, 0.8f, 0.0f, 1.0f);
-			Context->DrawIndexedPrimitives(GL_TRIANGLES, 96, GL_UNSIGNED_SHORT, (108 + 360 + 12) * 2);
+			Context->DrawIndexedPrimitives(GL_TRIANGLES, mTrainTrackRotateIndexCount, GL_UNSIGNED_SHORT, mTrainTrackRotateIndexStart * 2);
 		}
 		else if (TrackTool == swTrackTool::RotateTrainTrackLeft)
 		{
-			Context->DrawIndexedPrimitives(GL_TRIANGLES, 96, GL_UNSIGNED_SHORT, (108 + 360 + 12) * 2);
+			Context->DrawIndexedPrimitives(GL_TRIANGLES, mTrainTrackRotateIndexCount, GL_UNSIGNED_SHORT, mTrainTrackRotateIndexStart * 2);
 
 			if (CanAdd)
-				Context->DrawIndexedPrimitives(GL_TRIANGLES, 72, GL_UNSIGNED_SHORT, (108 + 360 + 12 + 192) * 2);
+				Context->DrawIndexedPrimitives(GL_TRIANGLES, mTrainTrackInsertIndexCount, GL_UNSIGNED_SHORT, mTrainTrackInsertIndexStart * 2);
 
 			Context->SetColor(0.8f, 0.8f, 0.0f, 1.0f);
-			Context->DrawIndexedPrimitives(GL_TRIANGLES, 96, GL_UNSIGNED_SHORT, (108 + 360 + 12 + 96) * 2);
+			Context->DrawIndexedPrimitives(GL_TRIANGLES, mTrainTrackRotateIndexCount, GL_UNSIGNED_SHORT, (mTrainTrackRotateIndexStart + mTrainTrackRotateIndexCount) * 2);
 		}
 		else if (TrackTool == swTrackTool::InsertTrainTrack)
 		{
-			Context->DrawIndexedPrimitives(GL_TRIANGLES, 192, GL_UNSIGNED_SHORT, (108 + 360 + 12) * 2);
+			Context->DrawIndexedPrimitives(GL_TRIANGLES, mTrainTrackRotateIndexCount * 2, GL_UNSIGNED_SHORT, mTrainTrackRotateIndexStart * 2);
 
 			if (CanAdd)
 			{
 				Context->SetColor(0.8f, 0.8f, 0.0f, 1.0f);
-				Context->DrawIndexedPrimitives(GL_TRIANGLES, 72, GL_UNSIGNED_SHORT, (108 + 360 + 12 + 192) * 2);
+				Context->DrawIndexedPrimitives(GL_TRIANGLES, mTrainTrackInsertIndexCount, GL_UNSIGNED_SHORT, mTrainTrackInsertIndexStart * 2);
 			}
 		}
 		else
 		{
-			Context->DrawIndexedPrimitives(GL_TRIANGLES, 192, GL_UNSIGNED_SHORT, (108 + 360 + 12) * 2);
+			Context->DrawIndexedPrimitives(GL_TRIANGLES, mTrainTrackRotateIndexCount * 2, GL_UNSIGNED_SHORT, mTrainTrackRotateIndexStart * 2);
 
 			if (CanAdd)
-				Context->DrawIndexedPrimitives(GL_TRIANGLES, 72, GL_UNSIGNED_SHORT, (108 + 360 + 12 + 192) * 2);
+				Context->DrawIndexedPrimitives(GL_TRIANGLES, mTrainTrackInsertIndexCount, GL_UNSIGNED_SHORT, mTrainTrackInsertIndexStart * 2);
 		}
 	}
 	else
@@ -610,7 +601,7 @@ void swViewManipulator::DrawTrainTrack(swPart* Part, swContext* Context, swTrack
 			else
 				Context->SetColor(TrainTrackColor);
 
-			Context->DrawIndexedPrimitives(GL_TRIANGLES, 72, GL_UNSIGNED_SHORT, (108 + 360 + 12 + 192) * 2);
+			Context->DrawIndexedPrimitives(GL_TRIANGLES, mTrainTrackInsertIndexCount, GL_UNSIGNED_SHORT, mTrainTrackInsertIndexStart * 2);
 		}
 	}
 

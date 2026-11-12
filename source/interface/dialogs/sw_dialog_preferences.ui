@@ -129,16 +129,6 @@
           <item row="2" column="1">
            <layout class="QHBoxLayout" name="ShadowLibraryLayout">
             <item>
-             <widget class="QCheckBox" name="ShadowLibraryEnabled">
-              <property name="accessibleName">
-               <string>Use Part Connections</string>
-              </property>
-              <property name="toolTip">
-               <string>Turn part connections from the LDCad shadow library on or off.</string>
-              </property>
-             </widget>
-            </item>
-            <item>
              <widget class="QLineEdit" name="ShadowLibraryEdit">
               <property name="accessibleName">
                <string>Part Connections</string>
@@ -1126,6 +1116,29 @@
             </property>
             <property name="toolTip">
              <string>When the selected submodel has a joint, rotating it turns the joint around its own pivot and axis instead of the pivot point. Part &gt; Joint &gt; Rotate Joint does the same for the current selection.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="ShadowLibraryEnabledLabel">
+            <property name="toolTip">
+             <string>Turn part connections from the LDCad shadow library on or off. The library folder is set under Reference Paths.</string>
+            </property>
+            <property name="text">
+             <string>Use Part Connections</string>
+            </property>
+            <property name="buddy">
+             <cstring>ShadowLibraryEnabled</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QCheckBox" name="ShadowLibraryEnabled">
+            <property name="accessibleName">
+             <string>Use Part Connections</string>
+            </property>
+            <property name="toolTip">
+             <string>Turn part connections from the LDCad shadow library on or off. The library folder is set under Reference Paths.</string>
             </property>
            </widget>
           </item>
@@ -5537,7 +5550,6 @@
   <tabstop>partsLibraryBrowse</tabstop>
   <tabstop>UnofficialLibraryEdit</tabstop>
   <tabstop>UnofficialLibraryBrowseButton</tabstop>
-  <tabstop>ShadowLibraryEnabled</tabstop>
   <tabstop>ShadowLibraryEdit</tabstop>
   <tabstop>ShadowLibraryBrowseButton</tabstop>
   <tabstop>ShadowLibraryDownloadButton</tabstop>
@@ -5581,6 +5593,7 @@
   <tabstop>JointRotation</tabstop>
   <tabstop>FirstPartAtOrigin</tabstop>
   <tabstop>InsertColorMode</tabstop>
+  <tabstop>ShadowLibraryEnabled</tabstop>
   <tabstop>FlexSpreadMode</tabstop>
   <tabstop>FlexClampNewControlPoints</tabstop>
   <tabstop>FlexMiddleControlPoint</tabstop>

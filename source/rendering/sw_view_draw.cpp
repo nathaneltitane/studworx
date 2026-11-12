@@ -889,7 +889,6 @@ void swView::DrawConnectionMarkers() const
 	mContext->SetProjectionMatrix(GetProjectionMatrix());
 	mContext->EnableColorBlend(true);
 	mContext->SetDepthWrite(false);
-	mContext->SetVertexFormatPosition(3);
 
 	for (const swConnectionMarker& Marker : mConnectionMarkers)
 	{
@@ -1005,12 +1004,14 @@ void swView::DrawConnectionMarkers() const
 		if (!Triangles.empty())
 		{
 			mContext->SetVertexBufferPointer(Triangles.data());
+			mContext->SetVertexFormatPosition(3);
 			mContext->DrawPrimitives(GL_TRIANGLES, 0, static_cast<GLsizei>(Triangles.size()));
 		}
 
 		if (!Lines.empty())
 		{
 			mContext->SetVertexBufferPointer(Lines.data());
+			mContext->SetVertexFormatPosition(3);
 			mContext->DrawPrimitives(GL_LINES, 0, static_cast<GLsizei>(Lines.size()));
 		}
 	}

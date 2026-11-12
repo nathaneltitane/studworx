@@ -73,7 +73,7 @@ protected:
 	static constexpr int mTrainTrackRotateIndexStart = mMovePlaneIndexStart + mMovePlaneIndexCount * 3;
 	static constexpr int mTrainTrackRotateIndexCount = 96;
 	static constexpr int mTrainTrackInsertIndexStart = mTrainTrackRotateIndexStart + mTrainTrackRotateIndexCount * 2;
-	static constexpr int mTrainTrackInsertIndexCount = 72;
+	static constexpr int mTrainTrackInsertIndexCount = 42;
 	static constexpr int mTrainTrackConnectionIndexStart = mTrainTrackInsertIndexStart + mTrainTrackInsertIndexCount;
 	static constexpr int mTrainTrackConnectionIndexCount = 36;
 	static constexpr int mIndexCount = mTrainTrackConnectionIndexStart + mTrainTrackConnectionIndexCount;

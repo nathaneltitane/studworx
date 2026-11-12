@@ -315,12 +315,6 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->lgeoPath, &QLineEdit::textChanged, this, &swPreferencesDialog::UpdateDownloadButtons);
 	UpdateDownloadButtons();
 
-	// checkbox sits inside the path field
-	QHBoxLayout* ShadowLibraryEditLayout = new QHBoxLayout(ui->ShadowLibraryEdit);
-	ShadowLibraryEditLayout->setContentsMargins(4, 0, 0, 0);
-	ShadowLibraryEditLayout->addWidget(ui->ShadowLibraryEnabled);
-	ShadowLibraryEditLayout->addStretch();
-	ui->ShadowLibraryEdit->setTextMargins(ui->ShadowLibraryEnabled->sizeHint().width() + 4, 0, 0, 0);
 	connect(ui->ColorConfigBrowseButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorConfigBrowseButtonClicked);
 	connect(ui->ColorConfigUpdateButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorConfigUpdateButtonClicked);
 	connect(ui->ColorConfigAlternateBrowseButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorConfigAlternateBrowseButtonClicked);
@@ -1139,11 +1133,7 @@ void swPreferencesDialog::LgeoPathDownloadButtonClicked()
 
 void swPreferencesDialog::ShadowLibraryEnabledToggled(bool Checked)
 {
-	// read only keeps the checkbox inside clickable
-	ui->ShadowLibraryEdit->setReadOnly(!Checked);
-	QPalette Palette = ui->ShadowLibraryEdit->palette();
-	Palette.setColor(QPalette::Text, palette().color(Checked ? QPalette::Active : QPalette::Disabled, QPalette::Text));
-	ui->ShadowLibraryEdit->setPalette(Palette);
+	ui->ShadowLibraryEdit->setEnabled(Checked);
 	ui->ShadowLibraryBrowseButton->setEnabled(Checked);
 }
 
