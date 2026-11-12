@@ -67,6 +67,13 @@ public:
 		update();
 	}
 
+	// Sets the faded image shown before a render.
+	void SetGuideImage(const QImage& Image)
+	{
+		mGuideImage = Image;
+		update();
+	}
+
 	// Sets the empty canvas icon size.
 	void SetPlaceholderSize(int Size)
 	{
@@ -115,6 +122,7 @@ protected:
 
 	QImage mImage;
 	QImage mScaledImage;
+	QImage mGuideImage;
 	int mPlaceholderSize = 0;
 	QSize mCanvasSize;
 	bool mRegionMode = false;
@@ -174,8 +182,10 @@ protected:
 	void SavePresetClicked();
 	void DeletePresetClicked();
 	void UpdateCameras();
+	void UpdateGuideImage();
 
 	QTimer mUpdateTimer;
+	QTimer mGuideTimer;
 	QElapsedTimer mRenderTime;
 	QFile mOutputFile;
 	void* mOutputBuffer = nullptr;
@@ -193,6 +203,7 @@ protected:
 	QSpinBox* mWidthSpinBox = nullptr;
 	QSpinBox* mHeightSpinBox = nullptr;
 	QComboBox* mQualityComboBox = nullptr;
+	QComboBox* mFocalBlurComboBox = nullptr;
 	QComboBox* mLightRigComboBox = nullptr;
 	QComboBox* mFloorStyleComboBox = nullptr;
 	QComboBox* mBackgroundComboBox = nullptr;

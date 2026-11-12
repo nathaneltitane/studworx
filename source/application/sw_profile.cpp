@@ -254,7 +254,8 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Render", "FloorStyle", (int)swPOVRayFloorStyle::Plain),                    // SW_PROFILE_RENDER_FLOOR_STYLE
 	swProfileEntry("Render", "EnvironmentImage", ""),                                          // SW_PROFILE_RENDER_ENVIRONMENT_IMAGE
 	swProfileEntry("Render", "Transparent", 0),                                                // SW_PROFILE_RENDER_TRANSPARENT
-	swProfileEntry("Render", "Presets", QStringList({ "Draft|640|360|0|0|0|0|", "HD|1280|720|1|0|0|0|", "Full HD|1920|1080|2|0|0|0|", "Square|1080|1080|2|1|1|0|" })), // SW_PROFILE_RENDER_PRESETS
+	swProfileEntry("Render", "FocalBlur", 0),                                                  // SW_PROFILE_RENDER_FOCAL_BLUR
+	swProfileEntry("Render", "Presets", QStringList({ "Draft|640|360|0|0|0|0|0|", "HD|1280|720|1|0|0|0|0|", "Full HD|1920|1080|2|0|0|0|0|", "Square|1080|1080|2|1|1|0|0|" })), // SW_PROFILE_RENDER_PRESETS
 	swProfileEntry("Render", "Area", 0),                                                       // SW_PROFILE_RENDER_AREA
 	swProfileEntry("Render", "Region", "0.25 0.25 0.5 0.5"),                                   // SW_PROFILE_RENDER_REGION
 	swProfileEntry("Render", "Steps", 0),                                                      // SW_PROFILE_RENDER_STEPS

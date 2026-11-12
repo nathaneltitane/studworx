@@ -2005,6 +2005,7 @@ swResult<void> Project::ExportPOVRay(const QString& FileName, const swCamera* Ex
 	const int RenderQuality = static_cast<int>(swGetProfileRenderQuality());
 	const int LightRig = std::clamp(swGetProfileInteger(SW_PROFILE_RENDER_LIGHT_RIG), 0, static_cast<int>(swPOVRayLightRig::Count) - 1);
 	const int FloorStyle = std::clamp(swGetProfileInteger(SW_PROFILE_RENDER_FLOOR_STYLE), 0, static_cast<int>(swPOVRayFloorStyle::Count) - 1);
+	const int FocalBlur = swGetProfileInteger(SW_PROFILE_RENDER_FOCAL_BLUR) ? 1 : 0;
 	const QString EnvironmentImage = swGetProfileString(SW_PROFILE_RENDER_ENVIRONMENT_IMAGE);
 	Transparent = Transparent || swGetProfileInteger(SW_PROFILE_RENDER_TRANSPARENT) != 0;
 
@@ -2060,7 +2061,7 @@ swResult<void> Project::ExportPOVRay(const QString& FileName, const swCamera* Ex
 		"#ifndef (Radiosity) #declare Radiosity = (RenderQuality > 0); #end\n"
 		"#ifndef (LightRig) #declare LightRig = %2; #end\n"
 		"#ifndef (AreaSamples) #declare AreaSamples = select(RenderQuality - 1, 2, 3, 5); #end\n"
-		"#ifndef (FocalBlur) #declare FocalBlur = (RenderQuality > 1 & !CameraOrthographic); #end\n"
+		"#ifndef (FocalBlur) #declare FocalBlur = (%3 & !CameraOrthographic); #end\n"
 		"#ifndef (FocalAperture) #declare FocalAperture = vlength(CameraLocation - CameraTarget) * 0.01; #end\n\n"
 		"#if (Radiosity)\n"
 		"  global_settings {\n"
@@ -2072,7 +2073,7 @@ swResult<void> Project::ExportPOVRay(const QString& FileName, const swCamera* Ex
 		"      #end\n"
 		"    }\n"
 		"  }\n"
-		"#end\n\n").arg(RenderQuality).arg(LightRig).toLatin1().constData());
+		"#end\n\n").arg(RenderQuality).arg(LightRig).arg(FocalBlur).toLatin1().constData());
 	Line = QString::asprintf(
 			"#ifndef (Ambient) #declare Ambient = 0.4; #end\n"
 			"#ifndef (Diffuse) #declare Diffuse = 0.4; #end\n"

@@ -124,6 +124,13 @@ void swRenderPreviewWidget::paintEvent(QPaintEvent* PaintEvent)
 
 		Painter.drawImage(CanvasRect.topLeft(), mScaledImage);
 	}
+	else if (!mGuideImage.isNull())
+	{
+		// faded so it never reads as a render
+		Painter.setOpacity(0.5);
+		Painter.drawImage(CanvasRect, mGuideImage);
+		Painter.setOpacity(1.0);
+	}
 	else if (mPlaceholderSize > 0)
 	{
 		// paint the placeholder at its size
@@ -575,6 +582,10 @@ void swRenderDialog::CreatePanels()
 		QComboBox* QualityComboBox = mQualityComboBox;
 		CreateRow(ImagePanel, tr("Quality"), QualityComboBox, tr("Choose the rendering quality; higher quality can take longer."), tr("<p><b>Quality</b></p><p>Low uses POV-Ray's default quality without additional antialiasing options. Medium uses quality level 5 with antialiasing and fast radiosity. High uses quality level 11 with additional antialiasing settings and full radiosity.</p>"));
 
+		mFocalBlurComboBox = CreateComboBox({ tr("Off"), tr("On") }, swGetProfileInteger(SW_PROFILE_RENDER_FOCAL_BLUR) ? 1 : 0);
+		QComboBox* FocalBlurComboBox = mFocalBlurComboBox;
+		CreateRow(ImagePanel, tr("Focal Blur"), FocalBlurComboBox, tr("Blur parts nearer or farther than the camera target, like a real camera lens. Takes several times longer to render."), tr("<p><b>Focal Blur</b></p><p>On keeps the camera target sharp and blurs the parts in front of it and behind it, like the depth of field of a real camera lens, at any quality. It takes several times longer to render. Orthographic cameras are never blurred.</p>"));
+
 		mAreaComboBox = CreateComboBox({ tr("Full Image"), tr("Region") }, swGetProfileInteger(SW_PROFILE_RENDER_AREA));
 		CreateRow(ImagePanel, tr("Area"), mAreaComboBox, tr("Choose whether the whole image is rendered or only a region drawn on the preview."), tr("<p><b>Area</b></p><p>Full Image renders the whole image. Region renders only the part outlined on the preview, drag on the preview to draw it. A region rendered at the size of the last image is placed into that image so a detail can be refined without rendering everything again.</p>"));
 
@@ -629,6 +640,11 @@ void swRenderDialog::CreatePanels()
 			swSetProfileRenderQuality(mQuality);
 		});
 
+		connect(FocalBlurComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [](int Index)
+		{
+			swSetProfileInteger(SW_PROFILE_RENDER_FOCAL_BLUR, Index);
+		});
+
 		connect(PartsComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, [](int Index)
 		{
 			swSetProfileInteger(SW_PROFILE_RENDER_PARTS, Index);
@@ -658,7 +674,7 @@ void swRenderDialog::CreatePanels()
 		for (QSpinBox* SpinBox : { WidthSpinBox, HeightSpinBox })
 			connect(SpinBox, QOverload<int>::of(&QSpinBox::valueChanged), this, &swRenderDialog::UpdatePresets);
 
-		for (QComboBox* ComboBox : { QualityComboBox, LightRigComboBox, FloorStyleComboBox, BackgroundComboBox })
+		for (QComboBox* ComboBox : { QualityComboBox, FocalBlurComboBox, LightRigComboBox, FloorStyleComboBox, BackgroundComboBox })
 			connect(ComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &swRenderDialog::UpdatePresets);
 
 		connect(EnvironmentEdit, &QLineEdit::textChanged, this, &swRenderDialog::UpdatePresets);
@@ -686,6 +702,19 @@ void swRenderDialog::CreatePanels()
 			swSetProfileInteger(SW_PROFILE_RENDER_AREA, Index);
 			ui->preview->SetRegionMode(Index == 1);
 		});
+
+		// redraw the guide once edits settle
+		mGuideTimer.setSingleShot(true);
+		mGuideTimer.setInterval(250);
+		connect(&mGuideTimer, &QTimer::timeout, this, &swRenderDialog::UpdateGuideImage);
+
+		for (QSpinBox* SpinBox : { WidthSpinBox, HeightSpinBox })
+			connect(SpinBox, QOverload<int>::of(&QSpinBox::valueChanged), &mGuideTimer, QOverload<>::of(&QTimer::start));
+
+		for (QComboBox* ComboBox : { mAreaComboBox, mStepsComboBox, mCamerasComboBox })
+			connect(ComboBox, QOverload<int>::of(&QComboBox::currentIndexChanged), &mGuideTimer, QOverload<>::of(&QTimer::start));
+
+		mGuideTimer.start();
 
 		connect(ui->preview, &swRenderPreviewWidget::RegionChanged, this, [](const QRectF& Region)
 		{
@@ -897,18 +926,30 @@ void swRenderDialog::CreatePanels()
 	QTimer::singleShot(0, PanelWindow, FitPanels);
 }
 
+// use to split a stored preset
+static QStringList swGetPresetFields(const QString& Preset)
+{
+	QStringList Fields = Preset.split('|');
+
+	// older presets have no focal blur
+	if (Fields.size() == 8)
+		Fields.insert(7, QLatin1String("0"));
+
+	return Fields;
+}
+
 // use to list preset settings
 QStringList swRenderDialog::GetPresetValues() const
 {
-	return { QString::number(mWidthSpinBox->value()), QString::number(mHeightSpinBox->value()), QString::number(mQualityComboBox->currentIndex()), QString::number(mLightRigComboBox->currentIndex()), QString::number(mFloorStyleComboBox->currentIndex()), QString::number(mBackgroundComboBox->currentIndex()), QDir::fromNativeSeparators(mEnvironmentEdit->text().trimmed()) };
+	return { QString::number(mWidthSpinBox->value()), QString::number(mHeightSpinBox->value()), QString::number(mQualityComboBox->currentIndex()), QString::number(mLightRigComboBox->currentIndex()), QString::number(mFloorStyleComboBox->currentIndex()), QString::number(mBackgroundComboBox->currentIndex()), QString::number(mFocalBlurComboBox->currentIndex()), QDir::fromNativeSeparators(mEnvironmentEdit->text().trimmed()) };
 }
 
 // use to apply a stored preset
 void swRenderDialog::ApplyPreset(const QString& Preset)
 {
-	const QStringList Values = Preset.split('|');
+	const QStringList Values = swGetPresetFields(Preset);
 
-	if (Values.size() < 8)
+	if (Values.size() < 9)
 		return;
 
 	mPresetName = Values[0];
@@ -919,7 +960,8 @@ void swRenderDialog::ApplyPreset(const QString& Preset)
 	mLightRigComboBox->setCurrentIndex(std::clamp(Values[4].toInt(), 0, mLightRigComboBox->count() - 1));
 	mFloorStyleComboBox->setCurrentIndex(std::clamp(Values[5].toInt(), 0, mFloorStyleComboBox->count() - 1));
 	mBackgroundComboBox->setCurrentIndex(std::clamp(Values[6].toInt(), 0, mBackgroundComboBox->count() - 1));
-	mEnvironmentEdit->setText(QDir::toNativeSeparators(Values.mid(7).join('|')));
+	mFocalBlurComboBox->setCurrentIndex(std::clamp(Values[7].toInt(), 0, mFocalBlurComboBox->count() - 1));
+	mEnvironmentEdit->setText(QDir::toNativeSeparators(Values.mid(8).join('|')));
 
 	UpdatePresets();
 }
@@ -939,13 +981,13 @@ void swRenderDialog::UpdatePresets()
 
 	for (const QString& Preset : Presets)
 	{
-		const QStringList PresetValues = Preset.split('|');
+		const QStringList PresetValues = swGetPresetFields(Preset);
 
-		if (PresetValues.size() < 8)
+		if (PresetValues.size() < 9)
 			continue;
 
 		// show the last chosen duplicate
-		if ((CurrentIndex == -1 || PresetValues[0] == mPresetName) && PresetValues.mid(1, 6) == Values.mid(0, 6) && PresetValues.mid(7).join('|') == Values[6])
+		if ((CurrentIndex == -1 || PresetValues[0] == mPresetName) && PresetValues.mid(1, 7) == Values.mid(0, 7) && PresetValues.mid(8).join('|') == Values[7])
 			CurrentIndex = mPresetComboBox->count();
 
 		mPresetComboBox->addItem(PresetValues[0], Preset);
@@ -1016,6 +1058,36 @@ void swRenderDialog::DeletePresetClicked()
 	Presets.removeAll(Preset);
 	swSetProfileStringList(SW_PROFILE_RENDER_PRESETS, Presets);
 	UpdatePresets();
+}
+
+// use to show what a region render will cover
+void swRenderDialog::UpdateGuideImage()
+{
+	swModel* Model = swGetActiveModel();
+
+	if (!mAreaComboBox || mAreaComboBox->currentIndex() != 1 || !Model)
+	{
+		ui->preview->SetGuideImage(QImage());
+		return;
+	}
+
+	// the camera and step of the first image
+	swCamera* Camera = nullptr;
+	const int CameraIndex = mCamerasComboBox->currentData().toString() == QLatin1String("*") ? 1 : mCamerasComboBox->currentIndex();
+	const QString CameraName = mCamerasComboBox->itemData(CameraIndex).toString();
+
+	for (const std::unique_ptr<swCamera>& ModelCamera : Model->GetCameras())
+		if (!CameraName.isEmpty() && ModelCamera->GetName() == CameraName)
+			Camera = ModelCamera.get();
+
+	const swStep Step = mStepsComboBox->currentIndex() == 1 ? Model->GetCurrentStep() : SW_STEP_MAXIMUM;
+
+	// a small copy is enough for a guide
+	const double Scale = std::min(1.0, 1024.0 / std::max(mWidth, mHeight));
+	const int Width = std::max(1, qRound(mWidth * Scale));
+	const int Height = std::max(1, qRound(mHeight * Scale));
+
+	ui->preview->SetGuideImage(Model->GetStepImage(false, Width, Height, Step, swImageBackground::Default, Camera));
 }
 
 // use to list views and cameras

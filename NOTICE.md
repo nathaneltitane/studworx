@@ -13,6 +13,8 @@
   - Samples: sample-train-tracks.ldr, an S-curve of 9V curved track joined at its train track connections
   - POV-Ray: the POV-Ray path shows in Preferences on Windows and macOS too, so any POV-Ray 3.7 console can replace the bundled one, which stays the fallback, and starts at the bundled console there in place of the Linux path
   - POV-Ray: Windows builds bundle a 64 bit POV-Ray console in place of the 32 bit one
+  - POV-Ray: Focal Blur in the Image panel turns the depth of field on or off at any quality, off by default, where High quality always used it, and render presets keep it
+  - POV-Ray: Region shows a faded view of the model from the render camera and step until the first render, so the region can be drawn on the model
   - Render: the Log panel shows renderer progress on one line updated in place, as in a terminal, instead of running every update together
 
   </details>
