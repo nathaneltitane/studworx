@@ -16,50 +16,6 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-ubuntu:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v7
-    - name: Read version
-      id: version
-      shell: bash
-      run: |
-        [[ "$(grep -m 1 SW_VERSION_TEXT source/application/sw_global.h)" =~ \"([0-9-]+)\" ]]
-        echo "text=${BASH_REMATCH[1]}" >> "$GITHUB_OUTPUT"
-    - name: Install Qt
-      uses: jurplel/install-qt-action@v4  
-      with:
-        version: '5.15.*'
-        cache: 'true'
-    - name: Get number of CPU cores
-      uses: SimenB/github-actions-cpu-cores@v3
-      id: cpu-cores
-    - name: Generate Makefile
-      run: qmake PREFIX=/usr
-    - name: Build
-      run: make -j ${{ steps.cpu-cores.outputs.count }}
-    - name: Install
-      run: |
-        make install INSTALL_ROOT=$PWD/AppDir
-    - name: Generate test Makefile
-      run: |
-        mkdir -p build/testing
-        cd build/testing
-        qmake ../../source/testing/testing.pro CONFIG+=release CONFIG-=debug
-    - name: Build tests
-      working-directory: build/testing
-      run: make -j ${{ steps.cpu-cores.outputs.count }}
-    - name: Run tests
-      working-directory: build/testing
-      run: make check TESTARGS="-o test-results.xml,junitxml -o -,txt"
-    - name: Upload test results
-      if: always()
-      uses: actions/upload-artifact@v7
-      with:
-        name: test-results-linux-${{ steps.version.outputs.text }}-x64
-        path: build/testing/test-results.xml
-        if-no-files-found: ignore
-
   build-deb:
     strategy:
       fail-fast: false
@@ -90,6 +46,24 @@ jobs:
         do
           docker run --rm -v "$PWD/build/deb:/deb" "$image" sh -c 'apt-get update -qq && apt-get install -y -qq /deb/studworx_*.deb > /dev/null && QT_QPA_PLATFORM=offscreen studworx --version'
         done
+    - name: Generate test Makefile
+      run: |
+        mkdir -p build/testing
+        cd build/testing
+        qmake ../../source/testing/testing.pro CONFIG+=release CONFIG-=debug
+    - name: Build tests
+      working-directory: build/testing
+      run: make -j "$(nproc)"
+    - name: Run tests
+      working-directory: build/testing
+      run: make check TESTARGS="-o test-results.xml,junitxml -o -,txt"
+    - name: Upload test results
+      if: always()
+      uses: actions/upload-artifact@v7
+      with:
+        name: test-results-linux-${{ steps.version.outputs.text }}-${{ matrix.architecture }}
+        path: build/testing/test-results.xml
+        if-no-files-found: ignore
     - name: Upload package
       uses: actions/upload-artifact@v7
       with:
