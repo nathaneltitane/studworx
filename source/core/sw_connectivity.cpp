@@ -53,8 +53,90 @@ bool swConnectivity::FitsAt(const swConnectionCylinder& Male, const swConnection
 }
 
 // use to find valid insert offsets
+// use to mesh finger sequences, first offset against second
+static std::vector<std::pair<float, float>> swGetFingerOffsets(const swConnectionCylinder& Moving, const swConnectionCylinder& Fixed)
+{
+	const auto GetBoundaries = [](const swConnectionCylinder& Cylinder)
+	{
+		std::vector<float> Boundaries = { Cylinder.GetExtent().first };
+
+		for (const swConnectionSection& Section : Cylinder.Sections)
+			Boundaries.push_back(Boundaries.back() + Section.Length);
+
+		return Boundaries;
+	};
+
+	// the finger gender at a point
+	const auto IsMaleAt = [](const swConnectionCylinder& Cylinder, const std::vector<float>& Boundaries, float Point)
+	{
+		const size_t Index = std::upper_bound(Boundaries.begin(), Boundaries.end(), Point) - Boundaries.begin() - 1;
+
+		return (Index % 2 == 0) == (Cylinder.Gender == swConnectionGender::Male);
+	};
+
+	const std::vector<float> MovingBoundaries = GetBoundaries(Moving);
+	const std::vector<float> FixedBoundaries = GetBoundaries(Fixed);
+
+	if (MovingBoundaries.size() < 2 || FixedBoundaries.size() < 2)
+		return {};
+
+	const float Shortest = std::min(MovingBoundaries.back() - MovingBoundaries.front(), FixedBoundaries.back() - FixedBoundaries.front());
+	std::vector<std::pair<float, float>> Offsets;
+
+	// the shorter side meshes along its whole length
+	for (float MovingBoundary : MovingBoundaries)
+	{
+		for (float FixedBoundary : FixedBoundaries)
+		{
+			const float Offset = FixedBoundary - MovingBoundary;
+			const float Low = std::max(MovingBoundaries.front() + Offset, FixedBoundaries.front());
+			const float High = std::min(MovingBoundaries.back() + Offset, FixedBoundaries.back());
+
+			if (High - Low < Shortest - gConnectionTolerance)
+				continue;
+
+			if (std::any_of(Offsets.begin(), Offsets.end(), [Offset](const std::pair<float, float>& Existing) { return fabsf(Existing.first - Offset) < gConnectionTolerance; }))
+				continue;
+
+			std::vector<float> Points = { Low, High };
+
+			for (float Boundary : MovingBoundaries)
+				if (Boundary + Offset > Low && Boundary + Offset < High)
+					Points.push_back(Boundary + Offset);
+
+			for (float Boundary : FixedBoundaries)
+				if (Boundary > Low && Boundary < High)
+					Points.push_back(Boundary);
+
+			std::sort(Points.begin(), Points.end());
+			bool Meshes = true;
+
+			for (size_t PointIndex = 0; Meshes && PointIndex + 1 < Points.size(); PointIndex++)
+			{
+				if (Points[PointIndex + 1] - Points[PointIndex] < gConnectionTolerance)
+					continue;
+
+				const float Middle = (Points[PointIndex] + Points[PointIndex + 1]) / 2.0f;
+				Meshes = IsMaleAt(Moving, MovingBoundaries, Middle - Offset) != IsMaleAt(Fixed, FixedBoundaries, Middle);
+			}
+
+			if (Meshes)
+				Offsets.emplace_back(Offset, Offset);
+		}
+	}
+
+	return Offsets;
+}
+
 std::vector<std::pair<float, float>> swConnectivity::GetInsertRanges(const swConnectionCylinder& Male, const swConnectionCylinder& Female)
 {
+	// balls seat on the socket center
+	if (Male.Kind == swConnectionKind::Ball || Female.Kind == swConnectionKind::Ball)
+		return { { 0.0f, 0.0f } };
+
+	if (Male.Kind == swConnectionKind::Finger || Female.Kind == swConnectionKind::Finger)
+		return swGetFingerOffsets(Male, Female);
+
 	const auto [MaleStart, MaleEnd] = Male.GetExtent();
 	const auto [FemaleStart, FemaleEnd] = Female.GetExtent();
 	float Low = FemaleStart - MaleEnd;
@@ -119,11 +201,19 @@ std::vector<std::pair<float, float>> swConnectivity::GetInsertRanges(const swCon
 
 bool swConnectivity::AreCompatible(const swConnectionCylinder& a, const swConnectionCylinder& b)
 {
-	// clips take bars, finger and ball shapes never seat
-	const auto IsSeatable = [](const swConnectionCylinder& Cylinder) { return Cylinder.Kind == swConnectionKind::Cylinder || Cylinder.Kind == swConnectionKind::Clip; };
-
-	if (!IsSeatable(a) || !IsSeatable(b) || a.Gender == b.Gender || a.Group.compare(b.Group, Qt::CaseInsensitive) != 0)
+	if (a.Group.compare(b.Group, Qt::CaseInsensitive) != 0)
 		return false;
+
+	// fingers fill the gaps of the other side
+	if (a.Kind == swConnectionKind::Finger || b.Kind == swConnectionKind::Finger)
+		return a.Kind == b.Kind && !GetInsertRanges(a, b).empty();
+
+	if (a.Gender == b.Gender)
+		return false;
+
+	// balls sit in sockets of their size
+	if (a.Kind == swConnectionKind::Ball || b.Kind == swConnectionKind::Ball)
+		return a.Kind == b.Kind && fabsf(a.GetRadius() - b.GetRadius()) < gConnectionTolerance;
 
 	const swConnectionCylinder& Male = a.Gender == swConnectionGender::Male ? a : b;
 	const swConnectionCylinder& Female = a.Gender == swConnectionGender::Male ? b : a;
@@ -148,6 +238,10 @@ bool swConnectivity::AreSectionsCompatible(const swConnectionSection& Male, cons
 // use to test axis and depth
 bool swConnectivity::IsSeated(const swConnectionCylinder& Cylinder, const swMatrix44& Frame, const swConnectionCylinder& Other, const swMatrix44& OtherFrame)
 {
+	// balls turn any way in their socket
+	if (Cylinder.Kind == swConnectionKind::Ball || Other.Kind == swConnectionKind::Ball)
+		return swLength(Frame.GetTranslation() - OtherFrame.GetTranslation()) < gSeatTolerance;
+
 	const swVector3 ShapeAxis(0.0f, 0.0f, 1.0f);
 	const swVector3 Axis = swNormalize(swMultiply30(ShapeAxis, Frame));
 
@@ -406,7 +500,16 @@ bool swConnectivity::FindSnap(const swConnectionShapes& MovingShapes, const swMa
 					NewX = TargetX * cosf(SquareTwist) + TargetSide * sinf(SquareTwist);
 
 					const float Hand = swDot(Y, swCross(Z, X)) < 0.0f ? -1.0f : 1.0f;
-					const swVector3 NewY = swCross(TargetZ, NewX) * Hand;
+					swVector3 NewY = swCross(TargetZ, NewX) * Hand;
+					swVector3 NewZ = TargetZ;
+
+					// balls keep the part turn
+					if (Moving.Kind == swConnectionKind::Ball)
+					{
+						NewX = X;
+						NewY = Y;
+						NewZ = Z;
+					}
 
 					// the depth in the nearest insert range
 					const float Along = swDot(Position - TargetPosition, TargetZ);
@@ -422,9 +525,11 @@ bool swConnectivity::FindSnap(const swConnectionShapes& MovingShapes, const swMa
 					}
 
 					const swVector3 SeatPosition = TargetPosition + TargetZ * (IsMale ? SeatOffset : -SeatOffset);
-					const float Trace = swDot(NewX, X) + swDot(NewY, Y) + swDot(TargetZ, Z);
+					const float Trace = swDot(NewX, X) + swDot(NewY, Y) + swDot(NewZ, Z);
 					const float Turn = acosf(std::clamp((Trace - 1.0f) / 2.0f, -1.0f, 1.0f));
-					const float Score = Reach + swLength(SeatPosition - Position) / 2.0f + Turn * TurnWeight;
+					// the connection under the pointer first
+
+					const float Score = roundf(Reach) * 1000.0f + swLength(SeatPosition - Position) / 2.0f + Turn * TurnWeight;
 
 					if (Score >= BestScore)
 						continue;
@@ -432,7 +537,7 @@ bool swConnectivity::FindSnap(const swConnectionShapes& MovingShapes, const swMa
 					BestScore = Score;
 
 					// turn about the shape, then seat it
-					const swMatrix33 Delta = swMultiply(swMatrix33Transpose(swMatrix33(X, Y, Z)), swMatrix33(NewX, NewY, TargetZ));
+					const swMatrix33 Delta = swMultiply(swMatrix33Transpose(swMatrix33(X, Y, Z)), swMatrix33(NewX, NewY, NewZ));
 					const swVector3 Origin = swMultiply(MovingTransform.GetTranslation() - Position, Delta) + SeatPosition;
 
 					Snap.Transform = swMatrix44(swMultiply(swMatrix33(MovingTransform), Delta), Origin);
@@ -454,7 +559,8 @@ bool swConnectivity::FindSnap(const swConnectionShapes& MovingShapes, const swMa
 
 	const swMatrix44 SeatFrame = swMultiply(Snap.Frame, Snap.Transform);
 	const swVector3 SeatAxis = swNormalize(swMultiply30(swVector3(0.0f, 0.0f, 1.0f), SeatFrame));
-	Snap.Hinge = true;
+	// a ball turns freely, never as a hinge
+	Snap.Hinge = Snap.Cylinder->Kind != swConnectionKind::Ball;
 
 	for (const auto& [MovingCylinders, MovingShapeTransform] : MovingShapes)
 	{

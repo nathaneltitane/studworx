@@ -392,23 +392,27 @@ std::vector<swConnectionCylinder> swShadowParser::ParseJoint(const std::map<QStr
 	else if (Keyword == QLatin1String("SNAP_FGR"))
 	{
 		const QStringList Sequence = SplitTokens(GetParameter(Parameters, "seq"));
-		const std::optional<std::vector<float>> Radius = ParseNumbers(GetParameter(Parameters, "radius"), 1);
-		float Length = 0.0f;
+		const QString RadiusText = GetParameter(Parameters, "radius");
+		const std::optional<std::vector<float>> Radius = RadiusText.isEmpty() ? std::vector<float>{ 4.0f } : ParseNumbers(RadiusText, 1);
 
 		if (!Radius || Sequence.empty())
 			return {};
 
+		// the first finger gender, then alternating
+		Joint.Kind = swConnectionKind::Finger;
+		Joint.Gender = GetParameter(Parameters, "genderofs").startsWith('F', Qt::CaseInsensitive) ? swConnectionGender::Female : swConnectionGender::Male;
+		Joint.Center = !GetParameter(Parameters, "center").startsWith('f', Qt::CaseInsensitive);
+
 		for (const QString& Token : Sequence)
 		{
 			bool Ok = false;
-			Length += Token.toFloat(&Ok);
+			const float Width = Token.toFloat(&Ok);
 
-			if (!Ok)
+			if (!Ok || !std::isfinite(Width) || Width <= 0.0f)
 				return {};
-		}
 
-		Joint.Kind = swConnectionKind::Finger;
-		Joint.Sections.push_back({ swConnectionShape::Round, (*Radius)[0], Length });
+			Joint.Sections.push_back({ swConnectionShape::Round, (*Radius)[0], Width });
+		}
 	}
 	else
 	{
@@ -421,6 +425,7 @@ std::vector<swConnectionCylinder> swShadowParser::ParseJoint(const std::map<QStr
 			return {};
 
 		Joint.Kind = swConnectionKind::Ball;
+		Joint.Gender = GetParameter(Parameters, "gender").startsWith('F', Qt::CaseInsensitive) ? swConnectionGender::Female : swConnectionGender::Male;
 		Joint.Sections.push_back({ swConnectionShape::Round, Radius, 0.0f });
 	}
 

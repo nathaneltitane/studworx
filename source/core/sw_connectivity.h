@@ -34,7 +34,7 @@ enum class swConnectionScale
 	LengthOrRadius
 };
 
-// Clips take bars, finger and ball shapes only mark joints.
+// Clips take bars, balls take sockets, fingers fill gaps.
 enum class swConnectionKind
 {
 	Cylinder,

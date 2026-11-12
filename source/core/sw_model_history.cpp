@@ -658,6 +658,11 @@ void swModel::EndHistorySequence(const QString& Description)
 		}
 	}
 
+	// edits stop the refit on load
+
+	if (EditChanged)
+		swView::ClearFittedViews(this);
+
 	UpdateAllViews();
 	if (EditChanged)
 		RefreshPreview();

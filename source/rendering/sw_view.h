@@ -271,6 +271,7 @@ public:
 	static void UpdateProjectViews(const Project* Project);
 	static void UpdateAllViews();
 	static void UpdateFittedViews();
+	static void ClearFittedViews(const swModel* Model);
 
 	static void CreateResources(swContext* Context);
 	static void DestroyResources(swContext* Context);

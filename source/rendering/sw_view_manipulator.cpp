@@ -14,7 +14,7 @@
 
 swVertexBuffer swViewManipulator::mRotateMoveVertexBuffer;
 swIndexBuffer swViewManipulator::mRotateMoveIndexBuffer;
-swVector3 swViewManipulator::mRotateMoveVertices[51 + 138 + 10 + 74 + 28 + 24];
+swVector3 swViewManipulator::mRotateMoveVertices[51 + 138 + 10 + 74 + 40 + 8];
 
 swVector4 swViewManipulator::GetAxisColor(int AxisIndex, bool Selected)
 {
@@ -78,14 +78,14 @@ const GLushort swViewManipulator::mRotateMoveIndices[mIndexCount] =
 	259, 260, 261, 261, 262, 260, 261, 262, 263, 263, 264, 262, 263, 264, 265, 265, 266, 264, 265, 266, 267, 267, 268, 266, 267, 268, 269, 269, 270, 268, 269, 270, 271, 271, 272, 270,
 
 	// train track insert
-	273, 274, 275, 273, 275, 276,
-	277, 278, 279, 277, 279, 280,
-	281, 282, 283, 281, 283, 284, 285, 286, 287, 285, 287, 288, 289, 290, 291, 289, 291, 292,
-	293, 294, 295, 293, 295, 296, 297, 298, 299, 297, 299, 300,
+	273, 274, 275, 273, 275, 276, 280, 279, 278, 280, 278, 277, 278, 274, 273, 277, 278, 273, 280, 276, 275, 279, 280, 275, 273, 276, 280, 273, 280, 277, 279, 275, 274, 278, 279, 274,
+	281, 282, 283, 281, 283, 284, 288, 287, 286, 288, 286, 285, 286, 282, 281, 285, 286, 281, 288, 284, 283, 287, 288, 283, 281, 284, 288, 281, 288, 285, 287, 283, 282, 286, 287, 282,
+	289, 290, 291, 289, 291, 292, 296, 295, 294, 296, 294, 293, 294, 290, 289, 293, 294, 289, 296, 292, 291, 295, 296, 291, 289, 292, 296, 289, 296, 293, 295, 291, 290, 294, 295, 290,
+	297, 298, 299, 297, 299, 300, 304, 303, 302, 304, 302, 301, 302, 298, 297, 301, 302, 297, 304, 300, 299, 303, 304, 299, 297, 300, 304, 297, 304, 301, 303, 299, 298, 302, 303, 298,
+	305, 306, 307, 305, 307, 308, 312, 311, 310, 312, 310, 309, 310, 306, 305, 309, 310, 305, 312, 308, 307, 311, 312, 307, 305, 308, 312, 305, 312, 309, 311, 307, 306, 310, 311, 306,
 
 	// train track connection
-	301, 302, 303, 301, 303, 304, 308, 307, 306, 308, 306, 305, 306, 302, 301, 305, 306, 301,
-	308, 304, 303, 307, 308, 303, 301, 304, 308, 301, 308, 305, 307, 303, 302, 306, 307, 302
+	313, 314, 315, 313, 315, 316, 320, 319, 318, 320, 318, 317, 318, 314, 313, 317, 318, 313, 320, 316, 315, 319, 320, 315, 313, 316, 320, 313, 320, 317, 319, 315, 314, 318, 319, 314
 };
 
 swViewManipulator::swViewManipulator(swView* View)
@@ -267,39 +267,45 @@ void swViewManipulator::CreateResources(swContext* Context)
 		*CurVert = *(CurVert - 111); CurVert++;
 	}
 
-	// ghost track with plus badge
+	// track rails and ties sized on the connection cube
 
-	const auto AddTrainTrackQuad = [&CurVert](float Left, float Bottom, float Right, float Top)
+	const auto AddTrainTrackBox = [&CurVert](const swVector3& Min, const swVector3& Max)
 	{
-		*CurVert++ = Left; *CurVert++ = Bottom; *CurVert++ = 0.0f;
-		*CurVert++ = Right; *CurVert++ = Bottom; *CurVert++ = 0.0f;
-		*CurVert++ = Right; *CurVert++ = Top; *CurVert++ = 0.0f;
-		*CurVert++ = Left; *CurVert++ = Top; *CurVert++ = 0.0f;
+		for (const swVector3& Corner : { swVector3(Min.x, Min.y, Min.z), swVector3(Min.x, Max.y, Min.z), swVector3(Max.x, Max.y, Min.z), swVector3(Max.x, Min.y, Min.z), swVector3(Min.x, Min.y, Max.z), swVector3(Min.x, Max.y, Max.z), swVector3(Max.x, Max.y, Max.z), swVector3(Max.x, Min.y, Max.z) })
+		{
+			*CurVert++ = Corner.x;
+			*CurVert++ = Corner.y;
+			*CurVert++ = Corner.z;
+		}
 	};
 
-	AddTrainTrackQuad(0.2f, 0.2f, 1.0f, 0.25f);
-	AddTrainTrackQuad(0.2f, -0.25f, 1.0f, -0.2f);
-
-	for (float TieCenter : { 0.35f, 0.6f, 0.85f })
-		AddTrainTrackQuad(TieCenter - 0.04f, -0.32f, TieCenter + 0.04f, 0.32f);
-
-	AddTrainTrackQuad(0.85f, -0.455f, 1.09f, -0.385f);
-	AddTrainTrackQuad(0.935f, -0.54f, 1.005f, -0.3f);
-
 	const float OverlayTrainTrackBoxSize = 0.15f;
+	const float RailHalf = OverlayTrainTrackBoxSize * 0.2f;
+	const float RailGauge = OverlayTrainTrackBoxSize * 1.5f;
+	const float TieHalf = OverlayTrainTrackBoxSize * 0.3f;
+	const float TieReach = OverlayTrainTrackBoxSize * 2.2f;
+	const float TrackBase = -OverlayTrainTrackBoxSize * 0.35f;
+	const float TrackRailBase = -OverlayTrainTrackBoxSize * 0.05f;
 
-	*CurVert++ = -OverlayTrainTrackBoxSize; *CurVert++ = -OverlayTrainTrackBoxSize; *CurVert++ = -OverlayTrainTrackBoxSize;
-	*CurVert++ = -OverlayTrainTrackBoxSize; *CurVert++ =  OverlayTrainTrackBoxSize; *CurVert++ = -OverlayTrainTrackBoxSize;
-	*CurVert++ =  OverlayTrainTrackBoxSize; *CurVert++ =  OverlayTrainTrackBoxSize; *CurVert++ = -OverlayTrainTrackBoxSize;
-	*CurVert++ =  OverlayTrainTrackBoxSize; *CurVert++ = -OverlayTrainTrackBoxSize; *CurVert++ = -OverlayTrainTrackBoxSize;
-	*CurVert++ = -OverlayTrainTrackBoxSize; *CurVert++ = -OverlayTrainTrackBoxSize; *CurVert++ =  OverlayTrainTrackBoxSize;
-	*CurVert++ = -OverlayTrainTrackBoxSize; *CurVert++ =  OverlayTrainTrackBoxSize; *CurVert++ =  OverlayTrainTrackBoxSize;
-	*CurVert++ =  OverlayTrainTrackBoxSize; *CurVert++ =  OverlayTrainTrackBoxSize; *CurVert++ =  OverlayTrainTrackBoxSize;
-	*CurVert++ =  OverlayTrainTrackBoxSize; *CurVert++ = -OverlayTrainTrackBoxSize; *CurVert++ =  OverlayTrainTrackBoxSize;
+	// a cube clear of the cube
+
+	const float TrackStart = OverlayTrainTrackBoxSize * 3.0f;
+
+	for (const float Side : { 1.0f, -1.0f })
+		AddTrainTrackBox(swVector3(TrackStart, Side * RailGauge - RailHalf, TrackRailBase), swVector3(TrackStart + 0.8f, Side * RailGauge + RailHalf, TrackRailBase + 2.0f * RailHalf));
+
+	for (const float TieOffset : { 0.15f, 0.4f, 0.65f })
+		AddTrainTrackBox(swVector3(TrackStart + TieOffset - TieHalf, -TieReach, TrackBase), swVector3(TrackStart + TieOffset + TieHalf, TieReach, TrackRailBase));
+
+	AddTrainTrackBox(swVector3(-OverlayTrainTrackBoxSize, -OverlayTrainTrackBoxSize, -OverlayTrainTrackBoxSize), swVector3(OverlayTrainTrackBoxSize, OverlayTrainTrackBoxSize, OverlayTrainTrackBoxSize));
+
+	// every vertex written once
+
+	Q_ASSERT(CurVert == mRotateMoveVertices[0].GetFloats() + 3 * std::size(mRotateMoveVertices));
 
 	// train track gizmo scale
 
-	for (int VertIdx = 199; VertIdx < 309; VertIdx++)
+	for (int VertIdx = 199; VertIdx < static_cast<int>(std::size(mRotateMoveVertices)); VertIdx++)
 		mRotateMoveVertices[VertIdx] *= 1.5f;
 
 	mRotateMoveVertexBuffer = Context->CreateVertexBuffer(sizeof(mRotateMoveVertices), mRotateMoveVertices[0].GetFloats());

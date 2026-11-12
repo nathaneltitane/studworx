@@ -366,4 +366,66 @@ void swTests::ConnectivitySnapsDraggedParts()
 	QVERIFY(swConnectivity::FindSnap({ { &Bar, swMatrix44Identity() } }, Beside, { { &Clip, swMatrix44Identity() } }, swVector3LDrawToStudWorx(swVector3(0.0f, 0.0f, -10.0f)), 20.0f, Snap));
 	QVERIFY(swConnectivity::AreConnected(Bar, Snap.Transform, Clip, swMatrix44Identity()));
 	QVERIFY(Snap.Hinge);
+
+	// A ball dropped beside a socket of its size seats on the socket center, keeping its turn.
+	const std::vector<swConnectionCylinder> Ball = MakePart({ "0 !LDCAD SNAP_GEN [gender=M] [bounding=sph 8] [match=size] [placement=free] [pos=0 -10 0]" });
+	const std::vector<swConnectionCylinder> Socket = MakePart({ "0 !LDCAD SNAP_GEN [gender=F] [bounding=sph 8] [match=size] [placement=free] [pos=20 0 0]" });
+	const std::vector<swConnectionCylinder> BigSocket = MakePart({ "0 !LDCAD SNAP_GEN [group=techBallJnt] [gender=F] [bounding=sph 12.7] [placement=free] [pos=20 0 0]" });
+	swMatrix44 Tilted = swMatrix44RotationX(0.4f);
+	Tilted.SetTranslation(swVector3(10.0f, 6.0f, 3.0f));
+
+	QVERIFY(Ball.size() == 1 && Socket.size() == 1);
+	QVERIFY(Ball[0].Gender == swConnectionGender::Male && Socket[0].Gender == swConnectionGender::Female);
+	QVERIFY(!swConnectivity::AreCompatible(Ball[0], BigSocket[0]));
+	QVERIFY(swConnectivity::FindSnap({ { &Ball, swMatrix44Identity() } }, Tilted, { { &Socket, swMatrix44Identity() } }, swVector3LDrawToStudWorx(swVector3(20.0f, 0.0f, 0.0f)), 20.0f, Snap));
+	QVERIFY(swConnectivity::AreConnected(Ball, Snap.Transform, Socket, swMatrix44Identity()));
+	QVERIFY(swMatrix33Similar(swMatrix33(Snap.Transform), swMatrix33(Tilted)));
+	QVERIFY(!Snap.Hinge);
+
+	// Hinge brick top fingers fill the base gaps, centered by default, and turn as a hinge.
+	const std::vector<swConnectionCylinder> HingeBase = MakePart({ "0 !LDCAD SNAP_FGR [group=hgBrC] [genderOfs=F] [seq=18 4 18] [radius=4] [pos=0 10 0] [ori=0 -1 0 1 0 0 0 0 1]" });
+	const std::vector<swConnectionCylinder> HingeTop = MakePart({ "0 !LDCAD SNAP_FGR [group=hgBrC] [genderOfs=M] [seq=18 4 18] [radius=4] [pos=0 10 0] [ori=0 -1 0 1 0 0 0 0 1]" });
+	swMatrix44 Lifted = swMatrix44RotationZ(0.3f);
+	Lifted.SetTranslation(swVector3(1.0f, 3.0f, 6.0f));
+
+	QVERIFY(HingeBase.size() == 1 && HingeTop.size() == 1);
+	QVERIFY(HingeTop[0].Center && HingeTop[0].Sections.size() == 3);
+	QVERIFY(swConnectivity::AreCompatible(HingeTop[0], HingeBase[0]));
+	QVERIFY(!swConnectivity::AreCompatible(HingeTop[0], HingeTop[0]));
+	QVERIFY(swConnectivity::FindSnap({ { &HingeTop, swMatrix44Identity() } }, Lifted, { { &HingeBase, swMatrix44Identity() } }, swVector3LDrawToStudWorx(swVector3(0.0f, 10.0f, 0.0f)), 20.0f, Snap));
+	QVERIFY(swConnectivity::AreConnected(HingeTop, Snap.Transform, HingeBase, swMatrix44Identity()));
+	QVERIFY(swLength(Snap.Transform.GetTranslation()) < 0.01f);
+	QVERIFY(Snap.Hinge);
+
+	// A single finger with no radius sits in a dual finger gap, a door in its frame, both male first.
+	const std::vector<swConnectionCylinder> Dual = MakePart({ "0 !LDCAD SNAP_FGR [group=lckHng] [genderOfs=M] [seq=4.5 8 4.5]" });
+	const std::vector<swConnectionCylinder> Single = MakePart({ "0 !LDCAD SNAP_FGR [group=lckHng] [genderOfs=M] [seq=8]" });
+	const std::vector<swConnectionCylinder> Frame = MakePart({ "0 !LDCAD SNAP_FGR [group=door] [genderOfs=M] [seq=2 132 2] [radius=4]" });
+	const std::vector<swConnectionCylinder> Door = MakePart({ "0 !LDCAD SNAP_FGR [group=door] [genderOfs=M] [seq=132] [radius=4]" });
+
+	QVERIFY(Dual.size() == 1 && Single.size() == 1 && Frame.size() == 1 && Door.size() == 1);
+	QCOMPARE(swConnectivity::GetInsertRanges(Single[0], Dual[0]), (std::vector<std::pair<float, float>>{ { 0.0f, 0.0f } }));
+	QCOMPARE(swConnectivity::GetInsertRanges(Door[0], Frame[0]), (std::vector<std::pair<float, float>>{ { 0.0f, 0.0f } }));
+	QVERIFY(!swConnectivity::AreCompatible(Single[0], Door[0]));
+	QVERIFY(!swConnectivity::AreCompatible(Dual[0], Frame[0]));
+
+	// A 1x2x5 brick (2454b) dropped on a side stud of a 1x2x2/3 brick with side studs (4595) turns
+	// onto the side studs, not onto the bottom tube next to them.
+	const std::vector<swConnectionCylinder> SideStuds = MakePart({
+		"0 !LDCAD SNAP_CYL [gender=M] [caps=one] [secs=R 6 4] [grid=1 C 2 0 20]",
+		"0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=S 6 12   R 4 8] [pos=0 16 0] [grid=1 C 2 0 20]",
+		"0 !LDCAD SNAP_CYL [gender=M] [caps=one] [secs=R 6 4] [pos=10 10 0] [ori=0 -1 0 1 0 0 0 0 1] [grid=1 C 2 0 20]",
+		"0 !LDCAD SNAP_CYL [gender=M] [caps=one] [secs=R 6 4] [pos=-10 10 0] [ori=0 1 0 -1 0 0 0 0 1] [grid=1 C 2 0 20]",
+	});
+	const std::vector<swConnectionCylinder> TallBrick = MakePart({
+		"0 !LDCAD SNAP_CYL [gender=M] [caps=one] [secs=R 6 4] [grid=C 2 1 20 0]",
+		"0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=S 6 116] [pos=0 120 0] [grid=C 2 1 20 0]",
+	});
+	swMatrix44 Upright = swMatrix44Identity();
+	Upright.SetTranslation(swVector3LDrawToStudWorx(swVector3(14.0f, 10.0f, 10.0f)));
+
+	QVERIFY(swConnectivity::FindSnap({ { &TallBrick, swMatrix44Identity() } }, Upright, { { &SideStuds, swMatrix44Identity() } }, swVector3LDrawToStudWorx(swVector3(14.0f, 10.0f, 10.0f)), 20.0f, Snap));
+	QVERIFY(Snap.Cylinder && Snap.Cylinder->Gender == swConnectionGender::Female);
+	QVERIFY(swConnectivity::AreConnected(TallBrick, Snap.Transform, SideStuds, swMatrix44Identity()));
+	QVERIFY(swDot(swMultiply30(swVector3LDrawToStudWorx(swVector3(0.0f, -1.0f, 0.0f)), Snap.Transform), swVector3LDrawToStudWorx(swVector3(1.0f, 0.0f, 0.0f))) > 0.99f);
 }

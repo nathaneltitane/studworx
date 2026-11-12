@@ -889,6 +889,10 @@ void swView::DrawConnectionMarkers() const
 	mContext->EnableColorBlend(true);
 	mContext->SetDepthWrite(false);
 
+	// always on top of the parts
+
+	mContext->EnableDepthTest(false);
+
 	for (const swConnectionMarker& Marker : mConnectionMarkers)
 	{
 		swVector3 Screen = ProjectPoint(Marker.Position);
@@ -910,9 +914,8 @@ void swView::DrawConnectionMarkers() const
 
 		const bool Male = Marker.Gender == swConnectionGender::Male;
 
-		// joints fill their own size, seen through the part
+		// joints fill their own size
 		const bool Joint = Marker.Kind == swConnectionKind::Clip || Marker.Kind == swConnectionKind::Finger || Marker.Kind == swConnectionKind::Ball;
-		mContext->EnableDepthTest(!Joint);
 
 		// a stud sized cylinder out of the opening, clips and fingers at their size
 		if (Marker.Kind == swConnectionKind::Cylinder || Marker.Kind == swConnectionKind::Clip || Marker.Kind == swConnectionKind::Finger)
@@ -923,7 +926,7 @@ void swView::DrawConnectionMarkers() const
 			const swVector3 Side = swNormalize(swCross(Axis, fabsf(Axis.z) < 0.9f ? swVector3(0.0f, 0.0f, 1.0f) : swVector3(1.0f, 0.0f, 0.0f)));
 			const swVector3 Front = swCross(Axis, Side);
 
-			// lift off the surface so depth testing hides only covered points
+			// lift off the surface
 			const swVector3 Base = Marker.Position + Axis * (Marker.TwoSided ? -StudHeight / 2.0f : 0.25f);
 			const swVector3 Top = Base + Axis * StudHeight;
 			std::vector<swVector3> Triangles, Lines;

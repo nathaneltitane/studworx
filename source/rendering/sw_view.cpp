@@ -123,6 +123,14 @@ void swView::UpdateFittedViews()
 	}
 }
 
+// use to keep edited views where they are
+void swView::ClearFittedViews(const swModel* Model)
+{
+	for (swView* View : mViews)
+		if (View->GetActiveModel() == Model)
+			View->mZoomExtentsCamera = nullptr;
+}
+
 void swView::MakeCurrent()
 {
 	mContext->MakeCurrent();
