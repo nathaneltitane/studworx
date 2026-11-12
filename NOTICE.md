@@ -18,6 +18,8 @@
   - POV-Ray: a Region render keeps only the region, over the faded view of the model, where it was placed into an older image of the same file
   - POV-Ray: Region draws a square with Ctrl held, resizes from its edges and corners, moves when dragged from inside, and is drawn anew when dragged from outside
   - POV-Ray: Editor beside Log shows the scene file with syntax colors, renders your edits when Render using this configuration instead of the model configuration is ticked, greys out the settings it ignores, writes the scene again with Reset, opens a scene file with Open and saves a copy with Save As
+  - POV-Ray: the render window is a normal window with minimize and maximize like the Instructions window, and its buttons read Editor, Render, Log
+  - Render and Instructions windows: panels use the main window title bar with Float and Close, follow Lock Interface and reopen from the right-click panel list, where the Render panel stays greyed out as the one that never closes
   - Render: the Log panel shows renderer progress on one line updated in place, as in a terminal, instead of running every update together
 
   </details>

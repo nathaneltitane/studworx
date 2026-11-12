@@ -1288,6 +1288,28 @@ QWidget* swCreateDockTitleBar(QDockWidget* DockWidget)
 	return new swDockTitleBar(DockWidget);
 }
 
+// use to lock a panel, fixed panels never close
+void swSetDockWidgetLocked(QDockWidget* DockWidget, bool Locked)
+{
+	QDockWidget::DockWidgetFeatures Features = QDockWidget::DockWidgetMovable | QDockWidget::DockWidgetFloatable;
+
+	if (!DockWidget->property("swFixedPanel").toBool())
+		Features |= QDockWidget::DockWidgetClosable;
+
+	// empty title bar collapses the title
+	QWidget* TitleBar = DockWidget->titleBarWidget();
+
+	DockWidget->setTitleBarWidget(Locked ? new QWidget(DockWidget) : swCreateDockTitleBar(DockWidget));
+	delete TitleBar;
+
+	DockWidget->setFeatures(Locked ? QDockWidget::NoDockWidgetFeatures : Features);
+}
+
+bool swIsInterfaceLocked()
+{
+	return QSettings().value("MainWindow/LockInterface", false).toBool();
+}
+
 void swSetupPanelEdit(QWidget* Edit)
 {
 	// text boxes as tall as buttons

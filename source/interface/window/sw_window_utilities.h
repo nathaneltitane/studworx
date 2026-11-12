@@ -136,6 +136,8 @@ void swSetupPanelButton(QToolButton* Button);
 void swSetupTabScrollButtons(QTabBar* TabBar);
 QToolButton* swCreateTabCloseButton(QWidget* Parent);
 QWidget* swCreateDockTitleBar(QDockWidget* DockWidget);
+void swSetDockWidgetLocked(QDockWidget* DockWidget, bool Locked);
+bool swIsInterfaceLocked();
 void swSetupPanelEdit(QWidget* Edit);
 void swSetupSpinBoxSelection(QAbstractSpinBox* SpinBox);
 void swSetupPanelSpinBox(QAbstractSpinBox* SpinBox);

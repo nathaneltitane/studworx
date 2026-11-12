@@ -441,6 +441,9 @@ swRenderDialog::swRenderDialog(QWidget* Parent, swRenderDialogMode RenderDialogM
 	if (mDialogMode == swRenderDialogMode::RenderPOVRay)
 	{
 		setWindowTitle(tr("POV-Ray Render"));
+
+		// a normal window like instructions
+		setWindowFlags(Qt::Window);
 		setWhatsThis(tr("<p><b>POV-Ray Render</b></p><p>Render the current model step using POV-Ray. Choose the output image, its size and quality and the scene in the panels beside the preview, then select Render to start.</p><p>The preview is scaled to fit the window. Log shows the renderer output below the preview.</p>"));
 		mRenderButton->setToolTip(tr("Render the current model step with POV-Ray."));
 	}
@@ -494,7 +497,6 @@ void swRenderDialog::CreatePanels()
 		QDockWidget* Panel = new QDockWidget(Title, PanelWindow);
 		Panel->setObjectName(Name);
 		Panel->setWhatsThis(WhatsThis);
-		Panel->setFeatures(QDockWidget::DockWidgetMovable | QDockWidget::DockWidgetFloatable);
 
 		QWidget* Widget = new QWidget(Panel);
 		Panel->setWidget(Widget);
@@ -990,10 +992,10 @@ void swRenderDialog::CreatePanels()
 		});
 	}
 
-	RenderButtons.append(static_cast<QToolButton*>(mRenderButton));
 	if (mEditorButton)
 		RenderButtons.append(static_cast<QToolButton*>(mEditorButton));
 
+	RenderButtons.append(static_cast<QToolButton*>(mRenderButton));
 	RenderButtons.append(static_cast<QToolButton*>(mLogButton));
 
 	for (QToolButton* Button : RenderButtons)
@@ -1265,10 +1267,12 @@ void swRenderDialog::CreatePanels()
 	PanelWindow->restoreState(Settings.value("State").toByteArray(), SW_RENDER_WINDOW_STATE_VERSION);
 	Settings.endGroup();
 
-	// keep untoggled panels visible
+	// render panel stays, the entry point for the others
+	RenderDock->setProperty("swFixedPanel", true);
+	RenderDock->show();
+
 	for (QDockWidget* Panel : PanelWindow->findChildren<QDockWidget*>(QString(), Qt::FindDirectChildrenOnly))
-		if (Panel != mLogPanel && Panel != mEditorPanel)
-			Panel->show();
+		swSetDockWidgetLocked(Panel, swIsInterfaceLocked());
 
 	mLogButton->setChecked(!mLogPanel->isHidden());
 

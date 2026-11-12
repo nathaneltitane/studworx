@@ -621,19 +621,9 @@ QMenu* swMainWindow::createPopupMenu()
 
 void swMainWindow::SetInterfaceLocked(bool Locked)
 {
-	// panels keep resizing while locked
-	const QDockWidget::DockWidgetFeatures Features = Locked ? QDockWidget::NoDockWidgetFeatures : QDockWidget::DockWidgetClosable | QDockWidget::DockWidgetMovable | QDockWidget::DockWidgetFloatable;
-
-	for (QDockWidget* DockWidget : findChildren<QDockWidget*>(QString(), Qt::FindDirectChildrenOnly))
-	{
-		// empty title bar collapses the title
-		QWidget* TitleBar = DockWidget->titleBarWidget();
-
-		DockWidget->setTitleBarWidget(Locked ? new QWidget(DockWidget) : swCreateDockTitleBar(DockWidget));
-		delete TitleBar;
-
-		DockWidget->setFeatures(Features);
-	}
+	// panels keep resizing while locked, render and instructions windows follow
+	for (QDockWidget* DockWidget : findChildren<QDockWidget*>())
+		swSetDockWidgetLocked(DockWidget, Locked);
 
 	for (QToolBar* ToolBar : findChildren<QToolBar*>(QString(), Qt::FindDirectChildrenOnly))
 		ToolBar->setMovable(!Locked);

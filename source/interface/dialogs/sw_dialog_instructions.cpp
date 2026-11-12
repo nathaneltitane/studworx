@@ -134,9 +134,9 @@ swInstructionsDialog::swInstructionsDialog(QWidget* Parent, Project* Project)
 	restoreState(Settings.value("State").toByteArray());
 	Settings.endGroup();
 
-	// keep untoggled panels visible
-	for (QDockWidget* DockWidget : { static_cast<QDockWidget*>(mPropertiesWidget), static_cast<QDockWidget*>(mPlacementWidget), static_cast<QDockWidget*>(mGridWidget), static_cast<QDockWidget*>(mPageListWidget) })
-		DockWidget->show();
+	// panels follow the main window lock
+	for (QDockWidget* DockWidget : findChildren<QDockWidget*>(QString(), Qt::FindDirectChildrenOnly))
+		swSetDockWidgetLocked(DockWidget, swIsInterfaceLocked());
 }
 
 // use to save the panel layout
