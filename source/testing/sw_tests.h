@@ -28,6 +28,7 @@ private slots:
 	void ConnectivityFitsShapesAlongTheirAxis();
 	void ConnectivityConnectsSeatedShapes();
 	void ConnectivityMarksNearbyOpenEnds();
+	void ConnectivitySnapsDraggedParts();
 	void POVRayRendersExport();
 	void TranslucentImagesKeepColor_data();
 	void TranslucentImagesKeepColor();

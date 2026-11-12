@@ -226,6 +226,8 @@ public:
 	bool mHoverOutline;
 	quint32 mHoverOutlineColor;
 	bool mConnectionPoints;
+	bool mConnectionSnap;
+	bool mConnectionSnapJoint;
 	bool mHighlightNewParts;
 	quint32 mHighlightNewPartsColor;
 	bool mGridEnabled = true;

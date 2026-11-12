@@ -625,6 +625,16 @@ void swModel::SetJointAxisAction(swPart* Part, int Axis)
 	EndHistorySequence(tr("Joint Axis"));
 }
 
+void swModel::AddJointAction(swPart* Part, const swPartJoint& Joint)
+{
+	if (!Part || Joint.Type == swJointType::None)
+		return;
+
+	BeginJointsEdit();
+	SetJointIndex(Part, Part->SetJoint(Joint, mCurrentStep));
+	EndJointsEdit(tr("Set Joint"), true);
+}
+
 void swModel::ClearJointAction(swPart* Part, size_t Index)
 {
 	BeginHistorySequence();

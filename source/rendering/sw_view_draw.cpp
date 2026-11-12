@@ -867,7 +867,6 @@ void swView::DrawConnectionMarkers() const
 
 	const int CircleSegments = 16;
 	const float SymbolPixels = 6.0f * GetUIScale();
-	const float TickPixels = 14.0f * GetUIScale();
 	const swMatrix44 CameraWorld = swMatrix44AffineInverse(mCamera->mWorldView);
 	const swVector3 Right = swNormalize(swMultiply30(swVector3(1.0f, 0.0f, 0.0f), CameraWorld));
 	const swVector3 Up = swNormalize(swMultiply30(swVector3(0.0f, 1.0f, 0.0f), CameraWorld));
@@ -909,10 +908,56 @@ void swView::DrawConnectionMarkers() const
 		if (Alpha <= 0.01f)
 			continue;
 
+		const bool Male = Marker.Gender == swConnectionGender::Male;
+
+		// a stud sized cylinder out of the opening
+		if (Marker.Kind == swConnectionKind::Cylinder)
+		{
+			const float StudRadius = 6.0f;
+			const float StudHeight = 4.0f;
+			const swVector3 Axis = swNormalize(Marker.Direction);
+			const swVector3 Side = swNormalize(swCross(Axis, fabsf(Axis.z) < 0.9f ? swVector3(0.0f, 0.0f, 1.0f) : swVector3(1.0f, 0.0f, 0.0f)));
+			const swVector3 Front = swCross(Axis, Side);
+
+			// lift off the surface so depth testing hides only covered points
+			const swVector3 Base = Marker.Position + Axis * (Marker.TwoSided ? -StudHeight / 2.0f : 0.25f);
+			const swVector3 Top = Base + Axis * StudHeight;
+			std::vector<swVector3> Triangles, Lines;
+
+			for (int Segment = 0; Segment < CircleSegments; Segment++)
+			{
+				const float Angle = 2.0f * SW_PI * Segment / CircleSegments;
+				const float NextAngle = 2.0f * SW_PI * (Segment + 1) / CircleSegments;
+				const swVector3 Spoke = (Side * cosf(Angle) + Front * sinf(Angle)) * StudRadius;
+				const swVector3 NextSpoke = (Side * cosf(NextAngle) + Front * sinf(NextAngle)) * StudRadius;
+
+				Lines.insert(Lines.end(), { Base + Spoke, Base + NextSpoke, Top + Spoke, Top + NextSpoke });
+
+				// filled for male, hollow for female
+				if (Male)
+					Triangles.insert(Triangles.end(), { Base + Spoke, Base + NextSpoke, Top + Spoke, Top + Spoke, Base + NextSpoke, Top + NextSpoke, Top, Top + Spoke, Top + NextSpoke });
+				else if (Segment % (CircleSegments / 4) == 0)
+					Lines.insert(Lines.end(), { Base + Spoke, Top + Spoke });
+			}
+
+			if (!Triangles.empty())
+			{
+				mContext->SetColor(swVector4(Color.x, Color.y, Color.z, Color.w * Alpha * 0.5f));
+				mContext->SetVertexBufferPointer(Triangles.data());
+				mContext->SetVertexFormatPosition(3);
+				mContext->DrawPrimitives(GL_TRIANGLES, 0, static_cast<GLsizei>(Triangles.size()));
+			}
+
+			mContext->SetColor(swVector4(Color.x, Color.y, Color.z, Color.w * Alpha));
+			mContext->SetVertexBufferPointer(Lines.data());
+			mContext->SetVertexFormatPosition(3);
+			mContext->DrawPrimitives(GL_LINES, 0, static_cast<GLsizei>(Lines.size()));
+			continue;
+		}
+
 		// lift off the surface so depth testing hides only covered points
 		const float Size = SymbolPixels * Pixel;
 		const swVector3 Center = Marker.Position + ToCamera * ((Marker.TwoSided ? Marker.Radius : 0.0f) + Size);
-		const bool Male = Marker.Gender == swConnectionGender::Male;
 		std::vector<swVector2> Outline, Inner;
 		bool Closed = true;
 
@@ -934,12 +979,6 @@ void swView::DrawConnectionMarkers() const
 			break;
 
 		case swConnectionKind::Cylinder:
-			if (Marker.Shape == swConnectionShape::Axle)
-				Outline = { { 0.3f, 1.0f }, { -0.3f, 1.0f }, { -0.3f, 0.3f }, { -1.0f, 0.3f }, { -1.0f, -0.3f }, { -0.3f, -0.3f }, { -0.3f, -1.0f }, { 0.3f, -1.0f }, { 0.3f, -0.3f }, { 1.0f, -0.3f }, { 1.0f, 0.3f }, { 0.3f, 0.3f } };
-			else if (Marker.Shape == swConnectionShape::Square)
-				Outline = { { 0.85f, 0.85f }, { -0.85f, 0.85f }, { -0.85f, -0.85f }, { 0.85f, -0.85f } };
-			else
-				AddCircle(Outline, 1.0f, 0.0f, 2.0f * SW_PI, CircleSegments);
 			break;
 		}
 
@@ -990,13 +1029,6 @@ void swView::DrawConnectionMarkers() const
 				const swVector3 Corners[4] = { ToWorld(Outline[Index]), ToWorld(Outline[Index + 1]), ToWorld(Inner[Index]), ToWorld(Inner[Index + 1]) };
 				Triangles.insert(Triangles.end(), { Corners[0], Corners[1], Corners[2], Corners[2], Corners[1], Corners[3] });
 			}
-		}
-
-		// a short tick along the opening
-		if (Marker.Kind == swConnectionKind::Cylinder)
-		{
-			Lines.push_back(Center);
-			Lines.push_back(Center + Marker.Direction * (TickPixels * Pixel));
 		}
 
 		mContext->SetColor(swVector4(Color.x, Color.y, Color.z, Color.w * Alpha));

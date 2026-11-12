@@ -261,6 +261,16 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		ToggleShadowLibrary();
 		break;
 
+	case SW_EDIT_SNAP_CONNECTION_TOGGLE:
+		swTogglePreference(swGetPreferences().mConnectionSnap, SW_PROFILE_CONNECTION_SNAP);
+		UpdateShadowLibraryAction();
+		break;
+
+	case SW_EDIT_SNAP_CONNECTION_JOINT_TOGGLE:
+		swTogglePreference(swGetPreferences().mConnectionSnapJoint, SW_PROFILE_CONNECTION_SNAP_JOINT);
+		UpdateShadowLibraryAction();
+		break;
+
 	case SW_EDIT_SELECT_BY_NAME:
 		ShowSelectDialog();
 		break;

@@ -75,6 +75,7 @@ struct swSetInventoryItem;
 struct swModelHistoryEditState;
 struct swGroupHistoryState;
 struct swPartHistoryState;
+struct swPartJoint;
 struct swCameraHistoryState;
 struct swLightHistoryState;
 template<typename StateType> struct swObjectHistory;
@@ -436,6 +437,7 @@ public:
 	void AddJointHighlight(swScene* Scene, const swMatrix44& Transform) const;
 	void AddHoverOutline(swScene* Scene, const swMatrix44& Transform, std::vector<const swPart*> Chain) const;
 	void SetJointAxisAction(swPart* Part, int Axis);
+	void AddJointAction(swPart* Part, const swPartJoint& Joint);
 	void ClearJointAction(swPart* Part, size_t Index);
 	void ClearJointsAction(swPart* Part);
 

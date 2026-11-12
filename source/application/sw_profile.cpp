@@ -67,6 +67,8 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "HoverOutline", true),                                                     // SW_PROFILE_HOVER_OUTLINE
 	swProfileEntry("Settings", "HoverOutlineColor", SW_RGBA(150, 230, 240, 255)),                         // SW_PROFILE_HOVER_OUTLINE_COLOR #96e6f0
 	swProfileEntry("Settings", "ConnectionPoints", true),                                                 // SW_PROFILE_CONNECTION_POINTS
+	swProfileEntry("Settings", "ConnectionSnap", true),                                                   // SW_PROFILE_CONNECTION_SNAP
+	swProfileEntry("Settings", "ConnectionSnapJoint", false),                                             // SW_PROFILE_CONNECTION_SNAP_JOINT
 	swProfileEntry("Settings", "HighlightNewParts", 0),                                                   // SW_PROFILE_HIGHLIGHT_NEW_PARTS
 	swProfileEntry("Settings", "HighlightNewPartsColor", SW_RGBA(255, 85, 0, 217)),                       // SW_PROFILE_HIGHLIGHT_NEW_PARTS_COLOR #ff5500d9
 	swProfileEntry("Settings", "ShadingMode", static_cast<int>(swShadingMode::DefaultLights)),             // SW_PROFILE_SHADING_MODE

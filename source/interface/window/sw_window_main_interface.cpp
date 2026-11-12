@@ -216,6 +216,8 @@ void swMainWindow::CreateActions()
 	mActions[SW_PART_TOGGLE_FIRST_AT_ORIGIN]->setCheckable(true);
 	mActions[SW_PART_CONTROL_POINT_TANGENT]->setCheckable(true);
 	mActions[SW_EDIT_TOGGLE_SHADOW_LIBRARY]->setCheckable(true);
+	mActions[SW_EDIT_SNAP_CONNECTION_TOGGLE]->setCheckable(true);
+	mActions[SW_EDIT_SNAP_CONNECTION_JOINT_TOGGLE]->setCheckable(true);
 	mActions[SW_VIEW_LOCK_INTERFACE]->setCheckable(true);
 	UpdateShadowLibraryAction();
 
@@ -643,6 +645,9 @@ void swMainWindow::CreateToolBars()
 	SnapMenu->addSeparator();
 	SnapMenu->addMenu(SnapXYMenu);
 	SnapMenu->addMenu(SnapZMenu);
+	SnapMenu->addSeparator();
+	SnapMenu->addAction(mActions[SW_EDIT_SNAP_CONNECTION_TOGGLE]);
+	SnapMenu->addAction(mActions[SW_EDIT_SNAP_CONNECTION_JOINT_TOGGLE]);
 
 	QAction* MoveAction = new QAction(tr("Movement Snap"), this);
 	MoveAction->setStatusTip(tr("Snap translations to fixed intervals"));

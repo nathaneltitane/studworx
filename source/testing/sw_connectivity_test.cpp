@@ -321,3 +321,38 @@ void swTests::ConnectivityMarksNearbyOpenEnds()
 	QVERIFY(swConnectivity::GetMarkers({ { &Pin, swMatrix44Identity() } }, swVector3(0.0f, 0.0f, 0.0f), 20.0f, 4).front().TwoSided);
 	QVERIFY(swConnectivity::GetMarkers({ { &Pin, swMatrix44Identity() } }, swVector3(100.0f, 0.0f, 0.0f), 20.0f, 4).empty());
 }
+
+void swTests::ConnectivitySnapsDraggedParts()
+{
+	// A 1x2 brick dragged near a plate stud, off by a few units, lifted, turned 80 degrees and
+	// tipped, seats on the plate turned a quarter, and nothing seats far away or without shapes.
+	const std::vector<swConnectionCylinder> Plate = MakePlate(6, 8);
+	const std::vector<swConnectionCylinder> Brick = MakeBrick1x2();
+	const swConnectionShapes PlateShapes = { { &Plate, swMatrix44Identity() } };
+	const swConnectionShapes BrickShapes = { { &Brick, swMatrix44Identity() } };
+	const swVector3 Point = swVector3LDrawToStudWorx(swVector3(-70.0f, 0.0f, -50.0f));
+	swMatrix44 Dragged = swMultiply(swMatrix44RotationX(0.2f), swMatrix44RotationZ(80.0f * SW_DEGREES_TO_RADIANS));
+	Dragged.SetTranslation(swVector3LDrawToStudWorx(swVector3(-66.0f, -30.0f, -38.0f)));
+	swConnectionSnap Snap;
+
+	QVERIFY(swConnectivity::FindSnap(BrickShapes, Dragged, PlateShapes, Point, 20.0f, Snap));
+	QVERIFY(Snap.Cylinder && Snap.Cylinder->Gender == swConnectionGender::Female);
+	QVERIFY(swConnectivity::AreConnected(Brick, Snap.Transform, Plate, swMatrix44Identity()));
+	QVERIFY(!Snap.Hinge);
+	QVERIFY(fabsf(fabsf(swDot(swMultiply30(swVector3(1.0f, 0.0f, 0.0f), Snap.Transform), swVector3(0.0f, 1.0f, 0.0f))) - 1.0f) < 0.001f);
+
+	QVERIFY(!swConnectivity::FindSnap(BrickShapes, Dragged, PlateShapes, swVector3(500.0f, 0.0f, 0.0f), 20.0f, Snap));
+	QVERIFY(!Snap.Cylinder);
+	QVERIFY(!swConnectivity::FindSnap({}, Dragged, PlateShapes, Point, 20.0f, Snap));
+	QVERIFY(!swConnectivity::FindSnap(BrickShapes, Dragged, { { nullptr, swMatrix44Identity() } }, Point, 20.0f, Snap));
+
+	// A 3L bar seats sideways in a hole, keeping its slide along the hole, free to turn there.
+	const std::vector<swConnectionCylinder> Bar = MakeBar3L();
+	const std::vector<swConnectionCylinder> Hole = MakePart({ "0 !LDCAD SNAP_CYL [gender=F] [caps=none] [secs=R 4 16] [center=true] [pos=0 30 0] [ori=1 0 0 0 0 -1 0 1 0]" });
+	swMatrix44 Across = swMatrix44RotationY(1.3f);
+	Across.SetTranslation(swVector3(3.0f, 2.0f, 5.0f));
+
+	QVERIFY(swConnectivity::FindSnap({ { &Bar, swMatrix44Identity() } }, Across, { { &Hole, swMatrix44Identity() } }, swVector3LDrawToStudWorx(swVector3(0.0f, 30.0f, 0.0f)), 40.0f, Snap));
+	QVERIFY(swConnectivity::AreConnected(Bar, Snap.Transform, Hole, swMatrix44Identity()));
+	QVERIFY(Snap.Hinge);
+}

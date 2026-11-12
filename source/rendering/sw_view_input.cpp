@@ -174,6 +174,14 @@ std::pair<std::vector<swInsertPartInformation>, bool> swView::GetMouseInsertPart
 		swMatrix44 WorldMatrix = ObjectRayTest.PartRayTest.Transform;
 		WorldMatrix.SetTranslation(Position);
 
+		// seat on a connection, turned from how the part was held
+		swMatrix44 HeldMatrix = MovingPart && MovingPart == mMouseDownPart ? mMouseDownTransform : WorldMatrix;
+		HeldMatrix.SetTranslation(Position);
+		swConnectionSnap Snap;
+
+		if (FindConnectionSnap(PartData.Get(), HeldMatrix, ObjectRayTest, Snap))
+			return { { swInsertPartInformation{ PartData.Get(), Snap.Transform, gMainWindow->GetInsertColorIndex() } }, true };
+
 		return { { swInsertPartInformation{ PartData.Get(), WorldMatrix, gMainWindow->GetInsertColorIndex() } }, false };
 	}
 
@@ -1200,8 +1208,14 @@ void swView::StopTracking(bool Accept)
 
 	case swTool::Move:
 	case swTool::Rotate:
+	{
+		// a free move can end on a pin
+		swPart* SnapJointPart = Accept && Tool == swTool::Move && mTrackTool == swTrackTool::MoveXYZ ? mMouseDownPart : nullptr;
+
 		ActiveModel->EndMouseTool(Tool, this, Accept);
+		SetConnectionSnapJoint(SnapJointPart);
 		break;
+	}
 
 	case swTool::Erase:
 	case swTool::Paint:
@@ -1811,6 +1825,64 @@ void swView::UpdateConnectionMarkers()
 
 	mConnectionMarkers = std::move(Markers);
 	Redraw();
+}
+
+// use to seat a part near the pointer
+bool swView::FindConnectionSnap(const swPartData* PartData, const swMatrix44& Transform, const swObjectRayTest& ObjectRayTest, swConnectionSnap& Snap) const
+{
+	const swPreferences& Preferences = swGetPreferences();
+	const swObject* Object = ObjectRayTest.ObjectSection.Object;
+
+	// alt moves freely
+	if (!PartData || !Object || !Object->IsPart() || !Preferences.mConnectionSnap || !Preferences.mShadowLibraryEnabled || !swShadowLibrary::IsLoaded() || (mMouseModifiers & Qt::AltModifier))
+		return false;
+
+	swConnectionShapes MovingShapes;
+
+	if (PartData->IsModel())
+	{
+		for (const std::unique_ptr<swPart>& SubModelPart : PartData->GetModel()->GetParts())
+			if (SubModelPart->IsVisibleInSubModel())
+				swModel::AddPartShapes(SubModelPart.get(), swMatrix44Identity(), MovingShapes);
+	}
+	else if (const std::vector<swConnectionCylinder>& Cylinders = swShadowLibrary::GetCylinders(PartData->mFileName); !Cylinders.empty())
+		MovingShapes.emplace_back(&Cylinders, swMatrix44Identity());
+
+	swConnectionShapes TargetShapes;
+	swModel::AddPartShapes(static_cast<const swPart*>(Object), swMatrix44Identity(), TargetShapes);
+
+	if (MovingShapes.empty() || TargetShapes.empty())
+		return false;
+
+	const swVector3 Point = ObjectRayTest.Start + swNormalize(ObjectRayTest.End - ObjectRayTest.Start) * ObjectRayTest.Distance;
+
+	// a 2x2 stud area around the pointer
+	return swConnectivity::FindSnap(MovingShapes, Transform, TargetShapes, Point, 20.0f, Snap);
+}
+
+// use to hinge a submodel seated on a pin
+void swView::SetConnectionSnapJoint(swPart* Part)
+{
+	swModel* ActiveModel = GetActiveModel();
+
+	if (!ActiveModel || !Part || !Part->mPartData->IsModel() || !swGetPreferences().mConnectionSnapJoint)
+		return;
+
+	swConnectionSnap Snap;
+
+	if (!FindConnectionSnap(Part->mPartData.Get(), Part->mModelWorld, RayTest(true, true), Snap) || !Snap.Hinge)
+		return;
+
+	// only where the part already sits
+	if (swLength(Snap.Transform.GetTranslation() - Part->mModelWorld.GetTranslation()) > 0.5f || !swMatrix33Similar(swMatrix33(Snap.Transform), swMatrix33(Part->mModelWorld)))
+		return;
+
+	swPartJoint Joint;
+	Joint.Type = swJointType::Hinge;
+	Joint.Pivot = Snap.Frame.GetTranslation();
+	Joint.Axis = swNormalize(swMultiply30(swVector3(0.0f, 0.0f, 1.0f), Snap.Frame));
+
+	ActiveModel->AddJointAction(Part, Joint);
 }
 
 void swView::OnMouseMove()

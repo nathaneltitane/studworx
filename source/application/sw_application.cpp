@@ -80,6 +80,8 @@ void swPreferences::LoadDefaults()
 	mHoverOutline = swGetProfileInteger(SW_PROFILE_HOVER_OUTLINE);
 	mHoverOutlineColor = swGetProfileUnsignedInteger(SW_PROFILE_HOVER_OUTLINE_COLOR);
 	mConnectionPoints = swGetProfileInteger(SW_PROFILE_CONNECTION_POINTS);
+	mConnectionSnap = swGetProfileInteger(SW_PROFILE_CONNECTION_SNAP);
+	mConnectionSnapJoint = swGetProfileInteger(SW_PROFILE_CONNECTION_SNAP_JOINT);
 	mHighlightNewParts = swGetProfileInteger(SW_PROFILE_HIGHLIGHT_NEW_PARTS);
 	mHighlightNewPartsColor = swClampStepColorAlpha(swGetProfileUnsignedInteger(SW_PROFILE_HIGHLIGHT_NEW_PARTS_COLOR));
 	mDrawGridStuds = swGetProfileInteger(SW_PROFILE_GRID_STUDS);
@@ -209,6 +211,8 @@ void swPreferences::SaveDefaults()
 	swSetProfileInteger(SW_PROFILE_HOVER_OUTLINE, mHoverOutline);
 	swSetProfileUnsignedInteger(SW_PROFILE_HOVER_OUTLINE_COLOR, mHoverOutlineColor);
 	swSetProfileInteger(SW_PROFILE_CONNECTION_POINTS, mConnectionPoints);
+	swSetProfileInteger(SW_PROFILE_CONNECTION_SNAP, mConnectionSnap);
+	swSetProfileInteger(SW_PROFILE_CONNECTION_SNAP_JOINT, mConnectionSnapJoint);
 	swSetProfileInteger(SW_PROFILE_HIGHLIGHT_NEW_PARTS, mHighlightNewParts);
 	swSetProfileUnsignedInteger(SW_PROFILE_HIGHLIGHT_NEW_PARTS_COLOR, mHighlightNewPartsColor);
 	swSetProfileInteger(SW_PROFILE_GRID_STUDS, mDrawGridStuds);

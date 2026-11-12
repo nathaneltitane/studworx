@@ -1047,6 +1047,15 @@ void swMainWindow::UpdateShadowLibraryAction()
 	mActions[SW_EDIT_TOGGLE_SHADOW_LIBRARY]->setChecked(swGetPreferences().mShadowLibraryEnabled);
 	mActions[SW_EDIT_TOGGLE_SHADOW_LIBRARY]->setEnabled(swShadowLibrary::IsLoaded());
 
+	// connection snapping follows part connections
+	const swPreferences& Preferences = swGetPreferences();
+	const bool Connections = Preferences.mShadowLibraryEnabled && swShadowLibrary::IsLoaded();
+
+	mActions[SW_EDIT_SNAP_CONNECTION_TOGGLE]->setChecked(Preferences.mConnectionSnap);
+	mActions[SW_EDIT_SNAP_CONNECTION_TOGGLE]->setEnabled(Connections);
+	mActions[SW_EDIT_SNAP_CONNECTION_JOINT_TOGGLE]->setChecked(Preferences.mConnectionSnapJoint);
+	mActions[SW_EDIT_SNAP_CONNECTION_JOINT_TOGGLE]->setEnabled(Connections && Preferences.mConnectionSnap);
+
 	int Flags = 0;
 	std::vector<swObject*> Selection;
 	swObject* Focus = nullptr;

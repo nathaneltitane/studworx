@@ -315,3 +315,172 @@ std::vector<swConnectionMarker> swConnectivity::GetMarkers(const swConnectionSha
 
 	return Markers;
 }
+
+// use to square a frame
+static void swGetFrameAxes(const swMatrix44& Frame, swVector3& X, swVector3& Y, swVector3& Z)
+{
+	Z = swNormalize(swMultiply30(swVector3(0.0f, 0.0f, 1.0f), Frame));
+	X = swMultiply30(swVector3(1.0f, 0.0f, 0.0f), Frame);
+	X = swNormalize(X - Z * swDot(X, Z));
+
+	// mirrored frames keep their hand
+	const float Hand = swDot(swMultiply30(swVector3(0.0f, 1.0f, 0.0f), Frame), swCross(Z, X)) < 0.0f ? -1.0f : 1.0f;
+	Y = swCross(Z, X) * Hand;
+}
+
+// use to turn a vector about an axis
+static swVector3 swRotateAbout(const swVector3& Vector, const swVector3& Axis, float Radians)
+{
+	const float Cosine = cosf(Radians);
+
+	return Vector * Cosine + swCross(Axis, Vector) * sinf(Radians) + Axis * (swDot(Axis, Vector) * (1.0f - Cosine));
+}
+
+// use to seat a dragged part
+bool swConnectivity::FindSnap(const swConnectionShapes& MovingShapes, const swMatrix44& MovingTransform, const swConnectionShapes& TargetShapes, const swVector3& Point, float Range, swConnectionSnap& Snap)
+{
+	// a quarter turn weighs a stud
+	const float TurnWeight = 20.0f / (SW_PI / 2.0f);
+	const float QuarterTurn = SW_PI / 2.0f;
+	float BestScore = FLT_MAX;
+
+	Snap.Cylinder = nullptr;
+
+	for (const auto& [TargetCylinders, TargetTransform] : TargetShapes)
+	{
+		if (!TargetCylinders)
+			continue;
+
+		for (const swConnectionCylinder& Target : *TargetCylinders)
+		{
+			const swMatrix44 TargetFrame = swMultiply(swMatrix44LDrawToStudWorx(Target.Transform), TargetTransform);
+			const swVector3 TargetPosition = TargetFrame.GetTranslation();
+			const float Reach = swLength(TargetPosition - Point);
+
+			if (Reach > Range)
+				continue;
+
+			swVector3 TargetX, TargetY, TargetZ;
+			swGetFrameAxes(TargetFrame, TargetX, TargetY, TargetZ);
+			const swVector3 TargetSide = swCross(TargetZ, TargetX);
+
+			for (const auto& [MovingCylinders, MovingShapeTransform] : MovingShapes)
+			{
+				if (!MovingCylinders)
+					continue;
+
+				for (const swConnectionCylinder& Moving : *MovingCylinders)
+				{
+					if (!AreCompatible(Moving, Target))
+						continue;
+
+					const bool IsMale = Moving.Gender == swConnectionGender::Male;
+					const std::vector<std::pair<float, float>> InsertRanges = IsMale ? GetInsertRanges(Moving, Target) : GetInsertRanges(Target, Moving);
+
+					if (InsertRanges.empty())
+						continue;
+
+					const swMatrix44 LocalFrame = swMultiply(swMatrix44LDrawToStudWorx(Moving.Transform), MovingShapeTransform);
+					const swMatrix44 Frame = swMultiply(LocalFrame, MovingTransform);
+					const swVector3 Position = Frame.GetTranslation();
+					swVector3 X, Y, Z;
+					swGetFrameAxes(Frame, X, Y, Z);
+
+					// the shortest turn onto the target axis
+					const swVector3 TurnAxis = swCross(Z, TargetZ);
+					const float TurnSine = swLength(TurnAxis);
+					const float TurnAngle = atan2f(TurnSine, swDot(Z, TargetZ));
+					swVector3 NewX = X;
+
+					if (TurnSine > 0.0001f)
+						NewX = swRotateAbout(X, TurnAxis / TurnSine, TurnAngle);
+					else if (TurnAngle > QuarterTurn)
+						NewX = -X;
+
+					// the twist in quarter turns
+					const float Twist = atan2f(swDot(NewX, TargetSide), swDot(NewX, TargetX));
+					const float SquareTwist = roundf(Twist / QuarterTurn) * QuarterTurn;
+					NewX = TargetX * cosf(SquareTwist) + TargetSide * sinf(SquareTwist);
+
+					const float Hand = swDot(Y, swCross(Z, X)) < 0.0f ? -1.0f : 1.0f;
+					const swVector3 NewY = swCross(TargetZ, NewX) * Hand;
+
+					// the depth in the nearest insert range
+					const float Along = swDot(Position - TargetPosition, TargetZ);
+					const float MaleOffset = IsMale ? Along : -Along;
+					float SeatOffset = InsertRanges.front().first;
+
+					for (const std::pair<float, float>& InsertRange : InsertRanges)
+					{
+						const float Clamped = std::clamp(MaleOffset, InsertRange.first, InsertRange.second);
+
+						if (fabsf(Clamped - MaleOffset) < fabsf(SeatOffset - MaleOffset))
+							SeatOffset = Clamped;
+					}
+
+					const swVector3 SeatPosition = TargetPosition + TargetZ * (IsMale ? SeatOffset : -SeatOffset);
+					const float Trace = swDot(NewX, X) + swDot(NewY, Y) + swDot(TargetZ, Z);
+					const float Turn = acosf(std::clamp((Trace - 1.0f) / 2.0f, -1.0f, 1.0f));
+					const float Score = Reach + swLength(SeatPosition - Position) / 2.0f + Turn * TurnWeight;
+
+					if (Score >= BestScore)
+						continue;
+
+					BestScore = Score;
+
+					// turn about the shape, then seat it
+					const swMatrix33 Delta = swMultiply(swMatrix33Transpose(swMatrix33(X, Y, Z)), swMatrix33(NewX, NewY, TargetZ));
+					const swVector3 Origin = swMultiply(MovingTransform.GetTranslation() - Position, Delta) + SeatPosition;
+
+					Snap.Transform = swMatrix44(swMultiply(swMatrix33(MovingTransform), Delta), Origin);
+					Snap.Frame = LocalFrame;
+					Snap.Cylinder = &Moving;
+				}
+			}
+		}
+	}
+
+	if (!Snap.Cylinder)
+		return false;
+
+	// one round axis turns as a hinge
+	const auto IsRound = [](const swConnectionCylinder& Cylinder)
+	{
+		return !Cylinder.Sections.empty() && std::all_of(Cylinder.Sections.begin(), Cylinder.Sections.end(), [](const swConnectionSection& Section) { return Section.Shape == swConnectionShape::Round || swIsExtension(Section); });
+	};
+
+	const swMatrix44 SeatFrame = swMultiply(Snap.Frame, Snap.Transform);
+	const swVector3 SeatAxis = swNormalize(swMultiply30(swVector3(0.0f, 0.0f, 1.0f), SeatFrame));
+	Snap.Hinge = true;
+
+	for (const auto& [MovingCylinders, MovingShapeTransform] : MovingShapes)
+	{
+		if (!MovingCylinders)
+			continue;
+
+		for (const swConnectionCylinder& Moving : *MovingCylinders)
+		{
+			const swMatrix44 Frame = swMultiply(swMatrix44LDrawToStudWorx(Moving.Transform), swMultiply(MovingShapeTransform, Snap.Transform));
+
+			for (const auto& [TargetCylinders, TargetTransform] : TargetShapes)
+			{
+				if (!TargetCylinders)
+					continue;
+
+				for (const swConnectionCylinder& Target : *TargetCylinders)
+				{
+					if (!AreCompatible(Moving, Target) || !IsSeated(Moving, Frame, Target, swMultiply(swMatrix44LDrawToStudWorx(Target.Transform), TargetTransform)))
+						continue;
+
+					const swVector3 Offset = Frame.GetTranslation() - SeatFrame.GetTranslation();
+					const bool OnAxis = fabsf(swDot(swNormalize(swMultiply30(swVector3(0.0f, 0.0f, 1.0f), Frame)), SeatAxis)) > 0.99f && swLength(Offset - SeatAxis * swDot(Offset, SeatAxis)) < gSeatTolerance;
+
+					if (!OnAxis || !IsRound(Moving) || !IsRound(Target))
+						Snap.Hinge = false;
+				}
+			}
+		}
+	}
+
+	return true;
+}

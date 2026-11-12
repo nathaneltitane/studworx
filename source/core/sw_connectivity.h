@@ -116,6 +116,20 @@ struct swConnectionMarker
 	}
 };
 
+// A seat found for a moving part.
+struct swConnectionSnap
+{
+	// The new part world.
+	swMatrix44 Transform;
+
+	// The seated moving shape, part local.
+	swMatrix44 Frame;
+	const swConnectionCylinder* Cylinder = nullptr;
+
+	// Every seat is round and on one axis.
+	bool Hinge = false;
+};
+
 // How connection shapes fit together.
 class swConnectivity
 {
@@ -134,6 +148,9 @@ public:
 
 	// Grows Box to hold the shapes.
 	static void AddToBoundingBox(const std::vector<swConnectionCylinder>& Cylinders, const swMatrix44& Transform, swBoundingBox& Box);
+
+	// Seats a part shape on the target shape nearest Point, within Range, turned to fit in quarter turns.
+	static bool FindSnap(const swConnectionShapes& MovingShapes, const swMatrix44& MovingTransform, const swConnectionShapes& TargetShapes, const swVector3& Point, float Range, swConnectionSnap& Snap);
 
 	// The offsets where a male shape fits.
 	static std::vector<std::pair<float, float>> GetInsertRanges(const swConnectionCylinder& Male, const swConnectionCylinder& Female);

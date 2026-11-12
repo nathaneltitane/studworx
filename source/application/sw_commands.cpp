@@ -426,6 +426,24 @@ const swCommand gCommands[] =
 		"Ctrl+Alt+Shift+C"
 	},
 
+	// SW_EDIT_SNAP_CONNECTION_TOGGLE
+	{
+		QT_TRANSLATE_NOOP("Action", "Edit.Snap.ConnectionToggle"),
+		QT_TRANSLATE_NOOP("Menu", "Snap to Connections"),
+		QT_TRANSLATE_NOOP("Status", "Toggle seating moved and inserted parts on nearby connections"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Snap to Connections</b></p><p>While a part is dragged or inserted over another part, seat it on the nearest matching stud, anti stud, hole, axle or bar under the pointer, turned in quarter turns to fit. Hold Alt for a free move. Works while Part Connections is on.</p>"),
+		""
+	},
+
+	// SW_EDIT_SNAP_CONNECTION_JOINT_TOGGLE
+	{
+		QT_TRANSLATE_NOOP("Action", "Edit.Snap.ConnectionJointToggle"),
+		QT_TRANSLATE_NOOP("Menu", "Joint on Snap"),
+		QT_TRANSLATE_NOOP("Status", "Toggle setting a joint where a dragged submodel snaps on a round connection"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joint on Snap</b></p><p>When a dragged submodel snaps onto another part through round connections on a single axis, like a pin in a hole or a bar in a clip, set a hinge joint on it there, ready to turn. Works while Snap to Connections is on.</p>"),
+		""
+	},
+
 	// SW_EDIT_SELECT_BY_NAME
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.SelectByName"),

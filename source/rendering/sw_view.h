@@ -315,6 +315,8 @@ public:
 	void OnMouseLeave();
 	void UpdateHoverOutline();
 	void UpdateConnectionMarkers();
+	bool FindConnectionSnap(const swPartData* PartData, const swMatrix44& Transform, const swObjectRayTest& ObjectRayTest, swConnectionSnap& Snap) const;
+	void SetConnectionSnapJoint(swPart* Part);
 	void OnMouseWheel(float Direction);
 	void BeginDrag(swDragState DragState);
 	void EndDrag(bool Accept);
