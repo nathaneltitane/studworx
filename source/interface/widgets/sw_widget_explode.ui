@@ -53,30 +53,30 @@
       </widget>
      </item>
      <item row="1" column="1">
-      <widget class="QSpinBox" name="spreadX">
+      <widget class="swRangeDoubleSpinBox" name="spreadX">
        <property name="toolTip">
-        <string>Distance from the anchor part along X, as a percentage of the current distance.</string>
+        <string>Distance from the anchor part along X, as a multiple of the current distance.</string>
        </property>
        <property name="whatsThis">
-        <string>&lt;p&gt;&lt;b&gt;X Spread&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Scales how far each part sits from the anchor part along the X axis, measured between their centers. 100% leaves the parts in place, 200% doubles the distance. Set X and Z to 100% and Y higher to spread the parts only vertically.&lt;/p&gt;</string>
+        <string>&lt;p&gt;&lt;b&gt;X Spread&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Scales how far each part sits from the anchor part along the X axis, measured between their centers. 1.0 leaves the parts in place, 2.0 doubles the distance. Set X and Z to 1.0 and Y higher to spread the parts only vertically.&lt;/p&gt;</string>
        </property>
        <property name="accessibleName">
         <string>X spread</string>
        </property>
-       <property name="suffix">
-        <string> %</string>
+       <property name="decimals">
+        <number>1</number>
        </property>
        <property name="minimum">
-        <number>100</number>
+        <double>1.000000</double>
        </property>
        <property name="maximum">
-        <number>1000</number>
+        <double>10.000000</double>
        </property>
        <property name="singleStep">
-        <number>10</number>
+        <double>0.500000</double>
        </property>
        <property name="value">
-        <number>200</number>
+        <double>2.000000</double>
        </property>
       </widget>
      </item>
@@ -91,30 +91,30 @@
       </widget>
      </item>
      <item row="2" column="1">
-      <widget class="QSpinBox" name="spreadY">
+      <widget class="swRangeDoubleSpinBox" name="spreadY">
        <property name="toolTip">
-        <string>Distance from the anchor part along Y, as a percentage of the current distance.</string>
+        <string>Distance from the anchor part along Y, as a multiple of the current distance.</string>
        </property>
        <property name="whatsThis">
-        <string>&lt;p&gt;&lt;b&gt;Y Spread&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Scales how far each part sits from the anchor part along the Y axis, measured between their centers. 100% leaves the parts in place, 200% doubles the distance. Set X and Z to 100% and Y higher to spread the parts only vertically.&lt;/p&gt;</string>
+        <string>&lt;p&gt;&lt;b&gt;Y Spread&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Scales how far each part sits from the anchor part along the Y axis, measured between their centers. 1.0 leaves the parts in place, 2.0 doubles the distance. Set X and Z to 1.0 and Y higher to spread the parts only vertically.&lt;/p&gt;</string>
        </property>
        <property name="accessibleName">
         <string>Y spread</string>
        </property>
-       <property name="suffix">
-        <string> %</string>
+       <property name="decimals">
+        <number>1</number>
        </property>
        <property name="minimum">
-        <number>100</number>
+        <double>1.000000</double>
        </property>
        <property name="maximum">
-        <number>1000</number>
+        <double>10.000000</double>
        </property>
        <property name="singleStep">
-        <number>10</number>
+        <double>0.500000</double>
        </property>
        <property name="value">
-        <number>200</number>
+        <double>2.000000</double>
        </property>
       </widget>
      </item>
@@ -129,30 +129,30 @@
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QSpinBox" name="spreadZ">
+      <widget class="swRangeDoubleSpinBox" name="spreadZ">
        <property name="toolTip">
-        <string>Distance from the anchor part along Z, as a percentage of the current distance.</string>
+        <string>Distance from the anchor part along Z, as a multiple of the current distance.</string>
        </property>
        <property name="whatsThis">
-        <string>&lt;p&gt;&lt;b&gt;Z Spread&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Scales how far each part sits from the anchor part along the Z axis, measured between their centers. 100% leaves the parts in place, 200% doubles the distance. Set X and Z to 100% and Y higher to spread the parts only vertically.&lt;/p&gt;</string>
+        <string>&lt;p&gt;&lt;b&gt;Z Spread&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Scales how far each part sits from the anchor part along the Z axis, measured between their centers. 1.0 leaves the parts in place, 2.0 doubles the distance. Set X and Z to 1.0 and Y higher to spread the parts only vertically.&lt;/p&gt;</string>
        </property>
        <property name="accessibleName">
         <string>Z spread</string>
        </property>
-       <property name="suffix">
-        <string> %</string>
+       <property name="decimals">
+        <number>1</number>
        </property>
        <property name="minimum">
-        <number>100</number>
+        <double>1.000000</double>
        </property>
        <property name="maximum">
-        <number>1000</number>
+        <double>10.000000</double>
        </property>
        <property name="singleStep">
-        <number>10</number>
+        <double>0.500000</double>
        </property>
        <property name="value">
-        <number>200</number>
+        <double>2.000000</double>
        </property>
       </widget>
      </item>
@@ -240,6 +240,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>swRangeDoubleSpinBox</class>
+   <extends>QDoubleSpinBox</extends>
+   <header>sw_widget_spin_box.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

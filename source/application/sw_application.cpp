@@ -52,14 +52,13 @@ void swPreferences::LoadDefaults()
 	mAxisIconLabels = swGetProfileInteger(SW_PROFILE_AXIS_ICON_LABELS);
 	mAxisIconNegative = swGetProfileInteger(SW_PROFILE_AXIS_ICON_NEGATIVE);
 	mAxisIconCubeOutline = swGetProfileInteger(SW_PROFILE_AXIS_ICON_CUBE_OUTLINE);
-	mAxisIconCubeOutlineAlpha = swGetProfileInteger(SW_PROFILE_AXIS_ICON_CUBE_OUTLINE_ALPHA);
+	mAxisIconCubeOutlineColor = swGetProfileUnsignedInteger(SW_PROFILE_AXIS_ICON_CUBE_OUTLINE_COLOR);
 	mTextColor = swGetProfileUnsignedInteger(SW_PROFILE_TEXT_COLOR);
 	mTextHaloColor = swGetProfileUnsignedInteger(SW_PROFILE_TEXT_HALO_COLOR);
 	mMarqueeBorderColor = swGetProfileUnsignedInteger(SW_PROFILE_MARQUEE_BORDER_COLOR);
 	mMarqueeFillColor = swGetProfileUnsignedInteger(SW_PROFILE_MARQUEE_FILL_COLOR);
 	mOverlayColor = swGetProfileUnsignedInteger(SW_PROFILE_OVERLAY_COLOR);
 	mCutawayShadeColor = swGetProfileUnsignedInteger(SW_PROFILE_CUTAWAY_SHADE_COLOR);
-	mCutawayShadeAlpha = swGetProfileInteger(SW_PROFILE_CUTAWAY_SHADE_ALPHA);
 	mCutawayEdges = swGetProfileInteger(SW_PROFILE_CUTAWAY_EDGES);
 	mActiveViewColor = swGetProfileUnsignedInteger(SW_PROFILE_ACTIVE_VIEW_COLOR);
 	mInactiveViewColor = swGetProfileUnsignedInteger(SW_PROFILE_INACTIVE_VIEW_COLOR);
@@ -95,6 +94,8 @@ void swPreferences::LoadDefaults()
 	mDrawGridAxisX = swGetProfileInteger(SW_PROFILE_GRID_AXIS_X);
 	mDrawGridAxisY = swGetProfileInteger(SW_PROFILE_GRID_AXIS_Y);
 	mDrawGridAxisZ = swGetProfileInteger(SW_PROFILE_GRID_AXIS_Z);
+	mGridMargin = swGetProfileInteger(SW_PROFILE_GRID_MARGIN);
+	mGridHeightMargin = swGetProfileInteger(SW_PROFILE_GRID_HEIGHT_MARGIN);
 	mViewCubeEnabled = swGetProfileInteger(SW_PROFILE_VIEW_CUBE_ENABLED);
 	mViewCubeLocation = swGetProfileViewCubeLocation();
 	mViewCubeSize = swSnapSize(swGetProfileInteger(SW_PROFILE_VIEW_CUBE_SIZE), SW_VIEW_CUBE_SIZES);
@@ -177,7 +178,7 @@ void swPreferences::SaveDefaults()
 	swSetProfileInteger(SW_PROFILE_AXIS_ICON_LABELS, mAxisIconLabels);
 	swSetProfileInteger(SW_PROFILE_AXIS_ICON_NEGATIVE, mAxisIconNegative);
 	swSetProfileInteger(SW_PROFILE_AXIS_ICON_CUBE_OUTLINE, mAxisIconCubeOutline);
-	swSetProfileInteger(SW_PROFILE_AXIS_ICON_CUBE_OUTLINE_ALPHA, mAxisIconCubeOutlineAlpha);
+	swSetProfileUnsignedInteger(SW_PROFILE_AXIS_ICON_CUBE_OUTLINE_COLOR, mAxisIconCubeOutlineColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_TEXT_COLOR, mTextColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_TEXT_HALO_COLOR, mTextHaloColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_BACKGROUND_COLOR, mBackgroundSolidColor);
@@ -185,7 +186,6 @@ void swPreferences::SaveDefaults()
 	swSetProfileUnsignedInteger(SW_PROFILE_MARQUEE_FILL_COLOR, mMarqueeFillColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_OVERLAY_COLOR, mOverlayColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_CUTAWAY_SHADE_COLOR, mCutawayShadeColor);
-	swSetProfileInteger(SW_PROFILE_CUTAWAY_SHADE_ALPHA, mCutawayShadeAlpha);
 	swSetProfileInteger(SW_PROFILE_CUTAWAY_EDGES, mCutawayEdges);
 	swSetProfileUnsignedInteger(SW_PROFILE_ACTIVE_VIEW_COLOR, mActiveViewColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_INACTIVE_VIEW_COLOR, mInactiveViewColor);
@@ -221,6 +221,8 @@ void swPreferences::SaveDefaults()
 	swSetProfileInteger(SW_PROFILE_GRID_AXIS_X, mDrawGridAxisX);
 	swSetProfileInteger(SW_PROFILE_GRID_AXIS_Y, mDrawGridAxisY);
 	swSetProfileInteger(SW_PROFILE_GRID_AXIS_Z, mDrawGridAxisZ);
+	swSetProfileInteger(SW_PROFILE_GRID_MARGIN, mGridMargin);
+	swSetProfileInteger(SW_PROFILE_GRID_HEIGHT_MARGIN, mGridHeightMargin);
 	swSetProfileInteger(SW_PROFILE_VIEW_CUBE_ENABLED, mViewCubeEnabled);
 	swSetProfileViewCubeLocation(mViewCubeLocation);
 	swSetProfileInteger(SW_PROFILE_VIEW_CUBE_SIZE, mViewCubeSize);
@@ -343,6 +345,7 @@ void swPreferences::SetInterfaceColors(swColorTheme ColorTheme)
 		mGridLineColor = swGetProfileDefaultUnsignedInteger(SW_PROFILE_GRID_LINE_COLOR);
 		mViewCubeColor = swGetProfileDefaultUnsignedInteger(SW_PROFILE_VIEW_CUBE_COLOR);
 		mViewCubeTextColor = swGetProfileDefaultUnsignedInteger(SW_PROFILE_VIEW_CUBE_TEXT_COLOR);
+		mAxisIconCubeOutlineColor = swGetProfileDefaultUnsignedInteger(SW_PROFILE_AXIS_ICON_CUBE_OUTLINE_COLOR);
 		mViewCubeHighlightColor = swGetProfileDefaultUnsignedInteger(SW_PROFILE_VIEW_CUBE_HIGHLIGHT_COLOR);
 	}
 	else
@@ -356,6 +359,7 @@ void swPreferences::SetInterfaceColors(swColorTheme ColorTheme)
 		mGridLineColor = SW_RGBA(0, 0, 0, 255);
 		mViewCubeColor = SW_RGBA(248, 250, 252, 255);
 		mViewCubeTextColor = SW_RGBA(24, 33, 43, 255);
+		mAxisIconCubeOutlineColor = SW_RGBA(24, 33, 43, 128);
 		mViewCubeHighlightColor = SW_RGBA(41, 128, 185, 255);
 	}
 }

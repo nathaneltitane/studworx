@@ -2,6 +2,7 @@
 #include "sw_tests.h"
 #include "sw_commands.h"
 #include "sw_profile.h"
+#include "sw_math.h"
 
 // Writes inside a batch must stay readable at once and reach the settings file only when the batch
 // ends, so Preferences saves the file once instead of once per key.
@@ -83,9 +84,24 @@ void swTests::ProfileWritesEveryKey()
 	QSettings::setPath(QSettings::IniFormat, QSettings::UserScope, Directory.path());
 
 	swSetProfileInteger(SW_PROFILE_ANTIALIASING_SAMPLES, 8);
+
+	// a retired alpha key folds into its color
+	QSettings().setValue(QLatin1String("Instructions/ElementMarginAlpha"), 50);
+	QSettings().setValue(QLatin1String("Settings/ViewCubeTextColor"), SW_RGBA(10, 20, 30, 255));
+	QSettings().setValue(QLatin1String("Settings/AxisIconCubeOutlineAlpha"), 100);
+	QSettings().setValue(QLatin1String("Settings/CutawayShadeColor"), SW_RGBA(40, 50, 60, 0));
+	QSettings().setValue(QLatin1String("Settings/CutawayShadeAlpha"), 100);
+
 	swProfileWriteMissing();
 
 	QSettings Settings;
+
+	QVERIFY(!Settings.contains(QLatin1String("Instructions/ElementMarginAlpha")));
+	QVERIFY(!Settings.contains(QLatin1String("Settings/AxisIconCubeOutlineAlpha")));
+	QCOMPARE(Settings.value(QLatin1String("Settings/AxisIconCubeOutlineColor")).toUInt(), SW_RGBA(10, 20, 30, 255));
+	QVERIFY(!Settings.contains(QLatin1String("Settings/CutawayShadeAlpha")));
+	QCOMPARE(Settings.value(QLatin1String("Settings/CutawayShadeColor")).toUInt(), SW_RGBA(40, 50, 60, 255));
+	QCOMPARE(static_cast<int>(SW_RGBA_ALPHA(Settings.value(QLatin1String("Instructions/ElementMarginColor")).toUInt())), 128);
 
 	QCOMPARE(Settings.allKeys().size(), static_cast<int>(SW_PROFILE_KEY_COUNT));
 	QCOMPARE(Settings.value(QLatin1String("Settings/AASamples")).toInt(), 8);

@@ -4,7 +4,28 @@
   <summary>2026-11-11</summary>
 
   - Views: the X, Y and Z Axis Line toggles draw their lines on their own, and the Grid Origin Lines setting that silently hid them is gone
-  - Views: the negative Z axis line follows the height grids when they stand behind the model and only shows once the model has parts
+  - Views: the negative Z axis line follows the height grids when they stand behind the model and only shows once parts go below the base grid, like the X and Y lines growing with the model
+  - Views: the base grid starts at 2 × 2 studs and the height grids one brick high, and the grids and axis lines grow stud by stud and plate by plate past the parts, with a Grid Margin in studs and a Height Margin in plates in Preferences, Views, Base Grid
+  - Preferences: the Views page gathers the X, Y and Z axis line and negative axes settings in their own Axis Lines group above Base Grid, which keeps the grid settings
+  - Views: Split Horizontal, Split Vertical and Remove View no longer crash when the model view doesn't have keyboard focus
+  - Preferences: Rendering groups its settings into Display with Anti-aliasing, Mesh Detail Control and a Mesh Level of Detail slider with its value on the left, Studs with Contrast Settings at full width under Stud Style, Shading with the shading mode, lighting style and edge lines, Colors with the edge color settings, and Steps and Highlighting
+  - Model view: Mesh Detail Control joins Edge Lines and Conditional Lines in the options menu of the model view
+  - Preferences: Rendering, Steps and Highlighting lists its toggles first, then Fade on Joint Move and Rotate, Highlight Style and Outline Width, and its colors moved to Interface, Steps and Highlighting
+  - Preferences: General shows Author right under Online Services
+  - Preferences: the rows of Editing, Files, Base Grid, Parts, Preview and Minifigure Builder follow a steadier order, and Base Grid draws its lines with Draw Lines and Draw Lines Every, from 1 to 100 studs
+  - Preferences: Views, Cutaway starts with Cut Edges, and the cutaway shade color moved to Interface
+  - Preferences: the cutaway shade, axis icon outline and instructions page colors set their alpha in the color picker instead of a separate slider, and saved settings keep their look
+  - Preferences: Interface groups the colors from the farthest back to the closest, Interface, Grid, Objects, Steps and Highlighting, Flexible Parts, Axes, View Cube and Instructions, and the background joins the Interface group, whose rows run from the background to the text
+  - Preferences: the page margin and grid line colors of the Instructions page moved to Interface, Instructions as Page Margins, Page Grid Primary Lines and Page Grid Secondary Lines, and the help of the General, Rendering, Views and Interface pages names their new groups
+  - Explode: the X, Y and Z spreads are multiples from 1.0 to 10.0 instead of percentages, 1.0 leaving the parts in place and 2.0 doubling their distance, and Explode is greyed out while every spread is 1.0
+  - Site: the Panels section lists the Explode panel with its own image
+  - Interface: group titles such as Base Grid are no longer cut short at the right with some fonts
+  - Samples: sample-train-tracks.ldr, an S-curve of 9V curved track joined at its train track connections
+  - Site: the Interface, Steps, Rendering, Panels, Views, Tools, Modeling (including Train Track) and Models galleries show the new grid and axis lines in fresh captures, and the Preferences Views page shows the Axis Lines group
+  - Colors: the color picker popup opens wide enough for 16 color tiles a row instead of a narrow column
+  - Interface: check boxes in lists such as Part Categories and Context Menu stand out from the list background on the dark theme
+  - Instructions: the Add Notice and Edit Notice dialogs label their box Notice Text, and the Context Menu submenu dialogs label theirs Name, without a trailing colon
+  - Site: every image retaken from the installed build, with new images for the Cameras, Status Bar, Find, Group, Selection Mode, Snap Z, Transform, Visibility, Submodel, Tab, Keyframes, Timeline, Colors, Joints, Properties, Parts and Instructions editor menus, the Light Color picker, Edit Palettes, Edit Category, Add Notice and Page Setup dialogs, and recent files shown from the installed samples
   - Keyframes: the rewind, play, pause, stop and forward buttons are painted in the color theme, so they no longer stay black on a dark interface
   - Interface: floating panels keep the StudWorx title bar with its painted float and close buttons on every system, instead of the small Windows tool window frame
   - Keyframes: Add Keys is a square icon button like its toolbar button, and every panel button runs the same command as the matching toolbar button
@@ -248,14 +269,14 @@
 
   - Cutaway: cut into the model around a clicked face to see inside it, with a cube, sphere or cylinder shaped cut - from View > Cutaway, the model is never changed
   - Cutaway: click for the default size or drag to size it, move and resize it with the gizmo knobs, push in and pull out by one plate, Esc leaves it
-  - Cutaway: faces lined with a light shade, its color and alpha set in Preferences, the alpha reads 0 to 1 over 95% to 85% transparency so the shade never disappears
+  - Cutaway: faces lined with a light shade, its color and alpha set in Preferences, the alpha spread over 95% to 85% transparency so the shade never disappears
   - Cutaway: cut parts show solid surfaces in their own color where the cut passes through them, like a sawn brick instead of a hollow shell
   - Projection: new model views and tabs open with the last chosen projection, set in Preferences to change only the active view or all model views at once
   - Instructions: Model Projection in the Document settings renders the step and cover models in perspective or orthographic, whatever the model view shows
   - Turntable: after an idle time the model turns full screen in perspective around the X, Y or Z axis set in Preferences on the background color, any input ends it
   - Preferences: Views page grouped into Model, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder without repeating View or Preview, every slider shows its value on its left and reaches the right edge
   - Preferences: units inside their boxes and named by the count (1 stud, 6 studs), turntable idle and turn durations in seconds, grid line spacing in a spin box
-  - Preferences: the Files group sets the Author of new models, "Author" until it is set
+  - Preferences: the Author of new models is set in Preferences, "Author" until it is set
   - Preview: the panel, its options and its preferences are named Preview, since it shows models as well as parts
   - Parts panel: a floating panel ends on whole thumbnail or list rows and scrolls by whole rows, the bottom row is never cut
   - Part categories: turn each category on or off with its checkbox, sub parts and aliases are no longer listed
@@ -270,7 +291,7 @@
   - Instructions: settings, page layouts, notices and pointers saved in the model file as '!SW INSTRUCTION' meta commands
   - View cube: the view sphere is now a cube with chamfered edges and corners - click any of its 6 faces, 12 edges or 8 corners for that view, with sharper labels
   - Sizes: view cube, axis icon and part thumbnails each come in Extra Small to Extra Large on a 16px baseline - view cube and axis icon 48 to 192, thumbnails 32 to 128, with older saved sizes moved to the nearest one
-  - Axis icon: its own Preferences group with size, location, X, Y and Z labels, optional negative axes in their own duller colors set under Colors, and a chamfered view cube wireframe around the axis whose alpha reads 0 to 1 over the same range as the cutaway shade, the icon keeps the same clearance from the view edges as the view cube at each size with the labels kept inside it
+  - Axis icon: its own Preferences group with size, location, X, Y and Z labels, optional negative axes in their own duller colors set in Preferences, and a chamfered view cube wireframe around the axis whose alpha spans the same range as the cutaway shade, the icon keeps the same clearance from the view edges as the view cube at each size with the labels kept inside it
   - Command line: import and export the settings, keyboard shortcuts, mouse shortcuts and part categories without opening a window - '--import-settings', '--export-settings', '--import-keyboard-shortcuts', '--export-keyboard-shortcuts', '--import-mouse-shortcuts', '--export-mouse-shortcuts', '--import-categories', '--export-categories'
   - Command line: '--help', '--version' and the import and export options run without a display
   - Code: views, preferences, the parts library and projects split into smaller files by task - camera, input, categories, shortcuts, cache, loading, file and import - with no change in behavior

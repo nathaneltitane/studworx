@@ -551,7 +551,7 @@ bool swEditNoticeText(QWidget* Parent, QString& Text, bool NewNotice)
 {
 	bool Accepted = false;
 	const QString Title = NewNotice ? QCoreApplication::translate("swInstructionsDialog", "Add Notice") : QCoreApplication::translate("swInstructionsDialog", "Edit Notice");
-	const QString NewText = QInputDialog::getMultiLineText(Parent, Title, QCoreApplication::translate("swInstructionsDialog", "Notice text:"), Text, &Accepted);
+	const QString NewText = QInputDialog::getMultiLineText(Parent, Title, QCoreApplication::translate("swInstructionsDialog", "Notice Text"), Text, &Accepted);
 
 	if (!Accepted || NewText.trimmed().isEmpty())
 		return false;

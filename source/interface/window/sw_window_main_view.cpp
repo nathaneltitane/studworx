@@ -520,6 +520,7 @@ void swMainWindow::ModelViewOptionsMenuAboutToShow()
 	Menu->addSeparator();
 
 	AddRenderTargetActions(Menu, swRenderTarget::ModelView);
+	AddMenuCommand(Menu, tr("Mesh Detail Control"), SW_VIEW_TOGGLE_MESH_LOD, Preferences.mAllowLOD);
 }
 
 void swMainWindow::TogglePreviewViewCube()
@@ -906,9 +907,12 @@ void swMainWindow::SetTool(swTool Tool)
 
 void swMainWindow::SplitView(Qt::Orientation Orientation)
 {
-	QWidget* Focus = focusWidget();
+	// active view, focus may be elsewhere
 
-	if (Focus->metaObject() != &swViewWidget::staticMetaObject)
+	swView* ActiveView = GetActiveView();
+	QWidget* Focus = ActiveView ? ActiveView->GetWidget() : nullptr;
+
+	if (!Focus)
 		return;
 
 	QWidget* Parent = Focus->parentWidget();
@@ -955,9 +959,12 @@ void swMainWindow::SplitVertical()
 
 void swMainWindow::RemoveActiveView()
 {
-	QWidget* Focus = focusWidget();
+	// active view, focus may be elsewhere
 
-	if (Focus->metaObject() != &swViewWidget::staticMetaObject)
+	swView* ActiveView = GetActiveView();
+	QWidget* Focus = ActiveView ? ActiveView->GetWidget() : nullptr;
+
+	if (!Focus)
 		return;
 
 	QWidget* Parent = Focus->parentWidget();

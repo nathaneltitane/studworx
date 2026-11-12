@@ -125,10 +125,10 @@ swInstructions::swInstructions(Project* Project)
 	mShowElementPadding = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_PADDING) != 0;
 	mShowElementAnchors = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_ANCHORS) != 0;
 	mShowRulers = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_RULERS) != 0;
-	mElementMarginColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_ALPHA);
-	mElementPaddingColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_ALPHA);
-	mElementAnchorColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_ALPHA);
-	mRulerPointerColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR, SW_PROFILE_INSTRUCTIONS_RULER_POINTER_ALPHA);
+	mElementMarginColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR));
+	mElementPaddingColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR));
+	mElementAnchorColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR));
+	mRulerPointerColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR));
 
 	SetDefaultProperties();
 	mDefaultProperties = mStepProperties;
@@ -989,10 +989,10 @@ void swInstructions::UpdateColors()
 	SetMarginColor(swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_MARGIN_COLOR)));
 
 	// element colors come from the colors preferences
-	const QColor ElementMarginColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_ALPHA);
-	const QColor ElementPaddingColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_ALPHA);
-	const QColor ElementAnchorColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_ALPHA);
-	const QColor RulerPointerColor = GetProfileOverlayColor(SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR, SW_PROFILE_INSTRUCTIONS_RULER_POINTER_ALPHA);
+	const QColor ElementMarginColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR));
+	const QColor ElementPaddingColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR));
+	const QColor ElementAnchorColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR));
+	const QColor RulerPointerColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR));
 
 	if (mElementMarginColor == ElementMarginColor && mElementPaddingColor == ElementPaddingColor && mElementAnchorColor == ElementAnchorColor && mRulerPointerColor == RulerPointerColor)
 		return;
@@ -1003,15 +1003,6 @@ void swInstructions::UpdateColors()
 	mRulerPointerColor = RulerPointerColor;
 
 	emit GridChanged();
-}
-
-// use to combine a color with its alpha percentage
-QColor swInstructions::GetProfileOverlayColor(SW_PROFILE_KEY ColorKey, SW_PROFILE_KEY AlphaKey)
-{
-	QColor Color = swQColorFromRGBA(swGetProfileUnsignedInteger(ColorKey));
-	Color.setAlphaF(qBound(0, swGetProfileInteger(AlphaKey), 100) / 100.0);
-
-	return Color;
 }
 
 void swInstructions::SetGridWithinMargins(bool WithinMargins)

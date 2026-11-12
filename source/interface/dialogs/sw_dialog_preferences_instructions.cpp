@@ -25,10 +25,6 @@ void swInstructionsPreferences::Load()
 	ElementPaddingColor = swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR);
 	ElementAnchorColor = swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR);
 	RulerPointerColor = swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR);
-	ElementMarginAlpha = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_ALPHA);
-	ElementPaddingAlpha = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_ALPHA);
-	ElementAnchorAlpha = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_ALPHA);
-	RulerPointerAlpha = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_RULER_POINTER_ALPHA);
 	GridPrimaryColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_PRIMARY_COLOR));
 	GridSecondaryColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_SECONDARY_COLOR));
 	MarginColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_MARGIN_COLOR));
@@ -63,10 +59,6 @@ void swInstructionsPreferences::Save() const
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR, ElementPaddingColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR, ElementAnchorColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR, RulerPointerColor);
-	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_ALPHA, ElementMarginAlpha);
-	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_ALPHA, ElementPaddingAlpha);
-	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_ALPHA, ElementAnchorAlpha);
-	swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_RULER_POINTER_ALPHA, RulerPointerAlpha);
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_PRIMARY_COLOR, swRGBAFromQColor(GridPrimaryColor));
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_SECONDARY_COLOR, swRGBAFromQColor(GridSecondaryColor));
 	swSetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_MARGIN_COLOR, swRGBAFromQColor(MarginColor));
@@ -115,7 +107,7 @@ void swPreferencesDialog::CreateInstructionsTab()
 	PageRowLayout->addWidget(mInstructionsPageButton, 1);
 
 	QPushButton* PageResetButton = new QPushButton(tr("Reset"), PageGroup);
-	PageResetButton->setToolTip(tr("Bring back the built-in default page setup, grid and line colors."));
+	PageResetButton->setToolTip(tr("Bring back the built-in default page setup and grid, and the page margin and grid line colors of the Interface page."));
 	PageRowLayout->addWidget(PageResetButton);
 
 	QLabel* PageLabel = new QLabel(tr("Page"), PageGroup);
@@ -132,7 +124,7 @@ void swPreferencesDialog::CreateInstructionsTab()
 	mInstructionsSnapToGrid = CreateCheckBox(GridLayout, GridGroup, tr("Snap to Grid"), tr("Snap dragged elements to the grid of new instructions."), Instructions.SnapToGrid);
 
 	mInstructionsGridSize = new swInstructionsLengthSpinBox(GridGroup);
-	mInstructionsGridSize->setToolTip(tr("Main unit of the grid drawn with the primary color, in the margin units of the default page setup."));
+	mInstructionsGridSize->setToolTip(tr("Main unit of the grid drawn in the Page Grid Primary Lines color, in the margin units of the default page setup."));
 	mInstructionsGridSize->setAccessibleName(tr("Grid Size"));
 	QLabel* GridSizeLabel = new QLabel(tr("Grid Size"), GridGroup);
 	GridSizeLabel->setBuddy(mInstructionsGridSize);
@@ -143,7 +135,7 @@ void swPreferencesDialog::CreateInstructionsTab()
 	mInstructionsGridDivisions->setRange(1, SW_GRID_DIVISIONS_MAXIMUM);
 	mInstructionsGridDivisions->setPrefix(QLatin1String("1/"));
 	mInstructionsGridDivisions->setValue(Instructions.GridDivisions);
-	mInstructionsGridDivisions->setToolTip(tr("Split each grid unit into fractions drawn with the secondary color, dragged elements snap to the fractions."));
+	mInstructionsGridDivisions->setToolTip(tr("Split each grid unit into fractions drawn in the Page Grid Secondary Lines color, dragged elements snap to the fractions."));
 	mInstructionsGridDivisions->setAccessibleName(tr("Divisions"));
 	QLabel* GridDivisionsLabel = new QLabel(tr("Divisions"), GridGroup);
 	GridDivisionsLabel->setBuddy(mInstructionsGridDivisions);
@@ -170,19 +162,22 @@ void swPreferencesDialog::CreateInstructionsTab()
 	mInstructionsShowElementPadding = CreateCheckBox(WindowLayout, WindowGroup, tr("Show Element Padding"), tr("Fill the padding inside the border of each element on screen with the element padding color, it is never printed."), Instructions.ShowElementPadding);
 	mInstructionsShowElementAnchors = CreateCheckBox(WindowLayout, WindowGroup, tr("Show Element Anchors"), tr("Mark the corners, edge centers and center of each element on screen, they are never printed."), Instructions.ShowElementAnchors);
 
-	// line colors keep transparency
-	auto CreateColorButton = [this, WindowLayout, WindowGroup](const QString& Name, const QString& ToolTip, QColor* Color)
+	// line colors live on the interface page
+	auto CreateColorButton = [this](const QString& Name, const QString& ToolTip, QColor* Color)
 	{
-		QToolButton* Button = new QToolButton(WindowGroup);
+		QToolButton* Button = new QToolButton(ui->InstructionsColorsGroup);
 		Button->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+		Button->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
 		Button->setToolTip(ToolTip);
 		Button->setAccessibleName(Name);
 		swUpdateColorButton(Button, *Color);
 
-		QLabel* Label = new QLabel(Name, WindowGroup);
+		QLabel* Label = new QLabel(Name, ui->InstructionsColorsGroup);
 		Label->setBuddy(Button);
 		Label->setToolTip(ToolTip);
-		WindowLayout->addRow(Label, Button);
+		const int Row = ui->InstructionsColorsLayout->rowCount();
+		ui->InstructionsColorsLayout->addWidget(Label, Row, 0);
+		ui->InstructionsColorsLayout->addWidget(Button, Row, 1);
 
 		connect(Button, &QToolButton::clicked, this, [Button, Color]()
 		{
@@ -198,9 +193,9 @@ void swPreferencesDialog::CreateInstructionsTab()
 		return Button;
 	};
 
-	mInstructionsMarginColor = CreateColorButton(tr("Margin Color"), tr("Color of the dashed outline of the page margins."), &Instructions.MarginColor);
-	mInstructionsGridPrimaryColor = CreateColorButton(tr("Grid Primary Color"), tr("Color of the grid lines at every grid unit."), &Instructions.GridPrimaryColor);
-	mInstructionsGridSecondaryColor = CreateColorButton(tr("Grid Secondary Color"), tr("Color of the grid lines at the fractions of a grid unit."), &Instructions.GridSecondaryColor);
+	mInstructionsMarginColor = CreateColorButton(tr("Page Margins"), tr("Color of the dashed outline of the page margins."), &Instructions.MarginColor);
+	mInstructionsGridPrimaryColor = CreateColorButton(tr("Page Grid Primary Lines"), tr("Color of the grid lines at every grid unit."), &Instructions.GridPrimaryColor);
+	mInstructionsGridSecondaryColor = CreateColorButton(tr("Page Grid Secondary Lines"), tr("Color of the grid lines at the fractions of a grid unit."), &Instructions.GridSecondaryColor);
 
 	QGroupBox* EditorGroup = new QGroupBox(tr("Editor"), Tab);
 	QFormLayout* EditorLayout = new QFormLayout(EditorGroup);

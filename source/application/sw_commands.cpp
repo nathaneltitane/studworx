@@ -1879,7 +1879,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Cutaway.ShadeColor"),
 		QT_TRANSLATE_NOOP("Menu", "Sh&ade Color..."),
 		QT_TRANSLATE_NOOP("Status", "Choose the light shade on the cutaway faces"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Shade Color</b></p><p>Choose the light shade drawn on the cut faces.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Shade Color</b></p><p>Choose the color and alpha of the light shade drawn on the cut faces, also set as Cutaway Shade in Preferences, Interface.</p>"),
 		""
 	},
 
@@ -1951,7 +1951,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Grid.ToggleAxisZ"),
 		QT_TRANSLATE_NOOP("Menu", "Z Axis Line"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the z axis line on the grid origin and the height grids"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Z Axis Line</b></p><p>Show or hide the Z axis line through the grid origin or along the height grids, reaching below the base grid when Draw Negative Axes is on and the model has parts.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Z Axis Line</b></p><p>Show or hide the Z axis line through the grid origin or along the height grids, reaching below the base grid only when parts go below it.</p>"),
 		""
 	},
 
@@ -2075,9 +2075,9 @@ const swCommand gCommands[] =
 	// SW_VIEW_TOGGLE_MESH_LOD
 	{
 		QT_TRANSLATE_NOOP("Action", "View.ToggleMeshLOD"),
-		QT_TRANSLATE_NOOP("Menu", "Mesh LOD"),
+		QT_TRANSLATE_NOOP("Menu", "Mesh Detail Control"),
 		QT_TRANSLATE_NOOP("Status", "Toggle using simpler meshes for distant parts"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Mesh LOD</b></p><p>Draw distant parts with simpler meshes (level of detail), from a distance set in Preferences, so large models stay smooth.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Mesh Detail Control</b></p><p>Draw distant parts with simpler meshes, from the Mesh Level of Detail distance set in Preferences, so large models stay smooth.</p>"),
 		""
 	},
 

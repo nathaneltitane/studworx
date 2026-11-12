@@ -8,7 +8,7 @@ class swPartSelectionListView;
 struct swTrainTrackConnectionType;
 
 constexpr int SW_MAXIMUM_IMAGE_DIMENSION = 32768;
-constexpr int SW_MAXIMUM_GRID_LINE_SPACING = 10000;
+constexpr int SW_MAXIMUM_GRID_LINE_SPACING = 100;
 constexpr int SW_MAXIMUM_AREA_LIGHT_GRID = 64;
 
 QString swFormatValue(float Value, int Precision);
@@ -64,6 +64,7 @@ public:
 
 	void drawControl(ControlElement Element, const QStyleOption* Option, QPainter* Painter, const QWidget* Widget) const override;
 	int pixelMetric(PixelMetric Metric, const QStyleOption* Option, const QWidget* Widget) const override;
+	QRect subControlRect(ComplexControl Control, const QStyleOptionComplex* Option, SubControl Element, const QWidget* Widget) const override;
 	QSize sizeFromContents(ContentsType Type, const QStyleOption* Option, const QSize& Size, const QWidget* Widget) const override;
 	void drawPrimitive(PrimitiveElement Element, const QStyleOption* Option, QPainter* Painter, const QWidget* Widget) const override;
 	QIcon standardIcon(StandardPixmap Pixmap, const QStyleOption* Option, const QWidget* Widget) const override;

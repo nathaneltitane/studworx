@@ -24,7 +24,7 @@
      </property>
      <widget class="QWidget" name="tabGeneral">
       <property name="whatsThis">
-       <string>&lt;p&gt;&lt;b&gt;General Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set application behavior and custom library, configuration, and renderer paths. Bundled copies of the color, minifigure and other data files are used until you set your own.&lt;/p&gt;</string>
+       <string>&lt;p&gt;&lt;b&gt;General Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the library, configuration and renderer paths, the online service keys, the author of new models, and how StudWorx starts, opens, exports and edits models. Bundled copies of the color, minifigure and other data files are used until you set your own.&lt;/p&gt;</string>
       </property>
       <attribute name="title">
        <string>General</string>
@@ -539,144 +539,6 @@
         </widget>
        </item>
        <item row="2" column="0" colspan="2">
-        <widget class="QGroupBox" name="ApplicationGroup">
-         <property name="title">
-          <string>Application</string>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_4">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_25">
-            <property name="toolTip">
-             <string>Choose the interface theme and optionally reset its colors.</string>
-            </property>
-            <property name="text">
-             <string>Color Theme</string>
-            </property>
-            <property name="buddy">
-             <cstring>ColorTheme</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QComboBox" name="ColorTheme">
-            <property name="accessibleName">
-             <string>Color Theme</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose the interface theme and optionally reset its colors.</string>
-            </property>
-            <item>
-             <property name="text">
-              <string>Dark</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>System</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_19">
-            <property name="toolTip">
-             <string>Choose the interface language used after restarting StudWorx.</string>
-            </property>
-            <property name="text">
-             <string>Language</string>
-            </property>
-            <property name="buddy">
-             <cstring>Language</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QComboBox" name="Language">
-            <property name="accessibleName">
-             <string>Language</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose the interface language used after restarting StudWorx.</string>
-            </property>
-            <item>
-             <property name="text">
-              <string>Default</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="1" column="2">
-           <spacer name="horizontalSpacer_8">
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="3" column="0" colspan="2">
-        <widget class="QGroupBox" name="StartupGroup">
-         <property name="title">
-          <string>Startup</string>
-         </property>
-         <layout class="QGridLayout" name="StartupLayout">
-          <item row="0" column="0">
-           <widget class="QLabel" name="autoLoadMostRecentLabel">
-            <property name="toolTip">
-             <string>Open the most recently used file when StudWorx starts.</string>
-            </property>
-            <property name="text">
-             <string>Open Most Recent File</string>
-            </property>
-            <property name="buddy">
-             <cstring>autoLoadMostRecent</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QCheckBox" name="autoLoadMostRecent">
-            <property name="accessibleName">
-             <string>Open Most Recent File</string>
-            </property>
-            <property name="toolTip">
-             <string>Open the most recently used file when StudWorx starts.</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="RestoreTabLayoutLabel">
-            <property name="toolTip">
-             <string>Restore saved model tabs and view layouts when opening a model.</string>
-            </property>
-            <property name="text">
-             <string>Restore Tab Layout</string>
-            </property>
-            <property name="buddy">
-             <cstring>RestoreTabLayout</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QCheckBox" name="RestoreTabLayout">
-            <property name="accessibleName">
-             <string>Restore Tab Layout</string>
-            </property>
-            <property name="toolTip">
-             <string>Restore saved model tabs and view layouts when opening a model.</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="4" column="0" colspan="2">
         <widget class="QGroupBox" name="AuthorGroup">
          <property name="whatsThis">
           <string>&lt;p&gt;&lt;b&gt;Author&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The author of new models is built from its name, email address and comment, joined by the author line splitter. Empty parts are left out, and the Author Line field shows the result. For example, Jane Doe, jane@example.com and All rights reserved joined by &amp;quot; | &amp;quot; give Jane Doe | jane@example.com | All rights reserved.&lt;/p&gt;&lt;p&gt;The author of an open model is changed in its properties.&lt;/p&gt;</string>
@@ -806,6 +668,144 @@
          </layout>
         </widget>
        </item>
+       <item row="3" column="0" colspan="2">
+        <widget class="QGroupBox" name="ApplicationGroup">
+         <property name="title">
+          <string>Application</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_25">
+            <property name="toolTip">
+             <string>Choose the interface theme and optionally reset its colors.</string>
+            </property>
+            <property name="text">
+             <string>Color Theme</string>
+            </property>
+            <property name="buddy">
+             <cstring>ColorTheme</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="ColorTheme">
+            <property name="accessibleName">
+             <string>Color Theme</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the interface theme and optionally reset its colors.</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Dark</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>System</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_19">
+            <property name="toolTip">
+             <string>Choose the interface language used after restarting StudWorx.</string>
+            </property>
+            <property name="text">
+             <string>Language</string>
+            </property>
+            <property name="buddy">
+             <cstring>Language</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="Language">
+            <property name="accessibleName">
+             <string>Language</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the interface language used after restarting StudWorx.</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>Default</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <spacer name="horizontalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="4" column="0" colspan="2">
+        <widget class="QGroupBox" name="StartupGroup">
+         <property name="title">
+          <string>Startup</string>
+         </property>
+         <layout class="QGridLayout" name="StartupLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="autoLoadMostRecentLabel">
+            <property name="toolTip">
+             <string>Open the most recently used file when StudWorx starts.</string>
+            </property>
+            <property name="text">
+             <string>Open Most Recent File</string>
+            </property>
+            <property name="buddy">
+             <cstring>autoLoadMostRecent</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QCheckBox" name="autoLoadMostRecent">
+            <property name="accessibleName">
+             <string>Open Most Recent File</string>
+            </property>
+            <property name="toolTip">
+             <string>Open the most recently used file when StudWorx starts.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="RestoreTabLayoutLabel">
+            <property name="toolTip">
+             <string>Restore saved model tabs and view layouts when opening a model.</string>
+            </property>
+            <property name="text">
+             <string>Restore Tab Layout</string>
+            </property>
+            <property name="buddy">
+             <cstring>RestoreTabLayout</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QCheckBox" name="RestoreTabLayout">
+            <property name="accessibleName">
+             <string>Restore Tab Layout</string>
+            </property>
+            <property name="toolTip">
+             <string>Restore saved model tabs and view layouts when opening a model.</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
        <item row="5" column="0" colspan="2">
         <widget class="QGroupBox" name="FilesGroup">
          <property name="whatsThis">
@@ -861,7 +861,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="0">
+          <item row="3" column="0">
            <widget class="QLabel" name="MigrateMetaCommandsLabel">
             <property name="toolTip">
              <string>Choose what happens to the LeoCAD meta commands of opened models: ask each time, migrate them to StudWorx meta commands, or keep them. Migrated models are no longer read fully by LeoCAD.</string>
@@ -874,7 +874,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item row="3" column="1">
            <widget class="QComboBox" name="MigrateMetaCommands">
             <property name="accessibleName">
              <string>Migrate Files on Load</string>
@@ -899,7 +899,7 @@
             </item>
            </widget>
           </item>
-          <item row="3" column="0">
+          <item row="2" column="0">
            <widget class="QLabel" name="WarnPartsLoadFailureLabel">
             <property name="toolTip">
              <string>Show the parts that could not be loaded, and the parts the library marks as moved or as an alias, after a model opens, with a replacement from the library when one is found.</string>
@@ -912,7 +912,7 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
+          <item row="2" column="1">
            <widget class="QCheckBox" name="WarnPartsLoadFailure">
             <property name="accessibleName">
              <string>Warn About Missing and Moved Parts</string>
@@ -1019,7 +1019,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="0">
+          <item row="3" column="0">
            <widget class="QLabel" name="InsertColorModeLabel">
             <property name="toolTip">
              <string>Choose the color given to newly inserted parts: the current color, the color of the selected part, or the color of the last inserted part.</string>
@@ -1032,7 +1032,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item row="3" column="1">
            <widget class="QComboBox" name="InsertColorMode">
             <property name="accessibleName">
              <string>Insert Color</string>
@@ -1057,7 +1057,7 @@
             </item>
            </widget>
           </item>
-          <item row="1" column="0">
+          <item row="2" column="0">
            <widget class="QLabel" name="FirstPartAtOriginLabel">
             <property name="toolTip">
              <string>Place the first part of an empty model at 0, 0, 0 instead of where it is dropped.</string>
@@ -1070,7 +1070,7 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
+          <item row="2" column="1">
            <widget class="QCheckBox" name="FirstPartAtOrigin">
             <property name="accessibleName">
              <string>Insert First Part at Origin</string>
@@ -1080,7 +1080,7 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="0">
+          <item row="1" column="0">
            <widget class="QLabel" name="JointRotationLabel">
             <property name="toolTip">
              <string>When the selected submodel has a joint, rotating it turns the joint around its own pivot and axis instead of the pivot point. Part &gt; Joint &gt; Rotate Joint does the same for the current selection.</string>
@@ -1093,7 +1093,7 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
+          <item row="1" column="1">
            <widget class="QCheckBox" name="JointRotation">
             <property name="accessibleName">
              <string>Use Joint Rotation</string>
@@ -1224,18 +1224,18 @@
      </widget>
      <widget class="QWidget" name="tabRendering">
       <property name="whatsThis">
-       <string>&lt;p&gt;&lt;b&gt;Rendering Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Control shading, stud geometry, colors, selection appearance, edges, and step effects. Some options are unavailable when the graphics system does not support them.&lt;/p&gt;</string>
+       <string>&lt;p&gt;&lt;b&gt;Rendering Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Control the display quality, stud style, shading and lighting, edge lines, part colors, and step fading and highlighting. The step and highlight colors are set on the Interface page. Some options are unavailable when the graphics system does not support them.&lt;/p&gt;</string>
       </property>
       <attribute name="title">
        <string>Rendering</string>
       </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,0,0,0,1">
+      <layout class="QVBoxLayout" name="verticalLayout_8" stretch="0,0,0,0,0,1">
        <item>
-        <widget class="QGroupBox" name="PerformanceGroup">
+        <widget class="QGroupBox" name="DisplayGroup">
          <property name="title">
-          <string>Performance</string>
+          <string>Display</string>
          </property>
-         <layout class="QGridLayout" name="PerformanceLayout">
+         <layout class="QGridLayout" name="DisplayLayout">
           <item row="0" column="0">
            <widget class="QLabel" name="antiAliasingLabel">
             <property name="toolTip">
@@ -1249,7 +1249,7 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
+          <item row="0" column="1" colspan="2">
            <layout class="QHBoxLayout" name="antiAliasingLayout" stretch="0,1">
             <item>
              <widget class="QCheckBox" name="antiAliasing">
@@ -1288,13 +1288,26 @@
             </item>
            </layout>
           </item>
+          <item row="0" column="3">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
           <item row="1" column="0">
            <widget class="QLabel" name="MeshLODTitleLabel">
             <property name="toolTip">
              <string>Use simpler meshes for distant parts to improve display performance.</string>
             </property>
             <property name="text">
-             <string>Mesh LOD</string>
+             <string>Mesh Detail Control</string>
             </property>
             <property name="buddy">
              <cstring>MeshLOD</cstring>
@@ -1302,49 +1315,67 @@
            </widget>
           </item>
           <item row="1" column="1">
-           <layout class="QHBoxLayout" name="MeshLODLayout" stretch="0,1">
-            <item>
-             <widget class="QCheckBox" name="MeshLOD">
-              <property name="accessibleName">
-               <string>Mesh LOD</string>
-              </property>
-              <property name="toolTip">
-               <string>Use simpler meshes for distant parts to improve display performance.</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QSlider" name="MeshLODSlider">
-              <property name="accessibleName">
-               <string>Mesh Detail Distance</string>
-              </property>
-              <property name="toolTip">
-               <string>Set the distance from the camera in LDraw units (ldu, 20 ldu per stud) beyond which parts draw simpler studs.</string>
-              </property>
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="orientation">
-               <enum>Qt::Orientation::Horizontal</enum>
-              </property>
-              <property name="tickPosition">
-               <enum>QSlider::TickPosition::NoTicks</enum>
-              </property>
-             </widget>
-            </item>
-           </layout>
+           <widget class="QCheckBox" name="MeshLOD">
+            <property name="accessibleName">
+             <string>Mesh Detail Control</string>
+            </property>
+            <property name="toolTip">
+             <string>Use simpler meshes for distant parts to improve display performance.</string>
+            </property>
+           </widget>
           </item>
-          <item row="1" column="2">
+          <item row="2" column="0">
+           <widget class="QLabel" name="MeshLODSliderLabel">
+            <property name="toolTip">
+             <string>Set the distance from the camera in LDraw units (ldu, 20 ldu per stud) beyond which parts draw simpler studs.</string>
+            </property>
+            <property name="text">
+             <string>Mesh Level of Detail</string>
+            </property>
+            <property name="buddy">
+             <cstring>MeshLODSlider</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QSlider" name="MeshLODSlider">
+            <property name="accessibleName">
+             <string>Mesh Level of Detail</string>
+            </property>
+            <property name="toolTip">
+             <string>Set the distance from the camera in LDraw units (ldu, 20 ldu per stud) beyond which parts draw simpler studs.</string>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="tickPosition">
+             <enum>QSlider::TickPosition::NoTicks</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
            <widget class="QLabel" name="MeshLODLabel">
             <property name="text">
              <string/>
             </property>
            </widget>
           </item>
-          <item row="2" column="0">
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="StudsGroup">
+         <property name="title">
+          <string>Studs</string>
+         </property>
+         <layout class="QGridLayout" name="StudsLayout">
+          <item row="0" column="0">
            <widget class="QLabel" name="label_24">
             <property name="toolTip">
              <string>Choose stud geometry and the high contrast stud styles.</string>
@@ -1357,7 +1388,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item row="0" column="1">
            <widget class="QComboBox" name="studStyleCombo">
             <property name="accessibleName">
              <string>Stud Style</string>
@@ -1407,7 +1438,7 @@
             </item>
            </widget>
           </item>
-          <item row="2" column="2">
+          <item row="1" column="1">
            <widget class="QToolButton" name="HighContrastButton">
             <property name="toolTip">
              <string>Configure colors and the light/dark threshold for high contrast stud styles.</string>
@@ -1417,7 +1448,16 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="0">
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="ShadingGroup">
+         <property name="title">
+          <string>Shading</string>
+         </property>
+         <layout class="QGridLayout" name="ShadingLayout">
+          <item row="0" column="0">
            <widget class="QLabel" name="label_3">
             <property name="toolTip">
              <string>Choose how part surfaces and edges are drawn in model views.</string>
@@ -1430,7 +1470,7 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
+          <item row="0" column="1">
            <widget class="QComboBox" name="ShadingMode">
             <property name="accessibleName">
              <string>Shading Mode</string>
@@ -1455,7 +1495,20 @@
             </item>
            </widget>
           </item>
-          <item row="4" column="0">
+          <item row="0" column="3">
+           <spacer name="horizontalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0">
            <widget class="QLabel" name="LightingStyleLabel">
             <property name="toolTip">
              <string>Choose how the Default Lights shading mode lights parts in every view: Standard uses one light with a soft highlight, Studio adds fill and rim lights, Matte drops the highlights and Toon uses flat cel shading bands.</string>
@@ -1468,7 +1521,7 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
+          <item row="1" column="1">
            <widget class="QComboBox" name="LightingStyle">
             <property name="accessibleName">
              <string>Lighting Style</string>
@@ -1498,18 +1551,93 @@
             </item>
            </widget>
           </item>
-          <item row="0" column="3">
-           <spacer name="horizontalSpacer_2">
+          <item row="2" column="0">
+           <widget class="QLabel" name="edgeLinesLabel">
+            <property name="toolTip">
+             <string>Draw the edge lines defined by each part.</string>
+            </property>
+            <property name="text">
+             <string>Edge Lines</string>
+            </property>
+            <property name="buddy">
+             <cstring>edgeLines</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QCheckBox" name="edgeLines">
+            <property name="accessibleName">
+             <string>Edge Lines</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw the edge lines defined by each part.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="ConditionalLinesLabel">
+            <property name="toolTip">
+             <string>Draw conditional lines where needed to show curved part surfaces.</string>
+            </property>
+            <property name="text">
+             <string>Conditional Lines</string>
+            </property>
+            <property name="buddy">
+             <cstring>ConditionalLinesCheckBox</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QCheckBox" name="ConditionalLinesCheckBox">
+            <property name="accessibleName">
+             <string>Conditional Lines</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw conditional lines where needed to show curved part surfaces.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_26">
+            <property name="toolTip">
+             <string>Set edge-line width within the range supported by the graphics system.</string>
+            </property>
+            <property name="buddy">
+             <cstring>LineWidthSlider</cstring>
+            </property>
+            <property name="text">
+             <string>Line Width</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QSlider" name="LineWidthSlider">
+            <property name="accessibleName">
+             <string>Line Width</string>
+            </property>
+            <property name="toolTip">
+             <string>Set edge-line width within the range supported by the graphics system.</string>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="orientation">
              <enum>Qt::Orientation::Horizontal</enum>
             </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
+            <property name="tickPosition">
+             <enum>QSlider::TickPosition::NoTicks</enum>
             </property>
-           </spacer>
+           </widget>
+          </item>
+          <item row="4" column="2">
+           <widget class="QLabel" name="LineWidthLabel">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
@@ -1543,6 +1671,113 @@
             </property>
            </widget>
           </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="AutomateEdgeColorLabel">
+            <property name="toolTip">
+             <string>Calculate edge colors from part colors instead of using their defined edge colors.</string>
+            </property>
+            <property name="text">
+             <string>Automate Edge Color</string>
+            </property>
+            <property name="buddy">
+             <cstring>AutomateEdgeColor</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QCheckBox" name="AutomateEdgeColor">
+            <property name="accessibleName">
+             <string>Automate Edge Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Calculate edge colors from part colors instead of using their defined edge colors.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="EdgeContrastTitle">
+            <property name="toolTip">
+             <string>Set the contrast between automated edge colors and part surfaces from 0.00 to 1.00 (default 0.50).</string>
+            </property>
+            <property name="text">
+             <string>Edge Contrast</string>
+            </property>
+            <property name="buddy">
+             <cstring>EdgeContrastSlider</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QSlider" name="EdgeContrastSlider">
+            <property name="accessibleName">
+             <string>Edge Contrast</string>
+            </property>
+            <property name="toolTip">
+             <string>Set the contrast between automated edge colors and part surfaces from 0.00 to 1.00 (default 0.50).</string>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximum">
+             <number>100</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QLabel" name="EdgeContrastLabel">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="EdgeSaturationTitle">
+            <property name="toolTip">
+             <string>Set the saturation of automated edge colors from 0.00 to 1.00 (default 0.50).</string>
+            </property>
+            <property name="text">
+             <string>Edge Saturation</string>
+            </property>
+            <property name="buddy">
+             <cstring>EdgeSaturationSlider</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QSlider" name="EdgeSaturationSlider">
+            <property name="accessibleName">
+             <string>Edge Saturation</string>
+            </property>
+            <property name="toolTip">
+             <string>Set the saturation of automated edge colors from 0.00 to 1.00 (default 0.50).</string>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximum">
+             <number>100</number>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <widget class="QLabel" name="EdgeSaturationLabel">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
        </item>
@@ -1552,53 +1787,6 @@
           <string>Steps and Highlighting</string>
          </property>
          <layout class="QGridLayout" name="StepsLayout">
-          <item row="1" column="0">
-           <widget class="QLabel" name="FadeStepsLabel">
-            <property name="toolTip">
-             <string>Tint parts from previous building steps with the chosen fade color.</string>
-            </property>
-            <property name="text">
-             <string>Fade Previous Steps</string>
-            </property>
-            <property name="buddy">
-             <cstring>FadeSteps</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <layout class="QHBoxLayout" name="FadeStepsLayout" stretch="0,0,1">
-            <item>
-             <widget class="QCheckBox" name="FadeSteps">
-              <property name="accessibleName">
-               <string>Fade Previous Steps</string>
-              </property>
-              <property name="toolTip">
-               <string>Tint parts from previous building steps with the chosen fade color.</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QToolButton" name="FadeStepsColor">
-              <property name="accessibleName">
-               <string>Previous Step Color</string>
-              </property>
-              <property name="toolTip">
-               <string>Choose the tint used for parts from previous steps.</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="FadeStepsSpacer">
-              <property name="orientation">
-               <enum>Qt::Orientation::Horizontal</enum>
-              </property>
-             </spacer>
-            </item>
-           </layout>
-          </item>
           <item row="0" column="0">
            <widget class="QLabel" name="HighlightNewPartsLabel">
             <property name="toolTip">
@@ -1612,39 +1800,38 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
-           <layout class="QHBoxLayout" name="HighlightNewPartsLayout" stretch="0,0,1">
-            <item>
-             <widget class="QCheckBox" name="HighlightNewParts">
-              <property name="accessibleName">
-               <string>Highlight New Parts</string>
-              </property>
-              <property name="toolTip">
-               <string>Highlight parts introduced in the current building step.</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QToolButton" name="HighlightNewPartsColor">
-              <property name="accessibleName">
-               <string>New Part Highlight Color</string>
-              </property>
-              <property name="toolTip">
-               <string>Choose the highlight color for parts in the current step.</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="HighlightNewPartsSpacer">
-              <property name="orientation">
-               <enum>Qt::Orientation::Horizontal</enum>
-              </property>
-             </spacer>
-            </item>
-           </layout>
+          <item row="0" column="1" colspan="2">
+           <widget class="QCheckBox" name="HighlightNewParts">
+            <property name="accessibleName">
+             <string>Highlight New Parts</string>
+            </property>
+            <property name="toolTip">
+             <string>Highlight parts introduced in the current building step.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="FadeStepsLabel">
+            <property name="toolTip">
+             <string>Tint parts from previous building steps with the chosen fade color.</string>
+            </property>
+            <property name="text">
+             <string>Fade Previous Steps</string>
+            </property>
+            <property name="buddy">
+             <cstring>FadeSteps</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="2">
+           <widget class="QCheckBox" name="FadeSteps">
+            <property name="accessibleName">
+             <string>Fade Previous Steps</string>
+            </property>
+            <property name="toolTip">
+             <string>Tint parts from previous building steps with the chosen fade color.</string>
+            </property>
+           </widget>
           </item>
           <item row="2" column="0">
            <widget class="QLabel" name="FadeInlineLabel">
@@ -1659,39 +1846,15 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
-           <layout class="QHBoxLayout" name="FadeInlineLayout" stretch="0,0,1">
-            <item>
-             <widget class="QCheckBox" name="FadeInline">
-              <property name="accessibleName">
-               <string>Fade on Edit</string>
-              </property>
-              <property name="toolTip">
-               <string>Tint the rest of the model with the chosen color while editing a submodel in place. When off, the rest of the model stays in its own colors, slightly translucent.</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QToolButton" name="FadeInlineColor">
-              <property name="accessibleName">
-               <string>Edit Fade Color</string>
-              </property>
-              <property name="toolTip">
-               <string>Choose the tint used for the rest of the model while editing a submodel in place.</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="FadeInlineSpacer">
-              <property name="orientation">
-               <enum>Qt::Orientation::Horizontal</enum>
-              </property>
-             </spacer>
-            </item>
-           </layout>
+          <item row="2" column="1" colspan="2">
+           <widget class="QCheckBox" name="FadeInline">
+            <property name="accessibleName">
+             <string>Fade on Edit</string>
+            </property>
+            <property name="toolTip">
+             <string>Tint the rest of the model with the chosen color while editing a submodel in place. When off, the rest of the model stays in its own colors, slightly translucent.</string>
+            </property>
+           </widget>
           </item>
           <item row="3" column="0">
            <widget class="QLabel" name="FadeJointLabel">
@@ -1706,51 +1869,63 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
-           <layout class="QHBoxLayout" name="FadeJointLayout" stretch="0,0,0,1">
-            <item>
-             <widget class="QCheckBox" name="FadeJoint">
-              <property name="accessibleName">
-               <string>Fade on Joint Set</string>
-              </property>
-              <property name="toolTip">
-               <string>Tint all but the selected submodel with the chosen color while setting a joint.</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QToolButton" name="FadeJointColor">
-              <property name="accessibleName">
-               <string>Joint Fade Color</string>
-              </property>
-              <property name="toolTip">
-               <string>Choose the tint used for all but the selected submodel while setting a joint.</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QCheckBox" name="FadeJointMoving">
-              <property name="toolTip">
-               <string>Keep the joint fade while moving or rotating a joint. Leave off to check parts for collisions in their own colors.</string>
-              </property>
-              <property name="text">
-               <string>Fade on Joint Move and Rotate</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="FadeJointSpacer">
-              <property name="orientation">
-               <enum>Qt::Orientation::Horizontal</enum>
-              </property>
-             </spacer>
-            </item>
-           </layout>
+          <item row="3" column="1" colspan="2">
+           <widget class="QCheckBox" name="FadeJoint">
+            <property name="accessibleName">
+             <string>Fade on Joint Set</string>
+            </property>
+            <property name="toolTip">
+             <string>Tint all but the selected submodel with the chosen color while setting a joint.</string>
+            </property>
+           </widget>
           </item>
           <item row="4" column="0">
+           <widget class="QLabel" name="HoverOutlineLabel">
+            <property name="toolTip">
+             <string>Outline the innermost submodel under the pointer with the chosen color.</string>
+            </property>
+            <property name="text">
+             <string>Submodel Hover Outline</string>
+            </property>
+            <property name="buddy">
+             <cstring>HoverOutline</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1" colspan="2">
+           <widget class="QCheckBox" name="HoverOutline">
+            <property name="accessibleName">
+             <string>Submodel Hover Outline</string>
+            </property>
+            <property name="toolTip">
+             <string>Outline the innermost submodel under the pointer, or the submodel a joint would go on while setting a joint.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="FadeJointMovingLabel">
+            <property name="toolTip">
+             <string>Keep the joint fade while moving or rotating a joint. Leave off to check parts for collisions in their own colors.</string>
+            </property>
+            <property name="text">
+             <string>Fade on Joint Move and Rotate</string>
+            </property>
+            <property name="buddy">
+             <cstring>FadeJointMoving</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QCheckBox" name="FadeJointMoving">
+            <property name="accessibleName">
+             <string>Fade on Joint Move and Rotate</string>
+            </property>
+            <property name="toolTip">
+             <string>Keep the joint fade while moving or rotating a joint. Leave off to check parts for collisions in their own colors.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
            <widget class="QLabel" name="HighlightRenderModeLabel">
             <property name="whatsThis">
              <string>&lt;p&gt;&lt;b&gt;Highlight Style&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose how selected parts and parts added in the current step are highlighted in the viewport. Outline uses fading outlines in the selection, focus, or new-part highlight color. Selected parts also receive a faint fill over obscured portions. Tint and Edges uses tinted faces and colored edges for selection, and colored edges for new parts.&lt;/p&gt;&lt;p&gt;New-part highlighting requires Highlight New Parts. Wireframe views, image exports, and systems without outline support use Tint and Edges.&lt;/p&gt;</string>
@@ -1766,7 +1941,7 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
+          <item row="6" column="1">
            <widget class="QComboBox" name="HighlightRenderMode">
             <property name="accessibleName">
              <string>Highlight Style</string>
@@ -1789,7 +1964,7 @@
             </item>
            </widget>
           </item>
-          <item row="5" column="0">
+          <item row="7" column="0">
            <widget class="QLabel" name="SelectionOutlineWidthLabel">
             <property name="toolTip">
              <string>Choose the thickness of the outline drawn around selected parts and new parts.</string>
@@ -1802,7 +1977,7 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="1">
+          <item row="7" column="1">
            <widget class="swRangeSpinBox" name="SelectionOutlineWidth">
             <property name="accessibleName">
              <string>Outline Width</string>
@@ -1821,53 +1996,6 @@
             </property>
            </widget>
           </item>
-          <item row="6" column="0">
-           <widget class="QLabel" name="HoverOutlineLabel">
-            <property name="toolTip">
-             <string>Outline the innermost submodel under the pointer with the chosen color.</string>
-            </property>
-            <property name="text">
-             <string>Submodel Hover Outline</string>
-            </property>
-            <property name="buddy">
-             <cstring>HoverOutline</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="1">
-           <layout class="QHBoxLayout" name="HoverOutlineLayout" stretch="0,0,1">
-            <item>
-             <widget class="QCheckBox" name="HoverOutline">
-              <property name="accessibleName">
-               <string>Submodel Hover Outline</string>
-              </property>
-              <property name="toolTip">
-               <string>Outline the innermost submodel under the pointer, or the submodel a joint would go on while setting a joint.</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QToolButton" name="HoverOutlineColor">
-              <property name="accessibleName">
-               <string>Hover Outline Color</string>
-              </property>
-              <property name="toolTip">
-               <string>Choose the color of the submodel hover outline.</string>
-              </property>
-              <property name="text">
-               <string/>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="HoverOutlineSpacer">
-              <property name="orientation">
-               <enum>Qt::Orientation::Horizontal</enum>
-              </property>
-             </spacer>
-            </item>
-           </layout>
-          </item>
           <item row="0" column="3">
            <spacer name="StepsSpacer">
             <property name="orientation">
@@ -1880,223 +2008,6 @@
              </size>
             </property>
            </spacer>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item>
-        <widget class="QGroupBox" name="groupBox_8">
-         <property name="title">
-          <string>Lines</string>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_5">
-          <item row="5" column="2">
-           <widget class="QLabel" name="LineWidthLabel">
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="ConditionalLinesLabel">
-            <property name="toolTip">
-             <string>Draw conditional lines where needed to show curved part surfaces.</string>
-            </property>
-            <property name="text">
-             <string>Conditional Lines</string>
-            </property>
-            <property name="buddy">
-             <cstring>ConditionalLinesCheckBox</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QCheckBox" name="ConditionalLinesCheckBox">
-            <property name="accessibleName">
-             <string>Conditional Lines</string>
-            </property>
-            <property name="toolTip">
-             <string>Draw conditional lines where needed to show curved part surfaces.</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="3">
-           <spacer name="horizontalSpacer_9">
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="5" column="0">
-           <widget class="QLabel" name="label_26">
-            <property name="toolTip">
-             <string>Set edge-line width within the range supported by the graphics system.</string>
-            </property>
-            <property name="buddy">
-             <cstring>LineWidthSlider</cstring>
-            </property>
-            <property name="text">
-             <string>Line Width</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="1">
-           <widget class="QSlider" name="LineWidthSlider">
-            <property name="accessibleName">
-             <string>Line Width</string>
-            </property>
-            <property name="toolTip">
-             <string>Set edge-line width within the range supported by the graphics system.</string>
-            </property>
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="tickPosition">
-             <enum>QSlider::TickPosition::NoTicks</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0">
-           <widget class="QLabel" name="edgeLinesLabel">
-            <property name="toolTip">
-             <string>Draw the edge lines defined by each part.</string>
-            </property>
-            <property name="text">
-             <string>Edge Lines</string>
-            </property>
-            <property name="buddy">
-             <cstring>edgeLines</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QCheckBox" name="edgeLines">
-            <property name="accessibleName">
-             <string>Edge Lines</string>
-            </property>
-            <property name="toolTip">
-             <string>Draw the edge lines defined by each part.</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="AutomateEdgeColorLabel">
-            <property name="toolTip">
-             <string>Calculate edge colors from part colors instead of using their defined edge colors.</string>
-            </property>
-            <property name="text">
-             <string>Automate Edge Color</string>
-            </property>
-            <property name="buddy">
-             <cstring>AutomateEdgeColor</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QCheckBox" name="AutomateEdgeColor">
-            <property name="accessibleName">
-             <string>Automate Edge Color</string>
-            </property>
-            <property name="toolTip">
-             <string>Calculate edge colors from part colors instead of using their defined edge colors.</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="EdgeContrastTitle">
-            <property name="toolTip">
-             <string>Set the contrast between automated edge colors and part surfaces from 0.00 to 1.00 (default 0.50).</string>
-            </property>
-            <property name="text">
-             <string>Edge Contrast</string>
-            </property>
-            <property name="buddy">
-             <cstring>EdgeContrastSlider</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="QSlider" name="EdgeContrastSlider">
-            <property name="accessibleName">
-             <string>Edge Contrast</string>
-            </property>
-            <property name="toolTip">
-             <string>Set the contrast between automated edge colors and part surfaces from 0.00 to 1.00 (default 0.50).</string>
-            </property>
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="maximum">
-             <number>100</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="2">
-           <widget class="QLabel" name="EdgeContrastLabel">
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="EdgeSaturationTitle">
-            <property name="toolTip">
-             <string>Set the saturation of automated edge colors from 0.00 to 1.00 (default 0.50).</string>
-            </property>
-            <property name="text">
-             <string>Edge Saturation</string>
-            </property>
-            <property name="buddy">
-             <cstring>EdgeSaturationSlider</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <widget class="QSlider" name="EdgeSaturationSlider">
-            <property name="accessibleName">
-             <string>Edge Saturation</string>
-            </property>
-            <property name="toolTip">
-             <string>Set the saturation of automated edge colors from 0.00 to 1.00 (default 0.50).</string>
-            </property>
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="maximum">
-             <number>100</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="2">
-           <widget class="QLabel" name="EdgeSaturationLabel">
-            <property name="text">
-             <string/>
-            </property>
-           </widget>
           </item>
          </layout>
         </widget>
@@ -2118,7 +2029,7 @@
      </widget>
      <widget class="QWidget" name="tab">
       <property name="whatsThis">
-       <string>&lt;p&gt;&lt;b&gt;View Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose navigation aids for model views and the preview, the cutaway size and shade, the idle turntable, and the base grid. Locations select the corner where each navigation aid appears.&lt;/p&gt;</string>
+       <string>&lt;p&gt;&lt;b&gt;View Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose how model views follow steps, the navigation aids for model views and the preview, the cutaway size and cut edges, the idle turntable, the axis lines, the base grid, and the rendering of the parts list, preview and Minifigure Builder. Locations select the corner where each navigation aid appears.&lt;/p&gt;</string>
       </property>
       <attribute name="title">
        <string>Views</string>
@@ -2511,60 +2422,6 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="0">
-           <widget class="QLabel" name="AxisIconCubeOutlineAlphaLabel">
-            <property name="toolTip">
-             <string>Choose how opaque the axis icon cube outline is, from 0 to 1.</string>
-            </property>
-            <property name="buddy">
-             <cstring>AxisIconCubeOutlineAlphaSlider</cstring>
-            </property>
-            <property name="text">
-             <string>Outline Alpha</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="1">
-           <widget class="QSlider" name="AxisIconCubeOutlineAlphaSlider">
-            <property name="accessibleName">
-             <string>Axis Icon Cube Outline Alpha</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose how opaque the axis icon cube outline is, from 0 to 1.</string>
-            </property>
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimum">
-             <number>0</number>
-            </property>
-            <property name="maximum">
-             <number>100</number>
-            </property>
-            <property name="pageStep">
-             <number>10</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="tickPosition">
-             <enum>QSlider::TickPosition::NoTicks</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="2">
-           <widget class="QLabel" name="AxisIconCubeOutlineAlphaValueLabel">
-            <property name="toolTip">
-             <string>Choose how opaque the axis icon cube outline is, from 0 to 1.</string>
-            </property>
-            <property name="text">
-             <string notr="true">0.50</string>
-            </property>
-           </widget>
-          </item>
          </layout>
         </widget>
        </item>
@@ -2575,115 +2432,6 @@
          </property>
          <layout class="QGridLayout" name="CutawayLayout">
           <item row="0" column="0">
-           <widget class="QLabel" name="CutawaySizeLabel">
-            <property name="toolTip">
-             <string>Choose how many studs across a cutaway is when placed with a click.</string>
-            </property>
-            <property name="buddy">
-             <cstring>CutawaySizeSpinBox</cstring>
-            </property>
-            <property name="text">
-             <string>Size</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1" colspan="2">
-           <widget class="swRangeSpinBox" name="CutawaySizeSpinBox">
-            <property name="accessibleName">
-             <string>Cutaway Size</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose how many studs across a cutaway is when placed with a click.</string>
-            </property>
-            <property name="minimum">
-             <number>1</number>
-            </property>
-            <property name="maximum">
-             <number>64</number>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="CutawayShadeColorLabel">
-            <property name="toolTip">
-             <string>Choose the color of the light shade on the cutaway faces.</string>
-            </property>
-            <property name="buddy">
-             <cstring>CutawayShadeColorButton</cstring>
-            </property>
-            <property name="text">
-             <string>Shade Color</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1" colspan="2">
-           <widget class="QToolButton" name="CutawayShadeColorButton">
-            <property name="accessibleName">
-             <string>Cutaway Shade Color</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose the color of the light shade on the cutaway faces.</string>
-            </property>
-            <property name="text">
-             <string />
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="CutawayShadeAlphaLabel">
-            <property name="toolTip">
-             <string>Choose how opaque the light shade on the cutaway faces is, from 0 to 1.</string>
-            </property>
-            <property name="buddy">
-             <cstring>CutawayShadeAlphaSlider</cstring>
-            </property>
-            <property name="text">
-             <string>Shade Alpha</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QSlider" name="CutawayShadeAlphaSlider">
-            <property name="accessibleName">
-             <string>Cutaway Shade Alpha</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose how opaque the light shade on the cutaway faces is, from 0 to 1.</string>
-            </property>
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimum">
-             <number>0</number>
-            </property>
-            <property name="maximum">
-             <number>100</number>
-            </property>
-            <property name="pageStep">
-             <number>10</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-            <property name="tickPosition">
-             <enum>QSlider::TickPosition::NoTicks</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="2">
-           <widget class="QLabel" name="CutawayShadeAlphaValueLabel">
-            <property name="toolTip">
-             <string>Choose how opaque the light shade on the cutaway faces is, from 0 to 1.</string>
-            </property>
-            <property name="text">
-             <string notr="true">0.50</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
            <widget class="QLabel" name="CutawayEdgesLabel">
             <property name="toolTip">
              <string>Draw edge lines where the cutaway cuts through parts, in the part edge color, when edge lines are shown.</string>
@@ -2696,13 +2444,42 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="1" colspan="2">
+          <item row="0" column="1" colspan="2">
            <widget class="QCheckBox" name="CutawayEdgesCheckBox">
             <property name="accessibleName">
              <string>Cut Edges</string>
             </property>
             <property name="toolTip">
              <string>Draw edge lines where the cutaway cuts through parts, in the part edge color, when edge lines are shown.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="CutawaySizeLabel">
+            <property name="toolTip">
+             <string>Choose how many studs across a cutaway is when placed with a click.</string>
+            </property>
+            <property name="buddy">
+             <cstring>CutawaySizeSpinBox</cstring>
+            </property>
+            <property name="text">
+             <string>Size</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="2">
+           <widget class="swRangeSpinBox" name="CutawaySizeSpinBox">
+            <property name="accessibleName">
+             <string>Cutaway Size</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose how many studs across a cutaway is when placed with a click.</string>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>64</number>
             </property>
            </widget>
           </item>
@@ -2827,124 +2604,15 @@
         </widget>
        </item>
        <item>
-        <widget class="QGroupBox" name="groupBox_4">
-         <property name="title">
-          <string>Base Grid</string>
+        <widget class="QGroupBox" name="AxisLinesGroup">
+         <property name="whatsThis">
+          <string>&lt;p&gt;&lt;b&gt;Axis Lines&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the X, Y and Z axis lines through the grid origin, or the Z line along the height grids when they are on. The lines span the base grid and grow with the model, and Draw Negative Axes colors their halves below zero in the negative axis colors.&lt;/p&gt;</string>
          </property>
-         <layout class="QGridLayout" name="gridLayout_2">
-          <item row="1" column="0">
-           <widget class="QLabel" name="gridLinesLabel">
-            <property name="toolTip">
-             <string>Show base-grid lines at the specified spacing.</string>
-            </property>
-            <property name="text">
-             <string>Draw Lines Every</string>
-            </property>
-            <property name="buddy">
-             <cstring>gridLines</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <layout class="QHBoxLayout" name="gridLinesLayout" stretch="0,1">
-            <item>
-             <widget class="QCheckBox" name="gridLines">
-              <property name="accessibleName">
-               <string>Draw Lines Every</string>
-              </property>
-              <property name="toolTip">
-               <string>Show base-grid lines at the specified spacing.</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="swRangeSpinBox" name="gridLineSpacing">
-              <property name="accessibleName">
-               <string>Grid Line Spacing</string>
-              </property>
-              <property name="toolTip">
-               <string>Set base-grid line spacing in studs (1 to 10000).</string>
-              </property>
-              <property name="minimum">
-               <number>1</number>
-              </property>
-              <property name="maximum">
-               <number>10000</number>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="GridHeightXZLabel">
-            <property name="toolTip">
-             <string>Draw a vertical grid on the XZ plane through the X axis with lines every plate height.</string>
-            </property>
-            <property name="text">
-             <string>Draw XZ Height Grid</string>
-            </property>
-            <property name="buddy">
-             <cstring>GridHeightXZCheckBox</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1" colspan="2">
-           <widget class="QCheckBox" name="GridHeightXZCheckBox">
-            <property name="accessibleName">
-             <string>Draw XZ Height Grid</string>
-            </property>
-            <property name="toolTip">
-             <string>Draw a vertical grid on the XZ plane through the X axis with lines every plate height.</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="GridHeightYZLabel">
-            <property name="toolTip">
-             <string>Draw a vertical grid on the YZ plane through the Y axis with lines every plate height.</string>
-            </property>
-            <property name="text">
-             <string>Draw YZ Height Grid</string>
-            </property>
-            <property name="buddy">
-             <cstring>GridHeightYZCheckBox</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1" colspan="2">
-           <widget class="QCheckBox" name="GridHeightYZCheckBox">
-            <property name="accessibleName">
-             <string>Draw YZ Height Grid</string>
-            </property>
-            <property name="toolTip">
-             <string>Draw a vertical grid on the YZ plane through the Y axis with lines every plate height.</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="GridHeightBehindLabel">
-            <property name="toolTip">
-             <string>Draw the height grids on the side of the model facing away from the camera instead of through the origin axes.</string>
-            </property>
-            <property name="text">
-             <string>Draw Height Grids Behind the Model</string>
-            </property>
-            <property name="buddy">
-             <cstring>GridHeightBehindCheckBox</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1" colspan="2">
-           <widget class="QCheckBox" name="GridHeightBehindCheckBox">
-            <property name="accessibleName">
-             <string>Draw Height Grids Behind the Model</string>
-            </property>
-            <property name="toolTip">
-             <string>Draw the height grids on the side of the model facing away from the camera instead of through the origin axes.</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="0">
+         <property name="title">
+          <string>Axis Lines</string>
+         </property>
+         <layout class="QGridLayout" name="AxisLinesLayout">
+          <item row="0" column="0">
            <widget class="QLabel" name="GridAxisXLabel">
             <property name="toolTip">
              <string>Draw the x axis line at the grid origin.</string>
@@ -2957,7 +2625,7 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="1" colspan="2">
+          <item row="0" column="1" colspan="2">
            <widget class="QCheckBox" name="GridAxisXCheckBox">
             <property name="accessibleName">
              <string>Draw X Axis Line</string>
@@ -2967,7 +2635,7 @@
             </property>
            </widget>
           </item>
-          <item row="6" column="0">
+          <item row="1" column="0">
            <widget class="QLabel" name="GridAxisYLabel">
             <property name="toolTip">
              <string>Draw the y axis line at the grid origin.</string>
@@ -2980,7 +2648,7 @@
             </property>
            </widget>
           </item>
-          <item row="6" column="1" colspan="2">
+          <item row="1" column="1" colspan="2">
            <widget class="QCheckBox" name="GridAxisYCheckBox">
             <property name="accessibleName">
              <string>Draw Y Axis Line</string>
@@ -2990,7 +2658,7 @@
             </property>
            </widget>
           </item>
-          <item row="7" column="0">
+          <item row="2" column="0">
            <widget class="QLabel" name="GridAxisZLabel">
             <property name="toolTip">
              <string>Draw the z axis line at the grid origin, or along the height grids when they are shown.</string>
@@ -3003,7 +2671,7 @@
             </property>
            </widget>
           </item>
-          <item row="7" column="1" colspan="2">
+          <item row="2" column="1" colspan="2">
            <widget class="QCheckBox" name="GridAxisZCheckBox">
             <property name="accessibleName">
              <string>Draw Z Axis Line</string>
@@ -3013,7 +2681,7 @@
             </property>
            </widget>
           </item>
-          <item row="8" column="0">
+          <item row="3" column="0">
            <widget class="QLabel" name="GridNegativeAxesLabel">
             <property name="toolTip">
              <string>Draw the negative halves of the axis lines in the negative axis colors, with the Z line reaching below the base grid.</string>
@@ -3026,13 +2694,204 @@
             </property>
            </widget>
           </item>
-          <item row="8" column="1" colspan="2">
+          <item row="3" column="1" colspan="2">
            <widget class="QCheckBox" name="GridNegativeAxesCheckBox">
             <property name="accessibleName">
              <string>Draw Negative Axes</string>
             </property>
             <property name="toolTip">
              <string>Draw the negative halves of the axis lines in the negative axis colors, with the Z line reaching below the base grid.</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_4">
+         <property name="whatsThis">
+          <string>&lt;p&gt;&lt;b&gt;Base Grid&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the grid under the model and the vertical height grids. An empty model shows 2 × 2 studs and one brick, 3 plates, of height. The grids grow stud by stud and plate by plate around the parts, plus Grid Margin studs on X and Y and Height Margin plates on Z, and the axis lines follow them. For example, a Height Margin of 3 ends the grid one brick below a part placed under the base grid.&lt;/p&gt;</string>
+         </property>
+         <property name="title">
+          <string>Base Grid</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="4" column="0">
+           <widget class="QLabel" name="gridLinesLabel">
+            <property name="toolTip">
+             <string>Show base-grid lines.</string>
+            </property>
+            <property name="text">
+             <string>Draw Lines</string>
+            </property>
+            <property name="buddy">
+             <cstring>gridLines</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1" colspan="2">
+           <widget class="QCheckBox" name="gridLines">
+            <property name="accessibleName">
+             <string>Draw Lines</string>
+            </property>
+            <property name="toolTip">
+             <string>Show base-grid lines.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="gridLineSpacingLabel">
+            <property name="toolTip">
+             <string>Set base-grid line spacing in studs (1 to 100).</string>
+            </property>
+            <property name="text">
+             <string>Draw Lines Every</string>
+            </property>
+            <property name="buddy">
+             <cstring>gridLineSpacing</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1" colspan="2">
+           <widget class="swRangeSpinBox" name="gridLineSpacing">
+            <property name="accessibleName">
+             <string>Draw Lines Every</string>
+            </property>
+            <property name="toolTip">
+             <string>Set base-grid line spacing in studs (1 to 100).</string>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>100</number>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="GridHeightXZLabel">
+            <property name="toolTip">
+             <string>Draw a vertical grid on the XZ plane through the X axis with lines every plate height.</string>
+            </property>
+            <property name="text">
+             <string>Draw XZ Height Grid</string>
+            </property>
+            <property name="buddy">
+             <cstring>GridHeightXZCheckBox</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="2">
+           <widget class="QCheckBox" name="GridHeightXZCheckBox">
+            <property name="accessibleName">
+             <string>Draw XZ Height Grid</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw a vertical grid on the XZ plane through the X axis with lines every plate height.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="GridHeightYZLabel">
+            <property name="toolTip">
+             <string>Draw a vertical grid on the YZ plane through the Y axis with lines every plate height.</string>
+            </property>
+            <property name="text">
+             <string>Draw YZ Height Grid</string>
+            </property>
+            <property name="buddy">
+             <cstring>GridHeightYZCheckBox</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1" colspan="2">
+           <widget class="QCheckBox" name="GridHeightYZCheckBox">
+            <property name="accessibleName">
+             <string>Draw YZ Height Grid</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw a vertical grid on the YZ plane through the Y axis with lines every plate height.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="GridHeightBehindLabel">
+            <property name="toolTip">
+             <string>Draw the height grids on the side of the model facing away from the camera instead of through the origin axes.</string>
+            </property>
+            <property name="text">
+             <string>Draw Height Grids Behind the Model</string>
+            </property>
+            <property name="buddy">
+             <cstring>GridHeightBehindCheckBox</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1" colspan="2">
+           <widget class="QCheckBox" name="GridHeightBehindCheckBox">
+            <property name="accessibleName">
+             <string>Draw Height Grids Behind the Model</string>
+            </property>
+            <property name="toolTip">
+             <string>Draw the height grids on the side of the model facing away from the camera instead of through the origin axes.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="GridMarginLabel">
+            <property name="toolTip">
+             <string>Set how many studs the base grid and the X and Y axis lines reach past the parts (0 to 100).</string>
+            </property>
+            <property name="text">
+             <string>Grid Margin</string>
+            </property>
+            <property name="buddy">
+             <cstring>GridMarginSpinBox</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1" colspan="2">
+           <widget class="swRangeSpinBox" name="GridMarginSpinBox">
+            <property name="accessibleName">
+             <string>Grid Margin</string>
+            </property>
+            <property name="toolTip">
+             <string>Set how many studs the base grid and the X and Y axis lines reach past the parts (0 to 100).</string>
+            </property>
+            <property name="minimum">
+             <number>0</number>
+            </property>
+            <property name="maximum">
+             <number>100</number>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="GridHeightMarginLabel">
+            <property name="toolTip">
+             <string>Set how many plates the height grids and the Z axis line reach past the parts (0 to 100).</string>
+            </property>
+            <property name="text">
+             <string>Height Margin</string>
+            </property>
+            <property name="buddy">
+             <cstring>GridHeightMarginSpinBox</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1" colspan="2">
+           <widget class="swRangeSpinBox" name="GridHeightMarginSpinBox">
+            <property name="accessibleName">
+             <string>Height Margin</string>
+            </property>
+            <property name="toolTip">
+             <string>Set how many plates the height grids and the Z axis line reach past the parts (0 to 100).</string>
+            </property>
+            <property name="minimum">
+             <number>0</number>
+            </property>
+            <property name="maximum">
+             <number>100</number>
             </property>
            </widget>
           </item>
@@ -3068,7 +2927,7 @@
           <string>Parts</string>
          </property>
          <layout class="QGridLayout" name="PartsLayout">
-          <item row="0" column="0">
+          <item row="1" column="0">
            <widget class="QLabel" name="PartsSyncRenderingLabel">
             <property name="toolTip">
              <string>Use the model view rendering settings for the parts list and parts list images.</string>
@@ -3081,7 +2940,7 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="1" colspan="2">
+          <item row="1" column="1" colspan="2">
            <widget class="QCheckBox" name="PartsSyncRendering">
             <property name="accessibleName">
              <string>Use Model Settings</string>
@@ -3091,7 +2950,7 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
+          <item row="4" column="0">
            <widget class="QLabel" name="PartsShadingModeLabel">
             <property name="toolTip">
              <string>Choose how parts are drawn in the parts list and parts list images.</string>
@@ -3104,7 +2963,7 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
+          <item row="4" column="1">
            <widget class="QComboBox" name="PartsShadingMode">
             <property name="accessibleName">
              <string>Parts Shading Mode</string>
@@ -3175,7 +3034,7 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="0">
+          <item row="5" column="0">
            <widget class="QLabel" name="PartsLineWidthTitle">
             <property name="toolTip">
              <string>Set the line width used in the parts list and parts list images.</string>
@@ -3188,7 +3047,7 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
+          <item row="5" column="1">
            <widget class="QSlider" name="PartsLineWidthSlider">
             <property name="accessibleName">
              <string>Parts Line Width</string>
@@ -3201,7 +3060,7 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="2">
+          <item row="5" column="2">
            <widget class="QLabel" name="PartsLineWidthLabel">
             <property name="text">
              <string/>
@@ -3221,7 +3080,7 @@
             </property>
            </spacer>
           </item>
-          <item row="5" column="0">
+          <item row="0" column="0">
            <widget class="QLabel" name="PartsSnapToTilesLabel">
             <property name="toolTip">
              <string>Snap the width of the docked parts panel to whole thumbnail tiles after resizing it, and the categories to the longest category name when docked on top or bottom.</string>
@@ -3234,7 +3093,7 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="1" colspan="2">
+          <item row="0" column="1" colspan="2">
            <widget class="QCheckBox" name="PartsSnapToTiles">
             <property name="accessibleName">
              <string>Snap Panel Width to Tiles</string>
@@ -3425,7 +3284,7 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="0">
+          <item row="6" column="0">
            <widget class="QLabel" name="PreviewShadingModeLabel">
             <property name="toolTip">
              <string>Choose how parts are drawn in the preview.</string>
@@ -3438,7 +3297,7 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
+          <item row="6" column="1">
            <widget class="QComboBox" name="PreviewShadingMode">
             <property name="accessibleName">
              <string>Preview Shading Mode</string>
@@ -3463,7 +3322,7 @@
             </item>
            </widget>
           </item>
-          <item row="5" column="0">
+          <item row="4" column="0">
            <widget class="QLabel" name="PreviewEdgeLinesLabel">
             <property name="toolTip">
              <string>Draw edge lines on parts in the preview.</string>
@@ -3476,7 +3335,7 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="1" colspan="2">
+          <item row="4" column="1" colspan="2">
            <widget class="QCheckBox" name="PreviewEdgeLines">
             <property name="accessibleName">
              <string>Edge Lines</string>
@@ -3486,7 +3345,7 @@
             </property>
            </widget>
           </item>
-          <item row="6" column="0">
+          <item row="5" column="0">
            <widget class="QLabel" name="PreviewConditionalLinesLabel">
             <property name="toolTip">
              <string>Draw conditional lines on parts in the preview.</string>
@@ -3499,7 +3358,7 @@
             </property>
            </widget>
           </item>
-          <item row="6" column="1" colspan="2">
+          <item row="5" column="1" colspan="2">
            <widget class="QCheckBox" name="PreviewConditionalLines">
             <property name="accessibleName">
              <string>Conditional Lines</string>
@@ -3587,7 +3446,7 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
+          <item row="3" column="0">
            <widget class="QLabel" name="MinifigureBuilderShadingModeLabel">
             <property name="toolTip">
              <string>Choose how parts are drawn in the minifigure builder preview.</string>
@@ -3600,7 +3459,7 @@
             </property>
            </widget>
           </item>
-          <item row="1" column="1">
+          <item row="3" column="1">
            <widget class="QComboBox" name="MinifigureBuilderShadingMode">
             <property name="accessibleName">
              <string>Minifigure Builder Shading Mode</string>
@@ -3625,7 +3484,7 @@
             </item>
            </widget>
           </item>
-          <item row="2" column="0">
+          <item row="1" column="0">
            <widget class="QLabel" name="MinifigureBuilderEdgeLinesLabel">
             <property name="toolTip">
              <string>Draw edge lines on parts in the minifigure builder preview.</string>
@@ -3638,7 +3497,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1" colspan="2">
+          <item row="1" column="1" colspan="2">
            <widget class="QCheckBox" name="MinifigureBuilderEdgeLines">
             <property name="accessibleName">
              <string>Edge Lines</string>
@@ -3648,7 +3507,7 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="0">
+          <item row="2" column="0">
            <widget class="QLabel" name="MinifigureBuilderConditionalLinesLabel">
             <property name="toolTip">
              <string>Draw conditional lines on parts in the minifigure builder preview.</string>
@@ -3661,7 +3520,7 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="1" colspan="2">
+          <item row="2" column="1" colspan="2">
            <widget class="QCheckBox" name="MinifigureBuilderConditionalLines">
             <property name="accessibleName">
              <string>Conditional Lines</string>
@@ -3737,18 +3596,18 @@
      </widget>
      <widget class="QWidget" name="tabInterface">
       <property name="whatsThis">
-       <string>&lt;p&gt;&lt;b&gt;Interface Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose colors for the background, objects, grid, and interface. These settings control the display; they do not change the LDraw colors assigned to model parts.&lt;/p&gt;</string>
+       <string>&lt;p&gt;&lt;b&gt;Interface Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the colors of the interface, grid, objects, step highlighting, flexible parts, axes, view cube and instructions page, from the farthest back to the closest. Each color picker sets its alpha where the color can be see-through. These settings control the display; they do not change the LDraw colors assigned to model parts.&lt;/p&gt;</string>
       </property>
       <attribute name="title">
        <string>Interface</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_9" rowstretch="0,0,0,0,0,0,0,0,1">
        <item row="0" column="0">
-        <widget class="QGroupBox" name="groupBox_7">
+        <widget class="QGroupBox" name="groupBox_11">
          <property name="title">
-          <string>Background</string>
+          <string>Interface</string>
          </property>
-         <layout class="QGridLayout" name="gridLayout_7">
+         <layout class="QGridLayout" name="gridLayout_8">
           <item row="0" column="0">
            <widget class="QLabel" name="BackgroundColorLabel">
             <property name="toolTip">
@@ -3758,7 +3617,7 @@
              <cstring>BackgroundSolidColorButton</cstring>
             </property>
             <property name="text">
-             <string>Color</string>
+             <string>Background</string>
             </property>
            </widget>
           </item>
@@ -3775,8 +3634,242 @@
             </property>
            </widget>
           </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_6">
+            <property name="toolTip">
+             <string>Choose the display color for the active view border.</string>
+            </property>
+            <property name="buddy">
+             <cstring>ActiveViewColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Active View Border</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QToolButton" name="ActiveViewColorButton">
+            <property name="accessibleName">
+             <string>Active View Border</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the display color for the active view border.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_32">
+            <property name="toolTip">
+             <string>Choose the display color for inactive view borders.</string>
+            </property>
+            <property name="buddy">
+             <cstring>InactiveViewColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Inactive View Border</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QToolButton" name="InactiveViewColorButton">
+            <property name="accessibleName">
+             <string>Inactive View Border</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the display color for inactive view borders.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="CutawayShadeColorLabel">
+            <property name="toolTip">
+             <string>Choose the color and alpha of the light shade on the cutaway faces.</string>
+            </property>
+            <property name="buddy">
+             <cstring>CutawayShadeColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Cutaway Shade</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QToolButton" name="CutawayShadeColorButton">
+            <property name="accessibleName">
+             <string>Cutaway Shade Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the color and alpha of the light shade on the cutaway faces.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="ExplodeLineColorLabel">
+            <property name="toolTip">
+             <string>Choose the display color for the lines from each exploded part back to where it connects.</string>
+            </property>
+            <property name="buddy">
+             <cstring>ExplodeLineColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Explode Lines</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QToolButton" name="ExplodeLineColorButton">
+            <property name="accessibleName">
+             <string>Explode Lines Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the display color for the lines from each exploded part back to where it connects.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="toolTip">
+             <string>Choose the display color for view overlays.</string>
+            </property>
+            <property name="buddy">
+             <cstring>OverlayColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Overlay Color</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QToolButton" name="OverlayColorButton">
+            <property name="accessibleName">
+             <string>Overlay Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the display color for view overlays.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="label_16">
+            <property name="toolTip">
+             <string>Choose the display color for the selection rectangle fill.</string>
+            </property>
+            <property name="buddy">
+             <cstring>MarqueeFillColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Marquee Fill</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QToolButton" name="MarqueeFillColorButton">
+            <property name="accessibleName">
+             <string>Marquee Fill</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the display color for the selection rectangle fill.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="label_15">
+            <property name="toolTip">
+             <string>Choose the display color for the selection rectangle border.</string>
+            </property>
+            <property name="buddy">
+             <cstring>MarqueeBorderColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Marquee Border</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <widget class="QToolButton" name="MarqueeBorderColorButton">
+            <property name="accessibleName">
+             <string>Marquee Border</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the display color for the selection rectangle border.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="0">
+           <widget class="QLabel" name="label_31">
+            <property name="toolTip">
+             <string>Choose the display color for the halo behind view text.</string>
+            </property>
+            <property name="buddy">
+             <cstring>TextHaloColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Text Halo Color</string>
+            </property>
+           </widget>
+          </item>
+          <item row="8" column="1">
+           <widget class="QToolButton" name="TextHaloColorButton">
+            <property name="accessibleName">
+             <string>Text Halo Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the display color for the halo behind view text.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="0">
+           <widget class="QLabel" name="label_14">
+            <property name="toolTip">
+             <string>Choose the display color for view text.</string>
+            </property>
+            <property name="buddy">
+             <cstring>TextColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Text Color</string>
+            </property>
+           </widget>
+          </item>
+          <item row="9" column="1">
+           <widget class="QToolButton" name="TextColorButton">
+            <property name="accessibleName">
+             <string>Text Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the display color for view text.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
           <item row="0" column="2">
-           <spacer name="horizontalSpacer_12">
+           <spacer name="horizontalSpacer_16">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -3792,6 +3885,80 @@
         </widget>
        </item>
        <item row="1" column="0">
+        <widget class="QGroupBox" name="groupBox_10">
+         <property name="title">
+          <string>Grid</string>
+         </property>
+         <layout class="QGridLayout" name="horizontalLayout_17">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_29">
+            <property name="toolTip">
+             <string>Choose the display color for base-grid lines.</string>
+            </property>
+            <property name="buddy">
+             <cstring>gridLineColor</cstring>
+            </property>
+            <property name="text">
+             <string>Lines</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QToolButton" name="gridLineColor">
+            <property name="accessibleName">
+             <string>Grid Line Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the display color for base-grid lines.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_30">
+            <property name="toolTip">
+             <string>Choose the display color for base-grid stud markers.</string>
+            </property>
+            <property name="buddy">
+             <cstring>gridStudColor</cstring>
+            </property>
+            <property name="text">
+             <string>Studs</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QToolButton" name="gridStudColor">
+            <property name="accessibleName">
+             <string>Grid Stud Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the display color for base-grid stud markers.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_20">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0">
         <widget class="QGroupBox" name="groupBox_12">
          <property name="title">
           <string>Objects</string>
@@ -3917,7 +4084,189 @@
          </layout>
         </widget>
        </item>
-       <item row="2" column="0">
+       <item row="3" column="0">
+        <widget class="QGroupBox" name="StepsColorsGroup">
+         <property name="title">
+          <string>Steps and Highlighting</string>
+         </property>
+         <layout class="QGridLayout" name="StepsColorsLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="HighlightNewPartsColorLabel">
+            <property name="toolTip">
+             <string>Choose the highlight color for parts in the current step.</string>
+            </property>
+            <property name="text">
+             <string>Highlight New Parts</string>
+            </property>
+            <property name="buddy">
+             <cstring>HighlightNewPartsColor</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QToolButton" name="HighlightNewPartsColor">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="accessibleName">
+             <string>New Part Highlight Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the highlight color for parts in the current step.</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="FadeStepsColorLabel">
+            <property name="toolTip">
+             <string>Choose the tint used for parts from previous steps.</string>
+            </property>
+            <property name="text">
+             <string>Fade Previous Steps</string>
+            </property>
+            <property name="buddy">
+             <cstring>FadeStepsColor</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QToolButton" name="FadeStepsColor">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="accessibleName">
+             <string>Previous Step Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the tint used for parts from previous steps.</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="FadeInlineColorLabel">
+            <property name="toolTip">
+             <string>Choose the tint used for the rest of the model while editing a submodel in place.</string>
+            </property>
+            <property name="text">
+             <string>Fade on Edit</string>
+            </property>
+            <property name="buddy">
+             <cstring>FadeInlineColor</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QToolButton" name="FadeInlineColor">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="accessibleName">
+             <string>Edit Fade Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the tint used for the rest of the model while editing a submodel in place.</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="FadeJointColorLabel">
+            <property name="toolTip">
+             <string>Choose the tint used for all but the selected submodel while setting a joint.</string>
+            </property>
+            <property name="text">
+             <string>Fade on Joint Set</string>
+            </property>
+            <property name="buddy">
+             <cstring>FadeJointColor</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QToolButton" name="FadeJointColor">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="accessibleName">
+             <string>Joint Fade Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the tint used for all but the selected submodel while setting a joint.</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="HoverOutlineColorLabel">
+            <property name="toolTip">
+             <string>Choose the color of the submodel hover outline.</string>
+            </property>
+            <property name="text">
+             <string>Submodel Hover Outline</string>
+            </property>
+            <property name="buddy">
+             <cstring>HoverOutlineColor</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QToolButton" name="HoverOutlineColor">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="accessibleName">
+             <string>Hover Outline Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the color of the submodel hover outline.</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <spacer name="StepsColorsSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="4" column="0">
         <widget class="QGroupBox" name="FlexiblePartsColorsGroup">
          <property name="title">
           <string>Flexible Parts</string>
@@ -4095,411 +4444,7 @@
          </layout>
         </widget>
        </item>
-       <item row="3" column="0">
-        <widget class="QGroupBox" name="groupBox_11">
-         <property name="title">
-          <string>Interface</string>
-         </property>
-         <layout class="QGridLayout" name="gridLayout_8">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_6">
-            <property name="toolTip">
-             <string>Choose the display color for the active view border.</string>
-            </property>
-            <property name="buddy">
-             <cstring>ActiveViewColorButton</cstring>
-            </property>
-            <property name="text">
-             <string>Active View Border</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QToolButton" name="ActiveViewColorButton">
-            <property name="accessibleName">
-             <string>Active View Border</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose the display color for the active view border.</string>
-            </property>
-            <property name="text">
-             <string />
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_32">
-            <property name="toolTip">
-             <string>Choose the display color for inactive view borders.</string>
-            </property>
-            <property name="buddy">
-             <cstring>InactiveViewColorButton</cstring>
-            </property>
-            <property name="text">
-             <string>Inactive View Border</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QToolButton" name="InactiveViewColorButton">
-            <property name="accessibleName">
-             <string>Inactive View Border</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose the display color for inactive view borders.</string>
-            </property>
-            <property name="text">
-             <string />
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_14">
-            <property name="toolTip">
-             <string>Choose the display color for view text.</string>
-            </property>
-            <property name="buddy">
-             <cstring>TextColorButton</cstring>
-            </property>
-            <property name="text">
-             <string>Text Color</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QToolButton" name="TextColorButton">
-            <property name="accessibleName">
-             <string>Text Color</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose the display color for view text.</string>
-            </property>
-            <property name="text">
-             <string />
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_31">
-            <property name="toolTip">
-             <string>Choose the display color for the halo behind view text.</string>
-            </property>
-            <property name="buddy">
-             <cstring>TextHaloColorButton</cstring>
-            </property>
-            <property name="text">
-             <string>Text Halo Color</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="QToolButton" name="TextHaloColorButton">
-            <property name="accessibleName">
-             <string>Text Halo Color</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose the display color for the halo behind view text.</string>
-            </property>
-            <property name="text">
-             <string />
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="label_15">
-            <property name="toolTip">
-             <string>Choose the display color for the selection rectangle border.</string>
-            </property>
-            <property name="buddy">
-             <cstring>MarqueeBorderColorButton</cstring>
-            </property>
-            <property name="text">
-             <string>Marquee Border</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <widget class="QToolButton" name="MarqueeBorderColorButton">
-            <property name="accessibleName">
-             <string>Marquee Border</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose the display color for the selection rectangle border.</string>
-            </property>
-            <property name="text">
-             <string />
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="0">
-           <widget class="QLabel" name="label_16">
-            <property name="toolTip">
-             <string>Choose the display color for the selection rectangle fill.</string>
-            </property>
-            <property name="buddy">
-             <cstring>MarqueeFillColorButton</cstring>
-            </property>
-            <property name="text">
-             <string>Marquee Fill</string>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="1">
-           <widget class="QToolButton" name="MarqueeFillColorButton">
-            <property name="accessibleName">
-             <string>Marquee Fill</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose the display color for the selection rectangle fill.</string>
-            </property>
-            <property name="text">
-             <string />
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="0">
-           <widget class="QLabel" name="label_2">
-            <property name="toolTip">
-             <string>Choose the display color for view overlays.</string>
-            </property>
-            <property name="buddy">
-             <cstring>OverlayColorButton</cstring>
-            </property>
-            <property name="text">
-             <string>Overlay Color</string>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="1">
-           <widget class="QToolButton" name="OverlayColorButton">
-            <property name="accessibleName">
-             <string>Overlay Color</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose the display color for view overlays.</string>
-            </property>
-            <property name="text">
-             <string />
-            </property>
-           </widget>
-          </item>
-          <item row="7" column="0">
-           <widget class="QLabel" name="ExplodeLineColorLabel">
-            <property name="toolTip">
-             <string>Choose the display color for the lines from each exploded part back to where it connects.</string>
-            </property>
-            <property name="buddy">
-             <cstring>ExplodeLineColorButton</cstring>
-            </property>
-            <property name="text">
-             <string>Explode Lines</string>
-            </property>
-           </widget>
-          </item>
-          <item row="7" column="1">
-           <widget class="QToolButton" name="ExplodeLineColorButton">
-            <property name="accessibleName">
-             <string>Explode Lines Color</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose the display color for the lines from each exploded part back to where it connects.</string>
-            </property>
-            <property name="text">
-             <string />
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <spacer name="horizontalSpacer_16">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="4" column="0">
-        <widget class="QGroupBox" name="groupBox_10">
-         <property name="title">
-          <string>Grid</string>
-         </property>
-         <layout class="QGridLayout" name="horizontalLayout_17">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_29">
-            <property name="toolTip">
-             <string>Choose the display color for base-grid lines.</string>
-            </property>
-            <property name="buddy">
-             <cstring>gridLineColor</cstring>
-            </property>
-            <property name="text">
-             <string>Lines</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QToolButton" name="gridLineColor">
-            <property name="accessibleName">
-             <string>Grid Line Color</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose the display color for base-grid lines.</string>
-            </property>
-            <property name="text">
-             <string />
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_30">
-            <property name="toolTip">
-             <string>Choose the display color for base-grid stud markers.</string>
-            </property>
-            <property name="buddy">
-             <cstring>gridStudColor</cstring>
-            </property>
-            <property name="text">
-             <string>Studs</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QToolButton" name="gridStudColor">
-            <property name="accessibleName">
-             <string>Grid Stud Color</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose the display color for base-grid stud markers.</string>
-            </property>
-            <property name="text">
-             <string />
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <spacer name="horizontalSpacer_20">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-         </layout>
-        </widget>
-       </item>
        <item row="5" column="0">
-        <widget class="QGroupBox" name="groupBox_9">
-         <property name="title">
-          <string>View Cube</string>
-         </property>
-         <layout class="QGridLayout" name="horizontalLayout_16">
-          <item row="0" column="0">
-           <widget class="QLabel" name="label_22">
-            <property name="toolTip">
-             <string>Choose the display color for the navigation cube.</string>
-            </property>
-            <property name="buddy">
-             <cstring>ViewCubeColorButton</cstring>
-            </property>
-            <property name="text">
-             <string>Color</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QToolButton" name="ViewCubeColorButton">
-            <property name="accessibleName">
-             <string>View Cube Color</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose the display color for the navigation cube.</string>
-            </property>
-            <property name="text">
-             <string />
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="label_23">
-            <property name="toolTip">
-             <string>Choose the display color for navigation cube text.</string>
-            </property>
-            <property name="buddy">
-             <cstring>ViewCubeTextColorButton</cstring>
-            </property>
-            <property name="text">
-             <string>Text Color</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QToolButton" name="ViewCubeTextColorButton">
-            <property name="accessibleName">
-             <string>View Cube Text Color</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose the display color for navigation cube text.</string>
-            </property>
-            <property name="text">
-             <string />
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="label_20">
-            <property name="toolTip">
-             <string>Choose the display color for the highlighted region of the navigation cube.</string>
-            </property>
-            <property name="buddy">
-             <cstring>ViewCubeHighlightColorButton</cstring>
-            </property>
-            <property name="text">
-             <string>Highlight Color</string>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="QToolButton" name="ViewCubeHighlightColorButton">
-            <property name="accessibleName">
-             <string>View Cube Highlight Color</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose the display color for the highlighted region of the navigation cube.</string>
-            </property>
-            <property name="text">
-             <string />
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="2">
-           <spacer name="horizontalSpacer_21">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-         </layout>
-        </widget>
-       </item>
-       <item row="6" column="0">
         <widget class="QGroupBox" name="AxisColorsGroup">
          <property name="title">
           <string>Axes</string>
@@ -4674,13 +4619,136 @@
             </property>
            </spacer>
           </item>
+          <item row="6" column="0">
+           <widget class="QLabel" name="AxisIconCubeOutlineColorLabel">
+            <property name="toolTip">
+             <string>Choose the color and alpha of the axis icon cube outline.</string>
+            </property>
+            <property name="buddy">
+             <cstring>AxisIconCubeOutlineColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Axis Icon Outline</string>
+            </property>
+           </widget>
+          </item>
+          <item row="6" column="1">
+           <widget class="QToolButton" name="AxisIconCubeOutlineColorButton">
+            <property name="accessibleName">
+             <string>Axis Icon Outline</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the color and alpha of the axis icon cube outline.</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QGroupBox" name="groupBox_9">
+         <property name="title">
+          <string>View Cube</string>
+         </property>
+         <layout class="QGridLayout" name="horizontalLayout_16">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_22">
+            <property name="toolTip">
+             <string>Choose the display color for the navigation cube.</string>
+            </property>
+            <property name="buddy">
+             <cstring>ViewCubeColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Color</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QToolButton" name="ViewCubeColorButton">
+            <property name="accessibleName">
+             <string>View Cube Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the display color for the navigation cube.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_23">
+            <property name="toolTip">
+             <string>Choose the display color for navigation cube text.</string>
+            </property>
+            <property name="buddy">
+             <cstring>ViewCubeTextColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Text Color</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QToolButton" name="ViewCubeTextColorButton">
+            <property name="accessibleName">
+             <string>View Cube Text Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the display color for navigation cube text.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_20">
+            <property name="toolTip">
+             <string>Choose the display color for the highlighted region of the navigation cube.</string>
+            </property>
+            <property name="buddy">
+             <cstring>ViewCubeHighlightColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Highlight Color</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QToolButton" name="ViewCubeHighlightColorButton">
+            <property name="accessibleName">
+             <string>View Cube Highlight Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the display color for the highlighted region of the navigation cube.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <spacer name="horizontalSpacer_21">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
          </layout>
         </widget>
        </item>
        <item row="7" column="0">
         <widget class="QGroupBox" name="InstructionsColorsGroup">
          <property name="whatsThis">
-          <string>&lt;p&gt;&lt;b&gt;Instructions&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Colors of the element inspector of the instructions page, drawn like the box model of a web browser inspector: the margin fill around each element, the padding fill inside its border, and markers at its anchors, the corners, edge centers and center that placement aligns to. The Ruler Pointer color fills the arrows that follow the pointer on the rulers. Each color has an alpha from 0, transparent, to 1, opaque.&lt;/p&gt;&lt;p&gt;Show or hide each overlay with Show Element Margins, Show Element Padding and Show Element Anchors in the Instructions preferences or the Options menu of the Instructions window. The overlays show on screen only and are never printed.&lt;/p&gt;</string>
+          <string>&lt;p&gt;&lt;b&gt;Instructions&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Colors of the element inspector of the instructions page, drawn like the box model of a web browser inspector: the margin fill around each element, the padding fill inside its border, and markers at its anchors, the corners, edge centers and center that placement aligns to. The Ruler Pointer color fills the arrows that follow the pointer on the rulers. Page Margins colors the dashed outline of the page margins, and Page Grid Primary Lines and Page Grid Secondary Lines color the grid lines at every grid unit and at its fractions. Each color picker sets its alpha, from transparent to opaque.&lt;/p&gt;&lt;p&gt;Show or hide each overlay with Show Element Margins, Show Element Padding and Show Element Anchors in the Instructions preferences or the Options menu of the Instructions window. The overlays show on screen only and are never printed.&lt;/p&gt;</string>
          </property>
          <property name="title">
           <string>Instructions</string>
@@ -4712,44 +4780,6 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="2">
-           <widget class="QSlider" name="ElementMarginAlphaSlider">
-            <property name="accessibleName">
-             <string>Element Margin Alpha</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose how opaque the margin fill around each element on the instructions page is, from 0 to 1.</string>
-            </property>
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimum">
-             <number>0</number>
-            </property>
-            <property name="maximum">
-             <number>100</number>
-            </property>
-            <property name="pageStep">
-             <number>10</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="3">
-           <widget class="QLabel" name="ElementMarginAlphaValueLabel">
-            <property name="toolTip">
-             <string>Choose how opaque the margin fill around each element on the instructions page is, from 0 to 1.</string>
-            </property>
-            <property name="text">
-             <string notr="true">0.66</string>
-            </property>
-           </widget>
-          </item>
           <item row="1" column="0">
            <widget class="QLabel" name="ElementPaddingColorLabel">
             <property name="toolTip">
@@ -4773,44 +4803,6 @@
             </property>
             <property name="text">
              <string />
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="2">
-           <widget class="QSlider" name="ElementPaddingAlphaSlider">
-            <property name="accessibleName">
-             <string>Element Padding Alpha</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose how opaque the padding fill inside the border of each element on the instructions page is, from 0 to 1.</string>
-            </property>
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimum">
-             <number>0</number>
-            </property>
-            <property name="maximum">
-             <number>100</number>
-            </property>
-            <property name="pageStep">
-             <number>10</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="3">
-           <widget class="QLabel" name="ElementPaddingAlphaValueLabel">
-            <property name="toolTip">
-             <string>Choose how opaque the padding fill inside the border of each element on the instructions page is, from 0 to 1.</string>
-            </property>
-            <property name="text">
-             <string notr="true">0.55</string>
             </property>
            </widget>
           </item>
@@ -4840,44 +4832,6 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="2">
-           <widget class="QSlider" name="ElementAnchorAlphaSlider">
-            <property name="accessibleName">
-             <string>Element Anchors Alpha</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose how opaque the anchor markers of each element on the instructions page are, from 0 to 1.</string>
-            </property>
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimum">
-             <number>0</number>
-            </property>
-            <property name="maximum">
-             <number>100</number>
-            </property>
-            <property name="pageStep">
-             <number>10</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="3">
-           <widget class="QLabel" name="ElementAnchorAlphaValueLabel">
-            <property name="toolTip">
-             <string>Choose how opaque the anchor markers of each element on the instructions page are, from 0 to 1.</string>
-            </property>
-            <property name="text">
-             <string notr="true">1.00</string>
-            </property>
-           </widget>
-          </item>
           <item row="3" column="0">
            <widget class="QLabel" name="RulerPointerColorLabel">
             <property name="toolTip">
@@ -4901,44 +4855,6 @@
             </property>
             <property name="text">
              <string />
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="2">
-           <widget class="QSlider" name="RulerPointerAlphaSlider">
-            <property name="accessibleName">
-             <string>Ruler Pointer Alpha</string>
-            </property>
-            <property name="toolTip">
-             <string>Choose how opaque the ruler arrows that follow the pointer on the instructions page are, from 0 to 1.</string>
-            </property>
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="minimum">
-             <number>0</number>
-            </property>
-            <property name="maximum">
-             <number>100</number>
-            </property>
-            <property name="pageStep">
-             <number>10</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Orientation::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="3">
-           <widget class="QLabel" name="RulerPointerAlphaValueLabel">
-            <property name="toolTip">
-             <string>Choose how opaque the ruler arrows that follow the pointer on the instructions page are, from 0 to 1.</string>
-            </property>
-            <property name="text">
-             <string notr="true">1.00</string>
             </property>
            </widget>
           </item>
@@ -5592,24 +5508,24 @@
   <tabstop>lgeoPathBrowse</tabstop>
   <tabstop>RebrickableApiKeyEdit</tabstop>
   <tabstop>RebrickableApiKeyButton</tabstop>
-  <tabstop>ColorTheme</tabstop>
-  <tabstop>Language</tabstop>
-  <tabstop>autoLoadMostRecent</tabstop>
-  <tabstop>RestoreTabLayout</tabstop>
   <tabstop>AuthorName</tabstop>
   <tabstop>AuthorEmail</tabstop>
   <tabstop>AuthorComment</tabstop>
   <tabstop>AuthorSplitter</tabstop>
   <tabstop>AuthorPreview</tabstop>
+  <tabstop>ColorTheme</tabstop>
+  <tabstop>Language</tabstop>
+  <tabstop>autoLoadMostRecent</tabstop>
+  <tabstop>RestoreTabLayout</tabstop>
   <tabstop>WatchFileChanges</tabstop>
   <tabstop>LoadPartsBeforeShowing</tabstop>
-  <tabstop>MigrateMetaCommands</tabstop>
   <tabstop>WarnPartsLoadFailure</tabstop>
+  <tabstop>MigrateMetaCommands</tabstop>
   <tabstop>MarkColladaTransparency</tabstop>
   <tabstop>KMZGeometry</tabstop>
   <tabstop>fixedDirectionKeys</tabstop>
-  <tabstop>FirstPartAtOrigin</tabstop>
   <tabstop>JointRotation</tabstop>
+  <tabstop>FirstPartAtOrigin</tabstop>
   <tabstop>InsertColorMode</tabstop>
   <tabstop>FlexSpreadMode</tabstop>
   <tabstop>FlexClampNewControlPoints</tabstop>
@@ -5622,21 +5538,21 @@
   <tabstop>HighContrastButton</tabstop>
   <tabstop>ShadingMode</tabstop>
   <tabstop>LightingStyle</tabstop>
-  <tabstop>ColorSourceCombo</tabstop>
-  <tabstop>FadeSteps</tabstop>
-  <tabstop>FadeStepsColor</tabstop>
-  <tabstop>HighlightNewParts</tabstop>
-  <tabstop>HighlightNewPartsColor</tabstop>
-  <tabstop>HighlightRenderMode</tabstop>
-  <tabstop>SelectionOutlineWidth</tabstop>
-  <tabstop>HoverOutline</tabstop>
-  <tabstop>HoverOutlineColor</tabstop>
   <tabstop>edgeLines</tabstop>
   <tabstop>ConditionalLinesCheckBox</tabstop>
+  <tabstop>LineWidthSlider</tabstop>
+  <tabstop>ColorSourceCombo</tabstop>
   <tabstop>AutomateEdgeColor</tabstop>
   <tabstop>EdgeContrastSlider</tabstop>
   <tabstop>EdgeSaturationSlider</tabstop>
-  <tabstop>LineWidthSlider</tabstop>
+  <tabstop>HighlightNewParts</tabstop>
+  <tabstop>FadeSteps</tabstop>
+  <tabstop>FadeInline</tabstop>
+  <tabstop>FadeJoint</tabstop>
+  <tabstop>HoverOutline</tabstop>
+  <tabstop>FadeJointMoving</tabstop>
+  <tabstop>HighlightRenderMode</tabstop>
+  <tabstop>SelectionOutlineWidth</tabstop>
   <tabstop>ViewCubeSizeCombo</tabstop>
   <tabstop>ViewCubeLocationCombo</tabstop>
   <tabstop>ViewCubeLabelsCombo</tabstop>
@@ -5647,75 +5563,78 @@
   <tabstop>AxisIconLabelsCheckBox</tabstop>
   <tabstop>AxisIconNegativeCheckBox</tabstop>
   <tabstop>AxisIconCubeOutlineCheckBox</tabstop>
-  <tabstop>AxisIconCubeOutlineAlphaSlider</tabstop>
-  <tabstop>CutawaySizeSpinBox</tabstop>
-  <tabstop>CutawayShadeColorButton</tabstop>
-  <tabstop>CutawayShadeAlphaSlider</tabstop>
   <tabstop>CutawayEdgesCheckBox</tabstop>
+  <tabstop>CutawaySizeSpinBox</tabstop>
   <tabstop>TurntableIdleDurationSpinBox</tabstop>
   <tabstop>TurntableTurnTimeSpinBox</tabstop>
   <tabstop>TurntableAxisCombo</tabstop>
-  <tabstop>gridStuds</tabstop>
-  <tabstop>gridLines</tabstop>
-  <tabstop>gridLineSpacing</tabstop>
-  <tabstop>GridHeightXZCheckBox</tabstop>
-  <tabstop>GridHeightYZCheckBox</tabstop>
-  <tabstop>GridHeightBehindCheckBox</tabstop>
   <tabstop>GridAxisXCheckBox</tabstop>
   <tabstop>GridAxisYCheckBox</tabstop>
   <tabstop>GridAxisZCheckBox</tabstop>
   <tabstop>GridNegativeAxesCheckBox</tabstop>
+  <tabstop>gridStuds</tabstop>
+  <tabstop>GridHeightXZCheckBox</tabstop>
+  <tabstop>GridHeightYZCheckBox</tabstop>
+  <tabstop>GridHeightBehindCheckBox</tabstop>
+  <tabstop>gridLines</tabstop>
+  <tabstop>gridLineSpacing</tabstop>
+  <tabstop>GridMarginSpinBox</tabstop>
+  <tabstop>GridHeightMarginSpinBox</tabstop>
+  <tabstop>PartsSnapToTiles</tabstop>
   <tabstop>PartsSyncRendering</tabstop>
-  <tabstop>PartsShadingMode</tabstop>
   <tabstop>PartsEdgeLines</tabstop>
   <tabstop>PartsConditionalLines</tabstop>
+  <tabstop>PartsShadingMode</tabstop>
   <tabstop>PartsLineWidthSlider</tabstop>
   <tabstop>PreviewViewCubeSizeCombo</tabstop>
   <tabstop>PreviewViewCubeLocationCombo</tabstop>
   <tabstop>PreviewAxisIconSizeCombo</tabstop>
   <tabstop>PreviewSyncRendering</tabstop>
-  <tabstop>PreviewShadingMode</tabstop>
   <tabstop>PreviewEdgeLines</tabstop>
   <tabstop>PreviewConditionalLines</tabstop>
+  <tabstop>PreviewShadingMode</tabstop>
   <tabstop>PreviewLineWidthSlider</tabstop>
   <tabstop>BackgroundSolidColorButton</tabstop>
+  <tabstop>ActiveViewColorButton</tabstop>
+  <tabstop>InactiveViewColorButton</tabstop>
+  <tabstop>CutawayShadeColorButton</tabstop>
+  <tabstop>ExplodeLineColorButton</tabstop>
+  <tabstop>OverlayColorButton</tabstop>
+  <tabstop>MarqueeFillColorButton</tabstop>
+  <tabstop>MarqueeBorderColorButton</tabstop>
+  <tabstop>TextHaloColorButton</tabstop>
+  <tabstop>TextColorButton</tabstop>
+  <tabstop>gridLineColor</tabstop>
+  <tabstop>gridStudColor</tabstop>
   <tabstop>ObjectSelectedColorButton</tabstop>
   <tabstop>ObjectFocusedColorButton</tabstop>
   <tabstop>CameraColorButton</tabstop>
   <tabstop>LightColorButton</tabstop>
+  <tabstop>HighlightNewPartsColor</tabstop>
+  <tabstop>FadeStepsColor</tabstop>
+  <tabstop>FadeInlineColor</tabstop>
+  <tabstop>FadeJointColor</tabstop>
+  <tabstop>HoverOutlineColor</tabstop>
   <tabstop>ControlPointColorButton</tabstop>
   <tabstop>ControlPointFocusedColorButton</tabstop>
   <tabstop>ControlPointSeatedColorButton</tabstop>
   <tabstop>PathColorButton</tabstop>
   <tabstop>PathOutOfReachColorButton</tabstop>
   <tabstop>SpreadHandleColorButton</tabstop>
-  <tabstop>ActiveViewColorButton</tabstop>
-  <tabstop>InactiveViewColorButton</tabstop>
-  <tabstop>TextColorButton</tabstop>
-  <tabstop>TextHaloColorButton</tabstop>
-  <tabstop>MarqueeBorderColorButton</tabstop>
-  <tabstop>MarqueeFillColorButton</tabstop>
-  <tabstop>OverlayColorButton</tabstop>
-  <tabstop>ExplodeLineColorButton</tabstop>
-  <tabstop>gridLineColor</tabstop>
-  <tabstop>gridStudColor</tabstop>
-  <tabstop>ViewCubeColorButton</tabstop>
-  <tabstop>ViewCubeTextColorButton</tabstop>
-  <tabstop>ViewCubeHighlightColorButton</tabstop>
   <tabstop>AxisXColorButton</tabstop>
   <tabstop>AxisYColorButton</tabstop>
   <tabstop>AxisZColorButton</tabstop>
   <tabstop>AxisXNegativeColorButton</tabstop>
   <tabstop>AxisYNegativeColorButton</tabstop>
   <tabstop>AxisZNegativeColorButton</tabstop>
+  <tabstop>AxisIconCubeOutlineColorButton</tabstop>
+  <tabstop>ViewCubeColorButton</tabstop>
+  <tabstop>ViewCubeTextColorButton</tabstop>
+  <tabstop>ViewCubeHighlightColorButton</tabstop>
   <tabstop>ElementMarginColorButton</tabstop>
-  <tabstop>ElementMarginAlphaSlider</tabstop>
   <tabstop>ElementPaddingColorButton</tabstop>
-  <tabstop>ElementPaddingAlphaSlider</tabstop>
   <tabstop>ElementAnchorColorButton</tabstop>
-  <tabstop>ElementAnchorAlphaSlider</tabstop>
   <tabstop>RulerPointerColorButton</tabstop>
-  <tabstop>RulerPointerAlphaSlider</tabstop>
   <tabstop>categoriesTree</tabstop>
   <tabstop>partsTree</tabstop>
   <tabstop>importCategories</tabstop>

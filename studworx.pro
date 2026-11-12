@@ -156,6 +156,7 @@ unix:!macx {
 	samples.files += resources/samples/sample-lights-cameras.ldr
 	samples.files += resources/samples/sample-minifigure.ldr
 	samples.files += resources/samples/sample-pov-ray.ldr
+	samples.files += resources/samples/sample-train-tracks.ldr
 
 	INSTALLS += target docs man desktop icons mime appdata thumbnailer samples
 
@@ -187,6 +188,7 @@ macx {
 	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-lights-cameras.ldr
 	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-minifigure.ldr
 	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-pov-ray.ldr
+	samples.files += $$_PRO_FILE_PWD_/resources/samples/sample-train-tracks.ldr
 	samples.path = Contents/Resources/samples
 	QMAKE_BUNDLE_DATA += samples
 

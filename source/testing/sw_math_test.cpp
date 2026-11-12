@@ -159,3 +159,40 @@ void swTests::AxisAlignedRotationTolerance()
 	Invalid.SnapToAxisAligned();
 	CompareMatrix(Invalid, Original);
 }
+
+// The grid grows unit by unit past the parts, with margins only away from the origin.
+void swTests::GridExtentGrowsWithMargins()
+{
+	// empty grid, 2 x 2 studs and 3 plates
+	int Low = -1, High = 1;
+
+	swGrowGridExtent(-10.0f, 10.0f, 20.0f, 1, Low, High);
+	QCOMPARE(Low, -2);
+	QCOMPARE(High, 2);
+
+	// a brick 72 to 96 ldu below the floor
+	Low = 0;
+	High = 3;
+	swGrowGridExtent(-96.0f, -68.0f, 8.0f, 3, Low, High);
+	QCOMPARE(Low, -15);
+	QCOMPARE(High, 3);
+
+	// parts above the floor add no margin below it
+	Low = 0;
+	High = 3;
+	swGrowGridExtent(0.0f, 100.0f, 8.0f, 3, Low, High);
+	QCOMPARE(Low, 0);
+	QCOMPARE(High, 16);
+
+	// a zero margin hugs the parts
+	Low = -1;
+	High = 1;
+	swGrowGridExtent(-30.0f, 50.0f, 20.0f, 0, Low, High);
+	QCOMPARE(Low, -2);
+	QCOMPARE(High, 3);
+
+	// infinite bounds leave the range alone
+	swGrowGridExtent(-INFINITY, INFINITY, 20.0f, 1, Low, High);
+	QCOMPARE(Low, -2);
+	QCOMPARE(High, 3);
+}

@@ -295,7 +295,7 @@ void swPreferencesDialog::CreateContextMenuTab()
 
 	connect(SubmenuButton, &QPushButton::clicked, this, [this, InsertEntry]()
 	{
-		const QString Name = QInputDialog::getText(this, tr("Submenu"), tr("Name:")).trimmed();
+		const QString Name = QInputDialog::getText(this, tr("Submenu"), tr("Name")).trimmed();
 
 		if (!Name.isEmpty())
 			InsertEntry(QLatin1Char('>') + Name);
@@ -308,7 +308,7 @@ void swPreferencesDialog::CreateContextMenuTab()
 		if (!Current || !Current->data(0, SW_CONTEXT_ENTRY_ROLE).toString().startsWith(QLatin1Char('>')))
 			return;
 
-		const QString Name = QInputDialog::getText(this, tr("Rename Submenu"), tr("Name:"), QLineEdit::Normal, Current->text(0)).trimmed();
+		const QString Name = QInputDialog::getText(this, tr("Rename Submenu"), tr("Name"), QLineEdit::Normal, Current->text(0)).trimmed();
 
 		if (!Name.isEmpty())
 			swSetContextMenuItem(Current, QLatin1Char('>') + Name);

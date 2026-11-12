@@ -251,6 +251,18 @@ int swInterfaceStyle::pixelMetric(PixelMetric Metric, const QStyleOption* Option
 	return QProxyStyle::pixelMetric(Metric, Option, Widget);
 }
 
+QRect swInterfaceStyle::subControlRect(ComplexControl Control, const QStyleOptionComplex* Option, SubControl Element, const QWidget* Widget) const
+{
+	QRect Rect = QProxyStyle::subControlRect(Control, Option, Element, Widget);
+
+	// some fonts draw past the title rect
+
+	if (Control == CC_GroupBox && Element == SC_GroupBoxLabel)
+		Rect.setRight(Rect.right() + Option->fontMetrics.horizontalAdvance(QLatin1Char('M')));
+
+	return Rect;
+}
+
 QSize swInterfaceStyle::sizeFromContents(ContentsType Type, const QStyleOption* Option, const QSize& Size, const QWidget* Widget) const
 {
 	QSize Result = QProxyStyle::sizeFromContents(Type, Option, Size, Widget);
@@ -281,6 +293,16 @@ void swInterfaceStyle::drawPrimitive(PrimitiveElement Element, const QStyleOptio
 	if (Element == PE_IndicatorBranch && mCustom)
 	{
 		drawBranch(Option, Painter);
+		return;
+	}
+
+	// list check boxes stand out from the list
+
+	if (Element == PE_IndicatorItemViewItemCheck && mCustom)
+	{
+		QStyleOption CheckOption(*Option);
+		CheckOption.palette.setColor(QPalette::Base, Option->palette.color(QPalette::Window));
+		QProxyStyle::drawPrimitive(Element, &CheckOption, Painter, Widget);
 		return;
 	}
 

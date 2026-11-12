@@ -655,8 +655,6 @@ protected:
 	void EmitPagePropertyChanged(swInstructionsPropertyType Type);
 	void SetDefaultProperty(swInstructionsPropertyType Type, const QVariant& Value);
 	void SetShowOption(bool& Option, bool Value, SW_PROFILE_KEY Key);
-	static QColor GetProfileOverlayColor(SW_PROFILE_KEY ColorKey, SW_PROFILE_KEY AlphaKey);
-
 	Project* mProject = nullptr;
 	bool mShowGrid = true;
 	bool mSnapToGrid = true;

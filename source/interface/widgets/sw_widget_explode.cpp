@@ -13,10 +13,10 @@ swExplodeWidget::swExplodeWidget(QWidget* Parent)
 	connect(ui->uniform, &QCheckBox::toggled, this, &swExplodeWidget::UpdateUniform);
 	connect(ui->uniformAxis, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &swExplodeWidget::UpdateUniform);
 
-	for (QSpinBox* Spread : { ui->spreadX, ui->spreadY, ui->spreadZ })
+	for (QDoubleSpinBox* Spread : { ui->spreadX, ui->spreadY, ui->spreadZ })
 	{
-		connect(Spread, QOverload<int>::of(&QSpinBox::valueChanged), this, &swExplodeWidget::UpdateUniform);
-		connect(Spread, QOverload<int>::of(&QSpinBox::valueChanged), this, &swExplodeWidget::SettingsChanged);
+		connect(Spread, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &swExplodeWidget::UpdateUniform);
+		connect(Spread, QOverload<double>::of(&QDoubleSpinBox::valueChanged), this, &swExplodeWidget::SettingsChanged);
 	}
 
 	connect(ui->anchor, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &swExplodeWidget::SettingsChanged);
@@ -33,7 +33,7 @@ swExplodeWidget::swExplodeWidget(QWidget* Parent)
 	mExplodeButton = new QToolButton(Buttons);
 	mExplodeButton->setText(tr("Explode"));
 	mExplodeButton->setToolTip(tr("Flatten the submodels and spread the parts away from the anchor"));
-	mExplodeButton->setWhatsThis(tr("<p><b>Explode</b></p><p>Spread the parts on screen away from the anchor with the settings above. Submodels, and the submodels inside them, flatten into their parts first, so everything spreads in one undo step. While they are spread, changing a setting spreads them again.</p>"));
+	mExplodeButton->setWhatsThis(tr("<p><b>Explode</b></p><p>Spread the parts on screen away from the anchor with the settings above. Submodels, and the submodels inside them, flatten into their parts first, so everything spreads in one undo step. While they are spread, changing a setting spreads them again. It is greyed out while every spread is 1.0, which leaves the parts in place.</p>"));
 
 	mCollapseButton = new QToolButton(Buttons);
 	mCollapseButton->setText(tr("Collapse"));
@@ -112,7 +112,7 @@ void swExplodeWidget::UpdateAnchors()
 	const bool HasAnchor = ui->anchor->count() > 0;
 
 	ui->anchor->setPlaceholderText(tr("No part is selected"));
-	mExplodeButton->setEnabled(HasAnchor);
+	UpdateExplodeButton();
 	mSaveCopyButton->setEnabled(HasAnchor);
 	mCollapseButton->setEnabled(ActiveModel && (ActiveModel->IsExploded() || ActiveModel->IsExplodeFlattened()));
 }
@@ -120,19 +120,29 @@ void swExplodeWidget::UpdateAnchors()
 // use to make the other axes follow the uniform axis
 void swExplodeWidget::UpdateUniform()
 {
-	QSpinBox* const Spreads[] = { ui->spreadX, ui->spreadY, ui->spreadZ };
+	QDoubleSpinBox* const Spreads[] = { ui->spreadX, ui->spreadY, ui->spreadZ };
 	const bool Uniform = ui->uniform->isChecked();
-	const QSpinBox* Source = Spreads[ui->uniformAxis->currentIndex()];
+	const QDoubleSpinBox* Source = Spreads[ui->uniformAxis->currentIndex()];
 
 	ui->uniformAxis->setEnabled(Uniform);
 
-	for (QSpinBox* Spread : Spreads)
+	for (QDoubleSpinBox* Spread : Spreads)
 	{
 		Spread->setEnabled(!Uniform || Spread == Source);
 
 		if (Uniform && Spread != Source)
 			Spread->setValue(Source->value());
 	}
+
+	UpdateExplodeButton();
+}
+
+// use to grey out explode when nothing would move
+void swExplodeWidget::UpdateExplodeButton()
+{
+	const bool Spreads = ui->spreadX->value() > 1.0 || ui->spreadY->value() > 1.0 || ui->spreadZ->value() > 1.0;
+
+	mExplodeButton->setEnabled(ui->anchor->count() > 0 && Spreads);
 }
 
 // use to spread the parts again while they are exploded
@@ -149,7 +159,7 @@ swExplodeSettings swExplodeWidget::GetSettings() const
 	swExplodeSettings Settings;
 
 	Settings.Anchor = static_cast<swExplodeAnchor>(ui->anchor->currentData().toInt());
-	Settings.Spread = swVector3(ui->spreadX->value(), ui->spreadY->value(), ui->spreadZ->value()) / 100.0f;
+	Settings.Spread = swVector3(ui->spreadX->value(), ui->spreadY->value(), ui->spreadZ->value());
 	Settings.SelectedOnly = ui->selectedOnly->isChecked();
 	Settings.ShowLines = ui->showLines->isChecked();
 

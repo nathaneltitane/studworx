@@ -27,10 +27,6 @@ struct swInstructionsPreferences
 	quint32 ElementPaddingColor;
 	quint32 ElementAnchorColor;
 	quint32 RulerPointerColor;
-	int ElementMarginAlpha;
-	int ElementPaddingAlpha;
-	int ElementAnchorAlpha;
-	int RulerPointerAlpha;
 	QColor GridPrimaryColor;
 	QColor GridSecondaryColor;
 	QColor MarginColor;
@@ -141,9 +137,6 @@ private slots:
 	void EdgeLinesToggled();
 	void ConditionalLinesCheckBoxToggled();
 	void LineWidthSliderValueChanged();
-	void AxisIconCubeOutlineAlphaChanged();
-	void CutawayShadeAlphaChanged();
-	void ElementAlphaChanged();
 	void RenderTargetChanged();
 	void MeshLODSliderValueChanged();
 	void FadeStepsToggled();

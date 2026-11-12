@@ -53,6 +53,19 @@ inline T swClamp(const T& Value, const T& Min, const T& Max)
 		return Value;
 }
 
+// grow a grid range unit by unit past a span, margin only beyond the origin
+inline void swGrowGridExtent(float Min, float Max, float Unit, int Margin, int& Low, int& High)
+{
+	if (!std::isfinite(Min) || !std::isfinite(Max))
+		return;
+
+	// bound before converting to integers
+	constexpr float MaxGridExtent = 100000.0f;
+
+	Low = swMinimum(static_cast<int>(floorf(swClamp(Min / Unit, -MaxGridExtent, MaxGridExtent))) - (Min < 0.0f ? Margin : 0), Low);
+	High = swMaximum(static_cast<int>(ceilf(swClamp(Max / Unit, -MaxGridExtent, MaxGridExtent))) + (Max > 0.0f ? Margin : 0), High);
+}
+
 inline bool swIsZero(float Value)
 {
 	return fabsf(Value) < SW_EPSILON;

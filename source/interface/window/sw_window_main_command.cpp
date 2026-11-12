@@ -484,13 +484,13 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 	case SW_VIEW_CUTAWAY_SHADE_COLOR:
 		{
 			quint32& ShadeColor = swGetPreferences().mCutawayShadeColor;
-			const QColor NewColor = QColorDialog::getColor(swQColorFromRGBA(ShadeColor | SW_RGBA(0, 0, 0, 255)), this, tr("Select Cutaway Shade Color"));
+			const QColor NewColor = QColorDialog::getColor(swQColorFromRGBA(ShadeColor), this, tr("Select Cutaway Shade Color"), QColorDialog::ShowAlphaChannel);
 
 			if (!NewColor.isValid())
 				break;
 
-			// the transparency is its own preference
-			ShadeColor = SW_RGB(NewColor.red(), NewColor.green(), NewColor.blue());
+			// alpha keeps the overlay range
+			ShadeColor = SW_RGBA(NewColor.red(), NewColor.green(), NewColor.blue(), NewColor.alpha());
 			swSetProfileUnsignedInteger(SW_PROFILE_CUTAWAY_SHADE_COLOR, ShadeColor);
 			swView::UpdateAllViews();
 		}

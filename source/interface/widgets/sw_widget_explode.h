@@ -18,6 +18,7 @@ public:
 
 private slots:
 	void UpdateUniform();
+	void UpdateExplodeButton();
 	void SettingsChanged();
 
 private:

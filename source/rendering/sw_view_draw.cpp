@@ -571,8 +571,9 @@ void swView::DrawAxes() const
 			}
 		}
 
-		swVector4 OutlineColor = swVector4FromColor(Preferences.mViewCubeTextColor);
-		OutlineColor.w = swOverlayAlpha(Preferences.mAxisIconCubeOutlineAlpha);
+		// alpha keeps the overlay range
+		swVector4 OutlineColor = swVector4FromColor(Preferences.mAxisIconCubeOutlineColor);
+		OutlineColor.w = swOverlayAlpha((SW_RGBA_ALPHA(Preferences.mAxisIconCubeOutlineColor) * 100 + 127) / 255);
 
 		mContext->SetMaterial(swMaterialType::UnlitColor);
 		mContext->SetColor(OutlineColor);
@@ -795,7 +796,7 @@ void swView::DrawCutaway() const
 	mContext->EnableColorBlend(true);
 	mContext->SetDepthWrite(false);
 	swVector4 ShadeColor = swVector4FromColor(swGetPreferences().mCutawayShadeColor);
-	ShadeColor.w = swOverlayAlpha(swGetPreferences().mCutawayShadeAlpha);
+	ShadeColor.w = swOverlayAlpha((SW_RGBA_ALPHA(swGetPreferences().mCutawayShadeColor) * 100 + 127) / 255);
 	mContext->SetColor(ShadeColor);
 	mContext->SetVertexBufferPointer(ShadeVerts.data());
 	mContext->SetVertexFormatPosition(3);
@@ -1113,8 +1114,17 @@ void swView::DrawGrid()
 	if (!DrawBaseGrid && !DrawGridHeight && !DrawGridAxes)
 		return;
 
+	// ldraw units in ldu
+
+	constexpr float StudSize = 20.0f;   // 1x1 brick width
+	constexpr float BrickHeight = 24.0f;   // three plates
+	constexpr float PlateHeight = 8.0f;
+
+	// grid lines every spacing studs
 	const int Spacing = swMaximum(Preferences.mGridLineSpacing, 1);
-	int MinX, MaxX, MinY, MaxY, MinZ, MaxZ;
+
+	// x and y in studs, z in plates
+	int MinX = -1, MaxX = 1, MinY = -1, MaxY = 1, PlateMin = 0, PlateMax = static_cast<int>(BrickHeight / PlateHeight);
 	swVector3 Min(FLT_MAX, FLT_MAX, FLT_MAX), Max(-FLT_MAX, -FLT_MAX, -FLT_MAX);
 
 	bool GridSizeValid = mModel->GetVisiblePartsBoundingBox(Min, Max);
@@ -1145,30 +1155,30 @@ void swView::DrawGrid()
 		}
 	}
 
-	// use to size a grid axis
-	const auto GetGridExtent = [GridSizeValid, &Min, &Max, Spacing](int Axis, int Extent, int& Low, int& High)
+	// margins in studs and plates
+
+	if (GridSizeValid)
 	{
-		Low = -Extent;
-		High = Extent;
+		swGrowGridExtent(Min[0], Max[0], StudSize, Preferences.mGridMargin, MinX, MaxX);
+		swGrowGridExtent(Min[1], Max[1], StudSize, Preferences.mGridMargin, MinY, MaxY);
+		swGrowGridExtent(Min[2], Max[2], PlateHeight, Preferences.mGridHeightMargin, PlateMin, PlateMax);
+	}
 
-		if (!GridSizeValid || !std::isfinite(Min[Axis]) || !std::isfinite(Max[Axis]))
-			return;
+	// lines on spacing multiples and the edges
+	const auto GetGridLines = [Spacing](int Low, int High)
+	{
+		std::vector<int> Studs;
 
-		// bound before converting to integers
-		constexpr float MaxGridExtent = 10000.0f;
-		const float GridSpacing = 20.0f * Spacing;
+		for (int Stud = Low; Stud <= High; Stud++)
+			if (Stud % Spacing == 0 || Stud == Low || Stud == High)
+				Studs.push_back(Stud);
 
-		Low = swMinimum(static_cast<int>(floorf(swClamp(Min[Axis] / GridSpacing, -MaxGridExtent + 1.0f, MaxGridExtent - 1.0f))) - 1, -Extent);
-		High = swMaximum(static_cast<int>(ceilf(swClamp(Max[Axis] / GridSpacing, -MaxGridExtent + 1.0f, MaxGridExtent - 1.0f))) + 1, Extent);
+		return Studs;
 	};
 
-	GetGridExtent(0, 2, MinX, MaxX);
-	GetGridExtent(1, 2, MinY, MaxY);
-	GetGridExtent(2, 2, MinZ, MaxZ);
-
-	// height grids stand on the base grid
-	if (!GridSizeValid || !std::isfinite(Min[2]) || Min[2] >= 0.0f)
-		MinZ = 0;
+	const std::vector<int> LinesX = GetGridLines(MinX, MaxX);
+	const std::vector<int> LinesY = GetGridLines(MinY, MaxY);
+	const int LineVertexCount = 2 * static_cast<int>(LinesX.size() + LinesY.size());
 
 	if (DrawBaseGrid && (!mGridBuffer.IsValid() || MinX != mGridSettings[0] || MinY != mGridSettings[1] || MaxX != mGridSettings[2] || MaxY != mGridSettings[3] ||
 	    Spacing != mGridSettings[4] || (Preferences.mDrawGridStuds ? 1 : 0) != mGridSettings[5] || (Preferences.mDrawGridLines ? 1 : 0) != mGridSettings[6]))
@@ -1176,10 +1186,10 @@ void swView::DrawGrid()
 		int VertexBufferSize = 0;
 
 		if (Preferences.mDrawGridStuds)
-			VertexBufferSize += (MaxX - MinX) * Spacing * SW_GRID_STUD_RINGS * SW_GRID_STUD_SEGMENTS * 2 * 3 * sizeof(float);
+			VertexBufferSize += (MaxX - MinX) * SW_GRID_STUD_RINGS * SW_GRID_STUD_SEGMENTS * 2 * 3 * sizeof(float);
 
 		if (Preferences.mDrawGridLines)
-			VertexBufferSize += 2 * (MaxX - MinX + MaxY - MinY + 2) * 3 * sizeof(float);
+			VertexBufferSize += LineVertexCount * 3 * sizeof(float);
 
 		float* Verts = nullptr;
 
@@ -1195,9 +1205,9 @@ void swView::DrawGrid()
             // one row of stud outlines
             if (Preferences.mDrawGridStuds)
             {
-                for (int Stud = MinX * Spacing; Stud < MaxX * Spacing; Stud++)
+                for (int Stud = MinX; Stud < MaxX; Stud++)
                 {
-                    const float CenterX = Stud * 20.0f + 10.0f;
+                    const float CenterX = (Stud + 0.5f) * StudSize;
 
                     for (const float Radius : SW_GRID_STUD_RADII)
                     {
@@ -1218,25 +1228,23 @@ void swView::DrawGrid()
 
             if (Preferences.mDrawGridLines)
             {
-                float LineSpacing = Spacing * 20.0f;
-
-                for (int Step = MinX; Step < MaxX + 1; Step++)
+                for (int Stud : LinesX)
                 {
-                    *CurVert++ = Step * LineSpacing;
-                    *CurVert++ = MinY * LineSpacing;
+                    *CurVert++ = Stud * StudSize;
+                    *CurVert++ = MinY * StudSize;
                     *CurVert++ = 0.0f;
-                    *CurVert++ = Step * LineSpacing;
-                    *CurVert++ = MaxY * LineSpacing;
+                    *CurVert++ = Stud * StudSize;
+                    *CurVert++ = MaxY * StudSize;
                     *CurVert++ = 0.0f;
                 }
 
-                for (int Step = MinY; Step < MaxY + 1; Step++)
+                for (int Stud : LinesY)
                 {
-                    *CurVert++ = MinX * LineSpacing;
-                    *CurVert++ = Step * LineSpacing;
+                    *CurVert++ = MinX * StudSize;
+                    *CurVert++ = Stud * StudSize;
                     *CurVert++ = 0.0f;
-                    *CurVert++ = MaxX * LineSpacing;
-                    *CurVert++ = Step * LineSpacing;
+                    *CurVert++ = MaxX * StudSize;
+                    *CurVert++ = Stud * StudSize;
                     *CurVert++ = 0.0f;
                 }
             }
@@ -1263,7 +1271,7 @@ void swView::DrawGrid()
 
 	if (DrawBaseGrid && Preferences.mDrawGridStuds)
 	{
-		const int StudVertCount = (MaxX - MinX) * Spacing * SW_GRID_STUD_RINGS * SW_GRID_STUD_SEGMENTS * 2;
+		const int StudVertCount = (MaxX - MinX) * SW_GRID_STUD_RINGS * SW_GRID_STUD_SEGMENTS * 2;
 
 		mContext->SetDepthWrite(false);
 		mContext->EnableColorBlend(true);
@@ -1273,9 +1281,9 @@ void swView::DrawGrid()
 		mContext->SetColor(swVector4FromColor(Preferences.mGridStudColor));
 		mContext->SetVertexFormat(0, 3, 0, 0, 0, false);
 
-		for (int Stud = MinY * Spacing; Stud < MaxY * Spacing; Stud++)
+		for (int Stud = MinY; Stud < MaxY; Stud++)
 		{
-			mContext->SetWorldMatrix(swMatrix44Translation(swVector3(0.0f, Stud * 20.0f + 10.0f, 0.0f)));
+			mContext->SetWorldMatrix(swMatrix44Translation(swVector3(0.0f, (Stud + 0.5f) * StudSize, 0.0f)));
 			mContext->DrawPrimitives(GL_LINES, 0, StudVertCount);
 		}
 
@@ -1292,10 +1300,8 @@ void swView::DrawGrid()
 		mContext->SetMaterial(swMaterialType::UnlitColor);
 		mContext->SetColor(swVector4FromColor(Preferences.mGridLineColor));
 
-		int NumVerts = 2 * (MaxX - MinX + MaxY - MinY + 2);
-
 		mContext->SetVertexFormat(BufferOffset, 3, 0, 0, 0, false);
-		mContext->DrawPrimitives(GL_LINES, 0, NumVerts);
+		mContext->DrawPrimitives(GL_LINES, 0, LineVertexCount);
 	}
 
 	struct swGridVertex
@@ -1304,16 +1310,10 @@ void swView::DrawGrid()
 		quint32 Color;
 	};
 
-	// height grids follow the model
-	constexpr float PlateHeight = 8.0f;
-	const int PlateMin = static_cast<int>(floorf(MinZ * 20.0f * Spacing / PlateHeight));
-	const int PlateMax = static_cast<int>(ceilf(MaxZ * 20.0f * Spacing / PlateHeight));
+	// height grids span the plates
 	const float Bottom = PlateMin * PlateHeight;
 	const float Top = PlateMax * PlateHeight;
 	std::vector<swGridVertex> AxisVerts;
-
-	// negative z reaches below parts
-	const float AxisBottom = Preferences.mDrawGridNegativeAxes && GridSizeValid && Bottom >= 0.0f ? -Top : Bottom;
 
 	// use to add a two color axis line
 	const auto AddAxisLine = [&AxisVerts, &Preferences](const swVector3& Start, const swVector3& End, int Axis)
@@ -1343,11 +1343,10 @@ void swView::DrawGrid()
 	if (DrawGridHeight)
 	{
 		// vertical grids through or behind
-		const float LineSpacing = 20.0f * Spacing;
-		const float Left = MinX * LineSpacing;
-		const float Right = MaxX * LineSpacing;
-		const float Front = MinY * LineSpacing;
-		const float Back = MaxY * LineSpacing;
+		const float Left = MinX * StudSize;
+		const float Right = MaxX * StudSize;
+		const float Front = MinY * StudSize;
+		const float Back = MaxY * StudSize;
 		const swVector3 CameraPosition = mCamera->mPosition;
 		const bool BehindModel = Preferences.mGridHeightBehindModel;
 
@@ -1357,10 +1356,10 @@ void swView::DrawGrid()
 		{
 			const float Y = !BehindModel ? 0.0f : CameraPosition.y > (Front + Back) * 0.5f ? Front : Back;
 
-			for (int Step = MinX; Step <= MaxX; Step++)
+			for (int Stud : LinesX)
 			{
-				Lines.emplace_back(Step * LineSpacing, Y, Bottom);
-				Lines.emplace_back(Step * LineSpacing, Y, Top);
+				Lines.emplace_back(Stud * StudSize, Y, Bottom);
+				Lines.emplace_back(Stud * StudSize, Y, Top);
 			}
 
 			for (int Plate = PlateMin; Plate <= PlateMax; Plate++)
@@ -1370,17 +1369,17 @@ void swView::DrawGrid()
 			}
 
 			if (Preferences.mDrawGridAxisZ)
-				AddAxisLine(swVector3(0.0f, Y, AxisBottom), swVector3(0.0f, Y, Top), 2);
+				AddAxisLine(swVector3(0.0f, Y, Bottom), swVector3(0.0f, Y, Top), 2);
 		}
 
 		if (Preferences.mDrawGridHeightYZ)
 		{
 			const float X = !BehindModel ? 0.0f : CameraPosition.x > (Left + Right) * 0.5f ? Left : Right;
 
-			for (int Step = MinY; Step <= MaxY; Step++)
+			for (int Stud : LinesY)
 			{
-				Lines.emplace_back(X, Step * LineSpacing, Bottom);
-				Lines.emplace_back(X, Step * LineSpacing, Top);
+				Lines.emplace_back(X, Stud * StudSize, Bottom);
+				Lines.emplace_back(X, Stud * StudSize, Top);
 			}
 
 			for (int Plate = PlateMin; Plate <= PlateMax; Plate++)
@@ -1391,7 +1390,7 @@ void swView::DrawGrid()
 
 			// skip the drawn z axis line
 			if (Preferences.mDrawGridAxisZ && (BehindModel || !Preferences.mDrawGridHeightXZ))
-				AddAxisLine(swVector3(X, 0.0f, AxisBottom), swVector3(X, 0.0f, Top), 2);
+				AddAxisLine(swVector3(X, 0.0f, Bottom), swVector3(X, 0.0f, Top), 2);
 		}
 
 		mContext->SetLineWidth(1.0f);
@@ -1402,17 +1401,15 @@ void swView::DrawGrid()
 		mContext->DrawPrimitives(GL_LINES, 0, static_cast<int>(Lines.size()));
 	}
 
-	const float Scale = 20.0f * Spacing;
-
 	if (Preferences.mDrawGridAxisY)
-		AddAxisLine(swVector3(0.0f, MinY * Scale, 0.0f), swVector3(0.0f, MaxY * Scale, 0.0f), 1);
+		AddAxisLine(swVector3(0.0f, MinY * StudSize, 0.0f), swVector3(0.0f, MaxY * StudSize, 0.0f), 1);
 
 	if (Preferences.mDrawGridAxisX)
-		AddAxisLine(swVector3(MinX * Scale, 0.0f, 0.0f), swVector3(MaxX * Scale, 0.0f, 0.0f), 0);
+		AddAxisLine(swVector3(MinX * StudSize, 0.0f, 0.0f), swVector3(MaxX * StudSize, 0.0f, 0.0f), 0);
 
 	// height grids own their z lines
 	if (Preferences.mDrawGridAxisZ && !DrawGridHeight)
-		AddAxisLine(swVector3(0.0f, 0.0f, AxisBottom), swVector3(0.0f, 0.0f, Top), 2);
+		AddAxisLine(swVector3(0.0f, 0.0f, Bottom), swVector3(0.0f, 0.0f, Top), 2);
 
 	if (!AxisVerts.empty())
 	{

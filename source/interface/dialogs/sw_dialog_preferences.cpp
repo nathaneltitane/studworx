@@ -361,12 +361,6 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->edgeLines, &QCheckBox::toggled, this, &swPreferencesDialog::EdgeLinesToggled);
 	connect(ui->ConditionalLinesCheckBox, &QCheckBox::toggled, this, &swPreferencesDialog::ConditionalLinesCheckBoxToggled);
 	connect(ui->LineWidthSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::LineWidthSliderValueChanged);
-	connect(ui->CutawayShadeAlphaSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::CutawayShadeAlphaChanged);
-	connect(ui->ElementMarginAlphaSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::ElementAlphaChanged);
-	connect(ui->ElementPaddingAlphaSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::ElementAlphaChanged);
-	connect(ui->ElementAnchorAlphaSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::ElementAlphaChanged);
-	connect(ui->RulerPointerAlphaSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::ElementAlphaChanged);
-	connect(ui->AxisIconCubeOutlineAlphaSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::AxisIconCubeOutlineAlphaChanged);
 	connect(ui->AxisIconCubeOutlineCheckBox, &QCheckBox::toggled, this, [this]() { AxisIconSizeComboCurrentIndexChanged(ui->AxisIconSizeCombo->currentIndex()); });
 
 	for (swRenderTarget Target : { swRenderTarget::Preview, swRenderTarget::Parts, swRenderTarget::MinifigureBuilder })
@@ -380,6 +374,9 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	}
 
 	connect(ui->MeshLODSlider, QOverload<int>::of(&QSlider::valueChanged), this, &swPreferencesDialog::MeshLODSliderValueChanged);
+	connect(ui->MeshLOD, &QCheckBox::toggled, ui->MeshLODSliderLabel, &QWidget::setEnabled);
+	connect(ui->MeshLOD, &QCheckBox::toggled, ui->MeshLODSlider, &QWidget::setEnabled);
+	connect(ui->MeshLOD, &QCheckBox::toggled, ui->MeshLODLabel, &QWidget::setEnabled);
 	connect(ui->FadeSteps, &QCheckBox::toggled, this, &swPreferencesDialog::FadeStepsToggled);
 	connect(ui->FadeInline, &QCheckBox::toggled, this, &swPreferencesDialog::FadeInlineToggled);
 	connect(ui->FadeJoint, &QCheckBox::toggled, this, &swPreferencesDialog::FadeJointToggled);
@@ -418,6 +415,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->MarqueeFillColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->OverlayColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->ExplodeLineColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
+	connect(ui->AxisIconCubeOutlineColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->CutawayShadeColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->ElementMarginColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->ElementPaddingColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
@@ -569,6 +567,9 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	}
 
 	ui->MeshLOD->setChecked(mOptions->Preferences.mAllowLOD);
+	ui->MeshLODSliderLabel->setEnabled(mOptions->Preferences.mAllowLOD);
+	ui->MeshLODSlider->setEnabled(mOptions->Preferences.mAllowLOD);
+	ui->MeshLODLabel->setEnabled(mOptions->Preferences.mAllowLOD);
 
 	ui->MeshLODSlider->setRange(0, 1500.0f / mMeshLODMultiplier);
 	ui->MeshLODSlider->setValue(mOptions->Preferences.mMeshLODDistance / mMeshLODMultiplier);
@@ -589,6 +590,10 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->gridLineSpacing->setRange(1, SW_MAXIMUM_GRID_LINE_SPACING);
 	ui->gridLineSpacing->setValue(mOptions->Preferences.mGridLineSpacing);
 	UpdateStudSuffix(ui->gridLineSpacing);
+	ui->GridMarginSpinBox->setValue(mOptions->Preferences.mGridMargin);
+	UpdateStudSuffix(ui->GridMarginSpinBox);
+	ui->GridHeightMarginSpinBox->setValue(mOptions->Preferences.mGridHeightMargin);
+	ui->GridHeightMarginSpinBox->setSuffix(QLatin1String(" / ") + tr("%n plate(s)", nullptr, ui->GridHeightMarginSpinBox->maximum()));
 	ui->GridNegativeAxesCheckBox->setChecked(mOptions->Preferences.mDrawGridNegativeAxes);
 	ui->GridHeightXZCheckBox->setChecked(mOptions->Preferences.mDrawGridHeightXZ);
 	ui->GridHeightYZCheckBox->setChecked(mOptions->Preferences.mDrawGridHeightYZ);
@@ -601,14 +606,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->ProjectionScopeCombo->setCurrentIndex(static_cast<int>(mOptions->Preferences.mProjectionScope));
 	ui->CutawaySizeSpinBox->setValue(mOptions->Preferences.mCutawaySize);
 	UpdateStudSuffix(ui->CutawaySizeSpinBox);
-	ui->CutawayShadeAlphaSlider->setValue(mOptions->Preferences.mCutawayShadeAlpha);
-	CutawayShadeAlphaChanged();
 	ui->CutawayEdgesCheckBox->setChecked(mOptions->Preferences.mCutawayEdges);
-	ui->ElementMarginAlphaSlider->setValue(mOptions->Instructions.ElementMarginAlpha);
-	ui->ElementPaddingAlphaSlider->setValue(mOptions->Instructions.ElementPaddingAlpha);
-	ui->ElementAnchorAlphaSlider->setValue(mOptions->Instructions.ElementAnchorAlpha);
-	ui->RulerPointerAlphaSlider->setValue(mOptions->Instructions.RulerPointerAlpha);
-	ElementAlphaChanged();
 	ui->TurntableIdleDurationSpinBox->SetReference(ui->TurntableIdleDurationSpinBox->suffix());
 	ui->TurntableIdleDurationSpinBox->setValue(mOptions->Preferences.mTurntableIdleDuration);
 	ui->TurntableTurnTimeSpinBox->SetReference(ui->TurntableTurnTimeSpinBox->suffix());
@@ -619,8 +617,6 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->AxisIconLabelsCheckBox->setChecked(mOptions->Preferences.mAxisIconLabels);
 	ui->AxisIconNegativeCheckBox->setChecked(mOptions->Preferences.mAxisIconNegative);
 	ui->AxisIconCubeOutlineCheckBox->setChecked(mOptions->Preferences.mAxisIconCubeOutline);
-	ui->AxisIconCubeOutlineAlphaSlider->setValue(mOptions->Preferences.mAxisIconCubeOutlineAlpha);
-	AxisIconCubeOutlineAlphaChanged();
 
 	ui->ViewCubeLocationCombo->setCurrentIndex((int)mOptions->Preferences.mViewCubeLocation);
 	ui->ViewCubeLabelsCombo->setCurrentIndex(mOptions->Preferences.mViewCubeLabelAbbreviations ? 1 : 0);
@@ -731,11 +727,12 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	SetButtonPixmap(mOptions->Preferences.mMarqueeFillColor, ui->MarqueeFillColorButton);
 	SetButtonPixmap(mOptions->Preferences.mOverlayColor, ui->OverlayColorButton);
 	SetButtonPixmap(mOptions->Preferences.mExplodeLineColor, ui->ExplodeLineColorButton);
-	SetButtonPixmap(mOptions->Preferences.mCutawayShadeColor | SW_RGBA(0, 0, 0, 255), ui->CutawayShadeColorButton);
-	SetButtonPixmap(mOptions->Instructions.ElementMarginColor | SW_RGBA(0, 0, 0, 255), ui->ElementMarginColorButton);
-	SetButtonPixmap(mOptions->Instructions.ElementPaddingColor | SW_RGBA(0, 0, 0, 255), ui->ElementPaddingColorButton);
-	SetButtonPixmap(mOptions->Instructions.ElementAnchorColor | SW_RGBA(0, 0, 0, 255), ui->ElementAnchorColorButton);
-	SetButtonPixmap(mOptions->Instructions.RulerPointerColor | SW_RGBA(0, 0, 0, 255), ui->RulerPointerColorButton);
+	SetButtonPixmap(mOptions->Preferences.mAxisIconCubeOutlineColor, ui->AxisIconCubeOutlineColorButton);
+	SetButtonPixmap(mOptions->Preferences.mCutawayShadeColor, ui->CutawayShadeColorButton);
+	SetButtonPixmap(mOptions->Instructions.ElementMarginColor, ui->ElementMarginColorButton);
+	SetButtonPixmap(mOptions->Instructions.ElementPaddingColor, ui->ElementPaddingColorButton);
+	SetButtonPixmap(mOptions->Instructions.ElementAnchorColor, ui->ElementAnchorColorButton);
+	SetButtonPixmap(mOptions->Instructions.RulerPointerColor, ui->RulerPointerColorButton);
 	SetButtonPixmap(mOptions->Preferences.mActiveViewColor, ui->ActiveViewColorButton);
 	SetButtonPixmap(mOptions->Preferences.mInactiveViewColor, ui->InactiveViewColorButton);
 	SetButtonPixmap(mOptions->Preferences.mFadeStepsColor, ui->FadeStepsColor);
@@ -975,6 +972,8 @@ void swPreferencesDialog::accept()
 	mOptions->Preferences.mDrawGridStuds = ui->gridStuds->isChecked();
 	mOptions->Preferences.mDrawGridLines = ui->gridLines->isChecked();
 	mOptions->Preferences.mGridLineSpacing = GridLineSpacing;
+	mOptions->Preferences.mGridMargin = ui->GridMarginSpinBox->value();
+	mOptions->Preferences.mGridHeightMargin = ui->GridHeightMarginSpinBox->value();
 	mOptions->Preferences.mDrawGridNegativeAxes = ui->GridNegativeAxesCheckBox->isChecked();
 	mOptions->Preferences.mDrawGridHeightXZ = ui->GridHeightXZCheckBox->isChecked();
 	mOptions->Preferences.mDrawGridHeightYZ = ui->GridHeightYZCheckBox->isChecked();
@@ -991,7 +990,6 @@ void swPreferencesDialog::accept()
 	mOptions->Preferences.mFollowStepViews = ui->FollowStepViewsCheckBox->isChecked();
 	mOptions->Preferences.mProjectionScope = static_cast<swProjectionScope>(ui->ProjectionScopeCombo->currentIndex());
 	mOptions->Preferences.mCutawaySize = ui->CutawaySizeSpinBox->value();
-	mOptions->Preferences.mCutawayShadeAlpha = ui->CutawayShadeAlphaSlider->value();
 	mOptions->Preferences.mCutawayEdges = ui->CutawayEdgesCheckBox->isChecked();
 	mOptions->Preferences.mTurntableIdleDuration = ui->TurntableIdleDurationSpinBox->value();
 	mOptions->Preferences.mTurntableTurnTime = ui->TurntableTurnTimeSpinBox->value();
@@ -1000,7 +998,6 @@ void swPreferencesDialog::accept()
 	mOptions->Preferences.mAxisIconLabels = ui->AxisIconLabelsCheckBox->isChecked();
 	mOptions->Preferences.mAxisIconNegative = ui->AxisIconNegativeCheckBox->isChecked();
 	mOptions->Preferences.mAxisIconCubeOutline = ui->AxisIconCubeOutlineCheckBox->isChecked();
-	mOptions->Preferences.mAxisIconCubeOutlineAlpha = ui->AxisIconCubeOutlineAlphaSlider->value();
 	mOptions->Preferences.mViewCubeEnabled = ui->ViewCubeSizeCombo->currentIndex() > 0;
 	mOptions->Preferences.mViewCubeLocation = (swViewCubeLocation)ui->ViewCubeLocationCombo->currentIndex();
 	mOptions->Preferences.mViewCubeLabelAbbreviations = ui->ViewCubeLabelsCombo->currentIndex() == 1;
@@ -1038,10 +1035,6 @@ void swPreferencesDialog::accept()
 	Instructions.ShowElementMargins = mInstructionsShowElementMargins->isChecked();
 	Instructions.ShowElementPadding = mInstructionsShowElementPadding->isChecked();
 	Instructions.ShowElementAnchors = mInstructionsShowElementAnchors->isChecked();
-	Instructions.ElementMarginAlpha = ui->ElementMarginAlphaSlider->value();
-	Instructions.ElementPaddingAlpha = ui->ElementPaddingAlphaSlider->value();
-	Instructions.ElementAnchorAlpha = ui->ElementAnchorAlphaSlider->value();
-	Instructions.RulerPointerAlpha = ui->RulerPointerAlphaSlider->value();
 	Instructions.EditorHighlight = mInstructionsEditorHighlight->isChecked();
 	Instructions.EditorNumbers = mInstructionsEditorNumbers->isChecked();
 	Instructions.EditorWrap = mInstructionsEditorWrap->isChecked();
@@ -1352,30 +1345,41 @@ void swPreferencesDialog::ColorButtonClicked()
 		Title = tr("Select Explode Lines Color");
 		DialogOptions = QColorDialog::ShowAlphaChannel;
 	}
+	else if (Button == ui->AxisIconCubeOutlineColorButton)
+	{
+		Color = &mOptions->Preferences.mAxisIconCubeOutlineColor;
+		Title = tr("Select Axis Icon Outline Color");
+		DialogOptions = QColorDialog::ShowAlphaChannel;
+	}
 	else if (Button == ui->CutawayShadeColorButton)
 	{
 		Color = &mOptions->Preferences.mCutawayShadeColor;
 		Title = tr("Select Cutaway Shade Color");
+		DialogOptions = QColorDialog::ShowAlphaChannel;
 	}
 	else if (Button == ui->ElementMarginColorButton)
 	{
 		Color = &mOptions->Instructions.ElementMarginColor;
 		Title = tr("Select Element Margin Color");
+		DialogOptions = QColorDialog::ShowAlphaChannel;
 	}
 	else if (Button == ui->ElementPaddingColorButton)
 	{
 		Color = &mOptions->Instructions.ElementPaddingColor;
 		Title = tr("Select Element Padding Color");
+		DialogOptions = QColorDialog::ShowAlphaChannel;
 	}
 	else if (Button == ui->ElementAnchorColorButton)
 	{
 		Color = &mOptions->Instructions.ElementAnchorColor;
 		Title = tr("Select Element Anchor Color");
+		DialogOptions = QColorDialog::ShowAlphaChannel;
 	}
 	else if (Button == ui->RulerPointerColorButton)
 	{
 		Color = &mOptions->Instructions.RulerPointerColor;
 		Title = tr("Select Ruler Pointer Color");
+		DialogOptions = QColorDialog::ShowAlphaChannel;
 	}
 	else if (Button == ui->ActiveViewColorButton)
 	{
@@ -1576,27 +1580,7 @@ void swPreferencesDialog::UpdateStudSuffix(QSpinBox* SpinBox)
 	SpinBox->setSuffix(QLatin1String(" / ") + tr("%n stud(s)", nullptr, SpinBox->maximum()));
 }
 
-// use to show the cube outline alpha
-void swPreferencesDialog::AxisIconCubeOutlineAlphaChanged()
-{
-	ui->AxisIconCubeOutlineAlphaValueLabel->setText(locale().toString(ui->AxisIconCubeOutlineAlphaSlider->value() / 100.0, 'f', 2));
-}
-
-// use to show the instructions overlay alphas
-void swPreferencesDialog::ElementAlphaChanged()
-{
-	ui->ElementMarginAlphaValueLabel->setText(locale().toString(ui->ElementMarginAlphaSlider->value() / 100.0, 'f', 2));
-	ui->ElementPaddingAlphaValueLabel->setText(locale().toString(ui->ElementPaddingAlphaSlider->value() / 100.0, 'f', 2));
-	ui->ElementAnchorAlphaValueLabel->setText(locale().toString(ui->ElementAnchorAlphaSlider->value() / 100.0, 'f', 2));
-	ui->RulerPointerAlphaValueLabel->setText(locale().toString(ui->RulerPointerAlphaSlider->value() / 100.0, 'f', 2));
-}
-
 // use to show the cutaway shade alpha
-void swPreferencesDialog::CutawayShadeAlphaChanged()
-{
-	ui->CutawayShadeAlphaValueLabel->setText(locale().toString(ui->CutawayShadeAlphaSlider->value() / 100.0, 'f', 2));
-}
-
 void swPreferencesDialog::LineWidthSliderValueChanged()
 {
 	float Value = mLineWidthRange[0] + static_cast<float>(ui->LineWidthSlider->value()) * mLineWidthGranularity;
@@ -1671,6 +1655,7 @@ void swPreferencesDialog::GridLinesToggled()
 {
 	ui->gridLineColor->setEnabled(ui->gridLines->isChecked());
 	ui->gridLineSpacing->setEnabled(ui->gridLines->isChecked());
+	ui->gridLineSpacingLabel->setEnabled(ui->gridLines->isChecked());
 }
 
 void swPreferencesDialog::PreviewViewCubeSizeComboCurrentIndexChanged(int Index)
@@ -1689,9 +1674,8 @@ void swPreferencesDialog::AxisIconSizeComboCurrentIndexChanged(int Index)
 	ui->AxisIconLabelsCheckBox->setEnabled(Index != 0);
 	ui->AxisIconNegativeCheckBox->setEnabled(Index != 0);
 	ui->AxisIconCubeOutlineCheckBox->setEnabled(Index != 0);
-	ui->AxisIconCubeOutlineAlphaLabel->setEnabled(Index != 0 && ui->AxisIconCubeOutlineCheckBox->isChecked());
-	ui->AxisIconCubeOutlineAlphaSlider->setEnabled(Index != 0 && ui->AxisIconCubeOutlineCheckBox->isChecked());
-	ui->AxisIconCubeOutlineAlphaValueLabel->setEnabled(Index != 0 && ui->AxisIconCubeOutlineCheckBox->isChecked());
+	ui->AxisIconCubeOutlineColorLabel->setEnabled(Index != 0 && ui->AxisIconCubeOutlineCheckBox->isChecked());
+	ui->AxisIconCubeOutlineColorButton->setEnabled(Index != 0 && ui->AxisIconCubeOutlineCheckBox->isChecked());
 }
 
 void swPreferencesDialog::AutomateEdgeColorToggled()

@@ -43,6 +43,10 @@ Rotation tests turn parts in 15, 30 and 90 degree steps around every axis, in
 the part's own frame and in model coordinates, and check that each quarter turn
 lands exactly on 0 and 1, that the turned part keeps its position and moves by
 whole steps, and that real angles are never rounded.
+The grid extent test grows the base grid in studs and the height grids in plates
+around parts above and below the floor, and checks that the margins apply only
+away from the origin, that a zero margin hugs the parts and that infinite bounds
+leave the grid alone.
 A profile test writes settings inside a batch, in a temporary settings folder,
 and checks that they read back at once, that a nested batch and a removed key
 behave, and that the file is written only when the batch ends. A first start

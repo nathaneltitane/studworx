@@ -40,6 +40,7 @@ private slots:
 	void AxisAlignedRotations_data();
 	void AxisAlignedRotations();
 	void AxisAlignedRotationTolerance();
+	void GridExtentGrowsWithMargins();
 	void ProfileBatchSavesOnce();
 	void ProfileWritesEveryKey();
 	void ContextMenuDefaultResolves();

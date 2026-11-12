@@ -41,6 +41,8 @@ StudWorx is built from standard Qt widgets: panels, dialogs and windows follow y
 ![Colors options](resources/images/interface-menu-colors-options.png)
 ![Minifigure Builder options](resources/images/interface-menu-minifigure-builder-options.png)
 ![Toolbars](resources/images/interface-menu-toolbars.png)
+![Cameras](resources/images/interface-menu-cameras.png)
+![Status bar options](resources/images/interface-menu-status-bar.png)
 ![The main window with the model view, Parts, Preview, Minifigure Builder, Timeline, Colors, Properties, Joints and Terminal panels](resources/images/interface-window-main.png)
 ![Lock Interface hides the panel title bars](resources/images/interface-feature-lock-interface.png)
 ![Standard, Tools and Time toolbars](resources/images/interface-widget-toolbars.png)
@@ -57,7 +59,7 @@ Models are plain LDraw text files in LeoCAD's format, so they open in either pro
 
 ![Model thumbnails in Dolphin](resources/images/files-feature-thumbnails.png)
 
-- **LDraw models.** .ldr, .mpd and .dat files, with New, Open, Merge, Save, Save As, Reload and the four most recent files. Save As follows the LDraw file specification and adds the extension when it is left out: .ldr for a single model, .mpd for a model with submodels or embedded data. Files are written with Unix line endings, and a model loaded with Windows line endings keeps them when saved. Watch for File Changes reloads a model edited in another program. Sample models, a minifigure, cube, sphere and cylinder cutaways of it, an exploded model, a flexible part, a posable minifigure with joints, lights and cameras, and a scene with POV-Ray lights, floor and camera, install to /usr/share/studworx/samples, the samples folder beside the program on Windows, or the application bundle resources on macOS.
+- **LDraw models.** .ldr, .mpd and .dat files, with New, Open, Merge, Save, Save As, Reload and the four most recent files. Save As follows the LDraw file specification and adds the extension when it is left out: .ldr for a single model, .mpd for a model with submodels or embedded data. Files are written with Unix line endings, and a model loaded with Windows line endings keeps them when saved. Watch for File Changes reloads a model edited in another program. Sample models, a minifigure, cube, sphere and cylinder cutaways of it, an exploded model, a flexible part, a posable minifigure with joints, lights and cameras, a scene with POV-Ray lights, floor and camera, and an S-curve of 9V train track, install to /usr/share/studworx/samples, the samples folder beside the program on Windows, or the application bundle resources on macOS.
 - **Startup.** Open Most Recent File on Startup reopens the last model, Restore Tab Layout brings back its tabs and split views, and Load All Parts Before Showing waits until every part is loaded before the model appears.
 - **LeoCAD models.** Models saved by LeoCAD open as they are, and their LeoCAD meta commands are migrated to StudWorx ones, automatically when you choose so in Preferences. Older LeoCAD projects (.lcd) open and merge too, and save as LDraw.
 - **Import.** LEGO® Digital Designer models (.lxf and .lxfml), also opened with Open, recent files, drag and drop and the command line as an untitled project, with a bundled part and color mapping, and official set inventories with File > Set Inventory. Set inventories use your own free Rebrickable API key, asked for once or set under Online Services in the preferences, and are searched by set name or number.
@@ -194,7 +196,7 @@ The model view draws fast with OpenGL in four lighting styles, and File > Render
 - **Render window.** POV-Ray Render and Blender Render open the Render window. Choose the output file, follow the progress, and watch the image appear in the preview as it renders.
 - **Blender.** Render with the bundled Blender LDraw add-ons, with the output, image, scene, parts and editing settings in panels of the render window, or Open in Blender to keep working on the scene there. The Blender executable is set in Preferences.
 - **Lighting styles.** Standard Lighting, Studio Lighting, Matte Lighting and Toon Lighting, from the View menu or the command line with --lighting. Standard uses one light with soft highlights, Studio key, fill and rim lights, Matte no highlights, and Toon banded cel shading.
-- **Shading.** Wireframe, Flat Shading, Default Lights, Edge Lines, Conditional Lines and Mesh LOD (level of detail).
+- **Shading.** Wireframe, Flat Shading and Default Lights in View > Shading, and with Edge Lines, Conditional Lines and Mesh Detail Control in the options menu of the model view, Mesh Detail Control drawing distant parts with simpler meshes past the Mesh Level of Detail distance.
 - **Mesh level of detail.** Distant parts draw with simpler meshes, from a distance set in Preferences, so large models stay smooth.
 - **Studs.** Eight stud styles: Plain Studs, Thin-Line Logo Studs, Outline Logo Studs, Sharp Top Logo Studs, Rounded Top Logo Studs, Flattened Logo Studs, High Contrast Studs and High Contrast Logo Studs.
 - **Color configurations.** Colors come from the parts library, the LDraw color configuration or the alternate configuration with more realistic edge line colors for rendering, chosen under Rendering > Colors.
@@ -242,7 +244,7 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 - **Part connections.** Use Part Connections turns connected part selection on and off, with the shadow library folder chosen in Preferences.
 - **Find and Replace.** A bar over the view finds parts by part, color or both, steps through the matches with Find Next and Find Previous or selects them with Find All, and replaces the color or part with Replace Next or Replace All. The part list shows the parts of the model in the colors they are used in, with a flag on parts used in more than one color, and the gear button sets how the part lists are filtered and shown. Replace in Submodels makes Replace All reach every submodel the model uses.
 - **Array.** Repeat the selection along one, two or three axes, with a count, an X, Y and Z offset and an X, Y and Z rotation for each.
-- **Explode.** The Explode panel, shown from the panel context menu or View > Toolbars, spreads every other visible part, or only the selected ones with each group moving as one part, away from an anchor, the focused part or the first or last selected one, by an X, Y and Z percentage of its distance, or one value for all three with Uniform following the chosen axis. Each part slides straight out along the stud, pin or socket that holds it, a part without one along the nearest X, Y or Z axis from the part beside it, and with Show Lines a line in the Explode Lines color from Preferences runs through the connection, from the socket on the part it came off to the moved part. Submodels in the spread, and the submodels inside them, flatten into their parts first, so everything spreads, and the flatten and spread are one undo step. Changing a setting spreads the parts again, Collapse or Undo puts the parts and the submodels back, and any other edit only puts the parts back. Save Copy saves the whole exploded project to a separate file named with -exploded before the extension, and the open file is not saved.
+- **Explode.** The Explode panel, shown from the panel context menu or View > Toolbars, spreads every other visible part, or only the selected ones with each group moving as one part, away from an anchor, the focused part or the first or last selected one, by an X, Y and Z multiple of its distance from 1.0 to 10.0, where 1.0 leaves it in place and 2.0 doubles it, or one value for all three with Uniform following the chosen axis. Explode is greyed out while every spread is 1.0. Each part slides straight out along the stud, pin or socket that holds it, a part without one along the nearest X, Y or Z axis from the part beside it, and with Show Lines a line in the Explode Lines color from Preferences runs through the connection, from the socket on the part it came off to the moved part. Submodels in the spread, and the submodels inside them, flatten into their parts first, so everything spreads, and the flatten and spread are one undo step. Changing a setting spreads the parts again, Collapse or Undo puts the parts and the submodels back, and any other edit only puts the parts back. Save Copy saves the whole exploded project to a separate file named with -exploded before the extension, and the open file is not saved.
 - **Flex Path.** Hoses, cables and other flexible parts bend along control points that stop at the part length.
 - **Control points.** Insert Control Point and Remove Control Point, Clamp Tangent to hold a point along the path or release it to rotate freely, Align to Tangent once, or turn it along the X Axis, Y Axis or Z Axis. New points can start clamped, and the spread handle shapes the curve.
 - **Groups.** Group the selection under a unique name, Ungroup, Add to Group and Remove from Group for the focused part, and Edit Groups in a tree of parts and groups.
@@ -257,6 +259,13 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 ![Move snap](resources/images/modeling-menu-move-snap.png)
 ![Rotation snap](resources/images/modeling-menu-rotation-snap.png)
 ![Control point menu](resources/images/modeling-menu-control-point.png)
+![Find part](resources/images/modeling-menu-find-part.png)
+![Find options](resources/images/modeling-menu-find-options.png)
+![Group menu](resources/images/modeling-menu-group.png)
+![Selection mode](resources/images/modeling-menu-selection-mode.png)
+![Snap Z](resources/images/modeling-menu-snap-z.png)
+![Transform](resources/images/modeling-menu-transform.png)
+![Visibility](resources/images/modeling-menu-visibility.png)
 ![Part connections](resources/images/interface-menu-view-options.png)
 ![Group](resources/images/modeling-window-group.png)
 ![Select by Name](resources/images/modeling-window-select-by-name.png)
@@ -301,6 +310,7 @@ Give a placed submodel a joint, turn it with the mouse and save the angles as po
 ![Part > Joint](resources/images/interface-menu-part.png)
 ![Tools toolbar](resources/images/tools-widget-toolbar.png)
 ![Light properties](resources/images/tools-widget-light-properties.png)
+![Light color](resources/images/tools-widget-light-color.png)
 ![Save Image with Motion Joints](resources/images/tools-window-motion-joints.png)
 
 ## Views
@@ -327,7 +337,7 @@ Look at a model from any side, see inside it without changing it, and measure it
 - **View cube.** Chamfered edges and corners: click any of its 6 faces, 12 edges or 8 corners for that view.
 - **View cube settings.** Shown in any corner of the view, in Extra Small to Extra Large, with its own face, highlight and text colors, and small full names or large abbreviations (TP, BT, LT, RT, FT, BK) on its faces.
 - **Axis icon.** X, Y and Z labels with optional negative axes. The view cube, axis icon and part thumbnails come in Extra Small to Extra Large.
-- **Axis icon settings.** Shown in any corner, with or without labels, with negative axes and a cube outline of adjustable transparency, and a color for each axis and its negative.
+- **Axis icon settings.** Shown in any corner, with or without labels, with negative axes and a cube outline, its color and transparency, and a color for each axis and its negative, set on the Interface page.
 - **Preview overlays.** The preview shows its own view cube and axis icon, each turned on and off from its options.
 - **Viewpoints.** Front, Back, Top, Bottom, Left, Right and Home, Zoom Extents, Look At and Normal to Face.
 - **Projection.** Perspective or orthographic, for the active view or all views at once.
@@ -335,13 +345,15 @@ Look at a model from any side, see inside it without changing it, and measure it
 - **Cutaways.** Cube, sphere and cylinder cutaways with solid cut surfaces, a shaded cut and resize knobs, pushed in or pulled out by one plate. The cutaway is saved with the model and comes back when the file opens, and the parts themselves are never changed.
 - **Cutaway controls.** Grow and Shrink resize the cutaway, Push In and Pull Out move it one plate, Shade Color sets the light shade on the cut faces, and Remove shows the whole model again.
 - **Cut edges.** With edge lines on, the cut draws edge lines in each part's edge color where it meets the outer faces, and thinner lines along the corners of the cut faces. Cut Edges in Preferences > Views > Cutaway turns them off.
-- **Grids.** A Base Grid with Grid Studs, Grid Lines, vertical XZ Height Grid and YZ Height Grid sized around the model, each grid with its own toggle and All Grids to turn them on or off together, and X Axis Line, Y Axis Line and Z Axis Line toggles.
+- **Grids.** A Base Grid with Grid Studs, Grid Lines, vertical XZ Height Grid and YZ Height Grid growing stud by stud and plate by plate around the model with a set Grid Margin and Height Margin, each grid with its own toggle and All Grids to turn them on or off together, and X Axis Line, Y Axis Line and Z Axis Line toggles.
 - **Grid settings.** Line spacing, stud and line colors, and Height Grids Behind Model to keep the height grids behind the parts.
 - **Idle turntable.** The model turns full screen around the X, Y or Z axis when you leave StudWorx idle. Any input ends it. The idle time and the time for one turn are set in Preferences.
 
 <!-- gallery scroll -->
 
 ![Grids with the base grid off](resources/images/views-menu-grids.png)
+![Shading](resources/images/views-menu-shading.png)
+![Split view](resources/images/views-menu-split-view.png)
 ![Viewpoints](resources/images/interface-menu-viewpoints.png)
 ![Grids](resources/images/interface-menu-view-options.png)
 
@@ -370,6 +382,8 @@ Every part belongs to a building step. Steps drive the model view, the instructi
 
 ![Steps and Highlighting](resources/images/steps-menu-steps-highlighting.png)
 ![Steps menu](resources/images/interface-menu-steps.png)
+![Keyframes menu](resources/images/steps-menu-keyframes.png)
+![Timeline menu](resources/images/steps-menu-timeline.png)
 ![Timeline panel](resources/images/steps-widget-timeline.png)
 ![Step view](resources/images/steps-window-step-view.png)
 ![Keyframes panel](resources/images/steps-widget-keyframes.png)
@@ -386,6 +400,7 @@ Panels dock side by side in any area of the main window, with uniform headers, b
 - **Properties.** Compact position, rotation and transform rows and a spanning color swatch. Lights and cameras get named rows with units. A round key button ends each animated row, filled when the property has a key at the current step.
 - **Minifigure Builder.** Build a minifigure from templates and add several variations to the model.
 - **Preview.** Parts and models, floating or docking with a square view, with Keep Last Selection.
+- **Explode.** The anchor, the X, Y and Z spread multiples, Uniform, Selected Parts Only and Show Lines, with Explode, Collapse and Save Copy, described under Modeling.
 - **Joints.** The picked joint of the selected submodel with its axis, the tree of models, submodels and their joints with Delete Joint for the picked one, a right-click menu to move, rotate or delete a joint, and one on a submodel to edit or delete all its joints.
 - **Poses.** The poses of the model picked in the Joints panel with Save, Recall, Rename and Delete.
 - **Keyframes.** A full-width timeline of the keys of the selected or all objects per step, with buttons to add or remove keys, Add Keys and playback.
@@ -395,6 +410,15 @@ Panels dock side by side in any area of the main window, with uniform headers, b
 <!-- gallery scroll -->
 
 ![Terminal folders](resources/images/panels-menu-terminal.png)
+![Colors menu](resources/images/panels-menu-colors.png)
+![Joints menu](resources/images/panels-menu-joints.png)
+![Properties color menu](resources/images/panels-menu-properties-color.png)
+![Properties part menu](resources/images/panels-menu-properties-part.png)
+![Part palettes](resources/images/panels-window-part-palettes.png)
+![Parts menu](resources/images/panels-menu-parts-part.png)
+![Parts icons](resources/images/panels-menu-parts-icons.png)
+![Parts filter](resources/images/panels-menu-parts-filter.png)
+![Parts rendering](resources/images/panels-menu-parts-rendering.png)
 ![A selected part with its Properties](resources/images/panels-window-selected-part.png)
 ![Preview](resources/images/panels-widget-preview.png)
 ![Parts](resources/images/panels-widget-parts.png)
@@ -402,6 +426,7 @@ Panels dock side by side in any area of the main window, with uniform headers, b
 ![Minifigure Builder](resources/images/panels-widget-minifigure-builder.png)
 ![Colors](resources/images/panels-widget-colors.png)
 ![Properties](resources/images/panels-widget-properties.png)
+![Explode](resources/images/panels-widget-explode.png)
 ![Joints](resources/images/panels-widget-joints.png)
 ![Terminal](resources/images/panels-widget-terminal.png)
 ![Poses](resources/images/panels-widget-poses.png)
@@ -432,6 +457,13 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 <!-- gallery scroll -->
 
 ![Properties options](resources/images/instructions-menu-properties-options.png)
+![Editor options](resources/images/instructions-menu-editor-options.png)
+![Element menu](resources/images/instructions-menu-element.png)
+![Pages menu](resources/images/instructions-menu-pages.png)
+![Pointer menu](resources/images/instructions-menu-pointer.png)
+![Units](resources/images/instructions-menu-units.png)
+![Add Notice](resources/images/instructions-window-notice.png)
+![Page Setup](resources/images/instructions-window-page-setup.png)
 ![The Instructions window](resources/images/instructions-window-instructions.png)
 ![Element margins, padding and anchors](resources/images/instructions-feature-element-layout.png)
 ![Properties](resources/images/instructions-widget-properties.png)
@@ -460,6 +492,8 @@ Large builds split into submodels that you can edit on their own or in place, in
 
 <!-- gallery scroll -->
 
+![Submodel menu](resources/images/models-menu-submodel.png)
+![Tab menu](resources/images/models-menu-tab.png)
 ![Model properties](resources/images/models-window-properties.png)
 ![Parts](resources/images/models-window-parts.png)
 ![Submodels](resources/images/models-window-submodels.png)
@@ -472,9 +506,9 @@ Nine pages with lined up label and control columns, checkboxes included, each la
 
 - **General.** Reference paths, where the color configurations, minifigure builder settings and BrickLink mapping update from ldraw.org and Rebrickable with one button and bundled copies are used until a file is set, online services, where the Rebrickable API key is kept and Get Key opens its page, a rejected key being cleared so it is asked for again, the author of new models built from a name, email address and comment, such as All rights reserved, joined by the author line splitter and previewed as the author line, and the parts library, Blender, POV-Ray and LGEO locations.
 - **Startup and files.** Open the most recent file, restore the tab layout, load all parts before showing a model, warn about missing and moved parts, watch for file changes and ask, migrate or keep LeoCAD models when opened.
-- **Rendering and Views.** Performance, colors, steps and highlighting, and lines with edge contrast on Rendering, and the Model, View Cube, Axis Icon, Cutaway, Turntable, Base Grid, Parts, Preview and Minifigure Builder groups on Views.
-- **Interface and Instructions.** Interface and view colors, the default instruction page settings, and the rulers and element inspector overlays of the instructions page.
-- **View colors.** Background, active and inactive view borders, selected, focused and new parts, the marquee, overlays, text and its halo, lights, cameras, control points, Flex Paths, the view cube, every axis, and the element margin, padding and anchor overlays and the ruler pointer arrows of the instructions page, each with an alpha slider.
+- **Rendering and Views.** The Display, Studs, Shading, Colors and Steps and Highlighting groups on Rendering, and the Model, View Cube, Axis Icon, Cutaway, Turntable, Axis Lines, Base Grid, Parts, Preview and Minifigure Builder groups on Views.
+- **Interface and Instructions.** Every display color on Interface, in groups from the farthest back to the closest, and the default instruction page settings, the rulers and element inspector overlays of the instructions page and the editor options on Instructions.
+- **Display colors.** The Interface group with the background, active and inactive view borders, cutaway shade, explode lines, overlays, marquee and text with its halo, then the grid, selected and focused parts, cameras and lights, step highlighting and fading, control points and Flex Paths, every axis and the axis icon outline, the view cube, and the page margins, grid lines, element inspector overlays and ruler pointer of the instructions page. Colors that can be see-through set their alpha in the color picker.
 - **Categories.** Part categories turned on and off with a checkbox, edited, imported and exported.
 - **Context Menu.** A right click on a part or submodel that is not selected selects it first, so the menu acts on it. The right-click menu of the model view is yours to arrange, in its own tab before Keyboard. Add commands and menus from the list on the left with the arrow, a double click or a drag, reorder them with Up, Down or a drag, and add separators and named submenus, rename or remove entries, or reset to the default layout. Control point commands only show on flexible parts, and empty submenus are left out.
 - **Keyboard and Mouse.** Shortcuts recorded by clicking, importable and exportable. Commands that share a shortcut show in red, and assigning a taken shortcut asks before moving it.
@@ -489,6 +523,7 @@ Nine pages with lined up label and control columns, checkboxes included, each la
 ![Interface](resources/images/preferences-window-interface.png)
 ![Instructions](resources/images/preferences-window-instructions.png)
 ![Categories](resources/images/preferences-window-categories.png)
+![Edit Category](resources/images/preferences-window-edit-category.png)
 ![Context Menu](resources/images/preferences-window-context-menu.png)
 ![Keyboard](resources/images/preferences-window-keyboard.png)
 ![Mouse](resources/images/preferences-window-mouse.png)

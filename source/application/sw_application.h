@@ -198,14 +198,13 @@ public:
 	bool mAxisIconLabels;
 	bool mAxisIconNegative;
 	bool mAxisIconCubeOutline;
-	int mAxisIconCubeOutlineAlpha;
+	quint32 mAxisIconCubeOutlineColor;
 	quint32 mTextColor;
 	quint32 mTextHaloColor;
 	quint32 mMarqueeBorderColor;
 	quint32 mMarqueeFillColor;
 	quint32 mOverlayColor;
 	quint32 mCutawayShadeColor;
-	int mCutawayShadeAlpha;
 	bool mCutawayEdges;
 	quint32 mActiveViewColor;
 	quint32 mInactiveViewColor;
@@ -241,6 +240,8 @@ public:
 	bool mDrawGridAxisX;
 	bool mDrawGridAxisY;
 	bool mDrawGridAxisZ;
+	int mGridMargin;
+	int mGridHeightMargin;
 	bool mFixedAxes;
 	bool mViewCubeEnabled;
 	swViewCubeLocation mViewCubeLocation;

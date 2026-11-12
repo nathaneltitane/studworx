@@ -22,6 +22,12 @@ swColorPickerPopup::swColorPickerPopup(QWidget* Parent, int ColorIndex, bool All
 	connect(mColorList, &swColorList::ColorSelected, this, &swColorPickerPopup::ColorSelected);
 	layout->addWidget(mColorList);
 
+	// wide enough to fit the screen
+
+	const int ListWidth = QFontMetrics(mColorList->font()).height() * 3 / 2 * 16;
+	mColorList->setMinimumWidth(ListWidth);
+	mColorList->setFixedHeight(mColorList->GetHeightForWidth(ListWidth));
+
 	// fit the popup to the tiles
 	connect(mColorList, &swColorList::HeightChanged, this, [this]()
 	{

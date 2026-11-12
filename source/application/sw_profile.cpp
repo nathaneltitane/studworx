@@ -85,14 +85,13 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "AxisIconLabels", 1),                                                      // SW_PROFILE_AXIS_ICON_LABELS
 	swProfileEntry("Settings", "AxisIconNegative", 0),                                                    // SW_PROFILE_AXIS_ICON_NEGATIVE
 	swProfileEntry("Settings", "AxisIconCubeOutline", 0),                                                 // SW_PROFILE_AXIS_ICON_CUBE_OUTLINE
-	swProfileEntry("Settings", "AxisIconCubeOutlineAlpha", 50),                                     // SW_PROFILE_AXIS_ICON_CUBE_OUTLINE_ALPHA
+	swProfileEntry("Settings", "AxisIconCubeOutlineColor", SW_RGBA(255, 255, 255, 128)),           // SW_PROFILE_AXIS_ICON_CUBE_OUTLINE_COLOR #ffffff80
 	swProfileEntry("Settings", "TextColor", SW_RGBA(255, 255, 255, 255)),                                  // SW_PROFILE_TEXT_COLOR #ffffffff
 	swProfileEntry("Settings", "TextHaloColor", SW_RGBA(27, 30, 32, 255)),                                // SW_PROFILE_TEXT_HALO_COLOR #1b1e20ff
 	swProfileEntry("Settings", "MarqueeBorderColor", SW_RGBA(85, 170, 128, 255)),                          // SW_PROFILE_MARQUEE_BORDER_COLOR #55aa80ff
 	swProfileEntry("Settings", "MarqueeFillColor", SW_RGBA(42, 46, 50, 0)),                                // SW_PROFILE_MARQUEE_FILL_COLOR #2a2e3200
 	swProfileEntry("Settings", "OverlayColor", SW_RGBA(42, 46, 50, 255)),                                  // SW_PROFILE_OVERLAY_COLOR #2a2e32ff
-	swProfileEntry("Settings", "CutawayShadeColor", SW_RGBA(255, 255, 255, 25)),                           // SW_PROFILE_CUTAWAY_SHADE_COLOR #ffffff19
-	swProfileEntry("Settings", "CutawayShadeAlpha", 50),                                             // SW_PROFILE_CUTAWAY_SHADE_ALPHA
+	swProfileEntry("Settings", "CutawayShadeColor", SW_RGBA(255, 255, 255, 128)),                          // SW_PROFILE_CUTAWAY_SHADE_COLOR #ffffff80
 	swProfileEntry("Settings", "CutawayEdges", 1),                                                         // SW_PROFILE_CUTAWAY_EDGES
 	swProfileEntry("Settings", "ActiveViewColor", SW_RGBA(85, 85, 127, 255)),                              // SW_PROFILE_ACTIVE_VIEW_COLOR #55557fff
 	swProfileEntry("Settings", "InactiveViewColor", SW_RGBA(42, 46, 50, 255)),                             // SW_PROFILE_INACTIVE_VIEW_COLOR #2a2e32ff
@@ -121,6 +120,8 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "GridAxisX", 1),                                                            // SW_PROFILE_GRID_AXIS_X
 	swProfileEntry("Settings", "GridAxisY", 1),                                                            // SW_PROFILE_GRID_AXIS_Y
 	swProfileEntry("Settings", "GridAxisZ", 1),                                                            // SW_PROFILE_GRID_AXIS_Z
+	swProfileEntry("Settings", "GridMargin", 1),                                                           // SW_PROFILE_GRID_MARGIN
+	swProfileEntry("Settings", "GridHeightMargin", 3),                                                     // SW_PROFILE_GRID_HEIGHT_MARGIN
 	swProfileEntry("Settings", "AASamples", 1),                                                            // SW_PROFILE_ANTIALIASING_SAMPLES
 	swProfileEntry("Settings", "ViewCubeEnabled", 1),                                                      // SW_PROFILE_VIEW_CUBE_ENABLED
 	swProfileEntry("Settings", "ViewCubeLocation", (int)swViewCubeLocation::TopRight),                   // SW_PROFILE_VIEW_CUBE_LOCATION
@@ -309,14 +310,10 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Instructions", "ShowElementPadding", 0),                                   // SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_PADDING
 	swProfileEntry("Instructions", "ShowElementAnchors", 0),                                   // SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_ANCHORS
 	swProfileEntry("Instructions", "ShowRulers", 1),                                           // SW_PROFILE_INSTRUCTIONS_SHOW_RULERS
-	swProfileEntry("Instructions", "ElementMarginColor", SW_RGBA(246, 178, 107, 255)),         // SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR #f6b26bff
-	swProfileEntry("Instructions", "ElementMarginAlpha", 66),                                  // SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_ALPHA
-	swProfileEntry("Instructions", "ElementPaddingColor", SW_RGBA(147, 196, 125, 255)),        // SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR #93c47dff
-	swProfileEntry("Instructions", "ElementPaddingAlpha", 55),                                 // SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_ALPHA
+	swProfileEntry("Instructions", "ElementMarginColor", SW_RGBA(246, 178, 107, 168)),         // SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR #f6b26ba8
+	swProfileEntry("Instructions", "ElementPaddingColor", SW_RGBA(147, 196, 125, 140)),        // SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR #93c47d8c
 	swProfileEntry("Instructions", "ElementAnchorColor", SW_RGBA(214, 51, 160, 255)),          // SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR #d633a0ff
-	swProfileEntry("Instructions", "ElementAnchorAlpha", 100),                                 // SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_ALPHA
 	swProfileEntry("Instructions", "RulerPointerColor", SW_RGBA(230, 40, 40, 255)),            // SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR #e62828ff
-	swProfileEntry("Instructions", "RulerPointerAlpha", 100),                                  // SW_PROFILE_INSTRUCTIONS_RULER_POINTER_ALPHA
 	swProfileEntry("InstructionsDefaults", "PageWidth", 1008.0f),                              // SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_WIDTH
 	swProfileEntry("InstructionsDefaults", "PageHeight", 612.0f),                              // SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_HEIGHT
 	swProfileEntry("InstructionsDefaults", "MarginLeft", 36.0f),                               // SW_PROFILE_INSTRUCTIONS_DEFAULT_MARGIN_LEFT
@@ -399,6 +396,33 @@ void swProfileInitialize()
 void swProfileWriteMissing()
 {
 	QSettings Settings;
+
+	// fold retired alpha keys into colors
+
+	const std::tuple<SW_PROFILE_KEY, SW_PROFILE_KEY, QLatin1String> RetiredAlphaKeys[] =
+	{
+		{ SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_MARGIN_COLOR, QLatin1String("Instructions/ElementMarginAlpha") },
+		{ SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_PADDING_COLOR, QLatin1String("Instructions/ElementPaddingAlpha") },
+		{ SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR, SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR, QLatin1String("Instructions/ElementAnchorAlpha") },
+		{ SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR, SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR, QLatin1String("Instructions/RulerPointerAlpha") },
+		{ SW_PROFILE_AXIS_ICON_CUBE_OUTLINE_COLOR, SW_PROFILE_VIEW_CUBE_TEXT_COLOR, QLatin1String("Settings/AxisIconCubeOutlineAlpha") },
+		{ SW_PROFILE_CUTAWAY_SHADE_COLOR, SW_PROFILE_CUTAWAY_SHADE_COLOR, QLatin1String("Settings/CutawayShadeAlpha") }
+	};
+
+	for (const auto& [ColorKey, SourceKey, AlphaName] : RetiredAlphaKeys)
+	{
+		if (!Settings.contains(AlphaName))
+			continue;
+
+		const swProfileEntry& Entry = gProfileEntries[ColorKey];
+		const swProfileEntry& SourceEntry = gProfileEntries[SourceKey];
+		const QString ColorName = QString("%1/%2").arg(Entry.mSection, Entry.mKey);
+		const quint32 Color = Settings.value(QString("%1/%2").arg(SourceEntry.mSection, SourceEntry.mKey), swGetProfileDefaultUnsignedInteger(SourceKey)).toUInt();
+		const int Alpha = (qBound(0, Settings.value(AlphaName).toInt(), 100) * 255 + 50) / 100;
+
+		Settings.setValue(ColorName, SW_RGBA(SW_RGBA_RED(Color), SW_RGBA_GREEN(Color), SW_RGBA_BLUE(Color), Alpha));
+		Settings.remove(AlphaName);
+	}
 
 	for (const swProfileEntry& Entry : gProfileEntries)
 	{
