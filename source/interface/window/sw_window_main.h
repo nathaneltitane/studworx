@@ -451,6 +451,7 @@ protected:
 	QDockWidget* mPartsToolBar = nullptr;
 	QPointer<swInstructionsDialog> mInstructionsDialog;
 	QPointer<swRenderDialog> mPOVRayDialog;
+	QPointer<swRenderDialog> mBlenderDialog;
 	bool mPartsSnapPending = false;
 	bool mFitUpdatePending = false;
 	bool mPartsSnapRetried = false;

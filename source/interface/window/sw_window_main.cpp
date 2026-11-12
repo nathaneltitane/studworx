@@ -804,25 +804,21 @@ void swMainWindow::ShowRenderDialog(swRenderDialogMode RenderDialogMode)
 {
 #ifndef SW_DISABLE_RENDER_DIALOG
 
-	// povray window stays open
-	if (RenderDialogMode == swRenderDialogMode::RenderPOVRay)
-	{
-		if (mPOVRayDialog)
-		{
-			mPOVRayDialog->raise();
-			mPOVRayDialog->activateWindow();
-			return;
-		}
+	// render windows stay open
 
-		swRenderDialog* Dialog = new swRenderDialog(this, RenderDialogMode);
-		Dialog->setAttribute(Qt::WA_DeleteOnClose);
-		mPOVRayDialog = Dialog;
-		Dialog->showMaximized();
+	QPointer<swRenderDialog>& RenderDialog = RenderDialogMode == swRenderDialogMode::RenderPOVRay ? mPOVRayDialog : mBlenderDialog;
+
+	if (RenderDialog)
+	{
+		RenderDialog->raise();
+		RenderDialog->activateWindow();
 		return;
 	}
 
-	swRenderDialog Dialog(this, RenderDialogMode);
-	Dialog.exec();
+	swRenderDialog* Dialog = new swRenderDialog(this, RenderDialogMode);
+	Dialog->setAttribute(Qt::WA_DeleteOnClose);
+	RenderDialog = Dialog;
+	Dialog->showMaximized();
 #endif
 }
 

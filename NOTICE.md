@@ -23,6 +23,7 @@
   - Preferences: Download beside Part Connections and LGEO Library fetches the LDCad shadow library and the LGEO library from GitHub into the folder named there or the StudWorx data folder, with a download icon that turns into Update with the refresh icon once the library is there, and Use Part Connections moves to the Editing group of General, greying out the Part Connections path while off
   - Connection Points: with Part Connections on, the part under the pointer shows its connection points within a 2x2 stud area, filled for male and hollow for female, shaped after the connection, only where they face the camera, toggled under Steps and Highlighting in the view gear menu, with its color in Preferences
   - Connection Points: no longer crash the program with NVIDIA graphics on Windows
+  - Blender Render: opens as a normal window like POV-Ray Render and Instructions, maximized, with the window manager buttons, and stays open beside the model
   - Train track: the end gizmo is half again as big, and the add marker past an open end is a ghost track piece with a plus badge
   - Render: the Log panel shows renderer progress on one line updated in place, as in a terminal, instead of running every update together
 

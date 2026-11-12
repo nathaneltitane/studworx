@@ -438,12 +438,13 @@ swRenderDialog::swRenderDialog(QWidget* Parent, swRenderDialogMode RenderDialogM
 
 	ui->buttonBox->hide();
 
+	// a normal window like instructions
+
+	setWindowFlags(Qt::Window);
+
 	if (mDialogMode == swRenderDialogMode::RenderPOVRay)
 	{
 		setWindowTitle(tr("POV-Ray Render"));
-
-		// a normal window like instructions
-		setWindowFlags(Qt::Window);
 		setWhatsThis(tr("<p><b>POV-Ray Render</b></p><p>Render the current model step using POV-Ray. Choose the output image, its size and quality and the scene in the panels beside the preview, then select Render to start.</p><p>The preview is scaled to fit the window. Log shows the renderer output below the preview.</p>"));
 		mRenderButton->setToolTip(tr("Render the current model step with POV-Ray."));
 	}
