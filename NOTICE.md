@@ -11,7 +11,7 @@
   - Keyframes: panel buttons are painted in the color theme and run the same commands as the Time toolbar, which gains Set Keys, Remove Keys, Play and Stop
   - Timeline: steps with animation keys list a Keys row per keyed object, and clicking an object in Keyframes or Timeline selects it in the model view
   - Samples: sample-train-tracks.ldr, an S-curve of 9V curved track joined at its train track connections
-  - POV-Ray: the POV-Ray path shows in Preferences on Windows and macOS too, so any POV-Ray 3.7 console can replace the bundled one, which stays the fallback
+  - POV-Ray: the POV-Ray path shows in Preferences on Windows and macOS too, so any POV-Ray 3.7 console can replace the bundled one, which stays the fallback, and starts at the bundled console there in place of the Linux path
   - POV-Ray: Windows builds bundle a 64 bit POV-Ray console in place of the 32 bit one
 
   </details>

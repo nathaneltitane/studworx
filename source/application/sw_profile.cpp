@@ -390,6 +390,14 @@ static void swSetProfileValue(const swProfileEntry& Entry, const QVariant& Value
 void swProfileInitialize()
 {
 	gProfileEntries[SW_PROFILE_PROJECTS_PATH].mDefault = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation);
+
+	// use the console beside the program
+
+#if defined(Q_OS_WIN)
+	gProfileEntries[SW_PROFILE_POVRAY_PATH].mDefault = QDir::toNativeSeparators(QCoreApplication::applicationDirPath() + QLatin1String("/povconsole64.exe"));
+#elif defined(Q_OS_MACOS)
+	gProfileEntries[SW_PROFILE_POVRAY_PATH].mDefault = QCoreApplication::applicationDirPath() + QLatin1String("/povray");
+#endif
 }
 
 // every setting gets a line in the settings file
@@ -423,6 +431,15 @@ void swProfileWriteMissing()
 		Settings.setValue(ColorName, SW_RGBA(SW_RGBA_RED(Color), SW_RGBA_GREEN(Color), SW_RGBA_BLUE(Color), Alpha));
 		Settings.remove(AlphaName);
 	}
+
+#if defined(Q_OS_WIN) || defined(Q_OS_MACOS)
+
+	// replace the linux path written by older versions
+
+	if (Settings.value(QLatin1String("POVRay/Path")).toString() == QLatin1String("/usr/bin/povray"))
+		Settings.remove(QLatin1String("POVRay/Path"));
+
+#endif
 
 	for (const swProfileEntry& Entry : gProfileEntries)
 	{
