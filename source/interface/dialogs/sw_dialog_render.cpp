@@ -1082,6 +1082,20 @@ void swRenderDialog::UpdateLogPanel()
 	if (mDialogMode == swRenderDialogMode::RenderBlender)
 		Text.prepend(mStdOutList.join(QString()));
 
+	// carriage returns overwrite the progress line
+
+	QStringList Lines = Text.split(QLatin1Char('\n'));
+
+	for (QString& Line : Lines)
+	{
+		while (Line.endsWith(QLatin1Char('\r')))
+			Line.chop(1);
+
+		Line = Line.mid(Line.lastIndexOf(QLatin1Char('\r')) + 1);
+	}
+
+	Text = Lines.join(QLatin1Char('\n'));
+
 	if (Text == mLogEdit->toPlainText())
 		return;
 

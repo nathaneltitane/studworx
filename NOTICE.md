@@ -13,6 +13,7 @@
   - Samples: sample-train-tracks.ldr, an S-curve of 9V curved track joined at its train track connections
   - POV-Ray: the POV-Ray path shows in Preferences on Windows and macOS too, so any POV-Ray 3.7 console can replace the bundled one, which stays the fallback, and starts at the bundled console there in place of the Linux path
   - POV-Ray: Windows builds bundle a 64 bit POV-Ray console in place of the 32 bit one
+  - Render: the Log panel shows renderer progress on one line updated in place, as in a terminal, instead of running every update together
 
   </details>
 
