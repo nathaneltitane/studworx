@@ -2306,17 +2306,17 @@
     <message>
         <location filename="../../source/core/sw_object.cpp" line="93"/>
         <source>Change Spotlight Cone Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alterar ângulo do cone de luz spot</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="96"/>
         <source>Change Spotlight Penumbra Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alterar o ângulo da penumbra do spot light</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="99"/>
         <source>Change Spotlight POV-Ray Tightness</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alterar a tensão da luz spot POV-Ray</translation>
     </message>
     <message>
         <source>Change Spot Light Cone Angle</source>
@@ -2351,7 +2351,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3492"/>
         <source>Submodel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Submodelo</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3493"/>
@@ -2426,7 +2426,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3538"/>
         <source>Shading</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sombreamento</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3539"/>
@@ -2593,7 +2593,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="198"/>
         <source>Instr&amp;uctions...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Instruções...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="459"/>
@@ -2666,7 +2666,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2599"/>
         <source>Remove &amp;Keyframes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Remover quadros-chave</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2806"/>
@@ -2714,7 +2714,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="81"/>
         <source>Ima&amp;ge...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Imagem...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="99"/>
@@ -3831,17 +3831,17 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2069"/>
         <source>Open Most Recent File on Startup</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Abra o ficheiro mais recente no arranque</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2078"/>
         <source>Restore Tab Layout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Restaurar layout da guia</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2087"/>
         <source>Fixed Direction Keys</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Teclas de direcção fixas</translation>
     </message>
     <message>
         <source>Mesh LOD</source>
@@ -3905,7 +3905,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3364"/>
         <source>&amp;What&apos;s This?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">O que é isso?</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3373"/>
@@ -3915,7 +3915,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3382"/>
         <source>Report a &amp;Bug</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Reportar um bug</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2176"/>
@@ -3940,7 +3940,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="351"/>
         <source>Rep&amp;lace</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Substitui&amp;r</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="396"/>
@@ -4095,7 +4095,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1071"/>
         <source>Preference&amp;s...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">P&amp;referências...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1233"/>
@@ -4627,7 +4627,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2986"/>
         <source>Proper&amp;ties...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prop&amp;riedades...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2995"/>
@@ -5173,12 +5173,12 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/core/sw_project.cpp" line="218"/>
         <source>Submodel </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Submodelo</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project.cpp" line="231"/>
         <source>Submodel Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nome do submodelo</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project.cpp" line="238"/>
@@ -7624,7 +7624,7 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2600"/>
         <source>Remove all keyframes from the selected parts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Remova todos os fotogramas-chave das peças selecionadas</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2753"/>
@@ -7972,17 +7972,17 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1531"/>
         <source>Toggle the Standard toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alternar a barra de ferramentas padrão</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1540"/>
         <source>Toggle the Tools toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alternar a barra de ferramentas Ferramentas</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1549"/>
         <source>Toggle the Time toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alternar a barra de ferramentas de tempo</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1558"/>
@@ -8037,7 +8037,7 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1665"/>
         <source>Toggle full screen mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Modo tela cheia</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1683"/>
@@ -10768,7 +10768,7 @@ Export:
         <source>
 Settings:
 </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Configurações</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1354"/>
@@ -10895,7 +10895,7 @@ Pictures:
         <source>
 Camera:
 </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Câmara</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1296"/>
@@ -11977,7 +11977,7 @@ Veja https://github.com/nathaneltitane/studworx para saber como descarragar e in
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>1</source>
-        <translation type="unfinished">8x {1?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -11987,7 +11987,7 @@ Veja https://github.com/nathaneltitane/studworx para saber como descarragar e in
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>2</source>
-        <translation type="unfinished">8x {2?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -11997,7 +11997,7 @@ Veja https://github.com/nathaneltitane/studworx para saber como descarragar e in
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>3</source>
-        <translation type="unfinished">8x {3?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -12185,7 +12185,7 @@ Veja https://github.com/nathaneltitane/studworx para saber como descarragar e in
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="73"/>
         <source>Contrast</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Contraste</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="74"/>
@@ -12213,7 +12213,7 @@ Veja https://github.com/nathaneltitane/studworx para saber como descarragar e in
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="80"/>
         <source>Saturation</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Saturação</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="81"/>
@@ -13354,7 +13354,7 @@ Veja https://github.com/nathaneltitane/studworx para saber como descarragar e in
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="108"/>
         <source>Browse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Navegar</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="115"/>
@@ -13521,7 +13521,7 @@ Choose where to save it and build it now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_category.ui"/>
         <source>Keywords</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Palavras Chave</translation>
     </message>
 </context>
 <context>
@@ -13823,7 +13823,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="106"/>
         <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="111"/>
         <source>Replace</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Substituir</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="107"/>
@@ -14159,7 +14159,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="99"/>
         <source>Replace</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Substituir</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="103"/>
@@ -14658,7 +14658,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Output</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Saída</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
@@ -14673,7 +14673,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Index Page</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Página de índice</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
@@ -14697,12 +14697,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>After Each Step</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Após cada passo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>At the End</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">No fim</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
@@ -14742,7 +14742,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cor de fundo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
@@ -14930,7 +14930,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="151"/>
         <source>File Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nome do ficheiro</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="156"/>
@@ -14992,7 +14992,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="194"/>
         <source>&amp;Width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Largura</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="218"/>
@@ -15028,12 +15028,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="249"/>
         <source>&amp;Current Step</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Passo Actual</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="254"/>
         <source>&amp;All Steps</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Todos os Passos</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="259"/>
@@ -15440,7 +15440,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="204"/>
         <source>&amp;Height</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Altura</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="210"/>
@@ -15707,7 +15707,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="369"/>
         <source>&amp;Previous</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anterior</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="369"/>
@@ -15767,7 +15767,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="375"/>
         <source>&amp;Next</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Seguinte</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="375"/>
@@ -16493,7 +16493,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_print.cpp" line="73"/>
         <source>Browse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Navegar</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_print.cpp" line="78"/>
@@ -16670,7 +16670,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="155"/>
         <source>Page Setup...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Configuração de página...</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="156"/>
@@ -16930,7 +16930,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="359"/>
         <source>Orthographic</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ortográfico</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="376"/>
@@ -17682,7 +17682,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="653"/>
         <source>Border Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cor da borda</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="653"/>
@@ -18588,7 +18588,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="342"/>
         <source>View&amp;points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ponto de &amp;Vista</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="354"/>
@@ -18598,12 +18598,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="378"/>
         <source>&amp;Shading</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sombre&amp;amento</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="443"/>
         <source>Ren&amp;der</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Devolve&amp;r</translation>
     </message>
     <message>
         <source>&amp;Find</source>
@@ -18622,12 +18622,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="541"/>
         <source>&amp;Visibility</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visibilidade</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="548"/>
         <source>&amp;Steps</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Passos</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="565"/>
@@ -18938,7 +18938,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="463"/>
         <source>Shading</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sombreamento</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="465"/>
@@ -18993,7 +18993,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="492"/>
         <source>Highlight New Parts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Destacar as novas peças</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="494"/>
@@ -19183,7 +19183,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="918"/>
         <source>Preview...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visualização...</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="1148"/>
@@ -19289,7 +19289,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="372"/>
         <source>%1, %2</source>
-        <translation type="unfinished">%1: %2 {1,?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
@@ -19563,7 +19563,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>0</source>
-        <translation>8x {0?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
@@ -20050,7 +20050,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="390"/>
         <source>Template Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nome do modelo</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="403"/>
@@ -20692,10 +20692,10 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model_selection.cpp" line="696"/>
         <location filename="../../source/core/sw_model_selection.cpp" line="703"/>
         <location filename="../../source/core/sw_model_selection.cpp" line="710"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1137"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1144"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1550"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1611"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1153"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1160"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1566"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1627"/>
         <source>Selection</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Seleção</translation>
@@ -20741,7 +20741,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="315"/>
         <source>Add Spotlight</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Adicionar luz spot</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="1170"/>
@@ -20879,15 +20879,15 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Alterar projeção</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1273"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1304"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1289"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1320"/>
         <source>Hide Parts</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ocultar peças</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1335"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1366"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1351"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1382"/>
         <source>Unhide Parts</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mostrar peças</translation>
@@ -21044,8 +21044,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">Mini-figura</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/core/sw_model_selection.cpp" line="1544"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1626"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1560"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1642"/>
         <source>Replace Parts</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">
@@ -21614,7 +21614,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
         <source>Preset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Predefinição</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
@@ -21629,7 +21629,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
         <source>Units</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Unidades</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
@@ -21799,7 +21799,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.cpp" line="79"/>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.cpp" line="118"/>
         <source>Palette Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nome da paleta</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.cpp" line="98"/>
@@ -22315,7 +22315,7 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="380"/>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Apagar</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="380"/>
@@ -24534,7 +24534,7 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="109"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Reiniciar</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="113"/>
@@ -25001,7 +25001,7 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Restore Tab Layout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Restaurar layout da guia</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25031,7 +25031,7 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Fixed Direction Keys</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Teclas de direcção fixas</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25121,7 +25121,7 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw Lines Every</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Desenhar linhas cada</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25156,7 +25156,7 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw Studs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Desenhar pregos</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25321,7 +25321,7 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cor de fundo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25366,12 +25366,12 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>PO&amp;V-Ray Executable</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Executá&amp;vel POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>&amp;LGEO Library</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;LGEO Biblioteca</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25456,7 +25456,7 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Focused</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Focado</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25472,17 +25472,17 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="117"/>
         <source>Control Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ponto de controlo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Control Point Focused</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ponto de controlo focado</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Studs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">pregos</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25512,7 +25512,7 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Key sequence</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sequência de teclas</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -26268,7 +26268,7 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>&amp;Blender Executable</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blender Executável</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -26279,7 +26279,7 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Browse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Navegar</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -26334,7 +26334,7 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Author</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Autor</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -26685,7 +26685,7 @@ As placas de vídeo não suportadas utilizam a tonalidade da face e bordas color
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Shading</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sombreamento</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -27196,7 +27196,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Author</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Autor</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
@@ -27206,12 +27206,12 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Comments</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Comentários</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Measurements</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Medidas</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
@@ -27298,7 +27298,7 @@ N/A: %1 parts</source>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="807"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="893"/>
         <source>Multiple Colors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> Várias cores</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1111"/>
@@ -27341,7 +27341,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1133"/>
         <source>Toggle Keyframe</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alternar quadro-chave</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1200"/>
@@ -27704,7 +27704,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1435"/>
         <source>Angle in degrees of the spotlight&apos;s beam</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ângulo em graus do feixe de luz spot</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1436"/>
@@ -27714,7 +27714,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1436"/>
         <source>Angle in degrees over which the intensity of the spotlight falls off to zero</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ângulo em graus sobre o qual a intensidade da luz spot cai para zero</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1439"/>
@@ -27823,7 +27823,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1459"/>
         <source>Additional exponential spotlight edge softening</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Suavização adicional da borda do spot light exponencial</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1462"/>
@@ -28264,7 +28264,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="589"/>
         <source>Preset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Predefinição</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="589"/>
@@ -28295,7 +28295,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="618"/>
         <source>Output</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Saída</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="618"/>
@@ -28340,7 +28340,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="805"/>
         <source>Quality</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Qualidade</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="805"/>
@@ -28873,7 +28873,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="841"/>
         <source>Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cor de fundo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="843"/>
@@ -28898,7 +28898,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="849"/>
         <source>Browse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Navegar</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="853"/>
@@ -28963,7 +28963,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1116"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Reiniciar</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1116"/>

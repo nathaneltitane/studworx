@@ -38,8 +38,8 @@ points without collecting bounds again.
 The view fit entry points take an explicit `AdjustFarPlane` flag. Initial view
 and preview fits and automatic image output fits enable it, using the bounds
 available at that time; ordinary fits disable it. The distance expands only when
-those bounds extend beyond both the default 50,000 and the current distance. Later asset
-updates, redraws, navigation, and fits do not adjust clipping again.
+those bounds extend beyond both the default 50,000 and the current distance.
+Later assetupdates, redraws, navigation, and fits do not adjust clipping again.
 Increases include a 10% margin and round up to multiples of 10,000; they never
 shrink the distance or change saved model cameras. Explicit command-line clipping
 planes remain authoritative for image output.

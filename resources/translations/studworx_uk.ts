@@ -2306,17 +2306,17 @@
     <message>
         <location filename="../../source/core/sw_object.cpp" line="93"/>
         <source>Change Spotlight Cone Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Зміна кута конуса точкового світла</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="96"/>
         <source>Change Spotlight Penumbra Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Змінити кут напівтіні прожектора</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="99"/>
         <source>Change Spotlight POV-Ray Tightness</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Змініть герметичність прожектора POV-Ray</translation>
     </message>
     <message>
         <source>Change Spot Light Cone Angle</source>
@@ -2351,7 +2351,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3492"/>
         <source>Submodel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Підмодель</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3493"/>
@@ -2426,7 +2426,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3538"/>
         <source>Shading</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Затінення</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3539"/>
@@ -2487,7 +2487,7 @@
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="47"/>
         <source>Spotlight</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Точкове світло</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="50"/>
@@ -2698,7 +2698,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="81"/>
         <source>Ima&amp;ge...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Зображення...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="180"/>
@@ -2721,7 +2721,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="198"/>
         <source>Instr&amp;uctions...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Інструкції...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="225"/>
@@ -3024,7 +3024,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="918"/>
         <source>Spotlight</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Точкове світло</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="927"/>
@@ -3860,17 +3860,17 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2069"/>
         <source>Open Most Recent File on Startup</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Відкрити нещодавній файл під час запуску</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2078"/>
         <source>Restore Tab Layout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Відновити макет вкладки</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2087"/>
         <source>Fixed Direction Keys</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Кнопки фіксованих напрямків</translation>
     </message>
     <message>
         <source>Mesh LOD</source>
@@ -3964,7 +3964,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2986"/>
         <source>Proper&amp;ties...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Властивості...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3004"/>
@@ -4169,7 +4169,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3364"/>
         <source>&amp;What&apos;s This?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Що це?</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3373"/>
@@ -4179,7 +4179,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3382"/>
         <source>Report a &amp;Bug</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Повідомити про помилку</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2176"/>
@@ -4204,7 +4204,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="351"/>
         <source>Rep&amp;lace</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Замінити</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="396"/>
@@ -4264,7 +4264,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1071"/>
         <source>Preference&amp;s...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Налаштування...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1440"/>
@@ -4519,7 +4519,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2599"/>
         <source>Remove &amp;Keyframes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Видалити ключові кадри</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2806"/>
@@ -5278,12 +5278,12 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/core/sw_project.cpp" line="218"/>
         <source>Submodel </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Підмодель</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project.cpp" line="231"/>
         <source>Submodel Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Назва підмоделі</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project.cpp" line="238"/>
@@ -7605,7 +7605,7 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="919"/>
         <source>Add new spotlights to the model</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Додайте до моделі нові прожектори</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="928"/>
@@ -8362,17 +8362,17 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1531"/>
         <source>Toggle the Standard toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Перемкніть стандартну панель інструментів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1540"/>
         <source>Toggle the Tools toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Перемкніть панель інструментів «Інструменти».</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1549"/>
         <source>Toggle the Time toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Перемкніть панель інструментів часу</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1558"/>
@@ -8422,7 +8422,7 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1665"/>
         <source>Toggle full screen mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Перемкнути повноекранний режим</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2231"/>
@@ -8552,7 +8552,7 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2600"/>
         <source>Remove all keyframes from the selected parts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Видаліть усі ключові кадри з вибраних частин</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2627"/>
@@ -10760,7 +10760,7 @@ Pictures:
         <source>
 Camera:
 </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Камера</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1301"/>
@@ -10920,7 +10920,7 @@ Export:
         <source>
 Settings:
 </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Налаштування</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1354"/>
@@ -12144,7 +12144,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>1</source>
-        <translation type="unfinished">8x {1?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -12154,7 +12154,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>2</source>
-        <translation type="unfinished">8x {2?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -12164,7 +12164,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>3</source>
-        <translation type="unfinished">8x {3?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -12353,7 +12353,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="73"/>
         <source>Contrast</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Контраст</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="74"/>
@@ -12381,7 +12381,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="80"/>
         <source>Saturation</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">насиченість</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="81"/>
@@ -13524,7 +13524,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="108"/>
         <source>Browse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Огляд</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="115"/>
@@ -13691,7 +13691,7 @@ Choose where to save it and build it now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_category.ui"/>
         <source>Keywords</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ключові слова</translation>
     </message>
 </context>
 <context>
@@ -13993,7 +13993,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="106"/>
         <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="111"/>
         <source>Replace</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Замінити</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="107"/>
@@ -14331,7 +14331,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="99"/>
         <source>Replace</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Замінити</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="103"/>
@@ -14829,7 +14829,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Output</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вихід</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
@@ -14844,7 +14844,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Index Page</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Індексна сторінка</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
@@ -14868,12 +14868,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>After Each Step</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Після кожного кроку</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>At the End</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">У кінці</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
@@ -14898,12 +14898,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">праворуч</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ліворуч</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
@@ -14913,7 +14913,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Колір фону</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
@@ -15106,7 +15106,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="151"/>
         <source>File Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Назва файла</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="156"/>
@@ -15168,12 +15168,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="194"/>
         <source>&amp;Width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ширина</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="204"/>
         <source>&amp;Height</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Висота</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="218"/>
@@ -15209,12 +15209,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="249"/>
         <source>&amp;Current Step</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Поточний крок</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="254"/>
         <source>&amp;All Steps</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Усі кроки</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="259"/>
@@ -15877,7 +15877,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="369"/>
         <source>&amp;Previous</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Попередній</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="369"/>
@@ -15937,7 +15937,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="375"/>
         <source>&amp;Next</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Далі</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="375"/>
@@ -16278,7 +16278,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1610"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">праворуч</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1610"/>
@@ -16298,7 +16298,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1610"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ліворуч</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1615"/>
@@ -16426,7 +16426,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="22"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ліворуч</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="23"/>
@@ -16436,7 +16436,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="24"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">праворуч</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="25"/>
@@ -16665,7 +16665,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_print.cpp" line="73"/>
         <source>Browse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Огляд</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_print.cpp" line="78"/>
@@ -16842,7 +16842,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="155"/>
         <source>Page Setup...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Параметри сторінки...</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="156"/>
@@ -17102,7 +17102,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="359"/>
         <source>Orthographic</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ортографічна</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="376"/>
@@ -17582,7 +17582,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1193"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ліворуч</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1193"/>
@@ -17592,7 +17592,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1193"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">праворуч</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="571"/>
@@ -17854,7 +17854,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="653"/>
         <source>Border Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Колір рамки</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="653"/>
@@ -18174,7 +18174,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="279"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Позиція</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="280"/>
@@ -18789,7 +18789,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="342"/>
         <source>View&amp;points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Точки зору</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="354"/>
@@ -18799,12 +18799,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="378"/>
         <source>&amp;Shading</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">За&amp;тінення</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="443"/>
         <source>Ren&amp;der</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Рендер</translation>
     </message>
     <message>
         <source>&amp;Find</source>
@@ -18823,12 +18823,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="541"/>
         <source>&amp;Visibility</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Видимість</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="548"/>
         <source>&amp;Steps</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Кроки</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="565"/>
@@ -19114,7 +19114,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="463"/>
         <source>Shading</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Затінення</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="465"/>
@@ -19169,7 +19169,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="492"/>
         <source>Highlight New Parts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Підсвічувати нові блоки</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="494"/>
@@ -19359,7 +19359,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="918"/>
         <source>Preview...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Попередній перегляд...</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="1148"/>
@@ -19466,7 +19466,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="372"/>
         <source>%1, %2</source>
-        <translation type="unfinished">%1: %2 {1,?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
@@ -19741,7 +19741,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>0</source>
-        <translation type="unfinished">8x {0?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
@@ -20228,7 +20228,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="390"/>
         <source>Template Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Назва шаблона</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="403"/>
@@ -20837,10 +20837,10 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model_selection.cpp" line="696"/>
         <location filename="../../source/core/sw_model_selection.cpp" line="703"/>
         <location filename="../../source/core/sw_model_selection.cpp" line="710"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1137"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1144"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1550"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1611"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1153"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1160"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1566"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1627"/>
         <source>Selection</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вибір</translation>
@@ -20886,7 +20886,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="315"/>
         <source>Add Spotlight</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Додайте точкове світло</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="1170"/>
@@ -21024,15 +21024,15 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Змінити проекцію</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1273"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1304"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1289"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1320"/>
         <source>Hide Parts</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Сховати фрагменти</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1335"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1366"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1351"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1382"/>
         <source>Unhide Parts</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Показати фрагменти</translation>
@@ -21148,8 +21148,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">Мініфігура</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/core/sw_model_selection.cpp" line="1544"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1626"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1560"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1642"/>
         <source>Replace Parts</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">
@@ -21715,7 +21715,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
         <source>Preset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Попереднє налаштування</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
@@ -21730,7 +21730,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
         <source>Units</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Одиниці вимірювання</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
@@ -21740,12 +21740,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ліворуч</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">праворуч</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
@@ -21900,7 +21900,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.cpp" line="79"/>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.cpp" line="118"/>
         <source>Palette Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Назва палітри</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.cpp" line="98"/>
@@ -25106,7 +25106,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Restore Tab Layout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Відновити макет вкладки</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25136,7 +25136,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Fixed Direction Keys</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Кнопки фіксованих напрямків</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25226,7 +25226,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw Lines Every</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Відображати лінії кожні</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25261,7 +25261,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw Studs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Відображати контури шипів</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25426,7 +25426,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Колір фону</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25471,12 +25471,12 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>PO&amp;V-Ray Executable</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Програма PO&amp;V-Ray</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>&amp;LGEO Library</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;LGEO Бібліотека</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25561,7 +25561,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Focused</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Цілеспрямований</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25577,17 +25577,17 @@ Unsupported video cards use face tint and colored edges.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="117"/>
         <source>Control Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Контрольна точка</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Control Point Focused</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Зосереджено контрольну точку</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Studs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">шипів</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25617,7 +25617,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Key sequence</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Послідовність клавіш</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -26373,7 +26373,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>&amp;Blender Executable</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blender Виконуваний файл</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -26384,7 +26384,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Browse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Огляд</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -26439,7 +26439,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Author</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Автор</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -26790,7 +26790,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Shading</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Затінення</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -27313,7 +27313,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Author</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Автор</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
@@ -27323,12 +27323,12 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Comments</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Коментарі</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Measurements</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Розміри</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
@@ -27415,7 +27415,7 @@ N/A: %1 parts</source>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="807"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="893"/>
         <source>Multiple Colors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> Кілька кольорів</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1111"/>
@@ -27458,7 +27458,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1133"/>
         <source>Toggle Keyframe</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Перемкнути ключовий кадр</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1200"/>
@@ -27821,7 +27821,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1435"/>
         <source>Angle in degrees of the spotlight&apos;s beam</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Кут в градусах променя прожектора</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1436"/>
@@ -27831,7 +27831,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1436"/>
         <source>Angle in degrees over which the intensity of the spotlight falls off to zero</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Кут у градусах, при якому інтенсивність прожектора спадає до нуля</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1439"/>
@@ -27940,7 +27940,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1459"/>
         <source>Additional exponential spotlight edge softening</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Додаткове експоненціальне пом’якшення країв точкового світла</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1462"/>
@@ -28004,7 +28004,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1795"/>
         <source>Size </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Розмір</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1795"/>
@@ -28424,7 +28424,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="589"/>
         <source>Preset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Попереднє налаштування</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="589"/>
@@ -28455,7 +28455,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="618"/>
         <source>Output</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Вихід</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="618"/>
@@ -28500,7 +28500,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="805"/>
         <source>Quality</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Якість</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="805"/>
@@ -29033,7 +29033,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="841"/>
         <source>Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Колір фону</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="843"/>
@@ -29058,7 +29058,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="849"/>
         <source>Browse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Огляд</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="853"/>

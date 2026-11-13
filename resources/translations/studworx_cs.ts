@@ -2105,17 +2105,17 @@
     <message>
         <location filename="../../source/core/sw_object.cpp" line="93"/>
         <source>Change Spotlight Cone Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Změnit úhel kužele bodového světla</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="96"/>
         <source>Change Spotlight Penumbra Angle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Změnit úhel bodového světla Penumbra</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="99"/>
         <source>Change Spotlight POV-Ray Tightness</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Změňte těsnost bodového světla POV-Ray</translation>
     </message>
     <message>
         <source>Change Spot Light Cone Angle</source>
@@ -2150,7 +2150,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3492"/>
         <source>Submodel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Podmodel</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3493"/>
@@ -2175,7 +2175,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3528"/>
         <source>Export</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exportovat</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3529"/>
@@ -2225,7 +2225,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3538"/>
         <source>Shading</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stínování</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3539"/>
@@ -3072,7 +3072,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="81"/>
         <source>Ima&amp;ge...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Obrázek...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="135"/>
@@ -3087,12 +3087,12 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="198"/>
         <source>Instr&amp;uctions...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pok&amp;yny...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="351"/>
         <source>Rep&amp;lace</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nah&amp;radit</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="396"/>
@@ -3149,7 +3149,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1071"/>
         <source>Preference&amp;s...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">P&amp;ředvolby...</translation>
     </message>
     <message>
         <source>Remove Step</source>
@@ -3685,17 +3685,17 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2069"/>
         <source>Open Most Recent File on Startup</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Otevírat nejnovější soubor při spuštění</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2078"/>
         <source>Restore Tab Layout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Obnovit rozvržení karty</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2087"/>
         <source>Fixed Direction Keys</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Klávesy fixního směru</translation>
     </message>
     <message>
         <source>Mesh LOD</source>
@@ -3789,7 +3789,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2986"/>
         <source>Proper&amp;ties...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vlastnosti...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3004"/>
@@ -3994,7 +3994,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3364"/>
         <source>&amp;What&apos;s This?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">co je to?</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3373"/>
@@ -4004,7 +4004,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3382"/>
         <source>Report a &amp;Bug</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nahlásit chybu</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2176"/>
@@ -4245,7 +4245,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2599"/>
         <source>Remove &amp;Keyframes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Odstranit &amp;klíčové snímky</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2806"/>
@@ -4927,12 +4927,12 @@ Formát souboru není rozpoznán.</translation>
     <message>
         <location filename="../../source/core/sw_project.cpp" line="218"/>
         <source>Submodel </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Podmodel</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project.cpp" line="231"/>
         <source>Submodel Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Název podmodelu</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project.cpp" line="238"/>
@@ -7914,17 +7914,17 @@ Formát souboru není rozpoznán.</translation>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1531"/>
         <source>Toggle the Standard toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Přepnout panel standardních nástrojů</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1540"/>
         <source>Toggle the Tools toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Přepnout panel nástrojů</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1549"/>
         <source>Toggle the Time toolbar</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Přepnout panel nástrojů času</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1558"/>
@@ -7974,7 +7974,7 @@ Formát souboru není rozpoznán.</translation>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1665"/>
         <source>Toggle full screen mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Přepnout režim celé obrazovky</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2231"/>
@@ -8101,7 +8101,7 @@ Formát souboru není rozpoznán.</translation>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2600"/>
         <source>Remove all keyframes from the selected parts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Odstraňte všechny klíčové snímky z vybraných dílků</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2627"/>
@@ -10276,7 +10276,7 @@ Pictures:
         <source>
 Camera:
 </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fotoaparát</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1301"/>
@@ -10393,7 +10393,7 @@ Studs and Edges:
         <source>
 Export:
 </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exportovat</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1329"/>
@@ -10436,7 +10436,7 @@ Export:
         <source>
 Settings:
 </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nastavení</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1354"/>
@@ -11649,7 +11649,7 @@ Informace o tom, jak stáhnout a nainstalovat knihovnu, naleznete na adrese http
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>1</source>
-        <translation type="unfinished">8x {1?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -11659,7 +11659,7 @@ Informace o tom, jak stáhnout a nainstalovat knihovnu, naleznete na adrese http
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>2</source>
-        <translation type="unfinished">8x {2?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -11669,7 +11669,7 @@ Informace o tom, jak stáhnout a nainstalovat knihovnu, naleznete na adrese http
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>3</source>
-        <translation type="unfinished">8x {3?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -11857,7 +11857,7 @@ Informace o tom, jak stáhnout a nainstalovat knihovnu, naleznete na adrese http
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="73"/>
         <source>Contrast</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kontrast</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="74"/>
@@ -11885,7 +11885,7 @@ Informace o tom, jak stáhnout a nainstalovat knihovnu, naleznete na adrese http
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="80"/>
         <source>Saturation</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nasycení</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="81"/>
@@ -13028,7 +13028,7 @@ Informace o tom, jak stáhnout a nainstalovat knihovnu, naleznete na adrese http
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="108"/>
         <source>Browse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prohlížet</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="115"/>
@@ -13068,7 +13068,7 @@ Informace o tom, jak stáhnout a nainstalovat knihovnu, naleznete na adrese http
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="153"/>
         <source>Export...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exportovat...</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_export_bricklink.cpp" line="191"/>
@@ -13195,7 +13195,7 @@ Choose where to save it and build it now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_category.ui"/>
         <source>Keywords</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Klíčová slova</translation>
     </message>
 </context>
 <context>
@@ -13497,7 +13497,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="106"/>
         <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="111"/>
         <source>Replace</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nahradit</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="107"/>
@@ -13835,7 +13835,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="99"/>
         <source>Replace</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nahradit</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="103"/>
@@ -14333,7 +14333,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Output</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Výstup</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
@@ -14348,7 +14348,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Index Page</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Počáteční stránka</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
@@ -14372,12 +14372,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>After Each Step</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Po každém kroku</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>At the End</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Na konci</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
@@ -14402,12 +14402,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Právo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vlevo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
@@ -14417,7 +14417,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Barva pozadí</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
@@ -14610,7 +14610,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="151"/>
         <source>File Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Název souboru</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="156"/>
@@ -14672,12 +14672,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="194"/>
         <source>&amp;Width</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Šířka</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="204"/>
         <source>&amp;Height</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Výška</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="218"/>
@@ -14713,12 +14713,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="249"/>
         <source>&amp;Current Step</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aktuální krok</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="254"/>
         <source>&amp;All Steps</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Všechny kroky</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="259"/>
@@ -15380,7 +15380,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="369"/>
         <source>&amp;Previous</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Předchozí</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="369"/>
@@ -15440,7 +15440,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="375"/>
         <source>&amp;Next</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Další</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="375"/>
@@ -15781,7 +15781,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1610"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Právo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1610"/>
@@ -15801,7 +15801,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1610"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vlevo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1615"/>
@@ -15929,7 +15929,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="22"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vlevo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="23"/>
@@ -15939,7 +15939,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="24"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Právo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="25"/>
@@ -16168,7 +16168,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_print.cpp" line="73"/>
         <source>Browse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prohlížet</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_print.cpp" line="78"/>
@@ -16344,7 +16344,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="155"/>
         <source>Page Setup...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nastavení stránky...</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="156"/>
@@ -16604,7 +16604,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="359"/>
         <source>Orthographic</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pravoúhle</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="376"/>
@@ -17084,7 +17084,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1193"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vlevo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1193"/>
@@ -17094,7 +17094,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1193"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Právo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="571"/>
@@ -17356,7 +17356,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="653"/>
         <source>Border Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Barva ohraničení</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="653"/>
@@ -17676,7 +17676,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="279"/>
         <source>Position</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pozice</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="280"/>
@@ -18128,7 +18128,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="342"/>
         <source>View&amp;points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Pohledy</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="354"/>
@@ -18138,12 +18138,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="378"/>
         <source>&amp;Shading</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stínov&amp;ání</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="443"/>
         <source>Ren&amp;der</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Vykreslit</translation>
     </message>
     <message>
         <source>&amp;Find</source>
@@ -18162,12 +18162,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="541"/>
         <source>&amp;Visibility</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Viditelnost</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="548"/>
         <source>&amp;Steps</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kroky</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="618"/>
@@ -18557,7 +18557,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="463"/>
         <source>Shading</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stínování</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="465"/>
@@ -18612,7 +18612,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="492"/>
         <source>Highlight New Parts</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zvýrazněte nové části</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="494"/>
@@ -18802,7 +18802,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="918"/>
         <source>Preview...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Náhled...</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="1148"/>
@@ -18857,7 +18857,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="239"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Osvětlení</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="241"/>
@@ -18878,7 +18878,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="372"/>
         <source>%1, %2</source>
-        <translation type="unfinished">%1: %2 {1,?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
@@ -19723,7 +19723,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="390"/>
         <source>Template Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Název šablony</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="403"/>
@@ -20437,10 +20437,10 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model_selection.cpp" line="696"/>
         <location filename="../../source/core/sw_model_selection.cpp" line="703"/>
         <location filename="../../source/core/sw_model_selection.cpp" line="710"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1137"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1144"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1550"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1611"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1153"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1160"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1566"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1627"/>
         <source>Selection</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Výběr</translation>
@@ -20486,7 +20486,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="315"/>
         <source>Add Spotlight</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Přidejte bodové světlo</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="1170"/>
@@ -20624,15 +20624,15 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Změna projekce</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1273"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1304"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1289"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1320"/>
         <source>Hide Parts</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Skrýt dílky</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1335"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1366"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1351"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1382"/>
         <source>Unhide Parts</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Odkrýt dílky</translation>
@@ -20762,8 +20762,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">Minifig</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/core/sw_model_selection.cpp" line="1544"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1626"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1560"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1642"/>
         <source>Replace Parts</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">
@@ -21335,7 +21335,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
         <source>Preset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Přednastaveno</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
@@ -21350,7 +21350,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
         <source>Units</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">jednotky</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
@@ -21360,12 +21360,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Vlevo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Právo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
@@ -21514,7 +21514,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.cpp" line="79"/>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.cpp" line="118"/>
         <source>Palette Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Název palety</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.cpp" line="98"/>
@@ -24263,7 +24263,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="109"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Obnovit</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_instructions.cpp" line="113"/>
@@ -24714,7 +24714,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Restore Tab Layout</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Obnovit rozvržení karty</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -24744,7 +24744,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Fixed Direction Keys</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Klávesy fixního směru</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -24834,7 +24834,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw Lines Every</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nakreslí včechny čáry</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -24869,7 +24869,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw Studs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nakreslete cvočky</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25034,7 +25034,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Barva pozadí</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25079,12 +25079,12 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>PO&amp;V-Ray Executable</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spustitelný soubor PO&amp;V-Ray</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>&amp;LGEO Library</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Knihovna &amp;LGEO</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25169,7 +25169,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Focused</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zaměřeno</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25179,23 +25179,23 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Light</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Osvětlení</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="117"/>
         <source>Control Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kontrolní bod</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Control Point Focused</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zaostřeno na kontrolní bod</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Studs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">cvočky</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25225,7 +25225,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Key sequence</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kombinace kláves</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25664,7 +25664,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Export</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exportovat</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25981,7 +25981,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>&amp;Blender Executable</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blender Spustitelný soubor</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25992,7 +25992,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Browse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prohlížet</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -26047,7 +26047,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Author</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Autor</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -26398,7 +26398,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Shading</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stínování</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -26922,7 +26922,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Author</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Autor</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
@@ -26932,12 +26932,12 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Comments</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Komentáře</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Measurements</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rozměry</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
@@ -27024,7 +27024,7 @@ N/A: %1 parts</source>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="807"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="893"/>
         <source>Multiple Colors</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> Více barev</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1111"/>
@@ -27067,7 +27067,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1133"/>
         <source>Toggle Keyframe</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Přepnout klíčový rámeček</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1200"/>
@@ -27430,7 +27430,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1435"/>
         <source>Angle in degrees of the spotlight&apos;s beam</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Úhel paprsku bodového světla ve stupních</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1436"/>
@@ -27440,7 +27440,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1436"/>
         <source>Angle in degrees over which the intensity of the spotlight falls off to zero</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Úhel ve stupních, při kterém intenzita bodového světla klesne na nulu</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1439"/>
@@ -27549,7 +27549,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1459"/>
         <source>Additional exponential spotlight edge softening</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dodatečné exponenciální změkčení okrajů bodového světla</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1462"/>
@@ -27613,7 +27613,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1795"/>
         <source>Size </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Velikost</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1795"/>
@@ -28073,7 +28073,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="589"/>
         <source>Preset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Přednastaveno</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="589"/>
@@ -28104,7 +28104,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="618"/>
         <source>Output</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Výstup</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="618"/>
@@ -28149,7 +28149,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="805"/>
         <source>Quality</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kvalita</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="805"/>
@@ -28682,7 +28682,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="841"/>
         <source>Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Barva pozadí</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="843"/>
@@ -28707,7 +28707,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="849"/>
         <source>Browse</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Prohlížet</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="853"/>
@@ -28772,7 +28772,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1116"/>
         <source>Reset</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Obnovit</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1116"/>

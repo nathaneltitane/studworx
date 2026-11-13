@@ -51,4 +51,6 @@ private slots:
 	void DocumentationHelpsEveryCommand();
 	void DocumentationLinksEveryImage();
 	void InterfaceUsesPaintedIcons();
+	void TranslationsMatchCompiledCatalogs();
+	void TranslationsKeepPlaceholders();
 };

@@ -78,8 +78,8 @@
 <context>
     <name>swModel</name>
     <message numerus="yes">
-        <location filename="../../source/core/sw_model_selection.cpp" line="1544"/>
-        <location filename="../../source/core/sw_model_selection.cpp" line="1626"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1560"/>
+        <location filename="../../source/core/sw_model_selection.cpp" line="1642"/>
         <source>Replace Parts</source>
         <translation>
             <numerusform>Replace Part</numerusform>
