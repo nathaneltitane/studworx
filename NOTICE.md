@@ -8,6 +8,16 @@
   - Translations: about a hundred strings per language that only changed their mnemonic, punctuation or wording get their old translation back, marked unfinished for review
   - Translations: the Array dialog counts and a status line no longer show broken guesses like 8x {1?} in every language
   - Tests: catalogs are checked to compile with every translation, keep their placeholders and carry no merge guesses
+  - Site: screenshots never show larger than their real size, so menus and panels stay sharp
+  - Site: every gallery follows the order of the program, window first, then its menus and dialogs, with no image shown twice
+  - Site: a Toolbars section explains the Standard, Tools, Time and Transform toolbars
+  - Site: a Where Is It section lists the menu, toolbar or right click menu of every command, with its shortcut and a search, read from the program itself
+  - Site: Help entries name where to find their command, and the menu screenshots give way to the command list
+  - Site: the frame around a screenshot ends where the image ends
+  - Minifigure Builder: the preview no longer outlines every part in the highlight color when edge lines show, Highlight New Parts now only marks the model view
+  - Tests: the site's feature descriptions are kept short, and the command list is checked to name every command; Linux builds now run the tests that start the program
+  - Command line: a hidden --menus option prints every menu path, used to build the site
+  - Site: feature descriptions rewritten in plain words, saying what each feature does instead of listing its commands, now that the command index names them
 
   </details>
 

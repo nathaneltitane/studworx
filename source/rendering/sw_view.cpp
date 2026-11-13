@@ -619,14 +619,14 @@ static void swAddContextMenuEntries(QMenu* Menu, const QStringList& Layout, int&
 	}
 }
 
-void swView::ShowContextMenu() const
+void swView::ShowContextMenu(bool AllEntries) const
 {
 	if (mViewType != swViewType::View)
 		return;
 
 	const swModel* ActiveModel = GetActiveModel();
 	const swPart* FocusPart = ActiveModel ? dynamic_cast<const swPart*>(ActiveModel->GetFocusObject()) : nullptr;
-	const bool FlexPart = FocusPart && FocusPart->mPartData && FocusPart->mPartData->GetSynthInfo();
+	const bool FlexPart = AllEntries || (FocusPart && FocusPart->mPartData && FocusPart->mPartData->GetSynthInfo());
 	const QStringList& Custom = swGetPreferences().mContextMenu;
 	const QStringList Layout = Custom.isEmpty() ? swGetDefaultContextMenu() : Custom;
 

@@ -362,7 +362,7 @@ public:
 	void ZoomExtentsAtStep(swStep Step, swGeometryBoundsMode Mode, bool AdjustFarPlane);
 
 	void RemoveCamera();
-	void ShowContextMenu() const;
+	void ShowContextMenu(bool AllEntries = false) const;
 	bool CloseFindReplaceDialog();
 	void ShowFindReplaceWidget(bool Replace);
 

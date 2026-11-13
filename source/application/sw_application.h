@@ -316,6 +316,7 @@ struct swCommandLineOptions
 {
 	bool ParseOK = true;
 	bool Exit = false;
+	bool PrintMenus = false;
 	bool SaveImage = false;
 	bool SaveWavefront = false;
 	bool Save3DS = false;

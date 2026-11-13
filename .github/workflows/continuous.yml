@@ -56,6 +56,9 @@ jobs:
       run: make -j "$(nproc)"
     - name: Run tests
       working-directory: build/testing
+      # the binary checks run against the build the package came from
+      env:
+        SW_TEST_BINARY: ${{ github.workspace }}/build/deb/build/release/studworx
       run: make check TESTARGS="-o test-results.xml,junitxml -o -,txt"
     - name: Upload test results
       if: always()

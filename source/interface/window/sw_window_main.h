@@ -281,6 +281,7 @@ public:
 
 	void NewProject();
 	bool OpenProject(const QString& FileName);
+	QString GetMenuText();
 	void OpenRecentProject(int RecentFileIndex);
 	void ShowMergeDialog();
 	void ImportLDD();

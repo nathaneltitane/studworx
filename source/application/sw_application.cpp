@@ -1271,6 +1271,8 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			ParseString(Options.CategoriesImportName, true);
 		else if (Option == QLatin1String("--export-categories"))
 			ParseString(Options.CategoriesExportName, true);
+		else if (Option == QLatin1String("--menus"))
+			Options.PrintMenus = true;
 		else if (Option == QLatin1String("-v") || Option == QLatin1String("--version"))
 		{
 			Options.StdOut += tr("StudWorx Version %1\n").arg(SW_VERSION_TEXT);
@@ -1644,7 +1646,9 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 
 	if (!LoadPartsLibrary(Options.LibraryPaths.isEmpty() ? LibraryPaths : Options.LibraryPaths, !Options.LibraryPaths.isEmpty(), Options.StudStyle, Options.StudCylinderColorEnabled))
 	{
-		if (!gMainWindow)
+		// a menu dump has no one to answer the setup dialog
+
+		if (!gMainWindow || Options.PrintMenus)
 		{
 			StdErr << tr("StudWorx could not find an LDraw parts library.\n\nDownload one from %1 and pass it with --library.").arg(QLatin1String(SW_LIBRARY_DOWNLOAD_URL)) << "\n";
 			StdErr.flush();
@@ -2250,6 +2254,15 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 	{
 		gMainWindow->SetColorIndex(swGetColorIndex(7));
 		gMainWindow->GetPartSelectionWidget()->SetDefaultPart();
+
+		// every menu as text for the site
+
+		if (Options.PrintMenus)
+		{
+			StdOut << gMainWindow->GetMenuText();
+			StdOut.flush();
+			return swStartupMode::Success;
+		}
 
 #ifdef Q_OS_IOS
 		const swResult<void> RendererResult = swContext::InitializeRenderer(true);

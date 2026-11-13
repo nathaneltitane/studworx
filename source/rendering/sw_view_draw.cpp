@@ -107,7 +107,12 @@ void swView::OnDraw()
 	bool DrawInsertPreview = DrawInterface && std::any_of(mViews.begin(), mViews.end(), [](swView* View){ return View->mTrackTool == swTrackTool::Insert; });
 	mScene->SetDrawInsertPreview(DrawInsertPreview);
 	
-	mModel->GetScene(mScene.get(), mCamera, !DrawJointHighlight && (mOverrideHighlightNewParts ? mHighlightNewParts : Preferences.mHighlightNewParts), (mOverrideFadeSteps ? mFadeSteps : Preferences.mFadeSteps) && mViewType == swViewType::View);
+	// step effects belong to the main view
+
+	const bool HighlightNewParts = mOverrideHighlightNewParts ? mHighlightNewParts : Preferences.mHighlightNewParts && mViewType == swViewType::View;
+	const bool FadeSteps = (mOverrideFadeSteps ? mFadeSteps : Preferences.mFadeSteps) && mViewType == swViewType::View;
+
+	mModel->GetScene(mScene.get(), mCamera, !DrawJointHighlight && HighlightNewParts, FadeSteps);
 
 	if (DrawJoint)
 		JointsModel->AddJointHighlight(mScene.get(), JointsModel != mModel ? mActiveSubmodelTransform : swMatrix44Identity());

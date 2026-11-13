@@ -51,11 +51,15 @@ A profile test writes settings inside a batch, in a temporary settings folder,
 and checks that they read back at once, that a nested batch and a removed key
 behave, and that the file is written only when the batch ends. A first start
 must give every setting a line in the settings file and keep a value already set.
-Documentation tests read the source tree: `SITE.md` must name every command
+Documentation tests read the source tree: `index.html` must name every command
 by its menu name (numbered families such as Viewpoint 1 to 9 are left out), every
 command with a menu name must have `WhatsThis` help, and every image in
 `resources/images` must be named `section-kind-subject` and linked from `SITE.md`,
 while every image linked from `SITE.md`, `README.md` and the site template must exist.
+Every feature bullet in `SITE.md` must stay under 450 characters, so it explains
+instead of listing names, and `index.html` must hold no unfilled placeholder.
+With `SW_TEST_BINARY` set, `studworx --menus` must start without a parts library,
+print every command as a menu path, a tab and its shortcut, and show no file path.
 
 The executable creates a `QCoreApplication`; apart from the `SW_TEST_BINARY`
 checks it does not open windows or require an OpenGL context, the parts library, or network access. It uses the same Qt

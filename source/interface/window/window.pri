@@ -6,6 +6,7 @@ SOURCES += \
 	$$PWD/sw_window_main.cpp \
 	$$PWD/sw_window_main_command.cpp \
 	$$PWD/sw_window_main_interface.cpp \
+	$$PWD/sw_window_main_menus.cpp \
 	$$PWD/sw_window_main_project.cpp \
 	$$PWD/sw_window_main_update.cpp \
 	$$PWD/sw_window_main_view.cpp \
