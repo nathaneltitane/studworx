@@ -75,12 +75,25 @@ static QStringList GetCatalogs()
 	return Match.captured(1).split(QLatin1Char(' '), Qt::SkipEmptyParts);
 }
 
-// Every listed catalog must parse, and its compiled .qm must give back each translation it holds,
-// so a catalog edited without running tools/studworx-language-release cannot ship stale.
+// Every listed catalog must parse, and lrelease must compile it to a .qm that gives back each
+// translation it holds, the way the build compiles the catalogs the program ships.
 void swTests::TranslationsMatchCompiledCatalogs()
 {
 	const QStringList Catalogs = GetCatalogs();
 	QVERIFY(Catalogs.size() > 1);
+
+	// lrelease beside qt, then on the path
+
+	QString Release = QLibraryInfo::location(QLibraryInfo::BinariesPath) + QStringLiteral("/lrelease");
+
+	if (!QFileInfo(Release).isExecutable())
+		Release = QStandardPaths::findExecutable(QStringLiteral("lrelease"));
+
+	if (Release.isEmpty())
+		QSKIP("lrelease not found");
+
+	QTemporaryDir Directory;
+	QVERIFY(Directory.isValid());
 
 	QStringList Problems;
 
@@ -96,13 +109,19 @@ void swTests::TranslationsMatchCompiledCatalogs()
 			continue;
 		}
 
+		const QString PathCompiled = Directory.filePath(QFileInfo(Path).completeBaseName() + QStringLiteral(".qm"));
+
+		if (QProcess::execute(Release, QStringList() << QStringLiteral("-silent") << Path << QStringLiteral("-qm") << PathCompiled) != 0)
+		{
+			Problems.append(Catalog + QStringLiteral(": lrelease failed"));
+			continue;
+		}
+
 		QTranslator Translator;
-		QString PathCompiled = Path;
-		PathCompiled.replace(QLatin1String(".ts"), QLatin1String(".qm"));
 
 		if (!Translator.load(PathCompiled))
 		{
-			Problems.append(Catalog + QStringLiteral(": no compiled .qm"));
+			Problems.append(Catalog + QStringLiteral(": compiled .qm does not load"));
 			continue;
 		}
 

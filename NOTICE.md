@@ -7,7 +7,7 @@
   - Site: every image retaken from the current build, with a new Connection Points image in Modeling
   - Translations: about a hundred strings per language that only changed their mnemonic, punctuation or wording get their old translation back, marked unfinished for review
   - Translations: the Array dialog counts and a status line no longer show broken guesses like 8x {1?} in every language
-  - Tests: catalogs are checked for a compiled .qm that matches them, kept placeholders and no merge guesses
+  - Tests: catalogs are checked to compile with every translation, keep their placeholders and carry no merge guesses
 
   </details>
 
