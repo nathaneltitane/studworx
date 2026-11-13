@@ -1,6 +1,15 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-13</summary>
+
+  - Joints: an open Joints panel no longer turns off Highlight New Parts in the model view until a joint is picked
+  - Edit menu: Movement Snap and Rotation Snap follow Transform, the same menus as the toolbar buttons
+  - Site: every image retaken from the current build, with a new Connection Points image in Modeling
+
+  </details>
+
+  <details>
   <summary>2026-11-12</summary>
 
   - Views: the X, Y and Z axis lines draw on their own, the Grid Origin Lines setting is gone, and the negative Z line shows only once parts go below the base grid

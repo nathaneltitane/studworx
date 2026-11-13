@@ -32,7 +32,7 @@
 					"description": "StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library.",
 					"applicationCategory": "DesignApplication",
 					"operatingSystem": "Linux, Windows, macOS",
-					"softwareVersion": "2026-11-12",
+					"softwareVersion": "2026-11-13",
 					"license": "https://www.gnu.org/licenses/gpl-3.0.html",
 					"downloadUrl": "https://github.com/nathaneltitane/studworx/releases/latest",
 					"image": "https://studworx.app/resources/social/social.png",
@@ -3893,11 +3893,11 @@
 					</thead>
 
 					<tbody>
-						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-12_amd64.deb / arm64.deb</td></tr>
-						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-12-x86_64.rpm / aarch64.rpm</td></tr>
-						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-12-x86_64.appimage / aarch64.appimage</td></tr>
-						<tr><td>Windows</td><td>studworx-windows-2026-11-12-x64.exe</td></tr>
-						<tr><td>macOS</td><td>studworx-macos-2026-11-12-universal.dmg</td></tr>
+						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-13_amd64.deb / arm64.deb</td></tr>
+						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-13-x86_64.rpm / aarch64.rpm</td></tr>
+						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-13-x86_64.appimage / aarch64.appimage</td></tr>
+						<tr><td>Windows</td><td>studworx-windows-2026-11-13-x64.exe</td></tr>
+						<tr><td>macOS</td><td>studworx-macos-2026-11-13-universal.dmg</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -3950,6 +3950,16 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p class="lead">The latest release notices from the StudWorx repository.</p>
 
 			<details open>
+				<summary>2026-11-13</summary>
+
+				<ul>
+					<li>Joints: an open Joints panel no longer turns off Highlight New Parts in the model view until a joint is picked</li>
+					<li>Edit menu: Movement Snap and Rotation Snap follow Transform, the same menus as the toolbar buttons</li>
+					<li>Site: every <a href="#image">image</a> retaken from the current build, with a new Connection Points image in <a href="#modeling">Modeling</a></li>
+				</ul>
+			</details>
+
+			<details>
 				<summary>2026-11-12</summary>
 
 				<ul>
@@ -3963,7 +3973,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Samples: sample-train-tracks.ldr, an S-curve of 9V curved track joined at its train track connections</li>
 					<li>POV-Ray: the POV-Ray path shows in Preferences on Windows and macOS too, so any POV-Ray 3.7 console can replace the bundled one, which stays the fallback, and starts at the bundled console there in place of the Linux path</li>
 					<li>POV-Ray: Windows builds bundle a 64 bit POV-Ray console in place of the 32 bit one</li>
-					<li>POV-Ray: Focal Blur in the <a href="#image">Image</a> panel turns the depth of field on or off at any quality, off by default, where High quality always used it, and render presets keep it</li>
+					<li>POV-Ray: Focal Blur in the Image panel turns the depth of field on or off at any quality, off by default, where High quality always used it, and render presets keep it</li>
 					<li>POV-Ray: Region shows a faded view of the model from the render camera and step until the first render, so the region can be drawn on the model</li>
 					<li>POV-Ray: a Region render keeps only the region, over the faded view of the model, where it was placed into an older image of the same file</li>
 					<li>POV-Ray: Region draws a square with Ctrl held, resizes from its edges and corners, moves when dragged from inside, and is drawn anew when dragged from outside</li>
@@ -3982,7 +3992,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Views: inserting parts into a new model no longer zooms the camera onto them, while views still fit an opened model as its parts load</li>
 					<li>Render: the Log panel shows renderer progress on one line updated in place, as in a terminal, instead of running every update together</li>
 					<li>Joints: an open Joints panel no longer turns off Highlight New Parts in the model view until a joint is picked</li>
-					<li>Site: every image retaken from the current build, with a new Connection Points image in <a href="#modeling">Modeling</a></li>
+					<li>Site: every image retaken from the current build, with a new Connection Points image in Modeling</li>
 				</ul>
 			</details>
 
@@ -4072,23 +4082,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				</ul>
 			</details>
 
-			<details>
-				<summary>2026-11-06</summary>
-
-				<ul>
-					<li>Joints: Part &gt; Joint &gt; Set Joint, also in the model view right-click menu, gives a submodel hinge or ball joints from the shadow library connections, several per submodel, with the picked part outlined in red, the Joints tool next to Rotate turns them with the mouse, and Part &gt; Joint &gt; Move Joint and Rotate Joint and the Use Joint Rotation preference turn them with the rotate keys and the Rotate tool</li>
-					<li>Joints: the Poses panel is now the Joints panel, listing every model, its submodels as `arm-right.ldr 006` and their joints as `Joint 001` in a tree with a left-aligned angle column, with named poses per model saved, recalled, renamed and deleted in what is now the Poses panel</li>
-					<li>Image: File &gt; Image plays the main model poses as an animated GIF with Motion Joints, framed once around every pose so the model holds still</li>
-					<li>Samples: sample-joints.mpd, a minifigure with Stand, Wave, Walk and Work poses, and sample-pov-ray.ldr, a scene with key, fill and rim lights, a floor and a camera for POV-Ray renders</li>
-					<li>Preferences: the new Context Menu tab lets you arrange the model view right-click menu, adding commands, separators and named submenus, renaming, reordering or resetting them</li>
-					<li>Views: the base and height grids each have their own toggle, and All Grids turns them on or off together</li>
-					<li>Views: Fade on Edit and Fade on Joint Set tint the rest of the model with their own colors, set under Steps and Highlighting in the view gear menu and in the preferences, and an empty step no longer fades the model</li>
-					<li>Status bar: a selected submodel shows ID: N/A and the total weight of its parts when all of them have one, also in its Parts panel tooltip, and two or more selected parts show their total weight as `12.91 g Total`</li>
-					<li>Rendering: a model opened from the command line by a relative path renders with Blender next to the model, where the image was not found before</li>
-					<li>Settings: every setting has a line in StudWorx.conf from the first start</li>
-				</ul>
-			</details>
-
 			<p class="more"><a href="https://github.com/nathaneltitane/studworx/blob/main/NOTICE.md">Read every notice ›</a></p>
 		</section>
 
@@ -4099,7 +4092,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p>LEGO® is a trademark of the LEGO® Group, which does not sponsor, authorize or endorse this project.</p>
 			<div class="authorship">
 				<a class="avatar" href="https://nathaneltitane.com" aria-label="N Λ T H Λ N E L"><img src="resources/avatar/avatar-bird.png" alt="" width="64" height="64"></a>
-				<p>Version // 2026-11-12<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
+				<p>Version // 2026-11-13<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
 			</div>
 		</div>
 
