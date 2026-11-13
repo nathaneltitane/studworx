@@ -1601,7 +1601,7 @@ swStartupMode swApplication::Initialize(const QList<QPair<QString, bool>>& Libra
 	{
 		StdErr << RendererResult.error() << '\n';
 
-		if (!SaveAndExit)
+		if (!SaveAndExit && !Options.PrintMenus)
 			QMessageBox::critical(nullptr, tr("Initialize Renderer"), RendererResult.error());
 
 		return swStartupMode::Error;

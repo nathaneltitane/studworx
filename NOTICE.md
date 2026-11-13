@@ -17,6 +17,9 @@
   - Minifigure Builder: the preview no longer outlines every part in the highlight color when edge lines show, Highlight New Parts now only marks the model view
   - Tests: the site's feature descriptions are kept short, and the command list is checked to name every command; Linux builds now run the tests that start the program
   - Command line: a hidden --menus option prints every menu path, used to build the site
+  - Connections: a part grabbed by one of its studs or holes seats by that one, so a brick with studs on every side can go into a side hole by its top stud
+  - Connections: the green connection marks follow the parts as they move, and hide while a part is dragged
+  - Insert: a part dropped into empty space lands under the pointer, level with the model, instead of far away toward the horizon
   - Site: feature descriptions rewritten in plain words, saying what each feature does instead of listing its commands, now that the command index names them
 
   </details>

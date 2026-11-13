@@ -433,13 +433,51 @@ static swVector3 swRotateAbout(const swVector3& Vector, const swVector3& Axis, f
 	return Vector * Cosine + swCross(Axis, Vector) * sinf(Radians) + Axis * (swDot(Axis, Vector) * (1.0f - Cosine));
 }
 
+// use to find the shape under a grab
+const swConnectionCylinder* swConnectivity::FindGrabbed(const swConnectionShapes& Shapes, const swVector3& Grab)
+{
+	// a grab on the shape or just beside it
+
+	const float GrabTolerance = 4.0f;
+	const swConnectionCylinder* Grabbed = nullptr;
+	float BestDistance = FLT_MAX;
+
+	for (const auto& [Cylinders, Transform] : Shapes)
+	{
+		if (!Cylinders)
+			continue;
+
+		for (const swConnectionCylinder& Cylinder : *Cylinders)
+		{
+			const swMatrix44 Frame = swMultiply(swMatrix44LDrawToStudWorx(Cylinder.Transform), Transform);
+			const swVector3 Axis = swNormalize(swMultiply30(swVector3(0.0f, 0.0f, 1.0f), Frame));
+			const auto [Start, End] = Cylinder.GetExtent();
+			const swVector3 Offset = Grab - Frame.GetTranslation();
+			const float Along = std::clamp(swDot(Offset, Axis), Start, End);
+			const float Distance = swLength(Offset - Axis * Along) - Cylinder.GetRadius();
+
+			if (Distance <= GrabTolerance && Distance < BestDistance)
+			{
+				BestDistance = Distance;
+				Grabbed = &Cylinder;
+			}
+		}
+	}
+
+	return Grabbed;
+}
+
 // use to seat a dragged part
-bool swConnectivity::FindSnap(const swConnectionShapes& MovingShapes, const swMatrix44& MovingTransform, const swConnectionShapes& TargetShapes, const swVector3& Point, float Range, swConnectionSnap& Snap)
+bool swConnectivity::FindSnap(const swConnectionShapes& MovingShapes, const swMatrix44& MovingTransform, const swConnectionShapes& TargetShapes, const swVector3& Point, float Range, swConnectionSnap& Snap, const std::optional<swVector3>& Grab)
 {
 	// a quarter turn weighs a stud
 	const float TurnWeight = 20.0f / (SW_PI / 2.0f);
 	const float QuarterTurn = SW_PI / 2.0f;
-	float BestScore = FLT_MAX;
+	double BestScore = DBL_MAX;
+
+	// the shape the part was grabbed by connects first
+
+	const swConnectionCylinder* Grabbed = Grab ? FindGrabbed(MovingShapes, *Grab) : nullptr;
 
 	Snap.Cylinder = nullptr;
 
@@ -529,7 +567,7 @@ bool swConnectivity::FindSnap(const swConnectionShapes& MovingShapes, const swMa
 					const float Turn = acosf(std::clamp((Trace - 1.0f) / 2.0f, -1.0f, 1.0f));
 					// the connection under the pointer first
 
-					const float Score = roundf(Reach) * 1000.0f + swLength(SeatPosition - Position) / 2.0f + Turn * TurnWeight;
+					const double Score = (Grabbed && &Moving != Grabbed ? 1.0e7 : 0.0) + roundf(Reach) * 1000.0 + swLength(SeatPosition - Position) / 2.0f + Turn * TurnWeight;
 
 					if (Score >= BestScore)
 						continue;

@@ -151,7 +151,8 @@ public:
 	static void AddToBoundingBox(const std::vector<swConnectionCylinder>& Cylinders, const swMatrix44& Transform, swBoundingBox& Box);
 
 	// Seats a part shape on the target shape nearest Point, within Range, turned to fit in quarter turns.
-	static bool FindSnap(const swConnectionShapes& MovingShapes, const swMatrix44& MovingTransform, const swConnectionShapes& TargetShapes, const swVector3& Point, float Range, swConnectionSnap& Snap);
+	static const swConnectionCylinder* FindGrabbed(const swConnectionShapes& Shapes, const swVector3& Grab);
+	static bool FindSnap(const swConnectionShapes& MovingShapes, const swMatrix44& MovingTransform, const swConnectionShapes& TargetShapes, const swVector3& Point, float Range, swConnectionSnap& Snap, const std::optional<swVector3>& Grab = std::nullopt);
 
 	// The offsets where a male shape fits.
 	static std::vector<std::pair<float, float>> GetInsertRanges(const swConnectionCylinder& Male, const swConnectionCylinder& Female);

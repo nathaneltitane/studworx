@@ -428,4 +428,26 @@ void swTests::ConnectivitySnapsDraggedParts()
 	QVERIFY(Snap.Cylinder && Snap.Cylinder->Gender == swConnectionGender::Female);
 	QVERIFY(swConnectivity::AreConnected(TallBrick, Snap.Transform, SideStuds, swMatrix44Identity()));
 	QVERIFY(swDot(swMultiply30(swVector3LDrawToStudWorx(swVector3(0.0f, -1.0f, 0.0f)), Snap.Transform), swVector3LDrawToStudWorx(swVector3(1.0f, 0.0f, 0.0f))) > 0.99f);
+
+	// A brick with studs on top and sides, dragged beside a side hole, seats the facing side stud,
+	// and seats its top stud instead when grabbed there.
+	const std::vector<swConnectionCylinder> SideHole = MakePart({ "0 !LDCAD SNAP_CYL [gender=F] [caps=one] [secs=S 6 4] [pos=10 0 0] [ori=0 1 0 -1 0 0 0 0 1]" });
+	const std::vector<swConnectionCylinder> StudsEverywhere = MakePart({
+		"0 !LDCAD SNAP_CYL [gender=M] [caps=one] [secs=R 6 4] [grid=1 C 2 0 20]",
+		"0 !LDCAD SNAP_CYL [gender=M] [caps=one] [secs=R 6 4] [pos=10 10 0] [ori=0 -1 0 1 0 0 0 0 1] [grid=1 C 2 0 20]",
+		"0 !LDCAD SNAP_CYL [gender=M] [caps=one] [secs=R 6 4] [pos=-10 10 0] [ori=0 1 0 -1 0 0 0 0 1] [grid=1 C 2 0 20]",
+	});
+	const swConnectionShapes HoleShapes = { { &SideHole, swMatrix44Identity() } };
+	const swConnectionShapes StudShapes = { { &StudsEverywhere, swMatrix44Identity() } };
+	const swVector3 StudUp = swVector3LDrawToStudWorx(swVector3(0.0f, -1.0f, 0.0f));
+	const swVector3 HolePoint = swVector3LDrawToStudWorx(swVector3(12.0f, 0.0f, 0.0f));
+	swMatrix44 Near = swMatrix44Identity();
+	Near.SetTranslation(swVector3LDrawToStudWorx(swVector3(20.0f, -10.0f, 10.0f)));
+
+	QVERIFY(swConnectivity::FindSnap(StudShapes, Near, HoleShapes, HolePoint, 20.0f, Snap));
+	QVERIFY(swDot(swMultiply30(swVector3(0.0f, 0.0f, 1.0f), Snap.Frame), StudUp) < 0.5f);
+
+	QVERIFY(swConnectivity::FindSnap(StudShapes, Near, HoleShapes, HolePoint, 20.0f, Snap, swVector3LDrawToStudWorx(swVector3(0.0f, -2.0f, -10.0f))));
+	QVERIFY(swDot(swMultiply30(swVector3(0.0f, 0.0f, 1.0f), Snap.Frame), StudUp) > 0.99f);
+	QVERIFY(swConnectivity::AreConnected(StudsEverywhere, Snap.Transform, SideHole, swMatrix44Identity()));
 }

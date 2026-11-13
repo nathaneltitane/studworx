@@ -37,7 +37,7 @@ jobs:
     - name: Install Qt
       run: |
         sudo apt-get update
-        sudo apt-get install -y qtbase5-dev qttools5-dev-tools libqt5opengl5-dev libqt5svg5 qt5-image-formats-plugins zlib1g-dev
+        sudo apt-get install -y qtbase5-dev qttools5-dev-tools libqt5opengl5-dev libqt5svg5 qt5-image-formats-plugins zlib1g-dev xvfb libgl1-mesa-dri
     - name: Build package
       run: resources/packaging/deb/deb.sh build/deb
     - name: Test package
@@ -59,7 +59,8 @@ jobs:
       # the binary checks run against the build the package came from
       env:
         SW_TEST_BINARY: ${{ github.workspace }}/build/deb/build/release/studworx
-      run: make check TESTARGS="-o test-results.xml,junitxml -o -,txt"
+      # a virtual screen gives the program a software OpenGL context
+      run: xvfb-run -a make check TESTARGS="-o test-results.xml,junitxml -o -,txt"
     - name: Upload test results
       if: always()
       uses: actions/upload-artifact@v7

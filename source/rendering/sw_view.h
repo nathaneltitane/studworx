@@ -316,7 +316,8 @@ public:
 	void OnMouseLeave();
 	void UpdateHoverOutline();
 	void UpdateConnectionMarkers();
-	bool FindConnectionSnap(const swPartData* PartData, const swMatrix44& Transform, const swObjectRayTest& ObjectRayTest, swConnectionSnap& Snap) const;
+	void RedrawWithMarkers();
+	bool FindConnectionSnap(const swPartData* PartData, const swMatrix44& Transform, const swObjectRayTest& ObjectRayTest, swConnectionSnap& Snap, const std::optional<swVector3>& Grab = std::nullopt) const;
 	void SetConnectionSnapJoint(swPart* Part);
 	void OnMouseWheel(float Direction);
 	void BeginDrag(swDragState DragState);
@@ -490,6 +491,7 @@ protected:
 	quint32 mTrackToolSection = ~0U;
 	swMatrix44 mMouseDownTransform;
 	swPart* mMouseDownPart = nullptr;
+	std::optional<swVector3> mMouseDownGrab;
 
 	// The dragged control point cube.
 	swPart* mMouseDownControlPointPart = nullptr;

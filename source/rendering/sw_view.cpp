@@ -100,14 +100,25 @@ void swView::UpdateProjectViews(const Project* Project)
 		const swModel* ViewModel = View->GetActiveModel();
 
 		if (ViewModel && ViewModel->GetProject() == Project)
-			View->Redraw();
+			View->RedrawWithMarkers();
 	}
 }
 
 void swView::UpdateAllViews()
 {
 	for (swView* View : mViews)
-		View->Redraw();
+		View->RedrawWithMarkers();
+}
+
+// use to keep markers on moved parts
+void swView::RedrawWithMarkers()
+{
+	// shown markers follow the parts they mark
+
+	if (!mConnectionMarkers.empty())
+		UpdateConnectionMarkers();
+
+	Redraw();
 }
 
 // use to refit views once loaded

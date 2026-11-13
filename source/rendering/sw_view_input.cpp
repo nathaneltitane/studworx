@@ -179,7 +179,9 @@ std::pair<std::vector<swInsertPartInformation>, bool> swView::GetMouseInsertPart
 		HeldMatrix.SetTranslation(Position);
 		swConnectionSnap Snap;
 
-		if (FindConnectionSnap(PartData.Get(), HeldMatrix, ObjectRayTest, Snap))
+		const std::optional<swVector3> Grab = MovingPart && MovingPart == mMouseDownPart ? mMouseDownGrab : std::nullopt;
+
+		if (FindConnectionSnap(PartData.Get(), HeldMatrix, ObjectRayTest, Snap, Grab))
 			return { { swInsertPartInformation{ PartData.Get(), Snap.Transform, gMainWindow->GetInsertColorIndex() } }, true };
 
 		return { { swInsertPartInformation{ PartData.Get(), WorldMatrix, gMainWindow->GetInsertColorIndex() } }, false };
@@ -196,26 +198,25 @@ std::pair<std::vector<swInsertPartInformation>, bool> swView::GetMouseInsertPart
 			Point = swMultiply31(Point, InverseMatrix);
 	}
 
-	swVector3 Intersection;
-
-	if (swLineSegmentPlaneIntersection(&Intersection, ClickPoints[0], ClickPoints[1], swVector4(0, 0, 1, BoundingBox.Min.z)))
-	{
-		Intersection = ActiveModel->SnapPosition(Intersection);
-		return { { swInsertPartInformation{ PartData.Get(), swMatrix44Translation(Intersection), gMainWindow->GetInsertColorIndex() } }, false };
-	}
-
 	swVector3 Position;
 
 	if (!ActiveModel->GetFocusPosition(Position))
 		Position = ActiveModel->GetSelectionOrModelCenter();
 
-	swVector3 FrontVector(mCamera->mTargetPosition - mCamera->mPosition);
+	const swVector3 FrontVector(mCamera->mTargetPosition - mCamera->mPosition);
+	swVector3 FrontIntersection(0.0f, 0.0f, 0.0f);
+	const bool FrontHit = swLineSegmentPlaneIntersection(&FrontIntersection, ClickPoints[0], ClickPoints[1], swVector4(FrontVector, -swDot(FrontVector, Position)));
+	swVector3 GroundIntersection(0.0f, 0.0f, 0.0f);
+	const bool GroundHit = swLineSegmentPlaneIntersection(&GroundIntersection, ClickPoints[0], ClickPoints[1], swVector4(0, 0, 1, BoundingBox.Min.z));
 
-	if (swLineSegmentPlaneIntersection(&Intersection, ClickPoints[0], ClickPoints[1], swVector4(FrontVector, -swDot(FrontVector, Position))))
-	{
-		Intersection = ActiveModel->SnapPosition(Intersection);
-		return { { swInsertPartInformation{ PartData.Get(), swMatrix44Translation(Intersection), gMainWindow->GetInsertColorIndex() } }, false };
-	}
+	// a grazing ground hit lands far away
+	const float GroundReach = 2.0f * swLength(FrontIntersection - ClickPoints[0]);
+
+	if (GroundHit && (!FrontHit || swLength(GroundIntersection - ClickPoints[0]) <= GroundReach))
+		return { { swInsertPartInformation{ PartData.Get(), swMatrix44Translation(ActiveModel->SnapPosition(GroundIntersection)), gMainWindow->GetInsertColorIndex() } }, false };
+
+	if (FrontHit)
+		return { { swInsertPartInformation{ PartData.Get(), swMatrix44Translation(ActiveModel->SnapPosition(FrontIntersection)), gMainWindow->GetInsertColorIndex() } }, false };
 
 	return { { swInsertPartInformation{ PartData.Get(), swMatrix44Translation(UnprojectPoint(swVector3((float)mMouseX, (float)mMouseY, 0.9f))), gMainWindow->GetInsertColorIndex() } }, false };
 }
@@ -823,6 +824,7 @@ void swView::UpdateTrackTool()
 	int y = mMouseY;
 	bool Redraw = false;
 	mMouseDownPart = nullptr;
+	mMouseDownGrab.reset();
 	mMouseDownControlPointPart = nullptr;
 	mMouseDownControlPointSection = ~0U;
 	mTrackToolFromOverlay = false;
@@ -875,6 +877,13 @@ void swView::UpdateTrackTool()
 						mMouseDownTransform = Part->mModelWorld;
 						mMouseDownPart = Part;
 						NewTrackTool = swTrackTool::MoveXYZ;
+
+						// where on the part it was grabbed
+
+						const swObjectRayTest GrabRayTest = RayTest(true, false);
+
+						if (GrabRayTest.ObjectSection.Object == Part)
+							mMouseDownGrab = swMultiply31(GrabRayTest.Start + swNormalize(GrabRayTest.End - GrabRayTest.Start) * GrabRayTest.Distance, swMatrix44AffineInverse(Part->mModelWorld));
 					}
 					else if (ObjectSection.Section >= SW_PART_SECTION_CONTROL_POINT_FIRST && ObjectSection.Section <= SW_PART_SECTION_CONTROL_POINT_LAST)
 					{
@@ -1270,6 +1279,7 @@ void swView::StopTracking(bool Accept)
 
 	mTrackButton = swTrackButton::None;
 	UpdateTrackTool();
+	UpdateConnectionMarkers();
 	ActiveModel->UpdateAllViews();
 }
 
@@ -1828,7 +1838,7 @@ void swView::UpdateConnectionMarkers()
 }
 
 // use to seat a part near the pointer
-bool swView::FindConnectionSnap(const swPartData* PartData, const swMatrix44& Transform, const swObjectRayTest& ObjectRayTest, swConnectionSnap& Snap) const
+bool swView::FindConnectionSnap(const swPartData* PartData, const swMatrix44& Transform, const swObjectRayTest& ObjectRayTest, swConnectionSnap& Snap, const std::optional<swVector3>& Grab) const
 {
 	const swPreferences& Preferences = swGetPreferences();
 	const swObject* Object = ObjectRayTest.ObjectSection.Object;
@@ -1857,7 +1867,7 @@ bool swView::FindConnectionSnap(const swPartData* PartData, const swMatrix44& Tr
 	const swVector3 Point = ObjectRayTest.Start + swNormalize(ObjectRayTest.End - ObjectRayTest.Start) * ObjectRayTest.Distance;
 
 	// a 2x2 stud area around the pointer
-	return swConnectivity::FindSnap(MovingShapes, Transform, TargetShapes, Point, 20.0f, Snap);
+	return swConnectivity::FindSnap(MovingShapes, Transform, TargetShapes, Point, 20.0f, Snap, Grab);
 }
 
 // use to hinge a submodel seated on a pin
