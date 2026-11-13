@@ -4,8 +4,10 @@
   <summary>2026-11-13</summary>
 
   - Joints: an open Joints panel no longer turns off Highlight New Parts in the model view until a joint is picked
-  - Edit menu: Movement Snap and Rotation Snap follow Transform, the same menus as the toolbar buttons
   - Site: every image retaken from the current build, with a new Connection Points image in Modeling
+  - Translations: about a hundred strings per language that only changed their mnemonic, punctuation or wording get their old translation back, marked unfinished for review
+  - Translations: the Array dialog counts and a status line no longer show broken guesses like 8x {1?} in every language
+  - Tests: catalogs are checked for a compiled .qm that matches them, kept placeholders and no merge guesses
 
   </details>
 
@@ -40,8 +42,6 @@
   - Train track: the end gizmo is half again as big, and the add marker past an open end is a solid ghost track piece sized on the connection cube, a cube's width away from it
   - Views: inserting parts into a new model no longer zooms the camera onto them, while views still fit an opened model as its parts load
   - Render: the Log panel shows renderer progress on one line updated in place, as in a terminal, instead of running every update together
-  - Joints: an open Joints panel no longer turns off Highlight New Parts in the model view until a joint is picked
-  - Site: every image retaken from the current build, with a new Connection Points image in Modeling
 
   </details>
 
