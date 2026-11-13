@@ -14,6 +14,7 @@
 #include "sw_scene.h"
 #include "sw_window_utilities.h"
 #include "sw_synthesis.h"
+#include "sw_library_shadow.h"
 #include "sw_track_train.h"
 #include "sw_string.h"
 #include "sw_model.h"
@@ -1619,13 +1620,112 @@ bool swPart::IsControlPointSeated(quint32 ControlPointIndex) const
 	return GetControlPointSeat(ControlPointIndex) != nullptr;
 }
 
-// use to rest a seated cube on the surface
+// use to get the fittings at one end
+const std::vector<std::pair<std::string, swMatrix44>>& swPart::GetControlPointFittings(int EndIndex) const
+{
+	const swSynthesisInformation* SynthInfo = mPartData ? mPartData->GetSynthInfo() : nullptr;
+
+	// refresh only when the path changed
+
+	if (mFittingControlPoints != mControlPoints)
+	{
+		mFittingControlPoints = mControlPoints;
+		mEndFittings[0].clear();
+		mEndFittings[1].clear();
+		mEndInwardValid[0] = mEndInwardValid[1] = false;
+
+		if (SynthInfo && SynthInfo->IsCurve() && mControlPoints.size() >= 2)
+		{
+			const swVector3 Ends[2] = { mControlPoints.front().Transform.GetTranslation(), mControlPoints.back().Transform.GetTranslation() };
+
+			for (const auto& [PartName, Transform] : SynthInfo->GetParts(mControlPoints))
+			{
+				const swMatrix44 PartLocal = swMatrix44LDrawToStudWorx(Transform);
+				const float Distances[2] = { swLength(PartLocal.GetTranslation() - Ends[0]), swLength(PartLocal.GetTranslation() - Ends[1]) };
+				const int NearestEnd = Distances[1] < Distances[0] ? 1 : 0;
+
+				if (Distances[NearestEnd] <= SW_PART_FITTING_DISTANCE)
+					mEndFittings[NearestEnd].emplace_back(PartName, PartLocal);
+
+				// the nearest hose section shows the inside
+
+				else if (!mEndInwardValid[NearestEnd] || Distances[NearestEnd] < swLength(mEndInward[NearestEnd] - Ends[NearestEnd]))
+				{
+					mEndInward[NearestEnd] = PartLocal.GetTranslation();
+					mEndInwardValid[NearestEnd] = true;
+				}
+			}
+		}
+	}
+
+	return mEndFittings[EndIndex ? 1 : 0];
+}
+
+// use to find the base of an end fitting
+bool swPart::GetControlPointFittingBase(quint32 ControlPointIndex, swVector3& Position, swVector3& Normal) const
+{
+	const swSynthesisInformation* SynthInfo = mPartData ? mPartData->GetSynthInfo() : nullptr;
+
+	if (!SynthInfo || !SynthInfo->IsCurve() || !swShadowLibrary::IsLoaded() || mControlPoints.size() < 2)
+		return false;
+
+	if (ControlPointIndex != 0 && ControlPointIndex != mControlPoints.size() - 1)
+		return false;
+
+	const int EndIndex = ControlPointIndex ? 1 : 0;
+	const swMatrix44& ControlPoint = mControlPoints[ControlPointIndex].Transform;
+	const swVector3 Point = ControlPoint.GetTranslation();
+	const std::vector<std::pair<std::string, swMatrix44>>& Fittings = GetControlPointFittings(EndIndex);
+	const swVector3 Neighbor = mEndInwardValid[EndIndex] ? mEndInward[EndIndex] : mControlPoints[EndIndex ? mControlPoints.size() - 2 : 1].Transform.GetTranslation();
+	swVector3 Outward = swNormalize(SynthInfo->GetControlPointDirection(ControlPoint));
+
+	// the path leaves away from the hose
+
+	if (swDot(Outward, Neighbor - Point) > 0.0f)
+		Outward = -Outward;
+
+	bool Found = false;
+	float BestReach = -FLT_MAX;
+
+	// the outermost connection along the path
+
+	for (const auto& [PartName, PartLocal] : Fittings)
+	{
+		for (const swConnectionCylinder& Cylinder : swShadowLibrary::GetCylinders(PartName.c_str()))
+		{
+			if (Cylinder.Kind != swConnectionKind::Cylinder)
+				continue;
+
+			const swMatrix44 Frame = swMultiply(swMatrix44LDrawToStudWorx(Cylinder.Transform), PartLocal);
+			const swVector3 Axis = swNormalize(swMultiply30(swVector3(0.0f, 0.0f, 1.0f), Frame));
+			const float Reach = swDot(Frame.GetTranslation() - Point, Outward);
+
+			if (fabsf(swDot(Axis, Outward)) < 0.9f || Reach <= BestReach)
+				continue;
+
+			Found = true;
+			BestReach = Reach;
+			Position = Frame.GetTranslation();
+			Normal = swDot(Axis, Outward) > 0.0f ? -Axis : Axis;
+		}
+	}
+
+	return Found;
+}
+
+// use to rest a cube on the surface or fitting base
 swMatrix44 swPart::GetControlPointCubeTransform(quint32 ControlPointIndex) const
 {
 	swMatrix44 Transform = mControlPoints[ControlPointIndex].Transform;
 	const swControlPointSeat* Seat = GetControlPointSeat(ControlPointIndex);
+	swVector3 SurfacePosition, SurfaceNormal;
 
-	if (!Seat)
+	if (Seat)
+	{
+		SurfacePosition = Seat->SurfacePosition;
+		SurfaceNormal = Seat->SurfaceNormal;
+	}
+	else if (!GetControlPointFittingBase(ControlPointIndex, SurfacePosition, SurfaceNormal))
 		return Transform;
 
 	// turn the closest side flush
@@ -1634,7 +1734,7 @@ swMatrix44 swPart::GetControlPointCubeTransform(quint32 ControlPointIndex) const
 
 	for (int AxisIndex = 0; AxisIndex < 3; AxisIndex++)
 	{
-		const float Cosine = swDot(swNormalize(swVector3(Transform[AxisIndex])), Seat->SurfaceNormal);
+		const float Cosine = swDot(swNormalize(swVector3(Transform[AxisIndex])), SurfaceNormal);
 
 		if (fabsf(Cosine) > fabsf(NearestCosine))
 		{
@@ -1644,8 +1744,8 @@ swMatrix44 swPart::GetControlPointCubeTransform(quint32 ControlPointIndex) const
 	}
 
 	const swVector3 NearestAxis = swNormalize(swVector3(Transform[NearestAxisIndex])) * (NearestCosine < 0.0f ? -1.0f : 1.0f);
-	const swVector3 TurnAxis = swCross(NearestAxis, Seat->SurfaceNormal);
-	const float Angle = acosf(swClamp(swDot(NearestAxis, Seat->SurfaceNormal), -1.0f, 1.0f));
+	const swVector3 TurnAxis = swCross(NearestAxis, SurfaceNormal);
+	const float Angle = acosf(swClamp(swDot(NearestAxis, SurfaceNormal), -1.0f, 1.0f));
 	const swVector3 Position = Transform.GetTranslation();
 
 	if (Angle > 1e-4f && swLength(TurnAxis) > 1e-6f)
@@ -1653,7 +1753,7 @@ swMatrix44 swPart::GetControlPointCubeTransform(quint32 ControlPointIndex) const
 		const swVector3 TurnNormal = swNormalize(TurnAxis);
 		swMatrix33 Turn = swMatrix33FromAxisAngle(TurnNormal, Angle);
 
-		if (swDot(swMultiply(NearestAxis, Turn), Seat->SurfaceNormal) < 0.999f)
+		if (swDot(swMultiply(NearestAxis, Turn), SurfaceNormal) < 0.999f)
 			Turn = swMatrix33FromAxisAngle(TurnNormal, -Angle);
 
 		swMatrix33 Rotation = swMultiply(swMatrix33(Transform), Turn);
@@ -1662,8 +1762,8 @@ swMatrix44 swPart::GetControlPointCubeTransform(quint32 ControlPointIndex) const
 		Transform = swMatrix44(Rotation, Position);
 	}
 
-	const float Height = swDot(Position - Seat->SurfacePosition, Seat->SurfaceNormal);
-	Transform.SetTranslation(Position + Seat->SurfaceNormal * (SW_PART_CONTROL_POINT_SIZE - Height));
+	const float Height = swDot(Position - SurfacePosition, SurfaceNormal);
+	Transform.SetTranslation(Position + SurfaceNormal * (SW_PART_CONTROL_POINT_SIZE - Height));
 
 	return Transform;
 }
@@ -1966,6 +2066,9 @@ void swPart::UpdateMesh()
 {
 	mSynthPending = mPartData && mPartData->GetSynthInfo();
 	mPathControlPoints.clear();
+	mFittingControlPoints.clear();
+	mEndFittings[0].clear();
+	mEndFittings[1].clear();
 
 	if (mSynthPending)
 	{

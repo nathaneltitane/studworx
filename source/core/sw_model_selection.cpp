@@ -800,6 +800,18 @@ void swModel::AddPartShapes(const swPart* Part, const swMatrix44& Transform, swC
 
 	if (!PartData->IsModel())
 	{
+		// flexible parts connect through their end fittings
+
+		if (const swSynthesisInformation* SynthInfo = PartData->GetSynthInfo(); SynthInfo && SynthInfo->IsCurve())
+		{
+			for (int EndIndex = 0; EndIndex < 2; EndIndex++)
+				for (const auto& [PartName, PartLocal] : Part->GetControlPointFittings(EndIndex))
+					if (const std::vector<swConnectionCylinder>& Cylinders = swShadowLibrary::GetCylinders(PartName.c_str()); !Cylinders.empty())
+						Shapes.emplace_back(&Cylinders, swMultiply(PartLocal, World));
+
+			return;
+		}
+
 		const std::vector<swConnectionCylinder>& Cylinders = swShadowLibrary::GetCylinders(PartData->mFileName);
 
 		if (!Cylinders.empty())
@@ -831,7 +843,7 @@ bool swModel::SnapControlPointToConnection(swPart* Part, quint32 ControlPointInd
 }
 
 // use to find the seat of an end fitting
-bool swModel::FindControlPointSeat(const swPart* Part, quint32 ControlPointIndex, swMatrix44& SeatTransform, swVector3* SurfacePosition, swVector3* SurfaceNormal) const
+bool swModel::FindControlPointSeat(const swPart* Part, quint32 ControlPointIndex, swMatrix44& SeatTransform, swVector3* SurfacePosition, swVector3* SurfaceNormal, const swVector3* Point) const
 {
 	const swSynthesisInformation* SynthInfo = Part->mPartData->GetSynthInfo();
 	std::vector<swPartControlPoint> ControlPoints = Part->GetControlPoints();
@@ -843,7 +855,7 @@ bool swModel::FindControlPointSeat(const swPart* Part, quint32 ControlPointIndex
 		return false;
 
 	const float SnapDistance = 20.0f;
-	const float FittingDistance = 8.0f;
+	const float FittingDistance = SW_PART_FITTING_DISTANCE;
 	const swMatrix44 ControlPointWorld = swMultiply(ControlPoints[ControlPointIndex].Transform, Part->mModelWorld);
 
 	// fitting connection shapes at this end
@@ -948,7 +960,7 @@ bool swModel::FindControlPointSeat(const swPart* Part, quint32 ControlPointIndex
 	// every seat in reach by distance
 	struct swConnectionSeat
 	{
-		float Distance;
+		float Score;
 		swMatrix44 Transform;
 		swVector3 SurfacePosition;
 		swVector3 SurfaceNormal;
@@ -967,7 +979,7 @@ bool swModel::FindControlPointSeat(const swPart* Part, quint32 ControlPointIndex
 		swVector3 Min(FLT_MAX, FLT_MAX, FLT_MAX), Max(-FLT_MAX, -FLT_MAX, -FLT_MAX);
 		OtherPart->CompareBoundingBox(Min, Max);
 
-		const swVector3 Position = ControlPointWorld.GetTranslation();
+		const swVector3 Position = Point ? *Point : ControlPointWorld.GetTranslation();
 		const swVector3 Nearest(swClamp(Position.x, Min.x, Max.x), swClamp(Position.y, Min.y, Max.y), swClamp(Position.z, Min.z, Max.z));
 
 		if (Min.x <= Max.x && swLength(Position - Nearest) > SnapDistance + 2.0f * FittingDistance)
@@ -1007,8 +1019,12 @@ bool swModel::FindControlPointSeat(const swPart* Part, quint32 ControlPointIndex
 						const swVector3 Surface = Frame.GetTranslation();
 						const swVector3 Normal = swDot(Axis, Surface - PartCenter) < 0.0f ? -Axis : Axis;
 
-						if (Distance < SnapDistance)
-							Seats.push_back({ Distance, Seat, Surface, Normal, FittingIndex, Position });
+						// the connection under the pointer first
+
+						const float Reach = Point ? swLength(Position - *Point) : Distance;
+
+						if (Reach < SnapDistance)
+							Seats.push_back({ Point ? roundf(Reach) * 1000.0f + Distance / 2.0f : Distance, Seat, Surface, Normal, FittingIndex, Position });
 					}
 				}
 			}
@@ -1017,7 +1033,7 @@ bool swModel::FindControlPointSeat(const swPart* Part, quint32 ControlPointIndex
 
 	std::sort(Seats.begin(), Seats.end(), [](const swConnectionSeat& First, const swConnectionSeat& Second)
 	{
-		return First.Distance < Second.Distance;
+		return First.Score < Second.Score;
 	});
 
 	// leave unreachable connections free

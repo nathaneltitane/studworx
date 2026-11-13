@@ -391,7 +391,7 @@ void swModel::UpdateMoveTool(const swVector3& Distance, bool AllowRelative, bool
 }
 
 // use to drag a control point cube
-void swModel::UpdateControlPointDragTool(swPart* Part, const swVector3& Position)
+void swModel::UpdateControlPointDragTool(swPart* Part, const swVector3& Position, const swVector3* Point)
 {
 	const quint32 Section = Part->GetFocusSection();
 
@@ -405,7 +405,7 @@ void swModel::UpdateControlPointDragTool(swPart* Part, const swVector3& Position
 
 	// pull ends onto nearby connections
 	swMatrix44 SeatTransform;
-	const bool SeatFound = FindControlPointSeat(Part, ControlPointIndex, SeatTransform);
+	const bool SeatFound = FindControlPointSeat(Part, ControlPointIndex, SeatTransform, nullptr, nullptr, Point);
 
 	if (SeatFound)
 	{

@@ -624,7 +624,7 @@ public:
 	void UpdateFreeMoveTool(swPart* MousePart, const swMatrix44& StartTransform, const swMatrix44& NewTransform, bool IsConnection, bool AlternateButtonDrag);
 
 	// Moves the focused control point.
-	void UpdateControlPointDragTool(swPart* Part, const swVector3& Position);
+	void UpdateControlPointDragTool(swPart* Part, const swVector3& Position, const swVector3* Point = nullptr);
 	void UpdateRotateTool(const swVector3& Axis, float Angle, bool AlternateButtonDrag, bool Relative);
 	void UpdateRotateTool(const swMatrix33& RotationMatrix, bool AlternateButtonDrag, bool Relative);
 	void UpdateScaleTool(const float Scale);
@@ -718,7 +718,7 @@ protected:
 	bool SnapControlPointToConnection(swPart* Part, quint32 ControlPointIndex) const;
 
 	// Finds the seat of an end control point.
-	bool FindControlPointSeat(const swPart* Part, quint32 ControlPointIndex, swMatrix44& SeatTransform, swVector3* SurfacePosition = nullptr, swVector3* SurfaceNormal = nullptr) const;
+	bool FindControlPointSeat(const swPart* Part, quint32 ControlPointIndex, swMatrix44& SeatTransform, swVector3* SurfacePosition = nullptr, swVector3* SurfaceNormal = nullptr, const swVector3* Point = nullptr) const;
 
 	// Marks ends sitting on a connection.
 	void UpdateControlPointSeats();

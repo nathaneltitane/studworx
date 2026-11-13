@@ -11,6 +11,7 @@ class swPartData;
 
 // Half the edge of a control point cube.
 constexpr float SW_PART_CONTROL_POINT_SIZE = 10.0f;
+constexpr float SW_PART_FITTING_DISTANCE = 8.0f;
 
 enum swPartSection : quint32
 {
@@ -220,6 +221,8 @@ public:
 
 	// Where a control point cube is drawn.
 	swMatrix44 GetControlPointCubeTransform(quint32 ControlPointIndex) const;
+	bool GetControlPointFittingBase(quint32 ControlPointIndex, swVector3& Position, swVector3& Normal) const;
+	const std::vector<std::pair<std::string, swMatrix44>>& GetControlPointFittings(int EndIndex) const;
 
 	// The end dragged onto a seat or -1.
 	void SetControlPointSeatFound(int ControlPointIndex)
@@ -409,5 +412,11 @@ protected:
 	const swControlPointSeat* GetControlPointSeat(quint32 ControlPointIndex) const;
 
 	std::vector<swControlPointSeat> mControlPointSeats;
+
+	// The cached end fittings.
+	mutable std::vector<swPartControlPoint> mFittingControlPoints;
+	mutable std::vector<std::pair<std::string, swMatrix44>> mEndFittings[2];
+	mutable swVector3 mEndInward[2];
+	mutable bool mEndInwardValid[2] = { false, false };
 	int mControlPointSeatFound = -1;
 };

@@ -2062,7 +2062,8 @@ void swView::OnMouseMove()
 					const swMatrix44& SurfaceTransform = SurfaceRayTest.PartRayTest.Transform;
 					const swVector3 RayDirection = swNormalize(SurfaceRayTest.End - SurfaceRayTest.Start);
 					const swVector3& Face = SurfaceRayTest.PartRayTest.Plane;
-					swVector3 Position = swMultiply31(SurfaceRayTest.Start + RayDirection * SurfaceRayTest.Distance, swMatrix44AffineInverse(SurfaceTransform));
+					const swVector3 Point = SurfaceRayTest.Start + RayDirection * SurfaceRayTest.Distance;
+					swVector3 Position = swMultiply31(Point, swMatrix44AffineInverse(SurfaceTransform));
 
 					// the face sets one axis
 					for (int Axis = 0; Axis < 3; Axis++)
@@ -2084,7 +2085,7 @@ void swView::OnMouseMove()
 					else
 						Position = ActiveModel->SnapPosition(swMultiply31(Position, SurfaceTransform));
 
-					ActiveModel->UpdateControlPointDragTool(mMouseDownControlPointPart, Position);
+					ActiveModel->UpdateControlPointDragTool(mMouseDownControlPointPart, Position, &Point);
 				}
 				else
 				{
