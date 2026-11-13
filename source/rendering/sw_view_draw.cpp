@@ -80,7 +80,10 @@ void swView::OnDraw()
 	swModel* JointsModel = GetActiveModel();
 	const bool DrawJoint = DrawInterface && mViewType == swViewType::View && JointsModel && gMainWindow && (gMainWindow->GetTool() == swTool::Joints || gMainWindow->IsJointsPanelVisible() || JointsModel->IsJointFocused());
 
-	if (DrawJoint)
+	// new parts keep their highlight until a joint shows
+	const bool DrawJointHighlight = DrawJoint && (JointsModel->IsJointPick() || JointsModel->GetJointPart());
+
+	if (DrawJointHighlight)
 		mScene->SetHighlightColor(SW_RGBA(255, 0, 0, 255));
 
 	mScene->SetActiveSubmodelInstance(mActiveSubmodelInstance, mActiveSubmodelTransform, GetModelEditingPath());
@@ -104,7 +107,7 @@ void swView::OnDraw()
 	bool DrawInsertPreview = DrawInterface && std::any_of(mViews.begin(), mViews.end(), [](swView* View){ return View->mTrackTool == swTrackTool::Insert; });
 	mScene->SetDrawInsertPreview(DrawInsertPreview);
 	
-	mModel->GetScene(mScene.get(), mCamera, !DrawJoint && (mOverrideHighlightNewParts ? mHighlightNewParts : Preferences.mHighlightNewParts), (mOverrideFadeSteps ? mFadeSteps : Preferences.mFadeSteps) && mViewType == swViewType::View);
+	mModel->GetScene(mScene.get(), mCamera, !DrawJointHighlight && (mOverrideHighlightNewParts ? mHighlightNewParts : Preferences.mHighlightNewParts), (mOverrideFadeSteps ? mFadeSteps : Preferences.mFadeSteps) && mViewType == swViewType::View);
 
 	if (DrawJoint)
 		JointsModel->AddJointHighlight(mScene.get(), JointsModel != mModel ? mActiveSubmodelTransform : swMatrix44Identity());

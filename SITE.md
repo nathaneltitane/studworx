@@ -8,7 +8,7 @@ Every section of [studworx.app](https://studworx.app), features first. `tools/st
 
 StudWorx is built from standard Qt widgets: panels, dialogs and windows follow your system style and light or dark theme, and only the model views draw with OpenGL. Menus are grouped by task, every icon and cursor is drawn in code so it stays sharp at any size, and every dialog and panel explains itself.
 
-- **Menus by task.** File, Edit, View, Part, Steps, Models and Help, with clean labels and a unique mnemonic in each menu. Edit holds the Selection Mode, Transform and Tools submenus, View the Toolbars, Viewpoints, Cutaway, Cameras, Projection and Shading submenus, and Part the Joint, Group and Visibility submenus.
+- **Menus by task.** File, Edit, View, Part, Steps, Models and Help, with clean labels and a unique mnemonic in each menu. Edit holds the Selection Mode, Transform, Movement Snap, Rotation Snap and Tools submenus, View the Toolbars, Viewpoints, Cutaway, Cameras, Projection and Shading submenus, and Part the Joint, Group and Visibility submenus.
 - **Options menus.** A gear button opens the settings that belong to its place: grids, steps and highlighting and view overlays on the model view, list display and filtering on Parts, the insert color on Colors, overlays and selection on Preview, shading and lines on the Minifigure Builder, the model folder on Terminal, editing on the Editor and page setup on the instructions Properties.
 - **Toolbars.** Standard, Tools and Time toolbars. Move and rotate cursors show the axis they work on.
 - **Transform toolbar.** Type a position or rotation for the selection and apply it, as absolute coordinates or relative to where it is now. It has no entry of its own: its fields sit at the bottom of the Properties panel, shown with View > Toolbars > Properties Panel.
@@ -219,11 +219,12 @@ The model view draws fast with OpenGL in four lighting styles, and File > Render
 
 Pick a part in the Parts panel, drop it in the model view, then move, rotate, paint and group it. Snapping keeps everything on the LDraw grid, and selection tools find the parts you need in large models.
 
-<!-- gallery three -->
+<!-- gallery four -->
 
 ![Flex Path control points](resources/images/modeling-feature-flex-path.png)
 ![Train track](resources/images/modeling-feature-train-track.png)
 ![Explode](resources/images/modeling-feature-explode.png)
+![Connection Points](resources/images/modeling-feature-connection-points.png)
 
 <!-- gallery three -->
 

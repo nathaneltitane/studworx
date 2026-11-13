@@ -27,10 +27,12 @@
   - Flex Path: dragged hose and cable ends seat on the connection nearest the pointer like loose parts, without waiting for the grid, and end connectors show their connection points and take parts snapped onto them
   - Flex Path: the control point cube at a free end rests on the base of its end connector like a seated one, only its color telling free from seated
   - Blender Render: opens as a normal window like POV-Ray Render and Instructions, maximized, with the window manager buttons, and stays open beside the model
-  - Edit menu: Movement Snap and Rotation Snap sit under Transform, the same menus as the toolbar buttons, so snapping is set without the Standard toolbar shown
+  - Edit menu: Movement Snap and Rotation Snap follow Transform, the same menus as the toolbar buttons, so snapping is set without the Standard toolbar shown
   - Train track: the end gizmo is half again as big, and the add marker past an open end is a solid ghost track piece sized on the connection cube, a cube's width away from it
   - Views: inserting parts into a new model no longer zooms the camera onto them, while views still fit an opened model as its parts load
   - Render: the Log panel shows renderer progress on one line updated in place, as in a terminal, instead of running every update together
+  - Joints: an open Joints panel no longer turns off Highlight New Parts in the model view until a joint is picked
+  - Site: every image retaken from the current build, with a new Connection Points image in Modeling
 
   </details>
 
