@@ -461,9 +461,10 @@ protected:
 	int mDockDragGap = -1;
 	int mDockDragStart = 0;
 	int mDockDragViewSpare = 0;
-	bool mDockDragBottom = false;
+	int mDockDragViewSide = 0;
+	Qt::Orientation mDockDragOrientation = Qt::Vertical;
 	bool StartDockDrag(const QPoint& Position);
-	void MoveDockDrag(int Position);
+	void MoveDockDrag(const QPoint& Position);
 	bool mFitUpdatePending = false;
 	bool mPartsSnapRetried = false;
 	QSize mPartsSnapSize;

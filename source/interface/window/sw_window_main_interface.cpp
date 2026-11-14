@@ -1030,7 +1030,9 @@ void swMainWindow::CreateToolBars()
 	PropertiesLayout->addWidget(TransformWidget);
 
 	// as tall as the shown rows
-	auto UpdatePropertiesHeight = [this, PropertiesWidget, PropertiesLayout, PropertiesScrollArea, TransformWidget]()
+	std::shared_ptr<int> LastPanelHeight = std::make_shared<int>(-1);
+
+	auto UpdatePropertiesHeight = [this, PropertiesWidget, PropertiesLayout, PropertiesScrollArea, TransformWidget, LastPanelHeight]()
 	{
 		// hide empty scrolling rows
 		const bool ShowList = mPropertiesWidget->HasVisibleRows();
@@ -1053,6 +1055,12 @@ void swMainWindow::CreateToolBars()
 		PropertiesScrollArea->setMinimumHeight(MinimumListHeight);
 		PropertiesScrollArea->setMaximumHeight(ListHeight);
 		PropertiesWidget->setMaximumHeight(PanelHeight);
+
+		// only new rows ask for the full height
+		if (PanelHeight == *LastPanelHeight)
+			return;
+
+		*LastPanelHeight = PanelHeight;
 
 		// ask for the full height unless squeezed to the title bar
 		if (!mPropertiesToolBar->isFloating() && mPropertiesToolBar->isVisible() && mPropertiesToolBar->height() > mPropertiesToolBar->minimumSizeHint().height())

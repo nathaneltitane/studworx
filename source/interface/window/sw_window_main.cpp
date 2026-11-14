@@ -225,83 +225,113 @@ bool swMainWindow::StartDockDrag(const QPoint& Position)
 	const int Margin = qMax(4, style()->pixelMetric(QStyle::PM_DockWidgetSeparatorExtent, nullptr, this));
 	const QRect CentralRect = CentralWidget->geometry();
 
-	for (Qt::DockWidgetArea Area : { Qt::TopDockWidgetArea, Qt::BottomDockWidgetArea })
+	for (Qt::DockWidgetArea Area : { Qt::TopDockWidgetArea, Qt::BottomDockWidgetArea, Qt::LeftDockWidgetArea, Qt::RightDockWidgetArea })
 	{
-		QVector<QDockWidget*> Column;
-
-		for (QDockWidget* DockWidget : findChildren<QDockWidget*>(QString(), Qt::FindDirectChildrenOnly))
+		for (Qt::Orientation Orientation : { Qt::Vertical, Qt::Horizontal })
 		{
-			const QRect Rect = DockWidget->geometry();
+			const bool Vertical = Orientation == Qt::Vertical;
+			const int Along = Vertical ? Position.y() : Position.x();
+			const int Across = Vertical ? Position.x() : Position.y();
+			QVector<QDockWidget*> Line;
 
-			if (DockWidget->isVisible() && !DockWidget->isFloating() && dockWidgetArea(DockWidget) == Area && Position.x() >= Rect.left() && Position.x() <= Rect.right())
-				Column.append(DockWidget);
-		}
-
-		if (Column.isEmpty())
-			continue;
-
-		std::sort(Column.begin(), Column.end(), [](QDockWidget* First, QDockWidget* Second) { return First->y() < Second->y(); });
-
-		// the view sits before or after the column
-		const bool Bottom = Area == Qt::BottomDockWidgetArea;
-		const int Count = Column.size();
-
-		for (int Gap = Bottom ? 0 : 1; Gap <= (Bottom ? Count - 1 : Count); Gap++)
-		{
-			const int Low = Gap == 0 ? CentralRect.bottom() : Column[Gap - 1]->geometry().bottom();
-			const int High = Gap == Count ? CentralRect.top() : Column[Gap]->geometry().top();
-
-			if (Position.y() < Low - Margin || Position.y() > High + Margin)
-				continue;
-
-			for (QDockWidget* DockWidget : Column)
+			for (QDockWidget* DockWidget : findChildren<QDockWidget*>(QString(), Qt::FindDirectChildrenOnly))
 			{
-				// the limits the dock layout itself uses
-				const QWidgetItem Item(DockWidget);
-				mDockDragColumn.append(DockWidget);
-				mDockDragHeights.append(DockWidget->height());
-				mDockDragMinimums.append(Item.minimumSize().height());
-				mDockDragMaximums.append(Item.maximumSize().height());
+				const QRect Rect = DockWidget->geometry();
+				const int Start = Vertical ? Rect.left() : Rect.top();
+				const int End = Vertical ? Rect.right() : Rect.bottom();
+
+				if (DockWidget->isVisible() && !DockWidget->isFloating() && dockWidgetArea(DockWidget) == Area && Across >= Start && Across <= End)
+					Line.append(DockWidget);
 			}
 
-			mDockDragGap = Gap;
-			mDockDragStart = Position.y();
-			mDockDragBottom = Bottom;
-			mDockDragViewSpare = qMax(0, CentralWidget->height() - CentralWidget->minimumSizeHint().height());
-			return true;
+			if (Line.isEmpty())
+				continue;
+
+			std::sort(Line.begin(), Line.end(), [Vertical](QDockWidget* First, QDockWidget* Second) { return Vertical ? First->y() < Second->y() : First->x() < Second->x(); });
+
+			// the view sits before, after or beside the line
+			int ViewSide = 0;
+
+			if ((Vertical && Area == Qt::BottomDockWidgetArea) || (!Vertical && Area == Qt::RightDockWidgetArea))
+				ViewSide = -1;
+			else if ((Vertical && Area == Qt::TopDockWidgetArea) || (!Vertical && Area == Qt::LeftDockWidgetArea))
+				ViewSide = 1;
+
+			const int Count = Line.size();
+			const int ViewLow = Vertical ? CentralRect.bottom() : CentralRect.right();
+			const int ViewHigh = Vertical ? CentralRect.top() : CentralRect.left();
+
+			for (int Gap = ViewSide < 0 ? 0 : 1; Gap <= (ViewSide > 0 ? Count : Count - 1); Gap++)
+			{
+				const QRect LowRect = Gap > 0 ? Line[Gap - 1]->geometry() : QRect();
+				const QRect HighRect = Gap < Count ? Line[Gap]->geometry() : QRect();
+				const int Low = Gap == 0 ? ViewLow : (Vertical ? LowRect.bottom() : LowRect.right());
+				const int High = Gap == Count ? ViewHigh : (Vertical ? HighRect.top() : HighRect.left());
+
+				if (Along < Low - Margin || Along > High + Margin)
+					continue;
+
+				for (QDockWidget* DockWidget : Line)
+				{
+					// the dock layout limits contents plus title
+					QWidget* Content = DockWidget->widget();
+					const QWidgetItem Item(Content ? Content : DockWidget);
+					const int Size = Vertical ? DockWidget->height() : DockWidget->width();
+					const int Title = Content ? Size - (Vertical ? Content->height() : Content->width()) : 0;
+					const int Maximum = Vertical ? Item.maximumSize().height() : Item.maximumSize().width();
+					mDockDragColumn.append(DockWidget);
+					mDockDragHeights.append(Size);
+					mDockDragMinimums.append((Vertical ? Item.minimumSize().height() : Item.minimumSize().width()) + Title);
+					mDockDragMaximums.append(Maximum >= QWIDGETSIZE_MAX ? QWIDGETSIZE_MAX : Maximum + Title);
+				}
+
+				const QSize ViewMinimum = CentralWidget->minimumSizeHint();
+				mDockDragGap = Gap;
+				mDockDragStart = Along;
+				mDockDragViewSide = ViewSide;
+				mDockDragOrientation = Orientation;
+				mDockDragViewSpare = qMax(0, Vertical ? CentralWidget->height() - ViewMinimum.height() : CentralWidget->width() - ViewMinimum.width());
+				return true;
+			}
 		}
 	}
 
 	return false;
 }
 
-void swMainWindow::MoveDockDrag(int Position)
+void swMainWindow::MoveDockDrag(const QPoint& Position)
 {
 	QVector<int> Heights = mDockDragHeights;
 	const int Count = Heights.size();
-	const int Delta = Position - mDockDragStart;
-	const bool Up = Delta < 0;
+	const int Delta = (mDockDragOrientation == Qt::Vertical ? Position.y() : Position.x()) - mDockDragStart;
+	const bool Back = Delta < 0;
 
 	// the panel behind the divider grows
-	const int Grower = Up ? (mDockDragGap < Count ? mDockDragGap : -1) : mDockDragGap - 1;
+	const int Grower = Back ? (mDockDragGap < Count ? mDockDragGap : -1) : mDockDragGap - 1;
 	int Wanted = qAbs(Delta);
 
 	if (Grower >= 0)
 		Wanted = qMin(Wanted, qMax(0, mDockDragMaximums[Grower] - Heights[Grower]));
 
-	// panels ahead give way, nearest first, then the view
+	// the view gives way first, pushing panels ahead along
 	int Rest = Wanted;
-	const int Step = Up ? -1 : 1;
 
-	for (int Index = Up ? mDockDragGap - 1 : mDockDragGap; Rest > 0 && Index >= 0 && Index < Count; Index += Step)
+	if (mDockDragViewSide == (Back ? -1 : 1))
+		Rest -= qMin(Rest, mDockDragViewSpare);
+
+	// then the panel against the far edge
+	const int Step = Back ? 1 : -1;
+
+	for (int Index = Back ? 0 : Count - 1; Rest > 0 && (Back ? Index < mDockDragGap : Index >= mDockDragGap); Index += Step)
 	{
 		const int Give = qMin(Rest, qMax(0, Heights[Index] - mDockDragMinimums[Index]));
 		Heights[Index] -= Give;
 		Rest -= Give;
 	}
 
-	if (Rest > 0 && mDockDragBottom == Up)
-		Rest -= qMin(Rest, mDockDragViewSpare);
+	// nothing else can grow
+	if (Grower < 0 && mDockDragViewSide != (Back ? 1 : -1))
+		return;
 
 	if (Grower >= 0)
 		Heights[Grower] += Wanted - Rest;
@@ -318,7 +348,7 @@ void swMainWindow::MoveDockDrag(int Position)
 		Sizes.append(Heights[Index]);
 	}
 
-	resizeDocks(DockWidgets, Sizes, Qt::Vertical);
+	resizeDocks(DockWidgets, Sizes, mDockDragOrientation);
 }
 
 bool swMainWindow::eventFilter(QObject* Object, QEvent* Event)
@@ -396,7 +426,7 @@ bool swMainWindow::eventFilter(QObject* Object, QEvent* Event)
 
 	if (mDockDragGap >= 0 && Event->type() == QEvent::MouseMove && Object == this)
 	{
-		MoveDockDrag(static_cast<QMouseEvent*>(Event)->pos().y());
+		MoveDockDrag(static_cast<QMouseEvent*>(Event)->pos());
 		return true;
 	}
 
