@@ -30,11 +30,14 @@ public:
 
 	void SetCurrentColor(int colorIndex);
 	void ToggleGroupCollapsed(int GroupIndex);
+	void SetStrip(bool Strip);
+	void ScrollPage(int Direction);
 
 signals:
 	void ColorChanged(int colorIndex);
 	void ColorSelected(int colorIndex);
 	void HeightChanged();
+	void ScrollChanged(bool CanScrollLeft, bool CanScrollRight);
 
 protected slots:
 	void ColorsLoaded();
@@ -45,6 +48,9 @@ protected:
 	int GetGroupHeaderHeight(const swColorListGroup& Group, bool FirstGroup) const;
 	void UpdateRects();
 	void SelectCell(size_t CellIndex);
+	void UpdateStripRects();
+	void SetStripScroll(int Scroll);
+	void ShowCell(size_t CellIndex);
 
 	bool event(QEvent* Event) override;
 	void paintEvent(QPaintEvent* PaintEvent) override;
@@ -52,6 +58,7 @@ protected:
 	void mousePressEvent(QMouseEvent* MouseEvent) override;
 	void mouseMoveEvent(QMouseEvent* MouseEvent) override;
 	void keyPressEvent(QKeyEvent* KeyEvent) override;
+	void wheelEvent(QWheelEvent* WheelEvent) override;
 
 	std::vector<swColorListCell> mCells;
 	std::vector<swColorListGroup> mGroups;
@@ -66,6 +73,9 @@ protected:
 	int mPreferredHeight = 0;
 	bool mFitting = false;
 	bool mAllowNoColor;
+	bool mStrip = false;
+	int mStripScroll = 0;
+	int mStripWidth = 0;
 
 	QPoint mDragStartPosition;
 };

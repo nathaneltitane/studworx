@@ -7,6 +7,9 @@
   - Preferences: the Connection Points color moved to Steps and Highlighting, and it can now be made see-through
   - Translations: the new Show Connection Points setting and its tooltip are added to every language, waiting to be translated
   - Site: the General and Interface Preferences images are retaken to show the moved settings
+  - Colors: docked at the top or bottom, the swatches line up in one row across the whole window, scrolled with the wheel or the arrows at its ends
+  - Colors: docked at the top or bottom, the panel no longer squeezes the panels sharing its row
+  - Translations: the new Colors arrow tooltips and help text are added to every language, waiting to be translated
 
   </details>
 

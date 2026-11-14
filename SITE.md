@@ -362,7 +362,7 @@ Panels dock side by side in any area of the main window, with uniform headers, b
 
 - **Parts.** Categories and palettes with a filter. The panel snaps to whole thumbnail tiles and rows, docked or floating, and the tooltip of each part shows its name, ID and weight.
 - **Part palettes.** Create, rename, reorder and delete palettes, import them, or build one from an online set inventory.
-- **Colors.** Collapsible solid, translucent and special color groups with square color tiles.
+- **Colors.** Collapsible solid, translucent and special color groups with square color tiles. Docked at the top or bottom, the tiles line up in one long row you scroll with the wheel or the arrows at its ends.
 - **Properties.** Compact position, rotation and transform rows and a spanning color swatch. Lights and cameras get named rows with units. A round key button ends each animated row, filled when the property has a key at the current step.
 - **Minifigure Builder.** Build a minifigure from templates and add several variations to the model.
 - **Preview.** A small view of the part or model you picked, docked or floating, that can keep showing the last selection.

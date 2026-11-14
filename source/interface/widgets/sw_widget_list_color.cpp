@@ -97,6 +97,12 @@ int swColorList::GetGroupHeaderHeight(const swColorListGroup& Group, bool FirstG
 
 void swColorList::UpdateRects()
 {
+	if (mStrip)
+	{
+		UpdateStripRects();
+		return;
+	}
+
 	mPreferredHeight = GetHeightForWidth(width(), &mColumns, &mRows);
 
 	// a toggling scroll bar would recurse here
@@ -176,6 +182,101 @@ void swColorList::UpdateRects()
 
 		GroupY += NumRows * CellHeight;
 	}
+}
+
+void swColorList::UpdateStripRects()
+{
+	// one row, groups apart
+	const int CellSize = QFontMetrics(font()).height() * 3 / 2;
+	const int Gap = swGetLayoutSpacing(this, Qt::Horizontal);
+
+	if (height() != CellSize && !mFitting)
+	{
+		mFitting = true;
+		setFixedHeight(CellSize);
+		emit HeightChanged();
+		mFitting = false;
+	}
+
+	int Left = 0;
+	int CurCell = 0;
+
+	for (swColorListGroup& Group : mGroups)
+	{
+		Group.Rect = QRect();
+
+		if (Group.Button)
+			Group.Button->hide();
+
+		for (size_t ColorIdx = 0; ColorIdx < Group.Cells.size(); ColorIdx++)
+		{
+			mCells[CurCell++].Rect = QRect(Left - mStripScroll, 0, CellSize, CellSize - 1);
+			Left += CellSize;
+		}
+
+		Left += Gap;
+	}
+
+	mStripWidth = Left - Gap + 1;
+
+	// keep the row filled after a resize
+	const int Scroll = qBound(0, mStripScroll, qMax(0, mStripWidth - width()));
+
+	if (Scroll != mStripScroll)
+	{
+		mStripScroll = Scroll;
+		UpdateStripRects();
+		return;
+	}
+
+	emit ScrollChanged(mStripScroll > 0, mStripScroll < mStripWidth - width());
+}
+
+void swColorList::SetStrip(bool Strip)
+{
+	if (mStrip == Strip)
+		return;
+
+	mStrip = Strip;
+	mStripScroll = 0;
+
+	UpdateRects();
+	ShowCell(mCurrentCell);
+	update();
+}
+
+void swColorList::SetStripScroll(int Scroll)
+{
+	Scroll = qBound(0, Scroll, qMax(0, mStripWidth - width()));
+
+	if (Scroll == mStripScroll)
+		return;
+
+	mStripScroll = Scroll;
+
+	UpdateStripRects();
+	update();
+}
+
+void swColorList::ScrollPage(int Direction)
+{
+	// one screen of swatches
+	const int CellSize = QFontMetrics(font()).height() * 3 / 2;
+
+	SetStripScroll(mStripScroll + Direction * qMax(CellSize, width() - CellSize));
+}
+
+void swColorList::ShowCell(size_t CellIndex)
+{
+	if (!mStrip || CellIndex >= mCells.size())
+		return;
+
+	const QRect& Rect = mCells[CellIndex].Rect;
+
+	if (Rect.left() < 0)
+		SetStripScroll(mStripScroll + Rect.left());
+	else if (Rect.right() >= width())
+		SetStripScroll(mStripScroll + Rect.right() - width() + 1);
 }
 
 void swColorList::ToggleGroupCollapsed(int GroupIndex)
@@ -319,7 +420,7 @@ void swColorList::keyPressEvent(QKeyEvent *event)
 		if (mCurrentCell < mCells.size() - 1)
 			NewCell = mCurrentCell + 1;
 	}
-	else if (event->key() == Qt::Key_Up || event->key() == Qt::Key_Down)
+	else if (!mStrip && (event->key() == Qt::Key_Up || event->key() == Qt::Key_Down))
 	{
 		if (mCurrentCell >= mCells.size())
 			mCurrentCell = 0;
@@ -384,6 +485,24 @@ void swColorList::keyPressEvent(QKeyEvent *event)
 		SelectCell(NewCell);
 	else
 		QWidget::keyPressEvent(event);
+}
+
+void swColorList::wheelEvent(QWheelEvent* WheelEvent)
+{
+	// the grid leaves the wheel to the panel
+	if (!mStrip)
+	{
+		QWidget::wheelEvent(WheelEvent);
+		return;
+	}
+
+	const QPoint Delta = WheelEvent->angleDelta();
+	const int Steps = Delta.x() ? Delta.x() : Delta.y();
+	const int CellSize = QFontMetrics(font()).height() * 3 / 2;
+
+	// three swatches a notch
+	SetStripScroll(mStripScroll - Steps * CellSize * 3 / 120);
+	WheelEvent->accept();
 }
 
 void swColorList::resizeEvent(QResizeEvent* Event)
@@ -455,5 +574,6 @@ void swColorList::SelectCell(size_t CellIndex)
 	mColorCode = swGetColorCode(mCells[CellIndex].ColorIndex);
 
 	emit ColorChanged(mCells[mCurrentCell].ColorIndex);
+	ShowCell(mCurrentCell);
 	update();
 }

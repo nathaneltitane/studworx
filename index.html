@@ -2524,6 +2524,7 @@
 
 			<ul class="points">
 				<li><b>Properties.</b> Compact position, rotation and transform rows and a spanning color swatch. Lights and cameras get named rows with units. A round key button ends each animated row, filled when the property has a key at the current step.</li>
+				<li><b>Colors.</b> Collapsible solid, translucent and special color groups with square color tiles. Docked at the top or bottom, the tiles line up in one long row you scroll with the wheel or the arrows at its ends.</li>
 				<li><b>Parts.</b> Categories and palettes with a filter. The panel snaps to whole thumbnail tiles and rows, docked or floating, and the tooltip of each part shows its name, ID and weight.</li>
 				<li><b>Joints.</b> The joints of the selected submodel and their axis, a tree of every model with joints, and right-click menus to move, rotate or delete them.</li>
 				<li><b>Keyframes.</b> A full-width timeline of the keys of the selected or all objects per step, with buttons to add or remove keys, Add Keys and playback.</li>
@@ -2531,7 +2532,6 @@
 				<li><b>Preview.</b> A small view of the part or model you picked, docked or floating, that can keep showing the last selection.</li>
 				<li><b>Part palettes.</b> Create, rename, reorder and delete palettes, import them, or build one from an online set inventory.</li>
 				<li><b>Poses.</b> The poses of the model picked in the Joints panel with Save, Recall, Rename and Delete.</li>
-				<li><b>Colors.</b> Collapsible solid, translucent and special color groups with square color tiles.</li>
 				<li><b>Terminal.</b> An embedded terminal sized to whole rows and columns, with Open Model Folder.</li>
 				<li><b>Minifigure Builder.</b> Build a minifigure from templates and add several variations to the model.</li>
 				<li><b>Explode.</b> The controls of the explode feature, described under <a href="#modeling">Modeling</a>.</li>
@@ -3550,6 +3550,9 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Preferences: the Connection Points color moved to <a href="#steps">Steps</a> and Highlighting, and it can now be made see-through</li>
 					<li>Translations: the new Show Connection Points setting and its tooltip are added to every language, waiting to be translated</li>
 					<li>Site: the General and <a href="#interface">Interface</a> Preferences images are retaken to show the moved settings</li>
+					<li>Colors: docked at the top or bottom, the swatches line up in one row across the whole window, scrolled with the wheel or the arrows at its ends</li>
+					<li>Colors: docked at the top or bottom, the panel no longer squeezes the <a href="#panels">panels</a> sharing its row</li>
+					<li>Translations: the new Colors arrow tooltips and <a href="#help">help</a> text are added to every language, waiting to be translated</li>
 				</ul>
 			</details>
 
@@ -3562,11 +3565,11 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Translations: about a hundred strings per language that only changed their mnemonic, punctuation or wording get their old translation back, marked unfinished for review</li>
 					<li>Translations: the Array dialog counts and a status line no longer show broken guesses like 8x {1?} in every language</li>
 					<li>Tests: catalogs are checked to compile with every translation, keep their placeholders and carry no merge guesses</li>
-					<li>Site: screenshots never show larger than their real size, so menus and <a href="#panels">panels</a> stay sharp</li>
+					<li>Site: screenshots never show larger than their real size, so menus and panels stay sharp</li>
 					<li>Site: every gallery follows the order of the program, window first, then its menus and dialogs, with no image shown twice</li>
 					<li>Site: a <a href="#toolbars">Toolbars</a> section explains the Standard, <a href="#tools">Tools</a>, Time and Transform toolbars</li>
 					<li>Site: a <a href="#where">Where</a> Is It section lists the menu, toolbar or right click menu of every command, with its shortcut and a search, read from the program itself</li>
-					<li>Site: <a href="#help">Help</a> entries name where to find their command, and the menu screenshots give way to the command list</li>
+					<li>Site: Help entries name where to find their command, and the menu screenshots give way to the command list</li>
 					<li>Site: the frame around a screenshot ends where the image ends</li>
 					<li>Minifigure Builder: the preview no longer outlines every part in the highlight color when edge lines show, Highlight New Parts now only marks the model view</li>
 					<li>Tests: the site&#x27;s feature descriptions are kept short, and the command list is checked to name every command; Linux builds now run the tests that start the program</li>
@@ -3941,7 +3944,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Main Window","title":"Time Toolbar","paragraphs":["The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Timeline for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps."]},
 				{"group":"Main Window","title":"Tools Toolbar","paragraphs":["Choose a tool, then use it in the model view. Insertion tools create parts, lights, or cameras. Editing tools select, transform, remove, or recolor objects. Navigation tools change the viewpoint without changing model geometry. Mouse assignments can be customized in Preferences."]},
 				{"group":"Main Window","title":"Parts","paragraphs":["Choose a category or palette and filter its parts. Selecting a part prepares it for insertion; drag it into the model view to place it. Double-click a part to open its preview. Options controls filtering, thumbnails, and list display."]},
-				{"group":"Main Window","title":"Colors","paragraphs":["Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code."]},
+				{"group":"Main Window","title":"Colors","paragraphs":["Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.","Docked at the top or bottom, the swatches line up in one row; scroll the wheel or use the arrows at its ends to move along it."]},
 				{"group":"Main Window","title":"Change Selection Color","paragraphs":["Apply the current color to selected parts. Choosing a swatch sets the current color; this button applies that color to the selection."]},
 				{"group":"Main Window","title":"Properties","paragraphs":["Edit properties of the focused object or selection. Available fields depend on whether you select parts, a camera, or a light. Expand a section to see its fields. Keyframe controls mark properties at the current building step.","The transform fields at the bottom apply an X/Y/Z translation or rotation using the chosen transform mode. Press Enter to apply the values."]},
 				{"group":"Main Window","title":"Apply Transform","paragraphs":["Choose the translation or rotation mode, enter X/Y/Z values, and press Enter to apply them. Translation values use LDraw units; rotation values use degrees."]},

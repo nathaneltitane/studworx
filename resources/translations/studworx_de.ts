@@ -18189,8 +18189,8 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="326"/>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="623"/>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="631"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="851"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="852"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="932"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="933"/>
         <source>Transform</source>
         <translation>Transformation</translation>
     </message>
@@ -18365,10 +18365,9 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Teile&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wählen Sie eine Kategorie oder Palette und filtern Sie deren Teile. Durch die Auswahl eines Teils wird es zum Einfügen vorbereitet; Ziehen Sie es in die Modellansicht, um es zu platzieren. Doppelklicken Sie auf ein Teil, um dessen Vorschau zu öffnen. Optionen steuern Filterung, Miniaturansichten und Listenanzeige.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="769"/>
         <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Farben&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wählen Sie die aktuelle LDraw-Farbe aus den Farbfeldern. Diese Farbe wird beim Einfügen oder Bemalen von Teilen verwendet. Um ausgewählte Teile neu einzufärben, verwenden Sie die Farbschaltfläche über den Farbfeldern. Bewegen Sie den Mauszeiger über ein Farbfeld, um dessen Namen und Farbcode anzuzeigen.&lt;/p&gt;</translation>
+        <translation type="obsolete">&lt;p&gt;&lt;b&gt;Farben&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wählen Sie die aktuelle LDraw-Farbe aus den Farbfeldern. Diese Farbe wird beim Einfügen oder Bemalen von Teilen verwendet. Um ausgewählte Teile neu einzufärben, verwenden Sie die Farbschaltfläche über den Farbfeldern. Bewegen Sie den Mauszeiger über ein Farbfeld, um dessen Namen und Farbcode anzuzeigen.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="785"/>
@@ -18399,41 +18398,61 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="801"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="809"/>
+        <source>Scroll the swatches left.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="809"/>
+        <source>Scroll the swatches right.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="810"/>
+        <source>Scroll Colors Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="810"/>
+        <source>Scroll Colors Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="830"/>
         <source>LDraw Colors</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">LDraw-Farben</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="829"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="910"/>
         <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit properties of the focused object or selection. Available fields depend on whether you select parts, a camera, or a light. Expand a section to see its fields. Keyframe controls mark properties at the current building step.&lt;/p&gt;&lt;p&gt;The transform fields at the bottom apply an X/Y/Z translation or rotation using the chosen transform mode. Press Enter to apply the values.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Eigenschaften&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Eigenschaften des fokussierten Objekts oder der Auswahl bearbeiten. Die verfügbaren Felder hängen davon ab, ob Sie Teile, eine Kamera oder ein Licht auswählen. Erweitern Sie einen Abschnitt, um seine Felder anzuzeigen. Keyframe-Steuerelemente markieren Eigenschaften im aktuellen Bauschritt.&lt;/p&gt;&lt;p&gt;Die Transformationsfelder unten wenden eine X/Y/Z-Verschiebung oder -Rotation unter Verwendung des gewählten Transformationsmodus an. Drücken Sie die Eingabetaste, um die Werte anzuwenden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="850"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="931"/>
         <source>T</source>
         <translation type="unfinished">T</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="882"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="963"/>
         <source>Choose absolute or relative translation or rotation.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Wählen Sie absolute oder relative Translation oder Rotation.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="883"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="964"/>
         <source>&lt;p&gt;&lt;b&gt;Apply Transform&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the translation or rotation mode, enter X/Y/Z values, and press Enter to apply them. Translation values use LDraw units; rotation values use degrees.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Transformation anwenden&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wählen Sie den Translations- oder Rotationsmodus, geben Sie X/Y/Z-Werte ein und drücken Sie die Eingabetaste, um sie anzuwenden. Übersetzungswerte verwenden LDraw-Einheiten; Rotationswerte verwenden Grad.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="935"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1016"/>
         <source>&lt;p&gt;&lt;b&gt;Timeline&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="972"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1053"/>
         <source>Explode</source>
         <translation type="unfinished">Explosion</translation>
     </message>
@@ -18442,7 +18461,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Explosion&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Jedes andere sichtbare Teil oder nur die ausgewählten um einen X-, Y- und Z-Prozentsatz ihrer Entfernung von einem Anker wegschieben. Jedes Teil gleitet entlang der Verbindung heraus, die es hält. Zusammenfalten oder Rückgängig setzt die Teile zurück, und Kopie speichern sichert das explodierte Modell in einer eigenen Datei.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="985"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1066"/>
         <source>Joints</source>
         <translation type="unfinished">Gelenke</translation>
     </message>
@@ -18451,7 +18470,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Gelenke&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Das am ausgewählten Untermodell gewählte Gelenk mit seiner Achse und ein Baum aller Modelle mit Gelenken, ihrer Untermodelle mit Gelenken und deren Gelenke. Ein Gelenk wählen, um es zu bewegen oder zu drehen, und eines löschen, um es in die Ruhelage zurückzusetzen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="994"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1075"/>
         <source>Poses</source>
         <translation type="unfinished"></translation>
     </message>
@@ -18460,7 +18479,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Posen&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Die Posen des im Gelenke-Panel gewählten Modells. Die Gelenkwinkel als benannte Pose speichern, dann abrufen, umbenennen oder löschen. Posen werden mit dem Modell gespeichert.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1003"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1084"/>
         <source>Keyframes</source>
         <translation type="unfinished">Keyframes</translation>
     </message>
@@ -18469,7 +18488,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Eine Zeitleiste über die ganze Breite mit den Animations-Keys der ausgewählten oder aller Objekte, eine Spalte pro Schritt. Keys im aktuellen Schritt hinzufügen oder entfernen und die Schritte durchspielen, um die animierte Bewegung zu sehen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="861"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="942"/>
         <source>Transform X</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">X transformieren</translation>
@@ -18504,31 +18523,36 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="862"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="769"/>
+        <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.&lt;/p&gt;&lt;p&gt;Docked at the top or bottom, the swatches line up in one row; scroll the wheel or use the arrows at its ends to move along it.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="943"/>
         <source>Enter the X translation in LDraw units or rotation in degrees.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Geben Sie die X-Translation in LDraw-Einheiten oder die Drehung in Grad ein.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="867"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="948"/>
         <source>Transform Y</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Y transformieren</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="868"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="949"/>
         <source>Enter the Y translation in LDraw units or rotation in degrees.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Geben Sie die Y-Verschiebung in LDraw-Einheiten oder die Drehung in Grad ein.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="873"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="954"/>
         <source>Transform Z</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Verwandle Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="874"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="955"/>
         <source>Enter the Z translation in LDraw units or rotation in degrees.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Geben Sie die Z-Translation in LDraw-Einheiten oder die Drehung in Grad ein.</translation>
@@ -18539,7 +18563,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Zeitleiste&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wählen Sie einen Schritt aus, um ihn zum aktuellen zu machen, oder wählen Sie Teilezeilen aus, um diese Teile im Modell auszuwählen. Ziehen Sie Teile zwischen Schritten oder ordnen Sie sie innerhalb eines Schritts neu an. Klicken Sie mit der rechten Maustaste, um Befehle zum Einfügen, Entfernen, Verschieben und Sichtbarmachen von Schritten anzuzeigen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="954"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1035"/>
         <source>Minifigure Builder</source>
         <translation type="unfinished"></translation>
     </message>
@@ -18566,7 +18590,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Vorschau&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Inspizieren Sie ein Teil, ohne es im Modell zu platzieren. Doppelklicken Sie im Teile-Dock auf ein Teil, um eine Vorschau anzuzeigen. „Vorschau sperren“ behält die aktuelle Vorschau bei, wenn sich die Quellenauswahl ändert; Entsperren Sie es, um Updates zuzulassen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1055"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1136"/>
         <source>Asset loading failed</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Das Laden des Assets ist fehlgeschlagen</translation>
@@ -19378,12 +19402,12 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Farben</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="827"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="908"/>
         <source>Properties</source>
         <translation>Eigenschaften</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="933"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1014"/>
         <source>Timeline</source>
         <translation>Zeitachse</translation>
     </message>
@@ -19642,31 +19666,31 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Orthografisch</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1079"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1160"/>
         <source>Selection</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Auswahl</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1080"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1161"/>
         <source>View Orientation</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ansichtsausrichtung</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1081"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1162"/>
         <source>Position</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Position</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1082"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1163"/>
         <source>Snap and Transform</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Einrasten und Transformieren</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1083"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1164"/>
         <source>Step</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Schritt</translation>

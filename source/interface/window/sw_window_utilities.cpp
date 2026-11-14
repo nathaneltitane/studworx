@@ -671,8 +671,8 @@ void swFitFloatingDock(QDockWidget* DockWidget, bool Open)
 
 			for (QDockWidget* AreaDockWidget : MainWindow->findChildren<QDockWidget*>(QString(), Qt::FindDirectChildrenOnly))
 			{
-				// floating size panels stretch
-				if (AreaDockWidget->isFloating() || MainWindow->dockWidgetArea(AreaDockWidget) != Area || swIsViewDock(AreaDockWidget) || AreaDockWidget->property("swFloatingSize").toSize().isValid())
+				// floating size panels and strips stretch
+				if (AreaDockWidget->isFloating() || MainWindow->dockWidgetArea(AreaDockWidget) != Area || swIsViewDock(AreaDockWidget) || AreaDockWidget->property("swFloatingSize").toSize().isValid() || AreaDockWidget->property("swStrip").toBool())
 					continue;
 
 				AreaDockWidget->setMaximumWidth(QWIDGETSIZE_MAX);
@@ -878,8 +878,8 @@ protected:
 private:
 	void FitContents()
 	{
-		// never taller than the contents
-		setMaximumHeight(widget()->minimumHeight());
+		// never taller than the contents, unless they grow
+		setMaximumHeight(widget()->property("swCrampedGrow").toBool() ? QWIDGETSIZE_MAX : widget()->minimumHeight());
 		updateGeometry();
 
 		// floating panels follow the new height
