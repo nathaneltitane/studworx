@@ -16,7 +16,8 @@
   - Panels: a panel dragged out by its title follows its contents again, even when the window manager first ignores its new size
   - Colors: putting the panel back no longer makes the Terminal and Keyframes panels taller
   - Colors: docked, the strip opens back up when you drag the divider above it, like the other panels
-  - Panels: dragging the divider next to any docked panel, on any side, opens only that panel, even when the panels around it are folded, the others stay as they are
+  - Panels: dragging the divider next to any docked panel, on any side, opens only that panel, even when the panels around it are folded; the panels in between keep their size and move along, and the space comes from the view or the panel at the far end
+  - Properties: docked, it no longer jumps back to full height while you drag its divider
   - Translations: the new Colors arrow tooltips and help text are added to every language, waiting to be translated
 
   </details>
