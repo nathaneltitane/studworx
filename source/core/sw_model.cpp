@@ -155,6 +155,28 @@ bool swModel::GetPartWorldMatrix(swPart* Part, swMatrix44& ParentWorldMatrix) co
 	return false;
 }
 
+bool swModel::HasMissingParts() const
+{
+	std::unordered_set<const swModel*> Visited;
+	const std::function<bool(const swModel*)> Visit = [&Visited, &Visit](const swModel* Current)
+	{
+		if (!Current || !Visited.insert(Current).second)
+			return false;
+
+		for (const std::unique_ptr<swPart>& Part : Current->mParts)
+		{
+			const swPartData* PartData = Part->mPartData.Get();
+
+			if (PartData && (PartData->mState == swAssetState::Failed || (PartData->IsModel() && Visit(PartData->GetModel()))))
+				return true;
+		}
+
+		return false;
+	};
+
+	return Visit(this);
+}
+
 bool swModel::IncludesModel(const swModel* Model) const
 {
 	std::unordered_set<const swModel*> Visited;

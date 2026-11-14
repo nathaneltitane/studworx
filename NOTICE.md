@@ -32,6 +32,9 @@
   - Insert: a part dropped into empty space lands under the pointer, level with the model, instead of far away toward the horizon
   - Preferences: Show Connection Points, under Use Part Connections, turns the connection marks on or off, and the Connection Points color moved to Steps and Highlighting and takes transparency
   - Model view gear menu: Connection Points moved from Steps and Highlighting to sit under Part Connections, next to Insert First Part at Origin, matching the Editing preferences
+  - Windows: dialogs taller than the screen now open with their title bar and buttons on screen, and their pages scroll
+  - Missing parts: the placeholder brick for a part the library can't find gets a bold red outline, in the timeline's red, in every step and inside submodels, and the timeline shows the submodel holding it in the same red; selecting it shows the selection outline instead
+  - File: Missing and Moved Parts reopens the list of missing and renumbered parts after its warning was closed, without reopening the model
   - Site: feature descriptions rewritten in plain words, saying what each feature does instead of listing its commands, now that the command index names them
 
   </details>

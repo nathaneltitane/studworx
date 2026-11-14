@@ -2029,7 +2029,7 @@
           <item row="7" column="0">
            <widget class="QLabel" name="SelectionOutlineWidthLabel">
             <property name="toolTip">
-             <string>Choose the thickness of the outline drawn around selected parts and new parts.</string>
+             <string>Choose the thickness of the outline drawn around selected, new and missing parts.</string>
             </property>
             <property name="text">
              <string>Outline Width</string>
@@ -2045,7 +2045,7 @@
              <string>Outline Width</string>
             </property>
             <property name="toolTip">
-             <string>Choose the thickness of the outline drawn around selected parts and new parts.</string>
+             <string>Choose the thickness of the outline drawn around selected, new and missing parts.</string>
             </property>
             <property name="suffix">
              <string> px</string>

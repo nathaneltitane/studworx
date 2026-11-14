@@ -280,7 +280,11 @@ void swTimelineWidget::Update(bool Clear, bool UpdateItems)
 
 			QColor Color = palette().text().color();
 
-			if (Part->mPartData->mState == swAssetState::Failed)
+			// submodels holding missing parts too
+
+			const bool Missing = Part->mPartData->mState == swAssetState::Failed || (Part->mPartData->IsModel() && Part->mPartData->GetModel()->HasMissingParts());
+
+			if (Missing)
 				Color = swGetWarningTextColor();
 			else if (Part->IsHidden())
 				Color.setAlpha(128);

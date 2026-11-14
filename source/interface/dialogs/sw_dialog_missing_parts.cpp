@@ -21,7 +21,7 @@ swMissingPartsDialog::swMissingPartsDialog(QWidget* Parent, std::vector<swMissin
 	const int PartCount = static_cast<int>(mMissingParts.size());
 
 	setWindowTitle(tr("Missing and Moved Parts"));
-	setWhatsThis(tr("<p><b>Missing and Moved Parts</b></p><p>Lists the parts of the model that could not be loaded, they are left out of the model view and the previews, and the parts the library marks as moved (~Moved to) or as an alias (=) of another part.</p><p>A missing part is looked up through the BrickLink mapping file set under Preferences &gt; General &gt; Reference Paths, for parts the library now files under another number. A moved part or an alias is offered the part it points to. Replace Checked swaps the checked parts in every submodel, keeping their colors and positions. It can be undone and the file changes only when saved.</p><p>The warning can be turned off under Preferences &gt; General &gt; Files, the status bar icon opens this list again.</p>"));
+	setWhatsThis(tr("<p><b>Missing and Moved Parts</b></p><p>Lists the parts of the model that could not be loaded, shown as red-outlined placeholder bricks in the model view, and the parts the library marks as moved (~Moved to) or as an alias (=) of another part.</p><p>A missing part is looked up through the BrickLink mapping file set under Preferences &gt; General &gt; Reference Paths, for parts the library now files under another number. A moved part or an alias is offered the part it points to. Replace Checked swaps the checked parts in every submodel, keeping their colors and positions. It can be undone and the file changes only when saved.</p><p>The warning can be turned off under Preferences &gt; General &gt; Files, File &gt; Missing and Moved Parts and the status bar icon open this list again.</p>"));
 
 	QVBoxLayout* MainLayout = new QVBoxLayout(this);
 
@@ -30,7 +30,7 @@ swMissingPartsDialog::swMissingPartsDialog(QWidget* Parent, std::vector<swMissin
 	QStringList Messages;
 
 	if (FailedCount)
-		Messages.append(FailedCount == 1 ? tr("1 part could not be loaded. It is left out of the model view and previews until replaced.") : tr("%1 parts could not be loaded. They are left out of the model view and previews until replaced.").arg(FailedCount));
+		Messages.append(FailedCount == 1 ? tr("1 part could not be loaded. It shows as a red-outlined placeholder brick until replaced.") : tr("%1 parts could not be loaded. They show as red-outlined placeholder bricks until replaced.").arg(FailedCount));
 
 	if (MovedCount)
 		Messages.append(MovedCount == 1 ? tr("1 part is marked as moved or as an alias in the parts library.") : tr("%1 parts are marked as moved or as an alias in the parts library.").arg(MovedCount));

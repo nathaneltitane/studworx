@@ -1131,6 +1131,11 @@ void swPart::AddMainModelRenderMeshes(swScene* Scene, bool Highlight, bool Fade)
 	if (Fade)
 		RenderMeshState = swRenderMeshState::Faded;
 
+	// placeholders stand out in every step while editing
+
+	if (Scene->GetDrawInterface() && mPartData->mState == swAssetState::Failed)
+		RenderMeshState = swRenderMeshState::Missing;
+
 	if (Scene->GetDrawInterface())
 	{
 		const swPart* ActiveSubmodelInstance = Scene->GetActiveSubmodelInstance();
@@ -1193,6 +1198,13 @@ void swPart::AddSubModelRenderMeshes(swScene* Scene, const swMatrix44& WorldMatr
 		RenderMeshState = IsFocused() ? swRenderMeshState::Focused : (IsSelected() ? swRenderMeshState::Selected : swRenderMeshState::Default);
 	else if (ParentActive)
 		RenderMeshState = swRenderMeshState::Default;
+
+	// placeholders inside submodels stand out too
+
+	const bool PlainState = RenderMeshState == swRenderMeshState::Default || RenderMeshState == swRenderMeshState::Highlighted || RenderMeshState == swRenderMeshState::Faded;
+
+	if (Scene->GetDrawInterface() && PlainState && mPartData->mState == swAssetState::Failed)
+		RenderMeshState = swRenderMeshState::Missing;
 
 	if (ParentActive && Scene->GetJointFadePart() && Scene->GetJointFadePart() != this)
 		RenderMeshState = swRenderMeshState::FadedJoint;

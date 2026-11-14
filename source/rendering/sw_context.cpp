@@ -915,7 +915,7 @@ bool swContext::GenerateOutlineMasks(const swScene& Scene, QOpenGLFramebufferObj
 	return Success;
 }
 
-void swContext::DrawOutline(QOpenGLFramebufferObject& FullFramebuffer, QOpenGLFramebufferObject& VisibleFramebuffer, float DeviceScale, const swVector4& HighlightColor, const swVector4& HoverColor)
+void swContext::DrawOutline(QOpenGLFramebufferObject& FullFramebuffer, QOpenGLFramebufferObject& VisibleFramebuffer, float DeviceScale, const swVector4& HighlightColor, const swVector4& HoverColor, const swVector4& MissingColor)
 {
 	const swMatrix44 WorldMatrix = mWorldMatrix;
 	const swMatrix44 ViewMatrix = mViewMatrix;
@@ -933,7 +933,7 @@ void swContext::DrawOutline(QOpenGLFramebufferObject& FullFramebuffer, QOpenGLFr
 	const swPreferences& Preferences = swGetPreferences();
 
 	SetOutlineParams(swVector4(1.0f / FullFramebuffer.width(), 1.0f / FullFramebuffer.height(), static_cast<float>(Preferences.mSelectionOutlineWidth) * DeviceScale, 0.3f),
-		swVector4FromColor(Preferences.mObjectSelectedColor), swVector4FromColor(Preferences.mObjectFocusedColor), HighlightColor, HoverColor);
+		swVector4FromColor(Preferences.mObjectSelectedColor), swVector4FromColor(Preferences.mObjectFocusedColor), HighlightColor, HoverColor, MissingColor);
 
 	glActiveTexture(GL_TEXTURE1);
 	glBindTexture(GL_TEXTURE_2D, VisibleFramebuffer.texture());
@@ -1770,7 +1770,7 @@ void swContext::FlushState()
 
 	if (mOutlineParamsDirty && Program.OutlineParamsLocation != -1)
 	{
-		glUniform4fv(Program.OutlineParamsLocation, 5, mOutlineParams[0].GetFloats());
+		glUniform4fv(Program.OutlineParamsLocation, 6, mOutlineParams[0].GetFloats());
 		mOutlineParamsDirty = false;
 	}
 }

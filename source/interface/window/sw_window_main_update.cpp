@@ -21,6 +21,7 @@
 #include "sw_dialog_html.h"
 #include "sw_dialog_render.h"
 #include "sw_dialog_instructions.h"
+#include "sw_dialog_missing_parts.h"
 #include "sw_dialog_image.h"
 #include "sw_profile.h"
 #include "sw_view.h"
@@ -430,6 +431,8 @@ void swMainWindow::ViewFocusReceived()
 
 void swMainWindow::FileMenuAboutToShow()
 {
+	mActions[SW_FILE_MISSING_PARTS]->setEnabled(!GetMissingParts().empty());
+
 	for (int ActionIdx = SW_FILE_RECENT_FIRST; ActionIdx <= SW_FILE_RECENT_LAST; ActionIdx++)
 	{
 		int FileIdx = ActionIdx - SW_FILE_RECENT_FIRST;

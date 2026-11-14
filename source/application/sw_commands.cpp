@@ -48,6 +48,15 @@ const swCommand gCommands[] =
 		""
 	},
 
+	// SW_FILE_MISSING_PARTS
+	{
+		QT_TRANSLATE_NOOP("Action", "File.MissingParts"),
+		QT_TRANSLATE_NOOP("Menu", "Missing and Moved &Parts..."),
+		QT_TRANSLATE_NOOP("Status", "List the parts of the model that could not be loaded or have moved"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Missing and Moved Parts</b></p><p>Open again the list of parts the library could not find or has renumbered, to replace them after the warning was closed. Available while the model has such parts.</p>"),
+		""
+	},
+
 	// SW_FILE_TOGGLE_WATCH_FILE_CHANGES
 	{
 		QT_TRANSLATE_NOOP("Action", "File.ToggleWatchFileChanges"),

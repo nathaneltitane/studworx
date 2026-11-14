@@ -15,7 +15,8 @@ enum class swRenderMeshState : int
 	Faded,
 	Highlighted,
 	FadedInline,
-	FadedJoint
+	FadedJoint,
+	Missing
 };
 
 struct swRenderMesh
@@ -209,6 +210,11 @@ public:
 		return mHighlightColor;
 	}
 
+	const swVector4& GetMissingColor() const
+	{
+		return mMissingColor;
+	}
+
 	void SetHighlightRenderMode(swHighlightRenderMode HighlightRenderMode)
 	{
 		mHighlightRenderMode = HighlightRenderMode;
@@ -226,6 +232,7 @@ protected:
 	{
 		Selection,
 		Highlight,
+		Missing,
 		Occluders,
 		Hover
 	};
@@ -264,6 +271,7 @@ protected:
 	std::vector<swRenderMesh> mHoverMeshes;
 	bool mAddHover = false;
 	swVector4 mHighlightColor;
+	swVector4 mMissingColor;
 	bool mHasFadedParts = false;
 	bool mTranslucentFade = false;
 

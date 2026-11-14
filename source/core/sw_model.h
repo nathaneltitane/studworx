@@ -307,6 +307,7 @@ public:
 
 	bool GetPartWorldMatrix(swPart* Part, swMatrix44& ParentWorldMatrix) const;
 	bool IncludesModel(const swModel* Model) const;
+	bool HasMissingParts() const;
 	void CreatePartData(Project* Project);
 	bool RebindPartData(swPartData* Previous, swPartData* Replacement);
 	void UpdatePartData(std::vector<swModel*>& UpdatedModels);

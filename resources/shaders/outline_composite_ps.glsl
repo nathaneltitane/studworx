@@ -3,7 +3,7 @@ SW_PIXEL_OUTPUT
 
 uniform sampler2D Texture;
 uniform sampler2D VisibleTexture;
-uniform mediump vec4 OutlineParams[5]; // Pixel size / outline radius / hidden opacity, selected color, focused color, highlight color, hover color.
+uniform mediump vec4 OutlineParams[6]; // Pixel size / outline radius / hidden opacity, selected color, focused color, highlight color, hover color, missing color.
 
 SW_SHADER_PRECISION vec4 OutlineMaskCoverage(SW_SHADER_PRECISION vec2 Position)
 {
@@ -39,15 +39,17 @@ void main()
 
 				Expanded = max(Expanded, SampleCoverage);
 
-				// highlight and hover lines run inside, clear of the selection
-				ExpandedOpacity = max(ExpandedOpacity, vec3(SampleCoverage.r, 1.0 - SampleCoverage.b, 1.0 - SampleCoverage.a) * Opacity);
+				// highlight and hover lines run inside, clear of the selection and of other highlight levels
+				ExpandedOpacity = max(ExpandedOpacity, vec3(SampleCoverage.r, step(0.25, abs(SampleCoverage.b - Coverage.b)), 1.0 - SampleCoverage.a) * Opacity);
 			}
 		}
 	}
 
 	SW_SHADER_PRECISION float Border = max(Expanded.r - Coverage.r, 0.0);
 	SW_SHADER_PRECISION float BorderOpacity = max(ExpandedOpacity.x - Coverage.r, 0.0);
-	SW_SHADER_PRECISION float HighlightOpacity = Coverage.b * ExpandedOpacity.y * OutlineParams[3].a;
+	// blue is half for new parts and full for missing parts
+	SW_SHADER_PRECISION vec4 HighlightColor = mix(OutlineParams[3], OutlineParams[5], step(0.75, Coverage.b));
+	SW_SHADER_PRECISION float HighlightOpacity = step(0.25, Coverage.b) * ExpandedOpacity.y * HighlightColor.a;
 	SW_SHADER_PRECISION float HoverOpacity = Coverage.a * ExpandedOpacity.z * OutlineParams[4].a;
 	SW_SHADER_PRECISION float Visible = texture2D(VisibleTexture, PixelTexCoord).r;
 	SW_SHADER_PRECISION float Hidden = Coverage.r * (1.0 - Visible);
@@ -56,7 +58,7 @@ void main()
 	SW_SHADER_PRECISION vec3 SelectionColor = mix(FillColor.rgb, OutlineColor.rgb, Border);
 	SW_SHADER_PRECISION float SelectionOpacity = max(Hidden * OutlineParams[0].w, BorderOpacity);
 	SW_SHADER_PRECISION float BelowOpacity = HighlightOpacity + SelectionOpacity * (1.0 - HighlightOpacity);
-	SW_SHADER_PRECISION vec3 BelowColor = OutlineParams[3].rgb * HighlightOpacity + SelectionColor * SelectionOpacity * (1.0 - HighlightOpacity);
+	SW_SHADER_PRECISION vec3 BelowColor = HighlightColor.rgb * HighlightOpacity + SelectionColor * SelectionOpacity * (1.0 - HighlightOpacity);
 
 	// the hover line stays on top
 	SW_SHADER_PRECISION float Opacity = HoverOpacity + BelowOpacity * (1.0 - HoverOpacity);

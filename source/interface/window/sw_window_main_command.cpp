@@ -76,6 +76,10 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		ReloadPartsLibrary();
 		break;
 
+	case SW_FILE_MISSING_PARTS:
+		ShowMissingPartsDialog();
+		break;
+
 	case SW_FILE_TOGGLE_WATCH_FILE_CHANGES:
 		ToggleWatchFileChanges();
 		break;

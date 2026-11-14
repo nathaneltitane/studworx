@@ -434,6 +434,7 @@ void swMainWindow::CreateMenus()
 	FileMenu->addSeparator();
 	FileMenu->addAction(mActions[SW_FILE_RELOAD]);
 	FileMenu->addAction(mActions[SW_FILE_RELOAD_LIBRARY]);
+	FileMenu->addAction(mActions[SW_FILE_MISSING_PARTS]);
 	FileMenu->addSeparator();
 	FileMenu->addAction(mActions[SW_MODEL_PROPERTIES]);
 	FileMenu->addSeparator();

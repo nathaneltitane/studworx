@@ -182,8 +182,15 @@ bool swWindowGeometryFilter::eventFilter(QObject* Object, QEvent* Event)
 	if (!Screen)
 		return false;
 
-	// a quarter of the screen
-	const QRect Available = Screen->availableGeometry();
+	// title bar and borders, from the parent frame
+
+	const QSize ParentFrame = Parent ? Parent->frameGeometry().size() - Parent->size() : QSize();
+	const QSize FrameSize = ParentFrame.height() > 0 ? ParentFrame : QSize(0, Window->style()->pixelMetric(QStyle::PM_TitleBarHeight));
+
+	// a quarter of the screen, frame included
+
+	const QRect ScreenArea = Screen->availableGeometry();
+	const QRect Available(ScreenArea.topLeft(), (ScreenArea.size() - FrameSize).expandedTo(QSize(1, 1)));
 	const QSize MinimumSize = QSize(Available.width() / 4, Available.height() / 4).expandedTo(Window->minimumSizeHint()).boundedTo(Available.size());
 
 	// keep at least a quarter

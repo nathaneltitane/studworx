@@ -7,6 +7,7 @@
 #include "sw_application.h"
 #include "sw_object.h"
 #include "sw_colors.h"
+#include "sw_window_utilities.h"
 
 swScene::swScene()
 {
@@ -39,6 +40,12 @@ void swScene::Begin(const swMatrix44& ViewMatrix)
 	mFadeInlineColor = Preferences.mFadeInline ? swVector4FromColor(Preferences.mFadeInlineColor) : swVector4(1.0f, 1.0f, 1.0f, 0.99f);
 	mFadeJointColor = swVector4FromColor(Preferences.mFadeJointColor);
 	mHoverColor = swVector4FromColor(Preferences.mHoverOutlineColor);
+
+	// missing parts match the timeline warning
+
+	const QColor MissingColor = swGetWarningTextColor();
+	mMissingColor = swVector4(MissingColor.redF(), MissingColor.greenF(), MissingColor.blueF(), 1.0f);
+
 	mHasFadedParts = false;
 	mTranslucentFade = false;
 }
@@ -191,7 +198,7 @@ void swScene::DrawOpaqueMeshes(swContext* Context, bool DrawLit, int PrimitiveTy
 		const bool HasTriangles = (Mesh->mFlags & (swMeshFlag::HasDefault | swMeshFlag::HasSolid | swMeshFlag::HasTranslucent)) != 0;
 
 		if (mHighlightRenderMode == swHighlightRenderMode::Outline && HasTriangles &&
-			(State == swRenderMeshState::Selected || State == swRenderMeshState::Focused || State == swRenderMeshState::Highlighted))
+			(State == swRenderMeshState::Selected || State == swRenderMeshState::Focused || State == swRenderMeshState::Highlighted || State == swRenderMeshState::Missing))
 			State = swRenderMeshState::Default;
 
 		if (!DrawFaded && RenderMesh.State == swRenderMeshState::Faded)
@@ -224,6 +231,7 @@ void swScene::DrawOpaqueMeshes(swContext* Context, bool DrawLit, int PrimitiveTy
 				{
 				case swRenderMeshState::Default:
 				case swRenderMeshState::Highlighted:
+				case swRenderMeshState::Missing:
 					Context->SetColorIndex(ColorIndex);
 					break;
 
@@ -277,6 +285,10 @@ void swScene::DrawOpaqueMeshes(swContext* Context, bool DrawLit, int PrimitiveTy
 
 				case swRenderMeshState::Highlighted:
 					Context->SetColor(mHighlightColor);
+					break;
+
+				case swRenderMeshState::Missing:
+					Context->SetColor(mMissingColor);
 					break;
 
 				case swRenderMeshState::Faded:
@@ -405,6 +417,7 @@ void swScene::DrawTranslucentMeshes(swContext* Context, bool DrawLit, bool DrawF
 		{
 		case swRenderMeshState::Default:
 		case swRenderMeshState::Highlighted:
+		case swRenderMeshState::Missing:
 			Context->SetColorIndex(ColorIndex);
 			break;
 
@@ -600,7 +613,7 @@ bool swScene::HasHighlightedMeshes() const
 {
 	return std::any_of(mRenderMeshes.begin(), mRenderMeshes.end(), [](const swRenderMesh& Mesh)
 	{
-		return Mesh.State == swRenderMeshState::Highlighted;
+		return Mesh.State == swRenderMeshState::Highlighted || Mesh.State == swRenderMeshState::Missing;
 	});
 }
 
@@ -611,7 +624,10 @@ void swScene::DrawSelectionMask(swContext* Context) const
 
 void swScene::DrawHighlightMask(swContext* Context) const
 {
+	// missing parts drawn last stay on top
+
 	DrawOutlineGeometry(Context, swOutlineGeometry::Highlight);
+	DrawOutlineGeometry(Context, swOutlineGeometry::Missing);
 }
 
 void swScene::DrawHoverMask(swContext* Context) const
@@ -635,10 +651,12 @@ void swScene::DrawOutlineGeometry(swContext* Context, swOutlineGeometry Geometry
 	{
 		const bool Selected = RenderMesh.State == swRenderMeshState::Selected || RenderMesh.State == swRenderMeshState::Focused;
 		const bool Highlighted = RenderMesh.State == swRenderMeshState::Highlighted;
+		const bool Missing = RenderMesh.State == swRenderMeshState::Missing;
 
 		if (RenderMesh.State == swRenderMeshState::Preview ||
 			(Geometry == swOutlineGeometry::Selection && !Selected) ||
-			(Geometry == swOutlineGeometry::Highlight && !Highlighted))
+			(Geometry == swOutlineGeometry::Highlight && !Highlighted) ||
+			(Geometry == swOutlineGeometry::Missing && !Missing))
 			continue;
 
 		if (Geometry == swOutlineGeometry::Occluders && RenderMesh.State == swRenderMeshState::Faded && RenderMesh.FadeColor.w != 1.0f)
@@ -647,7 +665,10 @@ void swScene::DrawOutlineGeometry(swContext* Context, swOutlineGeometry Geometry
 		const swMesh* Mesh = RenderMesh.Mesh;
 		Context->BindMesh(Mesh);
 		Context->SetWorldMatrix(RenderMesh.WorldMatrix);
-		Context->SetColor(swVector4(Selected ? 1.0f : 0.0f, RenderMesh.State == swRenderMeshState::Focused ? 1.0f : 0.0f, Highlighted ? 1.0f : 0.0f, 1.0f));
+
+		// blue holds half for new parts, full for missing ones
+
+		Context->SetColor(swVector4(Selected ? 1.0f : 0.0f, RenderMesh.State == swRenderMeshState::Focused ? 1.0f : 0.0f, Missing ? 1.0f : (Highlighted ? 0.5f : 0.0f), 1.0f));
 
 		const swMeshLod& Lod = Mesh->mLods[RenderMesh.LodIndex];
 		for (int SectionIndex = 0; SectionIndex < Lod.NumSections; SectionIndex++)

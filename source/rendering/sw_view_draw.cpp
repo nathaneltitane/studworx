@@ -197,7 +197,7 @@ void swView::OnDraw()
 			});
 
 			if (OutlineEnabled && OutlineMasksReady)
-				mContext->DrawOutline(*mOutlineFullFramebuffer, *mOutlineVisibleFramebuffer, mWidget ? mWidget->GetDeviceScale() : mLineWidthScale, mScene->GetHighlightColor(), mScene->GetHoverColor());
+				mContext->DrawOutline(*mOutlineFullFramebuffer, *mOutlineVisibleFramebuffer, mWidget ? mWidget->GetDeviceScale() : mLineWidthScale, mScene->GetHighlightColor(), mScene->GetHoverColor(), mScene->GetMissingColor());
 
 			if (OutlineEnabled && !OutlineMasksReady)
 			{
