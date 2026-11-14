@@ -186,22 +186,20 @@ void swColorList::UpdateRects()
 
 void swColorList::UpdateStripRects()
 {
-	// rows fill the height, groups apart
+	// one row, groups apart
 	const int CellSize = swGetPanelButtonSize().height();
 	const int Gap = swGetLayoutSpacing(this, Qt::Horizontal);
 
 	mPreferredHeight = CellSize;
 
-	if ((minimumHeight() != CellSize || maximumHeight() != QWIDGETSIZE_MAX) && !mFitting)
+	if (height() != CellSize && !mFitting)
 	{
 		mFitting = true;
-		setMinimumHeight(CellSize);
-		setMaximumHeight(QWIDGETSIZE_MAX);
+		setFixedHeight(CellSize);
 		emit HeightChanged();
 		mFitting = false;
 	}
 
-	const int Rows = qMax(1, height() / CellSize);
 	int Left = 0;
 	int CurCell = 0;
 
@@ -215,9 +213,9 @@ void swColorList::UpdateStripRects()
 		const int CellCount = static_cast<int>(Group.Cells.size());
 
 		for (int ColorIdx = 0; ColorIdx < CellCount; ColorIdx++)
-			mCells[CurCell++].Rect = QRect(Left + ColorIdx / Rows * CellSize - mStripScroll, ColorIdx % Rows * CellSize, CellSize, CellSize - 1);
+			mCells[CurCell++].Rect = QRect(Left + ColorIdx * CellSize - mStripScroll, 0, CellSize, CellSize - 1);
 
-		Left += (CellCount + Rows - 1) / Rows * CellSize + Gap;
+		Left += CellCount * CellSize + Gap;
 	}
 
 	mStripWidth = Left - Gap + 1;
@@ -242,10 +240,6 @@ void swColorList::SetStrip(bool Strip)
 
 	mStrip = Strip;
 	mStripScroll = 0;
-
-	// the grid fits its own height again
-	if (!Strip)
-		setFixedHeight(height());
 
 	UpdateRects();
 	ShowCell(mCurrentCell);

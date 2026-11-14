@@ -896,8 +896,8 @@ protected:
 private:
 	void FitContents()
 	{
-		// never taller than the contents, unless they grow
-		setMaximumHeight(widget()->property("swCrampedGrow").toBool() ? QWIDGETSIZE_MAX : widget()->minimumHeight());
+		// never taller than the contents
+		setMaximumHeight(widget()->minimumHeight());
 		updateGeometry();
 
 		// floating panels follow the new height

@@ -856,18 +856,16 @@ void swMainWindow::CreateToolBars()
 	// as tall as the button and tiles
 	const auto FitColors = [this, ColorWidget, ColorLayout, ColorsShareRow]()
 	{
-		// the strip may be dragged taller or squeezed to its title
+		// the strip holds one row or squeezes to its title
 		const bool Strip = mColorsToolBar->property("swStrip").toBool();
 
-		ColorWidget->setProperty("swCrampedGrow", Strip);
 		ColorLayout->invalidate();
 
 		const int Height = ColorLayout->sizeHint().height();
 
-		ColorWidget->setMinimumHeight(Height);
-		ColorWidget->setMaximumHeight(Strip ? QWIDGETSIZE_MAX : Height);
+		ColorWidget->setFixedHeight(Height);
 		mColorsToolBar->widget()->setMinimumHeight(Strip ? 1 : 0);
-		mColorsToolBar->widget()->setMaximumHeight(Strip ? QWIDGETSIZE_MAX : Height);
+		mColorsToolBar->widget()->setMaximumHeight(Height);
 
 		// after layout, title bar height and rows are current
 		QTimer::singleShot(0, this, [this, ColorsShareRow]()
@@ -899,11 +897,7 @@ void swMainWindow::CreateToolBars()
 		ColorLayout->insertWidget(Strip ? ColorLayout->count() : 0, ColorRow);
 
 		for (int Index = 0; Index < ColorLayout->count(); Index++)
-		{
-			// buttons stay on top, the swatches take the height
-			const bool Top = Strip && ColorLayout->itemAt(Index)->widget() != mColorList;
-			ColorLayout->itemAt(Index)->setAlignment(Top ? Qt::AlignTop : Qt::Alignment());
-		}
+			ColorLayout->itemAt(Index)->setAlignment(Strip ? Qt::AlignTop : Qt::Alignment());
 
 		// the strip may span the window
 		mColorsToolBar->setProperty("swStrip", Strip);
@@ -912,7 +906,7 @@ void swMainWindow::CreateToolBars()
 			mColorsToolBar->setMaximumWidth(QWIDGETSIZE_MAX);
 
 		mColorsToolBar->setSizePolicy(Strip ? QSizePolicy::Expanding : QSizePolicy::Maximum, QSizePolicy::Maximum);
-		mColorList->setSizePolicy(Strip ? QSizePolicy::Expanding : QSizePolicy::Preferred, Strip ? QSizePolicy::Expanding : QSizePolicy::Fixed);
+		mColorList->setSizePolicy(Strip ? QSizePolicy::Expanding : QSizePolicy::Preferred, QSizePolicy::Fixed);
 		mColorButton->setSizePolicy(Strip ? QSizePolicy::Fixed : QSizePolicy::Expanding, QSizePolicy::Fixed);
 		ColorLeftButton->setVisible(Strip);
 		ColorRightButton->setVisible(Strip);
