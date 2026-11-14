@@ -497,7 +497,6 @@ void swMainWindow::ModelViewOptionsMenuAboutToShow()
 	// moving fades only with joint set fading
 	AddMenuCommand(StepsMenu, tr("Fade on Joint Move and Rotate"), SW_VIEW_TOGGLE_FADE_ON_JOINT_MOVE, Preferences.mFadeJointMoving)->setEnabled(Preferences.mFadeJoint);
 	AddMenuCommand(StepsMenu, tr("Submodel Hover Outline"), SW_VIEW_TOGGLE_HOVER_OUTLINE, Preferences.mHoverOutline);
-	AddMenuCommand(StepsMenu, tr("Connection Points"), SW_VIEW_TOGGLE_CONNECTION_POINTS, Preferences.mConnectionPoints)->setEnabled(Preferences.mShadowLibraryEnabled);
 
 	QMenu* GridMenu = Menu->addMenu(tr("Grid"));
 	AddMenuCommand(GridMenu, tr("All Grids"), SW_VIEW_GRID_TOGGLE_ALL, Preferences.mGridEnabled && Preferences.mDrawGridHeightXZ && Preferences.mDrawGridHeightYZ);
@@ -513,8 +512,13 @@ void swMainWindow::ModelViewOptionsMenuAboutToShow()
 
 	Menu->addSeparator();
 
-	AddMenuCommand(Menu, tr("Insert First Part at Origin"), SW_PART_TOGGLE_FIRST_AT_ORIGIN, Preferences.mFirstPartAtOrigin);
+	// editing, in preferences order
 	AddMenuCommand(Menu, tr("Part Connections"), SW_EDIT_TOGGLE_SHADOW_LIBRARY, Preferences.mShadowLibraryEnabled)->setEnabled(swShadowLibrary::IsLoaded());
+	AddMenuCommand(Menu, tr("Connection Points"), SW_VIEW_TOGGLE_CONNECTION_POINTS, Preferences.mConnectionPoints)->setEnabled(Preferences.mShadowLibraryEnabled);
+	AddMenuCommand(Menu, tr("Insert First Part at Origin"), SW_PART_TOGGLE_FIRST_AT_ORIGIN, Preferences.mFirstPartAtOrigin);
+
+	Menu->addSeparator();
+
 	AddMenuCommand(Menu, tr("View Cube"), SW_VIEW_TOGGLE_VIEW_CUBE, Preferences.mViewCubeEnabled);
 	AddMenuCommand(Menu, tr("Axis Icon"), SW_VIEW_TOGGLE_AXIS_ICON, Preferences.mDrawAxes);
 

@@ -31,6 +31,7 @@
   - Connections: the green connection marks follow the parts as they move, and hide while a part is dragged
   - Insert: a part dropped into empty space lands under the pointer, level with the model, instead of far away toward the horizon
   - Preferences: Show Connection Points, under Use Part Connections, turns the connection marks on or off, and the Connection Points color moved to Steps and Highlighting and takes transparency
+  - Model view gear menu: Connection Points moved from Steps and Highlighting to sit under Part Connections, next to Insert First Part at Origin, matching the Editing preferences
   - Site: feature descriptions rewritten in plain words, saying what each feature does instead of listing its commands, now that the command index names them
 
   </details>
