@@ -5304,12 +5304,12 @@ Formát souboru není rozpoznán.</translation>
 <context>
     <name>QDockWidget</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1242"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1260"/>
         <source>Float</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1246"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1264"/>
         <source>Close</source>
         <translation type="unfinished">Blízko</translation>
     </message>
@@ -6482,17 +6482,17 @@ Formát souboru není rozpoznán.</translation>
         <translation type="obsolete">Chyba</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1594"/>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1600"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1612"/>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1618"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1636"/>
         <source>Stop Blender Process</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">Zastavit proces Blenderu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1594"/>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1600"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1612"/>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1618"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1636"/>
         <source>%1 failed: %2</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">%1 selhalo: %2</translation>
@@ -12931,7 +12931,7 @@ Informace o tom, jak stáhnout a nainstalovat knihovnu, naleznete na adrese http
 <context>
     <name>swBlockingProgress</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="950"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="968"/>
         <source>%v of %m</source>
         <translation type="unfinished"></translation>
     </message>
@@ -13278,25 +13278,25 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swColorDialogPopup</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1794"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1812"/>
         <source>Choose Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Vyberte Barva</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1795"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1813"/>
         <source>&lt;p&gt;&lt;b&gt;Choose Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pick a color using the swatches or enter its component values. Choose OK to use the selected color, or Cancel to keep the original color. Editing the controls alone does not apply the color.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Vyberte barvu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte barvu pomocí vzorníku nebo zadejte hodnoty jejích složek. Zvolte OK, chcete-li použít vybranou barvu, nebo Zrušit, chcete-li zachovat původní barvu. Samotná úprava ovládacích prvků barvu nepoužije.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1821"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1839"/>
         <source>Custom Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Vlastní barva</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1822"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1840"/>
         <source>Choose a color or enter its component values.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Vyberte barvu nebo zadejte hodnoty jejích složek.</translation>
@@ -17409,7 +17409,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1896"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1914"/>
         <source>Transparent</source>
         <translation type="unfinished"></translation>
     </message>
@@ -17957,8 +17957,8 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="326"/>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="623"/>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="631"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="932"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="933"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="998"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="999"/>
         <source>Transform</source>
         <translation>Transformace</translation>
     </message>
@@ -18241,6 +18241,11 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Barvy</translation>
     </message>
     <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="769"/>
+        <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.&lt;/p&gt;&lt;p&gt;Docked at the top or bottom, the swatches line up in one row; scroll the wheel or use the arrows at its ends to move along it, or double-click an arrow to jump to that end.&lt;/p&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Barvy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zvolte aktuální barvu LDraw ze vzorníku. Tato barva se používá při vkládání nebo malování dílů. Chcete-li vybrané díly přebarvit, použijte barevné tlačítko nad vzorníkem. Umístěním ukazatele myši na vzorek zobrazíte jeho název a kód barvy.&lt;/p&gt;</translation>
@@ -18264,41 +18269,51 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Změnit barvu výběru&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Použít aktuální barvu na vybrané díly. Výběrem políčka nastavíte aktuální barvu; toto tlačítko použije tuto barvu na výběr.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="830"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="809"/>
+        <source>Scroll the swatches left. Double-click to jump to the first one.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="809"/>
+        <source>Scroll the swatches right. Double-click to jump to the last one.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="839"/>
         <source>LDraw Colors</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">LDraw Barvy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="908"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="974"/>
         <source>Properties</source>
         <translation>Vlastnosti</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="910"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="976"/>
         <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit properties of the focused object or selection. Available fields depend on whether you select parts, a camera, or a light. Expand a section to see its fields. Keyframe controls mark properties at the current building step.&lt;/p&gt;&lt;p&gt;The transform fields at the bottom apply an X/Y/Z translation or rotation using the chosen transform mode. Press Enter to apply the values.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Vlastnosti&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Upravte vlastnosti vybraného objektu nebo výběru. Dostupná pole závisí na tom, zda vyberete díly, fotoaparát nebo světlo. Rozbalením sekce zobrazíte její pole. Ovládací prvky klíčového snímku označují vlastnosti v aktuálním kroku vytváření.&lt;/p&gt;&lt;p&gt;Pole transformace ve spodní části aplikují X/Y/Z posun nebo rotaci pomocí zvoleného režimu transformace. Stisknutím klávesy Enter hodnoty použijete.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="963"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1029"/>
         <source>Choose absolute or relative translation or rotation.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Vyberte absolutní nebo relativní posunutí nebo otočení.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="964"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1030"/>
         <source>&lt;p&gt;&lt;b&gt;Apply Transform&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the translation or rotation mode, enter X/Y/Z values, and press Enter to apply them. Translation values use LDraw units; rotation values use degrees.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Použít transformaci&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte režim posunutí nebo otočení, zadejte hodnoty X/Y/Z a stisknutím klávesy Enter je použijte. Překladové hodnoty používají jednotky LDraw; hodnoty rotace používají stupně.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1016"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1082"/>
         <source>&lt;p&gt;&lt;b&gt;Timeline&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1053"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1119"/>
         <source>Explode</source>
         <translation type="unfinished">Rozložit</translation>
     </message>
@@ -18307,7 +18322,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Rozložit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odsune každý další viditelný díl, nebo jen vybrané, od kotvy o procento vzdálenosti v X, Y a Z. Každý díl vyjede podél spojení, které jej drží. Sbalit nebo Zpět vrátí díly na místo a Uložit kopii uloží rozložený model do samostatného souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1066"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1132"/>
         <source>Joints</source>
         <translation type="unfinished">Klouby</translation>
     </message>
@@ -18316,7 +18331,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Klouby&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kloub vybraný na vybraném podmodelu s jeho osou a strom každého modelu s klouby, jeho podmodelů s klouby a jejich kloubů. Vyberte kloub pro posun nebo otočení a smažte jej pro návrat do klidové polohy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1075"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1141"/>
         <source>Poses</source>
         <translation type="unfinished"></translation>
     </message>
@@ -18325,7 +18340,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Pózy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pózy modelu vybraného v panelu Klouby. Uložte úhly kloubů jako pojmenovanou pózu, pak ji vyvolejte, přejmenujte nebo smažte. Pózy se ukládají s modelem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1084"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1150"/>
         <source>Keyframes</source>
         <translation type="unfinished">Klíčové snímky</translation>
     </message>
@@ -18334,7 +18349,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Časová osa v plné šířce s animačními klíči vybraných nebo všech objektů, jeden sloupec na krok. Přidávejte nebo odebírejte klíče v aktuálním kroku a přehráváním kroků sledujte klíčovaný pohyb.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="942"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1008"/>
         <source>Transform X</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Transformace X</translation>
@@ -18365,11 +18380,6 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="769"/>
-        <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.&lt;/p&gt;&lt;p&gt;Docked at the top or bottom, the swatches line up in one row; scroll the wheel or use the arrows at its ends to move along it.&lt;/p&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="797"/>
         <source>Choose how inserted parts are colored.</source>
         <translation type="unfinished"></translation>
@@ -18377,16 +18387,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="797"/>
         <source>Color Options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="809"/>
-        <source>Scroll the swatches left.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="809"/>
-        <source>Scroll the swatches right.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -18400,42 +18400,42 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="931"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="997"/>
         <source>T</source>
         <translation type="unfinished">T</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="943"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1009"/>
         <source>Enter the X translation in LDraw units or rotation in degrees.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Zadejte posunutí X v jednotkách LDraw nebo otočení ve stupních.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="948"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1014"/>
         <source>Transform Y</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Transformace Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="949"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1015"/>
         <source>Enter the Y translation in LDraw units or rotation in degrees.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Zadejte Y posunutí v jednotkách LDraw nebo otočení ve stupních.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="954"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1020"/>
         <source>Transform Z</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Transformace Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="955"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1021"/>
         <source>Enter the Z translation in LDraw units or rotation in degrees.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Zadejte posun Z v jednotkách LDraw nebo otočení ve stupních.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1014"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1080"/>
         <source>Timeline</source>
         <translation>Časová osa</translation>
     </message>
@@ -18445,7 +18445,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Časová osa&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte krok, aby byl aktuální, nebo vyberte řádky dílů a vyberte tyto díly v modelu. Přetahujte kousky mezi kroky nebo v rámci kroku změňte jejich pořadí. Kliknutím pravým tlačítkem myši zobrazíte příkazy pro vkládání, odebírání, pohyb a viditelnost.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1035"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1101"/>
         <source>Minifigure Builder</source>
         <translation type="unfinished"></translation>
     </message>
@@ -18472,7 +18472,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Náhled&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zkontrolujte díl, aniž byste jej umístili do modelu. Dvojitým kliknutím na díl v doku Parts zobrazíte jeho náhled. Uzamknout náhled zachová aktuální náhled, když se změní výběr zdroje; odemkněte jej a povolte aktualizace.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1136"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1202"/>
         <source>Asset loading failed</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Načítání podkladu se nezdařilo</translation>
@@ -19415,62 +19415,62 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Ortografická</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1160"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1226"/>
         <source>Selection</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Výběr</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1161"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1227"/>
         <source>View Orientation</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Orientace pohledu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1162"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1228"/>
         <source>Position</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Poloha</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1163"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1229"/>
         <source>Snap and Transform</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Přichycení a transformace</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1164"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1230"/>
         <source>Step</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Krok</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1113"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1131"/>
         <source>Scroll the model tabs left.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1113"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1131"/>
         <source>Scroll the model tabs right.</source>
         <translation type="unfinished">Posune karty modelů doprava.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1114"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1132"/>
         <source>Scroll Tabs Left</source>
         <translation type="unfinished">Posunout karty doleva</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1114"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1132"/>
         <source>Scroll Tabs Right</source>
         <translation type="unfinished">Posunout karty doprava</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1115"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1133"/>
         <source>&lt;p&gt;&lt;b&gt;Scroll Tabs Left&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the model tabs hidden on the left when they do not all fit.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Posunout karty doleva&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí karty modelů skryté vlevo, když se nevejdou všechny.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1115"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1133"/>
         <source>&lt;p&gt;&lt;b&gt;Scroll Tabs Right&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the model tabs hidden on the right when they do not all fit.&lt;/p&gt;</source>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Posunout karty doprava&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí karty modelů skryté vpravo, když se nevejdou všechny.&lt;/p&gt;</translation>
     </message>

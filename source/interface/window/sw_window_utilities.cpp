@@ -438,6 +438,13 @@ static void swClampFloatingDock(QDockWidget* DockWidget)
 
 			if (!DockWidget->isFloating() || DockWidget->height() == Height || Tries > 40)
 				Timer->stop();
+			else if (Tries == 2)
+			{
+				// remapping clears stale manager state
+				DockWidget->hide();
+				DockWidget->show();
+				DockWidget->resize(DockWidget->width(), Height);
+			}
 			else
 				DockWidget->resize(DockWidget->width(), Height);
 		});
@@ -654,6 +661,10 @@ void swFitFloatingDock(QDockWidget* DockWidget, bool Open)
 		DockWidget->setMinimumSize(0, 0);
 		DockWidget->setMaximumSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX);
 
+		// docked panels scroll when squeezed
+		for (QScrollArea* ScrollArea : DockWidget->findChildren<QScrollArea*>())
+			ScrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+
 		// a set minimum wins over the size hint, so docked panels squeeze to the title bar
 		if (DockWidget->widget() && DockWidget->widget()->minimumHeight() == 0)
 			DockWidget->widget()->setMinimumHeight(1);
@@ -767,6 +778,8 @@ void swFitFloatingDock(QDockWidget* DockWidget, bool Open)
 	else if (!swIsViewDock(DockWidget))
 		MaximumHeight = Height;
 
+	bool Cut = false;
+
 	if (const QScreen* Screen = DockWidget->screen())
 	{
 		const int ScreenHeight = Screen->availableGeometry().height() - DockWidget->frameGeometry().height() + DockWidget->height();
@@ -775,6 +788,7 @@ void swFitFloatingDock(QDockWidget* DockWidget, bool Open)
 		if (Height > ScreenHeight)
 		{
 			Height = ScreenHeight;
+			Cut = true;
 
 			for (const QScrollArea* ScrollArea : ScrollAreas)
 				if (ScrollArea->widget() && ScrollArea->isVisibleTo(DockWidget))
@@ -784,6 +798,10 @@ void swFitFloatingDock(QDockWidget* DockWidget, bool Open)
 		if (MaximumHeight < QWIDGETSIZE_MAX)
 			MaximumHeight = qMax(qMin(MaximumHeight, ScreenHeight), Height);
 	}
+
+	// a passing scroll bar reflows the contents
+	for (QScrollArea* ScrollArea : ScrollAreas)
+		ScrollArea->setVerticalScrollBarPolicy(Cut ? Qt::ScrollBarAsNeeded : Qt::ScrollBarAlwaysOff);
 
 	DockWidget->setMaximumSize(QWIDGETSIZE_MAX, MaximumHeight);
 	DockWidget->setMinimumSize(Width, Height);

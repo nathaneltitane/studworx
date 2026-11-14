@@ -766,7 +766,7 @@ void swMainWindow::CreateToolBars()
 
 	mColorsToolBar = new QDockWidget(tr("Colors"), this);
 	mColorsToolBar->setObjectName("ColorsToolbar");
-	mColorsToolBar->setWhatsThis(tr("<p><b>Colors</b></p><p>Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.</p><p>Docked at the top or bottom, the swatches line up in one row; scroll the wheel or use the arrows at its ends to move along it.</p>"));
+	mColorsToolBar->setWhatsThis(tr("<p><b>Colors</b></p><p>Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.</p><p>Docked at the top or bottom, the swatches line up in one row; scroll the wheel or use the arrows at its ends to move along it, or double-click an arrow to jump to that end.</p>"));
 	swSetupWidgetHelp(mColorsToolBar);
 	mColorsToolBar->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Maximum);
 
@@ -806,15 +806,24 @@ void swMainWindow::CreateToolBars()
 		const bool Left = Button == ColorLeftButton;
 
 		Button->setIcon(swCreatePaintedIcon(Left ? swPaintedIcon::ArrowLeft : swPaintedIcon::ArrowRight));
-		Button->setToolTip(Left ? tr("Scroll the swatches left.") : tr("Scroll the swatches right."));
+		Button->setToolTip(Left ? tr("Scroll the swatches left. Double-click to jump to the first one.") : tr("Scroll the swatches right. Double-click to jump to the last one."));
 		Button->setAccessibleName(Left ? tr("Scroll Colors Left") : tr("Scroll Colors Right"));
 		Button->setAutoRepeat(true);
 		Button->hide();
 		swSetupPanelButton(Button);
 
-		connect(Button, &QToolButton::clicked, mColorList, [this, Left]()
+		connect(Button, &QToolButton::clicked, mColorList, [this, Button, Left]()
 		{
-			mColorList->ScrollPage(Left ? -1 : 1);
+			// held buttons repeat while down, a second quick click jumps to the end
+			const qint64 Now = QDateTime::currentMSecsSinceEpoch();
+			const bool Double = !Button->isDown() && Now - Button->property("swLastClick").toLongLong() < QApplication::doubleClickInterval();
+
+			Button->setProperty("swLastClick", Button->isDown() ? 0 : Now);
+
+			if (Double)
+				mColorList->ScrollEnd(Left ? -1 : 1);
+			else
+				mColorList->ScrollPage(Left ? -1 : 1);
 		});
 	}
 
@@ -829,39 +838,48 @@ void swMainWindow::CreateToolBars()
 	ColorLayout->addWidget(ColorRightButton);
 	mColorList->setAccessibleName(tr("LDraw Colors"));
 
-	// as tall as the button and tiles
-	const auto FitColors = [this, ColorWidget, ColorLayout]()
+	// panels sharing the strip row set its height
+	const auto ColorsShareRow = [this]()
 	{
-		// recompute and let the dock follow
+		if (!mColorsToolBar->property("swStrip").toBool())
+			return false;
+
+		const QRect Rect = mColorsToolBar->geometry();
+
+		for (QDockWidget* Dock : findChildren<QDockWidget*>(QString(), Qt::FindDirectChildrenOnly))
+			if (Dock != mColorsToolBar && Dock->isVisible() && !Dock->isFloating() && dockWidgetArea(Dock) == dockWidgetArea(mColorsToolBar) && Dock->geometry().top() < Rect.bottom() && Dock->geometry().bottom() > Rect.top() && !tabifiedDockWidgets(mColorsToolBar).contains(Dock))
+				return true;
+
+		return false;
+	};
+
+	// as tall as the button and tiles
+	const auto FitColors = [this, ColorWidget, ColorLayout, ColorsShareRow]()
+	{
+		// the strip may be dragged taller or squeezed to its title
+		const bool Strip = mColorsToolBar->property("swStrip").toBool();
+
+		ColorWidget->setProperty("swCrampedGrow", Strip);
 		ColorLayout->invalidate();
 
-		// the strip grows with panels beside it
-		const bool Strip = ColorWidget->property("swCrampedGrow").toBool();
 		const int Height = ColorLayout->sizeHint().height();
 
 		ColorWidget->setMinimumHeight(Height);
 		ColorWidget->setMaximumHeight(Strip ? QWIDGETSIZE_MAX : Height);
+		mColorsToolBar->widget()->setMinimumHeight(Strip ? 1 : 0);
+		mColorsToolBar->widget()->setMaximumHeight(Strip ? QWIDGETSIZE_MAX : Height);
 
-		// after layout, title bar height is current
-		QTimer::singleShot(0, this, [this, Strip]()
+		// after layout, title bar height and rows are current
+		QTimer::singleShot(0, this, [this, ColorsShareRow]()
 		{
-			// unless squeezed to the title bar
-			if (mColorsToolBar->isFloating() || !mColorsToolBar->isVisible() || mColorsToolBar->height() <= mColorsToolBar->minimumSizeHint().height())
+			// never shrink panels sharing its row, unless squeezed to the title bar
+			if (ColorsShareRow() || mColorsToolBar->isFloating() || !mColorsToolBar->isVisible() || mColorsToolBar->height() <= mColorsToolBar->minimumSizeHint().height())
 				return;
-
-			// never shrink panels sharing its row
-			if (Strip)
-			{
-				const QRect Rect = mColorsToolBar->geometry();
-
-				for (QDockWidget* Dock : findChildren<QDockWidget*>(QString(), Qt::FindDirectChildrenOnly))
-					if (Dock != mColorsToolBar && Dock->isVisible() && !Dock->isFloating() && dockWidgetArea(Dock) == dockWidgetArea(mColorsToolBar) && Dock->geometry().top() < Rect.bottom() && Dock->geometry().bottom() > Rect.top() && !tabifiedDockWidgets(mColorsToolBar).contains(Dock))
-						return;
-			}
 
 			resizeDocks({ mColorsToolBar }, { mColorsToolBar->sizeHint().height() }, Qt::Vertical);
 		});
 	};
+
 
 	connect(mColorList, &swColorList::HeightChanged, this, FitColors);
 
@@ -869,18 +887,22 @@ void swMainWindow::CreateToolBars()
 	connect(mColorsToolBar, &QDockWidget::featuresChanged, this, FitColors);
 
 	// top or bottom docks line the swatches up
-	const auto PlaceColors = [this, ColorWidget, ColorLayout, ColorLeftButton, ColorRightButton, FitColors]()
+	const auto PlaceColors = [this, ColorWidget, ColorLayout, ColorRow, ColorLeftButton, ColorRightButton, FitColors]()
 	{
 		const Qt::DockWidgetArea Area = dockWidgetArea(mColorsToolBar);
 		const bool Strip = !mColorsToolBar->isFloating() && (Area == Qt::TopDockWidgetArea || Area == Qt::BottomDockWidgetArea);
 
-		ColorWidget->setProperty("swCrampedGrow", Strip);
 		ColorLayout->setDirection(Strip ? QBoxLayout::LeftToRight : QBoxLayout::TopToBottom);
+
+		// color button and options end the strip
+		ColorLayout->removeWidget(ColorRow);
+		ColorLayout->insertWidget(Strip ? ColorLayout->count() : 0, ColorRow);
+
 		for (int Index = 0; Index < ColorLayout->count(); Index++)
 		{
-			// top only, so widths still stretch
-
-			ColorLayout->itemAt(Index)->setAlignment(Strip ? Qt::AlignTop : Qt::Alignment());
+			// buttons stay on top, the swatches take the height
+			const bool Top = Strip && ColorLayout->itemAt(Index)->widget() != mColorList;
+			ColorLayout->itemAt(Index)->setAlignment(Top ? Qt::AlignTop : Qt::Alignment());
 		}
 
 		// the strip may span the window
@@ -890,7 +912,7 @@ void swMainWindow::CreateToolBars()
 			mColorsToolBar->setMaximumWidth(QWIDGETSIZE_MAX);
 
 		mColorsToolBar->setSizePolicy(Strip ? QSizePolicy::Expanding : QSizePolicy::Maximum, QSizePolicy::Maximum);
-		mColorList->setSizePolicy(Strip ? QSizePolicy::Expanding : QSizePolicy::Preferred, QSizePolicy::Fixed);
+		mColorList->setSizePolicy(Strip ? QSizePolicy::Expanding : QSizePolicy::Preferred, Strip ? QSizePolicy::Expanding : QSizePolicy::Fixed);
 		mColorButton->setSizePolicy(Strip ? QSizePolicy::Fixed : QSizePolicy::Expanding, QSizePolicy::Fixed);
 		ColorLeftButton->setVisible(Strip);
 		ColorRightButton->setVisible(Strip);
@@ -899,6 +921,50 @@ void swMainWindow::CreateToolBars()
 		FitColors();
 	};
 
+	connect(mColorsToolBar, &QDockWidget::topLevelChanged, mColorList, [this](bool Floating)
+	{
+		// undocked panels start small
+		if (Floating)
+			mColorList->CollapseGroups();
+	});
+	// neighbours keep their height, the view takes the rest
+	const std::shared_ptr<QHash<QDockWidget*, int>> NeighbourHeights = std::make_shared<QHash<QDockWidget*, int>>();
+
+	connect(mColorsToolBar, &QDockWidget::topLevelChanged, this, [this, NeighbourHeights](bool Floating)
+	{
+		if (Floating)
+		{
+			NeighbourHeights->clear();
+
+			for (QDockWidget* Dock : findChildren<QDockWidget*>(QString(), Qt::FindDirectChildrenOnly))
+				if (Dock != mColorsToolBar && Dock->isVisible() && !Dock->isFloating())
+					NeighbourHeights->insert(Dock, Dock->height());
+		}
+
+		QTimer::singleShot(0, this, [this, NeighbourHeights]()
+		{
+			QList<QDockWidget*> Docks;
+			QList<int> Heights;
+
+			for (auto Iterator = NeighbourHeights->cbegin(); Iterator != NeighbourHeights->cend(); ++Iterator)
+			{
+				if (!Iterator.key()->isVisible() || Iterator.key()->isFloating())
+					continue;
+
+				Docks.append(Iterator.key());
+				Heights.append(Iterator.value());
+			}
+
+			if (!mColorsToolBar->isFloating() && mColorsToolBar->isVisible())
+			{
+				Docks.append(mColorsToolBar);
+				Heights.append(mColorsToolBar->sizeHint().height());
+			}
+
+			if (!Docks.isEmpty())
+				resizeDocks(Docks, Heights, Qt::Vertical);
+		});
+	});
 	connect(mColorsToolBar, &QDockWidget::dockLocationChanged, this, PlaceColors);
 	connect(mColorsToolBar, &QDockWidget::topLevelChanged, this, PlaceColors);
 

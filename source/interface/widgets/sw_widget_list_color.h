@@ -30,8 +30,10 @@ public:
 
 	void SetCurrentColor(int colorIndex);
 	void ToggleGroupCollapsed(int GroupIndex);
+	void CollapseGroups();
 	void SetStrip(bool Strip);
 	void ScrollPage(int Direction);
+	void ScrollEnd(int Direction);
 
 signals:
 	void ColorChanged(int colorIndex);

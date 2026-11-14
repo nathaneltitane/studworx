@@ -9,6 +9,12 @@
   - Site: the General and Interface Preferences images are retaken to show the moved settings
   - Colors: docked at the top or bottom, the swatches line up in one row across the whole window, scrolled with the wheel or the arrows at its ends
   - Colors: docked at the top or bottom, the panel no longer squeezes the panels sharing its row
+  - Colors: the strip tiles are as big as the buttons, with no blank space under the row, and the color button and gear sit at its right end
+  - Colors: the strip can be dragged taller, filling the extra height with more rows of swatches, or squeezed down to its title like the other panels
+  - Colors: double-clicking an arrow jumps to the start or the end of the strip
+  - Colors: undocked, every group starts folded, and the panel grows and shrinks with the groups you open, without shaking or a flickering scroll bar
+  - Panels: a panel dragged out by its title follows its contents again, even when the window manager first ignores its new size
+  - Colors: putting the panel back no longer makes the Terminal and Keyframes panels taller
   - Translations: the new Colors arrow tooltips and help text are added to every language, waiting to be translated
 
   </details>

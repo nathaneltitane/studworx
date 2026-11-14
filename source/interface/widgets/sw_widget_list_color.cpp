@@ -186,18 +186,22 @@ void swColorList::UpdateRects()
 
 void swColorList::UpdateStripRects()
 {
-	// one row, groups apart
-	const int CellSize = QFontMetrics(font()).height() * 3 / 2;
+	// rows fill the height, groups apart
+	const int CellSize = swGetPanelButtonSize().height();
 	const int Gap = swGetLayoutSpacing(this, Qt::Horizontal);
 
-	if (height() != CellSize && !mFitting)
+	mPreferredHeight = CellSize;
+
+	if ((minimumHeight() != CellSize || maximumHeight() != QWIDGETSIZE_MAX) && !mFitting)
 	{
 		mFitting = true;
-		setFixedHeight(CellSize);
+		setMinimumHeight(CellSize);
+		setMaximumHeight(QWIDGETSIZE_MAX);
 		emit HeightChanged();
 		mFitting = false;
 	}
 
+	const int Rows = qMax(1, height() / CellSize);
 	int Left = 0;
 	int CurCell = 0;
 
@@ -208,13 +212,12 @@ void swColorList::UpdateStripRects()
 		if (Group.Button)
 			Group.Button->hide();
 
-		for (size_t ColorIdx = 0; ColorIdx < Group.Cells.size(); ColorIdx++)
-		{
-			mCells[CurCell++].Rect = QRect(Left - mStripScroll, 0, CellSize, CellSize - 1);
-			Left += CellSize;
-		}
+		const int CellCount = static_cast<int>(Group.Cells.size());
 
-		Left += Gap;
+		for (int ColorIdx = 0; ColorIdx < CellCount; ColorIdx++)
+			mCells[CurCell++].Rect = QRect(Left + ColorIdx / Rows * CellSize - mStripScroll, ColorIdx % Rows * CellSize, CellSize, CellSize - 1);
+
+		Left += (CellCount + Rows - 1) / Rows * CellSize + Gap;
 	}
 
 	mStripWidth = Left - Gap + 1;
@@ -240,6 +243,10 @@ void swColorList::SetStrip(bool Strip)
 	mStrip = Strip;
 	mStripScroll = 0;
 
+	// the grid fits its own height again
+	if (!Strip)
+		setFixedHeight(height());
+
 	UpdateRects();
 	ShowCell(mCurrentCell);
 	update();
@@ -261,9 +268,15 @@ void swColorList::SetStripScroll(int Scroll)
 void swColorList::ScrollPage(int Direction)
 {
 	// one screen of swatches
-	const int CellSize = QFontMetrics(font()).height() * 3 / 2;
+	const int CellSize = swGetPanelButtonSize().height();
 
 	SetStripScroll(mStripScroll + Direction * qMax(CellSize, width() - CellSize));
+}
+
+void swColorList::ScrollEnd(int Direction)
+{
+	// clamped to the first or last swatch
+	SetStripScroll(Direction < 0 ? 0 : mStripWidth);
 }
 
 void swColorList::ShowCell(size_t CellIndex)
@@ -285,6 +298,12 @@ void swColorList::ToggleGroupCollapsed(int GroupIndex)
 		return;
 
 	SetGroupCollapsed(GroupIndex, !mGroups[GroupIndex].Collapsed);
+}
+
+void swColorList::CollapseGroups()
+{
+	for (int GroupIndex = 0; GroupIndex < static_cast<int>(mGroups.size()); GroupIndex++)
+		SetGroupCollapsed(GroupIndex, true);
 }
 
 void swColorList::SetGroupCollapsed(int GroupIndex, bool Collapsed)
@@ -498,7 +517,7 @@ void swColorList::wheelEvent(QWheelEvent* WheelEvent)
 
 	const QPoint Delta = WheelEvent->angleDelta();
 	const int Steps = Delta.x() ? Delta.x() : Delta.y();
-	const int CellSize = QFontMetrics(font()).height() * 3 / 2;
+	const int CellSize = swGetPanelButtonSize().height();
 
 	// three swatches a notch
 	SetStripScroll(mStripScroll - Steps * CellSize * 3 / 120);
