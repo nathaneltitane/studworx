@@ -209,83 +209,116 @@ void swMainWindow::CreatePreviewWidget()
 	}
 }
 
-void swMainWindow::LockDockEdge(const QPoint& Position)
+bool swMainWindow::StartDockDrag(const QPoint& Position)
 {
-	UnlockDockEdge();
+	mDockDragGap = -1;
+	mDockDragColumn.clear();
+	mDockDragHeights.clear();
+	mDockDragMinimums.clear();
+	mDockDragMaximums.clear();
 	QWidget* CentralWidget = centralWidget();
 
 	if (!CentralWidget)
-		return;
+		return false;
 
 	// the grab zone reaches past the gap
 	const int Margin = qMax(4, style()->pixelMetric(QStyle::PM_DockWidgetSeparatorExtent, nullptr, this));
 	const QRect CentralRect = CentralWidget->geometry();
 
-	for (Qt::DockWidgetArea Area : { Qt::TopDockWidgetArea, Qt::BottomDockWidgetArea, Qt::LeftDockWidgetArea, Qt::RightDockWidgetArea })
+	for (Qt::DockWidgetArea Area : { Qt::TopDockWidgetArea, Qt::BottomDockWidgetArea })
 	{
-		const bool Vertical = Area == Qt::TopDockWidgetArea || Area == Qt::BottomDockWidgetArea;
-		const bool Far = Area == Qt::BottomDockWidgetArea || Area == Qt::RightDockWidgetArea;
-		QVector<QDockWidget*> DockWidgets;
-		QRect AreaRect;
+		QVector<QDockWidget*> Column;
 
 		for (QDockWidget* DockWidget : findChildren<QDockWidget*>(QString(), Qt::FindDirectChildrenOnly))
 		{
-			if (DockWidget->isVisible() && !DockWidget->isFloating() && dockWidgetArea(DockWidget) == Area)
-			{
-				DockWidgets.append(DockWidget);
-				AreaRect |= DockWidget->geometry();
-			}
+			const QRect Rect = DockWidget->geometry();
+
+			if (DockWidget->isVisible() && !DockWidget->isFloating() && dockWidgetArea(DockWidget) == Area && Position.x() >= Rect.left() && Position.x() <= Rect.right())
+				Column.append(DockWidget);
 		}
 
-		if (DockWidgets.isEmpty())
+		if (Column.isEmpty())
 			continue;
 
-		// the gap between view and area
-		const int Point = Vertical ? Position.y() : Position.x();
-		const int Across = Vertical ? Position.x() : Position.y();
-		const int Start = Vertical ? (Far ? CentralRect.bottom() : AreaRect.bottom()) : (Far ? CentralRect.right() : AreaRect.right());
-		const int End = Vertical ? (Far ? AreaRect.top() : CentralRect.top()) : (Far ? AreaRect.left() : CentralRect.left());
-		const int AcrossStart = Vertical ? AreaRect.left() : AreaRect.top();
-		const int AcrossEnd = Vertical ? AreaRect.right() : AreaRect.bottom();
+		std::sort(Column.begin(), Column.end(), [](QDockWidget* First, QDockWidget* Second) { return First->y() < Second->y(); });
 
-		if (Point < Start - Margin || Point > End + Margin || Across < AcrossStart || Across > AcrossEnd)
-			continue;
+		// the view sits before or after the column
+		const bool Bottom = Area == Qt::BottomDockWidgetArea;
+		const int Count = Column.size();
 
-		// panels away from the edge hold still
-		const int Edge = Far ? End + 1 : Start - 1;
-
-		for (QDockWidget* DockWidget : DockWidgets)
+		for (int Gap = Bottom ? 0 : 1; Gap <= (Bottom ? Count - 1 : Count); Gap++)
 		{
-			const QRect Rect = DockWidget->geometry();
-			const int Near = Vertical ? (Far ? Rect.top() : Rect.bottom()) : (Far ? Rect.left() : Rect.right());
+			const int Low = Gap == 0 ? CentralRect.bottom() : Column[Gap - 1]->geometry().bottom();
+			const int High = Gap == Count ? CentralRect.top() : Column[Gap]->geometry().top();
 
-			if (qAbs(Near - Edge) <= 1)
+			if (Position.y() < Low - Margin || Position.y() > High + Margin)
 				continue;
 
-			mDockLocks.append({ DockWidget, DockWidget->minimumSize(), DockWidget->maximumSize() });
+			for (QDockWidget* DockWidget : Column)
+			{
+				// the limits the dock layout itself uses
+				const QWidgetItem Item(DockWidget);
+				mDockDragColumn.append(DockWidget);
+				mDockDragHeights.append(DockWidget->height());
+				mDockDragMinimums.append(Item.minimumSize().height());
+				mDockDragMaximums.append(Item.maximumSize().height());
+			}
 
-			if (Vertical)
-				DockWidget->setFixedHeight(DockWidget->height());
-			else
-				DockWidget->setFixedWidth(DockWidget->width());
+			mDockDragGap = Gap;
+			mDockDragStart = Position.y();
+			mDockDragBottom = Bottom;
+			mDockDragViewSpare = qMax(0, CentralWidget->height() - CentralWidget->minimumSizeHint().height());
+			return true;
 		}
-
-		return;
 	}
+
+	return false;
 }
 
-void swMainWindow::UnlockDockEdge()
+void swMainWindow::MoveDockDrag(int Position)
 {
-	for (const swDockLock& DockLock : mDockLocks)
-	{
-		if (!DockLock.DockWidget)
-			continue;
+	QVector<int> Heights = mDockDragHeights;
+	const int Count = Heights.size();
+	const int Delta = Position - mDockDragStart;
+	const bool Up = Delta < 0;
 
-		DockLock.DockWidget->setMinimumSize(DockLock.MinimumSize);
-		DockLock.DockWidget->setMaximumSize(DockLock.MaximumSize);
+	// the panel behind the divider grows
+	const int Grower = Up ? (mDockDragGap < Count ? mDockDragGap : -1) : mDockDragGap - 1;
+	int Wanted = qAbs(Delta);
+
+	if (Grower >= 0)
+		Wanted = qMin(Wanted, qMax(0, mDockDragMaximums[Grower] - Heights[Grower]));
+
+	// panels ahead give way, nearest first, then the view
+	int Rest = Wanted;
+	const int Step = Up ? -1 : 1;
+
+	for (int Index = Up ? mDockDragGap - 1 : mDockDragGap; Rest > 0 && Index >= 0 && Index < Count; Index += Step)
+	{
+		const int Give = qMin(Rest, qMax(0, Heights[Index] - mDockDragMinimums[Index]));
+		Heights[Index] -= Give;
+		Rest -= Give;
 	}
 
-	mDockLocks.clear();
+	if (Rest > 0 && mDockDragBottom == Up)
+		Rest -= qMin(Rest, mDockDragViewSpare);
+
+	if (Grower >= 0)
+		Heights[Grower] += Wanted - Rest;
+
+	QList<QDockWidget*> DockWidgets;
+	QList<int> Sizes;
+
+	for (int Index = 0; Index < Count; Index++)
+	{
+		if (!mDockDragColumn[Index])
+			return;
+
+		DockWidgets.append(mDockDragColumn[Index]);
+		Sizes.append(Heights[Index]);
+	}
+
+	resizeDocks(DockWidgets, Sizes, Qt::Vertical);
 }
 
 bool swMainWindow::eventFilter(QObject* Object, QEvent* Event)
@@ -357,11 +390,25 @@ bool swMainWindow::eventFilter(QObject* Object, QEvent* Event)
 		QTimer::singleShot(0, this, &swMainWindow::SnapPartsDock);
 	}
 
-	// area edge grows one panel
-	if (Object == this && Event->type() == QEvent::MouseButtonPress && static_cast<QMouseEvent*>(Event)->button() == Qt::LeftButton)
-		LockDockEdge(static_cast<QMouseEvent*>(Event)->pos());
-	else if (Event->type() == QEvent::MouseButtonRelease && !mDockLocks.isEmpty())
-		UnlockDockEdge();
+	// dividers grow only the panel behind them
+	if (Object == this && Event->type() == QEvent::MouseButtonPress && static_cast<QMouseEvent*>(Event)->button() == Qt::LeftButton && StartDockDrag(static_cast<QMouseEvent*>(Event)->pos()))
+		return true;
+
+	if (mDockDragGap >= 0 && Event->type() == QEvent::MouseMove && Object == this)
+	{
+		MoveDockDrag(static_cast<QMouseEvent*>(Event)->pos().y());
+		return true;
+	}
+
+	if (mDockDragGap >= 0 && Event->type() == QEvent::MouseButtonRelease)
+	{
+		mDockDragGap = -1;
+		mDockDragColumn.clear();
+		mDockDragHeights.clear();
+		mDockDragMinimums.clear();
+		mDockDragMaximums.clear();
+		return true;
+	}
 
 	// drop kde accelerators
 	if (Event->type() == QEvent::WindowTitleChange)
