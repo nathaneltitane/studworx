@@ -5658,14 +5658,24 @@ File format is not recognized.</source>
 <context>
     <name>QDockWidget</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1260"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1355"/>
         <source>Float</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1264"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1359"/>
         <source>Close</source>
         <translation type="unfinished">Закрити</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1399"/>
+        <source>Expand</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1399"/>
+        <source>Collapse</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6835,17 +6845,17 @@ File format is not recognized.</source>
         <translation type="obsolete">Помилка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1612"/>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1618"/>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1636"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1731"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1737"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1755"/>
         <source>Stop Blender Process</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">Зупинити процес Blender</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1612"/>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1618"/>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1636"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1731"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1737"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1755"/>
         <source>%1 failed: %2</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">%1 не вдалося: %2</translation>
@@ -12164,7 +12174,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">8x {1?}</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -12174,7 +12184,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">8x {2?}</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -12184,7 +12194,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">8x {3?}</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -13774,25 +13784,25 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swColorDialogPopup</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1812"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1931"/>
         <source>Choose Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть колір</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1813"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1932"/>
         <source>&lt;p&gt;&lt;b&gt;Choose Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pick a color using the swatches or enter its component values. Choose OK to use the selected color, or Cancel to keep the original color. Editing the controls alone does not apply the color.&lt;/p&gt;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Виберіть колір&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть колір за допомогою зразків або введіть значення його компонентів. Виберіть «ОК», щоб використовувати вибраний колір, або «Скасувати», щоб зберегти вихідний колір. Лише редагування елементів керування не застосовує колір.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1839"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1958"/>
         <source>Custom Color</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Спеціальний колір</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1840"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1959"/>
         <source>Choose a color or enter its component values.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть колір або введіть його складові значення.</translation>
@@ -17907,7 +17917,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1914"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="2033"/>
         <source>Transparent</source>
         <translation type="unfinished"></translation>
     </message>
@@ -18660,7 +18670,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1076"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1084"/>
         <source>&lt;p&gt;&lt;b&gt;Timeline&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -18673,7 +18683,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Шарніри&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Шарнір, вибраний на вибраній підмоделі, з його віссю, і дерево кожної моделі із шарнірами, її підмоделей із шарнірами та їхніх шарнірів. Виберіть шарнір, щоб перемістити чи повернути його, а видаліть його, щоб повернути у стан спокою.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1135"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1143"/>
         <source>Poses</source>
         <translation type="unfinished"></translation>
     </message>
@@ -18682,7 +18692,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Пози&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Пози моделі, вибраної на панелі шарнірів. Збережіть кути шарнірів як іменовану позу, а потім відновіть, перейменуйте чи видаліть її. Пози зберігаються разом із моделлю.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1144"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1152"/>
         <source>Keyframes</source>
         <translation type="unfinished">Ключові кадри</translation>
     </message>
@@ -18925,7 +18935,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Введіть трансляцію Z в одиницях LDraw або поворот у градусах.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1074"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1082"/>
         <source>Timeline</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Хронологія</translation>
@@ -18936,17 +18946,17 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Часова шкала&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть крок, щоб зробити його поточним, або виберіть рядки частин, щоб вибрати ці частини в моделі. Перетягуйте частини між кроками або змінюйте їх порядок у межах кроку. Клацніть правою кнопкою миші для поетапного вставлення, видалення, переміщення та команд видимості.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1095"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1103"/>
         <source>Minifigure Builder</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1113"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1121"/>
         <source>Explode</source>
         <translation type="unfinished">Розсунути</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1126"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1134"/>
         <source>Joints</source>
         <translation type="unfinished">Шарніри</translation>
     </message>
@@ -18973,38 +18983,38 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Попередній перегляд&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перегляньте деталь, не поміщаючи її в модель. Двічі клацніть деталь у док-станції Parts, щоб переглянути його. Lock Preview зберігає поточний попередній перегляд, коли змінюється вибір джерела; розблокуйте його, щоб дозволити оновлення.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1196"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1204"/>
         <source>Asset loading failed</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося завантажити ресурс</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="408"/>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="504"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="570"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="666"/>
         <source>Could not load part.</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося завантажити деталь.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="430"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="592"/>
         <source>Could not generate geometry.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося створити геометрію.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="444"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="606"/>
         <source>Regenerating synthesized part geometry.</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">Повторне створення геометрії синтезованих деталей.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="446"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="608"/>
         <source>Loading model parts (%1 / %2).</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">Завантаження деталей моделі (%1 / %2).</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="453"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="615"/>
         <source>The model could not be fully loaded. Some parts may be missing.
 
 %1</source>
@@ -19017,7 +19027,7 @@ Choose where to save it and download the latest %3 now?</source>
 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="688"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="850"/>
         <source>Close Other Tabs</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Закрийте інші вкладки</translation>
@@ -19077,7 +19087,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="792"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="954"/>
         <source>Export HTML</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Експорт HTML</translation>
@@ -19088,19 +19098,19 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">POV-Ray Експорт</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="999"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1161"/>
         <source>Save Image</source>
         <translatorcomment>Draft reused from an existing translation of this source text; requires review in this context.</translatorcomment>
         <translation type="unfinished">Зберегти зображення</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1011"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1173"/>
         <source>Nothing to select.</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Нічого для вибору.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1011"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1173"/>
         <source>Select Objects</source>
         <translatorcomment>Draft reused from an existing translation of this source text; requires review in this context.</translatorcomment>
         <translation type="unfinished">Виділити об&apos;єкти</translation>
@@ -19361,87 +19371,87 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="501"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="663"/>
         <source>Found through BrickLink number %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="509"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="671"/>
         <source>Marked as an alias in the parts library.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="510"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="672"/>
         <source>The part the alias stands for</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="515"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="677"/>
         <source>Marked as moved in the parts library.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="516"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="678"/>
         <source>The part it moved to</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="800"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="962"/>
         <source>Export POV-Ray</source>
         <translation type="unfinished">Експортувати POV-Ray</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="885"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1047"/>
         <source>Print</source>
         <translation type="unfinished">Роздрукувати</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="885"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1047"/>
         <source>Could not start the print job.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="918"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1080"/>
         <source>Preview...</source>
         <translation type="unfinished">Попередній перегляд...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1148"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1310"/>
         <source>Insert Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1150"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1312"/>
         <source>Current Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1151"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1313"/>
         <source>Selected Part Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1152"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1314"/>
         <source>Last Inserted Part Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1154"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1316"/>
         <source>Lock Parts Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1202"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1364"/>
         <source>Custom Rotation Snap</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1202"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1364"/>
         <source>Snap angle in degrees</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1214"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1376"/>
         <source>Custom (%1 Degrees)...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -19510,7 +19520,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
         <source>%1, %2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1: %2 {1,?}</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
@@ -19785,7 +19795,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>0</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">8x {0?}</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
@@ -19838,7 +19848,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">8x {8S?}</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1178"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1340"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="146"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="152"/>
         <source>None</source>
@@ -19921,31 +19931,31 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="unfinished">Ортографічна</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1220"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1228"/>
         <source>Selection</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виділення</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1221"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1229"/>
         <source>View Orientation</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Орієнтація вигляду</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1222"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1230"/>
         <source>Position</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Положення</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1223"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1231"/>
         <source>Snap and Transform</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Прив’язка та перетворення</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1224"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1232"/>
         <source>Step</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Крок</translation>

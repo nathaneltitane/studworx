@@ -1243,6 +1243,98 @@ protected:
 	}
 };
 
+// use to fold a docked panel to its title or open it back
+static void swToggleDockFolded(QDockWidget* DockWidget)
+{
+	QMainWindow* MainWindow = qobject_cast<QMainWindow*>(DockWidget->parentWidget());
+
+	if (!MainWindow || DockWidget->isFloating())
+		return;
+
+	// the panels stacked in its column
+	const Qt::DockWidgetArea Area = MainWindow->dockWidgetArea(DockWidget);
+	const int Across = DockWidget->geometry().center().x();
+	QList<QDockWidget*> Line;
+
+	for (QDockWidget* Other : MainWindow->findChildren<QDockWidget*>(QString(), Qt::FindDirectChildrenOnly))
+		if (Other->isVisible() && !Other->isFloating() && MainWindow->dockWidgetArea(Other) == Area && Across >= Other->geometry().left() && Across <= Other->geometry().right())
+			Line.append(Other);
+
+	std::sort(Line.begin(), Line.end(), [](QDockWidget* First, QDockWidget* Second) { return First->y() < Second->y(); });
+
+	const int Folded = DockWidget->minimumSizeHint().height();
+	const int Size = DockWidget->height();
+	const bool Fold = Size > Folded;
+	int Target = Folded;
+
+	if (Fold)
+		DockWidget->setProperty("swDockOpenHeight", Size);
+	else
+	{
+		QWidget* Content = DockWidget->widget();
+		const int Remembered = DockWidget->property("swDockOpenHeight").toInt();
+		Target = Remembered > Folded ? Remembered : Folded + (Content ? Content->sizeHint().height() : 0);
+		Target = qMin(Target, DockWidget->maximumHeight());
+	}
+
+	// the view takes or gives first, then the far panels inward
+	QWidget* CentralWidget = MainWindow->centralWidget();
+	const bool ViewInLine = Area == Qt::TopDockWidgetArea || Area == Qt::BottomDockWidgetArea;
+	const int Index = Line.indexOf(DockWidget);
+	QList<int> Heights;
+
+	for (QDockWidget* Other : Line)
+		Heights.append(Other->height());
+
+	int Rest = qAbs(Target - Size);
+
+	if (ViewInLine)
+		Rest -= Fold ? Rest : qMin(Rest, CentralWidget ? qMax(0, CentralWidget->height() - CentralWidget->minimumSizeHint().height()) : 0);
+
+	// folding drops the title onto the panels below, the open panel above grows
+	QList<int> Order;
+
+	if (Fold)
+	{
+		for (int Other = Index - 1; Other >= 0; Other--)
+			Order.append(Other);
+
+		for (int Other = Index + 1; Other < Line.size(); Other++)
+			Order.append(Other);
+	}
+	else
+	{
+		const bool Below = Index < Line.size() - 1;
+
+		for (int Other = Below ? Line.size() - 1 : 0; Other >= 0 && Other < Line.size(); Other += Below ? -1 : 1)
+			if (Other != Index)
+				Order.append(Other);
+	}
+
+	// folded panels stay folded unless nothing else takes the space
+	for (int Pass = 0; Pass < 2 && Rest > 0; Pass++)
+	{
+		for (int Other : Order)
+		{
+			if (Rest <= 0)
+				break;
+
+			const int Minimum = Line[Other]->minimumSizeHint().height();
+
+			if (Fold && Pass == 0 && Heights[Other] <= Minimum)
+				continue;
+
+			const int Room = Fold ? Line[Other]->maximumHeight() - Heights[Other] : Heights[Other] - Minimum;
+			const int Move = qMin(Rest, qMax(0, Room));
+			Heights[Other] += Fold ? Move : -Move;
+			Rest -= Move;
+		}
+	}
+
+	Heights[Index] = Fold ? Size - (qAbs(Target - Size) - Rest) : Size + (qAbs(Target - Size) - Rest);
+	MainWindow->resizeDocks(Line, Heights, Qt::Vertical);
+}
+
 // use to give panels one title bar, docked and floating
 // platform frames of floating panels ignore the color theme
 class swDockTitleBar : public QWidget
@@ -1256,6 +1348,9 @@ public:
 		Layout->setSpacing(2);
 		Layout->addStretch(1);
 
+		QToolButton* FoldButton = new swDockTitleButton(swPaintedIcon::ArrowDown, this);
+		Layout->addWidget(FoldButton);
+
 		QToolButton* FloatButton = new swDockTitleButton(swPaintedIcon::Undock, this);
 		FloatButton->setToolTip(QDockWidget::tr("Float"));
 		Layout->addWidget(FloatButton);
@@ -1264,6 +1359,7 @@ public:
 		CloseButton->setToolTip(QDockWidget::tr("Close"));
 		Layout->addWidget(CloseButton);
 
+		connect(FoldButton, &QToolButton::clicked, DockWidget, [DockWidget]() { swToggleDockFolded(DockWidget); });
 		connect(FloatButton, &QToolButton::clicked, DockWidget, [DockWidget]() { DockWidget->setFloating(!DockWidget->isFloating()); });
 		connect(CloseButton, &QToolButton::clicked, DockWidget, &QDockWidget::close);
 		connect(DockWidget, &QDockWidget::windowTitleChanged, this, QOverload<>::of(&QWidget::update));
@@ -1276,6 +1372,11 @@ public:
 
 		UpdateButtons(DockWidget->features());
 		connect(DockWidget, &QDockWidget::featuresChanged, this, UpdateButtons);
+
+		mFoldButton = FoldButton;
+		UpdateFoldButton();
+		connect(DockWidget, &QDockWidget::topLevelChanged, this, [this]() { UpdateFoldButton(); });
+		DockWidget->installEventFilter(this);
 	}
 
 	QSize sizeHint() const override
@@ -1289,6 +1390,23 @@ public:
 	}
 
 protected:
+	// the chevron follows the panel height
+	void UpdateFoldButton()
+	{
+		const bool Folded = mDockWidget->height() <= mDockWidget->minimumSizeHint().height();
+		mFoldButton->setVisible(!mDockWidget->isFloating());
+		mFoldButton->setIcon(swCreatePaintedIcon(Folded ? swPaintedIcon::ArrowUp : swPaintedIcon::ArrowDown));
+		mFoldButton->setToolTip(Folded ? QDockWidget::tr("Expand") : QDockWidget::tr("Collapse"));
+	}
+
+	bool eventFilter(QObject* Object, QEvent* Event) override
+	{
+		if (Object == mDockWidget && Event->type() == QEvent::Resize)
+			UpdateFoldButton();
+
+		return QWidget::eventFilter(Object, Event);
+	}
+
 	void paintEvent(QPaintEvent*) override
 	{
 		QPainter Painter(this);
@@ -1306,6 +1424,7 @@ protected:
 	}
 
 	QDockWidget* mDockWidget;
+	QToolButton* mFoldButton = nullptr;
 };
 
 QWidget* swCreateDockTitleBar(QDockWidget* DockWidget)
@@ -2550,6 +2669,14 @@ static void swDrawPaintedIcon(QPainter* Painter, swPaintedIcon Icon, const QSize
 
 	case swPaintedIcon::ArrowRight:
 		Draw.Stroke(swCreateIconLine({ { 8, 4 }, { 17, 12 }, { 8, 20 } }));
+		break;
+
+	case swPaintedIcon::ArrowUp:
+		Draw.Stroke(swCreateIconLine({ { 4, 16 }, { 12, 7 }, { 20, 16 } }));
+		break;
+
+	case swPaintedIcon::ArrowDown:
+		Draw.Stroke(swCreateIconLine({ { 4, 8 }, { 12, 17 }, { 20, 8 } }));
 		break;
 
 	case swPaintedIcon::Undock:

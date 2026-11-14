@@ -216,6 +216,8 @@ enum class swPaintedIcon
 	Download,
 	ArrowLeft,
 	ArrowRight,
+	ArrowUp,
+	ArrowDown,
 	Count
 };
 
