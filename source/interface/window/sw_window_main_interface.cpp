@@ -905,7 +905,7 @@ void swMainWindow::CreateToolBars()
 		if (Strip)
 			mColorsToolBar->setMaximumWidth(QWIDGETSIZE_MAX);
 
-		mColorsToolBar->setSizePolicy(Strip ? QSizePolicy::Expanding : QSizePolicy::Maximum, QSizePolicy::Maximum);
+		mColorsToolBar->setSizePolicy(Strip ? QSizePolicy::Expanding : QSizePolicy::Maximum, Strip ? QSizePolicy::Expanding : QSizePolicy::Maximum);
 		mColorList->setSizePolicy(Strip ? QSizePolicy::Expanding : QSizePolicy::Preferred, QSizePolicy::Fixed);
 		mColorButton->setSizePolicy(Strip ? QSizePolicy::Fixed : QSizePolicy::Expanding, QSizePolicy::Fixed);
 		ColorLeftButton->setVisible(Strip);

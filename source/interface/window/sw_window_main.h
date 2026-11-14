@@ -454,6 +454,10 @@ protected:
 	QPointer<swRenderDialog> mPOVRayDialog;
 	QPointer<swRenderDialog> mBlenderDialog;
 	bool mPartsSnapPending = false;
+	struct swDockLock { QPointer<QDockWidget> DockWidget; QSize MinimumSize; QSize MaximumSize; };
+	QVector<swDockLock> mDockLocks;
+	void LockDockEdge(const QPoint& Position);
+	void UnlockDockEdge();
 	bool mFitUpdatePending = false;
 	bool mPartsSnapRetried = false;
 	QSize mPartsSnapSize;

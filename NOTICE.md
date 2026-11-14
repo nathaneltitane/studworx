@@ -15,6 +15,8 @@
   - Colors: undocked, every group starts folded, and the panel grows and shrinks with the groups you open, without shaking or a flickering scroll bar
   - Panels: a panel dragged out by its title follows its contents again, even when the window manager first ignores its new size
   - Colors: putting the panel back no longer makes the Terminal and Keyframes panels taller
+  - Colors: docked, the strip opens back up when you drag the divider above it, like the other panels
+  - Panels: dragging the edge between the view and a row of panels opens only the panel next to it, the others stay as they are
   - Translations: the new Colors arrow tooltips and help text are added to every language, waiting to be translated
 
   </details>

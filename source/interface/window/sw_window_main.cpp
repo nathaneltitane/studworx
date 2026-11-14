@@ -209,6 +209,85 @@ void swMainWindow::CreatePreviewWidget()
 	}
 }
 
+void swMainWindow::LockDockEdge(const QPoint& Position)
+{
+	UnlockDockEdge();
+	QWidget* CentralWidget = centralWidget();
+
+	if (!CentralWidget)
+		return;
+
+	// the grab zone reaches past the gap
+	const int Margin = qMax(4, style()->pixelMetric(QStyle::PM_DockWidgetSeparatorExtent, nullptr, this));
+	const QRect CentralRect = CentralWidget->geometry();
+
+	for (Qt::DockWidgetArea Area : { Qt::TopDockWidgetArea, Qt::BottomDockWidgetArea, Qt::LeftDockWidgetArea, Qt::RightDockWidgetArea })
+	{
+		const bool Vertical = Area == Qt::TopDockWidgetArea || Area == Qt::BottomDockWidgetArea;
+		const bool Far = Area == Qt::BottomDockWidgetArea || Area == Qt::RightDockWidgetArea;
+		QVector<QDockWidget*> DockWidgets;
+		QRect AreaRect;
+
+		for (QDockWidget* DockWidget : findChildren<QDockWidget*>(QString(), Qt::FindDirectChildrenOnly))
+		{
+			if (DockWidget->isVisible() && !DockWidget->isFloating() && dockWidgetArea(DockWidget) == Area)
+			{
+				DockWidgets.append(DockWidget);
+				AreaRect |= DockWidget->geometry();
+			}
+		}
+
+		if (DockWidgets.isEmpty())
+			continue;
+
+		// the gap between view and area
+		const int Point = Vertical ? Position.y() : Position.x();
+		const int Across = Vertical ? Position.x() : Position.y();
+		const int Start = Vertical ? (Far ? CentralRect.bottom() : AreaRect.bottom()) : (Far ? CentralRect.right() : AreaRect.right());
+		const int End = Vertical ? (Far ? AreaRect.top() : CentralRect.top()) : (Far ? AreaRect.left() : CentralRect.left());
+		const int AcrossStart = Vertical ? AreaRect.left() : AreaRect.top();
+		const int AcrossEnd = Vertical ? AreaRect.right() : AreaRect.bottom();
+
+		if (Point < Start - Margin || Point > End + Margin || Across < AcrossStart || Across > AcrossEnd)
+			continue;
+
+		// panels away from the edge hold still
+		const int Edge = Far ? End + 1 : Start - 1;
+
+		for (QDockWidget* DockWidget : DockWidgets)
+		{
+			const QRect Rect = DockWidget->geometry();
+			const int Near = Vertical ? (Far ? Rect.top() : Rect.bottom()) : (Far ? Rect.left() : Rect.right());
+
+			if (qAbs(Near - Edge) <= 1)
+				continue;
+
+			mDockLocks.append({ DockWidget, DockWidget->minimumSize(), DockWidget->maximumSize() });
+
+			if (Vertical)
+				DockWidget->setFixedHeight(DockWidget->height());
+			else
+				DockWidget->setFixedWidth(DockWidget->width());
+		}
+
+		return;
+	}
+}
+
+void swMainWindow::UnlockDockEdge()
+{
+	for (const swDockLock& DockLock : mDockLocks)
+	{
+		if (!DockLock.DockWidget)
+			continue;
+
+		DockLock.DockWidget->setMinimumSize(DockLock.MinimumSize);
+		DockLock.DockWidget->setMaximumSize(DockLock.MaximumSize);
+	}
+
+	mDockLocks.clear();
+}
+
 bool swMainWindow::eventFilter(QObject* Object, QEvent* Event)
 {
 	// the warning icon opens the parts not loaded
@@ -277,6 +356,12 @@ bool swMainWindow::eventFilter(QObject* Object, QEvent* Event)
 		mPartsSnapPending = false;
 		QTimer::singleShot(0, this, &swMainWindow::SnapPartsDock);
 	}
+
+	// area edge grows one panel
+	if (Object == this && Event->type() == QEvent::MouseButtonPress && static_cast<QMouseEvent*>(Event)->button() == Qt::LeftButton)
+		LockDockEdge(static_cast<QMouseEvent*>(Event)->pos());
+	else if (Event->type() == QEvent::MouseButtonRelease && !mDockLocks.isEmpty())
+		UnlockDockEdge();
 
 	// drop kde accelerators
 	if (Event->type() == QEvent::WindowTitleChange)
