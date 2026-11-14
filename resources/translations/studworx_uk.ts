@@ -19427,7 +19427,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">%1 (ID: %2)</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="172"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="173"/>
         <source>%n objects selected</source>
         <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
         <translation type="unfinished">
@@ -19442,107 +19442,107 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete"> - %1 (ID: %2)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="202"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="203"/>
         <source> in group &apos;%1&apos;</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished"> в групі &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="235"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="236"/>
         <source>Part</source>
         <translation type="unfinished">Блок</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="237"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="238"/>
         <source>Camera</source>
         <translation type="unfinished">Камера</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="239"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="240"/>
         <source>Light</source>
         <translation type="unfinished">світло</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="241"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="242"/>
         <source>Origin</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="243"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="244"/>
         <source>%1 X: %2 Y: %3 Z: %4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="327"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="328"/>
         <source>Step %1</source>
         <translation type="unfinished">Крок %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="372"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
         <source>free</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="372"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
         <source>%1, %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
         <source>relative</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
         <source>absolute</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
         <source>%1 deg.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="376"/>
         <source>separately</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="376"/>
         <source>together</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="377"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="378"/>
         <source>Move: %1 - Axes: %2 - Rotate: %3 / %4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="379"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="380"/>
         <source>Movement snap, rotation snap, transform axes and rotation pivot. Change them with the last buttons of the standard toolbar.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="406"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="407"/>
         <source>&amp;Undo %1</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Скасувати %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="411"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="412"/>
         <source>&amp;Undo</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Скасувати</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="417"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="418"/>
         <source>&amp;Redo %1</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Повторити %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="422"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="423"/>
         <source>&amp;Redo</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Повторити</translation>
@@ -19852,46 +19852,46 @@ Choose where to save it and download the latest %3 now?</source>
         </translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="284"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="285"/>
         <source>View: %1 deg. Lat. / %2 deg. Lon. / %3</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вигляд: %1 град. шир. / %2 град. довг. / %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="283"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="284"/>
         <source>Perspective</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перспектива</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="166"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="167"/>
         <source>%1 - ID: %2 - Weight: %3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="166"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="191"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="198"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="167"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="192"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="199"/>
         <source>N/A</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="194"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="195"/>
         <source>%1 g Total</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="196"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="197"/>
         <source>%1 g</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="198"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="199"/>
         <source> - %1 - ID: %2 - Weight: %3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="283"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="284"/>
         <source>Orthographic</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ортографічна</translation>
@@ -20474,108 +20474,108 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swMissingPartsDialog</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="44"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="45"/>
         <source>Part</source>
         <translation type="unfinished">Блок</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="44"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="45"/>
         <source>Replacement</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="52"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="53"/>
         <source>Check the parts to replace with the part found in the library.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="23"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="51"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="24"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="52"/>
         <source>Missing and Moved Parts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="24"/>
-        <source>&lt;p&gt;&lt;b&gt;Missing and Moved Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Lists the parts of the model that could not be loaded, shown as red-outlined placeholder bricks in the model view, and the parts the library marks as moved (~Moved to) or as an alias (=) of another part.&lt;/p&gt;&lt;p&gt;A missing part is looked up through the BrickLink mapping file set under Preferences &amp;gt; General &amp;gt; Reference Paths, for parts the library now files under another number. A moved part or an alias is offered the part it points to. Replace Checked swaps the checked parts in every submodel, keeping their colors and positions. It can be undone and the file changes only when saved.&lt;/p&gt;&lt;p&gt;The warning can be turned off under Preferences &amp;gt; General &amp;gt; Files, File &amp;gt; Missing and Moved Parts and the status bar icon open this list again.&lt;/p&gt;</source>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="25"/>
+        <source>&lt;p&gt;&lt;b&gt;Missing and Moved Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Lists the parts of the model that could not be loaded, shown as red-outlined placeholder bricks in the model view, and the parts the library marks as moved (~Moved to) or as an alias (=) of another part.&lt;/p&gt;&lt;p&gt;A missing part is looked up through the BrickLink mapping file set under Preferences &amp;gt; General &amp;gt; Reference Paths, for parts the library now files under another number. A moved part or an alias is offered the part it points to. Replace Checked swaps the checked parts in every submodel, keeping their colors and positions, then saves the file. The swap can still be undone and saved again.&lt;/p&gt;&lt;p&gt;The warning can be turned off under Preferences &amp;gt; General &amp;gt; Files, File &amp;gt; Missing and Moved Parts and the status bar icon open this list again.&lt;/p&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="33"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="34"/>
         <source>1 part could not be loaded. It shows as a red-outlined placeholder brick until replaced.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="33"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="34"/>
         <source>%1 parts could not be loaded. They show as red-outlined placeholder bricks until replaced.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="36"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="37"/>
         <source>1 part is marked as moved or as an alias in the parts library.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="36"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="37"/>
         <source>%1 parts are marked as moved or as an alias in the parts library.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="81"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="82"/>
         <source>Used inside a library part, it can not be replaced here</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="81"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="82"/>
         <source>No replacement found</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="88"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="89"/>
         <source>Don&apos;t Warn Again</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="90"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="91"/>
         <source>Stop showing this list when a model opens, the status bar icon still opens it.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="94"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="95"/>
         <source>Copy List</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="95"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="96"/>
         <source>Copy the list of parts not loaded to the clipboard.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="96"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="97"/>
         <source>Replace Checked</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="97"/>
-        <source>Replace the checked parts in every submodel, it can be undone.</source>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="98"/>
+        <source>Replace the checked parts in every submodel and save the file, it can be undone.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="131"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="132"/>
         <source>%1× in %2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="133"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="134"/>
         <source>Used inside a library part</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="133"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="134"/>
         <source>Used %1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="182"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_missing_parts.cpp" line="188"/>
         <source>, replacement %1</source>
         <translation type="unfinished"></translation>
     </message>

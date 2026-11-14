@@ -6,6 +6,7 @@
 #include "sw_library.h"
 #include "sw_project.h"
 #include "sw_model.h"
+#include "sw_window_main.h"
 
 // parts table columns
 enum swMissingPartsColumn
@@ -21,7 +22,7 @@ swMissingPartsDialog::swMissingPartsDialog(QWidget* Parent, std::vector<swMissin
 	const int PartCount = static_cast<int>(mMissingParts.size());
 
 	setWindowTitle(tr("Missing and Moved Parts"));
-	setWhatsThis(tr("<p><b>Missing and Moved Parts</b></p><p>Lists the parts of the model that could not be loaded, shown as red-outlined placeholder bricks in the model view, and the parts the library marks as moved (~Moved to) or as an alias (=) of another part.</p><p>A missing part is looked up through the BrickLink mapping file set under Preferences &gt; General &gt; Reference Paths, for parts the library now files under another number. A moved part or an alias is offered the part it points to. Replace Checked swaps the checked parts in every submodel, keeping their colors and positions. It can be undone and the file changes only when saved.</p><p>The warning can be turned off under Preferences &gt; General &gt; Files, File &gt; Missing and Moved Parts and the status bar icon open this list again.</p>"));
+	setWhatsThis(tr("<p><b>Missing and Moved Parts</b></p><p>Lists the parts of the model that could not be loaded, shown as red-outlined placeholder bricks in the model view, and the parts the library marks as moved (~Moved to) or as an alias (=) of another part.</p><p>A missing part is looked up through the BrickLink mapping file set under Preferences &gt; General &gt; Reference Paths, for parts the library now files under another number. A moved part or an alias is offered the part it points to. Replace Checked swaps the checked parts in every submodel, keeping their colors and positions, then saves the file. The swap can still be undone and saved again.</p><p>The warning can be turned off under Preferences &gt; General &gt; Files, File &gt; Missing and Moved Parts and the status bar icon open this list again.</p>"));
 
 	QVBoxLayout* MainLayout = new QVBoxLayout(this);
 
@@ -94,7 +95,7 @@ swMissingPartsDialog::swMissingPartsDialog(QWidget* Parent, std::vector<swMissin
 	QPushButton* CopyButton = ButtonBox->addButton(tr("Copy List"), QDialogButtonBox::ActionRole);
 	CopyButton->setToolTip(tr("Copy the list of parts not loaded to the clipboard."));
 	mReplaceButton = ButtonBox->addButton(tr("Replace Checked"), QDialogButtonBox::AcceptRole);
-	mReplaceButton->setToolTip(tr("Replace the checked parts in every submodel, it can be undone."));
+	mReplaceButton->setToolTip(tr("Replace the checked parts in every submodel and save the file, it can be undone."));
 	MainLayout->addWidget(ButtonBox);
 
 	connect(ButtonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
@@ -168,6 +169,11 @@ void swMissingPartsDialog::ReplaceChecked()
 		MainModel->ReplacePartData(Replacements);
 
 	accept();
+
+	// replacing is the approval to save
+
+	if (MainModel && !Replacements.empty())
+		gMainWindow->mActions[SW_FILE_SAVE]->trigger();
 }
 
 void swMissingPartsDialog::CopyList()
