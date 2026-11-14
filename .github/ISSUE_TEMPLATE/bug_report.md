@@ -25,7 +25,7 @@ If applicable, add screenshots to help explain your problem.
 
 **Version (please complete the following information):**
  - OS: [e.g. Windows 10, Ubuntu, macOS]
- - StudWorx Version [e.g. 2026-11-13]
+ - StudWorx Version [e.g. 2026-11-14]
 
 **Crash information:**
 Some versions of StudWorx will show a message that they saved a minidump file when they crash, if you see this message please attach the file.

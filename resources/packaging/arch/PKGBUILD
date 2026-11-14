@@ -1,7 +1,7 @@
 # Maintainer: Peter Bartfai <pbartfai[at]stardust[dot]hu>
 
 pkgname=studworx
-pkgver=20261113
+pkgver=20261114
 pkgrel=1
 pkgdesc="StudWorx: LDraw / LEGO® model builder"
 url="https://github.com/nathaneltitane/studworx"

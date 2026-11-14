@@ -32,7 +32,7 @@
 					"description": "StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library.",
 					"applicationCategory": "DesignApplication",
 					"operatingSystem": "Linux, Windows, macOS",
-					"softwareVersion": "2026-11-13",
+					"softwareVersion": "2026-11-14",
 					"license": "https://www.gnu.org/licenses/gpl-3.0.html",
 					"downloadUrl": "https://github.com/nathaneltitane/studworx/releases/latest",
 					"image": "https://studworx.app/resources/social/social.png",
@@ -3486,11 +3486,11 @@
 					</thead>
 
 					<tbody>
-						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-13_amd64.deb / arm64.deb</td></tr>
-						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-13-x86_64.rpm / aarch64.rpm</td></tr>
-						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-13-x86_64.appimage / aarch64.appimage</td></tr>
-						<tr><td>Windows</td><td>studworx-windows-2026-11-13-x64.exe</td></tr>
-						<tr><td>macOS</td><td>studworx-macos-2026-11-13-universal.dmg</td></tr>
+						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-14_amd64.deb / arm64.deb</td></tr>
+						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-14-x86_64.rpm / aarch64.rpm</td></tr>
+						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-14-x86_64.appimage / aarch64.appimage</td></tr>
+						<tr><td>Windows</td><td>studworx-windows-2026-11-14-x64.exe</td></tr>
+						<tr><td>macOS</td><td>studworx-macos-2026-11-14-universal.dmg</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -3543,6 +3543,17 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p class="lead">The latest release notices from the StudWorx repository.</p>
 
 			<details open>
+				<summary>2026-11-14</summary>
+
+				<ul>
+					<li><a href="#preferences">Preferences</a>: a new Show Connection Points setting under Use Part Connections turns the green connection marks on or off</li>
+					<li>Preferences: the Connection Points color moved to <a href="#steps">Steps</a> and Highlighting, and it can now be made see-through</li>
+					<li>Translations: the new Show Connection Points setting and its tooltip are added to every language, waiting to be translated</li>
+					<li>Site: the General and <a href="#interface">Interface</a> Preferences images are retaken to show the moved settings</li>
+				</ul>
+			</details>
+
+			<details>
 				<summary>2026-11-13</summary>
 
 				<ul>
@@ -3563,7 +3574,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Connections: a part grabbed by one of its studs or holes seats by that one, so a brick with studs on every side can go into a side hole by its top stud</li>
 					<li>Connections: the green connection marks follow the parts as they move, and hide while a part is dragged</li>
 					<li>Insert: a part dropped into empty space lands under the pointer, level with the model, instead of far away toward the horizon</li>
-					<li><a href="#preferences">Preferences</a>: Show Connection Points, under Use Part Connections, turns the connection marks on or off, and the Connection Points color moved to <a href="#steps">Steps</a> and Highlighting and takes transparency</li>
+					<li>Preferences: Show Connection Points, under Use Part Connections, turns the connection marks on or off, and the Connection Points color moved to Steps and Highlighting and takes transparency</li>
 					<li>Site: feature descriptions rewritten in plain words, saying what each feature does instead of listing its commands, now that the command index names them</li>
 				</ul>
 			</details>
@@ -3575,7 +3586,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li><a href="#views">Views</a>: the X, Y and Z axis lines draw on their own, the Grid Origin Lines setting is gone, and the negative Z line shows only once parts go below the base grid</li>
 					<li>Views: the base grid starts at 2 × 2 studs and the height grids one brick high, and they grow past the parts by a Grid Margin in studs and a Height Margin in plates</li>
 					<li>Views: Split Horizontal, Split Vertical and Remove View no longer crash when the model view doesn&#x27;t have keyboard focus</li>
-					<li>Preferences: <a href="#rendering">Rendering</a>, Views and <a href="#interface">Interface</a> sort their settings into clearer groups, the colors move to Interface, and color alpha is set in the color picker</li>
+					<li>Preferences: <a href="#rendering">Rendering</a>, Views and Interface sort their settings into clearer groups, the colors move to Interface, and color alpha is set in the color picker</li>
 					<li>Explode: the X, Y and Z spreads are multiples from 1.0 to 10.0 instead of percentages, and Explode is greyed out while every spread is 1.0</li>
 					<li>Keyframes: panel buttons are painted in the color theme and run the same commands as the Time toolbar, which gains Set Keys, Remove Keys, Play and Stop</li>
 					<li>Timeline: steps with animation keys list a Keys row per keyed object, and clicking an object in Keyframes or Timeline selects it in the model view</li>
@@ -3675,20 +3686,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				</ul>
 			</details>
 
-			<details>
-				<summary>2026-11-08</summary>
-
-				<ul>
-					<li>Steps: an opened model now starts on a new empty step after its last one, ready for new parts</li>
-					<li>Files: a Missing and Moved Parts list opens with a model whose parts could not be loaded or are marked as moved or as an alias, offering the part each one points to or its BrickLink mapping, replacing the checked ones in every submodel in one undo step, with Copy List, Don&#x27;t Warn Again, a status bar icon and the Warn About Missing and Moved Parts preference</li>
-					<li>Find and Replace: the bar floats over the view, its part list shows the parts in the colors they are used in with a flag on parts used in more than one color, a gear button sets how the part lists are filtered and shown, and Replace in Submodels makes Replace All reach every submodel</li>
-					<li>Views: Submodel Hover Outline draws a pastel cyan outline over the innermost submodel under the pointer, on top of the selection outline, with its color in the preferences</li>
-					<li>Joints: the right-click menu of the Joints tree moves, rotates or deletes a joint, or edits or deletes all joints of a submodel, a joint inside a submodel opens it in place, and the joint bar over the view selects its submodels or ends joint mode</li>
-					<li>Menus: snap and joint entries use full names, such as No XY Snap, XY 1/20 Stud, No Rotation Snap, Set Joint, Delete Joint and Joints Panel</li>
-					<li>Thumbnails: part thumbnail icon badges sit in the bottom right corner</li>
-				</ul>
-			</details>
-
 			<p class="more"><a href="https://github.com/nathaneltitane/studworx/blob/main/NOTICE.md">Read every notice ›</a></p>
 		</section>
 
@@ -3699,7 +3696,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p>LEGO® is a trademark of the LEGO® Group, which does not sponsor, authorize or endorse this project.</p>
 			<div class="authorship">
 				<a class="avatar" href="https://nathaneltitane.com" aria-label="N Λ T H Λ N E L"><img src="resources/avatar/avatar-bird.png" alt="" width="64" height="64"></a>
-				<p>Version // 2026-11-13<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
+				<p>Version // 2026-11-14<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
 			</div>
 		</div>
 

@@ -1,6 +1,16 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-14</summary>
+
+  - Preferences: a new Show Connection Points setting under Use Part Connections turns the green connection marks on or off
+  - Preferences: the Connection Points color moved to Steps and Highlighting, and it can now be made see-through
+  - Translations: the new Show Connection Points setting and its tooltip are added to every language, waiting to be translated
+  - Site: the General and Interface Preferences images are retaken to show the moved settings
+
+  </details>
+
+  <details>
   <summary>2026-11-13</summary>
 
   - Joints: an open Joints panel no longer turns off Highlight New Parts in the model view until a joint is picked
