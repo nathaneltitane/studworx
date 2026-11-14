@@ -2476,7 +2476,7 @@
 			</div>
 
 			<ul class="points">
-				<li><b>Emphasis.</b> Make the build easier to follow: highlight the new parts of each step, fade the earlier ones, fade the rest of the model while you edit a submodel or set a joint, outline the submodel under the pointer, and mark the connection points of the part you point at.</li>
+				<li><b>Emphasis.</b> Make the build easier to follow: highlight the new parts of each step, fade the earlier ones, fade the rest of the model while you edit a submodel or set a joint, outline the submodel under the pointer, and mark the connection points of the part you point at, in a see-through color if you like, or not at all.</li>
 				<li><b>Keyframes panel.</b> A full-width timeline of the animation, one column per step and one row per object, with a diamond for each key. Add, remove and drag keys, and play the animation from the panel or the Time toolbar.</li>
 				<li><b>Timeline.</b> Shows the step each part is added in and removed in. An empty removal step reads Never. Drag parts between steps or reorder them, and Set Current Step from a step&#x27;s right-click menu.</li>
 				<li><b>Keys in the Timeline.</b> Each step with animation keys lists a Keys row per keyed object naming its keyed properties, and a double click on it selects that object at that step and shows the Keyframes panel.</li>
@@ -3563,6 +3563,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Connections: a part grabbed by one of its studs or holes seats by that one, so a brick with studs on every side can go into a side hole by its top stud</li>
 					<li>Connections: the green connection marks follow the parts as they move, and hide while a part is dragged</li>
 					<li>Insert: a part dropped into empty space lands under the pointer, level with the model, instead of far away toward the horizon</li>
+					<li><a href="#preferences">Preferences</a>: Show Connection Points, under Use Part Connections, turns the connection marks on or off, and the Connection Points color moved to <a href="#steps">Steps</a> and Highlighting and takes transparency</li>
 					<li>Site: feature descriptions rewritten in plain words, saying what each feature does instead of listing its commands, now that the command index names them</li>
 				</ul>
 			</details>
@@ -3574,10 +3575,10 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li><a href="#views">Views</a>: the X, Y and Z axis lines draw on their own, the Grid Origin Lines setting is gone, and the negative Z line shows only once parts go below the base grid</li>
 					<li>Views: the base grid starts at 2 × 2 studs and the height grids one brick high, and they grow past the parts by a Grid Margin in studs and a Height Margin in plates</li>
 					<li>Views: Split Horizontal, Split Vertical and Remove View no longer crash when the model view doesn&#x27;t have keyboard focus</li>
-					<li><a href="#preferences">Preferences</a>: <a href="#rendering">Rendering</a>, Views and <a href="#interface">Interface</a> sort their settings into clearer groups, the colors move to Interface, and color alpha is set in the color picker</li>
+					<li>Preferences: <a href="#rendering">Rendering</a>, Views and <a href="#interface">Interface</a> sort their settings into clearer groups, the colors move to Interface, and color alpha is set in the color picker</li>
 					<li>Explode: the X, Y and Z spreads are multiples from 1.0 to 10.0 instead of percentages, and Explode is greyed out while every spread is 1.0</li>
 					<li>Keyframes: panel buttons are painted in the color theme and run the same commands as the Time toolbar, which gains Set Keys, Remove Keys, Play and Stop</li>
-					<li>Timeline: <a href="#steps">steps</a> with animation keys list a Keys row per keyed object, and clicking an object in Keyframes or Timeline selects it in the model view</li>
+					<li>Timeline: steps with animation keys list a Keys row per keyed object, and clicking an object in Keyframes or Timeline selects it in the model view</li>
 					<li>Samples: sample-train-tracks.ldr, an S-curve of 9V curved track joined at its train track connections</li>
 					<li>POV-Ray: the POV-Ray path shows in Preferences on Windows and macOS too, so any POV-Ray 3.7 console can replace the bundled one, which stays the fallback, and starts at the bundled console there in place of the Linux path</li>
 					<li>POV-Ray: Windows builds bundle a 64 bit POV-Ray console in place of the 32 bit one</li>

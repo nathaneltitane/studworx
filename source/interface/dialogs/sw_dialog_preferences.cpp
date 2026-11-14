@@ -469,6 +469,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->UnofficialLibraryEdit->setText(mOptions->UnofficialLibraryPath);
 	ui->ShadowLibraryEdit->setText(mOptions->ShadowLibraryPath);
 	ui->ShadowLibraryEnabled->setChecked(mOptions->Preferences.mShadowLibraryEnabled);
+	ui->ConnectionPoints->setChecked(mOptions->Preferences.mConnectionPoints);
 	ShadowLibraryEnabledToggled(mOptions->Preferences.mShadowLibraryEnabled);
 	ui->ColorConfigEdit->setText(mOptions->ColorConfigPath);
 	ui->ColorConfigAlternateEdit->setText(mOptions->ColorConfigAlternatePath);
@@ -906,6 +907,7 @@ void swPreferencesDialog::accept()
 	mOptions->UnofficialLibraryPath = ui->UnofficialLibraryEdit->text();
 	mOptions->ShadowLibraryPath = ui->ShadowLibraryEdit->text();
 	mOptions->Preferences.mShadowLibraryEnabled = ui->ShadowLibraryEnabled->isChecked();
+	mOptions->Preferences.mConnectionPoints = ui->ConnectionPoints->isChecked();
 	mOptions->MinifigureBuilderSettingsPath = ui->MinifigureBuilderSettingsEdit->text();
 	mOptions->BrickLinkMappingPath = ui->BrickLinkMappingEdit->text();
 	mOptions->ColorConfigPath = ui->ColorConfigEdit->text();
@@ -1138,6 +1140,7 @@ void swPreferencesDialog::ShadowLibraryEnabledToggled(bool Checked)
 {
 	ui->ShadowLibraryEdit->setEnabled(Checked);
 	ui->ShadowLibraryBrowseButton->setEnabled(Checked);
+	ui->ConnectionPoints->setEnabled(Checked);
 }
 
 void swPreferencesDialog::ColorConfigBrowseButtonClicked()
@@ -1379,6 +1382,7 @@ void swPreferencesDialog::ColorButtonClicked()
 	{
 		Color = &mOptions->Preferences.mConnectionPointColor;
 		Title = tr("Select Connection Points Color");
+		DialogOptions = QColorDialog::ShowAlphaChannel;
 	}
 	else if (Button == ui->TextHaloColorButton)
 	{

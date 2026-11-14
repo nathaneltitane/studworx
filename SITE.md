@@ -344,7 +344,7 @@ Every part belongs to a building step. Steps drive the model view, the instructi
 - **Step views.** Steps can turn the model to their own view angle, like the ROTSTEP command of MLCad, and the Timeline shows and edits them.
 - **Keys in the Timeline.** Each step with animation keys lists a Keys row per keyed object naming its keyed properties, and a double click on it selects that object at that step and shows the Keyframes panel.
 - **Step view commands.** Give each step its own view angle, so the model turns to show that step best as you go through them.
-- **Emphasis.** Make the build easier to follow: highlight the new parts of each step, fade the earlier ones, fade the rest of the model while you edit a submodel or set a joint, outline the submodel under the pointer, and mark the connection points of the part you point at.
+- **Emphasis.** Make the build easier to follow: highlight the new parts of each step, fade the earlier ones, fade the rest of the model while you edit a submodel or set a joint, outline the submodel under the pointer, and mark the connection points of the part you point at, in a see-through color if you like, or not at all.
 - **Animation keys.** Animation keys remember where parts, lights and cameras are at each step. Add Keys records them as you work, and a round button in the Properties panel adds or removes one.
 - **Keyframes panel.** A full-width timeline of the animation, one column per step and one row per object, with a diamond for each key. Add, remove and drag keys, and play the animation from the panel or the Time toolbar.
 

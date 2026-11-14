@@ -20,6 +20,7 @@
   - Connections: a part grabbed by one of its studs or holes seats by that one, so a brick with studs on every side can go into a side hole by its top stud
   - Connections: the green connection marks follow the parts as they move, and hide while a part is dragged
   - Insert: a part dropped into empty space lands under the pointer, level with the model, instead of far away toward the horizon
+  - Preferences: Show Connection Points, under Use Part Connections, turns the connection marks on or off, and the Connection Points color moved to Steps and Highlighting and takes transparency
   - Site: feature descriptions rewritten in plain words, saying what each feature does instead of listing its commands, now that the command index names them
 
   </details>
