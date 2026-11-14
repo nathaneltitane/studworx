@@ -12174,7 +12174,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>1</source>
-        <translation type="unfinished">8x {1?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -12184,7 +12184,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>2</source>
-        <translation type="unfinished">8x {2?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -12194,7 +12194,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>3</source>
-        <translation type="unfinished">8x {3?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -19520,7 +19520,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
         <source>%1, %2</source>
-        <translation type="unfinished">%1: %2 {1,?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
@@ -19795,7 +19795,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>0</source>
-        <translation type="unfinished">8x {0?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>

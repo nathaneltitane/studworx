@@ -11855,7 +11855,7 @@ Download one from %1 and pass it with --library.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>1</source>
-        <translation type="unfinished">8x {1?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -11865,7 +11865,7 @@ Download one from %1 and pass it with --library.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>2</source>
-        <translation type="unfinished">8x {2?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -11875,7 +11875,7 @@ Download one from %1 and pass it with --library.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>3</source>
-        <translation type="unfinished">8x {3?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -19117,7 +19117,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
         <source>%1, %2</source>
-        <translation type="unfinished">%1: %2 {1,?}</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
