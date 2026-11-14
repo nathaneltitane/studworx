@@ -1187,7 +1187,7 @@
           <string>Flexible Parts</string>
          </property>
          <layout class="QGridLayout" name="FlexiblePartsLayout">
-          <item row="0" column="0">
+          <item row="2" column="0">
            <widget class="QLabel" name="FlexSpreadModeLabel">
             <property name="toolTip">
              <string>Choose how the spread handles of control points shape hoses and other flexible parts: normal lets the least bending choose every handle, distributed weight keeps the spread you drag at its point and refits the other handles to keep the part length.</string>
@@ -1200,7 +1200,7 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
+          <item row="2" column="1">
            <widget class="QComboBox" name="FlexSpreadMode">
             <property name="accessibleName">
              <string>Handle Spread</string>
@@ -1243,7 +1243,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="0">
+          <item row="0" column="0">
            <widget class="QLabel" name="FlexMiddleControlPointLabel">
             <property name="toolTip">
              <string>Give newly inserted flexible parts a control point halfway along their path.</string>
@@ -1256,7 +1256,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item row="0" column="1">
            <widget class="QCheckBox" name="FlexMiddleControlPoint">
             <property name="accessibleName">
              <string>Add Middle Control Point</string>
@@ -5618,9 +5618,9 @@
   <tabstop>JointRotation</tabstop>
   <tabstop>FirstPartAtOrigin</tabstop>
   <tabstop>InsertColorMode</tabstop>
-  <tabstop>FlexSpreadMode</tabstop>
-  <tabstop>FlexClampNewControlPoints</tabstop>
   <tabstop>FlexMiddleControlPoint</tabstop>
+  <tabstop>FlexClampNewControlPoints</tabstop>
+  <tabstop>FlexSpreadMode</tabstop>
   <tabstop>antiAliasing</tabstop>
   <tabstop>antiAliasingSamples</tabstop>
   <tabstop>MeshLOD</tabstop>
