@@ -521,6 +521,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->WatchFileChanges->setChecked(mOptions->Preferences.mWatchFileChanges);
 	ui->LoadPartsBeforeShowing->setChecked(mOptions->Preferences.mLoadPartsBeforeShowing);
 	ui->WarnPartsLoadFailure->setChecked(mOptions->Preferences.mWarnPartsLoadFailure);
+	ui->SaveAfterReplacingParts->setChecked(mOptions->Preferences.mSaveAfterReplacingParts);
 	ui->MigrateMetaCommands->setCurrentIndex(static_cast<int>(mOptions->Preferences.mMigrateMetaCommands));
 	ui->MarkColladaTransparency->setChecked(mOptions->Preferences.mMarkColladaTransparency);
 	ui->KMZGeometry->setCurrentIndex(mOptions->Preferences.mKMZVisibleSurfaces ? 0 : 1);
@@ -943,6 +944,7 @@ void swPreferencesDialog::accept()
 	mOptions->Preferences.mWatchFileChanges = ui->WatchFileChanges->isChecked();
 	mOptions->Preferences.mLoadPartsBeforeShowing = ui->LoadPartsBeforeShowing->isChecked();
 	mOptions->Preferences.mWarnPartsLoadFailure = ui->WarnPartsLoadFailure->isChecked();
+	mOptions->Preferences.mSaveAfterReplacingParts = ui->SaveAfterReplacingParts->isChecked();
 	mOptions->Preferences.mMigrateMetaCommands = static_cast<swMigrateMetaCommandsMode>(ui->MigrateMetaCommands->currentIndex());
 	mOptions->Preferences.mMarkColladaTransparency = ui->MarkColladaTransparency->isChecked();
 	mOptions->Preferences.mKMZVisibleSurfaces = ui->KMZGeometry->currentIndex() == 0;

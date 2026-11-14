@@ -187,6 +187,7 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "WatchFileChanges", true),                                      // SW_PROFILE_WATCH_FILE_CHANGES
 	swProfileEntry("Settings", "LoadPartsBeforeShowing", false),                              // SW_PROFILE_LOAD_PARTS_BEFORE_SHOWING
 	swProfileEntry("Settings", "WarnPartsLoadFailure", true),                                 // SW_PROFILE_WARN_PARTS_LOAD_FAILURE
+	swProfileEntry("Settings", "SaveAfterReplacingParts", true),                              // SW_PROFILE_SAVE_AFTER_REPLACING_PARTS
 	swProfileEntry("Settings", "MigrateMetaCommands", 0),                                      // SW_PROFILE_MIGRATE_META_COMMANDS
 	swProfileEntry("Settings", "MarkColladaTransparency", true),                               // SW_PROFILE_MARK_COLLADA_TRANSPARENCY
 	swProfileEntry("Settings", "KMZVisibleSurfaces", true),                                    // SW_PROFILE_KMZ_VISIBLE_SURFACES

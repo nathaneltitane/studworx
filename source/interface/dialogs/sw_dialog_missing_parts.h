@@ -33,5 +33,6 @@ protected:
 	std::vector<std::pair<swPartThumbnailId, QTableWidgetItem*>> mThumbnails;
 	QTableWidget* mPartsTable;
 	QCheckBox* mDontWarnCheck;
+	QCheckBox* mSaveCheck;
 	QPushButton* mReplaceButton;
 };

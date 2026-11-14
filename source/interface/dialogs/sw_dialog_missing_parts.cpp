@@ -22,7 +22,7 @@ swMissingPartsDialog::swMissingPartsDialog(QWidget* Parent, std::vector<swMissin
 	const int PartCount = static_cast<int>(mMissingParts.size());
 
 	setWindowTitle(tr("Missing and Moved Parts"));
-	setWhatsThis(tr("<p><b>Missing and Moved Parts</b></p><p>Lists the parts of the model that could not be loaded, shown as red-outlined placeholder bricks in the model view, and the parts the library marks as moved (~Moved to) or as an alias (=) of another part.</p><p>A missing part is looked up through the BrickLink mapping file set under Preferences &gt; General &gt; Reference Paths, for parts the library now files under another number. A moved part or an alias is offered the part it points to. Replace Checked swaps the checked parts in every submodel, keeping their colors and positions, then saves the file. The swap can still be undone and saved again.</p><p>The warning can be turned off under Preferences &gt; General &gt; Files, File &gt; Missing and Moved Parts and the status bar icon open this list again.</p>"));
+	setWhatsThis(tr("<p><b>Missing and Moved Parts</b></p><p>Lists the parts of the model that could not be loaded, shown as red-outlined placeholder bricks in the model view, and the parts the library marks as moved (~Moved to) or as an alias (=) of another part.</p><p>A missing part is looked up through the BrickLink mapping file set under Preferences &gt; General &gt; Reference Paths, for parts the library now files under another number. A moved part or an alias is offered the part it points to. Replace Checked swaps the checked parts in every submodel, keeping their colors and positions. With Save After Replacing checked it then saves the file, and the swap can still be undone and saved again.</p><p>The warning can be turned off under Preferences &gt; General &gt; Files, File &gt; Missing and Moved Parts and the status bar icon open this list again.</p>"));
 
 	QVBoxLayout* MainLayout = new QVBoxLayout(this);
 
@@ -89,13 +89,23 @@ swMissingPartsDialog::swMissingPartsDialog(QWidget* Parent, std::vector<swMissin
 	mDontWarnCheck = new QCheckBox(tr("Don't Warn Again"), this);
 	mDontWarnCheck->setChecked(!swGetPreferences().mWarnPartsLoadFailure);
 	mDontWarnCheck->setToolTip(tr("Stop showing this list when a model opens, the status bar icon still opens it."));
-	MainLayout->addWidget(mDontWarnCheck);
+	mSaveCheck = new QCheckBox(tr("Save After Replacing"), this);
+	mSaveCheck->setChecked(swGetPreferences().mSaveAfterReplacingParts);
+	mSaveCheck->setToolTip(tr("Save the file right after Replace Checked swaps the parts, it can still be undone."));
+
+	// both choices on one line
+
+	QHBoxLayout* CheckLayout = new QHBoxLayout();
+	CheckLayout->addWidget(mDontWarnCheck);
+	CheckLayout->addWidget(mSaveCheck);
+	CheckLayout->addStretch();
+	MainLayout->addLayout(CheckLayout);
 
 	QDialogButtonBox* ButtonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
 	QPushButton* CopyButton = ButtonBox->addButton(tr("Copy List"), QDialogButtonBox::ActionRole);
 	CopyButton->setToolTip(tr("Copy the list of parts not loaded to the clipboard."));
 	mReplaceButton = ButtonBox->addButton(tr("Replace Checked"), QDialogButtonBox::AcceptRole);
-	mReplaceButton->setToolTip(tr("Replace the checked parts in every submodel and save the file, it can be undone."));
+	mReplaceButton->setToolTip(tr("Replace the checked parts in every submodel, it can be undone."));
 	MainLayout->addWidget(ButtonBox);
 
 	connect(ButtonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
@@ -106,6 +116,8 @@ swMissingPartsDialog::swMissingPartsDialog(QWidget* Parent, std::vector<swMissin
 	{
 		swGetPreferences().mWarnPartsLoadFailure = !mDontWarnCheck->isChecked();
 		swSetProfileInteger(SW_PROFILE_WARN_PARTS_LOAD_FAILURE, swGetPreferences().mWarnPartsLoadFailure);
+		swGetPreferences().mSaveAfterReplacingParts = mSaveCheck->isChecked();
+		swSetProfileInteger(SW_PROFILE_SAVE_AFTER_REPLACING_PARTS, swGetPreferences().mSaveAfterReplacingParts);
 	});
 
 	// focus close, not the table
@@ -172,7 +184,7 @@ void swMissingPartsDialog::ReplaceChecked()
 
 	// replacing is the approval to save
 
-	if (MainModel && !Replacements.empty())
+	if (MainModel && !Replacements.empty() && mSaveCheck->isChecked())
 		gMainWindow->mActions[SW_FILE_SAVE]->trigger();
 }
 

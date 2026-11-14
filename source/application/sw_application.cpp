@@ -127,6 +127,7 @@ void swPreferences::LoadDefaults()
 	mWatchFileChanges = swGetProfileInteger(SW_PROFILE_WATCH_FILE_CHANGES);
 	mLoadPartsBeforeShowing = swGetProfileInteger(SW_PROFILE_LOAD_PARTS_BEFORE_SHOWING);
 	mWarnPartsLoadFailure = swGetProfileInteger(SW_PROFILE_WARN_PARTS_LOAD_FAILURE);
+	mSaveAfterReplacingParts = swGetProfileInteger(SW_PROFILE_SAVE_AFTER_REPLACING_PARTS);
 	mMigrateMetaCommands = static_cast<swMigrateMetaCommandsMode>(qBound(0, swGetProfileInteger(SW_PROFILE_MIGRATE_META_COMMANDS), static_cast<int>(swMigrateMetaCommandsMode::Keep)));
 	mMarkColladaTransparency = swGetProfileInteger(SW_PROFILE_MARK_COLLADA_TRANSPARENCY);
 	mKMZVisibleSurfaces = swGetProfileInteger(SW_PROFILE_KMZ_VISIBLE_SURFACES);
@@ -258,6 +259,7 @@ void swPreferences::SaveDefaults()
 	swSetProfileInteger(SW_PROFILE_WATCH_FILE_CHANGES, mWatchFileChanges);
 	swSetProfileInteger(SW_PROFILE_LOAD_PARTS_BEFORE_SHOWING, mLoadPartsBeforeShowing);
 	swSetProfileInteger(SW_PROFILE_WARN_PARTS_LOAD_FAILURE, mWarnPartsLoadFailure);
+	swSetProfileInteger(SW_PROFILE_SAVE_AFTER_REPLACING_PARTS, mSaveAfterReplacingParts);
 	swSetProfileInteger(SW_PROFILE_MIGRATE_META_COMMANDS, static_cast<int>(mMigrateMetaCommands));
 	swSetProfileInteger(SW_PROFILE_MARK_COLLADA_TRANSPARENCY, mMarkColladaTransparency);
 	swSetProfileInteger(SW_PROFILE_KMZ_VISIBLE_SURFACES, mKMZVisibleSurfaces);

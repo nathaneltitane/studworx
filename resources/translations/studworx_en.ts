@@ -101,7 +101,7 @@
 <context>
     <name>swPreferencesDialog</name>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="606"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="607"/>
         <source>%n plate(s)</source>
         <translation>
             <numerusform>%n plate</numerusform>
@@ -109,7 +109,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1647"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1649"/>
         <source>%n stud(s)</source>
         <translation>
             <numerusform>%n stud</numerusform>

@@ -62,7 +62,7 @@ Models are plain LDraw text files in LeoCAD's format, so they open in either pro
 - **COLLADA.** Translucent colors can be marked as transparent materials for programs that read them.
 - **HTML.** Export HTML turns the instructions into web pages, either one long page, saved at twice its size so it stays sharp on high density screens, or one page per step, in light or dark colors. You can restyle them without changing the model.
 - **Print.** File > Print prints the current model view through the system print dialog, with a Preview button where the dialog allows it.
-- **Missing and moved parts.** When a model uses parts the library can't find or has renumbered, StudWorx lists them and offers a replacement for each, swapped everywhere and saved in one click. Until then a missing part shows as a plain brick with a red outline, and the timeline paints it and its submodel red. Closed the list too soon? The File menu brings it back.
+- **Missing and moved parts.** When a model uses parts the library can't find or has renumbered, StudWorx lists them and offers a replacement for each, swapped everywhere in one click and saved right away, unless you turn that off. Until then a missing part shows as a plain brick with a red outline, and the timeline paints it and its submodel red. Closed the list too soon? The File menu brings it back.
 - **Thumbnails.** Model thumbnails in file managers, from a KDE thumbnail plugin or the desktop thumbnailer.
 - **Parts library.** Downloaded on the first start as the official LDraw complete.zip, or chosen from an archive you already have, and reloaded with File > Reload Library. An unofficial parts folder can be added beside it.
 - **Command line.** Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx. [L²CU](https://l2cu.app), the LDraw command line utility for Linux based systems, drives these renders and exports for whole folders of models.
@@ -454,7 +454,7 @@ Large builds split into submodels that you can edit on their own or in place, in
 Nine pages with lined up label and control columns, checkboxes included, each label greyed out with its control. Value boxes show their maximum and bring any typed number into range, and every slider shows its value.
 
 - **General.** Where StudWorx finds the parts library, Blender, POV-Ray and LGEO, with one-click updates for colors, minifigure parts and the BrickLink mapping. Also your Rebrickable key and the author line written into new models.
-- **Startup and files.** What happens when StudWorx starts and when you open a file: reopen the last model, wait for every part, warn about missing parts, notice changes made elsewhere, and what to do with LeoCAD models.
+- **Startup and files.** What happens when StudWorx starts and when you open a file: reopen the last model, wait for every part, warn about missing parts, save after replacing them, notice changes made elsewhere, and what to do with LeoCAD models.
 - **Rendering and Views.** Rendering sets how parts look, and Views sets what the model view shows around them, from the view cube to the grids.
 - **Interface and Instructions.** Interface holds every display color. Instructions holds the default page settings, the rulers and inspector, and the editor options.
 - **Display colors.** Every color StudWorx draws with, from the background and grids to selections, highlights, axes and the instruction page guides, see-through where it makes sense.

@@ -274,6 +274,7 @@ public:
 	bool mWatchFileChanges;
 	bool mLoadPartsBeforeShowing;
 	bool mWarnPartsLoadFailure;
+	bool mSaveAfterReplacingParts;
 	swMigrateMetaCommandsMode mMigrateMetaCommands;
 	bool mMarkColladaTransparency;
 	bool mKMZVisibleSurfaces;
