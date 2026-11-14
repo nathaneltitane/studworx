@@ -319,11 +319,24 @@ void swMainWindow::MoveDockDrag(const QPoint& Position)
 	if (mDockDragViewSide == (Back ? -1 : 1))
 		Rest -= qMin(Rest, mDockDragViewSpare);
 
-	// then the panel against the far edge
-	const int Step = Back ? 1 : -1;
+	// then stretching panels, largest first, panels fitting their contents last
+	QVector<int> Givers;
 
-	for (int Index = Back ? 0 : Count - 1; Rest > 0 && (Back ? Index < mDockDragGap : Index >= mDockDragGap); Index += Step)
+	for (int Index = Back ? 0 : Count - 1; Back ? Index < mDockDragGap : Index >= mDockDragGap; Index += Back ? 1 : -1)
+		Givers.append(Index);
+
+	std::stable_sort(Givers.begin(), Givers.end(), [this, &Heights](int First, int Second)
 	{
+		const bool FirstFits = mDockDragMaximums[First] < QWIDGETSIZE_MAX;
+		const bool SecondFits = mDockDragMaximums[Second] < QWIDGETSIZE_MAX;
+		return FirstFits != SecondFits ? SecondFits : (!FirstFits && Heights[First] > Heights[Second]);
+	});
+
+	for (int Index : Givers)
+	{
+		if (Rest <= 0)
+			break;
+
 		const int Give = qMin(Rest, qMax(0, Heights[Index] - mDockDragMinimums[Index]));
 		Heights[Index] -= Give;
 		Rest -= Give;

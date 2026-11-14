@@ -1304,11 +1304,23 @@ static void swToggleDockFolded(QDockWidget* DockWidget)
 	}
 	else
 	{
-		const bool Below = Index < Line.size() - 1;
-
-		for (int Other = Below ? Line.size() - 1 : 0; Other >= 0 && Other < Line.size(); Other += Below ? -1 : 1)
+		// stretching panels give first, largest first, panels fitting their contents last
+		for (int Other = 0; Other < Line.size(); Other++)
 			if (Other != Index)
 				Order.append(Other);
+
+		const auto Fits = [&Line](int Other)
+		{
+			QWidget* Content = Line[Other]->widget();
+			return Content && QWidgetItem(Content).maximumSize().height() < QWIDGETSIZE_MAX;
+		};
+
+		std::stable_sort(Order.begin(), Order.end(), [&Fits, &Heights](int First, int Second)
+		{
+			const bool FirstFits = Fits(First);
+			const bool SecondFits = Fits(Second);
+			return FirstFits != SecondFits ? SecondFits : (!FirstFits && Heights[First] > Heights[Second]);
+		});
 	}
 
 	// folded panels stay folded unless nothing else takes the space
