@@ -2645,9 +2645,9 @@
 			<p class="lead">File &gt; Instructions lays the <a href="#steps">steps</a> out on pages with a cover, parts lists and a bill of materials. Every page element can be styled and placed, and everything is saved in the model file as !SW INSTRUCTION <a href="#meta">meta</a> commands.</p>
 
 			<div class="gallery three">
-				<figure style="--width-image: 2551; --height-image: 1472">
+				<figure style="--width-image: 2728; --height-image: 1574">
 					<button class="shot" data-full="resources/images/instructions-feature-cover-page.png" aria-label="Enlarge Cover page">
-						<img src="resources/images/instructions-feature-cover-page.png" alt="Cover page" width="2551" height="1472" loading="lazy">
+						<img src="resources/images/instructions-feature-cover-page.png" alt="Cover page" width="2728" height="1574" loading="lazy">
 					</button>
 
 					<figcaption>Cover page</figcaption>
@@ -3580,6 +3580,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Missing parts: the placeholder brick for a part the library can<code>t find gets a bold red outline, in the timeline</code>s red, in every step and inside submodels, and the timeline shows the submodel holding it in the same red; selecting it shows the selection outline instead</li>
 					<li>Missing and Moved Parts: Replace Checked saves the file right after swapping the parts, unless Save After Replacing is unchecked in the list or under Preferences, General, <a href="#files">Files</a></li>
 					<li>Preferences: Flexible Parts lists Add Middle Control Point first and Handle Spread last</li>
+					<li>Samples: every sample has a title, and its name line matches its file name, so <a href="#instructions">instructions</a> cover pages show the title instead of New Model.ldr</li>
 					<li>File: Missing and Moved Parts reopens the list of missing and renumbered parts after its warning was closed, without reopening the model</li>
 					<li>Site: feature descriptions rewritten in plain words, saying what each feature does instead of listing its commands, now that the command index names them</li>
 				</ul>
@@ -3604,7 +3605,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>POV-Ray: a Region render keeps only the region, over the faded view of the model, where it was placed into an older image of the same file</li>
 					<li>POV-Ray: Region draws a square with Ctrl held, resizes from its edges and corners, moves when dragged from inside, and is drawn anew when dragged from outside</li>
 					<li>POV-Ray: Editor beside Log shows the scene file with syntax colors, renders your edits when Render using this configuration instead of the model configuration is ticked, greys out the settings it ignores, writes the scene again with Reset, opens a scene file with Open and saves a copy with Save As</li>
-					<li>POV-Ray: the render window is a normal window with minimize and maximize like the <a href="#instructions">Instructions</a> window, and its buttons read Editor, Render, Log</li>
+					<li>POV-Ray: the render window is a normal window with minimize and maximize like the Instructions window, and its buttons read Editor, Render, Log</li>
 					<li>Render and Instructions windows: panels use the main window title bar with Float and Close, follow Lock Interface and reopen from the right-click panel list, where the Render panel stays greyed out as the one that never closes</li>
 					<li>Preferences: Download beside Part Connections and LGEO Library fetches the LDCad shadow library and the LGEO library from GitHub into the folder named there or the StudWorx data folder, with a download icon that turns into Update with the refresh icon once the library is there, and Use Part Connections moves to the second row of the Editing group of General, greying out the Part Connections path while off, and the window is a normal window with the window manager buttons like Instructions</li>
 					<li>Connection Points: with Part Connections on, the part under the pointer shows its connection points within a 2x2 stud area, as stud sized cylinders standing out of each opening, filled for male and hollow for female, only where they face the camera, and clips, hinge fingers and balls filled at their own size, all drawn over the parts, toggled under Steps and Highlighting in the view gear menu, with its color in Preferences</li>

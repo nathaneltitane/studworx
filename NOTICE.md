@@ -36,6 +36,7 @@
   - Missing parts: the placeholder brick for a part the library can't find gets a bold red outline, in the timeline's red, in every step and inside submodels, and the timeline shows the submodel holding it in the same red; selecting it shows the selection outline instead
   - Missing and Moved Parts: Replace Checked saves the file right after swapping the parts, unless Save After Replacing is unchecked in the list or under Preferences, General, Files
   - Preferences: Flexible Parts lists Add Middle Control Point first and Handle Spread last
+  - Samples: every sample has a title, and its name line matches its file name, so instructions cover pages show the title instead of New Model.ldr
   - File: Missing and Moved Parts reopens the list of missing and renumbered parts after its warning was closed, without reopening the model
   - Site: feature descriptions rewritten in plain words, saying what each feature does instead of listing its commands, now that the command index names them
 
