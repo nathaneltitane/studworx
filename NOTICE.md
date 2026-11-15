@@ -1,6 +1,13 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-15</summary>
+
+  - Site: the page styles carry short notes that say what each part does
+
+  </details>
+
+  <details>
   <summary>2026-11-14</summary>
 
   - Preferences: a new Show Connection Points setting under Use Part Connections turns the green connection marks on or off

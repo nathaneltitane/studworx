@@ -109,10 +109,14 @@
 
 		<style>
 
+			/* base font and sizing */
+
 			* {
 				font-family: monospace;
 				box-sizing: border-box;
 			}
+
+			/* smooth page scrolling */
 
 			html {
 				scroll-behavior: smooth;
@@ -126,6 +130,8 @@
 				display: none;
 			}
 
+			/* page colors and spacing */
+
 			body {
 				background: #ffffff;
 				color: #666666;
@@ -136,22 +142,32 @@
 				overflow-x: hidden;
 			}
 
+			/* bright headings and bold */
+
 			h1, h2, h3, b, strong {
 				color: #222222;
 			}
+
+			/* tight heading lines */
 
 			h1, h2, h3 {
 				margin: 0px;
 				line-height: 1.2;
 			}
 
+			/* link color */
+
 			a {
 				color: #222222;
 			}
 
+			/* link hover */
+
 			a:hover {
 				font-weight: bold;
 			}
+
+			/* inline code */
 
 			code {
 				color: #222222;
@@ -166,6 +182,8 @@
 				overflow: hidden;
 			}
 
+			/* landing background picture */
+
 			.backdrop {
 				position: absolute;
 				inset: 0px;
@@ -173,6 +191,8 @@
 				opacity: 0;
 				animation: reveal-backdrop 2s ease forwards;
 			}
+
+			/* backdrop text block */
 
 			.backdrop pre {
 				margin: 0px;
@@ -186,10 +206,14 @@
 				zoom: 2;
 			}
 
+			/* backdrop zoom in */
+
 			@keyframes reveal-backdrop {
 				from { opacity: 0; transform: scale(1.75); }
 				to { opacity: 0.12; transform: scale(1); }
 			}
+
+			/* landing title corner */
 
 			.head-landing {
 				position: absolute;
@@ -200,13 +224,19 @@
 				animation: reveal-fade 0.75s ease forwards;
 			}
 
+			/* landing title */
+
 			.head-landing h1 {
 				font-size: clamp(20px, 4vw, 40px);
 			}
 
+			/* landing subtitle */
+
 			.head-landing p {
 				margin: 5px 0px 0px 0px;
 			}
+
+			/* centered landing logo */
 
 			.logo-landing {
 				position: absolute;
@@ -219,15 +249,21 @@
 				animation: reveal-logo 1.25s ease 0.25s forwards;
 			}
 
+			/* logo fills its box */
+
 			.logo {
 				width: 100%;
 				height: 100%;
 			}
 
+			/* logo rise in */
+
 			@keyframes reveal-logo {
 				from { opacity: 0; transform: translate(-50%, -45%) scale(0.85); }
 				to { opacity: 1; transform: translate(-50%, -55%) scale(1); }
 			}
+
+			/* landing text corner */
 
 			.foot-landing {
 				position: absolute;
@@ -239,19 +275,27 @@
 				animation: reveal-fade 0.75s ease 0.5s forwards;
 			}
 
+			/* landing introduction */
+
 			.foot-landing p {
 				max-width: 520px;
 				margin: 0px 0px 15px auto;
 			}
+
+			/* landing tagline size */
 
 			.foot-landing h2 {
 				font-size: clamp(20px, 3.3vw, 30px);
 				white-space: nowrap;
 			}
 
+			/* spaced tagline letters */
+
 			.tagline {
 				letter-spacing: 0.3em;
 			}
+
+			/* landing button row */
 
 			.buttons {
 				display: flex;
@@ -261,6 +305,8 @@
 				margin: 0px 0px 20px 0px;
 			}
 
+			/* landing button */
+
 			.button {
 				background: #bbbbbb;
 				color: #222222;
@@ -269,9 +315,13 @@
 				text-decoration: none;
 			}
 
+			/* landing button hover */
+
 			.button:hover {
 				background: #aaaaaa;
 			}
+
+			/* fade in */
 
 			@keyframes reveal-fade {
 				from { opacity: 0; }
@@ -288,6 +338,8 @@
 				padding: 60px 20px 20px 20px;
 			}
 
+			/* section heading row */
+
 			.head-section {
 				display: flex;
 				align-items: center;
@@ -297,18 +349,26 @@
 				margin: 0px 0px 20px 0px;
 			}
 
+			/* section title */
+
 			.head-section h2 {
 				font-size: clamp(20px, 2.5vw, 25px);
 			}
+
+			/* section subtitle */
 
 			.section h3 {
 				margin: 30px 0px 10px 0px;
 				font-size: 15px;
 			}
 
+			/* section introduction */
+
 			.lead {
 				font-size: 15px;
 			}
+
+			/* feature points grid */
 
 			.points {
 				list-style: none;
@@ -319,39 +379,55 @@
 				gap: 10px 20px;
 			}
 
+			/* one feature point */
+
 			.points li {
 				border-left: 5px solid #bbbbbb;
 				padding: 5px 0px 5px 10px;
 			}
 
+			/* long code wraps */
+
 			.points code {
 				overflow-wrap: anywhere;
 			}
+
+			/* numbered steps */
 
 			.steps {
 				margin: 25px 0px;
 				padding: 0px 0px 0px 30px;
 			}
 
+			/* one step */
+
 			.steps li {
 				margin: 0px 0px 10px 0px;
 				padding: 0px 0px 0px 5px;
 			}
+
+			/* step number */
 
 			.steps li::marker {
 				color: #bbbbbb;
 				font-weight: bold;
 			}
 
+			/* read more link */
+
 			.more a {
 				font-weight: bold;
 			}
+
+			/* hidden until scrolled to */
 
 			.reveal {
 				opacity: 0;
 				transform: translateY(40px);
 				transition: opacity 0.75s ease, transform 0.75s ease;
 			}
+
+			/* shown once scrolled to */
 
 			.reveal.shown {
 				opacity: 1;
@@ -367,6 +443,8 @@
 				margin: 0px auto;
 			}
 
+			/* section heading icon */
+
 			.icon.big {
 				width: 55px;
 				height: 55px;
@@ -379,6 +457,8 @@
 			figure {
 				margin: 0px;
 			}
+
+			/* full width figure */
 
 			figure.wide {
 				margin: 25px 0px;
@@ -399,10 +479,14 @@
 				cursor: pointer;
 			}
 
+			/* frameless picture */
+
 			figure.plain .shot {
 				background: transparent;
 				border-radius: 5px;
 			}
+
+			/* picture never past its size */
 
 			.shot img {
 				border-radius: 5px;
@@ -415,17 +499,25 @@
 				transition: transform 0.4s ease;
 			}
 
+			/* picture zoom on hover */
+
 			.shot:hover img {
 				transform: scale(1.02);
 			}
+
+			/* video figure */
 
 			figure.video {
 				margin: 25px 0px;
 			}
 
+			/* video inside a gallery */
+
 			.gallery figure.video {
 				margin: 0px;
 			}
+
+			/* video player */
 
 			figure.video video {
 				display: block;
@@ -437,19 +529,27 @@
 				transition: transform 0.4s ease;
 			}
 
+			/* video zoom on hover */
+
 			figure.video video:hover {
 				transform: scale(1.02);
 			}
 
+			/* viewer hides the other media */
+
 			#viewer img[hidden], #viewer video[hidden] {
 				display: none;
 			}
+
+			/* picture caption */
 
 			figcaption {
 				padding: 5px 5px 0px 5px;
 				font-size: 10px;
 				text-align: center;
 			}
+
+			/* picture grid */
 
 			.gallery {
 				display: grid;
@@ -468,9 +568,13 @@
 			.gallery.six { --columns: 6; }
 			.gallery.one > figure, .gallery.two > figure, .gallery.three > figure, .gallery.four > figure, .gallery.five > figure, .gallery.six > figure { flex: 1 1 calc((100% - (var(--columns) - 1) * 20px) / var(--columns) - 1px); min-width: 0px; }
 
+			/* square gallery frame */
+
 			.gallery.square .shot {
 				background: transparent;
 			}
+
+			/* tall pictures cropped from top */
 
 			.gallery.tall .shot img {
 				aspect-ratio: 960 / 1100;
@@ -483,6 +587,8 @@
 			@media (min-width: 801px) {
 				.gallery.tall.two > figure:last-child:nth-child(2n + 1) .shot img, .gallery.tall.three > figure:last-child:nth-child(3n + 1) .shot img, .gallery.tall.four > figure:last-child:nth-child(4n + 1) .shot img, .gallery.tall.five > figure:last-child:nth-child(5n + 1) .shot img, .gallery.tall.six > figure:last-child:nth-child(6n + 1) .shot img, .gallery.tall.one .shot img { aspect-ratio: 960 / 569; }
 			}
+
+			/* rows of natural sizes */
 
 			.gallery.natural {
 				display: flex;
@@ -507,10 +613,14 @@
 				margin-top: -20px;
 			}
 
+			/* natural gallery frame */
+
 			.gallery.natural .shot {
 				background: transparent;
 				border-radius: 5px;
 			}
+
+			/* natural gallery picture */
 
 			.gallery.natural .shot img {
 				width: 100%;
@@ -527,9 +637,13 @@
 				padding-bottom: 10px;
 			}
 
+			/* strip pictures keep size */
+
 			.gallery.scroll > figure {
 				flex: none;
 			}
+
+			/* strip frame */
 
 			.gallery.scroll .shot {
 				width: auto;
@@ -543,6 +657,8 @@
 				height: min(400px, calc(var(--height-image, 400) * 1px));
 			}
 
+			/* centered cube gallery */
+
 			.gallery.cube {
 				display: flex;
 				flex-wrap: wrap;
@@ -551,12 +667,16 @@
 				gap: 40px;
 			}
 
+			/* cube gallery frame */
+
 			.gallery.cube .shot {
 				display: block;
 				width: auto;
 				margin: 0px auto;
 				background: transparent;
 			}
+
+			/* cube gallery picture */
 
 			.gallery.cube .shot img {
 				width: auto;
@@ -570,10 +690,14 @@
 				border-radius: 20px 20px 0px 0px;
 			}
 
+			/* table */
+
 			table {
 				border-collapse: collapse;
 				min-width: 100%;
 			}
+
+			/* table cells */
 
 			th, td {
 				text-align: left;
@@ -583,15 +707,21 @@
 				white-space: nowrap;
 			}
 
+			/* table header */
+
 			th {
 				color: #222222;
 				background: #eeeeee;
 			}
 
+			/* wrapping table cells */
+
 			.table.wrap td {
 				white-space: normal;
 				min-width: 160px;
 			}
+
+			/* package name pill */
 
 			.package {
 				display: inline-block;
@@ -604,6 +734,8 @@
 				white-space: nowrap;
 			}
 
+			/* code block */
+
 			pre {
 				background: #eeeeee;
 				color: #222222;
@@ -611,6 +743,8 @@
 				padding: 15px 20px;
 				overflow-x: auto;
 			}
+
+			/* text diagram */
 
 			pre.diagram {
 				font-size: 10px;
@@ -624,24 +758,37 @@
 				height: 5px;
 			}
 
+			/* scrollbar track */
+
 			::-webkit-scrollbar-track {
 				background: transparent;
 			}
 
+			/* code block scrollbar inset */
+
 			pre::-webkit-scrollbar-track:vertical {
 				margin: 20px 0px;
 			}
+
+			/* scrollbar handle */
 
 			::-webkit-scrollbar-thumb {
 				background: #bbbbbb;
 				border-radius: 5px;
 			}
 
+			/* scrollbar handle hover */
+
 			::-webkit-scrollbar-thumb:hover {
 				background: #666666;
 			}
 
+			/* browsers without scrollbar styling */
+
 			@supports not selector(::-webkit-scrollbar) {
+
+				/* thin scrollbars elsewhere */
+
 				* {
 					scrollbar-width: thin;
 					scrollbar-color: #bbbbbb transparent;
@@ -666,6 +813,8 @@
 				padding: 10px 0px;
 			}
 
+			/* search fields */
+
 			#search, #search-menus {
 				width: 100%;
 				padding: 10px 20px;
@@ -677,9 +826,13 @@
 				outline: none;
 			}
 
+			/* search fields focused */
+
 			#search:focus, #search-menus:focus {
 				background: #eeeeee;
 			}
+
+			/* group chips grid */
 
 			.chips {
 				display: grid;
@@ -692,6 +845,8 @@
 				padding-right: 10px;
 				margin: 10px 0px 0px 0px;
 			}
+
+			/* group chip */
 
 			.chip {
 				text-align: center;
@@ -706,9 +861,13 @@
 				cursor: pointer;
 			}
 
+			/* group chip hover */
+
 			.chip:hover {
 				font-weight: bold;
 			}
+
+			/* selected group chip */
 
 			.chip.active {
 				background: #bbbbbb;
@@ -716,10 +875,14 @@
 				font-weight: bold;
 			}
 
+			/* command cards in columns */
+
 			.list-command {
 				columns: 2 480px;
 				column-gap: 25px;
 			}
+
+			/* command card */
 
 			.command {
 				break-inside: avoid;
@@ -729,6 +892,8 @@
 				margin: 0px 0px 20px 0px;
 			}
 
+			/* command card heading */
+
 			.head-command {
 				display: flex;
 				flex-wrap: wrap;
@@ -737,19 +902,27 @@
 				gap: 0px 10px;
 			}
 
+			/* command name */
+
 			.head-command h3 {
 				margin: 0px;
 				font-size: 15px;
 			}
+
+			/* command details */
 
 			.meta-command {
 				font-size: 10px;
 				color: #aaaaaa;
 			}
 
+			/* command description */
+
 			.command p {
 				margin: 5px 0px 0px 0px;
 			}
+
+			/* command example */
 
 			.command pre {
 				margin: 10px 0px;
@@ -760,31 +933,43 @@
 				white-space: pre-wrap;
 			}
 
+			/* command option */
+
 			.option {
 				border-top: 1px solid #eeeeee;
 				padding: 10px 0px 0px 0px;
 				margin: 10px 0px 0px 0px;
 			}
 
+			/* option name */
+
 			.option code {
 				color: #222222;
 				font-weight: bold;
 			}
+
+			/* option argument */
 
 			.option .argument {
 				color: #aaaaaa;
 				font-weight: normal;
 			}
 
+			/* option description */
+
 			.option p {
 				margin: 5px 0px 0px 0px;
 			}
+
+			/* highlighted marker */
 
 			.marker {
 				color: #bbbbbb;
 				font-weight: bold;
 				text-decoration: underline;
 			}
+
+			/* option values grid */
 
 			.values {
 				display: grid;
@@ -794,6 +979,8 @@
 				margin: 10px 0px 0px 0px;
 			}
 
+			/* one option value */
+
 			.values li {
 				background: #ffffff;
 				border-radius: 10px;
@@ -801,6 +988,8 @@
 				margin: 0px 0px 5px 0px;
 				font-size: 10px;
 			}
+
+			/* value tag */
 
 			.tag {
 				display: inline-block;
@@ -813,10 +1002,14 @@
 				white-space: nowrap;
 			}
 
+			/* default value tag */
+
 			.tag.default {
 				background: #bbbbbb;
 				color: #ffffff;
 			}
+
+			/* value pill */
 
 			.value {
 				text-align: center;
@@ -827,23 +1020,33 @@
 				color: #222222;
 			}
 
+			/* value note */
+
 			.value i {
 				color: #aaaaaa;
 				font-style: normal;
 			}
 
+			/* no matching command */
+
 			.empty-command {
 				padding: 20px 0px;
 			}
+
+			/* filtered out by search */
 
 			.command.hidden, .option.hidden {
 				display: none;
 			}
 
+			/* help entries in columns */
+
 			.list-help {
 				columns: 3 320px;
 				column-gap: 25px;
 			}
+
+			/* help group title */
 
 			.group-help {
 				column-span: all;
@@ -851,6 +1054,8 @@
 				margin: 20px 0px 5px 0px;
 				font-size: 15px;
 			}
+
+			/* help entry card */
 
 			.item-help {
 				break-inside: avoid;
@@ -860,13 +1065,19 @@
 				margin: 0px 0px 10px 0px;
 			}
 
+			/* help entry title */
+
 			.item-help b {
 				display: block;
 			}
 
+			/* help entry text */
+
 			.item-help p {
 				margin: 5px 0px 0px 0px;
 			}
+
+			/* shortcut on the right */
 
 			.item-help kbd {
 				float: right;
@@ -874,6 +1085,8 @@
 				font-size: 13px;
 				color: #777777;
 			}
+
+			/* menu path text */
 
 			.where-help {
 				color: #777777;
@@ -893,6 +1106,8 @@
 				border-top: 1px solid #e0e0e0;
 			}
 
+			/* no matching help */
+
 			.empty-help {
 				padding: 20px 0px;
 			}
@@ -906,19 +1121,27 @@
 				margin: 0px 0px 10px 0px;
 			}
 
+			/* folding list title */
+
 			summary {
 				font-weight: bold;
 				cursor: pointer;
 			}
+
+			/* folding list items */
 
 			details ul {
 				margin: 10px 0px 5px 0px;
 				padding: 0px 0px 0px 20px;
 			}
 
+			/* one folding item */
+
 			details li {
 				margin: 0px 0px 5px 0px;
 			}
+
+			/* folding item code */
 
 			details code {
 				color: #222222;
@@ -942,9 +1165,13 @@
 				animation: reveal-footer 0.75s ease 0.75s forwards;
 			}
 
+			/* footer slide in */
+
 			@keyframes reveal-footer {
 				to { transform: none; }
 			}
+
+			/* bottom navigation bar */
 
 			.footer {
 				display: flex;
@@ -960,6 +1187,8 @@
 			html::-webkit-scrollbar {
 				display: none;
 			}
+
+			/* hidden footer scrollbar */
 
 			.footer::-webkit-scrollbar {
 				display: none;
@@ -977,15 +1206,21 @@
 				transition: opacity 0.25s ease;
 			}
 
+			/* left scroll arrow */
+
 			.start-footer {
 				border-left-color: #000000;
 				transform: translateX(50%);
 			}
 
+			/* footer scroll arrows */
+
 			.end-footer {
 				border-right-color: #000000;
 				transform: translateX(-50%);
 			}
+
+			/* arrows shown when scrolling */
 
 			.scroll-footer .start-footer,
 			.scroll-footer .end-footer {
@@ -1006,10 +1241,14 @@
 				pointer-events: none;
 			}
 
+			/* centered footer buttons */
+
 			.inner-footer {
 				display: flex;
 				margin: 0px auto;
 			}
+
+			/* footer button */
 
 			.button-navigation {
 				flex: none;
@@ -1021,20 +1260,28 @@
 				font-size: 15px;
 			}
 
+			/* footer button icon */
+
 			.button-navigation .icon {
 				transition: transform 0.2s ease;
 			}
+
+			/* hovered or current icon raised */
 
 			.button-navigation:hover .icon,
 			.button-navigation.current .icon {
 				transform: translateY(-5px);
 			}
 
+			/* hovered or current button */
+
 			.button-navigation:hover,
 			.button-navigation.current {
 				color: #222222;
 				font-weight: bold;
 			}
+
+			/* footer button label */
 
 			.label {
 				display: block;
@@ -1051,9 +1298,13 @@
 				font-size: 10px;
 			}
 
+			/* copyright lines */
+
 			.copyright p {
 				margin: 0px 0px 10px 0px;
 			}
+
+			/* last copyright line */
 
 			.copyright p:last-child {
 				margin: 0px;
@@ -1071,6 +1322,8 @@
 				border-top: inherit;
 				text-align: center;
 			}
+
+			/* copyright avatar */
 
 			.copyright .avatar img {
 				display: block;
@@ -1099,10 +1352,14 @@
 				cursor: pointer;
 			}
 
+			/* viewer shown */
+
 			#viewer.open {
 				display: flex;
 				animation: reveal-fade 0.25s ease;
 			}
+
+			/* viewer media */
 
 			#viewer img, #viewer video {
 				max-width: 100%;
@@ -1124,11 +1381,15 @@
 				white-space: pre;
 			}
 
+			/* terminal window dots */
+
 			.bar-terminal {
 				display: flex;
 				gap: 5px;
 				margin: 0px 0px 10px 0px;
 			}
+
+			/* one terminal dot */
 
 			.bar-terminal i {
 				width: 10px;
@@ -1146,12 +1407,16 @@
 				margin: 25px 0px;
 			}
 
+			/* color swatch card */
+
 			.swatch {
 				background: #f6f6f6;
 				border-radius: 15px;
 				padding: 10px;
 				font-size: 10px;
 			}
+
+			/* swatch color */
 
 			.swatch span {
 				display: block;
@@ -1160,28 +1425,40 @@
 				margin: 0px 0px 10px 0px;
 			}
 
+			/* swatch name */
+
 			.swatch b {
 				display: block;
 			}
+
+			/* glyph preview */
 
 			.glyph {
 				font-weight: bold;
 				white-space: pre;
 			}
 
+			/* command list */
+
 			.command ul {
 				margin: 5px 0px 0px 0px;
 				padding: 0px 0px 0px 20px;
 			}
 
+			/* command table */
+
 			.command .table {
 				margin: 10px 0px;
 			}
+
+			/* command table cells */
 
 			.command th, .command td {
 				padding: 5px 10px;
 				font-size: 10px;
 			}
+
+			/* tablet layout */
 
 			@media (max-width: 800px) {
 				.foot-landing { left: 0px; }
@@ -1195,12 +1472,16 @@
 				.section .gallery.cube:has(> figure ~ figure) > figure { width: auto; }
 			}
 
+			/* small screen landing */
+
 			@media (max-width: 520px), (max-height: 560px) {
 				.landing { display: flex; flex-direction: column; gap: 25px; padding: 0px 0px 80px 0px; }
 				.head-landing, .logo-landing, .foot-landing { position: static; }
 				.logo-landing { width: min(56vw, 40vh, 260px); height: min(56vw, 40vh, 260px); margin: auto; transform: none; animation-name: reveal-fade; }
 				.foot-landing { max-width: none; }
 			}
+
+			/* phone layout */
 
 			@media (max-width: 520px) {
 				.points { grid-template-columns: 1fr; }
@@ -1209,6 +1490,8 @@
 				.copyright { width: calc(100% - 30px); }
 				.section .gallery:not(.one, .scroll):has(> figure ~ figure) { margin: 25px -15px; padding: 0px 15px 10px 15px; scroll-padding: 0px 15px; }
 			}
+
+			/* less motion when asked */
 
 			@media (prefers-reduced-motion: reduce) {
 				*, *::before, *::after { animation-duration: 0.01s !important; transition: none !important; }
@@ -3543,6 +3826,14 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p class="lead">The latest release notices from the StudWorx repository.</p>
 
 			<details open>
+				<summary>2026-11-15</summary>
+
+				<ul>
+					<li>Site: the page styles carry short notes that say what each part does</li>
+				</ul>
+			</details>
+
+			<details>
 				<summary>2026-11-14</summary>
 
 				<ul>
@@ -3686,24 +3977,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Site: help search groups the panel controls under Explode Panel, Joints and Poses Panels and Keyframes Panel, and the Export BrickLink and Missing and Moved Parts help under their window names, instead of Main Window</li>
 					<li>Packaging: the publisher reads StudWorx.app in the Windows uninstall entry and the software store listing, and macOS keeps its settings under studworx.app</li>
 					<li>Windows: resources/packaging/windows/windows-portable.sh builds a portable self extractor that needs no admin rights, and StudWorx keeps its settings in an INI file in the settings folder beside StudWorx.exe and leaves the registry alone</li>
-				</ul>
-			</details>
-
-			<details>
-				<summary>2026-11-09</summary>
-
-				<ul>
-					<li>Tabs: model tabs line up with the view gear button, each ending in a square close button behind a divider, and the tab scroll arrows are framed like the gear button</li>
-					<li>Poses: the poses move out of the Joints panel into their own Poses panel, View &gt; Toolbars &gt; Poses Panel, listed under a Pose header like the joints tree</li>
-					<li>Interface: Lock Interface, at the end of the toolbar and panel right-click menu and View &gt; Toolbars, hides the panel title bars to save space and keeps panels and toolbars from being dragged, floated or redocked, while panels still resize and model tabs still move</li>
-					<li>Joints: an empty joints tree reads None: Part &gt; Joint &gt; Set Joint</li>
-					<li>Joints: with no joint picked the panel reads None: select a jointed submodel, and the axis list reads X Axis, Y Axis, Z Axis</li>
-					<li>Joints: the red joint outline runs inside the submodel edge like the hover line, so it shows next to the selection outline</li>
-					<li>Interface: the Colors, Minifigure Builder and Explode panels scroll when the window is too short instead of overlapping the panels below, so the window resizes down from its bottom edge and the status bar stays on screen</li>
-					<li>Keyframes: View &gt; Toolbars &gt; Keyframes Panel docks a full-width timeline at the bottom or top, with Selected or All objects expandable to their properties, a diamond per key joined by a line, click a step to go to it, double-click to add or remove a key, drag a key to another step, a right-click menu, full and hollow diamonds to add or remove the selection&#x27;s keys, Add Keys, and rewind, play or pause, stop and forward buttons</li>
-					<li>Keyframes: Steps &gt; Set Keys (K), Remove Keys (Shift+K), Add Keys (Alt+K), Play or Pause (Ctrl+K) and Stop (Ctrl+Shift+K) have keyboard shortcuts</li>
-					<li>Properties: the key buttons are small round dots again, filled when the property has a key at the current step</li>
-					<li>Help: every command, the Explode, Joints, Poses and Keyframes panels and the remaining buttons explain themselves in What&#x27;s This? (Shift+F1) and F1</li>
 				</ul>
 			</details>
 
