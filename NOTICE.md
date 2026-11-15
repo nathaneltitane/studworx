@@ -19,7 +19,8 @@
   - Panels: dragging the divider next to any docked panel, on any side, opens only that panel, even when the panels around it are folded; the panels in between keep their size and move along, and the space comes from the view, then the largest stretching panel; panels that fit their contents, like Properties, give space last
   - Properties: docked, it no longer jumps back to full height while you drag its divider
   - Panels: a new arrow button on each docked panel title folds the panel down to its title, and opens it back to its old size; folding hands the space to the view or the open panel above, opening takes it from the view or the largest stretching panel, so Properties keeps its full height
-  - Translations: the new Colors and panel arrow tooltips and help text are added to every language, waiting to be translated
+  - Translations: the new Colors tooltips and help text are added to every language, waiting to be translated
+  - Translations: the panel arrow tooltips, the array step numbers and the snap labels that held placeholder guesses are now written out in every language; snap labels follow each language's own words for stud, brick and plate
 
   </details>
 

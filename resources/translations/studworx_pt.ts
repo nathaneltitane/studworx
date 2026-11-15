@@ -2961,7 +2961,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="792"/>
         <source>22.5 Degrees</source>
-        <translation type="unfinished">180 Graus {22.5 ?}</translation>
+        <translation>22,5 Graus</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="801"/>
@@ -5596,12 +5596,14 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1399"/>
         <source>Expand</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
+        <translation type="unfinished">Expandir</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1399"/>
         <source>Collapse</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
+        <translation type="unfinished">Recolher</translation>
     </message>
 </context>
 <context>
@@ -12007,7 +12009,7 @@ Veja https://github.com/nathaneltitane/studworx para saber como descarragar e in
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation>1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -12017,7 +12019,7 @@ Veja https://github.com/nathaneltitane/studworx para saber como descarragar e in
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>2</source>
-        <translation type="unfinished"></translation>
+        <translation>2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -12027,7 +12029,7 @@ Veja https://github.com/nathaneltitane/studworx para saber como descarragar e in
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>3</source>
-        <translation type="unfinished"></translation>
+        <translation>3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -19343,7 +19345,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
         <source>%1, %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1, %2</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
@@ -19623,51 +19625,51 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>1/20S</source>
-        <translation>8x {1/20S?}</translation>
+        <translation>1/20P</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>1/4S</source>
-        <translation>8x {1/4S?}</translation>
+        <translation>1/4P</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>1F</source>
-        <translation>8x {1F?}</translation>
+        <translation>1Pr</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>1/2S</source>
-        <translation>8x {1/2S?}</translation>
+        <translation>1/2P</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>1S</source>
-        <translation>8x {1S?}</translation>
+        <translation>1P</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <source>2S</source>
-        <translation>8x {2S?}</translation>
+        <translation>2P</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <source>3S</source>
-        <translation>8x {3S?}</translation>
+        <translation>3P</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <source>4S</source>
-        <translation>8x {4S?}</translation>
+        <translation>4P</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.h" line="145"/>
         <source>8S</source>
-        <translation>8x {8S?}</translation>
+        <translation>8P</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="1340"/>
@@ -19679,22 +19681,22 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>1B</source>
-        <translation>8x {1B?}</translation>
+        <translation>1T</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>2B</source>
-        <translation>8x {2B?}</translation>
+        <translation>2T</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>4B</source>
-        <translation>8x {4B?}</translation>
+        <translation>4T</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
         <source>8B</source>
-        <translation>8x {8B?}</translation>
+        <translation>8T</translation>
     </message>
     <message numerus="yes">
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="351"/>

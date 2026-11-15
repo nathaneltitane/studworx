@@ -5236,12 +5236,14 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1399"/>
         <source>Expand</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
+        <translation type="unfinished">Expandir</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1399"/>
         <source>Collapse</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
+        <translation type="unfinished">Contraer</translation>
     </message>
 </context>
 <context>
@@ -11661,7 +11663,7 @@ Por favor, visita https://github.com/nathaneltitane/studworx para saber cómo de
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation>1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -11671,7 +11673,7 @@ Por favor, visita https://github.com/nathaneltitane/studworx para saber cómo de
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>2</source>
-        <translation type="unfinished"></translation>
+        <translation>2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -11681,7 +11683,7 @@ Por favor, visita https://github.com/nathaneltitane/studworx para saber cómo de
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>3</source>
-        <translation type="unfinished"></translation>
+        <translation>3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -18707,7 +18709,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
         <source>%1, %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1, %2</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>

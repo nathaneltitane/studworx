@@ -2961,7 +2961,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="792"/>
         <source>22.5 Degrees</source>
-        <translation type="unfinished">180 degrés {22.5 ?}</translation>
+        <translation>22,5 degrés</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="801"/>
@@ -5595,12 +5595,14 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1399"/>
         <source>Expand</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
+        <translation type="unfinished">Déplier</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1399"/>
         <source>Collapse</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>AI-generated translation draft; requires human review.</translatorcomment>
+        <translation type="unfinished">Replier</translation>
     </message>
 </context>
 <context>
@@ -7280,7 +7282,7 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="793"/>
         <source>Snap rotations to 22.5 degrees</source>
-        <translation type="unfinished">Fixer le pas de rotation à 180 degrés {22.5 ?}</translation>
+        <translation>Fixer le pas de rotation à 22,5 degrés</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="802"/>
@@ -12004,7 +12006,7 @@ SVP visitez https://github.com/nathaneltitane/studworx pour apprendre comment t�
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>1</source>
-        <translation type="unfinished"></translation>
+        <translation>1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -12014,7 +12016,7 @@ SVP visitez https://github.com/nathaneltitane/studworx pour apprendre comment t�
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>2</source>
-        <translation type="unfinished"></translation>
+        <translation>2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -12024,7 +12026,7 @@ SVP visitez https://github.com/nathaneltitane/studworx pour apprendre comment t�
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>3</source>
-        <translation type="unfinished"></translation>
+        <translation>3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -19430,7 +19432,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
         <source>%1, %2</source>
-        <translation type="unfinished"></translation>
+        <translation>%1, %2</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
