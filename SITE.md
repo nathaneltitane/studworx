@@ -449,7 +449,7 @@ Large builds split into submodels that you can edit on their own or in place, in
 
 ## Preferences
 
-<!-- preferences | grid | PREFERENCES // EVERY SETTING IN ONE PLACE -->
+<!-- preferences | edge | PREFERENCES // EVERY SETTING IN ONE PLACE -->
 
 Nine pages with lined up label and control columns, checkboxes included, each label greyed out with its control. Value boxes show their maximum and bring any typed number into range, and every slider shows its value.
 
@@ -480,7 +480,7 @@ Nine pages with lined up label and control columns, checkboxes included, each la
 
 ## Meta
 
-<!-- meta | edge | META COMMANDS // LDRAW LINE HANDLING -->
+<!-- meta | grid | META COMMANDS // LDRAW LINE HANDLING -->
 
 Every meta command StudWorx reads, writes or keeps: the official LDraw ones, its own !SW commands, LeoCAD commands it migrates, and the commands of MLCad, LPub, LSynth, L3P, LDLite and Blender.
 
