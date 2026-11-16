@@ -19098,7 +19098,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="242"/>
         <source>Origin</source>
-        <translation type="unfinished">原始</translation>
+        <translation type="unfinished">原點</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="244"/>
@@ -19753,7 +19753,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Hip Accessory</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">時尚配飾</translation>
+        <translation type="unfinished">臀部配件</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
@@ -21874,7 +21874,7 @@ Weight: %1</source>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1176"/>
         <source>Filter Parts</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">過濾片</translation>
+        <translation type="unfinished">篩選零件</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1177"/>
@@ -25131,7 +25131,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Startup</source>
-        <translation type="unfinished">新創</translation>
+        <translation type="unfinished">啟動</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25776,7 +25776,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Author Line Splitter</source>
-        <translation type="unfinished">筆者行分割器</translation>
+        <translation type="unfinished">作者行分隔符</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25786,7 +25786,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Author Line</source>
-        <translation type="unfinished">作者線</translation>
+        <translation type="unfinished">作者行</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25993,7 +25993,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Get Key...</source>
-        <translation type="unfinished">取得密鑰...</translation>
+        <translation type="unfinished">取得金鑰...</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>

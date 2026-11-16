@@ -870,10 +870,10 @@ void swPreferencesDialog::showEvent(QShowEvent* Event)
 	// line up columns once shown
 	swAlignPreferencesColumns(ui->tabWidget);
 
-	// key button spans the browse and update buttons
+	// key button spans the browse and update buttons, wider when its text needs it
 	const int ButtonsLeft = ui->ColorConfigBrowseButton->mapTo(this, QPoint(0, 0)).x();
 	const int ButtonsRight = ui->ColorConfigUpdateButton->mapTo(this, QPoint(ui->ColorConfigUpdateButton->width(), 0)).x();
-	ui->RebrickableApiKeyButton->setFixedWidth(ButtonsRight - ButtonsLeft);
+	ui->RebrickableApiKeyButton->setFixedWidth(qMax(ButtonsRight - ButtonsLeft, ui->RebrickableApiKeyButton->sizeHint().width()));
 
 	// grow digits to the left
 	ui->MeshLODLabel->setAlignment(Qt::AlignRight | Qt::AlignVCenter);
