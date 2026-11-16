@@ -5,6 +5,7 @@
 
   - Site: every footer button has its own logo, with tools, files and steps logos for Toolbars, Files and Steps, GitHub and PayPal logos for GitHub and Donate, and L²CU in green like on MechaBlocks
   - Site: the page styles live in their own files under resources/css, and resources/css/logo.css picks each section's logo, so a new or swapped logo shows without rebuilding the page
+  - Translations: Traditional Chinese has about 1,900 more and better translations, from yoyomaimai
 
   </details>
 
