@@ -124,7 +124,7 @@
 				scrollbar-width: none;
 			}
 
-			/* page scrollbar hidden so the fixed footer spans the full width */
+			/* page scrollbar hidden */
 
 			html::-webkit-scrollbar {
 				display: none;
@@ -135,7 +135,7 @@
 			body {
 				background: #ffffff;
 				color: #666666;
-				margin: 0px;
+				margin: 0px 0px 0px 0px;
 				padding: 0px 0px 100px 0px;
 				font-size: 15px;
 				line-height: 1.6;
@@ -144,14 +144,20 @@
 
 			/* bright headings and bold */
 
-			h1, h2, h3, b, strong {
+			h1,
+			h2,
+			h3,
+			b,
+			strong {
 				color: #222222;
 			}
 
 			/* tight heading lines */
 
-			h1, h2, h3 {
-				margin: 0px;
+			h1,
+			h2,
+			h3 {
+				margin: 0px 0px 0px 0px;
 				line-height: 1.2;
 			}
 
@@ -186,7 +192,7 @@
 
 			.backdrop {
 				position: absolute;
-				inset: 0px;
+				inset: 0px 0px 0px 0px;
 				background: url("resources/images/interface-window-main.png") center / cover no-repeat;
 				opacity: 0;
 				animation: reveal-backdrop 2s ease forwards;
@@ -195,10 +201,10 @@
 			/* backdrop text block */
 
 			.backdrop pre {
-				margin: 0px;
-				padding: 0px;
+				margin: 0px 0px 0px 0px;
+				padding: 0px 0px 0px 0px;
 				background: none;
-				border-radius: 0px;
+				border-radius: 0px 0px 0px 0px;
 				overflow: visible;
 				color: #bbbbbb;
 				font-size: clamp(5px, 0.9vw, 10px);
@@ -209,36 +215,43 @@
 			/* backdrop zoom in */
 
 			@keyframes reveal-backdrop {
-				from { opacity: 0; transform: scale(1.75); }
-				to { opacity: 0.12; transform: scale(1); }
+				from {
+					opacity: 0;
+					transform: scale(1.75);
+				}
+
+				to {
+					opacity: 0.12;
+					transform: scale(1);
+				}
 			}
 
 			/* landing title corner */
 
-			.head-landing {
+			.landing-head {
 				position: absolute;
 				top: 0px;
 				left: 0px;
-				padding: 10px;
+				padding: 10px 10px 10px 10px;
 				opacity: 0;
 				animation: reveal-fade 0.75s ease forwards;
 			}
 
 			/* landing title */
 
-			.head-landing h1 {
+			.landing-head h1 {
 				font-size: clamp(20px, 4vw, 40px);
 			}
 
 			/* landing subtitle */
 
-			.head-landing p {
+			.landing-head p {
 				margin: 5px 0px 0px 0px;
 			}
 
 			/* centered landing logo */
 
-			.logo-landing {
+			.landing-logo {
 				position: absolute;
 				top: 50%;
 				left: 50%;
@@ -259,17 +272,24 @@
 			/* logo rise in */
 
 			@keyframes reveal-logo {
-				from { opacity: 0; transform: translate(-50%, -45%) scale(0.85); }
-				to { opacity: 1; transform: translate(-50%, -55%) scale(1); }
+				from {
+					opacity: 0;
+					transform: translate(-50%, -45%) scale(0.85);
+				}
+
+				to {
+					opacity: 1;
+					transform: translate(-50%, -55%) scale(1);
+				}
 			}
 
 			/* landing text corner */
 
-			.foot-landing {
+			.landing-foot {
 				position: absolute;
 				right: 0px;
 				bottom: 80px;
-				padding: 10px;
+				padding: 10px 10px 10px 10px;
 				text-align: right;
 				opacity: 0;
 				animation: reveal-fade 0.75s ease 0.5s forwards;
@@ -277,14 +297,14 @@
 
 			/* landing introduction */
 
-			.foot-landing p {
+			.landing-foot p {
 				max-width: 520px;
 				margin: 0px 0px 15px auto;
 			}
 
 			/* landing tagline size */
 
-			.foot-landing h2 {
+			.landing-foot h2 {
 				font-size: clamp(20px, 3.3vw, 30px);
 				white-space: nowrap;
 			}
@@ -310,8 +330,8 @@
 			.button {
 				background: #bbbbbb;
 				color: #222222;
-				border-radius: 20px;
-				padding: 10px 20px;
+				border-radius: 20px 20px 20px 20px;
+				padding: 10px 20px 10px 20px;
 				text-decoration: none;
 			}
 
@@ -324,23 +344,26 @@
 			/* fade in */
 
 			@keyframes reveal-fade {
-				from { opacity: 0; }
-				to { opacity: 1; }
-			}
+				from {
+					opacity: 0;
+				}
 
-			/* version */
+				to {
+					opacity: 1;
+				}
+			}
 
 			/* sections */
 
 			.section {
 				max-width: 1200px;
-				margin: 0px auto;
+				margin: 0px auto 0px auto;
 				padding: 60px 20px 20px 20px;
 			}
 
 			/* section heading row */
 
-			.head-section {
+			.section-head {
 				display: flex;
 				align-items: center;
 				gap: 15px;
@@ -351,7 +374,7 @@
 
 			/* section title */
 
-			.head-section h2 {
+			.section-head h2 {
 				font-size: clamp(20px, 2.5vw, 25px);
 			}
 
@@ -372,8 +395,8 @@
 
 			.points {
 				list-style: none;
-				padding: 0px;
-				margin: 25px 0px;
+				padding: 0px 0px 0px 0px;
+				margin: 25px 0px 25px 0px;
 				display: grid;
 				grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 				gap: 10px 20px;
@@ -395,7 +418,7 @@
 			/* numbered steps */
 
 			.steps {
-				margin: 25px 0px;
+				margin: 25px 0px 25px 0px;
 				padding: 0px 0px 0px 30px;
 			}
 
@@ -440,7 +463,7 @@
 				width: 40px;
 				height: 40px;
 				display: block;
-				margin: 0px auto;
+				margin: 0px auto 0px auto;
 			}
 
 			/* section heading icon */
@@ -448,20 +471,20 @@
 			.icon.big {
 				width: 55px;
 				height: 55px;
-				margin: 0px;
+				margin: 0px 0px 0px 0px;
 				flex: none;
 			}
 
 			/* figures */
 
 			figure {
-				margin: 0px;
+				margin: 0px 0px 0px 0px;
 			}
 
 			/* full width figure */
 
 			figure.wide {
-				margin: 25px 0px;
+				margin: 25px 0px 25px 0px;
 			}
 
 			/* frame stops where its image stops */
@@ -470,10 +493,10 @@
 				display: block;
 				width: 100%;
 				max-width: calc(var(--width-image, 100000) * 1px);
-				margin: 0px auto;
-				padding: 0px;
+				margin: 0px auto 0px auto;
+				padding: 0px 0px 0px 0px;
 				border: 0px;
-				border-radius: 5px;
+				border-radius: 5px 5px 5px 5px;
 				background: #eeeeee;
 				overflow: visible;
 				cursor: pointer;
@@ -483,18 +506,18 @@
 
 			figure.plain .shot {
 				background: transparent;
-				border-radius: 5px;
+				border-radius: 5px 5px 5px 5px;
 			}
 
 			/* picture never past its size */
 
 			.shot img {
-				border-radius: 5px;
+				border-radius: 5px 5px 5px 5px;
 				display: block;
 				width: 100%;
 				max-width: calc(var(--width-image, 100000) * 1px);
 				max-height: calc(var(--height-image, 100000) * 1px);
-				margin: 0px auto;
+				margin: 0px auto 0px auto;
 				height: auto;
 				transition: transform 0.4s ease;
 			}
@@ -508,13 +531,13 @@
 			/* video figure */
 
 			figure.video {
-				margin: 25px 0px;
+				margin: 25px 0px 25px 0px;
 			}
 
 			/* video inside a gallery */
 
 			.gallery figure.video {
-				margin: 0px;
+				margin: 0px 0px 0px 0px;
 			}
 
 			/* video player */
@@ -523,7 +546,7 @@
 				display: block;
 				width: 100%;
 				height: auto;
-				border-radius: 5px;
+				border-radius: 5px 5px 5px 5px;
 				background: #1b1e22;
 				cursor: pointer;
 				transition: transform 0.4s ease;
@@ -537,7 +560,8 @@
 
 			/* viewer hides the other media */
 
-			#viewer img[hidden], #viewer video[hidden] {
+			#viewer img[hidden],
+			#viewer video[hidden] {
 				display: none;
 			}
 
@@ -554,19 +578,54 @@
 			.gallery {
 				display: grid;
 				gap: 20px;
-				margin: 25px 0px;
+				margin: 25px 0px 25px 0px;
 			}
 
-			/* columns per class, leftovers grow to fill the row */
+			/* columns per gallery class */
 
-			.gallery.one, .gallery.two, .gallery.three, .gallery.four, .gallery.five, .gallery.six { display: flex; flex-wrap: wrap; }
-			.gallery.one { --columns: 1; }
-			.gallery.two { --columns: 2; }
-			.gallery.three { --columns: 3; }
-			.gallery.four { --columns: 4; }
-			.gallery.five { --columns: 5; }
-			.gallery.six { --columns: 6; }
-			.gallery.one > figure, .gallery.two > figure, .gallery.three > figure, .gallery.four > figure, .gallery.five > figure, .gallery.six > figure { flex: 1 1 calc((100% - (var(--columns) - 1) * 20px) / var(--columns) - 1px); min-width: 0px; }
+			.gallery.one,
+			.gallery.two,
+			.gallery.three,
+			.gallery.four,
+			.gallery.five,
+			.gallery.six {
+				display: flex;
+				flex-wrap: wrap;
+			}
+
+			.gallery.one {
+				--columns: 1;
+			}
+
+			.gallery.two {
+				--columns: 2;
+			}
+
+			.gallery.three {
+				--columns: 3;
+			}
+
+			.gallery.four {
+				--columns: 4;
+			}
+
+			.gallery.five {
+				--columns: 5;
+			}
+
+			.gallery.six {
+				--columns: 6;
+			}
+
+			.gallery.one > figure,
+			.gallery.two > figure,
+			.gallery.three > figure,
+			.gallery.four > figure,
+			.gallery.five > figure,
+			.gallery.six > figure {
+				flex: 1 1 calc((100% - (var(--columns) - 1) * 20px) / var(--columns) - 1px);
+				min-width: 0px;
+			}
 
 			/* square gallery frame */
 
@@ -582,10 +641,17 @@
 				object-position: top;
 			}
 
-			/* full width leftover keeps a landscape crop */
+			/* leftover keeps landscape crop */
 
 			@media (min-width: 801px) {
-				.gallery.tall.two > figure:last-child:nth-child(2n + 1) .shot img, .gallery.tall.three > figure:last-child:nth-child(3n + 1) .shot img, .gallery.tall.four > figure:last-child:nth-child(4n + 1) .shot img, .gallery.tall.five > figure:last-child:nth-child(5n + 1) .shot img, .gallery.tall.six > figure:last-child:nth-child(6n + 1) .shot img, .gallery.tall.one .shot img { aspect-ratio: 960 / 569; }
+				.gallery.tall.two > figure:last-child:nth-child(2n + 1) .shot img,
+				.gallery.tall.three > figure:last-child:nth-child(3n + 1) .shot img,
+				.gallery.tall.four > figure:last-child:nth-child(4n + 1) .shot img,
+				.gallery.tall.five > figure:last-child:nth-child(5n + 1) .shot img,
+				.gallery.tall.six > figure:last-child:nth-child(6n + 1) .shot img,
+				.gallery.tall.one .shot img {
+					aspect-ratio: 960 / 569;
+				}
 			}
 
 			/* rows of natural sizes */
@@ -617,7 +683,7 @@
 
 			.gallery.natural .shot {
 				background: transparent;
-				border-radius: 5px;
+				border-radius: 5px 5px 5px 5px;
 			}
 
 			/* natural gallery picture */
@@ -626,7 +692,7 @@
 				width: 100%;
 			}
 
-			/* side scrolling menus and windows, one height */
+			/* side scrolling strip */
 
 			.gallery.scroll {
 				display: flex;
@@ -672,7 +738,7 @@
 			.gallery.cube .shot {
 				display: block;
 				width: auto;
-				margin: 0px auto;
+				margin: 0px auto 0px auto;
 				background: transparent;
 			}
 
@@ -686,7 +752,7 @@
 
 			.table {
 				overflow-x: auto;
-				margin: 20px 0px;
+				margin: 20px 0px 20px 0px;
 				border-radius: 20px 20px 0px 0px;
 			}
 
@@ -699,10 +765,11 @@
 
 			/* table cells */
 
-			th, td {
+			th,
+			td {
 				text-align: left;
 				vertical-align: top;
-				padding: 10px 15px;
+				padding: 10px 15px 10px 15px;
 				border-bottom: 1px solid #eeeeee;
 				white-space: nowrap;
 			}
@@ -727,9 +794,9 @@
 				display: inline-block;
 				background: #f6f6f6;
 				color: #222222;
-				border-radius: 20px;
-				padding: 5px 10px;
-				margin: 5px 0px;
+				border-radius: 20px 20px 20px 20px;
+				padding: 5px 10px 5px 10px;
+				margin: 5px 0px 5px 0px;
 				font-size: 10px;
 				white-space: nowrap;
 			}
@@ -739,8 +806,8 @@
 			pre {
 				background: #eeeeee;
 				color: #222222;
-				border-radius: 20px;
-				padding: 15px 20px;
+				border-radius: 20px 20px 20px 20px;
+				padding: 15px 20px 15px 20px;
 				overflow-x: auto;
 			}
 
@@ -751,7 +818,7 @@
 				line-height: 1.25;
 			}
 
-			/* scrollbars kept clear of the corner radii */
+			/* scrollbars clear of corners */
 
 			::-webkit-scrollbar {
 				width: 5px;
@@ -767,14 +834,14 @@
 			/* code block scrollbar inset */
 
 			pre::-webkit-scrollbar-track:vertical {
-				margin: 20px 0px;
+				margin: 20px 0px 20px 0px;
 			}
 
 			/* scrollbar handle */
 
 			::-webkit-scrollbar-thumb {
 				background: #bbbbbb;
-				border-radius: 5px;
+				border-radius: 5px 5px 5px 5px;
 			}
 
 			/* scrollbar handle hover */
@@ -800,26 +867,27 @@
 			.options {
 				columns: 2 420px;
 				column-gap: 25px;
-				margin: 25px 0px;
+				margin: 25px 0px 25px 0px;
 			}
 
 			/* help */
 
-			.tools-search {
+			.search-tools {
 				position: sticky;
 				top: 0px;
 				z-index: 5;
 				background: #ffffff;
-				padding: 10px 0px;
+				padding: 10px 0px 10px 0px;
 			}
 
 			/* search fields */
 
-			#search, #search-menus {
+			#search,
+			#menus-search {
 				width: 100%;
-				padding: 10px 20px;
+				padding: 10px 20px 10px 20px;
 				border: 0px;
-				border-radius: 20px;
+				border-radius: 20px 20px 20px 20px;
 				background: #f6f6f6;
 				color: #222222;
 				font-size: 15px;
@@ -828,7 +896,8 @@
 
 			/* search fields focused */
 
-			#search:focus, #search-menus:focus {
+			#search:focus,
+			#menus-search:focus {
 				background: #eeeeee;
 			}
 
@@ -856,8 +925,8 @@
 				background: #eeeeee;
 				color: #666666;
 				border: 0px;
-				border-radius: 20px;
-				padding: 5px 10px;
+				border-radius: 20px 20px 20px 20px;
+				padding: 5px 10px 5px 10px;
 				cursor: pointer;
 			}
 
@@ -877,7 +946,7 @@
 
 			/* command cards in columns */
 
-			.list-command {
+			.command-list {
 				columns: 2 480px;
 				column-gap: 25px;
 			}
@@ -887,14 +956,14 @@
 			.command {
 				break-inside: avoid;
 				background: #f6f6f6;
-				border-radius: 15px;
-				padding: 15px;
+				border-radius: 15px 15px 15px 15px;
+				padding: 15px 15px 15px 15px;
 				margin: 0px 0px 20px 0px;
 			}
 
 			/* command card heading */
 
-			.head-command {
+			.command-head {
 				display: flex;
 				flex-wrap: wrap;
 				align-items: baseline;
@@ -904,14 +973,14 @@
 
 			/* command name */
 
-			.head-command h3 {
-				margin: 0px;
+			.command-head h3 {
+				margin: 0px 0px 0px 0px;
 				font-size: 15px;
 			}
 
 			/* command details */
 
-			.meta-command {
+			.command-meta {
 				font-size: 10px;
 				color: #aaaaaa;
 			}
@@ -925,9 +994,9 @@
 			/* command example */
 
 			.command pre {
-				margin: 10px 0px;
-				padding: 10px 15px;
-				border-radius: 10px;
+				margin: 10px 0px 10px 0px;
+				padding: 10px 15px 10px 15px;
+				border-radius: 10px 10px 10px 10px;
 				background: #ffffff;
 				font-size: 10px;
 				white-space: pre-wrap;
@@ -983,8 +1052,8 @@
 
 			.values li {
 				background: #ffffff;
-				border-radius: 10px;
-				padding: 5px 10px;
+				border-radius: 10px 10px 10px 10px;
+				padding: 5px 10px 5px 10px;
 				margin: 0px 0px 5px 0px;
 				font-size: 10px;
 			}
@@ -995,9 +1064,9 @@
 				display: inline-block;
 				background: #eeeeee;
 				color: #222222;
-				border-radius: 20px;
-				padding: 5px 10px;
-				margin: 5px 0px;
+				border-radius: 20px 20px 20px 20px;
+				padding: 5px 10px 5px 10px;
+				margin: 5px 0px 5px 0px;
 				font-size: 10px;
 				white-space: nowrap;
 			}
@@ -1014,8 +1083,8 @@
 			.value {
 				text-align: center;
 				background: #ffffff;
-				border-radius: 20px;
-				padding: 5px 10px;
+				border-radius: 20px 20px 20px 20px;
+				padding: 5px 10px 5px 10px;
 				font-size: 10px;
 				color: #222222;
 			}
@@ -1029,26 +1098,27 @@
 
 			/* no matching command */
 
-			.empty-command {
-				padding: 20px 0px;
+			.command-empty {
+				padding: 20px 0px 20px 0px;
 			}
 
 			/* filtered out by search */
 
-			.command.hidden, .option.hidden {
+			.command.hidden,
+			.option.hidden {
 				display: none;
 			}
 
 			/* help entries in columns */
 
-			.list-help {
+			.help-list {
 				columns: 3 320px;
 				column-gap: 25px;
 			}
 
 			/* help group title */
 
-			.group-help {
+			.help-group {
 				column-span: all;
 				break-inside: avoid;
 				margin: 20px 0px 5px 0px;
@@ -1057,29 +1127,29 @@
 
 			/* help entry card */
 
-			.item-help {
+			.help-item {
 				break-inside: avoid;
 				background: #f6f6f6;
-				border-radius: 15px;
-				padding: 10px 15px;
+				border-radius: 15px 15px 15px 15px;
+				padding: 10px 15px 10px 15px;
 				margin: 0px 0px 10px 0px;
 			}
 
 			/* help entry title */
 
-			.item-help b {
+			.help-item b {
 				display: block;
 			}
 
 			/* help entry text */
 
-			.item-help p {
+			.help-item p {
 				margin: 5px 0px 0px 0px;
 			}
 
 			/* shortcut on the right */
 
-			.item-help kbd {
+			.help-item kbd {
 				float: right;
 				font-family: inherit;
 				font-size: 13px;
@@ -1088,19 +1158,19 @@
 
 			/* menu path text */
 
-			.where-help {
+			.help-where {
 				color: #777777;
 			}
 
-			/* label set apart from the help text */
+			/* menu label set apart */
 
-			.item-help .where-help:not(.path-help) {
+			.help-item .help-where:not(.help-path) {
 				margin: 15px 0px 0px 0px;
 			}
 
-			/* one menu path per line, ruled apart */
+			/* one menu path per line */
 
-			.item-help .path-help {
+			.help-item .help-path {
 				margin: 5px 0px 0px 0px;
 				padding: 5px 0px 0px 0px;
 				border-top: 1px solid #e0e0e0;
@@ -1108,16 +1178,16 @@
 
 			/* no matching help */
 
-			.empty-help {
-				padding: 20px 0px;
+			.help-empty {
+				padding: 20px 0px 20px 0px;
 			}
 
 			/* notices */
 
 			details {
 				background: #f6f6f6;
-				border-radius: 15px;
-				padding: 10px 15px;
+				border-radius: 15px 15px 15px 15px;
+				padding: 10px 15px 10px 15px;
 				margin: 0px 0px 10px 0px;
 			}
 
@@ -1168,7 +1238,9 @@
 			/* footer slide in */
 
 			@keyframes reveal-footer {
-				to { transform: none; }
+				to {
+					transform: none;
+				}
 			}
 
 			/* bottom navigation bar */
@@ -1176,13 +1248,13 @@
 			.footer {
 				display: flex;
 				height: 80px;
-				padding: 0px 10px;
+				padding: 0px 10px 0px 10px;
 				overflow-x: auto;
 				overflow-y: hidden;
 				scrollbar-width: none;
 			}
 
-			/* page scrollbar hidden so the fixed footer spans the full width */
+			/* page scrollbar hidden */
 
 			html::-webkit-scrollbar {
 				display: none;
@@ -1194,10 +1266,10 @@
 				display: none;
 			}
 
-			/* footer ends point to the buttons out of view */
+			/* footer scroll ends */
 
-			.start-footer,
-			.end-footer {
+			.footer-start,
+			.footer-end {
 				flex: none;
 				align-self: center;
 				width: 40px;
@@ -1208,30 +1280,30 @@
 
 			/* left scroll arrow */
 
-			.start-footer {
+			.footer-start {
 				border-left-color: #000000;
 				transform: translateX(50%);
 			}
 
 			/* footer scroll arrows */
 
-			.end-footer {
+			.footer-end {
 				border-right-color: #000000;
 				transform: translateX(-50%);
 			}
 
 			/* arrows shown when scrolling */
 
-			.scroll-footer .start-footer,
-			.scroll-footer .end-footer {
+			.footer-scroll .footer-start,
+			.footer-scroll .footer-end {
 				opacity: 1;
 			}
 
-			/* footer edges fade the buttons scrolling under them */
+			/* footer edges fade */
 
-			.border-footer {
+			.footer-border {
 				position: absolute;
-				inset: 0px;
+				inset: 0px 0px 0px 0px;
 				z-index: 1;
 				border: 10px solid #aaaaaa;
 				border-top: 0px;
@@ -1243,14 +1315,14 @@
 
 			/* centered footer buttons */
 
-			.inner-footer {
+			.footer-inner {
 				display: flex;
-				margin: 0px auto;
+				margin: 0px auto 0px auto;
 			}
 
 			/* footer button */
 
-			.button-navigation {
+			.navigation-button {
 				flex: none;
 				min-width: 80px;
 				padding: 10px 10px 0px 10px;
@@ -1262,21 +1334,21 @@
 
 			/* footer button icon */
 
-			.button-navigation .icon {
+			.navigation-button .icon {
 				transition: transform 0.2s ease;
 			}
 
 			/* hovered or current icon raised */
 
-			.button-navigation:hover .icon,
-			.button-navigation.current .icon {
+			.navigation-button:hover .icon,
+			.navigation-button.current .icon {
 				transform: translateY(-5px);
 			}
 
 			/* hovered or current button */
 
-			.button-navigation:hover,
-			.button-navigation.current {
+			.navigation-button:hover,
+			.navigation-button.current {
 				color: #222222;
 				font-weight: bold;
 			}
@@ -1287,13 +1359,13 @@
 				display: block;
 			}
 
-			/* copyright: inset like the sections so its separators span the same width as the section heading lines */
+			/* copyright inset like sections */
 
 			.copyright {
 				max-width: 1160px;
 				width: calc(100% - 40px);
 				margin: 20px auto 0px auto;
-				padding: 20px 0px;
+				padding: 20px 0px 20px 0px;
 				border-top: 2px solid #eeeeee;
 				font-size: 10px;
 			}
@@ -1307,10 +1379,10 @@
 			/* last copyright line */
 
 			.copyright p:last-child {
-				margin: 0px;
+				margin: 0px 0px 0px 0px;
 			}
 
-			/* the authorship closes the credits like the mechablocks drawer copyright: a separation, then the bird avatar over the centered version and copyright line */
+			/* authorship closes the credits */
 
 			.copyright .authorship {
 				display: flex;
@@ -1331,7 +1403,7 @@
 				height: 65px;
 			}
 
-			/* the last section ends flush so every site keeps the same gap above the credits */
+			/* last section ends flush */
 
 			.section > :last-child,
 			.section > :last-child > :last-child {
@@ -1342,13 +1414,13 @@
 
 			#viewer {
 				position: fixed;
-				inset: 0px;
+				inset: 0px 0px 0px 0px;
 				z-index: 30;
 				display: none;
 				align-items: center;
 				justify-content: center;
 				background: rgba(187, 187, 187, 0.92);
-				padding: 20px;
+				padding: 20px 20px 20px 20px;
 				cursor: pointer;
 			}
 
@@ -1361,10 +1433,11 @@
 
 			/* viewer media */
 
-			#viewer img, #viewer video {
+			#viewer img,
+			#viewer video {
 				max-width: 100%;
 				max-height: 100%;
-				border-radius: 5px;
+				border-radius: 5px 5px 5px 5px;
 				filter: drop-shadow(0px 20px 20px rgba(0, 0, 0, 0.75));
 			}
 
@@ -1373,8 +1446,8 @@
 			.terminal {
 				background: #1b1e22;
 				color: #222222;
-				border-radius: 20px;
-				padding: 15px 20px;
+				border-radius: 20px 20px 20px 20px;
+				padding: 15px 20px 15px 20px;
 				font-size: 10px;
 				line-height: 1.4;
 				overflow-x: auto;
@@ -1383,7 +1456,7 @@
 
 			/* terminal window dots */
 
-			.bar-terminal {
+			.terminal-bar {
 				display: flex;
 				gap: 5px;
 				margin: 0px 0px 10px 0px;
@@ -1391,10 +1464,10 @@
 
 			/* one terminal dot */
 
-			.bar-terminal i {
+			.terminal-bar i {
 				width: 10px;
 				height: 10px;
-				border-radius: 50%;
+				border-radius: 50% 50% 50% 50%;
 				background: #bbbbbb;
 			}
 
@@ -1404,15 +1477,15 @@
 				display: grid;
 				grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
 				gap: 10px;
-				margin: 25px 0px;
+				margin: 25px 0px 25px 0px;
 			}
 
 			/* color swatch card */
 
 			.swatch {
 				background: #f6f6f6;
-				border-radius: 15px;
-				padding: 10px;
+				border-radius: 15px 15px 15px 15px;
+				padding: 10px 10px 10px 10px;
 				font-size: 10px;
 			}
 
@@ -1421,7 +1494,7 @@
 			.swatch span {
 				display: block;
 				height: 35px;
-				border-radius: 10px;
+				border-radius: 10px 10px 10px 10px;
 				margin: 0px 0px 10px 0px;
 			}
 
@@ -1448,54 +1521,138 @@
 			/* command table */
 
 			.command .table {
-				margin: 10px 0px;
+				margin: 10px 0px 10px 0px;
 			}
 
 			/* command table cells */
 
-			.command th, .command td {
-				padding: 5px 10px;
+			.command th,
+			.command td {
+				padding: 5px 10px 5px 10px;
 				font-size: 10px;
 			}
 
 			/* tablet layout */
 
 			@media (max-width: 800px) {
-				.foot-landing { left: 0px; }
-				.section .gallery:not(.one, .scroll):has(> figure ~ figure) { display: flex; flex-wrap: nowrap; align-items: flex-start; gap: 15px; margin: 25px -20px; padding: 0px 20px 10px 20px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0px 20px; scrollbar-width: none; }
-				.section .gallery:not(.one, .scroll):has(> figure ~ figure)::-webkit-scrollbar { display: none; }
-				.section .gallery:not(.one, .scroll):has(> figure ~ figure) > figure { flex: none; width: 82%; scroll-snap-align: center; }
-				.section .gallery.natural .break { display: none; }
-				.section .gallery.scroll .shot img { height: min(260px, calc(var(--height-image, 260) * 1px)); }
-				.section .gallery.natural:has(> figure ~ figure) > figure { width: calc(var(--width-image, 300) * 1px); max-width: 82%; }
-				.section .gallery.cube:has(> figure ~ figure) { justify-content: center; overflow-x: visible; }
-				.section .gallery.cube:has(> figure ~ figure) > figure { width: auto; }
+				.landing-foot {
+					left: 0px;
+				}
+
+				.section .gallery:not(.one, .scroll):has(> figure ~ figure) {
+					display: flex;
+					flex-wrap: nowrap;
+					align-items: flex-start;
+					gap: 15px;
+					margin: 25px -20px 25px -20px;
+					padding: 0px 20px 10px 20px;
+					overflow-x: auto;
+					scroll-snap-type: x mandatory;
+					scroll-padding: 0px 20px 0px 20px;
+					scrollbar-width: none;
+				}
+
+				.section .gallery:not(.one, .scroll):has(> figure ~ figure)::-webkit-scrollbar {
+					display: none;
+				}
+
+				.section .gallery:not(.one, .scroll):has(> figure ~ figure) > figure {
+					flex: none;
+					width: 82%;
+					scroll-snap-align: center;
+				}
+
+				.section .gallery.natural .break {
+					display: none;
+				}
+
+				.section .gallery.scroll .shot img {
+					height: min(260px, calc(var(--height-image, 260) * 1px));
+				}
+
+				.section .gallery.natural:has(> figure ~ figure) > figure {
+					width: calc(var(--width-image, 300) * 1px);
+					max-width: 82%;
+				}
+
+				.section .gallery.cube:has(> figure ~ figure) {
+					justify-content: center;
+					overflow-x: visible;
+				}
+
+				.section .gallery.cube:has(> figure ~ figure) > figure {
+					width: auto;
+				}
 			}
 
 			/* small screen landing */
 
 			@media (max-width: 520px), (max-height: 560px) {
-				.landing { display: flex; flex-direction: column; gap: 25px; padding: 0px 0px 80px 0px; }
-				.head-landing, .logo-landing, .foot-landing { position: static; }
-				.logo-landing { width: min(56vw, 40vh, 260px); height: min(56vw, 40vh, 260px); margin: auto; transform: none; animation-name: reveal-fade; }
-				.foot-landing { max-width: none; }
+				.landing {
+					display: flex;
+					flex-direction: column;
+					gap: 25px;
+					padding: 0px 0px 80px 0px;
+				}
+
+				.landing-head,
+				.landing-logo,
+				.landing-foot {
+					position: static;
+				}
+
+				.landing-logo {
+					width: min(56vw, 40vh, 260px);
+					height: min(56vw, 40vh, 260px);
+					margin: auto auto auto auto;
+					transform: none;
+					animation-name: reveal-fade;
+				}
+
+				.landing-foot {
+					max-width: none;
+				}
 			}
 
 			/* phone layout */
 
 			@media (max-width: 520px) {
-				.points { grid-template-columns: 1fr; }
-				.list-command { columns: 1; }
-				.section { padding: 50px 15px 15px 15px; }
-				.copyright { width: calc(100% - 30px); }
-				.section .gallery:not(.one, .scroll):has(> figure ~ figure) { margin: 25px -15px; padding: 0px 15px 10px 15px; scroll-padding: 0px 15px; }
+				.points {
+					grid-template-columns: 1fr;
+				}
+
+				.command-list {
+					columns: 1;
+				}
+
+				.section {
+					padding: 50px 15px 15px 15px;
+				}
+
+				.copyright {
+					width: calc(100% - 30px);
+				}
+
+				.section .gallery:not(.one, .scroll):has(> figure ~ figure) {
+					margin: 25px -15px 25px -15px;
+					padding: 0px 15px 10px 15px;
+					scroll-padding: 0px 15px 0px 15px;
+				}
 			}
 
 			/* less motion when asked */
 
 			@media (prefers-reduced-motion: reduce) {
-				*, *::before, *::after { animation-duration: 0.01s !important; transition: none !important; }
-				html { scroll-behavior: auto; }
+				*,
+				*::before,
+				*::after {
+					animation-duration: 0.01s !important;
+					transition: none !important;
+				}
+
+				html {
+					scroll-behavior: auto;
+				}
 			}
 
 		</style>
@@ -1909,16 +2066,16 @@
 		<div class="landing" id="top">
 			<div class="backdrop"></div>
 
-			<div class="head-landing">
+			<div class="landing-head">
 				<h1>StudWorx</h1>
 				<p>LDRAW / LEGO® MODEL BUILDER</p>
 			</div>
 
-			<div class="logo-landing">
+			<div class="landing-logo">
 				<svg class="logo" aria-hidden="true"><use href="#icon-studworx"/></svg>
 			</div>
 
-			<div class="foot-landing">
+			<div class="landing-foot">
 				<p>StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library.</p>
 				<p>It keeps LeoCAD's file format, so models open in either program, and adds a reworked interface with modeling, imaging and instructions features on top.</p>
 
@@ -1933,7 +2090,7 @@
 		</div>
 
 		<section id="interface" class="section reveal">
-			<header class="head-section">
+			<header class="section-head">
 				<svg class="icon big" aria-hidden="true"><use href="#icon-console"/></svg>
 				<h2>INTERFACE // MENUS, PANELS AND HELP</h2>
 			</header>
@@ -1990,7 +2147,7 @@
 		</section>
 
 		<section id="toolbars" class="section reveal">
-			<header class="head-section">
+			<header class="section-head">
 				<svg class="icon big" aria-hidden="true"><use href="#icon-red"/></svg>
 				<h2>TOOLBARS // STANDARD, TOOLS AND TIME</h2>
 			</header>
@@ -2024,7 +2181,7 @@
 		</section>
 
 		<section id="files" class="section reveal">
-			<header class="head-section">
+			<header class="section-head">
 				<svg class="icon big" aria-hidden="true"><use href="#icon-grey"/></svg>
 				<h2>FILES // OPEN, IMPORT, EXPORT AND PRINT</h2>
 			</header>
@@ -2160,7 +2317,7 @@
 		</section>
 
 		<section id="image" class="section reveal">
-			<header class="head-section">
+			<header class="section-head">
 				<svg class="icon big" aria-hidden="true"><use href="#icon-camera"/></svg>
 				<h2>SAVE MODEL IMAGE // STILLS AND ANIMATED GIFS</h2>
 			</header>
@@ -2290,7 +2447,7 @@
 		</section>
 
 		<section id="rendering" class="section reveal">
-			<header class="head-section">
+			<header class="section-head">
 				<svg class="icon big" aria-hidden="true"><use href="#icon-details"/></svg>
 				<h2>RENDERING // LIGHTING, SHADING AND RENDERERS</h2>
 			</header>
@@ -2406,7 +2563,7 @@
 		</section>
 
 		<section id="modeling" class="section reveal">
-			<header class="head-section">
+			<header class="section-head">
 				<svg class="icon big" aria-hidden="true"><use href="#icon-color"/></svg>
 				<h2>MODELING // PARTS, SELECTION AND TRANSFORMS</h2>
 			</header>
@@ -2533,7 +2690,7 @@
 		</section>
 
 		<section id="tools" class="section reveal">
-			<header class="head-section">
+			<header class="section-head">
 				<svg class="icon big" aria-hidden="true"><use href="#icon-teal"/></svg>
 				<h2>TOOLS // MOUSE, LIGHTS AND CAMERAS</h2>
 			</header>
@@ -2609,7 +2766,7 @@
 		</section>
 
 		<section id="views" class="section reveal">
-			<header class="head-section">
+			<header class="section-head">
 				<svg class="icon big" aria-hidden="true"><use href="#icon-plane"/></svg>
 				<h2>VIEWS // CUBE, CAMERAS, CUTAWAYS AND GRIDS</h2>
 			</header>
@@ -2733,7 +2890,7 @@
 		</section>
 
 		<section id="steps" class="section reveal">
-			<header class="head-section">
+			<header class="section-head">
 				<svg class="icon big" aria-hidden="true"><use href="#icon-yellow"/></svg>
 				<h2>STEPS // BUILD ORDER AND TIMELINE</h2>
 			</header>
@@ -2798,7 +2955,7 @@
 		</section>
 
 		<section id="panels" class="section reveal">
-			<header class="head-section">
+			<header class="section-head">
 				<svg class="icon big" aria-hidden="true"><use href="#icon-wireframe"/></svg>
 				<h2>PANELS // PARTS, COLORS, PROPERTIES AND MORE</h2>
 			</header>
@@ -2920,7 +3077,7 @@
 		</section>
 
 		<section id="instructions" class="section reveal">
-			<header class="head-section">
+			<header class="section-head">
 				<svg class="icon big" aria-hidden="true"><use href="#icon-blue"/></svg>
 				<h2>INSTRUCTIONS // PAGES READY TO PRINT</h2>
 			</header>
@@ -3042,7 +3199,7 @@
 		</section>
 
 		<section id="models" class="section reveal">
-			<header class="head-section">
+			<header class="section-head">
 				<svg class="icon big" aria-hidden="true"><use href="#icon-green"/></svg>
 				<h2>MODELS // SUBMODELS AND PROPERTIES</h2>
 			</header>
@@ -3097,7 +3254,7 @@
 		</section>
 
 		<section id="preferences" class="section reveal">
-			<header class="head-section">
+			<header class="section-head">
 				<svg class="icon big" aria-hidden="true"><use href="#icon-grid"/></svg>
 				<h2>PREFERENCES // EVERY SETTING IN ONE PLACE</h2>
 			</header>
@@ -3209,7 +3366,7 @@
 		</section>
 
 		<section id="meta" class="section reveal">
-			<header class="head-section">
+			<header class="section-head">
 				<svg class="icon big" aria-hidden="true"><use href="#icon-edge"/></svg>
 				<h2>META COMMANDS // LDRAW LINE HANDLING</h2>
 			</header>
@@ -3724,38 +3881,38 @@
 		</section>
 
 		<section id="where" class="section reveal">
-			<header class="head-section">
+			<header class="section-head">
 				<svg class="icon big" aria-hidden="true"><use href="#icon-baseplate"/></svg>
 				<h2>WHERE IS IT? // EVERY COMMAND AND ITS MENU</h2>
 			</header>
 
 			<p class="lead">Where to find each of the 394 commands: the menu bar, the <a href="#toolbars">toolbars</a>, the panel gear buttons and every right click menu, with its shortcut. Type part of a command name to find it.</p>
 
-			<div class="tools-search">
-				<input id="search-menus" class="search" type="search" placeholder="Search commands" aria-label="Search commands">
+			<div class="search-tools">
+				<input id="menus-search" class="search" type="search" placeholder="Search commands" aria-label="Search commands">
 			</div>
 
-			<div id="list-menus" class="list-help"></div>
+			<div id="menus-list" class="help-list"></div>
 		</section>
 
 		<section id="help" class="section reveal">
-			<header class="head-section">
+			<header class="section-head">
 				<svg class="icon big" aria-hidden="true"><use href="#icon-purple"/></svg>
 				<h2>HELP // EVERY &quot;WHAT&#x27;S THIS?&quot; ENTRY</h2>
 			</header>
 
 			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 464 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
-			<div class="tools-search">
+			<div class="search-tools">
 				<input id="search" type="search" placeholder="Search help" aria-label="Search help">
-				<div id="groups-help" class="chips"></div>
+				<div id="help-groups" class="chips"></div>
 			</div>
 
-			<div id="list-help" class="list-help"></div>
+			<div id="help-list" class="help-list"></div>
 		</section>
 
 		<section id="install" class="section reveal">
-			<header class="head-section">
+			<header class="section-head">
 				<svg class="icon big" aria-hidden="true"><use href="#icon-orange"/></svg>
 				<h2>INSTALL // DOWNLOAD, BUILD AND RUN</h2>
 			</header>
@@ -3818,7 +3975,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 		</section>
 
 		<section id="news" class="section reveal">
-			<header class="head-section">
+			<header class="section-head">
 				<svg class="icon big" aria-hidden="true"><use href="#icon-fuschia"/></svg>
 				<h2>NEWS // LATEST CHANGES</h2>
 			</header>
@@ -3829,7 +3986,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<summary>2026-11-15</summary>
 
 				<ul>
-					<li>Site: the page styles carry short notes that say what each part does</li>
+					<li>Site: the page styles and scripts carry short notes that say what each part does</li>
 					<li>Site: the link preview card shows the current app window</li>
 				</ul>
 			</details>
@@ -3996,35 +4153,35 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 		</div>
 
 		<nav id="footer" aria-label="Sections">
-			<div class="border-footer"></div>
+			<div class="footer-border"></div>
 
 			<div class="footer">
-				<div class="inner-footer">
-					<span class="start-footer" aria-hidden="true"></span>
-					<a class="button-navigation" href="#top"><svg class="icon" aria-hidden="true"><use href="#icon-studworx"/></svg><span class="label">Home</span></a>
-					<a class="button-navigation" href="#interface"><svg class="icon" aria-hidden="true"><use href="#icon-console"/></svg><span class="label">Interface</span></a>
-					<a class="button-navigation" href="#toolbars"><svg class="icon" aria-hidden="true"><use href="#icon-red"/></svg><span class="label">Toolbars</span></a>
-					<a class="button-navigation" href="#files"><svg class="icon" aria-hidden="true"><use href="#icon-grey"/></svg><span class="label">Files</span></a>
-					<a class="button-navigation" href="#image"><svg class="icon" aria-hidden="true"><use href="#icon-camera"/></svg><span class="label">Image</span></a>
-					<a class="button-navigation" href="#rendering"><svg class="icon" aria-hidden="true"><use href="#icon-details"/></svg><span class="label">Rendering</span></a>
-					<a class="button-navigation" href="#modeling"><svg class="icon" aria-hidden="true"><use href="#icon-color"/></svg><span class="label">Modeling</span></a>
-					<a class="button-navigation" href="#tools"><svg class="icon" aria-hidden="true"><use href="#icon-teal"/></svg><span class="label">Tools</span></a>
-					<a class="button-navigation" href="#views"><svg class="icon" aria-hidden="true"><use href="#icon-plane"/></svg><span class="label">Views</span></a>
-					<a class="button-navigation" href="#steps"><svg class="icon" aria-hidden="true"><use href="#icon-yellow"/></svg><span class="label">Steps</span></a>
-					<a class="button-navigation" href="#panels"><svg class="icon" aria-hidden="true"><use href="#icon-wireframe"/></svg><span class="label">Panels</span></a>
-					<a class="button-navigation" href="#instructions"><svg class="icon" aria-hidden="true"><use href="#icon-blue"/></svg><span class="label">Instructions</span></a>
-					<a class="button-navigation" href="#models"><svg class="icon" aria-hidden="true"><use href="#icon-green"/></svg><span class="label">Models</span></a>
-					<a class="button-navigation" href="#preferences"><svg class="icon" aria-hidden="true"><use href="#icon-grid"/></svg><span class="label">Preferences</span></a>
-					<a class="button-navigation" href="#meta"><svg class="icon" aria-hidden="true"><use href="#icon-edge"/></svg><span class="label">Meta</span></a>
-					<a class="button-navigation" href="#where"><svg class="icon" aria-hidden="true"><use href="#icon-baseplate"/></svg><span class="label">Where Is It</span></a>
-					<a class="button-navigation" href="#help"><svg class="icon" aria-hidden="true"><use href="#icon-purple"/></svg><span class="label">Help</span></a>
-					<a class="button-navigation" href="#install"><svg class="icon" aria-hidden="true"><use href="#icon-orange"/></svg><span class="label">Install</span></a>
-					<a class="button-navigation" href="#news"><svg class="icon" aria-hidden="true"><use href="#icon-fuschia"/></svg><span class="label">News</span></a>
-					<a class="button-navigation" href="https://github.com/nathaneltitane/studworx"><svg class="icon" aria-hidden="true"><use href="#icon-black"/></svg><span class="label">GitHub</span></a>
-					<a class="button-navigation" href="https://mechablocks.com"><svg class="icon" aria-hidden="true"><use href="#icon-red"/></svg><span class="label">MechaBlocks</span></a>
-					<a class="button-navigation" href="https://l2cu.app"><svg class="icon" aria-hidden="true"><use href="#icon-grey"/></svg><span class="label">L²CU</span></a>
-					<a class="button-navigation" href="https://www.paypal.com/donate?hosted_button_id=ZW3CDCANHJCWJ"><svg class="icon" aria-hidden="true"><use href="#icon-fuschia"/></svg><span class="label">Donate</span></a>
-					<span class="end-footer" aria-hidden="true"></span>
+				<div class="footer-inner">
+					<span class="footer-start" aria-hidden="true"></span>
+					<a class="navigation-button" href="#top"><svg class="icon" aria-hidden="true"><use href="#icon-studworx"/></svg><span class="label">Home</span></a>
+					<a class="navigation-button" href="#interface"><svg class="icon" aria-hidden="true"><use href="#icon-console"/></svg><span class="label">Interface</span></a>
+					<a class="navigation-button" href="#toolbars"><svg class="icon" aria-hidden="true"><use href="#icon-red"/></svg><span class="label">Toolbars</span></a>
+					<a class="navigation-button" href="#files"><svg class="icon" aria-hidden="true"><use href="#icon-grey"/></svg><span class="label">Files</span></a>
+					<a class="navigation-button" href="#image"><svg class="icon" aria-hidden="true"><use href="#icon-camera"/></svg><span class="label">Image</span></a>
+					<a class="navigation-button" href="#rendering"><svg class="icon" aria-hidden="true"><use href="#icon-details"/></svg><span class="label">Rendering</span></a>
+					<a class="navigation-button" href="#modeling"><svg class="icon" aria-hidden="true"><use href="#icon-color"/></svg><span class="label">Modeling</span></a>
+					<a class="navigation-button" href="#tools"><svg class="icon" aria-hidden="true"><use href="#icon-teal"/></svg><span class="label">Tools</span></a>
+					<a class="navigation-button" href="#views"><svg class="icon" aria-hidden="true"><use href="#icon-plane"/></svg><span class="label">Views</span></a>
+					<a class="navigation-button" href="#steps"><svg class="icon" aria-hidden="true"><use href="#icon-yellow"/></svg><span class="label">Steps</span></a>
+					<a class="navigation-button" href="#panels"><svg class="icon" aria-hidden="true"><use href="#icon-wireframe"/></svg><span class="label">Panels</span></a>
+					<a class="navigation-button" href="#instructions"><svg class="icon" aria-hidden="true"><use href="#icon-blue"/></svg><span class="label">Instructions</span></a>
+					<a class="navigation-button" href="#models"><svg class="icon" aria-hidden="true"><use href="#icon-green"/></svg><span class="label">Models</span></a>
+					<a class="navigation-button" href="#preferences"><svg class="icon" aria-hidden="true"><use href="#icon-grid"/></svg><span class="label">Preferences</span></a>
+					<a class="navigation-button" href="#meta"><svg class="icon" aria-hidden="true"><use href="#icon-edge"/></svg><span class="label">Meta</span></a>
+					<a class="navigation-button" href="#where"><svg class="icon" aria-hidden="true"><use href="#icon-baseplate"/></svg><span class="label">Where Is It</span></a>
+					<a class="navigation-button" href="#help"><svg class="icon" aria-hidden="true"><use href="#icon-purple"/></svg><span class="label">Help</span></a>
+					<a class="navigation-button" href="#install"><svg class="icon" aria-hidden="true"><use href="#icon-orange"/></svg><span class="label">Install</span></a>
+					<a class="navigation-button" href="#news"><svg class="icon" aria-hidden="true"><use href="#icon-fuschia"/></svg><span class="label">News</span></a>
+					<a class="navigation-button" href="https://github.com/nathaneltitane/studworx"><svg class="icon" aria-hidden="true"><use href="#icon-black"/></svg><span class="label">GitHub</span></a>
+					<a class="navigation-button" href="https://mechablocks.com"><svg class="icon" aria-hidden="true"><use href="#icon-red"/></svg><span class="label">MechaBlocks</span></a>
+					<a class="navigation-button" href="https://l2cu.app"><svg class="icon" aria-hidden="true"><use href="#icon-grey"/></svg><span class="label">L²CU</span></a>
+					<a class="navigation-button" href="https://www.paypal.com/donate?hosted_button_id=ZW3CDCANHJCWJ"><svg class="icon" aria-hidden="true"><use href="#icon-fuschia"/></svg><span class="label">Donate</span></a>
+					<span class="footer-end" aria-hidden="true"></span>
 				</div>
 			</div>
 		</nav>
@@ -4961,6 +5118,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 			const footer_navigation = document.querySelector ( '.footer' ) ;
 
+			// navigation button scrolled into view
+
 			function button_reveal ( button ) {
 
 				const left = button.offsetLeft - footer_navigation.offsetLeft ;
@@ -4987,11 +5146,13 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			function ends_toggle ( ) {
 
 				footer_navigation.classList.toggle (
-					'scroll-footer',
+					'footer-scroll',
 					footer_navigation.scrollWidth > footer_navigation.clientWidth + 1
 				) ;
 
 			}
+
+			// end buttons follow resizing
 
 			window.addEventListener ( 'resize', ends_toggle ) ;
 
@@ -5037,7 +5198,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 			}, { passive: false } ) ;
 
-			const buttons_navigation = [ ...document.querySelectorAll ( '.button-navigation[href^="#"]' ) ] ;
+			const buttons_navigation = [ ...document.querySelectorAll ( '.navigation-button[href^="#"]' ) ] ;
 
 			// the section in view crosses a band just above the middle of the window
 
@@ -5083,6 +5244,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 			let end_shown = false ;
 
+			// end text shows at the bottom
+
 			function end_reveal ( ) {
 
 				const end = page_end ( ) ;
@@ -5112,6 +5275,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 			}
 
+			// end text follows scroll and resize
+
 			window.addEventListener ( 'scroll', end_reveal, { passive: true } ) ;
 
 			window.addEventListener ( 'resize', end_reveal ) ;
@@ -5125,6 +5290,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 			const video_viewer = viewer.querySelector ( 'video' ) ;
 
+			// viewer opens on an image or video
+
 			const viewer_open = ( element ) => {
 
 				image_viewer.hidden = element !== image_viewer ;
@@ -5136,6 +5303,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			} ;
 
 			document.querySelectorAll ( '.shot' ).forEach ( ( shot ) => {
+
+				// screenshot opens full size
 
 				shot.addEventListener ( 'click', ( ) => {
 
@@ -5151,6 +5320,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 			document.querySelectorAll ( 'figure.video video' ).forEach ( ( video ) => {
 
+				// video opens full size
+
 				video.addEventListener ( 'click', ( ) => {
 
 					video_viewer.src = video.currentSrc || video.src ;
@@ -5165,6 +5336,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 			} ) ;
 
+			// viewer closes
+
 			const viewer_close = ( ) => {
 
 				viewer.classList.remove ( 'open' ) ;
@@ -5173,7 +5346,11 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 			} ;
 
+			// click closes the viewer
+
 			viewer.addEventListener ( 'click', viewer_close ) ;
+
+			// escape closes the viewer
 
 			document.addEventListener ( 'keydown', ( event ) => {
 
@@ -5188,12 +5365,16 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			// help index with search and area chips
 
 			const search_help = document.getElementById ( 'search' ) ;
-			const list_help = document.getElementById ( 'list-help' ) ;
-			const chips_help = document.getElementById ( 'groups-help' ) ;
+			const list_help = document.getElementById ( 'help-list' ) ;
+			const chips_help = document.getElementById ( 'help-groups' ) ;
 
 			let group_help = '' ;
 
+			// text made safe for html
+
 			const html_escape = ( text ) => text.replace ( /[&<>"]/g, ( character ) => ( { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' } [ character ] ) ) ;
+
+			// group filter chip
 
 			function chip_add ( name, label ) {
 
@@ -5202,6 +5383,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				chip.className = 'chip' + ( name === group_help ? ' active' : '' ) ;
 
 				chip.textContent = label ;
+
+				// chip picks its group
 
 				chip.addEventListener ( 'click', ( ) => {
 
@@ -5216,6 +5399,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				chips_help.appendChild ( chip ) ;
 
 			}
+
+			// help list filtered
 
 			function help_render ( ) {
 
@@ -5254,12 +5439,12 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 					count += matches.length ;
 
-					output += '<h3 class="group-help">' + html_escape ( group ) + '</h3>' ;
+					output += '<h3 class="help-group">' + html_escape ( group ) + '</h3>' ;
 
 					matches.forEach ( ( entry ) => {
 
 						output +=
-							'<div class="item-help"><b>' + html_escape ( entry.title ) + '</b>' +
+							'<div class="help-item"><b>' + html_escape ( entry.title ) + '</b>' +
 							entry.paragraphs.map ( ( paragraph ) => '<p>' + html_escape ( paragraph ) + '</p>' ).join ( '' ) +
 							where_html ( entry.title ) +
 							'</div>' ;
@@ -5276,32 +5461,35 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 				else {
 
-					list_help.innerHTML = '<p class="empty-help">No help matches your search.</p>' ;
+					list_help.innerHTML = '<p class="help-empty">No help matches your search.</p>' ;
 
 				}
-
 			}
 
 			// find it in, under help entries
 
 			function paths_html ( paths ) {
 
-				return paths.map ( ( path ) => '<p class="where-help path-help">' + html_escape ( path ) + '</p>' ).join ( '' ) ;
+				return paths.map ( ( path ) => '<p class="help-where help-path">' + html_escape ( path ) + '</p>' ).join ( '' ) ;
 
 			}
+
+			// menu paths for an entry
 
 			function where_html ( title ) {
 
 				const paths = paths_menus.get ( title.replace ( /\.\.\.$/, '' ).toLowerCase ( ) ) ;
 
-				return paths ? '<p class="where-help">Find it in:</p>' + paths_html ( paths ) : '' ;
+				return paths ? '<p class="help-where">Find it in:</p>' + paths_html ( paths ) : '' ;
 
 			}
 
 			// where is it, searchable
 
-			const search_menus = document.getElementById ( 'search-menus' ) ;
-			const list_menus = document.getElementById ( 'list-menus' ) ;
+			const search_menus = document.getElementById ( 'menus-search' ) ;
+			const list_menus = document.getElementById ( 'menus-list' ) ;
+
+			// command index filtered
 
 			function menus_render ( ) {
 
@@ -5316,14 +5504,16 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				} ) ;
 
 				list_menus.innerHTML = matches.length ? matches.map ( ( entry ) =>
-					'<div class="item-help"><b>' + html_escape ( entry.command ) +
+					'<div class="help-item"><b>' + html_escape ( entry.command ) +
 					( entry.shortcut ? '<kbd>' + html_escape ( entry.shortcut ) + '</kbd>' : '' ) + '</b>' +
 					paths_html ( entry.paths ) +
-					'</div>' ).join ( '' ) : '<p class="empty-help">No command matches your search.</p>' ;
+					'</div>' ).join ( '' ) : '<p class="help-empty">No command matches your search.</p>' ;
 
 			}
 
 			if ( search_menus ) {
+
+				// index filters while typing
 
 				search_menus.addEventListener ( 'input', menus_render ) ;
 
@@ -5334,6 +5524,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			chip_add ( '', 'All' ) ;
 
 			groups_help.forEach ( ( group ) => chip_add ( group, group ) ) ;
+
+			// help filters while typing
 
 			search_help.addEventListener ( 'input', help_render ) ;
 
