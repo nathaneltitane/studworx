@@ -1436,7 +1436,7 @@ void swPropertiesWidget::CreateWidgets()
 		{ CreateFloatEditor(swObjectPropertyId::LightSpotPenumbraAngle, tr("Penumbra"), tr("Angle in degrees over which the intensity of the spotlight falls off to zero"), 0.0f, 179.9f, true, tr("°")), swObjectPropertyId::LightSpotPenumbraAngle }
 	});
 
-	AddValueRow(this, tr("S"), tr("Area Size"),
+	AddValueRow(this, tr("S", "Area Size"), tr("Area Size"),
 	{
 		{ CreateFloatEditor(swObjectPropertyId::LightAreaSizeX, tr("Size X"), tr("The width of the area light"), 0.0f, FLT_MAX, true), swObjectPropertyId::LightAreaSizeX },
 		{ CreateFloatEditor(swObjectPropertyId::LightAreaSizeY, tr("Y"), tr("The height of the area light"), 0.0f, FLT_MAX, true), swObjectPropertyId::LightAreaSizeY }
@@ -1459,7 +1459,7 @@ void swPropertiesWidget::CreateWidgets()
 		{ CreateFloatEditor(swObjectPropertyId::LightPOVRaySpotTightness, tr("Tightness"), tr("Additional exponential spotlight edge softening"), 0.0f, FLT_MAX, true), swObjectPropertyId::LightPOVRaySpotTightness }
 	});
 
-	AddValueRow(this, tr("F"), tr("Fade"),
+	AddValueRow(this, tr("F", "Fade"), tr("Fade"),
 	{
 		{ CreateFloatEditor(swObjectPropertyId::LightPOVRayFadeDistance, tr("Fade Distance"), tr("The distance at which the full light intensity arrives"), 0.0f, FLT_MAX, true), swObjectPropertyId::LightPOVRayFadeDistance },
 		{ CreateFloatEditor(swObjectPropertyId::LightPOVRayFadePower, tr("Fade Power"), tr("Light falloff rate"), 0.0f, FLT_MAX, true), swObjectPropertyId::LightPOVRayFadePower }

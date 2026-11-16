@@ -7,6 +7,8 @@
   - Site: the page styles live in their own files under resources/css, and resources/css/logo.css picks each section's logo, so a new or swapped logo shows without rebuilding the page
   - Translations: Traditional Chinese has about 1,900 more and better translations, from yoyomaimai
   - Translations: Traditional Chinese reads right for Startup, Origin, Author Line, Hip Accessory and Filter Parts
+  - Translations: every line in all nine languages was reviewed, the missing ones translated, and each language uses one word per meaning, the same words as its menus
+  - Translations: snap sizes read as studs, plates and bricks in every language, and each property row letter matches its row name
   - Preferences: the Get Key button widens to show its whole label in longer languages
   - Translations: every machine-translated line in all nine languages was checked, and about 2,900 wrong ones now read right, like Close that read as near, Light as pale and Stud as earring
   - Translations: Traditional Chinese uses Taiwan words, like 匯入 and 匯出 for import and export
