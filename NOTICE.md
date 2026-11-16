@@ -4,6 +4,7 @@
   <summary>2026-11-15</summary>
 
   - Site: the page styles carry short notes that say what each part does
+  - Site: the link preview card shows the current app window
 
   </details>
 
