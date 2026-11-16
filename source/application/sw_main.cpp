@@ -185,7 +185,13 @@ int main(int argc, char *argv[])
 	QLocale Locale;
 
 	if (!Language.isEmpty())
+	{
 		Locale = QLocale(Language);
+
+		// kde dialog buttons follow this
+
+		qputenv("LANGUAGE", Language.toUtf8());
+	}
 
 	QTranslator QtTranslator;
 	if (QtTranslator.load(Locale, "qt", "_", QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
