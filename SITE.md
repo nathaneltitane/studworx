@@ -4,15 +4,13 @@ Every section of [studworx.app](https://studworx.app), features first. `tools/st
 
 ## Interface
 
-<!-- interface | INTERFACE // MENUS, PANELS AND HELP -->
+<!-- interface | INTERFACE // MENUS, WINDOW AND HELP -->
 
 StudWorx is built from standard Qt widgets: panels, dialogs and windows follow your system style and light or dark theme, and only the model views draw with OpenGL. Menus are grouped by task, every icon and cursor is drawn in code so it stays sharp at any size, and every dialog and panel explains itself.
 
 - **Menus by task.** Every command sits in a menu named for what you're doing, like File, Edit, View, Part, Steps or Models. Each one has its own keyboard letter. The Where Is It section below finds any command.
 - **Options menus.** Each panel and view has a gear button with the settings that belong to it, right where you need them.
-- **Tabs, splits and status bar.** Work on several models at once in tabs, split the view to see a model from two sides, or go full screen. The status bar shows what is selected, with its name, ID and weight, the view and snap settings and the current step; right click it to choose what it shows.
-- **Split views.** Split the model view into several views, each with its own camera, to see the model from different sides at once.
-- **Toolbars and panels on demand.** Show only the toolbars and panels you need, and hide the rest, from View > Toolbars.
+- **Tabs, split views and status bar.** Work on several models at once in tabs, or go full screen. Split the model view into several views, each with its own camera, to see the model from different sides at once. The status bar shows what is selected, with its name, ID and weight, the view and snap settings and the current step; right click it to choose what it shows.
 - **Lock Interface.** Keeps panels and toolbars where they are, so nothing gets dragged away by accident, and hides panel title bars to save space. Panels still resize and can still be shown or hidden. Turn it on at the end of View > Toolbars, or with a right click on any toolbar or panel title.
 - **Undo and clipboard.** Undo and Redo every change, and Cut, Copy and Paste parts between models and tabs. Paste with Steps keeps the steps of the copied parts.
 - **Contextual help.** Click Help > "What's This?" or the question mark in a title bar, then click anything to learn what it does. F1 works too. Every entry is also in the Help section below.
@@ -360,6 +358,7 @@ Every part belongs to a building step. Steps drive the model view, the instructi
 
 Panels dock side by side in any area of the main window, with uniform headers, buttons and text boxes sized from their options button.
 
+- **Panels on demand.** Show only the panels you need, and hide the rest, from View > Toolbars.
 - **Parts.** Categories and palettes with a filter. The panel snaps to whole thumbnail tiles and rows, docked or floating, and the tooltip of each part shows its name, ID and weight.
 - **Part palettes.** Create, rename, reorder and delete palettes, import them, or build one from an online set inventory.
 - **Colors.** Collapsible solid, translucent and special color groups with square color tiles. Docked at the top or bottom, the tiles line up in one long row you scroll with the wheel or the arrows at its ends.
