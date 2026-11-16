@@ -1,6 +1,13 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-16</summary>
+
+  - Site: every footer button has its own logo, with a tools logo for Toolbars, GitHub and PayPal logos for GitHub and Donate, and L²CU in green like on MechaBlocks
+
+  </details>
+
+  <details>
   <summary>2026-11-15</summary>
 
   - Site: the page styles and scripts carry short notes that say what each part does

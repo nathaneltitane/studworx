@@ -29,7 +29,7 @@ StudWorx is built from standard Qt widgets: panels, dialogs and windows follow y
 
 ## Toolbars
 
-<!-- toolbars | red | TOOLBARS // STANDARD, TOOLS AND TIME -->
+<!-- toolbars | tools | TOOLBARS // STANDARD, TOOLS AND TIME -->
 
 Toolbars hold the controls you reach for most, the same whatever you are working on. Show or hide each one from View > Toolbars or a right click on any toolbar, drag one by its handle to dock it on another edge or float it, and Lock Interface keeps them where they are.
 
@@ -425,7 +425,7 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 
 ## Models
 
-<!-- models | green | MODELS // SUBMODELS AND PROPERTIES -->
+<!-- models | black | MODELS // SUBMODELS AND PROPERTIES -->
 
 Large builds split into submodels that you can edit on their own or in place, inside the model that uses them.
 
