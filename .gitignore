@@ -49,7 +49,4 @@ studworx-windows*.exe
 /tools/studworx-social
 /resources/site/
 /index-social.html
-/resources/logo/*
-!/resources/logo/logo-studworx.svg
-!/resources/logo/logo-github.svg
 AGENTS.md

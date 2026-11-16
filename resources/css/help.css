@@ -1,0 +1,72 @@
+/* help entries in columns */
+
+.help-list {
+	columns: 3 320px;
+	column-gap: 25px;
+}
+
+/* help group title */
+
+.help-group {
+	column-span: all;
+	break-inside: avoid;
+	margin: 20px 0px 5px 0px;
+	font-size: 15px;
+}
+
+/* help entry card */
+
+.help-item {
+	break-inside: avoid;
+	background: #f6f6f6;
+	border-radius: 15px 15px 15px 15px;
+	padding: 10px 15px 10px 15px;
+	margin: 0px 0px 10px 0px;
+}
+
+/* help entry title */
+
+.help-item b {
+	display: block;
+}
+
+/* help entry text */
+
+.help-item p {
+	margin: 5px 0px 0px 0px;
+}
+
+/* shortcut on the right */
+
+.help-item kbd {
+	float: right;
+	font-family: inherit;
+	font-size: 13px;
+	color: #777777;
+}
+
+/* menu path text */
+
+.help-where {
+	color: #777777;
+}
+
+/* menu label set apart */
+
+.help-item .help-where:not(.help-path) {
+	margin: 15px 0px 0px 0px;
+}
+
+/* one menu path per line */
+
+.help-item .help-path {
+	margin: 5px 0px 0px 0px;
+	padding: 5px 0px 0px 0px;
+	border-top: 1px solid #e0e0e0;
+}
+
+/* no matching help */
+
+.help-empty {
+	padding: 20px 0px 20px 0px;
+}

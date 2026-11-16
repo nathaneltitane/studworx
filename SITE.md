@@ -1,10 +1,10 @@
 # Site
 
-Every section of [studworx.app](https://studworx.app), features first. `tools/studworx-site` builds the page from this file. Each `##` section starts with a comment that sets its page id, icon and heading, and its first paragraph is the lead. A `<!-- gallery class -->` comment turns the images and video links below it into one gallery, and the title of a single image sets its figure class. A `<!-- video -->` comment turns the link below it into a looping video, with the link text as its caption. A `<!-- include name -->` comment places generated content: the meta command list, the command index, the help search or the latest notices. A paragraph made of a single link ending in › becomes a more link, and `@VERSION@`, `@COMMANDS@` and `@ENTRIES@` are filled with the release version, the command count and the help entry count.
+Every section of [studworx.app](https://studworx.app), features first. `tools/studworx-site` builds the page from this file. Each `##` section starts with a comment that sets its page id and heading, its icon comes from `resources/css/logo.css`, and its first paragraph is the lead. A `<!-- gallery class -->` comment turns the images and video links below it into one gallery, and the title of a single image sets its figure class. A `<!-- video -->` comment turns the link below it into a looping video, with the link text as its caption. A `<!-- include name -->` comment places generated content: the meta command list, the command index, the help search or the latest notices. A paragraph made of a single link ending in › becomes a more link, and `@VERSION@`, `@COMMANDS@` and `@ENTRIES@` are filled with the release version, the command count and the help entry count.
 
 ## Interface
 
-<!-- interface | console | INTERFACE // MENUS, PANELS AND HELP -->
+<!-- interface | INTERFACE // MENUS, PANELS AND HELP -->
 
 StudWorx is built from standard Qt widgets: panels, dialogs and windows follow your system style and light or dark theme, and only the model views draw with OpenGL. Menus are grouped by task, every icon and cursor is drawn in code so it stays sharp at any size, and every dialog and panel explains itself.
 
@@ -29,7 +29,7 @@ StudWorx is built from standard Qt widgets: panels, dialogs and windows follow y
 
 ## Toolbars
 
-<!-- toolbars | tools | TOOLBARS // STANDARD, TOOLS AND TIME -->
+<!-- toolbars | TOOLBARS // STANDARD, TOOLS AND TIME -->
 
 Toolbars hold the controls you reach for most, the same whatever you are working on. Show or hide each one from View > Toolbars or a right click on any toolbar, drag one by its handle to dock it on another edge or float it, and Lock Interface keeps them where they are.
 
@@ -45,7 +45,7 @@ Toolbars hold the controls you reach for most, the same whatever you are working
 
 ## Files
 
-<!-- files | grey | FILES // OPEN, IMPORT, EXPORT AND PRINT -->
+<!-- files | FILES // OPEN, IMPORT, EXPORT AND PRINT -->
 
 Models are plain LDraw text files in LeoCAD's format, so they open in either program. StudWorx reads and writes them, imports from other tools, exports to 3D and parts list formats, and prints the current view.
 
@@ -108,7 +108,7 @@ studworx model.ldr opens a model. The options below work without opening a windo
 
 ## Image
 
-<!-- image | camera | SAVE MODEL IMAGE // STILLS AND ANIMATED GIFS -->
+<!-- image | SAVE MODEL IMAGE // STILLS AND ANIMATED GIFS -->
 
 File > Image saves still images and animated GIFs of the active model. The preview on the left shows exactly what will be saved, and the settings on the right are grouped by what they change. Every setting is kept for the next time.
 
@@ -170,7 +170,7 @@ The dialog keeps its settings in the [Settings] group of ~/.config/StudWorx/Stud
 
 ## Rendering
 
-<!-- rendering | details | RENDERING // LIGHTING, SHADING AND RENDERERS -->
+<!-- rendering | RENDERING // LIGHTING, SHADING AND RENDERERS -->
 
 The model view draws fast with OpenGL in four lighting styles, and File > Render hands the model to POV-Ray or Blender for photo quality images.
 
@@ -206,7 +206,7 @@ The model view draws fast with OpenGL in four lighting styles, and File > Render
 
 ## Modeling
 
-<!-- modeling | color | MODELING // PARTS, SELECTION AND TRANSFORMS -->
+<!-- modeling | MODELING // PARTS, SELECTION AND TRANSFORMS -->
 
 Pick a part in the Parts panel, drop it in the model view, then move, rotate, paint and group it. Snapping keeps everything on the LDraw grid, and selection tools find the parts you need in large models.
 
@@ -256,7 +256,7 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 
 ## Tools
 
-<!-- tools | teal | TOOLS // MOUSE, LIGHTS AND CAMERAS -->
+<!-- tools | TOOLS // MOUSE, LIGHTS AND CAMERAS -->
 
 The Tools toolbar sets what the mouse does in the model view. Every tool has a keyboard shortcut, and mouse buttons with modifier keys can start any tool for one drag.
 
@@ -293,7 +293,7 @@ Give a placed submodel a joint, turn it with the mouse and save the angles as po
 
 ## Views
 
-<!-- views | plane | VIEWS // CUBE, CAMERAS, CUTAWAYS AND GRIDS -->
+<!-- views | VIEWS // CUBE, CAMERAS, CUTAWAYS AND GRIDS -->
 
 Look at a model from any side, see inside it without changing it, and measure it against the grid.
 
@@ -329,7 +329,7 @@ Look at a model from any side, see inside it without changing it, and measure it
 
 ## Steps
 
-<!-- steps | yellow | STEPS // BUILD ORDER AND TIMELINE -->
+<!-- steps | STEPS // BUILD ORDER AND TIMELINE -->
 
 Every part belongs to a building step. Steps drive the model view, the instructions and the animated GIFs.
 
@@ -356,7 +356,7 @@ Every part belongs to a building step. Steps drive the model view, the instructi
 
 ## Panels
 
-<!-- panels | wireframe | PANELS // PARTS, COLORS, PROPERTIES AND MORE -->
+<!-- panels | PANELS // PARTS, COLORS, PROPERTIES AND MORE -->
 
 Panels dock side by side in any area of the main window, with uniform headers, buttons and text boxes sized from their options button.
 
@@ -390,7 +390,7 @@ Panels dock side by side in any area of the main window, with uniform headers, b
 
 ## Instructions
 
-<!-- instructions | blue | INSTRUCTIONS // PAGES READY TO PRINT -->
+<!-- instructions | INSTRUCTIONS // PAGES READY TO PRINT -->
 
 File > Instructions lays the steps out on pages with a cover, parts lists and a bill of materials. Every page element can be styled and placed, and everything is saved in the model file as !SW INSTRUCTION meta commands.
 
@@ -425,7 +425,7 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 
 ## Models
 
-<!-- models | black | MODELS // SUBMODELS AND PROPERTIES -->
+<!-- models | MODELS // SUBMODELS AND PROPERTIES -->
 
 Large builds split into submodels that you can edit on their own or in place, inside the model that uses them.
 
@@ -449,7 +449,7 @@ Large builds split into submodels that you can edit on their own or in place, in
 
 ## Preferences
 
-<!-- preferences | edge | PREFERENCES // EVERY SETTING IN ONE PLACE -->
+<!-- preferences | PREFERENCES // EVERY SETTING IN ONE PLACE -->
 
 Nine pages with lined up label and control columns, checkboxes included, each label greyed out with its control. Value boxes show their maximum and bring any typed number into range, and every slider shows its value.
 
@@ -480,7 +480,7 @@ Nine pages with lined up label and control columns, checkboxes included, each la
 
 ## Meta
 
-<!-- meta | grid | META COMMANDS // LDRAW LINE HANDLING -->
+<!-- meta | META COMMANDS // LDRAW LINE HANDLING -->
 
 Every meta command StudWorx reads, writes or keeps: the official LDraw ones, its own !SW commands, LeoCAD commands it migrates, and the commands of MLCad, LPub, LSynth, L3P, LDLite and Blender.
 
@@ -488,7 +488,7 @@ Every meta command StudWorx reads, writes or keeps: the official LDraw ones, its
 
 ## Where Is It
 
-<!-- where | baseplate | WHERE IS IT? // EVERY COMMAND AND ITS MENU -->
+<!-- where | WHERE IS IT? // EVERY COMMAND AND ITS MENU -->
 
 Where to find each of the @COMMANDS@ commands: the menu bar, the toolbars, the panel gear buttons and every right click menu, with its shortcut. Type part of a command name to find it.
 
@@ -496,7 +496,7 @@ Where to find each of the @COMMANDS@ commands: the menu bar, the toolbars, the p
 
 ## Help
 
-<!-- help | purple | HELP // EVERY "WHAT'S THIS?" ENTRY -->
+<!-- help | HELP // EVERY "WHAT'S THIS?" ENTRY -->
 
 The same help the app shows from Help > "What's This?", the title bar question mark or F1: @ENTRIES@ entries for every menu command, panel and dialog. Search them, or pick an area.
 
@@ -504,7 +504,7 @@ The same help the app shows from Help > "What's This?", the title bar question m
 
 ## Install
 
-<!-- install | orange | INSTALL // DOWNLOAD, BUILD AND RUN -->
+<!-- install | INSTALL // DOWNLOAD, BUILD AND RUN -->
 
 Packages are rebuilt from every change and carry the date version of the release. They include their own Qt libraries and the LDraw parts library.
 
@@ -548,7 +548,7 @@ studworx/tools/studworx-install [prefix] [build directory]
 
 ## News
 
-<!-- news | fuschia | NEWS // LATEST CHANGES -->
+<!-- news | NEWS // LATEST CHANGES -->
 
 The latest release notices from the StudWorx repository.
 

@@ -1,0 +1,156 @@
+/* home logo */
+
+.landing-logo .logo,
+.navigation-button.home .icon {
+	background-image: url(../logo/logo-studworx.svg);
+}
+
+/* interface logo */
+
+#interface .section-head .icon,
+.navigation-button.interface .icon {
+	background-image: url(../logo/logo-console.svg);
+}
+
+/* toolbars logo */
+
+#toolbars .section-head .icon,
+.navigation-button.toolbars .icon {
+	background-image: url(../logo/logo-tools.svg);
+}
+
+/* files logo */
+
+#files .section-head .icon,
+.navigation-button.files .icon {
+	background-image: url(../logo/logo-files.svg);
+}
+
+/* image logo */
+
+#image .section-head .icon,
+.navigation-button.image .icon {
+	background-image: url(../logo/logo-camera.svg);
+}
+
+/* rendering logo */
+
+#rendering .section-head .icon,
+.navigation-button.rendering .icon {
+	background-image: url(../logo/logo-details.svg);
+}
+
+/* modeling logo */
+
+#modeling .section-head .icon,
+.navigation-button.modeling .icon {
+	background-image: url(../logo/logo-color.svg);
+}
+
+/* tools logo */
+
+#tools .section-head .icon,
+.navigation-button.tools .icon {
+	background-image: url(../logo/logo-teal.svg);
+}
+
+/* views logo */
+
+#views .section-head .icon,
+.navigation-button.views .icon {
+	background-image: url(../logo/logo-plane.svg);
+}
+
+/* steps logo */
+
+#steps .section-head .icon,
+.navigation-button.steps .icon {
+	background-image: url(../logo/logo-steps.svg);
+}
+
+/* panels logo */
+
+#panels .section-head .icon,
+.navigation-button.panels .icon {
+	background-image: url(../logo/logo-wireframe.svg);
+}
+
+/* instructions logo */
+
+#instructions .section-head .icon,
+.navigation-button.instructions .icon {
+	background-image: url(../logo/logo-blue.svg);
+}
+
+/* models logo */
+
+#models .section-head .icon,
+.navigation-button.models .icon {
+	background-image: url(../logo/logo-black.svg);
+}
+
+/* preferences logo */
+
+#preferences .section-head .icon,
+.navigation-button.preferences .icon {
+	background-image: url(../logo/logo-edge.svg);
+}
+
+/* meta logo */
+
+#meta .section-head .icon,
+.navigation-button.meta .icon {
+	background-image: url(../logo/logo-grid.svg);
+}
+
+/* where logo */
+
+#where .section-head .icon,
+.navigation-button.where .icon {
+	background-image: url(../logo/logo-baseplate.svg);
+}
+
+/* help logo */
+
+#help .section-head .icon,
+.navigation-button.help .icon {
+	background-image: url(../logo/logo-purple.svg);
+}
+
+/* install logo */
+
+#install .section-head .icon,
+.navigation-button.install .icon {
+	background-image: url(../logo/logo-orange.svg);
+}
+
+/* news logo */
+
+#news .section-head .icon,
+.navigation-button.news .icon {
+	background-image: url(../logo/logo-fuschia.svg);
+}
+
+/* github logo */
+
+.navigation-button.github .icon {
+	background-image: url(../logo/logo-github.svg);
+}
+
+/* mechablocks logo */
+
+.navigation-button.mechablocks .icon {
+	background-image: url(../logo/logo-red.svg);
+}
+
+/* l2cu logo */
+
+.navigation-button.l2cu .icon {
+	background-image: url(../logo/logo-green.svg);
+}
+
+/* donate logo */
+
+.navigation-button.donate .icon {
+	background-image: url(../logo/logo-paypal.svg);
+}
