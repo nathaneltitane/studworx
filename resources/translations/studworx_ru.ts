@@ -1942,14 +1942,12 @@
     <message>
         <location filename="../../source/core/sw_object_camera.cpp" line="64"/>
         <source>Perspective</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перспектива</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object_camera.cpp" line="67"/>
         <source>Orthographic</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">орфографический</translation>
+        <translation type="unfinished">Ортогональная</translation>
     </message>
 </context>
 <context>
@@ -1999,74 +1997,62 @@
     <message>
         <location filename="../../source/core/sw_object.cpp" line="57"/>
         <source>Rename Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Переименовать свет</translation>
+        <translation type="unfinished">Переименовать источник света</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="60"/>
         <source>Change Light Type</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Изменить тип освещения</translation>
+        <translation type="unfinished">Изменить тип источника света</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="63"/>
         <source>Change Light Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Изменить цвет света</translation>
+        <translation type="unfinished">Изменить цвет источника света</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="66"/>
         <source>Change Light Blender Power</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Изменить свет Blender Мощность</translation>
+        <translation type="unfinished">Изменить мощность источника света Blender</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="69"/>
         <source>Change Light POV-Ray Power</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Изменить свет POV-Ray Мощность</translation>
+        <translation type="unfinished">Изменить мощность источника света POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="72"/>
         <source>Change Light Shadow</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Изменить светлую тень</translation>
+        <translation type="unfinished">Изменить тень источника света</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="75"/>
         <source>Change Light POV-Ray Fade Distance</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Изменить расстояние исчезновения света POV-Ray</translation>
+        <translation type="unfinished">Изменить расстояние затухания источника света POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="78"/>
         <source>Change Light POV-Ray Fade Power</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Изменить мощность света POV-Ray Fade</translation>
+        <translation type="unfinished">Изменить мощность затухания источника света POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="81"/>
         <source>Change Light Blender Radius</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Изменить радиус света Blender</translation>
+        <translation type="unfinished">Изменить радиус источника света Blender</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="84"/>
         <source>Change Light Blender Angle</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Изменить угол освещения Blender</translation>
+        <translation type="unfinished">Изменить угол источника света Blender</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="87"/>
         <source>Change Area Light X Size</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Изменить размер области освещения X</translation>
+        <translation type="unfinished">Изменить размер X площадного источника света</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="90"/>
         <source>Change Area Light Y Size</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Изменить размер области освещения по оси Y</translation>
+        <translation type="unfinished">Изменить размер Y площадного источника света</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="93"/>
@@ -2101,14 +2087,12 @@
     <message>
         <location filename="../../source/core/sw_object.cpp" line="102"/>
         <source>Change Area Light Shape</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Изменить форму освещения области</translation>
+        <translation type="unfinished">Изменить форму площадного источника света</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="106"/>
         <source>Change Area Light POV-Ray Grid</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Изменить сетку освещения области POV-Ray</translation>
+        <translation type="unfinished">Изменить сетку площадного источника света POV-Ray</translation>
     </message>
 </context>
 <context>
@@ -2214,25 +2198,21 @@
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="77"/>
         <source>Rectangle</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Прямоугольник</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="80"/>
         <source>Square</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Квадрат</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="83"/>
         <source>Disk</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Диск</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="86"/>
         <source>Ellipse</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Эллипс</translation>
     </message>
 </context>
@@ -2241,8 +2221,7 @@
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="44"/>
         <source>Point Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Точечный свет</translation>
+        <translation type="unfinished">Точечный источник света</translation>
     </message>
     <message>
         <source>Spot Light</source>
@@ -2257,14 +2236,12 @@
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="50"/>
         <source>Directional Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Направленный свет</translation>
+        <translation type="unfinished">Направленный источник света</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="53"/>
         <source>Area Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зона света</translation>
+        <translation type="unfinished">Площадный источник света</translation>
     </message>
 </context>
 <context>
@@ -2441,14 +2418,12 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="189"/>
         <source>&amp;POV-Ray Render...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;POV-Ray Рендеринг...</translation>
+        <translation type="unfinished">Рендеринг &amp;POV-Ray...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="198"/>
         <source>&amp;Blender Render...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Blender Рендеринг...</translation>
+        <translation type="unfinished">Рендеринг &amp;Blender...</translation>
     </message>
     <message>
         <source>&amp;Open in Blender...</source>
@@ -2711,8 +2686,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="918"/>
         <source>Point Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Точечный свет</translation>
+        <translation type="unfinished">Точечный источник света</translation>
     </message>
     <message>
         <source>Spot Light</source>
@@ -2722,14 +2696,12 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="936"/>
         <source>Directional Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Направленный свет</translation>
+        <translation type="unfinished">Направленный источник света</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="945"/>
         <source>Area Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зона света</translation>
+        <translation type="unfinished">Площадный источник света</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="954"/>
@@ -4171,19 +4143,16 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2680"/>
         <source>Focus Next Connection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Фокус на следующее соединение</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2689"/>
         <source>Focus Previous Connection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Фокус на предыдущее соединение</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2698"/>
         <source>Rotate Train Track</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Повернуть железнодорожный путь</translation>
     </message>
     <message>
@@ -4579,14 +4548,12 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3477"/>
         <source>NewDirectionalLight</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Новый направленный свет</translation>
+        <translation type="unfinished">Новый направленный источник света</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3478"/>
         <source>NewAreaLight</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Новый районный свет</translation>
+        <translation type="unfinished">Новый площадной источник света</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3479"/>
@@ -4715,25 +4682,21 @@
     <message>
         <location filename="../../source/core/sw_project.cpp" line="414"/>
         <source>Model &apos;%1&apos; was deleted.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Модель &apos;%1&apos; удалена.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_file.cpp" line="54"/>
         <source>Embedded data has no filename.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Встроенные данные не имеют имени файла.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_file.cpp" line="108"/>
         <source>Unexpected statement in embedded data &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Неожиданный оператор во внедренных данных &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_file.cpp" line="143"/>
         <source>Duplicate model &apos;%1&apos; was ignored; model names are case-insensitive.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Дублирующаяся модель &apos;%1&apos; была проигнорирована; имена моделей не чувствительны к регистру.</translation>
     </message>
     <message>
@@ -4776,13 +4739,11 @@ File format is not recognized.</source>
         <location filename="../../source/core/sw_project_file.cpp" line="574"/>
         <location filename="../../source/core/sw_project_file.cpp" line="676"/>
         <source>Could not write all model data.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось записать все данные модели.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_import.cpp" line="75"/>
         <source>Merging would change texture &apos;%1&apos; used by model &apos;%2&apos;. Rename the conflicting texture before merging.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">При слиянии изменится текстура &apos;%1&apos;, используемая моделью &apos;%2&apos;. Переименуйте конфликтующую текстуру перед объединением.</translation>
     </message>
     <message>
@@ -4874,37 +4835,31 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/core/sw_project_import.cpp" line="223"/>
         <source>Merged %1 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Объединен %1 </translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_import.cpp" line="242"/>
         <source>Could not reserve submodel name &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось зарезервировать имя подмодели &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_file.cpp" line="793"/>
         <source>Cannot export different submodels named &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Невозможно экспортировать различные подмодели с именем &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_file.cpp" line="843"/>
         <source>Could not serialize all model data.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось сериализовать все данные модели.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_file.cpp" line="881"/>
         <source>Cannot export different embedded data named &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Невозможно экспортировать различные встроенные данные с именем &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_import.cpp" line="416"/>
         <source>Clipboard contains no model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">В буфере обмена нет модели.</translation>
     </message>
     <message>
@@ -6388,7 +6343,6 @@ File format is not recognized.</source>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1737"/>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1755"/>
         <source>%1 failed: %2</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">%1 не удалось: %2</translation>
     </message>
     <message>
@@ -6636,8 +6590,7 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="199"/>
         <source>Render the current model using Blender</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Отрисуйте текущую модель, используя Blender.</translation>
+        <translation type="unfinished">Выполнить рендеринг текущей модели с помощью Blender</translation>
     </message>
     <message>
         <source>Open the current model in Blender</source>
@@ -6941,8 +6894,7 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="919"/>
         <source>Add new point light sources to the model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Добавьте в модель новые точечные источники света.</translation>
+        <translation type="unfinished">Добавить в модель новые точечные источники света</translation>
     </message>
     <message>
         <source>Add new spot lights to the model</source>
@@ -6957,8 +6909,7 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="946"/>
         <source>Add new area light sources to the model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Добавьте в модель новые источники освещения области.</translation>
+        <translation type="unfinished">Добавить в модель новые площадные источники света</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="955"/>
@@ -8026,20 +7977,17 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2681"/>
         <source>Focus the next connection of the currently selected track</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Фокус на следующее соединение текущей выбранной дорожки</translation>
+        <translation type="unfinished">Фокус на следующее соединение выбранного пути</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2690"/>
         <source>Focus the previous connection of the currently selected track</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Фокус на предыдущее соединение текущего выбранного трека</translation>
+        <translation type="unfinished">Фокус на предыдущее соединение выбранного пути</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2699"/>
         <source>Rotate the focused train track around its last connection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Вращайте выбранный железнодорожный путь вокруг его последнего соединения.</translation>
+        <translation type="unfinished">Вращать путь в фокусе вокруг его последнего соединения</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2708"/>
@@ -8240,7 +8188,6 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3374"/>
         <source>Click a control to read its contextual help</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Щелкните элемент управления, чтобы прочитать его контекстную справку.</translation>
     </message>
     <message>
@@ -8503,13 +8450,11 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="272"/>
         <source>&lt;p&gt;&lt;b&gt;Undo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reverse the most recent model edit, such as inserting, moving, painting, or deleting an object. Repeat Undo to move backward through the edit history.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Отменить&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Отменить последнее редактирование модели, например вставку, перемещение, рисование или удаление объекта. Повторите команду «Отменить», чтобы вернуться назад по истории изменений.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="281"/>
         <source>&lt;p&gt;&lt;b&gt;Redo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reapply an edit that was reversed with Undo. Making a new edit after Undo replaces the redo history with the new sequence of edits.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Повторить&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Повторно применить редактирование, которое было отменено с помощью функции «Отменить». При внесении нового редактирования после отмены действия история повторов заменяется новой последовательностью изменений.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -8752,56 +8697,47 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="911"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Part Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a part in the Parts dock and a color in Colors, then use this tool in the model view to place the part. Movement snapping controls placement increments. Use the preview to check placement before inserting the part.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент «Вставить деталь»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите деталь в доке «Детали» и цвет в разделе «Цвета», затем используйте этот инструмент на виде модели, чтобы разместить деталь. Привязка движения контролирует шаг размещения. Используйте предварительный просмотр, чтобы проверить размещение перед вставкой детали.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="920"/>
         <source>&lt;p&gt;&lt;b&gt;Point Light Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use the model view to place a light that emits in all directions from a point. Select the light afterward to edit its color, shadow settings, and renderer-specific power in Properties.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент «Точечный свет»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Используйте вид модели, чтобы разместить свет, излучаемый во всех направлениях от точки. Затем выберите источник света, чтобы изменить его цвет, настройки теней и мощность рендеринга в свойствах.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент «Точечный источник света»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Используйте вид модели, чтобы разместить источник света, излучающий во всех направлениях из одной точки. Затем выберите его, чтобы изменить цвет, параметры теней и мощность для конкретного средства рендеринга в разделе «Свойства».&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="929"/>
         <source>&lt;p&gt;&lt;b&gt;Spotlight Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use the model view to create a directed cone of light. In Properties, adjust its position and target, cone angle, penumbra, and renderer-specific power.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент «Прожектор»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Используйте вид модели, чтобы создать направленный конус света. В разделе «Свойства» настройте его положение и цель, угол конуса, полутень и мощность, специфичную для средства визуализации.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="938"/>
         <source>&lt;p&gt;&lt;b&gt;Directional Light Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create a light with parallel rays, such as sunlight. Its direction determines the illumination. Select it to adjust its transform, color, and renderer-specific settings in Properties.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент «Направленный свет»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Создайте свет с параллельными лучами, например, солнечным светом. Его направление определяет освещенность. Выберите его, чтобы настроить параметры преобразования, цвета и средства рендеринга в свойствах.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент «Направленный источник света»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Создайте источник света с параллельными лучами, например солнечный свет. Его направление определяет освещение. Выберите его, чтобы настроить преобразование, цвет и параметры средства рендеринга в разделе «Свойства».&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="947"/>
         <source>&lt;p&gt;&lt;b&gt;Area Light Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create a light that emits over an area. Select it to set the area shape and size in Properties, along with color and renderer-specific settings.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент «Освещение области»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Создайте свет, излучающий область. Выберите его, чтобы установить форму и размер области в свойствах, а также настройки цвета и средства визуализации.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент «Площадной источник света»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Создайте источник света, излучающий с поверхности. Выберите его, чтобы задать форму и размер поверхности в разделе «Свойства», а также цвет и параметры средства рендеринга.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="956"/>
         <source>&lt;p&gt;&lt;b&gt;Camera Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create a camera in the model view. Select the camera to edit its position, target, projection, and field of view in Properties. To look through the camera, choose it from View &amp;gt; Cameras.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент «Камера»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Создайте камеру на виде модели. Выберите камеру, чтобы изменить ее положение, цель, проекцию и поле обзора в свойствах. Чтобы посмотреть через камеру, выберите ее в меню «Вид» &gt; «Камеры».&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="965"/>
         <source>&lt;p&gt;&lt;b&gt;Select Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pick objects in the model view or drag a selection rectangle. Selection Mode controls whether matching part types or colors are included. The focused object provides the reference for relative transforms.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент выбора&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите объекты на виде модели или перетащите прямоугольник выделения. Режим выбора определяет, будут ли включены соответствующие типы или цвета частей. Объект в фокусе предоставляет ссылку для относительных преобразований.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент выбора&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите объекты на виде модели или перетащите прямоугольник выделения. Режим выбора определяет, будут ли включены детали того же типа или цвета. Объект в фокусе служит точкой отсчёта для относительных преобразований.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="974"/>
         <source>&lt;p&gt;&lt;b&gt;Move Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select the objects to move, then drag in the model view. Use the manipulator to constrain movement to an axis or plane. Movement Snap sets the increments, and Transform Options selects the coordinate reference.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент перемещения&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите объекты для перемещения, затем перетащите их в вид модели. Используйте манипулятор, чтобы ограничить движение осью или плоскостью. Привязка движения задает приращение, а Параметры преобразования выбирают привязку координат.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент перемещения&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите объекты для перемещения, затем перетащите их на виде модели. Используйте манипулятор, чтобы ограничить движение осью или плоскостью. Привязка движения задаёт шаг, а параметры преобразования определяют систему координат.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="983"/>
         <source>&lt;p&gt;&lt;b&gt;Rotate Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select objects, then drag a rotation handle in the model view. Rotation Snap sets the angle increments. Transform Options chooses relative or model axes and whether parts rotate together or separately.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент поворота&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите объекты, затем перетащите маркер вращения в виде модели. Привязка вращения устанавливает приращение угла. Параметры преобразования выбирают относительные оси или оси модели, а также то, будут ли части вращаться вместе или по отдельности.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент поворота&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите объекты, затем перетащите маркер вращения на виде модели. Привязка вращения задаёт шаг угла. Параметры преобразования определяют, относительные оси или оси модели используются и вращаются ли детали вместе или по отдельности.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1073"/>
@@ -9516,68 +9452,57 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1001"/>
         <source>&lt;p&gt;&lt;b&gt;Paint Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the replacement color in the Colors dock, then click parts in the model view to recolor them. To recolor the current selection together, use the color button above the swatches.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент «Рисование»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите заменяющий цвет на панели «Цвета», затем щелкните детали на виде модели, чтобы перекрасить их. Чтобы одновременно перекрасить текущий выделенный деталь, используйте кнопку цвета над образцами.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент «Закрасить»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите новый цвет на панели «Цвета», затем щёлкайте детали на виде модели, чтобы перекрасить их. Чтобы перекрасить всё текущее выделение сразу, используйте кнопку цвета над образцами.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1019"/>
         <source>&lt;p&gt;&lt;b&gt;Color Picker Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Click a part in the model view to make its color the current color. You can then use that color for insertion or painting; sampling it does not recolor the part.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент выбора цвета&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Щелкните деталь на виде модели, чтобы сделать его цвет текущим. Затем вы можете использовать этот цвет для вставки или рисования; выборка не меняет цвет детали.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент «Цветовая палитра»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Щёлкните деталь на виде модели, чтобы сделать её цвет текущим. Затем этот цвет можно использовать для вставки или закрашивания; при этом цвет самой детали не меняется.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1028"/>
         <source>&lt;p&gt;&lt;b&gt;Zoom Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag in the model view to move the viewpoint closer to or farther from the model. This changes the view rather than resizing parts. Use Zoom Region to frame a particular area.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент масштабирования&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетащите вид модели, чтобы переместить точку обзора ближе или дальше от модели. Это меняет вид, а не изменяет размер частей. Используйте масштабирование области, чтобы выделить определенную область.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент масштабирования&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетаскивайте по виду модели, чтобы приблизить или отдалить точку обзора. Меняется вид, а не размер деталей. Используйте «Масштабировать область», чтобы вписать нужную область.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1037"/>
         <source>&lt;p&gt;&lt;b&gt;Pan Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag to shift the view sideways or vertically without moving the model. Use this to reposition the model on screen while keeping the viewing direction.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент «Панорама»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетащите его, чтобы сместить вид в сторону или по вертикали, не перемещая модель. Используйте это, чтобы изменить положение модели на экране, сохраняя направление просмотра.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1046"/>
         <source>&lt;p&gt;&lt;b&gt;Orbit Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag to orbit the view around its center and inspect the model from another direction. This rotates the viewpoint rather than the selected parts; use Rotate for object edits.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент «Орбита»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетащите объект, чтобы вращать вид вокруг его центра, и осмотрите модель с другого направления. Это вращает точку обзора, а не выбранные части; используйте «Поворот» для редактирования объектов.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент «Орбита»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетаскивайте, чтобы вращать вид вокруг его центра и осматривать модель с другой стороны. Вращается точка обзора, а не выбранные детали; для редактирования объектов используйте «Вращать».&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1055"/>
         <source>&lt;p&gt;&lt;b&gt;Roll Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag to turn the view around its viewing axis, tilting what appears upright on screen. Model parts keep their positions and orientations.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент «Вращение»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетащите, чтобы повернуть вид вокруг оси просмотра, наклоняя то, что отображается на экране вертикально. Детали модели сохраняют свое положение и ориентацию.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент «Крутить»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетащите, чтобы повернуть вид вокруг оси просмотра, наклоняя изображение на экране. Детали модели сохраняют свои положения и ориентацию.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1064"/>
         <source>&lt;p&gt;&lt;b&gt;Zoom Region Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag a rectangle around the area you want to inspect. The view zooms to frame that region without changing model geometry.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент масштабирования области&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетащите прямоугольник вокруг области, которую хотите проверить. Изображение масштабируется, чтобы обрамить эту область без изменения геометрии модели.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Инструмент масштабирования области&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетащите прямоугольник вокруг области, которую хотите рассмотреть. Вид масштабируется так, чтобы вписать эту область, геометрия модели не меняется.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1397"/>
         <source>&lt;p&gt;&lt;b&gt;First Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the model at its first building step. Step navigation changes which parts are visible; it does not move parts to a different step.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Первый шаг&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Отобразите модель на первом этапе ее построения. Пошаговая навигация меняет видимые части; он не перемещает фигуры на другой шаг.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Первый шаг&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показать модель на первом шаге сборки. Переключение шагов меняет видимые детали; оно не переносит детали на другой шаг.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1406"/>
         <source>&lt;p&gt;&lt;b&gt;Previous Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the model one building step earlier. Parts introduced in later steps are hidden so you can inspect the earlier stage of construction.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Предыдущий шаг&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Отобразите модель на один шаг раньше. Детали, представленные на более поздних этапах, скрыты, поэтому вы можете просмотреть более раннюю стадию строительства.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Предыдущий шаг&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показать модель на один шаг сборки раньше. Детали, добавленные на более поздних шагах, скрываются, поэтому можно рассмотреть более раннюю стадию сборки.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1415"/>
         <source>&lt;p&gt;&lt;b&gt;Next Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the next building step to reveal the next stage of the model. Use the Timeline to change which step introduces a part.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Следующий шаг&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Отображение следующего шага построения, чтобы показать следующий этап модели. Используйте временную шкалу, чтобы изменить этап, на котором начинается деталь.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Следующий шаг&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показать следующий шаг сборки и следующую стадию модели. Используйте временную шкалу, чтобы изменить шаг, на котором добавляется деталь.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1424"/>
         <source>&lt;p&gt;&lt;b&gt;Last Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the last building step of the current model. Use this to return to the completed model after inspecting earlier steps.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Последний шаг&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Отображение последнего шага построения текущей модели. Используйте это, чтобы вернуться к завершенной модели после проверки предыдущих шагов.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Последний шаг&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показать последний шаг сборки текущей модели. Используйте это, чтобы вернуться к готовой модели после просмотра предыдущих шагов.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Add Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Enable this when an edit should create a new animation key at the current step. For example, moving a part at a later step can give it a different position there. The diamond controls in Properties show and toggle keys for individual properties.&lt;/p&gt;</source>
@@ -9888,7 +9813,6 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_about.ui"/>
         <source>StudWorx version running on this computer.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Версия StudWorx, работающая на этом компьютере.</translation>
     </message>
     <message>
@@ -9913,13 +9837,11 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_about.ui"/>
         <source>Select and copy system information for a problem report.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите и скопируйте информацию о системе для отчета о проблеме.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_about.ui"/>
         <source>&lt;p&gt;&lt;b&gt;System Information&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Shows the Qt runtime and build versions, graphics driver and renderer, OpenGL and shader versions, buffer sizes, and supported graphics features. Select the text and copy it with the standard keyboard shortcut to include it in a problem report.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Информация о системе&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показывает версии среды выполнения и сборки Qt, графический драйвер и средство рендеринга, версии OpenGL и шейдеров, размеры буфера и поддерживаемые графические функции. Выделите текст и скопируйте его с помощью стандартного сочетания клавиш, чтобы включить его в отчет о проблеме.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -9971,7 +9893,6 @@ Framebuffers: %2
 BlendFuncSeparate: %3
 Anisotropic: %4
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Буферы: %1
 Framebuffers: %2
 BlendFuncSeparate: %3
@@ -10342,8 +10263,7 @@ Information:
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1869"/>
         <source>The file &apos;%1&apos; has no parts to render.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">В файле &apos;%1&apos; нет деталей для отрисовки.</translation>
+        <translation type="unfinished">В файле &apos;%1&apos; нет деталей для рендеринга.</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="971"/>
@@ -10431,14 +10351,12 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <location filename="../../source/application/sw_application.cpp" line="990"/>
         <source>The camera position is too close to the camera target of the &apos;%1&apos; option.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Положение камеры слишком близко к цели камеры, указанной в опции &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="995"/>
         <source>Invalid up vector length specified for the &apos;%1&apos; option.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Для опции &apos;%1&apos; указана неверная длина вектора вверх.
 .</translation>
     </message>
@@ -10446,7 +10364,6 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <location filename="../../source/application/sw_application.cpp" line="1000"/>
         <source>The up vector is parallel to the front vector specified for the &apos;%1&apos; option.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вектор вверх параллелен переднему вектору, указанному для опции &apos;%1&apos;.
 .</translation>
     </message>
@@ -10986,15 +10903,13 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
         <location filename="../../source/application/sw_application.cpp" line="1300"/>
         <source>  -c, --camera &lt;camera name&gt;: Set the active camera.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  -c, --camera &lt;camera name&gt;: установить активную камеру.</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1301"/>
         <source>  --viewpoint &lt;viewpoint&gt;: Set the view to one of the preset viewpoints (front, back, left, right, top, bottom, home).
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  --viewpoint &lt;viewpoint&gt;: установите вид на одну из предустановленных точек обзора (спереди, сзади, слева, справа, сверху, снизу, дома).</translation>
+        <translation type="unfinished">  --viewpoint &lt;viewpoint&gt;: установить вид на одну из предустановленных точек обзора (front, back, left, right, top, bottom, home).</translation>
     </message>
     <message>
         <source>  --fade-steps-color &lt;#AARRGGBB&gt;: Rendering color for prior step parts.
@@ -11006,15 +10921,13 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
         <location filename="../../source/application/sw_application.cpp" line="1318"/>
         <source>  --highlight-color &lt;#AARRGGBB&gt;: Rendering color for highlighted parts.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  --highlight-color &lt;#AARRGGBB&gt;: Цвет рендеринга выделенных частей.</translation>
+        <translation type="unfinished">  --highlight-color &lt;#AARRGGBB&gt;: цвет рендеринга выделенных деталей.</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1309"/>
         <source>  --shading &lt;mode&gt;: Select shading mode for rendering (wireframe, flat, default, full).
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  --shading &lt;mode&gt;: выберите режим затенения для рендеринга (каркасный, плоский, по умолчанию, полный).</translation>
+        <translation type="unfinished">  --shading &lt;mode&gt;: выбрать режим затенения для рендеринга (wireframe, flat, default, full).</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1310"/>
@@ -11062,7 +10975,6 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
         <location filename="../../source/application/sw_application.cpp" line="1593"/>
         <source>Command line image export is not supported on iOS.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Экспорт изображений из командной строки не поддерживается в iOS.</translation>
     </message>
     <message>
@@ -11277,8 +11189,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Array&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create repeated copies of the selected parts using up to three array dimensions. Each row defines a count, an offset, and a rotation increment.&lt;/p&gt;&lt;p&gt;Counts include the original selection. For example, counts of 3, 2, and 1 create five new copies of each selected part. Set an offset or rotation to keep copies from overlapping.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Массив&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Создавайте повторяющиеся копии выбранных деталей, используя до трех измерений массива. Каждая строка определяет счетчик, смещение и приращение поворота.&lt;/p&gt;&lt;p&gt;Счетчики включают исходный выбор. Например, при счете 3, 2 и 1 создается пять новых копий каждого выбранного детали. Задайте смещение или поворот, чтобы копии не перекрывались.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Массив&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Создавайте повторяющиеся копии выбранных деталей, используя до трёх измерений массива. Каждая строка определяет количество, смещение и приращение поворота.&lt;/p&gt;&lt;p&gt;Количество включает исходный выбор. Например, при значениях 3, 2 и 1 создаётся пять новых копий каждой выбранной детали. Задайте смещение или поворот, чтобы копии не перекрывались.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -11298,44 +11209,37 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Number of positions in dimension 3, including the original.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Количество позиций в измерении 3, включая исходное.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 count</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Размер 3</translation>
+        <translation type="unfinished">Количество в измерении 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Number of positions in dimension 1, including the original.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Количество позиций в измерении 1, включая исходное.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 count</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Размер 1</translation>
+        <translation type="unfinished">Количество в измерении 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Number of positions in dimension 2, including the original.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Количество позиций в измерении 2, включая исходное.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 count</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Количество измерений 2</translation>
+        <translation type="unfinished">Количество в измерении 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Offsets&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Each row sets the X, Y, and Z displacement per step in the corresponding array dimension. Values use the model axes and LDraw units; 20 units equal one stud width. Negative values reverse the direction.&lt;/p&gt;&lt;p&gt;For a straight row spaced one stud apart along X, use a count greater than 1 and an X offset of 20 in the same row.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Смещения&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Каждая строка задает смещение по осям X, Y и Z на шаг в соответствующем измерении массива. Значения используют оси модели и единицы измерения LDraw; 20 единиц соответствуют ширине одной шпильки. Отрицательные значения меняют направление.&lt;/p&gt;&lt;p&gt;Для прямого ряда, расположенного на расстоянии одной стойки по оси X, используйте счетчик больше 1 и смещение по оси X, равное 20, в той же строке.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Смещения&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Каждая строка задаёт смещение по осям X, Y и Z на шаг в соответствующем измерении массива. Значения используют оси модели и единицы LDraw; 20 единиц соответствуют ширине одного шипа. Отрицательные значения меняют направление.&lt;/p&gt;&lt;p&gt;Для прямого ряда с интервалом в один шип по оси X используйте количество больше 1 и смещение по оси X, равное 20, в той же строке.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -11345,115 +11249,96 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Y offset per step in dimension 1, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Смещение по оси Y на шаг в измерении 1 в единицах LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 Y offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Смещение размера 1 по оси Y</translation>
+        <translation type="unfinished">Смещение Y, измерение 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>X offset per step in dimension 2, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Смещение X на шаг в измерении 2 в единицах LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 X offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Смещение размера 2 X</translation>
+        <translation type="unfinished">Смещение X, измерение 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>X offset per step in dimension 1, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Смещение X на шаг в измерении 1 в единицах LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 X offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Размер 1 X смещение</translation>
+        <translation type="unfinished">Смещение X, измерение 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>X offset per step in dimension 3, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Смещение X на шаг в измерении 3 в единицах LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 X offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Смещение размера 3 X</translation>
+        <translation type="unfinished">Смещение X, измерение 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Z offset per step in dimension 1, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Смещение Z на шаг в размере 1, в единицах LDraw.</translation>
+        <translation type="unfinished">Смещение Z на шаг в измерении 1 в единицах LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 Z offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Смещение по оси Z размера 1</translation>
+        <translation type="unfinished">Смещение Z, измерение 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Y offset per step in dimension 2, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Смещение Y на шаг в измерении 2 в единицах LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 Y offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Смещение размера 2 по оси Y</translation>
+        <translation type="unfinished">Смещение Y, измерение 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Y offset per step in dimension 3, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Смещение Y на шаг в измерении 3 в единицах LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 Y offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Смещение размера 3 по оси Y</translation>
+        <translation type="unfinished">Смещение Y, измерение 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Z offset per step in dimension 2, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Смещение Z на шаг в измерении 2 в единицах LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 Z offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Смещение по оси Z размера 2</translation>
+        <translation type="unfinished">Смещение Z, измерение 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Z offset per step in dimension 3, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Смещение Z на шаг в измерении 3, в единицах LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 Z offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Смещение размера 3 по оси Z</translation>
+        <translation type="unfinished">Смещение Z, измерение 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Rotations&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Each row sets the rotation increment around the X, Y, and Z model axes, in degrees, for its array dimension. Rotations from all three dimensions are added, then applied in X, Y, Z order before the offset.&lt;/p&gt;&lt;p&gt;Copies rotate around the focused part origin, or the selection center when no part has focus. Negative values reverse the rotation.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Повороты&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Каждая строка задает приращение поворота вокруг осей модели X, Y и Z в градусах для измерения ее массива. Повороты всех трех измерений добавляются, а затем применяются в порядке X, Y, Z перед смещением.&lt;/p&gt;&lt;p&gt;Копии вращаются вокруг начала координат детали в фокусе или центра выделения, если ни одна деталь не находится в фокусе. Отрицательные значения обращают вращение.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -11464,110 +11349,92 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Z rotation per step in dimension 3, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вращение Z за шаг в измерении 3, в градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 Z rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Размер 3, вращение по оси Z</translation>
+        <translation type="unfinished">Вращение Z, измерение 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>X rotation per step in dimension 3, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вращение X за шаг в измерении 3, в градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 X rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Размерность 3 X вращение</translation>
+        <translation type="unfinished">Вращение X, измерение 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>X rotation per step in dimension 1, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вращение X за шаг в измерении 1, в градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 X rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Размер 1 X вращение</translation>
+        <translation type="unfinished">Вращение X, измерение 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Z rotation per step in dimension 2, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вращение Z за шаг в измерении 2, в градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 Z rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Размер 2, вращение по оси Z</translation>
+        <translation type="unfinished">Вращение Z, измерение 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Z rotation per step in dimension 1, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вращение Z за шаг в измерении 1, в градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 Z rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Размер 1, вращение по оси Z</translation>
+        <translation type="unfinished">Вращение Z, измерение 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>X rotation per step in dimension 2, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вращение X за шаг в измерении 2, в градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 X rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Размер 2 X вращение</translation>
+        <translation type="unfinished">Вращение X, измерение 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Y rotation per step in dimension 1, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вращение по оси Y за шаг в измерении 1, в градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 Y rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Размер 1, вращение по оси Y</translation>
+        <translation type="unfinished">Вращение Y, измерение 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Y rotation per step in dimension 2, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вращение по оси Y за шаг в измерении 2, в градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 Y rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Размер 2, вращение по оси Y</translation>
+        <translation type="unfinished">Вращение Y, измерение 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Y rotation per step in dimension 3, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вращение по оси Y за шаг в измерении 3, в градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 Y rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Размер 3 вращения по оси Y</translation>
+        <translation type="unfinished">Вращение Y, измерение 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.cpp" line="100"/>
@@ -11675,7 +11542,6 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/library/sw_loader_asset.cpp" line="465"/>
         <source>Missing texture &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Отсутствует текстура &apos;%1&apos;.</translation>
     </message>
     <message>
@@ -11782,8 +11648,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="24"/>
         <source>&lt;p&gt;&lt;b&gt;Automated Edge Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Adjust the contrast and saturation used to calculate part edge colors. Both controls range from 0.00 to 1.00. Reset restores a control to 0.50.&lt;/p&gt;&lt;p&gt;Choose OK to return changes to Preferences, then choose OK in Preferences to keep them. Cancel discards changes in this dialog.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Автоматические цвета кромок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Отрегулируйте контрастность и насыщенность, используемые для расчета цветов кромок деталей. Оба элемента управления находятся в диапазоне от 0,00 до 1,00. Сброс восстанавливает значение элемента управления до 0,50.&lt;/p&gt;&lt;p&gt;Выберите «ОК», чтобы вернуть изменения в настройки, затем нажмите «ОК» в настройках, чтобы сохранить их. Отмена отменяет изменения в этом диалоговом окне.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Автоматические цвета краёв&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Отрегулируйте контрастность и насыщенность, используемые для расчёта цветов краёв деталей. Оба элемента управления находятся в диапазоне от 0,00 до 1,00. «Сброс» возвращает элемент управления к значению 0,50.&lt;/p&gt;&lt;p&gt;Нажмите «ОК», чтобы вернуть изменения в «Параметры», затем «ОК» в «Параметрах», чтобы сохранить их. «Отмена» отклоняет изменения в этом диалоге.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="73"/>
@@ -11793,20 +11658,17 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="74"/>
         <source>Set edge contrast from 0.00 to 1.00 (default 0.50).</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Установите контрастность краев от 0,00 до 1,00 (по умолчанию 0,50).</translation>
+        <translation type="unfinished">Установите контрастность краёв от 0,00 до 1,00 (по умолчанию 0,50).</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="75"/>
         <source>&lt;p&gt;&lt;b&gt;Edge Contrast&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Adjust the contrast used by automated edge colors to distinguish edges from part surfaces. The range is 0.00 to 1.00; Reset restores 0.50.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Контраст кромок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Отрегулируйте контрастность, используемую автоматическими цветами кромок, чтобы отличать кромки от поверхностей детали. Диапазон: от 0,00 до 1,00; Сброс восстанавливает 0,50.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Контрастность краёв&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Отрегулируйте контрастность, используемую автоматическими цветами краёв, чтобы отличать края от поверхностей детали. Диапазон: от 0,00 до 1,00; «Сброс» восстанавливает 0,50.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="76"/>
         <source>Restore edge contrast to 0.50.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Восстановите контрастность краев до 0,50.</translation>
+        <translation type="unfinished">Восстановите контрастность краёв до 0,50.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="80"/>
@@ -11896,8 +11758,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="84"/>
         <source>&lt;p&gt;&lt;b&gt;Edge Saturation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Adjust the tint or shade used to calculate automated edge colors from part colors. The range is 0.00 to 1.00; Reset restores 0.50.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Насыщенность кромок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Отрегулируйте оттенок или оттенок, используемый для автоматического расчета цветов кромок на основе цветов деталей. Диапазон: от 0,00 до 1,00; Сброс восстанавливает 0,50.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Насыщенность краёв&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Отрегулируйте осветление или затемнение, используемое для автоматического расчёта цветов краёв на основе цветов деталей. Диапазон: от 0,00 до 1,00; «Сброс» восстанавливает 0,50.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Restore the light/dark threshold to 0.50.</source>
@@ -11922,8 +11783,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="128"/>
         <source>Enable a custom color for stud cylinders in high contrast stud styles, then use the color button to choose it.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Включите собственный цвет для цилиндров шпилек в высококонтрастных стилях шпилек, а затем используйте кнопку цвета, чтобы выбрать его.</translation>
+        <translation type="unfinished">Включите собственный цвет для цилиндров шипов в стилях шипов с высокой контрастностью, а затем выберите его кнопкой цвета.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="130"/>
@@ -11933,8 +11793,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="131"/>
         <source>Enable a custom edge color for parts not covered by the black or dark overrides. Automated edge colors take precedence.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Включите пользовательский цвет края для частей, не покрытых черным или темным переопределением. Автоматизированные цвета краев имеют приоритет.</translation>
+        <translation type="unfinished">Включите пользовательский цвет краёв для деталей, не охваченных переопределениями для чёрного или тёмного. Автоматические цвета краёв имеют приоритет.</translation>
     </message>
     <message>
         <source>Enable a custom edge color for black parts. This override takes priority over the dark-part and general edge colors. Automated edge colors take precedence.</source>
@@ -13062,7 +12921,6 @@ Choose where to save it and build it now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_category.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Part Category&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Name a category and enter the expression used to find its parts in the library. Both fields are required. Choose OK to return the category changes to Preferences, then choose OK in Preferences to keep them. Cancel discards edits in this dialog.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Keyword Syntax&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Expressions match text in library part descriptions, ignoring case.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;tt&gt;Brick&lt;/tt&gt;: match this text anywhere in the description.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^Brick&lt;/tt&gt;: match Brick as a whole word.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;%Brick&lt;/tt&gt;: match Brick at the beginning of the description.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^%Brick&lt;/tt&gt;: require both a whole word and the beginning of the description.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A | B&lt;/tt&gt;: match either expression.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A &amp;amp; B&lt;/tt&gt;: match both expressions.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;!A&lt;/tt&gt;: exclude descriptions matching A.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;(A | B)&lt;/tt&gt;: group expressions.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Put spaces around &lt;tt&gt;|&lt;/tt&gt; and &lt;tt&gt;&amp;amp;&lt;/tt&gt;. Use parentheses when combining operators.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Examples&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;^%Brick | ^%Plate&lt;/tt&gt; matches descriptions beginning with the word Brick or Plate.&lt;br&gt;&lt;tt&gt;(^%Brick | ^%Plate) &amp;amp; !Pattern&lt;/tt&gt; also excludes descriptions containing Pattern.&lt;/p&gt;&lt;p&gt;Use the language of the library descriptions for search terms; do not translate the syntax symbols.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Категория деталей&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Задайте имя категории и выражение для поиска её деталей в библиотеке. Оба поля обязательны. Нажмите OK, чтобы перенести изменения в Параметры, затем OK в Параметрах, чтобы сохранить их. Отмена отклоняет изменения в этом диалоге.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Синтаксис ключевых слов&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выражения ищут текст в описаниях деталей библиотеки без учёта регистра.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;tt&gt;Brick&lt;/tt&gt;: ищет этот текст в любом месте описания.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^Brick&lt;/tt&gt;: ищет Brick как целое слово.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;%Brick&lt;/tt&gt;: ищет Brick в начале описания.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^%Brick&lt;/tt&gt;: требует целое слово в начале описания.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A | B&lt;/tt&gt;: ищет совпадение хотя бы с одним выражением.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A &amp;amp; B&lt;/tt&gt;: ищет совпадение с обоими выражениями.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;!A&lt;/tt&gt;: исключает описания, соответствующие A.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;(A | B)&lt;/tt&gt;: группирует выражения.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Ставьте пробелы вокруг &lt;tt&gt;|&lt;/tt&gt; и &lt;tt&gt;&amp;amp;&lt;/tt&gt;. При сочетании операторов используйте скобки.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Примеры&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;^%Brick | ^%Plate&lt;/tt&gt; находит описания, начинающиеся со слова Brick или Plate.&lt;br&gt;&lt;tt&gt;(^%Brick | ^%Plate) &amp;amp; !Pattern&lt;/tt&gt; также исключает описания, содержащие Pattern.&lt;/p&gt;&lt;p&gt;Используйте язык описаний библиотеки для поисковых слов; не переводите символы синтаксиса.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -13073,7 +12931,6 @@ Choose where to save it and build it now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_category.ui"/>
         <source>Enter the category name shown in the part browser.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Введите имя категории, отображаемое в браузере деталей.</translation>
     </message>
     <message>
@@ -13083,13 +12940,11 @@ Choose where to save it and build it now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_category.ui"/>
         <source>Enter an expression that matches part descriptions.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Введите выражение, соответствующее описаниям частей.</translation>
+        <translation type="unfinished">Введите выражение, соответствующее описаниям деталей.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_category.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Keyword Syntax&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Expressions match text in library part descriptions, ignoring case.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;tt&gt;Brick&lt;/tt&gt;: match this text anywhere in the description.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^Brick&lt;/tt&gt;: match Brick as a whole word.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;%Brick&lt;/tt&gt;: match Brick at the beginning of the description.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^%Brick&lt;/tt&gt;: require both a whole word and the beginning of the description.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A | B&lt;/tt&gt;: match either expression.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A &amp;amp; B&lt;/tt&gt;: match both expressions.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;!A&lt;/tt&gt;: exclude descriptions matching A.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;(A | B)&lt;/tt&gt;: group expressions.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Put spaces around &lt;tt&gt;|&lt;/tt&gt; and &lt;tt&gt;&amp;amp;&lt;/tt&gt;. Use parentheses when combining operators.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Examples&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;^%Brick | ^%Plate&lt;/tt&gt; matches descriptions beginning with the word Brick or Plate.&lt;br&gt;&lt;tt&gt;(^%Brick | ^%Plate) &amp;amp; !Pattern&lt;/tt&gt; also excludes descriptions containing Pattern.&lt;/p&gt;&lt;p&gt;Use the language of the library descriptions for search terms; do not translate the syntax symbols.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Синтаксис ключевых слов&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выражения ищут текст в описаниях деталей библиотеки без учёта регистра.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;tt&gt;Brick&lt;/tt&gt;: ищет этот текст в любом месте описания.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^Brick&lt;/tt&gt;: ищет Brick как целое слово.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;%Brick&lt;/tt&gt;: ищет Brick в начале описания.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^%Brick&lt;/tt&gt;: требует целое слово в начале описания.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A | B&lt;/tt&gt;: ищет совпадение хотя бы с одним выражением.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A &amp;amp; B&lt;/tt&gt;: ищет совпадение с обоими выражениями.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;!A&lt;/tt&gt;: исключает описания, соответствующие A.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;(A | B)&lt;/tt&gt;: группирует выражения.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Ставьте пробелы вокруг &lt;tt&gt;|&lt;/tt&gt; и &lt;tt&gt;&amp;amp;&lt;/tt&gt;. При сочетании операторов используйте скобки.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Примеры&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;^%Brick | ^%Plate&lt;/tt&gt; находит описания, начинающиеся со слова Brick или Plate.&lt;br&gt;&lt;tt&gt;(^%Brick | ^%Plate) &amp;amp; !Pattern&lt;/tt&gt; также исключает описания, содержащие Pattern.&lt;/p&gt;&lt;p&gt;Используйте язык описаний библиотеки для поисковых слов; не переводите символы синтаксиса.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -13189,25 +13044,21 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1931"/>
         <source>Choose Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите цвет</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1932"/>
         <source>&lt;p&gt;&lt;b&gt;Choose Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pick a color using the swatches or enter its component values. Choose OK to use the selected color, or Cancel to keep the original color. Editing the controls alone does not apply the color.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Выберите цвет&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите цвет, используя образцы, или введите значения его компонентов. Выберите «ОК», чтобы использовать выбранный цвет, или «Отмена», чтобы сохранить исходный цвет. Редактирование элементов управления само по себе не приводит к изменению цвета.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1958"/>
         <source>Custom Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Пользовательский цвет</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1959"/>
         <source>Choose a color or enter its component values.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите цвет или введите значения его компонентов.</translation>
     </message>
 </context>
@@ -13224,58 +13075,49 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="152"/>
         <source>OpenGL shader support is required.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Требуется поддержка шейдеров OpenGL.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="223"/>
         <source>Could not create the OpenGL context.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось создать контекст OpenGL.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="233"/>
         <source>Could not create the offscreen OpenGL surface.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось создать закадровую поверхность OpenGL.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="235"/>
         <source>Could not make the offscreen OpenGL context current.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось сделать закадровый контекст OpenGL текущим.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="409"/>
         <source>Could not read shader %1: %2</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось прочитать шейдер %1: %2.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="417"/>
         <source>Could not create shader %1.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось создать шейдер %1.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="437"/>
         <source>Could not compile shader %1:
 %2</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось скомпилировать шейдер %1:
 %2.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="503"/>
         <source>Could not create the shader program for %1 and %2.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось создать программу шейдера для %1 и %2.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="549"/>
         <source>Could not link the shader program for %1 and %2:
 %3</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось связать программу шейдера для %1 и %2:
 %3.</translation>
     </message>
@@ -13285,8 +13127,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Edit Groups&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reorganize the model&apos;s parts and groups in the tree. Drag parts or groups into a group, or to the top level to remove them from a parent group. Double-click a group name to rename it.&lt;/p&gt;&lt;p&gt;New Group creates a group inside the selected group, or beside an ungrouped part. Choose OK to apply the hierarchy, or Cancel to discard the changes. Empty groups are removed when changes are applied.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Редактировать группы&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Реорганизовать части и группы модели в дереве. Перетащите детали или группы в группу или на верхний уровень, чтобы удалить их из родительской группы. Дважды щелкните имя группы, чтобы переименовать ее.&lt;/p&gt;&lt;p&gt;Новая группа создает группу внутри выбранной группы или рядом с несгруппированным деталью. Выберите «ОК», чтобы применить иерархию, или «Отмена», чтобы отменить изменения. Пустые группы удаляются при применении изменений.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Изменить группы&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Реорганизуйте детали и группы модели в дереве. Перетащите детали или группы в группу или на верхний уровень, чтобы убрать их из родительской группы. Дважды щёлкните имя группы, чтобы переименовать её.&lt;/p&gt;&lt;p&gt;«Новая группа» создаёт группу внутри выбранной группы или рядом с несгруппированной деталью. Нажмите «ОК», чтобы применить иерархию, или «Отмена», чтобы отклонить изменения. Пустые группы удаляются при применении изменений.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.ui"/>
@@ -13296,20 +13137,17 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.ui"/>
         <source>Drag parts and groups to reorganize them; double-click a group name to rename it.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перетаскивайте детали и группы, чтобы реорганизовать их; дважды щелкните имя группы, чтобы переименовать ее.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Group Hierarchy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drop an item onto a group to make it a member of that group. Move it to the top level to remove its parent group. Only group names can be edited; names must be unique and nonempty.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Иерархия групп&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетащите элемент в группу, чтобы сделать его членом этой группы. Переместите его на верхний уровень, чтобы удалить родительскую группу. Редактировать можно только имена групп; имена должны быть уникальными и непустыми.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.ui"/>
         <source>Part and Group Hierarchy</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Иерархия частей и групп</translation>
+        <translation type="unfinished">Иерархия деталей и групп</translation>
     </message>
     <message>
         <source>New Group</source>
@@ -13318,20 +13156,17 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.cpp" line="46"/>
         <source>&amp;New Group</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Новая группа</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.cpp" line="47"/>
         <source>Create a group under the selected group or at the top level.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Создайте группу под выбранной группой или на верхнем уровне.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.cpp" line="48"/>
         <source>&lt;p&gt;&lt;b&gt;New Group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a group to create a subgroup inside it. If a part is selected, the new group is created beside that part. With no selection, the new group is created at the top level. Rename the new group by editing its name, then drag parts into it.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Новая группа&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите группу, чтобы создать внутри нее подгруппу. Если деталь выбран, новая группа создается рядом с этим деталью. Если выбор не выбран, новая группа создается на верхнем уровне. Переименуйте новую группу, отредактировав ее имя, а затем перетащите в нее детали.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Новая группа&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите группу, чтобы создать внутри неё подгруппу. Если выбрана деталь, новая группа создаётся рядом с ней. Если ничего не выбрано, новая группа создаётся на верхнем уровне. Переименуйте новую группу, отредактировав её имя, а затем перетащите в неё детали.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.cpp" line="97"/>
@@ -13711,13 +13546,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="92"/>
         <source>Toggle Replace</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Переключить замену</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="91"/>
         <source>Show or hide the replace options.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Показать или скрыть параметры замены.</translation>
     </message>
     <message>
@@ -13727,7 +13560,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="47"/>
         <source>Search Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет поиска</translation>
     </message>
     <message>
@@ -13763,8 +13595,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="103"/>
         <source>Replacement Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Сменный цвет</translation>
+        <translation type="unfinished">Цвет замены</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="108"/>
@@ -13787,8 +13618,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="193"/>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="217"/>
         <source>None</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Никто</translation>
+        <translation type="unfinished">Нет</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="18"/>
@@ -13798,8 +13628,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="39"/>
         <source>Close</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Закрывать</translation>
+        <translation type="unfinished">Закрыть</translation>
     </message>
 </context>
 <context>
@@ -13807,7 +13636,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_group.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Group Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Name a new group for the selected parts so you can select and move them together. Choose OK to create it, or Cancel to leave the groups unchanged.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Группировать детали&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Назовите новую группу для выбранных деталей, чтобы их можно было выбирать и перемещать вместе. Нажмите «ОК», чтобы создать ее, или «Отмена», чтобы оставить группы без изменений.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -13818,13 +13646,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_group.ui"/>
         <source>Enter a unique, nonempty name for the new group.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Введите уникальное непустое имя для новой группы.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_group.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Group Name&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a name that is not already used by another group in this model. The new group contains the selected parts and their existing groups.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Имя группы&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите имя, которое еще не используется другой группой в этой модели. Новая группа содержит выбранные детали и их существующие группы.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -13840,7 +13666,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_group.cpp" line="37"/>
         <source>A group with this name already exists.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Группа с таким названием уже существует.</translation>
     </message>
 </context>
@@ -13849,8 +13674,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Export HTML&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create browser-viewable building instructions and PNG images in the output folder. Choose which models to include, how to organize the step pages, and where to show parts lists.&lt;/p&gt;&lt;p&gt;Keep the generated HTML and image files together when copying or sharing the instructions.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Экспорт HTML&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Создайте инструкции по сборке, доступные для просмотра в браузере, и изображения PNG в выходной папке. Выберите, какие модели включить, как организовать страницы шагов и где показывать списки частей.&lt;/p&gt;&lt;p&gt;Сохраняйте сгенерированные файлы HTML и изображения вместе при копировании или совместном использовании инструкций.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Экспорт HTML&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Создайте инструкции по сборке, доступные для просмотра в браузере, и изображения PNG в выходной папке. Выберите, какие модели включить, как организовать страницы шагов и где показывать списки деталей.&lt;/p&gt;&lt;p&gt;Сохраняйте сгенерированные файлы HTML и изображения вместе при копировании или совместном использовании инструкций.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
@@ -13864,7 +13688,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Folder for the generated HTML pages and images.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Папка для сгенерированных HTML-страниц и изображений.</translation>
     </message>
     <message>
@@ -13880,13 +13703,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Choose the folder for the exported instructions.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите папку для экспортированных инструкций.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Choose Output Folder</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите выходную папку</translation>
     </message>
     <message>
@@ -13931,7 +13752,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Export the current model and the submodels it references.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Экспортируйте текущую модель и подмодели, на которые она ссылается.</translation>
     </message>
     <message>
@@ -13942,7 +13762,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Export instructions only for the current model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Экспортируйте инструкции только для текущей модели.</translation>
     </message>
     <message>
@@ -13972,7 +13791,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Create a separate HTML page for each step.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Создайте отдельную HTML-страницу для каждого шага.</translation>
     </message>
     <message>
@@ -13983,7 +13801,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Add a step index when using One Step per Page.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Добавьте индекс шага при использовании «Один шаг на страницу».</translation>
     </message>
     <message>
@@ -13993,8 +13810,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Width of each step image, in pixels.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Ширина каждого шага изображения в пикселях.</translation>
+        <translation type="unfinished">Ширина изображения каждого шага в пикселях.</translation>
     </message>
     <message>
         <source>Width:</source>
@@ -14003,7 +13819,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Height of each step image, in pixels.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Высота каждого изображения шага в пикселях.</translation>
     </message>
     <message>
@@ -14018,14 +13833,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Include a complete parts list after each model&apos;s instructions.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Включите полный список деталей после инструкций к каждой модели.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Include a list of the parts added in each step.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Включите список частей, добавленных на каждом этапе.</translation>
+        <translation type="unfinished">Включите список деталей, добавленных на каждом шаге.</translation>
     </message>
     <message>
         <source>Highlight new parts</source>
@@ -14538,13 +14351,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="156"/>
         <source>Choose the image file and format.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите файл изображения и формат.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="157"/>
         <source>Choose Image File</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите файл изображения</translation>
     </message>
     <message>
@@ -15050,7 +14861,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="200"/>
         <source>Width of the saved image, in pixels (1 to 32768).</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ширина сохраненного изображения в пикселях (от 1 до 32768).</translation>
     </message>
     <message>
@@ -15060,7 +14870,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="210"/>
         <source>Height of the saved image, in pixels (1 to 32768).</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Высота сохраненного изображения в пикселях (от 1 до 32768).</translation>
     </message>
     <message>
@@ -15075,7 +14884,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="255"/>
         <source>Save an image for every step in the active model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Сохраняйте изображения для каждого шага активной модели.</translation>
     </message>
     <message>
@@ -15085,7 +14893,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="250"/>
         <source>Save only the current step.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Сохраните только текущий шаг.</translation>
     </message>
     <message>
@@ -15113,7 +14920,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="271"/>
         <source>First Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Первый шаг</translation>
     </message>
     <message>
@@ -15128,7 +14934,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="279"/>
         <source>Last Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Последний шаг</translation>
     </message>
     <message>
@@ -17305,49 +17110,41 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="363"/>
         <source>Fade Previous Steps</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Затенять предыдущие шаги</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="363"/>
         <source>Tint the parts added in earlier steps with the fade color.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Окрашивать детали, добавленные на предыдущих шагах, цветом затенения.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="366"/>
         <source>Fade Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет затенения</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="366"/>
         <source>Color tinting the parts added in earlier steps, kept between 85 and 95 percent opaque.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет окраски деталей, добавленных на предыдущих шагах, с непрозрачностью от 85 до 95 процентов.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="370"/>
         <source>Highlight New Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выделять новые детали</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="370"/>
         <source>Outline the parts added in each step with the highlight color.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Обводить детали, добавленные на каждом шаге, цветом выделения.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="373"/>
         <source>Highlight Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет выделения</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="373"/>
         <source>Color of the outline around the parts added in each step, kept between 85 and 95 percent opaque.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет контура вокруг деталей, добавленных на каждом шаге, с непрозрачностью от 85 до 95 процентов.</translation>
     </message>
 </context>
@@ -17917,8 +17714,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="618"/>
         <source>Choose which related parts are included when selecting a part.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите, какие связанные части будут включены при выборе части.</translation>
+        <translation type="unfinished">Выберите, какие связанные детали включаются при выборе детали.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="632"/>
@@ -17928,8 +17724,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="633"/>
         <source>Choose coordinate axes and whether selected parts rotate together.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите оси координат и вращайтесь ли выбранные части вместе.</translation>
+        <translation type="unfinished">Выберите оси координат и то, вращаются ли выбранные детали вместе.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="638"/>
@@ -17959,7 +17754,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="657"/>
         <source>Choose movement snapping intervals for XY and Z.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите интервалы привязки движения для XY и Z.</translation>
     </message>
     <message>
@@ -17980,7 +17774,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="672"/>
         <source>Choose the rotation snapping interval.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите интервал привязки вращения.</translation>
     </message>
     <message>
@@ -18057,25 +17850,21 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="619"/>
         <source>&lt;p&gt;&lt;b&gt;Selection Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the rule applied when you pick a part in the model view. Single selects that part; the other modes include matching part types, matching colors, or both. For example, color selection lets you pick matching red parts without selecting each one separately.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Режим выбора&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите правило, которое будет применяться при выборе детали на виде модели. Single выбирает эту деталь; другие режимы включают соответствие типов фигур, совпадение цветов или и то, и другое. Например, выбор цвета позволяет выбирать одинаковые красные части, не выбирая каждую отдельно.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Режим выбора&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите правило, которое применяется при выборе детали на виде модели. «Единичный выбор» выбирает только эту деталь; другие режимы включают детали того же типа, того же цвета или и то и другое. Например, выбор по цвету позволяет выбрать все красные детали, не выбирая каждую отдельно.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="634"/>
         <source>&lt;p&gt;&lt;b&gt;Transform Options&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the axes and pivot used for interactive transforms. Relative Transforms uses the focused object&apos;s orientation, so movement along X follows that object&apos;s local X axis. Absolute Transforms uses the model axes. Rotate Together rotates the selection around a shared pivot; Rotate Separately rotates each part around its own origin.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Параметры преобразования&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите оси и поворот, используемые для интерактивных преобразований. Относительные преобразования используют ориентацию сфокусированного объекта, поэтому движение вдоль X следует за локальной осью X этого объекта. Absolute Transforms использует оси модели. «Повернуть вместе» вращает выделение вокруг общей точки поворота; Повернуть отдельно. Поворачивает каждую часть вокруг начала координат.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Параметры преобразования&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите оси и точку поворота для интерактивных преобразований. «Относительное преобразование» использует ориентацию объекта в фокусе, поэтому движение вдоль X следует локальной оси X этого объекта. «Абсолютное преобразование» использует оси модели. «Вращать вместе» вращает выделение вокруг общей точки поворота; «Вращать отдельно» вращает каждую деталь вокруг её собственного начала координат.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="658"/>
         <source>&lt;p&gt;&lt;b&gt;Movement Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose how far objects move in each snapped increment. XY controls movement across the base plane; Z controls vertical movement, so they can use different intervals. Turn snapping off for free placement, then enable it again when you need consistent spacing.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Привязка движения&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите, насколько далеко объекты перемещаются с каждым шагом привязки. XY управляет движением по базовой плоскости; Z управляет вертикальным движением, поэтому они могут использовать разные интервалы. Отключите привязку для свободного размещения, а затем включите ее снова, когда вам нужно одинаковое расстояние.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="673"/>
         <source>&lt;p&gt;&lt;b&gt;Rotation Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose an angle increment for interactive rotation. For example, a 90-degree increment is useful for quarter turns, while smaller increments allow finer alignment. Turn snapping off for free rotation without fixed angle increments.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Привязка вращения&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите шаг угла для интерактивного вращения. Например, приращение на 90 градусов полезно для четверти оборота, тогда как меньшие приращения обеспечивают более точное выравнивание. Отключите привязку для свободного вращения без фиксированного приращения угла.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -18086,7 +17875,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="712"/>
         <source>&lt;p&gt;&lt;b&gt;Tools Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a tool, then use it in the model view. Insertion tools create parts, lights, or cameras. Editing tools select, transform, remove, or recolor objects. Navigation tools change the viewpoint without changing model geometry. Mouse assignments can be customized in Preferences.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Панель инструментов «Инструменты»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите инструмент и используйте его в представлении модели. Инструменты вставки создают детали, источники света или камеры. Инструменты редактирования позволяют выбирать, трансформировать, удалять или перекрашивать объекты. Инструменты навигации изменяют точку обзора без изменения геометрии модели. Назначения мыши можно настроить в настройках.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -18097,8 +17885,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="757"/>
         <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a category or palette and filter its parts. Selecting a part prepares it for insertion; drag it into the model view to place it. Double-click a part to open its preview. Options controls filtering, thumbnails, and list display.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Детали&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите категорию или палитру и отфильтруйте их детали. Выбор детали подготавливает его к вставке; перетащите его на вид модели, чтобы разместить. Дважды щелкните деталь, чтобы открыть его предварительный просмотр. Параметры управляют фильтрацией, миниатюрами и отображением списка.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Детали&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите категорию или палитру и отфильтруйте её детали. Выбор детали подготавливает её к вставке; перетащите её на вид модели, чтобы разместить. Дважды щёлкните деталь, чтобы открыть её предварительный просмотр. Параметры управляют фильтрацией, миниатюрами и отображением списка.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="767"/>
@@ -18113,26 +17900,22 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="785"/>
         <source>Apply the current color to selected parts.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Примените текущий цвет к выбранным частям.</translation>
+        <translation type="unfinished">Примените текущий цвет к выбранным деталям.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="786"/>
         <source>Change Selection Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Изменить цвет выделения</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="787"/>
         <source>&lt;p&gt;&lt;b&gt;Change Selection Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Apply the current color to selected parts. Choosing a swatch sets the current color; this button applies that color to the selection.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Изменить цвет выделения&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Применить текущий цвет к выделенным деталям. Выбор образца устанавливает текущий цвет; эта кнопка применяет этот цвет к выделению.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="839"/>
         <source>LDraw Colors</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">LDraw цвета</translation>
+        <translation type="unfinished">Цвета LDraw</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="968"/>
@@ -18142,26 +17925,22 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="970"/>
         <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit properties of the focused object or selection. Available fields depend on whether you select parts, a camera, or a light. Expand a section to see its fields. Keyframe controls mark properties at the current building step.&lt;/p&gt;&lt;p&gt;The transform fields at the bottom apply an X/Y/Z translation or rotation using the chosen transform mode. Press Enter to apply the values.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Свойства&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Отредактируйте свойства выделенного объекта или выделения. Доступные поля зависят от того, выбираете ли вы фигуры, камеру или свет. Разверните раздел, чтобы увидеть его поля. Элементы управления ключевыми кадрами отмечают свойства на текущем этапе построения.&lt;/p&gt;&lt;p&gt;Поля преобразования внизу применяют перемещение или вращение по осям X/Y/Z с использованием выбранного режима преобразования. Нажмите Enter, чтобы применить значения.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Свойства&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Отредактируйте свойства объекта в фокусе или выделения. Доступные поля зависят от того, выбраны ли детали, камера или источник света. Разверните раздел, чтобы увидеть его поля. Элементы управления ключевыми кадрами отмечают свойства на текущем шаге сборки.&lt;/p&gt;&lt;p&gt;Поля преобразования внизу применяют сдвиг или вращение по осям X/Y/Z в выбранном режиме преобразования. Нажмите Enter, чтобы применить значения.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1023"/>
         <source>Choose absolute or relative translation or rotation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите абсолютный или относительный перевод или вращение.</translation>
+        <translation type="unfinished">Выберите абсолютный или относительный сдвиг или вращение.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1024"/>
         <source>&lt;p&gt;&lt;b&gt;Apply Transform&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the translation or rotation mode, enter X/Y/Z values, and press Enter to apply them. Translation values use LDraw units; rotation values use degrees.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Применить преобразование&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите режим перемещения или вращения, введите значения X/Y/Z и нажмите Enter, чтобы применить их. Значения перевода используют единицы LDraw; значения вращения используют градусы.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Применить преобразование&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите режим сдвига или вращения, введите значения X/Y/Z и нажмите Enter, чтобы применить их. Значения сдвига задаются в единицах LDraw; значения вращения — в градусах.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1002"/>
         <source>Transform X</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Преобразовать X</translation>
+        <translation type="unfinished">Преобразование X</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="80"/>
@@ -18255,32 +18034,27 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1003"/>
         <source>Enter the X translation in LDraw units or rotation in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Введите сдвиг X в единицах LDraw или поворот в градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1008"/>
         <source>Transform Y</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Преобразование Y</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1009"/>
         <source>Enter the Y translation in LDraw units or rotation in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Введите перевод Y в единицах LDraw или поворот в градусах.</translation>
+        <translation type="unfinished">Введите сдвиг Y в единицах LDraw или поворот в градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1014"/>
         <source>Transform Z</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Преобразовать Z</translation>
+        <translation type="unfinished">Преобразование Z</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1015"/>
         <source>Enter the Z translation in LDraw units or rotation in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Введите смещение Z в единицах LDraw или поворот в градусах.</translation>
+        <translation type="unfinished">Введите сдвиг Z в единицах LDraw или поворот в градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1082"/>
@@ -18331,8 +18105,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1204"/>
         <source>Asset loading failed</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Загрузка актива не удалась</translation>
+        <translation type="unfinished">Не удалось загрузить ресурс</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="570"/>
@@ -18344,7 +18117,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="592"/>
         <source>Could not generate geometry.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось создать геометрию.</translation>
     </message>
     <message>
@@ -18367,7 +18139,6 @@ Choose where to save it and download the latest %3 now?</source>
         <oldsource>The model could not be fully loaded, some pieces may be missing.
 
 %1</oldsource>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Модель не удалось загрузить полностью, некоторые детали могут отсутствовать.
 
 %1</translation>
@@ -18432,7 +18203,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="954"/>
         <source>Export HTML</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Экспорт HTML</translation>
     </message>
     <message>
@@ -18449,7 +18219,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="1173"/>
         <source>Nothing to select.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Нечего выбирать.</translation>
     </message>
     <message>
@@ -18969,7 +18738,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_command.cpp" line="108"/>
         <source>Export 3DS</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Экспорт 3DS</translation>
     </message>
     <message>
@@ -19084,7 +18852,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="347"/>
         <source>Cannot Merge Model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Невозможно объединить модель</translation>
     </message>
     <message>
@@ -19219,13 +18986,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="285"/>
         <source>View: %1 deg. Lat. / %2 deg. Lon. / %3</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вид: %1 град. шир. / %2 град. долг. / %3</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="284"/>
         <source>Perspective</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перспектива</translation>
     </message>
     <message>
@@ -19258,37 +19023,31 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="284"/>
         <source>Orthographic</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Ортографическая</translation>
+        <translation type="unfinished">Ортогональная</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1228"/>
         <source>Selection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выделение</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1229"/>
         <source>View Orientation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ориентация вида</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1230"/>
         <source>Position</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Положение</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1231"/>
         <source>Snap and Transform</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Привязка и преобразование</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1232"/>
         <source>Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Шаг</translation>
     </message>
     <message>
@@ -19327,7 +19086,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/library/sw_loader_mesh.cpp" line="1681"/>
         <source>Could not load included file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось загрузить включенный файл &apos;%1&apos;.</translation>
     </message>
 </context>
@@ -19374,26 +19132,22 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>Load a saved configuration of parts, colors, and angles.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Загрузите сохраненную конфигурацию деталей, цветов и углов.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>Minifigure Template</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Шаблон минифигурки</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>Save the current minifigure configuration as a named template.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Сохраните текущую конфигурацию минифигурки как именованный шаблон.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Save Template&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Enter a name for the current parts, colors, and pose. Reusing an existing name asks before replacing that template. The Default template cannot be overwritten.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Сохранить шаблон&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Введите имя текущих фигур, цвета и позу. Повторное использование существующего имени запрашивается перед заменой этого шаблона. Шаблон по умолчанию нельзя перезаписать.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Сохранить шаблон&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Введите имя для текущих деталей, цветов и позы. Если имя уже существует, перед заменой шаблона будет запрошено подтверждение. Шаблон по умолчанию нельзя перезаписать.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
@@ -19403,14 +19157,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>Delete the selected saved template.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Удалить выбранный сохраненный шаблон.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Delete Template&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected named template after confirmation. This does not remove parts from the preview or an existing model. The Default template cannot be deleted.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Удалить шаблон&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Удалить выбранный именованный шаблон после подтверждения. При этом части из предварительного просмотра или существующей модели не удаляются. Шаблон по умолчанию удалить невозможно.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Удалить шаблон&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Удалить выбранный именованный шаблон после подтверждения. Детали в предварительном просмотре и в существующей модели при этом не удаляются. Шаблон по умолчанию удалить невозможно.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
@@ -19450,109 +19202,91 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Hat</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Шляпа</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Hat Accessory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Шляпа Аксессуар</translation>
+        <translation type="unfinished">Аксессуар для шляпы</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Head</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Голова</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Neck</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Шея</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Torso</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Торс</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Hip</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Бедро</translation>
+        <translation type="unfinished">Бёдра</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Hip Accessory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модный аксессуар</translation>
+        <translation type="unfinished">Аксессуар для бёдер</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Left Arm</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Левая рука</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Right Arm</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Правая рука</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Left Hand</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Левая рука</translation>
+        <translation type="unfinished">Левая кисть</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Right Hand</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Правая рука</translation>
+        <translation type="unfinished">Правая кисть</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Left Hand Accessory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Аксессуар для левой руки</translation>
+        <translation type="unfinished">Аксессуар для левой кисти</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Right Hand Accessory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Аксессуар для правой руки</translation>
+        <translation type="unfinished">Аксессуар для правой кисти</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Left Leg</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Левая нога</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Right Leg</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Правая нога</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Left Leg Accessory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Аксессуар для левой ноги</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Right Leg Accessory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Аксессуар для правой ноги</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="53"/>
         <source>%1 part</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">%1 шт.</translation>
     </message>
     <message>
@@ -19664,38 +19398,32 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="61"/>
         <source>%1 color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">%1 цвет</translation>
+        <translation type="unfinished">%1: цвет</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="62"/>
         <source>Choose the color for %1.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите цвет для %1.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="64"/>
         <source>&lt;p&gt;&lt;b&gt;Choose Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Change the color of this minifigure part. The preview updates immediately, and saving a template includes the chosen color.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Выберите цвет&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Измените цвет этой детали минифигурки. Предварительный просмотр немедленно обновится, а при сохранении шаблона будет выбран выбранный цвет.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Выберите цвет&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Измените цвет этой детали минифигурки. Предварительный просмотр обновляется сразу, а сохранённый шаблон будет содержать выбранный цвет.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="77"/>
         <source>%1 rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">%1 ротация</translation>
+        <translation type="unfinished">%1: поворот</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="78"/>
         <source>Rotate %1, in degrees (-360 to 360).</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Поворот %1 в градусах (от -360 до 360).</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="79"/>
         <source>&lt;p&gt;&lt;b&gt;Rotation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Adjust this part&apos;s angle to pose the minifigure. Values range from -360 to 360 degrees. The available rotation depends on the selected minifigure section.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Поворот&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Отрегулируйте угол этой детали, чтобы расположить минифигурку. Значения варьируются от -360 до 360 градусов. Доступное вращение зависит от выбранного раздела минифигурок.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Поворот&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Отрегулируйте угол этой детали, чтобы придать минифигурке позу. Значения лежат в диапазоне от -360 до 360 градусов. Доступный поворот зависит от выбранной части минифигурки.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Minifigure Preview</source>
@@ -19705,8 +19433,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="130"/>
         <source>Preview of the chosen parts, colors, and pose.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Предварительный просмотр выбранных фигур, цветов и позы.</translation>
+        <translation type="unfinished">Предварительный просмотр выбранных деталей, цветов и позы.</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Minifigure Preview&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Check the assembled minifigure as you change parts, colors, or angles. Choose OK to add this configuration to the current model.&lt;/p&gt;</source>
@@ -19789,8 +19516,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="502"/>
         <source>None</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Никто</translation>
+        <translation type="unfinished">Нет</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
@@ -20127,7 +19853,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="121"/>
         <source>Model &apos;%1&apos; was deleted.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Модель &apos;%1&apos; удалена.</translation>
     </message>
     <message>
@@ -20182,7 +19907,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_file.cpp" line="778"/>
         <source>Model &apos;%1&apos;: reference to &apos;%2&apos; was ignored because it would create a circular reference.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Модель &apos;%1&apos;: ссылка на &apos;%2&apos; была проигнорирована, поскольку она создала бы циклическую ссылку.</translation>
     </message>
     <message>
@@ -20194,25 +19918,21 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_clipboard.cpp" line="82"/>
         <source>Cut</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Резать</translation>
+        <translation type="unfinished">Вырезать</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_clipboard.cpp" line="164"/>
         <source>Paste</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вставить</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_clipboard.cpp" line="175"/>
         <source>Duplicate Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Дублирующиеся части</translation>
+        <translation type="unfinished">Дублировать детали</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_clipboard.cpp" line="241"/>
         <source>Duplicate</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Дублировать</translation>
     </message>
     <message>
@@ -20233,20 +19953,17 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model_render.cpp" line="445"/>
         <location filename="../../source/core/sw_model_render.cpp" line="566"/>
         <source>Could not allocate the parts list image.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Не удалось выделить изображение списка частей.</translation>
+        <translation type="unfinished">Не удалось выделить изображение списка деталей.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_render.cpp" line="304"/>
         <source>Could not create the parts list framebuffer.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Не удалось создать фреймбуфер списка частей.</translation>
+        <translation type="unfinished">Не удалось создать фреймбуфер списка деталей.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_render.cpp" line="385"/>
         <source>Could not read the parts list image.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Не удалось прочитать изображение списка частей.</translation>
+        <translation type="unfinished">Не удалось прочитать изображение списка деталей.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_render.cpp" line="658"/>
@@ -20277,7 +19994,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="659"/>
         <source>Insert Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вставить шаг</translation>
     </message>
     <message>
@@ -20288,8 +20004,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_group.cpp" line="73"/>
         <source>Group Selection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выбор группы</translation>
+        <translation type="unfinished">Сгруппировать выделение</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_group.cpp" line="101"/>
@@ -20302,20 +20017,17 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model_group.cpp" line="110"/>
         <location filename="../../source/core/sw_model_group.cpp" line="144"/>
         <source>Ungroup Selection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Разгруппировать выделение</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_group.cpp" line="144"/>
         <source>No groups selected.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Группы не выбраны.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_group.cpp" line="167"/>
         <location filename="../../source/core/sw_model_group.cpp" line="238"/>
         <source>Ungroup</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Разгруппировать</translation>
     </message>
     <message>
@@ -20328,8 +20040,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model_edit.cpp" line="208"/>
         <location filename="../../source/core/sw_model_tool.cpp" line="277"/>
         <source>Add Part</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Добавить кусок</translation>
+        <translation type="unfinished">Добавить деталь</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="263"/>
@@ -20344,8 +20055,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model_selection.cpp" line="1566"/>
         <location filename="../../source/core/sw_model_selection.cpp" line="1627"/>
         <source>Selection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выбор</translation>
+        <translation type="unfinished">Выделение</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="475"/>
@@ -20356,8 +20066,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="492"/>
         <source>Reset Pivot Point</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Сбросить точку разворота</translation>
+        <translation type="unfinished">Сбросить точку поворота</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="513"/>
@@ -20408,7 +20117,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="540"/>
         <source>Add Control Point</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Добавить контрольную точку</translation>
     </message>
     <message>
@@ -20452,19 +20160,16 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="777"/>
         <source>Show Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Показать пьесы</translation>
+        <translation type="unfinished">Показать детали</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="814"/>
         <source>Change Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Изменить шаг</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="929"/>
         <source>Move to Model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перейти к модели</translation>
     </message>
     <message>
@@ -20510,34 +20215,29 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1666"/>
         <source>Set Show Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Установить шаг показа</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1697"/>
         <source>Set Hide Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Установить шаг скрытия</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1720"/>
         <source>Change Projection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Изменение прогноза</translation>
+        <translation type="unfinished">Изменить проекцию</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_selection.cpp" line="1289"/>
         <location filename="../../source/core/sw_model_selection.cpp" line="1320"/>
         <source>Hide Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Скрыть фрагменты</translation>
+        <translation type="unfinished">Скрыть детали</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_selection.cpp" line="1351"/>
         <location filename="../../source/core/sw_model_selection.cpp" line="1382"/>
         <source>Unhide Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Показать фрагменты</translation>
+        <translation type="unfinished">Показать детали</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="211"/>
@@ -20564,14 +20264,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="301"/>
         <source>Add Camera</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Добавить камеру</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="311"/>
         <source>Add Point Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Добавить точечный свет</translation>
+        <translation type="unfinished">Добавить точечный источник света</translation>
     </message>
     <message>
         <source>Add Spot Light</source>
@@ -20581,14 +20279,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="319"/>
         <source>Add Directional Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Добавьте направленный свет</translation>
+        <translation type="unfinished">Добавить направленный источник света</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="323"/>
         <source>Add Area Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Добавить свет области</translation>
+        <translation type="unfinished">Добавить площадной источник света</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="581"/>
@@ -20598,13 +20294,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="771"/>
         <source>Zoom Extents</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Масштабировать экстенты</translation>
+        <translation type="unfinished">Уместить содержимое</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="744"/>
         <source>Change Model Properties</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Изменить свойства модели</translation>
     </message>
     <message>
@@ -20612,8 +20306,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model.cpp" line="764"/>
         <location filename="../../source/core/sw_model.cpp" line="823"/>
         <source>Part Array</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Кусочный массив</translation>
+        <translation type="unfinished">Массив деталей</translation>
     </message>
     <message>
         <source>Add Minifig</source>
@@ -20721,7 +20414,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
         <source>Select models to manage, or drag them to change their order.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите модели для управления или перетащите их, чтобы изменить их порядок.</translation>
     </message>
     <message>
@@ -20757,7 +20449,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
         <source>Choose a unique name for each selected model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите уникальное имя для каждой выбранной модели.</translation>
     </message>
     <message>
@@ -20768,14 +20459,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
         <source>Save the selected models to separate LDraw files.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Сохраните выбранные модели в отдельные файлы LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Export Submodels&lt;/b&gt;&lt;/p&gt;&lt;p&gt;For one selected model, choose its output file. For several selected models, choose an output folder. Export writes files immediately, even if you later cancel this dialog.&lt;/p&gt;&lt;p&gt;A newly created empty model has nothing to export until the list changes have been applied.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Экспорт подмоделей&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Для одной выбранной модели выберите ее выходной файл. Для нескольких выбранных моделей выберите выходную папку. Экспорт записывает файлы немедленно, даже если вы позже отмените это диалоговое окно.&lt;/p&gt;&lt;p&gt;Вновь созданную пустую модель нечего экспортировать, пока изменения списка не будут применены.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Экспорт подмоделей&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Для одной выбранной модели выберите её выходной файл. Для нескольких выбранных моделей выберите выходную папку. Экспорт записывает файлы сразу, даже если позже вы отмените этот диалог.&lt;/p&gt;&lt;p&gt;Вновь созданной пустой модели нечего экспортировать, пока изменения списка не будут применены.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
@@ -20785,7 +20474,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
         <source>Create named copies of the selected models.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Создайте именованные копии выбранных моделей.</translation>
     </message>
     <message>
@@ -20796,7 +20484,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
         <source>Switch to the current list item when applying the changes.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Переключитесь на текущий элемент списка при применении изменений.</translation>
     </message>
     <message>
@@ -21288,8 +20975,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Part Palettes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Organize reusable collections of parts in the part browser. Create, rename, delete, import, or reorder palettes, then choose OK to apply the changes. Cancel discards these palette changes.&lt;/p&gt;&lt;p&gt;Palettes organize part choices; they do not change parts already placed in a model.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Палитры частей&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Упорядочивайте многоразовые коллекции частей в браузере частей. Создайте, переименуйте, удалите, импортируйте или измените порядок палитр, затем нажмите «ОК», чтобы применить изменения. Отмена отменяет эти изменения палитры.&lt;/p&gt;&lt;p&gt;Палитры упорядочивают выбор частей; они не заменяют детали, уже помещенные в модель.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Палитры деталей&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Упорядочивайте многоразовые коллекции деталей в браузере деталей. Создайте, переименуйте, удалите, импортируйте или переупорядочьте палитры, затем нажмите «ОК», чтобы применить изменения. «Отмена» отклоняет эти изменения палитр.&lt;/p&gt;&lt;p&gt;Палитры упорядочивают выбор деталей; они не меняют детали, уже помещённые в модель.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
@@ -21299,20 +20985,17 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Select the palette to rename, delete, or move.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите палитру, которую требуется переименовать, удалить или переместить.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Palette List&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a palette before using Rename, Delete, Move Up, or Move Down. The list order determines the palette order in the part browser.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Список палитр&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите палитру перед использованием функций «Переименовать», «Удалить», «Переместить вверх» или «Переместить вниз». Порядок списка определяет порядок палитр в браузере деталей.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Create a new empty part palette.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Создайте новую пустую палитру частей.</translation>
+        <translation type="unfinished">Создайте новую пустую палитру деталей.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
@@ -21322,14 +21005,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Remove the selected palette after confirmation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Удалите выбранную палитру после подтверждения.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Delete Palette&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected palette and its list of part choices. Library parts and parts already used in models are not deleted. At least one palette must remain.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Удалить палитру&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Удалить выбранную палитру и ее список вариантов деталей. Части библиотеки и части, уже используемые в моделях, не удаляются. Должна остаться хотя бы одна палитра.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Удалить палитру&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Удалить выбранную палитру и её список вариантов деталей. Детали библиотеки и детали, уже использованные в моделях, не удаляются. Должна остаться хотя бы одна палитра.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
@@ -21339,7 +21020,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Change the name of the selected palette.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Измените имя выбранной палитры.</translation>
     </message>
     <message>
@@ -21350,14 +21030,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Create a palette from an online set inventory.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Создайте палитру из онлайн-инвентаря.</translation>
+        <translation type="unfinished">Создайте палитру из онлайн-инвентаря набора.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Import Palette&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open Import Set Inventory to search for a set and download its inventory. The new palette uses the set description as its name.&lt;/p&gt;&lt;p&gt;The palette stores part IDs; inventory colors and quantities are not stored. An internet connection is required.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Палитра импорта&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Откройте инвентарь импорта набора, чтобы найти набор и загрузить его инвентарь. В качестве имени новая палитра использует описание набора.&lt;/p&gt;&lt;p&gt;Палитра хранит идентификаторы частей; Цвета и количества инвентаря не сохраняются. Требуется подключение к Интернету.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Импорт палитры&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Откройте «Импорт инвентаря набора», чтобы найти набор и загрузить его инвентарь. В качестве имени новая палитра использует описание набора.&lt;/p&gt;&lt;p&gt;Палитра хранит идентификаторы деталей; цвета и количества из инвентаря не сохраняются. Требуется подключение к Интернету.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
@@ -21367,7 +21045,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Move the selected palette one position earlier in the list.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Переместить выбранную палитру на одну позицию раньше в списке.</translation>
     </message>
     <message>
@@ -21378,7 +21055,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Move the selected palette one position later in the list.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Переместите выбранную палитру на одну позицию позже в списке.</translation>
     </message>
     <message>
@@ -21499,7 +21175,6 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="673"/>
         <source>Open Submodel</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Открыть подмодель</translation>
     </message>
 </context>
@@ -21508,14 +21183,12 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part_popup.cpp" line="10"/>
         <source>Choose Part</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выбрать кусок</translation>
+        <translation type="unfinished">Выбрать деталь</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part_popup.cpp" line="11"/>
         <source>&lt;p&gt;&lt;b&gt;Choose Part&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a part, then choose OK or double-click it to use it. Cancel keeps the original choice. Filter the list to find a part; Options controls matching and list display. When None is available, select it to omit the part.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Выбрать деталь&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите деталь, затем нажмите «ОК» или дважды щелкните его, чтобы использовать. Отмена сохраняет первоначальный выбор. Отфильтруйте список, чтобы найти кусок; Параметры управляют сопоставлением и отображением списка. Если доступно значение «Нет», выберите его, чтобы пропустить деталь.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Выбрать деталь&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите деталь, затем нажмите «ОК» или дважды щёлкните её, чтобы использовать. «Отмена» сохраняет первоначальный выбор. Отфильтруйте список, чтобы найти деталь; Параметры управляют сопоставлением и отображением списка. Если доступно значение «Нет», выберите его, чтобы не использовать деталь.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -21548,8 +21221,7 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1559"/>
         <source>Icons</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Иконки</translation>
+        <translation type="unfinished">Значки</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1563"/>
@@ -21584,32 +21256,27 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1603"/>
         <source>Lock Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Цвет блокировки</translation>
+        <translation type="unfinished">Заблокировать цвет</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1610"/>
         <source>Filter</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Фильтр</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1612"/>
         <source>Regular Expression</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Регулярное выражение</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1622"/>
         <source>Part ID</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Идентификатор детали</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1627"/>
         <source>Part Description</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Описание изделия</translation>
+        <translation type="unfinished">Описание детали</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1539"/>
@@ -21619,56 +21286,47 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1143"/>
         <source>Filter category names to narrow the category list.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Отфильтруйте названия категорий, чтобы сузить список категорий.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1158"/>
         <source>Part Categories</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Категории деталей</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1159"/>
         <source>Choose a category or palette to display its parts.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите категорию или палитру для отображения ее частей.</translation>
+        <translation type="unfinished">Выберите категорию или палитру для отображения её деталей.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1175"/>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1176"/>
         <source>Filter Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Части фильтра</translation>
+        <translation type="unfinished">Фильтр деталей</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1177"/>
         <source>Filter the displayed parts using the matching options.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Отфильтруйте отображаемые детали, используя соответствующие параметры.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1182"/>
         <source>Configure part filtering and list display.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Настройте фильтрацию деталей и отображение списка.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1182"/>
         <source>Part List Options</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Параметры списка предметов</translation>
+        <translation type="unfinished">Параметры списка деталей</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1186"/>
         <source>Available Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Доступные части</translation>
+        <translation type="unfinished">Доступные детали</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1187"/>
         <source>Select a part from the filtered list.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите деталь из отфильтрованного списка.</translation>
     </message>
     <message>
@@ -21767,43 +21425,36 @@ Weight: %1</source>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="543"/>
         <source>Could not decode embedded texture &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось декодировать встроенную текстуру &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="573"/>
         <source>Invalid Base64 data for embedded file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Неверные данные Base64 для внедренного файла &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="579"/>
         <source>Could not read embedded file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось прочитать встроенный файл &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="590"/>
         <source>Could not open file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось открыть файл &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="596"/>
         <source>Invalid archive file source.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Неверный источник файла архива.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="604"/>
         <source>Could not read archive entry %1.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось прочитать запись архива %1.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="607"/>
         <source>Could not read archive file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось прочитать архивный файл &apos;%1&apos;.</translation>
     </message>
     <message>
@@ -21829,13 +21480,11 @@ Weight: %1</source>
         <location filename="../../source/library/sw_library_load.cpp" line="294"/>
         <location filename="../../source/library/sw_library_load.cpp" line="391"/>
         <source>Library loading was canceled.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Загрузка библиотеки отменена.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library_load.cpp" line="340"/>
         <source>Could not load model geometry &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось загрузить геометрию модели &apos;%1&apos;.</translation>
     </message>
     <message>
@@ -21854,19 +21503,16 @@ Weight: %1</source>
         <location filename="../../source/library/sw_library_load.cpp" line="483"/>
         <location filename="../../source/library/sw_library_load.cpp" line="527"/>
         <source>Could not open included file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось открыть включенный файл &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="1411"/>
         <source>Primitive include cycle at &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Примитив включает цикл по адресу &apos;%1&apos;.</translation>
+        <translation type="unfinished">Циклическое включение примитивов в &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="1486"/>
         <source>Could not load included file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось загрузить включенный файл &apos;%1&apos;.</translation>
     </message>
 </context>
@@ -22322,13 +21968,11 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the interface language used after restarting StudWorx.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите язык интерфейса, используемый после перезапуска StudWorx.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Language</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Язык</translation>
     </message>
     <message>
@@ -22344,13 +21988,11 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the interface theme and optionally reset its colors.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите тему интерфейса и при необходимости сбросьте ее цвета.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Color Theme</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цветовая тема</translation>
     </message>
     <message>
@@ -22366,13 +22008,11 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Move parts along fixed model axes instead of view-relative directions.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перемещайте детали по фиксированным осям модели, а не по направлениям относительно вида.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Open the most recently used file when StudWorx starts.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Откройте последний использованный файл при запуске StudWorx.</translation>
     </message>
     <message>
@@ -22383,8 +22023,7 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Parts Library</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Библиотека пьес</translation>
+        <translation type="unfinished">Библиотека деталей</translation>
     </message>
     <message>
         <source>Choose a part-library folder.</source>
@@ -22429,37 +22068,31 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Set the POV-Ray executable used for rendering.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Установите исполняемый файл POV-Ray, используемый для рендеринга.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>POV-Ray Executable</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Исполняемый файл POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Locate the POV-Ray executable.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Найдите исполняемый файл POV-Ray.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Set the LGEO library folder used by POV-Ray exports.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Установите папку библиотеки LGEO, используемую при экспорте POV-Ray.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>LGEO Library</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Библиотека ЛГЕО</translation>
+        <translation type="unfinished">Библиотека LGEO</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the LGEO library folder.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите папку библиотеки LGEO.</translation>
     </message>
     <message>
@@ -22475,56 +22108,47 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Previous Step Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет предыдущего шага</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the tint used for parts from previous steps.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите оттенок, используемый для деталей из предыдущих шагов.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Shading Mode</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Режим затенения</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose how part surfaces and edges are drawn in model views.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите способ рисования поверхностей и кромок детали на видах модели.</translation>
+        <translation type="unfinished">Выберите способ рисования поверхностей и краёв детали на видах модели.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Use simpler meshes for distant parts to improve display performance.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Используйте более простые сетки для удаленных частей, чтобы улучшить производительность отображения.</translation>
+        <translation type="unfinished">Используйте более простые сетки для удалённых деталей, чтобы улучшить производительность отображения.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Tint parts from previous building steps with the chosen fade color.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Окрасьте детали, полученные на предыдущих этапах сборки, выбранным цветом затемнения.</translation>
+        <translation type="unfinished">Окрасьте детали, добавленные на предыдущих шагах сборки, выбранным цветом затенения.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Highlight parts introduced in the current building step.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выделите детали, представленные на текущем этапе сборки.</translation>
+        <translation type="unfinished">Выделите детали, добавленные на текущем шаге сборки.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>New Part Highlight Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет выделения новой детали</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the highlight color for parts in the current step.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите цвет выделения для частей на текущем шаге.</translation>
+        <translation type="unfinished">Выберите цвет выделения для деталей на текущем шаге.</translation>
     </message>
     <message>
         <source>Blender LDraw Render</source>
@@ -22559,31 +22183,26 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Configure colors and the light/dark threshold for high contrast stud styles.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Настройте цвета и порог светлого/темного цвета для высококонтрастных стилей заклепок.</translation>
+        <translation type="unfinished">Настройте цвета и порог светлого/тёмного для стилей шипов с высокой контрастностью.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Antialiasing Samples</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Образцы сглаживания</translation>
+        <translation type="unfinished">Выборки сглаживания</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the antialiasing sample count; more samples can use more graphics resources.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите количество образцов сглаживания; больше образцов может использовать больше графических ресурсов.</translation>
+        <translation type="unfinished">Выберите количество выборок сглаживания; больше выборок может требовать больше графических ресурсов.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose stud geometry and the high contrast stud styles.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выбирайте геометрию шипов и высококонтрастные стили шипов.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Smooth jagged edges in model views; changes require restarting StudWorx.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Сглаживание неровных краев на видах модели; изменения требуют перезапуска StudWorx.</translation>
     </message>
     <message>
@@ -22594,32 +22213,27 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw conditional lines where needed to show curved part surfaces.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Нарисуйте условные линии там, где необходимо показать изогнутые поверхности детали.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Set edge-line width within the range supported by the graphics system.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Установите ширину линии края в пределах диапазона, поддерживаемого графической системой.</translation>
+        <translation type="unfinished">Установите ширину линий краёв в пределах диапазона, поддерживаемого графической системой.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Line Width</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ширина линии</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw the edge lines defined by each part.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Нарисуйте линии края, определенные каждой деталью.</translation>
+        <translation type="unfinished">Нарисуйте линии краёв, определённые каждой деталью.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Calculate edge colors from part colors instead of using their defined edge colors.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Вычисляйте цвета кромок на основе цветов деталей вместо использования определенных для них цветов кромок.</translation>
+        <translation type="unfinished">Вычисляйте цвета краёв на основе цветов деталей вместо использования заданных для них цветов краёв.</translation>
     </message>
     <message>
         <source>Configure the contrast and saturation used for automated edge colors.</source>
@@ -22653,14 +22267,12 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the corner for the model-view navigation cube.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите угол куба навигации вида модели.</translation>
+        <translation type="unfinished">Выберите угол куба просмотра на виде модели.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the model-view navigation cube size, or disable it.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите размер куба навигации вида модели или отключите его.</translation>
+        <translation type="unfinished">Выберите размер куба просмотра на виде модели или отключите его.</translation>
     </message>
     <message>
         <source>View Cube:</source>
@@ -22669,7 +22281,6 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Location</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Расположение</translation>
     </message>
     <message>
@@ -22695,19 +22306,16 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the corner for the model-axis indicator.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите угол для индикатора оси модели.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Show the X, Y and Z labels on the model-axis indicator.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Показывать подписи X, Y и Z на индикаторе осей модели.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw the view cube outline around the model-axis indicator with the axis origin at its center.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Рисовать контур куба вида вокруг индикатора осей модели с началом координат в его центре.</translation>
     </message>
     <message>
@@ -22737,8 +22345,7 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Show stud positions on the base grid.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Покажите позиции шпилек на базовой сетке.</translation>
+        <translation type="unfinished">Показывать положения шипов на базовой сетке.</translation>
     </message>
     <message>
         <source>Part Preview</source>
@@ -22772,116 +22379,97 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the selection rectangle border.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите цвет отображения границы прямоугольника выделения.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Marquee Border</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Граница прямоугольника выделения</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for inactive view borders.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите цвет отображения для неактивных границ вида.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Marquee Fill</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Заливка прямоугольника выделения</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the selection rectangle fill.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите цвет отображения для заливки прямоугольника выделения.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for view text.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите цвет отображения для просмотра текста.</translation>
+        <translation type="unfinished">Выберите цвет отображения для текста вида.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Text Halo Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет ореола текста</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the halo behind view text.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите цвет отображения ореола позади текста.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Inactive View Border</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Неактивная граница просмотра</translation>
+        <translation type="unfinished">Граница неактивного вида</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for view overlays.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите цвет отображения для наложений просмотра.</translation>
+        <translation type="unfinished">Выберите цвет отображения для наложений вида.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Text Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет текста</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Overlay Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет наложения</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Active View Border</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Граница Active View</translation>
+        <translation type="unfinished">Граница активного вида</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the active view border.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите цвет отображения для границы активного вида.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the navigation cube.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите цвет отображения куба навигации.</translation>
+        <translation type="unfinished">Выберите цвет отображения куба просмотра.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for navigation cube text.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите цвет отображения текста куба навигации.</translation>
+        <translation type="unfinished">Выберите цвет отображения текста куба просмотра.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the highlighted region of the navigation cube.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите цвет отображения для выделенной области куба навигации.</translation>
+        <translation type="unfinished">Выберите цвет отображения для выделенной области куба просмотра.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for base-grid lines.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите цвет отображения для линий базовой сетки.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for base-grid stud markers.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите цвет отображения для маркеров стоек базовой сетки.</translation>
+        <translation type="unfinished">Выберите цвет отображения для маркеров шипов базовой сетки.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -22927,43 +22515,36 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Light Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Светлый цвет</translation>
+        <translation type="unfinished">Цвет источника света</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Camera Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет камеры</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Control Point Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет контрольной точки</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Focused Control Point Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Цвет фокусированной контрольной точки</translation>
+        <translation type="unfinished">Цвет контрольной точки в фокусе</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Selected Object Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет выбранного объекта</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Focused Object Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Цвет сфокусированного объекта</translation>
+        <translation type="unfinished">Цвет объекта в фокусе</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Mouse Sensitivity</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Чувствительность мыши</translation>
     </message>
     <message>
@@ -23035,13 +22616,11 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Outline</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Контур</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Tint and Edges</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Оттенок и края</translation>
     </message>
     <message>
@@ -23080,19 +22659,16 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>View Cube Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Посмотреть цвет куба</translation>
+        <translation type="unfinished">Цвет куба просмотра</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>View Cube Text Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет текста куба просмотра</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>View Cube Highlight Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет выделения куба просмотра</translation>
     </message>
     <message>
@@ -23107,7 +22683,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Grid Line Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет линии сетки</translation>
     </message>
     <message>
@@ -23117,8 +22692,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Grid Stud Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Цвет шпильки сетки</translation>
+        <translation type="unfinished">Цвет шипов сетки</translation>
     </message>
     <message>
         <source>Background Top Color</source>
@@ -23148,8 +22722,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for light-object outlines.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите цвет отображения контуров световых объектов.</translation>
+        <translation type="unfinished">Выберите цвет отображения контуров источников света.</translation>
     </message>
     <message>
         <source>Light:</source>
@@ -23158,8 +22731,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the focused object.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите цвет отображения для сфокусированного объекта.</translation>
+        <translation type="unfinished">Выберите цвет отображения для объекта в фокусе.</translation>
     </message>
     <message>
         <source>Focused:</source>
@@ -23168,14 +22740,12 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for camera-object outlines.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите цвет отображения контуров объектов-камер.</translation>
+        <translation type="unfinished">Выберите цвет отображения контуров камер.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the focused control point.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите цвет отображения для сфокусированной контрольной точки.</translation>
+        <translation type="unfinished">Выберите цвет отображения для контрольной точки в фокусе.</translation>
     </message>
     <message>
         <source>Control Point Focused:</source>
@@ -23184,13 +22754,11 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for control points.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите цвет отображения контрольных точек.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for selected objects.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите цвет отображения для выбранных объектов.</translation>
     </message>
     <message>
@@ -23208,8 +22776,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Part Categories&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create, edit, reorder, or import categories for the part browser. The right-hand list shows parts matching the selected category. Imported and edited categories are saved when you choose OK in Preferences; Export writes the current list immediately.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Категории частей&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Создавайте, редактируйте, изменяйте порядок или импортируйте категории для браузера частей. В правом списке показаны детали, соответствующие выбранной категории. Импортированные и отредактированные категории сохраняются, когда вы нажимаете «ОК» в настройках; Экспорт немедленно записывает текущий список.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Категории деталей&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Создавайте, редактируйте, переупорядочивайте или импортируйте категории для браузера деталей. В правом списке показаны детали, соответствующие выбранной категории. Импортированные и изменённые категории сохраняются, когда вы нажимаете «ОК» в «Параметрах»; «Экспорт» сразу записывает текущий список.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -23223,7 +22790,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Part Categories</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Категории деталей</translation>
     </message>
     <message>
@@ -23234,14 +22800,12 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Matching Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Соответствующие части</translation>
+        <translation type="unfinished">Подходящие детали</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>View the library parts matching the selected category.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Просмотрите элементы библиотеки, соответствующие выбранной категории.</translation>
+        <translation type="unfinished">Просмотрите детали библиотеки, соответствующие выбранной категории.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -23258,7 +22822,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Replace the category list with categories from a text file.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Замените список категорий категориями из текстового файла.</translation>
     </message>
     <message>
@@ -23269,7 +22832,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Save the current category list to a text file immediately.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Немедленно сохраните текущий список категорий в текстовый файл.</translation>
     </message>
     <message>
@@ -23280,7 +22842,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Restore the default category list after confirmation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Восстановите список категорий по умолчанию после подтверждения.</translation>
     </message>
     <message>
@@ -23296,7 +22857,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Create a category with a name and a keyword expression.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Создайте категорию с именем и выражением ключевого слова.</translation>
     </message>
     <message>
@@ -23307,7 +22867,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Edit the selected category name and keyword expression.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Отредактируйте выбранное имя категории и выражение ключевого слова.</translation>
     </message>
     <message>
@@ -23318,7 +22877,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Remove the selected category after confirmation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Удалить выбранную категорию после подтверждения.</translation>
     </message>
     <message>
@@ -23344,13 +22902,11 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Commands and Keyboard Shortcuts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Команды и сочетания клавиш</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Select the command whose keyboard shortcut you want to change.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите команду, сочетание клавиш которой вы хотите изменить.</translation>
     </message>
     <message>
@@ -23367,14 +22923,12 @@ Unsupported video cards use face tint and colored edges.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_context.cpp" line="140"/>
         <source>Filter Commands</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Фильтровать команды</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Filter commands by name or shortcut.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Фильтруйте команды по имени или ярлыку.</translation>
+        <translation type="unfinished">Фильтруйте команды по названию или сочетанию клавиш.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -23384,19 +22938,16 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Replace keyboard shortcuts with assignments from a text file.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Замените сочетания клавиш назначениями из текстового файла.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Save the current keyboard shortcuts to a text file immediately.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Немедленно сохраните текущие сочетания клавиш в текстовый файл.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Restore the default keyboard shortcuts after confirmation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Восстановите сочетания клавиш по умолчанию после подтверждения.</translation>
     </message>
     <message>
@@ -23407,7 +22958,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Press the key combination to assign, then choose Assign.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Нажмите комбинацию клавиш для назначения, затем выберите «Назначить».</translation>
     </message>
     <message>
@@ -23418,13 +22968,11 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Key Sequence</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Ключевая последовательность</translation>
+        <translation type="unfinished">Комбинация клавиш</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Assign the entered key combination to the selected command.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Назначьте введенную комбинацию клавиш выбранной команде.</translation>
     </message>
     <message>
@@ -23435,7 +22983,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Clear the selected command&apos;s keyboard shortcut.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Очистите сочетание клавиш выбранной команды.</translation>
     </message>
     <message>
@@ -23462,13 +23009,11 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Tools and Mouse Shortcuts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Инструменты и сочетания клавиш мыши</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Select a tool to edit its primary and secondary mouse shortcuts.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите инструмент, чтобы редактировать его основные и дополнительные сочетания клавиш мыши.</translation>
     </message>
     <message>
@@ -23488,19 +23033,16 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Replace mouse shortcuts with assignments from a text file.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Замените сочетания клавиш мыши назначениями из текстового файла.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Save the current mouse shortcuts to a text file immediately.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Немедленно сохраните текущие сочетания клавиш мыши в текстовый файл.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Restore the default mouse shortcuts after confirmation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Восстановите сочетания клавиш мыши по умолчанию после подтверждения.</translation>
     </message>
     <message>
@@ -23572,13 +23114,11 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Remove the primary mouse shortcut and promote the secondary shortcut.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Удалите основной ярлык мыши и повысьте уровень вторичного ярлыка.</translation>
+        <translation type="unfinished">Удалите основное сочетание клавиш мыши и сделайте дополнительное сочетание основным.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Adjust how strongly mouse motion affects navigation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Настройте, насколько сильно движение мыши влияет на навигацию.</translation>
     </message>
     <message>
@@ -23778,7 +23318,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1392"/>
         <source>Select Text Halo Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите цвет ореола текста</translation>
     </message>
     <message>
@@ -24379,14 +23918,12 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="654"/>
         <source>Default Lights is unavailable. Flat shading is used instead.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Индикаторы по умолчанию недоступны. Вместо этого используется плоская штриховка.</translation>
+        <translation type="unfinished">Подсветка по умолчанию недоступна. Вместо неё используется плоское затенение.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="681"/>
         <source>View cube rendering is unavailable.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Рендеринг куба обзора недоступен.</translation>
+        <translation type="unfinished">Рендеринг куба просмотра недоступен.</translation>
     </message>
     <message>
         <source>Outline rendering is unavailable. Face tint and colored edges will be used.</source>
@@ -25124,79 +24661,66 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Labels</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Подписи</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Cube Outline</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Контур куба</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Negative Axes</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Отрицательные оси</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Show the negative X, Y and Z axes on the model-axis indicator in their own colors.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Показывать отрицательные оси X, Y и Z на индикаторе осей модели собственными цветами.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the negative X axis color used by the axis icon.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите цвет отрицательной оси X для значка осей.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Negative X Axis Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет отрицательной оси X</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1536"/>
         <source>Select Negative X Axis Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выбрать цвет отрицательной оси X</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the negative Y axis color used by the axis icon.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите цвет отрицательной оси Y для значка осей.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Negative Y Axis Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет отрицательной оси Y</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1541"/>
         <source>Select Negative Y Axis Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выбрать цвет отрицательной оси Y</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the negative Z axis color used by the axis icon.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите цвет отрицательной оси Z для значка осей.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Negative Z Axis Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет отрицательной оси Z</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1546"/>
         <source>Select Negative Z Axis Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выбрать цвет отрицательной оси Z</translation>
     </message>
     <message>
@@ -25232,26 +24756,22 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw Negative Axes</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Рисовать отрицательные оси</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw the negative halves of the axis lines in the negative axis colors, with the Z line reaching below the base grid.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Рисует отрицательные половины линий осей цветами отрицательных осей, а линия Z уходит ниже базовой сетки.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="589"/>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1694"/>
         <source>%1 ldu</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">%1 ldu</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Set the distance from the camera in LDraw units (ldu, 20 ldu per stud) beyond which parts draw simpler studs.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Задаёт расстояние от камеры в единицах LDraw (ldu, 20 ldu на шип), дальше которого детали рисуют упрощённые шипы.</translation>
     </message>
     <message>
@@ -26435,7 +25955,6 @@ Unsupported video cards use face tint and colored edges.</source>
         <location filename="../../source/interface/widgets/sw_widget_preview.cpp" line="280"/>
         <location filename="../../source/interface/widgets/sw_widget_preview.cpp" line="320"/>
         <source>Preview unavailable</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Предварительный просмотр недоступен</translation>
     </message>
     <message>
@@ -26479,7 +25998,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Enter the author credited in this model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Введите автора, указанного в этой модели.</translation>
     </message>
     <message>
@@ -26489,7 +26007,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Enter a short description of this model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Введите краткое описание этой модели.</translation>
     </message>
     <message>
@@ -26499,7 +26016,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Enter plain-text notes to store with this model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Введите текстовые примечания для хранения в этой модели.</translation>
     </message>
     <message>
@@ -26509,13 +26025,11 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Overall model dimensions along the X, Y, and Z axes.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Габаритные размеры модели по осям X, Y и Z.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Model Measurements&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The dimensions of the model&apos;s bounding box are shown in centimeters, inches, and LDraw units (ldu). The values are read-only and include parts across all steps.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Размеры модели&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Размеры ограничивающей рамки модели показаны в сантиметрах, дюймах и единицах LDraw (ldu). Значения доступны только для чтения и включают детали на всех этапах.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -26525,13 +26039,11 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Model Measurements</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Размеры модели</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>View part quantities by color; click a column heading to sort.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Просмотр количества штук по цвету; щелкните заголовок столбца для сортировки.</translation>
     </message>
     <message>
@@ -26838,14 +26350,12 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="32"/>
         <source>Keyframe for %1</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ключевой кадр для %1</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="33"/>
         <source>&lt;p&gt;&lt;b&gt;Property Keyframe&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Enable or remove a keyframe for this property at the current building step. Keyframes let the property&apos;s value change between steps.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Ключевой кадр свойства&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Включите или удалите ключевой кадр для этого свойства на текущем этапе построения. Ключевые кадры позволяют изменять значение свойства между шагами.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Ключевой кадр свойства&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Включите или удалите ключевой кадр для этого свойства на текущем шаге сборки. Ключевые кадры позволяют изменять значение свойства между шагами.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="217"/>
@@ -26866,7 +26376,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1111"/>
         <source>Expand or collapse the %1 properties.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Разверните или сверните свойства %1.</translation>
     </message>
     <message>
@@ -26879,7 +26388,6 @@ N/A: %1 parts</source>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="719"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="724"/>
         <source>Multiple Values</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Несколько значений</translation>
     </message>
     <message>
@@ -26890,8 +26398,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="915"/>
         <source>Multiple Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Несколько частей</translation>
+        <translation type="unfinished">Несколько деталей</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="919"/>
@@ -26935,21 +26442,18 @@ N/A: %1 parts</source>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1398"/>
         <source>Part ID</source>
         <oldsource>Piece Id</oldsource>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Идентификатор фрагмента</translation>
+        <translation type="unfinished">Идентификатор детали</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="881"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1399"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1430"/>
         <source>Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1399"/>
         <source>Part color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цвет детали</translation>
     </message>
     <message>
@@ -26988,7 +26492,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1409"/>
         <source>Camera name</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Имя камеры</translation>
     </message>
     <message>
@@ -27000,7 +26503,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1410"/>
         <source>Camera projection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Проекция камеры</translation>
     </message>
     <message>
@@ -27012,7 +26514,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1414"/>
         <source>Field of view in degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Поле зрения в градусах</translation>
     </message>
     <message>
@@ -27024,7 +26525,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1415"/>
         <source>Near clipping distance</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Близкое расстояние отсечения</translation>
     </message>
     <message>
@@ -27036,15 +26536,13 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1416"/>
         <source>Far clipping distance</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Дальнее расстояние отсечения</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1419"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1474"/>
         <source>Transform</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Трансформировать</translation>
+        <translation type="unfinished">Преобразование</translation>
     </message>
     <message>
         <source>Position X</source>
@@ -27054,7 +26552,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1421"/>
         <source>Camera position</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Положение камеры</translation>
     </message>
     <message>
@@ -27079,7 +26576,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1422"/>
         <source>Camera target position</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Целевое положение камеры</translation>
     </message>
     <message>
@@ -27096,44 +26592,37 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1425"/>
         <source>Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Свет</translation>
+        <translation type="unfinished">Источник света</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1427"/>
         <source>Light name</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Светлое имя</translation>
+        <translation type="unfinished">Имя источника света</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1428"/>
         <source>Type</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Тип</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1428"/>
         <source>Light type</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Тип света</translation>
+        <translation type="unfinished">Тип источника света</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1430"/>
         <source>Light color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Светлый цвет</translation>
+        <translation type="unfinished">Цвет источника света</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1431"/>
         <source>Cast Shadow</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Отбрасывать тень</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1431"/>
         <source>Cast a shadow from this light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Отбрось тень от этого света</translation>
+        <translation type="unfinished">Отбрасывать тень от этого источника света</translation>
     </message>
     <message>
         <source>Cone Angle</source>
@@ -27240,14 +26729,12 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1429"/>
         <source>Area Shape</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Форма области</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1429"/>
         <source>The shape of the area light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Форма зонального освещения</translation>
+        <translation type="unfinished">Форма площадного источника света</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1433"/>
@@ -27287,26 +26774,22 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1441"/>
         <source>Size X</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Размер Х</translation>
+        <translation type="unfinished">Размер X</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1441"/>
         <source>The width of the area light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Ширина зоны освещения</translation>
+        <translation type="unfinished">Ширина площадного источника света</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1442"/>
         <source>The height of the area light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Высота площадного освещения</translation>
+        <translation type="unfinished">Высота площадного источника света</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1445"/>
         <source>Blender Settings</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Blender Настройки</translation>
+        <translation type="unfinished">Настройки Blender</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1447"/>
@@ -27322,15 +26805,13 @@ N/A: %1 parts</source>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1449"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1458"/>
         <source>Power</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Власть</translation>
+        <translation type="unfinished">Мощность</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1449"/>
         <source>Power of the light in watts</source>
         <oldsource>Power of the light in Watts</oldsource>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Мощность света в Ваттах</translation>
+        <translation type="unfinished">Мощность источника света в ваттах</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1449"/>
@@ -27340,32 +26821,27 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1450"/>
         <source>Radius</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Радиус</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1450"/>
         <source>Shadow soft size</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Мягкий размер теней</translation>
+        <translation type="unfinished">Размер мягкости тени</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1451"/>
         <source>Angle</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Угол</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1451"/>
         <source>Angular diameter of the light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Угловой диаметр света</translation>
+        <translation type="unfinished">Угловой диаметр источника света</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1454"/>
         <source>POV-Ray Settings</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">POV-Ray Настройки</translation>
+        <translation type="unfinished">Настройки POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1456"/>
@@ -27380,8 +26856,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1458"/>
         <source>Power of the light (multiplicative factor)</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Сила света (мультипликативный коэффициент)</translation>
+        <translation type="unfinished">Мощность источника света (множитель)</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1459"/>
@@ -27396,25 +26871,21 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1464"/>
         <source>Fade Distance</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Расстояние затухания</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1464"/>
         <source>The distance at which the full light intensity arrives</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Расстояние, на которое попадает полная интенсивность света</translation>
+        <translation type="unfinished">Расстояние, на котором достигается полная интенсивность света</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1465"/>
         <source>Fade Power</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Угасание силы</translation>
+        <translation type="unfinished">Мощность затухания</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1465"/>
         <source>Light falloff rate</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Скорость затухания света</translation>
     </message>
     <message>
@@ -27460,8 +26931,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1459"/>
         <source>Tightness</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Герметичность</translation>
+        <translation type="unfinished">Концентрация луча</translation>
     </message>
     <message>
         <source>Additional exponential spot light edge softening</source>
@@ -27471,7 +26941,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1470"/>
         <source>Grid X</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Сетка X</translation>
     </message>
     <message>
@@ -27487,7 +26956,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1476"/>
         <source>Position of the object</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Положение объекта</translation>
     </message>
     <message>
@@ -27498,7 +26966,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1477"/>
         <source>Rotation of the object in degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вращение объекта в градусах</translation>
     </message>
 </context>
@@ -27712,7 +27179,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="433"/>
         <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Start the render using the current settings. While rendering, this button becomes Cancel so you can stop the operation.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Рендеринг&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Запустите рендеринг с текущими настройками. Во время рендеринга эта кнопка меняется на «Отмена», поэтому вы можете остановить операцию.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -27754,8 +27220,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="985"/>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1973"/>
         <source>Open in Blender</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Открыто в Blender</translation>
+        <translation type="unfinished">Открыть в Blender</translation>
     </message>
     <message>
         <source>Import and open LDraw model in Blender</source>
@@ -27765,7 +27230,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1784"/>
         <source>Exporting Model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Экспорт модели</translation>
     </message>
     <message>
@@ -27781,8 +27245,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="449"/>
         <source>Render the current model step with POV-Ray.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Отрисуйте текущий шаг модели с помощью POV-Ray.</translation>
+        <translation type="unfinished">Выполните рендеринг текущего шага модели с помощью POV-Ray.</translation>
     </message>
     <message>
         <source>Set the POV-Ray image dimensions and render quality.</source>
@@ -27807,8 +27270,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1020"/>
         <source>Render the current model step with Blender.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Отрисуйте текущий шаг модели с помощью Blender.</translation>
+        <translation type="unfinished">Выполните рендеринг текущего шага модели с помощью Blender.</translation>
     </message>
     <message>
         <source>Configure Blender, its add-on, and render settings.</source>
@@ -27833,7 +27295,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1019"/>
         <source>Import the current model step and open it in Blender.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Импортируйте текущий шаг модели и откройте его в Blender.</translation>
     </message>
     <message>
@@ -28804,7 +28265,6 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1890"/>
         <source>Saving Blender Model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Сохранение модели Blender</translation>
     </message>
     <message>
@@ -28817,19 +28277,16 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1971"/>
         <source>errors%1</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">ошибки%1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1971"/>
         <source> and warnings</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished"> и предупреждения</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1971"/>
         <source>warnings</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">предупреждения</translation>
     </message>
     <message>
@@ -28841,8 +28298,7 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1972"/>
         <source>Open in Blender encountered %1. See Show Details...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">При открытии в Blender обнаружен %1. См. Показать детали...</translation>
+        <translation type="unfinished">При открытии в Blender обнаружены %1. См. «Показать детали...»</translation>
     </message>
     <message>
         <source>Error starting Blender render process.</source>
@@ -28854,14 +28310,12 @@ Install the povray-includes package or the include files of your POV-Ray version
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2060"/>
         <source>Failed to open log file: &apos;%1&apos;:
 %2</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось открыть файл журнала: &apos;%1&apos;:
 %2.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2221"/>
         <source>An error occurred while rendering.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">При рендеринге произошла ошибка.</translation>
     </message>
     <message>
@@ -28931,7 +28385,6 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="805"/>
         <source>Choose the rendering quality; higher quality can take longer.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите качество рендеринга; более высокое качество может занять больше времени.</translation>
     </message>
     <message>
@@ -28969,7 +28422,6 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1048"/>
         <source>Renderer Output</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вывод рендерера</translation>
     </message>
     <message>
@@ -28986,20 +28438,17 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1049"/>
         <source>Read and copy renderer output and diagnostic messages.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Чтение и копирование выходных данных и диагностических сообщений средства рендеринга.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Path and file name for the rendered image.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Путь и имя файла для визуализированного изображения.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Output Image&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose where to save the rendered image and its format, such as PNG, JPEG, or BMP. The output path applies to image rendering; Open in Blender does not use it.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Выходное изображение&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите, где сохранить визуализированное изображение и его формат, например PNG, JPEG или BMP. Путь вывода применяется к рендерингу изображения; При открытии в Blender он не используется.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Выходное изображение&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите, где сохранить визуализированное изображение и его формат, например PNG, JPEG или BMP. Путь вывода применяется к рендерингу изображения; при открытии в Blender он не используется.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Output:</source>
@@ -29008,13 +28457,11 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Choose the rendered image file and format.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите файл и формат визуализированного изображения.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Choose Render Output</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выберите вывод рендеринга</translation>
     </message>
     <message>
@@ -29026,31 +28473,26 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Preview of the rendered image.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Предварительный просмотр визуализированного изображения.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Render Preview</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Предварительный просмотр рендеринга</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Render Preview&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The preview is scaled to fit this area. Changing the dialog size does not change the output resolution; use Settings to change the image dimensions.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Предварительный просмотр&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Предварительный просмотр масштабируется в соответствии с этой областью. Изменение размера диалогового окна не меняет выходное разрешение; используйте настройки, чтобы изменить размеры изображения.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Progress of the current export or render.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ход текущего экспорта или рендеринга.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Render Progress</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Прогресс рендеринга</translation>
     </message>
     <message>
@@ -29214,8 +28656,7 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Select Objects&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use the checkboxes to choose visible parts, cameras, and lights in the current model. Choose OK to replace the current selection with the checked objects, or Cancel to keep the current selection.&lt;/p&gt;&lt;p&gt;Parts in the same top-level group are selected together. All, None, and Invert change the checkboxes in this dialog.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Выбрать объекты&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Используйте флажки, чтобы выбрать видимые части, камеры и источники света в текущей модели. Нажмите «ОК», чтобы заменить текущий выбор отмеченными объектами, или «Отмена», чтобы сохранить текущий выбор.&lt;/p&gt;&lt;p&gt;Детали в одной группе верхнего уровня выбираются вместе. Все, Нет и Инвертировать изменяют флажки в этом диалоговом окне.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Выбрать объекты&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Используйте флажки, чтобы выбрать видимые детали, камеры и источники света в текущей модели. Нажмите «ОК», чтобы заменить текущее выделение отмеченными объектами, или «Отмена», чтобы сохранить текущее выделение.&lt;/p&gt;&lt;p&gt;Детали в одной группе верхнего уровня выбираются вместе. «Все», «Нет» и «Инвертировать» изменяют флажки в этом диалоге.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
@@ -29225,26 +28666,22 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>Check the objects to include in the selection.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Отметьте объекты, которые необходимо включить в выборку.</translation>
+        <translation type="unfinished">Отметьте объекты, которые необходимо включить в выделение.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Object List&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The list includes parts visible in the current step and visible cameras and lights. Expand groups to see their parts. Checking or clearing a grouped part applies the same state to all parts in its top-level group.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Список объектов&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Список включает в себя части, видимые на текущем шаге, а также видимые камеры и источники света. Разверните группы, чтобы увидеть их детали. Проверка или очистка сгруппированного детали применяет одно и то же состояние ко всем деталям в группе верхнего уровня.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Список объектов&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Список включает детали, видимые на текущем шаге, а также видимые камеры и источники света. Разверните группы, чтобы увидеть их детали. Установка или снятие флажка у сгруппированной детали применяет то же состояние ко всем деталям в её группе верхнего уровня.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>Objects to Select</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Объекты для выбора</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>Check every object in the list.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Проверьте каждый объект в списке.</translation>
+        <translation type="unfinished">Отметьте все объекты в списке.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
@@ -29254,7 +28691,6 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>Clear every object checkbox in the list.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Снимите флажок для каждого объекта в списке.</translation>
     </message>
     <message>
@@ -29265,8 +28701,7 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>Check unchecked objects and clear checked objects.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Проверяйте неотмеченные объекты и очищайте отмеченные объекты.</translation>
+        <translation type="unfinished">Отметьте неотмеченные объекты и снимите отметку с отмеченных.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
@@ -29283,8 +28718,7 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Import Set Inventory&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Search the online Rebrickable database by set name or number. Select a result and choose OK, or double-click it, to download the set inventory for the operation that opened this dialog.&lt;/p&gt;&lt;p&gt;An internet connection is required for searching and downloading inventories.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Импорт инвентаря наборов&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выполняйте поиск в онлайн-базе данных Rebrickable по имени или номеру набора. Выберите результат и нажмите «ОК» или дважды щелкните его, чтобы загрузить набор инвентаря для операции, которая открыла это диалоговое окно.&lt;/p&gt;&lt;p&gt;Для поиска и загрузки инвентаря требуется подключение к Интернету.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Импорт инвентаря набора&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выполняйте поиск в онлайн-базе данных Rebrickable по названию или номеру набора. Выберите результат и нажмите «ОК» или дважды щёлкните его, чтобы загрузить инвентарь набора для операции, открывшей это диалоговое окно.&lt;/p&gt;&lt;p&gt;Для поиска и загрузки инвентаря требуется подключение к Интернету.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
@@ -29292,13 +28726,11 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="167"/>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="265"/>
         <source>Import Set Inventory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Импортировать инвентарь набора</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>Enter a set name or number, then press Enter or choose Search.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Введите имя или номер набора, затем нажмите Enter или выберите «Поиск».</translation>
     </message>
     <message>
@@ -29309,13 +28741,11 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Search Sets&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Enter a set number or words from its name. Press Enter or choose Search to retrieve matching sets. Refine the search if the set you want is not listed.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Поиск наборов&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Введите номер набора или слова из его названия. Нажмите Enter или выберите «Поиск», чтобы найти соответствующие наборы. Уточните поиск, если нужного набора нет в списке.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>Search the online database using the entered name or number.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Выполните поиск в онлайн-базе данных, используя введенное имя или номер.</translation>
     </message>
     <message>
@@ -29326,19 +28756,16 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>Select a set to download its part inventory.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите набор, чтобы загрузить список его частей.</translation>
+        <translation type="unfinished">Выберите набор, чтобы загрузить список его деталей.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>Set Search Results</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Установить результаты поиска</translation>
+        <translation type="unfinished">Результаты поиска наборов</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Search Results&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Results show the set number, name, release year, and part count. Select the desired set and choose OK, or double-click its row, to download its inventory.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Результаты поиска&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Результаты показывают номер набора, название, год выпуска и количество штук. Выберите нужный набор и нажмите «ОК» или дважды щелкните его строку, чтобы загрузить его инвентарь.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -29364,8 +28791,7 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>Set data provided by &lt;a href=&quot;https://www.rebrickable.com&quot;&gt;Rebrickable&lt;/a&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Установите данные, предоставленные &lt;a href=&quot;https://www.rebrickable.com&quot;&gt;Rebrickable&lt;/a&gt;</translation>
+        <translation type="unfinished">Данные о наборах предоставлены &lt;a href=&quot;https://www.rebrickable.com&quot;&gt;Rebrickable&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Sets Database provided by &lt;a href=&quot;https://www.rebrickable.com&quot;&gt;Rebrickable&lt;/a&gt;</source>
@@ -29450,7 +28876,6 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/widgets/sw_widget_spinner.cpp" line="9"/>
         <source>Loading</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Загрузка</translation>
     </message>
 </context>
@@ -29487,32 +28912,27 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/library/sw_texture.cpp" line="77"/>
         <source>Could not load texture &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось загрузить текстуру &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_texture.cpp" line="80"/>
         <source>Could not make the shared GL context current for texture upload.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось сделать общий контекст GL текущим для загрузки текстур.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_texture.cpp" line="83"/>
         <source>No shared GL context is available for texture upload.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Общий контекст GL недоступен для загрузки текстур.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_texture.cpp" line="86"/>
         <source>Texture upload failed.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Загрузка текстур не удалась.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_texture.cpp" line="89"/>
         <location filename="../../source/library/sw_texture.cpp" line="92"/>
         <source>Texture &apos;%1&apos; failed to load.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не удалось загрузить текстуру &apos;%1&apos;.</translation>
     </message>
 </context>
@@ -29521,14 +28941,12 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="13"/>
         <source>Building Steps and Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Шаги и детали сборки</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="14"/>
         <source>Select steps or parts; drag parts to reorder them or change their building step.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Выберите шаги или детали; перетаскивайте части, чтобы изменить их порядок или изменить шаг их построения.</translation>
+        <translation type="unfinished">Выберите шаги или детали; перетаскивайте детали, чтобы изменить их порядок или шаг сборки.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="189"/>
@@ -29703,19 +29121,16 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/rendering/sw_view_widget.cpp" line="55"/>
         <source>Stop looking through this camera.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перестать смотреть через эту камеру.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_view_widget.cpp" line="54"/>
         <source>Free Camera</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Свободная камера</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_view_widget.cpp" line="198"/>
         <source>Camera: %1</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера: %1</translation>
     </message>
     <message>

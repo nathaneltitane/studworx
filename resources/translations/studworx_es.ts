@@ -1946,14 +1946,12 @@
     <message>
         <location filename="../../source/core/sw_object_camera.cpp" line="64"/>
         <source>Perspective</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Perspectiva</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object_camera.cpp" line="67"/>
         <source>Orthographic</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Ortográfico</translation>
+        <translation type="unfinished">Ortográfica</translation>
     </message>
 </context>
 <context>
@@ -2003,73 +2001,61 @@
     <message>
         <location filename="../../source/core/sw_object.cpp" line="57"/>
         <source>Rename Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cambiar nombre de luz</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="60"/>
         <source>Change Light Type</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cambiar tipo de luz</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="63"/>
         <source>Change Light Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cambiar color de luz</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="66"/>
         <source>Change Light Blender Power</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Cambiar luz Blender Energía</translation>
+        <translation type="unfinished">Cambiar potencia de luz de Blender</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="69"/>
         <source>Change Light POV-Ray Power</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Cambiar luz POV-Ray Energía</translation>
+        <translation type="unfinished">Cambiar potencia de luz de POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="72"/>
         <source>Change Light Shadow</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Cambiar luz sombra</translation>
+        <translation type="unfinished">Cambiar sombra de luz</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="75"/>
         <source>Change Light POV-Ray Fade Distance</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Cambiar luz POV-Ray Distancia de desvanecimiento</translation>
+        <translation type="unfinished">Cambiar distancia de atenuación de luz de POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="78"/>
         <source>Change Light POV-Ray Fade Power</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Cambiar luz POV-Ray Potencia de atenuación</translation>
+        <translation type="unfinished">Cambiar potencia de atenuación de luz de POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="81"/>
         <source>Change Light Blender Radius</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Cambiar luz Blender Radio</translation>
+        <translation type="unfinished">Cambiar radio de luz de Blender</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="84"/>
         <source>Change Light Blender Angle</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Cambiar luz Blender Ángulo</translation>
+        <translation type="unfinished">Cambiar ángulo de luz de Blender</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="87"/>
         <source>Change Area Light X Size</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cambiar tamaño de luz de área X</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="90"/>
         <source>Change Area Light Y Size</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cambiar tamaño de luz de área Y</translation>
     </message>
     <message>
@@ -2105,14 +2091,12 @@
     <message>
         <location filename="../../source/core/sw_object.cpp" line="102"/>
         <source>Change Area Light Shape</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cambiar forma de luz de área</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="106"/>
         <source>Change Area Light POV-Ray Grid</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Cambiar luz de área POV-Ray Cuadrícula</translation>
+        <translation type="unfinished">Cambiar cuadrícula POV-Ray de luz de área</translation>
     </message>
 </context>
 <context>
@@ -2218,25 +2202,21 @@
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="77"/>
         <source>Rectangle</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Rectángulo</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="80"/>
         <source>Square</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cuadrado</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="83"/>
         <source>Disk</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Disco</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="86"/>
         <source>Ellipse</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elipse</translation>
     </message>
 </context>
@@ -2245,8 +2225,7 @@
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="44"/>
         <source>Point Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Punto de luz</translation>
+        <translation type="unfinished">Luz puntual</translation>
     </message>
     <message>
         <source>Spot Light</source>
@@ -2261,13 +2240,11 @@
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="50"/>
         <source>Directional Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Luz direccional</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="53"/>
         <source>Area Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Luz de área</translation>
     </message>
 </context>
@@ -4153,19 +4130,16 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2680"/>
         <source>Focus Next Connection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Centrarse en la siguiente conexión</translation>
+        <translation type="unfinished">Enfocar la siguiente conexión</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2689"/>
         <source>Focus Previous Connection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Centrarse en la conexión anterior</translation>
+        <translation type="unfinished">Enfocar la conexión anterior</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2698"/>
         <source>Rotate Train Track</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Girar la vía del tren</translation>
     </message>
     <message>
@@ -4516,14 +4490,12 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="189"/>
         <source>&amp;POV-Ray Render...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;POV-Ray Renderizar...</translation>
+        <translation type="unfinished">Renderizar con &amp;POV-Ray...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="198"/>
         <source>&amp;Blender Render...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Blender Renderizar...</translation>
+        <translation type="unfinished">Renderizar con &amp;Blender...</translation>
     </message>
     <message>
         <source>&amp;Open in Blender...</source>
@@ -4569,8 +4541,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="918"/>
         <source>Point Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Punto de luz</translation>
+        <translation type="unfinished">Luz puntual</translation>
     </message>
     <message>
         <source>Spot Light</source>
@@ -4580,13 +4551,11 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="936"/>
         <source>Directional Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Luz direccional</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="945"/>
         <source>Area Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Luz de área</translation>
     </message>
     <message>
@@ -4619,13 +4588,11 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3477"/>
         <source>NewDirectionalLight</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Nueva luz direccional</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3478"/>
         <source>NewAreaLight</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Nueva luz de área</translation>
     </message>
     <message>
@@ -4695,7 +4662,6 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3491"/>
         <source>ZoomRegion</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Región de zoom</translation>
     </message>
 </context>
@@ -4764,26 +4730,22 @@ Formato de archivo no reconocido.</translation>
     <message>
         <location filename="../../source/core/sw_project.cpp" line="414"/>
         <source>Model &apos;%1&apos; was deleted.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Se eliminó el modelo &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_file.cpp" line="54"/>
         <source>Embedded data has no filename.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Los datos incrustados no tienen nombre de archivo.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_file.cpp" line="108"/>
         <source>Unexpected statement in embedded data &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Declaración inesperada en datos incrustados &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_file.cpp" line="143"/>
         <source>Duplicate model &apos;%1&apos; was ignored; model names are case-insensitive.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Se ignoró el modelo duplicado &apos;%1&apos;; Los nombres de los modelos no distinguen entre mayúsculas y minúsculas.</translation>
+        <translation type="unfinished">Se ignoró el modelo duplicado &apos;%1&apos;; los nombres de los modelos no distinguen entre mayúsculas y minúsculas.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_file.cpp" line="362"/>
@@ -4812,13 +4774,11 @@ The file format is not recognized.</source>
         <location filename="../../source/core/sw_project_file.cpp" line="574"/>
         <location filename="../../source/core/sw_project_file.cpp" line="676"/>
         <source>Could not write all model data.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudieron escribir todos los datos del modelo.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_import.cpp" line="75"/>
         <source>Merging would change texture &apos;%1&apos; used by model &apos;%2&apos;. Rename the conflicting texture before merging.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">La fusión cambiaría la textura &apos;%1&apos; utilizada por el modelo &apos;%2&apos;. Cambie el nombre de la textura en conflicto antes de fusionarla.</translation>
     </message>
     <message>
@@ -4872,37 +4832,31 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/core/sw_project_import.cpp" line="223"/>
         <source>Merged %1 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Fusionado %1 </translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_import.cpp" line="242"/>
         <source>Could not reserve submodel name &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo reservar el nombre del submodelo &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_file.cpp" line="793"/>
         <source>Cannot export different submodels named &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pueden exportar diferentes submodelos llamados &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_file.cpp" line="843"/>
         <source>Could not serialize all model data.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudieron serializar todos los datos del modelo.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_file.cpp" line="881"/>
         <source>Cannot export different embedded data named &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pueden exportar diferentes datos incrustados llamados &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_import.cpp" line="416"/>
         <source>Clipboard contains no model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">El portapapeles no contiene ningún modelo.</translation>
     </message>
     <message>
@@ -6429,7 +6383,6 @@ The file format is not recognized.</source>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1737"/>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1755"/>
         <source>%1 failed: %2</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">%1 falló: %2</translation>
     </message>
     <message>
@@ -7384,8 +7337,7 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="199"/>
         <source>Render the current model using Blender</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Renderice el modelo actual usando Blender</translation>
+        <translation type="unfinished">Renderizar el modelo actual usando Blender</translation>
     </message>
     <message>
         <source>Open the current model in Blender</source>
@@ -7450,8 +7402,7 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="919"/>
         <source>Add new point light sources to the model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Agregar nuevas fuentes de luz puntuales al modelo.</translation>
+        <translation type="unfinished">Añadir nuevas fuentes de luz puntuales al modelo</translation>
     </message>
     <message>
         <source>Add new spot lights to the model</source>
@@ -7472,8 +7423,7 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="946"/>
         <source>Add new area light sources to the model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Agregar nuevas fuentes de luz de área al modelo</translation>
+        <translation type="unfinished">Añadir nuevas fuentes de luz de área al modelo</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="991"/>
@@ -8207,20 +8157,17 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2681"/>
         <source>Focus the next connection of the currently selected track</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Enfocar la siguiente conexión de la pista actualmente seleccionada</translation>
+        <translation type="unfinished">Enfocar la siguiente conexión de la vía seleccionada actualmente</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2690"/>
         <source>Focus the previous connection of the currently selected track</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Enfocar la conexión anterior de la pista actualmente seleccionada</translation>
+        <translation type="unfinished">Enfocar la conexión anterior de la vía seleccionada actualmente</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2699"/>
         <source>Rotate the focused train track around its last connection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Gira la vía del tren enfocada alrededor de su última conexión.</translation>
+        <translation type="unfinished">Girar la vía del tren enfocada alrededor de su última conexión</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2708"/>
@@ -8333,7 +8280,6 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3374"/>
         <source>Click a control to read its contextual help</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Haga clic en un control para leer su ayuda contextual</translation>
     </message>
     <message>
@@ -8572,14 +8518,12 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="272"/>
         <source>&lt;p&gt;&lt;b&gt;Undo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reverse the most recent model edit, such as inserting, moving, painting, or deleting an object. Repeat Undo to move backward through the edit history.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Deshacer&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Revertir la edición del modelo más reciente, como insertar, mover, pintar o eliminar un objeto. Repita Deshacer para retroceder en el historial de ediciones.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="281"/>
         <source>&lt;p&gt;&lt;b&gt;Redo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reapply an edit that was reversed with Undo. Making a new edit after Undo replaces the redo history with the new sequence of edits.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Rehacer&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vuelve a aplicar una edición que se revirtió con Deshacer. Realizar una nueva edición después de Deshacer reemplaza el historial de rehacer con la nueva secuencia de ediciones.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Rehacer&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Volver a aplicar una edición que se revirtió con Deshacer. Realizar una nueva edición después de Deshacer reemplaza el historial de rehacer con la nueva secuencia de ediciones.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="290"/>
@@ -8821,56 +8765,47 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="911"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Part Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a part in the Parts dock and a color in Colors, then use this tool in the model view to place the part. Movement snapping controls placement increments. Use the preview to check placement before inserting the part.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta Insertar pieza&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija una pieza en el menú Piezas y un color en Colores, luego use esta herramienta en la vista del modelo para colocar la pieza. El ajuste de movimiento controla los incrementos de ubicación. Utilice la vista previa para comprobar la ubicación antes de insertar la pieza.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta de inserción de piezas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija una pieza en el panel Piezas y un color en Colores, luego use esta herramienta en la vista del modelo para colocar la pieza. El ajuste de movimiento controla los incrementos de ubicación. Utilice la vista previa para comprobar la ubicación antes de insertar la pieza.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="920"/>
         <source>&lt;p&gt;&lt;b&gt;Point Light Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use the model view to place a light that emits in all directions from a point. Select the light afterward to edit its color, shadow settings, and renderer-specific power in Properties.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta Luz puntual&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Utilice la vista de modelo para colocar una luz que se emita en todas las direcciones desde un punto. Luego seleccione la luz para editar su color, configuración de sombra y potencia específica del renderizador en Propiedades.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta de luz puntual&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Utilice la vista de modelo para colocar una luz que se emita en todas las direcciones desde un punto. Luego seleccione la luz para editar su color, configuración de sombra y potencia específica del renderizador en Propiedades.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="929"/>
         <source>&lt;p&gt;&lt;b&gt;Spotlight Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use the model view to create a directed cone of light. In Properties, adjust its position and target, cone angle, penumbra, and renderer-specific power.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta Foco&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Utiliza la vista del modelo para crear un cono de luz dirigido. En Propiedades, ajuste su posición y objetivo, el ángulo del cono, la penumbra y la potencia específica del renderizador.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta de foco&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Utilice la vista del modelo para crear un cono de luz dirigido. En Propiedades, ajuste su posición y objetivo, el ángulo del cono, la penumbra y la potencia específica del renderizador.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="938"/>
         <source>&lt;p&gt;&lt;b&gt;Directional Light Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create a light with parallel rays, such as sunlight. Its direction determines the illumination. Select it to adjust its transform, color, and renderer-specific settings in Properties.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta de luz direccional&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Crea una luz con rayos paralelos, como la luz del sol. Su dirección determina la iluminación. Selecciónelo para ajustar su transformación, color y configuración específica del renderizador en Propiedades.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta de luz direccional&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cree una luz con rayos paralelos, como la luz del sol. Su dirección determina la iluminación. Selecciónela para ajustar su transformación, color y configuración específica del renderizador en Propiedades.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="947"/>
         <source>&lt;p&gt;&lt;b&gt;Area Light Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create a light that emits over an area. Select it to set the area shape and size in Properties, along with color and renderer-specific settings.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta de luz de área&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Crea una luz que se emite sobre un área. Selecciónelo para establecer la forma y el tamaño del área en Propiedades, junto con el color y la configuración específica del renderizador.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta de luz de área&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cree una luz que se emite sobre un área. Selecciónela para establecer la forma y el tamaño del área en Propiedades, junto con el color y la configuración específica del renderizador.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="956"/>
         <source>&lt;p&gt;&lt;b&gt;Camera Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create a camera in the model view. Select the camera to edit its position, target, projection, and field of view in Properties. To look through the camera, choose it from View &amp;gt; Cameras.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta Cámara&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Crea una cámara en la vista del modelo. Seleccione la cámara para editar su posición, objetivo, proyección y campo de visión en Propiedades. Para mirar a través de la cámara, selecciónela en Ver &gt; Cámaras.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta de cámara&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cree una cámara en la vista del modelo. Seleccione la cámara para editar su posición, objetivo, proyección y campo de visión en Propiedades. Para mirar a través de la cámara, selecciónela en Ver &amp;gt; Cámaras.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="965"/>
         <source>&lt;p&gt;&lt;b&gt;Select Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pick objects in the model view or drag a selection rectangle. Selection Mode controls whether matching part types or colors are included. The focused object provides the reference for relative transforms.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta Seleccionar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija objetos en la vista del modelo o arrastre un rectángulo de selección. El modo de selección controla si se incluyen tipos de piezas o colores coincidentes. El objeto enfocado proporciona la referencia para transformaciones relativas.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta de selección&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija objetos en la vista del modelo o arrastre un rectángulo de selección. El modo de selección controla si se incluyen tipos de piezas o colores coincidentes. El objeto enfocado proporciona la referencia para transformaciones relativas.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="974"/>
         <source>&lt;p&gt;&lt;b&gt;Move Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select the objects to move, then drag in the model view. Use the manipulator to constrain movement to an axis or plane. Movement Snap sets the increments, and Transform Options selects the coordinate reference.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta Mover&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seleccione los objetos que desea mover y luego arrástrelos en la vista del modelo. Utilice el manipulador para restringir el movimiento a un eje o plano. El ajuste de movimiento establece los incrementos y las opciones de transformación seleccionan la referencia de coordenadas.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta de movimiento&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seleccione los objetos que desea mover y luego arrástrelos en la vista del modelo. Utilice el manipulador para restringir el movimiento a un eje o plano. El ajuste de movimiento establece los incrementos y las opciones de transformación seleccionan la referencia de coordenadas.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="983"/>
         <source>&lt;p&gt;&lt;b&gt;Rotate Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select objects, then drag a rotation handle in the model view. Rotation Snap sets the angle increments. Transform Options chooses relative or model axes and whether parts rotate together or separately.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta Girar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seleccione objetos y luego arrastre un controlador de rotación en la vista del modelo. Rotación Snap establece los incrementos del ángulo. Las opciones de transformación eligen ejes relativos o del modelo y si las piezas giran juntas o por separado.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta de rotación&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seleccione objetos y luego arrastre un controlador de rotación en la vista del modelo. El ajuste de rotación establece los incrementos del ángulo. Las opciones de transformación eligen ejes relativos o del modelo y si las piezas giran juntas o por separado.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1073"/>
@@ -9585,68 +9520,57 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1001"/>
         <source>&lt;p&gt;&lt;b&gt;Paint Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the replacement color in the Colors dock, then click parts in the model view to recolor them. To recolor the current selection together, use the color button above the swatches.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta de pintura&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija el color de reemplazo en el panel Colores y luego haga clic en las piezas en la vista del modelo para cambiarles el color. Para cambiar el color de la selección actual juntos, use el botón de color encima de las muestras.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta de pintura&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija el color de reemplazo en el panel Colores y luego haga clic en las piezas en la vista del modelo para cambiarles el color. Para cambiar el color de la selección actual de una vez, use el botón de color encima de las muestras.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1019"/>
         <source>&lt;p&gt;&lt;b&gt;Color Picker Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Click a part in the model view to make its color the current color. You can then use that color for insertion or painting; sampling it does not recolor the part.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta Selector de color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Haga clic en una pieza en la vista del modelo para que su color sea el color actual. Luego puedes usar ese color para insertar o pintar; probarlo no cambia el color de la pieza.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta de selector de color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Haga clic en una pieza en la vista del modelo para que su color sea el color actual. Luego puede usar ese color para insertar o pintar; tomar su color no cambia el color de la pieza.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1028"/>
         <source>&lt;p&gt;&lt;b&gt;Zoom Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag in the model view to move the viewpoint closer to or farther from the model. This changes the view rather than resizing parts. Use Zoom Region to frame a particular area.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta Zoom&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Arrastra la vista del modelo para acercar o alejar el punto de vista del modelo. Esto cambia la vista en lugar de cambiar el tamaño de las piezas. Utilice Región de zoom para enmarcar un área en particular.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta de ampliación&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Arrastre en la vista del modelo para acercar o alejar el punto de vista del modelo. Esto cambia la vista en lugar de cambiar el tamaño de las piezas. Utilice Ampliar región para enmarcar un área en particular.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1037"/>
         <source>&lt;p&gt;&lt;b&gt;Pan Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag to shift the view sideways or vertically without moving the model. Use this to reposition the model on screen while keeping the viewing direction.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta Pan&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Arrastre para desplazar la vista hacia los lados o verticalmente sin mover el modelo. Úselo para reposicionar el modelo en la pantalla mientras mantiene la dirección de visualización.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta de desplazamiento&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Arrastre para desplazar la vista hacia los lados o verticalmente sin mover el modelo. Úselo para reposicionar el modelo en la pantalla mientras mantiene la dirección de visualización.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1046"/>
         <source>&lt;p&gt;&lt;b&gt;Orbit Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag to orbit the view around its center and inspect the model from another direction. This rotates the viewpoint rather than the selected parts; use Rotate for object edits.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta Órbita&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Arrastre para orbitar la vista alrededor de su centro e inspeccionar el modelo desde otra dirección. Esto rota el punto de vista en lugar de las piezas seleccionadas; utilice Rotar para editar objetos.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta de órbita&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Arrastre para orbitar la vista alrededor de su centro e inspeccionar el modelo desde otra dirección. Esto rota el punto de vista en lugar de las piezas seleccionadas; utilice Rotar para editar objetos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1055"/>
         <source>&lt;p&gt;&lt;b&gt;Roll Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag to turn the view around its viewing axis, tilting what appears upright on screen. Model parts keep their positions and orientations.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta Desplazar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Arrastra para girar la vista alrededor de su eje de visualización, inclinando lo que aparece en posición vertical en la pantalla. Las piezas del modelo mantienen sus posiciones y orientaciones.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta de pivotaje&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Arrastre para girar la vista alrededor de su eje de visualización, inclinando lo que aparece en posición vertical en la pantalla. Las piezas del modelo mantienen sus posiciones y orientaciones.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1064"/>
         <source>&lt;p&gt;&lt;b&gt;Zoom Region Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag a rectangle around the area you want to inspect. The view zooms to frame that region without changing model geometry.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta Zoom de región&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Arrastra un rectángulo alrededor del área que deseas inspeccionar. La vista se amplía para enmarcar esa región sin cambiar la geometría del modelo.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Herramienta de ampliación de región&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Arrastre un rectángulo alrededor del área que desea inspeccionar. La vista se amplía para enmarcar esa región sin cambiar la geometría del modelo.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1397"/>
         <source>&lt;p&gt;&lt;b&gt;First Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the model at its first building step. Step navigation changes which parts are visible; it does not move parts to a different step.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Primer paso&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Muestre el modelo en su primer paso de construcción. La navegación por pasos cambia qué piezas son visibles; no mueve piezas a un paso diferente.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Primer paso&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Muestra el modelo en su primer paso de construcción. La navegación por pasos cambia qué piezas son visibles; no mueve piezas a un paso diferente.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1406"/>
         <source>&lt;p&gt;&lt;b&gt;Previous Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the model one building step earlier. Parts introduced in later steps are hidden so you can inspect the earlier stage of construction.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Paso anterior&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Muestre el modelo un paso de construcción antes. Las piezas introducidas en pasos posteriores están ocultas para que puedas inspeccionar la etapa anterior de construcción.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Paso anterior&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Muestra el modelo un paso de construcción antes. Las piezas introducidas en pasos posteriores están ocultas para que pueda inspeccionar la etapa anterior de construcción.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1415"/>
         <source>&lt;p&gt;&lt;b&gt;Next Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the next building step to reveal the next stage of the model. Use the Timeline to change which step introduces a part.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Siguiente paso&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Muestra el siguiente paso de construcción para revelar la siguiente etapa del modelo. Utilice la línea de tiempo para cambiar qué paso presenta una pieza.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1424"/>
         <source>&lt;p&gt;&lt;b&gt;Last Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the last building step of the current model. Use this to return to the completed model after inspecting earlier steps.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Último paso&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Muestra el último paso de construcción del modelo actual. Utilízalo para volver al modelo completo después de inspeccionar los pasos anteriores.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Último paso&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Muestra el último paso de construcción del modelo actual. Utilícelo para volver al modelo completo después de inspeccionar los pasos anteriores.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Add Keys&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Enable this when an edit should create a new animation key at the current step. For example, moving a part at a later step can give it a different position there. The diamond controls in Properties show and toggle keys for individual properties.&lt;/p&gt;</source>
@@ -9957,8 +9881,7 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_about.ui"/>
         <source>StudWorx version running on this computer.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Versión de StudWorx ejecutándose en esta computadora.</translation>
+        <translation type="unfinished">Versión de StudWorx que se ejecuta en este ordenador.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_about.ui"/>
@@ -9982,14 +9905,12 @@ The file format is not recognized.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_about.ui"/>
         <source>Select and copy system information for a problem report.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Seleccione y copie información del sistema para un informe de problemas.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_about.ui"/>
         <source>&lt;p&gt;&lt;b&gt;System Information&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Shows the Qt runtime and build versions, graphics driver and renderer, OpenGL and shader versions, buffer sizes, and supported graphics features. Select the text and copy it with the standard keyboard shortcut to include it in a problem report.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Información del sistema&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Muestra el tiempo de ejecución de Qt y las versiones de compilación, el controlador y el procesador de gráficos, las versiones de OpenGL y de sombreado, los tamaños de búfer y las funciones de gráficos compatibles. Seleccione el texto y cópielo con el método abreviado de teclado estándar para incluirlo en un informe de problema.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Información del sistema&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Muestra el tiempo de ejecución de Qt y las versiones de compilación, el controlador y el procesador de gráficos, las versiones de OpenGL y de sombreado, los tamaños de búfer y las funciones de gráficos compatibles. Seleccione el texto y cópielo con el atajo de teclado estándar para incluirlo en un informe de problema.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_about.cpp" line="16"/>
@@ -10080,7 +10001,6 @@ Framebuffers: %2
 BlendFuncSeparate: %3
 Anisotropic: %4
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Búfers: %1
 Framebuffers: %2
 BlendFuncSeparate: %3
@@ -10507,7 +10427,6 @@ Information:
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1869"/>
         <source>The file &apos;%1&apos; has no parts to render.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">El archivo &apos;%1&apos; no tiene piezas para renderizar.</translation>
     </message>
     <message>
@@ -10545,14 +10464,12 @@ Information:
         <location filename="../../source/application/sw_application.cpp" line="1300"/>
         <source>  -c, --camera &lt;camera name&gt;: Set the active camera.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  -c, --camera &lt;camera name&gt;: establece la cámara activa.</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1301"/>
         <source>  --viewpoint &lt;viewpoint&gt;: Set the view to one of the preset viewpoints (front, back, left, right, top, bottom, home).
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  --viewpoint &lt;viewpoint&gt;: establece la vista en uno de los puntos de vista preestablecidos (frontal, posterior, izquierda, derecha, superior, inferior, inicio).</translation>
     </message>
     <message>
@@ -10571,14 +10488,12 @@ Information:
         <location filename="../../source/application/sw_application.cpp" line="1318"/>
         <source>  --highlight-color &lt;#AARRGGBB&gt;: Rendering color for highlighted parts.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  --highlight-color &lt;#AARRGGBB&gt;: Color de renderizado para piezas resaltadas.</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1309"/>
         <source>  --shading &lt;mode&gt;: Select shading mode for rendering (wireframe, flat, default, full).
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">  --shading &lt;mode&gt;: Seleccione el modo de sombreado para renderizado (estructura alámbrica, plano, predeterminado, completo).</translation>
     </message>
     <message>
@@ -10677,21 +10592,18 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <location filename="../../source/application/sw_application.cpp" line="990"/>
         <source>The camera position is too close to the camera target of the &apos;%1&apos; option.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">La posición de la cámara está demasiado cerca del objetivo de la cámara de la opción &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="995"/>
         <source>Invalid up vector length specified for the &apos;%1&apos; option.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Longitud del vector ascendente especificada no válida para la opción &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1000"/>
         <source>The up vector is parallel to the front vector specified for the &apos;%1&apos; option.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">El vector ascendente es paralelo al vector frontal especificado para la opción &apos;%1&apos;.</translation>
     </message>
     <message>
@@ -11123,7 +11035,6 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <location filename="../../source/application/sw_application.cpp" line="1593"/>
         <source>Command line image export is not supported on iOS.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">La exportación de imágenes por línea de comando no es compatible con iOS.</translation>
     </message>
     <message>
@@ -11343,8 +11254,7 @@ Por favor, visita https://github.com/nathaneltitane/studworx para saber cómo de
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Array&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create repeated copies of the selected parts using up to three array dimensions. Each row defines a count, an offset, and a rotation increment.&lt;/p&gt;&lt;p&gt;Counts include the original selection. For example, counts of 3, 2, and 1 create five new copies of each selected part. Set an offset or rotation to keep copies from overlapping.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Matriz&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Crea copias repetidas de las piezas seleccionadas usando hasta tres dimensiones de matriz. Cada fila define un recuento, un desplazamiento y un incremento de rotación.&lt;/p&gt;&lt;p&gt;Los recuentos incluyen la selección original. Por ejemplo, contar 3, 2 y 1 crea cinco copias nuevas de cada pieza seleccionada. Establezca un desplazamiento o una rotación para evitar que las copias se superpongan.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Secuencia&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Crea copias repetidas de las piezas seleccionadas usando hasta tres dimensiones de secuencia. Cada fila define un recuento, un desplazamiento y un incremento de rotación.&lt;/p&gt;&lt;p&gt;Los recuentos incluyen la selección original. Por ejemplo, los recuentos 3, 2 y 1 crean cinco copias nuevas de cada pieza seleccionada. Establezca un desplazamiento o una rotación para evitar que las copias se superpongan.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -11364,44 +11274,37 @@ Por favor, visita https://github.com/nathaneltitane/studworx para saber cómo de
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Number of positions in dimension 3, including the original.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Número de posiciones en la dimensión 3, incluido el original.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 count</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Recuento de dimensión 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Number of positions in dimension 1, including the original.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Número de posiciones en la dimensión 1, incluido el original.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 count</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Dimensión 1 recuento</translation>
+        <translation type="unfinished">Recuento de dimensión 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Number of positions in dimension 2, including the original.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Número de posiciones en la dimensión 2, incluido el original.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 count</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Recuento de dimensión 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Offsets&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Each row sets the X, Y, and Z displacement per step in the corresponding array dimension. Values use the model axes and LDraw units; 20 units equal one stud width. Negative values reverse the direction.&lt;/p&gt;&lt;p&gt;For a straight row spaced one stud apart along X, use a count greater than 1 and an X offset of 20 in the same row.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Desplazamientos&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cada fila establece el desplazamiento X, Y y Z por paso en la dimensión de matriz correspondiente. Los valores utilizan los ejes del modelo y las unidades LDraw; 20 unidades equivalen al ancho de un montante. Los valores negativos invierten la dirección.&lt;/p&gt;&lt;p&gt;Para una fila recta separada por un montante a lo largo de X, use un recuento mayor que 1 y un desplazamiento de X de 20 en la misma fila.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Desplazamientos&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cada fila establece el desplazamiento X, Y y Z por paso en la dimensión de secuencia correspondiente. Los valores utilizan los ejes del modelo y las unidades LDraw; 20 unidades equivalen al ancho de un tetón. Los valores negativos invierten la dirección.&lt;/p&gt;&lt;p&gt;Para una fila recta separada por un tetón a lo largo de X, use un recuento mayor que 1 y un desplazamiento de X de 20 en la misma fila.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -11411,116 +11314,97 @@ Por favor, visita https://github.com/nathaneltitane/studworx para saber cómo de
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Y offset per step in dimension 1, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Desplazamiento Y por paso en la dimensión 1, en unidades LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 Y offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Dimensión 1 Desplazamiento Y</translation>
+        <translation type="unfinished">Desplazamiento Y de dimensión 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>X offset per step in dimension 2, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Desplazamiento X por paso en la dimensión 2, en unidades LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 X offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Dimensión 2 X desplazamiento</translation>
+        <translation type="unfinished">Desplazamiento X de dimensión 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>X offset per step in dimension 1, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Desplazamiento X por paso en la dimensión 1, en unidades LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 X offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Dimensión 1 X desplazamiento</translation>
+        <translation type="unfinished">Desplazamiento X de dimensión 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>X offset per step in dimension 3, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Desplazamiento X por paso en la dimensión 3, en unidades LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 X offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Dimensión 3 X desplazamiento</translation>
+        <translation type="unfinished">Desplazamiento X de dimensión 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Z offset per step in dimension 1, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Desplazamiento Z por paso en la dimensión 1, en unidades LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 Z offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Desplazamiento Z de dimensión 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Y offset per step in dimension 2, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Desplazamiento Y por paso en la dimensión 2, en unidades LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 Y offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Dimensión 2 Desplazamiento Y</translation>
+        <translation type="unfinished">Desplazamiento Y de dimensión 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Y offset per step in dimension 3, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Desplazamiento Y por paso en la dimensión 3, en unidades LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 Y offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Dimensión 3 Desplazamiento Y</translation>
+        <translation type="unfinished">Desplazamiento Y de dimensión 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Z offset per step in dimension 2, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Desplazamiento Z por paso en la dimensión 2, en unidades LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 Z offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Desplazamiento Z de dimensión 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Z offset per step in dimension 3, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Desplazamiento Z por paso en la dimensión 3, en unidades LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 Z offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Desplazamiento Z de dimensión 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Rotations&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Each row sets the rotation increment around the X, Y, and Z model axes, in degrees, for its array dimension. Rotations from all three dimensions are added, then applied in X, Y, Z order before the offset.&lt;/p&gt;&lt;p&gt;Copies rotate around the focused part origin, or the selection center when no part has focus. Negative values reverse the rotation.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Rotaciones&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cada fila establece el incremento de rotación alrededor de los ejes del modelo X, Y y Z, en grados, para su dimensión de matriz. Se agregan rotaciones de las tres dimensiones y luego se aplican en orden X, Y, Z antes del desplazamiento.&lt;/p&gt;&lt;p&gt;Las copias giran alrededor del origen de la pieza enfocada o el centro de selección cuando ninguna pieza tiene el foco. Los valores negativos invierten la rotación.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Rotaciones&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cada fila establece el incremento de rotación alrededor de los ejes del modelo X, Y y Z, en grados, para su dimensión de secuencia. Se agregan rotaciones de las tres dimensiones y luego se aplican en orden X, Y, Z antes del desplazamiento.&lt;/p&gt;&lt;p&gt;Las copias giran alrededor del origen de la pieza enfocada o el centro de selección cuando ninguna pieza tiene el foco. Los valores negativos invierten la rotación.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -11530,110 +11414,92 @@ Por favor, visita https://github.com/nathaneltitane/studworx para saber cómo de
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Z rotation per step in dimension 3, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Rotación Z por paso en dimensión 3, en grados.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 Z rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Dimensión 3 rotación Z</translation>
+        <translation type="unfinished">Rotación Z de dimensión 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>X rotation per step in dimension 3, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Rotación X por paso en dimensión 3, en grados.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 X rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Dimensión 3 X rotación</translation>
+        <translation type="unfinished">Rotación X de dimensión 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>X rotation per step in dimension 1, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Rotación X por paso en dimensión 1, en grados.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 X rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Dimensión 1 X rotación</translation>
+        <translation type="unfinished">Rotación X de dimensión 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Z rotation per step in dimension 2, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Rotación Z por paso en dimensión 2, en grados.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 Z rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Dimensión 2 rotación Z</translation>
+        <translation type="unfinished">Rotación Z de dimensión 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Z rotation per step in dimension 1, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Rotación Z por paso en dimensión 1, en grados.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 Z rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Dimensión 1 rotación Z</translation>
+        <translation type="unfinished">Rotación Z de dimensión 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>X rotation per step in dimension 2, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Rotación X por paso en dimensión 2, en grados.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 X rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Dimensión 2 X rotación</translation>
+        <translation type="unfinished">Rotación X de dimensión 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Y rotation per step in dimension 1, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Rotación Y por paso en dimensión 1, en grados.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 Y rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Dimensión 1 rotación Y</translation>
+        <translation type="unfinished">Rotación Y de dimensión 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Y rotation per step in dimension 2, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Rotación Y por paso en dimensión 2, en grados.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 Y rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Dimensión 2 Y rotación</translation>
+        <translation type="unfinished">Rotación Y de dimensión 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Y rotation per step in dimension 3, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Rotación Y por paso en dimensión 3, en grados.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 Y rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Dimensión 3 Y rotación</translation>
+        <translation type="unfinished">Rotación Y de dimensión 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.cpp" line="100"/>
@@ -11741,13 +11607,11 @@ Por favor, visita https://github.com/nathaneltitane/studworx para saber cómo de
     <message>
         <location filename="../../source/library/sw_loader_asset.cpp" line="465"/>
         <source>Missing texture &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Falta la textura &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_loader_asset.cpp" line="608"/>
         <source>Could not load part &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo cargar la pieza &apos;%1&apos;.</translation>
     </message>
 </context>
@@ -11848,8 +11712,7 @@ Por favor, visita https://github.com/nathaneltitane/studworx para saber cómo de
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="24"/>
         <source>&lt;p&gt;&lt;b&gt;Automated Edge Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Adjust the contrast and saturation used to calculate part edge colors. Both controls range from 0.00 to 1.00. Reset restores a control to 0.50.&lt;/p&gt;&lt;p&gt;Choose OK to return changes to Preferences, then choose OK in Preferences to keep them. Cancel discards changes in this dialog.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Colores de borde automatizados&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ajusta el contraste y la saturación utilizados para calcular los colores de borde de la pieza. Ambos controles oscilan entre 0,00 y 1,00. Restablecer restaura un control a 0,50.&lt;/p&gt;&lt;p&gt;Elija Aceptar para devolver los cambios a Preferencias, luego elija Aceptar en Preferencias para conservarlos. Cancelar descarta los cambios en este cuadro de diálogo.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Color de bordes automático&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ajusta el contraste y la saturación utilizados para calcular los colores de borde de la pieza. Ambos controles oscilan entre 0,00 y 1,00. Reiniciar restaura un control a 0,50.&lt;/p&gt;&lt;p&gt;Elija Aceptar para devolver los cambios a Preferencias, luego elija Aceptar en Preferencias para conservarlos. Cancelar descarta los cambios en este cuadro de diálogo.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="73"/>
@@ -11859,19 +11722,16 @@ Por favor, visita https://github.com/nathaneltitane/studworx para saber cómo de
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="74"/>
         <source>Set edge contrast from 0.00 to 1.00 (default 0.50).</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Establezca el contraste de los bordes de 0,00 a 1,00 (predeterminado 0,50).</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="75"/>
         <source>&lt;p&gt;&lt;b&gt;Edge Contrast&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Adjust the contrast used by automated edge colors to distinguish edges from part surfaces. The range is 0.00 to 1.00; Reset restores 0.50.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Contraste de bordes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ajusta el contraste utilizado por los colores de bordes automatizados para distinguir los bordes de las superficies de las piezas. El rango es de 0,00 a 1,00; Restablecer restaura 0,50.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Contraste de bordes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ajusta el contraste utilizado por los colores de bordes automatizados para distinguir los bordes de las superficies de las piezas. El rango es de 0,00 a 1,00; Reiniciar restaura 0,50.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="76"/>
         <source>Restore edge contrast to 0.50.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Restaurar el contraste del borde a 0,50.</translation>
     </message>
     <message>
@@ -11962,8 +11822,7 @@ Por favor, visita https://github.com/nathaneltitane/studworx para saber cómo de
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="84"/>
         <source>&lt;p&gt;&lt;b&gt;Edge Saturation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Adjust the tint or shade used to calculate automated edge colors from part colors. The range is 0.00 to 1.00; Reset restores 0.50.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Saturación de bordes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ajusta el tinte o la sombra utilizada para calcular los colores de borde automatizados a partir de los colores de las piezas. El rango es de 0,00 a 1,00; Restablecer restaura 0,50.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Saturación de bordes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ajusta el tinte o la sombra utilizados para calcular los colores de borde automatizados a partir de los colores de las piezas. El rango es de 0,00 a 1,00; Reiniciar restaura 0,50.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Restore the light/dark threshold to 0.50.</source>
@@ -11988,8 +11847,7 @@ Por favor, visita https://github.com/nathaneltitane/studworx para saber cómo de
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="128"/>
         <source>Enable a custom color for stud cylinders in high contrast stud styles, then use the color button to choose it.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Habilite un color personalizado para cilindros con pernos en estilos de pernos de alto contraste y luego use el botón de color para elegirlo.</translation>
+        <translation type="unfinished">Habilite un color personalizado para los cilindros de los tetones en estilos de tetón de alto contraste y luego use el botón de color para elegirlo.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="130"/>
@@ -11999,7 +11857,6 @@ Por favor, visita https://github.com/nathaneltitane/studworx para saber cómo de
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="131"/>
         <source>Enable a custom edge color for parts not covered by the black or dark overrides. Automated edge colors take precedence.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Habilite un color de borde personalizado para piezas no cubiertas por las anulaciones de negro u oscuro. Los colores de borde automatizados tienen prioridad.</translation>
     </message>
     <message>
@@ -13126,7 +12983,6 @@ Choose where to save it and build it now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_category.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Part Category&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Name a category and enter the expression used to find its parts in the library. Both fields are required. Choose OK to return the category changes to Preferences, then choose OK in Preferences to keep them. Cancel discards edits in this dialog.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Keyword Syntax&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Expressions match text in library part descriptions, ignoring case.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;tt&gt;Brick&lt;/tt&gt;: match this text anywhere in the description.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^Brick&lt;/tt&gt;: match Brick as a whole word.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;%Brick&lt;/tt&gt;: match Brick at the beginning of the description.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^%Brick&lt;/tt&gt;: require both a whole word and the beginning of the description.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A | B&lt;/tt&gt;: match either expression.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A &amp;amp; B&lt;/tt&gt;: match both expressions.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;!A&lt;/tt&gt;: exclude descriptions matching A.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;(A | B)&lt;/tt&gt;: group expressions.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Put spaces around &lt;tt&gt;|&lt;/tt&gt; and &lt;tt&gt;&amp;amp;&lt;/tt&gt;. Use parentheses when combining operators.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Examples&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;^%Brick | ^%Plate&lt;/tt&gt; matches descriptions beginning with the word Brick or Plate.&lt;br&gt;&lt;tt&gt;(^%Brick | ^%Plate) &amp;amp; !Pattern&lt;/tt&gt; also excludes descriptions containing Pattern.&lt;/p&gt;&lt;p&gt;Use the language of the library descriptions for search terms; do not translate the syntax symbols.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Categoría de piezas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Asigne un nombre a la categoría e introduzca la expresión para buscar sus piezas en la biblioteca. Ambos campos son obligatorios. Elija Aceptar para trasladar los cambios a Preferencias y luego Aceptar en Preferencias para guardarlos. Cancelar descarta los cambios de este diálogo.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Sintaxis de palabras clave&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Las expresiones buscan texto en las descripciones de piezas de la biblioteca sin distinguir mayúsculas de minúsculas.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;tt&gt;Brick&lt;/tt&gt;: busca este texto en cualquier lugar de la descripción.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^Brick&lt;/tt&gt;: busca Brick como palabra completa.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;%Brick&lt;/tt&gt;: busca Brick al principio de la descripción.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^%Brick&lt;/tt&gt;: exige una palabra completa al principio de la descripción.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A | B&lt;/tt&gt;: busca coincidencias con al menos una de las expresiones.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A &amp;amp; B&lt;/tt&gt;: busca coincidencias con ambas expresiones.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;!A&lt;/tt&gt;: excluye las descripciones que coinciden con A.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;(A | B)&lt;/tt&gt;: agrupa expresiones.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Ponga espacios alrededor de &lt;tt&gt;|&lt;/tt&gt; y &lt;tt&gt;&amp;amp;&lt;/tt&gt;. Use paréntesis al combinar operadores.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Ejemplos&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;^%Brick | ^%Plate&lt;/tt&gt; busca descripciones que empiezan por la palabra Brick o Plate.&lt;br&gt;&lt;tt&gt;(^%Brick | ^%Plate) &amp;amp; !Pattern&lt;/tt&gt; también excluye las descripciones que contienen Pattern.&lt;/p&gt;&lt;p&gt;Use el idioma de las descripciones de la biblioteca para los términos de búsqueda; no traduzca los símbolos de sintaxis.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -13137,7 +12993,6 @@ Choose where to save it and build it now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_category.ui"/>
         <source>Enter the category name shown in the part browser.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ingrese el nombre de la categoría que se muestra en el navegador de piezas.</translation>
     </message>
     <message>
@@ -13147,13 +13002,11 @@ Choose where to save it and build it now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_category.ui"/>
         <source>Enter an expression that matches part descriptions.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ingrese una expresión que coincida con las descripciones de las piezas.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_category.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Keyword Syntax&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Expressions match text in library part descriptions, ignoring case.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;tt&gt;Brick&lt;/tt&gt;: match this text anywhere in the description.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^Brick&lt;/tt&gt;: match Brick as a whole word.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;%Brick&lt;/tt&gt;: match Brick at the beginning of the description.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^%Brick&lt;/tt&gt;: require both a whole word and the beginning of the description.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A | B&lt;/tt&gt;: match either expression.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A &amp;amp; B&lt;/tt&gt;: match both expressions.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;!A&lt;/tt&gt;: exclude descriptions matching A.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;(A | B)&lt;/tt&gt;: group expressions.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Put spaces around &lt;tt&gt;|&lt;/tt&gt; and &lt;tt&gt;&amp;amp;&lt;/tt&gt;. Use parentheses when combining operators.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Examples&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;^%Brick | ^%Plate&lt;/tt&gt; matches descriptions beginning with the word Brick or Plate.&lt;br&gt;&lt;tt&gt;(^%Brick | ^%Plate) &amp;amp; !Pattern&lt;/tt&gt; also excludes descriptions containing Pattern.&lt;/p&gt;&lt;p&gt;Use the language of the library descriptions for search terms; do not translate the syntax symbols.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Sintaxis de palabras clave&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Las expresiones buscan texto en las descripciones de piezas de la biblioteca sin distinguir mayúsculas de minúsculas.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;tt&gt;Brick&lt;/tt&gt;: busca este texto en cualquier lugar de la descripción.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^Brick&lt;/tt&gt;: busca Brick como palabra completa.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;%Brick&lt;/tt&gt;: busca Brick al principio de la descripción.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^%Brick&lt;/tt&gt;: exige una palabra completa al principio de la descripción.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A | B&lt;/tt&gt;: busca coincidencias con al menos una de las expresiones.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A &amp;amp; B&lt;/tt&gt;: busca coincidencias con ambas expresiones.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;!A&lt;/tt&gt;: excluye las descripciones que coinciden con A.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;(A | B)&lt;/tt&gt;: agrupa expresiones.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Ponga espacios alrededor de &lt;tt&gt;|&lt;/tt&gt; y &lt;tt&gt;&amp;amp;&lt;/tt&gt;. Use paréntesis al combinar operadores.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Ejemplos&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;^%Brick | ^%Plate&lt;/tt&gt; busca descripciones que empiezan por la palabra Brick o Plate.&lt;br&gt;&lt;tt&gt;(^%Brick | ^%Plate) &amp;amp; !Pattern&lt;/tt&gt; también excluye las descripciones que contienen Pattern.&lt;/p&gt;&lt;p&gt;Use el idioma de las descripciones de la biblioteca para los términos de búsqueda; no traduzca los símbolos de sintaxis.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -13253,25 +13106,21 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1931"/>
         <source>Choose Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Elige color</translation>
+        <translation type="unfinished">Elegir color</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1932"/>
         <source>&lt;p&gt;&lt;b&gt;Choose Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pick a color using the swatches or enter its component values. Choose OK to use the selected color, or Cancel to keep the original color. Editing the controls alone does not apply the color.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Elegir color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija un color usando las muestras o ingrese los valores de sus componentes. Elija Aceptar para utilizar el color seleccionado o Cancelar para conservar el color original. La edición de los controles por sí sola no aplica el color.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1958"/>
         <source>Custom Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Color personalizado</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1959"/>
         <source>Choose a color or enter its component values.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija un color o ingrese los valores de sus componentes.</translation>
     </message>
 </context>
@@ -13288,58 +13137,49 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="152"/>
         <source>OpenGL shader support is required.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Se requiere compatibilidad con el sombreador OpenGL.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="223"/>
         <source>Could not create the OpenGL context.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo crear el contexto OpenGL.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="233"/>
         <source>Could not create the offscreen OpenGL surface.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo crear la superficie fuera de pantalla OpenGL.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="235"/>
         <source>Could not make the offscreen OpenGL context current.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">No se pudo actualizar el contexto fuera de pantalla OpenGL.</translation>
+        <translation type="unfinished">No se pudo activar el contexto OpenGL fuera de pantalla.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="409"/>
         <source>Could not read shader %1: %2</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo leer el sombreador %1: %2</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="417"/>
         <source>Could not create shader %1.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo crear el sombreador %1.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="437"/>
         <source>Could not compile shader %1:
 %2</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo compilar el sombreador %1:
 %2</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="503"/>
         <source>Could not create the shader program for %1 and %2.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo crear el programa de sombreado para %1 y %2.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="549"/>
         <source>Could not link the shader program for %1 and %2:
 %3</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo vincular el programa de sombreado para %1 y %2:
 %3</translation>
     </message>
@@ -13349,8 +13189,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Edit Groups&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reorganize the model&apos;s parts and groups in the tree. Drag parts or groups into a group, or to the top level to remove them from a parent group. Double-click a group name to rename it.&lt;/p&gt;&lt;p&gt;New Group creates a group inside the selected group, or beside an ungrouped part. Choose OK to apply the hierarchy, or Cancel to discard the changes. Empty groups are removed when changes are applied.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Editar grupos&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reorganiza las piezas y grupos del modelo en el árbol. Arrastre piezas o grupos a un grupo o al nivel superior para eliminarlos de un grupo principal. Haz doble clic en el nombre de un grupo para cambiarle el nombre.&lt;/p&gt;&lt;p&gt;Nuevo grupo crea un grupo dentro del grupo seleccionado o al lado de una pieza desagrupada. Elija Aceptar para aplicar la jerarquía o Cancelar para descartar los cambios. Los grupos vacíos se eliminan cuando se aplican los cambios.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Editar grupos&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reorganiza las piezas y grupos del modelo en el árbol. Arrastre piezas o grupos a un grupo o al nivel superior para eliminarlos de un grupo principal. Haga doble clic en el nombre de un grupo para cambiarle el nombre.&lt;/p&gt;&lt;p&gt;Nuevo grupo crea un grupo dentro del grupo seleccionado o al lado de una pieza desagrupada. Elija Aceptar para aplicar la jerarquía o Cancelar para descartar los cambios. Los grupos vacíos se eliminan cuando se aplican los cambios.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.ui"/>
@@ -13360,19 +13199,16 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.ui"/>
         <source>Drag parts and groups to reorganize them; double-click a group name to rename it.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Arrastra piezas y grupos para reorganizarlos; haga doble clic en el nombre de un grupo para cambiarle el nombre.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Group Hierarchy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drop an item onto a group to make it a member of that group. Move it to the top level to remove its parent group. Only group names can be edited; names must be unique and nonempty.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Jerarquía de grupos&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Suelta un elemento en un grupo para convertirlo en miembro de ese grupo. Muévalo al nivel superior para eliminar su grupo principal. Sólo se pueden editar los nombres de los grupos; los nombres deben ser únicos y no estar vacíos.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Jerarquía de grupos&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Suelte un elemento en un grupo para convertirlo en miembro de ese grupo. Muévalo al nivel superior para eliminar su grupo principal. Solo se pueden editar los nombres de los grupos; los nombres deben ser únicos y no estar vacíos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.ui"/>
         <source>Part and Group Hierarchy</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Jerarquía de piezas y grupos</translation>
     </message>
     <message>
@@ -13382,19 +13218,16 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.cpp" line="46"/>
         <source>&amp;New Group</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Nuevo grupo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.cpp" line="47"/>
         <source>Create a group under the selected group or at the top level.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cree un grupo debajo del grupo seleccionado o en el nivel superior.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.cpp" line="48"/>
         <source>&lt;p&gt;&lt;b&gt;New Group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a group to create a subgroup inside it. If a part is selected, the new group is created beside that part. With no selection, the new group is created at the top level. Rename the new group by editing its name, then drag parts into it.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Nuevo grupo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seleccione un grupo para crear un subgrupo dentro de él. Si se selecciona una pieza, el nuevo grupo se crea al lado de esa pieza. Sin selección, el nuevo grupo se crea en el nivel superior. Cambie el nombre del nuevo grupo editando su nombre y luego arrastre las piezas a él.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -13777,13 +13610,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="92"/>
         <source>Toggle Replace</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Alternar reemplazo</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="91"/>
         <source>Show or hide the replace options.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mostrar u ocultar las opciones de reemplazo.</translation>
     </message>
     <message>
@@ -13793,13 +13624,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="47"/>
         <source>Search Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Color de búsqueda</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="52"/>
         <source>Search Part</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Pieza de búsqueda</translation>
     </message>
     <message>
@@ -13829,14 +13658,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="103"/>
         <source>Replacement Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Color de repuesto</translation>
+        <translation type="unfinished">Color de reemplazo</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="108"/>
         <source>Replacement Part</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Pieza de repuesto</translation>
+        <translation type="unfinished">Pieza de reemplazo</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="146"/>
@@ -13864,8 +13691,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="39"/>
         <source>Close</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Cerca</translation>
+        <translation type="unfinished">Cerrar</translation>
     </message>
 </context>
 <context>
@@ -13873,8 +13699,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_group.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Group Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Name a new group for the selected parts so you can select and move them together. Choose OK to create it, or Cancel to leave the groups unchanged.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Agrupar piezas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Nombra un nuevo grupo para las piezas seleccionadas para que puedas seleccionarlas y moverlas juntas. Elija Aceptar para crearlo o Cancelar para dejar los grupos sin cambios.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Agrupar piezas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Nombre un nuevo grupo para las piezas seleccionadas para poder seleccionarlas y moverlas juntas. Elija Aceptar para crearlo o Cancelar para dejar los grupos sin cambios.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_group.ui"/>
@@ -13884,13 +13709,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_group.ui"/>
         <source>Enter a unique, nonempty name for the new group.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ingrese un nombre único y no vacío para el nuevo grupo.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_group.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Group Name&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a name that is not already used by another group in this model. The new group contains the selected parts and their existing groups.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Nombre del grupo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija un nombre que no esté utilizado por otro grupo en este modelo. El nuevo grupo contiene las piezas seleccionadas y sus grupos existentes.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -13906,7 +13729,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_group.cpp" line="37"/>
         <source>A group with this name already exists.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ya existe un grupo con este nombre.</translation>
     </message>
 </context>
@@ -13938,13 +13760,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Add a step index when using One Step per Page.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Agregue un índice de pasos cuando utilice Un paso por página.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Width of each step image, in pixels.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ancho de la imagen de cada paso, en píxeles.</translation>
     </message>
     <message>
@@ -13954,7 +13774,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Height of each step image, in pixels.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Altura de la imagen de cada paso, en píxeles.</translation>
     </message>
     <message>
@@ -13968,13 +13787,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Export HTML&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create browser-viewable building instructions and PNG images in the output folder. Choose which models to include, how to organize the step pages, and where to show parts lists.&lt;/p&gt;&lt;p&gt;Keep the generated HTML and image files together when copying or sharing the instructions.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Exportar HTML&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cree instrucciones de construcción e imágenes PNG visibles en el navegador en la carpeta de salida. Elija qué modelos incluir, cómo organizar las páginas de pasos y dónde mostrar las listas de piezas.&lt;/p&gt;&lt;p&gt;Mantenga los archivos HTML y de imagen generados juntos cuando copie o comparta las instrucciones.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Folder for the generated HTML pages and images.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Carpeta para las páginas HTML e imágenes generadas.</translation>
     </message>
     <message>
@@ -13985,13 +13802,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Choose the folder for the exported instructions.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija la carpeta para las instrucciones exportadas.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Choose Output Folder</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija la carpeta de salida</translation>
     </message>
     <message>
@@ -14027,7 +13842,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Export the current model and the submodels it references.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Exporte el modelo actual y los submodelos a los que hace referencia.</translation>
     </message>
     <message>
@@ -14038,7 +13852,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Export instructions only for the current model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Exporte instrucciones solo para el modelo actual.</translation>
     </message>
     <message>
@@ -14068,7 +13881,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Create a separate HTML page for each step.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cree una página HTML separada para cada paso.</translation>
     </message>
     <message>
@@ -14093,7 +13905,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Include a complete parts list after each model&apos;s instructions.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Incluye una lista completa de piezas después de las instrucciones de cada modelo.</translation>
     </message>
     <message>
@@ -14103,7 +13914,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Include a list of the parts added in each step.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Incluya una lista de las piezas agregadas en cada paso.</translation>
     </message>
     <message>
@@ -14599,13 +14409,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="156"/>
         <source>Choose the image file and format.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el archivo de imagen y el formato.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="157"/>
         <source>Choose Image File</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija un archivo de imagen</translation>
     </message>
     <message>
@@ -15098,7 +14906,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="200"/>
         <source>Width of the saved image, in pixels (1 to 32768).</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ancho de la imagen guardada, en píxeles (1 a 32768).</translation>
     </message>
     <message>
@@ -15109,7 +14916,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="210"/>
         <source>Height of the saved image, in pixels (1 to 32768).</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Alto de la imagen guardada, en píxeles (1 a 32768).</translation>
     </message>
     <message>
@@ -15124,7 +14930,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="255"/>
         <source>Save an image for every step in the active model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Guarde una imagen para cada paso del modelo activo.</translation>
     </message>
     <message>
@@ -15134,7 +14939,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="250"/>
         <source>Save only the current step.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Guarde solo el paso actual.</translation>
     </message>
     <message>
@@ -15162,7 +14966,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="271"/>
         <source>First Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Primer paso</translation>
     </message>
     <message>
@@ -15177,7 +14980,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="279"/>
         <source>Last Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Último paso</translation>
     </message>
     <message>
@@ -17377,49 +17179,41 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="363"/>
         <source>Fade Previous Steps</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Atenuar pasos anteriores</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="363"/>
         <source>Tint the parts added in earlier steps with the fade color.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Teñir las piezas añadidas en pasos anteriores con el color de atenuación.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="366"/>
         <source>Fade Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Color de atenuación</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="366"/>
         <source>Color tinting the parts added in earlier steps, kept between 85 and 95 percent opaque.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Color que tiñe las piezas añadidas en pasos anteriores, mantenido entre un 85 y un 95 por ciento de opacidad.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="370"/>
         <source>Highlight New Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Resaltar piezas nuevas</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="370"/>
         <source>Outline the parts added in each step with the highlight color.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Contornear las piezas añadidas en cada paso con el color de resaltado.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="373"/>
         <source>Highlight Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Color de resaltado</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="373"/>
         <source>Color of the outline around the parts added in each step, kept between 85 and 95 percent opaque.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Color del contorno alrededor de las piezas añadidas en cada paso, mantenido entre un 85 y un 95 por ciento de opacidad.</translation>
     </message>
 </context>
@@ -17982,7 +17776,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="618"/>
         <source>Choose which related parts are included when selecting a part.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija qué piezas relacionadas se incluyen al seleccionar una pieza.</translation>
     </message>
     <message>
@@ -17993,7 +17786,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="633"/>
         <source>Choose coordinate axes and whether selected parts rotate together.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija los ejes de coordenadas y si las piezas seleccionadas giran juntas.</translation>
     </message>
     <message>
@@ -18024,7 +17816,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="657"/>
         <source>Choose movement snapping intervals for XY and Z.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija intervalos de ajuste de movimiento para XY y Z.</translation>
     </message>
     <message>
@@ -18045,7 +17836,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="672"/>
         <source>Choose the rotation snapping interval.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el intervalo de ajuste de rotación.</translation>
     </message>
     <message>
@@ -18056,14 +17846,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="712"/>
         <source>&lt;p&gt;&lt;b&gt;Tools Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a tool, then use it in the model view. Insertion tools create parts, lights, or cameras. Editing tools select, transform, remove, or recolor objects. Navigation tools change the viewpoint without changing model geometry. Mouse assignments can be customized in Preferences.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Barra de herramientas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija una herramienta y luego úsela en la vista del modelo. Las herramientas de inserción crean piezas, luces o cámaras. Las herramientas de edición seleccionan, transforman, eliminan o cambian el color de objetos. Las herramientas de navegación cambian el punto de vista sin cambiar la geometría del modelo. Las asignaciones del mouse se pueden personalizar en Preferencias.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Barra de herramientas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija una herramienta y luego úsela en la vista del modelo. Las herramientas de inserción crean piezas, luces o cámaras. Las herramientas de edición seleccionan, transforman, eliminan o cambian el color de objetos. Las herramientas de navegación cambian el punto de vista sin cambiar la geometría del modelo. Las asignaciones del ratón se pueden personalizar en Preferencias.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="757"/>
         <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a category or palette and filter its parts. Selecting a part prepares it for insertion; drag it into the model view to place it. Double-click a part to open its preview. Options controls filtering, thumbnails, and list display.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Piezas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elige una categoría o paleta y filtra sus piezas. Seleccionar una pieza la prepara para su inserción; arrástrelo a la vista del modelo para colocarlo. Haga doble clic en una pieza para abrir su vista previa. Las opciones controlan el filtrado, las miniaturas y la visualización de listas.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Piezas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija una categoría o paleta y filtre sus piezas. Seleccionar una pieza la prepara para su inserción; arrástrela a la vista del modelo para colocarla. Haga doble clic en una pieza para abrir su vista previa. Las opciones controlan el filtredo, las miniaturas y la visualización de listas.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.&lt;/p&gt;</source>
@@ -18073,13 +17861,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="785"/>
         <source>Apply the current color to selected parts.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Aplicar el color actual a las piezas seleccionadas.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="787"/>
         <source>&lt;p&gt;&lt;b&gt;Change Selection Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Apply the current color to selected parts. Choosing a swatch sets the current color; this button applies that color to the selection.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Cambiar color de selección&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Aplica el color actual a las piezas seleccionadas. Al elegir una muestra se establece el color actual; este botón aplica ese color a la selección.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -18105,14 +17891,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="839"/>
         <source>LDraw Colors</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">LDraw colores</translation>
+        <translation type="unfinished">Colores de LDraw</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="970"/>
         <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit properties of the focused object or selection. Available fields depend on whether you select parts, a camera, or a light. Expand a section to see its fields. Keyframe controls mark properties at the current building step.&lt;/p&gt;&lt;p&gt;The transform fields at the bottom apply an X/Y/Z translation or rotation using the chosen transform mode. Press Enter to apply the values.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Propiedades&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Editar propiedades del objeto o selección enfocado. Los campos disponibles dependen de si seleccionas piezas, una cámara o una luz. Expanda una sección para ver sus campos. Los controles de fotogramas clave marcan las propiedades en el paso de construcción actual.&lt;/p&gt;&lt;p&gt;Los campos de transformación en la parte inferior aplican una traslación o rotación X/Y/Z usando el modo de transformación elegido. Presione Enter para aplicar los valores.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Propiedades&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edita las propiedades del objeto enfocado o de la selección. Los campos disponibles dependen de si selecciona piezas, una cámara o una luz. Expanda una sección para ver sus campos. Los controles de fotogramas clave marcan las propiedades en el paso de construcción actual.&lt;/p&gt;&lt;p&gt;Los campos de transformación en la parte inferior aplican una traslación o rotación X/Y/Z usando el modo de transformación elegido. Presione Enter para aplicar los valores.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="991"/>
@@ -18122,14 +17906,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1023"/>
         <source>Choose absolute or relative translation or rotation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija traslación o rotación absoluta o relativa.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1024"/>
         <source>&lt;p&gt;&lt;b&gt;Apply Transform&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the translation or rotation mode, enter X/Y/Z values, and press Enter to apply them. Translation values use LDraw units; rotation values use degrees.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Aplicar transformación&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija el modo de traducción o rotación, ingrese los valores X/Y/Z y presione Entrar para aplicarlos. Los valores de traducción utilizan unidades LDraw; los valores de rotación utilizan grados.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Aplicar transformación&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija el modo de traslación o rotación, ingrese los valores X/Y/Z y presione Entrar para aplicarlos. Los valores de traslación utilizan unidades LDraw; los valores de rotación utilizan grados.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1084"/>
@@ -18175,7 +17957,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1002"/>
         <source>Transform X</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Transformar X</translation>
     </message>
     <message>
@@ -18215,31 +17996,26 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1003"/>
         <source>Enter the X translation in LDraw units or rotation in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ingrese la traslación de X en unidades LDraw o la rotación en grados.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1008"/>
         <source>Transform Y</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Transformar Y</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1009"/>
         <source>Enter the Y translation in LDraw units or rotation in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ingrese la traslación Y en unidades LDraw o la rotación en grados.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1014"/>
         <source>Transform Z</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Transformar Z</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1015"/>
         <source>Enter the Z translation in LDraw units or rotation in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ingrese la traslación Z en unidades LDraw o la rotación en grados.</translation>
     </message>
     <message>
@@ -18749,13 +18525,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="347"/>
         <source>Cannot Merge Model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se puede fusionar el modelo</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_command.cpp" line="108"/>
         <source>Export 3DS</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Exportar 3DS</translation>
     </message>
     <message>
@@ -18877,25 +18651,21 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="619"/>
         <source>&lt;p&gt;&lt;b&gt;Selection Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the rule applied when you pick a part in the model view. Single selects that part; the other modes include matching part types, matching colors, or both. For example, color selection lets you pick matching red parts without selecting each one separately.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Modo de selección&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elige la regla que se aplica al seleccionar una pieza en la vista del modelo. Single selecciona esa pieza; los otros modos incluyen tipos de piezas coincidentes, colores coincidentes o ambos. Por ejemplo, la selección de color te permite elegir piezas rojas que combinen sin tener que seleccionar cada una por separado.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Modo de selección&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija la regla que se aplica al seleccionar una pieza en la vista del modelo. Individual selecciona esa pieza; los otros modos incluyen tipos de piezas coincidentes, colores coincidentes o ambos. Por ejemplo, la selección de color le permite elegir piezas rojas coincidentes sin seleccionar cada una por separado.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="634"/>
         <source>&lt;p&gt;&lt;b&gt;Transform Options&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the axes and pivot used for interactive transforms. Relative Transforms uses the focused object&apos;s orientation, so movement along X follows that object&apos;s local X axis. Absolute Transforms uses the model axes. Rotate Together rotates the selection around a shared pivot; Rotate Separately rotates each part around its own origin.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Opciones de transformación&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija los ejes y el pivote utilizados para las transformaciones interactivas. Las transformaciones relativas utilizan la orientación del objeto enfocado, por lo que el movimiento a lo largo de X sigue el eje X local de ese objeto. Absolute Transforms utiliza los ejes del modelo. Rotar juntos rota la selección alrededor de un pivote compartido; Rotar por separado rota cada pieza alrededor de su propio origen.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Opciones de transformación&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija los ejes y el pivote utilizados para las transformaciones interactivas. Las transformaciones relativas utilizan la orientación del objeto enfocado, por lo que el movimiento a lo largo de X sigue el eje X local de ese objeto. Las transformaciones absolutas utilizan los ejes del modelo. Rotar juntos rota la selección alrededor de un pivote compartido; Rotar por separado rota cada pieza alrededor de su propio origen.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="658"/>
         <source>&lt;p&gt;&lt;b&gt;Movement Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose how far objects move in each snapped increment. XY controls movement across the base plane; Z controls vertical movement, so they can use different intervals. Turn snapping off for free placement, then enable it again when you need consistent spacing.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Ajuste de movimiento&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija hasta qué punto se mueven los objetos en cada incremento de ajuste. XY controla el movimiento a través del plano base; Z controla el movimiento vertical, por lo que pueden utilizar diferentes intervalos. Desactive el ajuste para una ubicación libre y habilítelo nuevamente cuando necesite un espaciado constante.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="673"/>
         <source>&lt;p&gt;&lt;b&gt;Rotation Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose an angle increment for interactive rotation. For example, a 90-degree increment is useful for quarter turns, while smaller increments allow finer alignment. Turn snapping off for free rotation without fixed angle increments.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Ajuste de rotación&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija un incremento de ángulo para la rotación interactiva. Por ejemplo, un incremento de 90 grados es útil para cuartos de vuelta, mientras que incrementos más pequeños permiten una alineación más precisa. Desactive el ajuste para rotación libre sin incrementos de ángulo fijo.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -18931,7 +18701,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="786"/>
         <source>Change Selection Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cambiar color de selección</translation>
     </message>
     <message>
@@ -19042,32 +18811,27 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1204"/>
         <source>Asset loading failed</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Error al cargar recursos</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="570"/>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="666"/>
         <source>Could not load part.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo cargar la pieza.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="592"/>
         <source>Could not generate geometry.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo generar geometría.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="606"/>
         <source>Regenerating synthesized part geometry.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Regeneración de geometría de pieza sintetizada.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="608"/>
         <source>Loading model parts (%1 / %2).</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cargando piezas del modelo (%1 / %2).</translation>
     </message>
     <message>
@@ -19078,7 +18842,6 @@ Choose where to save it and download the latest %3 now?</source>
         <oldsource>The model could not be fully loaded, some pieces may be missing.
 
 %1</oldsource>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">El modelo no se pudo cargar completamente, es posible que falten algunas piezas.
 
 %1</translation>
@@ -19111,7 +18874,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="954"/>
         <source>Export HTML</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Exportar HTML</translation>
     </message>
     <message>
@@ -19132,7 +18894,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="1173"/>
         <source>Nothing to select.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Nada que seleccionar.</translation>
     </message>
     <message>
@@ -19309,13 +19070,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="285"/>
         <source>View: %1 deg. Lat. / %2 deg. Lon. / %3</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Vista: %1 grados Lat. / %2 grados Lon. / %3</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="284"/>
         <source>Perspective</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Perspectiva</translation>
     </message>
     <message>
@@ -19348,37 +19107,31 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="284"/>
         <source>Orthographic</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ortográfica</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1228"/>
         <source>Selection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selección</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1229"/>
         <source>View Orientation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Orientación de la vista</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1230"/>
         <source>Position</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Posición</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1231"/>
         <source>Snap and Transform</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ajuste y transformación</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1232"/>
         <source>Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Paso</translation>
     </message>
     <message>
@@ -19417,7 +19170,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/library/sw_loader_mesh.cpp" line="1681"/>
         <source>Could not load included file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo cargar el archivo incluido &apos;%1&apos;.</translation>
     </message>
 </context>
@@ -19426,8 +19178,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_builder_minifigure.cpp" line="73"/>
         <source>Default</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Por defecto</translation>
+        <translation type="unfinished">Predeterminada</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_builder_minifigure.cpp" line="78"/>
@@ -19464,26 +19215,22 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>Load a saved configuration of parts, colors, and angles.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cargue una configuración guardada de piezas, colores y ángulos.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>Minifigure Template</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Plantilla de minifigura</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>Save the current minifigure configuration as a named template.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Guarde la configuración de minifigura actual como una plantilla con nombre.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Save Template&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Enter a name for the current parts, colors, and pose. Reusing an existing name asks before replacing that template. The Default template cannot be overwritten.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Guardar plantilla&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ingresa un nombre para las piezas, colores y poses actuales. Reutilizar un nombre existente pregunta antes de reemplazar esa plantilla. La plantilla predeterminada no se puede sobrescribir.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Guardar plantilla&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ingrese un nombre para las piezas, colores y poses actuales. Reutilizar un nombre existente pregunta antes de reemplazar esa plantilla. La plantilla predeterminada no se puede sobrescribir.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
@@ -19493,14 +19240,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>Delete the selected saved template.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Elimina la plantilla guardada seleccionada.</translation>
+        <translation type="unfinished">Borrar la plantilla guardada seleccionada.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Delete Template&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected named template after confirmation. This does not remove parts from the preview or an existing model. The Default template cannot be deleted.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Eliminar plantilla&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elimina la plantilla con nombre seleccionada después de la confirmación. Esto no elimina piezas de la vista previa ni de un modelo existente. La plantilla predeterminada no se puede eliminar.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Borrar plantilla&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Borra la plantilla con nombre seleccionada después de la confirmación. Esto no borra piezas de la vista previa ni de un modelo existente. La plantilla predeterminada no se puede borrar.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
@@ -19540,109 +19285,91 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Hat</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Sombrero</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Hat Accessory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Accesorio para sombrero</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Head</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cabeza</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Neck</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cuello</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Torso</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Torso</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Hip</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cadera</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Hip Accessory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Accesorio de cadera</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Left Arm</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">brazo izquierdo</translation>
+        <translation type="unfinished">Brazo izquierdo</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Right Arm</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Brazo derecho</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Left Hand</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">mano izquierda</translation>
+        <translation type="unfinished">Mano izquierda</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Right Hand</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Derecha</translation>
+        <translation type="unfinished">Mano derecha</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Left Hand Accessory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Accesorio para mano izquierda</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Right Hand Accessory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Accesorio para mano derecha</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Left Leg</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Pierna Izquierda</translation>
+        <translation type="unfinished">Pierna izquierda</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Right Leg</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Pierna Derecha</translation>
+        <translation type="unfinished">Pierna derecha</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Left Leg Accessory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Accesorio para pierna izquierda</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Right Leg Accessory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Accesorio para pierna derecha</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="53"/>
         <source>%1 part</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">%1 pieza</translation>
     </message>
     <message>
@@ -19754,37 +19481,31 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="61"/>
         <source>%1 color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">%1 color</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="62"/>
         <source>Choose the color for %1.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el color para %1.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="64"/>
         <source>&lt;p&gt;&lt;b&gt;Choose Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Change the color of this minifigure part. The preview updates immediately, and saving a template includes the chosen color.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Elige color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cambia el color de esta pieza de minifigura. La vista previa se actualiza inmediatamente y al guardar una plantilla se incluye el color elegido.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Elegir color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cambia el color de esta pieza de minifigura. La vista previa se actualiza inmediatamente y al guardar una plantilla se incluye el color elegido.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="77"/>
         <source>%1 rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">%1 rotación</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="78"/>
         <source>Rotate %1, in degrees (-360 to 360).</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Gire %1, en grados (-360 a 360).</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="79"/>
         <source>&lt;p&gt;&lt;b&gt;Rotation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Adjust this part&apos;s angle to pose the minifigure. Values range from -360 to 360 degrees. The available rotation depends on the selected minifigure section.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Rotación&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ajusta el ángulo de esta pieza para colocar la minifigura. Los valores oscilan entre -360 y 360 grados. La rotación disponible depende de la sección de minifiguras seleccionada.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -19795,7 +19516,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="130"/>
         <source>Preview of the chosen parts, colors, and pose.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Vista previa de las piezas elegidas, colores y pose.</translation>
     </message>
     <message>
@@ -20185,7 +19905,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="121"/>
         <source>Model &apos;%1&apos; was deleted.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Se eliminó el modelo &apos;%1&apos;.</translation>
     </message>
     <message>
@@ -20201,13 +19920,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="416"/>
         <source>Could not load all required parts.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudieron cargar todas las piezas requeridas.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="427"/>
         <source>Could not generate geometry for part &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo generar geometría para la pieza &apos;%1&apos;.</translation>
     </message>
     <message>
@@ -20240,7 +19957,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_file.cpp" line="778"/>
         <source>Model &apos;%1&apos;: reference to &apos;%2&apos; was ignored because it would create a circular reference.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Modelo &apos;%1&apos;: se ignoró la referencia a &apos;%2&apos; porque crearía una referencia circular.</translation>
     </message>
     <message>
@@ -20252,26 +19968,22 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_clipboard.cpp" line="82"/>
         <source>Cut</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cortar</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_clipboard.cpp" line="164"/>
         <source>Paste</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Pasta</translation>
+        <translation type="unfinished">Pegar</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_clipboard.cpp" line="175"/>
         <source>Duplicate Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Piezas duplicadas</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_clipboard.cpp" line="241"/>
         <source>Duplicate</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Duplicado</translation>
+        <translation type="unfinished">Duplicar</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_render.cpp" line="111"/>
@@ -20291,19 +20003,16 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model_render.cpp" line="445"/>
         <location filename="../../source/core/sw_model_render.cpp" line="566"/>
         <source>Could not allocate the parts list image.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo asignar la imagen de la lista de piezas.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_render.cpp" line="304"/>
         <source>Could not create the parts list framebuffer.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo crear el framebuffer de lista de piezas.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_render.cpp" line="385"/>
         <source>Could not read the parts list image.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo leer la imagen de la lista de piezas.</translation>
     </message>
     <message>
@@ -20335,7 +20044,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="659"/>
         <source>Insert Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Insertar paso</translation>
     </message>
     <message>
@@ -20346,8 +20054,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_group.cpp" line="73"/>
         <source>Group Selection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Selección de grupo</translation>
+        <translation type="unfinished">Agrupar selección</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_group.cpp" line="101"/>
@@ -20360,20 +20067,17 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model_group.cpp" line="110"/>
         <location filename="../../source/core/sw_model_group.cpp" line="144"/>
         <source>Ungroup Selection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Selección Desagrupar</translation>
+        <translation type="unfinished">Desagrupar selección</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_group.cpp" line="144"/>
         <source>No groups selected.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No hay grupos seleccionados.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_group.cpp" line="167"/>
         <location filename="../../source/core/sw_model_group.cpp" line="238"/>
         <source>Ungroup</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Desagrupar</translation>
     </message>
     <message>
@@ -20386,7 +20090,6 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model_edit.cpp" line="208"/>
         <location filename="../../source/core/sw_model_tool.cpp" line="277"/>
         <source>Add Part</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Añadir pieza</translation>
     </message>
     <message>
@@ -20402,7 +20105,6 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model_selection.cpp" line="1566"/>
         <location filename="../../source/core/sw_model_selection.cpp" line="1627"/>
         <source>Selection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Selección</translation>
     </message>
     <message>
@@ -20414,8 +20116,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="492"/>
         <source>Reset Pivot Point</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Restablecer punto de pivote</translation>
+        <translation type="unfinished">Reiniciar punto de pivote</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="513"/>
@@ -20466,8 +20167,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="540"/>
         <source>Add Control Point</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Agregar punto de control</translation>
+        <translation type="unfinished">Añadir punto de control</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="565"/>
@@ -20510,19 +20210,16 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="777"/>
         <source>Show Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mostrar piezas</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="814"/>
         <source>Change Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cambiar paso</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="929"/>
         <source>Move to Model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mover al modelo</translation>
     </message>
     <message>
@@ -20568,33 +20265,28 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1666"/>
         <source>Set Show Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Establecer paso de visualización</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1697"/>
         <source>Set Hide Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Establecer paso oculto</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1720"/>
         <source>Change Projection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cambiar proyección</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_selection.cpp" line="1289"/>
         <location filename="../../source/core/sw_model_selection.cpp" line="1320"/>
         <source>Hide Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ocultar piezas</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_selection.cpp" line="1351"/>
         <location filename="../../source/core/sw_model_selection.cpp" line="1382"/>
         <source>Unhide Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mostrar piezas</translation>
     </message>
     <message>
@@ -20622,14 +20314,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="301"/>
         <source>Add Camera</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Agregar cámara</translation>
+        <translation type="unfinished">Añadir cámara</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="311"/>
         <source>Add Point Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Agregar luz puntual</translation>
+        <translation type="unfinished">Añadir luz puntual</translation>
     </message>
     <message>
         <source>Add Spot Light</source>
@@ -20639,14 +20329,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="319"/>
         <source>Add Directional Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Agregar luz direccional</translation>
+        <translation type="unfinished">Añadir luz direccional</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="323"/>
         <source>Add Area Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Agregar luz de área</translation>
+        <translation type="unfinished">Añadir luz de área</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="581"/>
@@ -20656,13 +20344,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="771"/>
         <source>Zoom Extents</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Extensiones de zoom</translation>
+        <translation type="unfinished">Ver todo</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="744"/>
         <source>Change Model Properties</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cambiar propiedades del modelo</translation>
     </message>
     <message>
@@ -20670,8 +20356,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model.cpp" line="764"/>
         <location filename="../../source/core/sw_model.cpp" line="823"/>
         <source>Part Array</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Matriz de piezas</translation>
+        <translation type="unfinished">Secuencia de piezas</translation>
     </message>
     <message>
         <source>Add Minifig</source>
@@ -20810,7 +20495,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
         <source>Select models to manage, or drag them to change their order.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Seleccione modelos para administrar o arrástrelos para cambiar su orden.</translation>
     </message>
     <message>
@@ -20846,7 +20530,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
         <source>Choose a unique name for each selected model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija un nombre único para cada modelo seleccionado.</translation>
     </message>
     <message>
@@ -20857,14 +20540,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
         <source>Save the selected models to separate LDraw files.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Guarde los modelos seleccionados en archivos LDraw separados.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Export Submodels&lt;/b&gt;&lt;/p&gt;&lt;p&gt;For one selected model, choose its output file. For several selected models, choose an output folder. Export writes files immediately, even if you later cancel this dialog.&lt;/p&gt;&lt;p&gt;A newly created empty model has nothing to export until the list changes have been applied.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Exportar submodelos&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Para un modelo seleccionado, elija su archivo de salida. Para varios modelos seleccionados, elija una carpeta de salida. Exportar escribe archivos inmediatamente, incluso si luego cancelas este cuadro de diálogo.&lt;/p&gt;&lt;p&gt;Un modelo vacío recién creado no tiene nada que exportar hasta que se hayan aplicado los cambios de la lista.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Exportar submodelos&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Para un modelo seleccionado, elija su archivo de salida. Para varios modelos seleccionados, elija una carpeta de salida. Exportar escribe archivos inmediatamente, incluso si luego cancele este cuadro de diálogo.&lt;/p&gt;&lt;p&gt;Un modelo vacío recién creado no tiene nada que exportar hasta que se hayan aplicado los cambios de la lista.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
@@ -20874,7 +20555,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
         <source>Create named copies of the selected models.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cree copias con nombre de los modelos seleccionados.</translation>
     </message>
     <message>
@@ -20885,7 +20565,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
         <source>Switch to the current list item when applying the changes.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cambie al elemento de la lista actual al aplicar los cambios.</translation>
     </message>
     <message>
@@ -21376,8 +21055,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Part Palettes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Organize reusable collections of parts in the part browser. Create, rename, delete, import, or reorder palettes, then choose OK to apply the changes. Cancel discards these palette changes.&lt;/p&gt;&lt;p&gt;Palettes organize part choices; they do not change parts already placed in a model.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Paletas de piezas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Organiza colecciones de piezas reutilizables en el explorador de piezas. Cree, cambie el nombre, elimine, importe o reordene paletas y luego elija Aceptar para aplicar los cambios. Cancelar descarta estos cambios de paleta.&lt;/p&gt;&lt;p&gt;Las paletas organizan las opciones de piezas; no cambian piezas ya colocadas en un modelo.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Paletas de piezas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Organiza colecciones de piezas reutilizables en el explorador de piezas. Cree, renombre, borre, importe o reordene paletas y luego elija Aceptar para aplicar los cambios. Cancelar descarta estos cambios de paleta.&lt;/p&gt;&lt;p&gt;Las paletas organizan las opciones de piezas; no cambian piezas ya colocadas en un modelo.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
@@ -21387,19 +21065,16 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Select the palette to rename, delete, or move.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Seleccione la paleta para cambiarle el nombre, eliminarla o moverla.</translation>
+        <translation type="unfinished">Seleccione la paleta para renombrarla, borrarla o moverla.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Palette List&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a palette before using Rename, Delete, Move Up, or Move Down. The list order determines the palette order in the part browser.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Lista de paletas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seleccione una paleta antes de usar Cambiar nombre, Eliminar, Subir o Bajar. El orden de la lista determina el orden de las paletas en el navegador de piezas.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Lista de paletas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seleccione una paleta antes de usar Renombrar, Borrar, Subir o Bajar. El orden de la lista determina el orden de las paletas en el navegador de piezas.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Create a new empty part palette.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Crea una nueva paleta de piezas vacía.</translation>
     </message>
     <message>
@@ -21410,14 +21085,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Remove the selected palette after confirmation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Elimine la paleta seleccionada después de la confirmación.</translation>
+        <translation type="unfinished">Quite la paleta seleccionada después de la confirmación.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Delete Palette&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected palette and its list of part choices. Library parts and parts already used in models are not deleted. At least one palette must remain.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Eliminar paleta&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elimina la paleta seleccionada y su lista de opciones de piezas. Las piezas de la biblioteca y las piezas ya utilizadas en los modelos no se eliminan. Debe quedar al menos una paleta.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Borrar paleta&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Quita la paleta seleccionada y su lista de opciones de piezas. Las piezas de la biblioteca y las piezas ya utilizadas en los modelos no se eliminan. Debe quedar al menos una paleta.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
@@ -21427,8 +21100,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Change the name of the selected palette.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Cambia el nombre de la paleta seleccionada.</translation>
+        <translation type="unfinished">Renombrar la paleta seleccionada.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
@@ -21438,14 +21110,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Create a palette from an online set inventory.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Crea una paleta a partir de un inventario de conjuntos en línea.</translation>
+        <translation type="unfinished">Crea una paleta a partir del inventario de un set en línea.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Import Palette&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open Import Set Inventory to search for a set and download its inventory. The new palette uses the set description as its name.&lt;/p&gt;&lt;p&gt;The palette stores part IDs; inventory colors and quantities are not stored. An internet connection is required.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Importar paleta&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Abre Importar inventario de conjuntos para buscar un conjunto y descargar su inventario. La nueva paleta utiliza la descripción del conjunto como nombre.&lt;/p&gt;&lt;p&gt;La paleta almacena los ID de las piezas; Los colores y cantidades del inventario no se almacenan. Se requiere una conexión a Internet.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Importar paleta&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Abre Importar inventario de un set para buscar un set y descargar su inventario. La nueva paleta utiliza la descripción del set como nombre.&lt;/p&gt;&lt;p&gt;La paleta almacena los ID de las piezas; Los colores y cantidades del inventario no se almacenan. Se requiere una conexión a Internet.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
@@ -21455,7 +21125,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Move the selected palette one position earlier in the list.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mueva la paleta seleccionada una posición antes en la lista.</translation>
     </message>
     <message>
@@ -21466,7 +21135,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Move the selected palette one position later in the list.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mueva la paleta seleccionada una posición más adelante en la lista.</translation>
     </message>
     <message>
@@ -21510,7 +21178,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="378"/>
         <source>Could not load part &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo cargar la pieza &apos;%1&apos;.</translation>
     </message>
     <message>
@@ -21587,8 +21254,7 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="673"/>
         <source>Open Submodel</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Submodelo abierto</translation>
+        <translation type="unfinished">Abrir submodelo</translation>
     </message>
 </context>
 <context>
@@ -21596,14 +21262,12 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part_popup.cpp" line="10"/>
         <source>Choose Part</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Elige Pieza</translation>
+        <translation type="unfinished">Elegir pieza</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part_popup.cpp" line="11"/>
         <source>&lt;p&gt;&lt;b&gt;Choose Part&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a part, then choose OK or double-click it to use it. Cancel keeps the original choice. Filter the list to find a part; Options controls matching and list display. When None is available, select it to omit the part.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Elegir pieza&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Selecciona una pieza, luego elige Aceptar o haz doble clic en ella para usarla. Cancelar mantiene la elección original. Filtra la lista para encontrar una pieza; Las opciones controlan la coincidencia y la visualización de la lista. Cuando Ninguno esté disponible, selecciónelo para omitir la pieza.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Elegir pieza&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seleccione una pieza, luego elija Aceptar o haga doble clic en ella para usarla. Cancelar mantiene la elección original. Filtre la lista para encontrar una pieza; las opciones controlan la coincidencia y la visualización de la lista. Cuando Ninguno esté disponible, selecciónelo para omitir la pieza.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -21636,7 +21300,6 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1559"/>
         <source>Icons</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Iconos</translation>
     </message>
     <message>
@@ -21672,31 +21335,26 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1603"/>
         <source>Lock Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Color de bloqueo</translation>
+        <translation type="unfinished">Bloquear color</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1610"/>
         <source>Filter</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Filtrar</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1612"/>
         <source>Regular Expression</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Expresión regular</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1622"/>
         <source>Part ID</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">ID de pieza</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1627"/>
         <source>Part Description</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Descripción de la pieza</translation>
     </message>
     <message>
@@ -21707,57 +21365,48 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1143"/>
         <source>Filter category names to narrow the category list.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Filtre los nombres de las categorías para limitar la lista de categorías.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1158"/>
         <source>Part Categories</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Categorías de piezas</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1159"/>
         <source>Choose a category or palette to display its parts.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija una categoría o paleta para mostrar sus piezas.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1175"/>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1176"/>
         <source>Filter Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Piezas filtrantes</translation>
+        <translation type="unfinished">Filtrar piezas</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1177"/>
         <source>Filter the displayed parts using the matching options.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Filtra las piezas mostradas usando las opciones de coincidencia.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1182"/>
         <source>Configure part filtering and list display.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Configurar el filtrado de piezas y la visualización de listas.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1182"/>
         <source>Part List Options</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Opciones de lista de piezas</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1186"/>
         <source>Available Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Piezas disponibles</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1187"/>
         <source>Select a part from the filtered list.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Selecciona una pieza de la lista filtrada.</translation>
+        <translation type="unfinished">Seleccione una pieza de la lista filtrada.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1544"/>
@@ -21829,7 +21478,6 @@ Weight: %1</source>
         <location filename="../../source/library/sw_library.cpp" line="292"/>
         <location filename="../../source/library/sw_library.cpp" line="737"/>
         <source>Could not find part &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo encontrar la pieza &apos;%1&apos;.</translation>
     </message>
     <message>
@@ -21855,43 +21503,36 @@ Weight: %1</source>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="543"/>
         <source>Could not decode embedded texture &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo decodificar la textura incrustada &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="573"/>
         <source>Invalid Base64 data for embedded file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Datos Base64 no válidos para el archivo incrustado &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="579"/>
         <source>Could not read embedded file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo leer el archivo incrustado &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="590"/>
         <source>Could not open file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo abrir el archivo &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="596"/>
         <source>Invalid archive file source.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Fuente del archivo comprimido no válida.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="604"/>
         <source>Could not read archive entry %1.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo leer la entrada del archivo %1.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="607"/>
         <source>Could not read archive file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo leer el archivo comprimido &apos;%1&apos;.</translation>
     </message>
     <message>
@@ -21907,7 +21548,6 @@ Weight: %1</source>
     <message>
         <location filename="../../source/library/sw_library_load.cpp" line="190"/>
         <source>Could not generate geometry for part &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo generar geometría para la pieza &apos;%1&apos;.</translation>
     </message>
     <message>
@@ -21917,44 +21557,37 @@ Weight: %1</source>
         <location filename="../../source/library/sw_library_load.cpp" line="294"/>
         <location filename="../../source/library/sw_library_load.cpp" line="391"/>
         <source>Library loading was canceled.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Se canceló la carga de la biblioteca.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library_load.cpp" line="340"/>
         <source>Could not load model geometry &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo cargar la geometría del modelo &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library_load.cpp" line="394"/>
         <source>Could not load part &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo cargar la pieza &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library_load.cpp" line="407"/>
         <source>Could not prepare part &apos;%1&apos; for rendering.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo preparar la pieza &apos;%1&apos; para renderizar.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library_load.cpp" line="483"/>
         <location filename="../../source/library/sw_library_load.cpp" line="527"/>
         <source>Could not open included file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo abrir el archivo incluido &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="1411"/>
         <source>Primitive include cycle at &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Ciclo de inclusión primitivo en &apos;%1&apos;.</translation>
+        <translation type="unfinished">Ciclo de inclusión de primitivas en &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="1486"/>
         <source>Could not load included file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo cargar el archivo incluido &apos;%1&apos;.</translation>
     </message>
 </context>
@@ -22227,13 +21860,11 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the interface language used after restarting StudWorx.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el idioma de la interfaz utilizado después de reiniciar StudWorx.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Language</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Idioma</translation>
     </message>
     <message>
@@ -22249,13 +21880,11 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the interface theme and optionally reset its colors.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el tema de la interfaz y, opcionalmente, restablezca sus colores.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Color Theme</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Tema de color</translation>
     </message>
     <message>
@@ -22271,13 +21900,11 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Move parts along fixed model axes instead of view-relative directions.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mueva piezas a lo largo de ejes fijos del modelo en lugar de direcciones relativas a la vista.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Open the most recently used file when StudWorx starts.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Abra el archivo utilizado más recientemente cuando se inicie StudWorx.</translation>
     </message>
     <message>
@@ -22288,7 +21915,6 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Parts Library</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Biblioteca de piezas</translation>
     </message>
     <message>
@@ -22334,37 +21960,31 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Set the POV-Ray executable used for rendering.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Configure el ejecutable de POV-Ray utilizado para el renderizado.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>POV-Ray Executable</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ejecutable POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Locate the POV-Ray executable.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Localice el ejecutable de POV-Ray.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Set the LGEO library folder used by POV-Ray exports.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Configure la carpeta de la biblioteca LGEO utilizada por las exportaciones de POV-Ray.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>LGEO Library</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Biblioteca LGEO</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the LGEO library folder.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija la carpeta de la biblioteca LGEO.</translation>
     </message>
     <message>
@@ -22380,31 +22000,26 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Previous Step Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Color del paso anterior</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the tint used for parts from previous steps.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Elige el tinte utilizado para las piezas de los pasos anteriores.</translation>
+        <translation type="unfinished">Elija el tinte utilizado para las piezas de los pasos anteriores.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Shading Mode</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Modo de sombreado</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose how part surfaces and edges are drawn in model views.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija cómo se dibujan las superficies y los bordes de las piezas en las vistas del modelo.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Use simpler meshes for distant parts to improve display performance.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Utilice mallas más simples para piezas distantes para mejorar el rendimiento de la visualización.</translation>
     </message>
     <message>
@@ -22414,25 +22029,21 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Tint parts from previous building steps with the chosen fade color.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Tiñe las piezas de los pasos de construcción anteriores con el color difuminado elegido.</translation>
+        <translation type="unfinished">Teñir las piezas de los pasos de construcción anteriores con el color de atenuación elegido.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Highlight parts introduced in the current building step.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Resalte las piezas introducidas en el paso de construcción actual.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>New Part Highlight Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Color resaltado de nueva pieza</translation>
+        <translation type="unfinished">Color de resaltado de piezas nuevas</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the highlight color for parts in the current step.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el color de resaltado para las piezas en el paso actual.</translation>
     </message>
     <message>
@@ -22468,32 +22079,27 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Configure colors and the light/dark threshold for high contrast stud styles.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Configure los colores y el umbral de luz/oscuridad para estilos de tachuelas de alto contraste.</translation>
+        <translation type="unfinished">Configure los colores y el umbral de luz/oscuridad para los estilos de tetón de alto contraste.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Antialiasing Samples</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Muestras de suavizado</translation>
+        <translation type="unfinished">Muestras de anti-aliasing</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the antialiasing sample count; more samples can use more graphics resources.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Elija el recuento de muestras de antialiasing; más muestras pueden utilizar más recursos gráficos.</translation>
+        <translation type="unfinished">Elija el recuento de muestras de anti-aliasing; más muestras pueden utilizar más recursos gráficos.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose stud geometry and the high contrast stud styles.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Elija la geometría de las tachuelas y los estilos de tachuelas de alto contraste.</translation>
+        <translation type="unfinished">Elija la geometría de los tetones y los estilos de tetón de alto contraste.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Smooth jagged edges in model views; changes require restarting StudWorx.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Bordes irregulares suaves en vistas de modelo; Los cambios requieren reiniciar StudWorx.</translation>
+        <translation type="unfinished">Suavice los bordes irregulares en las vistas del modelo; los cambios requieren reiniciar StudWorx.</translation>
     </message>
     <message>
         <source>Selection Rendering</source>
@@ -22503,31 +22109,26 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw conditional lines where needed to show curved part surfaces.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Dibuja líneas condicionales donde sea necesario para mostrar superficies de piezas curvas.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Set edge-line width within the range supported by the graphics system.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Establezca el ancho de la línea de borde dentro del rango admitido por el sistema de gráficos.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Line Width</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ancho de línea</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw the edge lines defined by each part.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Dibuja las líneas de borde definidas por cada pieza.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Calculate edge colors from part colors instead of using their defined edge colors.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Calcule los colores de los bordes a partir de los colores de las piezas en lugar de utilizar los colores de los bordes definidos.</translation>
     </message>
     <message>
@@ -22548,37 +22149,31 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the corner for the model-view navigation cube.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija la esquina para el cubo de navegación de la vista del modelo.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the model-view navigation cube size, or disable it.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el tamaño del cubo de navegación de la vista del modelo o deshabilítelo.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Location</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ubicación</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the corner for the model-axis indicator.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija la esquina para el indicador del eje del modelo.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Show the X, Y and Z labels on the model-axis indicator.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mostrar las etiquetas X, Y y Z en el indicador de ejes del modelo.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw the view cube outline around the model-axis indicator with the axis origin at its center.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Dibujar el contorno del cubo de vista alrededor del indicador de ejes del modelo, con el origen de los ejes en su centro.</translation>
     </message>
     <message>
@@ -22604,8 +22199,7 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Show stud positions on the base grid.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Muestre las posiciones de los montantes en la rejilla base.</translation>
+        <translation type="unfinished">Mostrar las posiciones de los tetones en la cuadrícula base.</translation>
     </message>
     <message>
         <source>Show the model-axis indicator in the part preview.</source>
@@ -22630,116 +22224,97 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the selection rectangle border.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el color de visualización para el borde del rectángulo de selección.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Marquee Border</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Borde del rectángulo de selección</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for inactive view borders.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el color de visualización para los bordes de vista inactivos.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Marquee Fill</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Relleno del rectángulo de selección</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the selection rectangle fill.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el color de visualización para el relleno del rectángulo de selección.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for view text.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Elija el color de visualización para ver el texto.</translation>
+        <translation type="unfinished">Elija el color de visualización para el texto de la vista.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Text Halo Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Color del halo del texto</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the halo behind view text.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el color de visualización para el halo detrás del texto de la vista.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Inactive View Border</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Borde de vista inactivo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for view overlays.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Elija el color de visualización para ver superposiciones.</translation>
+        <translation type="unfinished">Elija el color de visualización para las superposiciones de la vista.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Text Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Color del texto</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Overlay Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Color de superposición</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Active View Border</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Borde de vista activa</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the active view border.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el color de visualización para el borde de la vista activa.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the navigation cube.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el color de visualización del cubo de navegación.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for navigation cube text.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el color de visualización para el texto del cubo de navegación.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the highlighted region of the navigation cube.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el color de visualización para la región resaltada del cubo de navegación.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for base-grid lines.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el color de visualización para las líneas de la cuadrícula base.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for base-grid stud markers.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Elija el color de visualización para los marcadores de montantes de rejilla de base.</translation>
+        <translation type="unfinished">Elija el color de visualización para los marcadores de tetones de la cuadrícula base.</translation>
     </message>
     <message>
         <source>Choose the display color for the top of the background gradient.</source>
@@ -22774,49 +22349,41 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for light-object outlines.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Elija el color de visualización para los contornos de los objetos claros.</translation>
+        <translation type="unfinished">Elija el color de visualización para los contornos de los objetos de luz.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the focused object.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el color de visualización para el objeto enfocado.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for camera-object outlines.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el color de visualización para los contornos de los objetos de la cámara.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the focused control point.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el color de visualización para el punto de control enfocado.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for control points.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el color de visualización para los puntos de control.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for selected objects.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el color de visualización para los objetos seleccionados.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Part Categories&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create, edit, reorder, or import categories for the part browser. The right-hand list shows parts matching the selected category. Imported and edited categories are saved when you choose OK in Preferences; Export writes the current list immediately.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Categorías de piezas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Crea, edita, reordena o importa categorías para el navegador de piezas. La lista de la derecha muestra piezas que coinciden con la categoría seleccionada. Las categorías importadas y editadas se guardan cuando elige Aceptar en Preferencias; Exportar escribe la lista actual inmediatamente.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Categorías de piezas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cree, edite, reordene o importa categorías para el navegador de piezas. La lista de la derecha muestra piezas que coinciden con la categoría seleccionada. Las categorías importadas y editadas se guardan cuando elige Aceptar en Preferencias; Exportar escribe la lista actual inmediatamente.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Part Categories</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Categorías de piezas</translation>
     </message>
     <message>
@@ -22827,50 +22394,42 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Matching Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Piezas a juego</translation>
+        <translation type="unfinished">Piezas coincidentes</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>View the library parts matching the selected category.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Vea las piezas de la biblioteca que coinciden con la categoría seleccionada.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Replace the category list with categories from a text file.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Reemplace la lista de categorías con categorías de un archivo de texto.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Save the current category list to a text file immediately.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Guarde la lista de categorías actual en un archivo de texto inmediatamente.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Restore the default category list after confirmation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Restaure la lista de categorías predeterminada después de la confirmación.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Create a category with a name and a keyword expression.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cree una categoría con un nombre y una expresión de palabra clave.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Edit the selected category name and keyword expression.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Edite el nombre de la categoría seleccionada y la expresión de palabras clave.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Remove the selected category after confirmation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Eliminar la categoría seleccionada después de la confirmación.</translation>
+        <translation type="unfinished">Quite la categoría seleccionada después de la confirmación.</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Keyboard Shortcuts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a command, click Key Sequence, press the desired key combination, then choose Assign. Remove clears the selected command&apos;s shortcut. Import replaces the shortcut list; Export writes the current list immediately. Choose OK in Preferences to save changes.&lt;/p&gt;</source>
@@ -22880,44 +22439,37 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Commands and Keyboard Shortcuts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Comandos y atajos de teclado</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Select the command whose keyboard shortcut you want to change.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Seleccione el comando cuyo método abreviado de teclado desea cambiar.</translation>
+        <translation type="unfinished">Seleccione el comando cuyo atajo de teclado desea cambiar.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_context.cpp" line="140"/>
         <source>Filter Commands</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Comandos de filtro</translation>
+        <translation type="unfinished">Filtrar comandos</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Filter commands by name or shortcut.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Filtrar comandos por nombre o acceso directo.</translation>
+        <translation type="unfinished">Filtrar comandos por nombre o atajo.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Replace keyboard shortcuts with assignments from a text file.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Reemplace los atajos de teclado con asignaciones de un archivo de texto.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Save the current keyboard shortcuts to a text file immediately.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Guarde los atajos de teclado actuales en un archivo de texto inmediatamente.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Restore the default keyboard shortcuts after confirmation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Restaure los atajos de teclado predeterminados después de la confirmación.</translation>
     </message>
     <message>
@@ -22928,26 +22480,22 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Press the key combination to assign, then choose Assign.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Presione la combinación de teclas para asignar y luego elija Asignar.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Key Sequence</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Secuencia clave</translation>
+        <translation type="unfinished">Secuencia de teclas</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Assign the entered key combination to the selected command.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Asigne la combinación de teclas ingresada al comando seleccionado.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Clear the selected command&apos;s keyboard shortcut.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Borre el método abreviado de teclado del comando seleccionado.</translation>
+        <translation type="unfinished">Borre el atajo de teclado del comando seleccionado.</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Mouse Shortcuts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a tool, choose a mouse button and optional modifiers, then choose Assign. Each tool can have two shortcuts; a new assignment becomes the primary shortcut. Remove clears the primary shortcut and promotes the secondary shortcut. Choose OK in Preferences to save changes.&lt;/p&gt;</source>
@@ -22967,14 +22515,12 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Tools and Mouse Shortcuts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Herramientas y atajos del mouse</translation>
+        <translation type="unfinished">Herramientas y atajos del ratón</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Select a tool to edit its primary and secondary mouse shortcuts.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Seleccione una herramienta para editar sus atajos de mouse primarios y secundarios.</translation>
+        <translation type="unfinished">Seleccione una herramienta para editar sus atajos de ratón primarios y secundarios.</translation>
     </message>
     <message>
         <source>Action</source>
@@ -22993,20 +22539,17 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Replace mouse shortcuts with assignments from a text file.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Reemplace los atajos del mouse con asignaciones de un archivo de texto.</translation>
+        <translation type="unfinished">Reemplace los atajos del ratón con asignaciones de un archivo de texto.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Save the current mouse shortcuts to a text file immediately.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Guarde los atajos del mouse actuales en un archivo de texto inmediatamente.</translation>
+        <translation type="unfinished">Guarde los atajos del ratón actuales en un archivo de texto inmediatamente.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Restore the default mouse shortcuts after confirmation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Restaure los atajos del mouse predeterminados después de la confirmación.</translation>
+        <translation type="unfinished">Restaure los atajos del ratón predeterminados después de la confirmación.</translation>
     </message>
     <message>
         <source>Choose the mouse button to assign to the selected tool.</source>
@@ -23077,14 +22620,12 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Remove the primary mouse shortcut and promote the secondary shortcut.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Elimine el atajo principal del mouse y promueva el atajo secundario.</translation>
+        <translation type="unfinished">Elimine el atajo principal del ratón y promueva el atajo secundario.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Adjust how strongly mouse motion affects navigation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Ajuste la fuerza con la que el movimiento del mouse afecta la navegación.</translation>
+        <translation type="unfinished">Ajuste la fuerza con la que el movimiento del ratón afecta la navegación.</translation>
     </message>
     <message>
         <source>Mouse Sensitivity:</source>
@@ -23094,7 +22635,6 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Mouse Sensitivity</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Sensibilidad del ratón</translation>
     </message>
     <message>
@@ -23449,13 +22989,11 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Outline</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Describir</translation>
+        <translation type="unfinished">Contorno</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Tint and Edges</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Tinte y bordes</translation>
     </message>
     <message>
@@ -23494,20 +23032,17 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>View Cube Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Ver color de cubo</translation>
+        <translation type="unfinished">Color del cubo de la vista</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>View Cube Text Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Ver color de texto de cubo</translation>
+        <translation type="unfinished">Color del texto del cubo de la vista</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>View Cube Highlight Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Ver color de resaltado de cubo</translation>
+        <translation type="unfinished">Color de resaltado del cubo de la vista</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -23521,8 +23056,7 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Grid Line Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Color de la línea de cuadrícula</translation>
+        <translation type="unfinished">Color de las líneas de la cuadrícula</translation>
     </message>
     <message>
         <source>Studs:</source>
@@ -23531,8 +23065,7 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Grid Stud Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Color del montante de rejilla</translation>
+        <translation type="unfinished">Color de los tetones de la cuadrícula</translation>
     </message>
     <message>
         <source>Background Top Color</source>
@@ -23556,8 +23089,7 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Light Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Color claro</translation>
+        <translation type="unfinished">Color de luz</translation>
     </message>
     <message>
         <source>Focused:</source>
@@ -23566,7 +23098,6 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Camera Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Color de la cámara</translation>
     </message>
     <message>
@@ -23576,25 +23107,21 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Control Point Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Color del punto de control</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Focused Control Point Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Color del punto de control enfocado</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Selected Object Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Color del objeto seleccionado</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Focused Object Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Color del objeto enfocado</translation>
     </message>
     <message>
@@ -23897,7 +23424,6 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1392"/>
         <source>Select Text Halo Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Seleccionar color de halo de texto</translation>
     </message>
     <message>
@@ -24497,14 +24023,12 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="654"/>
         <source>Default Lights is unavailable. Flat shading is used instead.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Las luces predeterminadas no están disponibles. En su lugar, se utiliza sombreado plano.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="681"/>
         <source>View cube rendering is unavailable.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Ver renderizado de cubo no está disponible.</translation>
+        <translation type="unfinished">El renderizado del cubo de la vista no está disponible.</translation>
     </message>
     <message>
         <source>Outline rendering is unavailable. Face tint and colored edges will be used.</source>
@@ -25242,79 +24766,66 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Labels</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Etiquetas</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Cube Outline</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Contorno del cubo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Negative Axes</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ejes negativos</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Show the negative X, Y and Z axes on the model-axis indicator in their own colors.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Mostrar los ejes X, Y y Z negativos en el indicador de ejes del modelo con sus propios colores.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the negative X axis color used by the axis icon.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el color del eje X negativo usado por el icono de ejes.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Negative X Axis Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Color del eje X negativo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1536"/>
         <source>Select Negative X Axis Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Seleccionar el color del eje X negativo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the negative Y axis color used by the axis icon.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el color del eje Y negativo usado por el icono de ejes.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Negative Y Axis Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Color del eje Y negativo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1541"/>
         <source>Select Negative Y Axis Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Seleccionar el color del eje Y negativo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the negative Z axis color used by the axis icon.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el color del eje Z negativo usado por el icono de ejes.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Negative Z Axis Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Color del eje Z negativo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1546"/>
         <source>Select Negative Z Axis Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Seleccionar el color del eje Z negativo</translation>
     </message>
     <message>
@@ -25350,27 +24861,23 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw Negative Axes</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Dibujar ejes negativos</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw the negative halves of the axis lines in the negative axis colors, with the Z line reaching below the base grid.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Dibuja las mitades negativas de las líneas de eje con los colores de los ejes negativos, con la línea Z extendiéndose por debajo de la cuadrícula base.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="589"/>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1694"/>
         <source>%1 ldu</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">%1 ldu</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Set the distance from the camera in LDraw units (ldu, 20 ldu per stud) beyond which parts draw simpler studs.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Establece la distancia a la cámara en unidades LDraw (ldu, 20 ldu por espiga) a partir de la cual las piezas dibujan espigas más simples.</translation>
+        <translation type="unfinished">Establece la distancia a la cámara en unidades LDraw (ldu, 20 ldu por tetón) a partir de la cual las piezas dibujan tetones más simples.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -26553,7 +26060,6 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <location filename="../../source/interface/widgets/sw_widget_preview.cpp" line="280"/>
         <location filename="../../source/interface/widgets/sw_widget_preview.cpp" line="320"/>
         <source>Preview unavailable</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Vista previa no disponible</translation>
     </message>
     <message>
@@ -26613,7 +26119,6 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Enter the author credited in this model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Introduzca el autor acreditado en este modelo.</translation>
     </message>
     <message>
@@ -26623,7 +26128,6 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Enter a short description of this model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Introduzca una breve descripción de este modelo.</translation>
     </message>
     <message>
@@ -26633,7 +26137,6 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Enter plain-text notes to store with this model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ingrese notas de texto sin formato para almacenar con este modelo.</translation>
     </message>
     <message>
@@ -26643,14 +26146,12 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Overall model dimensions along the X, Y, and Z axes.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Dimensiones generales del modelo a lo largo de los ejes X, Y y Z.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Model Measurements&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The dimensions of the model&apos;s bounding box are shown in centimeters, inches, and LDraw units (ldu). The values are read-only and include parts across all steps.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Medidas del modelo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Las dimensiones del cuadro delimitador del modelo se muestran en centímetros, pulgadas y unidades LDraw (ldu). Los valores son de solo lectura e incluyen partes de todos los pasos.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Medidas del modelo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Las dimensiones del cuadro delimitador del modelo se muestran en centímetros, pulgadas y unidades LDraw (ldu). Los valores son de solo lectura e incluyen piezas de todos los pasos.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Measurements:</source>
@@ -26659,13 +26160,11 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Model Measurements</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Medidas del modelo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>View part quantities by color; click a column heading to sort.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ver cantidades de piezas por color; haga clic en el encabezado de una columna para ordenar.</translation>
     </message>
     <message>
@@ -26972,13 +26471,11 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="32"/>
         <source>Keyframe for %1</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Fotograma clave para %1</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="33"/>
         <source>&lt;p&gt;&lt;b&gt;Property Keyframe&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Enable or remove a keyframe for this property at the current building step. Keyframes let the property&apos;s value change between steps.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Fotograma clave de propiedad&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Habilite o elimine un fotograma clave para esta propiedad en el paso de construcción actual. Los fotogramas clave permiten que el valor de la propiedad cambie entre pasos.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -27000,7 +26497,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1111"/>
         <source>Expand or collapse the %1 properties.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Expanda o contraiga las propiedades %1.</translation>
     </message>
     <message>
@@ -27013,8 +26509,7 @@ N/A: %1 parts</source>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="719"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="724"/>
         <source>Multiple Values</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Múltiples valores</translation>
+        <translation type="unfinished">Varios valores</translation>
     </message>
     <message>
         <source> Multiple Colors</source>
@@ -27024,7 +26519,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="915"/>
         <source>Multiple Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Varias piezas</translation>
     </message>
     <message>
@@ -27069,7 +26563,6 @@ N/A: %1 parts</source>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1398"/>
         <source>Part ID</source>
         <oldsource>Piece Id</oldsource>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">ID de pieza</translation>
     </message>
     <message>
@@ -27077,14 +26570,12 @@ N/A: %1 parts</source>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1399"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1430"/>
         <source>Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Color</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1399"/>
         <source>Part color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Color pieza</translation>
+        <translation type="unfinished">Color de la pieza</translation>
     </message>
     <message>
         <source>Show</source>
@@ -27122,7 +26613,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1409"/>
         <source>Camera name</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Nombre de la cámara</translation>
     </message>
     <message>
@@ -27134,7 +26624,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1410"/>
         <source>Camera projection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Proyección de cámara</translation>
     </message>
     <message>
@@ -27146,7 +26635,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1414"/>
         <source>Field of view in degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Campo de visión en grados</translation>
     </message>
     <message>
@@ -27158,8 +26646,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1415"/>
         <source>Near clipping distance</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Cerca de la distancia de recorte</translation>
+        <translation type="unfinished">Distancia de recorte cercana</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1416"/>
@@ -27170,15 +26657,13 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1416"/>
         <source>Far clipping distance</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Distancia de recorte lejana</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1419"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1474"/>
         <source>Transform</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Transformar</translation>
+        <translation type="unfinished">Transformación</translation>
     </message>
     <message>
         <source>Position X</source>
@@ -27188,7 +26673,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1421"/>
         <source>Camera position</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Posición de la cámara</translation>
     </message>
     <message>
@@ -27213,7 +26697,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1422"/>
         <source>Camera target position</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Posición de destino de la cámara</translation>
     </message>
     <message>
@@ -27230,44 +26713,37 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1425"/>
         <source>Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Luz</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1427"/>
         <source>Light name</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">nombre de la luz</translation>
+        <translation type="unfinished">Nombre de la luz</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1428"/>
         <source>Type</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Tipo</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1428"/>
         <source>Light type</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">tipo de luz</translation>
+        <translation type="unfinished">Tipo de luz</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1430"/>
         <source>Light color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">color claro</translation>
+        <translation type="unfinished">Color de la luz</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1431"/>
         <source>Cast Shadow</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Sombra proyectada</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1431"/>
         <source>Cast a shadow from this light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Proyecta una sombra de esta luz</translation>
+        <translation type="unfinished">Proyectar una sombra desde esta luz</translation>
     </message>
     <message>
         <source>Cone Angle</source>
@@ -27374,14 +26850,12 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1429"/>
         <source>Area Shape</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Forma del área</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1429"/>
         <source>The shape of the area light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">La forma de la luz del área.</translation>
+        <translation type="unfinished">La forma de la luz de área</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1433"/>
@@ -27421,26 +26895,22 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1441"/>
         <source>Size X</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Talla X</translation>
+        <translation type="unfinished">Tamaño X</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1441"/>
         <source>The width of the area light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">El ancho del área de luz.</translation>
+        <translation type="unfinished">El ancho de la luz de área</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1442"/>
         <source>The height of the area light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">La altura de la luz del área.</translation>
+        <translation type="unfinished">La altura de la luz de área</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1445"/>
         <source>Blender Settings</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Blender Configuración</translation>
+        <translation type="unfinished">Configuración de Blender</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1447"/>
@@ -27456,15 +26926,13 @@ N/A: %1 parts</source>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1449"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1458"/>
         <source>Power</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Fuerza</translation>
+        <translation type="unfinished">Potencia</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1449"/>
         <source>Power of the light in watts</source>
         <oldsource>Power of the light in Watts</oldsource>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Potencia de la luz en Watts</translation>
+        <translation type="unfinished">Potencia de la luz en vatios</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1449"/>
@@ -27474,32 +26942,27 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1450"/>
         <source>Radius</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Radio</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1450"/>
         <source>Shadow soft size</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Tamaño suave de la sombra</translation>
+        <translation type="unfinished">Suavidad de la sombra</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1451"/>
         <source>Angle</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ángulo</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1451"/>
         <source>Angular diameter of the light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Diámetro angular de la luz.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1454"/>
         <source>POV-Ray Settings</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">POV-Ray Configuración</translation>
+        <translation type="unfinished">Configuración de POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1456"/>
@@ -27514,7 +26977,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1458"/>
         <source>Power of the light (multiplicative factor)</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Potencia de la luz (factor multiplicativo)</translation>
     </message>
     <message>
@@ -27530,25 +26992,21 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1464"/>
         <source>Fade Distance</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Distancia de desvanecimiento</translation>
+        <translation type="unfinished">Distancia de atenuación</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1464"/>
         <source>The distance at which the full light intensity arrives</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">La distancia a la que llega la intensidad luminosa total.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1465"/>
         <source>Fade Power</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Poder de desvanecimiento</translation>
+        <translation type="unfinished">Potencia de atenuación</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1465"/>
         <source>Light falloff rate</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Tasa de caída de luz</translation>
     </message>
     <message>
@@ -27594,8 +27052,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1459"/>
         <source>Tightness</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Opresión</translation>
+        <translation type="unfinished">Concentración</translation>
     </message>
     <message>
         <source>Additional exponential spot light edge softening</source>
@@ -27605,7 +27062,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1470"/>
         <source>Grid X</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cuadrícula X</translation>
     </message>
     <message>
@@ -27621,7 +27077,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1476"/>
         <source>Position of the object</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Posición del objeto</translation>
     </message>
     <message>
@@ -27632,7 +27087,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1477"/>
         <source>Rotation of the object in degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Rotación del objeto en grados.</translation>
     </message>
 </context>
@@ -27846,7 +27300,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="433"/>
         <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Start the render using the current settings. While rendering, this button becomes Cancel so you can stop the operation.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Renderizar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Inicie el renderizado usando la configuración actual. Mientras renderiza, este botón se convierte en Cancelar para que pueda detener la operación.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -27888,8 +27341,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="985"/>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1973"/>
         <source>Open in Blender</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Abierto en Blender</translation>
+        <translation type="unfinished">Abrir en Blender</translation>
     </message>
     <message>
         <source>Import and open LDraw model in Blender</source>
@@ -27899,8 +27351,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1784"/>
         <source>Exporting Model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Modelo de exportación</translation>
+        <translation type="unfinished">Exportando modelo</translation>
     </message>
     <message>
         <source>Render Error</source>
@@ -27915,7 +27366,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="449"/>
         <source>Render the current model step with POV-Ray.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Renderice el paso del modelo actual con POV-Ray.</translation>
     </message>
     <message>
@@ -27941,8 +27391,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1020"/>
         <source>Render the current model step with Blender.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Renderiza el paso del modelo actual con Blender.</translation>
+        <translation type="unfinished">Renderice el paso del modelo actual con Blender.</translation>
     </message>
     <message>
         <source>Configure Blender, its add-on, and render settings.</source>
@@ -27967,7 +27416,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1019"/>
         <source>Import the current model step and open it in Blender.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Importe el paso del modelo actual y ábralo en Blender.</translation>
     </message>
     <message>
@@ -28938,8 +28386,7 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1890"/>
         <source>Saving Blender Model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Guardando el modelo Blender</translation>
+        <translation type="unfinished">Guardando el modelo de Blender</translation>
     </message>
     <message>
         <source>Cannot write Blender render script file &apos;%1&apos;:
@@ -28951,19 +28398,16 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1971"/>
         <source>errors%1</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">errores%1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1971"/>
         <source> and warnings</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished"> y advertencias</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1971"/>
         <source>warnings</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">advertencias</translation>
     </message>
     <message>
@@ -28975,8 +28419,7 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1972"/>
         <source>Open in Blender encountered %1. See Show Details...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Abierto en Blender encontrado %1. Ver Mostrar detalles...</translation>
+        <translation type="unfinished">Abrir en Blender encontró %1. Consulte Mostrar detalles...</translation>
     </message>
     <message>
         <source>Error starting Blender render process.</source>
@@ -28988,14 +28431,12 @@ Install the povray-includes package or the include files of your POV-Ray version
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2060"/>
         <source>Failed to open log file: &apos;%1&apos;:
 %2</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo abrir el archivo de registro: &apos;%1&apos;:
 %2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2221"/>
         <source>An error occurred while rendering.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Se produjo un error al renderizar.</translation>
     </message>
     <message>
@@ -29061,7 +28502,6 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="805"/>
         <source>Choose the rendering quality; higher quality can take longer.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija la calidad de renderizado; una mayor calidad puede llevar más tiempo.</translation>
     </message>
     <message>
@@ -29099,7 +28539,6 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1048"/>
         <source>Renderer Output</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Salida del renderizador</translation>
     </message>
     <message>
@@ -29116,7 +28555,6 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1049"/>
         <source>Read and copy renderer output and diagnostic messages.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Lea y copie la salida del renderizador y los mensajes de diagnóstico.</translation>
     </message>
     <message>
@@ -29126,14 +28564,12 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Path and file name for the rendered image.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ruta y nombre de archivo de la imagen renderizada.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Output Image&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose where to save the rendered image and its format, such as PNG, JPEG, or BMP. The output path applies to image rendering; Open in Blender does not use it.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Imagen de salida&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija dónde guardar la imagen renderizada y su formato, como PNG, JPEG o BMP. La ruta de salida se aplica a la representación de imágenes; Abrir en Blender no lo usa.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Imagen de salida&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija dónde guardar la imagen renderizada y su formato, como PNG, JPEG o BMP. La ruta de salida se aplica a la renderizado de imágenes; Abrir en Blender no lo usa.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Output:</source>
@@ -29142,13 +28578,11 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Choose the rendered image file and format.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija el archivo y el formato de la imagen renderizada.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Choose Render Output</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Elija la salida de renderizado</translation>
     </message>
     <message>
@@ -29160,31 +28594,26 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Preview of the rendered image.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Vista previa de la imagen renderizada.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Render Preview</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Vista previa de renderizado</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Render Preview&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The preview is scaled to fit this area. Changing the dialog size does not change the output resolution; use Settings to change the image dimensions.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Vista previa de renderizado&lt;/b&gt;&lt;/p&gt;&lt;p&gt;La vista previa se escala para ajustarse a esta área. Cambiar el tamaño del diálogo no cambia la resolución de salida; use Configuración para cambiar las dimensiones de la imagen.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Progress of the current export or render.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Progreso de la exportación o renderizado actual.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Render Progress</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Progreso del renderizado</translation>
     </message>
     <message>
@@ -29348,7 +28777,6 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Select Objects&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use the checkboxes to choose visible parts, cameras, and lights in the current model. Choose OK to replace the current selection with the checked objects, or Cancel to keep the current selection.&lt;/p&gt;&lt;p&gt;Parts in the same top-level group are selected together. All, None, and Invert change the checkboxes in this dialog.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Seleccionar objetos&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Utilice las casillas de verificación para elegir piezas, cámaras y luces visibles en el modelo actual. Elija Aceptar para reemplazar la selección actual con los objetos marcados, o Cancelar para mantener la selección actual.&lt;/p&gt;&lt;p&gt;Las piezas del mismo grupo de nivel superior se seleccionan juntas. Todo, Ninguno e Invertir cambian las casillas de verificación en este cuadro de diálogo.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -29359,26 +28787,22 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>Check the objects to include in the selection.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Marque los objetos a incluir en la selección.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Object List&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The list includes parts visible in the current step and visible cameras and lights. Expand groups to see their parts. Checking or clearing a grouped part applies the same state to all parts in its top-level group.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Lista de objetos&lt;/b&gt;&lt;/p&gt;&lt;p&gt;La lista incluye piezas visibles en el paso actual y cámaras y luces visibles. Ampliar grupos para ver sus piezas. Al marcar o borrar una pieza agrupada se aplica el mismo estado a todas las piezas de su grupo de nivel superior.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Lista de objetos&lt;/b&gt;&lt;/p&gt;&lt;p&gt;La lista incluye piezas visibles en el paso actual y cámaras y luces visibles. Expanda los grupos para ver sus piezas. Al marcar o desmarcar una pieza agrupada se aplica el mismo estado a todas las piezas de su grupo de nivel superior.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>Objects to Select</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Objetos para seleccionar</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>Check every object in the list.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Verifique todos los objetos de la lista.</translation>
+        <translation type="unfinished">Marque todos los objetos de la lista.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
@@ -29388,7 +28812,6 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>Clear every object checkbox in the list.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Borre todas las casillas de verificación de objetos de la lista.</translation>
     </message>
     <message>
@@ -29399,7 +28822,6 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>Check unchecked objects and clear checked objects.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Marque los objetos no marcados y borre los objetos marcados.</translation>
     </message>
     <message>
@@ -29417,8 +28839,7 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Import Set Inventory&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Search the online Rebrickable database by set name or number. Select a result and choose OK, or double-click it, to download the set inventory for the operation that opened this dialog.&lt;/p&gt;&lt;p&gt;An internet connection is required for searching and downloading inventories.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Importar inventario de conjuntos&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Busca en la base de datos de Rebrickable en línea por nombre o número de conjunto. Seleccione un resultado y elija Aceptar, o haga doble clic en él, para descargar el inventario establecido para la operación que abrió este cuadro de diálogo.&lt;/p&gt;&lt;p&gt;Se requiere una conexión a Internet para buscar y descargar inventarios.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Importar inventario de sets&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Busca en la base de datos de Rebrickable en línea por nombre o número de set. Seleccione un resultado y elija Aceptar, o haga doble clic en él, para descargar el inventario del set para la operación que abrió este cuadro de diálogo.&lt;/p&gt;&lt;p&gt;Se requiere una conexión a Internet para buscar y descargar inventarios.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
@@ -29426,14 +28847,12 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="167"/>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="265"/>
         <source>Import Set Inventory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Importar inventario de conjuntos</translation>
+        <translation type="unfinished">Importar inventario de un set</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>Enter a set name or number, then press Enter or choose Search.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Ingrese un nombre o número establecido, luego presione Entrar o elija Buscar.</translation>
+        <translation type="unfinished">Ingrese un nombre o número de set, luego presione Entrar o elija Buscar.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
@@ -29443,13 +28862,11 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Search Sets&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Enter a set number or words from its name. Press Enter or choose Search to retrieve matching sets. Refine the search if the set you want is not listed.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Buscar conjuntos&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ingrese un número de conjunto o palabras de su nombre. Presione Entrar o elija Buscar para recuperar conjuntos coincidentes. Refine la búsqueda si el conjunto que desea no aparece en la lista.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Buscar sets&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ingrese un número de set o palabras de su nombre. Presione Entrar o elija Buscar para recuperar sets coincidentes. Refine la búsqueda si el set que desea no aparece en la lista.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>Search the online database using the entered name or number.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Busque en la base de datos en línea utilizando el nombre o número ingresado.</translation>
     </message>
     <message>
@@ -29460,20 +28877,17 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>Select a set to download its part inventory.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Seleccione un conjunto para descargar su inventario de piezas.</translation>
+        <translation type="unfinished">Seleccione un set para descargar su inventario de piezas.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>Set Search Results</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Establecer resultados de búsqueda</translation>
+        <translation type="unfinished">Resultados de búsqueda de sets</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Search Results&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Results show the set number, name, release year, and part count. Select the desired set and choose OK, or double-click its row, to download its inventory.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Resultados de la búsqueda&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Los resultados muestran el número del conjunto, el nombre, el año de lanzamiento y el recuento de piezas. Seleccione el conjunto deseado y elija Aceptar, o haga doble clic en su fila para descargar su inventario.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Resultados de la búsqueda&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Los resultados muestran el número del set, el nombre, el año de lanzamiento y el recuento de piezas. Seleccione el set deseado y elija Aceptar, o haga doble clic en su fila para descargar su inventario.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
@@ -29498,8 +28912,7 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>Set data provided by &lt;a href=&quot;https://www.rebrickable.com&quot;&gt;Rebrickable&lt;/a&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Establecer datos proporcionados por &lt;a href=&quot;https://www.rebrickable.com&quot;&gt;Rebrickable&lt;/a&gt;</translation>
+        <translation type="unfinished">Datos del set proporcionados por &lt;a href=&quot;https://www.rebrickable.com&quot;&gt;Rebrickable&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Sets Database provided by &lt;a href=&quot;https://www.rebrickable.com&quot;&gt;Rebrickable&lt;/a&gt;</source>
@@ -29584,7 +28997,6 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/widgets/sw_widget_spinner.cpp" line="9"/>
         <source>Loading</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cargando</translation>
     </message>
 </context>
@@ -29621,32 +29033,27 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/library/sw_texture.cpp" line="77"/>
         <source>Could not load texture &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No se pudo cargar la textura &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_texture.cpp" line="80"/>
         <source>Could not make the shared GL context current for texture upload.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">No se pudo actualizar el contexto GL compartido para la carga de texturas.</translation>
+        <translation type="unfinished">No se pudo activar el contexto GL compartido para la carga de texturas.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_texture.cpp" line="83"/>
         <source>No shared GL context is available for texture upload.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">No hay ningún contexto GL compartido disponible para cargar texturas.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_texture.cpp" line="86"/>
         <source>Texture upload failed.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Error al cargar la textura.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_texture.cpp" line="89"/>
         <location filename="../../source/library/sw_texture.cpp" line="92"/>
         <source>Texture &apos;%1&apos; failed to load.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">La textura &apos;%1&apos; no se pudo cargar.</translation>
     </message>
 </context>
@@ -29655,14 +29062,12 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="13"/>
         <source>Building Steps and Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Pasos y piezas de construcción</translation>
+        <translation type="unfinished">Pasos de construcción y piezas</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="14"/>
         <source>Select steps or parts; drag parts to reorder them or change their building step.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Seleccionar pasos o piezas; arrastra las piezas para reordenarlas o cambiar su paso de construcción.</translation>
+        <translation type="unfinished">Seleccione pasos o piezas; arrastre las piezas para reordenarlas o cambiar su paso de construcción.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="189"/>
@@ -29837,19 +29242,16 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/rendering/sw_view_widget.cpp" line="55"/>
         <source>Stop looking through this camera.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Dejar de mirar a través de esta cámara.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_view_widget.cpp" line="54"/>
         <source>Free Camera</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cámara libre</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_view_widget.cpp" line="198"/>
         <source>Camera: %1</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Cámara: %1</translation>
     </message>
     <message>

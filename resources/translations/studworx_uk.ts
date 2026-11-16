@@ -2182,13 +2182,11 @@
     <message>
         <location filename="../../source/core/sw_object_camera.cpp" line="64"/>
         <source>Perspective</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перспектива</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object_camera.cpp" line="67"/>
         <source>Orthographic</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Орфографічний</translation>
     </message>
 </context>
@@ -2239,74 +2237,62 @@
     <message>
         <location filename="../../source/core/sw_object.cpp" line="57"/>
         <source>Rename Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перейменувати Light</translation>
+        <translation type="unfinished">Перейменувати світло</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="60"/>
         <source>Change Light Type</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Змінити тип світла</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="63"/>
         <source>Change Light Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Змінити колір світла</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="66"/>
         <source>Change Light Blender Power</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Змінити світло Blender Power</translation>
+        <translation type="unfinished">Змінити потужність світла Blender</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="69"/>
         <source>Change Light POV-Ray Power</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Змінити світло POV-Ray Power</translation>
+        <translation type="unfinished">Змінити потужність світла POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="72"/>
         <source>Change Light Shadow</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Змінити світлотінь</translation>
+        <translation type="unfinished">Змінити тінь світла</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="75"/>
         <source>Change Light POV-Ray Fade Distance</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Змінити світло POV-Ray Fade Distance</translation>
+        <translation type="unfinished">Змінити відстань згасання світла POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="78"/>
         <source>Change Light POV-Ray Fade Power</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Змінити світло POV-Ray Fade Power</translation>
+        <translation type="unfinished">Змінити силу згасання світла POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="81"/>
         <source>Change Light Blender Radius</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Змінити радіус світла Blender</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="84"/>
         <source>Change Light Blender Angle</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Змінити кут світла Blender</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="87"/>
         <source>Change Area Light X Size</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Змінити розмір освітлення області X</translation>
+        <translation type="unfinished">Змінити розмір X площинного світла</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="90"/>
         <source>Change Area Light Y Size</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Змінити розмір освітлення області Y</translation>
+        <translation type="unfinished">Змінити розмір Y площинного світла</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="93"/>
@@ -2341,14 +2327,12 @@
     <message>
         <location filename="../../source/core/sw_object.cpp" line="102"/>
         <source>Change Area Light Shape</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Змінити форму освітлення області</translation>
+        <translation type="unfinished">Змінити форму площинного світла</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object.cpp" line="106"/>
         <source>Change Area Light POV-Ray Grid</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Змінити світлову сітку POV-Ray</translation>
+        <translation type="unfinished">Змінити сітку POV-Ray площинного світла</translation>
     </message>
 </context>
 <context>
@@ -2454,25 +2438,21 @@
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="77"/>
         <source>Rectangle</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Прямокутник</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="80"/>
         <source>Square</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Квадратний</translation>
+        <translation type="unfinished">Квадрат</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="83"/>
         <source>Disk</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">диск</translation>
+        <translation type="unfinished">Диск</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="86"/>
         <source>Ellipse</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Еліпс</translation>
     </message>
 </context>
@@ -2481,7 +2461,6 @@
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="44"/>
         <source>Point Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Точкове світло</translation>
     </message>
     <message>
@@ -2497,14 +2476,12 @@
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="50"/>
         <source>Directional Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Спрямоване світло</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_object_light.cpp" line="53"/>
         <source>Area Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зона освітлення</translation>
+        <translation type="unfinished">Площинне світло</translation>
     </message>
 </context>
 <context>
@@ -2512,31 +2489,26 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="9"/>
         <source>&amp;New</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;новий</translation>
+        <translation type="unfinished">&amp;Новий</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="18"/>
         <source>&amp;Open...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;ВІДЧИНЕНО...</translation>
+        <translation type="unfinished">&amp;Відкрити...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="27"/>
         <source>&amp;Merge...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Об&apos;єднати...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="72"/>
         <source>&amp;Save</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;зберегти</translation>
+        <translation type="unfinished">&amp;Зберегти</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="81"/>
         <source>Save &amp;As...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Зберегти як...</translation>
     </message>
     <message>
@@ -2547,37 +2519,31 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="99"/>
         <source>&amp;LEGO® Digital Designer...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;LEGO® Digital Designer...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="108"/>
         <source>Set &amp;Inventory...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Налаштувати інвентар...</translation>
+        <translation type="unfinished">Задати &amp;інвентар...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="117"/>
         <source>3D &amp;Studio...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">3&amp;D студія...</translation>
+        <translation type="unfinished">3D &amp;Studio...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="126"/>
         <source>&amp;COLLADA...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;COLLADA...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="135"/>
         <source>&amp;HTML...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;HTML...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="153"/>
         <source>&amp;BrickLink...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;BrickLink...</translation>
     </message>
     <message>
@@ -2588,14 +2554,12 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="171"/>
         <source>&amp;POV-Ray...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;POV-Ray...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="180"/>
         <source>&amp;Wavefront...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Хвильовий фронт...</translation>
+        <translation type="unfinished">&amp;Wavefront...</translation>
     </message>
     <message>
         <source>&amp;Instructions...</source>
@@ -2605,8 +2569,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="216"/>
         <source>&amp;Print...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Роздрукувати...</translation>
+        <translation type="unfinished">&amp;Друкувати...</translation>
     </message>
     <message>
         <source>Print Pre&amp;view...</source>
@@ -2616,62 +2579,52 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="261"/>
         <source>E&amp;xit</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Вихід</translation>
+        <translation type="unfinished">Ви&amp;йти</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="270"/>
         <source>&amp;Undo</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Скасувати</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="279"/>
         <source>&amp;Redo</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Повторити</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="288"/>
         <source>Cu&amp;t</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Вирізати</translation>
+        <translation type="unfinished">Ви&amp;різати</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="297"/>
         <source>&amp;Copy</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Копія</translation>
+        <translation type="unfinished">&amp;Копіювати</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="306"/>
         <source>&amp;Paste</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Вставити</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="333"/>
         <source>Find Ne&amp;xt</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Знайти далі</translation>
+        <translation type="unfinished">Знайти на&amp;ступний</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="342"/>
         <source>Find Pre&amp;vious</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Знайти попередній</translation>
+        <translation type="unfinished">Знайти поп&amp;ередній</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="387"/>
         <source>Select &amp;All</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Виберіть усі</translation>
+        <translation type="unfinished">Виділити &amp;все</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="396"/>
         <source>Select &amp;None</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Виберіть Немає</translation>
+        <translation type="unfinished">Виділити &amp;нічого</translation>
     </message>
     <message>
         <source>Select &amp;Invert</source>
@@ -2681,13 +2634,11 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="459"/>
         <source>Select by Na&amp;me...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Виберіть за назвою...</translation>
+        <translation type="unfinished">Виділити за &amp;назвою...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="225"/>
         <source>&amp;Recent 1</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Останні 1</translation>
     </message>
     <message>
@@ -2708,14 +2659,12 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="189"/>
         <source>&amp;POV-Ray Render...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;POV-Ray Відобразити...</translation>
+        <translation type="unfinished">Вимальовування &amp;POV-Ray...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="198"/>
         <source>&amp;Blender Render...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Blender Відобразити...</translation>
+        <translation type="unfinished">Вимальовування &amp;Blender...</translation>
     </message>
     <message>
         <source>&amp;Open in Blender...</source>
@@ -2731,37 +2680,31 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="234"/>
         <source>&amp;Recent 2</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Останні 2</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="243"/>
         <source>&amp;Recent 3</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Останні 3</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="252"/>
         <source>&amp;Recent 4</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Останні 4</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="315"/>
         <source>Paste with Steps</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Вставити за допомогою кроків</translation>
+        <translation type="unfinished">Вставити з кроками</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="324"/>
         <source>&amp;Find</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;знайти</translation>
+        <translation type="unfinished">&amp;Знайти</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="351"/>
         <source>Find All</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Знайти все</translation>
     </message>
     <message>
@@ -2772,74 +2715,62 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="369"/>
         <source>Replace Next</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Замінити далі</translation>
+        <translation type="unfinished">Замінити наступний</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="378"/>
         <source>Replace All</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Замінити все</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="468"/>
         <source>Single Selection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Єдиний вибір</translation>
+        <translation type="unfinished">Одиночне виділення</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="477"/>
         <source>Part Selection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Вибір шматка</translation>
+        <translation type="unfinished">Виділення за блоком</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="486"/>
         <source>Color Selection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Вибір кольору</translation>
+        <translation type="unfinished">Виділення за кольором</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="495"/>
         <source>Part and Color Selection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Вибір деталей і кольорів</translation>
+        <translation type="unfinished">Виділення за блоком і кольором</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="504"/>
         <source>Relative Transforms</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відносні перетворення</translation>
+        <translation type="unfinished">Відносні трансформації</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="513"/>
         <source>Absolute Transforms</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Абсолютні трансформації</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="522"/>
         <source>Toggle Relative Transforms</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемикання відносних перетворень</translation>
+        <translation type="unfinished">Перемкнути відносні трансформації</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="531"/>
         <source>Rotate Separately</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Повертати окремо</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="540"/>
         <source>Rotate Together</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Обертати разом</translation>
+        <translation type="unfinished">Повертати разом</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="549"/>
         <source>Toggle Separate Transforms</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемикання окремих трансформацій</translation>
+        <translation type="unfinished">Перемкнути окремі трансформації</translation>
     </message>
     <message>
         <source>Move Snap Enabled</source>
@@ -2924,55 +2855,46 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="765"/>
         <source>1 Degree</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">1 ступінь</translation>
+        <translation type="unfinished">1 градус</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="774"/>
         <source>5 Degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">5 градусів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="783"/>
         <source>15 Degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">15 градусів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="792"/>
         <source>22.5 Degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">22,5 градусів</translation>
+        <translation type="unfinished">22,5 градуса</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="801"/>
         <source>30 Degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">30 градусів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="810"/>
         <source>45 Degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">45 градусів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="819"/>
         <source>60 Degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">60 градусів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="828"/>
         <source>90 Degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">90 градусів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="837"/>
         <source>180 Degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">180 градусів</translation>
     </message>
     <message>
@@ -2988,37 +2910,31 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="873"/>
         <source>Absolute Translation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Абсолютний переклад</translation>
+        <translation type="unfinished">Абсолютне переміщення</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="882"/>
         <source>Relative Translation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відносний переклад</translation>
+        <translation type="unfinished">Відносне переміщення</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="891"/>
         <source>Absolute Rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Абсолютне обертання</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="900"/>
         <source>Relative Rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Відносне обертання</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="909"/>
         <source>Insert</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Вставка</translation>
+        <translation type="unfinished">Вставити</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="918"/>
         <source>Point Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Точкове світло</translation>
     </message>
     <message>
@@ -3034,19 +2950,16 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="936"/>
         <source>Directional Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Спрямоване світло</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="945"/>
         <source>Area Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зона освітлення</translation>
+        <translation type="unfinished">Площинне світло</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="954"/>
         <source>Camera</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера</translation>
     </message>
     <message>
@@ -3076,8 +2989,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1017"/>
         <source>Color Picker</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Палітра кольорів</translation>
+        <translation type="unfinished">Піпетка</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1026"/>
@@ -3092,8 +3004,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1044"/>
         <source>Rotate View</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Повернути перегляд</translation>
+        <translation type="unfinished">Повернути вигляд</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1053"/>
@@ -3103,13 +3014,11 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1062"/>
         <source>Zoom Region</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Збільшити область</translation>
+        <translation type="unfinished">Масштабувати регіон</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1071"/>
         <source>Cancel Action</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Скасувати дію</translation>
     </message>
     <message>
@@ -3120,235 +3029,196 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1089"/>
         <source>Zoom In</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Збільшити</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1098"/>
         <source>Zoom Out</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Зменшити</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1107"/>
         <source>Zoom E&amp;xtents</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Розміри масштабування</translation>
+        <translation type="unfinished">Масштабувати до &amp;меж</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1116"/>
         <source>Look At</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Подивіться</translation>
+        <translation type="unfinished">Дивитися на</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1125"/>
         <source>Move Forward</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Рухайтеся вперед</translation>
+        <translation type="unfinished">Рухатися вперед</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1134"/>
         <source>Move Backward</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Переміщення назад</translation>
+        <translation type="unfinished">Рухатися назад</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1143"/>
         <source>Move Left</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Рух ліворуч</translation>
+        <translation type="unfinished">Рухатися ліворуч</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1152"/>
         <source>Move Right</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Рух праворуч</translation>
+        <translation type="unfinished">Рухатися праворуч</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1161"/>
         <source>Move Up</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Рух вгору</translation>
+        <translation type="unfinished">Рухатися вгору</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1170"/>
         <source>Move Down</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Рух вниз</translation>
+        <translation type="unfinished">Рухатися вниз</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1179"/>
         <source>&amp;Front</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Фронт</translation>
+        <translation type="unfinished">&amp;Спереду</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1188"/>
         <source>&amp;Back</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Назад</translation>
+        <translation type="unfinished">&amp;Ззаду</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1197"/>
         <source>&amp;Top</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Топ</translation>
+        <translation type="unfinished">&amp;Згори</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1206"/>
         <source>B&amp;ottom</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Дно</translation>
+        <translation type="unfinished">&amp;Знизу</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1215"/>
         <source>&amp;Left</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Ліворуч</translation>
+        <translation type="unfinished">&amp;Зліва</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1224"/>
         <source>&amp;Right</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;правильно</translation>
+        <translation type="unfinished">&amp;Справа</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1233"/>
         <source>&amp;Home</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;додому</translation>
+        <translation type="unfinished">&amp;Початковий вигляд</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1251"/>
         <source>Camera 1</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера 1</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1260"/>
         <source>Camera 2</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера 2</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1269"/>
         <source>Camera 3</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера 3</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1278"/>
         <source>Camera 4</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера 4</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1287"/>
         <source>Camera 5</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера 5</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1296"/>
         <source>Camera 6</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера 6</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1305"/>
         <source>Camera 7</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера 7</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1314"/>
         <source>Camera 8</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера 8</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1323"/>
         <source>Camera 9</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера 9</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1332"/>
         <source>Camera 10</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера 10</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1341"/>
         <source>Camera 11</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера 11</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1350"/>
         <source>Camera 12</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера 12</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1359"/>
         <source>Camera 13</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера 13</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1368"/>
         <source>Camera 14</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера 14</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1377"/>
         <source>Camera 15</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера 15</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1386"/>
         <source>Camera 16</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера 16</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1395"/>
         <source>First</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">перше</translation>
+        <translation type="unfinished">Перший</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1404"/>
         <source>Previous</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Попередній</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1413"/>
         <source>Next</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Далі</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1422"/>
         <source>Last</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Останній</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1431"/>
         <source>Insert Before</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вставити перед</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1440"/>
         <source>Insert After</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вставити після</translation>
     </message>
     <message>
@@ -3359,32 +3229,27 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1458"/>
         <source>Add Keys</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Додати ключі</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1503"/>
         <source>Split &amp;Horizontal</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Розділ по горизонталі</translation>
+        <translation type="unfinished">&amp;Розділити горизонтально</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1512"/>
         <source>Split &amp;Vertical</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Спліт по вертикалі</translation>
+        <translation type="unfinished">&amp;Розділити вертикально</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1521"/>
         <source>Re&amp;move View</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Видалити перегляд</translation>
+        <translation type="unfinished">Ви&amp;далити вигляд</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1530"/>
         <source>Rese&amp;t Views</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Скинути перегляди</translation>
+        <translation type="unfinished">Ски&amp;нути вигляди</translation>
     </message>
     <message>
         <source>Standard</source>
@@ -3426,32 +3291,27 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1673"/>
         <source>&amp;Full Screen</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Повний екран</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1682"/>
         <source>Close &amp;Tab</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Закрити вкладку</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1691"/>
         <source>&amp;Wireframe</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Каркас</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1700"/>
         <source>&amp;Flat Shading</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Плоске затінення</translation>
+        <translation type="unfinished">&amp;Плоске освітлення</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1709"/>
         <source>&amp;Default Lights</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Світло за замовчуванням</translation>
+        <translation type="unfinished">&amp;Типове освітлення</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1718"/>
@@ -3476,13 +3336,11 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1754"/>
         <source>&amp;Perspective</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Перспектива</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1763"/>
         <source>&amp;Orthographic</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Орфографічний</translation>
     </message>
     <message>
@@ -3493,7 +3351,6 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1781"/>
         <source>Axis Icon</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Значок осі</translation>
     </message>
     <message>
@@ -3504,8 +3361,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1799"/>
         <source>Fade Previous Steps</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зникнення попередніх кроків</translation>
+        <translation type="unfinished">Згасання попередніх кроків</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1808"/>
@@ -4505,25 +4361,21 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2545"/>
         <source>&amp;Delete</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Видалити</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2554"/>
         <source>&amp;Duplicate</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;дублікат</translation>
+        <translation type="unfinished">&amp;Дублювати</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2563"/>
         <source>&amp;Paint Selected</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Вибрана фарба</translation>
+        <translation type="unfinished">&amp;Фарбувати вибране</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2599"/>
         <source>Reset &amp;Pivot Point</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Скинути опорну точку</translation>
     </message>
     <message>
@@ -4544,104 +4396,87 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2617"/>
         <source>Insert Control Point</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Вставте контрольну точку</translation>
+        <translation type="unfinished">Вставити контрольну точку</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2626"/>
         <source>Remove Control Point</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Видалити контрольну точку</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2680"/>
         <source>Focus Next Connection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перейти до наступного підключення</translation>
+        <translation type="unfinished">Перейти до наступного з’єднання</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2689"/>
         <source>Focus Previous Connection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перейти до попереднього підключення</translation>
+        <translation type="unfinished">Перейти до попереднього з’єднання</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2698"/>
         <source>Rotate Train Track</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Повернути колію поїзда</translation>
+        <translation type="unfinished">Повернути залізничну колію</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2707"/>
         <source>Move +X</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемістіть +X</translation>
+        <translation type="unfinished">Перемістити +X</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2716"/>
         <source>Move -X</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемістіть -X</translation>
+        <translation type="unfinished">Перемістити -X</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2725"/>
         <source>Move +Y</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемістіть +Y</translation>
+        <translation type="unfinished">Перемістити +Y</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2734"/>
         <source>Move -Y</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Переміщення -Y</translation>
+        <translation type="unfinished">Перемістити -Y</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2743"/>
         <source>Move +Z</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемістіть +Z</translation>
+        <translation type="unfinished">Перемістити +Z</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2752"/>
         <source>Move -Z</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Переміщення -Z</translation>
+        <translation type="unfinished">Перемістити -Z</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2761"/>
         <source>Rotate +X</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Обернути +X</translation>
+        <translation type="unfinished">Покрутити +X</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2770"/>
         <source>Rotate -X</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Повернути -X</translation>
+        <translation type="unfinished">Покрутити -X</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2779"/>
         <source>Rotate +Y</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Обернути +Y</translation>
+        <translation type="unfinished">Покрутити +Y</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2788"/>
         <source>Rotate -Y</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Обертати -Y</translation>
+        <translation type="unfinished">Покрутити -Y</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2797"/>
         <source>Rotate +Z</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Повернути +Z</translation>
+        <translation type="unfinished">Покрутити +Z</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2806"/>
         <source>Rotate -Z</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Поворот -Z</translation>
+        <translation type="unfinished">Покрутити -Z</translation>
     </message>
     <message>
         <source>Minifig &amp;Wizard...</source>
@@ -4651,7 +4486,6 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2824"/>
         <source>A&amp;rray...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Масив...</translation>
     </message>
     <message>
@@ -4672,85 +4506,71 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2869"/>
         <source>Edit Selected Submodel</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Редагувати вибрану підмодель</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2878"/>
         <source>End Submodel Editing</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Завершити редагування підмоделі</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2887"/>
         <source>&amp;Group...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Група...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2896"/>
         <source>&amp;Ungroup</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Розгрупувати</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2905"/>
         <source>&amp;Add to Group</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Додати до групи</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2914"/>
         <source>Re&amp;move from Group</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Видалити з групи</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2923"/>
         <source>&amp;Edit Groups...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Редагувати групи...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2932"/>
         <source>&amp;Hide Selected</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Приховати вибране</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2941"/>
         <source>Hide &amp;Unselected</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&amp;Сховати невибране</translation>
+        <translation type="unfinished">Приховати &amp;невибране</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2950"/>
         <source>&amp;Unhide Selected</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Показати вибране</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2959"/>
         <source>U&amp;nhide All</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Показати все</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2968"/>
         <source>Show Earlier</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Показати Раніше</translation>
+        <translation type="unfinished">Показати раніше</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2977"/>
         <source>Show Later</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Показати пізніше</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2986"/>
         <source>New Submodel...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Нова підмодель...</translation>
     </message>
     <message>
@@ -4761,7 +4581,6 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3004"/>
         <source>Submodels...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Підмоделі...</translation>
     </message>
     <message>
@@ -4987,44 +4806,37 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3400"/>
         <source>&amp;About...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Про...</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3409"/>
         <source>Insert Step Before</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вставити крок перед</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3418"/>
         <source>Insert Step After</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вставити крок після</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3436"/>
         <source>Move Selection Here</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перемістити виділення сюди</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3445"/>
         <source>Move Selection Before</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перемістити виділення перед</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3454"/>
         <source>Move Selection After</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перемістити виділення після</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3463"/>
         <source>Set Current Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Установити поточний крок</translation>
+        <translation type="unfinished">Встановити поточний крок</translation>
     </message>
 </context>
 <context>
@@ -5047,14 +4859,12 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3477"/>
         <source>NewDirectionalLight</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Нове спрямоване світло</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3478"/>
         <source>NewAreaLight</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Нове освітлення області</translation>
+        <translation type="unfinished">Нове площинне світло</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3479"/>
@@ -5098,8 +4908,7 @@
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3486"/>
         <source>ColorPicker</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Палітра кольорів</translation>
+        <translation type="unfinished">Піпетка</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3487"/>
@@ -5184,25 +4993,21 @@
     <message>
         <location filename="../../source/core/sw_project.cpp" line="414"/>
         <source>Model &apos;%1&apos; was deleted.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Модель &apos;%1&apos; видалено.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_file.cpp" line="54"/>
         <source>Embedded data has no filename.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вбудовані дані не мають імені файлу.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_file.cpp" line="108"/>
         <source>Unexpected statement in embedded data &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Неочікувана заява у вбудованих даних &apos;%1&apos;.</translation>
+        <translation type="unfinished">Неочікуваний оператор у вбудованих даних &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_file.cpp" line="143"/>
         <source>Duplicate model &apos;%1&apos; was ignored; model names are case-insensitive.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Дубльована модель &apos;%1&apos; була проігнорована; назви моделей нечутливі до регістру.</translation>
     </message>
     <message>
@@ -5245,13 +5050,11 @@ File format is not recognized.</source>
         <location filename="../../source/core/sw_project_file.cpp" line="574"/>
         <location filename="../../source/core/sw_project_file.cpp" line="676"/>
         <source>Could not write all model data.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося записати всі дані моделі.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_import.cpp" line="75"/>
         <source>Merging would change texture &apos;%1&apos; used by model &apos;%2&apos;. Rename the conflicting texture before merging.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Об’єднання змінить текстуру &apos;%1&apos;, яка використовується моделлю &apos;%2&apos;. Перед об’єднанням перейменуйте конфліктну текстуру.</translation>
     </message>
     <message>
@@ -5343,37 +5146,31 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/core/sw_project_import.cpp" line="223"/>
         <source>Merged %1 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Об’єднано %1 </translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_import.cpp" line="242"/>
         <source>Could not reserve submodel name &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося зарезервувати назву підмоделі &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_file.cpp" line="793"/>
         <source>Cannot export different submodels named &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Неможливо експортувати різні субмоделі з назвою &apos;%1&apos;.</translation>
+        <translation type="unfinished">Неможливо експортувати різні підмоделі з назвою &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_file.cpp" line="843"/>
         <source>Could not serialize all model data.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося серіалізувати всі дані моделі.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_file.cpp" line="881"/>
         <source>Cannot export different embedded data named &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Неможливо експортувати різні вбудовані дані під назвою &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_project_import.cpp" line="416"/>
         <source>Clipboard contains no model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Буфер обміну не містить моделі.</translation>
     </message>
     <message>
@@ -5632,21 +5429,18 @@ File format is not recognized.</source>
         <location filename="../../source/library/sw_colors.cpp" line="396"/>
         <source>Solid</source>
         <comment>Colors</comment>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Твердий</translation>
+        <translation type="unfinished">Суцільний</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_colors.cpp" line="397"/>
         <source>Translucent</source>
         <comment>Colors</comment>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Напівпрозорий</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_colors.cpp" line="398"/>
         <source>Special</source>
         <comment>Colors</comment>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Особливий</translation>
     </message>
     <message>
@@ -6859,8 +6653,7 @@ File format is not recognized.</source>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1737"/>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1755"/>
         <source>%1 failed: %2</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">%1 не вдалося: %2</translation>
+        <translation type="unfinished">%1: помилка: %2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="526"/>
@@ -6944,19 +6737,16 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="10"/>
         <source>Create a new model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Створіть нову модель</translation>
+        <translation type="unfinished">Створити нову модель</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="19"/>
         <source>Open an existing model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Відкрити існуючу модель</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="28"/>
         <source>Merge the contents of another file with the current one</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Об’єднати вміст іншого файлу з поточним</translation>
     </message>
     <message>
@@ -6972,14 +6762,12 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="73"/>
         <source>Save the current model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Зберегти поточну модель</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="82"/>
         <source>Save the current model with a new name</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Збережіть поточну модель під новою назвою</translation>
+        <translation type="unfinished">Зберегти поточну модель під новою назвою</translation>
     </message>
     <message>
         <source>Save a picture of the current view</source>
@@ -6994,61 +6782,51 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="109"/>
         <source>Import all parts from an official set</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Імпортуйте всі елементи з офіційного набору</translation>
+        <translation type="unfinished">Імпортувати всі блоки з офіційного набору</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="118"/>
         <source>Export the current model in 3D Studio 3DS format</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Експортуйте поточну модель у формат 3D Studio 3DS</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="127"/>
         <source>Export the current model in COLLADA DAE format</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Експортуйте поточну модель у формат COLLADA DAE</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="136"/>
         <source>Create an HTML page for the current model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Створіть сторінку HTML для поточної моделі</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="154"/>
         <source>Export a list of parts used in BrickLink XML format</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Експортуйте список фрагментів у форматі BrickLink XML</translation>
+        <translation type="unfinished">Експортувати список використаних блоків у форматі BrickLink XML</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="163"/>
         <source>Export a list of parts used in comma delimited file format</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Експортуйте список фрагментів, які використовуються у форматі файлу, розділеного комами</translation>
+        <translation type="unfinished">Експортувати список використаних блоків у форматі файлу, розділеного комами</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="172"/>
         <source>Export the current model in POV-Ray format</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Експортуйте поточну модель у форматі POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="181"/>
         <source>Export the current model in Wavefront OBJ format</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Експортуйте поточну модель у формат Wavefront OBJ</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="190"/>
         <source>Render the current model using POV-Ray</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Візуалізуйте поточну модель за допомогою POV-Ray</translation>
+        <translation type="unfinished">Вимальовувати поточну модель за допомогою POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="208"/>
         <source>Configure instructions layout</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Налаштувати макет інструкцій</translation>
     </message>
     <message>
@@ -7067,44 +6845,37 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="244"/>
         <location filename="../../source/application/sw_commands.cpp" line="253"/>
         <source>Open this model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Відкрийте цю модель</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="262"/>
         <source>Quit the application; prompts to save model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вийти з програми; пропонує зберегти модель</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="271"/>
         <source>Undo the last action</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Скасувати останню дію</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="280"/>
         <source>Redo the previously undone action</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Повторити раніше скасовану дію</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="289"/>
         <source>Cut the selection and put it on the Clipboard</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виріжте виділення та помістіть його в буфер обміну</translation>
+        <translation type="unfinished">Вирізати виділене та помістити в буфер обміну</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="298"/>
         <source>Copy the selection and put it on the Clipboard</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Скопіюйте виділення та помістіть його в буфер обміну</translation>
+        <translation type="unfinished">Скопіювати виділене та помістити в буфер обміну</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="388"/>
         <source>Select all parts in the model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть усі частини моделі</translation>
+        <translation type="unfinished">Виділити всі блоки моделі</translation>
     </message>
     <message>
         <source>De-select everything</source>
@@ -7114,19 +6885,16 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="406"/>
         <source>Invert the current selection set</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Інвертувати поточний вибір</translation>
+        <translation type="unfinished">Інвертувати поточне виділення</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="460"/>
         <source>Select objects by name</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть об’єкти за назвою</translation>
+        <translation type="unfinished">Виділити об’єкти за назвою</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="307"/>
         <source>Insert Clipboard contents in the current step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вставити вміст буфера обміну в поточний крок</translation>
     </message>
     <message>
@@ -7137,8 +6905,7 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="199"/>
         <source>Render the current model using Blender</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Візуалізуйте поточну модель за допомогою Blender</translation>
+        <translation type="unfinished">Вимальовувати поточну модель за допомогою Blender</translation>
     </message>
     <message>
         <source>Open the current model in Blender</source>
@@ -7148,50 +6915,42 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="316"/>
         <source>Insert Clipboard contents in their original steps</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Вставте вміст буфера обміну згідно з початковими кроками</translation>
+        <translation type="unfinished">Вставити вміст буфера обміну в початкові кроки</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="325"/>
         <source>Find part</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Знайти шматок</translation>
+        <translation type="unfinished">Знайти блок</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="334"/>
         <source>Find next part</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Знайдіть наступний фрагмент</translation>
+        <translation type="unfinished">Знайти наступний блок</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="343"/>
         <source>Find previous part</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Знайди попередній фрагмент</translation>
+        <translation type="unfinished">Знайти попередній блок</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="352"/>
         <source>Find all parts that match the search criteria</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Знайдіть усі елементи, які відповідають критеріям пошуку</translation>
+        <translation type="unfinished">Знайти всі блоки, що відповідають критеріям пошуку</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="361"/>
         <source>Replace part</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Замінити шматок</translation>
+        <translation type="unfinished">Замінити блок</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="370"/>
         <source>Replace next part</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Замініть наступний шматок</translation>
+        <translation type="unfinished">Замінити наступний блок</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="379"/>
         <source>Replace all parts that match the search criteria</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Замініть усі елементи, які відповідають критеріям пошуку</translation>
+        <translation type="unfinished">Замінити всі блоки, що відповідають критеріям пошуку</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="397"/>
@@ -7202,62 +6961,52 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="469"/>
         <source>Select one part at a time</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть по одній частині</translation>
+        <translation type="unfinished">Виділяти по одному блоку</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="478"/>
         <source>Select all parts of the same type</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть усі частини одного типу</translation>
+        <translation type="unfinished">Виділяти всі блоки одного типу</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="487"/>
         <source>Select all parts of the same color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть усі частини одного кольору</translation>
+        <translation type="unfinished">Виділяти всі блоки одного кольору</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="496"/>
         <source>Select all parts of the same type and color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть усі частини одного типу та кольору</translation>
+        <translation type="unfinished">Виділяти всі блоки одного типу та кольору</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="505"/>
         <source>Move and rotate objects relative to the one that has focus</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Переміщуйте та повертайте об’єкти відносно того, на якому знаходиться фокус</translation>
+        <translation type="unfinished">Переміщувати та обертати об’єкти відносно того, що у фокусі</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="514"/>
         <source>Move and rotate objects in absolute coordinates</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Переміщення та обертання об’єктів в абсолютних координатах</translation>
+        <translation type="unfinished">Переміщувати та обертати об’єкти в абсолютних координатах</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="523"/>
         <source>Toggle moving and rotating objects relative to the one that has focus</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемикайте рухомі та обертові об’єкти відносно того, що має фокус</translation>
+        <translation type="unfinished">Перемкнути переміщення й обертання об’єктів відносно того, що у фокусі</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="532"/>
         <source>Rotate selected parts separately</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Повертайте вибрані частини окремо</translation>
+        <translation type="unfinished">Обертати вибрані блоки окремо</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="541"/>
         <source>Rotate selected parts together</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Обертайте вибрані частини разом</translation>
+        <translation type="unfinished">Обертати вибрані блоки разом</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="550"/>
         <source>Toggle rotating selected parts separately</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемкнути обертання вибраних частин окремо</translation>
+        <translation type="unfinished">Перемкнути окреме обертання вибраних блоків</translation>
     </message>
     <message>
         <source>Toggle snap axes</source>
@@ -7267,230 +7016,192 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="568"/>
         <source>Do not snap movement along the XY plane</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Не фіксуйте рух по площині XY</translation>
+        <translation type="unfinished">Не прив’язувати переміщення по площині XY</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="577"/>
         <source>Snap movement along the XY plane to 1/20 stud</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Прив’язка руху вздовж площини XY до шпильки 1/20</translation>
+        <translation type="unfinished">Прив’язка переміщення по площині XY до 1/20 шипа</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="586"/>
         <source>Snap movement along the XY plane to 1/4 stud</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Прив’язка руху вздовж площини XY до 1/4 шпильки</translation>
+        <translation type="unfinished">Прив’язка переміщення по площині XY до 1/4 шипа</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="595"/>
         <source>Snap movement along the XY plane to 1 flat</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Прив’язка руху вздовж площини XY до 1 плоскості</translation>
+        <translation type="unfinished">Прив’язка переміщення по площині XY до 1 пластини</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="604"/>
         <source>Snap movement along the XY plane to 1/2 stud</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Прив’язка руху вздовж площини XY до 1/2 шпильки</translation>
+        <translation type="unfinished">Прив’язка переміщення по площині XY до 1/2 шипа</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="613"/>
         <source>Snap movement along the XY plane to 1 stud</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Прив’язка руху по площині XY до 1 шпильки</translation>
+        <translation type="unfinished">Прив’язка переміщення по площині XY до 1 шипа</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="622"/>
         <source>Snap movement along the XY plane to 2 studs</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Прив&apos;язати рух по площині XY до 2 шпильок</translation>
+        <translation type="unfinished">Прив’язка переміщення по площині XY до 2 шипів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="631"/>
         <source>Snap movement along the XY plane to 3 studs</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Прив’язка руху по площині XY до 3 шпильок</translation>
+        <translation type="unfinished">Прив’язка переміщення по площині XY до 3 шипів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="640"/>
         <source>Snap movement along the XY plane to 4 studs</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Переміщення прив’язки по площині XY до 4 шпильок</translation>
+        <translation type="unfinished">Прив’язка переміщення по площині XY до 4 шипів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="649"/>
         <source>Snap movement along the XY plane to 8 studs</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Переміщення прив’язки по площині XY до 8 шпильок</translation>
+        <translation type="unfinished">Прив’язка переміщення по площині XY до 8 шипів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="658"/>
         <source>Do not snap movement along the Z axis</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Не фіксуйте рух по осі Z</translation>
+        <translation type="unfinished">Не прив’язувати переміщення по осі Z</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="667"/>
         <source>Snap movement along the Z axis to 1/20 stud</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Прив’язка руху вздовж осі Z до шпильки 1/20</translation>
+        <translation type="unfinished">Прив’язка переміщення по осі Z до 1/20 шипа</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="676"/>
         <source>Snap movement along the Z axis to 1/4 stud</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Переміщення прив’язки вздовж осі Z до шпильки 1/4</translation>
+        <translation type="unfinished">Прив’язка переміщення по осі Z до 1/4 шипа</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="685"/>
         <source>Snap movement along the Z axis to 1 flat</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Прив’язка руху вздовж осі Z до 1 плоскості</translation>
+        <translation type="unfinished">Прив’язка переміщення по осі Z до 1 пластини</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="694"/>
         <source>Snap movement along the Z axis to 1/2 stud</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Прив’язка руху по осі Z до 1/2 шпильки</translation>
+        <translation type="unfinished">Прив’язка переміщення по осі Z до 1/2 шипа</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="703"/>
         <source>Snap movement along the Z axis to 1 stud</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Прив’язка руху по осі Z до 1 шпильки</translation>
+        <translation type="unfinished">Прив’язка переміщення по осі Z до 1 шипа</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="712"/>
         <source>Snap movement along the Z axis to 1 brick</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Прив&apos;язка руху по осі Z до 1 цеглини</translation>
+        <translation type="unfinished">Прив’язка переміщення по осі Z до 1 цегли</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="721"/>
         <source>Snap movement along the Z axis to 2 bricks</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Прив&apos;язка руху по осі Z до 2 цеглинок</translation>
+        <translation type="unfinished">Прив’язка переміщення по осі Z до 2 цеглин</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="730"/>
         <source>Snap movement along the Z axis to 4 bricks</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Прив&apos;язка руху по осі Z до 4 цеглинок</translation>
+        <translation type="unfinished">Прив’язка переміщення по осі Z до 4 цеглин</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="739"/>
         <source>Snap movement along the Z axis to 8 bricks</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Прив&apos;язка руху по осі Z до 8 цеглинок</translation>
+        <translation type="unfinished">Прив’язка переміщення по осі Z до 8 цеглин</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="748"/>
         <source>Snap rotations to fixed intervals</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Прив’язка поворотів до фіксованих інтервалів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="757"/>
         <source>Do not snap rotations</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Не фіксуйте обертання</translation>
+        <translation type="unfinished">Не прив’язувати обертання</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="766"/>
         <source>Snap rotations to 1 degree</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Повороти на 1 градус</translation>
+        <translation type="unfinished">Прив’язка обертання до 1 градуса</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="775"/>
         <source>Snap rotations to 5 degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Повороти на 5 градусів</translation>
+        <translation type="unfinished">Прив’язка обертання до 5 градусів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="784"/>
         <source>Snap rotations to 15 degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Повороти на 15 градусів</translation>
+        <translation type="unfinished">Прив’язка обертання до 15 градусів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="793"/>
         <source>Snap rotations to 22.5 degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Швидке обертання до 22,5 градусів</translation>
+        <translation type="unfinished">Прив’язка обертання до 22,5 градуса</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="802"/>
         <source>Snap rotations to 30 degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Повороти на 30 градусів</translation>
+        <translation type="unfinished">Прив’язка обертання до 30 градусів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="811"/>
         <source>Snap rotations to 45 degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Повороти на 45 градусів</translation>
+        <translation type="unfinished">Прив’язка обертання до 45 градусів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="820"/>
         <source>Snap rotations to 60 degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Обертання на 60 градусів</translation>
+        <translation type="unfinished">Прив’язка обертання до 60 градусів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="829"/>
         <source>Snap rotations to 90 degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Обертання на 90 градусів</translation>
+        <translation type="unfinished">Прив’язка обертання до 90 градусів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="838"/>
         <source>Snap rotations to 180 degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Обертання на 180 градусів</translation>
+        <translation type="unfinished">Прив’язка обертання до 180 градусів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="865"/>
         <source>Apply transform to selected objects</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Застосувати трансформацію до виділених об’єктів</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="874"/>
         <source>Switch to absolute translation mode when applying transforms</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемикайтеся в режим абсолютного перекладу під час застосування трансформацій</translation>
+        <translation type="unfinished">Перемкнутися в режим абсолютного переміщення під час застосування трансформацій</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="883"/>
         <source>Switch to relative translation mode when applying transforms</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемикайтеся в режим відносного перекладу під час застосування трансформацій</translation>
+        <translation type="unfinished">Перемкнутися в режим відносного переміщення під час застосування трансформацій</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="892"/>
         <source>Switch to absolute rotation mode when applying transforms</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемикайтеся в режим абсолютного обертання під час застосування трансформацій</translation>
+        <translation type="unfinished">Перемкнутися в режим абсолютного обертання під час застосування трансформацій</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="901"/>
         <source>Switch to relative rotation mode when applying transforms</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемикання в режим відносного обертання під час застосування трансформацій</translation>
+        <translation type="unfinished">Перемкнутися в режим відносного обертання під час застосування трансформацій</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="910"/>
         <source>Add new parts to the model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Додайте нові деталі до моделі</translation>
+        <translation type="unfinished">Додати нові блоки до моделі</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="919"/>
         <source>Add new point light sources to the model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Додайте до моделі нові точкові джерела світла</translation>
+        <translation type="unfinished">Додати до моделі нові точкові джерела світла</translation>
     </message>
     <message>
         <source>Add new spot lights to the model</source>
@@ -7505,32 +7216,27 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="946"/>
         <source>Add new area light sources to the model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Додайте до моделі нові джерела світла області</translation>
+        <translation type="unfinished">Додати до моделі нові джерела площинного світла</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="955"/>
         <source>Create a new camera</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Створіть нову камеру</translation>
+        <translation type="unfinished">Створити нову камеру</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="964"/>
         <source>Select objects (hold the CTRL key down or drag the mouse to select multiple objects)</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть об’єкти (утримуйте клавішу CTRL або перетягніть мишу, щоб вибрати кілька об’єктів)</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="973"/>
         <source>Move selected objects</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перемістити виділені об’єкти</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="982"/>
         <source>Rotate selected parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Повертайте вибрані частини</translation>
+        <translation type="unfinished">Обертати вибрані блоки</translation>
     </message>
     <message>
         <source>Delete objects</source>
@@ -7546,61 +7252,51 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1018"/>
         <source>Get part color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Отримайте колір шматка</translation>
+        <translation type="unfinished">Взяти колір блока</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1027"/>
         <source>Zoom in or out</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Збільшити або зменшити масштаб</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1036"/>
         <source>Pan the current view</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Панорама поточного перегляду</translation>
+        <translation type="unfinished">Подвинути поточний вигляд</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1045"/>
         <source>Rotate the current view</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Обернути поточний вигляд</translation>
+        <translation type="unfinished">Повернути поточний вигляд</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1054"/>
         <source>Roll the current view</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Прокрутити поточний перегляд</translation>
+        <translation type="unfinished">Нахилити поточний вигляд</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1063"/>
         <source>Zoom into a region of the screen</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Збільште масштаб екрана</translation>
+        <translation type="unfinished">Масштабувати ділянку екрана</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1072"/>
         <source>Cancel current mouse action</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Скасувати поточну дію миші</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1081"/>
         <source>Change program settings</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Змінити налаштування програми</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1090"/>
         <source>Zoom in</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Збільшити</translation>
+        <translation type="unfinished">Збільшити масштаб</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1099"/>
         <source>Zoom out</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Зменшити масштаб</translation>
     </message>
     <message>
@@ -7654,92 +7350,77 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1117"/>
         <source>Rotate view so selected parts are at center</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Оберніть вигляд, щоб вибрані частини були в центрі</translation>
+        <translation type="unfinished">Повернути вигляд, щоб вибрані блоки були в центрі</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1126"/>
         <source>Move the current view forward</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемістити поточний перегляд вперед</translation>
+        <translation type="unfinished">Перемістити поточний вигляд вперед</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1135"/>
         <source>Move the current view backward</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемістити поточний перегляд назад</translation>
+        <translation type="unfinished">Перемістити поточний вигляд назад</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1144"/>
         <source>Move the current view to the left</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перемістити поточний вигляд ліворуч</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1153"/>
         <source>Move the current view to the right</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемістити поточне подання вправо</translation>
+        <translation type="unfinished">Перемістити поточний вигляд праворуч</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1162"/>
         <source>Move the current view up</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемістити поточний перегляд вгору</translation>
+        <translation type="unfinished">Перемістити поточний вигляд вгору</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1171"/>
         <source>Move the current view down</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемістити поточний перегляд вниз</translation>
+        <translation type="unfinished">Перемістити поточний вигляд вниз</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1180"/>
         <source>View model from the front</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Вигляд моделі спереду</translation>
+        <translation type="unfinished">Переглянути модель спереду</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1189"/>
         <source>View model from the back</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Огляд моделі ззаду</translation>
+        <translation type="unfinished">Переглянути модель ззаду</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1198"/>
         <source>View model from the top</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Переглянути модель зверху</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1207"/>
         <source>View model from the bottom</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Переглянути модель знизу</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1216"/>
         <source>View model from the left</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Переглянути модель зліва</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1225"/>
         <source>View model from the right</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Переглянути модель справа</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1234"/>
         <source>View model from the default position</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перегляньте модель із положення за замовчуванням</translation>
+        <translation type="unfinished">Переглянути модель із типового положення</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1243"/>
         <source>Do not use a camera</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Не використовуйте камеру</translation>
+        <translation type="unfinished">Не використовувати камеру</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1252"/>
@@ -7759,46 +7440,39 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="1378"/>
         <location filename="../../source/application/sw_commands.cpp" line="1387"/>
         <source>Use this camera</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Використовуйте цю камеру</translation>
+        <translation type="unfinished">Використовувати цю камеру</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1396"/>
         <source>Go to the first step of the model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перейдіть до першого кроку моделі</translation>
+        <translation type="unfinished">Перейти до першого кроку моделі</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1405"/>
         <source>Go to the previous step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перейти до попереднього кроку</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1414"/>
         <source>Go to the next step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перейдіть до наступного кроку</translation>
+        <translation type="unfinished">Перейти до наступного кроку</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1423"/>
         <source>Go to the last step of the model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перейдіть до останнього кроку моделі</translation>
+        <translation type="unfinished">Перейти до останнього кроку моделі</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1432"/>
         <location filename="../../source/application/sw_commands.cpp" line="3410"/>
         <source>Insert a new step before the current step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вставити новий крок перед поточним кроком</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1441"/>
         <location filename="../../source/application/sw_commands.cpp" line="3419"/>
         <source>Insert a new step after the current step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Вставте новий крок після поточного кроку</translation>
+        <translation type="unfinished">Вставити новий крок після поточного кроку</translation>
     </message>
     <message>
         <source>Remove current step</source>
@@ -7808,32 +7482,27 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1459"/>
         <source>Toggle adding new animation keys</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Увімкнути/вимкнути додавання нових клавіш анімації</translation>
+        <translation type="unfinished">Увімкнути або вимкнути додавання нових ключів анімації</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1504"/>
         <source>Split the current view horizontally</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Розділити поточний вигляд по горизонталі</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1513"/>
         <source>Split the current view vertically</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Розділити поточний вигляд по вертикалі</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1522"/>
         <source>Remove the current view</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Видалити поточний перегляд</translation>
+        <translation type="unfinished">Видалити поточний вигляд</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1531"/>
         <source>Reset all views</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Скинути всі перегляди</translation>
+        <translation type="unfinished">Скинути всі вигляди</translation>
     </message>
     <message>
         <source>Toggle the Standard Toolbar</source>
@@ -7893,26 +7562,22 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1683"/>
         <source>Close current tab</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Закрити поточну вкладку</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1692"/>
         <source>Display the scene as wireframe</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відобразіть сцену як каркас</translation>
+        <translation type="unfinished">Відобразити сцену як каркас</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1701"/>
         <source>Display the scene without any shading or lights</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відображайте сцену без затемнення чи світла</translation>
+        <translation type="unfinished">Відображати сцену без затінення та освітлення</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1710"/>
         <source>Display the scene with the default lights</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відображення сцени зі світлом за замовчуванням</translation>
+        <translation type="unfinished">Відображати сцену з типовим освітленням</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1719"/>
@@ -7937,37 +7602,31 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1755"/>
         <source>Set the current camera to use a perspective projection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Налаштуйте поточну камеру на використання перспективної проекції</translation>
+        <translation type="unfinished">Використовувати для поточної камери перспективну проекцію</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1764"/>
         <source>Set the current camera to use an orthographic projection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Налаштуйте поточну камеру на використання ортографічної проекції</translation>
+        <translation type="unfinished">Використовувати для поточної камери ортографічну проекцію</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1773"/>
         <source>Toggle the view cube</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемикання куба перегляду</translation>
+        <translation type="unfinished">Перемкнути куб візуалізації</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1782"/>
         <source>Toggle axis icon</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Значок перемикання осі</translation>
+        <translation type="unfinished">Перемкнути значок осей</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1791"/>
         <source>Toggle grid</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемикати сітку</translation>
+        <translation type="unfinished">Перемкнути сітку</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1800"/>
         <source>Toggle fading previous model steps</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перемкнути згасання попередніх кроків моделі</translation>
     </message>
     <message>
@@ -8534,8 +8193,7 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2528"/>
         <source>Add a new part to the model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Додайте новий фрагмент до моделі</translation>
+        <translation type="unfinished">Додати новий блок до моделі</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2537"/>
@@ -8545,20 +8203,17 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2546"/>
         <source>Delete selected objects</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Видалити виділені об&apos;єкти</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2555"/>
         <source>Create a copy of the selected parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Створіть копію вибраних частин</translation>
+        <translation type="unfinished">Створити копію вибраних блоків</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2564"/>
         <source>Change the color of the selected parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Змініть колір вибраних частин</translation>
+        <translation type="unfinished">Змінити колір вибраних блоків</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2582"/>
@@ -8573,8 +8228,7 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2600"/>
         <source>Reset the pivot point of the selected parts to their origin</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Скинути точку опори вибраних частин до їхнього початку</translation>
+        <translation type="unfinished">Скинути опорну точку вибраних блоків до їхньої початкової точки</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2609"/>
@@ -8639,52 +8293,44 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2618"/>
         <source>Insert a new control point</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Вставте нову контрольну точку</translation>
+        <translation type="unfinished">Вставити нову контрольну точку</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2627"/>
         <source>Remove the selected control point</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Видаліть вибрану контрольну точку</translation>
+        <translation type="unfinished">Видалити вибрану контрольну точку</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2681"/>
         <source>Focus the next connection of the currently selected track</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Фокус наступного підключення поточної вибраної доріжки</translation>
+        <translation type="unfinished">Перейти до наступного з’єднання вибраної колії</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2690"/>
         <source>Focus the previous connection of the currently selected track</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Фокусувати попереднє підключення поточної вибраної доріжки</translation>
+        <translation type="unfinished">Перейти до попереднього з’єднання вибраної колії</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2699"/>
         <source>Rotate the focused train track around its last connection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Поверніть вибрану залізничну колію навколо її останнього сполучення</translation>
+        <translation type="unfinished">Повернути вибрану залізничну колію навколо її останнього з’єднання</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2708"/>
         <location filename="../../source/application/sw_commands.cpp" line="2717"/>
         <source>Move selected objects along the X axis</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перемістити виділені об’єкти вздовж осі X</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2726"/>
         <location filename="../../source/application/sw_commands.cpp" line="2735"/>
         <source>Move selected objects along the Y axis</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перемістити виділені об’єкти вздовж осі Y</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2744"/>
         <location filename="../../source/application/sw_commands.cpp" line="2753"/>
         <source>Move selected objects along the Z axis</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перемістити виділені об’єкти вздовж осі Z</translation>
     </message>
     <message>
@@ -8731,8 +8377,7 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2825"/>
         <source>Make copies of the selected parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зробіть копії вибраних частин</translation>
+        <translation type="unfinished">Створити копії вибраних блоків</translation>
     </message>
     <message>
         <source>Open the model referenced by the selected part in a new tab</source>
@@ -8752,97 +8397,81 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2870"/>
         <source>Edit the currently selected submodel in-place</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відредагуйте вибрану субмодель на місці</translation>
+        <translation type="unfinished">Редагувати вибрану підмодель на місці</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2879"/>
         <source>End in-place submodel editing</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Завершити редагування підмоделі на місці</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2888"/>
         <source>Group selected parts together</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Згрупуйте вибрані частини разом</translation>
+        <translation type="unfinished">Згрупувати вибрані блоки разом</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2897"/>
         <source>Ungroup selected group</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Розгрупувати вибрану групу</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2906"/>
         <source>Add focused part to selected group</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Додати виділену частину до вибраної групи</translation>
+        <translation type="unfinished">Додати блок у фокусі до вибраної групи</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2915"/>
         <source>Remove focused part from group</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Видалити виділену частину з групи</translation>
+        <translation type="unfinished">Видалити блок у фокусі з групи</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2924"/>
         <source>Edit groups</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Редагувати групи</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2933"/>
         <source>Hide selected objects</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Приховати виділені об&apos;єкти</translation>
+        <translation type="unfinished">Приховати виділені об’єкти</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2942"/>
         <source>Hide objects that are not selected</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Приховати невибрані об’єкти</translation>
+        <translation type="unfinished">Приховати невиділені об’єкти</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2951"/>
         <source>Show hidden objects that are selected</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Показати вибрані приховані об&apos;єкти</translation>
+        <translation type="unfinished">Показати приховані об’єкти, які виділені</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2960"/>
         <source>Show all hidden objects</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Показати всі приховані об&apos;єкти</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2969"/>
         <source>Show selected parts one step earlier</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Показати вибрані частини на крок раніше</translation>
+        <translation type="unfinished">Показати вибрані блоки на крок раніше</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2978"/>
         <source>Show selected parts one step later</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Показати вибрані частини на один крок пізніше</translation>
+        <translation type="unfinished">Показати вибрані блоки на крок пізніше</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2987"/>
         <source>Create a new submodel</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Створіть нову підмодель</translation>
+        <translation type="unfinished">Створити нову підмодель</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2996"/>
         <source>Display the properties of the current submodel</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відображення властивостей поточної підмоделі</translation>
+        <translation type="unfinished">Показати властивості поточної підмоделі</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3005"/>
         <source>Show a list of all submodels</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Показати список усіх підмоделей</translation>
     </message>
     <message>
@@ -8887,13 +8516,11 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="3356"/>
         <location filename="../../source/application/sw_commands.cpp" line="3365"/>
         <source>Switch to this submodel</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перейдіть на цю підмодель</translation>
+        <translation type="unfinished">Перейти до цієї підмоделі</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3374"/>
         <source>Click a control to read its contextual help</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Натисніть елемент керування, щоб прочитати його контекстну довідку</translation>
     </message>
     <message>
@@ -8914,32 +8541,27 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3401"/>
         <source>Display program version number and system information</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відображення номера версії програми та інформації про систему</translation>
+        <translation type="unfinished">Показати номер версії програми та інформацію про систему</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3437"/>
         <source>Move the selected parts into this step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перемістіть вибрані частини на цей крок</translation>
+        <translation type="unfinished">Перемістити вибрані блоки в цей крок</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3446"/>
         <source>Move the selected parts into a new step before this</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перед цим перемістіть вибрані фрагменти на новий крок</translation>
+        <translation type="unfinished">Перемістити вибрані блоки в новий крок перед цим</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3455"/>
         <source>Move the selected parts into a new step after this</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Після цього перемістіть вибрані фрагменти на новий крок</translation>
+        <translation type="unfinished">Перемістити вибрані блоки в новий крок після цього</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3464"/>
         <source>View the model at this point in the timeline</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перегляньте модель у цей момент на шкалі часу</translation>
+        <translation type="unfinished">Переглянути модель у цей момент на часовій шкалі</translation>
     </message>
 </context>
 <context>
@@ -9164,13 +8786,11 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="272"/>
         <source>&lt;p&gt;&lt;b&gt;Undo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reverse the most recent model edit, such as inserting, moving, painting, or deleting an object. Repeat Undo to move backward through the edit history.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Скасувати&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Скасувати останнє редагування моделі, наприклад вставити, перемістити, зафарбувати або видалити об’єкт. Повторіть Скасувати, щоб перейти назад по історії редагування.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="281"/>
         <source>&lt;p&gt;&lt;b&gt;Redo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reapply an edit that was reversed with Undo. Making a new edit after Undo replaces the redo history with the new sequence of edits.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Повторити&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Повторно застосувати редагування, яке було скасовано за допомогою функції «Скасувати». Внесення нової правки після скасування замінює історію повторень новою послідовністю редагувань.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -9413,56 +9033,47 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="911"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Part Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a part in the Parts dock and a color in Colors, then use this tool in the model view to place the part. Movement snapping controls placement increments. Use the preview to check placement before inserting the part.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Вставити деталь»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть деталь у док-станції «Деталі» та колір у «Кольорах», а потім скористайтеся цим інструментом у вікні моделі, щоб розмістити деталь. Прив’язка руху керує кроками розміщення. Використовуйте попередній перегляд, щоб перевірити розташування перед вставленням деталі.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Вставити блок»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть блок у панелі «Блоки» та колір у «Кольорах», а потім скористайтеся цим інструментом у вигляді моделі, щоб розмістити блок. Прилипання переміщення керує кроками розміщення. Використовуйте попередній перегляд, щоб перевірити розташування перед вставленням блока.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="920"/>
         <source>&lt;p&gt;&lt;b&gt;Point Light Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use the model view to place a light that emits in all directions from a point. Select the light afterward to edit its color, shadow settings, and renderer-specific power in Properties.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Точкове світло»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Використовуйте вид моделі, щоб розмістити світло, яке випромінює в усіх напрямках від точки. Потім виберіть світло, щоб змінити його колір, налаштування тіні та потужність рендерера у властивостях.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="929"/>
         <source>&lt;p&gt;&lt;b&gt;Spotlight Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use the model view to create a directed cone of light. In Properties, adjust its position and target, cone angle, penumbra, and renderer-specific power.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Прожектор»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Використовуйте вид моделі, щоб створити спрямований конус світла. У «Властивості» налаштуйте його положення та ціль, кут конуса, півтінь і потужність рендерера.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="938"/>
         <source>&lt;p&gt;&lt;b&gt;Directional Light Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create a light with parallel rays, such as sunlight. Its direction determines the illumination. Select it to adjust its transform, color, and renderer-specific settings in Properties.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Спрямоване світло»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Створіть світло з паралельними променями, як-от сонячне світло. Його напрямок визначає освітленість. Виберіть його, щоб налаштувати параметри трансформації, кольору та засобу відтворення у властивостях.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Спрямоване світло»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Створіть світло з паралельними променями, як-от сонячне світло. Його напрямок визначає освітленість. Виберіть його, щоб налаштувати параметри трансформації, кольору та засобу вимальовування у властивостях.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="947"/>
         <source>&lt;p&gt;&lt;b&gt;Area Light Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create a light that emits over an area. Select it to set the area shape and size in Properties, along with color and renderer-specific settings.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Освітлення зони»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Створіть світло, яке випромінює область. Виберіть його, щоб установити форму та розмір області у властивостях, а також налаштування кольору та засобу візуалізації.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Площинне світло»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Створіть світло, яке випромінює з площі. Виберіть його, щоб задати форму та розмір площі у властивостях, а також колір і налаштування засобу вимальовування.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="956"/>
         <source>&lt;p&gt;&lt;b&gt;Camera Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create a camera in the model view. Select the camera to edit its position, target, projection, and field of view in Properties. To look through the camera, choose it from View &amp;gt; Cameras.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Камера»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Створіть камеру в режимі перегляду моделі. Виберіть камеру, щоб відредагувати її положення, ціль, проекцію та поле зору у властивостях. Щоб переглянути камеру, виберіть її в меню «Вигляд» &gt; «Камери».&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="965"/>
         <source>&lt;p&gt;&lt;b&gt;Select Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pick objects in the model view or drag a selection rectangle. Selection Mode controls whether matching part types or colors are included. The focused object provides the reference for relative transforms.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Вибір»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть об’єкти в поданні моделі або перетягніть прямокутник виділення. Режим вибору контролює, чи включено відповідні типи деталей або кольори. Фокусований об’єкт забезпечує посилання для відносних перетворень.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Виділити»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вибирайте об’єкти у вигляді моделі або перетягніть прямокутник виділення. Режим виділення визначає, чи додаються блоки того самого типу або кольору. Об’єкт у фокусі слугує точкою відліку для відносних трансформацій.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="974"/>
         <source>&lt;p&gt;&lt;b&gt;Move Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select the objects to move, then drag in the model view. Use the manipulator to constrain movement to an axis or plane. Movement Snap sets the increments, and Transform Options selects the coordinate reference.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Переміщення»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть об’єкти, які потрібно перемістити, а потім перетягніть їх у вікні моделі. Використовуйте маніпулятор, щоб обмежити рух віссю або площиною. Movement Snap встановлює кроки, а Transform Options вибирає прив’язку координат.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Переміщення»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть об’єкти для переміщення, а потім перетягніть їх у вікні моделі. Використовуйте маніпулятор, щоб обмежити рух віссю або площиною. «Прилипання переміщення» задає кроки, а «Параметри трансформації» вибирають систему координат.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="983"/>
         <source>&lt;p&gt;&lt;b&gt;Rotate Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select objects, then drag a rotation handle in the model view. Rotation Snap sets the angle increments. Transform Options chooses relative or model axes and whether parts rotate together or separately.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент обертання&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть об’єкти, а потім перетягніть ручку обертання у вікні моделі. Rotation Snap встановлює кроки кута. Параметри трансформації вибирають відносні осі чи осі моделі та обертають частини разом чи окремо.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Покрутити»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть об’єкти, а потім перетягніть ручку обертання у вікні моделі. «Прилипання обертання» задає кроки кута. «Параметри трансформації» вибирають відносні осі або осі моделі та те, чи обертаються блоки разом чи окремо.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1073"/>
@@ -10177,67 +9788,56 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1001"/>
         <source>&lt;p&gt;&lt;b&gt;Paint Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the replacement color in the Colors dock, then click parts in the model view to recolor them. To recolor the current selection together, use the color button above the swatches.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Малювання»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть колір заміни в док-станції «Кольори», а потім клацніть деталі в поданні моделі, щоб перефарбувати їх. Щоб змінити колір поточного виділення разом, скористайтеся кнопкою кольору над зразками.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Фарбувати»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть колір заміни на панелі «Кольори», а потім клацніть блоки у вигляді моделі, щоб перефарбувати їх. Щоб змінити колір поточного виділення разом, скористайтеся кнопкою кольору над зразками.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1019"/>
         <source>&lt;p&gt;&lt;b&gt;Color Picker Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Click a part in the model view to make its color the current color. You can then use that color for insertion or painting; sampling it does not recolor the part.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент вибору кольору&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Клацніть деталь у поданні моделі, щоб зробити її колір поточним. Потім ви можете використовувати цей колір для вставки або малювання; вибірка не змінює колір деталі.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Піпетка»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Клацніть блок у виді моделі, щоб зробити його колір поточним. Потім цей колір можна використати для вставки або фарбування; взяття кольору не змінює колір блока.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1028"/>
         <source>&lt;p&gt;&lt;b&gt;Zoom Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag in the model view to move the viewpoint closer to or farther from the model. This changes the view rather than resizing parts. Use Zoom Region to frame a particular area.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент масштабування&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетягніть у поданні моделі, щоб перемістити точку огляду ближче або далі від моделі. Це змінює вигляд, а не розмір частин. Використовуйте Zoom Region, щоб обрамити певну область.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Масштабувати»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетягніть у виді моделі, щоб наблизити або віддалити точку огляду від моделі. Це змінює вигляд, а не розмір блоків. Використовуйте «Масштабувати регіон», щоб охопити певну ділянку.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1037"/>
         <source>&lt;p&gt;&lt;b&gt;Pan Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag to shift the view sideways or vertically without moving the model. Use this to reposition the model on screen while keeping the viewing direction.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент &quot;Панорамування&quot;&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетягніть, щоб зсунути вигляд убік або вертикально, не переміщуючи модель. Використовуйте це, щоб змінити положення моделі на екрані, зберігаючи напрямок перегляду.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Подвинути»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетягніть, щоб зсунути вигляд убік або вгору-вниз, не переміщуючи модель. Це дає змогу змінити положення моделі на екрані, зберігаючи напрямок огляду.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1046"/>
         <source>&lt;p&gt;&lt;b&gt;Orbit Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag to orbit the view around its center and inspect the model from another direction. This rotates the viewpoint rather than the selected parts; use Rotate for object edits.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Обертання»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетягніть, щоб обертати подання навколо його центру та оглядати модель з іншого боку. Це повертає точку огляду, а не вибрані частини; використовуйте Rotate для редагування об’єктів.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Прокрутити»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетягніть, щоб обертати вигляд навколо його центру та оглядати модель з іншого боку. Це повертає точку огляду, а не вибрані блоки; для редагування об’єктів використовуйте «Покрутити».&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1055"/>
         <source>&lt;p&gt;&lt;b&gt;Roll Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag to turn the view around its viewing axis, tilting what appears upright on screen. Model parts keep their positions and orientations.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент Roll&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетягніть, щоб повернути вигляд навколо його осі перегляду, нахиляючи те, що відображається на екрані вертикально. Частини моделі зберігають своє положення та орієнтацію.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Нахилити»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетягніть, щоб повернути вигляд навколо осі огляду, нахиляючи те, що на екрані стоїть прямо. Блоки моделі зберігають своє положення та орієнтацію.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1064"/>
         <source>&lt;p&gt;&lt;b&gt;Zoom Region Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag a rectangle around the area you want to inspect. The view zooms to frame that region without changing model geometry.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент масштабування регіону&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетягніть прямокутник навколо області, яку потрібно перевірити. Перегляд масштабується, щоб обрамити цю область без зміни геометрії моделі.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інструмент «Масштабувати регіон»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетягніть прямокутник навколо ділянки, яку потрібно оглянути. Вигляд наблизиться, щоб охопити цю ділянку, без зміни геометрії моделі.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1397"/>
         <source>&lt;p&gt;&lt;b&gt;First Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the model at its first building step. Step navigation changes which parts are visible; it does not move parts to a different step.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Перший крок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Покажіть модель на її першому етапі побудови. Поетапна навігація змінює, які деталі є видимими; він не переміщує частини на інший крок.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Перший крок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати модель на її першому кроці побудови. Навігація по кроках змінює те, які блоки видимі; вона не переносить блоки на інший крок.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1406"/>
         <source>&lt;p&gt;&lt;b&gt;Previous Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the model one building step earlier. Parts introduced in later steps are hidden so you can inspect the earlier stage of construction.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Попередній крок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Покажіть модель на один крок побудови раніше. Деталі, додані на наступних етапах, приховані, щоб ви могли перевірити попередній етап будівництва.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Попередній крок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Покажіть модель на один крок побудови раніше. Блоки, додані на наступних етапах, приховані, щоб ви могли перевірити попередній етап будівництва.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1415"/>
         <source>&lt;p&gt;&lt;b&gt;Next Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the next building step to reveal the next stage of the model. Use the Timeline to change which step introduces a part.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Наступний крок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Відображення наступного етапу побудови, щоб показати наступний етап моделі. Використовуйте часову шкалу, щоб змінити крок, який вводить твір.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Наступний крок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати наступний крок побудови, щоб відкрити наступний етап моделі. Використовуйте часову шкалу, щоб змінити крок, на якому з’являється блок.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1424"/>
         <source>&lt;p&gt;&lt;b&gt;Last Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the last building step of the current model. Use this to return to the completed model after inspecting earlier steps.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Останній крок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Відображення останнього етапу будівництва поточної моделі. Використовуйте це, щоб повернутися до завершеної моделі після перевірки попередніх кроків.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -10549,7 +10149,6 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_about.ui"/>
         <source>StudWorx version running on this computer.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">На цьому комп’ютері працює версія StudWorx.</translation>
     </message>
     <message>
@@ -10574,13 +10173,11 @@ File format is not recognized.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_about.ui"/>
         <source>Select and copy system information for a problem report.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть і скопіюйте інформацію про систему для звіту про проблему.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_about.ui"/>
         <source>&lt;p&gt;&lt;b&gt;System Information&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Shows the Qt runtime and build versions, graphics driver and renderer, OpenGL and shader versions, buffer sizes, and supported graphics features. Select the text and copy it with the standard keyboard shortcut to include it in a problem report.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Інформація про систему&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показує версії середовища виконання та збірки Qt, графічний драйвер і рендерер, версії OpenGL і шейдерів, розміри буферів і підтримувані графічні функції. Виділіть текст і скопіюйте його за допомогою стандартної комбінації клавіш, щоб включити його у звіт про проблему.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -10619,10 +10216,11 @@ Depth Buffer: %2 bits
 Stencil Buffer: %3 bits
 
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Буфер кольорів: %1 бітів
 Буфер глибини: %2 бітів
-Буфер трафаретів: %3 бітів</translation>
+Буфер трафаретів: %3 бітів
+
+</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_about.cpp" line="37"/>
@@ -10631,11 +10229,11 @@ Framebuffers: %2
 BlendFuncSeparate: %3
 Anisotropic: %4
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Буфери: %1
 Framebuffers: %2
 BlendFuncSeparate: %3
-Anisotropic: %4</translation>
+Anisotropic: %4
+</translation>
     </message>
     <message>
         <source>Color Buffer: %1 bits %2 %3
@@ -10732,8 +10330,8 @@ POV-Ray renders can use the LGEO part library by Lutz Uhlmann.</source>
         <location filename="../../source/application/sw_application.cpp" line="908"/>
         <source>Not enough parameters for the &apos;%1&apos; option.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Недостатньо параметрів для опції &apos;%1&apos;.</translation>
+        <translation type="unfinished">Недостатньо параметрів для опції &apos;%1&apos;.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="801"/>
@@ -10751,15 +10349,15 @@ POV-Ray renders can use the LGEO part library by Lutz Uhlmann.</source>
         <location filename="../../source/application/sw_application.cpp" line="1236"/>
         <source>Invalid parameter value specified for the &apos;%1&apos; option: &apos;%2&apos;.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Недійсне значення параметра, указане для параметра &apos;%1&apos;: &apos;%2&apos;.</translation>
+        <translation type="unfinished">Недійсне значення параметра, указане для опції &apos;%1&apos;: &apos;%2&apos;.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="919"/>
         <source>The file &apos;%1&apos; is not readable.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Файл &apos;%1&apos; не читається.</translation>
+        <translation type="unfinished">Файл &apos;%1&apos; не читається.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1287"/>
@@ -11036,22 +10634,21 @@ Information:
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1869"/>
         <source>The file &apos;%1&apos; has no parts to render.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">У файлі &apos;%1&apos; немає деталей для відтворення.</translation>
+        <translation type="unfinished">У файлі &apos;%1&apos; немає блоків для вимальовування.</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="971"/>
         <source>Invalid parameter values specified for the &apos;%1&apos; option: limits are +/- 360.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Недійсні значення параметрів, указані для параметра &apos;%1&apos;: обмеження становлять +/- 360.</translation>
+        <translation type="unfinished">Недійсні значення параметрів, указані для параметра &apos;%1&apos;: обмеження становлять +/- 360.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1034"/>
         <source>Invalid parameter values specified for the &apos;%1&apos; option: requirements are: 1 &lt;= &lt;near&gt; &lt; &lt;far&gt;.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Недійсні значення параметрів, указані для опції &apos;%1&apos;: вимоги: 1 &lt;= &lt;near&gt; &lt; &lt;far&gt;.</translation>
+        <translation type="unfinished">Недійсні значення параметрів, указані для опції &apos;%1&apos;: вимоги: 1 &lt;= &lt;near&gt; &lt; &lt;far&gt;.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1340"/>
@@ -11087,15 +10684,15 @@ Information:
         <location filename="../../source/application/sw_application.cpp" line="1389"/>
         <source>High contrast stud style is required for the &apos;%1&apos; option but is not enabled.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Для параметра &apos;%1&apos; необхідний висококонтрастний стиль шпильки, але він не ввімкнений.</translation>
+        <translation type="unfinished">Для параметра &apos;%1&apos; потрібен висококонтрастний стиль шипів, але він не ввімкнений.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1378"/>
         <source>Automate edge color is required for the &apos;%1&apos; option but is not enabled.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Для параметра &apos;%1&apos; необхідний автоматичний колір краю, але він не ввімкнений.</translation>
+        <translation type="unfinished">Для параметра &apos;%1&apos; потрібен автоматичний колір країв, але він не ввімкнений.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="609"/>
@@ -11149,22 +10746,22 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <location filename="../../source/application/sw_application.cpp" line="990"/>
         <source>The camera position is too close to the camera target of the &apos;%1&apos; option.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Розташування камери занадто близько до об’єкта камери параметра &apos;%1&apos;.</translation>
+        <translation type="unfinished">Позиція камери надто близько до цілі камери параметра &apos;%1&apos;.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="995"/>
         <source>Invalid up vector length specified for the &apos;%1&apos; option.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Недійсна довжина вектора вгору, указана для параметра &apos;%1&apos;.</translation>
+        <translation type="unfinished">Недійсна довжина вектора вгору, указана для параметра &apos;%1&apos;.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1000"/>
         <source>The up vector is parallel to the front vector specified for the &apos;%1&apos; option.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Верхній вектор паралельний передньому вектору, визначеному для опції &apos;%1&apos;.</translation>
+        <translation type="unfinished">Вектор «вгору» паралельний вектору «вперед», указаному для параметра &apos;%1&apos;.
+</translation>
     </message>
     <message>
         <source>StudWorx Continuous Build %1
@@ -11183,15 +10780,15 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <location filename="../../source/application/sw_application.cpp" line="1281"/>
         <source>Compiled %1
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Складено %1</translation>
+        <translation type="unfinished">Зібрано %1
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1286"/>
         <source>Usage: studworx [options] [file]
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Використання: studworx [параметри] [файл]</translation>
+        <translation type="unfinished">Використання: studworx [параметри] [файл]
+</translation>
     </message>
     <message>
         <source>  [options] can be:
@@ -11227,8 +10824,8 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <location filename="../../source/application/sw_application.cpp" line="1293"/>
         <source>  -w, --width &lt;width&gt;: Set the picture width.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  -w, --width &lt;width&gt;: встановити ширину зображення.</translation>
+        <translation type="unfinished">  -w, --width &lt;width&gt;: встановити ширину зображення.
+</translation>
     </message>
     <message>
         <source>  -h, --height &lt;height&gt;: Set the picture height.
@@ -11240,43 +10837,43 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <location filename="../../source/application/sw_application.cpp" line="1295"/>
         <source>  -f, --from &lt;step&gt;: Set the first step to save pictures.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  -f, --from &lt;step&gt;: встановити перший крок для збереження зображень.</translation>
+        <translation type="unfinished">  -f, --from &lt;step&gt;: встановити перший крок для збереження зображень.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1296"/>
         <source>  -t, --to &lt;step&gt;: Set the last step to save pictures.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  -t, --to &lt;step&gt;: встановити останній крок для збереження зображень.</translation>
+        <translation type="unfinished">  -t, --to &lt;step&gt;: встановити останній крок для збереження зображень.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1297"/>
         <source>  -s, --submodel &lt;submodel&gt;: Set the active submodel.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  -s, --submodel &lt;submodel&gt;: встановити активну підмодель.</translation>
+        <translation type="unfinished">  -s, --submodel &lt;submodel&gt;: встановити активну підмодель.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1302"/>
         <source>  --camera-angles &lt;latitude&gt; &lt;longitude&gt;: Set the camera angles in degrees around the model.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  --camera-angles &lt;latitude&gt; &lt;longitude&gt;: установіть кути камери в градусах навколо моделі.</translation>
+        <translation type="unfinished">  --camera-angles &lt;latitude&gt; &lt;longitude&gt;: установіть кути камери в градусах навколо моделі.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1303"/>
         <source>  --camera-position &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: Set the camera position, target and up vector.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  --camera-position &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: установіть положення камери, ціль і вгору вектор.</translation>
+        <translation type="unfinished">  --camera-position &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: установіть положення камери, ціль і вгору вектор.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1304"/>
         <source>  --camera-position-ldraw &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: Set the camera position, target and up vector using LDraw coordinates.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  --camera-position-ldraw &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: установіть положення камери, ціль і вектор вгору, використовуючи координати LDraw.</translation>
+        <translation type="unfinished">  --camera-position-ldraw &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: установіть положення камери, ціль і вектор вгору, використовуючи координати LDraw.
+</translation>
     </message>
     <message>
         <source>  --orthographic: Render images using an orthographic projection.
@@ -11307,29 +10904,29 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <location filename="../../source/application/sw_application.cpp" line="1313"/>
         <source>  --fade-steps: Render parts from prior steps faded.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  --fade-steps: Візуалізація фрагментів із попередніх кроків вицвіла.</translation>
+        <translation type="unfinished">  --fade-steps: Вимальовувати блоки з попередніх кроків зі згасанням.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1314"/>
         <source>  --no-fade-steps: Do not render parts from prior steps faded.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  --no-fade-steps: Не відтворюйте фрагменти з попередніх кроків блідими.</translation>
+        <translation type="unfinished">  --no-fade-steps: Не вимальовувати блоки з попередніх кроків зі згасанням.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1316"/>
         <source>  --highlight: Highlight parts in the steps they appear.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  --highlight: виділіть частини в кроках, які вони з’являться.</translation>
+        <translation type="unfinished">  --highlight: виділяти блоки на кроках, де вони з’являються.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1317"/>
         <source>  --no-highlight: Do not highlight parts in the steps they appear.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  --no-highlight: Не виділяйте фрагменти в кроках, які вони з’являються.</translation>
+        <translation type="unfinished">  --no-highlight: Не виділяти блоки на кроках, де вони з’являються.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1310"/>
@@ -11341,8 +10938,8 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <location filename="../../source/application/sw_application.cpp" line="1311"/>
         <source>  --line-width &lt;width&gt;: Set the width of the edge lines.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  --line-width &lt;width&gt;: Установіть ширину крайових ліній.</translation>
+        <translation type="unfinished">  --line-width &lt;width&gt;: Установіть ширину крайових ліній.
+</translation>
     </message>
     <message>
         <source>  -nscc, --disable-stud-cylinder-color: Disable high contrast stud cylinder color.
@@ -11482,8 +11079,8 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <location filename="../../source/application/sw_application.cpp" line="1359"/>
         <source>  -v, --version: Output version information and exit.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  -v, --version: Вивести інформацію про версію та завершити роботу.</translation>
+        <translation type="unfinished">  -v, --version: Вивести інформацію про версію та завершити роботу.
+</translation>
     </message>
     <message>
         <source>  -?, --help: Display this help message and exit.
@@ -11495,8 +11092,8 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <location filename="../../source/application/sw_application.cpp" line="1366"/>
         <source>Unknown option: &apos;%1&apos;.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Невідомий варіант: &apos;%1&apos;.</translation>
+        <translation type="unfinished">Невідомий параметр: &apos;%1&apos;.
+</translation>
     </message>
     <message>
         <source>High contrast stud and edge color settings are ignored when -aec or --automate-edge-color is set.
@@ -11508,8 +11105,8 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <location filename="../../source/application/sw_application.cpp" line="1419"/>
         <source>--viewpoint is ignored when --camera is set.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">--viewpoint ігнорується, коли встановлено --camera.</translation>
+        <translation type="unfinished">--viewpoint ігнорується, коли встановлено --camera.
+</translation>
     </message>
     <message>
         <source>--orthographic is ignored when --camera is set.
@@ -11521,43 +11118,43 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <location filename="../../source/application/sw_application.cpp" line="1425"/>
         <source>--camera-angles is ignored when --camera is set.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">--camera-angles ігнорується, коли встановлено --camera.</translation>
+        <translation type="unfinished">--camera-angles ігнорується, коли встановлено --camera.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1428"/>
         <source>--camera-position is ignored when --camera is set.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">--camera-position ігнорується, коли встановлено --camera.</translation>
+        <translation type="unfinished">--camera-position ігнорується, коли встановлено --camera.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1433"/>
         <source>--camera-angles is ignored when --viewpoint is set.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">--camera-angles ігнорується, коли встановлено --viewpoint.</translation>
+        <translation type="unfinished">--camera-angles ігнорується, коли встановлено --viewpoint.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1436"/>
         <source>--camera-position is ignored when --viewpoint is set.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">--camera-position ігнорується, коли встановлено --viewpoint.</translation>
+        <translation type="unfinished">--camera-position ігнорується, коли встановлено --viewpoint.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1441"/>
         <source>--camera-position is ignored when --camera-angles is set.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">--camera-position ігнорується, коли встановлено --camera-angles.</translation>
+        <translation type="unfinished">--camera-position ігнорується, коли встановлено --camera-angles.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1448"/>
         <source>No file name specified.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Ім&apos;я файлу не вказано.</translation>
+        <translation type="unfinished">Назву файлу не вказано.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1607"/>
@@ -11650,15 +11247,15 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
         <location filename="../../source/application/sw_application.cpp" line="1300"/>
         <source>  -c, --camera &lt;camera name&gt;: Set the active camera.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  -c, --camera &lt;camera name&gt;: встановити активну камеру.</translation>
+        <translation type="unfinished">  -c, --camera &lt;camera name&gt;: встановити активну камеру.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1301"/>
         <source>  --viewpoint &lt;viewpoint&gt;: Set the view to one of the preset viewpoints (front, back, left, right, top, bottom, home).
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  --viewpoint &lt;viewpoint&gt;: Установіть одну із попередньо встановлених точок огляду (спереду, ззаду, ліворуч, праворуч, зверху, знизу, додому).</translation>
+        <translation type="unfinished">  --viewpoint &lt;viewpoint&gt;: встановити один із наперед заданих виглядів (front, back, left, right, top, bottom, home).
+</translation>
     </message>
     <message>
         <source>  --fade-steps-color &lt;#AARRGGBB&gt;: Rendering color for prior step parts.
@@ -11670,15 +11267,15 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
         <location filename="../../source/application/sw_application.cpp" line="1318"/>
         <source>  --highlight-color &lt;#AARRGGBB&gt;: Rendering color for highlighted parts.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  --highlight-color &lt;#AARRGGBB&gt;: колір відтворення для виділених частин.</translation>
+        <translation type="unfinished">  --highlight-color &lt;#AARRGGBB&gt;: колір вимальовування виділених блоків.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1309"/>
         <source>  --shading &lt;mode&gt;: Select shading mode for rendering (wireframe, flat, default, full).
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">  --shading &lt;mode&gt;: Виберіть режим затінення для візуалізації (каркасний, плоский, за замовчуванням, повний).</translation>
+        <translation type="unfinished">  --shading &lt;mode&gt;: вибрати режим затінення для вимальовування (wireframe, flat, default, full).
+</translation>
     </message>
     <message>
         <source>  --aa-samples &lt;samples&gt;: Anti-aliasing sample size (1, 2, 4, or 8).
@@ -11708,8 +11305,8 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
         <location filename="../../source/application/sw_application.cpp" line="1593"/>
         <source>Command line image export is not supported on iOS.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Експорт зображення командного рядка не підтримується в iOS.</translation>
+        <translation type="unfinished">Експорт зображення з командного рядка не підтримується в iOS.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="639"/>
@@ -11792,8 +11389,8 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
         <location filename="../../source/application/sw_application.cpp" line="1736"/>
         <source>Error: model &apos;%1&apos; does not exist.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Помилка: модель &apos;%1&apos; не існує.</translation>
+        <translation type="unfinished">Помилка: модель &apos;%1&apos; не існує.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1787"/>
@@ -11809,8 +11406,8 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
         <location filename="../../source/application/sw_application.cpp" line="2244"/>
         <source>Saved &apos;%1&apos;.
 </source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Збережено &apos;%1&apos;.</translation>
+        <translation type="unfinished">Збережено &apos;%1&apos;.
+</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_application.cpp" line="1952"/>
@@ -11856,8 +11453,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Array&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create repeated copies of the selected parts using up to three array dimensions. Each row defines a count, an offset, and a rotation increment.&lt;/p&gt;&lt;p&gt;Counts include the original selection. For example, counts of 3, 2, and 1 create five new copies of each selected part. Set an offset or rotation to keep copies from overlapping.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Масив&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Створюйте повторювані копії вибраних частин, використовуючи до трьох розмірів масиву. Кожен рядок визначає кількість, зміщення та крок обертання.&lt;/p&gt;&lt;p&gt;Кількість включає вихідний вибір. Наприклад, підрахунок 3, 2 і 1 створює п’ять нових копій кожного вибраного деталі. Установіть зсув або поворот, щоб копії не накладалися.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Масив&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Створюйте повторювані копії вибраних блоків, використовуючи до трьох розмірів масиву. Кожен рядок визначає кількість, зміщення та крок обертання.&lt;/p&gt;&lt;p&gt;Кількість включає вихідне виділення. Наприклад, кількості 3, 2 і 1 створюють п’ять нових копій кожного вибраного блока. Установіть зміщення або обертання, щоб копії не накладалися.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -11877,44 +11473,37 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Number of positions in dimension 3, including the original.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Кількість позицій у розмірі 3, включаючи оригінал.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 count</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Кількість розмірів 3</translation>
+        <translation type="unfinished">Кількість у розмірі 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Number of positions in dimension 1, including the original.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Кількість позицій у розмірі 1, включаючи оригінал.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 count</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Кількість розміру 1</translation>
+        <translation type="unfinished">Кількість у розмірі 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Number of positions in dimension 2, including the original.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Кількість позицій у розмірі 2, включаючи оригінал.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 count</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Кількість розмірів 2</translation>
+        <translation type="unfinished">Кількість у розмірі 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Offsets&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Each row sets the X, Y, and Z displacement per step in the corresponding array dimension. Values use the model axes and LDraw units; 20 units equal one stud width. Negative values reverse the direction.&lt;/p&gt;&lt;p&gt;For a straight row spaced one stud apart along X, use a count greater than 1 and an X offset of 20 in the same row.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Зміщення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Кожен рядок встановлює зсув X, Y та Z на крок у відповідному розмірі масиву. Значення використовують осі моделі та одиниці LDraw; 20 одиниць дорівнюють одній ширині шпильки. Від’ємні значення змінюють напрямок.&lt;/p&gt;&lt;p&gt;Для прямого ряду, віддаленого на одну шпильку вздовж X, використовуйте кількість, більшу за 1, і зміщення X 20 у тому самому рядку.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Зміщення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Кожен рядок встановлює зміщення X, Y та Z на крок у відповідному розмірі масиву. Значення використовують осі моделі та одиниці LDraw; 20 одиниць дорівнюють ширині одного шипа. Від’ємні значення змінюють напрямок.&lt;/p&gt;&lt;p&gt;Для прямого ряду з кроком в один шип уздовж X використовуйте кількість, більшу за 1, і зміщення X 20 у тому самому рядку.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -11924,116 +11513,97 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Y offset per step in dimension 1, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зміщення Y на крок у вимірі 1, в одиницях LDraw.</translation>
+        <translation type="unfinished">Зміщення Y на крок у розмірі 1, в одиницях LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 Y offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Розмір 1 Зміщення Y</translation>
+        <translation type="unfinished">Зміщення Y у розмірі 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>X offset per step in dimension 2, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зміщення X на крок у вимірі 2, в одиницях LDraw.</translation>
+        <translation type="unfinished">Зміщення X на крок у розмірі 2, в одиницях LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 X offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Розмір 2 X зміщення</translation>
+        <translation type="unfinished">Зміщення X у розмірі 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>X offset per step in dimension 1, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зсув X на крок у вимірі 1, в одиницях LDraw.</translation>
+        <translation type="unfinished">Зміщення X на крок у розмірі 1, в одиницях LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 X offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Розмір 1 X зміщення</translation>
+        <translation type="unfinished">Зміщення X у розмірі 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>X offset per step in dimension 3, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зсув X на крок у розмірності 3, в одиницях LDraw.</translation>
+        <translation type="unfinished">Зміщення X на крок у розмірі 3, в одиницях LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 X offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Розмір 3 X зміщення</translation>
+        <translation type="unfinished">Зміщення X у розмірі 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Z offset per step in dimension 1, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зміщення Z на крок у розмірності 1, в одиницях LDraw.</translation>
+        <translation type="unfinished">Зміщення Z на крок у розмірі 1, в одиницях LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 Z offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зміщення розміру 1 Z</translation>
+        <translation type="unfinished">Зміщення Z у розмірі 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Y offset per step in dimension 2, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зсув Y на крок у розмірності 2, в одиницях LDraw.</translation>
+        <translation type="unfinished">Зміщення Y на крок у розмірі 2, в одиницях LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 Y offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Розмір 2 зміщення Y</translation>
+        <translation type="unfinished">Зміщення Y у розмірі 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Y offset per step in dimension 3, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зсув Y на крок у розмірності 3, в одиницях LDraw.</translation>
+        <translation type="unfinished">Зміщення Y на крок у розмірі 3, в одиницях LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 Y offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Розмір 3 зміщення Y</translation>
+        <translation type="unfinished">Зміщення Y у розмірі 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Z offset per step in dimension 2, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зміщення Z на крок у розмірності 2, в одиницях LDraw.</translation>
+        <translation type="unfinished">Зміщення Z на крок у розмірі 2, в одиницях LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 Z offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зміщення розміру 2 Z</translation>
+        <translation type="unfinished">Зміщення Z у розмірі 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Z offset per step in dimension 3, in LDraw units.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зміщення Z на крок у розмірності 3, в одиницях LDraw.</translation>
+        <translation type="unfinished">Зміщення Z на крок у розмірі 3, в одиницях LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 Z offset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зміщення розміру 3 Z</translation>
+        <translation type="unfinished">Зміщення Z у розмірі 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Rotations&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Each row sets the rotation increment around the X, Y, and Z model axes, in degrees, for its array dimension. Rotations from all three dimensions are added, then applied in X, Y, Z order before the offset.&lt;/p&gt;&lt;p&gt;Copies rotate around the focused part origin, or the selection center when no part has focus. Negative values reverse the rotation.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Обертання&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Кожен рядок встановлює крок обертання навколо осей X, Y і Z моделі в градусах для свого розміру масиву. Обертання з усіх трьох вимірів додаються, а потім застосовуються в порядку X, Y, Z перед зсувом.&lt;/p&gt;&lt;p&gt;Копії обертаються навколо вихідної точки деталі або центру виділення, якщо деталь не має фокусу. Від’ємні значення змінюють обертання.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Обертання&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Кожен рядок встановлює крок обертання навколо осей X, Y і Z моделі в градусах для свого розміру масиву. Обертання з усіх трьох вимірів додаються, а потім застосовуються в порядку X, Y, Z перед зміщенням.&lt;/p&gt;&lt;p&gt;Копії обертаються навколо початку блока у фокусі або навколо центру виділення, якщо жоден блок не у фокусі. Від’ємні значення змінюють напрямок обертання.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
@@ -12043,110 +11613,92 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Z rotation per step in dimension 3, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Поворот Z на крок у розмірі 3, у градусах.</translation>
+        <translation type="unfinished">Обертання Z на крок у розмірі 3, у градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 Z rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Розмір 3 обертання Z</translation>
+        <translation type="unfinished">Обертання Z у розмірі 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>X rotation per step in dimension 3, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Поворот X на крок у розмірі 3, у градусах.</translation>
+        <translation type="unfinished">Обертання X на крок у розмірі 3, у градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 X rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Розмір 3 X обертання</translation>
+        <translation type="unfinished">Обертання X у розмірі 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>X rotation per step in dimension 1, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Поворот X на крок у вимірі 1, у градусах.</translation>
+        <translation type="unfinished">Обертання X на крок у розмірі 1, у градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 X rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Розмір 1 X обертання</translation>
+        <translation type="unfinished">Обертання X у розмірі 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Z rotation per step in dimension 2, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Поворот Z на крок у розмірності 2, у градусах.</translation>
+        <translation type="unfinished">Обертання Z на крок у розмірі 2, у градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 Z rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Розмір 2 обертання Z</translation>
+        <translation type="unfinished">Обертання Z у розмірі 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Z rotation per step in dimension 1, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Поворот Z на крок у розмірі 1, у градусах.</translation>
+        <translation type="unfinished">Обертання Z на крок у розмірі 1, у градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 Z rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Розмір 1 обертання Z</translation>
+        <translation type="unfinished">Обертання Z у розмірі 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>X rotation per step in dimension 2, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Поворот X на крок у розмірі 2, у градусах.</translation>
+        <translation type="unfinished">Обертання X на крок у розмірі 2, у градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 X rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Розмір 2 X обертання</translation>
+        <translation type="unfinished">Обертання X у розмірі 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Y rotation per step in dimension 1, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Обертання Y на крок у розмірності 1, у градусах.</translation>
+        <translation type="unfinished">Обертання Y на крок у розмірі 1, у градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 1 Y rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Розмір 1 Обертання Y</translation>
+        <translation type="unfinished">Обертання Y у розмірі 1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Y rotation per step in dimension 2, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Обертання Y на крок у розмірі 2, у градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 2 Y rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Розмір 2 Обертання Y</translation>
+        <translation type="unfinished">Обертання Y у розмірі 2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Y rotation per step in dimension 3, in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Обертання Y на крок у розмірі 3, у градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.ui"/>
         <source>Dimension 3 Y rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Розмір 3 Обертання Y</translation>
+        <translation type="unfinished">Обертання Y у розмірі 3</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_array.cpp" line="100"/>
@@ -12254,7 +11806,6 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/library/sw_loader_asset.cpp" line="465"/>
         <source>Missing texture &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Відсутня текстура &apos;%1&apos;.</translation>
     </message>
     <message>
@@ -12275,7 +11826,6 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="21"/>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="27"/>
         <source>Edge Colors</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Кольори країв</translation>
     </message>
     <message>
@@ -12292,7 +11842,6 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="49"/>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="114"/>
         <source>Reset</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Скинути</translation>
     </message>
     <message>
@@ -12318,7 +11867,6 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="91"/>
         <source>High Contrast</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Високий контраст</translation>
     </message>
     <message>
@@ -12344,8 +11892,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="251"/>
         <source>Select Stud Cylinder Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір циліндра шпильки</translation>
+        <translation type="unfinished">Виберіть колір циліндра шипа</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="256"/>
@@ -12356,15 +11903,13 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="265"/>
         <source>Automate edge color appears to be enabled.&lt;br&gt;Black parts edge color will not be accessible.&lt;br&gt;Do you want to continue?</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Здається, автоматичний колір країв увімкнено.&lt;br&gt;Колір краю чорних фігур буде недоступним.&lt;br&gt;Продовжити?</translation>
+        <translation type="unfinished">Здається, автоматичний колір країв увімкнено.&lt;br&gt;Колір краю чорних блоків буде недоступним.&lt;br&gt;Продовжити?</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="264"/>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="269"/>
         <source>Select Black Edge Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть «Колір чорного краю».</translation>
+        <translation type="unfinished">Виберіть колір чорного краю</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;High Contrast Edge Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose custom stud and edge colors for high contrast stud styles. Enable an override with its checkbox, then choose its color. Light/Dark Value sets the threshold for dark-part edge colors. Automated edge colors take precedence over the part edge overrides.&lt;/p&gt;&lt;p&gt;Choose OK to return changes to Preferences, then choose OK in Preferences to keep them. Cancel discards changes in this dialog. Reset restores an individual control&apos;s default.&lt;/p&gt;</source>
@@ -12379,8 +11924,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="24"/>
         <source>&lt;p&gt;&lt;b&gt;Automated Edge Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Adjust the contrast and saturation used to calculate part edge colors. Both controls range from 0.00 to 1.00. Reset restores a control to 0.50.&lt;/p&gt;&lt;p&gt;Choose OK to return changes to Preferences, then choose OK in Preferences to keep them. Cancel discards changes in this dialog.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Автоматичні кольори країв&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Налаштуйте контрастність і насиченість, які використовуються для розрахунку кольорів країв деталей. Обидва елементи керування варіюються від 0,00 до 1,00. Скидання відновлює елемент керування до 0,50.&lt;/p&gt;&lt;p&gt;Виберіть OK, щоб повернути зміни до налаштувань, а потім натисніть OK у налаштуваннях, щоб зберегти їх. Скасувати скасовує зміни в цьому діалоговому вікні.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Автоматичні кольори країв&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Налаштуйте контрастність і насиченість, які використовуються для розрахунку кольорів країв блоків. Обидва елементи керування варіюються від 0,00 до 1,00. Скидання відновлює елемент керування до 0,50.&lt;/p&gt;&lt;p&gt;Виберіть OK, щоб повернути зміни до налаштувань, а потім натисніть OK у налаштуваннях, щоб зберегти їх. Скасувати скасовує зміни в цьому діалоговому вікні.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="73"/>
@@ -12390,19 +11934,16 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="74"/>
         <source>Set edge contrast from 0.00 to 1.00 (default 0.50).</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Встановіть контраст країв від 0,00 до 1,00 (за замовчуванням 0,50).</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="75"/>
         <source>&lt;p&gt;&lt;b&gt;Edge Contrast&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Adjust the contrast used by automated edge colors to distinguish edges from part surfaces. The range is 0.00 to 1.00; Reset restores 0.50.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Контраст країв&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Налаштуйте контраст, який використовується автоматичними кольорами країв, щоб відрізняти краї від поверхонь деталей. Діапазон від 0,00 до 1,00; Скидання відновлює 0,50.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Контраст країв&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Налаштуйте контраст, який використовується автоматичними кольорами країв, щоб відрізняти краї від поверхонь блоків. Діапазон від 0,00 до 1,00; Скидання відновлює 0,50.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="76"/>
         <source>Restore edge contrast to 0.50.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Відновити контрастність країв до 0,50.</translation>
     </message>
     <message>
@@ -12493,8 +12034,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="84"/>
         <source>&lt;p&gt;&lt;b&gt;Edge Saturation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Adjust the tint or shade used to calculate automated edge colors from part colors. The range is 0.00 to 1.00; Reset restores 0.50.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Насиченість країв&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Налаштуйте відтінок або тінь, які використовуються для автоматичного обчислення кольорів країв на основі кольорів деталей. Діапазон від 0,00 до 1,00; Скидання відновлює 0,50.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Насиченість країв&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Налаштуйте відтінок або тінь, які використовуються для автоматичного обчислення кольорів країв на основі кольорів блоків. Діапазон від 0,00 до 1,00; Скидання відновлює 0,50.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Restore the light/dark threshold to 0.50.</source>
@@ -12519,8 +12059,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="128"/>
         <source>Enable a custom color for stud cylinders in high contrast stud styles, then use the color button to choose it.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Увімкніть нестандартний колір для циліндрів шпильок у висококонтрастних стилях шпильок, а потім виберіть колір за допомогою кнопки кольору.</translation>
+        <translation type="unfinished">Увімкніть нестандартний колір для циліндрів шипів у висококонтрастних стилях шипів, а потім виберіть колір за допомогою кнопки кольору.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="130"/>
@@ -12530,8 +12069,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="131"/>
         <source>Enable a custom edge color for parts not covered by the black or dark overrides. Automated edge colors take precedence.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Увімкніть спеціальний колір країв для частин, які не покриваються чорним або темним перевизначенням. Автоматизовані кольори країв мають пріоритет.</translation>
+        <translation type="unfinished">Увімкніть спеціальний колір країв для блоків, які не покриваються чорним або темним перевизначенням. Автоматизовані кольори країв мають пріоритет.</translation>
     </message>
     <message>
         <source>Enable a custom edge color for black parts. This override takes priority over the dark-part and general edge colors. Automated edge colors take precedence.</source>
@@ -12546,15 +12084,13 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="278"/>
         <source>Automate edge color appears to be enabled.&lt;br&gt;Dark parts edge color will not be accessible.&lt;br&gt;Do you want to continue?</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Схоже, що автоматичний колір країв увімкнено.&lt;br&gt;Колір країв темних деталей буде недоступним.&lt;br&gt;Продовжити?</translation>
+        <translation type="unfinished">Здається, автоматичний колір країв увімкнено.&lt;br&gt;Колір краю темних блоків буде недоступним.&lt;br&gt;Продовжити?</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="277"/>
         <location filename="../../source/interface/dialogs/sw_dialog_color_edge.cpp" line="282"/>
         <source>Select Dark Edge Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть Темний колір краю</translation>
+        <translation type="unfinished">Виберіть темний колір краю</translation>
     </message>
 </context>
 <context>
@@ -13661,8 +13197,7 @@ Choose where to save it and build it now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_category.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Part Category&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Name a category and enter the expression used to find its parts in the library. Both fields are required. Choose OK to return the category changes to Preferences, then choose OK in Preferences to keep them. Cancel discards edits in this dialog.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Keyword Syntax&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Expressions match text in library part descriptions, ignoring case.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;tt&gt;Brick&lt;/tt&gt;: match this text anywhere in the description.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^Brick&lt;/tt&gt;: match Brick as a whole word.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;%Brick&lt;/tt&gt;: match Brick at the beginning of the description.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^%Brick&lt;/tt&gt;: require both a whole word and the beginning of the description.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A | B&lt;/tt&gt;: match either expression.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A &amp;amp; B&lt;/tt&gt;: match both expressions.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;!A&lt;/tt&gt;: exclude descriptions matching A.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;(A | B)&lt;/tt&gt;: group expressions.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Put spaces around &lt;tt&gt;|&lt;/tt&gt; and &lt;tt&gt;&amp;amp;&lt;/tt&gt;. Use parentheses when combining operators.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Examples&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;^%Brick | ^%Plate&lt;/tt&gt; matches descriptions beginning with the word Brick or Plate.&lt;br&gt;&lt;tt&gt;(^%Brick | ^%Plate) &amp;amp; !Pattern&lt;/tt&gt; also excludes descriptions containing Pattern.&lt;/p&gt;&lt;p&gt;Use the language of the library descriptions for search terms; do not translate the syntax symbols.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Категорія деталей&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Назвіть категорію та введіть вираз для пошуку її деталей у бібліотеці. Обидва поля обов’язкові. Натисніть OK, щоб перенести зміни до Налаштувань, а потім OK у Налаштуваннях, щоб зберегти їх. Скасувати відхиляє зміни в цьому діалозі.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Синтаксис ключових слів&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вирази шукають текст в описах деталей бібліотеки без урахування регістру.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;tt&gt;Brick&lt;/tt&gt;: шукає цей текст у будь-якому місці опису.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^Brick&lt;/tt&gt;: шукає Brick як ціле слово.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;%Brick&lt;/tt&gt;: шукає Brick на початку опису.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^%Brick&lt;/tt&gt;: вимагає ціле слово на початку опису.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A | B&lt;/tt&gt;: шукає збіг принаймні з одним виразом.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A &amp;amp; B&lt;/tt&gt;: шукає збіг з обома виразами.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;!A&lt;/tt&gt;: виключає описи, що відповідають A.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;(A | B)&lt;/tt&gt;: групує вирази.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Ставте пробіли навколо &lt;tt&gt;|&lt;/tt&gt; і &lt;tt&gt;&amp;amp;&lt;/tt&gt;. Використовуйте дужки, поєднуючи оператори.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Приклади&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;^%Brick | ^%Plate&lt;/tt&gt; знаходить описи, що починаються зі слова Brick або Plate.&lt;br&gt;&lt;tt&gt;(^%Brick | ^%Plate) &amp;amp; !Pattern&lt;/tt&gt; також виключає описи, що містять Pattern.&lt;/p&gt;&lt;p&gt;Використовуйте мову описів бібліотеки для пошукових слів; не перекладайте символи синтаксису.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Категорія блоків&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Назвіть категорію та введіть вираз для пошуку її блоків у бібліотеці. Обидва поля обов’язкові. Натисніть OK, щоб перенести зміни до Налаштувань, а потім OK у Налаштуваннях, щоб зберегти їх. Скасувати відхиляє зміни в цьому діалозі.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Синтаксис ключових слів&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вирази шукають текст в описах блоків бібліотеки без урахування регістру.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;tt&gt;Brick&lt;/tt&gt;: шукає цей текст у будь-якому місці опису.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^Brick&lt;/tt&gt;: шукає Brick як ціле слово.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;%Brick&lt;/tt&gt;: шукає Brick на початку опису.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^%Brick&lt;/tt&gt;: вимагає ціле слово на початку опису.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A | B&lt;/tt&gt;: шукає збіг принаймні з одним виразом.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A &amp;amp; B&lt;/tt&gt;: шукає збіг з обома виразами.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;!A&lt;/tt&gt;: виключає описи, що відповідають A.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;(A | B)&lt;/tt&gt;: групує вирази.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Ставте пробіли навколо &lt;tt&gt;|&lt;/tt&gt; і &lt;tt&gt;&amp;amp;&lt;/tt&gt;. Використовуйте дужки, поєднуючи оператори.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Приклади&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;^%Brick | ^%Plate&lt;/tt&gt; знаходить описи, що починаються зі слова Brick або Plate.&lt;br&gt;&lt;tt&gt;(^%Brick | ^%Plate) &amp;amp; !Pattern&lt;/tt&gt; також виключає описи, що містять Pattern.&lt;/p&gt;&lt;p&gt;Використовуйте мову описів бібліотеки для пошукових слів; не перекладайте символи синтаксису.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_category.ui"/>
@@ -13672,8 +13207,7 @@ Choose where to save it and build it now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_category.ui"/>
         <source>Enter the category name shown in the part browser.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Введіть назву категорії, яка відображається в браузері деталей.</translation>
+        <translation type="unfinished">Введіть назву категорії, яка відображається в браузері блоків.</translation>
     </message>
     <message>
         <source>Name:</source>
@@ -13682,14 +13216,12 @@ Choose where to save it and build it now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_category.ui"/>
         <source>Enter an expression that matches part descriptions.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Введіть вираз, який відповідає описам частин.</translation>
+        <translation type="unfinished">Введіть вираз, який відповідає описам блоків.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_category.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Keyword Syntax&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Expressions match text in library part descriptions, ignoring case.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;tt&gt;Brick&lt;/tt&gt;: match this text anywhere in the description.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^Brick&lt;/tt&gt;: match Brick as a whole word.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;%Brick&lt;/tt&gt;: match Brick at the beginning of the description.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^%Brick&lt;/tt&gt;: require both a whole word and the beginning of the description.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A | B&lt;/tt&gt;: match either expression.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A &amp;amp; B&lt;/tt&gt;: match both expressions.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;!A&lt;/tt&gt;: exclude descriptions matching A.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;(A | B)&lt;/tt&gt;: group expressions.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Put spaces around &lt;tt&gt;|&lt;/tt&gt; and &lt;tt&gt;&amp;amp;&lt;/tt&gt;. Use parentheses when combining operators.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Examples&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;^%Brick | ^%Plate&lt;/tt&gt; matches descriptions beginning with the word Brick or Plate.&lt;br&gt;&lt;tt&gt;(^%Brick | ^%Plate) &amp;amp; !Pattern&lt;/tt&gt; also excludes descriptions containing Pattern.&lt;/p&gt;&lt;p&gt;Use the language of the library descriptions for search terms; do not translate the syntax symbols.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Синтаксис ключових слів&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вирази шукають текст в описах деталей бібліотеки без урахування регістру.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;tt&gt;Brick&lt;/tt&gt;: шукає цей текст у будь-якому місці опису.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^Brick&lt;/tt&gt;: шукає Brick як ціле слово.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;%Brick&lt;/tt&gt;: шукає Brick на початку опису.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^%Brick&lt;/tt&gt;: вимагає ціле слово на початку опису.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A | B&lt;/tt&gt;: шукає збіг принаймні з одним виразом.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A &amp;amp; B&lt;/tt&gt;: шукає збіг з обома виразами.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;!A&lt;/tt&gt;: виключає описи, що відповідають A.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;(A | B)&lt;/tt&gt;: групує вирази.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Ставте пробіли навколо &lt;tt&gt;|&lt;/tt&gt; і &lt;tt&gt;&amp;amp;&lt;/tt&gt;. Використовуйте дужки, поєднуючи оператори.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Приклади&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;^%Brick | ^%Plate&lt;/tt&gt; знаходить описи, що починаються зі слова Brick або Plate.&lt;br&gt;&lt;tt&gt;(^%Brick | ^%Plate) &amp;amp; !Pattern&lt;/tt&gt; також виключає описи, що містять Pattern.&lt;/p&gt;&lt;p&gt;Використовуйте мову описів бібліотеки для пошукових слів; не перекладайте символи синтаксису.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Синтаксис ключових слів&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вирази шукають текст в описах блоків бібліотеки без урахування регістру.&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;tt&gt;Brick&lt;/tt&gt;: шукає цей текст у будь-якому місці опису.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^Brick&lt;/tt&gt;: шукає Brick як ціле слово.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;%Brick&lt;/tt&gt;: шукає Brick на початку опису.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;^%Brick&lt;/tt&gt;: вимагає ціле слово на початку опису.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A | B&lt;/tt&gt;: шукає збіг принаймні з одним виразом.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;A &amp;amp; B&lt;/tt&gt;: шукає збіг з обома виразами.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;!A&lt;/tt&gt;: виключає описи, що відповідають A.&lt;/li&gt;&lt;li&gt;&lt;tt&gt;(A | B)&lt;/tt&gt;: групує вирази.&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Ставте пробіли навколо &lt;tt&gt;|&lt;/tt&gt; і &lt;tt&gt;&amp;amp;&lt;/tt&gt;. Використовуйте дужки, поєднуючи оператори.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Приклади&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;tt&gt;^%Brick | ^%Plate&lt;/tt&gt; знаходить описи, що починаються зі слова Brick або Plate.&lt;br&gt;&lt;tt&gt;(^%Brick | ^%Plate) &amp;amp; !Pattern&lt;/tt&gt; також виключає описи, що містять Pattern.&lt;/p&gt;&lt;p&gt;Використовуйте мову описів бібліотеки для пошукових слів; не перекладайте символи синтаксису.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Keywords:</source>
@@ -13788,25 +13320,21 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1931"/>
         <source>Choose Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть колір</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1932"/>
         <source>&lt;p&gt;&lt;b&gt;Choose Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pick a color using the swatches or enter its component values. Choose OK to use the selected color, or Cancel to keep the original color. Editing the controls alone does not apply the color.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Виберіть колір&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть колір за допомогою зразків або введіть значення його компонентів. Виберіть «ОК», щоб використовувати вибраний колір, або «Скасувати», щоб зберегти вихідний колір. Лише редагування елементів керування не застосовує колір.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1958"/>
         <source>Custom Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Спеціальний колір</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1959"/>
         <source>Choose a color or enter its component values.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть колір або введіть його складові значення.</translation>
     </message>
 </context>
@@ -13823,58 +13351,49 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="152"/>
         <source>OpenGL shader support is required.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Потрібна підтримка шейдерів OpenGL.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="223"/>
         <source>Could not create the OpenGL context.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося створити контекст OpenGL.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="233"/>
         <source>Could not create the offscreen OpenGL surface.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося створити зовнішню поверхню OpenGL.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="235"/>
         <source>Could not make the offscreen OpenGL context current.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося зробити позакадровий контекст OpenGL поточним.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="409"/>
         <source>Could not read shader %1: %2</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося прочитати шейдер %1: %2</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="417"/>
         <source>Could not create shader %1.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося створити шейдер %1.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="437"/>
         <source>Could not compile shader %1:
 %2</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося скомпілювати шейдер %1:
 %2</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="503"/>
         <source>Could not create the shader program for %1 and %2.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося створити шейдерну програму для %1 та %2.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_context.cpp" line="549"/>
         <source>Could not link the shader program for %1 and %2:
 %3</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося зв’язати шейдерну програму для %1 та %2:
 %3</translation>
     </message>
@@ -13884,8 +13403,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Edit Groups&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Reorganize the model&apos;s parts and groups in the tree. Drag parts or groups into a group, or to the top level to remove them from a parent group. Double-click a group name to rename it.&lt;/p&gt;&lt;p&gt;New Group creates a group inside the selected group, or beside an ungrouped part. Choose OK to apply the hierarchy, or Cancel to discard the changes. Empty groups are removed when changes are applied.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Редагувати групи&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Реорганізувати частини та групи моделі в дереві. Перетягніть частини або групи в групу або на верхній рівень, щоб видалити їх із батьківської групи. Двічі клацніть назву групи, щоб перейменувати її.&lt;/p&gt;&lt;p&gt;Нова група створює групу всередині вибраної групи або поруч із незгрупованим деталлю. Виберіть «ОК», щоб застосувати ієрархію, або «Скасувати», щоб скасувати зміни. Після застосування змін порожні групи видаляються.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Редагувати групи&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Змінюйте організацію блоків і груп моделі в дереві. Перетягніть блоки або групи в групу або на верхній рівень, щоб вилучити їх із батьківської групи. Двічі клацніть назву групи, щоб перейменувати її.&lt;/p&gt;&lt;p&gt;«Нова група» створює групу всередині вибраної групи або поруч із незгрупованим блоком. Виберіть «ОК», щоб застосувати ієрархію, або «Скасувати», щоб відхилити зміни. Порожні групи після застосування видаляються.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.ui"/>
@@ -13895,20 +13413,17 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.ui"/>
         <source>Drag parts and groups to reorganize them; double-click a group name to rename it.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перетягуйте частини та групи, щоб реорганізувати їх; двічі клацніть назву групи, щоб перейменувати її.</translation>
+        <translation type="unfinished">Перетягуйте блоки та групи, щоб реорганізувати їх; двічі клацніть назву групи, щоб перейменувати її.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Group Hierarchy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drop an item onto a group to make it a member of that group. Move it to the top level to remove its parent group. Only group names can be edited; names must be unique and nonempty.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Ієрархія груп&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетягніть елемент у групу, щоб зробити його членом цієї групи. Перемістіть його на верхній рівень, щоб видалити його батьківську групу. Редагувати можна лише назви груп; імена мають бути унікальними та непорожніми.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.ui"/>
         <source>Part and Group Hierarchy</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Ієрархія частин і груп</translation>
+        <translation type="unfinished">Ієрархія блоків і груп</translation>
     </message>
     <message>
         <source>New Group</source>
@@ -13917,20 +13432,17 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.cpp" line="46"/>
         <source>&amp;New Group</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Нова група</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.cpp" line="47"/>
         <source>Create a group under the selected group or at the top level.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Створіть групу під вибраною групою або на верхньому рівні.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.cpp" line="48"/>
         <source>&lt;p&gt;&lt;b&gt;New Group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a group to create a subgroup inside it. If a part is selected, the new group is created beside that part. With no selection, the new group is created at the top level. Rename the new group by editing its name, then drag parts into it.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Нова група&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть групу, щоб створити в ній підгрупу. Якщо вибрано деталь, нова група створюється поруч із цим деталлю. Без вибору нова група створюється на верхньому рівні. Перейменуйте нову групу, відредагувавши її назву, а потім перетягніть у неї частини.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Нова група&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть групу, щоб створити в ній підгрупу. Якщо вибрано блок, нова група створюється поруч із цим блоком. Без виділення нова група створюється на верхньому рівні. Перейменуйте нову групу, відредагувавши її назву, а потім перетягніть у неї блоки.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_groups_edit.cpp" line="97"/>
@@ -14314,13 +13826,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="92"/>
         <source>Toggle Replace</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перемкнути заміну</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="91"/>
         <source>Show or hide the replace options.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Показати або приховати параметри заміни.</translation>
     </message>
     <message>
@@ -14331,7 +13841,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="47"/>
         <source>Search Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Колір пошуку</translation>
     </message>
     <message>
@@ -14368,7 +13877,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="103"/>
         <source>Replacement Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Колір заміни</translation>
     </message>
     <message>
@@ -14392,8 +13900,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="193"/>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="217"/>
         <source>None</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Жодного</translation>
+        <translation type="unfinished">Нічого</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="18"/>
@@ -14403,7 +13910,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_find_replace.cpp" line="39"/>
         <source>Close</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Закрити</translation>
     </message>
 </context>
@@ -14412,8 +13918,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_group.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Group Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Name a new group for the selected parts so you can select and move them together. Choose OK to create it, or Cancel to leave the groups unchanged.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Згрупувати деталі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Назвіть нову групу для вибраних деталей, щоб ви могли вибрати та перемістити їх разом. Виберіть «ОК», щоб створити її, або «Скасувати», щоб залишити групи без змін.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Згрупувати блоки&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Назвіть нову групу для вибраних блоків, щоб ви могли вибрати та перемістити їх разом. Виберіть «ОК», щоб створити її, або «Скасувати», щоб залишити групи без змін.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_group.ui"/>
@@ -14423,14 +13928,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_group.ui"/>
         <source>Enter a unique, nonempty name for the new group.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Введіть унікальну назву для нової групи.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_group.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Group Name&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a name that is not already used by another group in this model. The new group contains the selected parts and their existing groups.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Назва групи&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть назву, яка ще не використовується іншою групою в цій моделі. Нова група містить вибрані частини та їхні існуючі групи.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Назва групи&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть назву, яка ще не використовується іншою групою в цій моделі. Нова група містить вибрані блоки та їхні існуючі групи.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_group.ui"/>
@@ -14445,7 +13948,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_group.cpp" line="37"/>
         <source>A group with this name already exists.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Група з такою назвою вже існує.</translation>
     </message>
 </context>
@@ -14454,8 +13956,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Export HTML&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create browser-viewable building instructions and PNG images in the output folder. Choose which models to include, how to organize the step pages, and where to show parts lists.&lt;/p&gt;&lt;p&gt;Keep the generated HTML and image files together when copying or sharing the instructions.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Експорт HTML&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Створюйте інструкції зі створення, які можна переглядати у браузері, і зображення PNG у вихідній папці. Виберіть, які моделі включити, як упорядкувати сторінки кроків і де відобразити списки деталей.&lt;/p&gt;&lt;p&gt;Зберігайте згенеровані HTML-файли та файли зображень разом під час копіювання або надання спільного доступу до інструкцій.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Експорт HTML&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Створюйте інструкції зі створення, які можна переглядати у браузері, і зображення PNG у вихідній теці. Виберіть, які моделі включити, як упорядкувати сторінки кроків і де відобразити списки блоків.&lt;/p&gt;&lt;p&gt;Зберігайте згенеровані HTML-файли та файли зображень разом під час копіювання або надання спільного доступу до інструкцій.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
@@ -14469,8 +13970,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Folder for the generated HTML pages and images.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Папка для згенерованих HTML-сторінок і зображень.</translation>
+        <translation type="unfinished">Тека для згенерованих HTML-сторінок і зображень.</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Output Folder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The exporter creates this folder if needed and writes the instruction pages and their images into it. Use a separate folder for each export to keep the generated files together.&lt;/p&gt;</source>
@@ -14485,14 +13985,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Choose the folder for the exported instructions.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть папку для експортованих інструкцій.</translation>
+        <translation type="unfinished">Виберіть теку для експортованих інструкцій.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Choose Output Folder</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть Output Folder</translation>
+        <translation type="unfinished">Виберіть вихідну теку</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
@@ -14536,7 +14034,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Export the current model and the submodels it references.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Експортуйте поточну модель і підмоделі, на які вона посилається.</translation>
     </message>
     <message>
@@ -14547,7 +14044,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Export instructions only for the current model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Експортувати інструкції лише для поточної моделі.</translation>
     </message>
     <message>
@@ -14577,7 +14073,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Create a separate HTML page for each step.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Створіть окрему HTML-сторінку для кожного кроку.</translation>
     </message>
     <message>
@@ -14588,7 +14083,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Add a step index when using One Step per Page.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Додайте індекс кроків, якщо використовуєте «Один крок на сторінку».</translation>
     </message>
     <message>
@@ -14598,7 +14092,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Width of each step image, in pixels.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ширина кожного крокового зображення, у пікселях.</translation>
     </message>
     <message>
@@ -14608,7 +14101,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Height of each step image, in pixels.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Висота зображення кожного кроку в пікселях.</translation>
     </message>
     <message>
@@ -14623,14 +14115,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Include a complete parts list after each model&apos;s instructions.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Додайте повний список деталей після інструкцій до кожної моделі.</translation>
+        <translation type="unfinished">Додайте повний список блоків після інструкцій до кожної моделі.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_html.ui"/>
         <source>Include a list of the parts added in each step.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Додайте список частин, доданих на кожному кроці.</translation>
+        <translation type="unfinished">Додайте список блоків, доданих на кожному кроці.</translation>
     </message>
     <message>
         <source>Highlight new parts</source>
@@ -15143,13 +14633,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="156"/>
         <source>Choose the image file and format.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть файл зображення та формат.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="157"/>
         <source>Choose Image File</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть файл зображення</translation>
     </message>
     <message>
@@ -15655,7 +15143,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="200"/>
         <source>Width of the saved image, in pixels (1 to 32768).</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ширина збереженого зображення в пікселях (від 1 до 32768).</translation>
     </message>
     <message>
@@ -15665,7 +15152,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="210"/>
         <source>Height of the saved image, in pixels (1 to 32768).</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Висота збереженого зображення в пікселях (від 1 до 32768).</translation>
     </message>
     <message>
@@ -15680,7 +15166,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="255"/>
         <source>Save an image for every step in the active model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Збережіть зображення для кожного кроку в активній моделі.</translation>
     </message>
     <message>
@@ -15690,7 +15175,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="250"/>
         <source>Save only the current step.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Зберегти лише поточний крок.</translation>
     </message>
     <message>
@@ -15718,7 +15202,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="271"/>
         <source>First Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перший крок</translation>
     </message>
     <message>
@@ -15733,7 +15216,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_image.cpp" line="279"/>
         <source>Last Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Останній крок</translation>
     </message>
     <message>
@@ -15833,7 +15315,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="19"/>
         <source>Instructions</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Інструкції</translation>
     </message>
     <message>
@@ -16009,7 +15490,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="181"/>
         <source>Page %1</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Сторінка %1</translation>
     </message>
     <message>
@@ -16251,8 +15731,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2176"/>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2186"/>
         <source>Pages</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">сторінки</translation>
+        <translation type="unfinished">Сторінки</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2177"/>
@@ -17947,50 +17426,42 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="363"/>
         <source>Fade Previous Steps</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Затінювати попередні кроки</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="363"/>
         <source>Tint the parts added in earlier steps with the fade color.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Забарвлювати деталі, додані на попередніх кроках, кольором затінення.</translation>
+        <translation type="unfinished">Забарвлювати блоки, додані на попередніх кроках, кольором затінення.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="366"/>
         <source>Fade Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Колір затінення</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="366"/>
         <source>Color tinting the parts added in earlier steps, kept between 85 and 95 percent opaque.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Колір забарвлення деталей, доданих на попередніх кроках, з непрозорістю від 85 до 95 відсотків.</translation>
+        <translation type="unfinished">Колір забарвлення блоків, доданих на попередніх кроках, з непрозорістю від 85 до 95 відсотків.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="370"/>
         <source>Highlight New Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виділяти нові деталі</translation>
+        <translation type="unfinished">Виділяти нові блоки</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="370"/>
         <source>Outline the parts added in each step with the highlight color.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Обводити деталі, додані на кожному кроці, кольором виділення.</translation>
+        <translation type="unfinished">Обводити блоки, додані на кожному кроці, кольором виділення.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="373"/>
         <source>Highlight Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Колір виділення</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="373"/>
         <source>Color of the outline around the parts added in each step, kept between 85 and 95 percent opaque.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Колір контуру навколо деталей, доданих на кожному кроці, з непрозорістю від 85 до 95 відсотків.</translation>
+        <translation type="unfinished">Колір контуру навколо блоків, доданих на кожному кроці, з непрозорістю від 85 до 95 відсотків.</translation>
     </message>
 </context>
 <context>
@@ -18563,20 +18034,17 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="618"/>
         <source>Choose which related parts are included when selecting a part.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть, які пов’язані частини будуть включені під час вибору частини.</translation>
+        <translation type="unfinished">Виберіть, які пов’язані блоки буде включено під час вибору блока.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="632"/>
         <source>Transform Options</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Параметри трансформації</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="633"/>
         <source>Choose coordinate axes and whether selected parts rotate together.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть осі координат і чи обертаються вибрані частини разом.</translation>
+        <translation type="unfinished">Виберіть осі координат і чи обертаються вибрані блоки разом.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="638"/>
@@ -18601,14 +18069,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="656"/>
         <source>Snap translations to fixed intervals</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Прив’язка перекладів до фіксованих інтервалів</translation>
+        <translation type="unfinished">Прилипання переміщення до фіксованих інтервалів</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="657"/>
         <source>Choose movement snapping intervals for XY and Z.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть інтервали прив’язки руху для XY і Z.</translation>
+        <translation type="unfinished">Виберіть інтервали прилипання переміщення для XY і Z.</translation>
     </message>
     <message>
         <source>Snap Angle Menu</source>
@@ -18619,25 +18085,21 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="662"/>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="670"/>
         <source>Rotation Snap</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Обертання Snap</translation>
+        <translation type="unfinished">Прилипання обертання</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="671"/>
         <source>Snap rotations to fixed intervals</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Прив’язка поворотів до фіксованих інтервалів</translation>
+        <translation type="unfinished">Прилипання обертання до фіксованих інтервалів</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="672"/>
         <source>Choose the rotation snapping interval.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть інтервал прив’язки обертання.</translation>
+        <translation type="unfinished">Виберіть інтервал прилипання обертання.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="677"/>
         <source>Standard</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Стандартний</translation>
     </message>
     <message>
@@ -18648,8 +18110,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="697"/>
         <source>Time</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">час</translation>
+        <translation type="unfinished">Час</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="699"/>
@@ -18710,26 +18171,22 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="619"/>
         <source>&lt;p&gt;&lt;b&gt;Selection Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the rule applied when you pick a part in the model view. Single selects that part; the other modes include matching part types, matching colors, or both. For example, color selection lets you pick matching red parts without selecting each one separately.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Режим вибору&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть правило, яке буде застосовано, коли ви виберете деталь у вікні моделі. Одиночний вибирає цю частину; інші режими включають відповідні типи частин, відповідні кольори або обидва. Наприклад, вибір кольору дає змогу вибрати відповідні червоні фігури, не вибираючи кожну окремо.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Режим виділення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть правило, яке застосовується, коли ви вибираєте блок у виді моделі. «Єдиний» виділяє лише цей блок; інші режими додають блоки того самого типу, того самого кольору або обидва. Наприклад, виділення за кольором дає змогу вибрати всі червоні блоки, не виділяючи кожен окремо.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="634"/>
         <source>&lt;p&gt;&lt;b&gt;Transform Options&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the axes and pivot used for interactive transforms. Relative Transforms uses the focused object&apos;s orientation, so movement along X follows that object&apos;s local X axis. Absolute Transforms uses the model axes. Rotate Together rotates the selection around a shared pivot; Rotate Separately rotates each part around its own origin.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Параметри трансформації&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть осі та опору для інтерактивних трансформацій. Відносне перетворення використовує орієнтацію фокусованого об’єкта, тому рух уздовж X слідує локальній осі X об’єкта. Absolute Transforms використовує осі моделі. Rotate Together обертає виділення навколо спільної опорної точки; Окремо обертати кожну частину навколо власного початку.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Параметри трансформації&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть осі та опорну точку для інтерактивних трансформацій. «Відносні трансформації» використовують орієнтацію об’єкта у фокусі, тому рух уздовж X іде вздовж локальної осі X цього об’єкта. «Абсолютні трансформації» використовують осі моделі. «Обертати разом» обертає виділення навколо спільної опорної точки; «Повертати окремо» обертає кожен блок навколо його власного початку.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="658"/>
         <source>&lt;p&gt;&lt;b&gt;Movement Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose how far objects move in each snapped increment. XY controls movement across the base plane; Z controls vertical movement, so they can use different intervals. Turn snapping off for free placement, then enable it again when you need consistent spacing.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Прив’язка руху&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть, на яку відстань рухаються об’єкти з кожним прив’язаним кроком. XY керує рухом через базову площину; Z контролює вертикальний рух, тому вони можуть використовувати різні інтервали. Вимкніть прив’язку для вільного розміщення, а потім увімкніть її знову, коли вам знадобиться послідовний інтервал.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Прилипання переміщення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть, на яку відстань об’єкти переміщуються за один крок прилипання. XY керує рухом по базовій площині; Z керує вертикальним рухом, тому для них можна задати різні інтервали. Вимкніть прилипання для вільного розміщення, а потім увімкніть його знову, коли потрібен постійний крок.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="673"/>
         <source>&lt;p&gt;&lt;b&gt;Rotation Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose an angle increment for interactive rotation. For example, a 90-degree increment is useful for quarter turns, while smaller increments allow finer alignment. Turn snapping off for free rotation without fixed angle increments.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Прив&apos;язка обертання&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть крок кута для інтерактивного обертання. Наприклад, крок у 90 градусів корисний для чверті обертів, тоді як менші кроки дозволяють точніше вирівнювати. Вимкніть прив’язку для вільного обертання без фіксованого збільшення кута.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Прилипання обертання&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть крок кута для інтерактивного обертання. Наприклад, крок 90 градусів зручний для поворотів на чверть оберту, а менші кроки дають точніше вирівнювання. Вимкніть прилипання для вільного обертання без фіксованих кроків кута.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Time Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Timeline for that. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.&lt;/p&gt;</source>
@@ -18739,8 +18196,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="712"/>
         <source>&lt;p&gt;&lt;b&gt;Tools Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a tool, then use it in the model view. Insertion tools create parts, lights, or cameras. Editing tools select, transform, remove, or recolor objects. Navigation tools change the viewpoint without changing model geometry. Mouse assignments can be customized in Preferences.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Панель інструментів&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть інструмент, а потім використовуйте його у вікні моделі. Інструменти вставки створюють фігури, світильники або камери. Інструменти редагування вибирають, перетворюють, видаляють або змінюють колір об’єктів. Інструменти навігації змінюють точку огляду без зміни геометрії моделі. Призначення миші можна налаштувати в налаштуваннях.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Панель інструментів&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть інструмент, а потім використовуйте його у виді моделі. Інструменти вставки створюють блоки, світло або камери. Інструменти редагування виділяють, трансформують, видаляють або перефарбовують об’єкти. Інструменти навігації змінюють точку огляду, не змінюючи геометрію моделі. Призначення миші можна налаштувати в налаштуваннях.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="754"/>
@@ -18750,13 +18206,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="757"/>
         <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a category or palette and filter its parts. Selecting a part prepares it for insertion; drag it into the model view to place it. Double-click a part to open its preview. Options controls filtering, thumbnails, and list display.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Деталі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть категорію або палітру та відфільтруйте його деталі. Вибір частини готує її до вставки; перетягніть його у вікно моделі, щоб розмістити. Двічі клацніть деталь, щоб відкрити його попередній перегляд. Параметри керують фільтруванням, мініатюрами та відображенням списку.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Блоки&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть категорію або палітру та відфільтруйте її блоки. Вибраний блок готовий до вставки; перетягніть його у вид моделі, щоб розмістити. Двічі клацніть блок, щоб відкрити його попередній перегляд. «Параметри» керують фільтрацією, мініатюрами та відображенням списку.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="767"/>
         <source>Colors</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Кольори</translation>
     </message>
     <message>
@@ -18767,25 +18221,21 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="785"/>
         <source>Apply the current color to selected parts.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Застосувати поточний колір до вибраних частин.</translation>
+        <translation type="unfinished">Застосувати поточний колір до вибраних блоків.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="786"/>
         <source>Change Selection Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Змінити колір виділення</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="787"/>
         <source>&lt;p&gt;&lt;b&gt;Change Selection Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Apply the current color to selected parts. Choosing a swatch sets the current color; this button applies that color to the selection.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Змінити колір виділення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Застосувати поточний колір до вибраних частин. Вибір зразка встановлює поточний колір; ця кнопка застосовує цей колір до виділення.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Змінити колір виділення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Застосувати поточний колір до вибраних блоків. Вибір зразка встановлює поточний колір; ця кнопка застосовує цей колір до виділення.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="839"/>
         <source>LDraw Colors</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Кольори LDraw</translation>
     </message>
     <message>
@@ -18796,26 +18246,22 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="970"/>
         <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit properties of the focused object or selection. Available fields depend on whether you select parts, a camera, or a light. Expand a section to see its fields. Keyframe controls mark properties at the current building step.&lt;/p&gt;&lt;p&gt;The transform fields at the bottom apply an X/Y/Z translation or rotation using the chosen transform mode. Press Enter to apply the values.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Властивості&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Редагувати властивості виділеного об’єкта або виділення. Доступні поля залежать від того, чи ви вибрали елементи, камеру чи світло. Розгорніть розділ, щоб побачити його поля. Елементи керування ключовими кадрами позначають властивості на поточному кроці побудови.&lt;/p&gt;&lt;p&gt;Поля трансформації внизу застосовують переміщення або обертання X/Y/Z за допомогою вибраного режиму трансформації. Натисніть Enter, щоб застосувати значення.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Властивості&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Редагуйте властивості об’єкта у фокусі або виділення. Доступні поля залежать від того, що виділено: блоки, камера чи світло. Розгорніть розділ, щоб побачити його поля. Елементи керування ключовими кадрами позначають властивості на поточному кроці побудови.&lt;/p&gt;&lt;p&gt;Поля трансформації внизу застосовують переміщення або обертання X/Y/Z за вибраним режимом трансформації. Натисніть Enter, щоб застосувати значення.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1023"/>
         <source>Choose absolute or relative translation or rotation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть абсолютний або відносний переклад або поворот.</translation>
+        <translation type="unfinished">Виберіть абсолютне чи відносне переміщення або обертання.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1024"/>
         <source>&lt;p&gt;&lt;b&gt;Apply Transform&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the translation or rotation mode, enter X/Y/Z values, and press Enter to apply them. Translation values use LDraw units; rotation values use degrees.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Застосувати трансформацію&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть режим перекладу або обертання, введіть значення X/Y/Z і натисніть Enter, щоб застосувати їх. Значення перекладу використовують одиниці LDraw; значення обертання використовують градуси.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Застосувати трансформацію&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть режим переміщення або обертання, введіть значення X/Y/Z і натисніть Enter, щоб застосувати їх. Значення переміщення використовують одиниці LDraw; значення обертання використовують градуси.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1002"/>
         <source>Transform X</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перетворення X</translation>
+        <translation type="unfinished">Трансформувати X</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="80"/>
@@ -18909,37 +18355,31 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1003"/>
         <source>Enter the X translation in LDraw units or rotation in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Введіть трансляцію X в одиницях LDraw або поворот у градусах.</translation>
+        <translation type="unfinished">Введіть переміщення X в одиницях LDraw або обертання у градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1008"/>
         <source>Transform Y</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Трансформувати Y</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1009"/>
         <source>Enter the Y translation in LDraw units or rotation in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Введіть трансляцію Y в одиницях LDraw або поворот у градусах.</translation>
+        <translation type="unfinished">Введіть переміщення Y в одиницях LDraw або обертання у градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1014"/>
         <source>Transform Z</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перетворення Z</translation>
+        <translation type="unfinished">Трансформувати Z</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1015"/>
         <source>Enter the Z translation in LDraw units or rotation in degrees.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Введіть трансляцію Z в одиницях LDraw або поворот у градусах.</translation>
+        <translation type="unfinished">Введіть переміщення Z в одиницях LDraw або обертання у градусах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1082"/>
         <source>Timeline</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Хронологія</translation>
     </message>
     <message>
@@ -18976,7 +18416,6 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="196"/>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="197"/>
         <source>Preview</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Попередній перегляд</translation>
     </message>
     <message>
@@ -18987,7 +18426,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1204"/>
         <source>Asset loading failed</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося завантажити ресурс</translation>
     </message>
     <message>
@@ -19000,7 +18438,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="592"/>
         <source>Could not generate geometry.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося створити геометрію.</translation>
     </message>
     <message>
@@ -19023,28 +18460,24 @@ Choose where to save it and download the latest %3 now?</source>
         <oldsource>The model could not be fully loaded, some pieces may be missing.
 
 %1</oldsource>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель не може бути повністю завантажена, деякі елементи можуть бути відсутні.
+        <translation type="unfinished">Модель не вдалося завантажити повністю. Деякі блоки можуть бути відсутні.
 
 %1</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="850"/>
         <source>Close Other Tabs</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Закрийте інші вкладки</translation>
+        <translation type="unfinished">Закрити інші вкладки</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="47"/>
         <source>The file &apos;%1&apos; has been modified by another application. Do you want to reload it?</source>
         <oldsource>The file &apos;%1&apos; has been modified by another application, do you want to reload it?</oldsource>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Файл &apos;%1&apos; було змінено іншою програмою. Перезавантажити його?</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="53"/>
         <source>File Changed</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Файл змінено</translation>
     </message>
     <message>
@@ -19091,7 +18524,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="954"/>
         <source>Export HTML</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Експорт HTML</translation>
     </message>
     <message>
@@ -19108,8 +18540,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="1173"/>
         <source>Nothing to select.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Нічого для вибору.</translation>
+        <translation type="unfinished">Нічого виділяти.</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.cpp" line="1173"/>
@@ -19175,7 +18606,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="465"/>
         <source>Wireframe</source>
-        <translation type="unfinished">Арматура</translation>
+        <translation type="unfinished">Каркас</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_view.cpp" line="466"/>
@@ -19480,7 +18911,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="203"/>
         <source> in group &apos;%1&apos;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished"> в групі &apos;%1&apos;</translation>
     </message>
     <message>
@@ -19562,25 +18992,21 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="407"/>
         <source>&amp;Undo %1</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Скасувати %1</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="412"/>
         <source>&amp;Undo</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Скасувати</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="418"/>
         <source>&amp;Redo %1</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Повторити %1</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="423"/>
         <source>&amp;Redo</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&amp;Повторити</translation>
     </message>
     <message>
@@ -19632,13 +19058,11 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="316"/>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="351"/>
         <source>Merge Model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель злиття</translation>
+        <translation type="unfinished">Об’єднати модель</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_command.cpp" line="108"/>
         <source>Export 3DS</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Експорт 3DS</translation>
     </message>
     <message>
@@ -19752,7 +19176,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="347"/>
         <source>Cannot Merge Model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдається об’єднати модель</translation>
     </message>
     <message>
@@ -19779,7 +19202,6 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="448"/>
         <source>Saving files in LCD format is no longer supported. Please use the LDR or MPD formats instead.</source>
         <oldsource>Saving files in LCD format is no longer supported, please use the LDR or MPD formats instead.</oldsource>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Збереження файлів у форматі LCD більше не підтримується, використовуйте натомість формати LDR або MPD.</translation>
     </message>
     <message>
@@ -19790,7 +19212,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_project.cpp" line="472"/>
         <source>Save changes to &apos;%1&apos;?</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Зберегти зміни в &apos;%1&apos;?</translation>
     </message>
     <message>
@@ -19854,8 +19275,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/window/sw_window_main.h" line="146"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="152"/>
         <source>None</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Жодного</translation>
+        <translation type="unfinished">Нічого</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main.h" line="151"/>
@@ -19890,13 +19310,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="285"/>
         <source>View: %1 deg. Lat. / %2 deg. Lon. / %3</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вигляд: %1 град. шир. / %2 град. довг. / %3</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="284"/>
         <source>Perspective</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перспектива</translation>
     </message>
     <message>
@@ -19929,37 +19347,31 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="284"/>
         <source>Orthographic</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ортографічна</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1228"/>
         <source>Selection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виділення</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1229"/>
         <source>View Orientation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Орієнтація вигляду</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1230"/>
         <source>Position</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Положення</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1231"/>
         <source>Snap and Transform</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Прив’язка та перетворення</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1232"/>
         <source>Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Крок</translation>
     </message>
     <message>
@@ -19998,7 +19410,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/library/sw_loader_mesh.cpp" line="1681"/>
         <source>Could not load included file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося завантажити включений файл &apos;%1&apos;.</translation>
     </message>
 </context>
@@ -20007,7 +19418,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_builder_minifigure.cpp" line="73"/>
         <source>Default</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">За замовчуванням</translation>
     </message>
     <message>
@@ -20045,26 +19455,22 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>Load a saved configuration of parts, colors, and angles.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Завантажте збережену конфігурацію частин, кольорів і кутів.</translation>
+        <translation type="unfinished">Завантажте збережену конфігурацію блоків, кольорів і кутів.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>Minifigure Template</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Шаблон мініфігурки</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>Save the current minifigure configuration as a named template.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Збережіть поточну конфігурацію мініфігурки як іменований шаблон.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Save Template&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Enter a name for the current parts, colors, and pose. Reusing an existing name asks before replacing that template. The Default template cannot be overwritten.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Зберегти шаблон&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Введіть назву для поточних фігур, кольорів і пози. Повторне використання існуючої назви запитує перед заміною цього шаблону. Шаблон за замовчуванням не можна перезаписати.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Зберегти шаблон&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Введіть назву для поточних блоків, кольорів і пози. Якщо назва вже існує, перед заміною шаблону буде запит. Типовий шаблон не можна перезаписати.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
@@ -20074,14 +19480,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>Delete the selected saved template.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Видалити вибраний збережений шаблон.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Delete Template&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected named template after confirmation. This does not remove parts from the preview or an existing model. The Default template cannot be deleted.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Видалити шаблон&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Видалити вибраний іменований шаблон після підтвердження. Це не видаляє частини з попереднього перегляду або наявної моделі. Шаблон за замовчуванням не можна видалити.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Видалити шаблон&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Видалити вибраний іменований шаблон після підтвердження. Це не видаляє блоки з попереднього перегляду або наявної моделі. Шаблон за замовчуванням не можна видалити.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
@@ -20121,110 +19525,92 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Hat</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Капелюх</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Hat Accessory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Капелюх аксесуар</translation>
+        <translation type="unfinished">Аксесуар для капелюха</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Head</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Голова</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Neck</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Шия</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Torso</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">тулуб</translation>
+        <translation type="unfinished">Тулуб</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Hip</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Стегно</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Hip Accessory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Стегна аксесуар</translation>
+        <translation type="unfinished">Аксесуар для стегон</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Left Arm</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ліва рука</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Right Arm</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Права рука</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Left Hand</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Ліва рука</translation>
+        <translation type="unfinished">Ліва кисть</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="35"/>
         <source>Right Hand</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Права рука</translation>
+        <translation type="unfinished">Права кисть</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Left Hand Accessory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Аксесуар для лівої руки</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Right Hand Accessory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Аксесуар для правої руки</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Left Leg</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ліва нога</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Right Leg</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Права нога</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Left Leg Accessory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Аксесуар для лівої ноги</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="36"/>
         <source>Right Leg Accessory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Аксесуар для правої ноги</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="53"/>
         <source>%1 part</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">%1 шт</translation>
+        <translation type="unfinished">%1 блок</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="54"/>
@@ -20335,38 +19721,32 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="61"/>
         <source>%1 color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">%1 колір</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="62"/>
         <source>Choose the color for %1.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть колір для %1.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="64"/>
         <source>&lt;p&gt;&lt;b&gt;Choose Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Change the color of this minifigure part. The preview updates immediately, and saving a template includes the chosen color.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Виберіть колір&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Змініть колір цієї мініфігурки. Попередній перегляд оновлюється негайно, а збереження шаблону включає вибраний колір.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="77"/>
         <source>%1 rotation</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">%1 обертання</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="78"/>
         <source>Rotate %1, in degrees (-360 to 360).</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Повернути %1 у градусах (від -360 до 360).</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="79"/>
         <source>&lt;p&gt;&lt;b&gt;Rotation&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Adjust this part&apos;s angle to pose the minifigure. Values range from -360 to 360 degrees. The available rotation depends on the selected minifigure section.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Обертання&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Відрегулюйте кут цього елемента, щоб позувати мініфігурку. Діапазон значень від -360 до 360 градусів. Доступне обертання залежить від вибраного розділу мініфігурки.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Обертання&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Змініть кут цього блока, щоб задати позу мініфігурки. Значення від -360 до 360 градусів. Доступне обертання залежить від вибраної частини мініфігурки.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Minifigure Preview</source>
@@ -20376,8 +19756,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="130"/>
         <source>Preview of the chosen parts, colors, and pose.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Попередній перегляд вибраних фігур, кольорів і пози.</translation>
+        <translation type="unfinished">Попередній перегляд вибраних блоків, кольорів і пози.</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Minifigure Preview&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Check the assembled minifigure as you change parts, colors, or angles. Choose OK to add this configuration to the current model.&lt;/p&gt;</source>
@@ -20429,7 +19808,6 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="443"/>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="452"/>
         <source>Import Templates</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Імпорт шаблонів</translation>
     </message>
     <message>
@@ -20451,7 +19829,6 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="464"/>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="472"/>
         <source>Export Templates</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Експортувати шаблони</translation>
     </message>
     <message>
@@ -20463,8 +19840,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.cpp" line="502"/>
         <source>None</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Жодного</translation>
+        <translation type="unfinished">Нічого</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_builder_minifigure.ui"/>
@@ -20656,8 +20032,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model_group.cpp" line="73"/>
         <location filename="../../source/core/sw_model_group.cpp" line="110"/>
         <source>No parts selected.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Не вибрано жодної частини.</translation>
+        <translation type="unfinished">Жодного блока не вибрано.</translation>
     </message>
     <message>
         <source>New Model</source>
@@ -20691,7 +20066,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="121"/>
         <source>Model &apos;%1&apos; was deleted.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Модель &apos;%1&apos; видалено.</translation>
     </message>
     <message>
@@ -20746,7 +20120,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_file.cpp" line="778"/>
         <source>Model &apos;%1&apos;: reference to &apos;%2&apos; was ignored because it would create a circular reference.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Модель &apos;%1&apos;: посилання на &apos;%2&apos; було проігноровано, оскільки це створило б циклічне посилання.</translation>
     </message>
     <message>
@@ -20758,26 +20131,22 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_clipboard.cpp" line="82"/>
         <source>Cut</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вирізати</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_clipboard.cpp" line="164"/>
         <source>Paste</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вставити</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_clipboard.cpp" line="175"/>
         <source>Duplicate Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Дубльовані частини</translation>
+        <translation type="unfinished">Дублювання блоків</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_clipboard.cpp" line="241"/>
         <source>Duplicate</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">дублікат</translation>
+        <translation type="unfinished">Дублювання</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_render.cpp" line="111"/>
@@ -20797,20 +20166,17 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model_render.cpp" line="445"/>
         <location filename="../../source/core/sw_model_render.cpp" line="566"/>
         <source>Could not allocate the parts list image.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Не вдалося розмістити зображення списку частин.</translation>
+        <translation type="unfinished">Не вдалося розмістити зображення списку блоків.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_render.cpp" line="304"/>
         <source>Could not create the parts list framebuffer.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Не вдалося створити кадровий буфер списку частин.</translation>
+        <translation type="unfinished">Не вдалося створити кадровий буфер списку блоків.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_render.cpp" line="385"/>
         <source>Could not read the parts list image.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Не вдалося прочитати зображення списку частин.</translation>
+        <translation type="unfinished">Не вдалося прочитати зображення списку блоків.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_render.cpp" line="658"/>
@@ -20841,7 +20207,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="659"/>
         <source>Insert Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вставити крок</translation>
     </message>
     <message>
@@ -20852,8 +20217,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_group.cpp" line="73"/>
         <source>Group Selection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Вибір групи</translation>
+        <translation type="unfinished">Групування виділення</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_group.cpp" line="101"/>
@@ -20866,20 +20230,17 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model_group.cpp" line="110"/>
         <location filename="../../source/core/sw_model_group.cpp" line="144"/>
         <source>Ungroup Selection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Розгрупувати вибір</translation>
+        <translation type="unfinished">Розгрупування виділення</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_group.cpp" line="144"/>
         <source>No groups selected.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Групи не вибрано.</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_group.cpp" line="167"/>
         <location filename="../../source/core/sw_model_group.cpp" line="238"/>
         <source>Ungroup</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Розгрупувати</translation>
     </message>
     <message>
@@ -20892,8 +20253,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model_edit.cpp" line="208"/>
         <location filename="../../source/core/sw_model_tool.cpp" line="277"/>
         <source>Add Part</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Додати фрагмент</translation>
+        <translation type="unfinished">Додавання блока</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="263"/>
@@ -20908,8 +20268,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model_selection.cpp" line="1566"/>
         <location filename="../../source/core/sw_model_selection.cpp" line="1627"/>
         <source>Selection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Вибір</translation>
+        <translation type="unfinished">Виділення</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="475"/>
@@ -20920,7 +20279,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="492"/>
         <source>Reset Pivot Point</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Скинути опорну точку</translation>
     </message>
     <message>
@@ -20972,13 +20330,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="540"/>
         <source>Add Control Point</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Додати контрольну точку</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="565"/>
         <source>Remove Control Point</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Видалити контрольну точку</translation>
     </message>
     <message>
@@ -21004,32 +20360,27 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="688"/>
         <source>Show Earlier</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Показати Раніше</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="738"/>
         <source>Show Later</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Показати пізніше</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="777"/>
         <source>Show Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Show Parts</translation>
+        <translation type="unfinished">Показати блоки</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="814"/>
         <source>Change Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Змінити крок</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="929"/>
         <source>Move to Model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перейти до моделі</translation>
+        <translation type="unfinished">Перемістити до моделі</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="983"/>
@@ -21074,34 +20425,29 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1666"/>
         <source>Set Show Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Встановити Показати крок</translation>
+        <translation type="unfinished">Встановити крок показу</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1697"/>
         <source>Set Hide Step</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Встановити крок приховування</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_edit.cpp" line="1720"/>
         <source>Change Projection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Змінити проекцію</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_selection.cpp" line="1289"/>
         <location filename="../../source/core/sw_model_selection.cpp" line="1320"/>
         <source>Hide Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Сховати фрагменти</translation>
+        <translation type="unfinished">Приховати блоки</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_selection.cpp" line="1351"/>
         <location filename="../../source/core/sw_model_selection.cpp" line="1382"/>
         <source>Unhide Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Показати фрагменти</translation>
+        <translation type="unfinished">Показати блоки</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="211"/>
@@ -21128,14 +20474,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="301"/>
         <source>Add Camera</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Додати камеру</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="311"/>
         <source>Add Point Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Додайте точкове світло</translation>
+        <translation type="unfinished">Додати точкове світло</translation>
     </message>
     <message>
         <source>Add Spot Light</source>
@@ -21145,14 +20489,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="319"/>
         <source>Add Directional Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Додайте спрямоване світло</translation>
+        <translation type="unfinished">Додати спрямоване світло</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="323"/>
         <source>Add Area Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Додати зону освітлення</translation>
+        <translation type="unfinished">Додати площинне світло</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="581"/>
@@ -21162,13 +20504,11 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="771"/>
         <source>Zoom Extents</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Розміри масштабування</translation>
+        <translation type="unfinished">Масштабувати до меж</translation>
     </message>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="744"/>
         <source>Change Model Properties</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Зміна властивостей моделі</translation>
     </message>
     <message>
@@ -21176,8 +20516,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/core/sw_model.cpp" line="764"/>
         <location filename="../../source/core/sw_model.cpp" line="823"/>
         <source>Part Array</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Масив штук</translation>
+        <translation type="unfinished">Масив блоків</translation>
     </message>
     <message>
         <source>Add Minifig</source>
@@ -21187,8 +20526,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model_tool.cpp" line="712"/>
         <source>Look At</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Подивіться</translation>
+        <translation type="unfinished">Дивитися на</translation>
     </message>
     <message>
         <source>Nothing to select.</source>
@@ -21271,7 +20609,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
         <source>Select models to manage, or drag them to change their order.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть моделі для керування або перетягніть їх, щоб змінити порядок.</translation>
     </message>
     <message>
@@ -21307,7 +20644,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
         <source>Choose a unique name for each selected model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть унікальну назву для кожної обраної моделі.</translation>
     </message>
     <message>
@@ -21318,14 +20654,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
         <source>Save the selected models to separate LDraw files.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Збережіть вибрані моделі в окремі файли LDraw.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Export Submodels&lt;/b&gt;&lt;/p&gt;&lt;p&gt;For one selected model, choose its output file. For several selected models, choose an output folder. Export writes files immediately, even if you later cancel this dialog.&lt;/p&gt;&lt;p&gt;A newly created empty model has nothing to export until the list changes have been applied.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Експорт підмоделей&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Для однієї вибраної моделі виберіть її вихідний файл. Для кількох вибраних моделей виберіть вихідну папку. Експорт записує файли негайно, навіть якщо ви пізніше скасуєте це діалогове вікно.&lt;/p&gt;&lt;p&gt;Новостворена порожня модель не має нічого для експорту, доки не буде застосовано зміни списку.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Експорт підмоделей&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Для однієї вибраної моделі виберіть її вихідний файл. Для кількох вибраних моделей виберіть вихідну теку. Експорт записує файли негайно, навіть якщо ви пізніше скасуєте це діалогове вікно.&lt;/p&gt;&lt;p&gt;Новостворена порожня модель не має нічого для експорту, доки не буде застосовано зміни списку.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
@@ -21335,19 +20669,16 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
         <source>Create named copies of the selected models.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Створіть іменовані копії вибраних моделей.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
         <source>Duplicate...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">дублікат...</translation>
+        <translation type="unfinished">Дублювати...</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.ui"/>
         <source>Switch to the current list item when applying the changes.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Під час застосування змін перейти до поточного елемента списку.</translation>
     </message>
     <message>
@@ -21400,7 +20731,6 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.cpp" line="194"/>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.cpp" line="262"/>
         <source>No submodel selected.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Підмодель не вибрано.</translation>
     </message>
     <message>
@@ -21416,8 +20746,7 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.cpp" line="224"/>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.cpp" line="246"/>
         <source>Export Submodel</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Підмодель експорту</translation>
+        <translation type="unfinished">Експортувати підмодель</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.cpp" line="216"/>
@@ -21441,8 +20770,7 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.cpp" line="230"/>
         <source>Select Export Folder</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть Експортувати папку</translation>
+        <translation type="unfinished">Виберіть теку експорту</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_list_model.cpp" line="262"/>
@@ -21510,13 +20838,11 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.cpp" line="133"/>
         <source>Page Setup</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Параметри сторінки</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
         <source>Size</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Розмір</translation>
     </message>
     <message>
@@ -21540,7 +20866,6 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_setup_page.ui"/>
         <source>Margins</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Поля</translation>
     </message>
     <message>
@@ -21849,32 +21174,27 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Part Palettes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Organize reusable collections of parts in the part browser. Create, rename, delete, import, or reorder palettes, then choose OK to apply the changes. Cancel discards these palette changes.&lt;/p&gt;&lt;p&gt;Palettes organize part choices; they do not change parts already placed in a model.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Палітри деталей&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Упорядковуйте багаторазові колекції деталей у браузері деталей. Створіть, перейменуйте, видаліть, імпортуйте або змініть порядок палітр, а потім виберіть «ОК», щоб застосувати зміни. «Скасувати» скасовує ці зміни палітри.&lt;/p&gt;&lt;p&gt;Палітри впорядковують вибір частин; вони не змінюють елементи, які вже розміщені в моделі.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Палітри блоків&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Упорядковуйте багаторазові добірки блоків у переглядачі блоків. Створюйте, перейменовуйте, видаляйте, імпортуйте або змінюйте порядок палітр, а потім натисніть «ОК», щоб застосувати зміни. «Скасувати» відхиляє ці зміни палітр.&lt;/p&gt;&lt;p&gt;Палітри впорядковують вибір блоків; вони не змінюють блоки, які вже розміщені в моделі.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Part Palettes</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Штучні палітри</translation>
+        <translation type="unfinished">Палітри блоків</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Select the palette to rename, delete, or move.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть палітру, яку потрібно перейменувати, видалити або перемістити.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Palette List&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a palette before using Rename, Delete, Move Up, or Move Down. The list order determines the palette order in the part browser.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Список палітр&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть палітру перед використанням команд «Перейменувати», «Видалити», «Перемістити вгору» або «Перемістити вниз». Порядок списку визначає порядок палітри в браузері частин.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Список палітр&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть палітру перед використанням команд «Перейменувати», «Видалити», «Перемістити вгору» або «Перемістити вниз». Порядок списку визначає порядок палітри в браузері блоків.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Create a new empty part palette.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Створіть нову порожню палітру елементів.</translation>
+        <translation type="unfinished">Створити нову порожню палітру блоків.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
@@ -21884,14 +21204,12 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Remove the selected palette after confirmation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Видаліть вибрану палітру після підтвердження.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Delete Palette&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected palette and its list of part choices. Library parts and parts already used in models are not deleted. At least one palette must remain.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Видалити палітру&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Видалити вибрану палітру та її список варіантів елементів. Деталі бібліотеки та деталі, які вже використовувалися в моделях, не видаляються. Повинна залишитися принаймні одна палітра.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Видалити палітру&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Видалити вибрану палітру та її список блоків. Блоки бібліотеки та блоки, які вже використані в моделях, не видаляються. Має залишитися принаймні одна палітра.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
@@ -21901,26 +21219,22 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Change the name of the selected palette.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Змініть назву вибраної палітри.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Rename...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перейменувати...</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Create a palette from an online set inventory.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Створіть палітру з онлайн-інвентарю.</translation>
+        <translation type="unfinished">Створити палітру з онлайн-інвентарю набору.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Import Palette&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open Import Set Inventory to search for a set and download its inventory. The new palette uses the set description as its name.&lt;/p&gt;&lt;p&gt;The palette stores part IDs; inventory colors and quantities are not stored. An internet connection is required.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Палітра імпорту&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Відкрийте перелік набору імпорту, щоб знайти набір і завантажити його перелік. Нова палітра використовує опис набору як назву.&lt;/p&gt;&lt;p&gt;Палітра зберігає ідентифікатори елементів; інвентарні кольори та кількість не зберігаються. Потрібне підключення до Інтернету.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Імпортувати палітру&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Відкрийте «Імпорт інвентарю набору», щоб знайти набір і завантажити його інвентар. Нова палітра використовує опис набору як назву.&lt;/p&gt;&lt;p&gt;Палітра зберігає ідентифікатори блоків; кольори та кількості з інвентарю не зберігаються. Потрібне підключення до інтернету.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
@@ -21930,32 +21244,27 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Move the selected palette one position earlier in the list.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перемістити вибрану палітру на одну позицію раніше в списку.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Move Up</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Рух вгору</translation>
+        <translation type="unfinished">Вгору</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Move the selected palette one position later in the list.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Перемістити вибрану палітру на одну позицію далі в списку.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.ui"/>
         <source>Move Down</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Рух вниз</translation>
+        <translation type="unfinished">Вниз</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.cpp" line="79"/>
         <source>New Part Palette</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Палітра нових творів</translation>
+        <translation type="unfinished">Нова палітра блоків</translation>
     </message>
     <message>
         <source>Palette Name:</source>
@@ -21971,20 +21280,17 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.cpp" line="98"/>
         <source>Are you sure you want to delete the palette &apos;%1&apos;?</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ви впевнені, що бажаєте видалити палітру &apos;%1&apos;?</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.cpp" line="99"/>
         <source>Delete Part Palette</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Видалити палітру фрагментів</translation>
+        <translation type="unfinished">Видалити палітру блоків</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_palette_part.cpp" line="118"/>
         <source>Rename Part Palette</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перейменувати палітру фрагментів</translation>
+        <translation type="unfinished">Перейменувати палітру блоків</translation>
     </message>
 </context>
 <context>
@@ -22054,26 +21360,22 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="652"/>
         <source>Add to Palette</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Додати до палітри</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="663"/>
         <source>None</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Жодного</translation>
+        <translation type="unfinished">Нічого</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="667"/>
         <source>Remove from Palette</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Видалити з палітри</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="673"/>
         <source>Open Submodel</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відкрийте підмодель</translation>
+        <translation type="unfinished">Відкрити підмодель</translation>
     </message>
 </context>
 <context>
@@ -22081,14 +21383,12 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part_popup.cpp" line="10"/>
         <source>Choose Part</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть деталь</translation>
+        <translation type="unfinished">Обрати блок</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part_popup.cpp" line="11"/>
         <source>&lt;p&gt;&lt;b&gt;Choose Part&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a part, then choose OK or double-click it to use it. Cancel keeps the original choice. Filter the list to find a part; Options controls matching and list display. When None is available, select it to omit the part.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Виберіть деталь&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть деталь, а потім натисніть OK або двічі клацніть його, щоб використати його. Скасувати зберігає початковий вибір. Відфільтруйте список, щоб знайти частину; Параметри керують відповідністю та відображенням списку. Якщо параметр «Немає», виберіть його, щоб пропустити деталь.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Виберіть блок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть блок, а потім натисніть «ОК» або двічі клацніть його, щоб використати. «Скасувати» зберігає початковий вибір. Відфільтруйте список, щоб знайти блок; «Параметри» керують відповідністю та відображенням списку. Якщо доступний варіант «Нічого», виберіть його, щоб пропустити блок.&lt;/p&gt;</translation>
     </message>
 </context>
 <context>
@@ -22097,15 +21397,13 @@ Weight: %1</source>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1141"/>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1142"/>
         <source>Filter Categories</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Категорії фільтрів</translation>
+        <translation type="unfinished">Фільтр категорій</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1149"/>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1616"/>
         <source>Match Case</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Match Case</translation>
+        <translation type="unfinished">Враховувати регістр</translation>
     </message>
     <message>
         <source>Search Parts</source>
@@ -22119,14 +21417,12 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1530"/>
         <source>Edit Palettes...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Редагувати палітри...</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1559"/>
         <source>Icons</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Ікони</translation>
+        <translation type="unfinished">Піктограми</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1563"/>
@@ -22161,32 +21457,27 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1603"/>
         <source>Lock Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Колір замка</translation>
+        <translation type="unfinished">Заблокувати колір</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1610"/>
         <source>Filter</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">фільтр</translation>
+        <translation type="unfinished">Фільтр</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1612"/>
         <source>Regular Expression</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Регулярний вираз</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1622"/>
         <source>Part ID</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">ID шматка</translation>
+        <translation type="unfinished">ID блока</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1627"/>
         <source>Part Description</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Опис твору</translation>
+        <translation type="unfinished">Опис блока</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1539"/>
@@ -22196,57 +21487,48 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1143"/>
         <source>Filter category names to narrow the category list.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Фільтруйте назви категорій, щоб звузити список категорій.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1158"/>
         <source>Part Categories</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Категорії штук</translation>
+        <translation type="unfinished">Категорії блоків</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1159"/>
         <source>Choose a category or palette to display its parts.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть категорію або палітру, щоб відобразити її частини.</translation>
+        <translation type="unfinished">Виберіть категорію або палітру, щоб відобразити її блоки.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1175"/>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1176"/>
         <source>Filter Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Шматки фільтра</translation>
+        <translation type="unfinished">Фільтр блоків</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1177"/>
         <source>Filter the displayed parts using the matching options.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відфільтруйте відображені деталі за допомогою відповідних параметрів.</translation>
+        <translation type="unfinished">Відфільтруйте відображені блоки за допомогою відповідних параметрів.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1182"/>
         <source>Configure part filtering and list display.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Налаштувати фільтрацію деталей і відображення списку.</translation>
+        <translation type="unfinished">Налаштувати фільтрацію блоків і відображення списку.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1182"/>
         <source>Part List Options</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Параметри списку штук</translation>
+        <translation type="unfinished">Параметри списку блоків</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1186"/>
         <source>Available Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Доступні штуки</translation>
+        <translation type="unfinished">Доступні блоки</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1187"/>
         <source>Select a part from the filtered list.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть деталь із відфільтрованого списку.</translation>
+        <translation type="unfinished">Виберіть блок із відфільтрованого списку.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1544"/>
@@ -22256,8 +21538,7 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1548"/>
         <source>Show Part Aliases</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Показати псевдоніми фрагментів</translation>
+        <translation type="unfinished">Показувати псевдоніми блоків</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1553"/>
@@ -22281,7 +21562,6 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1675"/>
         <source>Favorites</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вибране</translation>
     </message>
     <message>
@@ -22292,7 +21572,6 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_selection_part.cpp" line="1814"/>
         <source>In Use</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">У використанні</translation>
     </message>
     <message>
@@ -22347,43 +21626,36 @@ Weight: %1</source>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="543"/>
         <source>Could not decode embedded texture &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося декодувати вбудовану текстуру &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="573"/>
         <source>Invalid Base64 data for embedded file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Недійсні дані Base64 для вбудованого файлу &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="579"/>
         <source>Could not read embedded file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося прочитати вбудований файл &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="590"/>
         <source>Could not open file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося відкрити файл &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="596"/>
         <source>Invalid archive file source.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Недійсне джерело файлу архіву.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="604"/>
         <source>Could not read archive entry %1.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося прочитати запис архіву %1.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="607"/>
         <source>Could not read archive file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося прочитати файл архіву &apos;%1&apos;.</translation>
     </message>
     <message>
@@ -22409,13 +21681,11 @@ Weight: %1</source>
         <location filename="../../source/library/sw_library_load.cpp" line="294"/>
         <location filename="../../source/library/sw_library_load.cpp" line="391"/>
         <source>Library loading was canceled.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Завантаження бібліотеки скасовано.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library_load.cpp" line="340"/>
         <source>Could not load model geometry &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося завантажити геометрію моделі &apos;%1&apos;.</translation>
     </message>
     <message>
@@ -22434,19 +21704,16 @@ Weight: %1</source>
         <location filename="../../source/library/sw_library_load.cpp" line="483"/>
         <location filename="../../source/library/sw_library_load.cpp" line="527"/>
         <source>Could not open included file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося відкрити включений файл &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="1411"/>
         <source>Primitive include cycle at &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Примітивний цикл включення в &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_library.cpp" line="1486"/>
         <source>Could not load included file &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося завантажити включений файл &apos;%1&apos;.</translation>
     </message>
 </context>
@@ -22658,7 +21925,7 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Wireframe</source>
-        <translation>Арматура</translation>
+        <translation>Каркас</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -22755,8 +22022,7 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Application</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">застосування</translation>
+        <translation type="unfinished">Програма</translation>
     </message>
     <message>
         <source>Language:</source>
@@ -22766,7 +22032,6 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Default</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">За замовчуванням</translation>
     </message>
     <message>
@@ -22777,20 +22042,17 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Dark</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Темний</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>System</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">система</translation>
+        <translation type="unfinished">Система</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Reference Paths</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Шляхи посилань</translation>
     </message>
     <message>
         <source>Parts Library:</source>
@@ -22821,8 +22083,7 @@ Weight: %1</source>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="124"/>
         <source>Stud Style</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Стад стиль</translation>
+        <translation type="unfinished">Стиль шипів</translation>
     </message>
     <message>
         <source>Mesh LOD</source>
@@ -22836,8 +22097,7 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Plain</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Рівнина</translation>
+        <translation type="unfinished">Звичайний</translation>
     </message>
     <message>
         <source>Thin Lines Logo</source>
@@ -22847,31 +22107,26 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Outline Logo</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Контурний логотип</translation>
+        <translation type="unfinished">Логотип-контур</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Sharp Top Logo</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Логотип Sharp Top</translation>
+        <translation type="unfinished">Логотип із гострим верхом</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Rounded Top Logo</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Заокруглений верхній логотип</translation>
+        <translation type="unfinished">Логотип із округлим верхом</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Flattened Logo</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Сплощений логотип</translation>
+        <translation type="unfinished">Логотип зі сплощеним верхом</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>High Contrast</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Високий контраст</translation>
     </message>
     <message>
@@ -22887,8 +22142,7 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Contrast Settings...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Параметри контрастності...</translation>
+        <translation type="unfinished">Параметри контрасту...</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Preferences&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Configure the application, display, colors, part categories, and keyboard and mouse shortcuts. Choose OK to save the changes or Cancel to discard edits in Preferences. Language, part-library, and antialiasing changes may require restarting StudWorx.&lt;/p&gt;&lt;p&gt;Export buttons write files immediately. Blender add-on settings have their own Apply action and can configure Blender before you close Preferences.&lt;/p&gt;</source>
@@ -22903,13 +22157,11 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the interface language used after restarting StudWorx.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть мову інтерфейсу, яка буде використовуватися після перезапуску StudWorx.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Language</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Мова</translation>
     </message>
     <message>
@@ -22925,13 +22177,11 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the interface theme and optionally reset its colors.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть тему інтерфейсу та за бажанням скиньте її кольори.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Color Theme</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Кольорова тема</translation>
     </message>
     <message>
@@ -22947,13 +22197,11 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Move parts along fixed model axes instead of view-relative directions.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Переміщуйте деталі вздовж фіксованих осей моделі, а не вздовж відносних напрямків.</translation>
+        <translation type="unfinished">Переміщуйте блоки вздовж фіксованих осей моделі, а не вздовж відносних напрямків.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Open the most recently used file when StudWorx starts.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Відкрийте останній використовуваний файл під час запуску StudWorx.</translation>
     </message>
     <message>
@@ -22964,8 +22212,7 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Parts Library</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Бібліотека деталей</translation>
+        <translation type="unfinished">Бібліотека блоків</translation>
     </message>
     <message>
         <source>Choose a part-library folder.</source>
@@ -23010,38 +22257,32 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Set the POV-Ray executable used for rendering.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Встановіть виконуваний файл POV-Ray, який використовується для візуалізації.</translation>
+        <translation type="unfinished">Встановіть виконуваний файл POV-Ray, який використовується для вимальовування.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>POV-Ray Executable</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виконуваний файл POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Locate the POV-Ray executable.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Знайдіть виконуваний файл POV-Ray.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Set the LGEO library folder used by POV-Ray exports.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Установіть папку бібліотеки LGEO, яка використовується для експорту POV-Ray.</translation>
+        <translation type="unfinished">Установіть теку бібліотеки LGEO, яка використовується для експорту POV-Ray.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>LGEO Library</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Бібліотека LGEO</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the LGEO library folder.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть папку бібліотеки LGEO.</translation>
+        <translation type="unfinished">Виберіть теку бібліотеки LGEO.</translation>
     </message>
     <message>
         <source>Restore saved model tabs and view layouts when opening a project.</source>
@@ -23056,56 +22297,47 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Previous Step Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Колір попереднього кроку</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the tint used for parts from previous steps.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть відтінок, використаний для деталей із попередніх кроків.</translation>
+        <translation type="unfinished">Виберіть відтінок, використаний для блоків із попередніх кроків.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Shading Mode</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Режим затінення</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose how part surfaces and edges are drawn in model views.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть спосіб малювання поверхонь і країв у вигляді моделі.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Use simpler meshes for distant parts to improve display performance.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Використовуйте простіші сітки для віддалених частин, щоб покращити продуктивність відображення.</translation>
+        <translation type="unfinished">Використовувати простіші сітки для віддалених блоків, щоб покращити продуктивність відображення.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Tint parts from previous building steps with the chosen fade color.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відтініть частини з попередніх етапів будівництва вибраним кольором вицвітання.</translation>
+        <translation type="unfinished">Затінювати блоки з попередніх кроків вибраним кольором згасання.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Highlight parts introduced in the current building step.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виділіть елементи, введені на поточному етапі будівництва.</translation>
+        <translation type="unfinished">Виділяти блоки, додані на поточному кроці.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>New Part Highlight Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Колір виділення нової частини</translation>
+        <translation type="unfinished">Колір виділення нових блоків</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the highlight color for parts in the current step.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір виділення для частин на поточному кроці.</translation>
+        <translation type="unfinished">Виберіть колір виділення для блоків на поточному кроці.</translation>
     </message>
     <message>
         <source>Blender LDraw Render</source>
@@ -23140,32 +22372,27 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Configure colors and the light/dark threshold for high contrast stud styles.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Налаштуйте кольори та поріг світло/темно для висококонтрастних стилів шпильок.</translation>
+        <translation type="unfinished">Налаштуйте кольори та поріг світло/темно для висококонтрастних стилів шипів.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Antialiasing Samples</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зразки згладжування</translation>
+        <translation type="unfinished">Вибірки згладжування</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the antialiasing sample count; more samples can use more graphics resources.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть кількість вибірок згладжування; більше зразків може використовувати більше графічних ресурсів.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose stud geometry and the high contrast stud styles.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть геометрію шпильок і висококонтрастні стилі шпильок.</translation>
+        <translation type="unfinished">Виберіть геометрію шипів і висококонтрастні стилі шипів.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Smooth jagged edges in model views; changes require restarting StudWorx.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Гладкі зубчасті краї на моделях; зміни потребують перезапуску StudWorx.</translation>
+        <translation type="unfinished">Згладжувати нерівні краї у виглядах моделі; зміни потребують перезапуску StudWorx.</translation>
     </message>
     <message>
         <source>Selection Rendering</source>
@@ -23175,32 +22402,27 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw conditional lines where needed to show curved part surfaces.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Намалюйте умовні лінії, де потрібно, щоб показати вигнуті поверхні деталей.</translation>
+        <translation type="unfinished">Малювати умовні лінії там, де потрібно показати вигнуті поверхні блоків.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Set edge-line width within the range supported by the graphics system.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Встановіть ширину крайової лінії в діапазоні, який підтримується графічною системою.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Line Width</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ширина лінії</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw the edge lines defined by each part.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Намалюйте лінії краю, визначені кожною частиною.</translation>
+        <translation type="unfinished">Малювати лінії країв, визначені кожним блоком.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Calculate edge colors from part colors instead of using their defined edge colors.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Обчислюйте кольори країв із кольорів деталей замість використання їхніх визначених кольорів країв.</translation>
+        <translation type="unfinished">Обчислюйте кольори країв із кольорів блоків замість використання їхніх визначених кольорів країв.</translation>
     </message>
     <message>
         <source>Configure the contrast and saturation used for automated edge colors.</source>
@@ -23215,8 +22437,7 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Views</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перегляди</translation>
+        <translation type="unfinished">Вигляди</translation>
     </message>
     <message>
         <source>Model Views</source>
@@ -23231,20 +22452,17 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Axis Icon</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Значок осі</translation>
+        <translation type="unfinished">Значок осей</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the corner for the model-view navigation cube.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть кут для навігаційного куба моделі.</translation>
+        <translation type="unfinished">Виберіть кут для куба візуалізації.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the model-view navigation cube size, or disable it.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть розмір навігаційного куба перегляду моделі або вимкніть його.</translation>
+        <translation type="unfinished">Виберіть розмір куба візуалізації або вимкніть його.</translation>
     </message>
     <message>
         <source>View Cube:</source>
@@ -23254,7 +22472,6 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Location</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Розташування</translation>
     </message>
     <message>
@@ -23280,19 +22497,16 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the corner for the model-axis indicator.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть кут для індикатора осі моделі.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Show the X, Y and Z labels on the model-axis indicator.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Показувати підписи X, Y і Z на індикаторі осей моделі.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw the view cube outline around the model-axis indicator with the axis origin at its center.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Малювати контур куба вигляду навколо індикатора осей моделі з початком координат у його центрі.</translation>
     </message>
     <message>
@@ -23323,8 +22537,7 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Show stud positions on the base grid.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Покажіть положення шпильок на базовій сітці.</translation>
+        <translation type="unfinished">Показувати розташування шипів на базовій сітці.</translation>
     </message>
     <message>
         <source>Part Preview</source>
@@ -23354,122 +22567,102 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Colors</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Кольори</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the selection rectangle border.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір відображення рамки прямокутника вибору.</translation>
+        <translation type="unfinished">Виберіть колір межі рамки виділення.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Marquee Border</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Межа прямокутника виділення</translation>
+        <translation type="unfinished">Межа рамки виділення</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for inactive view borders.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір дисплея для меж неактивного перегляду.</translation>
+        <translation type="unfinished">Виберіть колір меж неактивного вигляду.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Marquee Fill</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Заливка прямокутника виділення</translation>
+        <translation type="unfinished">Заливка рамки виділення</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the selection rectangle fill.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір відображення для заливки виділеного прямокутника.</translation>
+        <translation type="unfinished">Виберіть колір заливки рамки виділення.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for view text.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір дисплея для перегляду тексту.</translation>
+        <translation type="unfinished">Виберіть колір тексту у виглядах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Text Halo Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Колір ореола тексту</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the halo behind view text.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір відображення для ореола позаду тексту.</translation>
+        <translation type="unfinished">Виберіть колір ореола навколо тексту у виглядах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Inactive View Border</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Межа неактивного перегляду</translation>
+        <translation type="unfinished">Межа неактивного вигляду</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for view overlays.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір дисплея для накладень.</translation>
+        <translation type="unfinished">Виберіть колір накладень у виглядах.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Text Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Колір тексту</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Overlay Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Колір накладання</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Active View Border</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Границя Active View</translation>
+        <translation type="unfinished">Межа активного вигляду</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the active view border.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір дисплея для межі активного перегляду.</translation>
+        <translation type="unfinished">Виберіть колір межі активного вигляду.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the navigation cube.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір дисплея для куба навігації.</translation>
+        <translation type="unfinished">Виберіть колір куба візуалізації.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for navigation cube text.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір відображення для тексту куба навігації.</translation>
+        <translation type="unfinished">Виберіть колір тексту куба візуалізації.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the highlighted region of the navigation cube.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір відображення для виділеної області навігаційного куба.</translation>
+        <translation type="unfinished">Виберіть колір виділеної області куба візуалізації.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for base-grid lines.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір відображення для ліній базової сітки.</translation>
+        <translation type="unfinished">Виберіть колір ліній базової сітки.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for base-grid stud markers.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір відображення для маркерів-гвоздиків базової сітки.</translation>
+        <translation type="unfinished">Виберіть колір позначок шипів базової сітки.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -23517,49 +22710,41 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Light Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Світлий колір</translation>
+        <translation type="unfinished">Колір світла</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Camera Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Колір камери</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Control Point Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Колір контрольної точки</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Focused Control Point Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Колір фокусованої контрольної точки</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Selected Object Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Колір вибраного об&apos;єкта</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Focused Object Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Колір сфокусованого об&apos;єкта</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Mouse Sensitivity</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Чутливість миші</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Interface</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Інтерфейс</translation>
     </message>
     <message>
@@ -23585,14 +22770,12 @@ Weight: %1</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Highlight New Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виділіть нові фрагменти</translation>
+        <translation type="unfinished">Виділяти нові блоки</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Fade Previous Steps</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зникнення попередніх кроків</translation>
+        <translation type="unfinished">Згасання попередніх кроків</translation>
     </message>
     <message>
         <source>Add-on Settings...</source>
@@ -23624,25 +22807,21 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Outline</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Контур</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Tint and Edges</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Тонування та краї</translation>
+        <translation type="unfinished">Відтінок і краї</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Lines</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Лінії</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Conditional Lines</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Умовні лінії</translation>
     </message>
     <message>
@@ -23653,14 +22832,12 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Edge Lines</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Крайові лінії</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Automate Edge Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Автоматизація кольору країв</translation>
+        <translation type="unfinished">Автоматичний колір країв</translation>
     </message>
     <message>
         <source>Marquee Fill:</source>
@@ -23675,25 +22852,21 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>View Cube Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Переглянути колір куба</translation>
+        <translation type="unfinished">Колір куба візуалізації</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>View Cube Text Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Переглянути колір тексту куба</translation>
+        <translation type="unfinished">Колір тексту куба візуалізації</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>View Cube Highlight Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Колір підсвічування куба перегляду</translation>
+        <translation type="unfinished">Колір підсвічування куба візуалізації</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Grid</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Сітка</translation>
     </message>
     <message>
@@ -23704,7 +22877,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Grid Line Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Колір лінії сітки</translation>
     </message>
     <message>
@@ -23715,8 +22887,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Grid Stud Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Колір шпильки сітки</translation>
+        <translation type="unfinished">Колір шипів сітки</translation>
     </message>
     <message>
         <source>Background Top Color</source>
@@ -23741,14 +22912,12 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Objects</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Об&apos;єкти</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for light-object outlines.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір відображення контурів світлових об’єктів.</translation>
+        <translation type="unfinished">Виберіть колір контурів світла.</translation>
     </message>
     <message>
         <source>Light:</source>
@@ -23758,8 +22927,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the focused object.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір відображення для об’єкта у фокусі.</translation>
+        <translation type="unfinished">Виберіть колір об’єкта у фокусі.</translation>
     </message>
     <message>
         <source>Focused:</source>
@@ -23769,14 +22937,12 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for camera-object outlines.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір відображення для контурів камери-об’єкта.</translation>
+        <translation type="unfinished">Виберіть колір контурів камер.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for the focused control point.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір дисплея для виділеної контрольної точки.</translation>
+        <translation type="unfinished">Виберіть колір контрольної точки у фокусі.</translation>
     </message>
     <message>
         <source>Control Point Focused:</source>
@@ -23786,14 +22952,12 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for control points.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір дисплея для контрольних точок.</translation>
+        <translation type="unfinished">Виберіть колір контрольних точок.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the display color for selected objects.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір відображення для вибраних об’єктів.</translation>
+        <translation type="unfinished">Виберіть колір вибраних об’єктів.</translation>
     </message>
     <message>
         <source>Control Point:</source>
@@ -23813,8 +22977,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Part Categories&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create, edit, reorder, or import categories for the part browser. The right-hand list shows parts matching the selected category. Imported and edited categories are saved when you choose OK in Preferences; Export writes the current list immediately.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Категорії деталей&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Створюйте, редагуйте, змінюйте порядок або імпортуйте категорії для переглядача деталей. Правий список показує частини, що відповідають вибраній категорії. Імпортовані та відредаговані категорії зберігаються, коли ви вибираєте OK у параметрах; Експорт негайно записує поточний список.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Категорії блоків&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Створюйте, редагуйте, змінюйте порядок або імпортуйте категорії для переглядача блоків. Правий список показує блоки, що відповідають вибраній категорії. Імпортовані та відредаговані категорії зберігаються, коли ви вибираєте OK у параметрах; Експорт негайно записує поточний список.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -23828,8 +22991,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Part Categories</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Категорії штук</translation>
+        <translation type="unfinished">Категорії блоків</translation>
     </message>
     <message>
         <source>Select a category to inspect or edit; drag categories to reorder them.</source>
@@ -23839,14 +23001,12 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Matching Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відповідні частини</translation>
+        <translation type="unfinished">Відповідні блоки</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>View the library parts matching the selected category.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перегляньте деталі бібліотеки, які відповідають вибраній категорії.</translation>
+        <translation type="unfinished">Перегляньте блоки бібліотеки, які відповідають вибраній категорії.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -23863,7 +23023,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Replace the category list with categories from a text file.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Замініть список категорій категоріями з текстового файлу.</translation>
     </message>
     <message>
@@ -23874,7 +23033,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Save the current category list to a text file immediately.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Негайно збережіть поточний список категорій у текстовий файл.</translation>
     </message>
     <message>
@@ -23885,7 +23043,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Restore the default category list after confirmation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Відновити стандартний список категорій після підтвердження.</translation>
     </message>
     <message>
@@ -23901,8 +23058,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Create a category with a name and a keyword expression.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Створіть категорію з назвою та ключовим виразом.</translation>
+        <translation type="unfinished">Створити категорію з назвою та виразом ключових слів.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -23912,8 +23068,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Edit the selected category name and keyword expression.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відредагуйте назву вибраної категорії та вираз ключового слова.</translation>
+        <translation type="unfinished">Редагувати назву вибраної категорії та вираз ключових слів.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -23923,7 +23078,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Remove the selected category after confirmation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Видаліть вибрану категорію після підтвердження.</translation>
     </message>
     <message>
@@ -23949,13 +23103,11 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Commands and Keyboard Shortcuts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Команди та комбінації клавіш</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Select the command whose keyboard shortcut you want to change.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть команду, комбінацію клавіш якої потрібно змінити.</translation>
     </message>
     <message>
@@ -23972,37 +23124,31 @@ Unsupported video cards use face tint and colored edges.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_context.cpp" line="140"/>
         <source>Filter Commands</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Команди фільтрів</translation>
+        <translation type="unfinished">Фільтр команд</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Filter commands by name or shortcut.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Фільтруйте команди за назвою або ярликом.</translation>
+        <translation type="unfinished">Фільтрувати команди за назвою або комбінацією клавіш.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Search shortcuts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Швидкі клавіші пошуку</translation>
+        <translation type="unfinished">Пошук комбінацій клавіш</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Replace keyboard shortcuts with assignments from a text file.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Замініть комбінації клавіш призначеннями з текстового файлу.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Save the current keyboard shortcuts to a text file immediately.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Негайно збережіть поточні комбінації клавіш у текстовий файл.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Restore the default keyboard shortcuts after confirmation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Відновіть стандартні комбінації клавіш після підтвердження.</translation>
     </message>
     <message>
@@ -24013,7 +23159,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Press the key combination to assign, then choose Assign.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Натисніть комбінацію клавіш, щоб призначити, а потім виберіть «Призначити».</translation>
     </message>
     <message>
@@ -24024,13 +23169,11 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Key Sequence</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Ключова послідовність</translation>
+        <translation type="unfinished">Послідовність клавіш</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Assign the entered key combination to the selected command.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Призначити введену комбінацію клавіш вибраній команді.</translation>
     </message>
     <message>
@@ -24041,7 +23184,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Clear the selected command&apos;s keyboard shortcut.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Очистити комбінацію клавіш вибраної команди.</translation>
     </message>
     <message>
@@ -24068,14 +23210,12 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Tools and Mouse Shortcuts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Інструменти та ярлики миші</translation>
+        <translation type="unfinished">Інструменти та комбінації клавіш миші</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Select a tool to edit its primary and secondary mouse shortcuts.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть інструмент для редагування основних і додаткових ярликів миші.</translation>
+        <translation type="unfinished">Виберіть інструмент, щоб редагувати його основні та додаткові комбінації клавіш миші.</translation>
     </message>
     <message>
         <source>Action</source>
@@ -24094,20 +23234,17 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Replace mouse shortcuts with assignments from a text file.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Замініть ярлики миші призначеннями з текстового файлу.</translation>
+        <translation type="unfinished">Замініть комбінації клавіш миші призначеннями з текстового файлу.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Save the current mouse shortcuts to a text file immediately.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Негайно збережіть поточні ярлики миші в текстовий файл.</translation>
+        <translation type="unfinished">Негайно збережіть поточні комбінації клавіш миші в текстовий файл.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Restore the default mouse shortcuts after confirmation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Після підтвердження відновіть стандартні ярлики миші.</translation>
+        <translation type="unfinished">Після підтвердження відновіть стандартні комбінації клавіш миші.</translation>
     </message>
     <message>
         <source>Choose the mouse button to assign to the selected tool.</source>
@@ -24178,13 +23315,11 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Remove the primary mouse shortcut and promote the secondary shortcut.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Видаліть основний ярлик миші та підвищте вторинний ярлик.</translation>
+        <translation type="unfinished">Видалити основну комбінацію клавіш миші та зробити основною додаткову.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Adjust how strongly mouse motion affects navigation.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Налаштуйте, наскільки сильно рух миші впливає на навігацію.</translation>
     </message>
     <message>
@@ -24247,13 +23382,11 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1362"/>
         <source>Reset Colors</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Скинути кольори</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1362"/>
         <source>Would you like to also reset the interface colors to match the color theme?</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Бажаєте також скинути кольори інтерфейсу відповідно до колірної теми?</translation>
     </message>
     <message>
@@ -24378,8 +23511,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1381"/>
         <source>Select Text Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть Колір тексту</translation>
+        <translation type="unfinished">Виберіть колір тексту</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1386"/>
@@ -24389,26 +23521,22 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1392"/>
         <source>Select Text Halo Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть «Колір ореола тексту».</translation>
+        <translation type="unfinished">Виберіть колір ореола тексту</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1398"/>
         <source>Select Marquee Border Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть колір межі рамки</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1403"/>
         <source>Select Marquee Fill Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть колір заливки рамки</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1409"/>
         <source>Select Overlay Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть «Колір накладання».</translation>
+        <translation type="unfinished">Виберіть колір накладання</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1414"/>
@@ -24448,20 +23576,17 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1456"/>
         <source>Select Active View Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть Колір Active View</translation>
+        <translation type="unfinished">Виберіть колір активного вигляду</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1461"/>
         <source>Select Inactive View Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть колір неактивного перегляду</translation>
+        <translation type="unfinished">Виберіть колір неактивного вигляду</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1466"/>
         <source>Select Fade Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть Fade Color</translation>
+        <translation type="unfinished">Виберіть колір згасання</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1472"/>
@@ -24481,8 +23606,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1489"/>
         <source>Select Highlight Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть Колір виділення</translation>
+        <translation type="unfinished">Виберіть колір виділення</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1495"/>
@@ -24527,38 +23651,32 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1551"/>
         <source>Select Object Selected Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть колір вибраного об’єкта</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1556"/>
         <source>Select Object Focused Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть «Колір фокусування на об’єкті».</translation>
+        <translation type="unfinished">Виберіть колір об’єкта у фокусі</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1561"/>
         <source>Select Camera Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть Колір камери</translation>
+        <translation type="unfinished">Виберіть колір камери</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1566"/>
         <source>Select Light Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть Світлий колір</translation>
+        <translation type="unfinished">Виберіть колір світла</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1571"/>
         <source>Select Control Point Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть Колір контрольної точки</translation>
+        <translation type="unfinished">Виберіть колір контрольної точки</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1577"/>
         <source>Select Control Point Focused Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть «Колір фокусування контрольної точки».</translation>
+        <translation type="unfinished">Виберіть колір контрольної точки у фокусі</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1583"/>
@@ -24659,8 +23777,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="340"/>
         <source>The shortcut &apos;%1&apos; is already assigned to &apos;%2&apos;. Do you want to replace it?</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Комбінація клавіш &apos;%1&apos; вже призначена для &apos;%2&apos;. Ви хочете його замінити?</translation>
+        <translation type="unfinished">Комбінація клавіш &apos;%1&apos; уже призначена для &apos;%2&apos;. Замінити її?</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="459"/>
@@ -25004,14 +24121,12 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="654"/>
         <source>Default Lights is unavailable. Flat shading is used instead.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Світло за замовчуванням недоступне. Замість цього використовується плоске затінення.</translation>
+        <translation type="unfinished">Типове освітлення недоступне. Замість нього використовується плоске освітлення.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="681"/>
         <source>View cube rendering is unavailable.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Візуалізація куба перегляду недоступна.</translation>
+        <translation type="unfinished">Вимальовування куба візуалізації недоступне.</translation>
     </message>
     <message>
         <source>Outline rendering is unavailable. Face tint and colored edges will be used.</source>
@@ -25021,8 +24136,7 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1325"/>
         <source>Select POV-Ray Executable</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть POV-Ray Виконуваний файл</translation>
+        <translation type="unfinished">Виберіть виконуваний файл POV-Ray</translation>
     </message>
     <message>
         <source>Import Keyboard Shortcuts</source>
@@ -25053,8 +24167,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="404"/>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="592"/>
         <source>Import Shortcuts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Імпорт ярликів</translation>
+        <translation type="unfinished">Імпорт комбінацій клавіш</translation>
     </message>
     <message>
         <source>Error loading mouse shortcuts file.</source>
@@ -25065,8 +24178,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="417"/>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="613"/>
         <source>Export Shortcuts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Експорт ярликів</translation>
+        <translation type="unfinished">Експорт комбінацій клавіш</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="121"/>
@@ -25754,79 +24866,66 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Labels</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Підписи</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Cube Outline</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Контур куба</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Negative Axes</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Від’ємні осі</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Show the negative X, Y and Z axes on the model-axis indicator in their own colors.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Показувати від’ємні осі X, Y і Z на індикаторі осей моделі власними кольорами.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the negative X axis color used by the axis icon.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть колір від’ємної осі X для значка осей.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Negative X Axis Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Колір від’ємної осі X</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1536"/>
         <source>Select Negative X Axis Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вибрати колір від’ємної осі X</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the negative Y axis color used by the axis icon.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть колір від’ємної осі Y для значка осей.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Negative Y Axis Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Колір від’ємної осі Y</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1541"/>
         <source>Select Negative Y Axis Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вибрати колір від’ємної осі Y</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose the negative Z axis color used by the axis icon.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть колір від’ємної осі Z для значка осей.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Negative Z Axis Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Колір від’ємної осі Z</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1546"/>
         <source>Select Negative Z Axis Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вибрати колір від’ємної осі Z</translation>
     </message>
     <message>
@@ -25862,27 +24961,23 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw Negative Axes</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Малювати від’ємні осі</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Draw the negative halves of the axis lines in the negative axis colors, with the Z line reaching below the base grid.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Малює від’ємні половини ліній осей кольорами від’ємних осей, а лінія Z сягає нижче базової сітки.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="589"/>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1694"/>
         <source>%1 ldu</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">%1 ldu</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Set the distance from the camera in LDraw units (ldu, 20 ldu per stud) beyond which parts draw simpler studs.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Задає відстань від камери в одиницях LDraw (ldu, 20 ldu на шип), далі якої деталі малюють спрощені шипи.</translation>
+        <translation type="unfinished">Задає відстань від камери в одиницях LDraw (ldu, 20 ldu на шип), після якої блоки малюються з простішими шипами.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -26992,7 +26087,6 @@ Unsupported video cards use face tint and colored edges.</source>
         <location filename="../../source/interface/widgets/sw_widget_preview.cpp" line="74"/>
         <location filename="../../source/interface/widgets/sw_widget_preview.cpp" line="349"/>
         <source>Lock Preview</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Заблокувати попередній перегляд</translation>
     </message>
     <message>
@@ -27003,7 +26097,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_preview.cpp" line="78"/>
         <source>Ctrl+L</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ctrl+L</translation>
     </message>
     <message>
@@ -27061,7 +26154,6 @@ Unsupported video cards use face tint and colored edges.</source>
         <location filename="../../source/interface/widgets/sw_widget_preview.cpp" line="261"/>
         <location filename="../../source/interface/widgets/sw_widget_preview.cpp" line="272"/>
         <source>Loading...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Завантаження...</translation>
     </message>
     <message>
@@ -27070,25 +26162,21 @@ Unsupported video cards use face tint and colored edges.</source>
         <location filename="../../source/interface/widgets/sw_widget_preview.cpp" line="280"/>
         <location filename="../../source/interface/widgets/sw_widget_preview.cpp" line="320"/>
         <source>Preview unavailable</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Попередній перегляд недоступний</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_preview.cpp" line="346"/>
         <source>Unlock the preview display to enable updates</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Розблокуйте екран попереднього перегляду, щоб увімкнути оновлення</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_preview.cpp" line="347"/>
         <source>Lock the preview display to disable updates</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Заблокуйте екран попереднього перегляду, щоб вимкнути оновлення</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_preview.cpp" line="349"/>
         <source>Unlock Preview</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Розблокувати попередній перегляд</translation>
     </message>
 </context>
@@ -27117,7 +26205,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Enter the author credited in this model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Введіть автора, зазначеного в цій моделі.</translation>
     </message>
     <message>
@@ -27127,7 +26214,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Enter a short description of this model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Введіть короткий опис цієї моделі.</translation>
     </message>
     <message>
@@ -27137,7 +26223,6 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Enter plain-text notes to store with this model.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Введіть звичайні текстові нотатки для зберігання в цій моделі.</translation>
     </message>
     <message>
@@ -27147,14 +26232,12 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Overall model dimensions along the X, Y, and Z axes.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Габаритні розміри моделі по осях X, Y, Z.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Model Measurements&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The dimensions of the model&apos;s bounding box are shown in centimeters, inches, and LDraw units (ldu). The values are read-only and include parts across all steps.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Розміри моделі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Розміри обмежувальної рамки моделі показано в сантиметрах, дюймах і одиницях LDraw (ldu). Значення доступні лише для читання та включають деталі на всіх етапах.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Розміри моделі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Розміри обмежувальної рамки моделі показано в сантиметрах, дюймах і одиницях LDraw (ldu). Значення доступні лише для читання та включають блоки на всіх етапах.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Measurements:</source>
@@ -27164,14 +26247,12 @@ Unsupported video cards use face tint and colored edges.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>Model Measurements</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вимірювання моделі</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_properties.ui"/>
         <source>View part quantities by color; click a column heading to sort.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перегляд кількості штук за кольором; клацніть заголовок стовпця для сортування.</translation>
+        <translation type="unfinished">Перегляд кількості блоків за кольором; клацніть заголовок стовпця для сортування.</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Parts Used&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The table counts parts across all steps, including parts inside submodels. Color columns show quantities, and totals summarize each part, each color, and the whole model. Click a column heading to sort. The part-name column stays visible while you scroll horizontally. Counts cannot be edited here.&lt;/p&gt;</source>
@@ -27478,13 +26559,11 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="32"/>
         <source>Keyframe for %1</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Ключовий кадр для %1</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="33"/>
         <source>&lt;p&gt;&lt;b&gt;Property Keyframe&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Enable or remove a keyframe for this property at the current building step. Keyframes let the property&apos;s value change between steps.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Ключовий кадр властивості&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Увімкніть або видаліть ключовий кадр для цієї властивості на поточному етапі створення. Ключові кадри дозволяють змінювати значення властивості між кроками.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -27506,7 +26585,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1111"/>
         <source>Expand or collapse the %1 properties.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Розгорніть або згорніть властивості %1.</translation>
     </message>
     <message>
@@ -27519,7 +26597,6 @@ N/A: %1 parts</source>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="719"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="724"/>
         <source>Multiple Values</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Кілька значень</translation>
     </message>
     <message>
@@ -27530,8 +26607,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="915"/>
         <source>Multiple Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Кілька штук</translation>
+        <translation type="unfinished">Кілька блоків</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="919"/>
@@ -27575,22 +26651,19 @@ N/A: %1 parts</source>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1398"/>
         <source>Part ID</source>
         <oldsource>Piece Id</oldsource>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Ідентифікатор шматка</translation>
+        <translation type="unfinished">Ідентифікатор блока</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="881"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1399"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1430"/>
         <source>Color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Колір</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1399"/>
         <source>Part color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Колір шматка</translation>
+        <translation type="unfinished">Колір блока</translation>
     </message>
     <message>
         <source>Show</source>
@@ -27615,7 +26688,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1407"/>
         <source>Camera</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера</translation>
     </message>
     <message>
@@ -27628,7 +26700,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1409"/>
         <source>Camera name</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Назва камери</translation>
     </message>
     <message>
@@ -27640,8 +26711,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1410"/>
         <source>Camera projection</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Камера проекції</translation>
+        <translation type="unfinished">Проекція камери</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1414"/>
@@ -27652,7 +26722,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1414"/>
         <source>Field of view in degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Поле зору в градусах</translation>
     </message>
     <message>
@@ -27664,8 +26733,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1415"/>
         <source>Near clipping distance</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Близька відрізна відстань</translation>
+        <translation type="unfinished">Ближня відстань відсікання</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1416"/>
@@ -27676,8 +26744,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1416"/>
         <source>Far clipping distance</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Далека відсікання</translation>
+        <translation type="unfinished">Дальня відстань відсікання</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1419"/>
@@ -27694,7 +26761,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1421"/>
         <source>Camera position</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Положення камери</translation>
     </message>
     <message>
@@ -27719,7 +26785,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1422"/>
         <source>Camera target position</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Цільове положення камери</translation>
     </message>
     <message>
@@ -27736,44 +26801,37 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1425"/>
         <source>Light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">світло</translation>
+        <translation type="unfinished">Світло</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1427"/>
         <source>Light name</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Світле ім&apos;я</translation>
+        <translation type="unfinished">Назва світла</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1428"/>
         <source>Type</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Тип</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1428"/>
         <source>Light type</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Легкий тип</translation>
+        <translation type="unfinished">Тип світла</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1430"/>
         <source>Light color</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Світлий колір</translation>
+        <translation type="unfinished">Колір світла</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1431"/>
         <source>Cast Shadow</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Cast Shadow</translation>
+        <translation type="unfinished">Відкидати тінь</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1431"/>
         <source>Cast a shadow from this light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відкиньте тінь від цього світла</translation>
+        <translation type="unfinished">Відкидати тінь від цього світла</translation>
     </message>
     <message>
         <source>Cone Angle</source>
@@ -27880,14 +26938,12 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1429"/>
         <source>Area Shape</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Форма області</translation>
+        <translation type="unfinished">Форма площі</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1429"/>
         <source>The shape of the area light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Форма ділянки світла</translation>
+        <translation type="unfinished">Форма площинного світла</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1433"/>
@@ -27927,26 +26983,22 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1441"/>
         <source>Size X</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Розмір X</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1441"/>
         <source>The width of the area light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Ширина ділянки світла</translation>
+        <translation type="unfinished">Ширина площинного світла</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1442"/>
         <source>The height of the area light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Висота ділянки світла</translation>
+        <translation type="unfinished">Висота площинного світла</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1445"/>
         <source>Blender Settings</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Blender Налаштування</translation>
+        <translation type="unfinished">Налаштування Blender</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1447"/>
@@ -27962,15 +27014,13 @@ N/A: %1 parts</source>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1449"/>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1458"/>
         <source>Power</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">потужність</translation>
+        <translation type="unfinished">Потужність</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1449"/>
         <source>Power of the light in watts</source>
         <oldsource>Power of the light in Watts</oldsource>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Потужність світла у Ватах</translation>
+        <translation type="unfinished">Потужність світла у ватах</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1449"/>
@@ -27980,32 +27030,27 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1450"/>
         <source>Radius</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Радіус</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1450"/>
         <source>Shadow soft size</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Тінь м&apos;який розмір</translation>
+        <translation type="unfinished">Розмір м’якості тіні</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1451"/>
         <source>Angle</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Кут</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1451"/>
         <source>Angular diameter of the light</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Кутовий діаметр світла</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1454"/>
         <source>POV-Ray Settings</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">POV-Ray Налаштування</translation>
+        <translation type="unfinished">Налаштування POV-Ray</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1456"/>
@@ -28020,7 +27065,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1458"/>
         <source>Power of the light (multiplicative factor)</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Потужність світла (множник)</translation>
     </message>
     <message>
@@ -28036,26 +27080,22 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1464"/>
         <source>Fade Distance</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відстань зникнення</translation>
+        <translation type="unfinished">Відстань згасання</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1464"/>
         <source>The distance at which the full light intensity arrives</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Відстань, на яку надходить повна інтенсивність світла</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1465"/>
         <source>Fade Power</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Fade Power</translation>
+        <translation type="unfinished">Сила згасання</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1465"/>
         <source>Light falloff rate</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Швидкість легкого падіння</translation>
+        <translation type="unfinished">Швидкість спаду світла</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1468"/>
@@ -28100,8 +27140,7 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1459"/>
         <source>Tightness</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Герметичність</translation>
+        <translation type="unfinished">Концентрація</translation>
     </message>
     <message>
         <source>Additional exponential spot light edge softening</source>
@@ -28111,7 +27150,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1470"/>
         <source>Grid X</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Сітка X</translation>
     </message>
     <message>
@@ -28127,7 +27165,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1476"/>
         <source>Position of the object</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Положення об&apos;єкта</translation>
     </message>
     <message>
@@ -28138,7 +27175,6 @@ N/A: %1 parts</source>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_properties.cpp" line="1477"/>
         <source>Rotation of the object in degrees</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Поворот об&apos;єкта в градусах</translation>
     </message>
 </context>
@@ -28348,8 +27384,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="433"/>
         <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Start the render using the current settings. While rendering, this button becomes Cancel so you can stop the operation.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Відтворення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Почати відтворення з використанням поточних налаштувань. Під час візуалізації ця кнопка стає Скасувати, щоб ви могли зупинити операцію.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вимальовування&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Почати вимальовування з використанням поточних налаштувань. Під час вимальовування ця кнопка стає Скасувати, щоб ви могли зупинити операцію.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>POV-Ray Image Render</source>
@@ -28390,7 +27425,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="985"/>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1973"/>
         <source>Open in Blender</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Відкрити в Blender</translation>
     </message>
     <message>
@@ -28401,8 +27435,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1784"/>
         <source>Exporting Model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Модель експорту</translation>
+        <translation type="unfinished">Експорт моделі</translation>
     </message>
     <message>
         <source>Render Error</source>
@@ -28417,8 +27450,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="449"/>
         <source>Render the current model step with POV-Ray.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відтворіть поточний крок моделі за допомогою POV-Ray.</translation>
+        <translation type="unfinished">Вималюйте поточний крок моделі за допомогою POV-Ray.</translation>
     </message>
     <message>
         <source>Set the POV-Ray image dimensions and render quality.</source>
@@ -28443,8 +27475,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1020"/>
         <source>Render the current model step with Blender.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відтворіть поточний крок моделі за допомогою Blender.</translation>
+        <translation type="unfinished">Вималюйте поточний крок моделі за допомогою Blender.</translation>
     </message>
     <message>
         <source>Configure Blender, its add-on, and render settings.</source>
@@ -28469,7 +27500,6 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1019"/>
         <source>Import the current model step and open it in Blender.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Імпортуйте поточний крок моделі та відкрийте його в Blender.</translation>
     </message>
     <message>
@@ -29440,7 +28470,6 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1890"/>
         <source>Saving Blender Model</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Збереження моделі Blender</translation>
     </message>
     <message>
@@ -29453,19 +28482,16 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1971"/>
         <source>errors%1</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">помилки%1</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1971"/>
         <source> and warnings</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished"> і попередження</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1971"/>
         <source>warnings</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">попередження</translation>
     </message>
     <message>
@@ -29477,8 +28503,7 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1972"/>
         <source>Open in Blender encountered %1. See Show Details...</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Відкрити в Blender виявлено %1. Див. Показати деталі...</translation>
+        <translation type="unfinished">Під час «Відкрити в Blender» виявлено %1. Див. «Показати деталі...»</translation>
     </message>
     <message>
         <source>Error starting Blender render process.</source>
@@ -29490,15 +28515,13 @@ Install the povray-includes package or the include files of your POV-Ray version
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2060"/>
         <source>Failed to open log file: &apos;%1&apos;:
 %2</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося відкрити файл журналу: &apos;%1&apos;:
 %2</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2221"/>
         <source>An error occurred while rendering.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Під час візуалізації сталася помилка.</translation>
+        <translation type="unfinished">Під час вимальовування сталася помилка.</translation>
     </message>
     <message>
         <source>Render failed.</source>
@@ -29567,8 +28590,7 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="805"/>
         <source>Choose the rendering quality; higher quality can take longer.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть якість візуалізації; висока якість може зайняти більше часу.</translation>
+        <translation type="unfinished">Виберіть якість вимальовування; висока якість може зайняти більше часу.</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Rendering Quality&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Low uses POV-Ray&apos;s default quality without additional antialiasing options. Medium uses quality level 5 with antialiasing. High uses quality level 11 with additional antialiasing settings.&lt;/p&gt;</source>
@@ -29605,8 +28627,7 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1048"/>
         <source>Renderer Output</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Вихід рендерера</translation>
+        <translation type="unfinished">Вивід рендерера</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="425"/>
@@ -29622,20 +28643,17 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1049"/>
         <source>Read and copy renderer output and diagnostic messages.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Читання та копіювання вихідних даних рендерера та діагностичних повідомлень.</translation>
+        <translation type="unfinished">Читання та копіювання виводу рендерера та діагностичних повідомлень.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Path and file name for the rendered image.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Шлях і ім’я файлу відтвореного зображення.</translation>
+        <translation type="unfinished">Шлях і ім’я файлу вимальованого зображення.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Output Image&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose where to save the rendered image and its format, such as PNG, JPEG, or BMP. The output path applies to image rendering; Open in Blender does not use it.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вихідне зображення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть місце для збереження відтвореного зображення та його формат, як-от PNG, JPEG або BMP. Вихідний шлях застосовується до візуалізації зображення; Open in Blender не використовує його.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вихідне зображення&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть, де зберегти вимальоване зображення, та його формат, наприклад PNG, JPEG або BMP. Вихідний шлях застосовується до вимальовування зображення; «Відкрити в Blender» його не використовує.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>Output:</source>
@@ -29644,14 +28662,12 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Choose the rendered image file and format.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть файл відтвореного зображення та формат.</translation>
+        <translation type="unfinished">Виберіть файл вимальованого зображення та формат.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Choose Render Output</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть Render Output</translation>
+        <translation type="unfinished">Виберіть вихід вимальовування</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
@@ -29662,32 +28678,27 @@ Install the povray-includes package or the include files of your POV-Ray version
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Preview of the rendered image.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Попередній перегляд візуалізованого зображення.</translation>
+        <translation type="unfinished">Попередній перегляд вимальованого зображення.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Render Preview</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Попередній перегляд візуалізації</translation>
+        <translation type="unfinished">Попередній перегляд вимальовування</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Render Preview&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The preview is scaled to fit this area. Changing the dialog size does not change the output resolution; use Settings to change the image dimensions.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Попередній перегляд&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Попередній перегляд масштабується відповідно до цієї області. Зміна розміру діалогового вікна не змінює вихідну роздільну здатність; використовуйте налаштування, щоб змінити розміри зображення.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Progress of the current export or render.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перебіг поточного експорту або візуалізації.</translation>
+        <translation type="unfinished">Перебіг поточного експорту або вимальовування.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
         <source>Render Progress</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перебіг візуалізації</translation>
+        <translation type="unfinished">Перебіг вимальовування</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1639"/>
@@ -29844,8 +28855,7 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Select Objects&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use the checkboxes to choose visible parts, cameras, and lights in the current model. Choose OK to replace the current selection with the checked objects, or Cancel to keep the current selection.&lt;/p&gt;&lt;p&gt;Parts in the same top-level group are selected together. All, None, and Invert change the checkboxes in this dialog.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Вибір об’єктів&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Використовуйте прапорці, щоб вибрати видимі частини, камери та освітлення в поточній моделі. Виберіть «ОК», щоб замінити поточне виділення позначеними об’єктами, або «Скасувати», щоб зберегти поточне виділення.&lt;/p&gt;&lt;p&gt;Елементи в одній групі верхнього рівня вибираються разом. Усі, Нічого та Інвертувати змінюють прапорці в цьому діалоговому вікні.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Виділення об’єктів&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Використовуйте прапорці, щоб позначити видимі блоки, камери та світло в поточній моделі. Натисніть «ОК», щоб замінити поточне виділення позначеними об’єктами, або «Скасувати», щоб зберегти поточне виділення.&lt;/p&gt;&lt;p&gt;Елементи в одній групі верхнього рівня виділяються разом. «Усі», «Нічого» та «Інвертувати» змінюють прапорці в цьому діалоговому вікні.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
@@ -29855,26 +28865,22 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>Check the objects to include in the selection.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Позначте об’єкти, які потрібно включити до вибору.</translation>
+        <translation type="unfinished">Позначте об’єкти, які потрібно включити до виділення.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Object List&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The list includes parts visible in the current step and visible cameras and lights. Expand groups to see their parts. Checking or clearing a grouped part applies the same state to all parts in its top-level group.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Список об’єктів&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Список включає елементи, видимі на поточному кроці, а також видимі камери та освітлення. Розгорніть групи, щоб побачити їхні частини. Перевірка або очищення згрупованої фігури застосовує той самий стан до всіх фігур у її групі верхнього рівня.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Список об’єктів&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Список містить блоки, видимі на поточному кроці, а також видимі камери та світло. Розгорніть групи, щоб побачити їхні блоки. Позначення або зняття позначки з блока в групі застосовує той самий стан до всіх блоків у його групі верхнього рівня.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>Objects to Select</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Об’єкти для вибору</translation>
+        <translation type="unfinished">Об’єкти для виділення</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>Check every object in the list.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Перевірте кожен об&apos;єкт у списку.</translation>
+        <translation type="unfinished">Позначити кожен об’єкт у списку.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
@@ -29884,8 +28890,7 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>Clear every object checkbox in the list.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Зніміть прапорці кожного об’єкта в списку.</translation>
+        <translation type="unfinished">Зняти позначку з кожного об’єкта у списку.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
@@ -29895,8 +28900,7 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
         <source>Check unchecked objects and clear checked objects.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Позначте непозначені об’єкти та очистіть позначені об’єкти.</translation>
+        <translation type="unfinished">Позначити непозначені об’єкти та зняти позначку з позначених.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_select.ui"/>
@@ -29913,7 +28917,6 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Import Set Inventory&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Search the online Rebrickable database by set name or number. Select a result and choose OK, or double-click it, to download the set inventory for the operation that opened this dialog.&lt;/p&gt;&lt;p&gt;An internet connection is required for searching and downloading inventories.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Імпорт набору інвентаризації&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Пошук в онлайновій базі даних Rebrickable за назвою або номером набору. Виберіть результат і натисніть «ОК» або двічі клацніть його, щоб завантажити встановлений інвентар для операції, яка відкрила це діалогове вікно.&lt;/p&gt;&lt;p&gt;Для пошуку та завантаження інвентаризації потрібне підключення до Інтернету.&lt;/p&gt;</translation>
     </message>
     <message>
@@ -29922,13 +28925,11 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="167"/>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.cpp" line="265"/>
         <source>Import Set Inventory</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Імпорт набору інвентарю</translation>
+        <translation type="unfinished">Імпорт інвентарю набору</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>Enter a set name or number, then press Enter or choose Search.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Введіть назву або номер набору, потім натисніть Enter або виберіть Пошук.</translation>
     </message>
     <message>
@@ -29939,13 +28940,11 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Search Sets&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Enter a set number or words from its name. Press Enter or choose Search to retrieve matching sets. Refine the search if the set you want is not listed.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">&lt;p&gt;&lt;b&gt;Пошук наборів&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Введіть номер або слова з назви набору. Натисніть Enter або виберіть «Пошук», щоб отримати відповідні набори. Уточніть пошук, якщо потрібного набору немає в списку.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>Search the online database using the entered name or number.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Шукайте в онлайн-базі даних за введеним іменем або номером.</translation>
     </message>
     <message>
@@ -29956,20 +28955,17 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>Select a set to download its part inventory.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Виберіть набір, щоб завантажити його інвентар.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>Set Search Results</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Налаштувати результати пошуку</translation>
+        <translation type="unfinished">Результати пошуку наборів</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>&lt;p&gt;&lt;b&gt;Search Results&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Results show the set number, name, release year, and part count. Select the desired set and choose OK, or double-click its row, to download its inventory.&lt;/p&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Результати пошуку&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Результати показують номер набору, назву, рік випуску та кількість штук. Виберіть потрібний набір і натисніть OK або двічі клацніть його рядок, щоб завантажити його інвентар.&lt;/p&gt;</translation>
+        <translation type="unfinished">&lt;p&gt;&lt;b&gt;Результати пошуку&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Результати показують номер набору, назву, рік випуску та кількість блоків. Виберіть потрібний набір і натисніть «ОК» або двічі клацніть його рядок, щоб завантажити його інвентар.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
@@ -29994,7 +28990,6 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_database_sets.ui"/>
         <source>Set data provided by &lt;a href=&quot;https://www.rebrickable.com&quot;&gt;Rebrickable&lt;/a&gt;</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Набір даних надано &lt;a href=&quot;https://www.rebrickable.com&quot;&gt;Rebrickable&lt;/a&gt;</translation>
     </message>
     <message>
@@ -30080,7 +29075,6 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/widgets/sw_widget_spinner.cpp" line="9"/>
         <source>Loading</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Завантаження</translation>
     </message>
 </context>
@@ -30117,32 +29111,27 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/library/sw_texture.cpp" line="77"/>
         <source>Could not load texture &apos;%1&apos;.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося завантажити текстуру &apos;%1&apos;.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_texture.cpp" line="80"/>
         <source>Could not make the shared GL context current for texture upload.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося зробити спільний контекст GL актуальним для завантаження текстури.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_texture.cpp" line="83"/>
         <source>No shared GL context is available for texture upload.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Спільний контекст GL недоступний для завантаження текстури.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_texture.cpp" line="86"/>
         <source>Texture upload failed.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Помилка завантаження текстури.</translation>
     </message>
     <message>
         <location filename="../../source/library/sw_texture.cpp" line="89"/>
         <location filename="../../source/library/sw_texture.cpp" line="92"/>
         <source>Texture &apos;%1&apos; failed to load.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Не вдалося завантажити текстуру &apos;%1&apos;.</translation>
     </message>
 </context>
@@ -30151,14 +29140,12 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="13"/>
         <source>Building Steps and Parts</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Будівельні кроки та елементи</translation>
+        <translation type="unfinished">Кроки та блоки</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="14"/>
         <source>Select steps or parts; drag parts to reorder them or change their building step.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
-        <translation type="unfinished">Виберіть кроки або частини; перетягуйте частини, щоб змінити їх порядок або змінити крок їхньої побудови.</translation>
+        <translation type="unfinished">Виберіть кроки або блоки; перетягуйте блоки, щоб змінити їх порядок або змінити крок їхньої побудови.</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="189"/>
@@ -30333,19 +29320,16 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     <message>
         <location filename="../../source/rendering/sw_view_widget.cpp" line="55"/>
         <source>Stop looking through this camera.</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Припинити дивитися через цю камеру.</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_view_widget.cpp" line="54"/>
         <source>Free Camera</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Вільна камера</translation>
     </message>
     <message>
         <location filename="../../source/rendering/sw_view_widget.cpp" line="198"/>
         <source>Camera: %1</source>
-        <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="unfinished">Камера: %1</translation>
     </message>
     <message>

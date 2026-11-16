@@ -8,6 +8,8 @@
   - Translations: Traditional Chinese has about 1,900 more and better translations, from yoyomaimai
   - Translations: Traditional Chinese reads right for Startup, Origin, Author Line, Hip Accessory and Filter Parts
   - Preferences: the Get Key button widens to show its whole label in longer languages
+  - Translations: every machine-translated line in all nine languages was checked, and about 2,900 wrong ones now read right, like Close that read as near, Light as pale and Stud as earring
+  - Translations: Traditional Chinese uses Taiwan words, like 匯入 and 匯出 for import and export
 
   </details>
 
