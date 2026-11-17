@@ -192,7 +192,7 @@ public:
 	int GetMaxTextureSize();
 	std::unique_ptr<QOpenGLFramebufferObject> CreateFramebuffer(int Width, int Height);
 	bool GenerateOutlineMasks(const swScene& Scene, QOpenGLFramebufferObject& FullFramebuffer, QOpenGLFramebufferObject& VisibleFramebuffer);
-	void DrawOutline(QOpenGLFramebufferObject& FullFramebuffer, QOpenGLFramebufferObject& VisibleFramebuffer, float DeviceScale, const swVector4& HighlightColor, const swVector4& HoverColor, const swVector4& MissingColor);
+	void DrawOutline(QOpenGLFramebufferObject& FullFramebuffer, QOpenGLFramebufferObject& VisibleFramebuffer, float DeviceScale, int OutlineWidth, const swVector4& HighlightColor, const swVector4& HoverColor, const swVector4& MissingColor);
 
 	void SetWorldMatrix(const swMatrix44& WorldMatrix)
 	{

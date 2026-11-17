@@ -424,8 +424,10 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 		CreateToggleEditor(swInstructionsPropertyType::HighlightNewParts, tr("Highlight New Parts"), tr("Outline the parts added in each step with the highlight color."))
 	});
 
-	CreateColorEditor(swInstructionsPropertyType::HighlightColor, tr("Highlight Color"), tr("Color of the outline around the parts added in each step, kept between 85 and 95 percent opaque."));
+	CreateColorEditor(swInstructionsPropertyType::HighlightColor, tr("Highlight Color"), tr("Color and opacity of the outline around the parts added in each step."));
 	AddEditorRow(CategoryIndex::Document, swInstructionsPropertyType::HighlightColor);
+	CreateLengthEditor(swInstructionsPropertyType::HighlightWidth, tr("Highlight Width"), tr("Thickness of the outline around the parts added in each step."), 1, 72, 0.05);
+	AddEditorRow(CategoryIndex::Document, swInstructionsPropertyType::HighlightWidth);
 
 	AddCategory(CategoryIndex::Cover, tr("Cover Page"), tr("<p><b>Cover Page</b></p><p>The first page, showing the model title, its author and the finished model. The title comes from the model description, or its name when there is none, the author from the model properties.</p>"));
 
@@ -515,7 +517,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 
 	AddRow(CategoryIndex::Page, { BackgroundApplyAllButton });
 
-	AddCategory(CategoryIndex::PageLayout, tr("Steps per Page"), tr("<p><b>Steps per Page</b></p><p>The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model, and Main Page Color gives a submodel's finished model the main page color.</p>"));
+	AddCategory(CategoryIndex::PageLayout, tr("Steps per Page"), tr("<p><b>Steps per Page</b></p><p>The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model, and Main Page Color gives a submodel's finished model the main page color. The final model border frames that area and its margin keeps it away from the steps and page margins.</p>"));
 
 	std::vector<QWidget*> PresetButtons;
 
@@ -620,6 +622,12 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddLabeledRow(CategoryIndex::PageLayout, tr("Columns"), mColumnsSpinBox);
 	AddLabeledRow(CategoryIndex::PageLayout, tr("Step Flow"), mStepFlowComboBox);
 	AddRow(CategoryIndex::PageLayout, { mFinalModelButton, mFinalModelColorButton });
+	CreateLengthEditor(swInstructionsPropertyType::FinalModelBorderWidth, tr("Final Border"), tr("Width of the frame around the final model area, 0 draws none."), 0, 72, 0.1);
+	AddEditorRow(CategoryIndex::PageLayout, swInstructionsPropertyType::FinalModelBorderWidth);
+	CreateColorEditor(swInstructionsPropertyType::FinalModelBorderColor, tr("Final Border Color"), tr("Color of the frame around the final model area."));
+	AddEditorRow(CategoryIndex::PageLayout, swInstructionsPropertyType::FinalModelBorderColor);
+	CreateLengthEditor(swInstructionsPropertyType::FinalModelMargin, tr("Final Margin"), tr("Space between the final model area and the steps and page margins around it."), 0, 144, 0.25);
+	AddEditorRow(CategoryIndex::PageLayout, swInstructionsPropertyType::FinalModelMargin);
 	AddRow(CategoryIndex::PageLayout, { ApplyAllButton });
 
 	AddCategory(CategoryIndex::Divider, tr("Divider"), tr("<p><b>Divider</b></p><p>The lines between neighboring steps. Horizontal and Vertical hide the lines in one direction, for example where page colors already split the page. The margin keeps the line ends away from the page margins, the padding keeps the steps away from the lines.</p>"));
@@ -1142,10 +1150,8 @@ void swInstructionsPropertiesWidget::ColorButtonClicked(swInstructionsPropertyTy
 	// edit the alpha of backgrounds
 	QColor SelectedColor = swPickColor(Button, GetColorValue(Type));
 
-	// hide too transparent highlights
-	if (SelectedColor.isValid() && Type == swInstructionsPropertyType::HighlightColor)
-		SelectedColor = swQColorFromRGBA(swClampStepColorAlpha(swRGBAFromQColor(SelectedColor)));
-	else if (SelectedColor.isValid() && Type == swInstructionsPropertyType::FadeColor)
+	// keep faded parts visible
+	if (SelectedColor.isValid() && Type == swInstructionsPropertyType::FadeColor)
 		SelectedColor = swQColorFromRGBA(swClampFadeColorAlpha(swRGBAFromQColor(SelectedColor)));
 
 	if (SelectedColor.isValid())

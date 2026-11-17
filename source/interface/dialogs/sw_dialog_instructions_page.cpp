@@ -315,7 +315,7 @@ void swInstructionsStepImageItem::Update()
 
 	const bool HighlightNewParts = !mCoverImage && !mFinalModel && mInstructions->GetBoolProperty(swInstructionsPropertyType::HighlightNewParts, mModel, mStep);
 	const QColor HighlightColor = mInstructions->GetColorProperty(swInstructionsPropertyType::HighlightColor, mModel, mStep);
-	View.SetHighlightNewPartsOverride(HighlightNewParts, swRGBAFromQColor(HighlightColor));
+	View.SetHighlightNewPartsOverride(HighlightNewParts, swRGBAFromQColor(HighlightColor), mInstructions->GetIntProperty(swInstructionsPropertyType::HighlightWidth, mModel, mStep));
 
 	// work on a copy of the main camera
 	View.SetCamera(View.GetCamera(), true);
@@ -1452,23 +1452,38 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 
 		if (Step.FinalModel)
 		{
+			// margin and border shrink the area
+
+			const qreal FinalMargin = Instructions->GetIntProperty(swInstructionsPropertyType::FinalModelMargin, Step.Model, Step.Step);
+			const qreal FinalBorder = Instructions->GetIntProperty(swInstructionsPropertyType::FinalModelBorderWidth, Step.Model, Step.Step);
+			const QRectF FinalRect = CellRect.adjusted(FinalMargin, FinalMargin, -FinalMargin, -FinalMargin);
+
 			// shortcut: uses the default page color, not a parent page override
 
 			if (Page->Settings.FinalModelColor)
 			{
-				QGraphicsRectItem* FinalAreaItem = new QGraphicsRectItem(CellRect, PageItem);
+				QGraphicsRectItem* FinalAreaItem = new QGraphicsRectItem(FinalRect, PageItem);
 				FinalAreaItem->setPen(QPen(Qt::NoPen));
 				FinalAreaItem->setBrush(QBrush(Instructions->GetColorProperty(swInstructionsPropertyType::PageBackgroundColor, nullptr, 0)));
 				FinalAreaItem->setZValue(-1.0);
 			}
 
+			if (FinalBorder > 0.0)
+			{
+				const qreal Half = FinalBorder / 2.0;
+
+				QGraphicsRectItem* FinalBorderItem = new QGraphicsRectItem(FinalRect.adjusted(Half, Half, -Half, -Half), PageItem);
+				FinalBorderItem->setPen(QPen(Instructions->GetColorProperty(swInstructionsPropertyType::FinalModelBorderColor, Step.Model, Step.Step), FinalBorder, Qt::SolidLine, Qt::SquareCap, Qt::MiterJoin));
+				FinalBorderItem->setBrush(Qt::NoBrush);
+			}
+
 			swInstructionsStepImageItem* FinalImageItem = new swInstructionsStepImageItem(PageItem, Instructions, Step.Model, Step.Step);
-			const qreal FinalInset = FinalImageItem->GetBoxStyle().GetInset();
+			const qreal FinalInset = FinalImageItem->GetBoxStyle().GetInset() + FinalBorder;
 
 			FinalImageItem->SetFinalModel();
-			FinalImageItem->SetImageSize(qMax(static_cast<int>(CellRect.width() - 2.0 * FinalInset), 1), qMax(static_cast<int>(CellRect.height() - 2.0 * FinalInset), 1));
+			FinalImageItem->SetImageSize(qMax(static_cast<int>(FinalRect.width() - 2.0 * FinalInset), 1), qMax(static_cast<int>(FinalRect.height() - 2.0 * FinalInset), 1));
 			FinalImageItem->Update();
-			FinalImageItem->setPos(CellRect.center() - FinalImageItem->boundingRect().center());
+			FinalImageItem->setPos(FinalRect.center() - FinalImageItem->boundingRect().center());
 
 			continue;
 		}

@@ -84,7 +84,7 @@ void swView::OnDraw()
 	const bool DrawJointHighlight = DrawJoint && (JointsModel->IsJointPick() || JointsModel->GetJointPart());
 
 	if (DrawJointHighlight)
-		mScene->SetHighlightColor(SW_RGBA(255, 0, 0, 255));
+		mScene->SetHighlightColor(swClampStepColorAlpha(SW_RGBA(255, 0, 0, 255)));
 
 	mScene->SetActiveSubmodelInstance(mActiveSubmodelInstance, mActiveSubmodelTransform, GetModelEditingPath());
 
@@ -174,7 +174,7 @@ void swView::OnDraw()
 			});
 
 			if (OutlineEnabled && OutlineMasksReady)
-				mContext->DrawOutline(*mOutlineFullFramebuffer, *mOutlineVisibleFramebuffer, mWidget ? mWidget->GetDeviceScale() : mLineWidthScale, mScene->GetHighlightColor(), mScene->GetHoverColor(), mScene->GetMissingColor());
+				mContext->DrawOutline(*mOutlineFullFramebuffer, *mOutlineVisibleFramebuffer, mWidget ? mWidget->GetDeviceScale() : mLineWidthScale, mOverrideHighlightNewParts ? mHighlightNewPartsWidth : swGetPreferences().mSelectionOutlineWidth, mScene->GetHighlightColor(), mScene->GetHoverColor(), mScene->GetMissingColor());
 
 			if (OutlineEnabled && !OutlineMasksReady)
 			{

@@ -19,23 +19,27 @@ void main()
 	SW_SHADER_PRECISION vec4 Expanded = Coverage;
 	SW_SHADER_PRECISION vec3 ExpandedOpacity = vec3(Coverage.r, 0.0, 0.0);
 	SW_SHADER_PRECISION vec2 PixelSize = OutlineParams[0].xy;
-	SW_SHADER_PRECISION float Radius = min(OutlineParams[0].z, 8.0);
+	SW_SHADER_PRECISION float Radius = min(OutlineParams[0].z, 64.0);
+
+	// wide outlines space the samples out and stay solid inside the fade
+	// shortcut: lines thinner than the spacing can show gaps, use passes for exact wide outlines
+	SW_SHADER_PRECISION float Spacing = max(1.0, ceil(Radius / 8.0));
 
 	// A disk of physical pixels keeps thin silhouettes connected on HiDPI
 	// displays. Constant loop bounds also work with desktop GLSL 1.10.
 	for (int Y = -8; Y <= 8; Y++)
 	{
-		if (abs(float(Y)) > Radius)
+		if (abs(float(Y)) * Spacing > Radius)
 			continue;
 
 		for (int X = -8; X <= 8; X++)
 		{
-			SW_SHADER_PRECISION vec2 Offset = vec2(float(X), float(Y));
+			SW_SHADER_PRECISION vec2 Offset = vec2(float(X), float(Y)) * Spacing;
 
 			if (dot(Offset, Offset) <= Radius * Radius)
 			{
 				SW_SHADER_PRECISION vec4 SampleCoverage = OutlineMaskCoverage(PixelTexCoord + PixelSize * Offset);
-				SW_SHADER_PRECISION float Opacity = 1.0 - smoothstep(0.0, Radius, max(length(Offset) - 1.0, 0.0));
+				SW_SHADER_PRECISION float Opacity = 1.0 - smoothstep(0.0, min(Radius, 8.0), max(length(Offset) - 1.0 - max(Radius - 8.0, 0.0), 0.0));
 
 				Expanded = max(Expanded, SampleCoverage);
 

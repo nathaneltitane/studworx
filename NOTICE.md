@@ -30,6 +30,8 @@
   - Instructions: the Steps per Page buttons show only their divider lines, the button is the page, one step per page shows a circle
   - Instructions: new part outlines on large step images no longer show seam lines
   - Instructions: Show Author sits on its own row
+  - Instructions: Highlight Width sets the new part outline thickness, wide outlines stay solid, and the highlight color keeps the opacity you pick
+  - Instructions: the final model area gets its own border and margin, none by default
 
   </details>
 

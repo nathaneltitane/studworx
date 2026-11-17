@@ -195,9 +195,10 @@ public:
 	void DrawSelectionMask(swContext* Context) const;
 	void DrawHighlightMask(swContext* Context) const;
 	void DrawOutlineOccluders(swContext* Context) const;
+	// callers clamp the alpha when they need to
 	void SetHighlightColor(quint32 HighlightColor)
 	{
-		mHighlightColor = swVector4FromColor(swClampStepColorAlpha(HighlightColor));
+		mHighlightColor = swVector4FromColor(HighlightColor);
 	}
 
 	void SetFadeColor(quint32 FadeColor)

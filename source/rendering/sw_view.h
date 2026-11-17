@@ -249,11 +249,12 @@ public:
 	}
 
 	// Use to highlight by the instructions.
-	void SetHighlightNewPartsOverride(bool HighlightNewParts, quint32 HighlightColor)
+	void SetHighlightNewPartsOverride(bool HighlightNewParts, quint32 HighlightColor, int HighlightWidth)
 	{
 		mOverrideHighlightNewParts = true;
 		mHighlightNewParts = HighlightNewParts;
 		mHighlightNewPartsColor = HighlightColor;
+		mHighlightNewPartsWidth = HighlightWidth;
 	}
 
 	// Use to keep line widths when enlarged.
@@ -515,6 +516,7 @@ protected:
 	bool mOverrideHighlightNewParts = false;
 	bool mHighlightNewParts = false;
 	quint32 mHighlightNewPartsColor = 0;
+	int mHighlightNewPartsWidth = 0;
 	float mLineWidthScale = 1.0f;
 	bool mDrawViewportBorder = true;
 	quint32 mBackgroundColor = 0;

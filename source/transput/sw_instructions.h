@@ -181,6 +181,10 @@ enum class swInstructionsPropertyType
 	StepDividerRounded,
 	StepDividerHorizontal,
 	StepDividerVertical,
+	HighlightWidth,
+	FinalModelBorderWidth,
+	FinalModelBorderColor,
+	FinalModelMargin,
 	Count
 };
 
