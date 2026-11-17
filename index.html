@@ -32,7 +32,7 @@
 					"description": "StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library.",
 					"applicationCategory": "DesignApplication",
 					"operatingSystem": "Linux, Windows, macOS",
-					"softwareVersion": "2026-11-16",
+					"softwareVersion": "2026-11-17",
 					"license": "https://www.gnu.org/licenses/gpl-3.0.html",
 					"downloadUrl": "https://github.com/nathaneltitane/studworx/releases/latest",
 					"image": "https://studworx.app/resources/social/social.png",
@@ -1715,14 +1715,14 @@
 						</thead>
 
 						<tbody>
-							<tr><td><code>0 !SW PROPERTY INSTRUCTION &lt;name&gt; &lt;value&gt;</code></td><td>Read, Write</td><td>document property, such as <code>STEP_NUMBER_BORDER_WIDTH 3</code></td></tr>
+							<tr><td><code>0 !SW PROPERTY INSTRUCTION &lt;name&gt; &lt;value&gt;</code></td><td>Read, Write</td><td>document property, such as <code>STEP_NUMBER_BORDER_WIDTH 3</code> or <code>COVER_TITLE_FILE title.txt</code>; <code>COVER_TITLE</code>, <code>COVER_AUTHOR</code> and <code>BILL_OF_MATERIALS_TITLE</code> take <code>_TEXT</code> and <code>_FILE</code>, the file wins over the text, and <a href="#files">files</a> are relative to the model file</td></tr>
 							<tr><td><code>0 !SW PAGE_PROPERTY INSTRUCTION STEP &lt;model&gt; &lt;step&gt; &lt;name&gt; &lt;value&gt;</code></td><td>Read, Write</td><td>property of the page starting at the step</td></tr>
 							<tr><td><code>0 !SW STEPS_PER_PAGE INSTRUCTION &lt;rows&gt; &lt;columns&gt; [VERTICAL] [FINAL_MODEL] [FINAL_MODEL_COLOR]</code></td><td>Read, Write</td><td>steps per page, filled down instead of across, with the finished model in the room left, on the main page color</td></tr>
 							<tr><td><code>0 !SW PAGE_STEPS_PER_PAGE INSTRUCTION STEP &lt;model&gt; &lt;step&gt; &lt;rows&gt; &lt;columns&gt; [VERTICAL] [FINAL_MODEL] [FINAL_MODEL_COLOR]</code></td><td>Read, Write</td><td>steps per page from the step on, same words as above</td></tr>
 							<tr><td><code>0 !SW BLANK_PAGE INSTRUCTION STEP &lt;model&gt; &lt;step&gt;</code></td><td>Read, Write</td><td>blank page before the step</td></tr>
 							<tr><td><code>0 !SW OFFSET INSTRUCTION &lt;element&gt; &lt;model&gt; &lt;step&gt; &lt;x&gt; &lt;y&gt;</code></td><td>Read, Write</td><td>element moved from its place</td></tr>
 							<tr><td><code>0 !SW LOCK INSTRUCTION &lt;element&gt; &lt;model&gt; &lt;step&gt; &lt;x&gt; &lt;y&gt;</code></td><td>Read, Write</td><td>element locked at a position</td></tr>
-							<tr><td><code>0 !SW NOTICE INSTRUCTION &lt;id&gt; PAGE &lt;page&gt; POSITION &lt;x&gt; &lt;y&gt; TEXT &lt;text&gt;</code></td><td>Read, Write</td><td>notice on a page</td></tr>
+							<tr><td><code>0 !SW NOTICE INSTRUCTION &lt;id&gt; PAGE &lt;page&gt; POSITION &lt;x&gt; &lt;y&gt; [FILE &quot;&lt;file&gt;&quot;] TEXT &lt;text&gt;</code></td><td>Read, Write</td><td>notice on a page, the text file wins over the text</td></tr>
 							<tr><td><code>0 !SW POINTER INSTRUCTION &lt;id&gt; PAGE &lt;page&gt; SOURCE &lt;element&gt; ANCHOR &lt;AUTO|0-7&gt; STYLE &lt;DEFAULT|LINE|WEDGE&gt; TIP &lt;DEFAULT|ARROW|DOT&gt; TARGET &lt;POINT|ELEMENT|PART&gt; &lt;element&gt; PART &lt;index&gt; POSITION &lt;x&gt; &lt;y&gt;</code></td><td>Read, Write</td><td>pointer from an element border to a point, element or part</td></tr>
 						</tbody>
 					</table>
@@ -1950,7 +1950,7 @@
 				<h2>HELP // EVERY &quot;WHAT&#x27;S THIS?&quot; ENTRY</h2>
 			</header>
 
-			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 465 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
+			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 466 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
 			<div class="search-tools">
 				<input id="search" type="search" placeholder="Search help" aria-label="Search help">
@@ -1975,11 +1975,11 @@
 					</thead>
 
 					<tbody>
-						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-16_amd64.deb / arm64.deb</td></tr>
-						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-16-x86_64.rpm / aarch64.rpm</td></tr>
-						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-16-x86_64.appimage / aarch64.appimage</td></tr>
-						<tr><td>Windows</td><td>studworx-windows-2026-11-16-x64.exe</td></tr>
-						<tr><td>macOS</td><td>studworx-macos-2026-11-16-universal.dmg</td></tr>
+						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-17_amd64.deb / arm64.deb</td></tr>
+						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-17-x86_64.rpm / aarch64.rpm</td></tr>
+						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-17-x86_64.appimage / aarch64.appimage</td></tr>
+						<tr><td>Windows</td><td>studworx-windows-2026-11-17-x64.exe</td></tr>
+						<tr><td>macOS</td><td>studworx-macos-2026-11-17-universal.dmg</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -2032,10 +2032,21 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p class="lead">The latest release notices from the StudWorx repository.</p>
 
 			<details open>
+				<summary>2026-11-17</summary>
+
+				<ul>
+					<li><a href="#instructions">Instructions</a>: Highlight Width sets how thick the new part outline is, from 1 to 72, and wide outlines stay solid</li>
+					<li>Instructions: the highlight color keeps the opacity you pick, no longer held between 85 and 95 percent</li>
+					<li>Instructions: Final Border, Final Border Color and Final Margin in <a href="#steps">Steps</a> per Page frame the final model area and keep it away from the steps and page margins, none by default</li>
+					<li>Translations: the new highlight and final model settings read right in all nine languages</li>
+				</ul>
+			</details>
+
+			<details>
 				<summary>2026-11-16</summary>
 
 				<ul>
-					<li>Site: every footer button has its own logo, with tools, <a href="#files">files</a> and <a href="#steps">steps</a> logos for <a href="#toolbars">Toolbars</a>, Files and Steps, GitHub and PayPal logos for GitHub and Donate, and L²CU in green like on MechaBlocks</li>
+					<li>Site: every footer button has its own logo, with tools, <a href="#files">files</a> and steps logos for <a href="#toolbars">Toolbars</a>, Files and Steps, GitHub and PayPal logos for GitHub and Donate, and L²CU in green like on MechaBlocks</li>
 					<li>Site: the page styles live in their own files under resources/css, and resources/css/logo.css picks each section&#x27;s logo, so a new or swapped logo shows without rebuilding the page</li>
 					<li>Translations: Traditional Chinese has about 1,900 more and better translations, from yoyomaimai</li>
 					<li>Translations: Traditional Chinese reads right for Startup, Origin, Author Line, Hip Accessory and Filter Parts</li>
@@ -2043,7 +2054,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Translations: every line in all nine languages was reviewed, the missing ones translated, and each language uses one word per meaning, the same words as its menus</li>
 					<li>Translations: snap sizes read as studs, plates and bricks in every language, and each property row letter matches its row name</li>
 					<li>Translations: Yes, No and the other dialog buttons follow the language picked in StudWorx</li>
-					<li><a href="#instructions">Instructions</a>: Undo and Redo at the start of the page bar, and the main window Undo and Redo shortcuts, take back and put back changes to the instructions, quick changes to one setting counting as one</li>
+					<li>Instructions: Undo and Redo at the start of the page bar, and the main window Undo and Redo shortcuts, take back and put back changes to the instructions, quick changes to one setting counting as one</li>
 					<li>Instructions: Model Size in the Box of the step and cover <a href="#models">models</a> sizes them from 10 to 200 percent, on all pages or this page only</li>
 					<li>Instructions: new part outlines follow only what can be seen, no more lines from parts hidden inside or behind others</li>
 					<li>Instructions: Page Background shows its own color on submodel pages instead of the Submodel Background</li>
@@ -2054,8 +2065,16 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Instructions: Step Flow in Steps per Page fills pages row by row or column by column, picked by you instead of by the page shape</li>
 					<li>Instructions: on pages with empty cells the last step stretches to fill them, and the step dividers follow the cells</li>
 					<li>Instructions: Show Final Model puts the finished model in the room left after a model<code>s last step, with Main Page Color to give a submodel</code>s finished model the main page color</li>
+					<li>Instructions: when the last page is full, the finished model goes on a new page, and Show Final Model and Main Page Color are greyed out on pages without a model&#x27;s last step</li>
+					<li>Instructions: Apply to All Pages on a submodel page keeps the main Page Background instead of resetting it</li>
+					<li>Instructions: Cover Title, Cover Author and BOM Title take your own text, or a text file that wins over it, and notices take a text file too</li>
+					<li>Instructions: the Editor panel stays folded when collapsed or dragged down, instead of growing back by a line</li>
+					<li>Instructions: dividers get their own Divider group with margin, padding, rounded ends and Horizontal or Vertical to hide lines <a href="#where">where</a> page colors already split the page, and reach the page margins by default without poking past them</li>
+					<li>Instructions: the Steps per Page buttons show only their divider lines, the button is the page, one step per page shows a circle</li>
 					<li>Instructions: new part outlines on large step images no longer show seam lines</li>
 					<li>Instructions: Show Author sits on its own row</li>
+					<li>Instructions: Highlight Width sets the new part outline thickness, wide outlines stay solid, and the highlight color keeps the opacity you pick</li>
+					<li>Instructions: the final model area gets its own border and margin, none by default</li>
 				</ul>
 			</details>
 
@@ -2105,7 +2124,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Site: screenshots never show larger than their real size, so menus and panels stay sharp</li>
 					<li>Site: every gallery follows the order of the program, window first, then its menus and dialogs, with no image shown twice</li>
 					<li>Site: a Toolbars section explains the Standard, <a href="#tools">Tools</a>, Time and Transform toolbars</li>
-					<li>Site: a <a href="#where">Where</a> Is It section lists the menu, toolbar or right click menu of every command, with its shortcut and a search, read from the program itself</li>
+					<li>Site: a Where Is It section lists the menu, toolbar or right click menu of every command, with its shortcut and a search, read from the program itself</li>
 					<li>Site: Help entries name where to find their command, and the menu screenshots give way to the command list</li>
 					<li>Site: the frame around a screenshot ends where the image ends</li>
 					<li>Minifigure Builder: the preview no longer outlines every part in the highlight color when edge lines show, Highlight New Parts now only marks the model view</li>
@@ -2161,42 +2180,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				</ul>
 			</details>
 
-			<details>
-				<summary>2026-11-11</summary>
-
-				<ul>
-					<li>Views: the X, Y and Z Axis Line toggles draw their lines on their own, and the Grid Origin Lines setting that silently hid them is gone</li>
-					<li>Views: the negative Z axis line follows the height grids when they stand behind the model and only shows once parts go below the base grid, like the X and Y lines growing with the model</li>
-					<li>Views: the base grid starts at 2 × 2 studs and the height grids one brick high, and the grids and axis lines grow stud by stud and plate by plate past the parts, with a Grid Margin in studs and a Height Margin in plates in Preferences, Views, Base Grid</li>
-					<li>Preferences: the Views page gathers the X, Y and Z axis line and negative axes settings in their own Axis Lines group above Base Grid, which keeps the grid settings</li>
-					<li>Views: Split Horizontal, Split Vertical and Remove View no longer crash when the model view doesn&#x27;t have keyboard focus</li>
-					<li>Preferences: Rendering groups its settings into Display with Anti-aliasing, Mesh Detail Control and a Mesh Level of Detail slider with its value on the left, Studs with Contrast Settings at full width under Stud Style, Shading with the shading mode, lighting style and edge lines, Colors with the edge color settings, and Steps and Highlighting</li>
-					<li>Model view: Mesh Detail Control joins Edge Lines and Conditional Lines in the options menu of the model view</li>
-					<li>Preferences: Rendering, Steps and Highlighting lists its toggles first, then Fade on Joint Move and Rotate, Highlight Style and Outline Width, and its colors moved to Interface, Steps and Highlighting</li>
-					<li>Preferences: General shows Author right under Online Services</li>
-					<li>Preferences: the rows of Editing, Files, Base Grid, Parts, Preview and Minifigure Builder follow a steadier order, and Base Grid draws its lines with Draw Lines and Draw Lines Every, from 1 to 100 studs</li>
-					<li>Preferences: Views, Cutaway starts with Cut Edges, and the cutaway shade color moved to Interface</li>
-					<li>Preferences: the cutaway shade, axis icon outline and instructions page colors set their alpha in the color picker instead of a separate slider, and saved settings keep their look</li>
-					<li>Preferences: Interface groups the colors from the farthest back to the closest, Interface, Grid, Objects, Steps and Highlighting, Flexible Parts, Axes, View Cube and Instructions, and the background joins the Interface group, whose rows run from the background to the text</li>
-					<li>Preferences: the page margin and grid line colors of the Instructions page moved to Interface, Instructions as Page Margins, Page Grid Primary Lines and Page Grid Secondary Lines, and the help of the General, Rendering, Views and Interface pages names their new groups</li>
-					<li>Explode: the X, Y and Z spreads are multiples from 1.0 to 10.0 instead of percentages, 1.0 leaving the parts in place and 2.0 doubling their distance, and Explode is greyed out while every spread is 1.0</li>
-					<li>Site: the Panels section lists the Explode panel with its own image</li>
-					<li>Interface: group titles such as Base Grid are no longer cut short at the right with some fonts</li>
-					<li>Samples: sample-train-tracks.ldr, an S-curve of 9V curved track joined at its train track connections</li>
-					<li>Site: the Interface, Steps, Rendering, Panels, Views, Tools, Modeling (including Train Track) and Models galleries show the new grid and axis lines in fresh captures, and the Preferences Views page shows the Axis Lines group</li>
-					<li>Colors: the color picker popup opens wide enough for 16 color tiles a row instead of a narrow column</li>
-					<li>Interface: check boxes in lists such as Part Categories and Context Menu stand out from the list background on the dark theme</li>
-					<li>Instructions: the Add Notice and Edit Notice dialogs label their box Notice Text, and the Context Menu submenu dialogs label theirs Name, without a trailing colon</li>
-					<li>Site: every image retaken from the installed build, with new images for the Cameras, Status Bar, Find, Group, Selection Mode, Snap Z, Transform, Visibility, Submodel, Tab, Keyframes, Timeline, Colors, Joints, Properties, Parts and Instructions editor menus, the Light Color picker, Edit Palettes, Edit Category, Add Notice and Page Setup dialogs, and recent files shown from the installed samples</li>
-					<li>Keyframes: the rewind, play, pause, stop and forward buttons are painted in the color theme, so they no longer stay black on a dark interface</li>
-					<li>Interface: floating panels keep the StudWorx title bar with its painted float and close buttons on every system, instead of the small Windows tool window frame</li>
-					<li>Keyframes: Add Keys is a square icon button like its toolbar button, and every panel button runs the same command as the matching toolbar button</li>
-					<li>Time toolbar: Set Keys, Remove Keys, Play and Stop join Add Keys and the step buttons, so the toolbar does everything the Keyframes panel buttons do</li>
-					<li>Timeline: each step with animation keys lists a Keys row per keyed object, so steps made by keys are no longer empty, and a double click selects that object at that step and shows the Keyframes panel</li>
-					<li>Keyframes: clicking an object name selects it in the model view like the Timeline, Ctrl+click adds or removes it, the arrow still folds its properties, and selected objects are highlighted</li>
-				</ul>
-			</details>
-
 			<p class="more"><a href="https://github.com/nathaneltitane/studworx/blob/main/NOTICE.md">Read every notice ›</a></p>
 		</section>
 
@@ -2207,7 +2190,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p>LEGO® is a trademark of the LEGO® Group, which does not sponsor, authorize or endorse this project.</p>
 			<div class="authorship">
 				<a class="avatar" href="https://nathaneltitane.com" aria-label="N Λ T H Λ N E L"><img src="resources/avatar/avatar-bird.png" alt="" width="64" height="64"></a>
-				<p>Version // 2026-11-16<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
+				<p>Version // 2026-11-17<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
 			</div>
 		</div>
 
@@ -2368,7 +2351,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Instructions","title":"Cover Page","paragraphs":["The first page, showing the model title, its author and the finished model. The title comes from the model description, or its name when there is none, the author from the model properties."]},
 				{"group":"Instructions","title":"Bill of Materials","paragraphs":["The last page, listing every part of the model. It uses the Parts List settings, under a Parts List title in its own font and color, with the box of the step numbers."]},
 				{"group":"Instructions","title":"Page","paragraphs":["The background of the step and blank pages. It applies to all these pages, or only to the current page when it has its own. The cover and the bill of materials have their own backgrounds."]},
-				{"group":"Instructions","title":"Steps per Page","paragraphs":["The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model, and Main Page Color gives a submodel's finished model the main page color. The dividers are the lines between neighboring steps."]},
+				{"group":"Instructions","title":"Steps per Page","paragraphs":["The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model, and Main Page Color gives a submodel's finished model the main page color. The final model border frames that area and its margin keeps it away from the steps and page margins."]},
+				{"group":"Instructions","title":"Divider","paragraphs":["The lines between neighboring steps. Horizontal and Vertical hide the lines in one direction, for example where page colors already split the page. The margin keeps the line ends away from the page margins, the padding keeps the steps away from the lines."]},
 				{"group":"Instructions","title":"Page Number","paragraphs":["The number of each page, the cover and blank pages are not numbered unless all pages are. Drag it or use the Placement panel to move it on all pages."]},
 				{"group":"Instructions","title":"Step Number","paragraphs":["The step number and the area behind each step. The bill of materials shows a Parts List title in its place."]},
 				{"group":"Instructions","title":"Parts List","paragraphs":["The list of parts added in each step. The bill of materials uses the same settings."]},

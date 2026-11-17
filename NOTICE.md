@@ -1,6 +1,16 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-17</summary>
+
+  - Instructions: Highlight Width sets how thick the new part outline is, from 1 to 72, and wide outlines stay solid
+  - Instructions: the highlight color keeps the opacity you pick, no longer held between 85 and 95 percent
+  - Instructions: Final Border, Final Border Color and Final Margin in Steps per Page frame the final model area and keep it away from the steps and page margins, none by default
+  - Translations: the new highlight and final model settings read right in all nine languages
+
+  </details>
+
+  <details>
   <summary>2026-11-16</summary>
 
   - Site: every footer button has its own logo, with tools, files and steps logos for Toolbars, Files and Steps, GitHub and PayPal logos for GitHub and Donate, and L²CU in green like on MechaBlocks
