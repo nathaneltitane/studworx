@@ -11,7 +11,7 @@
   - Instructions: every Properties group shows on every page and starts folded, selecting an element opens its group and folds the others
   - Instructions: Show Part IDs in the Bill of Materials group prints the part number under each part of the bill of materials, on by default
   - Instructions: selecting the bill of materials list opens the Parts List group too
-  - Instructions: Thumbnail Size goes up to 1024 pixels for large pages
+  - Instructions: Thumbnail Size goes up to 2048 pixels for large pages
   - Instructions: a full parts list column no longer spills past its area
   - Translations: the merged Page and Properties help and Show Part IDs read right in all nine languages
   - Site: the Properties image is retaken to show the new group order, folded

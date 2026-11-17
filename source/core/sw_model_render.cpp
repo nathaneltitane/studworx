@@ -298,7 +298,7 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 	swContext* Context = View.mContext;
 
 	// skip thumbnails wider than the list
-	const int ThumbnailSize = qBound(Scaled(16), Scaled(RequestedThumbnailSize), qMax(qMin(MaxWidth, Scaled(1024)), Scaled(16)));
+	const int ThumbnailSize = qBound(Scaled(16), Scaled(RequestedThumbnailSize), qMax(qMin(MaxWidth, Scaled(2048)), Scaled(16)));
 
 	View.SetSize(ThumbnailSize, ThumbnailSize);
 
