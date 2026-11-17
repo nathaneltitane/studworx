@@ -8,6 +8,7 @@
   - Instructions: Final Border, Final Border Color and Final Margin in Steps per Page frame the final model area and keep it away from the steps and page margins, none by default
   - Translations: the new highlight and final model settings read right in all nine languages
   - Site: the Instructions, Rendering, Views and Interface images are retaken to show the panel fold arrows and the new instructions settings, and the Instructions features name Step Flow, the final model, dividers, Model Size, Highlight Width, text files and Undo and Redo
+  - Site: the POV-Ray and Blender Render images show the full output path the windows fill in
 
   </details>
 
