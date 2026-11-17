@@ -15157,127 +15157,127 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation>%1 - Leer</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="376"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="378"/>
         <source>&lt;p&gt;&lt;b&gt;Page Bar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The timeline First, Previous, Next and Last shortcuts turn the pages too while the page or the Pages panel has focus.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Seitenleiste&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zur ersten, vorherigen, nächsten oder letzten Seite gehen oder direkt zum Deckblatt oder zur Stückliste, ausgegraut, solange diese Seiten ausgeschaltet sind. Schrittseite fügt einen leeren Schritt vor der aktuellen Seite ein, Leerseite fügt davor eine leere Seite ein und Seite entfernen entfernt eine leere Seite oder eine Seite mit leeren Schritten. Das Feld rechts zeigt die aktuelle Seite, geben Sie eine Nummer ein, um dorthin zu gehen. Die Zeitachsen-Kürzel Erster, Vorheriger, Nächster und Letzter blättern ebenfalls durch die Seiten, solange die Seite oder das Seiten-Panel den Fokus hat.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="386"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="388"/>
         <source>&lt;p&gt;&lt;b&gt;Undo and Redo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Undo takes back your last change to the instructions, Redo puts it back. Quick changes to the same setting count as one change. The main window Undo and Redo shortcuts work here too.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Rückgängig und Wiederherstellen&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Rückgängig nimmt die letzte Änderung an der Anleitung zurück, Wiederherstellen bringt sie zurück. Schnelle Änderungen an derselben Einstellung zählen als eine Änderung. Die Tastenkürzel für Rückgängig und Wiederherstellen aus dem Hauptfenster funktionieren auch hier.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="388"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="390"/>
         <source>&amp;Undo</source>
         <translation>&amp;Rückgängig</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="388"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="390"/>
         <source>Take back the last change to the instructions</source>
         <translation>Die letzte Änderung an der Anleitung rückgängig machen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="390"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="392"/>
         <source>Re&amp;do</source>
         <translation>&amp;Wiederherstellen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="390"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="392"/>
         <source>Put back the last change that was taken back</source>
         <translation>Die zuletzt rückgängig gemachte Änderung wiederherstellen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="402"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
         <source>&amp;First</source>
         <translation>&amp;Erste</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="402"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
         <source>Go to the first page</source>
         <translation>Zur ersten Seite gehen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="403"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="405"/>
         <source>&amp;Previous</source>
         <translation>&amp;Vorherige</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="403"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="405"/>
         <source>Go to the previous page</source>
         <translation>Zur vorherigen Seite gehen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="406"/>
         <source>&amp;Cover</source>
         <translation>&amp;Deckblatt</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="406"/>
         <source>Go to the cover page</source>
         <translation>Zum Deckblatt gehen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="405"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="407"/>
         <source>&amp;Step Page</source>
         <translation>&amp;Schrittseite</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="405"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="407"/>
         <source>Insert an empty step before the current page</source>
         <translation>Einen leeren Schritt vor der aktuellen Seite einfügen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="406"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="408"/>
         <source>Bl&amp;ank Page</source>
         <translation>Le&amp;erseite</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="406"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="408"/>
         <source>Insert a blank page before the current page</source>
         <translation>Eine leere Seite vor der aktuellen Seite einfügen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="407"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="409"/>
         <source>&amp;Remove Page</source>
         <translation>Seite ent&amp;fernen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="407"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="409"/>
         <source>Remove the current page when it is blank or holds only empty steps</source>
         <translation>Die aktuelle Seite entfernen, wenn sie leer ist oder nur leere Schritte enthält</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="408"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="410"/>
         <source>&amp;Bill of Materials</source>
         <translation>Stück&amp;liste</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="408"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="410"/>
         <source>Go to the bill of materials page</source>
         <translation>Zur Stücklistenseite gehen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="409"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="411"/>
         <source>&amp;Next</source>
         <translation>&amp;Nächste</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="409"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="411"/>
         <source>Go to the next page</source>
         <translation>Zur nächsten Seite gehen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="410"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="412"/>
         <source>&amp;Last</source>
         <translation>&amp;Letzte</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="410"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="412"/>
         <source>Go to the last page</source>
         <translation>Zur letzten Seite gehen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="416"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="418"/>
         <source>Current page out of all pages, type a number to go there</source>
         <translation>Aktuelle Seite von allen Seiten, geben Sie eine Nummer ein, um dorthin zu gehen</translation>
     </message>
@@ -15447,122 +15447,122 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
 <context>
     <name>swInstructionsGridWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="470"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="497"/>
         <source>Grid</source>
         <translation>Raster</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="471"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="498"/>
         <source>&lt;p&gt;&lt;b&gt;Grid&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The page grid helps aligning dragged elements, it is never printed. Show it on screen, snap dragged elements to it or to the anchors of the other elements, choose its area, the size of its main unit and the fractions it is split into, and the colors of its lines and of the margins.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Raster&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Das Seitenraster hilft beim Ausrichten gezogener Elemente und wird nie gedruckt. Zeigen Sie es auf dem Bildschirm, lassen Sie gezogene Elemente daran oder an den Ankern der anderen Elemente einrasten, wählen Sie seinen Bereich, die Größe seiner Haupteinheit und die Bruchteile, in die es geteilt wird, sowie die Farben seiner Linien und der Ränder.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="500"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="527"/>
         <source>Show Grid</source>
         <translation>Raster anzeigen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="500"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="527"/>
         <source>Draw the page grid on screen, it is never printed.</source>
         <translation>Das Seitenraster auf dem Bildschirm zeichnen, es wird nie gedruckt.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="501"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="528"/>
         <source>Snap to Grid</source>
         <translation>Am Raster einrasten</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="509"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="514"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="536"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="541"/>
         <source>Snap to Anchors</source>
         <translation>An Ankern einrasten</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="501"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="528"/>
         <source>Snap dragged elements to the page grid, this turns Snap to Anchors off.</source>
         <translation>Gezogene Elemente am Seitenraster einrasten lassen, das schaltet An Ankern einrasten aus.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="512"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="539"/>
         <source>Snap dragged elements to the anchors of the page area and the other elements, this turns Snap to Grid off.</source>
         <translation>Gezogene Elemente an den Ankern des Seitenbereichs und der anderen Elemente einrasten lassen, das schaltet Am Raster einrasten aus.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="513"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="540"/>
         <source>&lt;p&gt;&lt;b&gt;Snap to Anchors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;While an element is dragged, its corners, edge centers and center snap to those of the page area and of the other elements when they come within a few pixels, on each axis separately. Snap to Anchors and Snap to Grid exclude each other, turning one on turns the other off. Show Element Anchors in the Properties options shows the anchors.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;An Ankern einrasten&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Beim Ziehen eines Elements rasten seine Ecken, Kantenmitten und seine Mitte an denen des Seitenbereichs und der anderen Elemente ein, wenn sie auf wenige Pixel herankommen, für jede Achse getrennt. An Ankern einrasten und Am Raster einrasten schließen einander aus, das Einschalten des einen schaltet das andere aus. Elementanker zeigen in den Eigenschaftsoptionen zeigt die Anker.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="524"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="532"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="551"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="559"/>
         <source>Grid Area</source>
         <translation>Rasterbereich</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="528"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="555"/>
         <source>Within Margins</source>
         <translation>Innerhalb der Ränder</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="529"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="556"/>
         <source>Full Page</source>
         <translation>Ganze Seite</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="530"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="557"/>
         <source>Choose whether the grid covers the area inside the margins or the full page.</source>
         <translation>Wählen Sie, ob das Raster den Bereich innerhalb der Ränder oder die ganze Seite abdeckt.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="542"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="545"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="551"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="569"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="572"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="578"/>
         <source>Grid Size</source>
         <translation>Rastergröße</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="549"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="576"/>
         <source>Main unit of the grid drawn with the primary color, in the margin units of the page setup.</source>
         <translation>Haupteinheit des mit der Primärfarbe gezeichneten Rasters, in den Randeinheiten der Seiteneinrichtung.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="561"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="569"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="588"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="596"/>
         <source>Divisions</source>
         <translation>Unterteilungen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="567"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="594"/>
         <source>Split each grid unit into fractions drawn with the secondary color, dragged elements snap to the fractions.</source>
         <translation>Jede Rastereinheit in Bruchteile teilen, die mit der Sekundärfarbe gezeichnet werden, gezogene Elemente rasten an den Bruchteilen ein.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="601"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="628"/>
         <source>Primary Color</source>
         <translation>Primärfarbe</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="601"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="628"/>
         <source>Color of the grid lines at every grid unit.</source>
         <translation>Farbe der Rasterlinien an jeder Rastereinheit.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="602"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="629"/>
         <source>Secondary Color</source>
         <translation>Sekundärfarbe</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="602"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="629"/>
         <source>Color of the grid lines at the fractions of a grid unit.</source>
         <translation>Farbe der Rasterlinien an den Bruchteilen einer Rastereinheit.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="603"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="630"/>
         <source>Margin Color</source>
         <translation>Randfarbe</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="603"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="630"/>
         <source>Color of the dashed outline of the page margins.</source>
         <translation>Farbe der gestrichelten Umrandung der Seitenränder.</translation>
     </message>
@@ -15570,28 +15570,42 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
 <context>
     <name>swInstructionsPageListWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2330"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2340"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2488"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2498"/>
         <source>Pages</source>
         <translation>Seiten</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2331"/>
         <source>&lt;p&gt;&lt;b&gt;Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a page to show it. Right-click a page to insert or remove blank pages around it.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Seiten&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wählen Sie eine Seite, um sie anzuzeigen. Klicken Sie mit der rechten Maustaste auf eine Seite, um leere Seiten davor oder danach einzufügen oder zu entfernen.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Seiten&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wählen Sie eine Seite, um sie anzuzeigen. Klicken Sie mit der rechten Maustaste auf eine Seite, um leere Seiten davor oder danach einzufügen oder zu entfernen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2360"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2448"/>
+        <source>Lock Page: keep every element where it is and refuse removal</source>
+        <translation>Seite sperren: jedes Element an seinem Platz halten und Entfernen verhindern</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2449"/>
+        <source>Freeze Page: keep the page settings when changes are made for all pages</source>
+        <translation>Seite einfrieren: die Seiteneinstellungen behalten, wenn Änderungen für alle Seiten vorgenommen werden</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2489"/>
+        <source>&lt;p&gt;&lt;b&gt;Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a page to show it. Right-click a page to insert or remove blank pages around it.&lt;/p&gt;&lt;p&gt;Click the lock beside a page to keep its elements where they are. A locked page can&apos;t be removed.&lt;/p&gt;&lt;p&gt;Click the snowflake to freeze a page. It keeps its own copy of the settings, so changes for all pages skip it. Unfreeze it to follow the other pages again.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Seiten&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wählen Sie eine Seite, um sie anzuzeigen. Klicken Sie mit der rechten Maustaste auf eine Seite, um leere Seiten davor oder danach einzufügen oder zu entfernen.&lt;/p&gt;&lt;p&gt;Klicken Sie auf das Schloss neben einer Seite, damit ihre Elemente an ihrem Platz bleiben. Eine gesperrte Seite kann nicht entfernt werden.&lt;/p&gt;&lt;p&gt;Klicken Sie auf die Schneeflocke, um eine Seite einzufrieren. Sie behält eine eigene Kopie der Einstellungen, sodass Änderungen für alle Seiten sie überspringen. Tauen Sie sie auf, damit sie wieder den anderen Seiten folgt.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2519"/>
         <source>Insert Blank Page Before</source>
         <translation>Leere Seite davor einfügen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2368"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2527"/>
         <source>Insert Blank Page After</source>
         <translation>Leere Seite danach einfügen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2376"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2535"/>
         <source>Remove Blank Page</source>
         <translation>Leere Seite entfernen</translation>
     </message>
@@ -15609,112 +15623,112 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation>Einheiten der Lineale, die Seiteneinheiten oder die Dokumenteinheiten, wenn sie verwendet werden.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1797"/>
         <source>Anchor</source>
         <translation>Anker</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
         <source>Top Left</source>
         <translation>Oben links</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
         <source>Top</source>
         <translation>Oben</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
         <source>Top Right</source>
         <translation>Oben rechts</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
         <source>Right</source>
         <translation>Rechts</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
         <source>Bottom Right</source>
         <translation>Unten rechts</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
         <source>Bottom</source>
         <translation>Unten</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
         <source>Bottom Left</source>
         <translation>Unten links</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
         <source>Left</source>
         <translation>Links</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1767"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1803"/>
         <source>Automatic</source>
         <translation>Automatisch</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1791"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1827"/>
         <source>Default</source>
         <translation>Standard</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1808"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1844"/>
         <source>Style</source>
         <translation>Stil</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1808"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1844"/>
         <source>Line</source>
         <translation>Linie</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1808"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1844"/>
         <source>Callout Wedge</source>
         <translation>Beschriftungskeil</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1849"/>
         <source>Tip</source>
         <translation>Spitze</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1849"/>
         <source>Dot</source>
         <translation>Punkt</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1849"/>
         <source>Arrow</source>
         <translation>Pfeil</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1823"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
         <source>Remove Pointer</source>
         <translation>Zeiger entfernen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1830"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1866"/>
         <source>Add Notice...</source>
         <translation>Hinweis hinzufügen...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1848"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1884"/>
         <source>Add Pointer</source>
         <translation>Zeiger hinzufügen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1860"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1896"/>
         <source>Edit Notice...</source>
         <translation>Hinweis bearbeiten...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1870"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1906"/>
         <source>Remove Notice</source>
         <translation>Hinweis entfernen</translation>
     </message>
@@ -15888,13 +15902,13 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="69"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="385"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="412"/>
         <source>Step Number</source>
         <translation>Schrittnummer</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="70"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="389"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="416"/>
         <source>Parts List</source>
         <translation>Teileliste</translation>
     </message>
@@ -15914,52 +15928,52 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation>Das Element an %1 ausrichten.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="344"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="371"/>
         <source>%1 Elements Selected</source>
         <translation>%1 Elemente ausgewählt</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="393"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="420"/>
         <source>Cover Title</source>
         <translation>Deckblatttitel</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="397"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="424"/>
         <source>Cover Author</source>
         <translation>Deckblattautor</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="401"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="428"/>
         <source>Bill of Materials</source>
         <translation>Stückliste</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="405"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="432"/>
         <source>Step Model</source>
         <translation>Schrittmodell</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="409"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="436"/>
         <source>Cover Model</source>
         <translation>Deckblattmodell</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="413"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="440"/>
         <source>Page Number</source>
         <translation>Seitenzahl</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="417"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="444"/>
         <source>Notice</source>
         <translation>Hinweis</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="421"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="448"/>
         <source>Pointer</source>
         <translation>Zeiger</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="425"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="452"/>
         <source>No Element Selected</source>
         <translation>Kein Element ausgewählt</translation>
     </message>
@@ -17599,22 +17613,22 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
 <context>
     <name>swInstructionsRulerWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2160"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2196"/>
         <source>Horizontal Ruler</source>
         <translation>Horizontales Lineal</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2161"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2197"/>
         <source>Horizontal position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Horizontale Position auf der Seite in den Seiteneinheiten, der Pfeil folgt dem Zeiger.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2165"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2201"/>
         <source>Vertical Ruler</source>
         <translation>Vertikales Lineal</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2166"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2202"/>
         <source>Vertical position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Vertikale Position auf der Seite in den Seiteneinheiten, der Pfeil folgt dem Zeiger.</translation>
     </message>

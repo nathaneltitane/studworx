@@ -336,7 +336,34 @@ void swInstructionsPlacementWidget::LockClicked(bool Locked)
 		mInstructions->UnlockElement(mElementKey, mElementPosition - mPlacementPosition);
 }
 
+void swInstructionsPlacementWidget::SetCurrentPage(int PageIndex)
+{
+	mPageIndex = PageIndex;
+	UpdateWidget();
+}
+
 void swInstructionsPlacementWidget::UpdateWidget()
+{
+	UpdateControls();
+
+	// locked pages keep every position
+	if (mPageIndex < 0 || !mInstructions->IsPageLocked(static_cast<size_t>(mPageIndex)))
+		return;
+
+	mResetPositionButton->setEnabled(false);
+
+	for (QAbstractButton* Button : mAnchorGroup->buttons())
+		Button->setEnabled(false);
+
+	for (QToolButton* Button : mPlacementButtons)
+		Button->setEnabled(false);
+
+	QSignalBlocker Blocker(mLockButton);
+	mLockButton->setEnabled(false);
+	mLockButton->setChecked(mElement != swInstructionsPlacementElement::None);
+}
+
+void swInstructionsPlacementWidget::UpdateControls()
 {
 	// place against the first or last
 	if (mSelectionCount > 1)

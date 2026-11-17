@@ -415,6 +415,13 @@ struct swInstructionsPage
 	swInstructionsStepKey BlankKey = { nullptr, 0 };
 };
 
+// The lock and freeze of the page being drawn.
+struct swInstructionsPageState
+{
+	const swInstructionsProperties* FrozenProperties = nullptr;
+	const std::map<swInstructionsElementKey, QPointF>* LockedPositions = nullptr;
+};
+
 struct swInstructionsModel
 {
 	std::vector<swInstructionsProperties> StepProperties;
@@ -511,6 +518,17 @@ public:
 	QPointF GetLockedPosition(const swInstructionsElementKey& Key) const;
 	void LockElement(const swInstructionsElementKey& Key, const QPointF& Position);
 	void UnlockElement(const swInstructionsElementKey& Key, const QPointF& Offset);
+
+	// A locked page keeps its element positions.
+	bool IsPageLocked(size_t PageIndex) const;
+	void LockPage(size_t PageIndex, const std::map<swInstructionsElementKey, QPointF>& Positions);
+	void UnlockPage(size_t PageIndex);
+
+	// A frozen page keeps a copy of its settings.
+	bool IsPageFrozen(size_t PageIndex) const;
+	void FreezePage(size_t PageIndex);
+	void UnfreezePage(size_t PageIndex);
+	swInstructionsPageState GetPageState(size_t PageIndex) const;
 
 	// The page grid shows on screen only.
 	bool IsGridShown() const
@@ -652,6 +670,9 @@ public:
 	std::map<swInstructionsStepKey, swInstructionsProperties> mPagePropertyOverrides;
 	std::map<swInstructionsElementKey, QPointF> mElementOffsets;
 	std::map<swInstructionsElementKey, QPointF> mLockedPositions;
+	std::map<swInstructionsPageKey, std::map<swInstructionsElementKey, QPointF>> mLockedPages;
+	std::map<swInstructionsPageKey, swInstructionsProperties> mFrozenPages;
+	swInstructionsPageState mPageState;
 	std::multiset<swInstructionsStepKey> mBlankPages;
 	std::vector<swInstructionsNotice> mNotices;
 	std::vector<swInstructionsPointer> mPointers;
@@ -725,4 +746,27 @@ protected:
 	// Keys of the default blank pages.
 	static const swInstructionsStepKey mCoverBlankKey;
 	static const swInstructionsStepKey mBillOfMaterialsBlankKey;
+};
+
+// use to draw one page with its lock and freeze
+class swInstructionsPageScope
+{
+public:
+	swInstructionsPageScope(swInstructions* Instructions, size_t PageIndex)
+		: mInstructions(Instructions), mPreviousState(Instructions->mPageState)
+	{
+		Instructions->mPageState = Instructions->GetPageState(PageIndex);
+	}
+
+	~swInstructionsPageScope()
+	{
+		mInstructions->mPageState = mPreviousState;
+	}
+
+	swInstructionsPageScope(const swInstructionsPageScope&) = delete;
+	swInstructionsPageScope& operator=(const swInstructionsPageScope&) = delete;
+
+protected:
+	swInstructions* mInstructions;
+	swInstructionsPageState mPreviousState;
 };

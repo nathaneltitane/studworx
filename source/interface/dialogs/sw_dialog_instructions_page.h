@@ -514,3 +514,4 @@ bool swEditNoticeText(QWidget* Parent, QString& Text, QString& File, bool NewNot
 
 // Fills a scene with page elements.
 void swUpdateInstructionsPageScene(swInstructions* Instructions, const swInstructionsPage* Page, QGraphicsScene* Scene);
+void swLockInstructionsPage(swInstructions* Instructions, size_t PageIndex);

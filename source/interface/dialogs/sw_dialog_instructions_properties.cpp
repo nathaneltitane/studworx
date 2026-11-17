@@ -1670,7 +1670,13 @@ swInstructionsPageType swInstructionsPropertiesWidget::GetPageType() const
 
 void swInstructionsPropertiesWidget::UpdateCategories()
 {
+	// frozen pages keep their copy
+	const bool Frozen = mPageIndex >= 0 && mInstructions->IsPageFrozen(static_cast<size_t>(mPageIndex));
+
 	// fold arrow alone shows rows
 	for (CategoryWidgets& Category : mCategoryWidgets)
+	{
 		Category.Rows->setVisible(Category.Button->IsExpanded());
+		Category.Rows->setEnabled(!Frozen);
+	}
 }

@@ -218,6 +218,8 @@ enum class swPaintedIcon
 	ArrowRight,
 	ArrowUp,
 	ArrowDown,
+	Lock,
+	Snowflake,
 	Count
 };
 

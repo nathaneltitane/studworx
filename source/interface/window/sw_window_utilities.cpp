@@ -2705,6 +2705,25 @@ static void swDrawPaintedIcon(QPainter* Painter, swPaintedIcon Icon, const QSize
 		Draw.Stroke(swCreateIconLine({ { 7, 10 }, { 12, 15 }, { 17, 10 } }));
 		Draw.Stroke(swCreateIconLine({ { 4, 16 }, { 4, 20 }, { 20, 20 }, { 20, 16 } }));
 		break;
+
+	case swPaintedIcon::Lock:
+		Draw.Stroke(swCreateIconLine({ { 8, 11 }, { 8, 7.5 }, { 9.25, 4.75 }, { 12, 3.5 }, { 14.75, 4.75 }, { 16, 7.5 }, { 16, 11 } }));
+		Draw.Fill(swCreateIconRect(5, 11, 19, 21, 1.5));
+		Draw.Erase(swCreateIconCircle(12, 15.25, 1.5));
+		Draw.Erase(swCreateIconLine({ { 12, 15.5 }, { 12, 18 } }), 1.75);
+		break;
+
+	case swPaintedIcon::Snowflake:
+		Draw.Stroke(swCreateIconLine({ { 12, 3 }, { 12, 21 } }));
+		Draw.Stroke(swCreateIconLine({ { 19.79, 7.5 }, { 4.21, 16.5 } }));
+		Draw.Stroke(swCreateIconLine({ { 19.79, 16.5 }, { 4.21, 7.5 } }));
+		Draw.Stroke(swCreateIconLine({ { 19.66, 10.03 }, { 16.76, 9.25 }, { 17.54, 6.35 } }));
+		Draw.Stroke(swCreateIconLine({ { 14.12, 4.38 }, { 12, 6.5 }, { 9.88, 4.38 } }));
+		Draw.Stroke(swCreateIconLine({ { 6.46, 6.35 }, { 7.24, 9.25 }, { 4.34, 10.03 } }));
+		Draw.Stroke(swCreateIconLine({ { 4.34, 13.97 }, { 7.24, 14.75 }, { 6.46, 17.65 } }));
+		Draw.Stroke(swCreateIconLine({ { 9.88, 19.62 }, { 12, 17.5 }, { 14.12, 19.62 } }));
+		Draw.Stroke(swCreateIconLine({ { 17.54, 17.65 }, { 16.76, 14.75 }, { 19.66, 13.97 } }));
+		break;
 	}
 
 	Painter->restore();

@@ -509,6 +509,52 @@ void swInstructions::LoadCommandLines()
 			else
 				mLockedPositions[Key] = Position;
 		}
+		else if (Command == QLatin1String("LOCK_PAGE") || Command == QLatin1String("LOCK_PAGE_ELEMENT"))
+		{
+			Reader.ReadKeyword("PAGE");
+			const swInstructionsPageKey PageKey = Reader.ReadPageKey();
+
+			if (!Reader.IsValid())
+				continue;
+
+			std::map<swInstructionsElementKey, QPointF>& Positions = mLockedPages[PageKey];
+
+			if (Command == QLatin1String("LOCK_PAGE"))
+				continue;
+
+			const swInstructionsElementKey Key = Reader.ReadElementKey();
+			const QPointF Position = Reader.ReadPoint();
+
+			if (Reader.IsValid())
+				Positions[Key] = Position;
+		}
+		else if (Command == QLatin1String("FREEZE_PAGE") || Command == QLatin1String("FREEZE_PAGE_PROPERTY"))
+		{
+			Reader.ReadKeyword("PAGE");
+			const swInstructionsPageKey PageKey = Reader.ReadPageKey();
+
+			if (!Reader.IsValid())
+				continue;
+
+			// unwritten values are the defaults
+			std::map<swInstructionsPageKey, swInstructionsProperties>::iterator FrozenIt = mFrozenPages.find(PageKey);
+
+			if (FrozenIt == mFrozenPages.end())
+				FrozenIt = mFrozenPages.emplace(PageKey, mDefaultProperties).first;
+
+			if (Command == QLatin1String("FREEZE_PAGE"))
+				continue;
+
+			const int Type = Reader.ReadName(gInstructionsPropertyNames);
+
+			if (!Reader.IsValid())
+				continue;
+
+			const QVariant Value = Reader.ReadValue(mDefaultProperties[Type].Value);
+
+			if (Reader.IsValid())
+				FrozenIt->second[Type].Value = Value;
+		}
 		else if (Command == QLatin1String("NOTICE"))
 		{
 			swInstructionsNotice Notice;
@@ -629,6 +675,31 @@ QStringList swInstructions::GetCommandLines() const
 
 	for (const std::pair<const swInstructionsElementKey, QPointF>& Position : mLockedPositions)
 		CommandLines.append(QLatin1String("LOCK ") + swWriteInstructionsElementKey(Position.first) + QLatin1Char(' ') + swWriteInstructionsPoint(Position.second));
+
+	for (const auto& [PageKey, Positions] : mLockedPages)
+	{
+		const QString PageKeyText = swWriteInstructionsPageKey(PageKey);
+		CommandLines.append(QLatin1String("LOCK_PAGE PAGE ") + PageKeyText);
+
+		for (const auto& [Key, Position] : Positions)
+			CommandLines.append(QLatin1String("LOCK_PAGE_ELEMENT PAGE ") + PageKeyText + QLatin1Char(' ') + swWriteInstructionsElementKey(Key) + QLatin1Char(' ') + swWriteInstructionsPoint(Position));
+	}
+
+	// frozen pages write changed values only
+	for (const auto& [PageKey, Properties] : mFrozenPages)
+	{
+		const QString PageKeyText = swWriteInstructionsPageKey(PageKey);
+		CommandLines.append(QLatin1String("FREEZE_PAGE PAGE ") + PageKeyText);
+
+		for (int Type = 0; Type < static_cast<int>(swInstructionsPropertyType::Count); Type++)
+		{
+			const QVariant& DefaultValue = mDefaultProperties[Type].Value;
+			const QVariant& Value = Properties[Type].Value;
+
+			if (Value.isValid() && Value != DefaultValue)
+				CommandLines.append(QLatin1String("FREEZE_PAGE_PROPERTY PAGE ") + PageKeyText + QLatin1Char(' ') + gInstructionsPropertyNames[Type] + QLatin1Char(' ') + swWriteInstructionsValue(Value, DefaultValue));
+		}
+	}
 
 	for (const swInstructionsNotice& Notice : mNotices)
 		CommandLines.append(QStringLiteral("NOTICE %1 PAGE ").arg(Notice.Id) + swWriteInstructionsPageKey(Notice.PageKey) + QLatin1String(" POSITION ") + swWriteInstructionsPoint(Notice.Position) + (Notice.File.isEmpty() ? QString() : QLatin1String(" FILE \"") + QString(Notice.File).remove(QLatin1Char('"')) + QLatin1Char('"')) + QLatin1String(" TEXT ") + swEscapeInstructionsText(Notice.Text));

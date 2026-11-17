@@ -16,6 +16,7 @@ public:
 	swInstructionsPlacementWidget(QWidget* Parent, swInstructions* Instructions);
 
 	void SelectionChanged(QGraphicsItem* FocusItem, int SelectionCount);
+	void SetCurrentPage(int PageIndex);
 
 signals:
 	void AlignSelection(int Placement, bool LastSelection);
@@ -26,6 +27,7 @@ protected:
 	void ResetPositionClicked();
 	void LockClicked(bool Locked);
 	void UpdateWidget();
+	void UpdateControls();
 	swInstructionsPropertyType GetPlacementType() const;
 	swInstructionsPropertyType GetAnchorType() const;
 	bool IsInsideAnchor() const;
@@ -38,6 +40,7 @@ protected:
 	QPointF mElementPosition;
 	QPointF mPlacementPosition;
 	int mSelectionCount = 0;
+	int mPageIndex = -1;
 	bool mLastSelection = false;
 
 	QLabel* mElementLabel = nullptr;

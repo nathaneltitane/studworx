@@ -15183,127 +15183,127 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>%1 - Prázdná</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="376"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="378"/>
         <source>&lt;p&gt;&lt;b&gt;Page Bar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The timeline First, Previous, Next and Last shortcuts turn the pages too while the page or the Pages panel has focus.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Lišta stránek&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přejděte na první, předchozí, další nebo poslední stránku, nebo rovnou na obálku či soupis materiálu, které jsou zašedlé, dokud jsou tyto stránky vypnuté. Stránka kroku vloží prázdný krok před aktuální stránku, Prázdná stránka vloží před ni prázdnou stránku a Odebrat stránku odebere prázdnou stránku nebo stránku prázdných kroků. Políčko vpravo ukazuje aktuální stránku, zadáním čísla na ni přejdete. Zkratky První, Předchozí, Další a Poslední z časové osy listují stránkami také, dokud má fokus stránka nebo panel Stránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="386"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="388"/>
         <source>&lt;p&gt;&lt;b&gt;Undo and Redo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Undo takes back your last change to the instructions, Redo puts it back. Quick changes to the same setting count as one change. The main window Undo and Redo shortcuts work here too.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zpět a Znovu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zpět vrátí vaši poslední změnu v pokynech, Znovu ji obnoví. Rychlé změny téhož nastavení se počítají jako jedna změna. Zkratky Zpět a Znovu z hlavního okna fungují i zde.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="388"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="390"/>
         <source>&amp;Undo</source>
         <translation>&amp;Zpět</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="388"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="390"/>
         <source>Take back the last change to the instructions</source>
         <translation>Vrátit poslední změnu v pokynech</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="390"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="392"/>
         <source>Re&amp;do</source>
         <translation>Znov&amp;u</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="390"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="392"/>
         <source>Put back the last change that was taken back</source>
         <translation>Obnovit poslední vrácenou změnu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="402"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
         <source>&amp;First</source>
         <translation>&amp;První</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="402"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
         <source>Go to the first page</source>
         <translation>Přejít na první stránku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="403"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="405"/>
         <source>&amp;Previous</source>
         <translation>&amp;Předchozí</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="403"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="405"/>
         <source>Go to the previous page</source>
         <translation>Přejít na předchozí stránku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="406"/>
         <source>&amp;Cover</source>
         <translation>&amp;Obálka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="406"/>
         <source>Go to the cover page</source>
         <translation>Přejít na stránku obálky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="405"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="407"/>
         <source>&amp;Step Page</source>
         <translation>&amp;Stránka kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="405"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="407"/>
         <source>Insert an empty step before the current page</source>
         <translation>Vložit prázdný krok před aktuální stránku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="406"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="408"/>
         <source>Bl&amp;ank Page</source>
         <translation>Prázd&amp;ná stránka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="406"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="408"/>
         <source>Insert a blank page before the current page</source>
         <translation>Vložit prázdnou stránku před aktuální stránku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="407"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="409"/>
         <source>&amp;Remove Page</source>
         <translation>&amp;Odebrat stránku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="407"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="409"/>
         <source>Remove the current page when it is blank or holds only empty steps</source>
         <translation>Odebrat aktuální stránku, pokud je prázdná nebo obsahuje jen prázdné kroky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="408"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="410"/>
         <source>&amp;Bill of Materials</source>
         <translation>&amp;Soupis materiálu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="408"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="410"/>
         <source>Go to the bill of materials page</source>
         <translation>Přejít na stránku soupisu materiálu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="409"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="411"/>
         <source>&amp;Next</source>
         <translation>&amp;Další</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="409"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="411"/>
         <source>Go to the next page</source>
         <translation>Přejít na další stránku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="410"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="412"/>
         <source>&amp;Last</source>
         <translation>Po&amp;slední</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="410"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="412"/>
         <source>Go to the last page</source>
         <translation>Přejít na poslední stránku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="416"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="418"/>
         <source>Current page out of all pages, type a number to go there</source>
         <translation>Aktuální stránka z celkového počtu stránek, zadáním čísla na ni přejdete</translation>
     </message>
@@ -15475,122 +15475,122 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
 <context>
     <name>swInstructionsGridWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="470"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="497"/>
         <source>Grid</source>
         <translation>Mřížka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="471"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="498"/>
         <source>&lt;p&gt;&lt;b&gt;Grid&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The page grid helps aligning dragged elements, it is never printed. Show it on screen, snap dragged elements to it or to the anchors of the other elements, choose its area, the size of its main unit and the fractions it is split into, and the colors of its lines and of the margins.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Mřížka&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mřížka stránky pomáhá zarovnávat přetahované prvky, nikdy se netiskne. Zobrazte ji na obrazovce, přichytávejte k ní přetahované prvky nebo ke kotvám ostatních prvků, zvolte její oblast, velikost hlavní jednotky a zlomky, na které se dělí, a barvy jejích čar a okrajů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="500"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="527"/>
         <source>Show Grid</source>
         <translation>Zobrazit mřížku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="500"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="527"/>
         <source>Draw the page grid on screen, it is never printed.</source>
         <translation>Vykreslit mřížku stránky na obrazovce, nikdy se netiskne.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="501"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="528"/>
         <source>Snap to Grid</source>
         <translation>Přichytit k mřížce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="509"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="514"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="536"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="541"/>
         <source>Snap to Anchors</source>
         <translation>Přichytit ke kotvám</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="501"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="528"/>
         <source>Snap dragged elements to the page grid, this turns Snap to Anchors off.</source>
         <translation>Přichytit přetahované prvky k mřížce stránky, tím se vypne Přichytit ke kotvám.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="512"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="539"/>
         <source>Snap dragged elements to the anchors of the page area and the other elements, this turns Snap to Grid off.</source>
         <translation>Přichytit přetahované prvky ke kotvám oblasti stránky a ostatních prvků, tím se vypne Přichytit k mřížce.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="513"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="540"/>
         <source>&lt;p&gt;&lt;b&gt;Snap to Anchors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;While an element is dragged, its corners, edge centers and center snap to those of the page area and of the other elements when they come within a few pixels, on each axis separately. Snap to Anchors and Snap to Grid exclude each other, turning one on turns the other off. Show Element Anchors in the Properties options shows the anchors.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přichytit ke kotvám&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Při přetahování prvku se jeho rohy, středy hran a střed přichytí k těm z oblasti stránky a ostatních prvků, když se dostanou na pár pixelů, v každé ose zvlášť. Přichytit ke kotvám a Přichytit k mřížce se vzájemně vylučují, zapnutím jednoho se druhé vypne. Zobrazit kotvy prvků ve volbách Vlastností kotvy zobrazí.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="524"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="532"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="551"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="559"/>
         <source>Grid Area</source>
         <translation>Oblast mřížky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="528"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="555"/>
         <source>Within Margins</source>
         <translation>V okrajích</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="529"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="556"/>
         <source>Full Page</source>
         <translation>Celá stránka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="530"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="557"/>
         <source>Choose whether the grid covers the area inside the margins or the full page.</source>
         <translation>Zvolte, zda mřížka pokrývá oblast uvnitř okrajů, nebo celou stránku.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="542"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="545"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="551"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="569"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="572"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="578"/>
         <source>Grid Size</source>
         <translation>Velikost mřížky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="549"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="576"/>
         <source>Main unit of the grid drawn with the primary color, in the margin units of the page setup.</source>
         <translation>Hlavní jednotka mřížky kreslená primární barvou, v jednotkách okrajů nastavení stránky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="561"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="569"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="588"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="596"/>
         <source>Divisions</source>
         <translation>Dělení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="567"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="594"/>
         <source>Split each grid unit into fractions drawn with the secondary color, dragged elements snap to the fractions.</source>
         <translation>Rozdělit každou jednotku mřížky na zlomky kreslené sekundární barvou, přetahované prvky se přichytávají ke zlomkům.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="601"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="628"/>
         <source>Primary Color</source>
         <translation>Primární barva</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="601"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="628"/>
         <source>Color of the grid lines at every grid unit.</source>
         <translation>Barva čar mřížky na každé jednotce mřížky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="602"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="629"/>
         <source>Secondary Color</source>
         <translation>Sekundární barva</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="602"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="629"/>
         <source>Color of the grid lines at the fractions of a grid unit.</source>
         <translation>Barva čar mřížky na zlomcích jednotky mřížky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="603"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="630"/>
         <source>Margin Color</source>
         <translation>Barva okrajů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="603"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="630"/>
         <source>Color of the dashed outline of the page margins.</source>
         <translation>Barva čárkovaného obrysu okrajů stránky.</translation>
     </message>
@@ -15598,28 +15598,42 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
 <context>
     <name>swInstructionsPageListWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2330"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2340"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2488"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2498"/>
         <source>Pages</source>
         <translation>Stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2331"/>
         <source>&lt;p&gt;&lt;b&gt;Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a page to show it. Right-click a page to insert or remove blank pages around it.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Stránky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte stránku, aby se zobrazila. Kliknutím pravým tlačítkem na stránku vložíte nebo odeberete prázdné stránky kolem ní.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Stránky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte stránku, aby se zobrazila. Kliknutím pravým tlačítkem na stránku vložíte nebo odeberete prázdné stránky kolem ní.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2360"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2448"/>
+        <source>Lock Page: keep every element where it is and refuse removal</source>
+        <translation>Zamknout stránku: ponechat každý prvek na místě a zakázat odebrání</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2449"/>
+        <source>Freeze Page: keep the page settings when changes are made for all pages</source>
+        <translation>Zmrazit stránku: ponechat nastavení stránky při změnách pro všechny stránky</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2489"/>
+        <source>&lt;p&gt;&lt;b&gt;Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a page to show it. Right-click a page to insert or remove blank pages around it.&lt;/p&gt;&lt;p&gt;Click the lock beside a page to keep its elements where they are. A locked page can&apos;t be removed.&lt;/p&gt;&lt;p&gt;Click the snowflake to freeze a page. It keeps its own copy of the settings, so changes for all pages skip it. Unfreeze it to follow the other pages again.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Stránky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte stránku, aby se zobrazila. Kliknutím pravým tlačítkem na stránku vložíte nebo odeberete prázdné stránky kolem ní.&lt;/p&gt;&lt;p&gt;Klepněte na zámek vedle stránky, aby její prvky zůstaly na místě. Zamčenou stránku nelze odebrat.&lt;/p&gt;&lt;p&gt;Klepněte na vločku pro zmrazení stránky. Stránka si ponechá vlastní kopii nastavení, takže ji změny pro všechny stránky vynechají. Po rozmrazení bude opět následovat ostatní stránky.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2519"/>
         <source>Insert Blank Page Before</source>
         <translation>Vložit prázdnou stránku před</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2368"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2527"/>
         <source>Insert Blank Page After</source>
         <translation>Vložit prázdnou stránku za</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2376"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2535"/>
         <source>Remove Blank Page</source>
         <translation>Odebrat prázdnou stránku</translation>
     </message>
@@ -15637,112 +15651,112 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Jednotky pravítek, jednotky stránky nebo jednotky dokumentu, jsou-li používány.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1797"/>
         <source>Anchor</source>
         <translation>Kotva</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
         <source>Top Left</source>
         <translation>Vlevo nahoře</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
         <source>Top</source>
         <translation>Nahoře</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
         <source>Top Right</source>
         <translation>Vpravo nahoře</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
         <source>Right</source>
         <translation>Vpravo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
         <source>Bottom Right</source>
         <translation>Vpravo dole</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
         <source>Bottom</source>
         <translation>Dole</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
         <source>Bottom Left</source>
         <translation>Vlevo dole</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
         <source>Left</source>
         <translation>Vlevo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1767"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1803"/>
         <source>Automatic</source>
         <translation>Automaticky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1791"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1827"/>
         <source>Default</source>
         <translation>Výchozí</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1808"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1844"/>
         <source>Style</source>
         <translation>Styl</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1808"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1844"/>
         <source>Line</source>
         <translation>Čára</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1808"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1844"/>
         <source>Callout Wedge</source>
         <translation>Klínový odkaz</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1849"/>
         <source>Tip</source>
         <translation>Hrot</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1849"/>
         <source>Dot</source>
         <translation>Tečka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1849"/>
         <source>Arrow</source>
         <translation>Šipka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1823"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
         <source>Remove Pointer</source>
         <translation>Odebrat ukazatel</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1830"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1866"/>
         <source>Add Notice...</source>
         <translation>Přidat upozornění...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1848"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1884"/>
         <source>Add Pointer</source>
         <translation>Přidat ukazatel</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1860"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1896"/>
         <source>Edit Notice...</source>
         <translation>Upravit upozornění...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1870"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1906"/>
         <source>Remove Notice</source>
         <translation>Odebrat upozornění</translation>
     </message>
@@ -15916,13 +15930,13 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="69"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="385"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="412"/>
         <source>Step Number</source>
         <translation>Číslo kroku</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="70"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="389"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="416"/>
         <source>Parts List</source>
         <translation>Seznam dílů</translation>
     </message>
@@ -15942,52 +15956,52 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Umístit prvek k objektu %1.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="344"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="371"/>
         <source>%1 Elements Selected</source>
         <translation>Vybrané prvky: %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="393"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="420"/>
         <source>Cover Title</source>
         <translation>Název na obálce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="397"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="424"/>
         <source>Cover Author</source>
         <translation>Autor na obálce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="401"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="428"/>
         <source>Bill of Materials</source>
         <translation>Soupis materiálu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="405"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="432"/>
         <source>Step Model</source>
         <translation>Model kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="409"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="436"/>
         <source>Cover Model</source>
         <translation>Model obálky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="413"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="440"/>
         <source>Page Number</source>
         <translation>Číslo stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="417"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="444"/>
         <source>Notice</source>
         <translation>Upozornění</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="421"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="448"/>
         <source>Pointer</source>
         <translation>Ukazatel</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="425"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="452"/>
         <source>No Element Selected</source>
         <translation>Není vybrán žádný prvek</translation>
     </message>
@@ -17626,22 +17640,22 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
 <context>
     <name>swInstructionsRulerWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2160"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2196"/>
         <source>Horizontal Ruler</source>
         <translation>Vodorovné pravítko</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2161"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2197"/>
         <source>Horizontal position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Vodorovná poloha na stránce v jednotkách stránky, šipka sleduje ukazatel.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2165"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2201"/>
         <source>Vertical Ruler</source>
         <translation>Svislé pravítko</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2166"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2202"/>
         <source>Vertical position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Svislá poloha na stránce v jednotkách stránky, šipka sleduje ukazatel.</translation>
     </message>

@@ -13,7 +13,9 @@
   - Instructions: selecting the bill of materials list opens the Parts List group too
   - Instructions: Thumbnail Size goes up to 2048 pixels for large pages
   - Instructions: a full parts list column no longer spills past its area
-  - Translations: the merged Page and Properties help and Show Part IDs read right in all nine languages
+  - Instructions: a lock beside each page in the Pages panel keeps its elements where they are, and a locked page can't be removed
+  - Instructions: a snowflake beside each page freezes it, so it keeps its own settings while changes for all pages skip it; unfreezing follows the other pages again
+  - Translations: the merged Page and Properties help, Show Part IDs and the page lock and freeze read right in all nine languages
   - Site: the Properties image is retaken to show the new group order, folded
   - Site: the bill of materials image is retaken to show the part IDs
   - Translations: the new highlight and final model settings read right in all nine languages

@@ -1012,7 +1012,7 @@ void swInstructionsPointerItem::mousePressEvent(QGraphicsSceneMouseEvent* Event)
 	QGraphicsItem::mousePressEvent(Event);
 
 	// drag the tip to a new target
-	if (Event->button() == Qt::LeftButton && QLineF(Event->pos(), mTipPosition).length() <= qMax(mTipSize, 10.0))
+	if ((flags() & QGraphicsItem::ItemIsMovable) && Event->button() == Qt::LeftButton && QLineF(Event->pos(), mTipPosition).length() <= qMax(mTipSize, 10.0))
 	{
 		mDraggingTip = true;
 		Event->accept();
@@ -1121,6 +1121,10 @@ void swInstructionsPageWidget::StepSettingsChanged(swModel* Model, swStep Step)
 {
 	QGraphicsScene* Scene = scene();
 
+	// frozen pages keep their look
+	const size_t PageIndex = mPage ? static_cast<size_t>(mPage - mInstructions->mPages.data()) : mInstructions->mPages.size();
+	const swInstructionsPageScope PageScope(mInstructions, PageIndex);
+
 	const QList<QGraphicsItem*> Items = Scene->items();
 
 	for (QGraphicsItem* Item : Items)
@@ -1194,9 +1198,10 @@ void swInstructionsPageWidget::SelectionChanged()
 // use to align the selected elements
 void swInstructionsPageWidget::AlignSelection(int Placement, bool LastSelection)
 {
-	if (mSelectionOrder.size() < 2)
+	if (mSelectionOrder.size() < 2 || !mPage)
 		return;
 
+	const swInstructionsPageScope PageScope(mInstructions, static_cast<size_t>(mPage - mInstructions->mPages.data()));
 	std::map<swInstructionsElementKey, QGraphicsItem*> ElementItems;
 	const QList<QGraphicsItem*> SelectedItems = scene()->selectedItems();
 
@@ -1596,8 +1601,14 @@ static void swAddPageAnnotations(swInstructions* Instructions, size_t PageIndex,
 
 		QGraphicsItem* SourceItem = FindItem(Pointer.Source);
 
-		if (SourceItem)
-			new swInstructionsPointerItem(PageItem, Instructions, Pointer, SourceItem, FindItem(Pointer.TargetElement));
+		if (!SourceItem)
+			continue;
+
+		// locked pages keep their pointer tips
+		swInstructionsPointerItem* PointerItem = new swInstructionsPointerItem(PageItem, Instructions, Pointer, SourceItem, FindItem(Pointer.TargetElement));
+
+		if (Instructions->mPageState.LockedPositions)
+			PointerItem->setFlag(QGraphicsItem::ItemIsMovable, false);
 	}
 }
 
@@ -1613,6 +1624,7 @@ void swUpdateInstructionsPageScene(swInstructions* Instructions, const swInstruc
 
 	// fill the whole page background
 	const size_t PageIndex = static_cast<size_t>(Page - Instructions->mPages.data());
+	const swInstructionsPageScope PageScope(Instructions, PageIndex);
 	const QColor BackgroundColor = Instructions->GetPageBackgroundColor(PageIndex);
 	QGraphicsRectItem* PageItem = Scene->addRect(QRectF(0.0f, 0.0f, PageSetup.Width, PageSetup.Height), QPen(Qt::NoPen), QBrush(BackgroundColor));
 	PageItem->setFlag(QGraphicsItem::ItemClipsChildrenToShape, true);
@@ -1634,6 +1646,30 @@ void swUpdateInstructionsPageScene(swInstructions* Instructions, const swInstruc
 		swAddPageContent(Instructions, Page, Scene, PageItem, MarginsRect);
 
 	swAddPageAnnotations(Instructions, PageIndex, Scene, PageItem, MarginsRect);
+}
+
+// use to lock a page where it is drawn now
+void swLockInstructionsPage(swInstructions* Instructions, size_t PageIndex)
+{
+	if (PageIndex >= Instructions->mPages.size())
+		return;
+
+	QGraphicsScene Scene;
+	swUpdateInstructionsPageScene(Instructions, &Instructions->mPages[PageIndex], &Scene);
+
+	// pointers follow their elements
+	std::map<swInstructionsElementKey, QPointF> Positions;
+	const QList<QGraphicsItem*> Items = Scene.items();
+
+	for (const QGraphicsItem* Item : Items)
+	{
+		swInstructionsElementKey Key;
+
+		if (swGetElementKey(Item, Key) && std::get<0>(Key) != swInstructionsPlacementElement::Pointer)
+			Positions[Key] = Item->pos();
+	}
+
+	Instructions->LockPage(PageIndex, Positions);
 }
 
 void swInstructionsPageWidget::SetCurrentPage(const swInstructionsPage* Page)
@@ -2324,11 +2360,141 @@ void swInstructionsRulerWidget::paintEvent(QPaintEvent* Event)
 	Painter.drawPolygon(Arrow);
 }
 
+// The lock and freeze toggles of each page.
+class swInstructionsPageListDelegate : public QStyledItemDelegate
+{
+public:
+	swInstructionsPageListDelegate(QObject* Parent, swInstructions* Instructions)
+		: QStyledItemDelegate(Parent), mInstructions(Instructions)
+	{
+	}
+
+	void paint(QPainter* Painter, const QStyleOptionViewItem& Option, const QModelIndex& Index) const override
+	{
+		QStyleOptionViewItem ItemOption = Option;
+		initStyleOption(&ItemOption, Index);
+		const QWidget* Widget = Option.widget;
+		QStyle* Style = Widget ? Widget->style() : QApplication::style();
+
+		// whole row first, then the toggles
+		Style->drawPrimitive(QStyle::PE_PanelItemViewItem, &ItemOption, Painter, Widget);
+
+		const size_t PageIndex = static_cast<size_t>(Index.row());
+		const bool Selected = Option.state & QStyle::State_Selected;
+		auto DrawToggle = [&](const QRect& Rect, swPaintedIcon Icon, bool Checked)
+		{
+			const QIcon::Mode Mode = !Checked ? QIcon::Disabled : Selected ? QIcon::Selected : QIcon::Normal;
+			swCreatePaintedIcon(Icon).paint(Painter, Rect, Qt::AlignCenter, Mode);
+		};
+
+		DrawToggle(GetToggleRect(Option, 0), swPaintedIcon::Lock, mInstructions->IsPageLocked(PageIndex));
+		DrawToggle(GetToggleRect(Option, 1), swPaintedIcon::Snowflake, mInstructions->IsPageFrozen(PageIndex));
+
+		ItemOption.rect.setRight(GetVisibleRight(Option) - GetColumnWidth());
+		ItemOption.state &= ~QStyle::State_HasFocus;
+		QStyledItemDelegate::paint(Painter, ItemOption, Index);
+	}
+
+	QSize sizeHint(const QStyleOptionViewItem& Option, const QModelIndex& Index) const override
+	{
+		const QSize Size = QStyledItemDelegate::sizeHint(Option, Index);
+		return QSize(Size.width() + GetColumnWidth(), qMax(Size.height(), GetIconSize() + 4));
+	}
+
+	bool editorEvent(QEvent* Event, QAbstractItemModel* Model, const QStyleOptionViewItem& Option, const QModelIndex& Index) override
+	{
+		if (Event->type() != QEvent::MouseButtonPress && Event->type() != QEvent::MouseButtonRelease && Event->type() != QEvent::MouseButtonDblClick)
+			return QStyledItemDelegate::editorEvent(Event, Model, Option, Index);
+
+		const QMouseEvent* MouseEvent = static_cast<QMouseEvent*>(Event);
+		const int Toggle = FindToggle(Option, MouseEvent->pos());
+
+		if (Toggle < 0 || MouseEvent->button() != Qt::LeftButton)
+			return QStyledItemDelegate::editorEvent(Event, Model, Option, Index);
+
+		// the list rebuilds after a toggle
+		if (Event->type() == QEvent::MouseButtonRelease)
+		{
+			swInstructions* Instructions = mInstructions;
+			const size_t PageIndex = static_cast<size_t>(Index.row());
+
+			QTimer::singleShot(0, Instructions, [Instructions, PageIndex, Toggle]()
+			{
+				if (Toggle == 0)
+				{
+					if (Instructions->IsPageLocked(PageIndex))
+						Instructions->UnlockPage(PageIndex);
+					else
+						swLockInstructionsPage(Instructions, PageIndex);
+				}
+				else if (Instructions->IsPageFrozen(PageIndex))
+					Instructions->UnfreezePage(PageIndex);
+				else
+					Instructions->FreezePage(PageIndex);
+			});
+		}
+
+		return true;
+	}
+
+	bool helpEvent(QHelpEvent* Event, QAbstractItemView* View, const QStyleOptionViewItem& Option, const QModelIndex& Index) override
+	{
+		const int Toggle = Event->type() == QEvent::ToolTip ? FindToggle(Option, Event->pos()) : -1;
+
+		if (Toggle < 0)
+			return QStyledItemDelegate::helpEvent(Event, View, Option, Index);
+
+		const QString ToolTip = Toggle == 0
+			? QCoreApplication::translate("swInstructionsPageListWidget", "Lock Page: keep every element where it is and refuse removal")
+			: QCoreApplication::translate("swInstructionsPageListWidget", "Freeze Page: keep the page settings when changes are made for all pages");
+
+		QToolTip::showText(Event->globalPos(), ToolTip, View);
+		return true;
+	}
+
+protected:
+	static int GetIconSize()
+	{
+		return QApplication::style()->pixelMetric(QStyle::PM_SmallIconSize);
+	}
+
+	static int GetColumnWidth()
+	{
+		return GetIconSize() * 2 + 12;
+	}
+
+	// rows can be wider than the list
+	static int GetVisibleRight(const QStyleOptionViewItem& Option)
+	{
+		const QAbstractItemView* View = qobject_cast<const QAbstractItemView*>(Option.widget);
+		return View ? qMin(Option.rect.right(), View->viewport()->rect().right()) : Option.rect.right();
+	}
+
+	// toggles sit at the right end
+	static QRect GetToggleRect(const QStyleOptionViewItem& Option, int Toggle)
+	{
+		const int Size = GetIconSize();
+		return QRect(GetVisibleRight(Option) - (2 - Toggle) * (Size + 4) + 1, Option.rect.center().y() - Size / 2, Size, Size);
+	}
+
+	static int FindToggle(const QStyleOptionViewItem& Option, const QPoint& Position)
+	{
+		// a little slack around each icon
+		for (int Toggle = 0; Toggle < 2; Toggle++)
+			if (GetToggleRect(Option, Toggle).adjusted(-2, -2, 2, 2).contains(Position))
+				return Toggle;
+
+		return -1;
+	}
+
+	swInstructions* mInstructions;
+};
+
 swInstructionsPageListWidget::swInstructionsPageListWidget(QWidget* Parent, swInstructions* Instructions)
 	: QDockWidget(Parent), mInstructions(Instructions)
 {
 	setWindowTitle(tr("Pages"));
-	setWhatsThis(tr("<p><b>Pages</b></p><p>Select a page to show it. Right-click a page to insert or remove blank pages around it.</p>"));
+	setWhatsThis(tr("<p><b>Pages</b></p><p>Select a page to show it. Right-click a page to insert or remove blank pages around it.</p><p>Click the lock beside a page to keep its elements where they are. A locked page can't be removed.</p><p>Click the snowflake to freeze a page. It keeps its own copy of the settings, so changes for all pages skip it. Unfreeze it to follow the other pages again.</p>"));
 	swSetupWidgetHelp(this);
 
 	QWidget* CentralWidget = new QWidget(this);
@@ -2339,6 +2505,7 @@ swInstructionsPageListWidget::swInstructionsPageListWidget(QWidget* Parent, swIn
 	mThumbnailsWidget = new QListWidget(CentralWidget);
 	mThumbnailsWidget->setAccessibleName(tr("Pages"));
 	mThumbnailsWidget->setContextMenuPolicy(Qt::CustomContextMenu);
+	mThumbnailsWidget->setItemDelegate(new swInstructionsPageListDelegate(mThumbnailsWidget, mInstructions));
 	Layout->addWidget(mThumbnailsWidget);
 
 	connect(mThumbnailsWidget, &QWidget::customContextMenuRequested, this, &swInstructionsPageListWidget::CustomMenuRequested);
@@ -2374,7 +2541,7 @@ void swInstructionsPageListWidget::CustomMenuRequested(const QPoint& Position)
 	});
 
 	QAction* RemoveAction = Menu.addAction(tr("Remove Blank Page"));
-	RemoveAction->setEnabled(IsBlank);
+	RemoveAction->setEnabled(IsBlank && !mInstructions->IsPageLocked(PageIndex));
 
 	connect(RemoveAction, &QAction::triggered, this, [this, PageIndex]()
 	{

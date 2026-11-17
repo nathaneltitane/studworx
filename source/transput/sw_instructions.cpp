@@ -169,6 +169,8 @@ void swInstructions::ReloadCommandLines()
 	mPagePropertyOverrides.clear();
 	mElementOffsets.clear();
 	mLockedPositions.clear();
+	mLockedPages.clear();
+	mFrozenPages.clear();
 	mBlankPages.clear();
 	mNotices.clear();
 	mPointers.clear();
@@ -475,7 +477,8 @@ void swInstructions::InsertBlankPage(size_t PageIndex)
 
 void swInstructions::RemoveBlankPage(size_t PageIndex)
 {
-	if (PageIndex >= mPages.size() || mPages[PageIndex].Type != swInstructionsPageType::Blank)
+	// locked pages stay
+	if (PageIndex >= mPages.size() || mPages[PageIndex].Type != swInstructionsPageType::Blank || IsPageLocked(PageIndex))
 		return;
 
 	// switch off default blank pages
@@ -601,6 +604,11 @@ bool swInstructions::HasPageProperty(size_t PageIndex, swInstructionsPropertyTyp
 
 QVariant swInstructions::GetPageProperty(size_t PageIndex, swInstructionsPropertyType Type) const
 {
+	const swInstructionsPageState PageState = GetPageState(PageIndex);
+
+	if (PageState.FrozenProperties)
+		return (*PageState.FrozenProperties)[static_cast<int>(Type)].Value;
+
 	swInstructionsStepKey Key;
 
 	if (HasPageProperty(PageIndex, Type) && GetPageKey(PageIndex, Key))
@@ -627,13 +635,20 @@ QColor swInstructions::GetPageBackgroundColor(size_t PageIndex) const
 {
 	if (PageIndex < mPages.size())
 	{
+		// cover and materials follow the freeze too
+		const swInstructionsPageState PageState = GetPageState(PageIndex);
+		auto GetColor = [this, &PageState](swInstructionsPropertyType Type)
+		{
+			return PageState.FrozenProperties ? swQColorFromRGBA((*PageState.FrozenProperties)[static_cast<int>(Type)].Value.toUInt()) : GetColorProperty(Type, nullptr, 0);
+		};
+
 		switch (mPages[PageIndex].Type)
 		{
 		case swInstructionsPageType::Cover:
-			return GetColorProperty(swInstructionsPropertyType::CoverBackgroundColor, nullptr, 0);
+			return GetColor(swInstructionsPropertyType::CoverBackgroundColor);
 
 		case swInstructionsPageType::BillOfMaterials:
-			return GetColorProperty(swInstructionsPropertyType::BillOfMaterialsBackgroundColor, nullptr, 0);
+			return GetColor(swInstructionsPropertyType::BillOfMaterialsBackgroundColor);
 
 		case swInstructionsPageType::Steps:
 		case swInstructionsPageType::Blank:
@@ -822,11 +837,23 @@ swInstructionsPageKey swInstructions::GetPageElementsKey(size_t PageIndex) const
 
 bool swInstructions::IsElementLocked(const swInstructionsElementKey& Key) const
 {
+	if (mPageState.LockedPositions && mPageState.LockedPositions->find(Key) != mPageState.LockedPositions->end())
+		return true;
+
 	return mLockedPositions.find(Key) != mLockedPositions.end();
 }
 
 QPointF swInstructions::GetLockedPosition(const swInstructionsElementKey& Key) const
 {
+	// the page lock comes first
+	if (mPageState.LockedPositions)
+	{
+		const std::map<swInstructionsElementKey, QPointF>::const_iterator PagePosition = mPageState.LockedPositions->find(Key);
+
+		if (PagePosition != mPageState.LockedPositions->end())
+			return PagePosition->second;
+	}
+
 	const std::map<swInstructionsElementKey, QPointF>::const_iterator Position = mLockedPositions.find(Key);
 
 	if (Position == mLockedPositions.end())
@@ -854,6 +881,81 @@ void swInstructions::UnlockElement(const swInstructionsElementKey& Key, const QP
 		mElementOffsets[Key] = Offset;
 
 	emit PageLayoutChanged();
+}
+
+bool swInstructions::IsPageLocked(size_t PageIndex) const
+{
+	return PageIndex < mPages.size() && mLockedPages.find(GetPageElementsKey(PageIndex)) != mLockedPages.end();
+}
+
+void swInstructions::LockPage(size_t PageIndex, const std::map<swInstructionsElementKey, QPointF>& Positions)
+{
+	if (PageIndex >= mPages.size() || IsPageLocked(PageIndex))
+		return;
+
+	mLockedPages[GetPageElementsKey(PageIndex)] = Positions;
+
+	emit PageLayoutChanged();
+}
+
+// unlocked elements follow their placement again
+void swInstructions::UnlockPage(size_t PageIndex)
+{
+	if (PageIndex >= mPages.size() || !mLockedPages.erase(GetPageElementsKey(PageIndex)))
+		return;
+
+	emit PageLayoutChanged();
+}
+
+bool swInstructions::IsPageFrozen(size_t PageIndex) const
+{
+	return PageIndex < mPages.size() && mFrozenPages.find(GetPageElementsKey(PageIndex)) != mFrozenPages.end();
+}
+
+void swInstructions::FreezePage(size_t PageIndex)
+{
+	if (PageIndex >= mPages.size() || IsPageFrozen(PageIndex))
+		return;
+
+	// copy what the page shows now
+	swInstructionsProperties Properties = mStepProperties;
+
+	for (int Type = 0; Type < static_cast<int>(swInstructionsPropertyType::Count); Type++)
+		if (IsPageProperty(static_cast<swInstructionsPropertyType>(Type)))
+			Properties[Type].Value = GetPageProperty(PageIndex, static_cast<swInstructionsPropertyType>(Type));
+
+	mFrozenPages[GetPageElementsKey(PageIndex)] = Properties;
+
+	emit PageLayoutChanged();
+}
+
+// unfrozen pages drop their copy
+void swInstructions::UnfreezePage(size_t PageIndex)
+{
+	if (PageIndex >= mPages.size() || !mFrozenPages.erase(GetPageElementsKey(PageIndex)))
+		return;
+
+	emit PageLayoutChanged();
+}
+
+swInstructionsPageState swInstructions::GetPageState(size_t PageIndex) const
+{
+	swInstructionsPageState PageState;
+
+	if (PageIndex >= mPages.size() || (mLockedPages.empty() && mFrozenPages.empty()))
+		return PageState;
+
+	const swInstructionsPageKey PageKey = GetPageElementsKey(PageIndex);
+	const auto LockedIt = mLockedPages.find(PageKey);
+	const auto FrozenIt = mFrozenPages.find(PageKey);
+
+	if (LockedIt != mLockedPages.end())
+		PageState.LockedPositions = &LockedIt->second;
+
+	if (FrozenIt != mFrozenPages.end())
+		PageState.FrozenProperties = &FrozenIt->second;
+
+	return PageState;
 }
 
 // use to apply the preferences page defaults
@@ -1132,6 +1234,10 @@ std::optional<swInstructionsPageUnits> swInstructions::GetDocumentUnits() const
 
 QVariant swInstructions::GetProperty(swInstructionsPropertyType Type, swModel* Model, swStep Step) const
 {
+	// a frozen page reads its copy
+	if (mPageState.FrozenProperties)
+		return (*mPageState.FrozenProperties)[static_cast<int>(Type)].Value;
+
 	size_t PageIndex;
 
 	// a page value overrides its steps

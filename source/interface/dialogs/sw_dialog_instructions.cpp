@@ -348,6 +348,7 @@ void swInstructionsDialog::CurrentThumbnailChanged(int Index)
 	if (Index < 0 || Index >= static_cast<int>(mInstructions->mPages.size()))
 	{
 		mPageWidget->SetCurrentPage(nullptr);
+		mPlacementWidget->SetCurrentPage(-1);
 		return;
 	}
 
@@ -355,6 +356,7 @@ void swInstructionsDialog::CurrentThumbnailChanged(int Index)
 
 	mPageWidget->SetCurrentPage(Page);
 	mPropertiesWidget->SetCurrentPage(Index);
+	mPlacementWidget->SetCurrentPage(Index);
 }
 
 // use to build the page buttons and the page box
@@ -467,7 +469,8 @@ void swInstructionsDialog::RemovePage()
 {
 	const int Row = mPageListWidget->mThumbnailsWidget->currentRow();
 
-	if (Row < 0 || Row >= static_cast<int>(mInstructions->mPages.size()))
+	// locked pages refuse removal
+	if (Row < 0 || Row >= static_cast<int>(mInstructions->mPages.size()) || mInstructions->IsPageLocked(Row))
 		return;
 
 	if (mInstructions->mPages[Row].Type == swInstructionsPageType::Blank)
@@ -527,7 +530,7 @@ void swInstructionsDialog::UpdatePageBar()
 	mCoverButton->setEnabled(FindPage(swInstructionsPageType::Cover) >= 0);
 	mStepPageButton->setEnabled(GetEditableStepModel(Row) != nullptr);
 	mBlankPageButton->setEnabled(Row >= 0 && mInstructions->CanInsertBlankPage(Row));
-	mRemovePageButton->setEnabled((Row >= 0 && Row <= LastRow && mInstructions->mPages[Row].Type == swInstructionsPageType::Blank) || IsEmptyStepPage(Row));
+	mRemovePageButton->setEnabled(Row >= 0 && Row <= LastRow && !mInstructions->IsPageLocked(Row) && (mInstructions->mPages[Row].Type == swInstructionsPageType::Blank || IsEmptyStepPage(Row)));
 
 	QSignalBlocker Blocker(mPageSpinBox);
 	mPageSpinBox->setRange(1, qMax(LastRow + 1, 1));
