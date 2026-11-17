@@ -179,6 +179,8 @@ enum class swInstructionsPropertyType
 	StepDividerMargin,
 	StepDividerPadding,
 	StepDividerRounded,
+	StepDividerHorizontal,
+	StepDividerVertical,
 	Count
 };
 

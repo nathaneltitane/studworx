@@ -1406,6 +1406,9 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 
 			DividerInset = DividerWidth / 2.0 + Instructions->GetIntProperty(swInstructionsPropertyType::StepDividerPadding, FirstStep.Model, FirstStep.Step);
 
+			const bool Horizontal = Instructions->GetBoolProperty(swInstructionsPropertyType::StepDividerHorizontal, FirstStep.Model, FirstStep.Step);
+			const bool Vertical = Instructions->GetBoolProperty(swInstructionsPropertyType::StepDividerVertical, FirstStep.Model, FirstStep.Step);
+
 			auto IsNear = [](qreal Value1, qreal Value2)
 			{
 				return qAbs(Value1 - Value2) < 0.0001;
@@ -1425,13 +1428,13 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 					const qreal Left = qMax(Rect.left(), OtherRect.left());
 					const qreal Right = qMin(Rect.right(), OtherRect.right());
 
-					if (IsNear(OtherRect.left(), Rect.right()) && Bottom - Top > 0.0001)
+					if (Vertical && IsNear(OtherRect.left(), Rect.right()) && Bottom - Top > 0.0001)
 					{
 						const qreal X = MarginsRect.left() + MarginsRect.width() * Rect.right();
 						Scene->addLine(X, MarginsRect.top() + MarginsRect.height() * Top + Inset, X, MarginsRect.top() + MarginsRect.height() * Bottom - Inset, DividerPen)->setParentItem(PageItem);
 					}
 
-					if (IsNear(OtherRect.top(), Rect.bottom()) && Right - Left > 0.0001)
+					if (Horizontal && IsNear(OtherRect.top(), Rect.bottom()) && Right - Left > 0.0001)
 					{
 						const qreal Y = MarginsRect.top() + MarginsRect.height() * Rect.bottom();
 						Scene->addLine(MarginsRect.left() + MarginsRect.width() * Left + Inset, Y, MarginsRect.left() + MarginsRect.width() * Right - Inset, Y, DividerPen)->setParentItem(PageItem);

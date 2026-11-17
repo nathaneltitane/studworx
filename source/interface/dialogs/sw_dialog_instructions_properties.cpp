@@ -622,11 +622,16 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddRow(CategoryIndex::PageLayout, { mFinalModelButton, mFinalModelColorButton });
 	AddRow(CategoryIndex::PageLayout, { ApplyAllButton });
 
-	AddCategory(CategoryIndex::Divider, tr("Divider"), tr("<p><b>Divider</b></p><p>The lines between neighboring steps. The margin keeps the line ends away from the page margins, the padding keeps the steps away from the lines.</p>"));
+	AddCategory(CategoryIndex::Divider, tr("Divider"), tr("<p><b>Divider</b></p><p>The lines between neighboring steps. Horizontal and Vertical hide the lines in one direction, for example where page colors already split the page. The margin keeps the line ends away from the page margins, the padding keeps the steps away from the lines.</p>"));
 
 	AddRow(CategoryIndex::Divider, {
 		CreateToggleEditor(swInstructionsPropertyType::ShowStepDividers, tr("Show Step Dividers"), tr("Draw lines between neighboring steps.")),
 		CreateToggleEditor(swInstructionsPropertyType::StepDividerRounded, tr("Rounded Ends"), tr("Round the line ends, off draws flat ends."))
+	});
+
+	AddRow(CategoryIndex::Divider, {
+		CreateToggleEditor(swInstructionsPropertyType::StepDividerHorizontal, tr("Horizontal"), tr("Draw the lines between steps above and below each other.")),
+		CreateToggleEditor(swInstructionsPropertyType::StepDividerVertical, tr("Vertical"), tr("Draw the lines between steps side by side."))
 	});
 
 	CreateColorEditor(swInstructionsPropertyType::StepDividerColor, tr("Divider Color"), tr("Color of the lines between steps."));
@@ -1466,6 +1471,8 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 	SetEnabled(swInstructionsPropertyType::StepDividerMargin, ShowStepDividers);
 	SetEnabled(swInstructionsPropertyType::StepDividerPadding, ShowStepDividers);
 	SetEnabled(swInstructionsPropertyType::StepDividerRounded, ShowStepDividers);
+	SetEnabled(swInstructionsPropertyType::StepDividerHorizontal, ShowStepDividers);
+	SetEnabled(swInstructionsPropertyType::StepDividerVertical, ShowStepDividers);
 
 	const swInstructionsPageType PageType = GetPageType();
 	QSignalBlocker Blocker(mThumbnailPageButton);
