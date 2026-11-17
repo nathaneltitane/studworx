@@ -655,7 +655,9 @@ void swInstructions::ApplyPageToAllPages(size_t PageIndex, swInstructionsPropert
 	if (!IsPageProperty(Type) || !GetPageKey(PageIndex, Key))
 		return;
 
-	const QVariant Value = GetPageProperty(PageIndex, Type);
+	// submodel pages show the main background in the panel
+	const bool MainBackground = Type == swInstructionsPropertyType::PageBackgroundColor && !HasPageProperty(PageIndex, Type);
+	const QVariant Value = MainBackground ? mStepProperties[static_cast<int>(Type)].Value : GetPageProperty(PageIndex, Type);
 
 	for (auto& [PageKey, Properties] : mPagePropertyOverrides)
 		Properties[static_cast<int>(Type)] = swInstructionsProperty();
@@ -1320,6 +1322,7 @@ void swInstructions::AddDefaultPages(swModel* Model, std::vector<const swModel*>
 
 	const swStep LastStep = Model->GetLastStep();
 	swInstructionsPage Page;
+	swInstructionsPageSettings LastSettings;
 
 	// add entries for new steps
 	std::vector<swInstructionsProperties>& StepProperties = mModels[Model].StepProperties;
@@ -1361,6 +1364,7 @@ void swInstructions::AddDefaultPages(swModel* Model, std::vector<const swModel*>
 		InstructionsStep.Step = Step;
 
 		Page.Steps.push_back(std::move(InstructionsStep));
+		LastSettings = Page.Settings;
 
 		if (static_cast<int>(Page.Steps.size()) == Page.Settings.Rows * Page.Settings.Columns)
 			FinishPage(Page);
@@ -1368,7 +1372,15 @@ void swInstructions::AddDefaultPages(swModel* Model, std::vector<const swModel*>
 
 	// the finished model fills the room left after the last step
 
-	if (!Page.Steps.empty() && Page.Settings.FinalModel)
+	// a full last page sends it to a new page with the same layout
+
+	if (Page.Steps.empty() && LastSettings.FinalModel)
+	{
+		const swInstructionsStepKey FinalKey = { Model, LastStep };
+		Page.Settings = mPageSettingsOverrides.count(FinalKey) ? mPageSettingsOverrides.at(FinalKey) : LastSettings;
+	}
+
+	if (LastStep > 0 && Page.Settings.FinalModel)
 	{
 		swInstructionsStep FinalStep;
 

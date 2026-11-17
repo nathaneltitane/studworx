@@ -524,7 +524,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 
 	connect(mFinalModelButton, &QToolButton::toggled, this, [this]()
 	{
-		mFinalModelColorButton->setEnabled(mFinalModelButton->isChecked());
+		mFinalModelColorButton->setEnabled(mFinalModelButton->isEnabled() && mFinalModelButton->isChecked());
 
 		mInstructions->SetPageSettings(mPageIndex, GetPageLayoutSettings());
 	});
@@ -1438,7 +1438,23 @@ void swInstructionsPropertiesWidget::UpdatePageLayout()
 	mStepFlowComboBox->setCurrentIndex(static_cast<int>(PageSettings.Direction));
 	mFinalModelButton->setChecked(PageSettings.FinalModel);
 	mFinalModelColorButton->setChecked(PageSettings.FinalModelColor);
-	mFinalModelColorButton->setEnabled(PageSettings.FinalModel);
+
+	// only pages ending a model have room for it
+	bool HasLastStep = false;
+
+	if (mPageIndex >= 0 && mPageIndex < static_cast<int>(mInstructions->mPages.size()))
+	{
+		for (const swInstructionsStep& Step : mInstructions->mPages[mPageIndex].Steps)
+		{
+			if (Step.FinalModel || Step.Step == Step.Model->GetLastStep())
+			{
+				HasLastStep = true;
+			}
+		}
+	}
+
+	mFinalModelButton->setEnabled(HasLastStep);
+	mFinalModelColorButton->setEnabled(HasLastStep && PageSettings.FinalModel);
 
 	// check the matching preset
 	for (int Preset = 0; Preset < static_cast<int>(mDividerPresetButtons.size()); Preset++)

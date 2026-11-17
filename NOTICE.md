@@ -22,6 +22,8 @@
   - Instructions: Step Flow in Steps per Page fills pages row by row or column by column, picked by you instead of by the page shape
   - Instructions: on pages with empty cells the last step stretches to fill them, and the step dividers follow the cells
   - Instructions: Show Final Model puts the finished model in the room left after a model's last step, with Main Page Color to give a submodel's finished model the main page color
+  - Instructions: when the last page is full, the finished model goes on a new page, and Show Final Model and Main Page Color are greyed out on pages without a model's last step
+  - Instructions: Apply to All Pages on a submodel page keeps the main Page Background instead of resetting it
   - Instructions: new part outlines on large step images no longer show seam lines
   - Instructions: Show Author sits on its own row
 
