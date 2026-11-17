@@ -1189,9 +1189,9 @@
 					<figcaption>Page Setup</figcaption>
 				</figure>
 
-				<figure style="--width-image: 412; --height-image: 874">
+				<figure style="--width-image: 400; --height-image: 462">
 					<button class="shot" data-full="resources/images/instructions-widget-properties.png" aria-label="Enlarge Properties">
-						<img src="resources/images/instructions-widget-properties.png" alt="Properties" width="412" height="874" loading="lazy">
+						<img src="resources/images/instructions-widget-properties.png" alt="Properties" width="400" height="462" loading="lazy">
 					</button>
 
 					<figcaption>Properties</figcaption>
@@ -2039,9 +2039,10 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Instructions: the highlight color keeps the opacity you pick, no longer held between 85 and 95 percent</li>
 					<li>Instructions: Final Border, Final Border Color and Final Margin in <a href="#steps">Steps</a> per Page frame the final model area and keep it away from the steps and page margins, none by default</li>
 					<li>Instructions: the Properties groups follow the page from largest to smallest, Page before Bill of Materials and Step Number, Parts List then Divider after Steps per Page</li>
-					<li>Instructions: Page Number is part of the Page group, the bill of materials shows only its number settings there</li>
-					<li>Translations: the merged Page <a href="#help">help</a> reads right in all nine languages</li>
-					<li>Site: the Properties <a href="#image">image</a> is retaken to show the new group order</li>
+					<li>Instructions: Page Number is part of the Page group</li>
+					<li>Instructions: every Properties group shows on every page and starts folded, selecting an element opens its group and folds the others</li>
+					<li>Translations: the merged Page and Properties <a href="#help">help</a> read right in all nine languages</li>
+					<li>Site: the Properties <a href="#image">image</a> is retaken to show the new group order, folded</li>
 					<li>Translations: the new highlight and final model settings read right in all nine languages</li>
 					<li>Site: the Instructions, <a href="#rendering">Rendering</a>, <a href="#views">Views</a> and <a href="#interface">Interface</a> images are retaken to show the panel fold arrows and the new instructions settings, and the Instructions features name Step Flow, the final model, dividers, Model Size, Highlight Width, text <a href="#files">files</a> and Undo and Redo</li>
 					<li>Site: the POV-Ray and Blender Render images show the full output path the windows fill in</li>
@@ -2351,7 +2352,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Instructions","title":"Grid","paragraphs":["The page grid helps aligning dragged elements, it is never printed. Show it on screen, snap dragged elements to it or to the anchors of the other elements, choose its area, the size of its main unit and the fractions it is split into, and the colors of its lines and of the margins."]},
 				{"group":"Instructions","title":"Snap to Anchors","paragraphs":["While an element is dragged, its corners, edge centers and center snap to those of the page area and of the other elements when they come within a few pixels, on each axis separately. Snap to Anchors and Snap to Grid exclude each other, turning one on turns the other off. Show Element Anchors in the Properties options shows the anchors."]},
 				{"group":"Instructions","title":"Print","paragraphs":["Print the instruction pages on a printer or to a PDF file. The pages are printed on paper matching the page setup, the pages panel shows how they look."]},
-				{"group":"Instructions","title":"Properties","paragraphs":["Edit how the instruction pages look. With nothing selected on the page every section is shown, select an element to show only its settings and its box. Right-click the page to add notices and pointers. Changes apply to all pages."]},
+				{"group":"Instructions","title":"Properties","paragraphs":["Edit how the instruction pages look. Every section starts folded, select an element on the page to open its section and fold the others. Right-click the page to add notices and pointers. Changes apply to all pages."]},
 				{"group":"Instructions","title":"Document","paragraphs":["One font for all text of the instructions and the projection of the step and cover models. The instructions settings, notices and pointers are saved in the model file, the page setup and grid in the preferences."]},
 				{"group":"Instructions","title":"Cover Page","paragraphs":["The first page, showing the model title, its author and the finished model. The title comes from the model description, or its name when there is none, the author from the model properties."]},
 				{"group":"Instructions","title":"Page","paragraphs":["The background and the number of the step and blank pages. The background applies to all these pages, or only to the current page when it has its own, the cover and the bill of materials have their own backgrounds. The cover and blank pages are not numbered unless all pages are. Drag the number or use the Placement panel to move it on all pages."]},

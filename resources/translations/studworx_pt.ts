@@ -16178,7 +16178,7 @@ Escolher onde o gravar e transferir agora a última versão de %3?</translation>
         <translation type="obsolete">Todos os Passos</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1027"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1028"/>
         <source>Apply to All Pages</source>
         <translation>Aplicar a Todas as Páginas</translation>
     </message>
@@ -16556,6 +16556,11 @@ Escolher onde o gravar e transferir agora a última versão de %3?</translation>
         <translation>Página em Branco Depois da Capa</translation>
     </message>
     <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="140"/>
+        <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit how the instruction pages look. Every section starts folded, select an element on the page to open its section and fold the others. Right-click the page to add notices and pointers. Changes apply to all pages.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Propriedades&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edite o aspeto das páginas de instruções. Cada secção começa recolhida, selecione um elemento na página para abrir a sua secção e recolher as outras. Clique com o botão direito na página para adicionar avisos e indicadores. As alterações aplicam-se a todas as páginas.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="439"/>
         <source>Follow the cover with a blank page, like the inside of a printed cover.</source>
         <translation>Faz seguir a capa de uma página em branco, como o interior de uma capa impressa.</translation>
@@ -16713,9 +16718,8 @@ Escolher onde o gravar e transferir agora a última versão de %3?</translation>
         <translation>Página</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="140"/>
         <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit how the instruction pages look. With nothing selected on the page every section is shown, select an element to show only its settings and its box. Right-click the page to add notices and pointers. Changes apply to all pages.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Propriedades&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edite o aspeto das páginas de instruções. Sem nada selecionado na página são mostradas todas as secções, selecione um elemento para mostrar apenas as suas definições e a sua caixa. Clique com o botão direito na página para adicionar avisos e indicadores. As alterações aplicam-se a todas as páginas.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Propriedades&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edite o aspeto das páginas de instruções. Sem nada selecionado na página são mostradas todas as secções, selecione um elemento para mostrar apenas as suas definições e a sua caixa. Clique com o botão direito na página para adicionar avisos e indicadores. As alterações aplicam-se a todas as páginas.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="522"/>
@@ -16993,19 +16997,19 @@ Escolher onde o gravar e transferir agora a última versão de %3?</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="673"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1461"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1508"/>
         <source>Top</source>
         <translation>Topo</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="673"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1461"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1508"/>
         <source>Middle</source>
         <translation>Meio</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="673"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1461"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1508"/>
         <source>Bottom</source>
         <translation>Fundo</translation>
     </message>
@@ -17056,7 +17060,7 @@ Escolher onde o gravar e transferir agora a última versão de %3?</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="749"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1067"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1068"/>
         <source>Automatic</source>
         <translation>Automático</translation>
     </message>
@@ -17112,17 +17116,17 @@ Escolher onde o gravar e transferir agora a última versão de %3?</translation>
         <translation>Arredondamento dos cantos da caixa, 0 mantém-nos retos.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1058"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1059"/>
         <source>Remove the text file and go back to the typed or automatic text.</source>
         <translation>Remover o arquivo de texto e voltar ao texto digitado ou automático.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1067"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1068"/>
         <source>No File</source>
         <translation>Nenhum Arquivo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1058"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1059"/>
         <source>Choose the text file.</source>
         <translation>Escolher o arquivo de texto.</translation>
     </message>
@@ -17132,27 +17136,27 @@ Escolher onde o gravar e transferir agora a última versão de %3?</translation>
         <translation>&lt;p&gt;&lt;b&gt;Passos por página&lt;/b&gt;&lt;/p&gt;&lt;p&gt;As linhas e colunas de passos da página atual, as páginas seguintes continuam a partir dela. As predefinições dividem a página em metades, terços ou quartos e mostram os divisores de passos. O fluxo de passos preenche a página linha por linha ou coluna por coluna, e o último passo se estende pelas células vazias. Mostrar modelo final coloca o modelo pronto no espaço que sobra após o último passo de um modelo, e Cor da página principal dá ao modelo pronto de um submodelo a cor da página principal. A borda do modelo final emoldura essa área e sua margem a afasta dos passos e das margens de página.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1081"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1082"/>
         <source>Choose %1</source>
         <translation>Escolher %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1098"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1099"/>
         <source>Text Files (*.txt);;All Files (*)</source>
         <translation>Arquivos de texto (*.txt);;Todos os arquivos (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1461"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1508"/>
         <source>Left</source>
         <translation>Esquerda</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1461"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1508"/>
         <source>Center</source>
         <translation>Centro</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1461"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1508"/>
         <source>Right</source>
         <translation>Direita</translation>
     </message>
@@ -17535,17 +17539,17 @@ Escolher onde o gravar e transferir agora a última versão de %3?</translation>
         <translation>Cor que preenche todo o elemento, margem e espaçamento incluídos, transparente mostra o que está atrás.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="841"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="842"/>
         <source>Expand or collapse the %1 properties.</source>
         <translation>Expande ou recolhe as propriedades de %1.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1122"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1123"/>
         <source>Size of the font in the page units.</source>
         <translation>Tamanho do tipo de letra nas unidades da página.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1124"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1125"/>
         <source>%1 Size</source>
         <translation>Tamanho de %1</translation>
     </message>

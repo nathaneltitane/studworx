@@ -177,7 +177,6 @@ protected:
 	QToolButton* mFinalModelColorButton = nullptr;
 	QToolButton* mThumbnailPageButton = nullptr;
 	QToolButton* mBackgroundPageButton = nullptr;
-	std::vector<QWidget*> mPageBackgroundRows;
 	QToolButton* mThumbnailApplyAllButton = nullptr;
 	QToolButton* mModelSizePageButton = nullptr;
 	QToolButton* mModelSizeApplyAllButton = nullptr;

@@ -137,7 +137,7 @@ swInstructionsPropertiesWidget::swInstructionsPropertiesWidget(QWidget* Parent, 
 	: QDockWidget(Parent), mInstructions(Instructions)
 {
 	setWindowTitle(tr("Properties"));
-	setWhatsThis(tr("<p><b>Properties</b></p><p>Edit how the instruction pages look. With nothing selected on the page every section is shown, select an element to show only its settings and its box. Right-click the page to add notices and pointers. Changes apply to all pages.</p>"));
+	setWhatsThis(tr("<p><b>Properties</b></p><p>Edit how the instruction pages look. Every section starts folded, select an element on the page to open its section and fold the others. Right-click the page to add notices and pointers. Changes apply to all pages.</p>"));
 	swSetupWidgetHelp(this);
 
 	QWidget* CentralWidget = new QWidget(this);
@@ -466,9 +466,9 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddCategory(CategoryIndex::Page, tr("Page"), tr("<p><b>Page</b></p><p>The background and the number of the step and blank pages. The background applies to all these pages, or only to the current page when it has its own, the cover and the bill of materials have their own backgrounds. The cover and blank pages are not numbered unless all pages are. Drag the number or use the Placement panel to move it on all pages.</p>"));
 
 	CreateColorEditor(swInstructionsPropertyType::PageBackgroundColor, tr("Page Background"), tr("Color filling the whole page of main model steps, margins included."));
-	mPageBackgroundRows.push_back(AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::PageBackgroundColor)->parentWidget());
+	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::PageBackgroundColor);
 	CreateColorEditor(swInstructionsPropertyType::SubmodelBackgroundColor, tr("Submodel Background"), tr("Color filling the whole page of submodel steps, margins included."));
-	mPageBackgroundRows.push_back(AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::SubmodelBackgroundColor)->parentWidget());
+	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::SubmodelBackgroundColor);
 
 	// background for all or current page
 	mBackgroundPageButton = new QToolButton(this);
@@ -485,7 +485,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 		mInstructions->SetPageScope(mPageIndex, swInstructionsPropertyType::PageBackgroundColor, PageOnly);
 	});
 
-	mPageBackgroundRows.push_back(AddRow(CategoryIndex::Page, { mBackgroundPageButton }));
+	AddRow(CategoryIndex::Page, { mBackgroundPageButton });
 
 	QToolButton* BackgroundApplyAllButton = CreateApplyAllButton(tr("Use the background of this page on every page."));
 
@@ -494,7 +494,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 		mInstructions->ApplyPageToAllPages(mPageIndex, swInstructionsPropertyType::PageBackgroundColor);
 	});
 
-	mPageBackgroundRows.push_back(AddRow(CategoryIndex::Page, { BackgroundApplyAllButton }));
+	AddRow(CategoryIndex::Page, { BackgroundApplyAllButton });
 
 	AddRow(CategoryIndex::Page, {
 		CreateToggleEditor(swInstructionsPropertyType::ShowPageNumber, tr("Show Page Number"), tr("Show the number of each page except the cover and blank pages.")),
@@ -838,6 +838,7 @@ void swInstructionsPropertiesWidget::AddCategory(CategoryIndex Index, const QStr
 	CategoryWidgets& Category = mCategoryWidgets[static_cast<int>(Index)];
 
 	Category.Button = new swCollapsibleWidgetButton(Title, this);
+	Category.Button->SetExpanded(false);
 	Category.Button->setToolTip(tr("Expand or collapse the %1 properties.").arg(Title));
 	Category.Button->setWhatsThis(WhatsThis);
 	mCategoriesLayout->addWidget(Category.Button);
@@ -1281,6 +1282,52 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 	if (Focus == mFocus && Model == mModel && Step == mStep)
 		return;
 
+	// selection opens its own group
+	if (Focus != mFocus && Focus != FocusType::None)
+	{
+		CategoryIndex Open = CategoryIndex::Box;
+
+		switch (Focus)
+		{
+		case FocusType::StepNumber:
+			Open = CategoryIndex::Step;
+			break;
+
+		case FocusType::PartsList:
+			Open = CategoryIndex::PartsList;
+			break;
+
+		case FocusType::BillOfMaterials:
+			Open = CategoryIndex::BillOfMaterials;
+			break;
+
+		case FocusType::PageNumber:
+			Open = CategoryIndex::Page;
+			break;
+
+		case FocusType::CoverTitle:
+		case FocusType::CoverAuthor:
+		case FocusType::CoverImage:
+			Open = CategoryIndex::Cover;
+			break;
+
+		case FocusType::Notice:
+			Open = CategoryIndex::Notice;
+			break;
+
+		case FocusType::Pointer:
+			Open = CategoryIndex::Pointer;
+			break;
+
+		case FocusType::StepImage:
+		case FocusType::None:
+			break;
+		}
+
+		for (int Index = 0; Index < static_cast<int>(CategoryIndex::Count); Index++)
+			mCategoryWidgets[Index].Button->SetExpanded(Index == static_cast<int>(Open));
+	}
+
 	mFocus = Focus;
 	mModel = Model;
 	mStep = Step;
@@ -1616,86 +1663,7 @@ swInstructionsPageType swInstructionsPropertiesWidget::GetPageType() const
 
 void swInstructionsPropertiesWidget::UpdateCategories()
 {
-	std::array<bool, static_cast<int>(CategoryIndex::Count)> Visible = {};
-
-	// a selection shows its own settings
-	switch (mFocus)
-	{
-	case FocusType::None:
-		{
-			// the page type picks the settings
-			const swInstructionsPageType PageType = GetPageType();
-
-			Visible[static_cast<int>(CategoryIndex::Document)] = true;
-			Visible[static_cast<int>(CategoryIndex::Cover)] = true;
-			Visible[static_cast<int>(CategoryIndex::Page)] = PageType != swInstructionsPageType::Cover;
-			Visible[static_cast<int>(CategoryIndex::BillOfMaterials)] = true;
-			Visible[static_cast<int>(CategoryIndex::PageLayout)] = PageType == swInstructionsPageType::Steps;
-			Visible[static_cast<int>(CategoryIndex::Step)] = PageType == swInstructionsPageType::Steps;
-			Visible[static_cast<int>(CategoryIndex::PartsList)] = PageType == swInstructionsPageType::Steps || PageType == swInstructionsPageType::BillOfMaterials;
-			Visible[static_cast<int>(CategoryIndex::Divider)] = PageType == swInstructionsPageType::Steps;
-			Visible[static_cast<int>(CategoryIndex::Notice)] = true;
-			Visible[static_cast<int>(CategoryIndex::Pointer)] = true;
-			Visible[static_cast<int>(CategoryIndex::Box)] = true;
-		}
-		break;
-
-	case FocusType::StepImage:
-		Visible[static_cast<int>(CategoryIndex::Step)] = true;
-		Visible[static_cast<int>(CategoryIndex::PartsList)] = true;
-		Visible[static_cast<int>(CategoryIndex::Box)] = true;
-		break;
-
-	case FocusType::StepNumber:
-		Visible[static_cast<int>(CategoryIndex::Step)] = true;
-		Visible[static_cast<int>(CategoryIndex::Box)] = true;
-		break;
-
-	case FocusType::PartsList:
-		Visible[static_cast<int>(CategoryIndex::PartsList)] = true;
-		Visible[static_cast<int>(CategoryIndex::Box)] = true;
-		break;
-
-	case FocusType::PageNumber:
-		Visible[static_cast<int>(CategoryIndex::Page)] = true;
-		Visible[static_cast<int>(CategoryIndex::Box)] = true;
-		break;
-
-	case FocusType::CoverTitle:
-	case FocusType::CoverAuthor:
-	case FocusType::CoverImage:
-		Visible[static_cast<int>(CategoryIndex::Cover)] = true;
-		Visible[static_cast<int>(CategoryIndex::Box)] = true;
-		break;
-
-	case FocusType::BillOfMaterials:
-		Visible[static_cast<int>(CategoryIndex::BillOfMaterials)] = true;
-		Visible[static_cast<int>(CategoryIndex::PartsList)] = true;
-		Visible[static_cast<int>(CategoryIndex::Box)] = true;
-		break;
-
-	case FocusType::Notice:
-		Visible[static_cast<int>(CategoryIndex::Notice)] = true;
-		Visible[static_cast<int>(CategoryIndex::Box)] = true;
-		break;
-
-	case FocusType::Pointer:
-		Visible[static_cast<int>(CategoryIndex::Pointer)] = true;
-		break;
-	}
-
-	for (int Index = 0; Index < static_cast<int>(Visible.size()); Index++)
-	{
-		CategoryWidgets& Category = mCategoryWidgets[Index];
-
-		Category.Button->setVisible(Visible[Index]);
-		Category.Rows->setVisible(Visible[Index] && Category.Button->IsExpanded());
-	}
-
-	// only step and blank backgrounds
-	const swInstructionsPageType PageType = GetPageType();
-	const bool PageBackground = PageType == swInstructionsPageType::Steps || PageType == swInstructionsPageType::Blank;
-
-	for (QWidget* Row : mPageBackgroundRows)
-		Row->setVisible(PageBackground);
+	// fold arrow alone shows rows
+	for (CategoryWidgets& Category : mCategoryWidgets)
+		Category.Rows->setVisible(Category.Button->IsExpanded());
 }
