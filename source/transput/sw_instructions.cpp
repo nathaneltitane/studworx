@@ -107,9 +107,7 @@ swInstructions::swInstructions(Project* Project)
 		mPageSetup.MarginBottom = 0.5 * mDisplayDPI;
 	}
 
-	mPageSettings.Rows = 1;
-	mPageSettings.Columns = 1;
-	mPageSettings.Direction = GetPageDirection();
+	mPageSettings = swInstructionsPageSettings();
 
 	mShowGrid = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SHOW_GRID) != 0;
 	mSnapToGrid = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_SNAP_TO_GRID) != 0;
@@ -178,9 +176,7 @@ void swInstructions::ReloadCommandLines()
 	mNextNoticeId = 1;
 	mNextPointerId = 1;
 
-	mPageSettings.Rows = 1;
-	mPageSettings.Columns = 1;
-	mPageSettings.Direction = GetPageDirection();
+	mPageSettings = swInstructionsPageSettings();
 
 	SetDefaultProperties();
 	mDefaultProperties = mStepProperties;
@@ -324,18 +320,11 @@ void swInstructions::ResetProperties()
 void swInstructions::SetDefaultPageSettings(const swInstructionsPageSettings& PageSettings)
 {
 	mPageSettings = PageSettings;
-	mPageSettings.Direction = GetPageDirection();
 	mPageSettingsOverrides.clear();
 
 	CreatePages();
 
 	emit PageLayoutChanged();
-}
-
-swInstructionsDirection swInstructions::GetPageDirection() const
-{
-	// landscape fills rows, portrait columns
-	return mPageSetup.Width > mPageSetup.Height ? swInstructionsDirection::Horizontal : swInstructionsDirection::Vertical;
 }
 
 bool swInstructions::GetPageKey(size_t PageIndex, swInstructionsStepKey& Key) const
@@ -378,11 +367,7 @@ bool swInstructions::GetPageKey(size_t PageIndex, swInstructionsStepKey& Key) co
 swInstructionsPageSettings swInstructions::GetStepPageSettings(const swInstructionsStepKey& Key) const
 {
 	std::map<swInstructionsStepKey, swInstructionsPageSettings>::const_iterator SettingsIt = mPageSettingsOverrides.find(Key);
-	swInstructionsPageSettings PageSettings = SettingsIt != mPageSettingsOverrides.end() ? SettingsIt->second : mPageSettings;
-
-	PageSettings.Direction = GetPageDirection();
-
-	return PageSettings;
+	return SettingsIt != mPageSettingsOverrides.end() ? SettingsIt->second : mPageSettings;
 }
 
 swInstructionsPageSettings swInstructions::GetPageSettings(size_t PageIndex) const
@@ -393,22 +378,18 @@ swInstructionsPageSettings swInstructions::GetPageSettings(size_t PageIndex) con
 	return GetStepPageSettings({ nullptr, 0 });
 }
 
-void swInstructions::SetPageSettings(size_t PageIndex, int Rows, int Columns)
+void swInstructions::SetPageSettings(size_t PageIndex, const swInstructionsPageSettings& PageSettings)
 {
 	// pages hold their own step count
 	if (PageIndex >= mPages.size() || mPages[PageIndex].Type != swInstructionsPageType::Steps)
 		return;
 
-	swInstructionsPageSettings PageSettings = mPages[PageIndex].Settings;
-
-	if (PageSettings.Rows == Rows && PageSettings.Columns == Columns)
+	if (mPages[PageIndex].Settings == PageSettings)
 		return;
 
 	swInstructionsStepKey Key;
 	GetPageKey(PageIndex, Key);
 
-	PageSettings.Rows = Rows;
-	PageSettings.Columns = Columns;
 	mPageSettingsOverrides[Key] = PageSettings;
 
 	CreatePages();
@@ -435,7 +416,11 @@ void swInstructions::SetPageDividerPreset(size_t PageIndex, int Rows, int Column
 		return;
 	}
 
-	SetPageSettings(PageIndex, Rows, Columns);
+	swInstructionsPageSettings NewSettings = PageSettings;
+	NewSettings.Rows = Rows;
+	NewSettings.Columns = Columns;
+
+	SetPageSettings(PageIndex, NewSettings);
 }
 
 bool swInstructions::CanInsertBlankPage(size_t PageIndex) const
@@ -508,7 +493,6 @@ void swInstructions::SetPageSetup(const swInstructionsPageSetup& PageSetup)
 	swSetProfileFloat(SW_PROFILE_INSTRUCTIONS_MARGIN_TOP, mPageSetup.MarginTop);
 	swSetProfileFloat(SW_PROFILE_INSTRUCTIONS_MARGIN_BOTTOM, mPageSetup.MarginBottom);
 
-	mPageSettings.Direction = GetPageDirection();
 	CreatePages();
 
 	emit PageSetupChanged();
@@ -1336,7 +1320,6 @@ void swInstructions::AddDefaultPages(swModel* Model, std::vector<const swModel*>
 
 	const swStep LastStep = Model->GetLastStep();
 	swInstructionsPage Page;
-	int Row = 0, Column = 0;
 
 	// add entries for new steps
 	std::vector<swInstructionsProperties>& StepProperties = mModels[Model].StepProperties;
@@ -1361,12 +1344,7 @@ void swInstructions::AddDefaultPages(swModel* Model, std::vector<const swModel*>
 
 		if (!StepSubModels.empty())
 		{
-			if (!Page.Steps.empty())
-			{
-				mPages.emplace_back(std::move(Page));
-				Row = 0;
-				Column = 0;
-			}
+			FinishPage(Page);
 
 			for (swModel* SubModel : StepSubModels)
 				AddDefaultPages(SubModel, AddedModels);
@@ -1375,64 +1353,79 @@ void swInstructions::AddDefaultPages(swModel* Model, std::vector<const swModel*>
 		AddBlankPages(Page, { Model, Step });
 
 		if (Page.Steps.empty())
-		{
 			Page.Settings = GetStepPageSettings({ Model, Step });
-			Row = 0;
-			Column = 0;
-		}
 
-		const swInstructionsPageSettings PageSettings = Page.Settings;
 		swInstructionsStep InstructionsStep;
 
 		InstructionsStep.Model = Model;
 		InstructionsStep.Step = Step;
 
-		const double Width = 1.0 / (double)PageSettings.Columns;
-		const double Height = 1.0 / (double)PageSettings.Rows;
-		InstructionsStep.Rect = QRectF(Column * Width, Row * Height, Width, Height);
-
 		Page.Steps.push_back(std::move(InstructionsStep));
 
-		if (PageSettings.Direction == swInstructionsDirection::Horizontal)
-		{
-			Column++;
+		if (static_cast<int>(Page.Steps.size()) == Page.Settings.Rows * Page.Settings.Columns)
+			FinishPage(Page);
+	}
 
-			if (Column == PageSettings.Columns)
-			{
-				Row++;
-				Column = 0;
-			}
+	// the finished model fills the room left after the last step
 
-			if (Row == PageSettings.Rows)
-			{
-				mPages.emplace_back(std::move(Page));
-				Row = 0;
-				Column = 0;
-			}
-		}
-		else
-		{
-			Row++;
+	if (!Page.Steps.empty() && Page.Settings.FinalModel)
+	{
+		swInstructionsStep FinalStep;
 
-			if (Row == PageSettings.Rows)
-			{
-				Row = 0;
-				Column++;
-			}
+		FinalStep.Model = Model;
+		FinalStep.Step = LastStep;
+		FinalStep.FinalModel = true;
 
-			if (Column == PageSettings.Columns)
-			{
-				mPages.emplace_back(std::move(Page));
-				Row = 0;
-				Column = 0;
-			}
-		}
+		Page.Steps.push_back(std::move(FinalStep));
 	}
 
 	AddBlankPages(Page, { Model, LastStep + 1 });
 
-	if (!Page.Steps.empty())
-		mPages.emplace_back(std::move(Page));
+	FinishPage(Page);
+}
+
+void swInstructions::FinishPage(swInstructionsPage& Page)
+{
+	if (Page.Steps.empty())
+		return;
+
+	LayoutPage(Page);
+
+	mPages.emplace_back(std::move(Page));
+	Page = swInstructionsPage();
+}
+
+void swInstructions::LayoutPage(swInstructionsPage& Page) const
+{
+	const swInstructionsPageSettings& PageSettings = Page.Settings;
+	const bool Horizontal = PageSettings.Direction == swInstructionsDirection::Horizontal;
+	const int Count = static_cast<int>(Page.Steps.size());
+
+	// partial pages drop their empty lines
+
+	const int Rows = Horizontal ? qMin(PageSettings.Rows, (Count + PageSettings.Columns - 1) / PageSettings.Columns) : PageSettings.Rows;
+	const int Columns = Horizontal ? PageSettings.Columns : qMin(PageSettings.Columns, (Count + PageSettings.Rows - 1) / PageSettings.Rows);
+	const double Width = 1.0 / static_cast<double>(Columns);
+	const double Height = 1.0 / static_cast<double>(Rows);
+
+	for (int Index = 0; Index < Count; Index++)
+	{
+		const int Row = Horizontal ? Index / Columns : Index % Rows;
+		const int Column = Horizontal ? Index % Columns : Index / Rows;
+		QRectF& Rect = Page.Steps[Index].Rect;
+
+		Rect = QRectF(Column * Width, Row * Height, Width, Height);
+
+		// the last step stretches into the empty cells
+
+		if (Index == Count - 1)
+		{
+			if (Horizontal)
+				Rect.setRight(1.0);
+			else
+				Rect.setBottom(1.0);
+		}
+	}
 }
 
 void swInstructions::AddBlankPages(swInstructionsPage& Page, const swInstructionsStepKey& Key)
@@ -1443,11 +1436,7 @@ void swInstructions::AddBlankPages(swInstructionsPage& Page, const swInstruction
 		return;
 
 	// a blank page ends the page before it
-	if (!Page.Steps.empty())
-	{
-		mPages.emplace_back(std::move(Page));
-		Page = swInstructionsPage();
-	}
+	FinishPage(Page);
 
 	for (size_t BlankIndex = 0; BlankIndex < BlankCount; BlankIndex++)
 	{

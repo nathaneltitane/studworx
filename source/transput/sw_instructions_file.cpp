@@ -472,6 +472,14 @@ void swInstructions::LoadCommandLines()
 			if (!Reader.IsValid() || Settings.Rows < 1 || Settings.Columns < 1)
 				continue;
 
+			// flow and final model follow as words
+
+			const QStringList Options = Reader.ReadRest().split(QLatin1Char(' '), Qt::SkipEmptyParts);
+
+			Settings.Direction = Options.contains(QLatin1String("VERTICAL")) ? swInstructionsDirection::Vertical : swInstructionsDirection::Horizontal;
+			Settings.FinalModel = Options.contains(QLatin1String("FINAL_MODEL"));
+			Settings.FinalModelColor = Options.contains(QLatin1String("FINAL_MODEL_COLOR"));
+
 			if (PageSettings)
 				mPageSettingsOverrides[Key] = Settings;
 			else
@@ -576,11 +584,27 @@ QStringList swInstructions::GetCommandLines() const
 		}
 	}
 
-	if (mPageSettings.Rows != 1 || mPageSettings.Columns != 1)
-		CommandLines.append(QStringLiteral("STEPS_PER_PAGE %1 %2").arg(mPageSettings.Rows).arg(mPageSettings.Columns));
+	auto WritePageSettings = [](const swInstructionsPageSettings& Settings)
+	{
+		QString Line = QStringLiteral(" %1 %2").arg(Settings.Rows).arg(Settings.Columns);
+
+		if (Settings.Direction == swInstructionsDirection::Vertical)
+			Line += QLatin1String(" VERTICAL");
+
+		if (Settings.FinalModel)
+			Line += QLatin1String(" FINAL_MODEL");
+
+		if (Settings.FinalModelColor)
+			Line += QLatin1String(" FINAL_MODEL_COLOR");
+
+		return Line;
+	};
+
+	if (!(mPageSettings == swInstructionsPageSettings()))
+		CommandLines.append(QLatin1String("STEPS_PER_PAGE") + WritePageSettings(mPageSettings));
 
 	for (const std::pair<const swInstructionsStepKey, swInstructionsPageSettings>& PageSettings : mPageSettingsOverrides)
-		CommandLines.append(QLatin1String("PAGE_STEPS_PER_PAGE STEP ") + swWriteInstructionsStepKey(PageSettings.first) + QStringLiteral(" %1 %2").arg(PageSettings.second.Rows).arg(PageSettings.second.Columns));
+		CommandLines.append(QLatin1String("PAGE_STEPS_PER_PAGE STEP ") + swWriteInstructionsStepKey(PageSettings.first) + WritePageSettings(PageSettings.second));
 
 	for (const swInstructionsStepKey& BlankPage : mBlankPages)
 		CommandLines.append(QLatin1String("BLANK_PAGE STEP ") + swWriteInstructionsStepKey(BlankPage));

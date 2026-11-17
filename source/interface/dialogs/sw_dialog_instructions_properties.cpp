@@ -376,8 +376,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddCategory(CategoryIndex::Cover, tr("Cover Page"), tr("<p><b>Cover Page</b></p><p>The first page, showing the model title, its author and the finished model. The title comes from the model description, or its name when there is none, the author from the model properties.</p>"));
 
 	AddRow(CategoryIndex::Cover, {
-		CreateToggleEditor(swInstructionsPropertyType::ShowCoverPage, tr("Show Cover Page"), tr("Start the instructions with a page showing the model title and the finished model.")),
-		CreateToggleEditor(swInstructionsPropertyType::ShowCoverAuthor, tr("Show Author"), tr("Show the model author on the cover."))
+		CreateToggleEditor(swInstructionsPropertyType::ShowCoverPage, tr("Show Cover Page"), tr("Start the instructions with a page showing the model title and the finished model."))
 	});
 
 	AddRow(CategoryIndex::Cover, {
@@ -391,6 +390,10 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverTitleFont);
 	CreateColorEditor(swInstructionsPropertyType::CoverTitleColor, tr("Cover Title Color"), tr("Color of the model title."));
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverTitleColor);
+	AddRow(CategoryIndex::Cover, {
+		CreateToggleEditor(swInstructionsPropertyType::ShowCoverAuthor, tr("Show Author"), tr("Show the model author on the cover."))
+	});
+
 	CreateFontEditor(swInstructionsPropertyType::CoverAuthorFont, tr("Cover Author Font"), tr("Font of the model author."));
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverAuthorFont);
 	CreateColorEditor(swInstructionsPropertyType::CoverAuthorColor, tr("Cover Author Color"), tr("Color of the model author."));
@@ -446,7 +449,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 
 	AddRow(CategoryIndex::Page, { BackgroundApplyAllButton });
 
-	AddCategory(CategoryIndex::PageLayout, tr("Steps per Page"), tr("<p><b>Steps per Page</b></p><p>The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Steps fill landscape pages across each row and portrait pages down each column, following the orientation chosen in Page Setup. The dividers are the lines between neighboring steps.</p>"));
+	AddCategory(CategoryIndex::PageLayout, tr("Steps per Page"), tr("<p><b>Steps per Page</b></p><p>The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model, and Main Page Color gives a submodel's finished model the main page color. The dividers are the lines between neighboring steps.</p>"));
 
 	std::vector<QWidget*> PresetButtons;
 
@@ -486,7 +489,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 
 		connect(SpinBox, qOverload<int>(&QSpinBox::valueChanged), this, [this]()
 		{
-			mInstructions->SetPageSettings(mPageIndex, mRowsSpinBox->value(), mColumnsSpinBox->value());
+			mInstructions->SetPageSettings(mPageIndex, GetPageLayoutSettings());
 		});
 
 		return SpinBox;
@@ -495,20 +498,63 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	mRowsSpinBox = CreatePageLayoutSpinBox(tr("Rows"), tr("Number of step rows on this page."));
 	mColumnsSpinBox = CreatePageLayoutSpinBox(tr("Columns"), tr("Number of step columns on this page."));
 
-	QToolButton* ApplyAllButton = CreateApplyAllButton(tr("Use this number of rows and columns on every page."));
+	// steps fill across or down the page
+
+	mStepFlowComboBox = new QComboBox(this);
+	mStepFlowComboBox->addItems({ tr("Horizontal"), tr("Vertical") });
+	mStepFlowComboBox->setToolTip(tr("Fill this page with steps row by row, or column by column."));
+	mStepFlowComboBox->setWhatsThis(mStepFlowComboBox->toolTip());
+	mStepFlowComboBox->setAccessibleName(tr("Step Flow"));
+	swSetupPanelEdit(mStepFlowComboBox);
+
+	connect(mStepFlowComboBox, qOverload<int>(&QComboBox::currentIndexChanged), this, [this]()
+	{
+		mInstructions->SetPageSettings(mPageIndex, GetPageLayoutSettings());
+	});
+
+	// the finished model fills the room left
+
+	mFinalModelButton = new QToolButton(this);
+	mFinalModelButton->setText(tr("Show Final Model"));
+	mFinalModelButton->setToolTip(tr("Show the finished model in the room left on the page after the last step of a model."));
+	mFinalModelButton->setWhatsThis(mFinalModelButton->toolTip());
+	mFinalModelButton->setCheckable(true);
+	mFinalModelButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
+	swSetupPanelButton(mFinalModelButton);
+
+	connect(mFinalModelButton, &QToolButton::toggled, this, [this]()
+	{
+		mFinalModelColorButton->setEnabled(mFinalModelButton->isChecked());
+
+		mInstructions->SetPageSettings(mPageIndex, GetPageLayoutSettings());
+	});
+
+	// the finished model keeps the main page color
+
+	mFinalModelColorButton = new QToolButton(this);
+	mFinalModelColorButton->setText(tr("Main Page Color"));
+	mFinalModelColorButton->setToolTip(tr("Put the finished model of a submodel on the main page color."));
+	mFinalModelColorButton->setWhatsThis(mFinalModelColorButton->toolTip());
+	mFinalModelColorButton->setCheckable(true);
+	mFinalModelColorButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
+	swSetupPanelButton(mFinalModelColorButton);
+
+	connect(mFinalModelColorButton, &QToolButton::toggled, this, [this]()
+	{
+		mInstructions->SetPageSettings(mPageIndex, GetPageLayoutSettings());
+	});
+
+	QToolButton* ApplyAllButton = CreateApplyAllButton(tr("Use this page layout on every page."));
 
 	connect(ApplyAllButton, &QToolButton::clicked, this, [this]()
 	{
-		swInstructionsPageSettings PageSettings;
-
-		PageSettings.Rows = mRowsSpinBox->value();
-		PageSettings.Columns = mColumnsSpinBox->value();
-
-		mInstructions->SetDefaultPageSettings(PageSettings);
+		mInstructions->SetDefaultPageSettings(GetPageLayoutSettings());
 	});
 
 	AddLabeledRow(CategoryIndex::PageLayout, tr("Rows"), mRowsSpinBox);
 	AddLabeledRow(CategoryIndex::PageLayout, tr("Columns"), mColumnsSpinBox);
+	AddLabeledRow(CategoryIndex::PageLayout, tr("Step Flow"), mStepFlowComboBox);
+	AddRow(CategoryIndex::PageLayout, { mFinalModelButton, mFinalModelColorButton });
 	AddRow(CategoryIndex::PageLayout, { ApplyAllButton });
 
 	AddRow(CategoryIndex::PageLayout, {
@@ -1383,13 +1429,33 @@ void swInstructionsPropertiesWidget::UpdatePageLayout()
 
 	QSignalBlocker RowsBlocker(mRowsSpinBox);
 	QSignalBlocker ColumnsBlocker(mColumnsSpinBox);
+	QSignalBlocker FlowBlocker(mStepFlowComboBox);
+	QSignalBlocker FinalModelBlocker(mFinalModelButton);
+	QSignalBlocker FinalModelColorBlocker(mFinalModelColorButton);
 
 	mRowsSpinBox->setValue(PageSettings.Rows);
 	mColumnsSpinBox->setValue(PageSettings.Columns);
+	mStepFlowComboBox->setCurrentIndex(static_cast<int>(PageSettings.Direction));
+	mFinalModelButton->setChecked(PageSettings.FinalModel);
+	mFinalModelColorButton->setChecked(PageSettings.FinalModelColor);
+	mFinalModelColorButton->setEnabled(PageSettings.FinalModel);
 
 	// check the matching preset
 	for (int Preset = 0; Preset < static_cast<int>(mDividerPresetButtons.size()); Preset++)
 		mDividerPresetButtons[Preset]->setChecked(swDividerPresets[Preset].Rows == PageSettings.Rows && swDividerPresets[Preset].Columns == PageSettings.Columns);
+}
+
+swInstructionsPageSettings swInstructionsPropertiesWidget::GetPageLayoutSettings() const
+{
+	swInstructionsPageSettings PageSettings;
+
+	PageSettings.Rows = mRowsSpinBox->value();
+	PageSettings.Columns = mColumnsSpinBox->value();
+	PageSettings.Direction = static_cast<swInstructionsDirection>(mStepFlowComboBox->currentIndex());
+	PageSettings.FinalModel = mFinalModelButton->isChecked();
+	PageSettings.FinalModelColor = mFinalModelColorButton->isChecked();
+
+	return PageSettings;
 }
 
 swInstructionsPageType swInstructionsPropertiesWidget::GetPageType() const

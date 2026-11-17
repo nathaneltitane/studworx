@@ -414,7 +414,7 @@ protected:
 	void DrawRotateViewOverlay();
 	void DrawGrid();
 
-	swMatrix44 GetTileProjectionMatrix(int CurrentRow, int CurrentColumn, int CurrentTileWidth, int CurrentTileHeight) const;
+	swMatrix44 GetTileProjectionMatrix(int TileLeft, int TileBottom, int TileWidth, int TileHeight) const;
 
 	swCursor GetCursor() const;
 	void SetCursor(swCursor Cursor);

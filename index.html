@@ -1717,8 +1717,8 @@
 						<tbody>
 							<tr><td><code>0 !SW PROPERTY INSTRUCTION &lt;name&gt; &lt;value&gt;</code></td><td>Read, Write</td><td>document property, such as <code>STEP_NUMBER_BORDER_WIDTH 3</code></td></tr>
 							<tr><td><code>0 !SW PAGE_PROPERTY INSTRUCTION STEP &lt;model&gt; &lt;step&gt; &lt;name&gt; &lt;value&gt;</code></td><td>Read, Write</td><td>property of the page starting at the step</td></tr>
-							<tr><td><code>0 !SW STEPS_PER_PAGE INSTRUCTION &lt;rows&gt; &lt;columns&gt;</code></td><td>Read, Write</td><td>steps per page</td></tr>
-							<tr><td><code>0 !SW PAGE_STEPS_PER_PAGE INSTRUCTION STEP &lt;model&gt; &lt;step&gt; &lt;rows&gt; &lt;columns&gt;</code></td><td>Read, Write</td><td>steps per page from the step on</td></tr>
+							<tr><td><code>0 !SW STEPS_PER_PAGE INSTRUCTION &lt;rows&gt; &lt;columns&gt; [VERTICAL] [FINAL_MODEL] [FINAL_MODEL_COLOR]</code></td><td>Read, Write</td><td>steps per page, filled down instead of across, with the finished model in the room left, on the main page color</td></tr>
+							<tr><td><code>0 !SW PAGE_STEPS_PER_PAGE INSTRUCTION STEP &lt;model&gt; &lt;step&gt; &lt;rows&gt; &lt;columns&gt; [VERTICAL] [FINAL_MODEL] [FINAL_MODEL_COLOR]</code></td><td>Read, Write</td><td>steps per page from the step on, same words as above</td></tr>
 							<tr><td><code>0 !SW BLANK_PAGE INSTRUCTION STEP &lt;model&gt; &lt;step&gt;</code></td><td>Read, Write</td><td>blank page before the step</td></tr>
 							<tr><td><code>0 !SW OFFSET INSTRUCTION &lt;element&gt; &lt;model&gt; &lt;step&gt; &lt;x&gt; &lt;y&gt;</code></td><td>Read, Write</td><td>element moved from its place</td></tr>
 							<tr><td><code>0 !SW LOCK INSTRUCTION &lt;element&gt; &lt;model&gt; &lt;step&gt; &lt;x&gt; &lt;y&gt;</code></td><td>Read, Write</td><td>element locked at a position</td></tr>
@@ -2051,6 +2051,11 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li><a href="#preferences">Preferences</a>: the Get Key button widens to show its whole label in longer languages</li>
 					<li>Translations: every machine-translated line in all nine languages was checked, and about 2,900 wrong ones now read right, like Close that read as near, Light as pale and Stud as earring</li>
 					<li>Translations: Traditional Chinese uses Taiwan words, like 匯入 and 匯出 for import and export</li>
+					<li>Instructions: Step Flow in Steps per Page fills pages row by row or column by column, picked by you instead of by the page shape</li>
+					<li>Instructions: on pages with empty cells the last step stretches to fill them, and the step dividers follow the cells</li>
+					<li>Instructions: Show Final Model puts the finished model in the room left after a model<code>s last step, with Main Page Color to give a submodel</code>s finished model the main page color</li>
+					<li>Instructions: new part outlines on large step images no longer show seam lines</li>
+					<li>Instructions: Show Author sits on its own row</li>
 				</ul>
 			</details>
 
@@ -2363,7 +2368,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Instructions","title":"Cover Page","paragraphs":["The first page, showing the model title, its author and the finished model. The title comes from the model description, or its name when there is none, the author from the model properties."]},
 				{"group":"Instructions","title":"Bill of Materials","paragraphs":["The last page, listing every part of the model. It uses the Parts List settings, under a Parts List title in its own font and color, with the box of the step numbers."]},
 				{"group":"Instructions","title":"Page","paragraphs":["The background of the step and blank pages. It applies to all these pages, or only to the current page when it has its own. The cover and the bill of materials have their own backgrounds."]},
-				{"group":"Instructions","title":"Steps per Page","paragraphs":["The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Steps fill landscape pages across each row and portrait pages down each column, following the orientation chosen in Page Setup. The dividers are the lines between neighboring steps."]},
+				{"group":"Instructions","title":"Steps per Page","paragraphs":["The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model, and Main Page Color gives a submodel's finished model the main page color. The dividers are the lines between neighboring steps."]},
 				{"group":"Instructions","title":"Page Number","paragraphs":["The number of each page, the cover and blank pages are not numbered unless all pages are. Drag it or use the Placement panel to move it on all pages."]},
 				{"group":"Instructions","title":"Step Number","paragraphs":["The step number and the area behind each step. The bill of materials shows a Parts List title in its place."]},
 				{"group":"Instructions","title":"Parts List","paragraphs":["The list of parts added in each step. The bill of materials uses the same settings."]},

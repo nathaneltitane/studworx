@@ -33,9 +33,16 @@ enum class swInstructionsDirection
 
 struct swInstructionsPageSettings
 {
-	int Rows;
-	int Columns;
-	swInstructionsDirection Direction;
+	int Rows = 1;
+	int Columns = 1;
+	swInstructionsDirection Direction = swInstructionsDirection::Horizontal;
+	bool FinalModel = false;
+	bool FinalModelColor = false;
+
+	bool operator== (const swInstructionsPageSettings& Other) const
+	{
+		return Rows == Other.Rows && Columns == Other.Columns && Direction == Other.Direction && FinalModel == Other.FinalModel && FinalModelColor == Other.FinalModelColor;
+	}
 };
 
 enum class swInstructionsPropertyMode
@@ -328,6 +335,7 @@ struct swInstructionsStep
 	QRectF Rect;
 	swModel* Model;
 	swStep Step;
+	bool FinalModel = false;
 
 	swInstructionsProperties Properties;
 };
@@ -409,7 +417,7 @@ public:
 
 	void SetDefaultPageSettings(const swInstructionsPageSettings& PageSettings);
 	swInstructionsPageSettings GetPageSettings(size_t PageIndex) const;
-	void SetPageSettings(size_t PageIndex, int Rows, int Columns);
+	void SetPageSettings(size_t PageIndex, const swInstructionsPageSettings& PageSettings);
 	void SetPageDividerPreset(size_t PageIndex, int Rows, int Columns);
 	bool CanInsertBlankPage(size_t PageIndex) const;
 	void InsertBlankPage(size_t PageIndex);
@@ -418,7 +426,6 @@ public:
 	void ResetPageSetup();
 	static void LoadDefaultPageSetup();
 	void Update();
-	swInstructionsDirection GetPageDirection() const;
 
 	bool GetBoolProperty(swInstructionsPropertyType Type, swModel* Model, swStep Step) const;
 	int GetIntProperty(swInstructionsPropertyType Type, swModel* Model, swStep Step) const;
@@ -654,6 +661,8 @@ protected:
 	void AddDefaultPages(swModel* Model, std::vector<const swModel*>& AddedModels);
 	void AddBlankPages(swInstructionsPage& Page, const swInstructionsStepKey& Key);
 	void AddDefaultBlankPage(const swInstructionsStepKey& Key);
+	void LayoutPage(swInstructionsPage& Page) const;
+	void FinishPage(swInstructionsPage& Page);
 	swInstructionsPageSettings GetStepPageSettings(const swInstructionsStepKey& Key) const;
 	bool GetPageKey(size_t PageIndex, swInstructionsStepKey& Key) const;
 

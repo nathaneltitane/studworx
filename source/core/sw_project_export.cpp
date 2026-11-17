@@ -1688,7 +1688,7 @@ swResult<void> Project::ExportHTML(const swHTMLExportOptions& Options)
 			{
 				for (const swInstructionsStep& Step : Page.Steps)
 				{
-					if (Models.find(Step.Model) == Models.end())
+					if (Step.FinalModel || Models.find(Step.Model) == Models.end())
 						continue;
 
 					const QString StepPrefix = Models.size() > 1 ? ModelBaseNames.at(Step.Model) + '-' : QString();

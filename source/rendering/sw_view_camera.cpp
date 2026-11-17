@@ -36,7 +36,7 @@ swMatrix44 swView::GetProjectionMatrix() const
 		return swMatrix44Perspective(mCamera->m_fovy, AspectRatio, mCamera->m_zNear, mCamera->m_zFar);
 }
 
-swMatrix44 swView::GetTileProjectionMatrix(int CurrentRow, int CurrentColumn, int CurrentTileWidth, int CurrentTileHeight) const
+swMatrix44 swView::GetTileProjectionMatrix(int TileLeft, int TileBottom, int TileWidth, int TileHeight) const
 {
 	int ImageWidth = mRenderImage.width();
 	int ImageHeight = mRenderImage.height();
@@ -72,10 +72,10 @@ swMatrix44 swView::GetTileProjectionMatrix(int CurrentRow, int CurrentColumn, in
 		Far = mCamera->m_zFar;
 	}
 
-	double Left = ImageLeft + (ImageRight - ImageLeft) * (CurrentColumn * mWidth) / ImageWidth;
-	double Right = Left + (ImageRight - ImageLeft) * CurrentTileWidth / ImageWidth;
-	double Bottom = ImageBottom + (ImageTop - ImageBottom) * (CurrentRow * mHeight) / ImageHeight;
-	double Top = Bottom + (ImageTop - ImageBottom) * CurrentTileHeight / ImageHeight;
+	double Left = ImageLeft + (ImageRight - ImageLeft) * TileLeft / ImageWidth;
+	double Right = Left + (ImageRight - ImageLeft) * TileWidth / ImageWidth;
+	double Bottom = ImageBottom + (ImageTop - ImageBottom) * TileBottom / ImageHeight;
+	double Top = Bottom + (ImageTop - ImageBottom) * TileHeight / ImageHeight;
 
 	if (mCamera->GetProjection() == swCameraProjection::Orthographic)
 		return swMatrix44Orthographic(Left, Right, Bottom, Top, Near, Far);

@@ -125,16 +125,19 @@ void swView::OnDraw()
 	int TotalTileRows = 1;
 	int TotalTileColumns = 1;
 
-	if (!mRenderImage.isNull())
-	{
-		int ImageWidth = mRenderImage.width();
-		int ImageHeight = mRenderImage.height();
+	// tiles overlap so outlines see past their edges
 
-		if (ImageWidth > mWidth || ImageHeight > mHeight)
-		{
-			TotalTileColumns = (mWidth + ImageWidth - 1) / mWidth;
-			TotalTileRows = (mHeight + ImageHeight - 1) / mHeight;
-		}
+	const int TilePadding = 16;
+	int TileStepWidth = mWidth;
+	int TileStepHeight = mHeight;
+	const bool Tiled = !mRenderImage.isNull() && (mRenderImage.width() > mWidth || mRenderImage.height() > mHeight) && mWidth > 4 * TilePadding && mHeight > 4 * TilePadding;
+
+	if (Tiled)
+	{
+		TileStepWidth = mWidth - 2 * TilePadding;
+		TileStepHeight = mHeight - 2 * TilePadding;
+		TotalTileColumns = (mRenderImage.width() + TileStepWidth - 1) / TileStepWidth;
+		TotalTileRows = (mRenderImage.height() + TileStepHeight - 1) / TileStepHeight;
 	}
 
 	for (int CurrentTileRow = 0; CurrentTileRow < TotalTileRows; CurrentTileRow++)
@@ -144,35 +147,9 @@ void swView::OnDraw()
 			mContext->SetDefaultState();
 			mContext->SetViewport(0, 0, mWidth, mHeight);
 
-			int CurrentTileWidth, CurrentTileHeight;
-			swMatrix44 ProjectionMatrix;
+			DrawBackground();
 
-			if (!mRenderImage.isNull() && (TotalTileRows > 1 || TotalTileColumns > 1))
-			{
-				if (CurrentTileRow < TotalTileRows - 1)
-					CurrentTileHeight = mHeight;
-				else
-					CurrentTileHeight = mRenderImage.height() - (TotalTileRows - 1) * (mHeight);
-
-				if (CurrentTileColumn < TotalTileColumns - 1)
-					CurrentTileWidth = mWidth;
-				else
-					CurrentTileWidth = mRenderImage.width() - (TotalTileColumns - 1) * (mWidth);
-
-				DrawBackground();
-
-				mContext->SetViewport(0, 0, CurrentTileWidth, CurrentTileHeight);
-				ProjectionMatrix = GetTileProjectionMatrix(CurrentTileRow, CurrentTileColumn, CurrentTileWidth, CurrentTileHeight);
-			}
-			else
-			{
-				CurrentTileWidth = mWidth;
-				CurrentTileHeight = mHeight;
-
-				DrawBackground();
-
-				ProjectionMatrix = GetProjectionMatrix();
-			}
+			const swMatrix44 ProjectionMatrix = Tiled ? GetTileProjectionMatrix(CurrentTileColumn * TileStepWidth - TilePadding, CurrentTileRow * TileStepHeight - TilePadding, mWidth, mHeight) : GetProjectionMatrix();
 
 			mContext->SetProjectionMatrix(ProjectionMatrix);
 
@@ -231,20 +208,21 @@ void swView::OnDraw()
 					return;
 				}
 
-				quint32 TileY = 0, SrcY = 0;
-				if (CurrentTileRow != TotalTileRows - 1)
-					TileY = (TotalTileRows - CurrentTileRow - 1) * mHeight - ((mHeight - mRenderImage.height() % mHeight) % mHeight);
-				else if (TotalTileRows > 1)
-					SrcY = (mHeight - mRenderImage.height() % mHeight) % mHeight;
+				// copy the tile without its padding
 
-				quint32 TileStart = ((CurrentTileColumn * mWidth) + (TileY * mRenderImage.width())) * 4;
+				const int Padding = Tiled ? TilePadding : 0;
+				const int CopyWidth = qMin(TileStepWidth, mRenderImage.width() - CurrentTileColumn * TileStepWidth);
+				const int CopyHeight = qMin(TileStepHeight, mRenderImage.height() - CurrentTileRow * TileStepHeight);
+				const int SourceTop = mHeight - Padding - CopyHeight;
+				const int TargetTop = mRenderImage.height() - CurrentTileRow * TileStepHeight - CopyHeight;
+				const int TargetLeft = CurrentTileColumn * TileStepWidth;
 
-				for (int y = 0; y < CurrentTileHeight; y++)
+				for (int y = 0; y < CopyHeight; y++)
 				{
-					const quint8* src = Buffer + (SrcY + y) * mWidth * 4;
-					quint8* dst = ImageBuffer + TileStart + y * mRenderImage.width() * 4;
+					const quint8* Source = Buffer + (SourceTop + y) * TileImage.bytesPerLine() + Padding * 4;
+					uchar* Target = ImageBuffer + (TargetTop + y) * mRenderImage.bytesPerLine() + TargetLeft * 4;
 
-					memcpy(dst, src, CurrentTileWidth * 4);
+					memcpy(Target, Source, CopyWidth * 4);
 				}
 			}
 		}

@@ -483,7 +483,8 @@ void swInstructionsDialog::RemovePage()
 	std::vector<swStep> Steps;
 
 	for (const swInstructionsStep& Step : mInstructions->mPages[Row].Steps)
-		Steps.push_back(Step.Step);
+		if (!Step.FinalModel)
+			Steps.push_back(Step.Step);
 
 	// last step first so the earlier steps keep their numbers
 	for (auto StepIt = Steps.rbegin(); StepIt != Steps.rend(); ++StepIt)

@@ -19,6 +19,11 @@
   - Preferences: the Get Key button widens to show its whole label in longer languages
   - Translations: every machine-translated line in all nine languages was checked, and about 2,900 wrong ones now read right, like Close that read as near, Light as pale and Stud as earring
   - Translations: Traditional Chinese uses Taiwan words, like 匯入 and 匯出 for import and export
+  - Instructions: Step Flow in Steps per Page fills pages row by row or column by column, picked by you instead of by the page shape
+  - Instructions: on pages with empty cells the last step stretches to fill them, and the step dividers follow the cells
+  - Instructions: Show Final Model puts the finished model in the room left after a model's last step, with Main Page Color to give a submodel's finished model the main page color
+  - Instructions: new part outlines on large step images no longer show seam lines
+  - Instructions: Show Author sits on its own row
 
   </details>
 

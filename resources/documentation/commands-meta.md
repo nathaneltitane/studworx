@@ -193,8 +193,8 @@ Instructions settings, written in the main model header. Models are quoted file 
 | --- | --- | --- |
 | `0 !SW PROPERTY INSTRUCTION <name> <value>` | Read, Write | document property, such as `STEP_NUMBER_BORDER_WIDTH 3` |
 | `0 !SW PAGE_PROPERTY INSTRUCTION STEP <model> <step> <name> <value>` | Read, Write | property of the page starting at the step |
-| `0 !SW STEPS_PER_PAGE INSTRUCTION <rows> <columns>` | Read, Write | steps per page |
-| `0 !SW PAGE_STEPS_PER_PAGE INSTRUCTION STEP <model> <step> <rows> <columns>` | Read, Write | steps per page from the step on |
+| `0 !SW STEPS_PER_PAGE INSTRUCTION <rows> <columns> [VERTICAL] [FINAL_MODEL] [FINAL_MODEL_COLOR]` | Read, Write | steps per page, filled down instead of across, with the finished model in the room left, on the main page color |
+| `0 !SW PAGE_STEPS_PER_PAGE INSTRUCTION STEP <model> <step> <rows> <columns> [VERTICAL] [FINAL_MODEL] [FINAL_MODEL_COLOR]` | Read, Write | steps per page from the step on, same words as above |
 | `0 !SW BLANK_PAGE INSTRUCTION STEP <model> <step>` | Read, Write | blank page before the step |
 | `0 !SW OFFSET INSTRUCTION <element> <model> <step> <x> <y>` | Read, Write | element moved from its place |
 | `0 !SW LOCK INSTRUCTION <element> <model> <step> <x> <y>` | Read, Write | element locked at a position |

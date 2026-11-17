@@ -155,6 +155,7 @@ protected:
 	void UpdateEditors();
 	void UpdatePageLayout();
 	void UpdateCategories();
+	swInstructionsPageSettings GetPageLayoutSettings() const;
 	swInstructionsPageType GetPageType() const;
 
 	static QIcon CreateDividerPresetIcon(int Rows, int Columns, const QPalette& Palette);
@@ -170,6 +171,9 @@ protected:
 	std::array<EditorWidgets, static_cast<int>(swInstructionsPropertyType::Count)> mEditors;
 	QSpinBox* mRowsSpinBox = nullptr;
 	QSpinBox* mColumnsSpinBox = nullptr;
+	QComboBox* mStepFlowComboBox = nullptr;
+	QToolButton* mFinalModelButton = nullptr;
+	QToolButton* mFinalModelColorButton = nullptr;
 	QToolButton* mThumbnailPageButton = nullptr;
 	QToolButton* mBackgroundPageButton = nullptr;
 	QToolButton* mThumbnailApplyAllButton = nullptr;

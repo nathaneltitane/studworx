@@ -209,6 +209,13 @@ public:
 		return mCoverImage;
 	}
 
+	void SetFinalModel();
+
+	bool IsFinalModel() const
+	{
+		return mFinalModel;
+	}
+
 	void Update();
 
 	// Finds the part drawn at a point.
@@ -231,6 +238,7 @@ protected:
 	int mWidth = 1;
 	int mHeight = 1;
 	bool mCoverImage = false;
+	bool mFinalModel = false;
 	std::vector<swPartRegion> mPartRegions;
 };
 

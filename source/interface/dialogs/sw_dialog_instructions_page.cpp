@@ -14,6 +14,15 @@ bool swGetElementKey(const QGraphicsItem* Item, swInstructionsElementKey& Key)
 {
 	if (const swInstructionsStepImageItem* ImageItem = dynamic_cast<const swInstructionsStepImageItem*>(Item))
 	{
+		// the final model is no element of its own
+
+		if (ImageItem->IsFinalModel())
+		{
+			Key = { swInstructionsPlacementElement::None, nullptr, 0 };
+			return false;
+		}
+
+
 		const swInstructionsPlacementElement Element = ImageItem->IsCoverImage() ? swInstructionsPlacementElement::CoverImage : swInstructionsPlacementElement::StepImage;
 		Key = { Element, ImageItem->GetModel(), ImageItem->GetStep() };
 	}
@@ -261,6 +270,12 @@ void swInstructionsStepImageItem::SetCoverImage()
 	SetBoxStyle(mInstructions->GetBoxStyle(swInstructionsBoxElement::CoverImage, mModel, mStep));
 }
 
+void swInstructionsStepImageItem::SetFinalModel()
+{
+	mFinalModel = true;
+	setFlags(QGraphicsItem::GraphicsItemFlags());
+}
+
 QVariant swInstructionsStepImageItem::itemChange(GraphicsItemChange Change, const QVariant& Value)
 {
 	if (Change == QGraphicsItem::ItemPositionChange)
@@ -294,11 +309,11 @@ void swInstructionsStepImageItem::Update()
 	View.SetLineWidthScale(Scale);
 
 	// cover shows the finished model
-	const bool FadeSteps = !mCoverImage && mInstructions->GetBoolProperty(swInstructionsPropertyType::FadePreviousSteps, mModel, mStep);
+	const bool FadeSteps = !mCoverImage && !mFinalModel && mInstructions->GetBoolProperty(swInstructionsPropertyType::FadePreviousSteps, mModel, mStep);
 	const QColor FadeColor = mInstructions->GetColorProperty(swInstructionsPropertyType::FadeColor, mModel, mStep);
 	View.SetFadeStepsOverride(FadeSteps, swRGBAFromQColor(FadeColor));
 
-	const bool HighlightNewParts = !mCoverImage && mInstructions->GetBoolProperty(swInstructionsPropertyType::HighlightNewParts, mModel, mStep);
+	const bool HighlightNewParts = !mCoverImage && !mFinalModel && mInstructions->GetBoolProperty(swInstructionsPropertyType::HighlightNewParts, mModel, mStep);
 	const QColor HighlightColor = mInstructions->GetColorProperty(swInstructionsPropertyType::HighlightColor, mModel, mStep);
 	View.SetHighlightNewPartsOverride(HighlightNewParts, swRGBAFromQColor(HighlightColor));
 
@@ -1334,16 +1349,22 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 				{
 					const QRectF& OtherRect = Other.Rect;
 
-					if (IsNear(OtherRect.left(), Rect.right()) && IsNear(OtherRect.top(), Rect.top()))
+					// draw along the shared part of touching edges
+					const qreal Top = qMax(Rect.top(), OtherRect.top());
+					const qreal Bottom = qMin(Rect.bottom(), OtherRect.bottom());
+					const qreal Left = qMax(Rect.left(), OtherRect.left());
+					const qreal Right = qMin(Rect.right(), OtherRect.right());
+
+					if (IsNear(OtherRect.left(), Rect.right()) && Bottom - Top > 0.0001)
 					{
 						const qreal X = MarginsRect.left() + MarginsRect.width() * Rect.right();
-						Scene->addLine(X, MarginsRect.top() + MarginsRect.height() * Rect.top() + Inset, X, MarginsRect.top() + MarginsRect.height() * Rect.bottom() - Inset, DividerPen)->setParentItem(PageItem);
+						Scene->addLine(X, MarginsRect.top() + MarginsRect.height() * Top + Inset, X, MarginsRect.top() + MarginsRect.height() * Bottom - Inset, DividerPen)->setParentItem(PageItem);
 					}
 
-					if (IsNear(OtherRect.top(), Rect.bottom()) && IsNear(OtherRect.left(), Rect.left()))
+					if (IsNear(OtherRect.top(), Rect.bottom()) && Right - Left > 0.0001)
 					{
 						const qreal Y = MarginsRect.top() + MarginsRect.height() * Rect.bottom();
-						Scene->addLine(MarginsRect.left() + MarginsRect.width() * Rect.left() + Inset, Y, MarginsRect.left() + MarginsRect.width() * Rect.right() - Inset, Y, DividerPen)->setParentItem(PageItem);
+						Scene->addLine(MarginsRect.left() + MarginsRect.width() * Left + Inset, Y, MarginsRect.left() + MarginsRect.width() * Right - Inset, Y, DividerPen)->setParentItem(PageItem);
 					}
 				}
 			}
@@ -1353,6 +1374,31 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 	for (const swInstructionsStep& Step : Page->Steps)
 	{
 		const QRectF CellRect(MarginsRect.left() + MarginsRect.width() * Step.Rect.x(), MarginsRect.top() + MarginsRect.height() * Step.Rect.y(), MarginsRect.width() * Step.Rect.width(), MarginsRect.height() * Step.Rect.height());
+
+		// the finished model sits on the page alone
+
+		if (Step.FinalModel)
+		{
+			// shortcut: uses the default page color, not a parent page override
+
+			if (Page->Settings.FinalModelColor)
+			{
+				QGraphicsRectItem* FinalAreaItem = new QGraphicsRectItem(CellRect, PageItem);
+				FinalAreaItem->setPen(QPen(Qt::NoPen));
+				FinalAreaItem->setBrush(QBrush(Instructions->GetColorProperty(swInstructionsPropertyType::PageBackgroundColor, nullptr, 0)));
+				FinalAreaItem->setZValue(-1.0);
+			}
+
+			swInstructionsStepImageItem* FinalImageItem = new swInstructionsStepImageItem(PageItem, Instructions, Step.Model, Step.Step);
+			const qreal FinalInset = FinalImageItem->GetBoxStyle().GetInset();
+
+			FinalImageItem->SetFinalModel();
+			FinalImageItem->SetImageSize(qMax(static_cast<int>(CellRect.width() - 2.0 * FinalInset), 1), qMax(static_cast<int>(CellRect.height() - 2.0 * FinalInset), 1));
+			FinalImageItem->Update();
+			FinalImageItem->setPos(CellRect.center() - FinalImageItem->boundingRect().center());
+
+			continue;
+		}
 
 		// the step area holds its elements
 		QGraphicsRectItem* StepAreaItem = new QGraphicsRectItem(QRectF(QPointF(0.0, 0.0), CellRect.size()), PageItem);
