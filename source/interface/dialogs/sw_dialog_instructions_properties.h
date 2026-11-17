@@ -84,6 +84,7 @@ protected:
 	{
 		Bool,
 		Length,
+		Percent,
 		Choice,
 		Color,
 		Font
@@ -133,6 +134,7 @@ protected:
 	QToolButton* CreateToggleEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip);
 	QDoubleSpinBox* CreateLengthEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip, int Minimum, int Maximum, double PageFraction = 0.0);
 	double GetEditorMaximum(const EditorWidgets& Editor) const;
+	QSpinBox* CreatePercentEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip, int Minimum, int Maximum);
 	QComboBox* CreateChoiceEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip, const QStringList& Choices);
 	QToolButton* CreateApplyAllButton(const QString& ToolTip);
 	QToolButton* CreateColorEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip);
@@ -171,6 +173,8 @@ protected:
 	QToolButton* mThumbnailPageButton = nullptr;
 	QToolButton* mBackgroundPageButton = nullptr;
 	QToolButton* mThumbnailApplyAllButton = nullptr;
+	QToolButton* mModelSizePageButton = nullptr;
+	QToolButton* mModelSizeApplyAllButton = nullptr;
 	std::vector<QToolButton*> mDividerPresetButtons;
 	std::vector<QLabel*> mRowLabels;
 	QComboBox* mBoxElementComboBox = nullptr;

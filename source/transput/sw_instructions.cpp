@@ -207,7 +207,7 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::StepNumberFont)].Value = QFont("Arial", 72).toString();
 	Properties[static_cast<int>(swInstructionsPropertyType::StepNumberColor)].Value = SW_RGBA(0, 0, 0, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::StepBackgroundColor)].Value = SW_RGBA(255, 255, 255, 0);
-	Properties[static_cast<int>(swInstructionsPropertyType::PLIBackgroundColor)].Value = SW_RGBA(255, 255, 255, 255);
+	Properties[static_cast<int>(swInstructionsPropertyType::PLIBackgroundColor)].Value = SW_RGBA(255, 255, 255, 0);
 	Properties[static_cast<int>(swInstructionsPropertyType::PLIFont)].Value = QFont("Arial", 16).toString();
 	Properties[static_cast<int>(swInstructionsPropertyType::PLITextColor)].Value = SW_RGBA(0, 0, 0, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::PLIBorderColor)].Value = SW_RGBA(0, 0, 0, 255);
@@ -228,6 +228,8 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowCoverAuthor)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::PageBackgroundColor)].Value = SW_RGBA(255, 255, 255, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::SubmodelBackgroundColor)].Value = SW_RGBA(255, 255, 255, 255);
+	Properties[static_cast<int>(swInstructionsPropertyType::StepImageSize)].Value = 100;
+	Properties[static_cast<int>(swInstructionsPropertyType::CoverImageSize)].Value = 100;
 	Properties[static_cast<int>(swInstructionsPropertyType::StepNumberPlacement)].Value = SW_PLACEMENT_GRID_SIZE + 1;
 	Properties[static_cast<int>(swInstructionsPropertyType::StepNumberAnchor)].Value = static_cast<int>(swInstructionsPlacementAnchor::Area);
 	Properties[static_cast<int>(swInstructionsPropertyType::PLIPlacement)].Value = SW_PLACEMENT_GRID_SIZE + SW_PLACEMENT_GRID_SIZE - 1;
@@ -275,7 +277,7 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::BillOfMaterialsTitleColor)].Value = SW_RGBA(0, 0, 0, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::NoticeTextColor)].Value = SW_RGBA(0, 0, 0, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::NoticeBorderWidth)].Value = 2;
-	Properties[static_cast<int>(swInstructionsPropertyType::NoticeBackgroundColor)].Value = SW_RGBA(255, 255, 255, 255);
+	Properties[static_cast<int>(swInstructionsPropertyType::NoticeBackgroundColor)].Value = SW_RGBA(255, 255, 255, 0);
 	Properties[static_cast<int>(swInstructionsPropertyType::PointerStyle)].Value = static_cast<int>(swInstructionsPointerStyle::Line);
 	Properties[static_cast<int>(swInstructionsPropertyType::PointerTip)].Value = static_cast<int>(swInstructionsPointerTip::Arrow);
 	Properties[static_cast<int>(swInstructionsPropertyType::PointerColor)].Value = SW_RGBA(0, 0, 0, 255);
@@ -297,7 +299,7 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::HighlightNewParts)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::HighlightColor)].Value = SW_RGBA(255, 242, 0, 230);
 
-	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 110, "Missing default property");
+	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 112, "Missing default property");
 
 	return Properties;
 }
@@ -544,7 +546,7 @@ QFont swInstructions::GetFontProperty(swInstructionsPropertyType Type, swModel* 
 
 bool swInstructions::IsPageProperty(swInstructionsPropertyType Type)
 {
-	return Type == swInstructionsPropertyType::PLIThumbnailSize || Type == swInstructionsPropertyType::PLIThumbnailBackgroundColor || Type == swInstructionsPropertyType::PageBackgroundColor;
+	return Type == swInstructionsPropertyType::PLIThumbnailSize || Type == swInstructionsPropertyType::PLIThumbnailBackgroundColor || Type == swInstructionsPropertyType::PageBackgroundColor || Type == swInstructionsPropertyType::StepImageSize;
 }
 
 bool swInstructions::GetStepPageIndex(swModel* Model, swStep Step, size_t& PageIndex) const

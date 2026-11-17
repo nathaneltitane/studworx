@@ -282,8 +282,14 @@ void swInstructionsStepImageItem::Update()
 
 	// render large and draw at page size
 	const qreal Scale = swGetRenderScale(mInstructions);
-	const int Width = qRound(mWidth * Scale);
-	const int Height = qRound(mHeight * Scale);
+	const int CellWidth = qRound(mWidth * Scale);
+	const int CellHeight = qRound(mHeight * Scale);
+
+	// model size scales the fitted model
+
+	const qreal ModelSize = mInstructions->GetIntProperty(mCoverImage ? swInstructionsPropertyType::CoverImageSize : swInstructionsPropertyType::StepImageSize, mModel, mStep) / 100.0;
+	const int Width = qMax(qRound(CellWidth * ModelSize), 1);
+	const int Height = qMax(qRound(CellHeight * ModelSize), 1);
 	View.SetSize(Width, Height);
 	View.SetLineWidthScale(Scale);
 
@@ -317,6 +323,17 @@ void swInstructionsStepImageItem::Update()
 
 	QPoint CropOffset;
 	QImage Image = swCropImage(Images.front(), CropOffset);
+
+	// larger models keep to their cell
+
+	if (Image.width() > CellWidth || Image.height() > CellHeight)
+	{
+		const QPoint Trim(qMax((Image.width() - CellWidth) / 2, 0), qMax((Image.height() - CellHeight) / 2, 0));
+
+		Image = Image.copy(QRect(Trim, QSize(qMin(Image.width(), CellWidth), qMin(Image.height(), CellHeight))));
+		CropOffset += Trim;
+	}
+
 	Image.setDevicePixelRatio(Scale);
 	setPixmap(QPixmap::fromImage(Image));
 

@@ -620,7 +620,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	CreateLengthEditor(swInstructionsPropertyType::PointerTipSize, tr("Tip Size"), tr("Size of the arrows and dots, and width of the wedges at the element, never less than three times the pointer width."), 0, 288, 0.5)->setSpecialValueText(tr("Automatic"));
 	AddEditorRow(CategoryIndex::Pointer, swInstructionsPropertyType::PointerTipSize);
 
-	AddCategory(CategoryIndex::Box, tr("Box"), tr("<p><b>Box</b></p><p>The space and border around each element. The margin keeps other elements away, the padding keeps the border away from the content and the background fills all of it, margin and padding included. Pointers leave the border. Choose the element to edit, selecting an element on the page chooses it.</p>"));
+	AddCategory(CategoryIndex::Box, tr("Box"), tr("<p><b>Box</b></p><p>The space and border around each element. The margin keeps other elements away, the padding keeps the border away from the content and the background fills all of it, margin and padding included. Pointers leave the border. The step and cover models also set their size here. Choose the element to edit, selecting an element on the page chooses it.</p>"));
 
 	// choices follow the box elements
 	mBoxElementComboBox = new QComboBox(this);
@@ -641,6 +641,44 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	{
 		const swInstructionsBoxTypes BoxTypes = swGetBoxTypes(static_cast<swInstructionsBoxElement>(ElementIndex));
 		std::vector<QWidget*>& Rows = mBoxRows[ElementIndex];
+
+		// model sizes lead their boxes
+
+		if (ElementIndex == static_cast<int>(swInstructionsBoxElement::StepImage))
+		{
+			CreatePercentEditor(swInstructionsPropertyType::StepImageSize, tr("Model Size"), tr("Size of the step model, 100 percent fills its space, larger sizes are trimmed to it."), 10, 200);
+			Rows.push_back(AddEditorRow(CategoryIndex::Box, swInstructionsPropertyType::StepImageSize)->parentWidget());
+
+			mModelSizePageButton = new QToolButton(this);
+			mModelSizePageButton->setText(tr("Model Size on This Page Only"));
+			mModelSizePageButton->setCheckable(true);
+			mModelSizePageButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
+			mModelSizePageButton->setToolTip(tr("Give this page its own model size, unchecked it follows all pages."));
+			mModelSizePageButton->setWhatsThis(mModelSizePageButton->toolTip());
+			mModelSizePageButton->setAccessibleName(mModelSizePageButton->text());
+			swSetupPanelButton(mModelSizePageButton);
+
+			connect(mModelSizePageButton, &QToolButton::toggled, this, [this](bool PageOnly)
+			{
+				mInstructions->SetPageScope(mPageIndex, swInstructionsPropertyType::StepImageSize, PageOnly);
+			});
+
+			Rows.push_back(AddRow(CategoryIndex::Box, { mModelSizePageButton }));
+
+			mModelSizeApplyAllButton = CreateApplyAllButton(tr("Use the model size of this page on every page."));
+
+			connect(mModelSizeApplyAllButton, &QToolButton::clicked, this, [this]()
+			{
+				mInstructions->ApplyPageToAllPages(mPageIndex, swInstructionsPropertyType::StepImageSize);
+			});
+
+			Rows.push_back(AddRow(CategoryIndex::Box, { mModelSizeApplyAllButton }));
+		}
+		else if (ElementIndex == static_cast<int>(swInstructionsBoxElement::CoverImage))
+		{
+			CreatePercentEditor(swInstructionsPropertyType::CoverImageSize, tr("Model Size"), tr("Size of the cover model, 100 percent fills its space, larger sizes are trimmed to it."), 10, 200);
+			Rows.push_back(AddEditorRow(CategoryIndex::Box, swInstructionsPropertyType::CoverImageSize)->parentWidget());
+		}
 
 		CreateLengthEditor(BoxTypes.Margin, tr("Margin"), tr("Space outside the border, filled with the background."), 0, 288, 0.5);
 		Rows.push_back(AddEditorRow(CategoryIndex::Box, BoxTypes.Margin)->parentWidget());
@@ -810,6 +848,25 @@ QDoubleSpinBox* swInstructionsPropertiesWidget::CreateLengthEditor(swInstruction
 	});
 
 	connect(Editors.UnitButton, &swInstructionsUnitButton::UnitsChanged, this, &swInstructionsPropertiesWidget::UpdateEditors);
+
+	return SpinBox;
+}
+
+QSpinBox* swInstructionsPropertiesWidget::CreatePercentEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip, int Minimum, int Maximum)
+{
+	QSpinBox* SpinBox = new QSpinBox(this);
+	RegisterEditor(Type, EditorType::Percent, SpinBox, Name, ToolTip);
+
+	SpinBox->setRange(Minimum, Maximum);
+	SpinBox->setSingleStep(5);
+	SpinBox->setSuffix(QLatin1String(" %"));
+	SpinBox->setKeyboardTracking(false);
+	swSetupPanelSpinBox(SpinBox);
+
+	connect(SpinBox, qOverload<int>(&QSpinBox::valueChanged), this, [this, Type](int Value)
+	{
+		SetIntValue(Type, Value);
+	});
 
 	return SpinBox;
 }
@@ -1112,6 +1169,10 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 			}
 			break;
 
+		case EditorType::Percent:
+			qobject_cast<QSpinBox*>(Editor.Widget)->setValue(GetIntValue(Type));
+			break;
+
 		case EditorType::Choice:
 			qobject_cast<QComboBox*>(Editor.Widget)->setCurrentIndex(mInstructions->GetIntProperty(Type, mModel, mStep));
 			break;
@@ -1212,6 +1273,12 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 	mThumbnailApplyAllButton->setEnabled(mThumbnailPageButton->isEnabled());
 	mThumbnailPageButton->setChecked(mInstructions->HasPageProperty(mPageIndex, swInstructionsPropertyType::PLIThumbnailSize));
 
+	QSignalBlocker ModelSizeBlocker(mModelSizePageButton);
+
+	mModelSizePageButton->setEnabled(PageType == swInstructionsPageType::Steps);
+	mModelSizeApplyAllButton->setEnabled(mModelSizePageButton->isEnabled());
+	mModelSizePageButton->setChecked(mInstructions->HasPageProperty(mPageIndex, swInstructionsPropertyType::StepImageSize));
+
 	QSignalBlocker BackgroundBlocker(mBackgroundPageButton);
 
 	mBackgroundPageButton->setChecked(mInstructions->HasPageProperty(mPageIndex, swInstructionsPropertyType::PageBackgroundColor));
@@ -1233,6 +1300,11 @@ int swInstructionsPropertiesWidget::GetIntValue(swInstructionsPropertyType Type)
 
 QColor swInstructionsPropertiesWidget::GetColorValue(swInstructionsPropertyType Type) const
 {
+	// submodel pages keep their own row
+
+	if (Type == swInstructionsPropertyType::PageBackgroundColor && !mInstructions->HasPageProperty(mPageIndex, Type))
+		return mInstructions->GetColorProperty(Type, nullptr, 0);
+
 	if (swInstructions::IsPageProperty(Type))
 		return mInstructions->GetPageColorProperty(mPageIndex, Type);
 

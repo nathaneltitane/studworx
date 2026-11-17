@@ -6327,7 +6327,7 @@ File format is not recognized.</source>
         <translation>%1 не удалось: %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="526"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="543"/>
         <source>Create Parts List</source>
         <translation>Создать список деталей</translation>
     </message>
@@ -15290,27 +15290,27 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Страница %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="451"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="468"/>
         <source>Parts List</source>
         <translation>Список деталей</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="469"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="486"/>
         <source>%1 / %2</source>
         <translation>%1 / %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="553"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="570"/>
         <source>Add Notice</source>
         <translation>Добавить примечание</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="553"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="570"/>
         <source>Edit Notice</source>
         <translation>Изменить примечание</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="554"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="571"/>
         <source>Notice Text</source>
         <translation>Текст примечания</translation>
     </message>
@@ -15525,28 +15525,28 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsPageListWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2176"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2186"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2193"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2203"/>
         <source>Pages</source>
         <translation>Страницы</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2177"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2194"/>
         <source>&lt;p&gt;&lt;b&gt;Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a page to show it. Right-click a page to insert or remove blank pages around it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Страницы&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите страницу, чтобы показать её. Щёлкните страницу правой кнопкой мыши, чтобы вставить или удалить пустые страницы рядом с ней.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2206"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2223"/>
         <source>Insert Blank Page Before</source>
         <translation>Вставить пустую страницу перед</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2214"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2231"/>
         <source>Insert Blank Page After</source>
         <translation>Вставить пустую страницу после</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2222"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2239"/>
         <source>Remove Blank Page</source>
         <translation>Удалить пустую страницу</translation>
     </message>
@@ -15558,117 +15558,117 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsPageWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1009"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1026"/>
         <source>Units of the rulers, the page units or the document units when they are in use.</source>
         <translation>Единицы линеек: единицы страницы или единицы документа, если они используются.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1609"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1626"/>
         <source>Anchor</source>
         <translation>Опорная точка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1610"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1627"/>
         <source>Top Left</source>
         <translation>Сверху слева</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1610"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1627"/>
         <source>Top</source>
         <translation>Сверху</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1610"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1627"/>
         <source>Top Right</source>
         <translation>Сверху справа</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1610"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1627"/>
         <source>Right</source>
         <translation>Справа</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1610"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1627"/>
         <source>Bottom Right</source>
         <translation>Снизу справа</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1610"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1627"/>
         <source>Bottom</source>
         <translation>Снизу</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1610"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1627"/>
         <source>Bottom Left</source>
         <translation>Снизу слева</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1610"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1627"/>
         <source>Left</source>
         <translation>Слева</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1615"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1632"/>
         <source>Automatic</source>
         <translation>Автоматически</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1639"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1656"/>
         <source>Default</source>
         <translation>По умолчанию</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1656"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1673"/>
         <source>Style</source>
         <translation>Стиль</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1656"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1673"/>
         <source>Line</source>
         <translation>Линия</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1656"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1673"/>
         <source>Callout Wedge</source>
         <translation>Выноска-клин</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1661"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1678"/>
         <source>Tip</source>
         <translation>Наконечник</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1661"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1678"/>
         <source>Dot</source>
         <translation>Точка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1661"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1678"/>
         <source>Arrow</source>
         <translation>Стрелка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1671"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1688"/>
         <source>Remove Pointer</source>
         <translation>Удалить указатель</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1678"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1695"/>
         <source>Add Notice...</source>
         <translation>Добавить примечание...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1695"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1712"/>
         <source>Add Pointer</source>
         <translation>Добавить указатель</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1707"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1724"/>
         <source>Edit Notice...</source>
         <translation>Изменить примечание...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1716"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1733"/>
         <source>Remove Notice</source>
         <translation>Удалить примечание</translation>
     </message>
@@ -16093,7 +16093,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">Все шаги</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="838"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="895"/>
         <source>Apply to All Pages</source>
         <translation>Применить ко всем страницам</translation>
     </message>
@@ -16784,19 +16784,19 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="565"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1193"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1254"/>
         <source>Top</source>
         <translation>Сверху</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="565"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1193"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1254"/>
         <source>Middle</source>
         <translation>Посередине</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="565"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1193"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1254"/>
         <source>Bottom</source>
         <translation>Снизу</translation>
     </message>
@@ -16851,32 +16851,68 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Автоматически</translation>
     </message>
     <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="623"/>
+        <source>&lt;p&gt;&lt;b&gt;Box&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The space and border around each element. The margin keeps other elements away, the padding keeps the border away from the content and the background fills all of it, margin and padding included. Pointers leave the border. The step and cover models also set their size here. Choose the element to edit, selecting an element on the page chooses it.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Рамка&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Пространство и граница вокруг каждого элемента. Внешний отступ отодвигает другие элементы, внутренний отступ отодвигает границу от содержимого, а фон заливает всё, включая внешний и внутренний отступы. Указатели отходят от границы. Модели шага и обложки тоже задают здесь свой размер. Выберите элемент для правки; выбор элемента на странице выбирает его и здесь.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="649"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="679"/>
+        <source>Model Size</source>
+        <translation>Размер модели</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="649"/>
+        <source>Size of the step model, 100 percent fills its space, larger sizes are trimmed to it.</source>
+        <translation>Размер модели шага, 100 процентов заполняют её место, большие размеры обрезаются по нему.</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="653"/>
+        <source>Model Size on This Page Only</source>
+        <translation>Размер модели только на этой странице</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="656"/>
+        <source>Give this page its own model size, unchecked it follows all pages.</source>
+        <translation>Задать этой странице свой размер модели; без отметки она следует всем страницам.</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="668"/>
+        <source>Use the model size of this page on every page.</source>
+        <translation>Использовать размер модели этой страницы на каждой странице.</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="679"/>
+        <source>Size of the cover model, 100 percent fills its space, larger sizes are trimmed to it.</source>
+        <translation>Размер модели обложки, 100 процентов заполняют её место, большие размеры обрезаются по нему.</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="687"/>
         <source>Border Width</source>
         <translation>Ширина границы</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="651"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="689"/>
         <source>Corner Radius</source>
         <translation>Радиус скругления</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="651"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="689"/>
         <source>Roundness of the box corners, 0 keeps them square.</source>
         <translation>Скругление углов рамки; 0 оставляет их прямыми.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1193"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1254"/>
         <source>Left</source>
         <translation>Слева</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1193"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1254"/>
         <source>Center</source>
         <translation>Центр</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1193"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1254"/>
         <source>Right</source>
         <translation>Справа</translation>
     </message>
@@ -17077,9 +17113,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Рамка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="623"/>
         <source>&lt;p&gt;&lt;b&gt;Box&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The space and border around each element. The margin keeps other elements away, the padding keeps the border away from the content and the background fills all of it, margin and padding included. Pointers leave the border. Choose the element to edit, selecting an element on the page chooses it.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Рамка&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Пространство и граница вокруг каждого элемента. Внешний отступ отодвигает другие элементы, внутренний отступ отодвигает границу от содержимого, а фон заливает всё, включая внешний и внутренний отступы. Указатели отходят от границы. Выберите элемент для правки; выбор элемента на странице выбирает его и здесь.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Рамка&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Пространство и граница вокруг каждого элемента. Внешний отступ отодвигает другие элементы, внутренний отступ отодвигает границу от содержимого, а фон заливает всё, включая внешний и внутренний отступы. Указатели отходят от границы. Выберите элемент для правки; выбор элемента на странице выбирает его и здесь.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="627"/>
@@ -17113,62 +17148,62 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Элемент</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="645"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="683"/>
         <source>Margin</source>
         <translation>Поле</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="645"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="683"/>
         <source>Space outside the border, filled with the background.</source>
         <translation>Пространство снаружи границы, заливается фоном.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="647"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="685"/>
         <source>Padding</source>
         <translation>Внутренний отступ</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="647"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="685"/>
         <source>Space between the border and the content, filled with the background.</source>
         <translation>Пространство между границей и содержимым, заливается фоном.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="649"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="687"/>
         <source>Width of the line around the element, 0 draws no line.</source>
         <translation>Ширина линии вокруг элемента; 0 означает отсутствие линии.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="653"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="691"/>
         <source>Border Color</source>
         <translation>Цвет границы</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="653"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="691"/>
         <source>Color of the line around the element.</source>
         <translation>Цвет линии вокруг элемента.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="655"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="693"/>
         <source>Background</source>
         <translation>Фон</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="655"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="693"/>
         <source>Color filling the whole element, margin and padding included, transparent shows what lies behind.</source>
         <translation>Цвет, которым заливается весь элемент, включая внешний и внутренний отступы; прозрачный показывает то, что лежит позади.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="674"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="712"/>
         <source>Expand or collapse the %1 properties.</source>
         <translation>Развернуть или свернуть свойства %1.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="877"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="934"/>
         <source>Size of the font in the page units.</source>
         <translation>Размер шрифта в единицах страницы.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="879"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="936"/>
         <source>%1 Size</source>
         <translation>Размер: %1</translation>
     </message>
@@ -17239,22 +17274,22 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsRulerWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2006"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2023"/>
         <source>Horizontal Ruler</source>
         <translation>Горизонтальная линейка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2007"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2024"/>
         <source>Horizontal position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Горизонтальное положение на странице в единицах страницы; стрелка следует за указателем.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2011"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2028"/>
         <source>Vertical Ruler</source>
         <translation>Вертикальная линейка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2012"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2029"/>
         <source>Vertical position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Вертикальное положение на странице в единицах страницы; стрелка следует за указателем.</translation>
     </message>

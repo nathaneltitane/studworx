@@ -12,6 +12,10 @@
   - Translations: snap sizes read as studs, plates and bricks in every language, and each property row letter matches its row name
   - Translations: Yes, No and the other dialog buttons follow the language picked in StudWorx
   - Instructions: Undo and Redo at the start of the page bar, and the main window Undo and Redo shortcuts, take back and put back changes to the instructions, quick changes to one setting counting as one
+  - Instructions: Model Size in the Box of the step and cover models sizes them from 10 to 200 percent, on all pages or this page only
+  - Instructions: new part outlines follow only what can be seen, no more lines from parts hidden inside or behind others
+  - Instructions: Page Background shows its own color on submodel pages instead of the Submodel Background
+  - Instructions: Parts List and Notice backgrounds start transparent, like the other boxes and images
   - Preferences: the Get Key button widens to show its whole label in longer languages
   - Translations: every machine-translated line in all nine languages was checked, and about 2,900 wrong ones now read right, like Close that read as near, Light as pale and Stud as earring
   - Translations: Traditional Chinese uses Taiwan words, like 匯入 and 匯出 for import and export

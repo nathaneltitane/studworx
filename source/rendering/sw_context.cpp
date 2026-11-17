@@ -852,14 +852,24 @@ bool swContext::GenerateOutlineMasks(const swScene& Scene, QOpenGLFramebufferObj
 
 	if (DrawSelection && Scene.HasHighlightedMeshes())
 	{
+		// new parts show only where seen
+
+		glClear(GL_DEPTH_BUFFER_BIT);
+		EnableColorWrite(false);
+		SetPolygonOffset(swPolygonOffset::Opaque);
+
+		Scene.DrawOutlineOccluders(this);
+
+		SetPolygonOffset(swPolygonOffset::None);
+		EnableColorWrite(true);
+
 		// keep highlight and selection apart
-		EnableDepthTest(false);
+
 		glColorMask(GL_FALSE, GL_FALSE, GL_TRUE, GL_FALSE);
 
 		Scene.DrawHighlightMask(this);
 
 		glColorMask(GL_TRUE, GL_TRUE, GL_TRUE, GL_TRUE);
-		EnableDepthTest(true);
 	}
 
 	const bool Success = VisibleFramebuffer.bind() && glCheckFramebufferStatus(GL_FRAMEBUFFER) == GL_FRAMEBUFFER_COMPLETE;

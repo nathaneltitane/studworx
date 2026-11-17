@@ -161,6 +161,8 @@ enum class swInstructionsPropertyType
 	BillOfMaterialsTitleColor,
 	CoverAuthorColor,
 	SubmodelBackgroundColor,
+	StepImageSize,
+	CoverImageSize,
 	Count
 };
 
