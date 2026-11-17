@@ -78,7 +78,16 @@ pattern_date='^[0-9]{4}-[0-9]{2}-[0-9]{2}$'
 
 # paths that make a release
 
-paths_code=(source resources ':!resources/translations' ':!resources/documentation' ':!resources/images' platform '*.pro' '*.pri')
+paths_code=(
+	source
+	resources
+	':!resources/translations'
+	':!resources/documentation'
+	':!resources/images'
+	platform
+	'*.pro'
+	'*.pri'
+)
 
 # today as a date
 
