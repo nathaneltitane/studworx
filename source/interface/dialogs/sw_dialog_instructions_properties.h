@@ -68,13 +68,12 @@ protected:
 	{
 		Document,
 		Cover,
-		BillOfMaterials,
 		Page,
+		BillOfMaterials,
 		PageLayout,
-		Divider,
-		PageNumber,
 		Step,
 		PartsList,
+		Divider,
 		Notice,
 		Pointer,
 		Box,
@@ -178,6 +177,7 @@ protected:
 	QToolButton* mFinalModelColorButton = nullptr;
 	QToolButton* mThumbnailPageButton = nullptr;
 	QToolButton* mBackgroundPageButton = nullptr;
+	std::vector<QWidget*> mPageBackgroundRows;
 	QToolButton* mThumbnailApplyAllButton = nullptr;
 	QToolButton* mModelSizePageButton = nullptr;
 	QToolButton* mModelSizeApplyAllButton = nullptr;

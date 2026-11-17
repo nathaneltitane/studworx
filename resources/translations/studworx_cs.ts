@@ -16172,7 +16172,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">Všechny kroky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1029"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1027"/>
         <source>Apply to All Pages</source>
         <translation>Použít na všechny stránky</translation>
     </message>
@@ -16591,76 +16591,81 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="466"/>
+        <source>&lt;p&gt;&lt;b&gt;Page&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The background and the number of the step and blank pages. The background applies to all these pages, or only to the current page when it has its own, the cover and the bill of materials have their own backgrounds. The cover and blank pages are not numbered unless all pages are. Drag the number or use the Placement panel to move it on all pages.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Stránka&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pozadí a číslo stránek kroků a prázdných stránek. Pozadí platí pro všechny tyto stránky, nebo jen pro aktuální stránku, pokud má vlastní, obálka a soupis materiálu mají vlastní pozadí. Obálka a prázdné stránky se nečíslují, pokud nejsou číslovány všechny stránky. Přetažením čísla nebo panelem Umístění ho přesunete na všech stránkách.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="512"/>
         <source>Bill of Materials</source>
         <translation>Soupis materiálu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="469"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="515"/>
         <source>Show Bill of Materials</source>
         <translation>Zobrazit soupis materiálu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="469"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="515"/>
         <source>End the instructions with a page listing every part of the model.</source>
         <translation>Ukončit pokyny stránkou se seznamem všech dílů modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="473"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="519"/>
         <source>Blank Page Before Bill of Materials</source>
         <translation>Prázdná stránka před soupisem materiálu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="473"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="519"/>
         <source>Precede the bill of materials with a blank page.</source>
         <translation>Před soupis materiálu zařadit prázdnou stránku.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="476"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="522"/>
         <source>Color filling the whole bill of materials page, margins included.</source>
         <translation>Barva vyplňující celou stránku soupisu materiálu včetně okrajů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="478"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="524"/>
         <source>BOM Title</source>
         <translation>Název kusovníku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="478"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="524"/>
         <source>Title above the bill of materials, empty for Parts List.</source>
         <translation>Název nad kusovníkem, prázdné pro Seznam dílů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="480"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="526"/>
         <source>BOM Title File</source>
         <translation>Soubor názvu kusovníku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="480"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="526"/>
         <source>Text file holding the bill of materials title, used instead of the typed title, relative to the model file.</source>
         <translation>Textový soubor s názvem kusovníku, použitý místo zadaného názvu, relativně k souboru modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="468"/>
         <source>Color filling the whole page of main model steps, margins included.</source>
         <translation>Barva vyplňující celou stránku kroků hlavního modelu včetně okrajů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="491"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="470"/>
         <source>Submodel Background</source>
         <translation>Pozadí podmodelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="491"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="470"/>
         <source>Color filling the whole page of submodel steps, margins included.</source>
         <translation>Barva vyplňující celou stránku kroků podmodelu včetně okrajů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="511"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="490"/>
         <source>Use the background of this page on every page.</source>
         <translation>Použít pozadí této stránky na každé stránce.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="520"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="533"/>
         <source>Steps per Page</source>
         <translation>Kroky na stránku</translation>
     </message>
@@ -16669,26 +16674,26 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Kroky na stránku&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Řádky a sloupce kroků na aktuální stránce, další stránky na ni navazují. Předvolby dělí stránku na poloviny, třetiny nebo čtvrtiny a zobrazují oddělovače kroků. Tok kroků vyplňuje stránku po řádcích nebo po sloupcích a poslední krok se roztáhne do prázdných buněk. Zobrazit hotový model umístí hotový model do volného místa za posledním krokem modelu. Barva hlavní stránky dá hotovému modelu podmodelu barvu hlavní stránky. Oddělovače jsou čáry mezi sousedními kroky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="565"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="621"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="694"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="578"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="634"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
         <source>Rows</source>
         <translation>Řádky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="565"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="578"/>
         <source>Number of step rows on this page.</source>
         <translation>Počet řádků kroků na této stránce.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="566"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="622"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="694"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="579"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="635"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
         <source>Columns</source>
         <translation>Sloupce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="566"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="579"/>
         <source>Number of step columns on this page.</source>
         <translation>Počet sloupců kroků na této stránce.</translation>
     </message>
@@ -16697,7 +16702,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Použít tento počet řádků a sloupců na každé stránce.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="487"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="466"/>
         <source>Page</source>
         <translation>Stránka</translation>
     </message>
@@ -16707,27 +16712,26 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>&lt;p&gt;&lt;b&gt;Vlastnosti&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Upravte, jak stránky s pokyny vypadají. Pokud není na stránce nic vybráno, zobrazí se všechny sekce, vyberte prvek, abyste zobrazili jen jeho nastavení a rámeček. Kliknutím pravým tlačítkem na stránku přidáte upozornění a ukazatele. Změny platí pro všechny stránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="476"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="522"/>
         <source>BOM Background</source>
         <translation>Pozadí soupisu materiálu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="487"/>
         <source>&lt;p&gt;&lt;b&gt;Page&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The background of the step and blank pages. It applies to all these pages, or only to the current page when it has its own. The cover and the bill of materials have their own backgrounds.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Stránka&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pozadí stránek kroků a prázdných stránek. Platí pro všechny tyto stránky, nebo jen pro aktuální stránku, pokud má vlastní. Obálka a soupis materiálu mají vlastní pozadí.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Stránka&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pozadí stránek kroků a prázdných stránek. Platí pro všechny tyto stránky, nebo jen pro aktuální stránku, pokud má vlastní. Obálka a soupis materiálu mají vlastní pozadí.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="468"/>
         <source>Page Background</source>
         <translation>Pozadí stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="496"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="475"/>
         <source>Background on This Page Only</source>
         <translation>Pozadí pouze na této stránce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="499"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="478"/>
         <source>Give this page its own background, unchecked it follows all pages.</source>
         <translation>Dát této stránce vlastní pozadí, nezaškrtnuto sleduje všechny stránky.</translation>
     </message>
@@ -16736,420 +16740,418 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Kroky na stránku&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Řádky a sloupce kroků na aktuální stránce, další stránky na ni navazují. Předvolby dělí stránku na poloviny, třetiny nebo čtvrtiny a zobrazují oddělovače kroků. Kroky vyplňují stránky na šířku po řádcích a stránky na výšku po sloupcích, podle orientace zvolené v Nastavení stránky. Oddělovače jsou čáry mezi sousedními kroky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="636"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="711"/>
         <source>Show Step Dividers</source>
         <translation>Zobrazit oddělovače kroků</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="636"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="711"/>
         <source>Draw lines between neighboring steps.</source>
         <translation>Kreslit čáry mezi sousedními kroky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="637"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="712"/>
         <source>Rounded Ends</source>
         <translation>Zaoblené konce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="637"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="712"/>
         <source>Round the line ends, off draws flat ends.</source>
         <translation>Zaoblit konce čar, jinak jsou rovné.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="641"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="716"/>
         <source>Draw the lines between steps above and below each other.</source>
         <translation>Kreslit čáry mezi kroky nad sebou.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="642"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="717"/>
         <source>Draw the lines between steps side by side.</source>
         <translation>Kreslit čáry mezi kroky vedle sebe.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="645"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="720"/>
         <source>Divider Color</source>
         <translation>Barva oddělovače</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="645"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="720"/>
         <source>Color of the lines between steps.</source>
         <translation>Barva čar mezi kroky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="647"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="722"/>
         <source>Divider Width</source>
         <translation>Šířka oddělovače</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="647"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="722"/>
         <source>Width of the lines between steps.</source>
         <translation>Šířka čar mezi kroky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="649"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="724"/>
         <source>Divider Margin</source>
         <translation>Okraj oddělovače</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="649"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="724"/>
         <source>Space between the line ends and the page margins.</source>
         <translation>Mezera mezi konci čar a okraji stránky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="651"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="726"/>
         <source>Divider Padding</source>
         <translation>Odsazení oddělovače</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="651"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="726"/>
         <source>Space between the lines and the steps on each side.</source>
         <translation>Mezera mezi čarami a kroky na každé straně.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="654"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="662"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="758"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="505"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
         <source>Page Number</source>
         <translation>Číslo stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="654"/>
         <source>&lt;p&gt;&lt;b&gt;Page Number&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The number of each page, the cover and blank pages are not numbered unless all pages are. Drag it or use the Placement panel to move it on all pages.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Číslo stránky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Číslo každé stránky, obálka a prázdné stránky se nečíslují, pokud nejsou číslovány všechny stránky. Přetažením nebo panelem Umístění ho přesunete na všech stránkách.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Číslo stránky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Číslo každé stránky, obálka a prázdné stránky se nečíslují, pokud nejsou číslovány všechny stránky. Přetažením nebo panelem Umístění ho přesunete na všech stránkách.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="657"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="500"/>
         <source>Show Page Number</source>
         <translation>Zobrazit číslo stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="657"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="500"/>
         <source>Show the number of each page except the cover and blank pages.</source>
         <translation>Zobrazit číslo každé stránky kromě obálky a prázdných stránek.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="658"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="501"/>
         <source>Number All Pages</source>
         <translation>Číslovat všechny stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="658"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="501"/>
         <source>Number every page, the cover and blank pages included.</source>
         <translation>Číslovat každou stránku, včetně obálky a prázdných stránek.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="662"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="505"/>
         <source>Page Number Format</source>
         <translation>Formát čísla stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="662"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="505"/>
         <source>Show the page number alone or with the page count.</source>
         <translation>Zobrazit číslo stránky samotné nebo s počtem stránek.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="662"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="505"/>
         <source>Page Number / Page Count</source>
         <translation>Číslo stránky / počet stránek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="664"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="507"/>
         <source>Page Number Font</source>
         <translation>Písmo čísla stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="664"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="507"/>
         <source>Font of the page numbers.</source>
         <translation>Písmo čísel stránek.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="666"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="509"/>
         <source>Page Number Color</source>
         <translation>Barva čísla stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="666"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="509"/>
         <source>Color of the page numbers.</source>
         <translation>Barva čísel stránek.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="669"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="758"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="646"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
         <source>Step Number</source>
         <translation>Číslo kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="672"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="649"/>
         <source>Show Step Number</source>
         <translation>Zobrazit číslo kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="675"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="652"/>
         <source>Step Number Font</source>
         <translation>Písmo čísla kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="675"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="652"/>
         <source>Font of the step numbers.</source>
         <translation>Písmo čísel kroků.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="654"/>
         <source>Step Number Color</source>
         <translation>Barva čísla kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="654"/>
         <source>Color of the step numbers.</source>
         <translation>Barva čísel kroků.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="679"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="656"/>
         <source>Step Background</source>
         <translation>Pozadí kroku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="679"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="656"/>
         <source>Color filling the area of each step, transparent shows the page background.</source>
         <translation>Barva vyplňující plochu každého kroku, průhledná ukáže pozadí stránky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="682"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="659"/>
         <source>&lt;p&gt;&lt;b&gt;Parts List&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The list of parts added in each step. The bill of materials uses the same settings.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Seznam dílů&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seznam dílů přidaných v každém kroku. Soupis materiálu používá stejná nastavení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="685"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="662"/>
         <source>Show Parts List</source>
         <translation>Zobrazit seznam dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="685"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="662"/>
         <source>Show the parts added in each step next to its number.</source>
         <translation>Zobrazit díly přidané v každém kroku vedle jeho čísla.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="686"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="663"/>
         <source>Show Part Counts</source>
         <translation>Zobrazit počty dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="686"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="663"/>
         <source>Show how many of each part are needed.</source>
         <translation>Zobrazit, kolik kusů každého dílu je potřeba.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="690"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="667"/>
         <source>Parts List Order</source>
         <translation>Pořadí seznamu dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="690"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="667"/>
         <source>Order of the parts in the list.</source>
         <translation>Pořadí dílů v seznamu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="690"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="667"/>
         <source>Sort by Color</source>
         <translation>Řadit podle barvy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="690"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="667"/>
         <source>Sort by Name</source>
         <translation>Řadit podle názvu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="690"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="667"/>
         <source>Sort by Part ID</source>
         <translation>Řadit podle ID dílu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="694"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
         <source>Parts List Layout</source>
         <translation>Rozvržení seznamu dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="694"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
         <source>Line the parts up in rows or in columns.</source>
         <translation>Seřadit díly do řádků nebo do sloupců.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="696"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="673"/>
         <source>Line Reference</source>
         <translation>Referenční čára</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="696"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="673"/>
         <source>Thumbnail edge the parts line up on.</source>
         <translation>Okraj náhledu, na který se díly zarovnávají.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="696"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1463"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="673"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1461"/>
         <source>Top</source>
         <translation>Nahoře</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="696"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1463"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="673"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1461"/>
         <source>Middle</source>
         <translation>Uprostřed</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="696"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1463"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="673"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1461"/>
         <source>Bottom</source>
         <translation>Dole</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="698"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="675"/>
         <source>Parts List Font</source>
         <translation>Písmo seznamu dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="698"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="675"/>
         <source>Font of the part counts.</source>
         <translation>Písmo počtů dílů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="700"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
         <source>Parts List Text Color</source>
         <translation>Barva textu seznamu dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="700"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
         <source>Color of the part counts.</source>
         <translation>Barva počtů dílů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="721"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="698"/>
         <source>Use the thumbnail size and background of this page on every page.</source>
         <translation>Použít velikost a pozadí náhledů této stránky na každé stránce.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="743"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="741"/>
         <source>End line pointers with an arrow or a dot, callout wedges have no tip.</source>
         <translation>Zakončit čárové ukazatele šipkou nebo tečkou, klínové odkazy nemají hrot.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="743"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="741"/>
         <source>Arrow</source>
         <translation>Šipka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="749"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="747"/>
         <source>Width of the pointer lines, Border follows the border of the element.</source>
         <translation>Šířka čar ukazatelů, Ohraničení sleduje ohraničení prvku.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="749"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="747"/>
         <source>Border</source>
         <translation>Ohraničení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="751"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1069"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="749"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1067"/>
         <source>Automatic</source>
         <translation>Automaticky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="754"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="752"/>
         <source>&lt;p&gt;&lt;b&gt;Box&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The space and border around each element. The margin keeps other elements away, the padding keeps the border away from the content and the background fills all of it, margin and padding included. Pointers leave the border. The step and cover models also set their size here. Choose the element to edit, selecting an element on the page chooses it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Rámeček&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Prostor a ohraničení kolem každého prvku. Okraj drží ostatní prvky stranou, odsazení drží ohraničení dál od obsahu a pozadí vyplňuje vše, včetně okraje a odsazení. Ukazatele vycházejí z ohraničení. Modely kroku a obálky zde také nastavují svou velikost. Zvolte prvek k úpravě, výběr prvku na stránce jej zvolí.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="780"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="810"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="778"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="808"/>
         <source>Model Size</source>
         <translation>Velikost modelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="780"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="778"/>
         <source>Size of the step model, 100 percent fills its space, larger sizes are trimmed to it.</source>
         <translation>Velikost modelu kroku, 100 procent vyplní jeho prostor, větší velikosti se do něj oříznou.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="784"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="782"/>
         <source>Model Size on This Page Only</source>
         <translation>Velikost modelu pouze na této stránce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="787"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="785"/>
         <source>Give this page its own model size, unchecked it follows all pages.</source>
         <translation>Dát této stránce vlastní velikost modelu, nezaškrtnuté se řídí všemi stránkami.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="799"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="797"/>
         <source>Use the model size of this page on every page.</source>
         <translation>Použít velikost modelu této stránky na všech stránkách.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="810"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="808"/>
         <source>Size of the cover model, 100 percent fills its space, larger sizes are trimmed to it.</source>
         <translation>Velikost modelu obálky, 100 procent vyplní jeho prostor, větší velikosti se do něj oříznou.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="818"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="816"/>
         <source>Border Width</source>
         <translation>Šířka ohraničení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="820"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="818"/>
         <source>Corner Radius</source>
         <translation>Poloměr rohů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="820"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="818"/>
         <source>Roundness of the box corners, 0 keeps them square.</source>
         <translation>Zaoblení rohů rámečku, 0 je nechá hranaté.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1060"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1058"/>
         <source>Remove the text file and go back to the typed or automatic text.</source>
         <translation>Odebrat textový soubor a vrátit se k zadanému nebo automatickému textu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1069"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1067"/>
         <source>No File</source>
         <translation>Žádný soubor</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1060"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1058"/>
         <source>Choose the text file.</source>
         <translation>Vybrat textový soubor.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="520"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="533"/>
         <source>&lt;p&gt;&lt;b&gt;Steps per Page&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model, and Main Page Color gives a submodel&apos;s finished model the main page color. The final model border frames that area and its margin keeps it away from the steps and page margins.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Kroky na stránku&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Řádky a sloupce kroků na aktuální stránce, další stránky na ni navazují. Předvolby dělí stránku na poloviny, třetiny nebo čtvrtiny a zobrazují oddělovače kroků. Tok kroků plní stránku po řádcích nebo po sloupcích a poslední krok se roztáhne do prázdných buněk. Zobrazit hotový model umístí hotový model do místa po posledním kroku modelu a Barva hlavní stránky dá hotovému modelu podmodelu barvu hlavní stránky. Rámeček hotového modelu tuto oblast ohraničuje a jeho okraj ji drží dál od kroků a okrajů stránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1083"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1081"/>
         <source>Choose %1</source>
         <translation>Vybrat %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1100"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1098"/>
         <source>Text Files (*.txt);;All Files (*)</source>
         <translation>Textové soubory (*.txt);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1463"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1461"/>
         <source>Left</source>
         <translation>Vlevo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1463"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1461"/>
         <source>Center</source>
         <translation>Střed</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1463"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1461"/>
         <source>Right</source>
         <translation>Vpravo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="702"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="679"/>
         <source>Thumbnail Size</source>
         <translation>Velikost náhledu</translation>
     </message>
@@ -17184,27 +17186,27 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Barva autora modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="466"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="512"/>
         <source>&lt;p&gt;&lt;b&gt;Bill of Materials&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The last page, listing every part of the model. It uses the Parts List settings, under a Parts List title in its own font and color, with the box of the step numbers.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Soupis materiálu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Poslední stránka, která uvádí každý díl modelu. Používá nastavení Seznamu dílů, pod nadpisem Seznam dílů s vlastním písmem a barvou, s rámečkem čísel kroků.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="482"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="528"/>
         <source>BOM Title Font</source>
         <translation>Písmo nadpisu soupisu materiálu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="482"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="528"/>
         <source>Font of the Parts List title above the bill of materials.</source>
         <translation>Písmo nadpisu Seznam dílů nad soupisem materiálu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="484"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="530"/>
         <source>BOM Title Color</source>
         <translation>Barva nadpisu soupisu materiálu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="484"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="530"/>
         <source>Color of the Parts List title above the bill of materials.</source>
         <translation>Barva nadpisu Seznam dílů nad soupisem materiálu.</translation>
     </message>
@@ -17213,85 +17215,85 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Kroky na stránku&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Řádky a sloupce kroků na aktuální stránce, další stránky na ni navazují. Předvolby dělí stránku na poloviny, třetiny nebo čtvrtiny a zobrazují oddělovače kroků. Tok kroků vyplňuje stránku po řádcích nebo po sloupcích a poslední krok se roztáhne do prázdných buněk. Zobrazit hotový model umístí hotový model do volného místa za posledním krokem modelu. Oddělovače jsou čáry mezi sousedními kroky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="571"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="641"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="584"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="716"/>
         <source>Horizontal</source>
         <translation>Vodorovně</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="571"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="642"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="584"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="717"/>
         <source>Vertical</source>
         <translation>Svisle</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="572"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="585"/>
         <source>Fill this page with steps row by row, or column by column.</source>
         <translation>Vyplnit tuto stránku kroky po řádcích, nebo po sloupcích.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="574"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="623"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="587"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="636"/>
         <source>Step Flow</source>
         <translation>Tok kroků</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="585"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="598"/>
         <source>Show Final Model</source>
         <translation>Zobrazit hotový model</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="586"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="599"/>
         <source>Show the finished model in the room left on the page after the last step of a model.</source>
         <translation>Zobrazit hotový model ve volném místě stránky za posledním krokem modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="602"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="615"/>
         <source>Main Page Color</source>
         <translation>Barva hlavní stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="603"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="616"/>
         <source>Put the finished model of a submodel on the main page color.</source>
         <translation>Umístit hotový model podmodelu na barvu hlavní stránky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="614"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="627"/>
         <source>Use this page layout on every page.</source>
         <translation>Použít toto rozvržení na všech stránkách.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="625"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="638"/>
         <source>Final Border</source>
         <translation>Konečný rámeček</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="625"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="638"/>
         <source>Width of the frame around the final model area, 0 draws none.</source>
         <translation>Šířka rámečku kolem oblasti hotového modelu, 0 žádný nekreslí.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="627"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="640"/>
         <source>Final Border Color</source>
         <translation>Barva konečného rámečku</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="627"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="640"/>
         <source>Color of the frame around the final model area.</source>
         <translation>Barva rámečku kolem oblasti hotového modelu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="629"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="642"/>
         <source>Final Margin</source>
         <translation>Konečný okraj</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="629"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="642"/>
         <source>Space between the final model area and the steps and page margins around it.</source>
         <translation>Mezera mezi oblastí hotového modelu a kroky a okraji stránky kolem ní.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="633"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="708"/>
         <source>Divider</source>
         <translation>Oddělovač</translation>
     </message>
@@ -17300,138 +17302,138 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Oddělovač&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Čáry mezi sousedními kroky. Okraj drží konce čar dál od okrajů stránky, odsazení drží kroky dál od čar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="669"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="646"/>
         <source>&lt;p&gt;&lt;b&gt;Step Number&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The step number and the area behind each step. The bill of materials shows a Parts List title in its place.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Číslo kroku&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Číslo kroku a plocha za každým krokem. Soupis materiálu na jeho místě zobrazuje nadpis Seznam dílů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="672"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="649"/>
         <source>Show the number of each step in its top left corner, and the Parts List title of the bill of materials.</source>
         <translation>Zobrazit číslo každého kroku v jeho levém horním rohu a nadpis Seznam dílů soupisu materiálu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="702"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="679"/>
         <source>Size each part is drawn at, larger thumbnails show larger parts.</source>
         <translation>Velikost, ve které se každý díl kreslí, větší náhledy ukazují větší díly.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="704"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="681"/>
         <source>Thumbnail Background</source>
         <translation>Pozadí náhledu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="704"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="681"/>
         <source>Color behind each part and its count, transparent draws none.</source>
         <translation>Barva za každým dílem a jeho počtem, průhledná nekreslí nic.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="709"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="686"/>
         <source>Thumbnails on This Page Only</source>
         <translation>Náhledy pouze na této stránce</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="712"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="689"/>
         <source>Give this page its own thumbnail size and background, unchecked it follows all pages.</source>
         <translation>Dát této stránce vlastní velikost a pozadí náhledů, nezaškrtnuto sleduje všechny stránky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="731"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="758"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="729"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
         <source>Notice</source>
         <translation>Upozornění</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="731"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="729"/>
         <source>&lt;p&gt;&lt;b&gt;Notice&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Free text written on a page to point out something. Right-click the page and choose Add Notice to write one, double-click it to edit its text. Drag it, lock it in place or give it pointers like any other element.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Upozornění&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Volný text napsaný na stránce, aby na něco upozornil. Kliknutím pravým tlačítkem na stránku a volbou Přidat upozornění jej napíšete, dvojitým kliknutím upravíte jeho text. Přetáhněte jej, zamkněte na místě nebo mu dejte ukazatele jako každému jinému prvku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="733"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="731"/>
         <source>Notice Font</source>
         <translation>Písmo upozornění</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="733"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="731"/>
         <source>Font of the notices.</source>
         <translation>Písmo upozornění.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="735"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="733"/>
         <source>Notice Text Color</source>
         <translation>Barva textu upozornění</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="735"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="733"/>
         <source>Color of the notice text.</source>
         <translation>Barva textu upozornění.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="738"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="736"/>
         <source>Pointer</source>
         <translation>Ukazatel</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="738"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="736"/>
         <source>&lt;p&gt;&lt;b&gt;Pointer&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A pointer leaves the border of an element to point at a part, a step or a notice. Right-click an element and choose Add Pointer, then drag its tip onto a part of a step model, another element or any point of the page, the tip follows what it points at. Right-click a pointer to choose the anchor it leaves from, or its own style and tip.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Ukazatel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ukazatel vychází z ohraničení prvku a ukazuje na díl, krok nebo upozornění. Klikněte pravým tlačítkem na prvek a zvolte Přidat ukazatel, pak přetáhněte jeho hrot na díl modelu kroku, jiný prvek nebo libovolný bod stránky, hrot sleduje to, na co ukazuje. Kliknutím pravým tlačítkem na ukazatel zvolíte kotvu, ze které vychází, nebo jeho vlastní styl a hrot.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="741"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="739"/>
         <source>Pointer Style</source>
         <translation>Styl ukazatele</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="741"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="739"/>
         <source>Draw pointers as a line or as a callout wedge narrowing to the tip.</source>
         <translation>Kreslit ukazatele jako čáru nebo jako klínový odkaz zužující se k hrotu.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="741"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="739"/>
         <source>Line</source>
         <translation>Čára</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="741"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="739"/>
         <source>Callout Wedge</source>
         <translation>Klínový odkaz</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="743"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="741"/>
         <source>Pointer Tip</source>
         <translation>Hrot ukazatele</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="743"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="741"/>
         <source>Dot</source>
         <translation>Tečka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="745"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="743"/>
         <source>Pointer Color</source>
         <translation>Barva ukazatele</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="745"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="743"/>
         <source>Color of the pointers.</source>
         <translation>Barva ukazatelů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="749"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="747"/>
         <source>Pointer Width</source>
         <translation>Šířka ukazatele</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="751"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="749"/>
         <source>Tip Size</source>
         <translation>Velikost hrotu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="751"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="749"/>
         <source>Size of the arrows and dots, and width of the wedges at the element, never less than three times the pointer width.</source>
         <translation>Velikost šipek a teček a šířka klínů u prvku, nikdy menší než trojnásobek šířky ukazatele.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="754"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="752"/>
         <source>Box</source>
         <translation>Rámeček</translation>
     </message>
@@ -17440,19 +17442,19 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Rámeček&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Prostor a ohraničení kolem každého prvku. Okraj drží ostatní prvky stranou, odsazení drží ohraničení dál od obsahu a pozadí vyplňuje vše, včetně okraje a odsazení. Ukazatele vycházejí z ohraničení. Zvolte prvek k úpravě, výběr prvku na stránce jej zvolí.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="758"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
         <source>Step Model</source>
         <translation>Model kroku</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="445"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="758"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
         <source>Cover Title</source>
         <translation>Název na obálce</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="457"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="758"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
         <source>Cover Author</source>
         <translation>Autor na obálce</translation>
     </message>
@@ -17461,83 +17463,83 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Kroky na stránku&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Řádky a sloupce kroků na aktuální stránce, další stránky na ni navazují. Předvolby dělí stránku na poloviny, třetiny nebo čtvrtiny a zobrazují oddělovače kroků. Tok kroků plní stránku po řádcích nebo po sloupcích a poslední krok se roztáhne do prázdných buněk. Zobrazit hotový model umístí hotový model do místa po posledním kroku modelu a Barva hlavní stránky dá hotovému modelu podmodelu barvu hlavní stránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="633"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="708"/>
         <source>&lt;p&gt;&lt;b&gt;Divider&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The lines between neighboring steps. Horizontal and Vertical hide the lines in one direction, for example where page colors already split the page. The margin keeps the line ends away from the page margins, the padding keeps the steps away from the lines.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Oddělovač&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Čáry mezi sousedními kroky. Vodorovně a Svisle skryjí čáry v jednom směru, například tam, kde stránku už dělí barvy stránky. Okraj drží konce čar dál od okrajů stránky, odsazení drží kroky dál od čar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="758"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
         <source>Cover Model</source>
         <translation>Model obálky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="759"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="757"/>
         <source>Choose the element whose box is edited, the parts list box is also the bill of materials box.</source>
         <translation>Zvolte prvek, jehož rámeček se upravuje, rámeček seznamu dílů je zároveň rámečkem soupisu materiálu.</translation>
     </message>
     <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="759"/>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="761"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="763"/>
         <source>Element</source>
         <translation>Prvek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="814"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="812"/>
         <source>Margin</source>
         <translation>Okraj</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="814"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="812"/>
         <source>Space outside the border, filled with the background.</source>
         <translation>Prostor vně ohraničení, vyplněný pozadím.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="816"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="814"/>
         <source>Padding</source>
         <translation>Odsazení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="816"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="814"/>
         <source>Space between the border and the content, filled with the background.</source>
         <translation>Prostor mezi ohraničením a obsahem, vyplněný pozadím.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="818"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="816"/>
         <source>Width of the line around the element, 0 draws no line.</source>
         <translation>Šířka čáry kolem prvku, 0 nekreslí žádnou čáru.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="822"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="820"/>
         <source>Border Color</source>
         <translation>Barva ohraničení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="822"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="820"/>
         <source>Color of the line around the element.</source>
         <translation>Barva čáry kolem prvku.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="824"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="822"/>
         <source>Background</source>
         <translation>Pozadí</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="824"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="822"/>
         <source>Color filling the whole element, margin and padding included, transparent shows what lies behind.</source>
         <translation>Barva vyplňující celý prvek, včetně okraje a odsazení, průhledná ukáže, co leží za ním.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="843"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="841"/>
         <source>Expand or collapse the %1 properties.</source>
         <translation>Rozbalte nebo sbalte vlastnosti %1.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1124"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1122"/>
         <source>Size of the font in the page units.</source>
         <translation>Velikost písma v jednotkách stránky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1126"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1124"/>
         <source>%1 Size</source>
         <translation>Velikost: %1</translation>
     </message>
@@ -17547,8 +17549,8 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Průhledné</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="682"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="758"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="659"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
         <source>Parts List</source>
         <translation>Seznam dílů</translation>
     </message>

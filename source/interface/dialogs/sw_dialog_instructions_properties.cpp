@@ -463,6 +463,52 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	CreateColorEditor(swInstructionsPropertyType::CoverAuthorColor, tr("Cover Author Color"), tr("Color of the model author."));
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverAuthorColor);
 
+	AddCategory(CategoryIndex::Page, tr("Page"), tr("<p><b>Page</b></p><p>The background and the number of the step and blank pages. The background applies to all these pages, or only to the current page when it has its own, the cover and the bill of materials have their own backgrounds. The cover and blank pages are not numbered unless all pages are. Drag the number or use the Placement panel to move it on all pages.</p>"));
+
+	CreateColorEditor(swInstructionsPropertyType::PageBackgroundColor, tr("Page Background"), tr("Color filling the whole page of main model steps, margins included."));
+	mPageBackgroundRows.push_back(AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::PageBackgroundColor)->parentWidget());
+	CreateColorEditor(swInstructionsPropertyType::SubmodelBackgroundColor, tr("Submodel Background"), tr("Color filling the whole page of submodel steps, margins included."));
+	mPageBackgroundRows.push_back(AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::SubmodelBackgroundColor)->parentWidget());
+
+	// background for all or current page
+	mBackgroundPageButton = new QToolButton(this);
+	mBackgroundPageButton->setText(tr("Background on This Page Only"));
+	mBackgroundPageButton->setCheckable(true);
+	mBackgroundPageButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
+	mBackgroundPageButton->setToolTip(tr("Give this page its own background, unchecked it follows all pages."));
+	mBackgroundPageButton->setWhatsThis(mBackgroundPageButton->toolTip());
+	mBackgroundPageButton->setAccessibleName(mBackgroundPageButton->text());
+	swSetupPanelButton(mBackgroundPageButton);
+
+	connect(mBackgroundPageButton, &QToolButton::toggled, this, [this](bool PageOnly)
+	{
+		mInstructions->SetPageScope(mPageIndex, swInstructionsPropertyType::PageBackgroundColor, PageOnly);
+	});
+
+	mPageBackgroundRows.push_back(AddRow(CategoryIndex::Page, { mBackgroundPageButton }));
+
+	QToolButton* BackgroundApplyAllButton = CreateApplyAllButton(tr("Use the background of this page on every page."));
+
+	connect(BackgroundApplyAllButton, &QToolButton::clicked, this, [this]()
+	{
+		mInstructions->ApplyPageToAllPages(mPageIndex, swInstructionsPropertyType::PageBackgroundColor);
+	});
+
+	mPageBackgroundRows.push_back(AddRow(CategoryIndex::Page, { BackgroundApplyAllButton }));
+
+	AddRow(CategoryIndex::Page, {
+		CreateToggleEditor(swInstructionsPropertyType::ShowPageNumber, tr("Show Page Number"), tr("Show the number of each page except the cover and blank pages.")),
+		CreateToggleEditor(swInstructionsPropertyType::ShowPageNumberAllPages, tr("Number All Pages"), tr("Number every page, the cover and blank pages included."))
+	});
+
+	// choices follow the number formats
+	CreateChoiceEditor(swInstructionsPropertyType::PageNumberFormat, tr("Page Number Format"), tr("Show the page number alone or with the page count."), { tr("Page Number"), tr("Page Number / Page Count") });
+	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::PageNumberFormat);
+	CreateFontEditor(swInstructionsPropertyType::PageNumberFont, tr("Page Number Font"), tr("Font of the page numbers."));
+	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::PageNumberFont);
+	CreateColorEditor(swInstructionsPropertyType::PageNumberColor, tr("Page Number Color"), tr("Color of the page numbers."));
+	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::PageNumberColor);
+
 	AddCategory(CategoryIndex::BillOfMaterials, tr("Bill of Materials"), tr("<p><b>Bill of Materials</b></p><p>The last page, listing every part of the model. It uses the Parts List settings, under a Parts List title in its own font and color, with the box of the step numbers.</p>"));
 
 	AddRow(CategoryIndex::BillOfMaterials, {
@@ -483,39 +529,6 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsTitleFont);
 	CreateColorEditor(swInstructionsPropertyType::BillOfMaterialsTitleColor, tr("BOM Title Color"), tr("Color of the Parts List title above the bill of materials."));
 	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsTitleColor);
-
-	AddCategory(CategoryIndex::Page, tr("Page"), tr("<p><b>Page</b></p><p>The background of the step and blank pages. It applies to all these pages, or only to the current page when it has its own. The cover and the bill of materials have their own backgrounds.</p>"));
-
-	CreateColorEditor(swInstructionsPropertyType::PageBackgroundColor, tr("Page Background"), tr("Color filling the whole page of main model steps, margins included."));
-	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::PageBackgroundColor);
-	CreateColorEditor(swInstructionsPropertyType::SubmodelBackgroundColor, tr("Submodel Background"), tr("Color filling the whole page of submodel steps, margins included."));
-	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::SubmodelBackgroundColor);
-
-	// background for all or current page
-	mBackgroundPageButton = new QToolButton(this);
-	mBackgroundPageButton->setText(tr("Background on This Page Only"));
-	mBackgroundPageButton->setCheckable(true);
-	mBackgroundPageButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
-	mBackgroundPageButton->setToolTip(tr("Give this page its own background, unchecked it follows all pages."));
-	mBackgroundPageButton->setWhatsThis(mBackgroundPageButton->toolTip());
-	mBackgroundPageButton->setAccessibleName(mBackgroundPageButton->text());
-	swSetupPanelButton(mBackgroundPageButton);
-
-	connect(mBackgroundPageButton, &QToolButton::toggled, this, [this](bool PageOnly)
-	{
-		mInstructions->SetPageScope(mPageIndex, swInstructionsPropertyType::PageBackgroundColor, PageOnly);
-	});
-
-	AddRow(CategoryIndex::Page, { mBackgroundPageButton });
-
-	QToolButton* BackgroundApplyAllButton = CreateApplyAllButton(tr("Use the background of this page on every page."));
-
-	connect(BackgroundApplyAllButton, &QToolButton::clicked, this, [this]()
-	{
-		mInstructions->ApplyPageToAllPages(mPageIndex, swInstructionsPropertyType::PageBackgroundColor);
-	});
-
-	AddRow(CategoryIndex::Page, { BackgroundApplyAllButton });
 
 	AddCategory(CategoryIndex::PageLayout, tr("Steps per Page"), tr("<p><b>Steps per Page</b></p><p>The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model, and Main Page Color gives a submodel's finished model the main page color. The final model border frames that area and its margin keeps it away from the steps and page margins.</p>"));
 
@@ -630,42 +643,6 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddEditorRow(CategoryIndex::PageLayout, swInstructionsPropertyType::FinalModelMargin);
 	AddRow(CategoryIndex::PageLayout, { ApplyAllButton });
 
-	AddCategory(CategoryIndex::Divider, tr("Divider"), tr("<p><b>Divider</b></p><p>The lines between neighboring steps. Horizontal and Vertical hide the lines in one direction, for example where page colors already split the page. The margin keeps the line ends away from the page margins, the padding keeps the steps away from the lines.</p>"));
-
-	AddRow(CategoryIndex::Divider, {
-		CreateToggleEditor(swInstructionsPropertyType::ShowStepDividers, tr("Show Step Dividers"), tr("Draw lines between neighboring steps.")),
-		CreateToggleEditor(swInstructionsPropertyType::StepDividerRounded, tr("Rounded Ends"), tr("Round the line ends, off draws flat ends."))
-	});
-
-	AddRow(CategoryIndex::Divider, {
-		CreateToggleEditor(swInstructionsPropertyType::StepDividerHorizontal, tr("Horizontal"), tr("Draw the lines between steps above and below each other.")),
-		CreateToggleEditor(swInstructionsPropertyType::StepDividerVertical, tr("Vertical"), tr("Draw the lines between steps side by side."))
-	});
-
-	CreateColorEditor(swInstructionsPropertyType::StepDividerColor, tr("Divider Color"), tr("Color of the lines between steps."));
-	AddEditorRow(CategoryIndex::Divider, swInstructionsPropertyType::StepDividerColor);
-	CreateLengthEditor(swInstructionsPropertyType::StepDividerWidth, tr("Divider Width"), tr("Width of the lines between steps."), 1, 72, 0.1);
-	AddEditorRow(CategoryIndex::Divider, swInstructionsPropertyType::StepDividerWidth);
-	CreateLengthEditor(swInstructionsPropertyType::StepDividerMargin, tr("Divider Margin"), tr("Space between the line ends and the page margins."), 0, 144, 0.25);
-	AddEditorRow(CategoryIndex::Divider, swInstructionsPropertyType::StepDividerMargin);
-	CreateLengthEditor(swInstructionsPropertyType::StepDividerPadding, tr("Divider Padding"), tr("Space between the lines and the steps on each side."), 0, 144, 0.25);
-	AddEditorRow(CategoryIndex::Divider, swInstructionsPropertyType::StepDividerPadding);
-
-	AddCategory(CategoryIndex::PageNumber, tr("Page Number"), tr("<p><b>Page Number</b></p><p>The number of each page, the cover and blank pages are not numbered unless all pages are. Drag it or use the Placement panel to move it on all pages.</p>"));
-
-	AddRow(CategoryIndex::PageNumber, {
-		CreateToggleEditor(swInstructionsPropertyType::ShowPageNumber, tr("Show Page Number"), tr("Show the number of each page except the cover and blank pages.")),
-		CreateToggleEditor(swInstructionsPropertyType::ShowPageNumberAllPages, tr("Number All Pages"), tr("Number every page, the cover and blank pages included."))
-	});
-
-	// choices follow the number formats
-	CreateChoiceEditor(swInstructionsPropertyType::PageNumberFormat, tr("Page Number Format"), tr("Show the page number alone or with the page count."), { tr("Page Number"), tr("Page Number / Page Count") });
-	AddEditorRow(CategoryIndex::PageNumber, swInstructionsPropertyType::PageNumberFormat);
-	CreateFontEditor(swInstructionsPropertyType::PageNumberFont, tr("Page Number Font"), tr("Font of the page numbers."));
-	AddEditorRow(CategoryIndex::PageNumber, swInstructionsPropertyType::PageNumberFont);
-	CreateColorEditor(swInstructionsPropertyType::PageNumberColor, tr("Page Number Color"), tr("Color of the page numbers."));
-	AddEditorRow(CategoryIndex::PageNumber, swInstructionsPropertyType::PageNumberColor);
-
 	AddCategory(CategoryIndex::Step, tr("Step Number"), tr("<p><b>Step Number</b></p><p>The step number and the area behind each step. The bill of materials shows a Parts List title in its place.</p>"));
 
 	AddRow(CategoryIndex::Step, {
@@ -727,6 +704,27 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	});
 
 	AddRow(CategoryIndex::PartsList, { mThumbnailApplyAllButton });
+
+	AddCategory(CategoryIndex::Divider, tr("Divider"), tr("<p><b>Divider</b></p><p>The lines between neighboring steps. Horizontal and Vertical hide the lines in one direction, for example where page colors already split the page. The margin keeps the line ends away from the page margins, the padding keeps the steps away from the lines.</p>"));
+
+	AddRow(CategoryIndex::Divider, {
+		CreateToggleEditor(swInstructionsPropertyType::ShowStepDividers, tr("Show Step Dividers"), tr("Draw lines between neighboring steps.")),
+		CreateToggleEditor(swInstructionsPropertyType::StepDividerRounded, tr("Rounded Ends"), tr("Round the line ends, off draws flat ends."))
+	});
+
+	AddRow(CategoryIndex::Divider, {
+		CreateToggleEditor(swInstructionsPropertyType::StepDividerHorizontal, tr("Horizontal"), tr("Draw the lines between steps above and below each other.")),
+		CreateToggleEditor(swInstructionsPropertyType::StepDividerVertical, tr("Vertical"), tr("Draw the lines between steps side by side."))
+	});
+
+	CreateColorEditor(swInstructionsPropertyType::StepDividerColor, tr("Divider Color"), tr("Color of the lines between steps."));
+	AddEditorRow(CategoryIndex::Divider, swInstructionsPropertyType::StepDividerColor);
+	CreateLengthEditor(swInstructionsPropertyType::StepDividerWidth, tr("Divider Width"), tr("Width of the lines between steps."), 1, 72, 0.1);
+	AddEditorRow(CategoryIndex::Divider, swInstructionsPropertyType::StepDividerWidth);
+	CreateLengthEditor(swInstructionsPropertyType::StepDividerMargin, tr("Divider Margin"), tr("Space between the line ends and the page margins."), 0, 144, 0.25);
+	AddEditorRow(CategoryIndex::Divider, swInstructionsPropertyType::StepDividerMargin);
+	CreateLengthEditor(swInstructionsPropertyType::StepDividerPadding, tr("Divider Padding"), tr("Space between the lines and the steps on each side."), 0, 144, 0.25);
+	AddEditorRow(CategoryIndex::Divider, swInstructionsPropertyType::StepDividerPadding);
 
 	AddCategory(CategoryIndex::Notice, tr("Notice"), tr("<p><b>Notice</b></p><p>Free text written on a page to point out something. Right-click the page and choose Add Notice to write one, double-click it to edit its text. Drag it, lock it in place or give it pointers like any other element.</p>"));
 
@@ -1630,13 +1628,12 @@ void swInstructionsPropertiesWidget::UpdateCategories()
 
 			Visible[static_cast<int>(CategoryIndex::Document)] = true;
 			Visible[static_cast<int>(CategoryIndex::Cover)] = true;
+			Visible[static_cast<int>(CategoryIndex::Page)] = PageType != swInstructionsPageType::Cover;
 			Visible[static_cast<int>(CategoryIndex::BillOfMaterials)] = true;
 			Visible[static_cast<int>(CategoryIndex::PageLayout)] = PageType == swInstructionsPageType::Steps;
-			Visible[static_cast<int>(CategoryIndex::Divider)] = PageType == swInstructionsPageType::Steps;
-			Visible[static_cast<int>(CategoryIndex::Page)] = PageType == swInstructionsPageType::Steps || PageType == swInstructionsPageType::Blank;
-			Visible[static_cast<int>(CategoryIndex::PageNumber)] = PageType != swInstructionsPageType::Cover;
 			Visible[static_cast<int>(CategoryIndex::Step)] = PageType == swInstructionsPageType::Steps;
 			Visible[static_cast<int>(CategoryIndex::PartsList)] = PageType == swInstructionsPageType::Steps || PageType == swInstructionsPageType::BillOfMaterials;
+			Visible[static_cast<int>(CategoryIndex::Divider)] = PageType == swInstructionsPageType::Steps;
 			Visible[static_cast<int>(CategoryIndex::Notice)] = true;
 			Visible[static_cast<int>(CategoryIndex::Pointer)] = true;
 			Visible[static_cast<int>(CategoryIndex::Box)] = true;
@@ -1660,7 +1657,7 @@ void swInstructionsPropertiesWidget::UpdateCategories()
 		break;
 
 	case FocusType::PageNumber:
-		Visible[static_cast<int>(CategoryIndex::PageNumber)] = true;
+		Visible[static_cast<int>(CategoryIndex::Page)] = true;
 		Visible[static_cast<int>(CategoryIndex::Box)] = true;
 		break;
 
@@ -1694,4 +1691,11 @@ void swInstructionsPropertiesWidget::UpdateCategories()
 		Category.Button->setVisible(Visible[Index]);
 		Category.Rows->setVisible(Visible[Index] && Category.Button->IsExpanded());
 	}
+
+	// only step and blank backgrounds
+	const swInstructionsPageType PageType = GetPageType();
+	const bool PageBackground = PageType == swInstructionsPageType::Steps || PageType == swInstructionsPageType::Blank;
+
+	for (QWidget* Row : mPageBackgroundRows)
+		Row->setVisible(PageBackground);
 }

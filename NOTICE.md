@@ -6,6 +6,10 @@
   - Instructions: Highlight Width sets how thick the new part outline is, from 1 to 72, and wide outlines stay solid
   - Instructions: the highlight color keeps the opacity you pick, no longer held between 85 and 95 percent
   - Instructions: Final Border, Final Border Color and Final Margin in Steps per Page frame the final model area and keep it away from the steps and page margins, none by default
+  - Instructions: the Properties groups follow the page from largest to smallest, Page before Bill of Materials and Step Number, Parts List then Divider after Steps per Page
+  - Instructions: Page Number is part of the Page group, the bill of materials shows only its number settings there
+  - Translations: the merged Page help reads right in all nine languages
+  - Site: the Properties image is retaken to show the new group order
   - Translations: the new highlight and final model settings read right in all nine languages
   - Site: the Instructions, Rendering, Views and Interface images are retaken to show the panel fold arrows and the new instructions settings, and the Instructions features name Step Flow, the final model, dividers, Model Size, Highlight Width, text files and Undo and Redo
   - Site: the POV-Ray and Blender Render images show the full output path the windows fill in
