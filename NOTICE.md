@@ -11,6 +11,7 @@
   - Translations: every line in all nine languages was reviewed, the missing ones translated, and each language uses one word per meaning, the same words as its menus
   - Translations: snap sizes read as studs, plates and bricks in every language, and each property row letter matches its row name
   - Translations: Yes, No and the other dialog buttons follow the language picked in StudWorx
+  - Instructions: Undo and Redo at the start of the page bar, and the main window Undo and Redo shortcuts, take back and put back changes to the instructions, quick changes to one setting counting as one
   - Preferences: the Get Key button widens to show its whole label in longer languages
   - Translations: every machine-translated line in all nine languages was checked, and about 2,900 wrong ones now read right, like Close that read as near, Light as pale and Stud as earring
   - Translations: Traditional Chinese uses Taiwan words, like 匯入 and 匯出 for import and export

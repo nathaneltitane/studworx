@@ -610,6 +610,10 @@ public:
 	void SetShowElementPadding(bool ShowElementPadding);
 	void SetShowElementAnchors(bool ShowElementAnchors);
 	void SetShowRulers(bool ShowRulers);
+	bool CanUndo() const;
+	bool CanRedo() const;
+	void Undo();
+	void Redo();
 
 //protected:
 	std::vector<swInstructionsPage> mPages;
@@ -635,12 +639,15 @@ signals:
 	void PageLayoutChanged();
 	void GridChanged();
 	void UnitsChanged();
+	void HistoryChanged();
 
 protected:
 	void SetDefaultProperties();
 	void LoadCommandLines();
 	QStringList GetCommandLines() const;
 	void StoreCommandLines();
+	void ReloadCommandLines();
+	void RestoreCommandLines(std::vector<QStringList>& From, std::vector<QStringList>& To);
 	void CreatePages();
 	void AddDefaultPages(swModel* Model, std::vector<const swModel*>& AddedModels);
 	void AddBlankPages(swInstructionsPage& Page, const swInstructionsStepKey& Key);
@@ -676,6 +683,10 @@ protected:
 	QColor mRulerPointerColor;
 	int mNextNoticeId = 1;
 	int mNextPointerId = 1;
+	std::vector<QStringList> mUndoLines;
+	std::vector<QStringList> mRedoLines;
+	std::vector<int> mChangedLines;
+	QElapsedTimer mChangeTimer;
 
 	static const float mDisplayDPI;
 

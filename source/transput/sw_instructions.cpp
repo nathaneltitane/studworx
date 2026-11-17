@@ -151,7 +151,21 @@ void swInstructions::SetProject(Project* Project)
 {
 	mProject = Project;
 
-	// read the commands of the new project
+	// a new project starts a new history
+
+	mUndoLines.clear();
+	mRedoLines.clear();
+	mChangedLines.clear();
+
+	ReloadCommandLines();
+
+	emit HistoryChanged();
+}
+
+void swInstructions::ReloadCommandLines()
+{
+	// read the commands of the project
+
 	mPages.clear();
 	mPageSettingsOverrides.clear();
 	mPagePropertyOverrides.clear();

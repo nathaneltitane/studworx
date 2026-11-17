@@ -616,13 +616,87 @@ void swInstructions::StoreCommandLines()
 		return;
 
 	const QStringList CommandLines = GetCommandLines();
+	const QStringList StoredLines = MainModel->GetInstructionLines();
 
-	if (CommandLines == MainModel->GetInstructionLines())
+	if (CommandLines == StoredLines)
 		return;
+
+	// quick changes to the same lines share one undo step
+
+	std::vector<int> ChangedLines;
+
+	if (CommandLines.size() == StoredLines.size())
+	{
+		for (int LineIndex = 0; LineIndex < CommandLines.size(); LineIndex++)
+			if (CommandLines[LineIndex] != StoredLines[LineIndex])
+				ChangedLines.push_back(LineIndex);
+	}
+
+	const bool Merge = !mUndoLines.empty() && !ChangedLines.empty() && ChangedLines == mChangedLines && mChangeTimer.isValid() && mChangeTimer.elapsed() < 1000;
+
+	if (!Merge)
+	{
+		mUndoLines.push_back(StoredLines);
+
+		if (mUndoLines.size() > 100)
+			mUndoLines.erase(mUndoLines.begin());
+	}
+
+	mChangedLines = ChangedLines;
+	mChangeTimer.start();
+	mRedoLines.clear();
 
 	MainModel->SetInstructionLines(CommandLines);
 	mProject->MarkAsModified();
 
 	if (gMainWindow)
 		gMainWindow->UpdateTitle();
+
+	emit HistoryChanged();
+}
+
+bool swInstructions::CanUndo() const
+{
+	return !mUndoLines.empty();
+}
+
+bool swInstructions::CanRedo() const
+{
+	return !mRedoLines.empty();
+}
+
+void swInstructions::Undo()
+{
+	RestoreCommandLines(mUndoLines, mRedoLines);
+}
+
+void swInstructions::Redo()
+{
+	RestoreCommandLines(mRedoLines, mUndoLines);
+}
+
+void swInstructions::RestoreCommandLines(std::vector<QStringList>& From, std::vector<QStringList>& To)
+{
+	swModel* MainModel = mProject ? mProject->GetMainModel() : nullptr;
+
+	if (!MainModel || From.empty())
+		return;
+
+	// keep the current lines for the way back
+
+	To.push_back(MainModel->GetInstructionLines());
+	MainModel->SetInstructionLines(From.back());
+	From.pop_back();
+	mChangedLines.clear();
+
+	ReloadCommandLines();
+
+	emit StepSettingsChanged(nullptr, 0);
+
+	mProject->MarkAsModified();
+
+	if (gMainWindow)
+		gMainWindow->UpdateTitle();
+
+	emit HistoryChanged();
 }

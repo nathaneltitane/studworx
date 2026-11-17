@@ -15371,142 +15371,167 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>正在打印页面...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="81"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="97"/>
         <source>Show or hide the Print panel to print the instruction pages</source>
         <translation>显示或隐藏打印面板以打印说明书页面</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="84"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="100"/>
         <source>Export HTML</source>
         <translation>导出 HTML</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="85"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="101"/>
         <source>Export the instruction pages as HTML pages and images</source>
         <translation>将说明书页面导出为 HTML 页面和图像</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="95"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="111"/>
         <source>Ctrl+Shift+E</source>
         <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="97"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="113"/>
         <source>Show or hide the Editor panel to inspect and edit the text of the model file</source>
         <translation>显示或隐藏编辑器面板，以查看和编辑模型文件的文本</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="186"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="202"/>
         <source>%1 - Cover</source>
         <translation>%1 - 封面</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="190"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="206"/>
         <source>%1 - Bill of Materials</source>
         <translation>%1 - 物料清单</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="194"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="210"/>
         <source>%1 - Blank</source>
         <translation>%1 - 空白页</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="360"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="376"/>
         <source>&lt;p&gt;&lt;b&gt;Page Bar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The timeline First, Previous, Next and Last shortcuts turn the pages too while the page or the Pages panel has focus.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;页面栏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;转到第一页、上一页、下一页或最后一页，或者直接转到封面或物料清单，这些页面关闭时对应按钮显示为灰色。步骤页会在当前页之前插入一个空步骤，空白页会在其之前插入一个空白页，移除页面会移除空白页或只含空步骤的页面。右侧的框显示当前页，输入数字即可转到该页。当页面或页面面板获得焦点时，时间线的第一个、上一个、下一个和最后一个快捷键也会翻页。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="368"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="386"/>
+        <source>&lt;p&gt;&lt;b&gt;Undo and Redo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Undo takes back your last change to the instructions, Redo puts it back. Quick changes to the same setting count as one change. The main window Undo and Redo shortcuts work here too.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;撤销和重做&lt;/b&gt;&lt;/p&gt;&lt;p&gt;撤销会取消你对说明书的上一次更改，重做会恢复它。对同一设置的快速更改算作一次更改。主窗口的撤销和重做快捷键在这里同样可用。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="388"/>
+        <source>&amp;Undo</source>
+        <translation>撤销</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="388"/>
+        <source>Take back the last change to the instructions</source>
+        <translation>撤销对说明书的上一次更改</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="390"/>
+        <source>Re&amp;do</source>
+        <translation>重做</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="390"/>
+        <source>Put back the last change that was taken back</source>
+        <translation>重做上一次撤销的更改</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="402"/>
         <source>&amp;First</source>
         <translation>第一个</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="368"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="402"/>
         <source>Go to the first page</source>
         <translation>转到第一页</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="369"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="403"/>
         <source>&amp;Previous</source>
         <translation>上一个</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="369"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="403"/>
         <source>Go to the previous page</source>
         <translation>转到上一页</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="370"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
         <source>&amp;Cover</source>
         <translation>封面</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="370"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
         <source>Go to the cover page</source>
         <translation>转到封面页</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="371"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="405"/>
         <source>&amp;Step Page</source>
         <translation>步骤页</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="371"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="405"/>
         <source>Insert an empty step before the current page</source>
         <translation>在当前页之前插入一个空步骤</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="372"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="406"/>
         <source>Bl&amp;ank Page</source>
         <translation>空白页</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="372"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="406"/>
         <source>Insert a blank page before the current page</source>
         <translation>在当前页之前插入一个空白页</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="373"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="407"/>
         <source>&amp;Remove Page</source>
         <translation>移除页面</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="373"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="407"/>
         <source>Remove the current page when it is blank or holds only empty steps</source>
         <translation>当前页为空白或只含空步骤时将其移除</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="374"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="408"/>
         <source>&amp;Bill of Materials</source>
         <translation>物料清单</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="374"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="408"/>
         <source>Go to the bill of materials page</source>
         <translation>转到物料清单页</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="375"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="409"/>
         <source>&amp;Next</source>
         <translation>下一个</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="375"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="409"/>
         <source>Go to the next page</source>
         <translation>转到下一页</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="376"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="410"/>
         <source>&amp;Last</source>
         <translation>最后一个</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="376"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="410"/>
         <source>Go to the last page</source>
         <translation>转到最后一页</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="382"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="416"/>
         <source>Current page out of all pages, type a number to go there</source>
         <translation>当前页码及总页数，输入数字即可转到该页</translation>
     </message>
@@ -15523,7 +15548,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">横向</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="181"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="197"/>
         <source>Page %1</source>
         <translation>第 %1 页</translation>
     </message>

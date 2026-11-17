@@ -69,6 +69,22 @@ swInstructionsDialog::swInstructionsDialog(QWidget* Parent, Project* Project)
 		}
 	}
 
+	// undo keys follow the main window, text boxes keep their own
+
+	const std::pair<int, QToolButton*> HistoryCommands[] =
+	{
+		{ SW_EDIT_UNDO, mUndoButton },
+		{ SW_EDIT_REDO, mRedoButton }
+	};
+
+	for (const auto& [CommandId, Button] : HistoryCommands)
+	{
+		QAction* HistoryAction = gMainWindow->mActions[CommandId];
+		QShortcut* Shortcut = new QShortcut(HistoryAction->shortcut(), this, nullptr, nullptr, Qt::WindowShortcut);
+		connect(Shortcut, &QShortcut::activated, Button, &QToolButton::click);
+		connect(HistoryAction, &QAction::changed, Shortcut, [Shortcut, HistoryAction]() { Shortcut->setKey(HistoryAction->shortcut()); });
+	}
+
 	// print panel opens below the grid
 	mPrintWidget = new swInstructionsPrintWidget(this, mInstructions);
 	mPrintWidget->setObjectName("InstructionsPrint");
@@ -364,6 +380,24 @@ QWidget* swInstructionsDialog::CreatePageBar()
 	};
 
 	QListWidget* ThumbnailsWidget = mPageListWidget->mThumbnailsWidget;
+
+	// undo and redo take back instruction changes
+
+	const QString HistoryWhatsThis = tr("<p><b>Undo and Redo</b></p><p>Undo takes back your last change to the instructions, Redo puts it back. Quick changes to the same setting count as one change. The main window Undo and Redo shortcuts work here too.</p>");
+
+	mUndoButton = CreateButton(tr("&Undo"), tr("Take back the last change to the instructions"), gMainWindow->mActions[SW_EDIT_UNDO]->icon(), false, [this]() { mInstructions->Undo(); });
+	mUndoButton->setWhatsThis(HistoryWhatsThis);
+	mRedoButton = CreateButton(tr("Re&do"), tr("Put back the last change that was taken back"), gMainWindow->mActions[SW_EDIT_REDO]->icon(), false, [this]() { mInstructions->Redo(); });
+	mRedoButton->setWhatsThis(HistoryWhatsThis);
+
+	auto UpdateHistoryButtons = [this]()
+	{
+		mUndoButton->setEnabled(mInstructions->CanUndo());
+		mRedoButton->setEnabled(mInstructions->CanRedo());
+	};
+
+	connect(mInstructions, &swInstructions::HistoryChanged, this, UpdateHistoryButtons);
+	UpdateHistoryButtons();
 
 	mFirstButton = CreateButton(tr("&First"), tr("Go to the first page"), swCreatePaintedIcon(swPaintedIcon::TimeFirst), false, [this]() { ShowPage(0); });
 	mPreviousButton = CreateButton(tr("&Previous"), tr("Go to the previous page"), swCreatePaintedIcon(swPaintedIcon::TimePrevious), false, [this, ThumbnailsWidget]() { ShowPage(ThumbnailsWidget->currentRow() - 1); });

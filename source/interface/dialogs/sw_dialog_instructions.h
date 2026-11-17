@@ -63,6 +63,8 @@ protected:
 	swInstructionsPrintWidget* mPrintWidget = nullptr;
 	swInstructionsEditorWidget* mEditorWidget = nullptr;
 
+	QToolButton* mUndoButton = nullptr;
+	QToolButton* mRedoButton = nullptr;
 	QToolButton* mFirstButton = nullptr;
 	QToolButton* mPreviousButton = nullptr;
 	QToolButton* mCoverButton = nullptr;
