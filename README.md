@@ -23,7 +23,7 @@ Every feature, menu and panel is listed in [SITE.md](SITE.md) and shown on [stud
 
 ---
 
-### TL;DR
+### TL:DR
 
 **Install ↴**
 

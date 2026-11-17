@@ -156,7 +156,7 @@ void swTests::DocumentationKeepsFeaturesShort()
 	const QString Site = ReadSourceFile(QStringLiteral("index.html"));
 	QVERIFY(!Site.isEmpty());
 
-	const QRegularExpressionMatch Placeholder = QRegularExpression(QStringLiteral("@[A-Z_]+@|<!-- include ")).match(Site);
+	const QRegularExpressionMatch Placeholder = QRegularExpression(QStringLiteral("@[A-Z_]+@|\\[//\\]: # \\(include ")).match(Site);
 	QVERIFY2(!Placeholder.hasMatch(), qPrintable(QStringLiteral("index.html holds an unfilled placeholder, regenerate the site: ") + Placeholder.captured(0)));
 }
 

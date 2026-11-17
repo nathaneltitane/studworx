@@ -1,10 +1,10 @@
 # Site
 
-Every section of [studworx.app](https://studworx.app), features first. `tools/studworx-site` builds the page from this file. Each `##` section starts with a comment that sets its page id and heading, its icon comes from `resources/css/logo.css`, and its first paragraph is the lead. A `<!-- gallery class -->` comment turns the images and video links below it into one gallery, and the title of a single image sets its figure class. A `<!-- video -->` comment turns the link below it into a looping video, with the link text as its caption. A `<!-- include name -->` comment places generated content: the meta command list, the command index, the help search or the latest notices. A paragraph made of a single link ending in › becomes a more link, and `@VERSION@`, `@COMMANDS@` and `@ENTRIES@` are filled with the release version, the command count and the help entry count.
+Every section of [studworx.app](https://studworx.app), features first. `tools/studworx-site` builds the page from this file. Each `##` section starts with a comment that sets its page id and heading, its icon comes from `resources/css/logo.css`, and its first paragraph is the lead. A `[//]: # (gallery class)` comment turns the images and video links below it into one gallery, and the title of a single image sets its figure class. A `[//]: # (video)` comment turns the link below it into a looping video, with the link text as its caption. A `[//]: # (include name)` comment places generated content: the meta command list, the command index, the help search or the latest notices. A paragraph made of a single link ending in › becomes a more link, and `@VERSION@`, `@COMMANDS@` and `@ENTRIES@` are filled with the release version, the command count and the help entry count.
 
 ## Interface
 
-<!-- interface | INTERFACE // MENUS, WINDOW AND HELP -->
+[//]: # (interface | INTERFACE // MENUS, WINDOW AND HELP)
 
 StudWorx is built from standard Qt widgets: panels, dialogs and windows follow your system style and light or dark theme, and only the model views draw with OpenGL. Menus are grouped by task, every icon and cursor is drawn in code so it stays sharp at any size, and every dialog and panel explains itself.
 
@@ -18,7 +18,7 @@ StudWorx is built from standard Qt widgets: panels, dialogs and windows follow y
 - **Ten languages.** English, French, German, Spanish, Portuguese, Czech, Ukrainian, Russian, Simplified Chinese and Traditional Chinese.
 - **Color theme.** Follow the system, or force the light or dark theme, from Preferences.
 
-<!-- gallery scroll -->
+[//]: # (gallery scroll)
 
 ![The main window with the model view, Parts, Preview, Minifigure Builder, Timeline, Colors, Properties, Joints and Terminal panels](resources/images/interface-window-main.png)
 ![Split views](resources/images/interface-feature-split-views.png)
@@ -27,7 +27,7 @@ StudWorx is built from standard Qt widgets: panels, dialogs and windows follow y
 
 ## Toolbars
 
-<!-- toolbars | TOOLBARS // STANDARD, TOOLS AND TIME -->
+[//]: # (toolbars | TOOLBARS // STANDARD, TOOLS AND TIME)
 
 Toolbars hold the controls you reach for most, the same whatever you are working on. Show or hide each one from View > Toolbars or a right click on any toolbar, drag one by its handle to dock it on another edge or float it, and Lock Interface keeps them where they are.
 
@@ -36,18 +36,18 @@ Toolbars hold the controls you reach for most, the same whatever you are working
 - **Time.** Play through the building steps, and set or remove animation keys.
 - **Transform.** Type a position or rotation for the selection and apply it, as absolute coordinates or relative to where it is now. It has no entry of its own: its fields sit at the bottom of the Properties panel, shown with View > Toolbars > Properties Panel.
 
-<!-- gallery scroll -->
+[//]: # (gallery scroll)
 
 ![Standard, Tools and Time toolbars](resources/images/toolbars-widget-toolbars.png)
 ![Tools toolbar](resources/images/toolbars-widget-tools.png)
 
 ## Files
 
-<!-- files | FILES // OPEN, IMPORT, EXPORT AND PRINT -->
+[//]: # (files | FILES // OPEN, IMPORT, EXPORT AND PRINT)
 
 Models are plain LDraw text files in LeoCAD's format, so they open in either program. StudWorx reads and writes them, imports from other tools, exports to 3D and parts list formats, and prints the current view.
 
-<!-- gallery one -->
+[//]: # (gallery one)
 
 ![Model thumbnails in Dolphin](resources/images/files-feature-thumbnails.png)
 
@@ -93,7 +93,7 @@ studworx model.ldr opens a model. The options below work without opening a windo
 | --import-categories, --export-categories | Part categories |
 | -v, --version, -h, --help | Version and usage |
 
-<!-- gallery scroll -->
+[//]: # (gallery scroll)
 
 ![LeoCAD meta command migration](resources/images/files-window-meta-migration.png)
 ![Missing and moved parts](resources/images/files-window-missing-parts.png)
@@ -106,11 +106,11 @@ studworx model.ldr opens a model. The options below work without opening a windo
 
 ## Image
 
-<!-- image | SAVE MODEL IMAGE // STILLS AND ANIMATED GIFS -->
+[//]: # (image | SAVE MODEL IMAGE // STILLS AND ANIMATED GIFS)
 
 File > Image saves still images and animated GIFs of the active model. The preview on the left shows exactly what will be saved, and the settings on the right are grouped by what they change. Every setting is kept for the next time.
 
-<!-- gallery three -->
+[//]: # (gallery three)
 
 ![Turntable](resources/images/image-feature-turntable.gif)
 ![Steps](resources/images/image-feature-steps.gif)
@@ -159,7 +159,7 @@ The dialog keeps its settings in the [Settings] group of ~/.config/StudWorx/Stud
 | ImageHoldLast | Hold Last |
 | ImageFit, ImageCenter, ImageMargin, ImageFitScope | Framing |
 
-<!-- gallery scroll -->
+[//]: # (gallery scroll)
 
 ![Still image: background, steps, framing, size and file](resources/images/image-window-still-image.png)
 ![Animated GIF turntable](resources/images/image-window-turntable.png)
@@ -168,11 +168,11 @@ The dialog keeps its settings in the [Settings] group of ~/.config/StudWorx/Stud
 
 ## Rendering
 
-<!-- rendering | RENDERING // LIGHTING, SHADING AND RENDERERS -->
+[//]: # (rendering | RENDERING // LIGHTING, SHADING AND RENDERERS)
 
 The model view draws fast with OpenGL in four lighting styles, and File > Render hands the model to POV-Ray or Blender for photo quality images.
 
-<!-- gallery four -->
+[//]: # (gallery four)
 
 ![A POV-Ray render](resources/images/rendering-feature-pov-ray.png)
 ![Standard](resources/images/rendering-feature-standard.png)
@@ -195,7 +195,7 @@ The model view draws fast with OpenGL in four lighting styles, and File > Render
 - **Selection highlight.** Selected parts get an outline or a tint, and you choose how thick and how see-through it is.
 - **Anti-aliasing.** 2x, 4x or 8x samples, and an adjustable line width.
 
-<!-- gallery scroll -->
+[//]: # (gallery scroll)
 
 ![Render window](resources/images/rendering-window-render.png)
 ![Blender render window](resources/images/rendering-window-blender-render.png)
@@ -204,18 +204,18 @@ The model view draws fast with OpenGL in four lighting styles, and File > Render
 
 ## Modeling
 
-<!-- modeling | MODELING // PARTS, SELECTION AND TRANSFORMS -->
+[//]: # (modeling | MODELING // PARTS, SELECTION AND TRANSFORMS)
 
 Pick a part in the Parts panel, drop it in the model view, then move, rotate, paint and group it. Snapping keeps everything on the LDraw grid, and selection tools find the parts you need in large models.
 
-<!-- gallery four -->
+[//]: # (gallery four)
 
 ![Flex Path control points](resources/images/modeling-feature-flex-path.png)
 ![Train track](resources/images/modeling-feature-train-track.png)
 ![Explode](resources/images/modeling-feature-explode.png)
 ![Connection Points](resources/images/modeling-feature-connection-points.png)
 
-<!-- gallery three -->
+[//]: # (gallery three)
 
 [A Flex Path hose follows its end point as it moves, then seats back on its brick](resources/videos/studworx-flex-01.mp4)
 [A hose end seated on a newly placed brick, the path bending to reach it](resources/videos/studworx-flex-02.mp4)
@@ -244,7 +244,7 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 - **Pivot points and keyframes.** Put the turning point of each part back at its center, or clear the animation of the selected parts.
 - **Lights and cameras.** Lights and cameras are placed in the model and saved with it, see Tools.
 
-<!-- gallery scroll -->
+[//]: # (gallery scroll)
 
 ![The Find and Replace bar](resources/images/modeling-widget-find-replace.png)
 ![Select by Name](resources/images/modeling-window-select-by-name.png)
@@ -254,11 +254,11 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 
 ## Tools
 
-<!-- tools | TOOLS // MOUSE, LIGHTS AND CAMERAS -->
+[//]: # (tools | TOOLS // MOUSE, LIGHTS AND CAMERAS)
 
 The Tools toolbar sets what the mouse does in the model view. Every tool has a keyboard shortcut, and mouse buttons with modifier keys can start any tool for one drag.
 
-<!-- gallery two -->
+[//]: # (gallery two)
 
 ![Lights and cameras](resources/images/tools-feature-lights-cameras.png)
 ![Joints animation of a minifigure](resources/images/tools-feature-joints-animation.gif)
@@ -283,7 +283,7 @@ Give a placed submodel a joint, turn it with the mouse and save the angles as po
 - **Poses panel.** Save the joint angles of a model as a named pose, like sitting or waving, and bring them back in one step. Poses are saved in the model's own file.
 - **Joints motion.** Make an animated GIF that moves the model smoothly from pose to pose and back.
 
-<!-- gallery scroll -->
+[//]: # (gallery scroll)
 
 ![Light properties](resources/images/tools-widget-light-properties.png)
 ![Light color](resources/images/tools-widget-light-color.png)
@@ -291,11 +291,11 @@ Give a placed submodel a joint, turn it with the mouse and save the angles as po
 
 ## Views
 
-<!-- views | VIEWS // CUBE, CAMERAS, CUTAWAYS AND GRIDS -->
+[//]: # (views | VIEWS // CUBE, CAMERAS, CUTAWAYS AND GRIDS)
 
 Look at a model from any side, see inside it without changing it, and measure it against the grid.
 
-<!-- gallery three -->
+[//]: # (gallery three)
 
 ![View cube small labels](resources/images/views-feature-view-cube-small-labels.png)
 ![View cube large abbreviations](resources/images/views-feature-view-cube-large-abbreviations.png)
@@ -327,11 +327,11 @@ Look at a model from any side, see inside it without changing it, and measure it
 
 ## Steps
 
-<!-- steps | STEPS // BUILD ORDER AND TIMELINE -->
+[//]: # (steps | STEPS // BUILD ORDER AND TIMELINE)
 
 Every part belongs to a building step. Steps drive the model view, the instructions and the animated GIFs.
 
-<!-- gallery two -->
+[//]: # (gallery two)
 
 ![Fade and highlight](resources/images/steps-feature-fade-highlight.png)
 ![Submodel hover outline over a selection](resources/images/steps-feature-hover-outline.png)
@@ -346,7 +346,7 @@ Every part belongs to a building step. Steps drive the model view, the instructi
 - **Animation keys.** Animation keys remember where parts, lights and cameras are at each step. Add Keys records them as you work, and a round button in the Properties panel adds or removes one.
 - **Keyframes panel.** A full-width timeline of the animation, one column per step and one row per object, with a diamond for each key. Add, remove and drag keys, and play the animation from the panel or the Time toolbar.
 
-<!-- gallery scroll -->
+[//]: # (gallery scroll)
 
 ![Timeline panel](resources/images/steps-widget-timeline.png)
 ![Keyframes panel](resources/images/steps-widget-keyframes.png)
@@ -354,7 +354,7 @@ Every part belongs to a building step. Steps drive the model view, the instructi
 
 ## Panels
 
-<!-- panels | PANELS // PARTS, COLORS, PROPERTIES AND MORE -->
+[//]: # (panels | PANELS // PARTS, COLORS, PROPERTIES AND MORE)
 
 Panels dock side by side in any area of the main window, with uniform headers, buttons and text boxes sized from their options button.
 
@@ -372,7 +372,7 @@ Panels dock side by side in any area of the main window, with uniform headers, b
 - **Terminal.** An embedded terminal sized to whole rows and columns, with Open Model Folder.
 - **Terminal folders.** Follow Model Folder moves the terminal to the folder of each model you open, and Go to Model Folder moves it there once.
 
-<!-- gallery scroll -->
+[//]: # (gallery scroll)
 
 ![Parts](resources/images/panels-widget-parts.png)
 ![Part tooltip](resources/images/panels-widget-part-tooltip.png)
@@ -389,11 +389,11 @@ Panels dock side by side in any area of the main window, with uniform headers, b
 
 ## Instructions
 
-<!-- instructions | INSTRUCTIONS // PAGES READY TO PRINT -->
+[//]: # (instructions | INSTRUCTIONS // PAGES READY TO PRINT)
 
 File > Instructions lays the steps out on pages with a cover, parts lists and a bill of materials. Every page element can be styled and placed, and everything is saved in the model file as !SW INSTRUCTION meta commands.
 
-<!-- gallery three -->
+[//]: # (gallery three)
 
 ![Cover page](resources/images/instructions-feature-cover-page.png)
 ![Step page](resources/images/instructions-feature-step-page.png)
@@ -410,7 +410,7 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 - **Element inspector.** Like a web browser's inspector, it shows the space around and inside every page element, so you can line things up. It never prints.
 - **Editor, Export HTML and Print.** An Editor panel to read and edit the model file text, whose height snaps to whole lines so no line is ever cut off, Export HTML for the instruction pages, and a built-in Print panel.
 
-<!-- gallery scroll -->
+[//]: # (gallery scroll)
 
 ![The Instructions window](resources/images/instructions-window-instructions.png)
 ![Page Setup](resources/images/instructions-window-page-setup.png)
@@ -424,11 +424,11 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 
 ## Models
 
-<!-- models | MODELS // SUBMODELS AND PROPERTIES -->
+[//]: # (models | MODELS // SUBMODELS AND PROPERTIES)
 
 Large builds split into submodels that you can edit on their own or in place, inside the model that uses them.
 
-<!-- gallery one -->
+[//]: # (gallery one)
 
 ![Editing a submodel in place](resources/images/models-feature-edit-in-place.png)
 
@@ -440,7 +440,7 @@ Large builds split into submodels that you can edit on their own or in place, in
 - **Editing commands.** Step into the selected submodel to edit it in place, and step back out to its parent.
 - **Names.** Consistent default names and numbered duplicates: Submodel 001.ldr, and Car.ldr becomes Car 001.ldr.
 
-<!-- gallery scroll -->
+[//]: # (gallery scroll)
 
 ![Model properties](resources/images/models-window-properties.png)
 ![Parts](resources/images/models-window-parts.png)
@@ -448,7 +448,7 @@ Large builds split into submodels that you can edit on their own or in place, in
 
 ## Preferences
 
-<!-- preferences | PREFERENCES // EVERY SETTING IN ONE PLACE -->
+[//]: # (preferences | PREFERENCES // EVERY SETTING IN ONE PLACE)
 
 Nine pages with lined up label and control columns, checkboxes included, each label greyed out with its control. Value boxes show their maximum and bring any typed number into range, and every slider shows its value.
 
@@ -463,7 +463,7 @@ Nine pages with lined up label and control columns, checkboxes included, each la
 - **Shortcut filters.** Filter commands and tools by name or shortcut, give each two shortcuts, and reset them to the defaults.
 - **From LeoCAD.** Settings, part palettes and minifigure templates are copied from LeoCAD on the first start.
 
-<!-- gallery scroll -->
+[//]: # (gallery scroll)
 
 ![General](resources/images/preferences-window-general.png)
 ![Rendering](resources/images/preferences-window-rendering.png)
@@ -479,31 +479,31 @@ Nine pages with lined up label and control columns, checkboxes included, each la
 
 ## Meta
 
-<!-- meta | META COMMANDS // LDRAW LINE HANDLING -->
+[//]: # (meta | META COMMANDS // LDRAW LINE HANDLING)
 
 Every meta command StudWorx reads, writes or keeps: the official LDraw ones, its own !SW commands, LeoCAD commands it migrates, and the commands of MLCad, LPub, LSynth, L3P, LDLite and Blender.
 
-<!-- include meta -->
+[//]: # (include meta)
 
 ## Where Is It
 
-<!-- where | WHERE IS IT? // EVERY COMMAND AND ITS MENU -->
+[//]: # (where | WHERE IS IT? // EVERY COMMAND AND ITS MENU)
 
 Where to find each of the @COMMANDS@ commands: the menu bar, the toolbars, the panel gear buttons and every right click menu, with its shortcut. Type part of a command name to find it.
 
-<!-- include where -->
+[//]: # (include where)
 
 ## Help
 
-<!-- help | HELP // EVERY "WHAT'S THIS?" ENTRY -->
+[//]: # (help | HELP // EVERY "WHAT'S THIS?" ENTRY)
 
 The same help the app shows from Help > "What's This?", the title bar question mark or F1: @ENTRIES@ entries for every menu command, panel and dialog. Search them, or pick an area.
 
-<!-- include search -->
+[//]: # (include search)
 
 ## Install
 
-<!-- install | INSTALL // DOWNLOAD, BUILD AND RUN -->
+[//]: # (install | INSTALL // DOWNLOAD, BUILD AND RUN)
 
 Packages are rebuilt from every change and carry the date version of the release. They include their own Qt libraries and the LDraw parts library.
 
@@ -547,10 +547,10 @@ studworx/tools/studworx-install [prefix] [build directory]
 
 ## News
 
-<!-- news | NEWS // LATEST CHANGES -->
+[//]: # (news | NEWS // LATEST CHANGES)
 
 The latest release notices from the StudWorx repository.
 
-<!-- include notice -->
+[//]: # (include notice)
 
 [Read every notice ›](https://github.com/nathaneltitane/studworx/blob/main/NOTICE.md)
