@@ -7,6 +7,7 @@
   - Instructions: the highlight color keeps the opacity you pick, no longer held between 85 and 95 percent
   - Instructions: Final Border, Final Border Color and Final Margin in Steps per Page frame the final model area and keep it away from the steps and page margins, none by default
   - Translations: the new highlight and final model settings read right in all nine languages
+  - Site: the Instructions, Rendering, Views and Interface images are retaken to show the panel fold arrows and the new instructions settings, and the Instructions features name Step Flow, the final model, dividers, Model Size, Highlight Width, text files and Undo and Redo
 
   </details>
 
@@ -40,8 +41,6 @@
   - Instructions: the Steps per Page buttons show only their divider lines, the button is the page, one step per page shows a circle
   - Instructions: new part outlines on large step images no longer show seam lines
   - Instructions: Show Author sits on its own row
-  - Instructions: Highlight Width sets the new part outline thickness, wide outlines stay solid, and the highlight color keeps the opacity you pick
-  - Instructions: the final model area gets its own border and margin, none by default
 
   </details>
 

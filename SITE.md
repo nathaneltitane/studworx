@@ -400,10 +400,10 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 ![Bill of materials](resources/images/instructions-feature-bill-of-materials.png)
 
 - **Page setup.** Paper and screen presets, metric or imperial units, margins and orientation.
-- **Page bar.** Turn the instruction pages, jump to the cover or the bill of materials, type a page number, and insert or remove blank pages and empty steps.
-- **Pages.** Instructions get a cover with the title and author, a list of every part, and as many steps per page as you want, each page with its own background.
-- **Style.** Choose the font, how steps are divided, how the model is drawn, and how the parts list looks and is sorted.
-- **Step images.** Parts new to each step are outlined and the earlier ones fade.
+- **Page bar.** Undo and redo changes, turn the instruction pages, jump to the cover or the bill of materials, type a page number, and insert or remove blank pages and empty steps.
+- **Pages.** Instructions get a cover with the title and author, a list of every part, and as many steps per page as you want, filled row by row or column by column, each page with its own background. Titles and notices take your own text or a text file. The finished model can fill the room left after the last step, with its own border and margin.
+- **Style.** Choose the font, how steps are divided, with dividers that get their own margins and rounded ends, how big and how the model is drawn, and how the parts list looks and is sorted.
+- **Step images.** Parts new to each step are outlined, in the width and color you pick, and the earlier ones fade.
 - **Placement.** Drag every page element where you want it, or lock it in place. Elements snap to a page grid, or to the edges and centers of the page and the other elements.
 - **Elements.** Every page element, like page numbers or the parts list, can have its own colors, fonts, border, rounded corners and background. Notices and pointers draw attention to parts and steps.
 - **Rulers.** Rulers along the page measure it in your units, show the margins, and follow the pointer with a small arrow.
