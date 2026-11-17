@@ -46,7 +46,7 @@ static const QLatin1String gInstructionsPropertyNames[] =
 	QLatin1String("STEP_IMAGE_SIZE"), QLatin1String("COVER_IMAGE_SIZE"),
 	QLatin1String("COVER_TITLE_TEXT"), QLatin1String("COVER_TITLE_FILE"), QLatin1String("COVER_AUTHOR_TEXT"),
 	QLatin1String("COVER_AUTHOR_FILE"), QLatin1String("BILL_OF_MATERIALS_TITLE_TEXT"), QLatin1String("BILL_OF_MATERIALS_TITLE_FILE"),
-	QLatin1String("STEP_DIVIDER_MARGIN"), QLatin1String("STEP_DIVIDER_PADDING"), QLatin1String("STEP_DIVIDER_ROUNDED"), QLatin1String("STEP_DIVIDER_HORIZONTAL"), QLatin1String("STEP_DIVIDER_VERTICAL"), QLatin1String("HIGHLIGHT_WIDTH"), QLatin1String("FINAL_MODEL_BORDER_WIDTH"), QLatin1String("FINAL_MODEL_BORDER_COLOR"), QLatin1String("FINAL_MODEL_MARGIN")
+	QLatin1String("STEP_DIVIDER_MARGIN"), QLatin1String("STEP_DIVIDER_PADDING"), QLatin1String("STEP_DIVIDER_ROUNDED"), QLatin1String("STEP_DIVIDER_HORIZONTAL"), QLatin1String("STEP_DIVIDER_VERTICAL"), QLatin1String("HIGHLIGHT_WIDTH"), QLatin1String("FINAL_MODEL_BORDER_WIDTH"), QLatin1String("FINAL_MODEL_BORDER_COLOR"), QLatin1String("FINAL_MODEL_MARGIN"), QLatin1String("BILL_OF_MATERIALS_SHOW_PART_IDS")
 };
 
 static_assert(std::size(gInstructionsPropertyNames) == static_cast<size_t>(swInstructionsPropertyType::Count), "Missing property name");

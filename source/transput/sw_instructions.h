@@ -185,6 +185,7 @@ enum class swInstructionsPropertyType
 	FinalModelBorderWidth,
 	FinalModelBorderColor,
 	FinalModelMargin,
+	BillOfMaterialsShowPartIds,
 	Count
 };
 

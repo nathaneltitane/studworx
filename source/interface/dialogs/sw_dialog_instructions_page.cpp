@@ -542,13 +542,14 @@ void swInstructionsPartsListItem::Update()
 	QFont Font = mInstructions->GetFontProperty(swInstructionsPropertyType::PLIFont, mModel, mStep);
 	QColor TextColor = mInstructions->GetColorProperty(swInstructionsPropertyType::PLITextColor, mModel, mStep);
 	const bool ShowCounts = mInstructions->GetBoolProperty(swInstructionsPropertyType::PLIShowCounts, mModel, mStep);
+	const bool ShowPartIds = mBillOfMaterials && mInstructions->GetBoolProperty(swInstructionsPropertyType::BillOfMaterialsShowPartIds, mModel, mStep);
 	const swPartsListSort Sort = static_cast<swPartsListSort>(mInstructions->GetIntProperty(swInstructionsPropertyType::PLISortOrder, mModel, mStep));
 	const swPartsListLayout Layout = static_cast<swPartsListLayout>(mInstructions->GetIntProperty(swInstructionsPropertyType::PLILayout, mModel, mStep));
 	const swPartsListAlignment Alignment = static_cast<swPartsListAlignment>(mInstructions->GetIntProperty(swInstructionsPropertyType::PLIAlignment, mModel, mStep));
 	const int ThumbnailSize = mInstructions->GetIntProperty(swInstructionsPropertyType::PLIThumbnailSize, mModel, mStep);
 	const QColor ThumbnailBackgroundColor = mInstructions->GetColorProperty(swInstructionsPropertyType::PLIThumbnailBackgroundColor, mModel, mStep);
 
-	const swResult<QImage> PartsImage = mModel->GetPartsListImage(mMaxWidth, ThumbnailSize, mBillOfMaterials ? 0 : mStep, swRGBAFromQColor(BackgroundColor), swRGBAFromQColor(ThumbnailBackgroundColor), Font, TextColor, false, ShowCounts, Sort, Layout, Alignment, mMaxHeight, swGetRenderScale(mInstructions));
+	const swResult<QImage> PartsImage = mModel->GetPartsListImage(mMaxWidth, ThumbnailSize, mBillOfMaterials ? 0 : mStep, swRGBAFromQColor(BackgroundColor), swRGBAFromQColor(ThumbnailBackgroundColor), Font, TextColor, false, ShowCounts, Sort, Layout, Alignment, mMaxHeight, swGetRenderScale(mInstructions), ShowPartIds);
 
 	if (!PartsImage)
 	{

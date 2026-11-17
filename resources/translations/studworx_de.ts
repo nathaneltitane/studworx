@@ -6397,7 +6397,7 @@ Das Dateiformat wird nicht erkannt.</translation>
         <translation>%1 fehlgeschlagen: %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="558"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="559"/>
         <source>Create Parts List</source>
         <translation>Teileliste erstellen</translation>
     </message>
@@ -15312,48 +15312,48 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation>%1 / %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="586"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="587"/>
         <source>Add Notice</source>
         <translation>Hinweis hinzufügen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="586"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="587"/>
         <source>Edit Notice</source>
         <translation>Hinweis bearbeiten</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="589"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="590"/>
         <source>Notice &amp;Text</source>
         <translation>Hinweis&amp;text</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="595"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="596"/>
         <source>Text &amp;File</source>
         <translation>Text&amp;datei</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="598"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="599"/>
         <source>Text file used instead of the typed text, relative to the model file.</source>
         <translation>Textdatei, die statt des eingegebenen Texts verwendet wird, relativ zur Modelldatei.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="613"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="614"/>
         <source>Choose the text file.</source>
         <translation>Die Textdatei wählen.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="603"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="627"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="604"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="628"/>
         <source>Choose Text File</source>
         <translation>Textdatei wählen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="613"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="614"/>
         <source>Remove the text file and go back to the typed text.</source>
         <translation>Die Textdatei entfernen und zum eingegebenen Text zurückkehren.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="627"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="628"/>
         <source>Text Files (*.txt);;All Files (*)</source>
         <translation>Textdateien (*.txt);;Alle Dateien (*)</translation>
     </message>
@@ -15570,28 +15570,28 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
 <context>
     <name>swInstructionsPageListWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2329"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2339"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2330"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2340"/>
         <source>Pages</source>
         <translation>Seiten</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2330"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2331"/>
         <source>&lt;p&gt;&lt;b&gt;Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a page to show it. Right-click a page to insert or remove blank pages around it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Seiten&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Wählen Sie eine Seite, um sie anzuzeigen. Klicken Sie mit der rechten Maustaste auf eine Seite, um leere Seiten davor oder danach einzufügen oder zu entfernen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2359"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2360"/>
         <source>Insert Blank Page Before</source>
         <translation>Leere Seite davor einfügen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2367"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2368"/>
         <source>Insert Blank Page After</source>
         <translation>Leere Seite danach einfügen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2375"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2376"/>
         <source>Remove Blank Page</source>
         <translation>Leere Seite entfernen</translation>
     </message>
@@ -15604,117 +15604,117 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
 <context>
     <name>swInstructionsPageWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1105"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1106"/>
         <source>Units of the rulers, the page units or the document units when they are in use.</source>
         <translation>Einheiten der Lineale, die Seiteneinheiten oder die Dokumenteinheiten, wenn sie verwendet werden.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1760"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
         <source>Anchor</source>
         <translation>Anker</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
         <source>Top Left</source>
         <translation>Oben links</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
         <source>Top</source>
         <translation>Oben</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
         <source>Top Right</source>
         <translation>Oben rechts</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
         <source>Right</source>
         <translation>Rechts</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
         <source>Bottom Right</source>
         <translation>Unten rechts</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
         <source>Bottom</source>
         <translation>Unten</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
         <source>Bottom Left</source>
         <translation>Unten links</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
         <source>Left</source>
         <translation>Links</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1766"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1767"/>
         <source>Automatic</source>
         <translation>Automatisch</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1790"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1791"/>
         <source>Default</source>
         <translation>Standard</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1807"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1808"/>
         <source>Style</source>
         <translation>Stil</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1807"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1808"/>
         <source>Line</source>
         <translation>Linie</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1807"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1808"/>
         <source>Callout Wedge</source>
         <translation>Beschriftungskeil</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1812"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Tip</source>
         <translation>Spitze</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1812"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Dot</source>
         <translation>Punkt</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1812"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Arrow</source>
         <translation>Pfeil</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1822"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1823"/>
         <source>Remove Pointer</source>
         <translation>Zeiger entfernen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1829"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1830"/>
         <source>Add Notice...</source>
         <translation>Hinweis hinzufügen...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1847"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1848"/>
         <source>Add Pointer</source>
         <translation>Zeiger hinzufügen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1860"/>
         <source>Edit Notice...</source>
         <translation>Hinweis bearbeiten...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1869"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1870"/>
         <source>Remove Notice</source>
         <translation>Hinweis entfernen</translation>
     </message>
@@ -16145,7 +16145,7 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="obsolete">Alle Schritte</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1028"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1032"/>
         <source>Apply to All Pages</source>
         <translation>Auf alle Seiten anwenden</translation>
     </message>
@@ -16588,37 +16588,37 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation>Die Anleitung mit einer Seite beenden, die jedes Teil des Modells auflistet.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="519"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="523"/>
         <source>Blank Page Before Bill of Materials</source>
         <translation>Leere Seite vor der Stückliste</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="519"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="523"/>
         <source>Precede the bill of materials with a blank page.</source>
         <translation>Der Stückliste eine leere Seite voranstellen.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="522"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="526"/>
         <source>Color filling the whole bill of materials page, margins included.</source>
         <translation>Farbe, die die ganze Stücklistenseite füllt, einschließlich der Ränder.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="524"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="528"/>
         <source>BOM Title</source>
         <translation>Stücklistentitel</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="524"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="528"/>
         <source>Title above the bill of materials, empty for Parts List.</source>
         <translation>Titel über der Stückliste, leer für Teileliste.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="526"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="530"/>
         <source>BOM Title File</source>
         <translation>Stücklisten-Titeldatei</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="526"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="530"/>
         <source>Text file holding the bill of materials title, used instead of the typed title, relative to the model file.</source>
         <translation>Textdatei mit dem Stücklistentitel, statt des eingegebenen Titels verwendet, relativ zur Modelldatei.</translation>
     </message>
@@ -16643,7 +16643,7 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation>Den Hintergrund dieser Seite auf jeder Seite verwenden.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="533"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="537"/>
         <source>Steps per Page</source>
         <translation>Schritte pro Seite</translation>
     </message>
@@ -16652,26 +16652,26 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Schritte pro Seite&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Die Zeilen und Spalten der Schritte auf der aktuellen Seite, die folgenden Seiten schließen daran an. Die Voreinstellungen teilen die Seite in Hälften, Drittel oder Viertel und zeigen die Schritttrennlinien. Die Schrittfolge füllt die Seite zeilenweise oder spaltenweise, und der letzte Schritt dehnt sich in leere Felder aus. Fertiges Modell zeigen setzt das fertige Modell in den freien Platz nach dem letzten Schritt eines Modells. Hauptseitenfarbe gibt dem fertigen Modell eines Untermodells die Farbe der Hauptseite. Die Trennlinien sind die Linien zwischen benachbarten Schritten.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="578"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="634"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="582"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="638"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="675"/>
         <source>Rows</source>
         <translation>Zeilen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="578"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="582"/>
         <source>Number of step rows on this page.</source>
         <translation>Anzahl der Schrittzeilen auf dieser Seite.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="579"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="635"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="583"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="639"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="675"/>
         <source>Columns</source>
         <translation>Spalten</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="579"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="583"/>
         <source>Number of step columns on this page.</source>
         <translation>Anzahl der Schrittspalten auf dieser Seite.</translation>
     </message>
@@ -16689,7 +16689,7 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Eigenschaften&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Bearbeiten Sie, wie die Anleitungsseiten aussehen. Ist nichts auf der Seite ausgewählt, werden alle Abschnitte gezeigt, wählen Sie ein Element, um nur seine Einstellungen und sein Feld zu zeigen. Klicken Sie mit der rechten Maustaste auf die Seite, um Hinweise und Zeiger hinzuzufügen. Änderungen gelten für alle Seiten.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="522"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="526"/>
         <source>BOM Background</source>
         <translation>Hintergrund der Stückliste</translation>
     </message>
@@ -16717,78 +16717,78 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Schritte pro Seite&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Die Zeilen und Spalten der Schritte auf der aktuellen Seite, die folgenden Seiten schließen daran an. Die Voreinstellungen teilen die Seite in Hälften, Drittel oder Viertel und zeigen die Schritttrennlinien. Schritte füllen Querformatseiten zeilenweise und Hochformatseiten spaltenweise, entsprechend der in der Seiteneinrichtung gewählten Ausrichtung. Die Trennlinien sind die Linien zwischen benachbarten Schritten.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="711"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="715"/>
         <source>Show Step Dividers</source>
         <translation>Schritttrennlinien zeigen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="711"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="715"/>
         <source>Draw lines between neighboring steps.</source>
         <translation>Linien zwischen benachbarten Schritten zeichnen.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="712"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="716"/>
         <source>Rounded Ends</source>
         <translation>Abgerundete Enden</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="712"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="716"/>
         <source>Round the line ends, off draws flat ends.</source>
         <translation>Die Linienenden abrunden, sonst sind sie gerade.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="716"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="720"/>
         <source>Draw the lines between steps above and below each other.</source>
         <translation>Die Linien zwischen übereinanderliegenden Schritten zeichnen.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="717"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="721"/>
         <source>Draw the lines between steps side by side.</source>
         <translation>Die Linien zwischen nebeneinanderliegenden Schritten zeichnen.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="720"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="724"/>
         <source>Divider Color</source>
         <translation>Farbe der Trennlinien</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="720"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="724"/>
         <source>Color of the lines between steps.</source>
         <translation>Farbe der Linien zwischen den Schritten.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="722"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="726"/>
         <source>Divider Width</source>
         <translation>Breite der Trennlinien</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="722"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="726"/>
         <source>Width of the lines between steps.</source>
         <translation>Breite der Linien zwischen den Schritten.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="724"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="728"/>
         <source>Divider Margin</source>
         <translation>Trennlinienabstand</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="724"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="728"/>
         <source>Space between the line ends and the page margins.</source>
         <translation>Abstand zwischen den Linienenden und den Seitenrändern.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="726"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="730"/>
         <source>Divider Padding</source>
         <translation>Trennlinieninnenabstand</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="726"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="730"/>
         <source>Space between the lines and the steps on each side.</source>
         <translation>Abstand zwischen den Linien und den Schritten auf jeder Seite.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="505"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="760"/>
         <source>Page Number</source>
         <translation>Seitenzahl</translation>
     </message>
@@ -16852,283 +16852,293 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation>Farbe der Seitenzahlen.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="646"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="519"/>
+        <source>Show Part IDs</source>
+        <translation>Teilenummern zeigen</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="519"/>
+        <source>Print the part number under each part of the bill of materials, for easy reference.</source>
+        <translation>Druckt die Teilenummer unter jedes Teil der Stückliste, zum leichten Nachschlagen.</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="650"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="760"/>
         <source>Step Number</source>
         <translation>Schrittnummer</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="649"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="653"/>
         <source>Show Step Number</source>
         <translation>Schrittnummer anzeigen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="652"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="656"/>
         <source>Step Number Font</source>
         <translation>Schriftart der Schrittnummer</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="652"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="656"/>
         <source>Font of the step numbers.</source>
         <translation>Schriftart der Schrittnummern.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="654"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="658"/>
         <source>Step Number Color</source>
         <translation>Farbe der Schrittnummer</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="654"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="658"/>
         <source>Color of the step numbers.</source>
         <translation>Farbe der Schrittnummern.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="656"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="660"/>
         <source>Step Background</source>
         <translation>Schritthintergrund</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="656"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="660"/>
         <source>Color filling the area of each step, transparent shows the page background.</source>
         <translation>Farbe, die den Bereich jedes Schritts füllt, transparent zeigt den Seitenhintergrund.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="659"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="663"/>
         <source>&lt;p&gt;&lt;b&gt;Parts List&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The list of parts added in each step. The bill of materials uses the same settings.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Teileliste&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Die Liste der in jedem Schritt hinzugefügten Teile. Die Stückliste verwendet dieselben Einstellungen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="662"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="666"/>
         <source>Show Parts List</source>
         <translation>Teileliste anzeigen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="662"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="666"/>
         <source>Show the parts added in each step next to its number.</source>
         <translation>Die in jedem Schritt hinzugefügten Teile neben seiner Nummer zeigen.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="663"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="667"/>
         <source>Show Part Counts</source>
         <translation>Teileanzahl zeigen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="663"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="667"/>
         <source>Show how many of each part are needed.</source>
         <translation>Zeigen, wie viele von jedem Teil benötigt werden.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="667"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
         <source>Parts List Order</source>
         <translation>Reihenfolge der Teileliste</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="667"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
         <source>Order of the parts in the list.</source>
         <translation>Reihenfolge der Teile in der Liste.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="667"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
         <source>Sort by Color</source>
         <translation>Nach Farbe sortieren</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="667"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
         <source>Sort by Name</source>
         <translation>Nach Name sortieren</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="667"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
         <source>Sort by Part ID</source>
         <translation>Nach Teilenummer sortieren</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="675"/>
         <source>Parts List Layout</source>
         <translation>Layout der Teileliste</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="675"/>
         <source>Line the parts up in rows or in columns.</source>
         <translation>Die Teile in Zeilen oder in Spalten ausrichten.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="673"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
         <source>Line Reference</source>
         <translation>Ausrichtungskante</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="673"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
         <source>Thumbnail edge the parts line up on.</source>
         <translation>Kante der Vorschaubilder, an der die Teile ausgerichtet werden.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="673"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1508"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
         <source>Top</source>
         <translation>Oben</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="673"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1508"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
         <source>Middle</source>
         <translation>Mitte</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="673"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1508"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
         <source>Bottom</source>
         <translation>Unten</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="675"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="679"/>
         <source>Parts List Font</source>
         <translation>Schriftart der Teileliste</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="675"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="679"/>
         <source>Font of the part counts.</source>
         <translation>Schriftart der Teileanzahlen.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="681"/>
         <source>Parts List Text Color</source>
         <translation>Textfarbe der Teileliste</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="681"/>
         <source>Color of the part counts.</source>
         <translation>Farbe der Teileanzahlen.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="698"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="702"/>
         <source>Use the thumbnail size and background of this page on every page.</source>
         <translation>Die Vorschaubildgröße und den Hintergrund dieser Seite auf jeder Seite verwenden.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="741"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="745"/>
         <source>End line pointers with an arrow or a dot, callout wedges have no tip.</source>
         <translation>Linienzeiger mit einem Pfeil oder einem Punkt enden lassen, Beschriftungskeile haben keine Spitze.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="741"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="745"/>
         <source>Arrow</source>
         <translation>Pfeil</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="747"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="751"/>
         <source>Width of the pointer lines, Border follows the border of the element.</source>
         <translation>Breite der Zeigerlinien, Rahmen folgt dem Rahmen des Elements.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="747"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="751"/>
         <source>Border</source>
         <translation>Rahmen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="749"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1068"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="753"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1072"/>
         <source>Automatic</source>
         <translation>Automatisch</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="752"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
         <source>&lt;p&gt;&lt;b&gt;Box&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The space and border around each element. The margin keeps other elements away, the padding keeps the border away from the content and the background fills all of it, margin and padding included. Pointers leave the border. The step and cover models also set their size here. Choose the element to edit, selecting an element on the page chooses it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Feld&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Der Raum und der Rahmen um jedes Element. Der Außenabstand hält andere Elemente fern, der Innenabstand hält den Rahmen vom Inhalt fern, und der Hintergrund füllt alles, Außen- und Innenabstand eingeschlossen. Zeiger gehen vom Rahmen aus. Die Schritt- und Titelmodelle stellen hier auch ihre Größe ein. Wählen Sie das zu bearbeitende Element, das Auswählen eines Elements auf der Seite wählt es.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="778"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="808"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="782"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="812"/>
         <source>Model Size</source>
         <translation>Modellgröße</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="778"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="782"/>
         <source>Size of the step model, 100 percent fills its space, larger sizes are trimmed to it.</source>
         <translation>Größe des Schrittmodells, 100 Prozent füllen seinen Platz, größere Werte werden darauf beschnitten.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="782"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="786"/>
         <source>Model Size on This Page Only</source>
         <translation>Modellgröße nur auf dieser Seite</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="785"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="789"/>
         <source>Give this page its own model size, unchecked it follows all pages.</source>
         <translation>Dieser Seite eine eigene Modellgröße geben, nicht angehakt folgt sie allen Seiten.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="797"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="801"/>
         <source>Use the model size of this page on every page.</source>
         <translation>Die Modellgröße dieser Seite auf jeder Seite verwenden.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="808"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="812"/>
         <source>Size of the cover model, 100 percent fills its space, larger sizes are trimmed to it.</source>
         <translation>Größe des Titelmodells, 100 Prozent füllen seinen Platz, größere Werte werden darauf beschnitten.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="816"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="820"/>
         <source>Border Width</source>
         <translation>Rahmenbreite</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="818"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="822"/>
         <source>Corner Radius</source>
         <translation>Eckenradius</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="818"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="822"/>
         <source>Roundness of the box corners, 0 keeps them square.</source>
         <translation>Rundung der Feldecken, 0 lässt sie eckig.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1059"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1063"/>
         <source>Remove the text file and go back to the typed or automatic text.</source>
         <translation>Die Textdatei entfernen und zum eingegebenen oder automatischen Text zurückkehren.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1068"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1072"/>
         <source>No File</source>
         <translation>Keine Datei</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1059"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1063"/>
         <source>Choose the text file.</source>
         <translation>Die Textdatei wählen.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="533"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="537"/>
         <source>&lt;p&gt;&lt;b&gt;Steps per Page&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model, and Main Page Color gives a submodel&apos;s finished model the main page color. The final model border frames that area and its margin keeps it away from the steps and page margins.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Schritte pro Seite&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Die Zeilen und Spalten der Schritte auf der aktuellen Seite, die folgenden Seiten schließen daran an. Die Vorlagen teilen die Seite in Hälften, Drittel oder Viertel und zeigen die Trennlinien. Der Schrittfluss füllt die Seite Zeile für Zeile oder Spalte für Spalte, und der letzte Schritt dehnt sich in leere Zellen aus. Endmodell anzeigen setzt das fertige Modell in den Platz nach dem letzten Schritt eines Modells, und Hauptseitenfarbe gibt dem fertigen Modell eines Untermodells die Farbe der Hauptseite. Der Rahmen des fertigen Modells fasst diesen Bereich ein, und sein Abstand hält ihn von den Schritten und Seitenrändern fern.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1082"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1086"/>
         <source>Choose %1</source>
         <translation>%1 wählen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1099"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1103"/>
         <source>Text Files (*.txt);;All Files (*)</source>
         <translation>Textdateien (*.txt);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1508"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
         <source>Left</source>
         <translation>Links</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1508"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
         <source>Center</source>
         <translation>Mitte</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1508"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
         <source>Right</source>
         <translation>Rechts</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="679"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="683"/>
         <source>Thumbnail Size</source>
         <translation>Vorschaubildgröße</translation>
     </message>
@@ -17168,22 +17178,22 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation>&lt;p&gt;&lt;b&gt;Stückliste&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Die letzte Seite, die jedes Teil des Modells auflistet. Sie verwendet die Einstellungen der Teileliste, unter einem Titel Teileliste in eigener Schriftart und Farbe, mit dem Feld der Schrittnummern.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="528"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="532"/>
         <source>BOM Title Font</source>
         <translation>Schriftart des Stücklistentitels</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="528"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="532"/>
         <source>Font of the Parts List title above the bill of materials.</source>
         <translation>Schriftart des Titels Teileliste über der Stückliste.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="530"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="534"/>
         <source>BOM Title Color</source>
         <translation>Farbe des Stücklistentitels</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="530"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="534"/>
         <source>Color of the Parts List title above the bill of materials.</source>
         <translation>Farbe des Titels Teileliste über der Stückliste.</translation>
     </message>
@@ -17192,85 +17202,85 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Schritte pro Seite&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Die Zeilen und Spalten der Schritte auf der aktuellen Seite, die folgenden Seiten schließen daran an. Die Voreinstellungen teilen die Seite in Hälften, Drittel oder Viertel und zeigen die Schritttrennlinien. Die Schrittfolge füllt die Seite zeilenweise oder spaltenweise, und der letzte Schritt dehnt sich in leere Felder aus. Fertiges Modell zeigen setzt das fertige Modell in den freien Platz nach dem letzten Schritt eines Modells. Die Trennlinien sind die Linien zwischen benachbarten Schritten.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="584"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="716"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="588"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="720"/>
         <source>Horizontal</source>
         <translation>Horizontal</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="584"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="717"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="588"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="721"/>
         <source>Vertical</source>
         <translation>Vertikal</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="585"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="589"/>
         <source>Fill this page with steps row by row, or column by column.</source>
         <translation>Diese Seite zeilenweise oder spaltenweise mit Schritten füllen.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="587"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="636"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="591"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="640"/>
         <source>Step Flow</source>
         <translation>Schrittfolge</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="598"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="602"/>
         <source>Show Final Model</source>
         <translation>Fertiges Modell zeigen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="599"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="603"/>
         <source>Show the finished model in the room left on the page after the last step of a model.</source>
         <translation>Das fertige Modell im freien Platz der Seite nach dem letzten Schritt eines Modells zeigen.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="615"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="619"/>
         <source>Main Page Color</source>
         <translation>Hauptseitenfarbe</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="616"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="620"/>
         <source>Put the finished model of a submodel on the main page color.</source>
         <translation>Das fertige Modell eines Untermodells auf die Hauptseitenfarbe setzen.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="627"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="631"/>
         <source>Use this page layout on every page.</source>
         <translation>Dieses Seitenlayout auf allen Seiten verwenden.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="638"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="642"/>
         <source>Final Border</source>
         <translation>Endrahmen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="638"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="642"/>
         <source>Width of the frame around the final model area, 0 draws none.</source>
         <translation>Breite des Rahmens um den Bereich des fertigen Modells, 0 zeichnet keinen.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="640"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="644"/>
         <source>Final Border Color</source>
         <translation>Endrahmenfarbe</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="640"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="644"/>
         <source>Color of the frame around the final model area.</source>
         <translation>Farbe des Rahmens um den Bereich des fertigen Modells.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="642"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="646"/>
         <source>Final Margin</source>
         <translation>Endabstand</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="642"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="646"/>
         <source>Space between the final model area and the steps and page margins around it.</source>
         <translation>Abstand zwischen dem Bereich des fertigen Modells und den Schritten und Seitenrändern darum.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="708"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="712"/>
         <source>Divider</source>
         <translation>Trennlinie</translation>
     </message>
@@ -17279,138 +17289,138 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Trennlinie&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Die Linien zwischen benachbarten Schritten. Der Abstand hält die Linienenden von den Seitenrändern fern, der Innenabstand hält die Schritte von den Linien fern.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="646"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="650"/>
         <source>&lt;p&gt;&lt;b&gt;Step Number&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The step number and the area behind each step. The bill of materials shows a Parts List title in its place.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Schrittnummer&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Die Schrittnummer und der Bereich hinter jedem Schritt. Die Stückliste zeigt an ihrer Stelle einen Titel Teileliste.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="649"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="653"/>
         <source>Show the number of each step in its top left corner, and the Parts List title of the bill of materials.</source>
         <translation>Die Nummer jedes Schritts in seiner oberen linken Ecke zeigen, sowie den Titel Teileliste der Stückliste.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="679"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="683"/>
         <source>Size each part is drawn at, larger thumbnails show larger parts.</source>
         <translation>Größe, in der jedes Teil gezeichnet wird, größere Vorschaubilder zeigen größere Teile.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="681"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="685"/>
         <source>Thumbnail Background</source>
         <translation>Vorschaubildhintergrund</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="681"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="685"/>
         <source>Color behind each part and its count, transparent draws none.</source>
         <translation>Farbe hinter jedem Teil und seiner Anzahl, transparent zeichnet keine.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="686"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="690"/>
         <source>Thumbnails on This Page Only</source>
         <translation>Vorschaubilder nur auf dieser Seite</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="689"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="693"/>
         <source>Give this page its own thumbnail size and background, unchecked it follows all pages.</source>
         <translation>Dieser Seite eine eigene Vorschaubildgröße und einen eigenen Hintergrund geben, ohne Häkchen folgt sie allen Seiten.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="729"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="733"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="760"/>
         <source>Notice</source>
         <translation>Hinweis</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="729"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="733"/>
         <source>&lt;p&gt;&lt;b&gt;Notice&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Free text written on a page to point out something. Right-click the page and choose Add Notice to write one, double-click it to edit its text. Drag it, lock it in place or give it pointers like any other element.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Hinweis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Freier Text auf einer Seite, um auf etwas aufmerksam zu machen. Klicken Sie mit der rechten Maustaste auf die Seite und wählen Sie Hinweis hinzufügen, um einen zu schreiben, doppelklicken Sie darauf, um den Text zu bearbeiten. Ziehen Sie ihn, sperren Sie ihn an seiner Stelle oder geben Sie ihm Zeiger wie jedem anderen Element.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="731"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="735"/>
         <source>Notice Font</source>
         <translation>Hinweisschriftart</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="731"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="735"/>
         <source>Font of the notices.</source>
         <translation>Schriftart der Hinweise.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="733"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="737"/>
         <source>Notice Text Color</source>
         <translation>Hinweistextfarbe</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="733"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="737"/>
         <source>Color of the notice text.</source>
         <translation>Farbe des Hinweistexts.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="736"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="740"/>
         <source>Pointer</source>
         <translation>Zeiger</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="736"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="740"/>
         <source>&lt;p&gt;&lt;b&gt;Pointer&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A pointer leaves the border of an element to point at a part, a step or a notice. Right-click an element and choose Add Pointer, then drag its tip onto a part of a step model, another element or any point of the page, the tip follows what it points at. Right-click a pointer to choose the anchor it leaves from, or its own style and tip.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zeiger&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ein Zeiger geht vom Rahmen eines Elements aus und zeigt auf ein Teil, einen Schritt oder einen Hinweis. Klicken Sie mit der rechten Maustaste auf ein Element und wählen Sie Zeiger hinzufügen, ziehen Sie dann seine Spitze auf ein Teil eines Schrittmodells, ein anderes Element oder einen beliebigen Punkt der Seite, die Spitze folgt dem, worauf sie zeigt. Klicken Sie mit der rechten Maustaste auf einen Zeiger, um den Anker zu wählen, von dem er ausgeht, oder seinen eigenen Stil und seine Spitze.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="739"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="743"/>
         <source>Pointer Style</source>
         <translation>Zeigerstil</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="739"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="743"/>
         <source>Draw pointers as a line or as a callout wedge narrowing to the tip.</source>
         <translation>Zeiger als Linie oder als Beschriftungskeil zeichnen, der sich zur Spitze verjüngt.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="739"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="743"/>
         <source>Line</source>
         <translation>Linie</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="739"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="743"/>
         <source>Callout Wedge</source>
         <translation>Beschriftungskeil</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="741"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="745"/>
         <source>Pointer Tip</source>
         <translation>Zeigerspitze</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="741"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="745"/>
         <source>Dot</source>
         <translation>Punkt</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="743"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="747"/>
         <source>Pointer Color</source>
         <translation>Zeigerfarbe</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="743"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="747"/>
         <source>Color of the pointers.</source>
         <translation>Farbe der Zeiger.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="747"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="751"/>
         <source>Pointer Width</source>
         <translation>Zeigerbreite</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="749"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="753"/>
         <source>Tip Size</source>
         <translation>Spitzengröße</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="749"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="753"/>
         <source>Size of the arrows and dots, and width of the wedges at the element, never less than three times the pointer width.</source>
         <translation>Größe der Pfeile und Punkte sowie Breite der Keile am Element, nie weniger als das Dreifache der Zeigerbreite.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="752"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
         <source>Box</source>
         <translation>Feld</translation>
     </message>
@@ -17419,19 +17429,19 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Feld&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Der Raum und der Rahmen um jedes Element. Der Außenabstand hält andere Elemente fern, der Innenabstand hält den Rahmen vom Inhalt fern, und der Hintergrund füllt alles, Außen- und Innenabstand eingeschlossen. Zeiger gehen vom Rahmen aus. Wählen Sie das zu bearbeitende Element, das Auswählen eines Elements auf der Seite wählt es.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="760"/>
         <source>Step Model</source>
         <translation>Schrittmodell</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="445"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="760"/>
         <source>Cover Title</source>
         <translation>Deckblatttitel</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="457"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="760"/>
         <source>Cover Author</source>
         <translation>Deckblattautor</translation>
     </message>
@@ -17440,83 +17450,83 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Schritte pro Seite&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Die Zeilen und Spalten der Schritte auf der aktuellen Seite, die folgenden Seiten schließen daran an. Die Vorlagen teilen die Seite in Hälften, Drittel oder Viertel und zeigen die Trennlinien. Der Schrittfluss füllt die Seite Zeile für Zeile oder Spalte für Spalte, und der letzte Schritt dehnt sich in leere Zellen aus. Endmodell anzeigen setzt das fertige Modell in den Platz nach dem letzten Schritt eines Modells, und Hauptseitenfarbe gibt dem fertigen Modell eines Untermodells die Farbe der Hauptseite.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="708"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="712"/>
         <source>&lt;p&gt;&lt;b&gt;Divider&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The lines between neighboring steps. Horizontal and Vertical hide the lines in one direction, for example where page colors already split the page. The margin keeps the line ends away from the page margins, the padding keeps the steps away from the lines.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Trennlinie&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Die Linien zwischen benachbarten Schritten. Horizontal und Vertikal blenden die Linien in einer Richtung aus, etwa wo Seitenfarben die Seite schon teilen. Der Abstand hält die Linienenden von den Seitenrändern fern, der Innenabstand hält die Schritte von den Linien fern.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="760"/>
         <source>Cover Model</source>
         <translation>Deckblattmodell</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="757"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="761"/>
         <source>Choose the element whose box is edited, the parts list box is also the bill of materials box.</source>
         <translation>Das Element wählen, dessen Feld bearbeitet wird, das Feld der Teileliste ist auch das Feld der Stückliste.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="759"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="763"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="765"/>
         <source>Element</source>
         <translation>Element</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="812"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="816"/>
         <source>Margin</source>
         <translation>Rand</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="812"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="816"/>
         <source>Space outside the border, filled with the background.</source>
         <translation>Raum außerhalb des Rahmens, mit dem Hintergrund gefüllt.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="814"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="818"/>
         <source>Padding</source>
         <translation>Innenabstand</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="814"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="818"/>
         <source>Space between the border and the content, filled with the background.</source>
         <translation>Raum zwischen dem Rahmen und dem Inhalt, mit dem Hintergrund gefüllt.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="816"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="820"/>
         <source>Width of the line around the element, 0 draws no line.</source>
         <translation>Breite der Linie um das Element, 0 zeichnet keine Linie.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="820"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="824"/>
         <source>Border Color</source>
         <translation>Rahmenfarbe</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="820"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="824"/>
         <source>Color of the line around the element.</source>
         <translation>Farbe der Linie um das Element.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="822"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="826"/>
         <source>Background</source>
         <translation>Hintergrund</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="822"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="826"/>
         <source>Color filling the whole element, margin and padding included, transparent shows what lies behind.</source>
         <translation>Farbe, die das ganze Element füllt, Außen- und Innenabstand eingeschlossen, transparent zeigt, was dahinter liegt.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="842"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="846"/>
         <source>Expand or collapse the %1 properties.</source>
         <translation>Die %1-Eigenschaften ein- oder ausklappen.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1123"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1127"/>
         <source>Size of the font in the page units.</source>
         <translation>Größe der Schriftart in den Seiteneinheiten.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1125"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1129"/>
         <source>%1 Size</source>
         <translation>%1-Größe</translation>
     </message>
@@ -17526,8 +17536,8 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation>Transparent</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="659"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="663"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="760"/>
         <source>Parts List</source>
         <translation>Teileliste</translation>
     </message>
@@ -17589,22 +17599,22 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
 <context>
     <name>swInstructionsRulerWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2159"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2160"/>
         <source>Horizontal Ruler</source>
         <translation>Horizontales Lineal</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2160"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2161"/>
         <source>Horizontal position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Horizontale Position auf der Seite in den Seiteneinheiten, der Pfeil folgt dem Zeiger.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2164"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2165"/>
         <source>Vertical Ruler</source>
         <translation>Vertikales Lineal</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2165"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2166"/>
         <source>Vertical position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Vertikale Position auf der Seite in den Seiteneinheiten, der Pfeil folgt dem Zeiger.</translation>
     </message>
@@ -20356,42 +20366,42 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation>Die Schrittbilder konnten nicht erstellt werden.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="261"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="436"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="445"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="566"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="262"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="437"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="446"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="573"/>
         <source>Could not allocate the parts list image.</source>
         <translation>Das Bild der Teileliste konnte nicht angelegt werden.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="304"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="305"/>
         <source>Could not create the parts list framebuffer.</source>
         <translation>Der Teilelisten-Framebuffer konnte nicht erstellt werden.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="385"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="386"/>
         <source>Could not read the parts list image.</source>
         <translation>Das Teilelistenbild konnte nicht gelesen werden.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="658"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1003"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1033"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1039"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1050"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1066"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1070"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1100"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1108"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="670"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1015"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1045"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1051"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1062"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1078"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1082"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1112"/>
         <location filename="../../source/core/sw_model_render.cpp" line="1120"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1124"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1132"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1136"/>
         <source>Could not write file &apos;%1&apos;:
 %2</source>
         <translation>Die Datei „%1“ konnte nicht geschrieben werden:
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="997"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1009"/>
         <source>Save at least two poses of the main model first.</source>
         <translation>Zuerst mindestens zwei Posen des Hauptmodells speichern.</translation>
     </message>

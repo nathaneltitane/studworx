@@ -516,6 +516,10 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	});
 
 	AddRow(CategoryIndex::BillOfMaterials, {
+		CreateToggleEditor(swInstructionsPropertyType::BillOfMaterialsShowPartIds, tr("Show Part IDs"), tr("Print the part number under each part of the bill of materials, for easy reference."))
+	});
+
+	AddRow(CategoryIndex::BillOfMaterials, {
 		CreateToggleEditor(swInstructionsPropertyType::ShowBillOfMaterialsBlankPage, tr("Blank Page Before Bill of Materials"), tr("Precede the bill of materials with a blank page."))
 	});
 
@@ -1493,6 +1497,7 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 	const bool ShowBillOfMaterials = GetBool(swInstructionsPropertyType::ShowBillOfMaterials);
 
 	SetEnabled(swInstructionsPropertyType::ShowBillOfMaterialsBlankPage, ShowBillOfMaterials);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsShowPartIds, ShowBillOfMaterials);
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsBackgroundColor, ShowBillOfMaterials);
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleFont, !UseDocumentFont && ShowBillOfMaterials && ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleColor, ShowBillOfMaterials && ShowStepNumber);

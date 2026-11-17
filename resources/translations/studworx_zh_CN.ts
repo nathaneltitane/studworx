@@ -6361,7 +6361,7 @@ File format is not recognized.</source>
         <translation>%1 失败：%2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="558"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="559"/>
         <source>Create Parts List</source>
         <translation>创建零件列表</translation>
     </message>
@@ -15563,48 +15563,48 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>%1 / %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="586"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="587"/>
         <source>Add Notice</source>
         <translation>添加提示</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="586"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="587"/>
         <source>Edit Notice</source>
         <translation>编辑提示</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="589"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="590"/>
         <source>Notice &amp;Text</source>
         <translation>注释文本(&amp;T)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="595"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="596"/>
         <source>Text &amp;File</source>
         <translation>文本文件(&amp;F)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="598"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="599"/>
         <source>Text file used instead of the typed text, relative to the model file.</source>
         <translation>代替输入文本使用的文本文件，相对于模型文件。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="613"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="614"/>
         <source>Choose the text file.</source>
         <translation>选择文本文件。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="603"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="627"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="604"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="628"/>
         <source>Choose Text File</source>
         <translation>选择文本文件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="613"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="614"/>
         <source>Remove the text file and go back to the typed text.</source>
         <translation>移除文本文件，恢复为输入的文本。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="627"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="628"/>
         <source>Text Files (*.txt);;All Files (*)</source>
         <translation>文本文件 (*.txt);;所有文件 (*)</translation>
     </message>
@@ -15819,28 +15819,28 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsPageListWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2329"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2339"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2330"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2340"/>
         <source>Pages</source>
         <translation>页面</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2330"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2331"/>
         <source>&lt;p&gt;&lt;b&gt;Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a page to show it. Right-click a page to insert or remove blank pages around it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;页面&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择一个页面即可显示它。右键点击页面可在其前后插入或移除空白页。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2359"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2360"/>
         <source>Insert Blank Page Before</source>
         <translation>在前面插入空白页</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2367"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2368"/>
         <source>Insert Blank Page After</source>
         <translation>在后面插入空白页</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2375"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2376"/>
         <source>Remove Blank Page</source>
         <translation>移除空白页</translation>
     </message>
@@ -15852,117 +15852,117 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsPageWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1105"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1106"/>
         <source>Units of the rulers, the page units or the document units when they are in use.</source>
         <translation>标尺的单位，在使用时为页面单位或文档单位。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1760"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
         <source>Anchor</source>
         <translation>锚点</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
         <source>Top Left</source>
         <translation>左上</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
         <source>Top</source>
         <translation>上</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
         <source>Top Right</source>
         <translation>右上</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
         <source>Right</source>
         <translation>右</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
         <source>Bottom Right</source>
         <translation>右下</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
         <source>Bottom</source>
         <translation>下</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
         <source>Bottom Left</source>
         <translation>左下</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1762"/>
         <source>Left</source>
         <translation>左</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1766"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1767"/>
         <source>Automatic</source>
         <translation>自动</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1790"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1791"/>
         <source>Default</source>
         <translation>默认</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1807"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1808"/>
         <source>Style</source>
         <translation>样式</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1807"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1808"/>
         <source>Line</source>
         <translation>线</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1807"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1808"/>
         <source>Callout Wedge</source>
         <translation>标注楔形</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1812"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Tip</source>
         <translation>尖端</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1812"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Dot</source>
         <translation>圆点</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1812"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Arrow</source>
         <translation>箭头</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1822"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1823"/>
         <source>Remove Pointer</source>
         <translation>移除指针</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1829"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1830"/>
         <source>Add Notice...</source>
         <translation>添加提示...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1847"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1848"/>
         <source>Add Pointer</source>
         <translation>添加指针</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1860"/>
         <source>Edit Notice...</source>
         <translation>编辑提示...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1869"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1870"/>
         <source>Remove Notice</source>
         <translation>移除提示</translation>
     </message>
@@ -16387,7 +16387,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">所有步骤</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1028"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1032"/>
         <source>Apply to All Pages</source>
         <translation>应用到所有页面</translation>
     </message>
@@ -16823,37 +16823,37 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>以列出模型所有零件的页面作为说明书的结尾。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="519"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="523"/>
         <source>Blank Page Before Bill of Materials</source>
         <translation>物料清单前空白页</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="519"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="523"/>
         <source>Precede the bill of materials with a blank page.</source>
         <translation>在物料清单之前加一页空白页。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="522"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="526"/>
         <source>Color filling the whole bill of materials page, margins included.</source>
         <translation>填充整个物料清单页的颜色，包括边距。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="524"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="528"/>
         <source>BOM Title</source>
         <translation>物料清单标题</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="524"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="528"/>
         <source>Title above the bill of materials, empty for Parts List.</source>
         <translation>物料清单上方的标题，留空则为“零件清单”。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="526"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="530"/>
         <source>BOM Title File</source>
         <translation>物料清单标题文件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="526"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="530"/>
         <source>Text file holding the bill of materials title, used instead of the typed title, relative to the model file.</source>
         <translation>包含物料清单标题的文本文件，代替输入的标题，相对于模型文件。</translation>
     </message>
@@ -16878,7 +16878,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>在每一页上使用此页的背景。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="533"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="537"/>
         <source>Steps per Page</source>
         <translation>每页步骤数</translation>
     </message>
@@ -16887,26 +16887,26 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;每页步骤数&lt;/b&gt;&lt;/p&gt;&lt;p&gt;当前页上的步骤行数和列数，后续页面依此顺延。预设将页面分为二等分、三等分或四等分，并显示步骤分隔线。步骤排布按行或按列填满页面，最后一步会延伸到空白格中。显示最终模型会把完成的模型放在模型最后一步之后的空余处。主页面颜色让子模型的完成模型使用主页面的颜色。分隔线是相邻步骤之间的线条。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="578"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="634"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="582"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="638"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="675"/>
         <source>Rows</source>
         <translation>行数</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="578"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="582"/>
         <source>Number of step rows on this page.</source>
         <translation>此页上的步骤行数。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="579"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="635"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="583"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="639"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="675"/>
         <source>Columns</source>
         <translation>列数</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="579"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="583"/>
         <source>Number of step columns on this page.</source>
         <translation>此页上的步骤列数。</translation>
     </message>
@@ -16924,7 +16924,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;属性&lt;/b&gt;&lt;/p&gt;&lt;p&gt;编辑说明书页面的外观。页面上未选择任何内容时显示所有部分，选择一个元素则只显示其设置和边框。右键点击页面可添加提示和指针。更改适用于所有页面。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="522"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="526"/>
         <source>BOM Background</source>
         <translation>物料清单背景</translation>
     </message>
@@ -16952,78 +16952,78 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;每页步骤数&lt;/b&gt;&lt;/p&gt;&lt;p&gt;当前页上的步骤行数和列数，后续页面依此顺延。预设将页面分为二等分、三等分或四等分，并显示步骤分隔线。横向页面的步骤沿每一行排布，纵向页面的步骤沿每一列排布，依据页面设置中选择的方向。分隔线是相邻步骤之间的线条。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="711"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="715"/>
         <source>Show Step Dividers</source>
         <translation>显示步骤分隔线</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="711"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="715"/>
         <source>Draw lines between neighboring steps.</source>
         <translation>在相邻步骤之间绘制线条。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="712"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="716"/>
         <source>Rounded Ends</source>
         <translation>圆角端点</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="712"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="716"/>
         <source>Round the line ends, off draws flat ends.</source>
         <translation>线条端点为圆角，关闭时为平直端点。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="716"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="720"/>
         <source>Draw the lines between steps above and below each other.</source>
         <translation>在上下相邻的步骤之间绘制线条。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="717"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="721"/>
         <source>Draw the lines between steps side by side.</source>
         <translation>在左右相邻的步骤之间绘制线条。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="720"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="724"/>
         <source>Divider Color</source>
         <translation>分隔线颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="720"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="724"/>
         <source>Color of the lines between steps.</source>
         <translation>步骤之间线条的颜色。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="722"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="726"/>
         <source>Divider Width</source>
         <translation>分隔线宽度</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="722"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="726"/>
         <source>Width of the lines between steps.</source>
         <translation>步骤之间线条的宽度。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="724"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="728"/>
         <source>Divider Margin</source>
         <translation>分隔线边距</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="724"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="728"/>
         <source>Space between the line ends and the page margins.</source>
         <translation>线条端点与页面边距之间的距离。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="726"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="730"/>
         <source>Divider Padding</source>
         <translation>分隔线内距</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="726"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="730"/>
         <source>Space between the lines and the steps on each side.</source>
         <translation>线条与两侧步骤之间的距离。</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="505"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="760"/>
         <source>Page Number</source>
         <translation>页码</translation>
     </message>
@@ -17087,283 +17087,293 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>页码的颜色。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="646"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="519"/>
+        <source>Show Part IDs</source>
+        <translation>显示零件编号</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="519"/>
+        <source>Print the part number under each part of the bill of materials, for easy reference.</source>
+        <translation>在物料清单中每个零件下方打印零件编号，便于查找。</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="650"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="760"/>
         <source>Step Number</source>
         <translation>步骤编号</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="649"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="653"/>
         <source>Show Step Number</source>
         <translation>显示步骤编号</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="652"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="656"/>
         <source>Step Number Font</source>
         <translation>步骤编号字体</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="652"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="656"/>
         <source>Font of the step numbers.</source>
         <translation>步骤编号的字体。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="654"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="658"/>
         <source>Step Number Color</source>
         <translation>步骤编号颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="654"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="658"/>
         <source>Color of the step numbers.</source>
         <translation>步骤编号的颜色。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="656"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="660"/>
         <source>Step Background</source>
         <translation>步骤背景</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="656"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="660"/>
         <source>Color filling the area of each step, transparent shows the page background.</source>
         <translation>填充每个步骤区域的颜色，透明则显示页面背景。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="659"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="663"/>
         <source>&lt;p&gt;&lt;b&gt;Parts List&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The list of parts added in each step. The bill of materials uses the same settings.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;零件列表&lt;/b&gt;&lt;/p&gt;&lt;p&gt;每个步骤中添加的零件列表。物料清单使用相同的设置。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="662"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="666"/>
         <source>Show Parts List</source>
         <translation>显示零件列表</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="662"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="666"/>
         <source>Show the parts added in each step next to its number.</source>
         <translation>在每个步骤的编号旁显示该步骤中添加的零件。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="663"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="667"/>
         <source>Show Part Counts</source>
         <translation>显示零件数量</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="663"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="667"/>
         <source>Show how many of each part are needed.</source>
         <translation>显示每种零件需要多少个。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="667"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
         <source>Parts List Order</source>
         <translation>零件列表顺序</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="667"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
         <source>Order of the parts in the list.</source>
         <translation>列表中零件的顺序。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="667"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
         <source>Sort by Color</source>
         <translation>按颜色排序</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="667"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
         <source>Sort by Name</source>
         <translation>按名称排序</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="667"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
         <source>Sort by Part ID</source>
         <translation>按零件编号排序</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="675"/>
         <source>Parts List Layout</source>
         <translation>零件列表布局</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="671"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="675"/>
         <source>Line the parts up in rows or in columns.</source>
         <translation>将零件排成行或排成列。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="673"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
         <source>Line Reference</source>
         <translation>对齐基准</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="673"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
         <source>Thumbnail edge the parts line up on.</source>
         <translation>零件对齐所依据的缩略图边缘。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="673"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1508"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
         <source>Top</source>
         <translation>上</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="673"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1508"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
         <source>Middle</source>
         <translation>中</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="673"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1508"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
         <source>Bottom</source>
         <translation>下</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="675"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="679"/>
         <source>Parts List Font</source>
         <translation>零件列表字体</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="675"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="679"/>
         <source>Font of the part counts.</source>
         <translation>零件数量的字体。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="681"/>
         <source>Parts List Text Color</source>
         <translation>零件列表文本颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="681"/>
         <source>Color of the part counts.</source>
         <translation>零件数量的颜色。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="698"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="702"/>
         <source>Use the thumbnail size and background of this page on every page.</source>
         <translation>在每一页上使用此页的缩略图大小和背景。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="741"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="745"/>
         <source>End line pointers with an arrow or a dot, callout wedges have no tip.</source>
         <translation>线条指针以箭头或圆点结尾，标注楔形没有尖端。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="741"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="745"/>
         <source>Arrow</source>
         <translation>箭头</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="747"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="751"/>
         <source>Width of the pointer lines, Border follows the border of the element.</source>
         <translation>指针线条的宽度，边框则跟随元素的边框。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="747"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="751"/>
         <source>Border</source>
         <translation>边框</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="749"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1068"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="753"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1072"/>
         <source>Automatic</source>
         <translation>自动</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="752"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
         <source>&lt;p&gt;&lt;b&gt;Box&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The space and border around each element. The margin keeps other elements away, the padding keeps the border away from the content and the background fills all of it, margin and padding included. Pointers leave the border. The step and cover models also set their size here. Choose the element to edit, selecting an element on the page chooses it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;框&lt;/b&gt;&lt;/p&gt;&lt;p&gt;每个元素周围的空间和边框。边距使其他元素保持距离，内边距使边框与内容保持距离，背景填充其全部区域，包括边距和内边距。指针从边框伸出。步骤模型和封面模型也在这里设置大小。选择要编辑的元素，在页面上选择一个元素即可选中它。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="778"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="808"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="782"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="812"/>
         <source>Model Size</source>
         <translation>模型大小</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="778"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="782"/>
         <source>Size of the step model, 100 percent fills its space, larger sizes are trimmed to it.</source>
         <translation>步骤模型的大小，100% 填满其空间，更大的尺寸会被裁剪到该空间。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="782"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="786"/>
         <source>Model Size on This Page Only</source>
         <translation>仅此页使用该模型大小</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="785"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="789"/>
         <source>Give this page its own model size, unchecked it follows all pages.</source>
         <translation>为此页设置单独的模型大小，不勾选则跟随所有页面。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="797"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="801"/>
         <source>Use the model size of this page on every page.</source>
         <translation>在每一页上使用此页的模型大小。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="808"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="812"/>
         <source>Size of the cover model, 100 percent fills its space, larger sizes are trimmed to it.</source>
         <translation>封面模型的大小，100% 填满其空间，更大的尺寸会被裁剪到该空间。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="816"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="820"/>
         <source>Border Width</source>
         <translation>边框宽度</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="818"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="822"/>
         <source>Corner Radius</source>
         <translation>圆角半径</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="818"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="822"/>
         <source>Roundness of the box corners, 0 keeps them square.</source>
         <translation>框角的圆润程度，0 表示保持直角。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1059"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1063"/>
         <source>Remove the text file and go back to the typed or automatic text.</source>
         <translation>移除文本文件，恢复为输入的文本或自动文本。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1068"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1072"/>
         <source>No File</source>
         <translation>无文件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1059"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1063"/>
         <source>Choose the text file.</source>
         <translation>选择文本文件。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="533"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="537"/>
         <source>&lt;p&gt;&lt;b&gt;Steps per Page&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model, and Main Page Color gives a submodel&apos;s finished model the main page color. The final model border frames that area and its margin keeps it away from the steps and page margins.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;每页步骤&lt;/b&gt;&lt;/p&gt;&lt;p&gt;当前页面上步骤的行数和列数，后续页面依此延续。预设将页面分成二等分、三等分或四等分，并显示步骤分隔线。步骤顺序按行或按列填充页面，最后一步会延伸到空白单元格。显示最终模型会把完成的模型放在模型最后一步之后的剩余空间，主页面颜色让子模型的完成模型使用主页面颜色。最终模型边框框住该区域，其边距使其远离步骤和页面边距。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1082"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1086"/>
         <source>Choose %1</source>
         <translation>选择%1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1099"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1103"/>
         <source>Text Files (*.txt);;All Files (*)</source>
         <translation>文本文件 (*.txt);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1508"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
         <source>Left</source>
         <translation>左</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1508"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
         <source>Center</source>
         <translation>中心</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1508"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
         <source>Right</source>
         <translation>右</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="679"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="683"/>
         <source>Thumbnail Size</source>
         <translation>缩略图大小</translation>
     </message>
@@ -17403,22 +17413,22 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>&lt;p&gt;&lt;b&gt;物料清单&lt;/b&gt;&lt;/p&gt;&lt;p&gt;最后一页，列出模型的所有零件。它使用零件列表的设置，在以自身字体和颜色显示的零件列表标题之下，并带有步骤编号的框。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="528"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="532"/>
         <source>BOM Title Font</source>
         <translation>物料清单标题字体</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="528"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="532"/>
         <source>Font of the Parts List title above the bill of materials.</source>
         <translation>物料清单上方零件列表标题的字体。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="530"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="534"/>
         <source>BOM Title Color</source>
         <translation>物料清单标题颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="530"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="534"/>
         <source>Color of the Parts List title above the bill of materials.</source>
         <translation>物料清单上方零件列表标题的颜色。</translation>
     </message>
@@ -17427,85 +17437,85 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;每页步骤数&lt;/b&gt;&lt;/p&gt;&lt;p&gt;当前页上的步骤行数和列数，后续页面依此顺延。预设将页面分为二等分、三等分或四等分，并显示步骤分隔线。步骤排布按行或按列填满页面，最后一步会延伸到空白格中。显示最终模型会把完成的模型放在模型最后一步之后的空余处。分隔线是相邻步骤之间的线条。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="584"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="716"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="588"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="720"/>
         <source>Horizontal</source>
         <translation>横向</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="584"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="717"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="588"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="721"/>
         <source>Vertical</source>
         <translation>纵向</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="585"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="589"/>
         <source>Fill this page with steps row by row, or column by column.</source>
         <translation>按行或按列用步骤填满此页。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="587"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="636"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="591"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="640"/>
         <source>Step Flow</source>
         <translation>步骤排布</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="598"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="602"/>
         <source>Show Final Model</source>
         <translation>显示最终模型</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="599"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="603"/>
         <source>Show the finished model in the room left on the page after the last step of a model.</source>
         <translation>在模型最后一步之后的页面空余处显示完成的模型。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="615"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="619"/>
         <source>Main Page Color</source>
         <translation>主页面颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="616"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="620"/>
         <source>Put the finished model of a submodel on the main page color.</source>
         <translation>把子模型的完成模型放在主页面颜色上。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="627"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="631"/>
         <source>Use this page layout on every page.</source>
         <translation>在所有页面上使用此页面布局。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="638"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="642"/>
         <source>Final Border</source>
         <translation>最终边框</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="638"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="642"/>
         <source>Width of the frame around the final model area, 0 draws none.</source>
         <translation>最终模型区域周围边框的宽度，0 表示不绘制。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="640"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="644"/>
         <source>Final Border Color</source>
         <translation>最终边框颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="640"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="644"/>
         <source>Color of the frame around the final model area.</source>
         <translation>最终模型区域周围边框的颜色。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="642"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="646"/>
         <source>Final Margin</source>
         <translation>最终边距</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="642"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="646"/>
         <source>Space between the final model area and the steps and page margins around it.</source>
         <translation>最终模型区域与周围步骤和页面边距之间的间隔。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="708"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="712"/>
         <source>Divider</source>
         <translation>分隔线</translation>
     </message>
@@ -17514,138 +17524,138 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;分隔线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;相邻步骤之间的线条。边距让线条端点远离页面边距，内距让步骤远离线条。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="646"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="650"/>
         <source>&lt;p&gt;&lt;b&gt;Step Number&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The step number and the area behind each step. The bill of materials shows a Parts List title in its place.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;步骤编号&lt;/b&gt;&lt;/p&gt;&lt;p&gt;步骤编号和每个步骤背后的区域。物料清单在其位置显示零件列表标题。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="649"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="653"/>
         <source>Show the number of each step in its top left corner, and the Parts List title of the bill of materials.</source>
         <translation>在每个步骤的左上角显示其编号，并显示物料清单的零件列表标题。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="679"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="683"/>
         <source>Size each part is drawn at, larger thumbnails show larger parts.</source>
         <translation>每个零件绘制的大小，缩略图越大，零件显示得越大。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="681"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="685"/>
         <source>Thumbnail Background</source>
         <translation>缩略图背景</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="681"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="685"/>
         <source>Color behind each part and its count, transparent draws none.</source>
         <translation>每个零件及其数量后面的颜色，透明则不绘制。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="686"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="690"/>
         <source>Thumbnails on This Page Only</source>
         <translation>仅此页使用该缩略图</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="689"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="693"/>
         <source>Give this page its own thumbnail size and background, unchecked it follows all pages.</source>
         <translation>让此页使用自己的缩略图大小和背景，取消勾选则跟随所有页面。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="729"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="733"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="760"/>
         <source>Notice</source>
         <translation>提示</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="729"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="733"/>
         <source>&lt;p&gt;&lt;b&gt;Notice&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Free text written on a page to point out something. Right-click the page and choose Add Notice to write one, double-click it to edit its text. Drag it, lock it in place or give it pointers like any other element.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;提示&lt;/b&gt;&lt;/p&gt;&lt;p&gt;写在页面上用来指出某件事的自由文本。右键点击页面并选择添加提示即可写一条，双击它可编辑文字。可以像其他元素一样拖动它、将其锁定在原位或为其添加指针。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="731"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="735"/>
         <source>Notice Font</source>
         <translation>提示字体</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="731"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="735"/>
         <source>Font of the notices.</source>
         <translation>提示的字体。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="733"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="737"/>
         <source>Notice Text Color</source>
         <translation>提示文本颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="733"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="737"/>
         <source>Color of the notice text.</source>
         <translation>声明文字的颜色。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="736"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="740"/>
         <source>Pointer</source>
         <translation>指针</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="736"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="740"/>
         <source>&lt;p&gt;&lt;b&gt;Pointer&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A pointer leaves the border of an element to point at a part, a step or a notice. Right-click an element and choose Add Pointer, then drag its tip onto a part of a step model, another element or any point of the page, the tip follows what it points at. Right-click a pointer to choose the anchor it leaves from, or its own style and tip.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;指针&lt;/b&gt;&lt;/p&gt;&lt;p&gt;指针从元素的边框伸出，指向零件、步骤或提示。右键点击元素并选择添加指针，然后将其尖端拖到步骤模型的某个零件、另一个元素或页面上的任意一点，尖端会跟随它所指向的对象。右键点击指针可选择它伸出的锚点，或其自身的样式和尖端。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="739"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="743"/>
         <source>Pointer Style</source>
         <translation>指针样式</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="739"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="743"/>
         <source>Draw pointers as a line or as a callout wedge narrowing to the tip.</source>
         <translation>将指针绘制为线条，或向尖端逐渐变窄的标注楔形。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="739"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="743"/>
         <source>Line</source>
         <translation>线</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="739"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="743"/>
         <source>Callout Wedge</source>
         <translation>标注楔形</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="741"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="745"/>
         <source>Pointer Tip</source>
         <translation>指针尖端</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="741"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="745"/>
         <source>Dot</source>
         <translation>圆点</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="743"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="747"/>
         <source>Pointer Color</source>
         <translation>指针颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="743"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="747"/>
         <source>Color of the pointers.</source>
         <translation>指针的颜色。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="747"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="751"/>
         <source>Pointer Width</source>
         <translation>指针宽度</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="749"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="753"/>
         <source>Tip Size</source>
         <translation>尖端大小</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="749"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="753"/>
         <source>Size of the arrows and dots, and width of the wedges at the element, never less than three times the pointer width.</source>
         <translation>箭头和圆点的大小，以及楔形在元素处的宽度，不会小于指针宽度的三倍。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="752"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
         <source>Box</source>
         <translation>框</translation>
     </message>
@@ -17654,19 +17664,19 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;框&lt;/b&gt;&lt;/p&gt;&lt;p&gt;每个元素周围的空间和边框。边距使其他元素保持距离，内边距使边框与内容保持距离，背景填充其全部区域，包括边距和内边距。指针从边框伸出。选择要编辑的元素，在页面上选择一个元素即可选中它。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="760"/>
         <source>Step Model</source>
         <translation>步骤模型</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="445"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="760"/>
         <source>Cover Title</source>
         <translation>封面标题</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="457"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="760"/>
         <source>Cover Author</source>
         <translation>封面作者</translation>
     </message>
@@ -17675,83 +17685,83 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;每页步骤&lt;/b&gt;&lt;/p&gt;&lt;p&gt;当前页面上步骤的行数和列数，后续页面依此延续。预设将页面分成二等分、三等分或四等分，并显示步骤分隔线。步骤顺序按行或按列填充页面，最后一步会延伸到空白单元格。显示最终模型会把完成的模型放在模型最后一步之后的剩余空间，主页面颜色让子模型的完成模型使用主页面颜色。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="708"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="712"/>
         <source>&lt;p&gt;&lt;b&gt;Divider&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The lines between neighboring steps. Horizontal and Vertical hide the lines in one direction, for example where page colors already split the page. The margin keeps the line ends away from the page margins, the padding keeps the steps away from the lines.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;分隔线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;相邻步骤之间的线条。水平和垂直会隐藏一个方向的线条，例如页面颜色已经将页面分开的地方。边距让线条端点远离页面边距，内距让步骤远离线条。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="760"/>
         <source>Cover Model</source>
         <translation>封面模型</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="757"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="761"/>
         <source>Choose the element whose box is edited, the parts list box is also the bill of materials box.</source>
         <translation>选择要编辑其框的元素，零件列表框同时也是物料清单框。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="759"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="763"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="765"/>
         <source>Element</source>
         <translation>元素</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="812"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="816"/>
         <source>Margin</source>
         <translation>边距</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="812"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="816"/>
         <source>Space outside the border, filled with the background.</source>
         <translation>边框之外的空间，以背景填充。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="814"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="818"/>
         <source>Padding</source>
         <translation>内边距</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="814"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="818"/>
         <source>Space between the border and the content, filled with the background.</source>
         <translation>边框与内容之间的空间，以背景填充。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="816"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="820"/>
         <source>Width of the line around the element, 0 draws no line.</source>
         <translation>元素周围线条的宽度，0 表示不绘制线条。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="820"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="824"/>
         <source>Border Color</source>
         <translation>边框颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="820"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="824"/>
         <source>Color of the line around the element.</source>
         <translation>元素周围线条的颜色。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="822"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="826"/>
         <source>Background</source>
         <translation>背景</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="822"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="826"/>
         <source>Color filling the whole element, margin and padding included, transparent shows what lies behind.</source>
         <translation>填充整个元素的颜色，包括边距和内边距，透明则显示其后面的内容。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="842"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="846"/>
         <source>Expand or collapse the %1 properties.</source>
         <translation>展开或折叠 %1 属性。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1123"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1127"/>
         <source>Size of the font in the page units.</source>
         <translation>字体大小，以页面单位计。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1125"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1129"/>
         <source>%1 Size</source>
         <translation>%1 大小</translation>
     </message>
@@ -17761,8 +17771,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>透明</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="659"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="756"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="663"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="760"/>
         <source>Parts List</source>
         <translation>零件列表</translation>
     </message>
@@ -17821,22 +17831,22 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsRulerWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2159"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2160"/>
         <source>Horizontal Ruler</source>
         <translation>水平标尺</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2160"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2161"/>
         <source>Horizontal position on the page in the page units, the arrow follows the pointer.</source>
         <translation>页面上的水平位置，以页面单位计，箭头跟随指针。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2164"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2165"/>
         <source>Vertical Ruler</source>
         <translation>垂直标尺</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2165"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2166"/>
         <source>Vertical position on the page in the page units, the arrow follows the pointer.</source>
         <translation>页面上的垂直位置，以页面单位计，箭头跟随指针。</translation>
     </message>
@@ -20539,42 +20549,42 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>无法创建步骤图像。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="261"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="436"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="445"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="566"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="262"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="437"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="446"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="573"/>
         <source>Could not allocate the parts list image.</source>
         <translation>无法分配零件清单图像。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="304"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="305"/>
         <source>Could not create the parts list framebuffer.</source>
         <translation>无法创建零件清单帧缓冲区。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="385"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="386"/>
         <source>Could not read the parts list image.</source>
         <translation>无法读取零件清单图像。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="658"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1003"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1033"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1039"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1050"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1066"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1070"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1100"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1108"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="670"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1015"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1045"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1051"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1062"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1078"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1082"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1112"/>
         <location filename="../../source/core/sw_model_render.cpp" line="1120"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1124"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1132"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1136"/>
         <source>Could not write file &apos;%1&apos;:
 %2</source>
         <translation>无法写入文件 &apos;%1&apos;：
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="997"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1009"/>
         <source>Save at least two poses of the main model first.</source>
         <translation>请先保存至少两个主模型姿势。</translation>
     </message>

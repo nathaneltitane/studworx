@@ -538,7 +538,7 @@ public:
 	QImage GetStepImage(bool Zoom, int Width, int Height, swStep Step, swImageBackground Background = swImageBackground::Default, swCamera* Camera = nullptr);
 
 	// Empty inventories give a null image.
-	swResult<QImage> GetPartsListImage(int MaxWidth, int ThumbnailSize, swStep Step, quint32 BackgroundColor, quint32 ThumbnailBackgroundColor, QFont Font, QColor TextColor, bool KeepMissingParts, bool ShowCounts = true, swPartsListSort Sort = swPartsListSort::Color, swPartsListLayout Layout = swPartsListLayout::Rows, swPartsListAlignment Alignment = swPartsListAlignment::End, int MaxHeight = INT_MAX, float Scale = 1.0f) const;
+	swResult<QImage> GetPartsListImage(int MaxWidth, int ThumbnailSize, swStep Step, quint32 BackgroundColor, quint32 ThumbnailBackgroundColor, QFont Font, QColor TextColor, bool KeepMissingParts, bool ShowCounts = true, swPartsListSort Sort = swPartsListSort::Color, swPartsListLayout Layout = swPartsListLayout::Rows, swPartsListAlignment Alignment = swPartsListAlignment::End, int MaxHeight = INT_MAX, float Scale = 1.0f, bool ShowPartIds = false) const;
 	swResult<void> SaveStepImages(const QString& BaseName, bool AddStepSuffix, bool Zoom, int Width, int Height, swStep Start, swStep End, swImageBackground Background, const QColor& BackgroundColor = QColor());
 
 	// Frames turn the active view around the model center.

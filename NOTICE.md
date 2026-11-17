@@ -9,8 +9,10 @@
   - Instructions: the Properties groups follow the page from largest to smallest, Page before Bill of Materials and Step Number, Parts List then Divider after Steps per Page
   - Instructions: Page Number is part of the Page group
   - Instructions: every Properties group shows on every page and starts folded, selecting an element opens its group and folds the others
-  - Translations: the merged Page and Properties help read right in all nine languages
+  - Instructions: Show Part IDs in the Bill of Materials group prints the part number under each part of the bill of materials, on by default
+  - Translations: the merged Page and Properties help and Show Part IDs read right in all nine languages
   - Site: the Properties image is retaken to show the new group order, folded
+  - Site: the bill of materials image is retaken to show the part IDs
   - Translations: the new highlight and final model settings read right in all nine languages
   - Site: the Instructions, Rendering, Views and Interface images are retaken to show the panel fold arrows and the new instructions settings, and the Instructions features name Step Flow, the final model, dividers, Model Size, Highlight Width, text files and Undo and Redo
   - Site: the POV-Ray and Blender Render images show the full output path the windows fill in

@@ -250,6 +250,10 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::FinalModelBorderWidth)].Value = 0;
 	Properties[static_cast<int>(swInstructionsPropertyType::FinalModelBorderColor)].Value = SW_RGBA(0, 0, 0, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::FinalModelMargin)].Value = 0;
+
+	// materials page names each part
+
+	Properties[static_cast<int>(swInstructionsPropertyType::BillOfMaterialsShowPartIds)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::StepNumberPlacement)].Value = SW_PLACEMENT_GRID_SIZE + 1;
 	Properties[static_cast<int>(swInstructionsPropertyType::StepNumberAnchor)].Value = static_cast<int>(swInstructionsPlacementAnchor::Area);
 	Properties[static_cast<int>(swInstructionsPropertyType::PLIPlacement)].Value = SW_PLACEMENT_GRID_SIZE + SW_PLACEMENT_GRID_SIZE - 1;
@@ -319,7 +323,7 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::HighlightNewParts)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::HighlightColor)].Value = SW_RGBA(255, 242, 0, 230);
 
-	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 127, "Missing default property");
+	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 128, "Missing default property");
 
 	return Properties;
 }

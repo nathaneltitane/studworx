@@ -192,7 +192,7 @@ swResult<QImage> swModel::RenderStepImageWithReadyAssets(bool Zoom, int Width, i
 	return Image;
 }
 
-swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnailSize, swStep Step, quint32 BackgroundColor, quint32 ThumbnailBackgroundColor, QFont Font, QColor TextColor, bool KeepMissingParts, bool ShowCounts, swPartsListSort Sort, swPartsListLayout Layout, swPartsListAlignment Alignment, int MaxHeight, float Scale) const
+swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnailSize, swStep Step, quint32 BackgroundColor, quint32 ThumbnailBackgroundColor, QFont Font, QColor TextColor, bool KeepMissingParts, bool ShowCounts, swPartsListSort Sort, swPartsListLayout Layout, swPartsListAlignment Alignment, int MaxHeight, float Scale, bool ShowPartIds) const
 {
 	// scale every pixel size
 	auto Scaled = [Scale](int Size)
@@ -232,6 +232,7 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 		QPoint Position;
 		QPoint TextPosition;
 		int CellWidth;
+		QString PartId;
 	};
 
 	std::vector<swPartsListImage> Images;
@@ -448,13 +449,19 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 
 	DummyPainter.setFont(Font);
 	QFontMetrics FontMetrics = DummyPainter.fontMetrics();
-	const int Ascent = ShowCounts ? FontMetrics.ascent() : 0;
+	// count and id lines under thumbnails
+	const int LineCount = ShowCounts + ShowPartIds;
+	const int Ascent = LineCount ? FontMetrics.ascent() + (LineCount - 1) * FontMetrics.lineSpacing() : 0;
 
 	const int Spacing = Scaled(20);
 
-	// take the wider of thumbnail and count
+	// take the widest of thumbnail and text
 	for (swPartsListImage& Image : Images)
+	{
+		Image.PartId = QFileInfo(QString::fromLatin1(Image.PartData->mFileName)).completeBaseName();
 		Image.CellWidth = qMax(Image.Bounds.width(), ShowCounts ? FontMetrics.horizontalAdvance(QString::number(Image.Count) + 'x') : 0);
+		Image.CellWidth = qMax(Image.CellWidth, ShowPartIds ? FontMetrics.horizontalAdvance(Image.PartId) : 0);
+	}
 
 	// use to place a part beside the edge
 	auto GetAlignmentOffset = [Alignment](int Space)
@@ -583,6 +590,7 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 		// line up thumbnail and count
 		const int ThumbnailX = Position.x() + GetAlignmentOffset(Image.CellWidth - Image.Bounds.width()) * (Layout == swPartsListLayout::Columns);
 		const int TextX = Position.x() + GetAlignmentOffset(Image.CellWidth - TextWidth) * (Layout == swPartsListLayout::Columns);
+		const int PartIdX = Position.x() + GetAlignmentOffset(Image.CellWidth - FontMetrics.horizontalAdvance(Image.PartId)) * (Layout == swPartsListLayout::Columns);
 
 		// keep the background inside the spacing
 		if (qAlpha(ThumbnailBackgroundColor))
@@ -590,8 +598,12 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 
 		Painter.drawImage(QPoint(ThumbnailX, Position.y()), Image.Thumbnail, Image.Bounds);
 
+		// id on the last line
 		if (ShowCounts)
-			Painter.drawText(QPoint(TextX, TextPosition.y()), Text);
+			Painter.drawText(QPoint(TextX, TextPosition.y() - ShowPartIds * FontMetrics.lineSpacing()), Text);
+
+		if (ShowPartIds)
+			Painter.drawText(QPoint(PartIdX, TextPosition.y()), Image.PartId);
 	}
 
 	Painter.end();
