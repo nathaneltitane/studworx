@@ -17209,19 +17209,19 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1515"/>
         <source>Top</source>
         <translation>上</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1515"/>
         <source>Middle</source>
         <translation>中</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1515"/>
         <source>Bottom</source>
         <translation>下</translation>
     </message>
@@ -17358,17 +17358,17 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>文本文件 (*.txt);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1515"/>
         <source>Left</source>
         <translation>左</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1515"/>
         <source>Center</source>
         <translation>中心</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1515"/>
         <source>Right</source>
         <translation>右</translation>
     </message>
@@ -20549,42 +20549,42 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>无法创建步骤图像。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="262"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="437"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="446"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="573"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="263"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="438"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="447"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="574"/>
         <source>Could not allocate the parts list image.</source>
         <translation>无法分配零件清单图像。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="305"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="306"/>
         <source>Could not create the parts list framebuffer.</source>
         <translation>无法创建零件清单帧缓冲区。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="386"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="387"/>
         <source>Could not read the parts list image.</source>
         <translation>无法读取零件清单图像。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="670"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1015"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1045"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1051"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1062"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1078"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1082"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1112"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1120"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1132"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1136"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="671"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1016"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1046"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1052"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1063"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1079"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1083"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1113"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1121"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1133"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1137"/>
         <source>Could not write file &apos;%1&apos;:
 %2</source>
         <translation>无法写入文件 &apos;%1&apos;：
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="1009"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1010"/>
         <source>Save at least two poses of the main model first.</source>
         <translation>请先保存至少两个主模型姿势。</translation>
     </message>

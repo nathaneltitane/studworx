@@ -680,7 +680,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddEditorRow(CategoryIndex::PartsList, swInstructionsPropertyType::PLIFont);
 	CreateColorEditor(swInstructionsPropertyType::PLITextColor, tr("Parts List Text Color"), tr("Color of the part counts."));
 	AddEditorRow(CategoryIndex::PartsList, swInstructionsPropertyType::PLITextColor);
-	CreateLengthEditor(swInstructionsPropertyType::PLIThumbnailSize, tr("Thumbnail Size"), tr("Size each part is drawn at, larger thumbnails show larger parts."), 32, 512);
+	CreateLengthEditor(swInstructionsPropertyType::PLIThumbnailSize, tr("Thumbnail Size"), tr("Size each part is drawn at, larger thumbnails show larger parts."), 32, 1024);
 	AddEditorRow(CategoryIndex::PartsList, swInstructionsPropertyType::PLIThumbnailSize);
 	CreateColorEditor(swInstructionsPropertyType::PLIThumbnailBackgroundColor, tr("Thumbnail Background"), tr("Color behind each part and its count, transparent draws none."));
 	AddEditorRow(CategoryIndex::PartsList, swInstructionsPropertyType::PLIThumbnailBackgroundColor);
@@ -1290,6 +1290,7 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 	if (Focus != mFocus && Focus != FocusType::None)
 	{
 		CategoryIndex Open = CategoryIndex::Box;
+		CategoryIndex OpenAlso = CategoryIndex::Box;
 
 		switch (Focus)
 		{
@@ -1303,6 +1304,7 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 
 		case FocusType::BillOfMaterials:
 			Open = CategoryIndex::BillOfMaterials;
+			OpenAlso = CategoryIndex::PartsList;
 			break;
 
 		case FocusType::PageNumber:
@@ -1329,7 +1331,7 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 		}
 
 		for (int Index = 0; Index < static_cast<int>(CategoryIndex::Count); Index++)
-			mCategoryWidgets[Index].Button->SetExpanded(Index == static_cast<int>(Open));
+			mCategoryWidgets[Index].Button->SetExpanded(Index == static_cast<int>(Open) || Index == static_cast<int>(OpenAlso));
 	}
 
 	mFocus = Focus;

@@ -200,8 +200,9 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 		return qRound(Size * Scale);
 	};
 
-	MaxWidth = Scaled(MaxWidth);
-	MaxHeight = MaxHeight < INT_MAX / 8 ? Scaled(MaxHeight) : INT_MAX;
+	// wrap inside the image padding
+	MaxWidth = qMax(Scaled(MaxWidth) - Scaled(40), Scaled(16));
+	MaxHeight = MaxHeight < INT_MAX / 8 ? qMax(Scaled(MaxHeight) - Scaled(40), Scaled(16)) : INT_MAX;
 
 	if (Font.pointSizeF() > 0.0)
 		Font.setPointSizeF(Font.pointSizeF() * Scale);
@@ -297,7 +298,7 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 	swContext* Context = View.mContext;
 
 	// skip thumbnails wider than the list
-	const int ThumbnailSize = qBound(Scaled(16), Scaled(RequestedThumbnailSize), qMax(qMin(MaxWidth, Scaled(512)), Scaled(16)));
+	const int ThumbnailSize = qBound(Scaled(16), Scaled(RequestedThumbnailSize), qMax(qMin(MaxWidth, Scaled(1024)), Scaled(16)));
 
 	View.SetSize(ThumbnailSize, ThumbnailSize);
 

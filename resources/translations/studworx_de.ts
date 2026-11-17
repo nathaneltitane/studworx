@@ -16974,19 +16974,19 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1515"/>
         <source>Top</source>
         <translation>Oben</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1515"/>
         <source>Middle</source>
         <translation>Mitte</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="677"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1515"/>
         <source>Bottom</source>
         <translation>Unten</translation>
     </message>
@@ -17123,17 +17123,17 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation>Textdateien (*.txt);;Alle Dateien (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1515"/>
         <source>Left</source>
         <translation>Links</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1515"/>
         <source>Center</source>
         <translation>Mitte</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1513"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_properties.cpp" line="1515"/>
         <source>Right</source>
         <translation>Rechts</translation>
     </message>
@@ -20366,42 +20366,42 @@ Soll ein Speicherort gewählt und die neueste Version von %3 jetzt heruntergelad
         <translation>Die Schrittbilder konnten nicht erstellt werden.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="262"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="437"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="446"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="573"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="263"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="438"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="447"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="574"/>
         <source>Could not allocate the parts list image.</source>
         <translation>Das Bild der Teileliste konnte nicht angelegt werden.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="305"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="306"/>
         <source>Could not create the parts list framebuffer.</source>
         <translation>Der Teilelisten-Framebuffer konnte nicht erstellt werden.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="386"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="387"/>
         <source>Could not read the parts list image.</source>
         <translation>Das Teilelistenbild konnte nicht gelesen werden.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="670"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1015"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1045"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1051"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1062"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1078"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1082"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1112"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1120"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1132"/>
-        <location filename="../../source/core/sw_model_render.cpp" line="1136"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="671"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1016"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1046"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1052"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1063"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1079"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1083"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1113"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1121"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1133"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1137"/>
         <source>Could not write file &apos;%1&apos;:
 %2</source>
         <translation>Die Datei „%1“ konnte nicht geschrieben werden:
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_render.cpp" line="1009"/>
+        <location filename="../../source/core/sw_model_render.cpp" line="1010"/>
         <source>Save at least two poses of the main model first.</source>
         <translation>Zuerst mindestens zwei Posen des Hauptmodells speichern.</translation>
     </message>
