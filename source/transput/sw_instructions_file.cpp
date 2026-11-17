@@ -45,7 +45,8 @@ static const QLatin1String gInstructionsPropertyNames[] =
 	QLatin1String("BILL_OF_MATERIALS_TITLE_FONT"), QLatin1String("COVER_AUTHOR_FONT"), QLatin1String("BILL_OF_MATERIALS_TITLE_COLOR"), QLatin1String("COVER_AUTHOR_COLOR"), QLatin1String("SUBMODEL_BACKGROUND_COLOR"),
 	QLatin1String("STEP_IMAGE_SIZE"), QLatin1String("COVER_IMAGE_SIZE"),
 	QLatin1String("COVER_TITLE_TEXT"), QLatin1String("COVER_TITLE_FILE"), QLatin1String("COVER_AUTHOR_TEXT"),
-	QLatin1String("COVER_AUTHOR_FILE"), QLatin1String("BILL_OF_MATERIALS_TITLE_TEXT"), QLatin1String("BILL_OF_MATERIALS_TITLE_FILE")
+	QLatin1String("COVER_AUTHOR_FILE"), QLatin1String("BILL_OF_MATERIALS_TITLE_TEXT"), QLatin1String("BILL_OF_MATERIALS_TITLE_FILE"),
+	QLatin1String("STEP_DIVIDER_MARGIN"), QLatin1String("STEP_DIVIDER_PADDING"), QLatin1String("STEP_DIVIDER_ROUNDED")
 };
 
 static_assert(std::size(gInstructionsPropertyNames) == static_cast<size_t>(swInstructionsPropertyType::Count), "Missing property name");

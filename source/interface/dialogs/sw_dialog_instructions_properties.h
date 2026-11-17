@@ -71,6 +71,7 @@ protected:
 		BillOfMaterials,
 		Page,
 		PageLayout,
+		Divider,
 		PageNumber,
 		Step,
 		PartsList,
@@ -160,8 +161,6 @@ protected:
 	void UpdateCategories();
 	swInstructionsPageSettings GetPageLayoutSettings() const;
 	swInstructionsPageType GetPageType() const;
-
-	static QIcon CreateDividerPresetIcon(int Rows, int Columns, const QPalette& Palette);
 
 	swInstructions* mInstructions = nullptr;
 	QWidget* mOptionsRow = nullptr;

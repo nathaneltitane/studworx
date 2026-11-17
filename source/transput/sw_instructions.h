@@ -176,6 +176,9 @@ enum class swInstructionsPropertyType
 	CoverAuthorFile,
 	BillOfMaterialsTitleText,
 	BillOfMaterialsTitleFile,
+	StepDividerMargin,
+	StepDividerPadding,
+	StepDividerRounded,
 	Count
 };
 

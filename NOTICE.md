@@ -26,6 +26,8 @@
   - Instructions: Apply to All Pages on a submodel page keeps the main Page Background instead of resetting it
   - Instructions: Cover Title, Cover Author and BOM Title take your own text, or a text file that wins over it, and notices take a text file too
   - Instructions: the Editor panel stays folded when collapsed or dragged down, instead of growing back by a line
+  - Instructions: dividers get their own Divider group with margin, padding and rounded ends, and reach the page margins by default without poking past them
+  - Instructions: the Steps per Page buttons show only their divider lines, the button is the page, one step per page shows a circle
   - Instructions: new part outlines on large step images no longer show seam lines
   - Instructions: Show Author sits on its own row
 

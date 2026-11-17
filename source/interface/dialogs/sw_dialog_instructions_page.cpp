@@ -1397,10 +1397,14 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 		if (Instructions->GetBoolProperty(swInstructionsPropertyType::ShowStepDividers, FirstStep.Model, FirstStep.Step))
 		{
 			const int DividerWidth = Instructions->GetIntProperty(swInstructionsPropertyType::StepDividerWidth, FirstStep.Model, FirstStep.Step);
-			const QPen DividerPen(Instructions->GetColorProperty(swInstructionsPropertyType::StepDividerColor, FirstStep.Model, FirstStep.Step), DividerWidth);
-			const qreal Inset = 10.0;
+			const bool Rounded = Instructions->GetBoolProperty(swInstructionsPropertyType::StepDividerRounded, FirstStep.Model, FirstStep.Step);
+			const QPen DividerPen(Instructions->GetColorProperty(swInstructionsPropertyType::StepDividerColor, FirstStep.Model, FirstStep.Step), DividerWidth, Qt::SolidLine, Rounded ? Qt::RoundCap : Qt::FlatCap);
 
-			DividerInset = DividerWidth / 2.0;
+			// round ends stay inside the margins
+
+			const qreal Inset = Instructions->GetIntProperty(swInstructionsPropertyType::StepDividerMargin, FirstStep.Model, FirstStep.Step) + (Rounded ? DividerWidth / 2.0 : 0.0);
+
+			DividerInset = DividerWidth / 2.0 + Instructions->GetIntProperty(swInstructionsPropertyType::StepDividerPadding, FirstStep.Model, FirstStep.Step);
 
 			auto IsNear = [](qreal Value1, qreal Value2)
 			{

@@ -325,6 +325,60 @@ void swInstructionsPropertiesWidget::ShowPageSetupDialog()
 }
 
 // split page presets
+// the button is the page, only its dividers show
+class swDividerPresetButton : public QToolButton
+{
+public:
+	swDividerPresetButton(int Rows, int Columns, QWidget* Parent)
+		: QToolButton(Parent), mRows(Rows), mColumns(Columns)
+	{
+	}
+
+protected:
+	void paintEvent(QPaintEvent* Event) override
+	{
+		QToolButton::paintEvent(Event);
+
+		QPainter Painter(this);
+		const QRectF PageRect = QRectF(rect()).adjusted(1.0, 1.0, -1.0, -1.0);
+
+		// line ends keep clear of the border
+
+		const qreal Gap = 5.0;
+		QColor LineColor = palette().color(QPalette::WindowText);
+
+		if (!isEnabled())
+			LineColor.setAlpha(110);
+
+		Painter.setPen(QPen(LineColor, 2.0, Qt::SolidLine, Qt::FlatCap));
+
+		// a single step shows a circle
+
+		if (mRows == 1 && mColumns == 1)
+		{
+			const qreal Radius = PageRect.height() / 2.0 - Gap;
+
+			Painter.setRenderHint(QPainter::Antialiasing);
+			Painter.drawEllipse(PageRect.center(), Radius, Radius);
+		}
+
+		for (int Row = 1; Row < mRows; Row++)
+		{
+			const qreal Y = qRound(PageRect.top() + PageRect.height() * Row / mRows);
+			Painter.drawLine(QPointF(PageRect.left() + Gap, Y), QPointF(PageRect.right() - Gap, Y));
+		}
+
+		for (int Column = 1; Column < mColumns; Column++)
+		{
+			const qreal X = qRound(PageRect.left() + PageRect.width() * Column / mColumns);
+			Painter.drawLine(QPointF(X, PageRect.top() + Gap), QPointF(X, PageRect.bottom() - Gap));
+		}
+	}
+
+	int mRows;
+	int mColumns;
+};
+
 struct swDividerPreset
 {
 	int Rows;
@@ -461,7 +515,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 
 	AddRow(CategoryIndex::Page, { BackgroundApplyAllButton });
 
-	AddCategory(CategoryIndex::PageLayout, tr("Steps per Page"), tr("<p><b>Steps per Page</b></p><p>The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model, and Main Page Color gives a submodel's finished model the main page color. The dividers are the lines between neighboring steps.</p>"));
+	AddCategory(CategoryIndex::PageLayout, tr("Steps per Page"), tr("<p><b>Steps per Page</b></p><p>The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model, and Main Page Color gives a submodel's finished model the main page color.</p>"));
 
 	std::vector<QWidget*> PresetButtons;
 
@@ -470,8 +524,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 		const swDividerPreset& DividerPreset = swDividerPresets[Preset];
 		const QString Name = tr(DividerPreset.Name);
 
-		QToolButton* Button = new QToolButton(this);
-		Button->setIcon(CreateDividerPresetIcon(DividerPreset.Rows, DividerPreset.Columns, palette()));
+		QToolButton* Button = new swDividerPresetButton(DividerPreset.Rows, DividerPreset.Columns, this);
 		Button->setCheckable(true);
 		Button->setToolTip(tr(DividerPreset.ToolTip));
 		Button->setWhatsThis(Button->toolTip());
@@ -569,14 +622,21 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddRow(CategoryIndex::PageLayout, { mFinalModelButton, mFinalModelColorButton });
 	AddRow(CategoryIndex::PageLayout, { ApplyAllButton });
 
-	AddRow(CategoryIndex::PageLayout, {
-		CreateToggleEditor(swInstructionsPropertyType::ShowStepDividers, tr("Show Step Dividers"), tr("Draw lines between neighboring steps."))
+	AddCategory(CategoryIndex::Divider, tr("Divider"), tr("<p><b>Divider</b></p><p>The lines between neighboring steps. The margin keeps the line ends away from the page margins, the padding keeps the steps away from the lines.</p>"));
+
+	AddRow(CategoryIndex::Divider, {
+		CreateToggleEditor(swInstructionsPropertyType::ShowStepDividers, tr("Show Step Dividers"), tr("Draw lines between neighboring steps.")),
+		CreateToggleEditor(swInstructionsPropertyType::StepDividerRounded, tr("Rounded Ends"), tr("Round the line ends, off draws flat ends."))
 	});
 
 	CreateColorEditor(swInstructionsPropertyType::StepDividerColor, tr("Divider Color"), tr("Color of the lines between steps."));
-	AddEditorRow(CategoryIndex::PageLayout, swInstructionsPropertyType::StepDividerColor);
+	AddEditorRow(CategoryIndex::Divider, swInstructionsPropertyType::StepDividerColor);
 	CreateLengthEditor(swInstructionsPropertyType::StepDividerWidth, tr("Divider Width"), tr("Width of the lines between steps."), 1, 72, 0.1);
-	AddEditorRow(CategoryIndex::PageLayout, swInstructionsPropertyType::StepDividerWidth);
+	AddEditorRow(CategoryIndex::Divider, swInstructionsPropertyType::StepDividerWidth);
+	CreateLengthEditor(swInstructionsPropertyType::StepDividerMargin, tr("Divider Margin"), tr("Space between the line ends and the page margins."), 0, 144, 0.25);
+	AddEditorRow(CategoryIndex::Divider, swInstructionsPropertyType::StepDividerMargin);
+	CreateLengthEditor(swInstructionsPropertyType::StepDividerPadding, tr("Divider Padding"), tr("Space between the lines and the steps on each side."), 0, 144, 0.25);
+	AddEditorRow(CategoryIndex::Divider, swInstructionsPropertyType::StepDividerPadding);
 
 	AddCategory(CategoryIndex::PageNumber, tr("Page Number"), tr("<p><b>Page Number</b></p><p>The number of each page, the cover and blank pages are not numbered unless all pages are. Drag it or use the Placement panel to move it on all pages.</p>"));
 
@@ -1403,6 +1463,9 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 	SetEnabled(swInstructionsPropertyType::PageNumberFont, !UseDocumentFont && ShowPageNumber);
 	SetEnabled(swInstructionsPropertyType::PageNumberColor, ShowPageNumber);
 	SetEnabled(swInstructionsPropertyType::StepDividerWidth, ShowStepDividers);
+	SetEnabled(swInstructionsPropertyType::StepDividerMargin, ShowStepDividers);
+	SetEnabled(swInstructionsPropertyType::StepDividerPadding, ShowStepDividers);
+	SetEnabled(swInstructionsPropertyType::StepDividerRounded, ShowStepDividers);
 
 	const swInstructionsPageType PageType = GetPageType();
 	QSignalBlocker Blocker(mThumbnailPageButton);
@@ -1481,40 +1544,6 @@ void swInstructionsPropertiesWidget::DividerPresetClicked(int Preset)
 	UpdatePageLayout();
 }
 
-QIcon swInstructionsPropertiesWidget::CreateDividerPresetIcon(int Rows, int Columns, const QPalette& Palette)
-{
-	// outline the page and dividers
-	const int Size = 32;
-	const QRectF PageRect(6.0, 4.0, 20.0, 24.0);
-
-	QPixmap Pixmap(Size, Size);
-	Pixmap.fill(Qt::transparent);
-
-	QPainter Painter(&Pixmap);
-	QColor OutlineColor = Palette.color(QPalette::WindowText);
-	OutlineColor.setAlpha(110);
-
-	Painter.setPen(QPen(OutlineColor, 2.0));
-	Painter.drawRect(PageRect);
-	Painter.setPen(QPen(Palette.color(QPalette::WindowText), 2.0));
-
-	for (int Row = 1; Row < Rows; Row++)
-	{
-		const qreal Y = PageRect.top() + PageRect.height() * Row / Rows;
-		Painter.drawLine(QPointF(PageRect.left() + 3.0, Y), QPointF(PageRect.right() - 3.0, Y));
-	}
-
-	for (int Column = 1; Column < Columns; Column++)
-	{
-		const qreal X = PageRect.left() + PageRect.width() * Column / Columns;
-		Painter.drawLine(QPointF(X, PageRect.top() + 3.0), QPointF(X, PageRect.bottom() - 3.0));
-	}
-
-	Painter.end();
-
-	return QIcon(Pixmap);
-}
-
 void swInstructionsPropertiesWidget::UpdatePageLayout()
 {
 	const swInstructionsPageSettings PageSettings = mInstructions->GetPageSettings(mPageIndex);
@@ -1590,6 +1619,7 @@ void swInstructionsPropertiesWidget::UpdateCategories()
 			Visible[static_cast<int>(CategoryIndex::Cover)] = true;
 			Visible[static_cast<int>(CategoryIndex::BillOfMaterials)] = true;
 			Visible[static_cast<int>(CategoryIndex::PageLayout)] = PageType == swInstructionsPageType::Steps;
+			Visible[static_cast<int>(CategoryIndex::Divider)] = PageType == swInstructionsPageType::Steps;
 			Visible[static_cast<int>(CategoryIndex::Page)] = PageType == swInstructionsPageType::Steps || PageType == swInstructionsPageType::Blank;
 			Visible[static_cast<int>(CategoryIndex::PageNumber)] = PageType != swInstructionsPageType::Cover;
 			Visible[static_cast<int>(CategoryIndex::Step)] = PageType == swInstructionsPageType::Steps;

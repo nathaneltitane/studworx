@@ -232,6 +232,12 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::CoverAuthorFile)].Value = QString();
 	Properties[static_cast<int>(swInstructionsPropertyType::BillOfMaterialsTitleText)].Value = QString();
 	Properties[static_cast<int>(swInstructionsPropertyType::BillOfMaterialsTitleFile)].Value = QString();
+
+	// dividers reach the page margins
+
+	Properties[static_cast<int>(swInstructionsPropertyType::StepDividerMargin)].Value = 0;
+	Properties[static_cast<int>(swInstructionsPropertyType::StepDividerPadding)].Value = 0;
+	Properties[static_cast<int>(swInstructionsPropertyType::StepDividerRounded)].Value = false;
 	Properties[static_cast<int>(swInstructionsPropertyType::StepNumberPlacement)].Value = SW_PLACEMENT_GRID_SIZE + 1;
 	Properties[static_cast<int>(swInstructionsPropertyType::StepNumberAnchor)].Value = static_cast<int>(swInstructionsPlacementAnchor::Area);
 	Properties[static_cast<int>(swInstructionsPropertyType::PLIPlacement)].Value = SW_PLACEMENT_GRID_SIZE + SW_PLACEMENT_GRID_SIZE - 1;
@@ -301,7 +307,7 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::HighlightNewParts)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::HighlightColor)].Value = SW_RGBA(255, 242, 0, 230);
 
-	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 118, "Missing default property");
+	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 121, "Missing default property");
 
 	return Properties;
 }
@@ -1240,6 +1246,9 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::ShowStepDividers:
 	case swInstructionsPropertyType::StepDividerColor:
 	case swInstructionsPropertyType::StepDividerWidth:
+	case swInstructionsPropertyType::StepDividerMargin:
+	case swInstructionsPropertyType::StepDividerPadding:
+	case swInstructionsPropertyType::StepDividerRounded:
 	case swInstructionsPropertyType::StepNumberPlacement:
 	case swInstructionsPropertyType::StepNumberAnchor:
 	case swInstructionsPropertyType::PLIPlacement:
