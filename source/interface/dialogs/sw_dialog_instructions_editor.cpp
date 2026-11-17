@@ -514,7 +514,12 @@ int swInstructionsEditorWidget::GetSnapDelta() const
 	// lines start below the document margin
 	const qreal Margin = mTextEdit->document()->documentMargin();
 	const int ViewportHeight = mTextEdit->viewport()->height();
-	int Lines = qMax(1, qRound((ViewportHeight - Margin) / LineHeight));
+	int Lines = qRound((ViewportHeight - Margin) / LineHeight);
+
+	// a folded panel stays folded
+	if (Lines < 1)
+		return 0;
+
 	int Delta = qCeil(Margin + Lines * LineHeight) - ViewportHeight;
 
 	// round up when the panel cannot shrink
