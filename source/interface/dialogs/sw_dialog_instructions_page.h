@@ -510,7 +510,7 @@ bool swGetElementKey(const QGraphicsItem* Item, swInstructionsElementKey& Key);
 QPointF swGetPointerAnchor(const QRectF& BorderRect, int Anchor);
 
 // Edits the text of a notice.
-bool swEditNoticeText(QWidget* Parent, QString& Text, bool NewNotice);
+bool swEditNoticeText(QWidget* Parent, QString& Text, QString& File, bool NewNotice);
 
 // Fills a scene with page elements.
 void swUpdateInstructionsPageScene(swInstructions* Instructions, const swInstructionsPage* Page, QGraphicsScene* Scene);

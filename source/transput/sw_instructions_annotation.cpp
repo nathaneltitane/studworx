@@ -10,7 +10,7 @@ const swInstructionsNotice* swInstructions::FindNotice(int Id) const
 	return nullptr;
 }
 
-int swInstructions::AddNotice(size_t PageIndex, const QPointF& Position, const QString& Text)
+int swInstructions::AddNotice(size_t PageIndex, const QPointF& Position, const QString& Text, const QString& File)
 {
 	swInstructionsNotice Notice;
 
@@ -18,6 +18,7 @@ int swInstructions::AddNotice(size_t PageIndex, const QPointF& Position, const Q
 	Notice.PageKey = GetPageElementsKey(PageIndex);
 	Notice.Position = Position;
 	Notice.Text = Text;
+	Notice.File = File;
 
 	mNotices.push_back(Notice);
 
@@ -26,14 +27,15 @@ int swInstructions::AddNotice(size_t PageIndex, const QPointF& Position, const Q
 	return Notice.Id;
 }
 
-void swInstructions::SetNoticeText(int Id, const QString& Text)
+void swInstructions::SetNoticeText(int Id, const QString& Text, const QString& File)
 {
 	for (swInstructionsNotice& Notice : mNotices)
 	{
-		if (Notice.Id != Id || Notice.Text == Text)
+		if (Notice.Id != Id || (Notice.Text == Text && Notice.File == File))
 			continue;
 
 		Notice.Text = Text;
+		Notice.File = File;
 
 		emit PageLayoutChanged();
 		return;

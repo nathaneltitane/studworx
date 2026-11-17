@@ -43,7 +43,9 @@ static const QLatin1String gInstructionsPropertyNames[] =
 	QLatin1String("PAGE_NUMBER_CORNER_RADIUS"), QLatin1String("COVER_TITLE_CORNER_RADIUS"), QLatin1String("COVER_AUTHOR_CORNER_RADIUS"),
 	QLatin1String("COVER_IMAGE_CORNER_RADIUS"), QLatin1String("NOTICE_CORNER_RADIUS"),
 	QLatin1String("BILL_OF_MATERIALS_TITLE_FONT"), QLatin1String("COVER_AUTHOR_FONT"), QLatin1String("BILL_OF_MATERIALS_TITLE_COLOR"), QLatin1String("COVER_AUTHOR_COLOR"), QLatin1String("SUBMODEL_BACKGROUND_COLOR"),
-	QLatin1String("STEP_IMAGE_SIZE"), QLatin1String("COVER_IMAGE_SIZE")
+	QLatin1String("STEP_IMAGE_SIZE"), QLatin1String("COVER_IMAGE_SIZE"),
+	QLatin1String("COVER_TITLE_TEXT"), QLatin1String("COVER_TITLE_FILE"), QLatin1String("COVER_AUTHOR_TEXT"),
+	QLatin1String("COVER_AUTHOR_FILE"), QLatin1String("BILL_OF_MATERIALS_TITLE_TEXT"), QLatin1String("BILL_OF_MATERIALS_TITLE_FILE")
 };
 
 static_assert(std::size(gInstructionsPropertyNames) == static_cast<size_t>(swInstructionsPropertyType::Count), "Missing property name");
@@ -515,7 +517,19 @@ void swInstructions::LoadCommandLines()
 			Notice.PageKey = Reader.ReadPageKey();
 			Reader.ReadKeyword("POSITION");
 			Notice.Position = Reader.ReadPoint();
-			Reader.ReadKeyword("TEXT");
+			// the text file comes before the text
+
+			QString Keyword = Reader.ReadToken();
+
+			if (Keyword == QLatin1String("FILE"))
+			{
+				Notice.File = Reader.ReadToken();
+				Keyword = Reader.ReadToken();
+			}
+
+			if (Keyword != QLatin1String("TEXT"))
+				continue;
+
 			Notice.Text = swUnescapeInstructionsText(Reader.ReadRest());
 
 			if (!Reader.IsValid() || Notice.Id < 1 || FindNotice(Notice.Id))
@@ -616,7 +630,7 @@ QStringList swInstructions::GetCommandLines() const
 		CommandLines.append(QLatin1String("LOCK ") + swWriteInstructionsElementKey(Position.first) + QLatin1Char(' ') + swWriteInstructionsPoint(Position.second));
 
 	for (const swInstructionsNotice& Notice : mNotices)
-		CommandLines.append(QStringLiteral("NOTICE %1 PAGE ").arg(Notice.Id) + swWriteInstructionsPageKey(Notice.PageKey) + QLatin1String(" POSITION ") + swWriteInstructionsPoint(Notice.Position) + QLatin1String(" TEXT ") + swEscapeInstructionsText(Notice.Text));
+		CommandLines.append(QStringLiteral("NOTICE %1 PAGE ").arg(Notice.Id) + swWriteInstructionsPageKey(Notice.PageKey) + QLatin1String(" POSITION ") + swWriteInstructionsPoint(Notice.Position) + (Notice.File.isEmpty() ? QString() : QLatin1String(" FILE \"") + QString(Notice.File).remove(QLatin1Char('"')) + QLatin1Char('"')) + QLatin1String(" TEXT ") + swEscapeInstructionsText(Notice.Text));
 
 	for (const swInstructionsPointer& Pointer : mPointers)
 	{

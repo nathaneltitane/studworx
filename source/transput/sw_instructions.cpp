@@ -226,6 +226,12 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::SubmodelBackgroundColor)].Value = SW_RGBA(255, 255, 255, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::StepImageSize)].Value = 100;
 	Properties[static_cast<int>(swInstructionsPropertyType::CoverImageSize)].Value = 100;
+	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitleText)].Value = QString();
+	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitleFile)].Value = QString();
+	Properties[static_cast<int>(swInstructionsPropertyType::CoverAuthorText)].Value = QString();
+	Properties[static_cast<int>(swInstructionsPropertyType::CoverAuthorFile)].Value = QString();
+	Properties[static_cast<int>(swInstructionsPropertyType::BillOfMaterialsTitleText)].Value = QString();
+	Properties[static_cast<int>(swInstructionsPropertyType::BillOfMaterialsTitleFile)].Value = QString();
 	Properties[static_cast<int>(swInstructionsPropertyType::StepNumberPlacement)].Value = SW_PLACEMENT_GRID_SIZE + 1;
 	Properties[static_cast<int>(swInstructionsPropertyType::StepNumberAnchor)].Value = static_cast<int>(swInstructionsPlacementAnchor::Area);
 	Properties[static_cast<int>(swInstructionsPropertyType::PLIPlacement)].Value = SW_PLACEMENT_GRID_SIZE + SW_PLACEMENT_GRID_SIZE - 1;
@@ -295,7 +301,7 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::HighlightNewParts)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::HighlightColor)].Value = SW_RGBA(255, 242, 0, 230);
 
-	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 112, "Missing default property");
+	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 118, "Missing default property");
 
 	return Properties;
 }
@@ -1153,6 +1159,48 @@ void swInstructions::SetDefaultFont(swInstructionsPropertyType Type, const QFont
 	SetDefaultProperty(Type, Font.toString());
 }
 
+void swInstructions::SetDefaultText(swInstructionsPropertyType Type, const QString& Text)
+{
+	SetDefaultProperty(Type, Text);
+}
+
+QString swInstructions::GetTextProperty(swInstructionsPropertyType Type) const
+{
+	return mStepProperties[static_cast<int>(Type)].Value.toString();
+}
+
+// use to read a text file, relative to the model file
+QString swInstructions::GetFileText(const QString& FileName) const
+{
+	if (FileName.isEmpty())
+		return QString();
+
+	QString FilePath = FileName;
+
+	if (QFileInfo(FilePath).isRelative() && mProject && !mProject->GetFileName().isEmpty())
+		FilePath = QFileInfo(mProject->GetFileName()).dir().filePath(FilePath);
+
+	QFile File(FilePath);
+
+	if (!File.open(QIODevice::ReadOnly | QIODevice::Text))
+		return QString();
+
+	return QString::fromUtf8(File.readAll()).trimmed();
+}
+
+// the file wins, then the typed text, then the automatic text
+QString swInstructions::GetSourcedText(swInstructionsPropertyType TextType, swInstructionsPropertyType FileType, const QString& Automatic) const
+{
+	const QString FileText = GetFileText(GetTextProperty(FileType));
+
+	if (!FileText.isEmpty())
+		return FileText;
+
+	const QString Text = GetTextProperty(TextType);
+
+	return Text.isEmpty() ? Automatic : Text;
+}
+
 void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const QVariant& Value)
 {
 	swInstructionsProperty& Property = mStepProperties[static_cast<int>(Type)];
@@ -1265,6 +1313,12 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::NoticeCornerRadius:
 	case swInstructionsPropertyType::BillOfMaterialsTitleFont:
 	case swInstructionsPropertyType::BillOfMaterialsTitleColor:
+	case swInstructionsPropertyType::CoverTitleText:
+	case swInstructionsPropertyType::CoverTitleFile:
+	case swInstructionsPropertyType::CoverAuthorText:
+	case swInstructionsPropertyType::CoverAuthorFile:
+	case swInstructionsPropertyType::BillOfMaterialsTitleText:
+	case swInstructionsPropertyType::BillOfMaterialsTitleFile:
 		emit PageLayoutChanged();
 		break;
 

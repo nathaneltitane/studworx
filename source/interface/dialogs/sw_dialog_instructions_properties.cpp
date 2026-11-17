@@ -386,6 +386,10 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	CreateColorEditor(swInstructionsPropertyType::CoverBackgroundColor, tr("Cover Background"), tr("Color filling the whole cover page, margins included."));
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverBackgroundColor);
 
+	CreateTextEditor(swInstructionsPropertyType::CoverTitleText, tr("Cover Title"), tr("Title on the cover, empty for the model description or name."), false);
+	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverTitleText);
+	CreateTextEditor(swInstructionsPropertyType::CoverTitleFile, tr("Cover Title File"), tr("Text file holding the cover title, used instead of the typed title, relative to the model file."), true);
+	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverTitleFile);
 	CreateFontEditor(swInstructionsPropertyType::CoverTitleFont, tr("Cover Title Font"), tr("Font of the model title."));
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverTitleFont);
 	CreateColorEditor(swInstructionsPropertyType::CoverTitleColor, tr("Cover Title Color"), tr("Color of the model title."));
@@ -394,6 +398,10 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 		CreateToggleEditor(swInstructionsPropertyType::ShowCoverAuthor, tr("Show Author"), tr("Show the model author on the cover."))
 	});
 
+	CreateTextEditor(swInstructionsPropertyType::CoverAuthorText, tr("Cover Author"), tr("Author on the cover, empty for the model author."), false);
+	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverAuthorText);
+	CreateTextEditor(swInstructionsPropertyType::CoverAuthorFile, tr("Cover Author File"), tr("Text file holding the cover author, used instead of the typed author, relative to the model file."), true);
+	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverAuthorFile);
 	CreateFontEditor(swInstructionsPropertyType::CoverAuthorFont, tr("Cover Author Font"), tr("Font of the model author."));
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverAuthorFont);
 	CreateColorEditor(swInstructionsPropertyType::CoverAuthorColor, tr("Cover Author Color"), tr("Color of the model author."));
@@ -411,6 +419,10 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 
 	CreateColorEditor(swInstructionsPropertyType::BillOfMaterialsBackgroundColor, tr("BOM Background"), tr("Color filling the whole bill of materials page, margins included."));
 	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsBackgroundColor);
+	CreateTextEditor(swInstructionsPropertyType::BillOfMaterialsTitleText, tr("BOM Title"), tr("Title above the bill of materials, empty for Parts List."), false);
+	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsTitleText);
+	CreateTextEditor(swInstructionsPropertyType::BillOfMaterialsTitleFile, tr("BOM Title File"), tr("Text file holding the bill of materials title, used instead of the typed title, relative to the model file."), true);
+	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsTitleFile);
 	CreateFontEditor(swInstructionsPropertyType::BillOfMaterialsTitleFont, tr("BOM Title Font"), tr("Font of the Parts List title above the bill of materials."));
 	AddEditorRow(CategoryIndex::BillOfMaterials, swInstructionsPropertyType::BillOfMaterialsTitleFont);
 	CreateColorEditor(swInstructionsPropertyType::BillOfMaterialsTitleColor, tr("BOM Title Color"), tr("Color of the Parts List title above the bill of materials."));
@@ -813,6 +825,9 @@ QLabel* swInstructionsPropertiesWidget::AddEditorRow(CategoryIndex Index, swInst
 
 	RowEditors.push_back(Editors.Widget);
 
+	if (Editors.BrowseButton)
+		RowEditors.push_back(Editors.BrowseButton);
+
 	QWidget* Row = AddRow(Index, RowEditors);
 	QHBoxLayout* RowLayout = static_cast<QHBoxLayout*>(Row->layout());
 
@@ -960,6 +975,62 @@ QToolButton* swInstructionsPropertiesWidget::CreateColorEditor(swInstructionsPro
 	});
 
 	return Button;
+}
+
+// a set path turns browse into reset
+static void swUpdateBrowseButton(QToolButton* BrowseButton, const QString& FileName)
+{
+	const bool HasFile = !FileName.trimmed().isEmpty();
+
+	BrowseButton->setText(HasFile ? QString() : QLatin1String("..."));
+	BrowseButton->setIcon(HasFile ? BrowseButton->style()->standardIcon(QStyle::SP_LineEditClearButton) : QIcon());
+	BrowseButton->setToolTip(HasFile ? QCoreApplication::translate("swInstructionsPropertiesWidget", "Remove the text file and go back to the typed or automatic text.") : QCoreApplication::translate("swInstructionsPropertiesWidget", "Choose the text file."));
+	BrowseButton->setWhatsThis(BrowseButton->toolTip());
+}
+
+// empty text keeps the automatic text
+QLineEdit* swInstructionsPropertiesWidget::CreateTextEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip, bool File)
+{
+	QLineEdit* LineEdit = new QLineEdit(this);
+	RegisterEditor(Type, EditorType::Text, LineEdit, Name, ToolTip);
+	LineEdit->setPlaceholderText(File ? tr("No File") : tr("Automatic"));
+	LineEdit->setClearButtonEnabled(!File);
+	swSetupPanelEdit(LineEdit);
+
+	connect(LineEdit, &QLineEdit::editingFinished, this, [this, Type, LineEdit, File]()
+	{
+		mInstructions->SetDefaultText(Type, File ? LineEdit->text().trimmed() : LineEdit->text());
+	});
+
+	if (!File)
+		return LineEdit;
+
+	EditorWidgets& Editors = mEditors[static_cast<int>(Type)];
+	Editors.BrowseButton = new QToolButton(this);
+	Editors.BrowseButton->setAccessibleName(tr("Choose %1").arg(Name));
+	swSetupPanelButton(Editors.BrowseButton);
+	swUpdateBrowseButton(Editors.BrowseButton, LineEdit->text());
+
+	connect(LineEdit, &QLineEdit::textChanged, Editors.BrowseButton, [BrowseButton = Editors.BrowseButton](const QString& Text)
+	{
+		swUpdateBrowseButton(BrowseButton, Text);
+	});
+
+	connect(Editors.BrowseButton, &QToolButton::clicked, this, [this, Type, LineEdit, Name]()
+	{
+		if (!LineEdit->text().trimmed().isEmpty())
+		{
+			mInstructions->SetDefaultText(Type, QString());
+			return;
+		}
+
+		const QString FileName = QFileDialog::getOpenFileName(this, Name, LineEdit->text(), tr("Text Files (*.txt);;All Files (*)"));
+
+		if (!FileName.isEmpty())
+			mInstructions->SetDefaultText(Type, FileName);
+	});
+
+	return LineEdit;
 }
 
 QToolButton* swInstructionsPropertiesWidget::CreateFontEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip)
@@ -1244,6 +1315,18 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 					Editor.SizeSpinBox->setValue(Font.pointSizeF() / swGetPageUnitScale(Units));
 			}
 			break;
+
+		case EditorType::Text:
+			{
+				QLineEdit* LineEdit = qobject_cast<QLineEdit*>(Editor.Widget);
+				QSignalBlocker LineEditBlocker(LineEdit);
+
+				LineEdit->setText(mInstructions->GetTextProperty(Type));
+
+				if (Editor.BrowseButton)
+					swUpdateBrowseButton(Editor.BrowseButton, LineEdit->text());
+			}
+			break;
 		}
 	}
 
@@ -1266,6 +1349,9 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 
 		if (Editors.SizeSpinBox)
 			Editors.SizeSpinBox->setEnabled(Enabled);
+
+		if (Editors.BrowseButton)
+			Editors.BrowseButton->setEnabled(Enabled);
 	};
 
 	const bool UseDocumentFont = GetBool(swInstructionsPropertyType::UseDocumentFont);
@@ -1280,6 +1366,10 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 	SetEnabled(swInstructionsPropertyType::CoverTitleColor, ShowCoverPage);
 	SetEnabled(swInstructionsPropertyType::CoverAuthorFont, !UseDocumentFont && ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
 	SetEnabled(swInstructionsPropertyType::CoverAuthorColor, ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
+	SetEnabled(swInstructionsPropertyType::CoverTitleText, ShowCoverPage);
+	SetEnabled(swInstructionsPropertyType::CoverTitleFile, ShowCoverPage);
+	SetEnabled(swInstructionsPropertyType::CoverAuthorText, ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
+	SetEnabled(swInstructionsPropertyType::CoverAuthorFile, ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
 	SetEnabled(swInstructionsPropertyType::ShowCoverAuthor, ShowCoverPage);
 	SetEnabled(swInstructionsPropertyType::ShowCoverBlankPage, ShowCoverPage);
 	SetEnabled(swInstructionsPropertyType::CoverBackgroundColor, ShowCoverPage);
@@ -1290,6 +1380,8 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsBackgroundColor, ShowBillOfMaterials);
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleFont, !UseDocumentFont && ShowBillOfMaterials && ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleColor, ShowBillOfMaterials && ShowStepNumber);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleText, ShowBillOfMaterials && ShowStepNumber);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleFile, ShowBillOfMaterials && ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::StepNumberFont, !UseDocumentFont && ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::StepNumberColor, ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::PLIFont, !UseDocumentFont);

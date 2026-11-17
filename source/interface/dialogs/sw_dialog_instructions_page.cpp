@@ -480,7 +480,7 @@ void swInstructionsStepNumberItem::Update()
 	// step 0 is the bill of materials title
 	setFont(mInstructions->GetFontProperty(mStep ? swInstructionsPropertyType::StepNumberFont : swInstructionsPropertyType::BillOfMaterialsTitleFont, mModel, mStep));
 	setBrush(QBrush(mInstructions->GetColorProperty(mStep ? swInstructionsPropertyType::StepNumberColor : swInstructionsPropertyType::BillOfMaterialsTitleColor, mModel, mStep)));
-	setText(mStep ? QString::number(mStep) : QCoreApplication::translate("swInstructionsDialog", "Parts List"));
+	setText(mStep ? QString::number(mStep) : mInstructions->GetSourcedText(swInstructionsPropertyType::BillOfMaterialsTitleText, swInstructionsPropertyType::BillOfMaterialsTitleFile, QCoreApplication::translate("swInstructionsDialog", "Parts List")));
 }
 
 swInstructionsPageNumberItem::swInstructionsPageNumberItem(QGraphicsItem* Parent, swInstructions* Instructions, size_t PageIndex)
@@ -579,16 +579,78 @@ QVariant swInstructionsCoverTextItem::itemChange(GraphicsItemChange Change, cons
 	return QGraphicsTextItem::itemChange(Change, Value);
 }
 
-bool swEditNoticeText(QWidget* Parent, QString& Text, bool NewNotice)
+// typed text, or a text file that wins over it
+bool swEditNoticeText(QWidget* Parent, QString& Text, QString& File, bool NewNotice)
 {
-	bool Accepted = false;
-	const QString Title = NewNotice ? QCoreApplication::translate("swInstructionsDialog", "Add Notice") : QCoreApplication::translate("swInstructionsDialog", "Edit Notice");
-	const QString NewText = QInputDialog::getMultiLineText(Parent, Title, QCoreApplication::translate("swInstructionsDialog", "Notice Text"), Text, &Accepted);
+	QDialog Dialog(Parent);
+	Dialog.setWindowTitle(NewNotice ? QCoreApplication::translate("swInstructionsDialog", "Add Notice") : QCoreApplication::translate("swInstructionsDialog", "Edit Notice"));
 
-	if (!Accepted || NewText.trimmed().isEmpty())
+	QVBoxLayout* Layout = new QVBoxLayout(&Dialog);
+	QLabel* TextLabel = new QLabel(QCoreApplication::translate("swInstructionsDialog", "Notice &Text"), &Dialog);
+	QPlainTextEdit* TextEdit = new QPlainTextEdit(Text, &Dialog);
+	TextLabel->setBuddy(TextEdit);
+	Layout->addWidget(TextLabel);
+	Layout->addWidget(TextEdit);
+
+	QLabel* FileLabel = new QLabel(QCoreApplication::translate("swInstructionsDialog", "Text &File"), &Dialog);
+	QHBoxLayout* FileLayout = new QHBoxLayout();
+	QLineEdit* FileEdit = new QLineEdit(File, &Dialog);
+	FileEdit->setToolTip(QCoreApplication::translate("swInstructionsDialog", "Text file used instead of the typed text, relative to the model file."));
+	FileEdit->setWhatsThis(FileEdit->toolTip());
+	FileLabel->setBuddy(FileEdit);
+
+	QToolButton* BrowseButton = new QToolButton(&Dialog);
+	BrowseButton->setAccessibleName(QCoreApplication::translate("swInstructionsDialog", "Choose Text File"));
+
+	// a set path turns browse into reset
+
+	auto UpdateBrowseButton = [BrowseButton](const QString& FileName)
+	{
+		const bool HasFile = !FileName.trimmed().isEmpty();
+
+		BrowseButton->setText(HasFile ? QString() : QLatin1String("..."));
+		BrowseButton->setIcon(HasFile ? BrowseButton->style()->standardIcon(QStyle::SP_LineEditClearButton) : QIcon());
+		BrowseButton->setToolTip(HasFile ? QCoreApplication::translate("swInstructionsDialog", "Remove the text file and go back to the typed text.") : QCoreApplication::translate("swInstructionsDialog", "Choose the text file."));
+	};
+
+	UpdateBrowseButton(File);
+	QObject::connect(FileEdit, &QLineEdit::textChanged, BrowseButton, UpdateBrowseButton);
+
+	QObject::connect(BrowseButton, &QToolButton::clicked, &Dialog, [&Dialog, FileEdit]()
+	{
+		if (!FileEdit->text().trimmed().isEmpty())
+		{
+			FileEdit->clear();
+			return;
+		}
+
+		const QString FileName = QFileDialog::getOpenFileName(&Dialog, QCoreApplication::translate("swInstructionsDialog", "Choose Text File"), FileEdit->text(), QCoreApplication::translate("swInstructionsDialog", "Text Files (*.txt);;All Files (*)"));
+
+		if (!FileName.isEmpty())
+			FileEdit->setText(FileName);
+	});
+
+	FileLayout->addWidget(FileEdit);
+	FileLayout->addWidget(BrowseButton);
+	Layout->addWidget(FileLabel);
+	Layout->addLayout(FileLayout);
+
+	QDialogButtonBox* ButtonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, &Dialog);
+	QObject::connect(ButtonBox, &QDialogButtonBox::accepted, &Dialog, &QDialog::accept);
+	QObject::connect(ButtonBox, &QDialogButtonBox::rejected, &Dialog, &QDialog::reject);
+	Layout->addWidget(ButtonBox);
+
+	if (Dialog.exec() != QDialog::Accepted)
+		return false;
+
+	const QString NewText = TextEdit->toPlainText();
+	const QString NewFile = FileEdit->text().trimmed();
+
+	if (NewText.trimmed().isEmpty() && NewFile.isEmpty())
 		return false;
 
 	Text = NewText;
+	File = NewFile;
 
 	return true;
 }
@@ -602,7 +664,8 @@ swInstructionsNoticeItem::swInstructionsNoticeItem(QGraphicsItem* Parent, swInst
 
 	setFont(mInstructions->GetFontProperty(swInstructionsPropertyType::NoticeFont, nullptr, 0));
 	setDefaultTextColor(mInstructions->GetColorProperty(swInstructionsPropertyType::NoticeTextColor, nullptr, 0));
-	setPlainText(Notice.Text);
+	const QString FileText = mInstructions->GetFileText(Notice.File);
+	setPlainText(FileText.isEmpty() ? Notice.Text : FileText);
 }
 
 QVariant swInstructionsNoticeItem::itemChange(GraphicsItemChange Change, const QVariant& Value)
@@ -627,11 +690,12 @@ void swInstructionsNoticeItem::mouseDoubleClickEvent(QGraphicsSceneMouseEvent* E
 	const int Id = mId;
 	swInstructions* Instructions = mInstructions;
 	QString Text = Notice->Text;
+	QString File = Notice->File;
 
-	QTimer::singleShot(0, Instructions, [Instructions, Parent, Id, Text]() mutable
+	QTimer::singleShot(0, Instructions, [Instructions, Parent, Id, Text, File]() mutable
 	{
-		if (swEditNoticeText(Parent, Text, false))
-			Instructions->SetNoticeText(Id, Text);
+		if (swEditNoticeText(Parent, Text, File, false))
+			Instructions->SetNoticeText(Id, Text, File);
 	});
 }
 
@@ -1185,6 +1249,8 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 		if (Title.isEmpty())
 			Title = QFileInfo(Properties.mFileName).completeBaseName();
 
+		Title = Instructions->GetSourcedText(swInstructionsPropertyType::CoverTitleText, swInstructionsPropertyType::CoverTitleFile, Title);
+
 		const QFont TitleFont = Instructions->GetFontProperty(swInstructionsPropertyType::CoverTitleFont, Model, 0);
 		const QColor TextColor = Instructions->GetColorProperty(swInstructionsPropertyType::CoverTitleColor, Model, 0);
 		const QColor AuthorColor = Instructions->GetColorProperty(swInstructionsPropertyType::CoverAuthorColor, Model, 0);
@@ -1229,7 +1295,7 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 
 		AddCoverText(Title, TitleFont, false, swInstructionsPropertyType::CoverTitlePlacement);
 
-		const QString Author = Properties.mAuthor.trimmed();
+		const QString Author = Instructions->GetSourcedText(swInstructionsPropertyType::CoverAuthorText, swInstructionsPropertyType::CoverAuthorFile, Properties.mAuthor.trimmed());
 
 		if (!Author.isEmpty() && Instructions->GetBoolProperty(swInstructionsPropertyType::ShowCoverAuthor, Model, 0))
 		{
@@ -1741,9 +1807,10 @@ void swInstructionsPageWidget::contextMenuEvent(QContextMenuEvent* Event)
 		connect(Menu.addAction(tr("Add Notice...")), &QAction::triggered, this, [this, PageIndex, ScenePosition]()
 		{
 			QString Text;
+			QString File;
 
-			if (swEditNoticeText(this, Text, true))
-				mInstructions->AddNotice(PageIndex, ScenePosition, Text);
+			if (swEditNoticeText(this, Text, File, true))
+				mInstructions->AddNotice(PageIndex, ScenePosition, Text, File);
 		});
 
 		if (ElementItem && dynamic_cast<swInstructionsBoxBase*>(ElementItem))
@@ -1771,9 +1838,10 @@ void swInstructionsPageWidget::contextMenuEvent(QContextMenuEvent* Event)
 			{
 				const swInstructionsNotice* Notice = mInstructions->FindNotice(Id);
 				QString Text = Notice ? Notice->Text : QString();
+				QString File = Notice ? Notice->File : QString();
 
-				if (Notice && swEditNoticeText(this, Text, false))
-					mInstructions->SetNoticeText(Id, Text);
+				if (Notice && swEditNoticeText(this, Text, File, false))
+					mInstructions->SetNoticeText(Id, Text, File);
 			});
 
 			connect(Menu.addAction(tr("Remove Notice")), &QAction::triggered, this, [this, Id]()

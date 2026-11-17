@@ -191,14 +191,14 @@ Instructions settings, written in the main model header. Models are quoted file 
 
 | Command | Handling | Use |
 | --- | --- | --- |
-| `0 !SW PROPERTY INSTRUCTION <name> <value>` | Read, Write | document property, such as `STEP_NUMBER_BORDER_WIDTH 3` |
+| `0 !SW PROPERTY INSTRUCTION <name> <value>` | Read, Write | document property, such as `STEP_NUMBER_BORDER_WIDTH 3` or `COVER_TITLE_FILE title.txt`; `COVER_TITLE`, `COVER_AUTHOR` and `BILL_OF_MATERIALS_TITLE` take `_TEXT` and `_FILE`, the file wins over the text, and files are relative to the model file |
 | `0 !SW PAGE_PROPERTY INSTRUCTION STEP <model> <step> <name> <value>` | Read, Write | property of the page starting at the step |
 | `0 !SW STEPS_PER_PAGE INSTRUCTION <rows> <columns> [VERTICAL] [FINAL_MODEL] [FINAL_MODEL_COLOR]` | Read, Write | steps per page, filled down instead of across, with the finished model in the room left, on the main page color |
 | `0 !SW PAGE_STEPS_PER_PAGE INSTRUCTION STEP <model> <step> <rows> <columns> [VERTICAL] [FINAL_MODEL] [FINAL_MODEL_COLOR]` | Read, Write | steps per page from the step on, same words as above |
 | `0 !SW BLANK_PAGE INSTRUCTION STEP <model> <step>` | Read, Write | blank page before the step |
 | `0 !SW OFFSET INSTRUCTION <element> <model> <step> <x> <y>` | Read, Write | element moved from its place |
 | `0 !SW LOCK INSTRUCTION <element> <model> <step> <x> <y>` | Read, Write | element locked at a position |
-| `0 !SW NOTICE INSTRUCTION <id> PAGE <page> POSITION <x> <y> TEXT <text>` | Read, Write | notice on a page |
+| `0 !SW NOTICE INSTRUCTION <id> PAGE <page> POSITION <x> <y> [FILE "<file>"] TEXT <text>` | Read, Write | notice on a page, the text file wins over the text |
 | `0 !SW POINTER INSTRUCTION <id> PAGE <page> SOURCE <element> ANCHOR <AUTO\|0-7> STYLE <DEFAULT\|LINE\|WEDGE> TIP <DEFAULT\|ARROW\|DOT> TARGET <POINT\|ELEMENT\|PART> <element> PART <index> POSITION <x> <y>` | Read, Write | pointer from an element border to a point, element or part |
 
 ### Group

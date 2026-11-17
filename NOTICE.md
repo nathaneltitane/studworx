@@ -24,6 +24,7 @@
   - Instructions: Show Final Model puts the finished model in the room left after a model's last step, with Main Page Color to give a submodel's finished model the main page color
   - Instructions: when the last page is full, the finished model goes on a new page, and Show Final Model and Main Page Color are greyed out on pages without a model's last step
   - Instructions: Apply to All Pages on a submodel page keeps the main Page Background instead of resetting it
+  - Instructions: Cover Title, Cover Author and BOM Title take your own text, or a text file that wins over it, and notices take a text file too
   - Instructions: new part outlines on large step images no longer show seam lines
   - Instructions: Show Author sits on its own row
 

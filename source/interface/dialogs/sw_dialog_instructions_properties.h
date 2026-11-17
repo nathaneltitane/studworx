@@ -87,7 +87,8 @@ protected:
 		Percent,
 		Choice,
 		Color,
-		Font
+		Font,
+		Text
 	};
 
 	enum class FocusType
@@ -117,6 +118,7 @@ protected:
 		QLabel* Label = nullptr;
 		swInstructionsUnitButton* UnitButton = nullptr;
 		QDoubleSpinBox* SizeSpinBox = nullptr;
+		QToolButton* BrowseButton = nullptr;
 		EditorType Type = EditorType::Bool;
 		QString Name;
 		int Minimum = 0;
@@ -139,6 +141,7 @@ protected:
 	QToolButton* CreateApplyAllButton(const QString& ToolTip);
 	QToolButton* CreateColorEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip);
 	QToolButton* CreateFontEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip);
+	QLineEdit* CreateTextEditor(swInstructionsPropertyType Type, const QString& Name, const QString& ToolTip, bool File);
 	void ColorButtonClicked(swInstructionsPropertyType Type);
 	void FontButtonClicked(swInstructionsPropertyType Type);
 	void SetCategoriesExpanded(bool Expanded);

@@ -170,6 +170,12 @@ enum class swInstructionsPropertyType
 	SubmodelBackgroundColor,
 	StepImageSize,
 	CoverImageSize,
+	CoverTitleText,
+	CoverTitleFile,
+	CoverAuthorText,
+	CoverAuthorFile,
+	BillOfMaterialsTitleText,
+	BillOfMaterialsTitleFile,
 	Count
 };
 
@@ -360,6 +366,7 @@ struct swInstructionsNotice
 	swInstructionsPageKey PageKey;
 	QPointF Position;
 	QString Text;
+	QString File;
 };
 
 // A pointer from an element anchor.
@@ -436,6 +443,10 @@ public:
 	void SetDefaultInt(swInstructionsPropertyType Type, int Value);
 	void SetDefaultColor(swInstructionsPropertyType Type, const QColor& Color);
 	void SetDefaultFont(swInstructionsPropertyType Type, const QFont& Font);
+	void SetDefaultText(swInstructionsPropertyType Type, const QString& Text);
+	QString GetTextProperty(swInstructionsPropertyType Type) const;
+	QString GetSourcedText(swInstructionsPropertyType TextType, swInstructionsPropertyType FileType, const QString& Automatic) const;
+	QString GetFileText(const QString& FileName) const;
 	void ResetProperties();
 
 	// Properties set on a single page.
@@ -469,8 +480,8 @@ public:
 	}
 
 	const swInstructionsNotice* FindNotice(int Id) const;
-	int AddNotice(size_t PageIndex, const QPointF& Position, const QString& Text);
-	void SetNoticeText(int Id, const QString& Text);
+	int AddNotice(size_t PageIndex, const QPointF& Position, const QString& Text, const QString& File = QString());
+	void SetNoticeText(int Id, const QString& Text, const QString& File);
 	void RemoveNotice(int Id);
 
 	const std::vector<swInstructionsPointer>& GetPointers() const
