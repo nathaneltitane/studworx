@@ -3,6 +3,8 @@
   <details open>
   <summary>2026-11-17</summary>
 
+  - Joints: a jointed submodel inside a group keeps its joint editing, moving and turning
+  - Joints: Escape or a click away from the joints leaves joint mode and goes back to selecting parts
   - Instructions: the page view smooths lines, borders and round ends
   - Instructions: rounded divider ends are full half circles at every width, thin dividers no longer look pointy
   - Instructions: Highlight Width sets how thick the new part outline is, from 1 to 72, and wide outlines stay solid

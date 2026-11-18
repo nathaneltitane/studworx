@@ -8838,9 +8838,8 @@ Formát souboru není rozpoznán.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Nástroj Otočit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte objekty a poté přetáhněte úchyt otáčení v pohledu modelu. Přichycení otáčení nastavuje přírůstky úhlu. Možnosti transformace určují, zda se použijí relativní, nebo modelové osy a zda se díly otáčejí společně, nebo samostatně.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1073"/>
         <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cancel the current mouse action, a face or cutaway pick or a cutaway resize, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Zrušit akci&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zruší aktuální akci myši, výběr plochy nebo řezu či změnu velikosti řezu, zavře lištu Najít a nahradit nebo zruší výběr. Když není nic vybráno, odstraní řez.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Zrušit akci&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zruší aktuální akci myši, výběr plochy nebo řezu či změnu velikosti řezu, zavře lištu Najít a nahradit nebo zruší výběr. Když není nic vybráno, odstraní řez.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1082"/>
@@ -9804,6 +9803,11 @@ Formát souboru není rozpoznán.</translation>
         <location filename="../../source/application/sw_commands.cpp" line="1010"/>
         <source>&lt;p&gt;&lt;b&gt;Joints Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag a submodel that has a joint to turn it. Hinges turn about their axis with the horizontal drag, balls turn about the screen up and right directions. Rotation Snap sets the steps and one drag is one undo step. Use Part &amp;gt; Joint &amp;gt; Set Joint to give a submodel a joint.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Nástroj Klouby&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přetažením podmodelu s kloubem jej otočíte. Závěsy se otáčejí kolem své osy vodorovným tažením, kulové klouby kolem směrů nahoru a doprava na obrazovce. Přichytávání otáčení nastavuje kroky a jedno tažení je jeden krok zpět. Podmodelu dáte kloub příkazem Díl &amp;gt; Kloub &amp;gt; Nastavit kloub.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1073"/>
+        <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cancel the current mouse action, a face or cutaway pick or a cutaway resize, leave joint mode, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Zrušit akci&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zruší aktuální akci myši, výběr plochy nebo řezu či změnu velikosti řezu, ukončí režim kloubů, zavře lištu Najít a nahradit nebo zruší výběr. Když není nic vybráno, odstraní řez.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1631"/>
@@ -15598,8 +15602,8 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
 <context>
     <name>swInstructionsPageListWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2488"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2498"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2511"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2521"/>
         <source>Pages</source>
         <translation>Stránky</translation>
     </message>
@@ -15608,32 +15612,32 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Stránky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte stránku, aby se zobrazila. Kliknutím pravým tlačítkem na stránku vložíte nebo odeberete prázdné stránky kolem ní.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2448"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2463"/>
         <source>Lock Page: keep every element where it is and refuse removal</source>
         <translation>Zamknout stránku: ponechat každý prvek na místě a zakázat odebrání</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2449"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2464"/>
         <source>Freeze Page: keep the page settings when changes are made for all pages</source>
         <translation>Zmrazit stránku: ponechat nastavení stránky při změnách pro všechny stránky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2512"/>
         <source>&lt;p&gt;&lt;b&gt;Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a page to show it. Right-click a page to insert or remove blank pages around it.&lt;/p&gt;&lt;p&gt;Click the lock beside a page to keep its elements where they are. A locked page can&apos;t be removed.&lt;/p&gt;&lt;p&gt;Click the snowflake to freeze a page. It keeps its own copy of the settings, so changes for all pages skip it. Unfreeze it to follow the other pages again.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Stránky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte stránku, aby se zobrazila. Kliknutím pravým tlačítkem na stránku vložíte nebo odeberete prázdné stránky kolem ní.&lt;/p&gt;&lt;p&gt;Klepněte na zámek vedle stránky, aby její prvky zůstaly na místě. Zamčenou stránku nelze odebrat.&lt;/p&gt;&lt;p&gt;Klepněte na vločku pro zmrazení stránky. Stránka si ponechá vlastní kopii nastavení, takže ji změny pro všechny stránky vynechají. Po rozmrazení bude opět následovat ostatní stránky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2519"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2542"/>
         <source>Insert Blank Page Before</source>
         <translation>Vložit prázdnou stránku před</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2527"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2550"/>
         <source>Insert Blank Page After</source>
         <translation>Vložit prázdnou stránku za</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2535"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2558"/>
         <source>Remove Blank Page</source>
         <translation>Odebrat prázdnou stránku</translation>
     </message>
@@ -15646,117 +15650,117 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
 <context>
     <name>swInstructionsPageWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1106"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1109"/>
         <source>Units of the rulers, the page units or the document units when they are in use.</source>
         <translation>Jednotky pravítek, jednotky stránky nebo jednotky dokumentu, jsou-li používány.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1797"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1812"/>
         <source>Anchor</source>
         <translation>Kotva</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Top Left</source>
         <translation>Vlevo nahoře</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Top</source>
         <translation>Nahoře</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Top Right</source>
         <translation>Vpravo nahoře</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Right</source>
         <translation>Vpravo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Bottom Right</source>
         <translation>Vpravo dole</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Bottom</source>
         <translation>Dole</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Bottom Left</source>
         <translation>Vlevo dole</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Left</source>
         <translation>Vlevo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1803"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1818"/>
         <source>Automatic</source>
         <translation>Automaticky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1827"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1842"/>
         <source>Default</source>
         <translation>Výchozí</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1844"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
         <source>Style</source>
         <translation>Styl</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1844"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
         <source>Line</source>
         <translation>Čára</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1844"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
         <source>Callout Wedge</source>
         <translation>Klínový odkaz</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1849"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1864"/>
         <source>Tip</source>
         <translation>Hrot</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1849"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1864"/>
         <source>Dot</source>
         <translation>Tečka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1849"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1864"/>
         <source>Arrow</source>
         <translation>Šipka</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1874"/>
         <source>Remove Pointer</source>
         <translation>Odebrat ukazatel</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1866"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1881"/>
         <source>Add Notice...</source>
         <translation>Přidat upozornění...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1884"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1899"/>
         <source>Add Pointer</source>
         <translation>Přidat ukazatel</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1896"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1911"/>
         <source>Edit Notice...</source>
         <translation>Upravit upozornění...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1906"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1921"/>
         <source>Remove Notice</source>
         <translation>Odebrat upozornění</translation>
     </message>
@@ -17640,22 +17644,22 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
 <context>
     <name>swInstructionsRulerWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2196"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2211"/>
         <source>Horizontal Ruler</source>
         <translation>Vodorovné pravítko</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2197"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2212"/>
         <source>Horizontal position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Vodorovná poloha na stránce v jednotkách stránky, šipka sleduje ukazatel.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2201"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2216"/>
         <source>Vertical Ruler</source>
         <translation>Svislé pravítko</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2202"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2217"/>
         <source>Vertical position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Svislá poloha na stránce v jednotkách stránky, šipka sleduje ukazatel.</translation>
     </message>
@@ -20854,8 +20858,8 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         </translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="517"/>
-        <location filename="../../source/core/sw_model_joints.cpp" line="635"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="520"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="638"/>
         <source>Set Joint</source>
         <translation>Nastavit kloub</translation>
     </message>
@@ -20865,22 +20869,22 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Vyvolat pózu</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="608"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="611"/>
         <source>Turn Joint</source>
         <translation>Otočit kloub</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="625"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="628"/>
         <source>Joint Axis</source>
         <translation>Osa kloubu</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="646"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="649"/>
         <source>Delete Joint</source>
         <translation>Odstranit kloub</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="659"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="662"/>
         <source>Delete All Joints</source>
         <translation>Odstranit všechny klouby</translation>
     </message>

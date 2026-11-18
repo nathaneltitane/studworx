@@ -264,19 +264,22 @@ bool swModel::JointsRayTest(const swVector3& Start, const swVector3& End, float&
 swPart* swModel::GetJointPart() const
 {
 	swPart* Found = nullptr;
+	int Count = 0;
 
 	for (const std::unique_ptr<swPart>& Part : mParts)
 	{
 		if (!Part->IsSelected() || !Part->mPartData->IsModel())
 			continue;
 
-		if (Found)
-			return nullptr;
+		// a grouped selection keeps the focused submodel
+		if (Part->IsFocused())
+			return Part.get();
 
 		Found = Part.get();
+		Count++;
 	}
 
-	return Found;
+	return Count == 1 ? Found : nullptr;
 }
 
 // use to pick one joint of the joint part

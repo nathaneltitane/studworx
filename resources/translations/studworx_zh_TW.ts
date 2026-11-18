@@ -8771,9 +8771,8 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;旋轉工具&lt;/b&gt;&lt;/p&gt;&lt;p&gt;選擇物件，然後在模型視圖中拖曳旋轉手柄。旋轉吸附設定角度增量。變換選項選擇相對軸或模型軸以及零件是一起旋轉還是單獨旋轉。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1073"/>
         <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cancel the current mouse action, a face or cutaway pick or a cutaway resize, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;取消動作&lt;/b&gt;&lt;/p&gt;&lt;p&gt;取消目前的滑鼠動作、面或剖面選取、剖面調整大小，關閉尋找與取代列，或清除選取。未選取任何項目時會移除剖面。&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;取消動作&lt;/b&gt;&lt;/p&gt;&lt;p&gt;取消目前的滑鼠動作、面或剖面選取、剖面調整大小，關閉尋找與取代列，或清除選取。未選取任何項目時會移除剖面。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1082"/>
@@ -9737,6 +9736,11 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="1010"/>
         <source>&lt;p&gt;&lt;b&gt;Joints Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag a submodel that has a joint to turn it. Hinges turn about their axis with the horizontal drag, balls turn about the screen up and right directions. Rotation Snap sets the steps and one drag is one undo step. Use Part &amp;gt; Joint &amp;gt; Set Joint to give a submodel a joint.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;關節工具&lt;/b&gt;&lt;/p&gt;&lt;p&gt;拖曳帶有關節的子模型即可轉動它。鉸鏈會隨水平拖曳繞其軸轉動，球窩關節則繞螢幕的上下和左右方向轉動。旋轉吸附設定步進，一次拖曳為一個復原步驟。使用「零件 &amp;gt; 關節 &amp;gt; 設定關節」可為子模型加上關節。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1073"/>
+        <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cancel the current mouse action, a face or cutaway pick or a cutaway resize, leave joint mode, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;取消動作&lt;/b&gt;&lt;/p&gt;&lt;p&gt;取消目前的滑鼠動作、面或剖面選取、剖面調整大小，離開關節模式，關閉尋找與取代列，或清除選取。未選取任何項目時會移除剖面。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1631"/>
@@ -15820,8 +15824,8 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsPageListWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2488"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2498"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2511"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2521"/>
         <source>Pages</source>
         <translation>頁面</translation>
     </message>
@@ -15830,32 +15834,32 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;頁面&lt;/b&gt;&lt;/p&gt;&lt;p&gt;選取頁面即可顯示。在頁面上按一下滑鼠右鍵，可在其前後插入或移除空白頁。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2448"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2463"/>
         <source>Lock Page: keep every element where it is and refuse removal</source>
         <translation>鎖定頁面：讓每個元素保持原位並拒絕移除</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2449"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2464"/>
         <source>Freeze Page: keep the page settings when changes are made for all pages</source>
         <translation>凍結頁面：對所有頁面進行變更時保留此頁面的設定</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2512"/>
         <source>&lt;p&gt;&lt;b&gt;Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a page to show it. Right-click a page to insert or remove blank pages around it.&lt;/p&gt;&lt;p&gt;Click the lock beside a page to keep its elements where they are. A locked page can&apos;t be removed.&lt;/p&gt;&lt;p&gt;Click the snowflake to freeze a page. It keeps its own copy of the settings, so changes for all pages skip it. Unfreeze it to follow the other pages again.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;頁面&lt;/b&gt;&lt;/p&gt;&lt;p&gt;選取頁面即可顯示。在頁面上按一下滑鼠右鍵，可在其前後插入或移除空白頁。&lt;/p&gt;&lt;p&gt;按一下頁面旁的鎖，讓它的元素保持原位。鎖定的頁面無法移除。&lt;/p&gt;&lt;p&gt;按一下雪花凍結頁面。它會保留自己的一份設定，所以對所有頁面的變更會略過它。解凍後它會再次跟隨其他頁面。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2519"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2542"/>
         <source>Insert Blank Page Before</source>
         <translation>在前面插入空白頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2527"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2550"/>
         <source>Insert Blank Page After</source>
         <translation>在後面插入空白頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2535"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2558"/>
         <source>Remove Blank Page</source>
         <translation>移除空白頁</translation>
     </message>
@@ -15867,117 +15871,117 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsPageWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1106"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1109"/>
         <source>Units of the rulers, the page units or the document units when they are in use.</source>
         <translation>標尺的單位，使用中時為頁面單位或檔案單位。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1797"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1812"/>
         <source>Anchor</source>
         <translation>錨點</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Top Left</source>
         <translation>左上</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Top</source>
         <translation>上</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Top Right</source>
         <translation>右上</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Right</source>
         <translation>右</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Bottom Right</source>
         <translation>右下</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Bottom</source>
         <translation>下</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Bottom Left</source>
         <translation>左下</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Left</source>
         <translation>左</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1803"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1818"/>
         <source>Automatic</source>
         <translation>自動</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1827"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1842"/>
         <source>Default</source>
         <translation>預設</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1844"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
         <source>Style</source>
         <translation>樣式</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1844"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
         <source>Line</source>
         <translation>線條</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1844"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
         <source>Callout Wedge</source>
         <translation>標註楔形</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1849"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1864"/>
         <source>Tip</source>
         <translation>尖端</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1849"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1864"/>
         <source>Dot</source>
         <translation>點</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1849"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1864"/>
         <source>Arrow</source>
         <translation>箭頭</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1874"/>
         <source>Remove Pointer</source>
         <translation>移除指標</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1866"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1881"/>
         <source>Add Notice...</source>
         <translation>新增通知...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1884"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1899"/>
         <source>Add Pointer</source>
         <translation>新增指標</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1896"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1911"/>
         <source>Edit Notice...</source>
         <translation>編輯通知...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1906"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1921"/>
         <source>Remove Notice</source>
         <translation>移除通知</translation>
     </message>
@@ -17846,22 +17850,22 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsRulerWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2196"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2211"/>
         <source>Horizontal Ruler</source>
         <translation>水平標尺</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2197"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2212"/>
         <source>Horizontal position on the page in the page units, the arrow follows the pointer.</source>
         <translation>頁面上的水平位置（以頁面單位表示），箭頭跟隨指標</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2201"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2216"/>
         <source>Vertical Ruler</source>
         <translation>垂直標尺</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2202"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2217"/>
         <source>Vertical position on the page in the page units, the arrow follows the pointer.</source>
         <translation>頁面上的垂直位置（以頁面單位表示），箭頭跟隨指標</translation>
     </message>
@@ -21060,8 +21064,8 @@ Choose where to save it and download the latest %3 now?</source>
         </translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="517"/>
-        <location filename="../../source/core/sw_model_joints.cpp" line="635"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="520"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="638"/>
         <source>Set Joint</source>
         <translation>設定關節</translation>
     </message>
@@ -21071,22 +21075,22 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>套用姿勢</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="608"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="611"/>
         <source>Turn Joint</source>
         <translation>旋轉關節</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="625"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="628"/>
         <source>Joint Axis</source>
         <translation>關節軸</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="646"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="649"/>
         <source>Delete Joint</source>
         <translation>刪除關節</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="659"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="662"/>
         <source>Delete All Joints</source>
         <translation>刪除所有關節</translation>
     </message>

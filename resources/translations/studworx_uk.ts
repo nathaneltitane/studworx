@@ -8800,9 +8800,8 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;Інструмент «Покрутити»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виділіть об’єкти, а потім перетягніть ручку обертання у вигляді моделі. «Прив’язка обертання» задає кроки кута. «Параметри трансформації» вибирають відносні осі або осі моделі та те, чи обертаються деталі разом чи окремо.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1073"/>
         <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cancel the current mouse action, a face or cutaway pick or a cutaway resize, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Скасувати дію&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Скасувати поточну дію мишею, вибір грані чи розрізу або зміну розміру розрізу, закрити панель пошуку й заміни або очистити виділення. Якщо нічого не виділено, прибирає розріз.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Скасувати дію&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Скасувати поточну дію мишею, вибір грані чи розрізу або зміну розміру розрізу, закрити панель пошуку й заміни або очистити виділення. Якщо нічого не виділено, прибирає розріз.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1082"/>
@@ -9766,6 +9765,11 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="1010"/>
         <source>&lt;p&gt;&lt;b&gt;Joints Tool&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drag a submodel that has a joint to turn it. Hinges turn about their axis with the horizontal drag, balls turn about the screen up and right directions. Rotation Snap sets the steps and one drag is one undo step. Use Part &amp;gt; Joint &amp;gt; Set Joint to give a submodel a joint.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Інструмент «Шарніри»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетягніть підмодель із шарніром, щоб повернути її. Петлі обертаються навколо своєї осі під час горизонтального перетягування, кулі обертаються навколо напрямків екрана вгору й праворуч. «Прив’язка обертання» задає кроки, а одне перетягування становить один крок скасування. Щоб додати підмоделі шарнір, скористайтеся Деталь &amp;gt; Шарнір &amp;gt; Задати шарнір.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1073"/>
+        <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cancel the current mouse action, a face or cutaway pick or a cutaway resize, leave joint mode, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Скасувати дію&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Скасувати поточну дію мишею, вибір грані чи розрізу або зміну розміру розрізу, вийти з режиму шарнірів, закрити панель пошуку й заміни або очистити виділення. Якщо нічого не виділено, прибирає розріз.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1631"/>
@@ -15601,8 +15605,8 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsPageListWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2488"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2498"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2511"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2521"/>
         <source>Pages</source>
         <translation>Сторінки</translation>
     </message>
@@ -15611,32 +15615,32 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Сторінки&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть сторінку, щоб показати її. Клацніть сторінку правою кнопкою миші, щоб вставити або видалити порожні сторінки навколо неї.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2448"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2463"/>
         <source>Lock Page: keep every element where it is and refuse removal</source>
         <translation>Закріпити сторінку: залишити кожен елемент на місці й заборонити вилучення</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2449"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2464"/>
         <source>Freeze Page: keep the page settings when changes are made for all pages</source>
         <translation>Заморозити сторінку: зберегти налаштування сторінки під час змін для всіх сторінок</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2512"/>
         <source>&lt;p&gt;&lt;b&gt;Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a page to show it. Right-click a page to insert or remove blank pages around it.&lt;/p&gt;&lt;p&gt;Click the lock beside a page to keep its elements where they are. A locked page can&apos;t be removed.&lt;/p&gt;&lt;p&gt;Click the snowflake to freeze a page. It keeps its own copy of the settings, so changes for all pages skip it. Unfreeze it to follow the other pages again.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Сторінки&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виберіть сторінку, щоб показати її. Клацніть сторінку правою кнопкою миші, щоб вставити або видалити порожні сторінки навколо неї.&lt;/p&gt;&lt;p&gt;Натисніть замок біля сторінки, щоб її елементи залишалися на місці. Закріплену сторінку не можна вилучити.&lt;/p&gt;&lt;p&gt;Натисніть сніжинку, щоб заморозити сторінку. Вона зберігає власну копію налаштувань, тож зміни для всіх сторінок її оминають. Розморозьте її, щоб вона знову слідувала за іншими сторінками.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2519"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2542"/>
         <source>Insert Blank Page Before</source>
         <translation>Вставити порожню сторінку перед</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2527"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2550"/>
         <source>Insert Blank Page After</source>
         <translation>Вставити порожню сторінку після</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2535"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2558"/>
         <source>Remove Blank Page</source>
         <translation>Видалити порожню сторінку</translation>
     </message>
@@ -15649,117 +15653,117 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsPageWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1106"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1109"/>
         <source>Units of the rulers, the page units or the document units when they are in use.</source>
         <translation>Одиниці лінійок, одиниці сторінки або одиниці документа, коли вони використовуються.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1797"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1812"/>
         <source>Anchor</source>
         <translation>Якір</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Top Left</source>
         <translation>Вгорі ліворуч</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Top</source>
         <translation>Згори</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Top Right</source>
         <translation>Вгорі праворуч</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Right</source>
         <translation>Праворуч</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Bottom Right</source>
         <translation>Внизу праворуч</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Bottom</source>
         <translation>Знизу</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Bottom Left</source>
         <translation>Внизу ліворуч</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1798"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
         <source>Left</source>
         <translation>Ліворуч</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1803"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1818"/>
         <source>Automatic</source>
         <translation>Автоматично</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1827"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1842"/>
         <source>Default</source>
         <translation>За замовчуванням</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1844"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
         <source>Style</source>
         <translation>Стиль</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1844"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
         <source>Line</source>
         <translation>Лінія</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1844"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
         <source>Callout Wedge</source>
         <translation>Клин виноски</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1849"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1864"/>
         <source>Tip</source>
         <translation>Кінчик</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1849"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1864"/>
         <source>Dot</source>
         <translation>Крапка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1849"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1864"/>
         <source>Arrow</source>
         <translation>Стрілка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1874"/>
         <source>Remove Pointer</source>
         <translation>Видалити вказівник</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1866"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1881"/>
         <source>Add Notice...</source>
         <translation>Додати примітку...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1884"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1899"/>
         <source>Add Pointer</source>
         <translation>Додати вказівник</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1896"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1911"/>
         <source>Edit Notice...</source>
         <translation>Редагувати примітку...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1906"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1921"/>
         <source>Remove Notice</source>
         <translation>Видалити примітку</translation>
     </message>
@@ -17644,22 +17648,22 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsRulerWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2196"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2211"/>
         <source>Horizontal Ruler</source>
         <translation>Горизонтальна лінійка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2197"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2212"/>
         <source>Horizontal position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Горизонтальна позиція на сторінці в одиницях сторінки; стрілка слідує за вказівником.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2201"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2216"/>
         <source>Vertical Ruler</source>
         <translation>Вертикальна лінійка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2202"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2217"/>
         <source>Vertical position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Вертикальна позиція на сторінці в одиницях сторінки; стрілка слідує за вказівником.</translation>
     </message>
@@ -20723,8 +20727,8 @@ Choose where to save it and download the latest %3 now?</source>
         </translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="517"/>
-        <location filename="../../source/core/sw_model_joints.cpp" line="635"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="520"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="638"/>
         <source>Set Joint</source>
         <translation>Задати шарнір</translation>
     </message>
@@ -20734,22 +20738,22 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Відновити позу</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="608"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="611"/>
         <source>Turn Joint</source>
         <translation>Повернути шарнір</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="625"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="628"/>
         <source>Joint Axis</source>
         <translation>Вісь шарніра</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="646"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="649"/>
         <source>Delete Joint</source>
         <translation>Видалити шарнір</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="659"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="662"/>
         <source>Delete All Joints</source>
         <translation>Видалити всі шарніри</translation>
     </message>

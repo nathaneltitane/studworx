@@ -1303,8 +1303,10 @@ void swView::CancelTrackingOrClearSelectionAction()
 	{
 		swModel* ActiveModel = GetActiveModel();
 
-		// esc leaves the cutaway
-		if (HasCutaway() && (!ActiveModel || !ActiveModel->AnyObjectsSelected()))
+		// esc leaves joint mode first
+		if (gMainWindow->GetTool() == swTool::Joints || (ActiveModel && ActiveModel->IsJointFocused()))
+			EndJointFocus();
+		else if (HasCutaway() && (!ActiveModel || !ActiveModel->AnyObjectsSelected()))
 			RemoveCutaway();
 		else if (ActiveModel)
 			ActiveModel->ClearSelectionAction();
@@ -1529,6 +1531,14 @@ void swView::OnButtonDown(swTrackButton TrackButton)
 
 			if (ActiveModel->JointsToolClicked(StartEnd[0], StartEnd[1], Right, Up))
 				StartTracking(TrackButton);
+			else if (!Pick)
+			{
+				// a click off the joints selects again
+
+				EndJointFocus();
+				UpdateTrackTool();
+				return OnButtonDown(TrackButton);
+			}
 
 			// set joint goes back to select
 

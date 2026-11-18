@@ -1070,7 +1070,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Edit.Cancel"),
 		QT_TRANSLATE_NOOP("Menu", "Cancel Action"),
 		QT_TRANSLATE_NOOP("Status", "Cancel current mouse action"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Cancel Action</b></p><p>Cancel the current mouse action, a face or cutaway pick or a cutaway resize, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Cancel Action</b></p><p>Cancel the current mouse action, a face or cutaway pick or a cutaway resize, leave joint mode, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.</p>"),
 		"Esc"
 	},
 
