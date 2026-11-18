@@ -407,7 +407,7 @@ public:
 	void SetJointPick(bool Pick);
 	void SetJointRotate(bool Rotate);
 	void UpdateJointRotate();
-	void SetJointFocus();
+	void SetJointFocus(bool Focus = true);
 	void EndJointFocus();
 	bool IsJointFocused() const
 	{

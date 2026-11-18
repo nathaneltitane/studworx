@@ -475,6 +475,13 @@ void swModel::SetActive(bool Active)
 
 	if (Active)
 		UpdateControlPointSeats();
+
+	// a model left behind drops joint mode
+	else
+	{
+		mJointFocus = nullptr;
+		mJointRotate = nullptr;
+	}
 }
 
 void swModel::CalculateStep(swStep Step)

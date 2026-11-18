@@ -3,6 +3,7 @@
   <details open>
   <summary>2026-11-17</summary>
 
+  - Joints: editing a submodel in place no longer starts joint mode or joint move and rotate, joint mode only starts from a joint
   - Joints: a jointed submodel inside a group keeps its joint editing, moving and turning
   - Joints: Escape or a click away from the joints leaves joint mode and goes back to selecting parts
   - Instructions: the page view smooths lines, borders and round ends

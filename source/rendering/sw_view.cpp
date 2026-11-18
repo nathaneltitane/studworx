@@ -278,6 +278,15 @@ void swView::SetSelectedSubmodelActive()
 	if (!Part->mPartData->IsModel())
 		return;
 
+	// editing in place is not joint mode
+	if (ActiveModel->IsJointFocused() || gMainWindow->GetTool() == swTool::Joints)
+	{
+		ActiveModel->SetJointRotate(false);
+		ActiveModel->SetJointFocus(false);
+		mJointReturn = false;
+		gMainWindow->SetTool(swTool::Select);
+	}
+
 	// keep ancestor models at their steps
 	mZoomExtentsCamera = nullptr;
 	mSubmodelEditingPath.push_back(Part);

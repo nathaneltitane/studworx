@@ -683,9 +683,9 @@ void swModel::UpdateJointRotate()
 }
 
 // joints picked in the list
-void swModel::SetJointFocus()
+void swModel::SetJointFocus(bool Focus)
 {
-	swPart* Part = GetJointPart();
+	swPart* Part = Focus ? GetJointPart() : nullptr;
 
 	mJointFocus = Part && Part->HasJoints() ? Part : nullptr;
 }
