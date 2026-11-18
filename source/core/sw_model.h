@@ -415,6 +415,7 @@ public:
 	}
 	swPart* GetRotateJoint() const;
 	bool RotateJoint(swPart* Part, const swMatrix33& WorldRotation);
+	void TurnJointGroup(swPart* Joint, const swMatrix44& Before);
 	bool IsJointPick() const
 	{
 		return mJointPick;

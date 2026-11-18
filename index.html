@@ -778,8 +778,8 @@
 
 			<ul class="points">
 				<li><b>Set Joint.</b> Turn a submodel into something that moves, like a minifigure arm or a hinged door: pick the connection it turns on, and StudWorx makes a hinge on a round shape or a ball on a sphere, or a hinge on the part&#x27;s center when the part has no connection data. A submodel can have several joints, each listed in the Joints panel and saved in the model file.</li>
+				<li><b>Joint Move and Rotate.</b> Move and rotate a joint with the usual gizmos and keys instead of the Joints tool. Parts grouped with the jointed submodel turn along with it, like an arm grouped with its shoulder. A bar over the view shows <a href="#where">where</a> the joint sits in the model and takes you back out when you&#x27;re done.</li>
 				<li><b>Joints from the shadow library.</b> Joints and connections come from the shape data of the LDCad shadow library: round shapes become hinges and spheres become balls, and clips and hinge fingers connect too. Square and round box shapes don&#x27;t connect yet.</li>
-				<li><b>Joint Move and Rotate.</b> Move and rotate a joint with the usual gizmos and keys instead of the Joints tool. A bar over the view shows <a href="#where">where</a> the joint sits in the model and takes you back out when you&#x27;re done.</li>
 				<li><b>Joints tool.</b> Grab a jointed submodel and drag to turn it: a hinge turns about its axis, a ball any way. The parts holding joints are outlined in red, and each drag is one undo step.</li>
 				<li><b>Poses panel.</b> Save the joint angles of a model as a named pose, like sitting or waving, and bring them back in one step. Poses are saved in the model&#x27;s own file.</li>
 				<li><b>Joints panel.</b> Every model with joints in a tree, down to each joint with its type and angle. Click a joint to work on it, or a model to see its poses.</li>
@@ -2035,6 +2035,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<summary>2026-11-17</summary>
 
 				<ul>
+					<li>Joints: parts grouped with a jointed submodel turn along with its joint, from the gizmo, the keys and the Joints tool</li>
 					<li>Shortcuts: Shift+I switches to Default Lights shading by default</li>
 					<li>Joints: in joint mode the Move and Rotate tools and their shortcuts act on the joint, like Move Joint and Rotate Joint</li>
 					<li><a href="#views">Views</a>: the rotate gizmo draws its axis circles all the way around, no longer cut in half</li>

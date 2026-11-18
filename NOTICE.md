@@ -3,6 +3,7 @@
   <details open>
   <summary>2026-11-17</summary>
 
+  - Joints: parts grouped with a jointed submodel turn along with its joint, from the gizmo, the keys and the Joints tool
   - Shortcuts: Shift+I switches to Default Lights shading by default
   - Joints: in joint mode the Move and Rotate tools and their shortcuts act on the joint, like Move Joint and Rotate Joint
   - Views: the rotate gizmo draws its axis circles all the way around, no longer cut in half

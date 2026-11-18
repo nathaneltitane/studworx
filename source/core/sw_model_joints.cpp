@@ -598,7 +598,9 @@ void swModel::UpdateJointsTool(float DeltaX, float DeltaY)
 		Rotation = swVectorFromRotation(swMultiply(mJointsWorldRotation, swMultiply(Turn, swMultiply(swMatrix33AffineInverse(mJointsWorldRotation), swRotationFromVector(mJointsStartRotation)))));
 	}
 
+	const swMatrix44 Before = mJointsJoint->mModelWorld;
 	mJointsJoint->SetJointRotation(mJointsJointIndex, Rotation, mCurrentStep);
+	TurnJointGroup(mJointsJoint, Before);
 	UpdateAllViews();
 }
 
@@ -706,6 +708,29 @@ swPart* swModel::GetRotateJoint() const
 		return nullptr;
 
 	return Part == mJointRotate || swGetPreferences().mJointRotation ? Part : nullptr;
+}
+
+// use to carry a joint's group along
+void swModel::TurnJointGroup(swPart* Joint, const swMatrix44& Before)
+{
+	const swGroup* Group = Joint->GetTopGroup();
+
+	if (!Group)
+		return;
+
+	const swMatrix44 Turn = swMultiply(swMatrix44AffineInverse(Before), Joint->mModelWorld);
+	const bool AddKey = gMainWindow->GetAddKeys();
+
+	for (const std::unique_ptr<swPart>& Part : mParts)
+	{
+		if (Part.get() == Joint || Part->GetTopGroup() != Group)
+			continue;
+
+		const swMatrix44 Turned = swMultiply(Part->mModelWorld, Turn);
+		Part->SetPosition(Turned.GetTranslation(), mCurrentStep, AddKey);
+		Part->SetRotation(swMatrix33Clean(swMatrix33(Turned)), mCurrentStep, AddKey);
+		Part->UpdatePosition(mCurrentStep);
+	}
 }
 
 // use to turn a joint by a model space rotation

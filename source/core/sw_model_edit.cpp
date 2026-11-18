@@ -1317,7 +1317,11 @@ void swModel::RotateSelectedObjects(const swMatrix33& InputRotationMatrix, swMod
 			WorldRotation = swMultiply(swMatrix33AffineInverse(RelativeRotation), swMultiply(RotationMatrix, RelativeRotation));
 		}
 
+		const swMatrix44 Before = Joint->mModelWorld;
 		Rotated = RotateJoint(Joint, WorldRotation);
+
+		if (Rotated)
+			TurnJointGroup(Joint, Before);
 	}
 	else
 	{
