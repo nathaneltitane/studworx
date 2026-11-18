@@ -782,7 +782,7 @@
 				<li><b>Joints panel.</b> Every model with joints in a tree, down to each joint with its type and angle. Click a joint to work on it, or a model to see its poses. The Piece column tells copies of the same submodel apart by where each sits in its file, and ticking Lock freezes a joint: it turns grey and can&#x27;t be moved, turned or changed until you untick it.</li>
 				<li><b>Joint Mode Start.</b> In Preferences, pick which joint opens first: the first one, the one you used last, or none, with every joint shown as a ring you click to open. With Select Joints in View on, the other joints stay as faded rings, so you can hop from one to the next.</li>
 				<li><b>Joints from the shadow library.</b> Joints and connections come from the shape data of the LDCad shadow library: round shapes become hinges and spheres become balls, and clips and hinge fingers connect too. Square and round box shapes don&#x27;t connect yet.</li>
-				<li><b>Joint Mode.</b> Press J to work on the joint of the selected submodel, or of the submodel around the selected part, and press J again to leave. It&#x27;s also in the right-click menu under Joint, next to End Joint Mode.</li>
+				<li><b>Joint Mode.</b> Press Ctrl+Shift+J to work on the joint of the selected submodel, or of the submodel around the selected part, and press it again to leave. It&#x27;s also in the right-click menu under Joint, next to End Joint Mode.</li>
 				<li><b>Joints tool.</b> Grab a jointed submodel and drag to turn it: a hinge turns about its axis, a ball any way. The parts holding joints are outlined in red, and each drag is one undo step.</li>
 				<li><b>Poses panel.</b> Save the joint angles of a model as a named pose, like sitting or waving, and bring them back in one step. Poses are saved in the model&#x27;s own file.</li>
 				<li><b>Joints motion.</b> Make an animated GIF that moves the model smoothly from pose to pose and back.</li>
@@ -2037,7 +2037,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<summary>2026-11-18</summary>
 
 				<ul>
-					<li>Joints: J goes into joint mode on the selected submodel, or the jointed submodel around the selected part, and J again leaves it; Joint Mode and End Joint Mode are in Part &gt; Joint and the right-click menu</li>
+					<li>Joints: Ctrl+Shift+J goes into joint mode on the selected submodel, or the jointed submodel around the selected part, and Ctrl+Shift+J again leaves it; Joint Mode and End Joint Mode are in Part &gt; Joint and the right-click menu</li>
 					<li>Joints: right-clicking in joint mode keeps the joint, so End Joint Mode works from the right-click menu</li>
 					<li>Joints panel: a Piece column shows <a href="#where">where</a> each submodel sits in its file, taken out of the submodel&#x27;s name</li>
 					<li>Joints panel: a Lock column freezes a joint, saved in the file; a locked joint shows in the Deactivated grey and can&#x27;t be moved, turned, edited or deleted</li>
@@ -2903,7 +2903,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"command":"Array","shortcut":"","paths":["Part"]},
 				{"command":"Reset Pivot Point","shortcut":"Ctrl+#","paths":["Part"]},
 				{"command":"Remove Keyframes","shortcut":"","paths":["Part"]},
-				{"command":"Joint Mode","shortcut":"J","paths":["Part > Joint","Right click the model view > Joint"]},
+				{"command":"Joint Mode","shortcut":"Ctrl+Shift+J","paths":["Part > Joint","Right click the model view > Joint"]},
 				{"command":"End Joint Mode","shortcut":"","paths":["Part > Joint","Right click the model view > Joint"]},
 				{"command":"Set Joint","shortcut":"","paths":["Part > Joint","Right click the model view > Joint"]},
 				{"command":"Move Joint","shortcut":"","paths":["Part > Joint","Right click the model view > Joint","Right click Joints panel"]},
