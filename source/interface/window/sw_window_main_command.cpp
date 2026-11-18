@@ -1449,11 +1449,15 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		break;
 
 	case SW_EDIT_ACTION_MOVE:
-		SetTool(swTool::Move);
-		break;
-
 	case SW_EDIT_ACTION_ROTATE:
-		SetTool(swTool::Rotate);
+		{
+			// in joint mode they turn the joint
+			const bool JointMode = ActiveModel && ActiveModel->IsJointFocused();
+			SetTool(CommandId == SW_EDIT_ACTION_MOVE ? swTool::Move : swTool::Rotate);
+
+			if (JointMode)
+				ActiveModel->SetJointRotate(true);
+		}
 		break;
 
 	case SW_EDIT_ACTION_ERASE:
