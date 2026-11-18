@@ -1086,6 +1086,9 @@ swInstructionsPageWidget::swInstructionsPageWidget(QWidget* Parent, swInstructio
 	setScene(Scene);
 	setBackgroundBrush(palette().color(QPalette::Mid));
 
+	// smooth lines and round ends
+	setRenderHint(QPainter::Antialiasing, true);
+
 	connect(mInstructions, &swInstructions::StepSettingsChanged, this, &swInstructionsPageWidget::StepSettingsChanged);
 	connect(Scene, &QGraphicsScene::selectionChanged, this, &swInstructionsPageWidget::SelectionChanged);
 	connect(mPlacementWidget, &swInstructionsPlacementWidget::AlignSelection, this, &swInstructionsPageWidget::AlignSelection);
