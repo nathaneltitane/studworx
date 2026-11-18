@@ -347,7 +347,7 @@ Every part belongs to a building step. Steps drive the model view, the instructi
 - **Step view commands.** Give each step its own view angle, so the model turns to show that step best as you go through them.
 - **Emphasis.** Make the build easier to follow: highlight the new parts of each step, fade the earlier ones, fade the rest of the model while you edit a submodel or set a joint, outline the submodel under the pointer, and mark the connection points of the part you point at, in a see-through color if you like, or not at all.
 - **Animation keys.** Animation keys remember where parts, lights and cameras are at each step. Add Keys records them as you work, and a round button in the Properties panel adds or removes one.
-- **Keyframes panel.** A full-width timeline of the animation, one column per step and one row per object, with a diamond for each key. Add, remove and drag keys, and play the animation from the panel or the Time toolbar.
+- **Keyframes panel.** A full-width timeline of the animation, one column per step and one row per object, with a diamond for each key. Click a diamond to pick it, Ctrl+click to pick more, and Delete removes them. Add, remove and drag keys, and play the animation from the panel or the Time toolbar.
 
 [//]: # (gallery scroll)
 
@@ -464,6 +464,7 @@ Nine pages with lined up label and control columns, checkboxes included, each la
 - **Context Menu.** Arrange the right-click menu of the model view the way you work: add, reorder, rename or group its commands, or reset it. Right clicking an unselected part selects it first.
 - **Keyboard and Mouse.** Shortcuts recorded by clicking, importable and exportable. Commands that share a shortcut show in red, and assigning a taken shortcut asks before moving it.
 - **Shortcut filters.** Filter commands and tools by name or shortcut, give each two shortcuts, and reset them to the defaults.
+- **Delete.** Delete removes only what is selected where you work: a joint, a step, picked keys, a pointer or notice on a page, or parts in the view.
 - **Built-in Keys.** The end of the Keyboard list shows the keys that can't be changed, greyed out, like F1 for help and Ctrl+click to add to the selection.
 - **From LeoCAD.** Settings, part palettes and minifigure templates are copied from LeoCAD on the first start.
 

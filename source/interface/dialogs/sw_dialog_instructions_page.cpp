@@ -1770,6 +1770,29 @@ void swInstructionsPageWidget::mouseMoveEvent(QMouseEvent* Event)
 			PointerItem->UpdateGeometry();
 }
 
+void swInstructionsPageWidget::RemoveSelectedElements()
+{
+	std::vector<swInstructionsElementKey> Keys;
+
+	for (QGraphicsItem* Item : scene()->selectedItems())
+	{
+		swInstructionsElementKey Key;
+
+		if (swGetElementKey(Item, Key))
+			Keys.push_back(Key);
+	}
+
+	// generated elements stay
+
+	for (const swInstructionsElementKey& Key : Keys)
+	{
+		if (std::get<0>(Key) == swInstructionsPlacementElement::Pointer)
+			mInstructions->RemovePointer(static_cast<int>(std::get<2>(Key)));
+		else if (std::get<0>(Key) == swInstructionsPlacementElement::Notice)
+			mInstructions->RemoveNotice(static_cast<int>(std::get<2>(Key)));
+	}
+}
+
 void swInstructionsPageWidget::contextMenuEvent(QContextMenuEvent* Event)
 {
 	if (!mPage)

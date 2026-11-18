@@ -85,6 +85,22 @@ swInstructionsDialog::swInstructionsDialog(QWidget* Parent, Project* Project)
 		connect(HistoryAction, &QAction::changed, Shortcut, [Shortcut, HistoryAction]() { Shortcut->setKey(HistoryAction->shortcut()); });
 	}
 
+	// delete key follows the main window
+
+	QAction* DeleteAction = gMainWindow->mActions[SW_PART_DELETE];
+	const std::pair<QWidget*, std::function<void()>> DeleteTargets[] =
+	{
+		{ PageArea, [this]() { mPageWidget->RemoveSelectedElements(); } },
+		{ mPageListWidget, [this]() { RemovePage(); } }
+	};
+
+	for (const auto& [Target, Remove] : DeleteTargets)
+	{
+		QShortcut* Shortcut = new QShortcut(DeleteAction->shortcut(), Target, nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
+		connect(Shortcut, &QShortcut::activated, this, Remove);
+		connect(DeleteAction, &QAction::changed, Shortcut, [Shortcut, DeleteAction]() { Shortcut->setKey(DeleteAction->shortcut()); });
+	}
+
 	// print panel opens below the grid
 	mPrintWidget = new swInstructionsPrintWidget(this, mInstructions);
 	mPrintWidget->setObjectName("InstructionsPrint");

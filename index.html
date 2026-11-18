@@ -968,7 +968,7 @@
 
 			<ul class="points">
 				<li><b>Emphasis.</b> Make the build easier to follow: highlight the new parts of each step, fade the earlier ones, fade the rest of the model while you edit a submodel or set a joint, outline the submodel under the pointer, and mark the connection points of the part you point at, in a see-through color if you like, or not at all.</li>
-				<li><b>Keyframes panel.</b> A full-width timeline of the animation, one column per step and one row per object, with a diamond for each key. Add, remove and drag keys, and play the animation from the panel or the Time toolbar.</li>
+				<li><b>Keyframes panel.</b> A full-width timeline of the animation, one column per step and one row per object, with a diamond for each key. Click a diamond to pick it, Ctrl+click to pick more, and Delete removes them. Add, remove and drag keys, and play the animation from the panel or the Time toolbar.</li>
 				<li><b>Timeline.</b> Shows the step each part is added in and removed in. An empty removal step reads Never. Drag parts between steps or reorder them, and Set Current Step from a step&#x27;s right-click menu.</li>
 				<li><b>Keys in the Timeline.</b> Each step with animation keys lists a Keys row per keyed object naming its keyed properties, and a double click on it selects that object at that step and shows the Keyframes panel.</li>
 				<li><b>Animation keys.</b> Animation keys remember <a href="#where">where</a> parts, lights and cameras are at each step. Add Keys records them as you work, and a round button in the Properties panel adds or removes one.</li>
@@ -1320,6 +1320,7 @@
 				<li><b>Display colors.</b> Every color StudWorx draws with, from the background and grids to selections, highlights, axes and the instruction page guides, see-through where it makes sense.</li>
 				<li><b>Keyboard and Mouse.</b> Shortcuts recorded by clicking, importable and exportable. Commands that share a shortcut show in red, and assigning a taken shortcut asks before moving it.</li>
 				<li><b>Built-in Keys.</b> The end of the Keyboard list shows the keys that can&#x27;t be changed, greyed out, like F1 for <a href="#help">help</a> and Ctrl+click to add to the selection.</li>
+				<li><b>Delete.</b> Delete removes only what is selected where you work: a joint, a step, picked keys, a pointer or notice on a page, or parts in the view.</li>
 				<li><b><a href="#interface">Interface</a> and <a href="#instructions">Instructions</a>.</b> Interface holds every display color. Instructions holds the default page settings, the rulers and inspector, and the editor options.</li>
 				<li><b><a href="#rendering">Rendering</a> and <a href="#views">Views</a>.</b> Rendering sets how parts look, and Views sets what the model view shows around them, from the view cube to the grids.</li>
 				<li><b>Shortcut filters.</b> Filter commands and tools by name or shortcut, give each two shortcuts, and reset them to the defaults.</li>
@@ -2040,12 +2041,14 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 				<ul>
 					<li>Keyboard <a href="#preferences">preferences</a>: a Built-in Keys group at the end lists the keys that can&#x27;t be changed, greyed out</li>
+					<li>Shortcuts: Delete removes only what is selected <a href="#where">where</a> you work: the joint in the Joints panel, the step in the Timeline, the picked keys in the Keyframes panel, the pointers, notices or blank page in the <a href="#instructions">instructions</a>, or the selected objects in the view; it can be changed in Keyboard preferences</li>
+					<li>Keyframes panel: click a diamond to pick it, Ctrl+click to add or take it out, Shift+click to take it out; picked keys light up and Delete removes them</li>
 					<li>Shortcuts: Ctrl+Shift+W, Exit Mode in the menus and Keyboard preferences, exits one mode per press, innermost first: a pick, joint mode, the cutaway, then in-place submodel editing; it keeps the selection</li>
 					<li>Shortcuts: Esc <a href="#steps">steps</a> back the same way, clears the selection before leaving a mode, and now also steps out of in-place submodel editing</li>
 					<li>Shortcuts: Ctrl+Shift+J only goes into joint mode; Ctrl+Shift+W or Esc leaves it</li>
 					<li>Joints: Ctrl+Shift+J goes into joint mode on the selected submodel, or the jointed submodel around the selected part, and Ctrl+Shift+W or Esc leaves it; Joint Mode and End Joint Mode are in Part &gt; Joint and the right-click menu</li>
 					<li>Joints: right-clicking in joint mode keeps the joint, so End Joint Mode works from the right-click menu</li>
-					<li>Joints panel: a Piece column shows <a href="#where">where</a> each submodel sits in its file, taken out of the submodel&#x27;s name</li>
+					<li>Joints panel: a Piece column shows where each submodel sits in its file, taken out of the submodel&#x27;s name</li>
 					<li>Joints panel: a Lock column freezes a joint, saved in the file; a locked joint shows in the Deactivated grey and can&#x27;t be moved, turned, edited or deleted</li>
 					<li>Preferences: Joint Mode Start opens the first joint, the last used joint of that submodel, or an overview with every joint shown as a ring to click</li>
 					<li>Preferences: Select Joints in View shows the other joints as faded rings while a joint is open, and clicking one opens it</li>
@@ -2065,7 +2068,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Joints: editing a submodel in place no longer starts joint mode or joint move and rotate, joint mode only starts from a joint</li>
 					<li>Joints: a jointed submodel inside a group keeps its joint editing, moving and turning</li>
 					<li>Joints: Escape or a click away from the joints leaves joint mode and goes back to selecting parts</li>
-					<li><a href="#instructions">Instructions</a>: the page view smooths lines, borders and round ends</li>
+					<li>Instructions: the page view smooths lines, borders and round ends</li>
 					<li>Instructions: rounded divider ends are full half circles at every width, thin dividers no longer look pointy</li>
 					<li>Instructions: Highlight Width sets how thick the new part outline is, from 1 to 72, and wide outlines stay solid</li>
 					<li>Instructions: the highlight color keeps the opacity you pick, no longer held between 85 and 95 percent</li>
@@ -2421,7 +2424,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Joints and Poses Panels","title":"Recall","paragraphs":["Turn the joints of this model back to the angles of the picked pose, in one undo step."]},
 				{"group":"Joints and Poses Panels","title":"Rename","paragraphs":["Give the picked pose a new name."]},
 				{"group":"Joints and Poses Panels","title":"Delete","paragraphs":["Remove the picked pose from the model. The joints keep their angles."]},
-				{"group":"Keyframes Panel","title":"Keyframes","paragraphs":["A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.","Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion."]},
+				{"group":"Keyframes Panel","title":"Keyframes","paragraphs":["A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, click a diamond to pick it, Ctrl+click to add or remove it from the picked keys and Shift+click to take it out. Delete removes the picked keys. Double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.","Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion."]},
 				{"group":"Keyframes Panel","title":"Rewind","paragraphs":["Go to the first step of the model."]},
 				{"group":"Keyframes Panel","title":"Forward","paragraphs":["Go to the last step of the model."]},
 				{"group":"Keyframes Panel","title":"Selected","paragraphs":["List only the selected objects in the timeline, with or without keys."]},
@@ -2658,7 +2661,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"View Menu","title":"Keep Last Selection","paragraphs":["Keep showing the last selected part in the preview after the selection is cleared."]},
 				{"group":"Part Menu","title":"Insert Part","paragraphs":["Add the part chosen in the Parts panel to the model, next to the part that has focus or the last part added."]},
 				{"group":"Part Menu","title":"Insert First Part at Origin","paragraphs":["Place the first part of an empty model at 0, 0, 0."]},
-				{"group":"Part Menu","title":"Delete","paragraphs":["Remove the selected objects from the model."]},
+				{"group":"Part Menu","title":"Delete","paragraphs":["Removes only what is selected, picked by where you work: the joint in the Joints panel, the step in the Timeline panel, the picked keys in the Keyframes panel, or the selected keys at the current step when none are picked, and the selected pointers, notices or blank page in the instructions. In the view it removes a focused control point alone, otherwise the selected objects. With nothing selected it does nothing."]},
 				{"group":"Part Menu","title":"Duplicate","paragraphs":["Add a copy of each selected part in the same place, with copies of their groups, and select the copies."]},
 				{"group":"Part Menu","title":"Paint Selected","paragraphs":["Change the selected parts to the color chosen in the Colors panel."]},
 				{"group":"Part Menu","title":"Set Joint","paragraphs":["Select one submodel, choose Part > Joint > Set Joint, also in the right-click menu of the model view, then click one of its connections with the Set Joint pointer, which outlines the part under it in red. The click sets the joint and goes back to the Select tool in joint mode on the new joint. Set Joint again at another connection adds a joint, and Set Joint at a joint already there resets it. A round connection makes a hinge on its axis and a sphere makes a ball. A part without shadow data gets a hinge on its origin. The joint shows in the Joints panel and setting it can be undone."]},

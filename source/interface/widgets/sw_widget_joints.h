@@ -13,6 +13,7 @@ public:
 	bool OpenCurrentJoint();
 	void SelectJoint(const QString& ModelName, int Index, int Joint);
 	swModel* GetPoseModel() const;
+	bool ClearFocusedJoint();
 
 signals:
 	void PoseModelChanged();
@@ -28,7 +29,6 @@ private slots:
 private:
 	void UpdateTree();
 	swPart* GetTreeJoint(swModel** Model, size_t* Joint) const;
-	bool eventFilter(QObject* Object, QEvent* Event) override;
 
 	QTreeWidget* mTree;
 	QLabel* mJointLabel;

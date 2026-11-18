@@ -438,6 +438,7 @@ public:
 	swInstructionsPageWidget(QWidget* Parent, swInstructions* Instructions, swInstructionsPropertiesWidget* PropertiesWidget, swInstructionsPlacementWidget* PlacementWidget);
 
 	void SetCurrentPage(const swInstructionsPage* Page);
+	void RemoveSelectedElements();
 
 	swInstructions* GetInstructions() const
 	{

@@ -7886,6 +7886,11 @@ File format is not recognized.</source>
         <translation>以普通樣式繪製凸點</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2546"/>
+        <source>Delete what is selected where you work</source>
+        <translation>刪除你正在操作之處所選的內容</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="2573"/>
         <source>Click a connection of the selected submodel to make it a joint</source>
         <translation>點選所選子模型的連接點，將其設為關節</translation>
@@ -8084,9 +8089,8 @@ File format is not recognized.</source>
         <translation>切換將空白模型的第一個零件放置在 0, 0, 0</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2546"/>
         <source>Delete selected objects</source>
-        <translation>刪除選取的物件</translation>
+        <translation type="vanished">刪除選取的物件</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2555"/>
@@ -8825,6 +8829,11 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;旋轉工具&lt;/b&gt;&lt;/p&gt;&lt;p&gt;選擇物件，然後在模型視圖中拖曳旋轉手柄。旋轉吸附設定角度增量。變換選項選擇相對軸或模型軸以及零件是一起旋轉還是單獨旋轉。&lt;/p&gt;</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2547"/>
+        <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Removes only what is selected, picked by where you work: the joint in the Joints panel, the step in the Timeline panel, the picked keys in the Keyframes panel, or the selected keys at the current step when none are picked, and the selected pointers, notices or blank page in the instructions. In the view it removes a focused control point alone, otherwise the selected objects. With nothing selected it does nothing.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;刪除&lt;/b&gt;&lt;/p&gt;&lt;p&gt;只移除所選內容，取決於你在哪裡操作：關節面板中的關節、時間軸面板中的步驟、關鍵影格面板中選取的關鍵影格（若未選取任何關鍵影格，則為所選物件在目前步驟的關鍵影格），以及說明書中所選的指標、註記或空白頁。在檢視中，它只移除取得焦點的控制點，否則移除所選物件。未選取任何內容時不執行任何動作。&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="2601"/>
         <source>&lt;p&gt;&lt;b&gt;Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel. The Joint Mode Start preference picks which joint opens: the first joint, the last used joint, or an overview of rings to pick from. Ctrl+Shift+W or Esc leaves it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;關節模式&lt;/b&gt;&lt;/p&gt;&lt;p&gt;編輯所選子模型的關節，與在關節面板中點擊它相同。若選中的是帶關節子模型中的零件，則向上轉到該子模型。若未選中任何內容，則開啟關節面板中選定的關節。「關節模式起始」偏好設定決定開啟哪個關節：第一個、上次使用的，或顯示可供選擇的圓環概覽。按 Ctrl+Shift+W 或 Esc 退出。&lt;/p&gt;</translation>
@@ -9344,9 +9353,8 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;在原點插入第一個零件&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將空白模型的第一個零件放在 0, 0, 0。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2547"/>
         <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected objects from the model.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;刪除&lt;/b&gt;&lt;/p&gt;&lt;p&gt;從模型中移除所選物件。&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;刪除&lt;/b&gt;&lt;/p&gt;&lt;p&gt;從模型中移除所選物件。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2556"/>
@@ -15460,167 +15468,167 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>列印頁面...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="97"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="113"/>
         <source>Show or hide the Print panel to print the instruction pages</source>
         <translation>顯示或隱藏列印面板以列印說明頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="100"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="116"/>
         <source>Export HTML</source>
         <translation>匯出 HTML</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="101"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="117"/>
         <source>Export the instruction pages as HTML pages and images</source>
         <translation>將說明頁面匯出為 HTML 頁面和影像</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="111"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="127"/>
         <source>Ctrl+Shift+E</source>
         <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="113"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="129"/>
         <source>Show or hide the Editor panel to inspect and edit the text of the model file</source>
         <translation>顯示或隱藏編輯器面板，以便檢查和編輯模型檔案的文字</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="202"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="218"/>
         <source>%1 - Cover</source>
         <translation>%1 - 封面</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="206"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="222"/>
         <source>%1 - Bill of Materials</source>
         <translation>%1 - 材料清單</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="210"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="226"/>
         <source>%1 - Blank</source>
         <translation>%1 - 空白</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="378"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="394"/>
         <source>&lt;p&gt;&lt;b&gt;Page Bar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The timeline First, Previous, Next and Last shortcuts turn the pages too while the page or the Pages panel has focus.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;頁面列&lt;/b&gt;&lt;/p&gt;&lt;p&gt;前往第一頁、上一頁、下一頁或最後一頁，或直接前往封面或材料清單，這些頁面關閉時按鈕會呈灰色。「步驟頁」會在目前頁面之前插入一個空白步驟，「空白頁」會在其前面插入一張空白頁，「移除頁面」則移除空白頁或只有空白步驟的頁面。右側的方框顯示目前頁碼，輸入數字即可前往該頁。當頁面或「頁面」面板取得焦點時，時間軸的「第一個」、「上一個」、「下一個」和「最後一個」快速鍵也能翻頁。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="388"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
         <source>&lt;p&gt;&lt;b&gt;Undo and Redo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Undo takes back your last change to the instructions, Redo puts it back. Quick changes to the same setting count as one change. The main window Undo and Redo shortcuts work here too.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;復原和重做&lt;/b&gt;&lt;/p&gt;&lt;p&gt;復原會取消你對說明書的上一次變更，重做會恢復它。對同一設定的快速變更算作一次變更。主視窗的復原和重做快捷鍵在這裡同樣可用。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="390"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="406"/>
         <source>&amp;Undo</source>
         <translation>&amp;復原</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="390"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="406"/>
         <source>Take back the last change to the instructions</source>
         <translation>復原對說明書的上一次變更</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="392"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="408"/>
         <source>Re&amp;do</source>
         <translation>&amp;重做</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="392"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="408"/>
         <source>Put back the last change that was taken back</source>
         <translation>重做上一次復原的變更</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="420"/>
         <source>&amp;First</source>
         <translation>&amp;第一頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="420"/>
         <source>Go to the first page</source>
         <translation>前往第一頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="405"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="421"/>
         <source>&amp;Previous</source>
         <translation>上一頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="405"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="421"/>
         <source>Go to the previous page</source>
         <translation>前往上一頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="406"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="422"/>
         <source>&amp;Cover</source>
         <translation>&amp;封面</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="406"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="422"/>
         <source>Go to the cover page</source>
         <translation>前往封面頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="407"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="423"/>
         <source>&amp;Step Page</source>
         <translation>&amp;步驟頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="407"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="423"/>
         <source>Insert an empty step before the current page</source>
         <translation>在目前頁面之前插入一個空白步驟</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="408"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="424"/>
         <source>Bl&amp;ank Page</source>
         <translation>&amp;空白頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="408"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="424"/>
         <source>Insert a blank page before the current page</source>
         <translation>在目前頁之前插入一張空白頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="409"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="425"/>
         <source>&amp;Remove Page</source>
         <translation>&amp;移除頁面</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="409"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="425"/>
         <source>Remove the current page when it is blank or holds only empty steps</source>
         <translation>當目前頁面為空白或僅包含空白步驟時，將其刪除</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="410"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="426"/>
         <source>&amp;Bill of Materials</source>
         <translation>&amp;材料清單</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="410"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="426"/>
         <source>Go to the bill of materials page</source>
         <translation>前往材料清單頁面</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="411"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="427"/>
         <source>&amp;Next</source>
         <translation>下一頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="411"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="427"/>
         <source>Go to the next page</source>
         <translation>前往下一頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="412"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="428"/>
         <source>&amp;Last</source>
         <translation>&amp;最後一頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="412"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="428"/>
         <source>Go to the last page</source>
         <translation>前往最後一頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="418"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="434"/>
         <source>Current page out of all pages, type a number to go there</source>
         <translation>目前頁碼與總頁數，輸入數字即可前往該頁</translation>
     </message>
@@ -15637,7 +15645,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">橫向</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="197"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="213"/>
         <source>Page %1</source>
         <translation>第 %1 頁</translation>
     </message>
@@ -15908,8 +15916,8 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsPageListWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2511"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2521"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2534"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2544"/>
         <source>Pages</source>
         <translation>頁面</translation>
     </message>
@@ -15918,32 +15926,32 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;頁面&lt;/b&gt;&lt;/p&gt;&lt;p&gt;選取頁面即可顯示。在頁面上按一下滑鼠右鍵，可在其前後插入或移除空白頁。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2463"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2486"/>
         <source>Lock Page: keep every element where it is and refuse removal</source>
         <translation>鎖定頁面：讓每個元素保持原位並拒絕移除</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2464"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2487"/>
         <source>Freeze Page: keep the page settings when changes are made for all pages</source>
         <translation>凍結頁面：對所有頁面進行變更時保留此頁面的設定</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2512"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2535"/>
         <source>&lt;p&gt;&lt;b&gt;Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a page to show it. Right-click a page to insert or remove blank pages around it.&lt;/p&gt;&lt;p&gt;Click the lock beside a page to keep its elements where they are. A locked page can&apos;t be removed.&lt;/p&gt;&lt;p&gt;Click the snowflake to freeze a page. It keeps its own copy of the settings, so changes for all pages skip it. Unfreeze it to follow the other pages again.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;頁面&lt;/b&gt;&lt;/p&gt;&lt;p&gt;選取頁面即可顯示。在頁面上按一下滑鼠右鍵，可在其前後插入或移除空白頁。&lt;/p&gt;&lt;p&gt;按一下頁面旁的鎖，讓它的元素保持原位。鎖定的頁面無法移除。&lt;/p&gt;&lt;p&gt;按一下雪花凍結頁面。它會保留自己的一份設定，所以對所有頁面的變更會略過它。解凍後它會再次跟隨其他頁面。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2542"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2565"/>
         <source>Insert Blank Page Before</source>
         <translation>在前面插入空白頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2550"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2573"/>
         <source>Insert Blank Page After</source>
         <translation>在後面插入空白頁</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2558"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2581"/>
         <source>Remove Blank Page</source>
         <translation>移除空白頁</translation>
     </message>
@@ -15960,112 +15968,112 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>標尺的單位，使用中時為頁面單位或檔案單位。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1812"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1835"/>
         <source>Anchor</source>
         <translation>錨點</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1836"/>
         <source>Top Left</source>
         <translation>左上</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1836"/>
         <source>Top</source>
         <translation>上</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1836"/>
         <source>Top Right</source>
         <translation>右上</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1836"/>
         <source>Right</source>
         <translation>右</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1836"/>
         <source>Bottom Right</source>
         <translation>右下</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1836"/>
         <source>Bottom</source>
         <translation>下</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1836"/>
         <source>Bottom Left</source>
         <translation>左下</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1836"/>
         <source>Left</source>
         <translation>左</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1818"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1841"/>
         <source>Automatic</source>
         <translation>自動</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1842"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1865"/>
         <source>Default</source>
         <translation>預設</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1882"/>
         <source>Style</source>
         <translation>樣式</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1882"/>
         <source>Line</source>
         <translation>線條</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1882"/>
         <source>Callout Wedge</source>
         <translation>標註楔形</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1864"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1887"/>
         <source>Tip</source>
         <translation>尖端</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1864"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1887"/>
         <source>Dot</source>
         <translation>點</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1864"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1887"/>
         <source>Arrow</source>
         <translation>箭頭</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1874"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1897"/>
         <source>Remove Pointer</source>
         <translation>移除指標</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1881"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1904"/>
         <source>Add Notice...</source>
         <translation>新增通知...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1899"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1922"/>
         <source>Add Pointer</source>
         <translation>新增指標</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1911"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1934"/>
         <source>Edit Notice...</source>
         <translation>編輯通知...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1921"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1944"/>
         <source>Remove Notice</source>
         <translation>移除通知</translation>
     </message>
@@ -17934,22 +17942,22 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsRulerWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2211"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2234"/>
         <source>Horizontal Ruler</source>
         <translation>水平標尺</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2212"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2235"/>
         <source>Horizontal position on the page in the page units, the arrow follows the pointer.</source>
         <translation>頁面上的水平位置（以頁面單位表示），箭頭跟隨指標</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2216"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2239"/>
         <source>Vertical Ruler</source>
         <translation>垂直標尺</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2217"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2240"/>
         <source>Vertical position on the page in the page units, the arrow follows the pointer.</source>
         <translation>頁面上的垂直位置（以頁面單位表示），箭頭跟隨指標</translation>
     </message>
@@ -18019,38 +18027,38 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>模型及其子模型的關節</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="41"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="40"/>
         <source>Hinge axis, for parts without shadow data</source>
         <translation>鉸鏈軸，適用於沒有陰影資料的零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="42"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="41"/>
         <source>&lt;p&gt;&lt;b&gt;Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The axis a hinge turns about, in the coordinates of the submodel. Use it for parts without shadow data, which get a hinge on their origin.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;軸&lt;/b&gt;&lt;/p&gt;&lt;p&gt;鉸鏈轉動所繞的軸，以子模型的座標表示。適用於沒有陰影資料的零件，這些零件會在其原點上取得一個鉸鏈。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="126"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="125"/>
         <source>Joint %1</source>
         <translation>關節 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="148"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="147"/>
         <source>None: Part &gt; Joint &gt; Set Joint</source>
         <translation>無：零件 &gt; 關節 &gt; 設定關節</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="319"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="318"/>
         <source>Joint %1, %2, angle %3</source>
         <translation>關節 %1、%2，角度 %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="319"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="318"/>
         <source>No joint</source>
         <translation>無關節</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="125"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="319"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="124"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="318"/>
         <source>Hinge</source>
         <translation>鉸鏈</translation>
     </message>
@@ -18079,69 +18087,69 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>子模型在父檔案中的位置，從上往下數零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="40"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="39"/>
         <source>X Axis</source>
         <translation>X 軸</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="40"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="39"/>
         <source>Y Axis</source>
         <translation>Y 軸</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="40"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="39"/>
         <source>Z Axis</source>
         <translation>Z 軸</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="47"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="280"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="46"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="279"/>
         <source>Delete Joint</source>
         <translation>刪除關節</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="48"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="47"/>
         <source>Delete the joint picked in the list (Delete)</source>
         <translation>刪除清單中選取的關節 (Delete)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="49"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="48"/>
         <source>&lt;p&gt;&lt;b&gt;Delete Joint&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Delete the joint picked in the joints list and put that joint back at rest. The Delete key does the same in the list. This can be undone.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;刪除關節&lt;/b&gt;&lt;/p&gt;&lt;p&gt;刪除關節清單中選取的關節，並讓該關節回到靜止狀態。在清單中按 Delete 鍵也有相同效果。此操作可以復原。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="125"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="319"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="124"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="318"/>
         <source>Ball</source>
         <translation>球形</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="250"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="249"/>
         <source>Edit Joints</source>
         <translation>編輯關節</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="252"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="251"/>
         <source>Delete All Joints</source>
         <translation>刪除所有關節</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="277"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="276"/>
         <source>Move Joint</source>
         <translation>移動關節</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="278"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="277"/>
         <source>Rotate Joint</source>
         <translation>旋轉關節</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="319"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="318"/>
         <source>None: select a jointed submodel</source>
         <translation>無：請選取含關節的子模型</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="319"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="318"/>
         <source>Pick a joint</source>
         <translation>選擇一個關節</translation>
     </message>
@@ -18153,143 +18161,148 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swKeyframesView</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="208"/>
         <source>Keys of each object per step: click a step to go there, double-click to add or remove a key, drag a key to move it</source>
-        <translation>每個物件在各步驟的關鍵影格：按一下步驟即可前往該步驟，按兩下可新增或移除關鍵影格，拖曳關鍵影格即可移動</translation>
+        <translation type="vanished">每個物件在各步驟的關鍵影格：按一下步驟即可前往該步驟，按兩下可新增或移除關鍵影格，拖曳關鍵影格即可移動</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;One column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;關鍵影格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;每個步驟一欄、每個物件一列，可展開至其屬性。菱形代表關鍵影格，連線連接同一屬性的關鍵影格。點擊步驟可跳至該步驟，連按兩下儲存格可新增或移除關鍵影格，拖曳菱形可將關鍵影格移到其他步驟，按右鍵可取得更多選項。數值請在屬性面板中編輯。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="279"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="214"/>
+        <source>Keys of each object per step: click a step to go there, click a key to pick it, Ctrl+click to add it, double-click to add or remove a key, drag a key to move it</source>
+        <translation>每個物件每步的關鍵影格：按一下步驟可跳到該步驟，按一下關鍵影格可選取它，Ctrl+按一下可加入，按兩下可新增或移除關鍵影格，拖曳關鍵影格可移動它</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="297"/>
         <source>Position</source>
         <translation>位置</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="280"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="298"/>
         <source>Rotation</source>
         <translation>旋轉</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="285"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="303"/>
         <source>Target</source>
         <translation>目標點</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="286"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="304"/>
         <source>Up</source>
         <translation>向上</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="292"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="310"/>
         <source>Color</source>
         <translation>顏色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="293"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="311"/>
         <source>Power</source>
         <translation>功率</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="294"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="312"/>
         <source>POV-Ray Power</source>
         <translation>POV-Ray 功率</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="295"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="313"/>
         <source>Fade Distance</source>
         <translation>衰減距離</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="296"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="314"/>
         <source>Fade Power</source>
         <translation>衰減指數</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="297"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="315"/>
         <source>Radius</source>
         <translation>半徑</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="298"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="316"/>
         <source>Angle</source>
         <translation>角度</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="299"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="317"/>
         <source>Area Width</source>
         <translation>區域光寬度</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="300"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="318"/>
         <source>Area Height</source>
         <translation>區域光高度</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="301"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="319"/>
         <source>Spot Cone</source>
         <translation>聚光燈錐角</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="302"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="320"/>
         <source>Spot Penumbra</source>
         <translation>聚光燈半影</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="303"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="321"/>
         <source>Spot Tightness</source>
         <translation>聚光燈緊度</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="304"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="322"/>
         <source>Area Grid X</source>
         <translation>區域光格線 X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="305"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="323"/>
         <source>Area Grid Y</source>
         <translation>區域光格線 Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="425"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="443"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="525"/>
         <source>Remove Keyframes</source>
         <translation>移除關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="538"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="646"/>
         <source>Move Keyframe</source>
         <translation>移動關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="554"/>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="588"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="669"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="703"/>
         <source>Remove Keyframe</source>
         <translation>移除關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="556"/>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="586"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="671"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="701"/>
         <source>Add Keyframe</source>
         <translation>新增關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="568"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="683"/>
         <source>Add Key</source>
         <translation>新增關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="569"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="684"/>
         <source>Remove Key</source>
         <translation>移除關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="571"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="686"/>
         <source>Remove All Keys</source>
         <translation>移除所有關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="698"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="813"/>
         <source>Step</source>
         <translation>步驟</translation>
     </message>
@@ -18343,9 +18356,13 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;停止&lt;/b&gt;&lt;/p&gt;&lt;p&gt;停止逐步播放，並回到開始播放時的步驟。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="15"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;&lt;p&gt;Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;關鍵影格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;動畫關鍵影格的時間軸，每個步驟一欄，每個物件一列，可展開顯示其屬性。菱形標示關鍵影格，線條連接同一個屬性的關鍵影格。按一下名稱可選取物件，Ctrl+按一下可將它加入或移出選取範圍，按一下其箭頭可顯示其屬性。按一下步驟即可前往該步驟，在儲存格上按兩下可新增或移除關鍵影格，拖曳菱形可將關鍵影格移到另一個步驟，按一下滑鼠右鍵可看到更多選項。數值在「屬性」面板中編輯。&lt;/p&gt;&lt;p&gt;「已選取」列出所選物件，「全部」列出所有含關鍵影格的物件。實心和空心菱形會在目前步驟新增或移除所選物件的關鍵影格，「新增關鍵影格」讓編輯時建立關鍵影格，播放按鈕則依序播放各步驟以顯示關鍵影格的動作。&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;關鍵影格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;動畫關鍵影格的時間軸，每個步驟一欄，每個物件一列，可展開顯示其屬性。菱形標示關鍵影格，線條連接同一個屬性的關鍵影格。按一下名稱可選取物件，Ctrl+按一下可將它加入或移出選取範圍，按一下其箭頭可顯示其屬性。按一下步驟即可前往該步驟，在儲存格上按兩下可新增或移除關鍵影格，拖曳菱形可將關鍵影格移到另一個步驟，按一下滑鼠右鍵可看到更多選項。數值在「屬性」面板中編輯。&lt;/p&gt;&lt;p&gt;「已選取」列出所選物件，「全部」列出所有含關鍵影格的物件。實心和空心菱形會在目前步驟新增或移除所選物件的關鍵影格，「新增關鍵影格」讓編輯時建立關鍵影格，播放按鈕則依序播放各步驟以顯示關鍵影格的動作。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="15"/>
+        <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, click a diamond to pick it, Ctrl+click to add or remove it from the picked keys and Shift+click to take it out. Delete removes the picked keys. Double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;&lt;p&gt;Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;關鍵影格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;動畫關鍵影格的時間軸，每步一欄、每個物件一列，可展開到其屬性。菱形表示關鍵影格，線條連接同一屬性的關鍵影格。按一下名稱可選取物件，Ctrl+按一下可將其加入或移出選取，按一下其箭頭可顯示屬性。按一下步驟可跳到該步驟，按一下菱形可選取它，Ctrl+按一下可將其加入或移出選取的關鍵影格，Shift+按一下可將其移出。Del 移除選取的關鍵影格。按兩下儲存格可新增或移除關鍵影格，拖曳菱形可將關鍵影格移到另一步，按右鍵查看更多。數值在屬性面板中編輯。&lt;/p&gt;&lt;p&gt;「已選取」列出所選物件，「全部」列出所有具有關鍵影格的物件。實心和空心菱形新增或移除所選物件在目前步驟的關鍵影格，「新增關鍵影格」使編輯建立關鍵影格，播放按鈕逐步播放以顯示關鍵影格動作。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="53"/>
@@ -18388,12 +18405,12 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>&lt;p&gt;&lt;b&gt;全部&lt;/b&gt;&lt;/p&gt;&lt;p&gt;列出所選物件，以及模型中其他每個含關鍵影格的物件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="201"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="207"/>
         <source>Add Keyframe</source>
         <translation>新增關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="201"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="207"/>
         <source>Remove Keyframe</source>
         <translation>移除關鍵影格</translation>
     </message>
@@ -19512,7 +19529,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>無法貼上選取內容</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="1013"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="1026"/>
         <source>No joint here</source>
         <translation>此處沒有關節</translation>
     </message>
@@ -22285,12 +22302,12 @@ Weight: %1</source>
 <context>
     <name>swPosesWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="418"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="412"/>
         <source>Pose</source>
         <translation>姿勢</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="420"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="414"/>
         <source>Saved poses of this model, played in this order by the Joints motion</source>
         <translation>此模型的已儲存姿勢，依此順序由關節動作播放</translation>
     </message>
@@ -22299,88 +22316,88 @@ Weight: %1</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;姿勢&lt;/b&gt;&lt;/p&gt;&lt;p&gt;儲存在關節面板中選取之模型內的姿勢，每個姿勢只記錄該模型關節的角度。影像對話框的關節動作會依此順序播放主模型的姿勢。選取一個姿勢即可還原、重新命名或刪除。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="412"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="406"/>
         <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The poses saved in the model picked in the Joints panel, or in the current model, each holding the angles of that model&apos;s joints only. Save stores the joint angles as a named pose, Recall puts them back in one undo step, and Rename and Delete change the picked pose. Poses are saved with the model, and the Joints motion of the image dialog plays the poses of the main model in this order.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;姿勢&lt;/b&gt;&lt;/p&gt;&lt;p&gt;儲存在關節面板中選取之模型（或目前模型）中的姿勢，每個姿勢僅包含該模型關節的角度。「儲存」會將關節角度存為具名姿勢，「還原」會在一個復原步驟中還原它們，「重新命名」和「刪除」會變更選取的姿勢。姿勢會隨模型一起儲存，影像對話方塊的關節動作會依此順序播放主模型的姿勢。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="434"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="428"/>
         <source>Save</source>
         <translation>儲存</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="434"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="428"/>
         <source>Save the joint angles of this model as a pose</source>
         <translation>將此模型的關節角度儲存為姿勢</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="434"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="428"/>
         <source>&lt;p&gt;&lt;b&gt;Save&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Store the angles of the joints in this model under a name. Saving a name that already exists replaces that pose.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;儲存&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將此模型的關節角度以名稱儲存。儲存已存在的名稱會取代該姿勢。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="435"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="429"/>
         <source>Recall</source>
         <translation>還原</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="435"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="429"/>
         <source>Put the joints of this model back in the picked pose</source>
         <translation>將此模型的關節放回所選姿勢</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="435"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="429"/>
         <source>&lt;p&gt;&lt;b&gt;Recall&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the joints of this model back to the angles of the picked pose, in one undo step.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;還原&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將此模型的關節轉回所選姿勢的角度，只需一次復原步驟。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="436"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="430"/>
         <source>Rename</source>
         <translation>重新命名</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="436"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="430"/>
         <source>Rename the picked pose</source>
         <translation>重新命名所選姿勢</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="436"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="430"/>
         <source>&lt;p&gt;&lt;b&gt;Rename&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Give the picked pose a new name.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;重新命名&lt;/b&gt;&lt;/p&gt;&lt;p&gt;為所選姿勢指定新名稱。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="437"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="431"/>
         <source>Delete</source>
         <translation>刪除</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="437"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="431"/>
         <source>Delete the picked pose</source>
         <translation>刪除選取的姿勢</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="437"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="431"/>
         <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the picked pose from the model. The joints keep their angles.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;刪除&lt;/b&gt;&lt;/p&gt;&lt;p&gt;從模型中移除所選姿勢。關節保持其角度。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="479"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="516"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="473"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="510"/>
         <source>Name</source>
         <translation>名稱</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="479"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="473"/>
         <source>Save Pose</source>
         <translation>儲存姿勢</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="479"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="473"/>
         <source>Pose %1</source>
         <translation>姿勢 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="516"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="510"/>
         <source>Rename Pose</source>
         <translation>重新命名姿勢</translation>
     </message>
@@ -24331,37 +24348,37 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>重設類別</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="370"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="369"/>
         <source>The shortcut &apos;%1&apos; is already assigned to &apos;%2&apos;. Do you want to replace it?</source>
         <translation>快速鍵 &apos;%1&apos; 已指定給 &apos;%2&apos;。是否取代？</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="488"/>
         <source>Insert</source>
         <translation>插入</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="490"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="489"/>
         <source>Edit</source>
         <translation>編輯</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="491"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="490"/>
         <source>View</source>
         <translation>視圖</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="630"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="629"/>
         <source>Could not read mouse shortcuts file &apos;%1&apos;.</source>
         <translation>無法讀取滑鼠快速鍵檔案 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="649"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="648"/>
         <source>Could not write mouse shortcuts file &apos;%1&apos;.</source>
         <translation>無法寫入滑鼠快速鍵檔案 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="654"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
         <source>Reset Mouse Shortcuts</source>
         <translation>重設滑鼠快速鍵</translation>
     </message>
@@ -24647,7 +24664,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">儲存鍵盤快速鍵檔案時出錯。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="461"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="460"/>
         <source>Are you sure you want to load the default keyboard shortcuts?</source>
         <translation>確定要載入預設鍵盤快速鍵嗎？</translation>
     </message>
@@ -24667,9 +24684,9 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>右鍵</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="372"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="567"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="576"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="371"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="566"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="575"/>
         <source>Override Shortcut</source>
         <translation>取代快速鍵</translation>
     </message>
@@ -24699,26 +24716,26 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="obsolete">導入鍵盤快速鍵</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="454"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="453"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>匯出鍵盤快速鍵</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="461"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="460"/>
         <source>Reset Keyboard Shortcuts</source>
         <translation>重設鍵盤快速鍵</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="567"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="576"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="566"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="575"/>
         <source>This shortcut is already assigned to &apos;%1&apos;. Do you want to replace it?</source>
         <oldsource>This shortcut is already assigned to &apos;%1&apos;, do you want to replace it?</oldsource>
         <translation>此快速鍵已指定給 &apos;%1&apos;，是否取代？</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="426"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="434"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="622"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="425"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="433"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="621"/>
         <source>Import Shortcuts</source>
         <translation>匯入快速鍵</translation>
     </message>
@@ -24727,8 +24744,8 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">載入游標快速鍵檔案時出錯。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="447"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="643"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="446"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="642"/>
         <source>Export Shortcuts</source>
         <translation>匯出快速鍵</translation>
     </message>
@@ -24763,105 +24780,103 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>F1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
         <source>Clear the joint in the Joints panel</source>
-        <translation>清除關節面板中的關節</translation>
+        <translation type="vanished">清除關節面板中的關節</translation>
+    </message>
+    <message>
+        <source>Del</source>
+        <translation type="vanished">Del</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
-        <source>Del</source>
-        <translation>Del</translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
         <source>Add to the selection</source>
         <translation>加入選取</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
         <source>Ctrl+Click</source>
         <translation>Ctrl+按一下</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
         <source>Remove from the selection</source>
         <translation>從選取中移除</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
         <source>Shift+Click</source>
         <translation>Shift+按一下</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
         <source>Zoom faster or slower</source>
         <translation>更快或更慢地縮放</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
         <source>Ctrl or Shift+Wheel</source>
         <translation>Ctrl 或 Shift+滾輪</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
         <source>Snap rotation, keep the insert tool, free a locked joint</source>
         <translation>對齊旋轉、保留插入工具、釋放鎖定的關節</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
         <source>Hold Ctrl</source>
         <translation>按住 Ctrl</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
         <source>Jump to a part in the parts list</source>
         <translation>跳到零件清單中的零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
         <source>A to Z</source>
         <translation>A 到 Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="214"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
         <source>Move through the parts list</source>
         <translation>在零件清單中移動</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="214"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
         <source>Arrows, Home, End, Page Up, Page Down</source>
         <translation>方向鍵、Home、End、Page Up、Page Down</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="217"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="216"/>
         <source>Built-in Keys</source>
         <translation>內建按鍵</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="273"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="272"/>
         <source>The shortcut &apos;%1&apos; is shared by %2.</source>
         <translation>快速鍵 &apos;%1&apos; 由 %2 共用。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="426"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="447"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="622"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="643"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="425"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="446"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="621"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="642"/>
         <source>Shortcut Files (*.txt);;All Files (*)</source>
         <translation>快速鍵檔案 (*.txt);;所有檔案 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="434"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="433"/>
         <source>Could not read keyboard shortcuts file &apos;%1&apos;.</source>
         <translation>無法讀取鍵盤快速鍵檔案 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="454"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="453"/>
         <source>Could not write keyboard shortcuts file &apos;%1&apos;.</source>
         <translation>無法寫入鍵盤快速鍵檔案 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="630"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="629"/>
         <source>Import Mouse Shortcuts</source>
         <translation>匯入滑鼠快速鍵</translation>
     </message>
@@ -24870,12 +24885,12 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">儲存游標快速鍵檔案時出錯。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="649"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="648"/>
         <source>Export Mouse Shortcuts</source>
         <translation>匯出滑鼠快速鍵</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="654"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
         <source>Are you sure you want to load the default mouse shortcuts?</source>
         <translation>確定要載入預設滑鼠快速鍵嗎？</translation>
     </message>

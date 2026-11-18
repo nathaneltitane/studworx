@@ -2543,8 +2543,8 @@ const swCommand gCommands[] =
 	{
 		QT_TRANSLATE_NOOP("Action", "Part.Delete"),
 		QT_TRANSLATE_NOOP("Menu", "&Delete"),
-		QT_TRANSLATE_NOOP("Status", "Delete selected objects"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Delete</b></p><p>Remove the selected objects from the model.</p>"),
+		QT_TRANSLATE_NOOP("Status", "Delete what is selected where you work"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Delete</b></p><p>Removes only what is selected, picked by where you work: the joint in the Joints panel, the step in the Timeline panel, the picked keys in the Keyframes panel, or the selected keys at the current step when none are picked, and the selected pointers, notices or blank page in the instructions. In the view it removes a focused control point alone, otherwise the selected objects. With nothing selected it does nothing.</p>"),
 		"Delete"
 	},
 

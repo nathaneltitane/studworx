@@ -12,7 +12,7 @@ swKeyframesWidget::swKeyframesWidget(QWidget* Parent)
 {
 	// panel overview
 
-	setWhatsThis(tr("<p><b>Keyframes</b></p><p>A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.</p><p>Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.</p>"));
+	setWhatsThis(tr("<p><b>Keyframes</b></p><p>A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, click a diamond to pick it, Ctrl+click to add or remove it from the picked keys and Shift+click to take it out. Delete removes the picked keys. Double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.</p><p>Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.</p>"));
 
 	QVBoxLayout* Layout = new QVBoxLayout(this);
 	QHBoxLayout* Buttons = new QHBoxLayout();
@@ -174,6 +174,12 @@ void swKeyframesWidget::RemoveKeysClicked()
 	SetSelectedKeys(false);
 }
 
+void swKeyframesWidget::DeleteKeys()
+{
+	if (!mView->RemoveSelectedKeys())
+		SetSelectedKeys(false);
+}
+
 void swKeyframesWidget::SetSelectedKeys(bool KeyFrame)
 {
 	swModel* Model = gMainWindow->GetActiveModel();
@@ -205,7 +211,7 @@ swKeyframesView::swKeyframesView(QWidget* Parent)
 	: QAbstractScrollArea(Parent)
 {
 	setMouseTracking(false);
-	setToolTip(tr("Keys of each object per step: click a step to go there, double-click to add or remove a key, drag a key to move it"));
+	setToolTip(tr("Keys of each object per step: click a step to go there, click a key to pick it, Ctrl+click to add it, double-click to add or remove a key, drag a key to move it"));
 
 	const int TextHeight = fontMetrics().height();
 	mRowHeight = TextHeight + 6;
@@ -249,6 +255,18 @@ void swKeyframesView::Update()
 	for (swKeyframesObject& Entry : GetModelObjects(Model, mStepCount))
 		if (Entry.Selected || (mShowAll && Entry.HasKeys))
 			mObjects.push_back(std::move(Entry));
+
+	// picked keys drop once gone
+
+	std::set<std::tuple<swObject*, swObjectPropertyId, swStep>> Keys;
+
+	for (const swKeyframesObject& Object : mObjects)
+		for (const swKeyframesTrack& Track : Object.Tracks)
+			for (swStep Step : Track.Steps)
+				if (mSelectedKeys.count({ Object.Object, Track.PropertyId, Step }))
+					Keys.insert({ Object.Object, Track.PropertyId, Step });
+
+	mSelectedKeys = std::move(Keys);
 
 	UpdateRows();
 }
@@ -450,6 +468,65 @@ void swKeyframesView::SelectRowObject(int RowIndex, bool Toggle)
 		Model->AddToSelectionAction({ Object });
 }
 
+// a diamond is picked when all its keys are
+bool swKeyframesView::IsKeySelected(int RowIndex, swStep Step) const
+{
+	if (RowIndex < 0 || RowIndex >= static_cast<int>(mRows.size()))
+		return false;
+
+	swObject* Object = mObjects[mRows[RowIndex].ObjectIndex].Object;
+	bool Found = false;
+
+	for (const swKeyframesTrack* Track : GetRowTracks(RowIndex, false))
+	{
+		if (!HasStep(Track->Steps, Step))
+			continue;
+
+		if (!mSelectedKeys.count({ Object, Track->PropertyId, Step }))
+			return false;
+
+		Found = true;
+	}
+
+	return Found;
+}
+
+void swKeyframesView::SelectKey(int RowIndex, swStep Step, bool Selected)
+{
+	swObject* Object = mObjects[mRows[RowIndex].ObjectIndex].Object;
+
+	for (const swKeyframesTrack* Track : GetRowTracks(RowIndex, false))
+	{
+		if (!HasStep(Track->Steps, Step))
+			continue;
+
+		if (Selected)
+			mSelectedKeys.insert({ Object, Track->PropertyId, Step });
+		else
+			mSelectedKeys.erase({ Object, Track->PropertyId, Step });
+	}
+
+	viewport()->update();
+}
+
+bool swKeyframesView::RemoveSelectedKeys()
+{
+	swModel* Model = gMainWindow->GetActiveModel();
+
+	if (!Model || mSelectedKeys.empty())
+		return false;
+
+	std::vector<swKeyFrameEdit> Edits;
+
+	for (const auto& [Object, PropertyId, Step] : mSelectedKeys)
+		Edits.push_back({ Object, PropertyId, Step, 0 });
+
+	mSelectedKeys.clear();
+	Model->EditKeyFrames(Edits, tr("Remove Keyframes"));
+
+	return true;
+}
+
 void swKeyframesView::SetCurrentStep(swStep Step)
 {
 	swModel* Model = gMainWindow->GetActiveModel();
@@ -497,14 +574,35 @@ void swKeyframesView::mousePressEvent(QMouseEvent* Event)
 		return;
 	}
 
+	const Qt::KeyboardModifiers Modifiers = Event->modifiers();
+
+	// ctrl toggles, shift takes out
+
 	if (RowIndex >= 0 && RowHasKey(RowIndex, Step))
 	{
-		mDragRow = RowIndex;
-		mDragStep = Step;
-		mDragTarget = Step;
+		if (Modifiers & Qt::ControlModifier)
+			SelectKey(RowIndex, Step, !IsKeySelected(RowIndex, Step));
+		else if (Modifiers & Qt::ShiftModifier)
+			SelectKey(RowIndex, Step, false);
+		else
+		{
+			mSelectedKeys.clear();
+			SelectKey(RowIndex, Step, true);
+			mDragRow = RowIndex;
+			mDragStep = Step;
+			mDragTarget = Step;
+		}
 	}
 	else
+	{
+		if (!(Modifiers & (Qt::ControlModifier | Qt::ShiftModifier)))
+		{
+			mSelectedKeys.clear();
+			viewport()->update();
+		}
+
 		SetCurrentStep(Step);
+	}
 }
 
 void swKeyframesView::mouseMoveEvent(QMouseEvent* Event)
@@ -535,7 +633,24 @@ void swKeyframesView::mouseReleaseEvent(QMouseEvent* Event)
 	viewport()->update();
 
 	if (To != From)
+	{
+		// the moved key stays picked
+
+		swObject* Object = mObjects[mRows[RowIndex].ObjectIndex].Object;
+		std::vector<swObjectPropertyId> PropertyIds;
+
+		for (const swKeyframesTrack* Track : GetRowTracks(RowIndex, false))
+			if (HasStep(Track->Steps, From))
+				PropertyIds.push_back(Track->PropertyId);
+
 		EditRow(RowIndex, From, To, tr("Move Keyframe"));
+		mSelectedKeys.clear();
+
+		for (swObjectPropertyId PropertyId : PropertyIds)
+			mSelectedKeys.insert({ Object, PropertyId, To });
+
+		Update();
+	}
 	else
 		SetCurrentStep(From);
 }
@@ -683,7 +798,7 @@ void swKeyframesView::paintEvent(QPaintEvent* Event)
 		const bool Dragging = RowIndex == mDragRow && mDragTarget != mDragStep;
 
 		for (swStep Step : Steps)
-			DrawDiamond(StepX(Step), CenterY, Row.TrackIndex < 0 ? Diamond - 1 : Diamond, (Dragging && Step == mDragStep) ? GridColor : KeyColor);
+			DrawDiamond(StepX(Step), CenterY, Row.TrackIndex < 0 ? Diamond - 1 : Diamond, (Dragging && Step == mDragStep) ? GridColor : IsKeySelected(RowIndex, Step) ? HighlightColor : KeyColor);
 
 		if (Dragging)
 			DrawDiamond(StepX(mDragTarget), CenterY, Diamond, HighlightColor);

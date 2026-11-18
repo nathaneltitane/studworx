@@ -827,8 +827,21 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		break;
 
 	case SW_PART_DELETE:
-		if (ActiveModel)
+	{
+		// the focused panel picks what goes
+
+		QWidget* FocusWidget = QApplication::focusWidget();
+		QTreeWidgetItem* StepItem = mTimelineWidget && mTimelineWidget->hasFocus() ? mTimelineWidget->currentItem() : nullptr;
+
+		if (mJointsWidget && mJointsWidget->ClearFocusedJoint())
+			break;
+		else if (StepItem && !StepItem->parent())
+			mTimelineWidget->RemoveStep();
+		else if (mKeyframesWidget && FocusWidget && mKeyframesWidget->isAncestorOf(FocusWidget))
+			mKeyframesWidget->DeleteKeys();
+		else if (ActiveModel)
 			ActiveModel->DeleteSelectedObjects();
+	}
 		break;
 
 	case SW_PART_DUPLICATE:

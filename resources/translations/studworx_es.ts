@@ -7896,6 +7896,11 @@ El formato de archivo no se reconoce.</translation>
         <translation>Dibujar tetones con el estilo plano</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2546"/>
+        <source>Delete what is selected where you work</source>
+        <translation>Eliminar lo seleccionado donde trabajas</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="2573"/>
         <source>Click a connection of the selected submodel to make it a joint</source>
         <translation>Hacer clic en una conexión del submodelo seleccionado para convertirla en articulación</translation>
@@ -8094,9 +8099,8 @@ El formato de archivo no se reconoce.</translation>
         <translation>Alternar colocar la primera pieza de un modelo vacío en 0, 0, 0</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2546"/>
         <source>Delete selected objects</source>
-        <translation>Borrar objetos seleccionados</translation>
+        <translation type="vanished">Borrar objetos seleccionados</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2555"/>
@@ -8835,6 +8839,11 @@ El formato de archivo no se reconoce.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Herramienta de rotación&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seleccione objetos y luego arrastre un controlador de rotación en la vista del modelo. El ajuste de rotación establece los incrementos del ángulo. Las opciones de transformación eligen ejes relativos o del modelo y si las piezas giran juntas o por separado.&lt;/p&gt;</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2547"/>
+        <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Removes only what is selected, picked by where you work: the joint in the Joints panel, the step in the Timeline panel, the picked keys in the Keyframes panel, or the selected keys at the current step when none are picked, and the selected pointers, notices or blank page in the instructions. In the view it removes a focused control point alone, otherwise the selected objects. With nothing selected it does nothing.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Eliminar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Quita solo lo seleccionado, según donde trabajas: la articulación en el panel Articulaciones, el paso en el panel Línea de tiempo, las claves elegidas en el panel Fotogramas clave o, si no hay ninguna elegida, las claves de los objetos seleccionados en el paso actual, y los punteros, avisos o la página en blanco seleccionados en las instrucciones. En la vista quita solo un punto de control enfocado; si no, los objetos seleccionados. Sin nada seleccionado no hace nada.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="2601"/>
         <source>&lt;p&gt;&lt;b&gt;Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel. The Joint Mode Start preference picks which joint opens: the first joint, the last used joint, or an overview of rings to pick from. Ctrl+Shift+W or Esc leaves it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Modo articulación&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Trabaja con la articulación del submodelo seleccionado, igual que al hacer clic en ella en el panel Articulaciones. Con una pieza seleccionada dentro de un submodelo con articulación, sube a ese submodelo. Sin nada seleccionado, abre la articulación elegida en el panel Articulaciones. La preferencia Inicio del modo articulación elige qué articulación se abre: la primera, la última usada o una vista general de anillos para elegir. Ctrl+Mayús+W o Esc sale de él.&lt;/p&gt;</translation>
@@ -9354,9 +9363,8 @@ El formato de archivo no se reconoce.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Insertar la primera pieza en el origen&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Coloca la primera pieza de un modelo vacío en 0, 0, 0.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2547"/>
         <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected objects from the model.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Borrar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Quita del modelo los objetos seleccionados.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Borrar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Quita del modelo los objetos seleccionados.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2556"/>
@@ -15266,167 +15274,167 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Imprimiendo páginas...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="97"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="113"/>
         <source>Show or hide the Print panel to print the instruction pages</source>
         <translation>Muestra u oculta el panel Imprimir para imprimir las páginas de instrucciones</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="100"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="116"/>
         <source>Export HTML</source>
         <translation>Exportar HTML</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="101"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="117"/>
         <source>Export the instruction pages as HTML pages and images</source>
         <translation>Exporta las páginas de instrucciones como páginas HTML e imágenes</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="111"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="127"/>
         <source>Ctrl+Shift+E</source>
         <translation>Ctrl+Shift+E</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="113"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="129"/>
         <source>Show or hide the Editor panel to inspect and edit the text of the model file</source>
         <translation>Muestra u oculta el panel Editor para inspeccionar y editar el texto del archivo del modelo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="202"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="218"/>
         <source>%1 - Cover</source>
         <translation>%1 - Portada</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="206"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="222"/>
         <source>%1 - Bill of Materials</source>
         <translation>%1 - Lista de materiales</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="210"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="226"/>
         <source>%1 - Blank</source>
         <translation>%1 - En blanco</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="378"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="394"/>
         <source>&lt;p&gt;&lt;b&gt;Page Bar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The timeline First, Previous, Next and Last shortcuts turn the pages too while the page or the Pages panel has focus.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Barra de páginas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ve a la primera página, la anterior, la siguiente o la última, o directamente a la portada o a la lista de materiales, desactivadas mientras esas páginas estén desactivadas. Página de paso inserta un paso vacío antes de la página actual, Página en blanco inserta una página en blanco antes de ella y Quitar página quita una página en blanco o una página de pasos vacíos. El cuadro de la derecha muestra la página actual; escribe un número para ir a ella. Los atajos Primero, Anterior, Siguiente y Último de la línea de tiempo también cambian de página mientras la página o el panel Páginas tienen el foco.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="388"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
         <source>&lt;p&gt;&lt;b&gt;Undo and Redo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Undo takes back your last change to the instructions, Redo puts it back. Quick changes to the same setting count as one change. The main window Undo and Redo shortcuts work here too.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Deshacer y Rehacer&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Deshacer quita tu último cambio en las instrucciones, Rehacer lo vuelve a poner. Los cambios rápidos en el mismo ajuste cuentan como un solo cambio. Los atajos de Deshacer y Rehacer de la ventana principal también funcionan aquí.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="390"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="406"/>
         <source>&amp;Undo</source>
         <translation>Des&amp;hacer</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="390"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="406"/>
         <source>Take back the last change to the instructions</source>
         <translation>Deshacer el último cambio en las instrucciones</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="392"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="408"/>
         <source>Re&amp;do</source>
         <translation>&amp;Rehacer</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="392"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="408"/>
         <source>Put back the last change that was taken back</source>
         <translation>Rehacer el último cambio deshecho</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="420"/>
         <source>&amp;First</source>
         <translation>&amp;Primera</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="420"/>
         <source>Go to the first page</source>
         <translation>Ir a la primera página</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="405"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="421"/>
         <source>&amp;Previous</source>
         <translation>&amp;Anterior</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="405"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="421"/>
         <source>Go to the previous page</source>
         <translation>Ir a la página anterior</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="406"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="422"/>
         <source>&amp;Cover</source>
         <translation>Por&amp;tada</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="406"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="422"/>
         <source>Go to the cover page</source>
         <translation>Ir a la página de portada</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="407"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="423"/>
         <source>&amp;Step Page</source>
         <translation>Página de pa&amp;so</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="407"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="423"/>
         <source>Insert an empty step before the current page</source>
         <translation>Inserta un paso vacío antes de la página actual</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="408"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="424"/>
         <source>Bl&amp;ank Page</source>
         <translation>Página en &amp;blanco</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="408"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="424"/>
         <source>Insert a blank page before the current page</source>
         <translation>Inserta una página en blanco antes de la página actual</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="409"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="425"/>
         <source>&amp;Remove Page</source>
         <translation>&amp;Quitar página</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="409"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="425"/>
         <source>Remove the current page when it is blank or holds only empty steps</source>
         <translation>Quita la página actual cuando está en blanco o solo contiene pasos vacíos</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="410"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="426"/>
         <source>&amp;Bill of Materials</source>
         <translation>Lista de &amp;materiales</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="410"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="426"/>
         <source>Go to the bill of materials page</source>
         <translation>Ir a la página de la lista de materiales</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="411"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="427"/>
         <source>&amp;Next</source>
         <translation>&amp;Siguiente</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="411"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="427"/>
         <source>Go to the next page</source>
         <translation>Ir a la página siguiente</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="412"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="428"/>
         <source>&amp;Last</source>
         <translation>&amp;Última</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="412"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="428"/>
         <source>Go to the last page</source>
         <translation>Ir a la última página</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="418"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="434"/>
         <source>Current page out of all pages, type a number to go there</source>
         <translation>Página actual del total de páginas; escribe un número para ir a ella</translation>
     </message>
@@ -15443,7 +15451,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">Horizontal</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="197"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="213"/>
         <source>Page %1</source>
         <translation>Página %1</translation>
     </message>
@@ -15716,8 +15724,8 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsPageListWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2511"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2521"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2534"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2544"/>
         <source>Pages</source>
         <translation>Páginas</translation>
     </message>
@@ -15726,32 +15734,32 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Páginas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seleccione una página para mostrarla. Haga clic con el botón derecho en una página para insertar o quitar páginas en blanco a su alrededor.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2463"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2486"/>
         <source>Lock Page: keep every element where it is and refuse removal</source>
         <translation>Bloquear página: mantener cada elemento en su sitio e impedir que se quite</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2464"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2487"/>
         <source>Freeze Page: keep the page settings when changes are made for all pages</source>
         <translation>Congelar página: conservar los ajustes de la página cuando se hagan cambios para todas las páginas</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2512"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2535"/>
         <source>&lt;p&gt;&lt;b&gt;Pages&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a page to show it. Right-click a page to insert or remove blank pages around it.&lt;/p&gt;&lt;p&gt;Click the lock beside a page to keep its elements where they are. A locked page can&apos;t be removed.&lt;/p&gt;&lt;p&gt;Click the snowflake to freeze a page. It keeps its own copy of the settings, so changes for all pages skip it. Unfreeze it to follow the other pages again.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Páginas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seleccione una página para mostrarla. Haga clic con el botón derecho en una página para insertar o quitar páginas en blanco a su alrededor.&lt;/p&gt;&lt;p&gt;Haga clic en el candado junto a una página para mantener sus elementos en su sitio. Una página bloqueada no se puede quitar.&lt;/p&gt;&lt;p&gt;Haga clic en el copo de nieve para congelar una página. Guarda su propia copia de los ajustes, así que los cambios para todas las páginas la omiten. Descongélela para que vuelva a seguir a las demás páginas.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2542"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2565"/>
         <source>Insert Blank Page Before</source>
         <translation>Insertar página en blanco antes</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2550"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2573"/>
         <source>Insert Blank Page After</source>
         <translation>Insertar página en blanco después</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2558"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2581"/>
         <source>Remove Blank Page</source>
         <translation>Quitar página en blanco</translation>
     </message>
@@ -15768,112 +15776,112 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Unidades de las reglas, las unidades de página o las unidades del documento cuando están en uso.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1812"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1835"/>
         <source>Anchor</source>
         <translation>Ancla</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1836"/>
         <source>Top Left</source>
         <translation>Arriba izquierda</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1836"/>
         <source>Top</source>
         <translation>Arriba</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1836"/>
         <source>Top Right</source>
         <translation>Arriba derecha</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1836"/>
         <source>Right</source>
         <translation>Derecha</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1836"/>
         <source>Bottom Right</source>
         <translation>Abajo derecha</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1836"/>
         <source>Bottom</source>
         <translation>Abajo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1836"/>
         <source>Bottom Left</source>
         <translation>Abajo izquierda</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1813"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1836"/>
         <source>Left</source>
         <translation>Izquierda</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1818"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1841"/>
         <source>Automatic</source>
         <translation>Automático</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1842"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1865"/>
         <source>Default</source>
         <translation>Predeterminado</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1882"/>
         <source>Style</source>
         <translation>Estilo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1882"/>
         <source>Line</source>
         <translation>Línea</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1859"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1882"/>
         <source>Callout Wedge</source>
         <translation>Cuña de llamada</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1864"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1887"/>
         <source>Tip</source>
         <translation>Punta</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1864"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1887"/>
         <source>Dot</source>
         <translation>Punto</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1864"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1887"/>
         <source>Arrow</source>
         <translation>Flecha</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1874"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1897"/>
         <source>Remove Pointer</source>
         <translation>Quitar puntero</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1881"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1904"/>
         <source>Add Notice...</source>
         <translation>Añadir aviso...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1899"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1922"/>
         <source>Add Pointer</source>
         <translation>Añadir puntero</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1911"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1934"/>
         <source>Edit Notice...</source>
         <translation>Editar aviso...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1921"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="1944"/>
         <source>Remove Notice</source>
         <translation>Quitar aviso</translation>
     </message>
@@ -17742,22 +17750,22 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swInstructionsRulerWidget</name>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2211"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2234"/>
         <source>Horizontal Ruler</source>
         <translation>Regla horizontal</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2212"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2235"/>
         <source>Horizontal position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Posición horizontal en la página en las unidades de página; la flecha sigue al puntero.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2216"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2239"/>
         <source>Vertical Ruler</source>
         <translation>Regla vertical</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2217"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_page.cpp" line="2240"/>
         <source>Vertical position on the page in the page units, the arrow follows the pointer.</source>
         <translation>Posición vertical en la página en las unidades de página; la flecha sigue al puntero.</translation>
     </message>
@@ -17827,38 +17835,38 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Articulaciones del modelo y sus submodelos</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="41"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="40"/>
         <source>Hinge axis, for parts without shadow data</source>
         <translation>Eje de la bisagra, para piezas sin datos de sombra</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="42"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="41"/>
         <source>&lt;p&gt;&lt;b&gt;Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The axis a hinge turns about, in the coordinates of the submodel. Use it for parts without shadow data, which get a hinge on their origin.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Eje&lt;/b&gt;&lt;/p&gt;&lt;p&gt;El eje sobre el que gira una bisagra, en las coordenadas del submodelo. Úsalo para piezas sin datos de sombra, que reciben una bisagra en su origen.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="126"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="125"/>
         <source>Joint %1</source>
         <translation>Articulación %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="148"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="147"/>
         <source>None: Part &gt; Joint &gt; Set Joint</source>
         <translation>Ninguna: Pieza &gt; Articulación &gt; Definir articulación</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="319"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="318"/>
         <source>Joint %1, %2, angle %3</source>
         <translation>Articulación %1, %2, ángulo %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="319"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="318"/>
         <source>No joint</source>
         <translation>Sin articulación</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="125"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="319"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="124"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="318"/>
         <source>Hinge</source>
         <translation>Bisagra</translation>
     </message>
@@ -17887,69 +17895,69 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Dónde está el submodelo en su archivo padre, contando piezas desde arriba</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="40"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="39"/>
         <source>X Axis</source>
         <translation>Eje X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="40"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="39"/>
         <source>Y Axis</source>
         <translation>Eje Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="40"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="39"/>
         <source>Z Axis</source>
         <translation>Eje Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="47"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="280"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="46"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="279"/>
         <source>Delete Joint</source>
         <translation>Eliminar articulación</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="48"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="47"/>
         <source>Delete the joint picked in the list (Delete)</source>
         <translation>Elimina la articulación elegida en la lista (Supr)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="49"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="48"/>
         <source>&lt;p&gt;&lt;b&gt;Delete Joint&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Delete the joint picked in the joints list and put that joint back at rest. The Delete key does the same in the list. This can be undone.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Eliminar articulación&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elimina la articulación elegida en la lista de articulaciones y devuelve esa articulación a su posición de reposo. La tecla Supr hace lo mismo en la lista. Se puede deshacer.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="125"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="319"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="124"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="318"/>
         <source>Ball</source>
         <translation>Rótula</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="250"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="249"/>
         <source>Edit Joints</source>
         <translation>Editar articulaciones</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="252"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="251"/>
         <source>Delete All Joints</source>
         <translation>Eliminar todas las articulaciones</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="277"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="276"/>
         <source>Move Joint</source>
         <translation>Mover articulación</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="278"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="277"/>
         <source>Rotate Joint</source>
         <translation>Rotar articulación</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="319"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="318"/>
         <source>None: select a jointed submodel</source>
         <translation>Ninguna: selecciona un submodelo articulado</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="319"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="318"/>
         <source>Pick a joint</source>
         <translation>Elige una articulación</translation>
     </message>
@@ -17961,143 +17969,148 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swKeyframesView</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="208"/>
         <source>Keys of each object per step: click a step to go there, double-click to add or remove a key, drag a key to move it</source>
-        <translation>Claves de cada objeto por paso: haga clic en un paso para ir a él, doble clic para añadir o quitar una clave, arrastra una clave para moverla</translation>
+        <translation type="vanished">Claves de cada objeto por paso: haga clic en un paso para ir a él, doble clic para añadir o quitar una clave, arrastra una clave para moverla</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;One column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Fotogramas clave&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Una columna por paso y una fila por objeto, desplegable hasta sus propiedades. Un rombo marca una clave y una línea une las claves de una propiedad. Haz clic en un paso para ir a él, doble clic en una celda para añadir o quitar una clave, arrastra un rombo para mover la clave a otro paso y haz clic derecho para más opciones. Los valores se editan en el panel Propiedades.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="279"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="214"/>
+        <source>Keys of each object per step: click a step to go there, click a key to pick it, Ctrl+click to add it, double-click to add or remove a key, drag a key to move it</source>
+        <translation>Claves de cada objeto por paso: haz clic en un paso para ir a él, en una clave para elegirla, Ctrl+clic para añadirla, doble clic para añadir o quitar una clave, arrastra una clave para moverla</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="297"/>
         <source>Position</source>
         <translation>Posición</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="280"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="298"/>
         <source>Rotation</source>
         <translation>Rotación</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="285"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="303"/>
         <source>Target</source>
         <translation>Objetivo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="286"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="304"/>
         <source>Up</source>
         <translation>Arriba</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="292"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="310"/>
         <source>Color</source>
         <translation>Color</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="293"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="311"/>
         <source>Power</source>
         <translation>Potencia</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="294"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="312"/>
         <source>POV-Ray Power</source>
         <translation>Potencia POV-Ray</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="295"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="313"/>
         <source>Fade Distance</source>
         <translation>Distancia de atenuación</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="296"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="314"/>
         <source>Fade Power</source>
         <translation>Exponente de atenuación</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="297"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="315"/>
         <source>Radius</source>
         <translation>Radio</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="298"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="316"/>
         <source>Angle</source>
         <translation>Ángulo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="299"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="317"/>
         <source>Area Width</source>
         <translation>Ancho del área</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="300"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="318"/>
         <source>Area Height</source>
         <translation>Altura del área</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="301"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="319"/>
         <source>Spot Cone</source>
         <translation>Cono del foco</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="302"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="320"/>
         <source>Spot Penumbra</source>
         <translation>Penumbra del foco</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="303"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="321"/>
         <source>Spot Tightness</source>
         <translation>Concentración del foco</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="304"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="322"/>
         <source>Area Grid X</source>
         <translation>Cuadrícula del área X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="305"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="323"/>
         <source>Area Grid Y</source>
         <translation>Cuadrícula del área Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="425"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="443"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="525"/>
         <source>Remove Keyframes</source>
         <translation>Quitar fotogramas clave</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="538"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="646"/>
         <source>Move Keyframe</source>
         <translation>Mover fotograma clave</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="554"/>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="588"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="669"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="703"/>
         <source>Remove Keyframe</source>
         <translation>Quitar fotograma clave</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="556"/>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="586"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="671"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="701"/>
         <source>Add Keyframe</source>
         <translation>Añadir fotograma clave</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="568"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="683"/>
         <source>Add Key</source>
         <translation>Añadir clave</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="569"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="684"/>
         <source>Remove Key</source>
         <translation>Quitar clave</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="571"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="686"/>
         <source>Remove All Keys</source>
         <translation>Quitar todas las claves</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="698"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="813"/>
         <source>Step</source>
         <translation>Paso</translation>
     </message>
@@ -18151,9 +18164,13 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Detener&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Detiene la reproducción de los pasos y vuelve al paso desde el que empezó.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="15"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;&lt;p&gt;Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Fotogramas clave&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Una línea de tiempo de las claves de animación con una columna por paso y una fila por objeto, expandible a sus propiedades. Un rombo marca una clave y una línea une las claves de una propiedad. Haga clic en un nombre para seleccionar el objeto, Ctrl+clic para añadirlo a la selección o quitarlo de ella y haga clic en su flecha para mostrar sus propiedades. Haga clic en un paso para ir a él, doble clic en una celda para añadir o quitar una clave, arrastra un rombo para mover la clave a otro paso y haga clic derecho para más opciones. Los valores se editan en el panel Propiedades.&lt;/p&gt;&lt;p&gt;Seleccionados lista los objetos seleccionados y Todos todos los objetos con claves. Los rombos lleno y hueco añaden o quitan las claves de los objetos seleccionados en el paso actual, Añadir claves hace que las ediciones creen claves y los botones de reproducción recorren los pasos para mostrar el movimiento con claves.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Fotogramas clave&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Una línea de tiempo de las claves de animación con una columna por paso y una fila por objeto, expandible a sus propiedades. Un rombo marca una clave y una línea une las claves de una propiedad. Haga clic en un nombre para seleccionar el objeto, Ctrl+clic para añadirlo a la selección o quitarlo de ella y haga clic en su flecha para mostrar sus propiedades. Haga clic en un paso para ir a él, doble clic en una celda para añadir o quitar una clave, arrastra un rombo para mover la clave a otro paso y haga clic derecho para más opciones. Los valores se editan en el panel Propiedades.&lt;/p&gt;&lt;p&gt;Seleccionados lista los objetos seleccionados y Todos todos los objetos con claves. Los rombos lleno y hueco añaden o quitan las claves de los objetos seleccionados en el paso actual, Añadir claves hace que las ediciones creen claves y los botones de reproducción recorren los pasos para mostrar el movimiento con claves.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="15"/>
+        <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, click a diamond to pick it, Ctrl+click to add or remove it from the picked keys and Shift+click to take it out. Delete removes the picked keys. Double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;&lt;p&gt;Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Fotogramas clave&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Una línea de tiempo de las claves de animación con una columna por paso y una fila por objeto, desplegable hasta sus propiedades. Un rombo marca una clave y una línea une las claves de una propiedad. Haz clic en un nombre para seleccionar el objeto, Ctrl+clic para añadirlo o quitarlo de la selección y clic en su flecha para ver sus propiedades. Haz clic en un paso para ir a él, clic en un rombo para elegirlo, Ctrl+clic para añadirlo o quitarlo de las claves elegidas y Mayús+clic para sacarlo. Supr quita las claves elegidas. Doble clic en una celda para añadir o quitar una clave, arrastra un rombo para mover la clave a otro paso y clic derecho para más. Los valores se editan en el panel Propiedades.&lt;/p&gt;&lt;p&gt;Seleccionados muestra los objetos seleccionados, Todos cada objeto con claves. Los rombos lleno y hueco añaden o quitan las claves de los objetos seleccionados en el paso actual, Añadir claves hace que las ediciones creen claves y los botones de reproducción recorren los pasos para mostrar el movimiento.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="53"/>
@@ -18196,12 +18213,12 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>&lt;p&gt;&lt;b&gt;Todos&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Lista los objetos seleccionados y todos los demás objetos del modelo que tienen claves.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="201"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="207"/>
         <source>Add Keyframe</source>
         <translation>Añadir fotograma clave</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="201"/>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="207"/>
         <source>Remove Keyframe</source>
         <translation>Quitar fotograma clave</translation>
     </message>
@@ -19114,7 +19131,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>No se puede pegar la selección</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="1013"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="1026"/>
         <source>No joint here</source>
         <translation>No hay articulación aquí</translation>
     </message>
@@ -22138,12 +22155,12 @@ Peso: %1</translation>
 <context>
     <name>swPosesWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="418"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="412"/>
         <source>Pose</source>
         <translation>Pose</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="420"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="414"/>
         <source>Saved poses of this model, played in this order by the Joints motion</source>
         <translation>Poses guardadas de este modelo, reproducidas en este orden por el movimiento de Articulaciones</translation>
     </message>
@@ -22152,88 +22169,88 @@ Peso: %1</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Las poses guardadas en el modelo elegido en el panel Articulaciones, cada una con los ángulos de las articulaciones de ese modelo únicamente. El movimiento de Articulaciones del diálogo de imagen reproduce las poses del modelo principal en este orden. Elige una para recuperarla, renombrarla o eliminarla.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="412"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="406"/>
         <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The poses saved in the model picked in the Joints panel, or in the current model, each holding the angles of that model&apos;s joints only. Save stores the joint angles as a named pose, Recall puts them back in one undo step, and Rename and Delete change the picked pose. Poses are saved with the model, and the Joints motion of the image dialog plays the poses of the main model in this order.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Las poses guardadas en el modelo elegido en el panel Articulaciones, o en el modelo actual, cada una con los ángulos de las articulaciones de ese modelo solamente. Guardar almacena los ángulos de articulación como una pose con nombre, Recuperar los devuelve en un solo paso de deshacer, y Renombrar y Borrar cambian la pose elegida. Las poses se guardan con el modelo, y el movimiento Articulaciones del diálogo de imagen reproduce las poses del modelo principal en este orden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="434"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="428"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="434"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="428"/>
         <source>Save the joint angles of this model as a pose</source>
         <translation>Guardar los ángulos de articulación de este modelo como una pose</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="434"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="428"/>
         <source>&lt;p&gt;&lt;b&gt;Save&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Store the angles of the joints in this model under a name. Saving a name that already exists replaces that pose.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Guardar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Almacena los ángulos de las articulaciones de este modelo con un nombre. Guardar un nombre que ya existe reemplaza esa pose.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="435"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="429"/>
         <source>Recall</source>
         <translation>Recuperar</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="435"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="429"/>
         <source>Put the joints of this model back in the picked pose</source>
         <translation>Devolver las articulaciones de este modelo a la pose elegida</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="435"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="429"/>
         <source>&lt;p&gt;&lt;b&gt;Recall&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the joints of this model back to the angles of the picked pose, in one undo step.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Recuperar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Gira las articulaciones de este modelo de vuelta a los ángulos de la pose elegida, en un solo paso de deshacer.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="436"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="430"/>
         <source>Rename</source>
         <translation>Renombrar</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="436"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="430"/>
         <source>Rename the picked pose</source>
         <translation>Renombrar la pose elegida</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="436"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="430"/>
         <source>&lt;p&gt;&lt;b&gt;Rename&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Give the picked pose a new name.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Renombrar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Da un nombre nuevo a la pose elegida.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="437"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="431"/>
         <source>Delete</source>
         <translation>Borrar</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="437"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="431"/>
         <source>Delete the picked pose</source>
         <translation>Borrar la pose elegida</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="437"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="431"/>
         <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the picked pose from the model. The joints keep their angles.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Borrar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Quita la pose elegida del modelo. Las articulaciones conservan sus ángulos.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="479"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="516"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="473"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="510"/>
         <source>Name</source>
         <translation>Nombre</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="479"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="473"/>
         <source>Save Pose</source>
         <translation>Guardar pose</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="479"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="473"/>
         <source>Pose %1</source>
         <translation>Pose %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="516"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="510"/>
         <source>Rename Pose</source>
         <translation>Renombrar pose</translation>
     </message>
@@ -24226,37 +24243,37 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation>Reiniciar categorías</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="370"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="369"/>
         <source>The shortcut &apos;%1&apos; is already assigned to &apos;%2&apos;. Do you want to replace it?</source>
         <translation>El atajo &apos;%1&apos; ya está asignado a &apos;%2&apos;. ¿Quiere reemplazarlo?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="488"/>
         <source>Insert</source>
         <translation>Insertar</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="490"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="489"/>
         <source>Edit</source>
         <translation>Editar</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="491"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="490"/>
         <source>View</source>
         <translation>Vista</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="630"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="629"/>
         <source>Could not read mouse shortcuts file &apos;%1&apos;.</source>
         <translation>No se pudo leer el archivo de atajos de ratón &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="649"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="648"/>
         <source>Could not write mouse shortcuts file &apos;%1&apos;.</source>
         <translation>No se pudo escribir el archivo de atajos de ratón &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="654"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
         <source>Reset Mouse Shortcuts</source>
         <translation>Reiniciar atajos de ratón</translation>
     </message>
@@ -24542,7 +24559,7 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation type="vanished">Error guardando el archivo de atajos de teclado.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="461"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="460"/>
         <source>Are you sure you want to load the default keyboard shortcuts?</source>
         <translation>¿Seguro que quiere cargar los atajos de teclado predeterminados?</translation>
     </message>
@@ -24562,9 +24579,9 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation>Botón derecho</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="372"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="567"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="576"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="371"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="566"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="575"/>
         <source>Override Shortcut</source>
         <translation>Sobrescribir atajo</translation>
     </message>
@@ -24594,26 +24611,26 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation type="obsolete">Importar atajos de teclado</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="454"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="453"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Exportar atajos de teclado</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="461"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="460"/>
         <source>Reset Keyboard Shortcuts</source>
         <translation>Reiniciar atajos de teclado</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="567"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="576"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="566"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="575"/>
         <source>This shortcut is already assigned to &apos;%1&apos;. Do you want to replace it?</source>
         <oldsource>This shortcut is already assigned to &apos;%1&apos;, do you want to replace it?</oldsource>
         <translation>Este atajo ya está asignado a &apos;%1&apos;. ¿Quiere reemplazarlo?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="426"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="434"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="622"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="425"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="433"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="621"/>
         <source>Import Shortcuts</source>
         <translation>Importar atajos</translation>
     </message>
@@ -24622,8 +24639,8 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation type="vanished">Error cargando el archivo de atajos de ratón.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="447"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="643"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="446"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="642"/>
         <source>Export Shortcuts</source>
         <translation>Exportar atajos</translation>
     </message>
@@ -24658,105 +24675,103 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation>F1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
         <source>Clear the joint in the Joints panel</source>
-        <translation>Borrar la articulación en el panel Articulaciones</translation>
+        <translation type="vanished">Borrar la articulación en el panel Articulaciones</translation>
+    </message>
+    <message>
+        <source>Del</source>
+        <translation type="vanished">Supr</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
-        <source>Del</source>
-        <translation>Supr</translation>
-    </message>
-    <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
         <source>Add to the selection</source>
         <translation>Añadir a la selección</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
         <source>Ctrl+Click</source>
         <translation>Ctrl+Clic</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
         <source>Remove from the selection</source>
         <translation>Quitar de la selección</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
         <source>Shift+Click</source>
         <translation>Mayús+Clic</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
         <source>Zoom faster or slower</source>
         <translation>Hacer zoom más rápido o más lento</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
         <source>Ctrl or Shift+Wheel</source>
         <translation>Ctrl o Mayús+Rueda</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
         <source>Snap rotation, keep the insert tool, free a locked joint</source>
         <translation>Ajustar el giro, mantener la herramienta de inserción, liberar una articulación bloqueada</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
         <source>Hold Ctrl</source>
         <translation>Mantener Ctrl</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
         <source>Jump to a part in the parts list</source>
         <translation>Saltar a una pieza en la lista de piezas</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
         <source>A to Z</source>
         <translation>A a Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="214"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
         <source>Move through the parts list</source>
         <translation>Moverse por la lista de piezas</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="214"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
         <source>Arrows, Home, End, Page Up, Page Down</source>
         <translation>Flechas, Inicio, Fin, Re Pág, Av Pág</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="217"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="216"/>
         <source>Built-in Keys</source>
         <translation>Teclas fijas</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="273"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="272"/>
         <source>The shortcut &apos;%1&apos; is shared by %2.</source>
         <translation>El atajo &apos;%1&apos; lo comparten %2.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="426"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="447"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="622"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="643"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="425"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="446"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="621"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="642"/>
         <source>Shortcut Files (*.txt);;All Files (*)</source>
         <translation>Archivos de atajos (*.txt);;Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="434"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="433"/>
         <source>Could not read keyboard shortcuts file &apos;%1&apos;.</source>
         <translation>No se pudo leer el archivo de atajos de teclado &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="454"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="453"/>
         <source>Could not write keyboard shortcuts file &apos;%1&apos;.</source>
         <translation>No se pudo escribir el archivo de atajos de teclado &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="630"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="629"/>
         <source>Import Mouse Shortcuts</source>
         <translation>Importar atajos de ratón</translation>
     </message>
@@ -24765,12 +24780,12 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation type="vanished">Error guardando el archivo de atajos del ratón.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="649"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="648"/>
         <source>Export Mouse Shortcuts</source>
         <translation>Exportar atajos de ratón</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="654"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
         <source>Are you sure you want to load the default mouse shortcuts?</source>
         <translation>¿Seguro que quiere cargar los atajos de ratón predeterminados?</translation>
     </message>

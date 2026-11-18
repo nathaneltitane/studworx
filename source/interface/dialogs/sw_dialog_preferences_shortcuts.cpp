@@ -205,7 +205,6 @@ void swPreferencesDialog::UpdateCommandList()
 	const std::pair<const char*, const char*> BuiltInKeys[] =
 	{
 		{ QT_TR_NOOP("Help for the panel under the pointer"), QT_TR_NOOP("F1") },
-		{ QT_TR_NOOP("Clear the joint in the Joints panel"), QT_TR_NOOP("Del") },
 		{ QT_TR_NOOP("Add to the selection"), QT_TR_NOOP("Ctrl+Click") },
 		{ QT_TR_NOOP("Remove from the selection"), QT_TR_NOOP("Shift+Click") },
 		{ QT_TR_NOOP("Zoom faster or slower"), QT_TR_NOOP("Ctrl or Shift+Wheel") },

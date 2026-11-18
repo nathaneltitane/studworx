@@ -26,7 +26,6 @@ swJointsWidget::swJointsWidget(QWidget* Parent)
 	mTree->setToolTip(tr("Joints of the model and its submodels"));
 	connect(mTree, &QTreeWidget::itemClicked, this, &swJointsWidget::TreeItemClicked);
 	connect(mTree, &QTreeWidget::currentItemChanged, this, &swJointsWidget::UpdateClearButton);
-	mTree->installEventFilter(this);
 	mTree->setContextMenuPolicy(Qt::CustomContextMenu);
 	connect(mTree, &QTreeWidget::customContextMenuRequested, this, &swJointsWidget::TreeMenuRequested);
 	Layout->addWidget(mTree, 2);
@@ -389,19 +388,14 @@ void swJointsWidget::ClearClicked()
 	swView::UpdateAllViews();
 }
 
-bool swJointsWidget::eventFilter(QObject* Object, QEvent* Event)
+bool swJointsWidget::ClearFocusedJoint()
 {
-	// the delete key goes to the list, not the part delete
-	if (Object == mTree && (Event->type() == QEvent::ShortcutOverride || Event->type() == QEvent::KeyPress) && static_cast<QKeyEvent*>(Event)->key() == Qt::Key_Delete && mClearButton->isEnabled())
-	{
-		if (Event->type() == QEvent::KeyPress)
-			ClearClicked();
+	if (!mTree->hasFocus() || !mClearButton->isEnabled())
+		return false;
 
-		Event->accept();
-		return true;
-	}
+	ClearClicked();
 
-	return QWidget::eventFilter(Object, Event);
+	return true;
 }
 
 swPosesWidget::swPosesWidget(swJointsWidget* JointsWidget, QWidget* Parent)

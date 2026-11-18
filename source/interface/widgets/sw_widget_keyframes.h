@@ -37,6 +37,7 @@ public:
 	void Update();
 	void AddKeysClicked();
 	void RemoveKeysClicked();
+	void DeleteKeys();
 	void PlayClicked();
 	void StopClicked();
 
@@ -66,6 +67,7 @@ public:
 	void Update();
 	void SetShowAll(bool ShowAll);
 	void SetCurrentStep(swStep Step);
+	bool RemoveSelectedKeys();
 
 	bool GetShowAll() const
 	{
@@ -102,6 +104,8 @@ protected:
 	void EditRow(int RowIndex, swStep RemoveStep, swStep AddStep, const QString& Description);
 	void RemoveRowKeys(int RowIndex);
 	void SelectRowObject(int RowIndex, bool Toggle);
+	bool IsKeySelected(int RowIndex, swStep Step) const;
+	void SelectKey(int RowIndex, swStep Step, bool Selected);
 
 	std::vector<swKeyframesObject> mObjects;
 	std::vector<swKeyframesRow> mRows;
@@ -109,6 +113,7 @@ protected:
 	swStep mCurrentStep = 1;
 	swStep mStepCount = 1;
 	bool mShowAll = false;
+	std::set<std::tuple<swObject*, swObjectPropertyId, swStep>> mSelectedKeys;
 
 	int mRowHeight = 20;
 	int mColumnWidth = 24;
