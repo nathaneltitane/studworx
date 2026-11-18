@@ -465,8 +465,19 @@ Nine pages with lined up label and control columns, checkboxes included, each la
 - **Keyboard and Mouse.** Shortcuts recorded by clicking, importable and exportable. Commands that share a shortcut show in red, and assigning a taken shortcut asks before moving it.
 - **Shortcut filters.** Filter commands and tools by name or shortcut, give each two shortcuts, and reset them to the defaults.
 - **Delete.** Delete removes only what is selected where you work: a joint, a step, picked keys, a pointer or notice on a page, or parts in the view. Del always deletes and can't be changed, so it sits in Built-in Keys.
-- **Built-in Keys.** The end of the Keyboard list shows the keys that can't be changed, greyed out, like F1 for help and Ctrl+click to add to the selection.
+- **Built-in Keys.** The end of the Keyboard list shows the keys that can't be changed, greyed out, listed below.
 - **From LeoCAD.** Settings, part palettes and minifigure templates are copied from LeoCAD on the first start.
+
+| Built-in keys | What they do |
+| --- | --- |
+| F1 | Help for the panel under the pointer |
+| Del | Delete what is selected where you work |
+| Ctrl+Click | Add to the selection |
+| Shift+Click | Remove from the selection |
+| Ctrl or Shift+Wheel | Zoom faster or slower |
+| Hold Ctrl | Snap rotation, keep the insert tool, free a locked joint |
+| A to Z | Jump to a part in the parts list |
+| Arrows, Home, End, Page Up, Page Down | Move through the parts list |
 
 [//]: # (gallery scroll)
 

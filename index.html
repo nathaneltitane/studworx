@@ -1320,13 +1320,32 @@
 				<li><b>Context Menu.</b> Arrange the right-click menu of the model view the way you work: add, reorder, rename or group its commands, or reset it. Right clicking an unselected part selects it first.</li>
 				<li><b>Display colors.</b> Every color StudWorx draws with, from the background and grids to selections, highlights, axes and the instruction page guides, see-through where it makes sense.</li>
 				<li><b>Keyboard and Mouse.</b> Shortcuts recorded by clicking, importable and exportable. Commands that share a shortcut show in red, and assigning a taken shortcut asks before moving it.</li>
-				<li><b>Built-in Keys.</b> The end of the Keyboard list shows the keys that can&#x27;t be changed, greyed out, like F1 for <a href="#help">help</a> and Ctrl+click to add to the selection.</li>
 				<li><b><a href="#interface">Interface</a> and <a href="#instructions">Instructions</a>.</b> Interface holds every display color. Instructions holds the default page settings, the rulers and inspector, and the editor options.</li>
 				<li><b><a href="#rendering">Rendering</a> and <a href="#views">Views</a>.</b> Rendering sets how parts look, and Views sets what the model view shows around them, from the view cube to the grids.</li>
 				<li><b>Shortcut filters.</b> Filter commands and tools by name or shortcut, give each two shortcuts, and reset them to the defaults.</li>
+				<li><b>Built-in Keys.</b> The end of the Keyboard list shows the keys that can&#x27;t be changed, greyed out, listed below.</li>
 				<li><b>From LeoCAD.</b> Settings, part palettes and minifigure templates are copied from LeoCAD on the first start.</li>
 				<li><b>Categories.</b> Part categories turned on and off with a checkbox, edited, imported and exported.</li>
 			</ul>
+
+			<div class="table">
+				<table>
+					<thead>
+						<tr><th>Built-in keys</th><th>What they do</th></tr>
+					</thead>
+
+					<tbody>
+						<tr><td>F1</td><td><a href="#help">Help</a> for the panel under the pointer</td></tr>
+						<tr><td>Del</td><td>Delete what is selected where you work</td></tr>
+						<tr><td>Ctrl+Click</td><td>Add to the selection</td></tr>
+						<tr><td>Shift+Click</td><td>Remove from the selection</td></tr>
+						<tr><td>Ctrl or Shift+Wheel</td><td>Zoom faster or slower</td></tr>
+						<tr><td>Hold Ctrl</td><td>Snap rotation, keep the insert tool, free a locked joint</td></tr>
+						<tr><td>A to Z</td><td>Jump to a part in the parts list</td></tr>
+						<tr><td>Arrows, Home, End, Page Up, Page Down</td><td>Move through the parts list</td></tr>
+					</tbody>
+				</table>
+			</div>
 
 			<div class="gallery scroll">
 				<figure style="--width-image: 960; --height-image: 2034">
@@ -2043,6 +2062,9 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Keyboard <a href="#preferences">preferences</a>: a Built-in Keys group at the end lists the keys that can&#x27;t be changed, greyed out</li>
 					<li>Shortcuts: Delete removes only what is selected <a href="#where">where</a> you work: the joint in the Joints panel, the step in the <a href="#steps">Steps</a> panel, the picked keys in the Keyframes panel, the pointers, notices or blank page in the <a href="#instructions">instructions</a>, or the selected objects in the view; Del always deletes, listed under Built-in Keys in Keyboard preferences and can&#x27;t be given to another command</li>
 					<li>Steps panel: the Timeline panel is now the Steps panel, saved shortcuts and panel places carry over</li>
+					<li><a href="#panels">Panels</a>: the Poses panel keeps its place on every start, and a panel layout filled with Joints copies resets to the default once</li>
+					<li>Site: Preferences lists every built-in key and what it does</li>
+					<li>Site: Steps, Keyboard preferences, main window, lighting styles, projections, cutaways, wireframe, height grids, split <a href="#views">views</a> and Selected Part images retaken</li>
 					<li>Keyframes panel: click a diamond to pick it, Ctrl+click to add or take it out, Shift+click to take it out; picked keys light up and Delete removes them</li>
 					<li>Shortcuts: Ctrl+Shift+W, Exit Mode in the menus and Keyboard preferences, exits one mode per press, innermost first: a pick, joint mode, the cutaway, then in-place submodel editing; it keeps the selection</li>
 					<li>Shortcuts: Esc steps back the same way, clears the selection before leaving a mode, and now also steps out of in-place submodel editing</li>
@@ -2065,7 +2087,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Joints: parts grouped with a jointed submodel turn along with its joint, from the gizmo, the keys and the Joints tool</li>
 					<li>Shortcuts: Shift+I switches to Default Lights shading by default</li>
 					<li>Joints: in joint mode the Move and Rotate tools and their shortcuts act on the joint, like Move Joint and Rotate Joint</li>
-					<li><a href="#views">Views</a>: the rotate gizmo draws its axis circles all the way around, no longer cut in half</li>
+					<li>Views: the rotate gizmo draws its axis circles all the way around, no longer cut in half</li>
 					<li>Joints: editing a submodel in place no longer starts joint mode or joint move and rotate, joint mode only starts from a joint</li>
 					<li>Joints: a jointed submodel inside a group keeps its joint editing, moving and turning</li>
 					<li>Joints: Escape or a click away from the joints leaves joint mode and goes back to selecting parts</li>
@@ -2101,7 +2123,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Site: the page styles live in their own files under resources/css, and resources/css/logo.css picks each section&#x27;s logo, so a new or swapped logo shows without rebuilding the page</li>
 					<li>Translations: Traditional Chinese has about 1,900 more and better translations, from yoyomaimai</li>
 					<li>Translations: Traditional Chinese reads right for Startup, Origin, Author Line, Hip Accessory and Filter Parts</li>
-					<li>Site: Interface covers the window and <a href="#panels">Panels</a> the panels, with split views told once and showing or hiding panels moved to Panels</li>
+					<li>Site: Interface covers the window and Panels the panels, with split views told once and showing or hiding panels moved to Panels</li>
 					<li>Translations: every line in all nine languages was reviewed, the missing ones translated, and each language uses one word per meaning, the same words as its menus</li>
 					<li>Translations: snap sizes read as studs, plates and bricks in every language, and each property row letter matches its row name</li>
 					<li>Translations: Yes, No and the other dialog buttons follow the language picked in StudWorx</li>

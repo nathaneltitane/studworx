@@ -140,13 +140,21 @@ static void swMigrateRenamedToolbars()
 	{
 		{ QLatin1String("PiecesToolbar"), QLatin1String("PartsToolbar") },
 		{ QLatin1String("MinifigToolbar"), QLatin1String("MinifigureToolbar") },
-		{ QLatin1String("PosesToolbar"), QLatin1String("JointsToolbar") },
 		{ QLatin1String("TimelineToolbar"), QLatin1String("StepsToolbar") }
 	};
 
 	QSettings Settings;
 	const QByteArray OldState = Settings.value("MainWindow/State").toByteArray();
 	QByteArray State = OldState;
+
+	// drop layouts filled with joints copies
+
+	if (State.count(swSerializeName(QLatin1String("JointsToolbar"))) > 1)
+	{
+		Settings.remove("MainWindow/State");
+		Settings.sync();
+		return;
+	}
 
 	for (const auto& [OldName, NewName] : RenamedToolbars)
 		State.replace(swSerializeName(OldName), swSerializeName(NewName));
