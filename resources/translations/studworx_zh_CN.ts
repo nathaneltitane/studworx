@@ -2407,9 +2407,8 @@
         <translation>编辑选定子模型</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2896"/>
         <source>End Submodel Editing</source>
-        <translation>结束子模型编辑</translation>
+        <translation type="vanished">结束子模型编辑</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3004"/>
@@ -3307,6 +3306,10 @@
         <translation>展平子模型</translation>
     </message>
     <message>
+        <source>End Mode</source>
+        <translation type="vanished">结束模式</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="3031"/>
         <source>Submodel 1</source>
         <translation>子模型 1</translation>
@@ -3589,6 +3592,11 @@
         <location filename="../../source/application/sw_commands.cpp" line="2689"/>
         <source>Z Axis</source>
         <translation>Z 轴</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2896"/>
+        <source>Exit Mode</source>
+        <translation>结束模式</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3391"/>
@@ -6990,9 +6998,8 @@ File format is not recognized.</source>
         <translation>放大屏幕上的一个区域</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1072"/>
         <source>Cancel current mouse action</source>
-        <translation>取消当前鼠标操作</translation>
+        <translation type="vanished">取消当前鼠标操作</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1081"/>
@@ -7233,9 +7240,8 @@ File format is not recognized.</source>
         <translation>就地编辑当前选定的子模型</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2897"/>
         <source>End in-place submodel editing</source>
-        <translation>结束就地子模型编辑</translation>
+        <translation type="vanished">结束就地子模型编辑</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3005"/>
@@ -7885,14 +7891,22 @@ File format is not recognized.</source>
         <translation>点击选定子模型的一个连接，将其设为关节</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2600"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2897"/>
+        <source>Exit the innermost mode, one layer per press</source>
+        <translation>结束最内层模式，每按一次一层</translation>
+    </message>
+    <message>
         <source>Go into joint mode on the selected submodel, or leave it</source>
-        <translation>进入所选子模型的关节模式，或退出</translation>
+        <translation type="vanished">进入所选子模型的关节模式，或退出</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2609"/>
         <source>Leave joint mode and go back to where it started</source>
         <translation>退出关节模式并回到开始的位置</translation>
+    </message>
+    <message>
+        <source>End the innermost mode, one layer per press</source>
+        <translation type="vanished">结束最内层模式，每按一次一层</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3401"/>
@@ -7928,6 +7942,11 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="451"/>
         <source>Toggle setting a joint where a dragged submodel snaps on a round connection</source>
         <translation>切换在拖动的子模型吸附到圆形连接时设置关节</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1072"/>
+        <source>Cancel the current action, one layer per press</source>
+        <translation>取消当前操作，每按一次一层</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1468"/>
@@ -8088,6 +8107,11 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="2591"/>
         <source>Rotate the selected submodel around its picked joint instead of the pivot point</source>
         <translation>围绕选定子模型所选的接合点旋转该子模型，而不是围绕枢轴点</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2600"/>
+        <source>Go into joint mode on the selected submodel</source>
+        <translation>进入所选子模型的关节模式</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2618"/>
@@ -8801,6 +8825,20 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;旋转工具&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择物体，然后在模型视图中拖动旋转手柄。旋转吸附设置角度增量。变换选项选择相对轴或模型轴以及零件是一起旋转还是单独旋转。&lt;/p&gt;</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
+        <source>&lt;p&gt;&lt;b&gt;Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel. The Joint Mode Start preference picks which joint opens: the first joint, the last used joint, or an overview of rings to pick from. Ctrl+Shift+W or Esc leaves it.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;关节模式&lt;/b&gt;&lt;/p&gt;&lt;p&gt;编辑所选子模型的关节，与在关节面板中点击它相同。若选中的是带关节子模型中的零件，则向上转到该子模型。若未选中任何内容，则打开关节面板中选定的关节。“关节模式起始”偏好设置决定打开哪个关节：第一个、上次使用的，或显示可供选择的圆环概览。按 Ctrl+Shift+W 或 Esc 退出。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2898"/>
+        <source>&lt;p&gt;&lt;b&gt;Exit Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Exits one mode per press, innermost first: a face or cutaway pick, joint mode, the cutaway, then in-place submodel editing one level up. The selection stays as it is.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;结束模式&lt;/b&gt;&lt;/p&gt;&lt;p&gt;每按一次结束一个模式，从最内层开始：面或剖切拾取、关节模式、剖切，然后向上一级结束子模型就地编辑。选择保持不变。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;p&gt;&lt;b&gt;End Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ends one mode per press, innermost first: a face or cutaway pick, joint mode, the cutaway, then in-place submodel editing one level up. The selection stays as it is.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;结束模式&lt;/b&gt;&lt;/p&gt;&lt;p&gt;每按一次结束一个模式，从最内层开始：面或剖切拾取、关节模式、剖切，然后向上一级结束子模型就地编辑。选择保持不变。&lt;/p&gt;</translation>
+    </message>
+    <message>
         <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cancel the current mouse action, a face or cutaway pick or a cutaway resize, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.&lt;/p&gt;</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;取消操作&lt;/b&gt;&lt;/p&gt;&lt;p&gt;取消当前的鼠标操作、面或剖切选取、剖切调整大小，关闭查找和替换栏，或清除选择。没有选择时会移除剖切。&lt;/p&gt;</translation>
     </message>
@@ -9340,9 +9378,8 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;编辑选定子模型&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在其父模型内就地编辑选定子模型。路径栏显示您所在的位置。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2898"/>
         <source>&lt;p&gt;&lt;b&gt;End Submodel Editing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Leave in-place editing and go back to the parent model.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;结束子模型编辑&lt;/b&gt;&lt;/p&gt;&lt;p&gt;离开就地编辑并回到父模型。&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;结束子模型编辑&lt;/b&gt;&lt;/p&gt;&lt;p&gt;离开就地编辑并回到父模型。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2907"/>
@@ -9554,6 +9591,11 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;缩放区域工具&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在要检查的区域周围拖动一个矩形。视图会缩放以框定该区域，而不更改模型几何形状。&lt;/p&gt;</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1073"/>
+        <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Steps back one layer per press: closes the Find and Replace bar, cancels a face or cutaway pick or a cutaway resize, clears the selection, then leaves joint mode, removes the cutaway, and ends in-place submodel editing one level up.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;取消操作&lt;/b&gt;&lt;/p&gt;&lt;p&gt;每按一次后退一层：关闭查找和替换栏，取消面或剖切拾取或剖切大小调整，清除选择，然后退出关节模式，移除剖切，并向上一级结束子模型就地编辑。&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="1397"/>
         <source>&lt;p&gt;&lt;b&gt;First Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the model at its first building step. Step navigation changes which parts are visible; it does not move parts to a different step.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;第一步&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在第一个构建步骤中显示模型。步骤导航会改变哪些零件可见；它不会将零件移动到不同的步骤。&lt;/p&gt;</translation>
@@ -9652,9 +9694,8 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;关节旋转&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选中一个带关节的子模型时，切换到旋转工具，操纵器位于所选关节的枢轴上并以红色勾勒，旋转键和旋转工具会让关节绕其自身的枢轴和轴转动。铰链只能绕其轴转动。选择其他内容会回到枢轴点。偏好设置中的使用关节旋转会在选定子模型带有关节时始终这样做。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
         <source>&lt;p&gt;&lt;b&gt;Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel. The Joint Mode Start preference picks which joint opens: the first joint, the last used joint, or an overview of rings to pick from. Press it again to leave joint mode.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;关节模式&lt;/b&gt;&lt;/p&gt;&lt;p&gt;编辑所选子模型的关节，与在关节面板中点击它相同。若选中的是带关节子模型中的零件，则向上转到该子模型。若未选中任何内容，则打开关节面板中选定的关节。“关节模式起始”偏好设置决定打开哪个关节：第一个、上次使用的，或显示可供选择的圆环概览。再按一次退出关节模式。&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;关节模式&lt;/b&gt;&lt;/p&gt;&lt;p&gt;编辑所选子模型的关节，与在关节面板中点击它相同。若选中的是带关节子模型中的零件，则向上转到该子模型。若未选中任何内容，则打开关节面板中选定的关节。“关节模式起始”偏好设置决定打开哪个关节：第一个、上次使用的，或显示可供选择的圆环概览。再按一次退出关节模式。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2619"/>
@@ -9782,9 +9823,8 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;关节工具&lt;/b&gt;&lt;/p&gt;&lt;p&gt;拖动带关节的子模型使其转动。铰链随水平拖动绕其轴转动，球关节绕屏幕的上方向和右方向转动。旋转吸附设定步长，一次拖动为一步撤销。使用“零件 &gt; 关节 &gt; 设置关节”为子模型添加关节。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1073"/>
         <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cancel the current mouse action, a face or cutaway pick or a cutaway resize, leave joint mode, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;取消操作&lt;/b&gt;&lt;/p&gt;&lt;p&gt;取消当前的鼠标操作、面或剖切选取、剖切调整大小，退出关节模式，关闭查找和替换栏，或清除选择。没有选择时会移除剖切。&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;取消操作&lt;/b&gt;&lt;/p&gt;&lt;p&gt;取消当前的鼠标操作、面或剖切选取、剖切调整大小，退出关节模式，关闭查找和替换栏，或清除选择。没有选择时会移除剖切。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1631"/>
@@ -19333,7 +19373,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">%1 (ID: %2)</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="174"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="172"/>
         <source>%n objects selected</source>
         <translation>
             <numerusform>已选择 %n 个物体</numerusform>
@@ -19344,83 +19384,83 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished"> - %1 (ID: %2)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="204"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="202"/>
         <source> in group &apos;%1&apos;</source>
         <translation> 在组 &apos;%1&apos; 中</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="237"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="235"/>
         <source>Part</source>
         <translation>零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="239"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="237"/>
         <source>Camera</source>
         <translation>相机</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="241"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="239"/>
         <source>Light</source>
         <translation>光源</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="243"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="241"/>
         <source>Origin</source>
         <translation>原点</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="245"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="243"/>
         <source>%1 X: %2 Y: %3 Z: %4</source>
         <translation>%1 X：%2 Y：%3 Z：%4</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="329"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="327"/>
         <source>Step %1</source>
         <translation>步骤 %1</translation>
     </message>
     <message>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="372"/>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="376"/>
         <source>free</source>
         <translation>自由</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="372"/>
         <source>%1, %2</source>
         <translation>%1，%2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
         <source>relative</source>
         <translation>相对</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
         <source>absolute</source>
         <translation>绝对</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="376"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
         <source>%1 deg.</source>
         <translation>%1 度</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="377"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
         <source>separately</source>
         <translation>分别</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="377"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
         <source>together</source>
         <translation>整体</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="379"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="377"/>
         <source>Move: %1 - Axes: %2 - Rotate: %3 / %4</source>
         <translation>移动：%1 - 轴：%2 - 旋转：%3 / %4</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="381"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="379"/>
         <source>Movement snap, rotation snap, transform axes and rotation pivot. Change them with the last buttons of the standard toolbar.</source>
         <translation>移动吸附、旋转吸附、变换轴和旋转枢轴。可用标准工具栏的最后几个按钮更改它们。</translation>
     </message>
@@ -19500,22 +19540,22 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished"> M: %1 %2 R: %3 </translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="408"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="406"/>
         <source>&amp;Undo %1</source>
         <translation>撤销 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="413"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="411"/>
         <source>&amp;Undo</source>
         <translation>撤销</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="419"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="417"/>
         <source>&amp;Redo %1</source>
         <translation>重做 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="424"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="422"/>
         <source>&amp;Redo</source>
         <translation>重做</translation>
     </message>
@@ -19749,44 +19789,44 @@ Choose where to save it and download the latest %3 now?</source>
         </translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="286"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="284"/>
         <source>View: %1 deg. Lat. / %2 deg. Lon. / %3</source>
         <translation>视图：纬度 %1 度 / 经度 %2 度 / %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="285"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="283"/>
         <source>Perspective</source>
         <translation>透视</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="168"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="166"/>
         <source>%1 - ID: %2 - Weight: %3</source>
         <translation>%1 - ID：%2 - 重量：%3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="168"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="193"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="200"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="166"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="191"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="198"/>
         <source>N/A</source>
         <translation>不适用</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="196"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="194"/>
         <source>%1 g Total</source>
         <translation>共 %1 g</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="198"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="196"/>
         <source>%1 g</source>
         <translation>%1 g</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="200"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="198"/>
         <source> - %1 - ID: %2 - Weight: %3</source>
         <translation> - %1 - ID：%2 - 重量：%3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="285"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="283"/>
         <source>Orthographic</source>
         <translation>正交</translation>
     </message>

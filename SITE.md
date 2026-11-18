@@ -268,7 +268,8 @@ The Tools toolbar sets what the mouse does in the model view. Every tool has a k
 - **Keyboard and gamepad view.** Zoom and move the camera with the keyboard, or with a gamepad's left stick in builds that support one.
 - **Lights.** Point Light, Spotlight, Directional Light and Area Light tools place lights in the model, with named properties and units, saved in the model file.
 - **Cameras.** The Camera tool places a camera. View > Cameras switches between the first sixteen cameras, or No Camera for the free view.
-- **Cancel Action.** Esc stops what you're doing: it cancels the current mouse action, closes the find bar, clears the selection, and with nothing selected removes the cutaway.
+- **Cancel Action.** Esc steps back one layer per press: it closes the find bar, cancels a pick, clears the selection, then leaves joint mode, removes the cutaway, and steps out of a submodel edited in place.
+- **Exit Mode.** Ctrl+Shift+W exits one mode per press, innermost first: a pick, joint mode, the cutaway, then a submodel edited in place. It leaves the selection alone.
 - **Mouse.** Mouse sensitivity and a shortcut for every tool and view action, recorded in Preferences.
 
 ### Joints mode
@@ -278,7 +279,7 @@ Give a placed submodel a joint, turn it with the mouse and save the angles as po
 - **Joints from the shadow library.** Joints and connections come from the shape data of the LDCad shadow library: round shapes become hinges and spheres become balls, and clips and hinge fingers connect too. Square and round box shapes don't connect yet.
 - **Set Joint.** Turn a submodel into something that moves, like a minifigure arm or a hinged door: pick the connection it turns on, and StudWorx makes a hinge on a round shape or a ball on a sphere, or a hinge on the part's center when the part has no connection data. A submodel can have several joints, each listed in the Joints panel and saved in the model file.
 - **Joints tool.** Grab a jointed submodel and drag to turn it: a hinge turns about its axis, a ball any way. The parts holding joints are outlined in red, and each drag is one undo step.
-- **Joint Mode.** Press Ctrl+Shift+J to work on the joint of the selected submodel, or of the submodel around the selected part, and press it again to leave. It's also in the right-click menu under Joint, next to End Joint Mode.
+- **Joint Mode.** Press Ctrl+Shift+J to work on the joint of the selected submodel, or of the submodel around the selected part, and press Ctrl+Shift+W or Esc to leave. It's also in the right-click menu under Joint, next to End Joint Mode.
 - **Joint Mode Start.** In Preferences, pick which joint opens first: the first one, the one you used last, or none, with every joint shown as a ring you click to open. With Select Joints in View on, the other joints stay as faded rings, so you can hop from one to the next.
 - **Joint Move and Rotate.** Move and rotate a joint with the usual gizmos and keys instead of the Joints tool. Parts grouped with the jointed submodel turn along with it, like an arm grouped with its shoulder. A hinge only turns one way, so the other rings show grey; hold Ctrl to light them up and turn the whole piece around the joint. A bar over the view shows where the joint sits in the model and takes you back out when you're done.
 - **Joints panel.** Every model with joints in a tree, down to each joint with its type and angle. Click a joint to work on it, or a model to see its poses. The Piece column tells copies of the same submodel apart by where each sits in its file, and ticking Lock freezes a joint: it turns grey and can't be moved, turned or changed until you untick it.

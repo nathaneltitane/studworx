@@ -3,7 +3,10 @@
   <details open>
   <summary>2026-11-18</summary>
 
-  - Joints: Ctrl+Shift+J goes into joint mode on the selected submodel, or the jointed submodel around the selected part, and Ctrl+Shift+J again leaves it; Joint Mode and End Joint Mode are in Part > Joint and the right-click menu
+  - Shortcuts: Ctrl+Shift+W, Exit Mode in the menus and Keyboard preferences, exits one mode per press, innermost first: a pick, joint mode, the cutaway, then in-place submodel editing; it keeps the selection
+  - Shortcuts: Esc steps back the same way, clears the selection before leaving a mode, and now also steps out of in-place submodel editing
+  - Shortcuts: Ctrl+Shift+J only goes into joint mode; Ctrl+Shift+W or Esc leaves it
+  - Joints: Ctrl+Shift+J goes into joint mode on the selected submodel, or the jointed submodel around the selected part, and Ctrl+Shift+W or Esc leaves it; Joint Mode and End Joint Mode are in Part > Joint and the right-click menu
   - Joints: right-clicking in joint mode keeps the joint, so End Joint Mode works from the right-click menu
   - Joints panel: a Piece column shows where each submodel sits in its file, taken out of the submodel's name
   - Joints panel: a Lock column freezes a joint, saved in the file; a locked joint shows in the Deactivated grey and can't be moved, turned, edited or deleted

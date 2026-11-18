@@ -297,7 +297,7 @@ public:
 	void SetSubmodelEditingPath(const std::vector<swPart*>& Path);
 	bool SetJointModelActive(swModel* Target);
 	void EndJointFocus();
-	bool ToggleJointMode();
+	bool EnterJointMode();
 	void FocusSetJoint(const std::vector<swPart*>& Parts);
 	bool OpenSetJoint();
 	void SetJointPathDepth(size_t Index);
@@ -332,7 +332,7 @@ public:
 	void EndPanGesture(bool Accept);
 	void StartOrbitTracking();
 	void StopTracking(bool Accept);
-	void CancelTrackingOrClearSelectionAction();
+	void EndLayerAction(bool ClearSelection);
 	void StartFaceNormalPick();
 	void StartCutawayPick(swCutawayShape CutawayShape);
 	void ResizeCutaway(float Scale);

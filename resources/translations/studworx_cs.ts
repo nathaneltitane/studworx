@@ -3406,6 +3406,11 @@
         <translation>Zploštit podmodely</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2896"/>
+        <source>Exit Mode</source>
+        <translation>Ukončit režim</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="2069"/>
         <source>Lock Parts Color</source>
         <translation>Zamknout barvu dílů</translation>
@@ -3743,6 +3748,10 @@
         <location filename="../../source/application/sw_commands.cpp" line="2689"/>
         <source>Z Axis</source>
         <translation>Osa Z</translation>
+    </message>
+    <message>
+        <source>End Mode</source>
+        <translation type="vanished">Ukončit režim</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3013"/>
@@ -4325,9 +4334,8 @@
         <translation>Upravit vybraný podmodel</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2896"/>
         <source>End Submodel Editing</source>
-        <translation>Ukončit úpravy podmodelu</translation>
+        <translation type="vanished">Ukončit úpravy podmodelu</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2905"/>
@@ -7067,9 +7075,8 @@ Formát souboru není rozpoznán.</translation>
         <translation>Přiblížit oblast obrazovky</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1072"/>
         <source>Cancel current mouse action</source>
-        <translation>Zrušit aktuální akci myši</translation>
+        <translation type="vanished">Zrušit aktuální akci myši</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1081"/>
@@ -7668,14 +7675,17 @@ Formát souboru není rozpoznán.</translation>
         <translation>Kliknutím na spojení vybraného podmodelu z něj vytvoříte kloub</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2600"/>
         <source>Go into joint mode on the selected submodel, or leave it</source>
-        <translation>Přejít do režimu kloubu vybraného podmodelu, nebo ho opustit</translation>
+        <translation type="vanished">Přejít do režimu kloubu vybraného podmodelu, nebo ho opustit</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2609"/>
         <source>Leave joint mode and go back to where it started</source>
         <translation>Opustit režim kloubu a vrátit se tam, kde začal</translation>
+    </message>
+    <message>
+        <source>End the innermost mode, one layer per press</source>
+        <translation type="vanished">Ukončí nejvnitřnější režim, jednu vrstvu na stisk</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3401"/>
@@ -7821,6 +7831,11 @@ Formát souboru není rozpoznán.</translation>
         <location filename="../../source/application/sw_commands.cpp" line="451"/>
         <source>Toggle setting a joint where a dragged submodel snaps on a round connection</source>
         <translation>Přepnout nastavení kloubu, kde se přetahovaný podmodel zachytí na kulatém spojení</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1072"/>
+        <source>Cancel the current action, one layer per press</source>
+        <translation>Zruší aktuální akci, jednu vrstvu na stisk</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1450"/>
@@ -8029,6 +8044,11 @@ Formát souboru není rozpoznán.</translation>
         <translation>Otáčet vybraný podmodel kolem vybraného kloubu místo kolem bodu otáčení</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2600"/>
+        <source>Go into joint mode on the selected submodel</source>
+        <translation>Přejde do režimu kloubu vybraného podmodelu</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="2618"/>
         <source>Reset the pivot point of the selected parts to their origin</source>
         <translatorcomment>TODO - původ, zdroj, počátek, vznik</translatorcomment>
@@ -8088,6 +8108,11 @@ Formát souboru není rozpoznán.</translation>
         <location filename="../../source/application/sw_commands.cpp" line="2879"/>
         <source>Replace every submodel, and the submodels inside it, with its parts in one step</source>
         <translation>Nahradit každý podmodel a podmodely v něm jeho díly na jeden krok</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2897"/>
+        <source>Exit the innermost mode, one layer per press</source>
+        <translation>Ukončí nejvnitřnější režim, jednu vrstvu na stisk</translation>
     </message>
     <message>
         <source>Remove all key frames from the selected parts</source>
@@ -8195,9 +8220,8 @@ Formát souboru není rozpoznán.</translation>
         <translation>Upravit aktuálně vybraný podmodel na místě</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2897"/>
         <source>End in-place submodel editing</source>
-        <translation>Ukončit úpravu podmodelu na místě</translation>
+        <translation type="vanished">Ukončit úpravu podmodelu na místě</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2906"/>
@@ -8868,6 +8892,20 @@ Formát souboru není rozpoznán.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Nástroj Otočit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte objekty a poté přetáhněte úchyt otáčení v pohledu modelu. Přichycení otáčení nastavuje přírůstky úhlu. Možnosti transformace určují, zda se použijí relativní, nebo modelové osy a zda se díly otáčejí společně, nebo samostatně.&lt;/p&gt;</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
+        <source>&lt;p&gt;&lt;b&gt;Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel. The Joint Mode Start preference picks which joint opens: the first joint, the last used joint, or an overview of rings to pick from. Ctrl+Shift+W or Esc leaves it.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Režim kloubu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pracuje s kloubem vybraného podmodelu, stejně jako kliknutí na něj v panelu Klouby. Je-li vybrán díl uvnitř podmodelu s kloubem, přejde nahoru k tomuto podmodelu. Není-li nic vybráno, otevře kloub zvolený v panelu Klouby. Předvolba Začátek režimu kloubu určuje, který kloub se otevře: první, naposledy použitý, nebo přehled kroužků k výběru. Ctrl+Shift+W nebo Esc jej opustí.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2898"/>
+        <source>&lt;p&gt;&lt;b&gt;Exit Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Exits one mode per press, innermost first: a face or cutaway pick, joint mode, the cutaway, then in-place submodel editing one level up. The selection stays as it is.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Ukončit režim&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Každým stiskem ukončí jeden režim, nejvnitřnější první: výběr plochy nebo řezu, režim kloubu, řez, pak úpravy podmodelu na místě o úroveň výš. Výběr zůstane, jak je.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;p&gt;&lt;b&gt;End Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ends one mode per press, innermost first: a face or cutaway pick, joint mode, the cutaway, then in-place submodel editing one level up. The selection stays as it is.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Ukončit režim&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Každým stiskem ukončí jeden režim, nejvnitřnější první: výběr plochy nebo řezu, režim kloubu, řez, pak úpravy podmodelu na místě o úroveň výš. Výběr zůstane, jak je.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cancel the current mouse action, a face or cutaway pick or a cutaway resize, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.&lt;/p&gt;</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Zrušit akci&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zruší aktuální akci myši, výběr plochy nebo řezu či změnu velikosti řezu, zavře lištu Najít a nahradit nebo zruší výběr. Když není nic vybráno, odstraní řez.&lt;/p&gt;</translation>
     </message>
@@ -9407,9 +9445,8 @@ Formát souboru není rozpoznán.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Upravit vybraný podmodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Upraví vybraný podmodel přímo na místě, uvnitř jeho nadřazeného modelu. Lišta cesty ukazuje, kde se nacházíte.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2898"/>
         <source>&lt;p&gt;&lt;b&gt;End Submodel Editing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Leave in-place editing and go back to the parent model.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Ukončit úpravu podmodelu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Opustí úpravy na místě a vrátí se k nadřazenému modelu.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Ukončit úpravu podmodelu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Opustí úpravy na místě a vrátí se k nadřazenému modelu.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2907"/>
@@ -9621,6 +9658,11 @@ Formát souboru není rozpoznán.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Nástroj Oblast zvětšení&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přetáhněte obdélník kolem oblasti, kterou chcete prohlédnout. Pohled se přiblíží tak, aby tuto oblast zarámoval, aniž by se změnila geometrie modelu.&lt;/p&gt;</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1073"/>
+        <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Steps back one layer per press: closes the Find and Replace bar, cancels a face or cutaway pick or a cutaway resize, clears the selection, then leaves joint mode, removes the cutaway, and ends in-place submodel editing one level up.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Zrušit akci&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Každým stiskem se vrátí o jednu vrstvu: zavře lištu Najít a nahradit, zruší výběr plochy nebo řezu či změnu velikosti řezu, zruší výběr, pak opustí režim kloubu, odstraní řez a ukončí úpravy podmodelu na místě o úroveň výš.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="1397"/>
         <source>&lt;p&gt;&lt;b&gt;First Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the model at its first building step. Step navigation changes which parts are visible; it does not move parts to a different step.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;První krok&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí model v jeho prvním kroku sestavení. Kroková navigace mění, které díly jsou viditelné; nepřesouvá díly do jiného kroku.&lt;/p&gt;</translation>
@@ -9719,9 +9761,8 @@ Formát souboru není rozpoznán.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Otáčení kloubu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Když je vybrán jeden podmodel s kloubem, přepne na nástroj Otáčení s manipulátorem na bodu otáčení zvoleného kloubu, obtaženým červeně, a klávesy otáčení a nástroj Otáčení otáčejí kloub kolem jeho vlastního bodu otáčení a osy. Závěs se otáčí jen kolem své osy. Výběr něčeho jiného vrátí zpět na bod otáčení. Volba Použít otáčení kloubu v předvolbách to dělá vždy, když vybraný podmodel má kloub.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
         <source>&lt;p&gt;&lt;b&gt;Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel. The Joint Mode Start preference picks which joint opens: the first joint, the last used joint, or an overview of rings to pick from. Press it again to leave joint mode.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Režim kloubu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pracuje s kloubem vybraného podmodelu, stejně jako kliknutí na něj v panelu Klouby. Je-li vybrán díl uvnitř podmodelu s kloubem, přejde nahoru k tomuto podmodelu. Není-li nic vybráno, otevře kloub zvolený v panelu Klouby. Předvolba Začátek režimu kloubu určuje, který kloub se otevře: první, naposledy použitý, nebo přehled kroužků k výběru. Dalším stiskem režim kloubu opustíte.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Režim kloubu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pracuje s kloubem vybraného podmodelu, stejně jako kliknutí na něj v panelu Klouby. Je-li vybrán díl uvnitř podmodelu s kloubem, přejde nahoru k tomuto podmodelu. Není-li nic vybráno, otevře kloub zvolený v panelu Klouby. Předvolba Začátek režimu kloubu určuje, který kloub se otevře: první, naposledy použitý, nebo přehled kroužků k výběru. Dalším stiskem režim kloubu opustíte.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2619"/>
@@ -9849,9 +9890,8 @@ Formát souboru není rozpoznán.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Nástroj Klouby&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přetažením podmodelu s kloubem jej otočíte. Závěsy se otáčejí kolem své osy vodorovným tažením, kulové klouby kolem směrů nahoru a doprava na obrazovce. Přichytávání otáčení nastavuje kroky a jedno tažení je jeden krok zpět. Podmodelu dáte kloub příkazem Díl &amp;gt; Kloub &amp;gt; Nastavit kloub.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1073"/>
         <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cancel the current mouse action, a face or cutaway pick or a cutaway resize, leave joint mode, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Zrušit akci&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zruší aktuální akci myši, výběr plochy nebo řezu či změnu velikosti řezu, ukončí režim kloubů, zavře lištu Najít a nahradit nebo zruší výběr. Když není nic vybráno, odstraní řez.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Zrušit akci&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zruší aktuální akci myši, výběr plochy nebo řezu či změnu velikosti řezu, ukončí režim kloubů, zavře lištu Najít a nahradit nebo zruší výběr. Když není nic vybráno, odstraní řez.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1631"/>
@@ -19078,73 +19118,73 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Vlastní (%1 stupňů)...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="237"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="235"/>
         <source>Part</source>
         <translation>Díl</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="239"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="237"/>
         <source>Camera</source>
         <translation>Kamera</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="241"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="239"/>
         <source>Light</source>
         <translation>Světlo</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="243"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="241"/>
         <source>Origin</source>
         <translation>Počátek</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="245"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="243"/>
         <source>%1 X: %2 Y: %3 Z: %4</source>
         <translation>%1 X: %2 Y: %3 Z: %4</translation>
     </message>
     <message>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="372"/>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="376"/>
         <source>free</source>
         <translation>volně</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="372"/>
         <source>%1, %2</source>
         <translation>%1, %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
         <source>relative</source>
         <translation>relativní</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
         <source>absolute</source>
         <translation>absolutní</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="376"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
         <source>%1 deg.</source>
         <translation>%1 °</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="377"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
         <source>separately</source>
         <translation>odděleně</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="377"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
         <source>together</source>
         <translation>společně</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="379"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="377"/>
         <source>Move: %1 - Axes: %2 - Rotate: %3 / %4</source>
         <translation>Posun: %1 - Osy: %2 - Otáčení: %3 / %4</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="381"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="379"/>
         <source>Movement snap, rotation snap, transform axes and rotation pivot. Change them with the last buttons of the standard toolbar.</source>
         <translation>Přichytávání posunu, přichytávání otáčení, osy transformace a střed otáčení. Změníte je posledními tlačítky standardního panelu nástrojů.</translation>
     </message>
@@ -19254,7 +19294,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">%1 (ID: %2)</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="174"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="172"/>
         <source>%n objects selected</source>
         <translation>
             <numerusform>%n vybraný objekt</numerusform>
@@ -19267,12 +19307,12 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished"> - %1 (ID: %2)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="204"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="202"/>
         <source> in group &apos;%1&apos;</source>
         <translation> ve skupině &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="329"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="327"/>
         <source>Step %1</source>
         <translation>Krok %1</translation>
     </message>
@@ -19281,22 +19321,22 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished"> M: %1 %2 R: %3 </translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="408"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="406"/>
         <source>&amp;Undo %1</source>
         <translation>&amp;Zpět %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="413"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="411"/>
         <source>&amp;Undo</source>
         <translation>&amp;Zpět</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="419"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="417"/>
         <source>&amp;Redo %1</source>
         <translation>&amp;Znovu %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="424"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="422"/>
         <source>&amp;Redo</source>
         <translation>&amp;Znovu</translation>
     </message>
@@ -19555,44 +19595,44 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         </translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="286"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="284"/>
         <source>View: %1 deg. Lat. / %2 deg. Lon. / %3</source>
         <translation>Pohled: %1 st. š. / %2 st. d. / %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="285"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="283"/>
         <source>Perspective</source>
         <translation>Perspektivní</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="168"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="166"/>
         <source>%1 - ID: %2 - Weight: %3</source>
         <translation>%1 - ID: %2 - Hmotnost: %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="168"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="193"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="200"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="166"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="191"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="198"/>
         <source>N/A</source>
         <translation>N/D</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="196"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="194"/>
         <source>%1 g Total</source>
         <translation>%1 g celkem</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="198"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="196"/>
         <source>%1 g</source>
         <translation>%1 g</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="200"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="198"/>
         <source> - %1 - ID: %2 - Weight: %3</source>
         <translation> - %1 - ID: %2 - Hmotnost: %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="285"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="283"/>
         <source>Orthographic</source>
         <translation>Pravoúhlá</translation>
     </message>

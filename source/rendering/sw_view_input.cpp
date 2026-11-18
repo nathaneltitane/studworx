@@ -1434,8 +1434,12 @@ void swView::StopTracking(bool Accept)
 	ActiveModel->UpdateAllViews();
 }
 
-void swView::CancelTrackingOrClearSelectionAction()
+// one layer per press, innermost first
+void swView::EndLayerAction(bool ClearSelection)
 {
+	swModel* ActiveModel = GetActiveModel();
+	const bool JointMode = gMainWindow->GetTool() == swTool::Joints || (ActiveModel && ActiveModel->IsJointFocused());
+
 	if (mPickingFaceNormal)
 		StopFaceNormalPick();
 	else if (mCutawayPickShape != swCutawayShape::None)
@@ -1450,18 +1454,17 @@ void swView::CancelTrackingOrClearSelectionAction()
 	}
 	else if (mTrackButton != swTrackButton::None)
 		StopTracking(false);
-	else
-	{
-		swModel* ActiveModel = GetActiveModel();
 
-		// esc leaves joint mode first
-		if (gMainWindow->GetTool() == swTool::Joints || (ActiveModel && ActiveModel->IsJointFocused()))
-			EndJointFocus();
-		else if (HasCutaway() && (!ActiveModel || !ActiveModel->AnyObjectsSelected()))
-			RemoveCutaway();
-		else if (ActiveModel)
-			ActiveModel->ClearSelectionAction();
-	}
+	// joint mode owns its selection
+
+	else if (ClearSelection && !JointMode && ActiveModel && ActiveModel->AnyObjectsSelected())
+		ActiveModel->ClearSelectionAction();
+	else if (JointMode)
+		EndJointFocus();
+	else if (HasCutaway())
+		RemoveCutaway();
+	else if (!mSubmodelEditingPath.empty())
+		SetSubmodelActive(mSubmodelEditingPath.size() - 1);
 }
 
 void swView::OnButtonDown(swTrackButton TrackButton)

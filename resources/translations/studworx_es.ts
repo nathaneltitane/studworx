@@ -2364,9 +2364,8 @@
         <translation>Editar submodelo seleccionado</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2896"/>
         <source>End Submodel Editing</source>
-        <translation>Finalizar edición de submodelo</translation>
+        <translation type="vanished">Finalizar edición de submodelo</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3004"/>
@@ -3278,6 +3277,10 @@
         <translation>Aplanar submodelos</translation>
     </message>
     <message>
+        <source>End Mode</source>
+        <translation type="vanished">Terminar modo</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="3031"/>
         <source>Submodel 1</source>
         <translation>Submodelo 1</translation>
@@ -3560,6 +3563,11 @@
         <location filename="../../source/application/sw_commands.cpp" line="2689"/>
         <source>Z Axis</source>
         <translation>Eje Z</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2896"/>
+        <source>Exit Mode</source>
+        <translation>Terminar modo</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3391"/>
@@ -6990,9 +6998,8 @@ El formato de archivo no se reconoce.</translation>
         <translation>Ampliar una región de la pantalla</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1072"/>
         <source>Cancel current mouse action</source>
-        <translation>Cancelar la acción actual del ratón</translation>
+        <translation type="vanished">Cancelar la acción actual del ratón</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1081"/>
@@ -7894,14 +7901,22 @@ El formato de archivo no se reconoce.</translation>
         <translation>Hacer clic en una conexión del submodelo seleccionado para convertirla en articulación</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2600"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2897"/>
+        <source>Exit the innermost mode, one layer per press</source>
+        <translation>Termina el modo más interno, una capa por pulsación</translation>
+    </message>
+    <message>
         <source>Go into joint mode on the selected submodel, or leave it</source>
-        <translation>Entrar en el modo articulación del submodelo seleccionado, o salir de él</translation>
+        <translation type="vanished">Entrar en el modo articulación del submodelo seleccionado, o salir de él</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2609"/>
         <source>Leave joint mode and go back to where it started</source>
         <translation>Salir del modo articulación y volver adonde empezó</translation>
+    </message>
+    <message>
+        <source>End the innermost mode, one layer per press</source>
+        <translation type="vanished">Termina el modo más interno, una capa por pulsación</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3401"/>
@@ -7937,6 +7952,11 @@ El formato de archivo no se reconoce.</translation>
         <location filename="../../source/application/sw_commands.cpp" line="451"/>
         <source>Toggle setting a joint where a dragged submodel snaps on a round connection</source>
         <translation>Alternar definir una articulación donde un submodelo arrastrado encaja en una conexión redonda</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1072"/>
+        <source>Cancel the current action, one layer per press</source>
+        <translation>Cancela la acción actual, una capa por pulsación</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1468"/>
@@ -8099,6 +8119,11 @@ El formato de archivo no se reconoce.</translation>
         <translation>Rotar el submodelo seleccionado alrededor de la articulación elegida en lugar del punto de pivote</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2600"/>
+        <source>Go into joint mode on the selected submodel</source>
+        <translation>Entra en el modo articulación del submodelo seleccionado</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="2618"/>
         <source>Reset the pivot point of the selected parts to their origin</source>
         <translation>Reiniciar punto de pivote de las piezas seleccionadas a su origen</translation>
@@ -8221,9 +8246,8 @@ El formato de archivo no se reconoce.</translation>
         <translation>Editar el submodelo seleccionado actual in-situ</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2897"/>
         <source>End in-place submodel editing</source>
-        <translation>Finalizar la edición del submodelo in-situ</translation>
+        <translation type="vanished">Finalizar la edición del submodelo in-situ</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2906"/>
@@ -8811,6 +8835,20 @@ El formato de archivo no se reconoce.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Herramienta de rotación&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seleccione objetos y luego arrastre un controlador de rotación en la vista del modelo. El ajuste de rotación establece los incrementos del ángulo. Las opciones de transformación eligen ejes relativos o del modelo y si las piezas giran juntas o por separado.&lt;/p&gt;</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
+        <source>&lt;p&gt;&lt;b&gt;Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel. The Joint Mode Start preference picks which joint opens: the first joint, the last used joint, or an overview of rings to pick from. Ctrl+Shift+W or Esc leaves it.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Modo articulación&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Trabaja con la articulación del submodelo seleccionado, igual que al hacer clic en ella en el panel Articulaciones. Con una pieza seleccionada dentro de un submodelo con articulación, sube a ese submodelo. Sin nada seleccionado, abre la articulación elegida en el panel Articulaciones. La preferencia Inicio del modo articulación elige qué articulación se abre: la primera, la última usada o una vista general de anillos para elegir. Ctrl+Mayús+W o Esc sale de él.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2898"/>
+        <source>&lt;p&gt;&lt;b&gt;Exit Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Exits one mode per press, innermost first: a face or cutaway pick, joint mode, the cutaway, then in-place submodel editing one level up. The selection stays as it is.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Terminar modo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Termina un modo por pulsación, empezando por el más interno: una selección de cara o de corte, el modo articulación, el corte y luego la edición del submodelo en su sitio, un nivel hacia arriba. La selección se queda como está.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;p&gt;&lt;b&gt;End Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ends one mode per press, innermost first: a face or cutaway pick, joint mode, the cutaway, then in-place submodel editing one level up. The selection stays as it is.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Terminar modo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Termina un modo por pulsación, empezando por el más interno: una selección de cara o de corte, el modo articulación, el corte y luego la edición del submodelo en su sitio, un nivel hacia arriba. La selección se queda como está.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cancel the current mouse action, a face or cutaway pick or a cutaway resize, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.&lt;/p&gt;</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Cancelar acción&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cancela la acción actual del ratón, la selección de una cara o de un corte, o el cambio de tamaño de un corte, cierra la barra Buscar y reemplazar o borra la selección. Sin nada seleccionado quita el corte.&lt;/p&gt;</translation>
     </message>
@@ -9350,9 +9388,8 @@ El formato de archivo no se reconoce.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Editar submodelo seleccionado&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edita el submodelo seleccionado en su sitio, dentro de su padre. Una barra de ruta muestra dónde estás.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2898"/>
         <source>&lt;p&gt;&lt;b&gt;End Submodel Editing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Leave in-place editing and go back to the parent model.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Finalizar edición de submodelo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Sale de la edición en el sitio y vuelve al modelo padre.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Finalizar edición de submodelo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Sale de la edición en el sitio y vuelve al modelo padre.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2907"/>
@@ -9564,6 +9601,11 @@ El formato de archivo no se reconoce.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Herramienta de ampliación de región&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Arrastre un rectángulo alrededor del área que desea inspeccionar. La vista se amplía para enmarcar esa región sin cambiar la geometría del modelo.&lt;/p&gt;</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1073"/>
+        <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Steps back one layer per press: closes the Find and Replace bar, cancels a face or cutaway pick or a cutaway resize, clears the selection, then leaves joint mode, removes the cutaway, and ends in-place submodel editing one level up.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Cancelar acción&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Retrocede una capa por pulsación: cierra la barra Buscar y reemplazar, cancela una selección de cara o de corte o un cambio de tamaño del corte, borra la selección, luego sale del modo articulación, quita el corte y termina la edición del submodelo en su sitio, un nivel hacia arriba.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="1397"/>
         <source>&lt;p&gt;&lt;b&gt;First Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the model at its first building step. Step navigation changes which parts are visible; it does not move parts to a different step.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Primer paso&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Muestra el modelo en su primer paso de construcción. La navegación por pasos cambia qué piezas son visibles; no mueve piezas a un paso diferente.&lt;/p&gt;</translation>
@@ -9662,9 +9704,8 @@ El formato de archivo no se reconoce.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Rotación de articulación&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Con un submodelo con articulación seleccionado, cambia a la herramienta Rotar con el manipulador en el pivote de la articulación elegida, contorneada en rojo, y las teclas de rotación y la herramienta Rotar giran la articulación alrededor de su propio pivote y eje. Una bisagra solo gira sobre su eje. Al seleccionar otra cosa vuelve al punto de pivote. Usar rotación de articulación en Preferencias hace esto siempre que un submodelo seleccionado tiene una articulación.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
         <source>&lt;p&gt;&lt;b&gt;Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel. The Joint Mode Start preference picks which joint opens: the first joint, the last used joint, or an overview of rings to pick from. Press it again to leave joint mode.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Modo articulación&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Trabaja con la articulación del submodelo seleccionado, igual que al hacer clic en ella en el panel Articulaciones. Con una pieza seleccionada dentro de un submodelo con articulación, sube a ese submodelo. Sin nada seleccionado, abre la articulación elegida en el panel Articulaciones. La preferencia Inicio del modo articulación elige qué articulación se abre: la primera, la última usada o una vista general de anillos para elegir. Púlsalo otra vez para salir del modo articulación.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Modo articulación&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Trabaja con la articulación del submodelo seleccionado, igual que al hacer clic en ella en el panel Articulaciones. Con una pieza seleccionada dentro de un submodelo con articulación, sube a ese submodelo. Sin nada seleccionado, abre la articulación elegida en el panel Articulaciones. La preferencia Inicio del modo articulación elige qué articulación se abre: la primera, la última usada o una vista general de anillos para elegir. Púlsalo otra vez para salir del modo articulación.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2619"/>
@@ -9792,9 +9833,8 @@ El formato de archivo no se reconoce.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Herramienta Articulaciones&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Arrastre un submodelo que tiene una articulación para girarlo. Las bisagras giran sobre su eje con el arrastre horizontal, las rótulas giran sobre las direcciones arriba y derecha de la pantalla. Ajustar rotaciones define los pasos y un arrastre es un paso de deshacer. Use Pieza &amp;gt; Articulación &amp;gt; Definir articulación para dar una articulación a un submodelo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1073"/>
         <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cancel the current mouse action, a face or cutaway pick or a cutaway resize, leave joint mode, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Cancelar acción&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cancela la acción actual del ratón, la selección de una cara o de un corte, o el cambio de tamaño de un corte, sale del modo de articulaciones, cierra la barra Buscar y reemplazar o borra la selección. Sin nada seleccionado quita el corte.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Cancelar acción&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cancela la acción actual del ratón, la selección de una cara o de un corte, o el cambio de tamaño de un corte, sale del modo de articulaciones, cierra la barra Buscar y reemplazar o borra la selección. Sin nada seleccionado quita el corte.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1631"/>
@@ -18952,73 +18992,73 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Personalizado (%1 grados)...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="237"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="235"/>
         <source>Part</source>
         <translation>Pieza</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="239"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="237"/>
         <source>Camera</source>
         <translation>Cámara</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="241"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="239"/>
         <source>Light</source>
         <translation>Luz</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="243"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="241"/>
         <source>Origin</source>
         <translation>Origen</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="245"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="243"/>
         <source>%1 X: %2 Y: %3 Z: %4</source>
         <translation>%1 X: %2 Y: %3 Z: %4</translation>
     </message>
     <message>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="372"/>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="376"/>
         <source>free</source>
         <translation>libre</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="372"/>
         <source>%1, %2</source>
         <translation>%1, %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
         <source>relative</source>
         <translation>relativas</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
         <source>absolute</source>
         <translation>absolutas</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="376"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
         <source>%1 deg.</source>
         <translation>%1 grados</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="377"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
         <source>separately</source>
         <translation>por separado</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="377"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
         <source>together</source>
         <translation>juntas</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="379"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="377"/>
         <source>Move: %1 - Axes: %2 - Rotate: %3 / %4</source>
         <translation>Mover: %1 - Ejes: %2 - Rotar: %3 / %4</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="381"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="379"/>
         <source>Movement snap, rotation snap, transform axes and rotation pivot. Change them with the last buttons of the standard toolbar.</source>
         <translation>Ajuste de traslación, ajuste de rotación, ejes de transformación y pivote de rotación. Cámbialos con los últimos botones de la barra de herramientas estándar.</translation>
     </message>
@@ -19264,7 +19304,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">%1 (ID: %2)</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="174"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="172"/>
         <source>%n objects selected</source>
         <translation>
             <numerusform>%n objeto seleccionado</numerusform>
@@ -19403,12 +19443,12 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Ángulo de ajuste en grados</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="204"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="202"/>
         <source> in group &apos;%1&apos;</source>
         <translation> dentro del grupo &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="329"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="327"/>
         <source>Step %1</source>
         <translation>Paso %1</translation>
     </message>
@@ -19417,22 +19457,22 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished"> M: %1 %2 R: %3 </translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="408"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="406"/>
         <source>&amp;Undo %1</source>
         <translation>&amp;Deshacer %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="413"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="411"/>
         <source>&amp;Undo</source>
         <translation>Des&amp;hacer</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="419"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="417"/>
         <source>&amp;Redo %1</source>
         <translation>&amp;Rehacer %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="424"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="422"/>
         <source>&amp;Redo</source>
         <translation>&amp;Rehacer</translation>
     </message>
@@ -19568,44 +19608,44 @@ Choose where to save it and download the latest %3 now?</source>
         </translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="286"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="284"/>
         <source>View: %1 deg. Lat. / %2 deg. Lon. / %3</source>
         <translation>Vista: %1 grados Lat. / %2 grados Lon. / %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="285"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="283"/>
         <source>Perspective</source>
         <translation>Perspectiva</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="168"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="166"/>
         <source>%1 - ID: %2 - Weight: %3</source>
         <translation>%1 - ID: %2 - Peso: %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="168"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="193"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="200"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="166"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="191"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="198"/>
         <source>N/A</source>
         <translation>N/D</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="196"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="194"/>
         <source>%1 g Total</source>
         <translation>%1 g en total</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="198"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="196"/>
         <source>%1 g</source>
         <translation>%1 g</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="200"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="198"/>
         <source> - %1 - ID: %2 - Weight: %3</source>
         <translation> - %1 - ID: %2 - Peso: %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="285"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="283"/>
         <source>Orthographic</source>
         <translation>Ortográfica</translation>
     </message>

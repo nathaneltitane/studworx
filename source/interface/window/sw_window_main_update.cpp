@@ -128,8 +128,6 @@ void swMainWindow::UpdateSelectedObjects(bool SelectionChanged)
 		mActions[SW_TIMELINE_MOVE_SELECTION]->setEnabled(Flags & SW_SELECTION_PART);
 		mActions[SW_TIMELINE_MOVE_SELECTION_BEFORE]->setEnabled(Flags & SW_SELECTION_PART);
 		mActions[SW_TIMELINE_MOVE_SELECTION_AFTER]->setEnabled(Flags & SW_SELECTION_PART);
-
-		mActions[SW_PART_EDIT_END_SUBMODEL]->setEnabled(GetCurrentTabModel() != ActiveModel);
 	}
 
 	mPropertiesWidget->Update(Selection, Focus);

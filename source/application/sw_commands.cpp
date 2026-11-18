@@ -1069,8 +1069,8 @@ const swCommand gCommands[] =
 	{
 		QT_TRANSLATE_NOOP("Action", "Edit.Cancel"),
 		QT_TRANSLATE_NOOP("Menu", "Cancel Action"),
-		QT_TRANSLATE_NOOP("Status", "Cancel current mouse action"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Cancel Action</b></p><p>Cancel the current mouse action, a face or cutaway pick or a cutaway resize, leave joint mode, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.</p>"),
+		QT_TRANSLATE_NOOP("Status", "Cancel the current action, one layer per press"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Cancel Action</b></p><p>Steps back one layer per press: closes the Find and Replace bar, cancels a face or cutaway pick or a cutaway resize, clears the selection, then leaves joint mode, removes the cutaway, and ends in-place submodel editing one level up.</p>"),
 		"Esc"
 	},
 
@@ -2597,8 +2597,8 @@ const swCommand gCommands[] =
 	{
 		QT_TRANSLATE_NOOP("Action", "Part.JointMode"),
 		QT_TRANSLATE_NOOP("Menu", "Joint &Mode"),
-		QT_TRANSLATE_NOOP("Status", "Go into joint mode on the selected submodel, or leave it"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joint Mode</b></p><p>Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel. The Joint Mode Start preference picks which joint opens: the first joint, the last used joint, or an overview of rings to pick from. Press it again to leave joint mode.</p>"),
+		QT_TRANSLATE_NOOP("Status", "Go into joint mode on the selected submodel"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joint Mode</b></p><p>Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel. The Joint Mode Start preference picks which joint opens: the first joint, the last used joint, or an overview of rings to pick from. Ctrl+Shift+W or Esc leaves it.</p>"),
 		"Ctrl+Shift+J"
 	},
 
@@ -2893,9 +2893,9 @@ const swCommand gCommands[] =
 	// SW_PART_EDIT_END_SUBMODEL
 	{
 		QT_TRANSLATE_NOOP("Action", "Part.EditEndSubmodel"),
-		QT_TRANSLATE_NOOP("Menu", "End Submodel Editing"),
-		QT_TRANSLATE_NOOP("Status", "End in-place submodel editing"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>End Submodel Editing</b></p><p>Leave in-place editing and go back to the parent model.</p>"),
+		QT_TRANSLATE_NOOP("Menu", "Exit Mode"),
+		QT_TRANSLATE_NOOP("Status", "Exit the innermost mode, one layer per press"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Exit Mode</b></p><p>Exits one mode per press, innermost first: a face or cutaway pick, joint mode, the cutaway, then in-place submodel editing one level up. The selection stays as it is.</p>"),
 		"Ctrl+Shift+W"
 	},
 

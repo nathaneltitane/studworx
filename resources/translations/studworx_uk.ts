@@ -3578,6 +3578,10 @@
         <translation>Вісь Z</translation>
     </message>
     <message>
+        <source>End Mode</source>
+        <translation type="vanished">Завершити режим</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="3013"/>
         <source>Proper&amp;ties...</source>
         <translation>Вла&amp;стивості...</translation>
@@ -4104,6 +4108,11 @@
         <translation>Завантажувати всі деталі перед показом</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2896"/>
+        <source>Exit Mode</source>
+        <translation>Завершити режим</translation>
+    </message>
+    <message>
         <source>&amp;Insert</source>
         <translatorcomment>Machine-translated draft (Google Translate); requires human review.</translatorcomment>
         <translation type="obsolete">&amp;Вставка</translation>
@@ -4264,9 +4273,8 @@
         <translation>Редагувати вибрану підмодель</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2896"/>
         <source>End Submodel Editing</source>
-        <translation>Завершити редагування підмоделі</translation>
+        <translation type="vanished">Завершити редагування підмоделі</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2905"/>
@@ -7030,9 +7038,8 @@ File format is not recognized.</source>
         <translation>Масштабувати ділянку екрана</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1072"/>
         <source>Cancel current mouse action</source>
-        <translation>Скасувати поточну дію миші</translation>
+        <translation type="vanished">Скасувати поточну дію миші</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1081"/>
@@ -7622,14 +7629,17 @@ File format is not recognized.</source>
         <translation>Клацніть з’єднання виділеної підмоделі, щоб зробити його шарніром</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2600"/>
         <source>Go into joint mode on the selected submodel, or leave it</source>
-        <translation>Увійти в режим шарніра вибраної підмоделі або вийти з нього</translation>
+        <translation type="vanished">Увійти в режим шарніра вибраної підмоделі або вийти з нього</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2609"/>
         <source>Leave joint mode and go back to where it started</source>
         <translation>Вийти з режиму шарніра й повернутися туди, де він почався</translation>
+    </message>
+    <message>
+        <source>End the innermost mode, one layer per press</source>
+        <translation type="vanished">Завершити найвнутрішніший режим, один шар за натискання</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3401"/>
@@ -7775,6 +7785,11 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="451"/>
         <source>Toggle setting a joint where a dragged submodel snaps on a round connection</source>
         <translation>Перемкнути задання шарніра, коли перетягнута підмодель прив’язується до круглого з’єднання</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1072"/>
+        <source>Cancel the current action, one layer per press</source>
+        <translation>Скасувати поточну дію, один шар за натискання</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1450"/>
@@ -7983,6 +7998,11 @@ File format is not recognized.</source>
         <translation>Обертати виділену підмодель навколо її вибраного шарніра замість опорної точки</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2600"/>
+        <source>Go into joint mode on the selected submodel</source>
+        <translation>Увійти в режим шарніра для вибраної підмоделі</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="2618"/>
         <source>Reset the pivot point of the selected parts to their origin</source>
         <translation>Скинути опорну точку виділених деталей до їхнього початку координат</translation>
@@ -8041,6 +8061,11 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="2879"/>
         <source>Replace every submodel, and the submodels inside it, with its parts in one step</source>
         <translation>Замінити кожну підмодель, разом із підмоделями всередині неї, її деталями за один крок</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2897"/>
+        <source>Exit the innermost mode, one layer per press</source>
+        <translation>Завершити найвнутрішніший режим, один шар за натискання</translation>
     </message>
     <message>
         <source>Remove all key frames from the selected parts</source>
@@ -8154,9 +8179,8 @@ File format is not recognized.</source>
         <translation>Редагувати вибрану підмодель на місці</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2897"/>
         <source>End in-place submodel editing</source>
-        <translation>Завершити редагування підмоделі на місці</translation>
+        <translation type="vanished">Завершити редагування підмоделі на місці</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2906"/>
@@ -8830,6 +8854,20 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;Інструмент «Покрутити»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Виділіть об’єкти, а потім перетягніть ручку обертання у вигляді моделі. «Прив’язка обертання» задає кроки кута. «Параметри трансформації» вибирають відносні осі або осі моделі та те, чи обертаються деталі разом чи окремо.&lt;/p&gt;</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
+        <source>&lt;p&gt;&lt;b&gt;Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel. The Joint Mode Start preference picks which joint opens: the first joint, the last used joint, or an overview of rings to pick from. Ctrl+Shift+W or Esc leaves it.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Режим шарніра&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Працює з шарніром вибраної підмоделі, так само як клацання по ньому на панелі «Шарніри». Якщо вибрано деталь усередині підмоделі з шарніром, піднімається до цієї підмоделі. Якщо нічого не вибрано, відкриває шарнір, вибраний на панелі «Шарніри». Параметр «Початок режиму шарніра» визначає, який шарнір відкриється: перший, останній використаний або огляд кілець для вибору. Ctrl+Shift+W або Esc виходить із нього.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2898"/>
+        <source>&lt;p&gt;&lt;b&gt;Exit Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Exits one mode per press, innermost first: a face or cutaway pick, joint mode, the cutaway, then in-place submodel editing one level up. The selection stays as it is.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Завершити режим&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Завершує один режим за натискання, починаючи з найвнутрішнішого: вибір грані чи розрізу, режим шарніра, розріз, потім редагування підмоделі на місці на рівень вище. Виділення лишається як є.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;p&gt;&lt;b&gt;End Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ends one mode per press, innermost first: a face or cutaway pick, joint mode, the cutaway, then in-place submodel editing one level up. The selection stays as it is.&lt;/p&gt;</source>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Завершити режим&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Завершує один режим за натискання, починаючи з найвнутрішнішого: вибір грані чи розрізу, режим шарніра, розріз, потім редагування підмоделі на місці на рівень вище. Виділення лишається як є.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cancel the current mouse action, a face or cutaway pick or a cutaway resize, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.&lt;/p&gt;</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Скасувати дію&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Скасувати поточну дію мишею, вибір грані чи розрізу або зміну розміру розрізу, закрити панель пошуку й заміни або очистити виділення. Якщо нічого не виділено, прибирає розріз.&lt;/p&gt;</translation>
     </message>
@@ -9369,9 +9407,8 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;Редагувати виділену підмодель&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Редагувати виділену підмодель на місці, всередині її батьківської. Панель шляху показує, де ви перебуваєте.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2898"/>
         <source>&lt;p&gt;&lt;b&gt;End Submodel Editing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Leave in-place editing and go back to the parent model.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Завершити редагування підмоделі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вийти з редагування на місці та повернутися до батьківської моделі.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Завершити редагування підмоделі&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вийти з редагування на місці та повернутися до батьківської моделі.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2907"/>
@@ -9583,6 +9620,11 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;Інструмент «Масштабувати регіон»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетягніть прямокутник навколо ділянки, яку потрібно оглянути. Вигляд наблизиться, щоб охопити цю ділянку, без зміни геометрії моделі.&lt;/p&gt;</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1073"/>
+        <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Steps back one layer per press: closes the Find and Replace bar, cancels a face or cutaway pick or a cutaway resize, clears the selection, then leaves joint mode, removes the cutaway, and ends in-place submodel editing one level up.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Скасувати дію&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Відступає на один шар за натискання: закриває панель «Знайти й замінити», скасовує вибір грані чи розрізу або зміну розміру розрізу, знімає виділення, потім виходить із режиму шарніра, прибирає розріз і завершує редагування підмоделі на місці на рівень вище.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="1397"/>
         <source>&lt;p&gt;&lt;b&gt;First Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the model at its first building step. Step navigation changes which parts are visible; it does not move parts to a different step.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Перший крок&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показати модель на її першому кроці побудови. Навігація по кроках змінює те, які деталі видимі; вона не переносить деталі на інший крок.&lt;/p&gt;</translation>
@@ -9681,9 +9723,8 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;Обертання шарніра&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Коли виділено одну підмодель із шарніром, перемикає на інструмент «Покрутити» з маніпулятором на осі обраного шарніра, обведеного червоним, а клавіші обертання та інструмент «Покрутити» повертають шарнір навколо його власної точки повороту й осі. Завіса повертається лише навколо своєї осі. Виділення чогось іншого повертає до опорної точки. Параметр «Обертання шарніра» в налаштуваннях робить це щоразу, коли виділена підмодель має шарнір.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
         <source>&lt;p&gt;&lt;b&gt;Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel. The Joint Mode Start preference picks which joint opens: the first joint, the last used joint, or an overview of rings to pick from. Press it again to leave joint mode.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Режим шарніра&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Працює з шарніром вибраної підмоделі, так само як клацання по ньому на панелі «Шарніри». Якщо вибрано деталь усередині підмоделі з шарніром, піднімається до цієї підмоделі. Якщо нічого не вибрано, відкриває шарнір, вибраний на панелі «Шарніри». Параметр «Початок режиму шарніра» визначає, який шарнір відкриється: перший, останній використаний або огляд кілець для вибору. Натисніть ще раз, щоб вийти з режиму шарніра.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Режим шарніра&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Працює з шарніром вибраної підмоделі, так само як клацання по ньому на панелі «Шарніри». Якщо вибрано деталь усередині підмоделі з шарніром, піднімається до цієї підмоделі. Якщо нічого не вибрано, відкриває шарнір, вибраний на панелі «Шарніри». Параметр «Початок режиму шарніра» визначає, який шарнір відкриється: перший, останній використаний або огляд кілець для вибору. Натисніть ще раз, щоб вийти з режиму шарніра.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2619"/>
@@ -9811,9 +9852,8 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;Інструмент «Шарніри»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Перетягніть підмодель із шарніром, щоб повернути її. Петлі обертаються навколо своєї осі під час горизонтального перетягування, кулі обертаються навколо напрямків екрана вгору й праворуч. «Прив’язка обертання» задає кроки, а одне перетягування становить один крок скасування. Щоб додати підмоделі шарнір, скористайтеся Деталь &amp;gt; Шарнір &amp;gt; Задати шарнір.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1073"/>
         <source>&lt;p&gt;&lt;b&gt;Cancel Action&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cancel the current mouse action, a face or cutaway pick or a cutaway resize, leave joint mode, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Скасувати дію&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Скасувати поточну дію мишею, вибір грані чи розрізу або зміну розміру розрізу, вийти з режиму шарнірів, закрити панель пошуку й заміни або очистити виділення. Якщо нічого не виділено, прибирає розріз.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Скасувати дію&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Скасувати поточну дію мишею, вибір грані чи розрізу або зміну розміру розрізу, вийти з режиму шарнірів, закрити панель пошуку й заміни або очистити виділення. Якщо нічого не виділено, прибирає розріз.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1631"/>
@@ -19134,7 +19174,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">%1 (ID: %2)</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="174"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="172"/>
         <source>%n objects selected</source>
         <translation>
             <numerusform>Вибрано %n об&apos;єкт</numerusform>
@@ -19148,103 +19188,103 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete"> - %1 (ID: %2)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="204"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="202"/>
         <source> in group &apos;%1&apos;</source>
         <translation> в групі &apos;%1&apos;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="237"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="235"/>
         <source>Part</source>
         <translation>Деталь</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="239"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="237"/>
         <source>Camera</source>
         <translation>Камера</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="241"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="239"/>
         <source>Light</source>
         <translation>Світло</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="243"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="241"/>
         <source>Origin</source>
         <translation>Початок координат</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="245"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="243"/>
         <source>%1 X: %2 Y: %3 Z: %4</source>
         <translation>%1 X: %2 Y: %3 Z: %4</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="329"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="327"/>
         <source>Step %1</source>
         <translation>Крок %1</translation>
     </message>
     <message>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="372"/>
         <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="376"/>
         <source>free</source>
         <translation>вільно</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="372"/>
         <source>%1, %2</source>
         <translation>%1, %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
         <source>relative</source>
         <translation>відносні</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="373"/>
         <source>absolute</source>
         <translation>абсолютні</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="376"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="374"/>
         <source>%1 deg.</source>
         <translation>%1 град.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="377"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
         <source>separately</source>
         <translation>окремо</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="377"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="375"/>
         <source>together</source>
         <translation>разом</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="379"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="377"/>
         <source>Move: %1 - Axes: %2 - Rotate: %3 / %4</source>
         <translation>Переміщення: %1 - Осі: %2 - Обертання: %3 / %4</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="381"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="379"/>
         <source>Movement snap, rotation snap, transform axes and rotation pivot. Change them with the last buttons of the standard toolbar.</source>
         <translation>Прив’язка переміщення, прив’язка обертання, осі трансформації та опорна точка обертання. Змінюйте їх останніми кнопками стандартної панелі інструментів.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="408"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="406"/>
         <source>&amp;Undo %1</source>
         <translation>&amp;Скасувати %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="413"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="411"/>
         <source>&amp;Undo</source>
         <translation>&amp;Скасувати</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="419"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="417"/>
         <source>&amp;Redo %1</source>
         <translation>&amp;Повторити %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="424"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="422"/>
         <source>&amp;Redo</source>
         <translation>&amp;Повторити</translation>
     </message>
@@ -19547,44 +19587,44 @@ Choose where to save it and download the latest %3 now?</source>
         </translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="286"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="284"/>
         <source>View: %1 deg. Lat. / %2 deg. Lon. / %3</source>
         <translation>Вигляд: %1 град. шир. / %2 град. довг. / %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="285"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="283"/>
         <source>Perspective</source>
         <translation>Перспектива</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="168"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="166"/>
         <source>%1 - ID: %2 - Weight: %3</source>
         <translation>%1 - ID: %2 - Вага: %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="168"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="193"/>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="200"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="166"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="191"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="198"/>
         <source>N/A</source>
         <translation>Н/д</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="196"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="194"/>
         <source>%1 g Total</source>
         <translation>%1 г загалом</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="198"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="196"/>
         <source>%1 g</source>
         <translation>%1 г</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="200"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="198"/>
         <source> - %1 - ID: %2 - Weight: %3</source>
         <translation> - %1 - ID: %2 - Вага: %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="285"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="283"/>
         <source>Orthographic</source>
         <translation>Ортографічна</translation>
     </message>

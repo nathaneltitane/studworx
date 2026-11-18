@@ -1009,7 +1009,7 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		break;
 
 	case SW_PART_JOINT_MODE:
-		if (ActiveView && !ActiveView->ToggleJointMode() && !(mJointsWidget && mJointsWidget->OpenCurrentJoint()))
+		if (ActiveView && !ActiveView->EnterJointMode() && !(mJointsWidget && mJointsWidget->OpenCurrentJoint()))
 			statusBar()->showMessage(tr("No joint here"), 3000);
 		break;
 
@@ -1020,7 +1020,7 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 
 	case SW_PART_EDIT_END_SUBMODEL:
 		if (ActiveView)
-			ActiveView->SetTopSubmodelActive();
+			ActiveView->EndLayerAction(false);
 		break;
 
 	case SW_PART_EDIT_SELECTED_SUBMODEL:
@@ -1509,7 +1509,7 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 
 	case SW_EDIT_CANCEL:
 		if (ActiveView && !ActiveView->CloseFindReplaceDialog())
-			ActiveView->CancelTrackingOrClearSelectionAction();
+			ActiveView->EndLayerAction(true);
 		break;
 
 	case SW_TIMELINE_INSERT_BEFORE:

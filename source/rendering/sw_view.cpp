@@ -464,15 +464,12 @@ void swView::EndJointFocus()
 }
 
 // joint mode from its key
-bool swView::ToggleJointMode()
+bool swView::EnterJointMode()
 {
 	swModel* ActiveModel = GetActiveModel();
 
 	if (ActiveModel->IsJointFocused())
-	{
-		EndJointFocus();
 		return true;
-	}
 
 	// the selected submodel first
 	if (swPart* Part = ActiveModel->GetJointPart(); Part && Part->HasJoints())
