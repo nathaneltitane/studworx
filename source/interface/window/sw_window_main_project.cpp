@@ -8,7 +8,7 @@
 #include "sw_widget_terminal.h"
 #endif
 #include "sw_widget_properties.h"
-#include "sw_widget_timeline.h"
+#include "sw_widget_steps.h"
 #include "sw_view_widget.h"
 #include "sw_widget_list_color.h"
 #include "sw_window_utilities.h"

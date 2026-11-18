@@ -60,7 +60,7 @@ void swModel::Merge(std::unique_ptr<swModel> Other)
 
 	Other->mGroups.clear();
 
-	gMainWindow->UpdateTimeline(false, false);
+	gMainWindow->UpdateSteps(false, false);
 }
 
 swResult<void> swModel::Cut()
@@ -81,7 +81,7 @@ swResult<void> swModel::Cut()
 	EndEditHistory();
 	EndHistorySequence(tr("Cut"));
 
-	gMainWindow->UpdateTimeline(false, false);
+	gMainWindow->UpdateSteps(false, false);
 	gMainWindow->UpdateSelectedObjects(true);
 
 	return swResult<void>();
@@ -163,7 +163,7 @@ swResult<void> swModel::Paste(bool PasteToCurrentStep)
 
 	EndHistorySequence(tr("Paste"));
 
-	gMainWindow->UpdateTimeline(false, false);
+	gMainWindow->UpdateSteps(false, false);
 
 	return swResult<void>();
 }
@@ -240,7 +240,7 @@ void swModel::DuplicateSelectedParts()
 
 	EndHistorySequence(tr("Duplicate"));
 
-	gMainWindow->UpdateTimeline(false, false);
+	gMainWindow->UpdateSteps(false, false);
 }
 
 void swModel::PaintSelectedParts()

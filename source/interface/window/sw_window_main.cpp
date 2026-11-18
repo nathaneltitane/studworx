@@ -7,7 +7,7 @@
 #include "sw_widget_terminal.h"
 #endif
 #include "sw_widget_properties.h"
-#include "sw_widget_timeline.h"
+#include "sw_widget_steps.h"
 #include "sw_view_widget.h"
 #include "sw_widget_list_color.h"
 #include "sw_window_utilities.h"
@@ -546,7 +546,7 @@ void swMainWindow::UpdateAssets()
 	for (const std::unique_ptr<swModel>& Model : Project->GetModels())
 		Model->UpdatePartData(UpdatedModels);
 
-	UpdateTimeline(false, true);
+	UpdateSteps(false, true);
 
 	swView::UpdateProjectViews(Project);
 
@@ -776,7 +776,7 @@ QMenu* swMainWindow::createPopupMenu()
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_PARTS]);
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_COLORS]);
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_PROPERTIES]);
-	Menu->addAction(mActions[SW_VIEW_TOOLBAR_TIMELINE]);
+	Menu->addAction(mActions[SW_VIEW_TOOLBAR_STEPS]);
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_PREVIEW]);
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_MINIFIGURE_BUILDER]);
 	Menu->addAction(mActions[SW_VIEW_TOOLBAR_EXPLODE]);
@@ -812,7 +812,7 @@ void swMainWindow::UpdateDockWidgetActions()
 	mActions[SW_VIEW_TOOLBAR_PARTS]->setChecked(mPartsToolBar->isVisible());
 	mActions[SW_VIEW_TOOLBAR_COLORS]->setChecked(mColorsToolBar->isVisible());
 	mActions[SW_VIEW_TOOLBAR_PROPERTIES]->setChecked(mPropertiesToolBar->isVisible());
-	mActions[SW_VIEW_TOOLBAR_TIMELINE]->setChecked(mTimelineToolBar->isVisible());
+	mActions[SW_VIEW_TOOLBAR_STEPS]->setChecked(mStepsToolBar->isVisible());
 	mActions[SW_VIEW_TOOLBAR_STANDARD]->setChecked(mStandardToolBar->isVisible());
 	mActions[SW_VIEW_TOOLBAR_TOOLS]->setChecked(mToolsToolBar->isVisible());
 	mActions[SW_VIEW_TOOLBAR_TIME]->setChecked(mTimeToolBar->isVisible());

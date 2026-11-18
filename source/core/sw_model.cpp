@@ -506,7 +506,7 @@ void swModel::SetCurrentStep(swStep Step)
 
 	if (gMainWindow)
 	{
-		gMainWindow->UpdateTimeline(false, false);
+		gMainWindow->UpdateSteps(false, false);
 		gMainWindow->UpdateSelectedObjects(true);
 	}
 
@@ -830,7 +830,7 @@ void swModel::ShowArrayDialog()
 
 	EndHistorySequence(tr("Part Array"));
 
-	gMainWindow->UpdateTimeline(false, false);
+	gMainWindow->UpdateSteps(false, false);
 }
 
 // use to find the part that stays in place, the first and last selected follow the model order
@@ -892,7 +892,7 @@ void swModel::Explode(const swExplodeSettings& Settings)
 
 		mExplodeRevision = mUndoHistory.empty() ? 0 : mUndoHistory.front()->Revision;
 
-		gMainWindow->UpdateTimeline(false, false);
+		gMainWindow->UpdateSteps(false, false);
 		gMainWindow->UpdateInUseCategory();
 
 		if (!Anchor)
@@ -1224,7 +1224,7 @@ void swModel::AddMinifigure(const swMinifigure& Minifigure)
 
 	EndHistorySequence(tr("Add Minifigure"));
 
-	gMainWindow->UpdateTimeline(false, false);
+	gMainWindow->UpdateSteps(false, false);
 }
 
 void swModel::SetMinifigure(const swMinifigure& Minifigure)
@@ -1270,7 +1270,7 @@ void swModel::UpdateInterface()
 	if (!gMainWindow)
 		return;
 
-	gMainWindow->UpdateTimeline(true, false);
+	gMainWindow->UpdateSteps(true, false);
 	gMainWindow->UpdateUndoRedo(!mUndoHistory.empty() ? mUndoHistory[0]->Description : nullptr, !mRedoHistory.empty() ? mRedoHistory[0]->Description : nullptr);
 	gMainWindow->UpdatePaste(!gApplication->mClipboard.isEmpty());
 	gMainWindow->UpdateCategories();

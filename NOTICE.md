@@ -4,7 +4,8 @@
   <summary>2026-11-18</summary>
 
   - Keyboard preferences: a Built-in Keys group at the end lists the keys that can't be changed, greyed out
-  - Shortcuts: Delete removes only what is selected where you work: the joint in the Joints panel, the step in the Timeline, the picked keys in the Keyframes panel, the pointers, notices or blank page in the instructions, or the selected objects in the view; it can be changed in Keyboard preferences
+  - Shortcuts: Delete removes only what is selected where you work: the joint in the Joints panel, the step in the Steps panel, the picked keys in the Keyframes panel, the pointers, notices or blank page in the instructions, or the selected objects in the view; Del always deletes, listed under Built-in Keys in Keyboard preferences and can't be given to another command
+  - Steps panel: the Timeline panel is now the Steps panel, saved shortcuts and panel places carry over
   - Keyframes panel: click a diamond to pick it, Ctrl+click to add or take it out, Shift+click to take it out; picked keys light up and Delete removes them
   - Shortcuts: Ctrl+Shift+W, Exit Mode in the menus and Keyboard preferences, exits one mode per press, innermost first: a pick, joint mode, the cutaway, then in-place submodel editing; it keeps the selection
   - Shortcuts: Esc steps back the same way, clears the selection before leaving a mode, and now also steps out of in-place submodel editing

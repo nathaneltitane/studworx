@@ -41,7 +41,7 @@ void swScene::Begin(const swMatrix44& ViewMatrix)
 	mFadeJointColor = swVector4FromColor(Preferences.mFadeJointColor);
 	mHoverColor = swVector4FromColor(Preferences.mHoverOutlineColor);
 
-	// missing parts match the timeline warning
+	// missing parts match the steps warning
 
 	const QColor MissingColor = swGetWarningTextColor();
 	mMissingColor = swVector4(MissingColor.redF(), MissingColor.greenF(), MissingColor.blueF(), 1.0f);

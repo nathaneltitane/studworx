@@ -301,11 +301,11 @@ The Blender LDraw import add-on handles these commands when Import Cameras and I
 | Command | Option | Use |
 | --- | --- | --- |
 | `0 BFC` | BFC | back face culling |
-| `0 CLEAR` | CLEAR Command | hides earlier parts in the timeline |
+| `0 CLEAR` | CLEAR Command | hides earlier parts from that step on |
 | `0 !LEOCAD GROUP`, `0 GROUP` | GROUP Command | collections from groups |
 | `0 !LEOCAD CAMERA` | Import Cameras | cameras |
 | `0 !LEOCAD LIGHT` | Import Lights | lights |
 | `0 PRINT`, `0 WRITE` | PRINT/WRITE Command | messages printed to the console |
-| `0 STEP` | STEP Command, STEP Groups | timeline keys and step collections |
+| `0 STEP` | STEP Command, STEP Groups | step keys and step collections |
 | `0 !TEXMAP`, `0 !DATA` | TEXMAP and DATA Command | textures |
 | `0 PAUSE`, `0 SAVE` | PAUSE Command, SAVE Command | not implemented |

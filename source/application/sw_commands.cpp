@@ -1412,7 +1412,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Time.Next"),
 		QT_TRANSLATE_NOOP("Menu", "Next"),
 		QT_TRANSLATE_NOOP("Status", "Go to the next step"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Next Step</b></p><p>Display the next building step to reveal the next stage of the model. Use the Timeline to change which step introduces a part.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Next Step</b></p><p>Display the next building step to reveal the next stage of the model. Use the Steps panel to change which step introduces a part.</p>"),
 		"Ctrl+N"
 	},
 
@@ -1587,11 +1587,11 @@ const swCommand gCommands[] =
 		"F9"
 	},
 
-	// SW_VIEW_TOOLBAR_TIMELINE
+	// SW_VIEW_TOOLBAR_STEPS
 	{
-		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Timeline"),
-		QT_TRANSLATE_NOOP("Menu", "Timeline Panel"),
-		QT_TRANSLATE_NOOP("Status", "Toggle the Timeline panel"),
+		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Steps"),
+		QT_TRANSLATE_NOOP("Menu", "Steps Panel"),
+		QT_TRANSLATE_NOOP("Status", "Toggle the Steps panel"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Show or Hide</b></p><p>Show or hide this toolbar or panel. A right click on any toolbar or panel title gives the same list.</p>"),
 		"F10"
 	},
@@ -1654,7 +1654,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "View.Toolbars.Keyframes"),
 		QT_TRANSLATE_NOOP("Menu", "Keyframes Panel"),
 		QT_TRANSLATE_NOOP("Status", "Toggle the Keyframes panel"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Keyframes</b></p><p>Show or hide the Keyframes panel, a timeline of the animation keys of the objects per step.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Keyframes</b></p><p>Show or hide the Keyframes panel, a chart of the animation keys of the objects per step.</p>"),
 		""
 	},
 
@@ -2544,7 +2544,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.Delete"),
 		QT_TRANSLATE_NOOP("Menu", "&Delete"),
 		QT_TRANSLATE_NOOP("Status", "Delete what is selected where you work"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Delete</b></p><p>Removes only what is selected, picked by where you work: the joint in the Joints panel, the step in the Timeline panel, the picked keys in the Keyframes panel, or the selected keys at the current step when none are picked, and the selected pointers, notices or blank page in the instructions. In the view it removes a focused control point alone, otherwise the selected objects. With nothing selected it does nothing.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Delete</b></p><p>Removes only what is selected, picked by where you work: the joint in the Joints panel, the step in the Steps panel, the picked keys in the Keyframes panel, or the selected keys at the current step when none are picked, and the selected pointers, notices or blank page in the instructions. In the view it removes a focused control point alone, otherwise the selected objects. With nothing selected it does nothing.</p>"),
 		"Delete"
 	},
 
@@ -3421,25 +3421,25 @@ const swCommand gCommands[] =
 		""
 	},
 
-	// SW_TIMELINE_INSERT_BEFORE
+	// SW_STEPS_INSERT_BEFORE
 	{
 		"",
 		QT_TRANSLATE_NOOP("Menu", "Insert Step Before"),
 		QT_TRANSLATE_NOOP("Status", "Insert a new step before the current step"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Insert Step Before</b></p><p>Add an empty step before this step in the Timeline.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Insert Step Before</b></p><p>Add an empty step before this step in the Steps panel.</p>"),
 		""
 	},
 
-	// SW_TIMELINE_INSERT_AFTER
+	// SW_STEPS_INSERT_AFTER
 	{
 		"",
 		QT_TRANSLATE_NOOP("Menu", "Insert Step After"),
 		QT_TRANSLATE_NOOP("Status", "Insert a new step after the current step"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Insert Step After</b></p><p>Add an empty step after this step in the Timeline.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Insert Step After</b></p><p>Add an empty step after this step in the Steps panel.</p>"),
 		""
 	},
 
-	// SW_TIMELINE_DELETE
+	// SW_STEPS_DELETE
 	{
 		"",
 		QT_TRANSLATE_NOOP("Menu", "Delete Step"),
@@ -3448,7 +3448,7 @@ const swCommand gCommands[] =
 		""
 	},
 
-	// SW_TIMELINE_MOVE_SELECTION
+	// SW_STEPS_MOVE_SELECTION
 	{
 		"",
 		QT_TRANSLATE_NOOP("Menu", "Move Selection Here"),
@@ -3457,7 +3457,7 @@ const swCommand gCommands[] =
 		""
 	},
 
-	// SW_TIMELINE_MOVE_SELECTION_BEFORE
+	// SW_STEPS_MOVE_SELECTION_BEFORE
 	{
 		"",
 		QT_TRANSLATE_NOOP("Menu", "Move Selection Before"),
@@ -3466,7 +3466,7 @@ const swCommand gCommands[] =
 		""
 	},
 
-	// SW_TIMELINE_MOVE_SELECTION_AFTER
+	// SW_STEPS_MOVE_SELECTION_AFTER
 	{
 		"",
 		QT_TRANSLATE_NOOP("Menu", "Move Selection After"),
@@ -3475,11 +3475,11 @@ const swCommand gCommands[] =
 		""
 	},
 
-	// SW_TIMELINE_SET_CURRENT
+	// SW_STEPS_SET_CURRENT
 	{
 		"",
 		QT_TRANSLATE_NOOP("Menu", "Set Current Step"),
-		QT_TRANSLATE_NOOP("Status", "View the model at this point in the timeline"),
+		QT_TRANSLATE_NOOP("Status", "View the model at this step"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Set Current Step</b></p><p>Show the model at this step.</p>"),
 		""
 	}

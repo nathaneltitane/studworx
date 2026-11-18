@@ -78,7 +78,7 @@ static const QRegularExpression swMinifigureShortName(QStringLiteral("Minifig(?!
 
 QString swRenameStoredName(QString Name)
 {
-	return Name.replace(QLatin1String("Edit.Tool.Pose"), QLatin1String("Edit.Tool.Joints")).replace(QLatin1String("View.Toolbars.Poses"), QLatin1String("View.Toolbars.Joints")).replace(QLatin1String("Pieces"), QLatin1String("Parts")).replace(QLatin1String("Piece"), QLatin1String("Part")).replace(QLatin1String("ViewSphere"), QLatin1String("ViewCube")).replace(swMinifigureShortName, QLatin1String("Minifigure"));
+	return Name.replace(QLatin1String("Edit.Tool.Pose"), QLatin1String("Edit.Tool.Joints")).replace(QLatin1String("View.Toolbars.Poses"), QLatin1String("View.Toolbars.Joints")).replace(QLatin1String("View.Toolbars.Timeline"), QLatin1String("View.Toolbars.Steps")).replace(QLatin1String("Pieces"), QLatin1String("Parts")).replace(QLatin1String("Piece"), QLatin1String("Part")).replace(QLatin1String("ViewSphere"), QLatin1String("ViewCube")).replace(swMinifigureShortName, QLatin1String("Minifigure"));
 }
 
 static void swMigrateRenamedKeys()
@@ -140,7 +140,8 @@ static void swMigrateRenamedToolbars()
 	{
 		{ QLatin1String("PiecesToolbar"), QLatin1String("PartsToolbar") },
 		{ QLatin1String("MinifigToolbar"), QLatin1String("MinifigureToolbar") },
-		{ QLatin1String("PosesToolbar"), QLatin1String("JointsToolbar") }
+		{ QLatin1String("PosesToolbar"), QLatin1String("JointsToolbar") },
+		{ QLatin1String("TimelineToolbar"), QLatin1String("StepsToolbar") }
 	};
 
 	QSettings Settings;

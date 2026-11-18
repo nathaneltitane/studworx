@@ -21,7 +21,7 @@ SOURCES += \
 	$$PWD/sw_widget_selection_part_popup.cpp \
 	$$PWD/sw_widget_spin_box_double.cpp \
 	$$PWD/sw_widget_spinner.cpp \
-	$$PWD/sw_widget_timeline.cpp
+	$$PWD/sw_widget_steps.cpp
 
 HEADERS += \
 	$$PWD/sw_widget_builder_minifigure.h \
@@ -44,7 +44,7 @@ HEADERS += \
 	$$PWD/sw_widget_spin_box_double.h \
 	$$PWD/sw_widget_spinner.h \
 	$$PWD/sw_widget_text_edit.h \
-	$$PWD/sw_widget_timeline.h
+	$$PWD/sw_widget_steps.h
 
 FORMS += \
 	$$PWD/sw_widget_builder_minifigure.ui \

@@ -136,7 +136,9 @@ void swPreferencesDialog::UpdateCommandList()
 
 	for (unsigned int ActionIndex = 0; ActionIndex < SW_COMMAND_COUNT; ActionIndex++)
 	{
-		if (!gCommands[ActionIndex].ID[0])
+		// del sits in the built-in keys
+
+		if (!gCommands[ActionIndex].ID[0] || ActionIndex == SW_PART_DELETE)
 			continue;
 
 		const QString Identifier = tr(gCommands[ActionIndex].ID);
@@ -205,6 +207,7 @@ void swPreferencesDialog::UpdateCommandList()
 	const std::pair<const char*, const char*> BuiltInKeys[] =
 	{
 		{ QT_TR_NOOP("Help for the panel under the pointer"), QT_TR_NOOP("F1") },
+		{ QT_TR_NOOP("Delete what is selected where you work"), QT_TR_NOOP("Del") },
 		{ QT_TR_NOOP("Add to the selection"), QT_TR_NOOP("Ctrl+Click") },
 		{ QT_TR_NOOP("Remove from the selection"), QT_TR_NOOP("Shift+Click") },
 		{ QT_TR_NOOP("Zoom faster or slower"), QT_TR_NOOP("Ctrl or Shift+Wheel") },
@@ -356,6 +359,14 @@ void swPreferencesDialog::ShortcutAssignClicked()
 		return;
 
 	QString NewShortcut = ui->shortcutEdit->text();
+
+	// del stays with delete
+
+	if (NewShortcut == QKeySequence(gCommands[SW_PART_DELETE].DefaultShortcut).toString(QKeySequence::NativeText))
+	{
+		QMessageBox::information(this, tr("Built-in Key"), tr("The shortcut '%1' is a built-in key that always deletes what is selected.").arg(NewShortcut));
+		return;
+	}
 
 	if (!NewShortcut.isEmpty())
 	{

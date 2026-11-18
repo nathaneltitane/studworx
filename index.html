@@ -161,11 +161,11 @@
 
 			<div class="gallery scroll">
 				<figure style="--width-image: 3840; --height-image: 2131">
-					<button class="shot" data-full="resources/images/interface-window-main.png" aria-label="Enlarge The main window with the model view, Parts, Preview, Minifigure Builder, Timeline, Colors, Properties, Joints and Terminal panels">
-						<img src="resources/images/interface-window-main.png" alt="The main window with the model view, Parts, Preview, Minifigure Builder, Timeline, Colors, Properties, Joints and Terminal panels" width="3840" height="2131" loading="lazy">
+					<button class="shot" data-full="resources/images/interface-window-main.png" aria-label="Enlarge The main window with the model view, Parts, Preview, Minifigure Builder, Steps, Colors, Properties, Joints and Terminal panels">
+						<img src="resources/images/interface-window-main.png" alt="The main window with the model view, Parts, Preview, Minifigure Builder, Steps, Colors, Properties, Joints and Terminal panels" width="3840" height="2131" loading="lazy">
 					</button>
 
-					<figcaption>The main window with the model view, Parts, Preview, Minifigure Builder, Timeline, Colors, Properties, Joints and Terminal panels</figcaption>
+					<figcaption>The main window with the model view, Parts, Preview, Minifigure Builder, Steps, Colors, Properties, Joints and Terminal panels</figcaption>
 				</figure>
 
 				<figure style="--width-image: 3840; --height-image: 2131">
@@ -247,7 +247,7 @@
 			</div>
 
 			<ul class="points">
-				<li><b>Missing and moved parts.</b> When a model uses parts the library can&#x27;t find or has renumbered, StudWorx lists them and offers a replacement for each, swapped everywhere in one click and saved right away, unless you turn that off. Until then a missing part shows as a plain brick with a red outline, and the timeline paints it and its submodel red. Closed the list too soon? The File menu brings it back.</li>
+				<li><b>Missing and moved parts.</b> When a model uses parts the library can&#x27;t find or has renumbered, StudWorx lists them and offers a replacement for each, swapped everywhere in one click and saved right away, unless you turn that off. Until then a missing part shows as a plain brick with a red outline, and the <a href="#steps">Steps</a> panel paints it and its submodel red. Closed the list too soon? The File menu brings it back.</li>
 				<li><b>Command line.</b> Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx. <a href="https://l2cu.app">L²CU</a>, the LDraw command line utility for Linux based systems, drives these renders and exports for whole folders of models.</li>
 				<li><b>LDraw models.</b> StudWorx opens and saves the standard LDraw files, .ldr, .mpd and .dat, as the LDraw specification describes them, keeping their line endings, and reloads a model changed in another program. Bundled samples cover every feature, from cutaways and flexible parts to joints, lights and train track.</li>
 				<li><b>Export.</b> Send a model to other 3D programs, POV-Ray or the web, or turn its parts into a BrickLink wanted list or a CSV parts list. BrickLink exports translate part numbers and colors through a bundled mapping of over 55,000 parts, and parts you set by hand are remembered.</li>
@@ -275,7 +275,7 @@
 					<tbody>
 						<tr><td>-l, --library, --unofficial-library, --shadow-library</td><td>Choose the parts, unofficial parts and LDCad shadow libraries</td></tr>
 						<tr><td>-i, --image, -w, --width, --height</td><td>Save an <a href="#image">image</a> of the model at a size</td></tr>
-						<tr><td>-f, --from &lt;step&gt;, -t, --to &lt;step&gt;, -s, --submodel</td><td>Save a range of <a href="#steps">steps</a>, or one submodel</td></tr>
+						<tr><td>-f, --from &lt;step&gt;, -t, --to &lt;step&gt;, -s, --submodel</td><td>Save a range of steps, or one submodel</td></tr>
 						<tr><td>-c, --camera, --viewpoint, --camera-angles, --camera-position, --camera-position-ldraw</td><td>Choose a camera, a viewpoint or an exact camera position</td></tr>
 						<tr><td>--projection, --field-of-view, --clip-planes, --transparent</td><td>Projection, field of view, clipping planes and a transparent background</td></tr>
 						<tr><td>--fade-steps, --no-fade-steps, --fade-color, --highlight, --no-highlight, --highlight-color</td><td>Fade previous steps and highlight new parts</td></tr>
@@ -943,7 +943,7 @@
 		<section id="steps" class="section reveal">
 			<header class="section-head">
 				<span class="icon big logo-steps" aria-hidden="true"></span>
-				<h2>STEPS // BUILD ORDER AND TIMELINE</h2>
+				<h2>STEPS // BUILD ORDER AND STEPS PANEL</h2>
 			</header>
 
 			<p class="lead">Every part belongs to a building step. Steps drive the model view, the <a href="#instructions">instructions</a> and the animated GIFs.</p>
@@ -968,23 +968,23 @@
 
 			<ul class="points">
 				<li><b>Emphasis.</b> Make the build easier to follow: highlight the new parts of each step, fade the earlier ones, fade the rest of the model while you edit a submodel or set a joint, outline the submodel under the pointer, and mark the connection points of the part you point at, in a see-through color if you like, or not at all.</li>
-				<li><b>Keyframes panel.</b> A full-width timeline of the animation, one column per step and one row per object, with a diamond for each key. Click a diamond to pick it, Ctrl+click to pick more, and Delete removes them. Add, remove and drag keys, and play the animation from the panel or the Time toolbar.</li>
-				<li><b>Timeline.</b> Shows the step each part is added in and removed in. An empty removal step reads Never. Drag parts between steps or reorder them, and Set Current Step from a step&#x27;s right-click menu.</li>
-				<li><b>Keys in the Timeline.</b> Each step with animation keys lists a Keys row per keyed object naming its keyed properties, and a double click on it selects that object at that step and shows the Keyframes panel.</li>
+				<li><b>Keyframes panel.</b> A full-width chart of the animation, one column per step and one row per object, with a diamond for each key. Click a diamond to pick it, Ctrl+click to pick more, and Delete removes them. Add, remove and drag keys, and play the animation from the panel or the Time toolbar.</li>
+				<li><b>Steps panel.</b> Shows the step each part is added in and removed in. An empty removal step reads Never. Drag parts between steps or reorder them, and Set Current Step from a step&#x27;s right-click menu.</li>
+				<li><b>Keys in the Steps panel.</b> Each step with animation keys lists a Keys row per keyed object naming its keyed properties, and a double click on it selects that object at that step and shows the Keyframes panel.</li>
 				<li><b>Animation keys.</b> Animation keys remember <a href="#where">where</a> parts, lights and cameras are at each step. Add Keys records them as you work, and a round button in the Properties panel adds or removes one.</li>
-				<li><b>Move and paste.</b> Move the selected parts to an earlier or later step, add steps from the Timeline, and paste parts together with their steps.</li>
-				<li><b>Step <a href="#views">views</a>.</b> Steps can turn the model to their own view angle, like the ROTSTEP command of MLCad, and the Timeline shows and edits them.</li>
+				<li><b>Move and paste.</b> Move the selected parts to an earlier or later step, add steps from the Steps panel, and paste parts together with their steps.</li>
+				<li><b>Step <a href="#views">views</a>.</b> Steps can turn the model to their own view angle, like the ROTSTEP command of MLCad, and the Steps panel shows and edits them.</li>
 				<li><b>Step view commands.</b> Give each step its own view angle, so the model turns to show that step best as you go through them.</li>
 				<li><b>Steps menu.</b> Move through the building steps, add or delete steps, and play them back like an animation.</li>
 			</ul>
 
 			<div class="gallery scroll">
 				<figure style="--width-image: 533; --height-image: 556">
-					<button class="shot" data-full="resources/images/steps-widget-timeline.png" aria-label="Enlarge Timeline panel">
-						<img src="resources/images/steps-widget-timeline.png" alt="Timeline panel" width="533" height="556" loading="lazy">
+					<button class="shot" data-full="resources/images/steps-widget-steps.png" aria-label="Enlarge Steps panel">
+						<img src="resources/images/steps-widget-steps.png" alt="Steps panel" width="533" height="556" loading="lazy">
 					</button>
 
-					<figcaption>Timeline panel</figcaption>
+					<figcaption>Steps panel</figcaption>
 				</figure>
 
 				<figure style="--width-image: 1920; --height-image: 300">
@@ -1018,7 +1018,7 @@
 				<li><b>Colors.</b> Collapsible solid, translucent and special color groups with square color tiles. Docked at the top or bottom, the tiles line up in one long row you scroll with the wheel or the arrows at its ends.</li>
 				<li><b>Parts.</b> Categories and palettes with a filter. The panel snaps to whole thumbnail tiles and rows, docked or floating, and the tooltip of each part shows its name, ID and weight.</li>
 				<li><b>Joints.</b> The joints of the selected submodel and their axis, a tree of every model with joints, and right-click menus to move, rotate or delete them.</li>
-				<li><b>Keyframes.</b> A full-width timeline of the keys of the selected or all objects per step, with buttons to add or remove keys, Add Keys and playback.</li>
+				<li><b>Keyframes.</b> A full-width chart of the keys of the selected or all objects per step, with buttons to add or remove keys, Add Keys and playback.</li>
 				<li><b>Terminal folders.</b> Follow Model Folder moves the terminal to the folder of each model you open, and Go to Model Folder moves it there once.</li>
 				<li><b>Preview.</b> A small view of the part or model you picked, docked or floating, that can keep showing the last selection.</li>
 				<li><b>Part palettes.</b> Create, rename, reorder and delete palettes, import them, or build one from an online set inventory.</li>
@@ -1316,11 +1316,11 @@
 			<ul class="points">
 				<li><b>Startup and <a href="#files">files</a>.</b> What happens when StudWorx starts and when you open a file: reopen the last model, wait for every part, warn about missing parts, save after replacing them, notice changes made elsewhere, and what to do with LeoCAD <a href="#models">models</a>.</li>
 				<li><b>General.</b> <a href="#where">Where</a> StudWorx finds the parts library, Blender, POV-Ray and LGEO, with one-click updates for colors, minifigure parts and the BrickLink mapping. Also your Rebrickable key and the author line written into new models.</li>
+				<li><b>Delete.</b> Delete removes only what is selected where you work: a joint, a step, picked keys, a pointer or notice on a page, or parts in the view. Del always deletes and can&#x27;t be changed, so it sits in Built-in Keys.</li>
 				<li><b>Context Menu.</b> Arrange the right-click menu of the model view the way you work: add, reorder, rename or group its commands, or reset it. Right clicking an unselected part selects it first.</li>
 				<li><b>Display colors.</b> Every color StudWorx draws with, from the background and grids to selections, highlights, axes and the instruction page guides, see-through where it makes sense.</li>
 				<li><b>Keyboard and Mouse.</b> Shortcuts recorded by clicking, importable and exportable. Commands that share a shortcut show in red, and assigning a taken shortcut asks before moving it.</li>
 				<li><b>Built-in Keys.</b> The end of the Keyboard list shows the keys that can&#x27;t be changed, greyed out, like F1 for <a href="#help">help</a> and Ctrl+click to add to the selection.</li>
-				<li><b>Delete.</b> Delete removes only what is selected where you work: a joint, a step, picked keys, a pointer or notice on a page, or parts in the view.</li>
 				<li><b><a href="#interface">Interface</a> and <a href="#instructions">Instructions</a>.</b> Interface holds every display color. Instructions holds the default page settings, the rulers and inspector, and the editor options.</li>
 				<li><b><a href="#rendering">Rendering</a> and <a href="#views">Views</a>.</b> Rendering sets how parts look, and Views sets what the model view shows around them, from the view cube to the grids.</li>
 				<li><b>Shortcut filters.</b> Filter commands and tools by name or shortcut, give each two shortcuts, and reset them to the defaults.</li>
@@ -1920,12 +1920,12 @@
 
 						<tbody>
 							<tr><td><code>0 BFC</code></td><td>BFC</td><td>back face culling</td></tr>
-							<tr><td><code>0 CLEAR</code></td><td>CLEAR Command</td><td>hides earlier parts in the timeline</td></tr>
+							<tr><td><code>0 CLEAR</code></td><td>CLEAR Command</td><td>hides earlier parts from that step on</td></tr>
 							<tr><td><code>0 !LEOCAD GROUP</code>, <code>0 GROUP</code></td><td>GROUP Command</td><td>collections from groups</td></tr>
 							<tr><td><code>0 !LEOCAD CAMERA</code></td><td>Import Cameras</td><td>cameras</td></tr>
 							<tr><td><code>0 !LEOCAD LIGHT</code></td><td>Import Lights</td><td>lights</td></tr>
 							<tr><td><code>0 PRINT</code>, <code>0 WRITE</code></td><td>PRINT/WRITE Command</td><td>messages printed to the console</td></tr>
-							<tr><td><code>0 STEP</code></td><td>STEP Command, STEP Groups</td><td>timeline keys and step collections</td></tr>
+							<tr><td><code>0 STEP</code></td><td>STEP Command, STEP Groups</td><td>step keys and step collections</td></tr>
 							<tr><td><code>0 !TEXMAP</code>, <code>0 !DATA</code></td><td>TEXMAP and DATA Command</td><td>textures</td></tr>
 							<tr><td><code>0 PAUSE</code>, <code>0 SAVE</code></td><td>PAUSE Command, SAVE Command</td><td>not implemented</td></tr>
 						</tbody>
@@ -2041,10 +2041,11 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 				<ul>
 					<li>Keyboard <a href="#preferences">preferences</a>: a Built-in Keys group at the end lists the keys that can&#x27;t be changed, greyed out</li>
-					<li>Shortcuts: Delete removes only what is selected <a href="#where">where</a> you work: the joint in the Joints panel, the step in the Timeline, the picked keys in the Keyframes panel, the pointers, notices or blank page in the <a href="#instructions">instructions</a>, or the selected objects in the view; it can be changed in Keyboard preferences</li>
+					<li>Shortcuts: Delete removes only what is selected <a href="#where">where</a> you work: the joint in the Joints panel, the step in the <a href="#steps">Steps</a> panel, the picked keys in the Keyframes panel, the pointers, notices or blank page in the <a href="#instructions">instructions</a>, or the selected objects in the view; Del always deletes, listed under Built-in Keys in Keyboard preferences and can&#x27;t be given to another command</li>
+					<li>Steps panel: the Timeline panel is now the Steps panel, saved shortcuts and panel places carry over</li>
 					<li>Keyframes panel: click a diamond to pick it, Ctrl+click to add or take it out, Shift+click to take it out; picked keys light up and Delete removes them</li>
 					<li>Shortcuts: Ctrl+Shift+W, Exit Mode in the menus and Keyboard preferences, exits one mode per press, innermost first: a pick, joint mode, the cutaway, then in-place submodel editing; it keeps the selection</li>
-					<li>Shortcuts: Esc <a href="#steps">steps</a> back the same way, clears the selection before leaving a mode, and now also steps out of in-place submodel editing</li>
+					<li>Shortcuts: Esc steps back the same way, clears the selection before leaving a mode, and now also steps out of in-place submodel editing</li>
 					<li>Shortcuts: Ctrl+Shift+J only goes into joint mode; Ctrl+Shift+W or Esc leaves it</li>
 					<li>Joints: Ctrl+Shift+J goes into joint mode on the selected submodel, or the jointed submodel around the selected part, and Ctrl+Shift+W or Esc leaves it; Joint Mode and End Joint Mode are in Part &gt; Joint and the right-click menu</li>
 					<li>Joints: right-clicking in joint mode keeps the joint, so End Joint Mode works from the right-click menu</li>
@@ -2351,7 +2352,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Save Model Image","title":"Animation","paragraphs":["Animated GIF saves an animation that loops forever.","Turntable turns the model around one axis through the Framing center, starting from the current view. Full Turn makes seamless revolutions. Angle swings between two angles from the current view and back again. Turns sets how many revolutions or swings make up the loop, so complex builds can be shown from every side more than once.","Next Step moves through the steps chosen in the Steps group while the model turns, one step every few turns or seconds. The loop ends on the last step and starts again.","Steps plays the chosen steps one per frame, for short animated instructions.","Joints blends through the poses of the main model saved in the Poses panel, in order and back to the first. Frames sets how many images go between two poses.","Frames sets how many images make up one turn and Frame Rate how many play each second. Hold Last keeps the finished model on screen before a loop through the steps restarts. Duration shows how long one loop plays."]},
 				{"group":"Save Model Image","title":"Framing","paragraphs":["Current View saves exactly what the view shows. Fit Model aims at the model and moves the camera back until every part fits inside the image at every turntable angle and every pose, so animations turn in place without zooming and Joints animations hold still. Fit Each Step fits every step on its own parts. Fitted stills are centered on the model.","Center sets the point the turntable turns around and the camera aims at. World Origin is the 0, 0, 0 point of the scene, Model Origin is the middle of the model base and Model Center is the middle of the model.","Margin keeps empty space around the model. Bounds measures the fit on the whole model, so every step lines up, or only on the steps being saved."]},
 				{"group":"Save Model Image","title":"Background","paragraphs":["View Color fills the background with the view background. Transparent leaves it empty so the model can be placed over other images.","Only PNG and GIF files keep transparency. GIF edges are hard, without smoothing."]},
-				{"group":"Instructions","title":"Page Bar","paragraphs":["Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The timeline First, Previous, Next and Last shortcuts turn the pages too while the page or the Pages panel has focus."]},
+				{"group":"Instructions","title":"Page Bar","paragraphs":["Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The First, Previous, Next and Last step shortcuts turn the pages too while the page or the Pages panel has focus."]},
 				{"group":"Instructions","title":"Undo and Redo","paragraphs":["Undo takes back your last change to the instructions, Redo puts it back. Quick changes to the same setting count as one change. The main window Undo and Redo shortcuts work here too."]},
 				{"group":"Instructions","title":"Editor","paragraphs":["The text of the model file as it is saved, its parts, steps and instructions. Edit it and apply to load the model from the text, the change is unsaved until the model is saved."]},
 				{"group":"Instructions","title":"Pages","paragraphs":["Select a page to show it. Right-click a page to insert or remove blank pages around it.","Click the lock beside a page to keep its elements where they are. A locked page can't be removed.","Click the snowflake to freeze a page. It keeps its own copy of the settings, so changes for all pages skip it. Unfreeze it to follow the other pages again."]},
@@ -2424,10 +2425,10 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Joints and Poses Panels","title":"Recall","paragraphs":["Turn the joints of this model back to the angles of the picked pose, in one undo step."]},
 				{"group":"Joints and Poses Panels","title":"Rename","paragraphs":["Give the picked pose a new name."]},
 				{"group":"Joints and Poses Panels","title":"Delete","paragraphs":["Remove the picked pose from the model. The joints keep their angles."]},
-				{"group":"Keyframes Panel","title":"Keyframes","paragraphs":["A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, click a diamond to pick it, Ctrl+click to add or remove it from the picked keys and Shift+click to take it out. Delete removes the picked keys. Double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.","Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion."]},
+				{"group":"Keyframes Panel","title":"Keyframes","paragraphs":["A chart of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, click a diamond to pick it, Ctrl+click to add or remove it from the picked keys and Shift+click to take it out. Delete removes the picked keys. Double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.","Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion."]},
 				{"group":"Keyframes Panel","title":"Rewind","paragraphs":["Go to the first step of the model."]},
 				{"group":"Keyframes Panel","title":"Forward","paragraphs":["Go to the last step of the model."]},
-				{"group":"Keyframes Panel","title":"Selected","paragraphs":["List only the selected objects in the timeline, with or without keys."]},
+				{"group":"Keyframes Panel","title":"Selected","paragraphs":["List only the selected objects in the chart, with or without keys."]},
 				{"group":"Keyframes Panel","title":"All","paragraphs":["List the selected objects and every other object of the model that has keys."]},
 				{"group":"Main Window","title":"Lock Preview","paragraphs":["Keep the current preview while you browse. Unlock Preview allows the display to update again. An empty preview cannot be locked."]},
 				{"group":"Main Window","title":"Property Keyframe","paragraphs":["Enable or remove a keyframe for this property at the current building step. Keyframes let the property's value change between steps."]},
@@ -2439,14 +2440,14 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Main Window","title":"Movement Snap","paragraphs":["Choose how far objects move in each snapped increment. XY controls movement across the base plane; Z controls vertical movement, so they can use different intervals. Turn snapping off for free placement, then enable it again when you need consistent spacing."]},
 				{"group":"Main Window","title":"Rotation Snap","paragraphs":["Choose an angle increment for interactive rotation. For example, a 90-degree increment is useful for quarter turns, while smaller increments allow finer alignment. Turn snapping off for free rotation without fixed angle increments."]},
 				{"group":"Main Window","title":"Standard Toolbar","paragraphs":["Use file controls to create, open, and save models, and Undo or Redo to navigate edit history. Before moving or rotating objects, choose the selection rule, coordinate reference, and snapping increments from the four drop-down controls. Help > \"What's This?\" explains individual controls."]},
-				{"group":"Main Window","title":"Time Toolbar","paragraphs":["The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Timeline for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps."]},
+				{"group":"Main Window","title":"Time Toolbar","paragraphs":["The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Steps panel for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps."]},
 				{"group":"Main Window","title":"Tools Toolbar","paragraphs":["Choose a tool, then use it in the model view. Insertion tools create parts, lights, or cameras. Editing tools select, transform, remove, or recolor objects. Navigation tools change the viewpoint without changing model geometry. Mouse assignments can be customized in Preferences."]},
 				{"group":"Main Window","title":"Parts","paragraphs":["Choose a category or palette and filter its parts. Selecting a part prepares it for insertion; drag it into the model view to place it. Double-click a part to open its preview. Options controls filtering, thumbnails, and list display."]},
 				{"group":"Main Window","title":"Colors","paragraphs":["Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.","Docked at the top or bottom, the swatches line up in one row; scroll the wheel or use the arrows at its ends to move along it, or double-click an arrow to jump to that end."]},
 				{"group":"Main Window","title":"Change Selection Color","paragraphs":["Apply the current color to selected parts. Choosing a swatch sets the current color; this button applies that color to the selection."]},
 				{"group":"Main Window","title":"Properties","paragraphs":["Edit properties of the focused object or selection. Available fields depend on whether you select parts, a camera, or a light. Expand a section to see its fields. Keyframe controls mark properties at the current building step.","The transform fields at the bottom apply an X/Y/Z translation or rotation using the chosen transform mode. Press Enter to apply the values."]},
 				{"group":"Main Window","title":"Apply Transform","paragraphs":["Choose the translation or rotation mode, enter X/Y/Z values, and press Enter to apply them. Translation values use LDraw units; rotation values use degrees."]},
-				{"group":"Main Window","title":"Timeline","paragraphs":["Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands."]},
+				{"group":"Main Window","title":"Steps","paragraphs":["Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands."]},
 				{"group":"Main Window","title":"Close Model Tab","paragraphs":["Close this tab. The model stays in the file; open it again from the Models menu."]},
 				{"group":"Main Window","title":"Choose Color","paragraphs":["Pick a color using the swatches or enter its component values. Choose OK to use the selected color, or Cancel to keep the original color. Editing the controls alone does not apply the color."]},
 				{"group":"Main Window","title":"In-place Editing","paragraphs":["The path shows the model being edited inside this view. The last name is the current editing target. Choose an earlier name to edit that ancestor, or the close button to return to the tab's model."]},
@@ -2551,7 +2552,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"View Menu","title":"Camera","paragraphs":["Look through this camera of the model. The menu lists the first sixteen cameras."]},
 				{"group":"Steps Menu","title":"First Step","paragraphs":["Display the model at its first building step. Step navigation changes which parts are visible; it does not move parts to a different step."]},
 				{"group":"Steps Menu","title":"Previous Step","paragraphs":["Display the model one building step earlier. Parts introduced in later steps are hidden so you can inspect the earlier stage of construction."]},
-				{"group":"Steps Menu","title":"Next Step","paragraphs":["Display the next building step to reveal the next stage of the model. Use the Timeline to change which step introduces a part."]},
+				{"group":"Steps Menu","title":"Next Step","paragraphs":["Display the next building step to reveal the next stage of the model. Use the Steps panel to change which step introduces a part."]},
 				{"group":"Steps Menu","title":"Last Step","paragraphs":["Display the last building step of the current model. Use this to return to the completed model after inspecting earlier steps."]},
 				{"group":"Steps Menu","title":"Insert Before","paragraphs":["Add an empty step before the current step. The current step and the ones after it move one step later."]},
 				{"group":"Steps Menu","title":"Insert After","paragraphs":["Add an empty step after the current step. The steps after it move one step later."]},
@@ -2569,7 +2570,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"View Menu","title":"Explode","paragraphs":["Show or hide the Explode panel, which spreads the parts on screen away from an anchor to show how they connect."]},
 				{"group":"View Menu","title":"Joints","paragraphs":["Show or hide the Joints panel, which lists the joints of every model and moves, rotates or deletes them."]},
 				{"group":"View Menu","title":"Poses","paragraphs":["Show or hide the Poses panel, which saves and recalls named sets of joint angles."]},
-				{"group":"View Menu","title":"Keyframes","paragraphs":["Show or hide the Keyframes panel, a timeline of the animation keys of the objects per step."]},
+				{"group":"View Menu","title":"Keyframes","paragraphs":["Show or hide the Keyframes panel, a chart of the animation keys of the objects per step."]},
 				{"group":"View Menu","title":"Lock Interface","paragraphs":["Keep the panels and toolbars where they are: panel title bars are hidden to save space, and panels and toolbars can no longer be dragged, floated or docked elsewhere. Panels still resize, and they can still be shown or hidden from this menu. Right-click a toolbar, or use View, Toolbars, to lock or unlock."]},
 				{"group":"View Menu","title":"Full Screen","paragraphs":["Fill the whole screen with the StudWorx window, or go back to a normal window."]},
 				{"group":"View Menu","title":"Close Tab","paragraphs":["Close the current model tab, asking to save its changes first."]},
@@ -2661,7 +2662,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"View Menu","title":"Keep Last Selection","paragraphs":["Keep showing the last selected part in the preview after the selection is cleared."]},
 				{"group":"Part Menu","title":"Insert Part","paragraphs":["Add the part chosen in the Parts panel to the model, next to the part that has focus or the last part added."]},
 				{"group":"Part Menu","title":"Insert First Part at Origin","paragraphs":["Place the first part of an empty model at 0, 0, 0."]},
-				{"group":"Part Menu","title":"Delete","paragraphs":["Removes only what is selected, picked by where you work: the joint in the Joints panel, the step in the Timeline panel, the picked keys in the Keyframes panel, or the selected keys at the current step when none are picked, and the selected pointers, notices or blank page in the instructions. In the view it removes a focused control point alone, otherwise the selected objects. With nothing selected it does nothing."]},
+				{"group":"Part Menu","title":"Delete","paragraphs":["Removes only what is selected, picked by where you work: the joint in the Joints panel, the step in the Steps panel, the picked keys in the Keyframes panel, or the selected keys at the current step when none are picked, and the selected pointers, notices or blank page in the instructions. In the view it removes a focused control point alone, otherwise the selected objects. With nothing selected it does nothing."]},
 				{"group":"Part Menu","title":"Duplicate","paragraphs":["Add a copy of each selected part in the same place, with copies of their groups, and select the copies."]},
 				{"group":"Part Menu","title":"Paint Selected","paragraphs":["Change the selected parts to the color chosen in the Colors panel."]},
 				{"group":"Part Menu","title":"Set Joint","paragraphs":["Select one submodel, choose Part > Joint > Set Joint, also in the right-click menu of the model view, then click one of its connections with the Set Joint pointer, which outlines the part under it in red. The click sets the joint and goes back to the Select tool in joint mode on the new joint. Set Joint again at another connection adds a joint, and Set Joint at a joint already there resets it. A round connection makes a hinge on its axis and a sphere makes a ball. A part without shadow data gets a hinge on its origin. The joint shows in the Joints panel and setting it can be undone."]},
@@ -2710,13 +2711,13 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Help Menu","title":"Home Page","paragraphs":["Open the StudWorx repository on GitHub in your web browser."]},
 				{"group":"Help Menu","title":"Report a Bug","paragraphs":["Open the StudWorx issues on GitHub in your web browser to report a problem."]},
 				{"group":"Help Menu","title":"About","paragraphs":["Show the StudWorx version, a link to its home page, and system information to copy into a bug report."]},
-				{"group":"Timeline","title":"Insert Step Before","paragraphs":["Add an empty step before this step in the Timeline."]},
-				{"group":"Timeline","title":"Insert Step After","paragraphs":["Add an empty step after this step in the Timeline."]},
-				{"group":"Timeline","title":"Delete Step","paragraphs":["Remove this step. Its parts join the step before it and later steps move one step earlier."]},
-				{"group":"Timeline","title":"Move Selection Here","paragraphs":["Move the selected parts into this step."]},
-				{"group":"Timeline","title":"Move Selection Before","paragraphs":["Move the selected parts into a new step before this one."]},
-				{"group":"Timeline","title":"Move Selection After","paragraphs":["Move the selected parts into a new step after this one."]},
-				{"group":"Timeline","title":"Set Current Step","paragraphs":["Show the model at this step."]}
+				{"group":"Steps Panel","title":"Insert Step Before","paragraphs":["Add an empty step before this step in the Steps panel."]},
+				{"group":"Steps Panel","title":"Insert Step After","paragraphs":["Add an empty step after this step in the Steps panel."]},
+				{"group":"Steps Panel","title":"Delete Step","paragraphs":["Remove this step. Its parts join the step before it and later steps move one step earlier."]},
+				{"group":"Steps Panel","title":"Move Selection Here","paragraphs":["Move the selected parts into this step."]},
+				{"group":"Steps Panel","title":"Move Selection Before","paragraphs":["Move the selected parts into a new step before this one."]},
+				{"group":"Steps Panel","title":"Move Selection After","paragraphs":["Move the selected parts into a new step after this one."]},
+				{"group":"Steps Panel","title":"Set Current Step","paragraphs":["Show the model at this step."]}
 			] ;
 
 			const groups_help = [
@@ -2729,7 +2730,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				"Steps Menu",
 				"Models Menu",
 				"Help Menu",
-				"Timeline",
+				"Steps Panel",
 				"About",
 				"Array",
 				"Explode Panel",
@@ -2857,7 +2858,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"command":"Parts Panel","shortcut":"F8","paths":["View > Toolbars","Right click a toolbar or panel title"]},
 				{"command":"Colors Panel","shortcut":"F7","paths":["View > Toolbars","Right click a toolbar or panel title"]},
 				{"command":"Properties Panel","shortcut":"F9","paths":["View > Toolbars","Right click a toolbar or panel title"]},
-				{"command":"Timeline Panel","shortcut":"F10","paths":["View > Toolbars","Right click a toolbar or panel title"]},
+				{"command":"Steps Panel","shortcut":"F10","paths":["View > Toolbars","Right click a toolbar or panel title"]},
 				{"command":"Preview Panel","shortcut":"F11","paths":["View > Toolbars","Right click a toolbar or panel title"]},
 				{"command":"Minifigure Builder Panel","shortcut":"","paths":["View > Toolbars","Right click a toolbar or panel title"]},
 				{"command":"Explode Panel","shortcut":"","paths":["View > Toolbars","Right click a toolbar or panel title"]},
@@ -2878,7 +2879,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"command":"Top","shortcut":"T","paths":["View > Viewpoints","Right click the model view > Viewpoints","Instructions window > Right click a pointer > Anchor"]},
 				{"command":"Bottom","shortcut":"O","paths":["View > Viewpoints","Right click the model view > Viewpoints","Instructions window > Right click a pointer > Anchor"]},
 				{"command":"Home","shortcut":"H","paths":["View > Viewpoints","Right click the model view > Viewpoints"]},
-				{"command":"Step View","shortcut":"","paths":["View > Viewpoints","Right click the model view > Viewpoints","Right click Timeline panel"]},
+				{"command":"Step View","shortcut":"","paths":["View > Viewpoints","Right click the model view > Viewpoints","Right click Steps panel"]},
 				{"command":"Follow Step Views","shortcut":"","paths":["View > Viewpoints","Right click the model view > Viewpoints"]},
 				{"command":"Normal to Face","shortcut":"","paths":["View > Viewpoints","Right click the model view","Right click the model view > Viewpoints"]},
 				{"command":"Cube","shortcut":"","paths":["View > Cutaway","Right click the model view > Cutaway"]},
@@ -2922,17 +2923,17 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"command":"Add to Group","shortcut":"","paths":["Part > Group"]},
 				{"command":"Remove from Group","shortcut":"","paths":["Part > Group"]},
 				{"command":"Edit Groups","shortcut":"Ctrl+Alt+Shift+G","paths":["Part > Group"]},
-				{"command":"Hide Selected","shortcut":"Ctrl+H","paths":["Part > Visibility","Right click Timeline panel"]},
-				{"command":"Hide Unselected","shortcut":"Ctrl+Alt+Shift+H","paths":["Part > Visibility","Right click Timeline panel"]},
-				{"command":"Unhide Selected","shortcut":"Ctrl+Shift+H","paths":["Part > Visibility","Right click Timeline panel"]},
-				{"command":"Unhide All","shortcut":"Ctrl+Alt+H","paths":["Part > Visibility","Right click Timeline panel"]},
+				{"command":"Hide Selected","shortcut":"Ctrl+H","paths":["Part > Visibility","Right click Steps panel"]},
+				{"command":"Hide Unselected","shortcut":"Ctrl+Alt+Shift+H","paths":["Part > Visibility","Right click Steps panel"]},
+				{"command":"Unhide Selected","shortcut":"Ctrl+Shift+H","paths":["Part > Visibility","Right click Steps panel"]},
+				{"command":"Unhide All","shortcut":"Ctrl+Alt+H","paths":["Part > Visibility","Right click Steps panel"]},
 				{"command":"First","shortcut":"","paths":["Steps","Time toolbar"]},
 				{"command":"Previous","shortcut":"Ctrl+E","paths":["Steps","Time toolbar"]},
 				{"command":"Next","shortcut":"Ctrl+N","paths":["Steps","Time toolbar"]},
 				{"command":"Last","shortcut":"","paths":["Steps","Time toolbar"]},
 				{"command":"Insert Before","shortcut":"","paths":["Steps"]},
 				{"command":"Insert After","shortcut":"","paths":["Steps"]},
-				{"command":"Delete Step","shortcut":"Shift+Del","paths":["Steps","Right click Timeline panel"]},
+				{"command":"Delete Step","shortcut":"Shift+Del","paths":["Steps","Right click Steps panel"]},
 				{"command":"Add Keys","shortcut":"Alt+K","paths":["Steps","Time toolbar"]},
 				{"command":"Set Keys","shortcut":"K","paths":["Steps","Time toolbar"]},
 				{"command":"Remove Keys","shortcut":"Shift+K","paths":["Steps","Time toolbar"]},
@@ -3005,12 +3006,12 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"command":"Connection Points","shortcut":"","paths":["Model View Options"]},
 				{"command":"Insert First Part at Origin","shortcut":"","paths":["Model View Options"]},
 				{"command":"Mesh Detail Control","shortcut":"","paths":["Model View Options"]},
-				{"command":"Set Current Step","shortcut":"","paths":["Right click Timeline panel"]},
-				{"command":"Insert Step Before","shortcut":"","paths":["Right click Timeline panel"]},
-				{"command":"Insert Step After","shortcut":"","paths":["Right click Timeline panel"]},
-				{"command":"Move Selection Here","shortcut":"","paths":["Right click Timeline panel"]},
-				{"command":"Move Selection Before","shortcut":"","paths":["Right click Timeline panel"]},
-				{"command":"Move Selection After","shortcut":"","paths":["Right click Timeline panel"]},
+				{"command":"Set Current Step","shortcut":"","paths":["Right click Steps panel"]},
+				{"command":"Insert Step Before","shortcut":"","paths":["Right click Steps panel"]},
+				{"command":"Insert Step After","shortcut":"","paths":["Right click Steps panel"]},
+				{"command":"Move Selection Here","shortcut":"","paths":["Right click Steps panel"]},
+				{"command":"Move Selection Before","shortcut":"","paths":["Right click Steps panel"]},
+				{"command":"Move Selection After","shortcut":"","paths":["Right click Steps panel"]},
 				{"command":"Delete Joint","shortcut":"","paths":["Right click Joints panel"]},
 				{"command":"Add Key","shortcut":"","paths":["Right click Keyframes panel"]},
 				{"command":"Remove Key","shortcut":"","paths":["Right click Keyframes panel"]},

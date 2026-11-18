@@ -10,7 +10,7 @@
 #include "sw_widget_terminal.h"
 #endif
 #include "sw_widget_properties.h"
-#include "sw_widget_timeline.h"
+#include "sw_widget_steps.h"
 #include "sw_view_widget.h"
 #include "sw_widget_list_color.h"
 #include "sw_widget_label_elided.h"
@@ -53,7 +53,7 @@ void swMainWindow::UpdateSelectedObjects(bool SelectionChanged)
 
 	if (SelectionChanged)
 	{
-		mTimelineWidget->UpdateSelection();
+		mStepsWidget->UpdateSelection();
 
 		if (ActiveModel)
 			ActiveModel->UpdateJointRotate();
@@ -125,9 +125,9 @@ void swMainWindow::UpdateSelectedObjects(bool SelectionChanged)
 		// fixme disable on step 1
 		mActions[SW_PART_SHOW_EARLIER]->setEnabled(Flags & SW_SELECTION_PART);
 		mActions[SW_PART_SHOW_LATER]->setEnabled(Flags & SW_SELECTION_PART);
-		mActions[SW_TIMELINE_MOVE_SELECTION]->setEnabled(Flags & SW_SELECTION_PART);
-		mActions[SW_TIMELINE_MOVE_SELECTION_BEFORE]->setEnabled(Flags & SW_SELECTION_PART);
-		mActions[SW_TIMELINE_MOVE_SELECTION_AFTER]->setEnabled(Flags & SW_SELECTION_PART);
+		mActions[SW_STEPS_MOVE_SELECTION]->setEnabled(Flags & SW_SELECTION_PART);
+		mActions[SW_STEPS_MOVE_SELECTION_BEFORE]->setEnabled(Flags & SW_SELECTION_PART);
+		mActions[SW_STEPS_MOVE_SELECTION_AFTER]->setEnabled(Flags & SW_SELECTION_PART);
 	}
 
 	mPropertiesWidget->Update(Selection, Focus);
@@ -290,9 +290,9 @@ void swMainWindow::UpdateViewOrientation(const swCamera* Camera)
 	UpdateStatusSegments();
 }
 
-void swMainWindow::UpdateTimeline(bool Clear, bool UpdateItems)
+void swMainWindow::UpdateSteps(bool Clear, bool UpdateItems)
 {
-	mTimelineWidget->Update(Clear, UpdateItems);
+	mStepsWidget->Update(Clear, UpdateItems);
 
 	if (mKeyframesToolBar && mKeyframesToolBar->isVisible())
 		mKeyframesWidget->Update();

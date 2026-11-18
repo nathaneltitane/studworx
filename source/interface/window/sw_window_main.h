@@ -16,7 +16,7 @@ class swPreviewDockWidget;
 class PartPreview;
 class swColorList;
 class swPropertiesWidget;
-class swTimelineWidget;
+class swStepsWidget;
 class swElidedLabel;
 class swDoubleSpinBox;
 class swSpinnerWidget;
@@ -308,7 +308,7 @@ public:
 	void UpdateStatusBarPosition();
 	void UpdateViewOrientation(const swCamera* Camera);
 	void UpdateStatusSegments();
-	void UpdateTimeline(bool Clear, bool UpdateItems);
+	void UpdateSteps(bool Clear, bool UpdateItems);
 	void UpdatePaste(bool Enabled);
 	void UpdateCurrentStep();
 	void SetAddKeys(bool AddKeys);
@@ -484,7 +484,7 @@ protected:
 	swVector3 mTurntableFront;
 	QDockWidget* mColorsToolBar = nullptr;
 	QDockWidget* mPropertiesToolBar = nullptr;
-	QDockWidget* mTimelineToolBar = nullptr;
+	QDockWidget* mStepsToolBar = nullptr;
 	QDockWidget* mMinifigureBuilderToolBar = nullptr;
 	QDockWidget* mExplodeToolBar = nullptr;
 	class swExplodeWidget* mExplodeWidget = nullptr;
@@ -498,7 +498,7 @@ protected:
 	swColorList* mColorList = nullptr;
 	QToolButton* mColorButton = nullptr;
 	swPropertiesWidget* mPropertiesWidget = nullptr;
-	swTimelineWidget* mTimelineWidget = nullptr;
+	swStepsWidget* mStepsWidget = nullptr;
 	swDoubleSpinBox* mTransformXEdit = nullptr;
 	swDoubleSpinBox* mTransformYEdit = nullptr;
 	swDoubleSpinBox* mTransformZEdit = nullptr;

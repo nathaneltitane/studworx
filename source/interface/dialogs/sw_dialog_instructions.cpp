@@ -48,7 +48,7 @@ swInstructionsDialog::swInstructionsDialog(QWidget* Parent, Project* Project)
 	PageAreaLayout->addWidget(CreatePageBar());
 	setCentralWidget(PageArea);
 
-	// timeline shortcuts turn pages, kept off the editor panel
+	// step shortcuts turn pages, kept off the editor panel
 	const std::pair<int, QToolButton*> PageCommands[] =
 	{
 		{ SW_VIEW_TIME_FIRST, mFirstButton },
@@ -59,13 +59,13 @@ swInstructionsDialog::swInstructionsDialog(QWidget* Parent, Project* Project)
 
 	for (const auto& [CommandId, Button] : PageCommands)
 	{
-		QAction* TimelineAction = gMainWindow->mActions[CommandId];
+		QAction* StepAction = gMainWindow->mActions[CommandId];
 
 		for (QWidget* Target : { PageArea, static_cast<QWidget*>(mPageListWidget) })
 		{
-			QShortcut* Shortcut = new QShortcut(TimelineAction->shortcut(), Target, nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
+			QShortcut* Shortcut = new QShortcut(StepAction->shortcut(), Target, nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
 			connect(Shortcut, &QShortcut::activated, Button, &QToolButton::click);
-			connect(TimelineAction, &QAction::changed, Shortcut, [Shortcut, TimelineAction]() { Shortcut->setKey(TimelineAction->shortcut()); });
+			connect(StepAction, &QAction::changed, Shortcut, [Shortcut, StepAction]() { Shortcut->setKey(StepAction->shortcut()); });
 		}
 	}
 
@@ -391,7 +391,7 @@ QWidget* swInstructionsDialog::CreatePageBar()
 		Button->setIcon(Icon);
 		Button->setToolButtonStyle(Icon.isNull() ? Qt::ToolButtonTextOnly : Qt::ToolButtonTextBesideIcon);
 		Button->setLayoutDirection(IconAfterText ? Qt::RightToLeft : Qt::LeftToRight);
-		Button->setWhatsThis(tr("<p><b>Page Bar</b></p><p>Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The timeline First, Previous, Next and Last shortcuts turn the pages too while the page or the Pages panel has focus.</p>"));
+		Button->setWhatsThis(tr("<p><b>Page Bar</b></p><p>Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The First, Previous, Next and Last step shortcuts turn the pages too while the page or the Pages panel has focus.</p>"));
 		connect(Button, &QToolButton::clicked, this, Clicked);
 		PageBarLayout->addWidget(Button);
 		return Button;
@@ -440,7 +440,7 @@ QWidget* swInstructionsDialog::CreatePageBar()
 	return PageBar;
 }
 
-// use to get the model whose steps fill a page, only the active model since step edits follow the timeline
+// use to get the model whose steps fill a page, only the active model since step edits follow the Steps panel
 swModel* swInstructionsDialog::GetEditableStepModel(int Row) const
 {
 	if (Row < 0 || Row >= static_cast<int>(mInstructions->mPages.size()))

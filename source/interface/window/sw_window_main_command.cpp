@@ -7,7 +7,7 @@
 #include "sw_widget_terminal.h"
 #endif
 #include "sw_widget_properties.h"
-#include "sw_widget_timeline.h"
+#include "sw_widget_steps.h"
 #include "sw_view_widget.h"
 #include "sw_widget_list_color.h"
 #include "sw_window_utilities.h"
@@ -338,8 +338,8 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		ToggleDockWidget(mPropertiesToolBar);
 		break;
 
-	case SW_VIEW_TOOLBAR_TIMELINE:
-		ToggleDockWidget(mTimelineToolBar);
+	case SW_VIEW_TOOLBAR_STEPS:
+		ToggleDockWidget(mStepsToolBar);
 		break;
 
 	case SW_VIEW_TOOLBAR_PREVIEW:
@@ -831,12 +831,12 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		// the focused panel picks what goes
 
 		QWidget* FocusWidget = QApplication::focusWidget();
-		QTreeWidgetItem* StepItem = mTimelineWidget && mTimelineWidget->hasFocus() ? mTimelineWidget->currentItem() : nullptr;
+		QTreeWidgetItem* StepItem = mStepsWidget && mStepsWidget->hasFocus() ? mStepsWidget->currentItem() : nullptr;
 
 		if (mJointsWidget && mJointsWidget->ClearFocusedJoint())
 			break;
 		else if (StepItem && !StepItem->parent())
-			mTimelineWidget->RemoveStep();
+			mStepsWidget->RemoveStep();
 		else if (mKeyframesWidget && FocusWidget && mKeyframesWidget->isAncestorOf(FocusWidget))
 			mKeyframesWidget->DeleteKeys();
 		else if (ActiveModel)
@@ -1525,32 +1525,32 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 			ActiveView->EndLayerAction(true);
 		break;
 
-	case SW_TIMELINE_INSERT_BEFORE:
-		mTimelineWidget->InsertStepBefore();
+	case SW_STEPS_INSERT_BEFORE:
+		mStepsWidget->InsertStepBefore();
 		break;
 
-	case SW_TIMELINE_INSERT_AFTER:
-		mTimelineWidget->InsertStepAfter();
+	case SW_STEPS_INSERT_AFTER:
+		mStepsWidget->InsertStepAfter();
 		break;
 
-	case SW_TIMELINE_DELETE:
-		mTimelineWidget->RemoveStep();
+	case SW_STEPS_DELETE:
+		mStepsWidget->RemoveStep();
 		break;
 
-	case SW_TIMELINE_MOVE_SELECTION:
-		mTimelineWidget->MoveSelection();
+	case SW_STEPS_MOVE_SELECTION:
+		mStepsWidget->MoveSelection();
 		break;
 
-	case SW_TIMELINE_MOVE_SELECTION_BEFORE:
-		mTimelineWidget->MoveSelectionBefore();
+	case SW_STEPS_MOVE_SELECTION_BEFORE:
+		mStepsWidget->MoveSelectionBefore();
 		break;
 
-	case SW_TIMELINE_MOVE_SELECTION_AFTER:
-		mTimelineWidget->MoveSelectionAfter();
+	case SW_STEPS_MOVE_SELECTION_AFTER:
+		mStepsWidget->MoveSelectionAfter();
 		break;
 
-	case SW_TIMELINE_SET_CURRENT:
-		mTimelineWidget->SetCurrentStep();
+	case SW_STEPS_SET_CURRENT:
+		mStepsWidget->SetCurrentStep();
 		break;
 
 	case SW_COMMAND_COUNT:

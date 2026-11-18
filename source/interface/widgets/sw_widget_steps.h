@@ -1,12 +1,12 @@
 #pragma once
 
-class swTimelineWidget : public QTreeWidget
+class swStepsWidget : public QTreeWidget
 {
 	Q_OBJECT
 
 public:
-	swTimelineWidget(QWidget* Parent);
-	~swTimelineWidget();
+	swStepsWidget(QWidget* Parent);
+	~swStepsWidget();
 
 	void Update(bool Clear, bool UpdateItems);
 	void UpdateSelection();

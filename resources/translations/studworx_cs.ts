@@ -930,9 +930,13 @@
         <translation>Zobrazit.Panely nástrojů.Vlastnosti</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1592"/>
         <source>View.Toolbars.Timeline</source>
-        <translation>Zobrazit.Panely nástrojů.Časová osa</translation>
+        <translation type="vanished">Zobrazit.Panely nástrojů.Časová osa</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1592"/>
+        <source>View.Toolbars.Steps</source>
+        <translation>Zobrazit.Panely nástrojů.Kroky</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1601"/>
@@ -3591,9 +3595,8 @@
         <translation>Panel vlastností</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1593"/>
         <source>Timeline Panel</source>
-        <translation>Panel časové osy</translation>
+        <translation type="vanished">Panel časové osy</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1602"/>
@@ -3993,6 +3996,11 @@
         <location filename="../../source/application/sw_commands.cpp" line="3445"/>
         <source>Delete Step</source>
         <translation>Odstranit krok</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1593"/>
+        <source>Steps Panel</source>
+        <translation>Panel kroků</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2042"/>
@@ -7680,6 +7688,11 @@ Formát souboru není rozpoznán.</translation>
         <translation>Kliknutím na spojení vybraného podmodelu z něj vytvoříte kloub</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3482"/>
+        <source>View the model at this step</source>
+        <translation>Zobrazit model v tomto kroku</translation>
+    </message>
+    <message>
         <source>Go into joint mode on the selected submodel, or leave it</source>
         <translation type="vanished">Přejít do režimu kloubu vybraného podmodelu, nebo ho opustit</translation>
     </message>
@@ -7711,6 +7724,11 @@ Formát souboru není rozpoznán.</translation>
         <location filename="../../source/application/sw_commands.cpp" line="1009"/>
         <source>Turn a joint</source>
         <translation>Otočit kloub</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1594"/>
+        <source>Toggle the Steps panel</source>
+        <translation>Přepnout panel Kroky</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1639"/>
@@ -7899,9 +7917,8 @@ Formát souboru není rozpoznán.</translation>
         <translation>Přepnout panel Vlastnosti</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1594"/>
         <source>Toggle the Timeline panel</source>
-        <translation>Přepnout panel Časová osa</translation>
+        <translation type="vanished">Přepnout panel Časová osa</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1603"/>
@@ -8379,9 +8396,8 @@ Formát souboru není rozpoznán.</translation>
         <translation>Přesunout vybrané díly do nového kroku za tímto</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3482"/>
         <source>View the model at this point in the timeline</source>
-        <translation>Zobrazit model v tomto okamžiku na časové ose</translation>
+        <translation type="vanished">Zobrazit model v tomto okamžiku na časové ose</translation>
     </message>
 </context>
 <context>
@@ -8896,9 +8912,23 @@ Formát souboru není rozpoznán.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Nástroj Otočit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte objekty a poté přetáhněte úchyt otáčení v pohledu modelu. Přichycení otáčení nastavuje přírůstky úhlu. Možnosti transformace určují, zda se použijí relativní, nebo modelové osy a zda se díly otáčejí společně, nebo samostatně.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2547"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1657"/>
+        <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Keyframes panel, a chart of the animation keys of the objects per step.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje panel Klíčové snímky, graf animačních klíčů objektů po krocích.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3429"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert Step Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step before this step in the Steps panel.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Vložit krok před&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá prázdný krok před tento krok v panelu Kroky.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3438"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert Step After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step after this step in the Steps panel.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Vložit krok za&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá prázdný krok za tento krok v panelu Kroky.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Removes only what is selected, picked by where you work: the joint in the Joints panel, the step in the Timeline panel, the picked keys in the Keyframes panel, or the selected keys at the current step when none are picked, and the selected pointers, notices or blank page in the instructions. In the view it removes a focused control point alone, otherwise the selected objects. With nothing selected it does nothing.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Smazat&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odstraní jen to, co je vybráno, podle toho, kde pracujete: kloub v panelu Klouby, krok v panelu Časová osa, zvolené klíče v panelu Klíčové snímky, nebo když žádné zvolené nejsou, klíče vybraných objektů v aktuálním kroku, a vybrané ukazatele, poznámky nebo prázdnou stránku v návodu. V pohledu odstraní samotný zaměřený řídicí bod, jinak vybrané objekty. Když není nic vybráno, neudělá nic.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Smazat&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odstraní jen to, co je vybráno, podle toho, kde pracujete: kloub v panelu Klouby, krok v panelu Časová osa, zvolené klíče v panelu Klíčové snímky, nebo když žádné zvolené nejsou, klíče vybraných objektů v aktuálním kroku, a vybrané ukazatele, poznámky nebo prázdnou stránku v návodu. V pohledu odstraní samotný zaměřený řídicí bod, jinak vybrané objekty. Když není nic vybráno, neudělá nic.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2601"/>
@@ -8988,6 +9018,11 @@ Formát souboru není rozpoznán.</translation>
         <location filename="../../source/application/sw_commands.cpp" line="1388"/>
         <source>&lt;p&gt;&lt;b&gt;Camera&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Look through this camera of the model. The menu lists the first sixteen cameras.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Kamera&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí pohled touto kamerou modelu. Nabídka uvádí prvních šestnáct kamer.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1415"/>
+        <source>&lt;p&gt;&lt;b&gt;Next Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the next building step to reveal the next stage of the model. Use the Steps panel to change which step introduces a part.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Další krok&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí další krok sestavení, aby se odhalila další fáze modelu. Pomocí panelu Kroky změňte, ve kterém kroku se díl objeví.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1433"/>
@@ -9591,14 +9626,12 @@ Formát souboru není rozpoznán.</translation>
         <translation>&lt;p&gt;&lt;b&gt;O programu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí verzi StudWorx, odkaz na domovskou stránku a informace o systému ke zkopírování do hlášení chyby.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3429"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Step Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step before this step in the Timeline.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Vložit krok před&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá prázdný krok před tento krok na časové ose.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Vložit krok před&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá prázdný krok před tento krok na časové ose.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3438"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Step After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step after this step in the Timeline.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Vložit krok za&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá prázdný krok za tento krok na časové ose.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Vložit krok za&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá prázdný krok za tento krok na časové ose.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3447"/>
@@ -9681,9 +9714,8 @@ Formát souboru není rozpoznán.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Předchozí krok&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí model o jeden krok sestavení dříve. Díly přidané v pozdějších krocích jsou skryté, takže si můžete prohlédnout dřívější fázi stavby.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1415"/>
         <source>&lt;p&gt;&lt;b&gt;Next Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the next building step to reveal the next stage of the model. Use the Timeline to change which step introduces a part.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Další krok&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí další krok sestavení, aby se odhalila další fáze modelu. Pomocí Časové osy změňte, ve kterém kroku se díl objeví.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Další krok&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí další krok sestavení, aby se odhalila další fáze modelu. Pomocí Časové osy změňte, ve kterém kroku se díl objeví.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1424"/>
@@ -9757,6 +9789,11 @@ Formát souboru není rozpoznán.</translation>
         <location filename="../../source/application/sw_commands.cpp" line="2160"/>
         <source>&lt;p&gt;&lt;b&gt;Connection Points&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mark the studs, tubes, axle holes, clips and other connection points of the hovered part within a 2x2 stud area of the pointer, when Part Connections is on in the preferences. Filled marks are male points, hollow marks are female points, and only the points facing the camera show.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Spojovací body&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Označí výstupky, trubky, otvory pro osy, spony a další spojovací body dílu pod ukazatelem v oblasti 2x2 výstupků kolem ukazatele, když jsou v předvolbách zapnuta Spojení dílů. Plné značky jsou vnější body, prázdné značky jsou vnitřní body a zobrazují se jen body natočené ke kameře.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2547"/>
+        <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Removes only what is selected, picked by where you work: the joint in the Joints panel, the step in the Steps panel, the picked keys in the Keyframes panel, or the selected keys at the current step when none are picked, and the selected pointers, notices or blank page in the instructions. In the view it removes a focused control point alone, otherwise the selected objects. With nothing selected it does nothing.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Smazat&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odstraní jen to, co je vybráno, podle toho, kde pracujete: kloub v panelu Klouby, krok v panelu Kroky, zvolené klíče v panelu Klíčové snímky, nebo když žádné zvolené nejsou, klíče vybraných objektů v aktuálním kroku, a vybrané ukazatele, poznámky nebo prázdnou stránku v návodu. V pohledu odstraní samotný zaměřený řídicí bod, jinak vybrané objekty. Když není nic vybráno, neudělá nic.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2583"/>
@@ -9917,9 +9954,8 @@ Formát souboru není rozpoznán.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Pózy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje panel Pózy, který ukládá a vyvolává pojmenované sady úhlů kloubů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1657"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Keyframes panel, a timeline of the animation keys of the objects per step.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje panel Klíčové snímky, časovou osu animačních klíčů objektů po krocích.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí nebo skryje panel Klíčové snímky, časovou osu animačních klíčů objektů po krocích.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1729"/>
@@ -15279,9 +15315,13 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>%1 - Prázdná</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="394"/>
         <source>&lt;p&gt;&lt;b&gt;Page Bar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The timeline First, Previous, Next and Last shortcuts turn the pages too while the page or the Pages panel has focus.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Lišta stránek&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přejděte na první, předchozí, další nebo poslední stránku, nebo rovnou na obálku či soupis materiálu, které jsou zašedlé, dokud jsou tyto stránky vypnuté. Stránka kroku vloží prázdný krok před aktuální stránku, Prázdná stránka vloží před ni prázdnou stránku a Odebrat stránku odebere prázdnou stránku nebo stránku prázdných kroků. Políčko vpravo ukazuje aktuální stránku, zadáním čísla na ni přejdete. Zkratky První, Předchozí, Další a Poslední z časové osy listují stránkami také, dokud má fokus stránka nebo panel Stránky.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Lišta stránek&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přejděte na první, předchozí, další nebo poslední stránku, nebo rovnou na obálku či soupis materiálu, které jsou zašedlé, dokud jsou tyto stránky vypnuté. Stránka kroku vloží prázdný krok před aktuální stránku, Prázdná stránka vloží před ni prázdnou stránku a Odebrat stránku odebere prázdnou stránku nebo stránku prázdných kroků. Políčko vpravo ukazuje aktuální stránku, zadáním čísla na ni přejdete. Zkratky První, Předchozí, Další a Poslední z časové osy listují stránkami také, dokud má fokus stránka nebo panel Stránky.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="394"/>
+        <source>&lt;p&gt;&lt;b&gt;Page Bar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The First, Previous, Next and Last step shortcuts turn the pages too while the page or the Pages panel has focus.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Lišta stránek&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přejděte na první, předchozí, další nebo poslední stránku, nebo rovnou na obálku či soupis materiálu, které jsou zašedlé, dokud jsou tyto stránky vypnuté. Stránka kroku vloží prázdný krok před aktuální stránku, Prázdná stránka vloží před ni prázdnou stránku a Odebrat stránku odebere prázdnou stránku nebo stránku prázdných kroků. Políčko vpravo ukazuje aktuální stránku, zadáním čísla na ni přejdete. Zkratky První, Předchozí, Další a Poslední pro kroky listují stránkami také, dokud má fokus stránka nebo panel Stránky.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
@@ -18154,9 +18194,8 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Časová osa animačních klíčů s jedním sloupcem na krok a jedním řádkem na objekt, rozbalitelným na jeho vlastnosti. Kosočtverec označuje klíč a čára spojuje klíče jedné vlastnosti. Kliknutím na název vyberete objekt, Ctrl+kliknutím jej přidáte do výběru nebo z něj odeberete a kliknutím na jeho šipku zobrazíte jeho vlastnosti. Kliknutím na krok na něj přejdete, dvojitým kliknutím na buňku klíč přidáte nebo odeberete, přetažením kosočtverce klíč přesunete na jiný krok a pravým tlačítkem zobrazíte další možnosti. Hodnoty se upravují v panelu Vlastnosti.&lt;/p&gt;&lt;p&gt;Vybrané uvádí vybrané objekty, Vše každý objekt s klíči. Plné a prázdné kosočtverce přidávají nebo odebírají klíče vybraných objektů v aktuálním kroku, Přidat klíče způsobí, že úpravy vytvářejí klíče, a tlačítka přehrávání procházejí kroky, aby ukázala pohyb podle klíčů.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="15"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, click a diamond to pick it, Ctrl+click to add or remove it from the picked keys and Shift+click to take it out. Delete removes the picked keys. Double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;&lt;p&gt;Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Časová osa animačních klíčů s jedním sloupcem na krok a jedním řádkem na objekt, rozbalitelná až k jeho vlastnostem. Kosočtverec označuje klíč a čára spojuje klíče jedné vlastnosti. Kliknutím na název vyberete objekt, Ctrl+klik ho přidá do výběru nebo z něj odebere a kliknutím na jeho šipku zobrazíte vlastnosti. Kliknutím na krok na něj přejdete, kliknutím na kosočtverec ho zvolíte, Ctrl+klik ho přidá ke zvoleným klíčům nebo ho z nich odebere a Shift+klik ho vyjme. Del odstraní zvolené klíče. Dvojklikem na buňku přidáte nebo odeberete klíč, tažením kosočtverce přesunete klíč do jiného kroku a pravým tlačítkem otevřete další volby. Hodnoty se upravují v panelu Vlastnosti.&lt;/p&gt;&lt;p&gt;Vybrané ukazuje vybrané objekty, Vše každý objekt s klíči. Plný a dutý kosočtverec přidají nebo odeberou klíče vybraných objektů v aktuálním kroku, Přidávat klíče nechá úpravy vytvářet klíče a tlačítka přehrávání projdou kroky a ukážou pohyb.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Časová osa animačních klíčů s jedním sloupcem na krok a jedním řádkem na objekt, rozbalitelná až k jeho vlastnostem. Kosočtverec označuje klíč a čára spojuje klíče jedné vlastnosti. Kliknutím na název vyberete objekt, Ctrl+klik ho přidá do výběru nebo z něj odebere a kliknutím na jeho šipku zobrazíte vlastnosti. Kliknutím na krok na něj přejdete, kliknutím na kosočtverec ho zvolíte, Ctrl+klik ho přidá ke zvoleným klíčům nebo ho z nich odebere a Shift+klik ho vyjme. Del odstraní zvolené klíče. Dvojklikem na buňku přidáte nebo odeberete klíč, tažením kosočtverce přesunete klíč do jiného kroku a pravým tlačítkem otevřete další volby. Hodnoty se upravují v panelu Vlastnosti.&lt;/p&gt;&lt;p&gt;Vybrané ukazuje vybrané objekty, Vše každý objekt s klíči. Plný a dutý kosočtverec přidají nebo odeberou klíče vybraných objektů v aktuálním kroku, Přidávat klíče nechá úpravy vytvářet klíče a tlačítka přehrávání projdou kroky a ukážou pohyb.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="53"/>
@@ -18179,9 +18218,18 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Zobrazí klíče vybraných objektů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="77"/>
         <source>&lt;p&gt;&lt;b&gt;Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;List only the selected objects in the timeline, with or without keys.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Vybrané&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Uvede na časové ose jen vybrané objekty, s klíči nebo bez nich.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Vybrané&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Uvede na časové ose jen vybrané objekty, s klíči nebo bez nich.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="15"/>
+        <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A chart of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, click a diamond to pick it, Ctrl+click to add or remove it from the picked keys and Shift+click to take it out. Delete removes the picked keys. Double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;&lt;p&gt;Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Graf animačních klíčů s jedním sloupcem na krok a jedním řádkem na objekt, rozbalitelná až k jeho vlastnostem. Kosočtverec označuje klíč a čára spojuje klíče jedné vlastnosti. Kliknutím na název vyberete objekt, Ctrl+klik ho přidá do výběru nebo z něj odebere a kliknutím na jeho šipku zobrazíte vlastnosti. Kliknutím na krok na něj přejdete, kliknutím na kosočtverec ho zvolíte, Ctrl+klik ho přidá ke zvoleným klíčům nebo ho z nich odebere a Shift+klik ho vyjme. Del odstraní zvolené klíče. Dvojklikem na buňku přidáte nebo odeberete klíč, tažením kosočtverce přesunete klíč do jiného kroku a pravým tlačítkem otevřete další volby. Hodnoty se upravují v panelu Vlastnosti.&lt;/p&gt;&lt;p&gt;Vybrané ukazuje vybrané objekty, Vše každý objekt s klíči. Plný a dutý kosočtverec přidají nebo odeberou klíče vybraných objektů v aktuálním kroku, Přidávat klíče nechá úpravy vytvářet klíče a tlačítka přehrávání projdou kroky a ukážou pohyb.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="77"/>
+        <source>&lt;p&gt;&lt;b&gt;Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;List only the selected objects in the chart, with or without keys.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Vybrané&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Uvede v grafu jen vybrané objekty, s klíči nebo bez nich.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="81"/>
@@ -18489,6 +18537,11 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>&lt;p&gt;&lt;b&gt;Standardní panel nástrojů&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pomocí ovládacích prvků souboru vytvářejte, otevírejte a ukládejte modely a pomocí Zpět nebo Znovu procházejte historii úprav. Před přesouváním nebo otáčením objektů zvolte pravidlo výběru, souřadnicový základ a přichytávací kroky ze čtyř rozbalovacích ovládacích prvků. Nápověda &gt; &quot;Co je toto?&quot; vysvětluje jednotlivé ovládací prvky.&lt;/p&gt;</translation>
     </message>
     <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="709"/>
+        <source>&lt;p&gt;&lt;b&gt;Time Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Steps panel for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Panel nástrojů Čas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Tlačítka se šipkami procházejí kroky stavby, abyste mohli zkontrolovat, jak se model sestavuje. Nemění krok přiřazený dílu, k tomu slouží panel Kroky. Přehrát projde kroky modelu a ukáže pohyb podle klíčů a při dalším použití pozastaví, Zastavit se vrátí na krok, ze kterého přehrávání začalo. Nastavit klíče a Odebrat klíče přidávají nebo odebírají klíče vybraných objektů v aktuálním kroku, jako kosočtverce panelu Klíčové snímky. Přidat klíče určuje, zda úpravy vytvářejí animační klíče v aktuálním kroku, což umožňuje, aby se vlastnosti, například poloha, mezi kroky lišily.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="722"/>
         <source>&lt;p&gt;&lt;b&gt;Tools Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a tool, then use it in the model view. Insertion tools create parts, lights, or cameras. Editing tools select, transform, remove, or recolor objects. Navigation tools change the viewpoint without changing model geometry. Mouse assignments can be customized in Preferences.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Panel nástrojů Nástroje&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte nástroj a poté jej použijte v zobrazení modelu. Nástroje pro vkládání vytvářejí díly, světla nebo kamery. Nástroje pro úpravy vybírají, transformují, odebírají nebo přebarvují objekty. Navigační nástroje mění pohled bez změny geometrie modelu. Přiřazení myši lze upravit v Předvolbách.&lt;/p&gt;</translation>
@@ -18512,6 +18565,16 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="779"/>
         <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.&lt;/p&gt;&lt;p&gt;Docked at the top or bottom, the swatches line up in one row; scroll the wheel or use the arrows at its ends to move along it, or double-click an arrow to jump to that end.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Barvy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Z vzorků vyberte aktuální barvu LDraw. Tato barva se použije při vkládání nebo malování dílů. Chcete-li přebarvit vybrané díly, použijte tlačítko barvy nad vzorky. Najetím na vzorek zobrazíte jeho název a kód barvy.&lt;/p&gt;&lt;p&gt;Při ukotvení nahoře nebo dole se vzorky řadí do jedné řady; kolečkem myši nebo šipkami na jejích koncích se po ní posouváte, nebo dvojitým kliknutím na šipku skočíte na její konec.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1092"/>
+        <source>Steps</source>
+        <translation>Kroky</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1094"/>
+        <source>&lt;p&gt;&lt;b&gt;Steps&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Kroky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte krok, aby se stal aktuálním, nebo vyberte řádky dílů, abyste tyto díly vybrali v modelu. Přetahujte díly mezi kroky nebo je měňte v pořadí v rámci kroku. Řádky Klíče uvádějí objekty s animačními klíči v kroku a dvojité kliknutí vybere tento objekt tam a zobrazí panel Klíčové snímky. Kliknutím pravým tlačítkem zobrazíte příkazy pro vložení, odebrání, přesun a viditelnost kroků.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.&lt;/p&gt;</source>
@@ -18569,9 +18632,8 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>&lt;p&gt;&lt;b&gt;Použít transformaci&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte režim posunu nebo otočení, zadejte hodnoty X/Y/Z a stisknutím klávesy Enter je použijte. Hodnoty posunu používají jednotky LDraw; hodnoty otočení používají stupně.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1094"/>
         <source>&lt;p&gt;&lt;b&gt;Timeline&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Časová osa&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte krok, aby se stal aktuálním, nebo vyberte řádky dílů, abyste tyto díly vybrali v modelu. Přetahujte díly mezi kroky nebo je měňte v pořadí v rámci kroku. Řádky Klíče uvádějí objekty s animačními klíči v kroku a dvojité kliknutí vybere tento objekt tam a zobrazí panel Klíčové snímky. Kliknutím pravým tlačítkem zobrazíte příkazy pro vložení, odebrání, přesun a viditelnost kroků.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Časová osa&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte krok, aby se stal aktuálním, nebo vyberte řádky dílů, abyste tyto díly vybrali v modelu. Přetahujte díly mezi kroky nebo je měňte v pořadí v rámci kroku. Řádky Klíče uvádějí objekty s animačními klíči v kroku a dvojité kliknutí vybere tento objekt tam a zobrazí panel Klíčové snímky. Kliknutím pravým tlačítkem zobrazíte příkazy pro vložení, odebrání, přesun a viditelnost kroků.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1131"/>
@@ -18635,9 +18697,8 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>&amp;Modely</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="709"/>
         <source>&lt;p&gt;&lt;b&gt;Time Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Timeline for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Panel nástrojů Čas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Tlačítka se šipkami procházejí kroky stavby, abyste mohli zkontrolovat, jak se model sestavuje. Nemění krok přiřazený dílu, k tomu slouží Časová osa. Přehrát projde kroky modelu a ukáže pohyb podle klíčů a při dalším použití pozastaví, Zastavit se vrátí na krok, ze kterého přehrávání začalo. Nastavit klíče a Odebrat klíče přidávají nebo odebírají klíče vybraných objektů v aktuálním kroku, jako kosočtverce panelu Klíčové snímky. Přidat klíče určuje, zda úpravy vytvářejí animační klíče v aktuálním kroku, což umožňuje, aby se vlastnosti, například poloha, mezi kroky lišily.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Panel nástrojů Čas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Tlačítka se šipkami procházejí kroky stavby, abyste mohli zkontrolovat, jak se model sestavuje. Nemění krok přiřazený dílu, k tomu slouží Časová osa. Přehrát projde kroky modelu a ukáže pohyb podle klíčů a při dalším použití pozastaví, Zastavit se vrátí na krok, ze kterého přehrávání začalo. Nastavit klíče a Odebrat klíče přidávají nebo odebírají klíče vybraných objektů v aktuálním kroku, jako kosočtverce panelu Klíčové snímky. Přidat klíče určuje, zda úpravy vytvářejí animační klíče v aktuálním kroku, což umožňuje, aby se vlastnosti, například poloha, mezi kroky lišily.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="807"/>
@@ -18690,9 +18751,8 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Zadejte posun Z v jednotkách LDraw nebo otočení ve stupních.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1092"/>
         <source>Timeline</source>
-        <translation>Časová osa</translation>
+        <translation type="vanished">Časová osa</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Timeline&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
@@ -24242,37 +24302,37 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation>Obnovit kategorie</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="369"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="380"/>
         <source>The shortcut &apos;%1&apos; is already assigned to &apos;%2&apos;. Do you want to replace it?</source>
         <translation>Zkratka &apos;%1&apos; je již přiřazena k &apos;%2&apos;. Chcete ji nahradit?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="488"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="499"/>
         <source>Insert</source>
         <translation>Vložit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="500"/>
         <source>Edit</source>
         <translation>Upravit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="490"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="501"/>
         <source>View</source>
         <translation>Zobrazit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="629"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="640"/>
         <source>Could not read mouse shortcuts file &apos;%1&apos;.</source>
         <translation>Soubor zkratek myši &apos;%1&apos; se nepodařilo přečíst.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="648"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="659"/>
         <source>Could not write mouse shortcuts file &apos;%1&apos;.</source>
         <translation>Soubor zkratek myši &apos;%1&apos; se nepodařilo zapsat.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="664"/>
         <source>Reset Mouse Shortcuts</source>
         <translation>Obnovit zkratky myši</translation>
     </message>
@@ -24558,7 +24618,7 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation type="vanished">Chyba při ukládání souboru klávesových zkratek.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="460"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="471"/>
         <source>Are you sure you want to load the default keyboard shortcuts?</source>
         <translation>Opravdu chcete načíst výchozí klávesové zkratky?</translation>
     </message>
@@ -24578,9 +24638,9 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation>Pravé tlačítko</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="371"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="566"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="575"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="382"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="577"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="586"/>
         <source>Override Shortcut</source>
         <translation>Přepsat zkratky</translation>
     </message>
@@ -24605,26 +24665,26 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation type="obsolete">Importovat klávesové zkratky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="453"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="464"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Exportovat klávesové zkratky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="460"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="471"/>
         <source>Reset Keyboard Shortcuts</source>
         <translation>Obnovit klávesové zkratky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="566"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="575"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="577"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="586"/>
         <source>This shortcut is already assigned to &apos;%1&apos;. Do you want to replace it?</source>
         <oldsource>This shortcut is already assigned to &apos;%1&apos;, do you want to replace it?</oldsource>
         <translation>Tato zkratka je již přiřazena k &apos;%1&apos;, chcete ji nahradit?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="425"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="433"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="621"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="436"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="444"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="632"/>
         <source>Import Shortcuts</source>
         <translation>Importovat zkratky</translation>
     </message>
@@ -24633,8 +24693,8 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation type="vanished">Chyba při čtení souboru zkratek myši.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="446"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="642"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="457"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
         <source>Export Shortcuts</source>
         <translation>Exportovat zkratky</translation>
     </message>
@@ -24659,12 +24719,12 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation>Vlaková trať</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="207"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
         <source>Help for the panel under the pointer</source>
         <translation>Nápověda k panelu pod ukazatelem</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="207"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
         <source>F1</source>
         <translation>F1</translation>
     </message>
@@ -24673,99 +24733,115 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation type="vanished">Vymazat kloub v panelu Klouby</translation>
     </message>
     <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
         <source>Del</source>
-        <translation type="vanished">Del</translation>
+        <translation>Del</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <source>Delete what is selected where you work</source>
+        <translation>Smazat, co je vybráno tam, kde pracujete</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
         <source>Add to the selection</source>
         <translation>Přidat do výběru</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
         <source>Ctrl+Click</source>
         <translation>Ctrl+klik</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
         <source>Remove from the selection</source>
         <translation>Odebrat z výběru</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
         <source>Shift+Click</source>
         <translation>Shift+klik</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
         <source>Zoom faster or slower</source>
         <translation>Přibližovat rychleji nebo pomaleji</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
         <source>Ctrl or Shift+Wheel</source>
         <translation>Ctrl nebo Shift+kolečko</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="214"/>
         <source>Snap rotation, keep the insert tool, free a locked joint</source>
         <translation>Přichytit otáčení, ponechat nástroj vkládání, uvolnit zamčený kloub</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="214"/>
         <source>Hold Ctrl</source>
         <translation>Držet Ctrl</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="215"/>
         <source>Jump to a part in the parts list</source>
         <translation>Skočit na díl v seznamu dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="215"/>
         <source>A to Z</source>
         <translation>A až Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="216"/>
         <source>Move through the parts list</source>
         <translation>Pohyb seznamem dílů</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="216"/>
         <source>Arrows, Home, End, Page Up, Page Down</source>
         <translation>Šipky, Home, End, Page Up, Page Down</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="216"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="219"/>
         <source>Built-in Keys</source>
         <translation>Pevné klávesy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="272"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="275"/>
         <source>The shortcut &apos;%1&apos; is shared by %2.</source>
         <translation>Zkratku &apos;%1&apos; sdílí %2.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="425"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="446"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="621"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="642"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="367"/>
+        <source>Built-in Key</source>
+        <translation>Vestavěná klávesa</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="367"/>
+        <source>The shortcut &apos;%1&apos; is a built-in key that always deletes what is selected.</source>
+        <translation>Zkratka &apos;%1&apos; je vestavěná klávesa, která vždy smaže, co je vybráno.</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="436"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="457"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="632"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
         <source>Shortcut Files (*.txt);;All Files (*)</source>
         <translation>Soubory zkratek (*.txt);;Všechny soubory (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="433"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="444"/>
         <source>Could not read keyboard shortcuts file &apos;%1&apos;.</source>
         <translation>Soubor klávesových zkratek &apos;%1&apos; se nepodařilo přečíst.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="453"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="464"/>
         <source>Could not write keyboard shortcuts file &apos;%1&apos;.</source>
         <translation>Soubor klávesových zkratek &apos;%1&apos; se nepodařilo zapsat.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="629"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="640"/>
         <source>Import Mouse Shortcuts</source>
         <translation>Importovat zkratky myši</translation>
     </message>
@@ -24774,12 +24850,12 @@ Nepodporované grafické karty používají odstín obličeje a barevné okraje.
         <translation type="vanished">Při ukládání souboru klávesových zkratek došlo k chybě.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="648"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="659"/>
         <source>Export Mouse Shortcuts</source>
         <translation>Exportovat zkratky myši</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="664"/>
         <source>Are you sure you want to load the default mouse shortcuts?</source>
         <translation>Opravdu chcete načíst výchozí zkratky pro myš?</translation>
     </message>
@@ -29731,6 +29807,64 @@ Nainstalujte POV-Ray 3.7 nebo novější z %1 a nastavte jej v Předvolby › Ob
     </message>
 </context>
 <context>
+    <name>swStepsWidget</name>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="13"/>
+        <source>Building Steps and Parts</source>
+        <translation>Stavební kroky a díly</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="14"/>
+        <source>Select steps or parts; drag parts to reorder them or change their building step.</source>
+        <translation>Vyberte kroky nebo díly; přetažením dílů změníte jejich pořadí nebo změníte jejich stavební krok.</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="189"/>
+        <source>Step %1</source>
+        <translation>Krok %1</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="333"/>
+        <source>Keys: %1 (%2)</source>
+        <translation>Klíče: %1 (%2)</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="337"/>
+        <source>Animation keys of this object at this step. Double-click to select it and show the Keyframes panel.</source>
+        <translation>Animační klíče tohoto objektu v tomto kroku. Dvojitým kliknutím jej vyberete a zobrazíte panel Klíčové snímky.</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="352"/>
+        <source>relative</source>
+        <translation>relativní</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="352"/>
+        <source>absolute</source>
+        <translation>absolutní</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="352"/>
+        <source>added</source>
+        <translation>přidáno</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="357"/>
+        <source>View: back to default</source>
+        <translation>Pohled: zpět na výchozí</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="359"/>
+        <source>View: %1, %2, %3 %4</source>
+        <translation>Pohled: %1, %2, %3 %4</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="364"/>
+        <source>Step view saved as an MLCAD ROTSTEP line. Double-click to edit it.</source>
+        <translation>Pohled kroku uložený jako řádek MLCAD ROTSTEP. Dvojitým kliknutím jej upravíte.</translation>
+    </message>
+</context>
+<context>
     <name>swTerminalWidget</name>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_terminal.cpp" line="28"/>
@@ -29790,59 +29924,48 @@ Nainstalujte POV-Ray 3.7 nebo novější z %1 a nastavte jej v Předvolby › Ob
 <context>
     <name>swTimelineWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="13"/>
         <source>Building Steps and Parts</source>
-        <translation>Stavební kroky a díly</translation>
+        <translation type="vanished">Stavební kroky a díly</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="14"/>
         <source>Select steps or parts; drag parts to reorder them or change their building step.</source>
-        <translation>Vyberte kroky nebo díly; přetažením dílů změníte jejich pořadí nebo změníte jejich stavební krok.</translation>
+        <translation type="vanished">Vyberte kroky nebo díly; přetažením dílů změníte jejich pořadí nebo změníte jejich stavební krok.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="189"/>
         <source>Step %1</source>
-        <translation>Krok %1</translation>
+        <translation type="vanished">Krok %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="333"/>
         <source>Keys: %1 (%2)</source>
-        <translation>Klíče: %1 (%2)</translation>
+        <translation type="vanished">Klíče: %1 (%2)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="337"/>
         <source>Animation keys of this object at this step. Double-click to select it and show the Keyframes panel.</source>
-        <translation>Animační klíče tohoto objektu v tomto kroku. Dvojitým kliknutím jej vyberete a zobrazíte panel Klíčové snímky.</translation>
+        <translation type="vanished">Animační klíče tohoto objektu v tomto kroku. Dvojitým kliknutím jej vyberete a zobrazíte panel Klíčové snímky.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="352"/>
         <source>relative</source>
-        <translation>relativní</translation>
+        <translation type="vanished">relativní</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="352"/>
         <source>absolute</source>
-        <translation>absolutní</translation>
+        <translation type="vanished">absolutní</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="352"/>
         <source>added</source>
-        <translation>přidáno</translation>
+        <translation type="vanished">přidáno</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="357"/>
         <source>View: back to default</source>
-        <translation>Pohled: zpět na výchozí</translation>
+        <translation type="vanished">Pohled: zpět na výchozí</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="359"/>
         <source>View: %1, %2, %3 %4</source>
-        <translation>Pohled: %1, %2, %3 %4</translation>
+        <translation type="vanished">Pohled: %1, %2, %3 %4</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="364"/>
         <source>Step view saved as an MLCAD ROTSTEP line. Double-click to edit it.</source>
-        <translation>Pohled kroku uložený jako řádek MLCAD ROTSTEP. Dvojitým kliknutím jej upravíte.</translation>
+        <translation type="vanished">Pohled kroku uložený jako řádek MLCAD ROTSTEP. Dvojitým kliknutím jej upravíte.</translation>
     </message>
 </context>
 <context>

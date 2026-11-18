@@ -12,7 +12,7 @@ swKeyframesWidget::swKeyframesWidget(QWidget* Parent)
 {
 	// panel overview
 
-	setWhatsThis(tr("<p><b>Keyframes</b></p><p>A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, click a diamond to pick it, Ctrl+click to add or remove it from the picked keys and Shift+click to take it out. Delete removes the picked keys. Double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.</p><p>Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.</p>"));
+	setWhatsThis(tr("<p><b>Keyframes</b></p><p>A chart of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, click a diamond to pick it, Ctrl+click to add or remove it from the picked keys and Shift+click to take it out. Delete removes the picked keys. Double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.</p><p>Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.</p>"));
 
 	QVBoxLayout* Layout = new QVBoxLayout(this);
 	QHBoxLayout* Buttons = new QHBoxLayout();
@@ -74,7 +74,7 @@ swKeyframesWidget::swKeyframesWidget(QWidget* Parent)
 	mSelectedButton->setText(tr("Selected"));
 	mSelectedButton->setCheckable(true);
 	mSelectedButton->setToolTip(tr("Show the keys of the selected objects"));
-	mSelectedButton->setWhatsThis(tr("<p><b>Selected</b></p><p>List only the selected objects in the timeline, with or without keys.</p>"));
+	mSelectedButton->setWhatsThis(tr("<p><b>Selected</b></p><p>List only the selected objects in the chart, with or without keys.</p>"));
 	Buttons->addWidget(mSelectedButton);
 
 	mAllButton = new QToolButton(this);

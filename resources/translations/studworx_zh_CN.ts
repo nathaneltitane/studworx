@@ -869,9 +869,8 @@
         <translation>视图.工具栏.属性</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1592"/>
         <source>View.Toolbars.Timeline</source>
-        <translation>视图.工具栏.时间线</translation>
+        <translation type="vanished">视图.工具栏.时间线</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1601"/>
@@ -932,6 +931,11 @@
         <location filename="../../source/application/sw_commands.cpp" line="1493"/>
         <source>View.Time.Stop</source>
         <translation>视图.时间线.停止</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1592"/>
+        <source>View.Toolbars.Steps</source>
+        <translation>视图.工具栏.步骤</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1637"/>
@@ -2386,6 +2390,11 @@
         <location filename="../../source/application/sw_commands.cpp" line="1440"/>
         <source>Insert After</source>
         <translation>在后面插入</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1593"/>
+        <source>Steps Panel</source>
+        <translation>步骤面板</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2626"/>
@@ -3860,9 +3869,8 @@
         <translation>属性面板</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1593"/>
         <source>Timeline Panel</source>
-        <translation>时间线面板</translation>
+        <translation type="vanished">时间线面板</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1602"/>
@@ -7322,9 +7330,8 @@ File format is not recognized.</source>
         <translation>将选定零件移动到此步骤之后的新步骤</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3482"/>
         <source>View the model at this point in the timeline</source>
-        <translation>在时间线的这一点查看模型</translation>
+        <translation type="vanished">在时间线的这一点查看模型</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1459"/>
@@ -7541,9 +7548,8 @@ File format is not recognized.</source>
         <translation>切换属性面板</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1594"/>
         <source>Toggle the Timeline panel</source>
-        <translation>切换时间线面板</translation>
+        <translation type="vanished">切换时间线面板</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1603"/>
@@ -7901,6 +7907,11 @@ File format is not recognized.</source>
         <translation>结束最内层模式，每按一次一层</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3482"/>
+        <source>View the model at this step</source>
+        <translation>在此步骤查看模型</translation>
+    </message>
+    <message>
         <source>Go into joint mode on the selected submodel, or leave it</source>
         <translation type="vanished">进入所选子模型的关节模式，或退出</translation>
     </message>
@@ -7972,6 +7983,11 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="1495"/>
         <source>Stop playing and go back to the step playing started from</source>
         <translation>停止播放并回到开始播放时的步骤</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1594"/>
+        <source>Toggle the Steps panel</source>
+        <translation>切换步骤面板</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2258"/>
@@ -8829,9 +8845,23 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;旋转工具&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择物体，然后在模型视图中拖动旋转手柄。旋转吸附设置角度增量。变换选项选择相对轴或模型轴以及零件是一起旋转还是单独旋转。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2547"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1657"/>
+        <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Keyframes panel, a chart of the animation keys of the objects per step.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;关键帧&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示或隐藏关键帧面板，这是按步骤显示物体动画关键帧的图表。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3429"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert Step Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step before this step in the Steps panel.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;在前面插入步骤&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在步骤面板中此步骤之前添加一个空步骤。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3438"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert Step After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step after this step in the Steps panel.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;在后面插入步骤&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在步骤面板中此步骤之后添加一个空步骤。&lt;/p&gt;</translation>
+    </message>
+    <message>
         <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Removes only what is selected, picked by where you work: the joint in the Joints panel, the step in the Timeline panel, the picked keys in the Keyframes panel, or the selected keys at the current step when none are picked, and the selected pointers, notices or blank page in the instructions. In the view it removes a focused control point alone, otherwise the selected objects. With nothing selected it does nothing.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;删除&lt;/b&gt;&lt;/p&gt;&lt;p&gt;只移除所选内容，取决于你在哪里操作：关节面板中的关节、时间线面板中的步骤、关键帧面板中选中的关键帧（若未选中任何关键帧，则为所选对象在当前步骤的关键帧），以及说明书中所选的指针、注释或空白页。在视图中，它只移除获得焦点的控制点，否则移除所选对象。未选择任何内容时不执行任何操作。&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;删除&lt;/b&gt;&lt;/p&gt;&lt;p&gt;只移除所选内容，取决于你在哪里操作：关节面板中的关节、时间线面板中的步骤、关键帧面板中选中的关键帧（若未选中任何关键帧，则为所选对象在当前步骤的关键帧），以及说明书中所选的指针、注释或空白页。在视图中，它只移除获得焦点的控制点，否则移除所选对象。未选择任何内容时不执行任何操作。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2601"/>
@@ -8921,6 +8951,11 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="1388"/>
         <source>&lt;p&gt;&lt;b&gt;Camera&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Look through this camera of the model. The menu lists the first sixteen cameras.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;相机&lt;/b&gt;&lt;/p&gt;&lt;p&gt;透过模型的这个相机观看。菜单列出前十六个相机。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1415"/>
+        <source>&lt;p&gt;&lt;b&gt;Next Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the next building step to reveal the next stage of the model. Use the Steps panel to change which step introduces a part.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;下一步&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示下一个构建步骤以揭示模型的下一阶段。使用步骤面板更改引入零件的步骤。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1433"/>
@@ -9524,14 +9559,12 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;关于&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示 StudWorx 版本、主页链接，以及可复制到错误报告中的系统信息。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3429"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Step Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step before this step in the Timeline.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;在前面插入步骤&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在时间轴中此步骤之前添加一个空步骤。&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;在前面插入步骤&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在时间轴中此步骤之前添加一个空步骤。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3438"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Step After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step after this step in the Timeline.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;在后面插入步骤&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在时间轴中此步骤之后添加一个空步骤。&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;在后面插入步骤&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在时间轴中此步骤之后添加一个空步骤。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3447"/>
@@ -9614,9 +9647,8 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;上一步&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示前一个构建步骤的模型。后面步骤中引入的零件被隐藏，以便您可以检查构建的早期阶段。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1415"/>
         <source>&lt;p&gt;&lt;b&gt;Next Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the next building step to reveal the next stage of the model. Use the Timeline to change which step introduces a part.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;下一步&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示下一个构建步骤以揭示模型的下一阶段。使用时间轴更改引入零件的步骤。&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;下一步&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示下一个构建步骤以揭示模型的下一阶段。使用时间轴更改引入零件的步骤。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1424"/>
@@ -9690,6 +9722,11 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="2160"/>
         <source>&lt;p&gt;&lt;b&gt;Connection Points&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mark the studs, tubes, axle holes, clips and other connection points of the hovered part within a 2x2 stud area of the pointer, when Part Connections is on in the preferences. Filled marks are male points, hollow marks are female points, and only the points facing the camera show.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;连接点&lt;/b&gt;&lt;/p&gt;&lt;p&gt;当偏好设置中的零件连接开启时，在指针周围 2x2 凸点的范围内标出悬停零件的凸点、管、轴孔、夹子和其他连接点。实心标记为凸连接点，空心标记为凹连接点，且只显示朝向相机的点。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2547"/>
+        <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Removes only what is selected, picked by where you work: the joint in the Joints panel, the step in the Steps panel, the picked keys in the Keyframes panel, or the selected keys at the current step when none are picked, and the selected pointers, notices or blank page in the instructions. In the view it removes a focused control point alone, otherwise the selected objects. With nothing selected it does nothing.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;删除&lt;/b&gt;&lt;/p&gt;&lt;p&gt;只移除所选内容，取决于你在哪里操作：关节面板中的关节、步骤面板中的步骤、关键帧面板中选中的关键帧（若未选中任何关键帧，则为所选对象在当前步骤的关键帧），以及说明书中所选的指针、注释或空白页。在视图中，它只移除获得焦点的控制点，否则移除所选对象。未选择任何内容时不执行任何操作。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2583"/>
@@ -9850,9 +9887,8 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;姿势&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示或隐藏姿势面板，该面板保存并调用命名的关节角度组。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1657"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Keyframes panel, a timeline of the animation keys of the objects per step.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;关键帧&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示或隐藏关键帧面板，这是按步骤显示物体动画关键帧的时间轴。&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;关键帧&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示或隐藏关键帧面板，这是按步骤显示物体动画关键帧的时间轴。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1729"/>
@@ -15507,9 +15543,13 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>%1 - 空白页</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="394"/>
         <source>&lt;p&gt;&lt;b&gt;Page Bar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The timeline First, Previous, Next and Last shortcuts turn the pages too while the page or the Pages panel has focus.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;页面栏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;转到第一页、上一页、下一页或最后一页，或者直接转到封面或物料清单，这些页面关闭时对应按钮显示为灰色。步骤页会在当前页之前插入一个空步骤，空白页会在其之前插入一个空白页，移除页面会移除空白页或只含空步骤的页面。右侧的框显示当前页，输入数字即可转到该页。当页面或页面面板获得焦点时，时间线的第一个、上一个、下一个和最后一个快捷键也会翻页。&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;页面栏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;转到第一页、上一页、下一页或最后一页，或者直接转到封面或物料清单，这些页面关闭时对应按钮显示为灰色。步骤页会在当前页之前插入一个空步骤，空白页会在其之前插入一个空白页，移除页面会移除空白页或只含空步骤的页面。右侧的框显示当前页，输入数字即可转到该页。当页面或页面面板获得焦点时，时间线的第一个、上一个、下一个和最后一个快捷键也会翻页。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="394"/>
+        <source>&lt;p&gt;&lt;b&gt;Page Bar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The First, Previous, Next and Last step shortcuts turn the pages too while the page or the Pages panel has focus.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;页面栏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;转到第一页、上一页、下一页或最后一页，或者直接转到封面或物料清单，这些页面关闭时对应按钮显示为灰色。步骤页会在当前页之前插入一个空步骤，空白页会在其之前插入一个空白页，移除页面会移除空白页或只含空步骤的页面。右侧的框显示当前页，输入数字即可转到该页。当页面或页面面板获得焦点时，步骤的第一个、上一个、下一个和最后一个快捷键也会翻页。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
@@ -18359,9 +18399,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;关键帧&lt;/b&gt;&lt;/p&gt;&lt;p&gt;动画关键帧的时间线，每个步骤一列，每个对象一行，可展开查看其属性。菱形标记一个关键帧，一条线连接同一属性的各个关键帧。点击名称可选择对象，Ctrl+点击可将其加入选择或从选择中移除，点击其箭头可显示其属性。点击步骤可转到该步，双击单元格可添加或移除关键帧，拖动菱形可将关键帧移到另一步，右键点击可查看更多操作。数值在属性面板中编辑。&lt;/p&gt;&lt;p&gt;已选择列出所选对象，全部列出所有带关键帧的对象。实心和空心菱形在当前步骤添加或移除所选对象的关键帧，添加关键帧让编辑操作创建关键帧，播放按钮依次播放各步骤以显示关键帧动作。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="15"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, click a diamond to pick it, Ctrl+click to add or remove it from the picked keys and Shift+click to take it out. Delete removes the picked keys. Double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;&lt;p&gt;Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;关键帧&lt;/b&gt;&lt;/p&gt;&lt;p&gt;动画关键帧的时间线，每步一列、每个对象一行，可展开到其属性。菱形表示关键帧，线条连接同一属性的关键帧。单击名称可选择对象，Ctrl+单击可将其加入或移出选择，单击其箭头可显示属性。单击步骤可跳转到该步骤，单击菱形可选中它，Ctrl+单击可将其加入或移出选中的关键帧，Shift+单击可将其移出。Del 移除选中的关键帧。双击单元格可添加或移除关键帧，拖动菱形可将关键帧移到另一步，右键单击查看更多。数值在属性面板中编辑。&lt;/p&gt;&lt;p&gt;“所选”列出所选对象，“全部”列出所有带关键帧的对象。实心和空心菱形添加或移除所选对象在当前步骤的关键帧，“添加关键帧”使编辑创建关键帧，播放按钮逐步播放以显示关键帧动作。&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;关键帧&lt;/b&gt;&lt;/p&gt;&lt;p&gt;动画关键帧的时间线，每步一列、每个对象一行，可展开到其属性。菱形表示关键帧，线条连接同一属性的关键帧。单击名称可选择对象，Ctrl+单击可将其加入或移出选择，单击其箭头可显示属性。单击步骤可跳转到该步骤，单击菱形可选中它，Ctrl+单击可将其加入或移出选中的关键帧，Shift+单击可将其移出。Del 移除选中的关键帧。双击单元格可添加或移除关键帧，拖动菱形可将关键帧移到另一步，右键单击查看更多。数值在属性面板中编辑。&lt;/p&gt;&lt;p&gt;“所选”列出所选对象，“全部”列出所有带关键帧的对象。实心和空心菱形添加或移除所选对象在当前步骤的关键帧，“添加关键帧”使编辑创建关键帧，播放按钮逐步播放以显示关键帧动作。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="53"/>
@@ -18384,9 +18423,18 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>显示所选对象的关键帧</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="77"/>
         <source>&lt;p&gt;&lt;b&gt;Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;List only the selected objects in the timeline, with or without keys.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;已选择&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在时间线中仅列出所选对象，无论是否带关键帧。&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;已选择&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在时间线中仅列出所选对象，无论是否带关键帧。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="15"/>
+        <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A chart of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, click a diamond to pick it, Ctrl+click to add or remove it from the picked keys and Shift+click to take it out. Delete removes the picked keys. Double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;&lt;p&gt;Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;关键帧&lt;/b&gt;&lt;/p&gt;&lt;p&gt;动画关键帧的图表，每步一列、每个对象一行，可展开到其属性。菱形表示关键帧，线条连接同一属性的关键帧。单击名称可选择对象，Ctrl+单击可将其加入或移出选择，单击其箭头可显示属性。单击步骤可跳转到该步骤，单击菱形可选中它，Ctrl+单击可将其加入或移出选中的关键帧，Shift+单击可将其移出。Del 移除选中的关键帧。双击单元格可添加或移除关键帧，拖动菱形可将关键帧移到另一步，右键单击查看更多。数值在属性面板中编辑。&lt;/p&gt;&lt;p&gt;“所选”列出所选对象，“全部”列出所有带关键帧的对象。实心和空心菱形添加或移除所选对象在当前步骤的关键帧，“添加关键帧”使编辑创建关键帧，播放按钮逐步播放以显示关键帧动作。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="77"/>
+        <source>&lt;p&gt;&lt;b&gt;Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;List only the selected objects in the chart, with or without keys.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;已选择&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在图表中仅列出所选对象，无论是否带关键帧。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="81"/>
@@ -18549,9 +18597,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>标准</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="709"/>
         <source>&lt;p&gt;&lt;b&gt;Time Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Timeline for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;时间工具栏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;箭头按钮在搭建步骤中前后移动，以便查看模型是如何组装的。它们不会更改分配给零件的步骤，更改请使用时间线。播放依次播放模型的各步骤以显示关键帧动作，再次使用时暂停，停止则回到开始播放时所在的步骤。设置关键帧和移除关键帧会在当前步骤添加或移除所选对象的关键帧，与关键帧面板中的菱形作用相同。添加关键帧控制编辑操作是否在当前步骤创建动画关键帧，从而让位置等属性在各步骤之间变化。&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;时间工具栏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;箭头按钮在搭建步骤中前后移动，以便查看模型是如何组装的。它们不会更改分配给零件的步骤，更改请使用时间线。播放依次播放模型的各步骤以显示关键帧动作，再次使用时暂停，停止则回到开始播放时所在的步骤。设置关键帧和移除关键帧会在当前步骤添加或移除所选对象的关键帧，与关键帧面板中的菱形作用相同。添加关键帧控制编辑操作是否在当前步骤创建动画关键帧，从而让位置等属性在各步骤之间变化。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="779"/>
@@ -18559,9 +18606,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>&lt;p&gt;&lt;b&gt;颜色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;从色板中选择当前的 LDraw 颜色。插入或上色零件时使用此颜色。要为所选零件重新上色，请使用色板上方的颜色按钮。将鼠标悬停在色板上可查看其名称和颜色代码。&lt;/p&gt;&lt;p&gt;停靠在顶部或底部时，色板排成一行；滚动滚轮或使用两端的箭头可沿其移动，双击箭头可跳到该端。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1094"/>
         <source>&lt;p&gt;&lt;b&gt;Timeline&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;时间线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择一个步骤使其成为当前步骤，或选择零件行以在模型中选中这些零件。可以在步骤之间拖动零件，或在步骤内重新排序。关键帧行标明某一步骤中带动画关键帧的对象，双击会在该处选中该对象并显示关键帧面板。右键点击可使用插入、移除、移动步骤和可见性命令。&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;时间线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择一个步骤使其成为当前步骤，或选择零件行以在模型中选中这些零件。可以在步骤之间拖动零件，或在步骤内重新排序。关键帧行标明某一步骤中带动画关键帧的对象，双击会在该处选中该对象并显示关键帧面板。右键点击可使用插入、移除、移动步骤和可见性命令。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="388"/>
@@ -18804,6 +18850,11 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>模型</translation>
     </message>
     <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="709"/>
+        <source>&lt;p&gt;&lt;b&gt;Time Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Steps panel for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;时间工具栏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;箭头按钮在搭建步骤中前后移动，以便查看模型是如何组装的。它们不会更改分配给零件的步骤，更改请使用步骤面板。播放依次播放模型的各步骤以显示关键帧动作，再次使用时暂停，停止则回到开始播放时所在的步骤。设置关键帧和移除关键帧会在当前步骤添加或移除所选对象的关键帧，与关键帧面板中的菱形作用相同。添加关键帧控制编辑操作是否在当前步骤创建动画关键帧，从而让位置等属性在各步骤之间变化。&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="807"/>
         <source>Choose how inserted parts are colored.</source>
         <translation>选择插入的零件如何着色。</translation>
@@ -18855,8 +18906,17 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1092"/>
+        <source>Steps</source>
+        <translation>步骤</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1094"/>
+        <source>&lt;p&gt;&lt;b&gt;Steps&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;步骤&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择一个步骤使其成为当前步骤，或选择零件行以在模型中选中这些零件。可以在步骤之间拖动零件，或在步骤内重新排序。关键帧行标明某一步骤中带动画关键帧的对象，双击会在该处选中该对象并显示关键帧面板。右键点击可使用插入、移除、移动步骤和可见性命令。&lt;/p&gt;</translation>
+    </message>
+    <message>
         <source>Timeline</source>
-        <translation>时间线</translation>
+        <translation type="vanished">时间线</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Timeline&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
@@ -24347,37 +24407,37 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>重置类别</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="369"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="380"/>
         <source>The shortcut &apos;%1&apos; is already assigned to &apos;%2&apos;. Do you want to replace it?</source>
         <translation>快捷键 &apos;%1&apos; 已分配给 &apos;%2&apos;。是否替换？</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="488"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="499"/>
         <source>Insert</source>
         <translation>插入</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="500"/>
         <source>Edit</source>
         <translation>编辑</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="490"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="501"/>
         <source>View</source>
         <translation>视图</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="629"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="640"/>
         <source>Could not read mouse shortcuts file &apos;%1&apos;.</source>
         <translation>无法读取鼠标快捷键文件 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="648"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="659"/>
         <source>Could not write mouse shortcuts file &apos;%1&apos;.</source>
         <translation>无法写入鼠标快捷键文件 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="664"/>
         <source>Reset Mouse Shortcuts</source>
         <translation>重置鼠标快捷键</translation>
     </message>
@@ -24663,7 +24723,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">保存键盘快捷键文件时出错。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="460"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="471"/>
         <source>Are you sure you want to load the default keyboard shortcuts?</source>
         <translation>确定要加载默认键盘快捷键吗？</translation>
     </message>
@@ -24683,9 +24743,9 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>右键</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="371"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="566"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="575"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="382"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="577"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="586"/>
         <source>Override Shortcut</source>
         <translation>覆盖快捷键</translation>
     </message>
@@ -24715,26 +24775,26 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="obsolete">导入键盘快捷键</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="453"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="464"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>导出键盘快捷键</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="460"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="471"/>
         <source>Reset Keyboard Shortcuts</source>
         <translation>重置键盘快捷键</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="566"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="575"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="577"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="586"/>
         <source>This shortcut is already assigned to &apos;%1&apos;. Do you want to replace it?</source>
         <oldsource>This shortcut is already assigned to &apos;%1&apos;, do you want to replace it?</oldsource>
         <translation>此快捷键已分配给 &apos;%1&apos;，是否替换？</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="425"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="433"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="621"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="436"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="444"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="632"/>
         <source>Import Shortcuts</source>
         <translation>导入快捷键</translation>
     </message>
@@ -24743,8 +24803,8 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">加载鼠标快捷键文件时出错。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="446"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="642"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="457"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
         <source>Export Shortcuts</source>
         <translation>导出快捷键</translation>
     </message>
@@ -24769,12 +24829,12 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>火车轨道</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="207"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
         <source>Help for the panel under the pointer</source>
         <translation>指针下面板的帮助</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="207"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
         <source>F1</source>
         <translation>F1</translation>
     </message>
@@ -24783,99 +24843,115 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">清除关节面板中的关节</translation>
     </message>
     <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
         <source>Del</source>
-        <translation type="vanished">Del</translation>
+        <translation>Del</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <source>Delete what is selected where you work</source>
+        <translation>删除你正在操作之处所选的内容</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
         <source>Add to the selection</source>
         <translation>添加到选择</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
         <source>Ctrl+Click</source>
         <translation>Ctrl+单击</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
         <source>Remove from the selection</source>
         <translation>从选择中移除</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
         <source>Shift+Click</source>
         <translation>Shift+单击</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
         <source>Zoom faster or slower</source>
         <translation>更快或更慢地缩放</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
         <source>Ctrl or Shift+Wheel</source>
         <translation>Ctrl 或 Shift+滚轮</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="214"/>
         <source>Snap rotation, keep the insert tool, free a locked joint</source>
         <translation>对齐旋转、保留插入工具、释放锁定的关节</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="214"/>
         <source>Hold Ctrl</source>
         <translation>按住 Ctrl</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="215"/>
         <source>Jump to a part in the parts list</source>
         <translation>跳到零件列表中的零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="215"/>
         <source>A to Z</source>
         <translation>A 到 Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="216"/>
         <source>Move through the parts list</source>
         <translation>在零件列表中移动</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="216"/>
         <source>Arrows, Home, End, Page Up, Page Down</source>
         <translation>方向键、Home、End、Page Up、Page Down</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="216"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="219"/>
         <source>Built-in Keys</source>
         <translation>内置按键</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="272"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="275"/>
         <source>The shortcut &apos;%1&apos; is shared by %2.</source>
         <translation>快捷键 &apos;%1&apos; 被 %2 共用。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="425"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="446"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="621"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="642"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="367"/>
+        <source>Built-in Key</source>
+        <translation>内置按键</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="367"/>
+        <source>The shortcut &apos;%1&apos; is a built-in key that always deletes what is selected.</source>
+        <translation>快捷键“%1”是内置按键，始终删除所选内容。</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="436"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="457"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="632"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
         <source>Shortcut Files (*.txt);;All Files (*)</source>
         <translation>快捷键文件 (*.txt);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="433"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="444"/>
         <source>Could not read keyboard shortcuts file &apos;%1&apos;.</source>
         <translation>无法读取键盘快捷键文件 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="453"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="464"/>
         <source>Could not write keyboard shortcuts file &apos;%1&apos;.</source>
         <translation>无法写入键盘快捷键文件 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="629"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="640"/>
         <source>Import Mouse Shortcuts</source>
         <translation>导入鼠标快捷键</translation>
     </message>
@@ -24884,12 +24960,12 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">保存鼠标快捷键文件时出错。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="648"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="659"/>
         <source>Export Mouse Shortcuts</source>
         <translation>导出鼠标快捷键</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="664"/>
         <source>Are you sure you want to load the default mouse shortcuts?</source>
         <translation>确定要加载默认鼠标快捷键吗？</translation>
     </message>
@@ -29806,6 +29882,64 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     </message>
 </context>
 <context>
+    <name>swStepsWidget</name>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="13"/>
+        <source>Building Steps and Parts</source>
+        <translation>搭建步骤和零件</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="14"/>
+        <source>Select steps or parts; drag parts to reorder them or change their building step.</source>
+        <translation>选择步骤或零件；拖动零件以重新排序或更改其构建步骤。</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="189"/>
+        <source>Step %1</source>
+        <translation>步骤 %1</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="333"/>
+        <source>Keys: %1 (%2)</source>
+        <translation>关键帧：%1 (%2)</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="337"/>
+        <source>Animation keys of this object at this step. Double-click to select it and show the Keyframes panel.</source>
+        <translation>此物体在此步骤的动画关键帧。双击可选中它并显示“关键帧”面板。</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="352"/>
+        <source>relative</source>
+        <translation>相对</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="352"/>
+        <source>absolute</source>
+        <translation>绝对</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="352"/>
+        <source>added</source>
+        <translation>已添加</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="357"/>
+        <source>View: back to default</source>
+        <translation>视图：恢复默认</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="359"/>
+        <source>View: %1, %2, %3 %4</source>
+        <translation>视图：%1，%2，%3 %4</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="364"/>
+        <source>Step view saved as an MLCAD ROTSTEP line. Double-click to edit it.</source>
+        <translation>步骤视图已保存为 MLCAD ROTSTEP 行。双击可编辑。</translation>
+    </message>
+</context>
+<context>
     <name>swTerminalWidget</name>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_terminal.cpp" line="28"/>
@@ -29865,59 +29999,48 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
 <context>
     <name>swTimelineWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="13"/>
         <source>Building Steps and Parts</source>
-        <translation>搭建步骤和零件</translation>
+        <translation type="vanished">搭建步骤和零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="14"/>
         <source>Select steps or parts; drag parts to reorder them or change their building step.</source>
-        <translation>选择步骤或零件；拖动零件以重新排序或更改其构建步骤。</translation>
+        <translation type="vanished">选择步骤或零件；拖动零件以重新排序或更改其构建步骤。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="189"/>
         <source>Step %1</source>
-        <translation>步骤 %1</translation>
+        <translation type="vanished">步骤 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="333"/>
         <source>Keys: %1 (%2)</source>
-        <translation>关键帧：%1 (%2)</translation>
+        <translation type="vanished">关键帧：%1 (%2)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="337"/>
         <source>Animation keys of this object at this step. Double-click to select it and show the Keyframes panel.</source>
-        <translation>此物体在此步骤的动画关键帧。双击可选中它并显示“关键帧”面板。</translation>
+        <translation type="vanished">此物体在此步骤的动画关键帧。双击可选中它并显示“关键帧”面板。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="352"/>
         <source>relative</source>
-        <translation>相对</translation>
+        <translation type="vanished">相对</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="352"/>
         <source>absolute</source>
-        <translation>绝对</translation>
+        <translation type="vanished">绝对</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="352"/>
         <source>added</source>
-        <translation>已添加</translation>
+        <translation type="vanished">已添加</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="357"/>
         <source>View: back to default</source>
-        <translation>视图：恢复默认</translation>
+        <translation type="vanished">视图：恢复默认</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="359"/>
         <source>View: %1, %2, %3 %4</source>
-        <translation>视图：%1，%2，%3 %4</translation>
+        <translation type="vanished">视图：%1，%2，%3 %4</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="364"/>
         <source>Step view saved as an MLCAD ROTSTEP line. Double-click to edit it.</source>
-        <translation>步骤视图已保存为 MLCAD ROTSTEP 行。双击可编辑。</translation>
+        <translation type="vanished">步骤视图已保存为 MLCAD ROTSTEP 行。双击可编辑。</translation>
     </message>
 </context>
 <context>

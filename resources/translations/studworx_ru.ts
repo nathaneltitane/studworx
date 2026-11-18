@@ -869,9 +869,8 @@
         <translation>Вид.Панель инструментов.Свойства</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1592"/>
         <source>View.Toolbars.Timeline</source>
-        <translation>Вид.Панель инструментов.Шкала времени</translation>
+        <translation type="vanished">Вид.Панель инструментов.Шкала времени</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1601"/>
@@ -932,6 +931,11 @@
         <location filename="../../source/application/sw_commands.cpp" line="1493"/>
         <source>View.Time.Stop</source>
         <translation>Вид.Время.Стоп</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1592"/>
+        <source>View.Toolbars.Steps</source>
+        <translation>Вид.Панель инструментов.Шаги</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1637"/>
@@ -3406,9 +3410,8 @@
         <translation>Панель свойств</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1593"/>
         <source>Timeline Panel</source>
-        <translation>Панель шкалы времени</translation>
+        <translation type="vanished">Панель шкалы времени</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1602"/>
@@ -3883,6 +3886,11 @@
         <location filename="../../source/application/sw_commands.cpp" line="3445"/>
         <source>Delete Step</source>
         <translation>Удалить шаг</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1593"/>
+        <source>Steps Panel</source>
+        <translation>Панель шагов</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1925"/>
@@ -7558,6 +7566,11 @@ File format is not recognized.</source>
         <translation>Щёлкните соединение выбранной подмодели, чтобы сделать его сочленением</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3482"/>
+        <source>View the model at this step</source>
+        <translation>Показать модель на этом шаге</translation>
+    </message>
+    <message>
         <source>Go into joint mode on the selected submodel, or leave it</source>
         <translation type="vanished">Войти в режим сочленения выбранной подмодели или выйти из него</translation>
     </message>
@@ -7584,6 +7597,11 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="2249"/>
         <source>Draw studs with the outline logo style</source>
         <translation>Рисовать шипы стилем с контурным логотипом</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1594"/>
+        <source>Toggle the Steps panel</source>
+        <translation>Переключить отображение панели «Шаги»</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1639"/>
@@ -7777,9 +7795,8 @@ File format is not recognized.</source>
         <translation>Переключить отображение панели «Свойства»</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1594"/>
         <source>Toggle the Timeline panel</source>
-        <translation>Переключить отображение панели «Шкала времени»</translation>
+        <translation type="vanished">Переключить отображение панели «Шкала времени»</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1603"/>
@@ -8254,9 +8271,8 @@ File format is not recognized.</source>
         <translation>Переместить выбранные детали на новый шаг после этого шага</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3482"/>
         <source>View the model at this point in the timeline</source>
-        <translation>Показать модель в этой точке шкалы времени</translation>
+        <translation type="vanished">Показать модель в этой точке шкалы времени</translation>
     </message>
 </context>
 <context>
@@ -8771,9 +8787,23 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;Инструмент поворота&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите объекты, затем перетащите маркер вращения на виде модели. Привязка вращения задаёт шаг угла. Параметры преобразования определяют, относительные оси или оси модели используются и вращаются ли детали вместе или по отдельности.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2547"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1657"/>
+        <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Keyframes panel, a chart of the animation keys of the objects per step.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Ключевые кадры&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показывает или скрывает панель «Ключевые кадры» — диаграмму ключей анимации объектов по шагам.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3429"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert Step Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step before this step in the Steps panel.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Вставить шаг перед&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Добавить пустой шаг перед этим шагом на панели «Шаги».&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3438"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert Step After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step after this step in the Steps panel.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Вставить шаг после&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Добавить пустой шаг после этого шага на панели «Шаги».&lt;/p&gt;</translation>
+    </message>
+    <message>
         <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Removes only what is selected, picked by where you work: the joint in the Joints panel, the step in the Timeline panel, the picked keys in the Keyframes panel, or the selected keys at the current step when none are picked, and the selected pointers, notices or blank page in the instructions. In the view it removes a focused control point alone, otherwise the selected objects. With nothing selected it does nothing.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Удалить&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Удаляет только выбранное, в зависимости от того, где вы работаете: сочленение на панели «Сочленения», шаг на панели «Хронология», выбранные ключи на панели «Ключевые кадры» или, если ни один не выбран, ключи выделенных объектов на текущем шаге, а также выделенные указатели, примечания или пустую страницу в инструкции. В виде удаляет только точку управления в фокусе, иначе выделенные объекты. Если ничего не выбрано, ничего не делает.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Удалить&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Удаляет только выбранное, в зависимости от того, где вы работаете: сочленение на панели «Сочленения», шаг на панели «Хронология», выбранные ключи на панели «Ключевые кадры» или, если ни один не выбран, ключи выделенных объектов на текущем шаге, а также выделенные указатели, примечания или пустую страницу в инструкции. В виде удаляет только точку управления в фокусе, иначе выделенные объекты. Если ничего не выбрано, ничего не делает.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2601"/>
@@ -8863,6 +8893,11 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="1388"/>
         <source>&lt;p&gt;&lt;b&gt;Camera&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Look through this camera of the model. The menu lists the first sixteen cameras.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Камера&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Смотреть через эту камеру модели. В меню перечислены первые шестнадцать камер.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1415"/>
+        <source>&lt;p&gt;&lt;b&gt;Next Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the next building step to reveal the next stage of the model. Use the Steps panel to change which step introduces a part.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Следующий шаг&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показать следующий шаг сборки и следующую стадию модели. Используйте панель «Шаги», чтобы изменить шаг, на котором добавляется деталь.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1433"/>
@@ -9466,14 +9501,12 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;О программе&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показать версию StudWorx, ссылку на домашнюю страницу и системную информацию для копирования в отчёт об ошибке.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3429"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Step Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step before this step in the Timeline.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Вставить шаг перед&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Добавить пустой шаг перед этим шагом на шкале времени.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Вставить шаг перед&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Добавить пустой шаг перед этим шагом на шкале времени.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3438"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Step After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step after this step in the Timeline.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Вставить шаг после&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Добавить пустой шаг после этого шага на шкале времени.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Вставить шаг после&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Добавить пустой шаг после этого шага на шкале времени.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3447"/>
@@ -9556,9 +9589,8 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;Предыдущий шаг&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показать модель на один шаг сборки раньше. Детали, добавленные на более поздних шагах, скрываются, поэтому можно рассмотреть более раннюю стадию сборки.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1415"/>
         <source>&lt;p&gt;&lt;b&gt;Next Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the next building step to reveal the next stage of the model. Use the Timeline to change which step introduces a part.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Следующий шаг&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показать следующий шаг сборки и следующую стадию модели. Используйте временную шкалу, чтобы изменить шаг, на котором добавляется деталь.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Следующий шаг&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показать следующий шаг сборки и следующую стадию модели. Используйте временную шкалу, чтобы изменить шаг, на котором добавляется деталь.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1424"/>
@@ -9632,6 +9664,11 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="2160"/>
         <source>&lt;p&gt;&lt;b&gt;Connection Points&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mark the studs, tubes, axle holes, clips and other connection points of the hovered part within a 2x2 stud area of the pointer, when Part Connections is on in the preferences. Filled marks are male points, hollow marks are female points, and only the points facing the camera show.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Точки соединения&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Отмечать шипы, трубки, отверстия для осей, зажимы и другие точки соединения детали под указателем в области 2x2 шипа вокруг него, когда в параметрах включены соединения деталей. Закрашенные метки обозначают выступающие точки, пустые метки обозначают принимающие точки, и показываются только точки, обращённые к камере.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2547"/>
+        <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Removes only what is selected, picked by where you work: the joint in the Joints panel, the step in the Steps panel, the picked keys in the Keyframes panel, or the selected keys at the current step when none are picked, and the selected pointers, notices or blank page in the instructions. In the view it removes a focused control point alone, otherwise the selected objects. With nothing selected it does nothing.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Удалить&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Удаляет только выбранное, в зависимости от того, где вы работаете: сочленение на панели «Сочленения», шаг на панели «Шаги», выбранные ключи на панели «Ключевые кадры» или, если ни один не выбран, ключи выделенных объектов на текущем шаге, а также выделенные указатели, примечания или пустую страницу в инструкции. В виде удаляет только точку управления в фокусе, иначе выделенные объекты. Если ничего не выбрано, ничего не делает.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2583"/>
@@ -9792,9 +9829,8 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;Позы&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показывает или скрывает панель «Позы», которая сохраняет и применяет именованные наборы углов сочленений.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1657"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Keyframes panel, a timeline of the animation keys of the objects per step.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Ключевые кадры&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показывает или скрывает панель «Ключевые кадры» — временную шкалу ключей анимации объектов по шагам.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Ключевые кадры&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показывает или скрывает панель «Ключевые кадры» — временную шкалу ключей анимации объектов по шагам.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1729"/>
@@ -15244,9 +15280,13 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>%1 - Пустая страница</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="394"/>
         <source>&lt;p&gt;&lt;b&gt;Page Bar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The timeline First, Previous, Next and Last shortcuts turn the pages too while the page or the Pages panel has focus.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Панель страниц&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Переход к первой, предыдущей, следующей или последней странице либо сразу к обложке или спецификации; кнопки недоступны, пока эти страницы выключены. «Страница шага» вставляет пустой шаг перед текущей страницей, «Пустая страница» вставляет пустую страницу перед ней, а «Удалить страницу» удаляет пустую страницу или страницу с пустыми шагами. Поле справа показывает текущую страницу; введите номер, чтобы перейти к ней. Сочетания клавиш временной шкалы «Первый», «Предыдущий», «Следующий» и «Последний» тоже листают страницы, пока фокус на странице или на панели «Страницы».&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Панель страниц&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Переход к первой, предыдущей, следующей или последней странице либо сразу к обложке или спецификации; кнопки недоступны, пока эти страницы выключены. «Страница шага» вставляет пустой шаг перед текущей страницей, «Пустая страница» вставляет пустую страницу перед ней, а «Удалить страницу» удаляет пустую страницу или страницу с пустыми шагами. Поле справа показывает текущую страницу; введите номер, чтобы перейти к ней. Сочетания клавиш временной шкалы «Первый», «Предыдущий», «Следующий» и «Последний» тоже листают страницы, пока фокус на странице или на панели «Страницы».&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="394"/>
+        <source>&lt;p&gt;&lt;b&gt;Page Bar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The First, Previous, Next and Last step shortcuts turn the pages too while the page or the Pages panel has focus.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Панель страниц&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Переход к первой, предыдущей, следующей или последней странице либо сразу к обложке или спецификации; кнопки недоступны, пока эти страницы выключены. «Страница шага» вставляет пустой шаг перед текущей страницей, «Пустая страница» вставляет пустую страницу перед ней, а «Удалить страницу» удаляет пустую страницу или страницу с пустыми шагами. Поле справа показывает текущую страницу; введите номер, чтобы перейти к ней. Сочетания клавиш шагов «Первый», «Предыдущий», «Следующий» и «Последний» тоже листают страницы, пока фокус на странице или на панели «Страницы».&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
@@ -18088,9 +18128,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Ключевые кадры&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Шкала времени ключей анимации: один столбец на шаг и одна строка на объект, которую можно развернуть до его свойств. Ромб отмечает ключ, а линия соединяет ключи одного свойства. Щёлкните имя, чтобы выбрать объект, Ctrl+щелчок — чтобы добавить его в выделение или убрать из него, а щелчок по стрелке показывает его свойства. Щёлкните шаг, чтобы перейти к нему, дважды щёлкните ячейку, чтобы добавить или удалить ключ, перетащите ромб, чтобы переместить ключ на другой шаг, а щелчок правой кнопкой открывает дополнительные действия. Значения изменяются на панели «Свойства».&lt;/p&gt;&lt;p&gt;«Выбранные» перечисляет выбранные объекты, «Все» — каждый объект с ключами. Закрашенный и пустой ромбы добавляют или удаляют ключи выбранных объектов на текущем шаге, «Добавлять ключи» заставляет правки создавать ключи, а кнопки воспроизведения проигрывают шаги, показывая анимированное движение.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="15"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, click a diamond to pick it, Ctrl+click to add or remove it from the picked keys and Shift+click to take it out. Delete removes the picked keys. Double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;&lt;p&gt;Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Ключевые кадры&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Хронология ключей анимации: столбец на шаг и строка на объект, раскрываемая до его свойств. Ромб отмечает ключ, линия соединяет ключи одного свойства. Щелчок по имени выделяет объект, Ctrl+щелчок добавляет его к выделению или убирает из него, щелчок по стрелке показывает его свойства. Щелкните шаг, чтобы перейти к нему, щелкните ромб, чтобы выбрать его, Ctrl+щелчок добавляет его к выбранным ключам или убирает из них, Shift+щелчок убирает его. Del удаляет выбранные ключи. Двойной щелчок по ячейке добавляет или удаляет ключ, перетаскивание ромба переносит ключ на другой шаг, правый щелчок открывает другие команды. Значения меняются на панели «Свойства».&lt;/p&gt;&lt;p&gt;«Выделенные» показывает выделенные объекты, «Все» — каждый объект с ключами. Полный и пустой ромбы добавляют или удаляют ключи выделенных объектов на текущем шаге, «Добавлять ключи» заставляет правки создавать ключи, а кнопки воспроизведения проходят по шагам, показывая движение.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Ключевые кадры&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Хронология ключей анимации: столбец на шаг и строка на объект, раскрываемая до его свойств. Ромб отмечает ключ, линия соединяет ключи одного свойства. Щелчок по имени выделяет объект, Ctrl+щелчок добавляет его к выделению или убирает из него, щелчок по стрелке показывает его свойства. Щелкните шаг, чтобы перейти к нему, щелкните ромб, чтобы выбрать его, Ctrl+щелчок добавляет его к выбранным ключам или убирает из них, Shift+щелчок убирает его. Del удаляет выбранные ключи. Двойной щелчок по ячейке добавляет или удаляет ключ, перетаскивание ромба переносит ключ на другой шаг, правый щелчок открывает другие команды. Значения меняются на панели «Свойства».&lt;/p&gt;&lt;p&gt;«Выделенные» показывает выделенные объекты, «Все» — каждый объект с ключами. Полный и пустой ромбы добавляют или удаляют ключи выделенных объектов на текущем шаге, «Добавлять ключи» заставляет правки создавать ключи, а кнопки воспроизведения проходят по шагам, показывая движение.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="53"/>
@@ -18113,9 +18152,18 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Показать ключи выбранных объектов</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="77"/>
         <source>&lt;p&gt;&lt;b&gt;Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;List only the selected objects in the timeline, with or without keys.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Выбранные&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показывать на шкале времени только выбранные объекты, с ключами или без.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Выбранные&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показывать на шкале времени только выбранные объекты, с ключами или без.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="15"/>
+        <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A chart of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, click a diamond to pick it, Ctrl+click to add or remove it from the picked keys and Shift+click to take it out. Delete removes the picked keys. Double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;&lt;p&gt;Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Ключевые кадры&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Диаграмма ключей анимации: столбец на шаг и строка на объект, раскрываемая до его свойств. Ромб отмечает ключ, линия соединяет ключи одного свойства. Щелчок по имени выделяет объект, Ctrl+щелчок добавляет его к выделению или убирает из него, щелчок по стрелке показывает его свойства. Щелкните шаг, чтобы перейти к нему, щелкните ромб, чтобы выбрать его, Ctrl+щелчок добавляет его к выбранным ключам или убирает из них, Shift+щелчок убирает его. Del удаляет выбранные ключи. Двойной щелчок по ячейке добавляет или удаляет ключ, перетаскивание ромба переносит ключ на другой шаг, правый щелчок открывает другие команды. Значения меняются на панели «Свойства».&lt;/p&gt;&lt;p&gt;«Выделенные» показывает выделенные объекты, «Все» — каждый объект с ключами. Полный и пустой ромбы добавляют или удаляют ключи выделенных объектов на текущем шаге, «Добавлять ключи» заставляет правки создавать ключи, а кнопки воспроизведения проходят по шагам, показывая движение.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="77"/>
+        <source>&lt;p&gt;&lt;b&gt;Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;List only the selected objects in the chart, with or without keys.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Выбранные&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показывать в диаграмме только выбранные объекты, с ключами или без.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="81"/>
@@ -18344,9 +18392,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Время</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="709"/>
         <source>&lt;p&gt;&lt;b&gt;Time Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Timeline for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Панель времени&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Кнопки со стрелками перемещают по шагам сборки, чтобы можно было посмотреть, как собирается модель. Они не меняют шаг, назначенный детали; для этого используйте шкалу времени. «Воспроизвести» проходит по шагам модели, показывая заданное движение и паузы при повторном использовании, а «Стоп» возвращает к шагу, с которого началось воспроизведение. «Задать ключи» и «Удалить ключи» добавляют или удаляют ключи выбранных объектов на текущем шаге, как ромбики панели «Ключевые кадры». «Добавлять ключи» определяет, создают ли изменения ключи анимации на текущем шаге, позволяя таким свойствам, как положение, меняться от шага к шагу.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Панель времени&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Кнопки со стрелками перемещают по шагам сборки, чтобы можно было посмотреть, как собирается модель. Они не меняют шаг, назначенный детали; для этого используйте шкалу времени. «Воспроизвести» проходит по шагам модели, показывая заданное движение и паузы при повторном использовании, а «Стоп» возвращает к шагу, с которого началось воспроизведение. «Задать ключи» и «Удалить ключи» добавляют или удаляют ключи выбранных объектов на текущем шаге, как ромбики панели «Ключевые кадры». «Добавлять ключи» определяет, создают ли изменения ключи анимации на текущем шаге, позволяя таким свойствам, как положение, меняться от шага к шагу.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="779"/>
@@ -18364,9 +18411,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Прокрутить образцы вправо. Двойной щелчок переходит к последнему.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1094"/>
         <source>&lt;p&gt;&lt;b&gt;Timeline&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Шкала времени&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите шаг, чтобы сделать его текущим, или строки деталей, чтобы выбрать эти детали в модели. Перетаскивайте детали между шагами или меняйте их порядок внутри шага. Строки «Ключи» называют объекты с ключами анимации на шаге; двойной щелчок выбирает этот объект на этом шаге и показывает панель «Ключевые кадры». Щёлкните правой кнопкой для команд вставки, удаления, перемещения шагов и видимости.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Шкала времени&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите шаг, чтобы сделать его текущим, или строки деталей, чтобы выбрать эти детали в модели. Перетаскивайте детали между шагами или меняйте их порядок внутри шага. Строки «Ключи» называют объекты с ключами анимации на шаге; двойной щелчок выбирает этот объект на этом шаге и показывает панель «Ключевые кадры». Щёлкните правой кнопкой для команд вставки, удаления, перемещения шагов и видимости.&lt;/p&gt;</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Explode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Spread every other visible part, or only the selected ones, away from an anchor by an X, Y and Z percentage of its distance. Each part slides out along the connection that holds it. Collapse or Undo puts the parts back, and Save Copy saves the exploded model to a separate file.&lt;/p&gt;</source>
@@ -18559,6 +18605,11 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>&amp;Модели</translation>
     </message>
     <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="709"/>
+        <source>&lt;p&gt;&lt;b&gt;Time Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Steps panel for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Панель времени&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Кнопки со стрелками перемещают по шагам сборки, чтобы можно было посмотреть, как собирается модель. Они не меняют шаг, назначенный детали; для этого используйте панель «Шаги». «Воспроизвести» проходит по шагам модели, показывая заданное движение и паузы при повторном использовании, а «Стоп» возвращает к шагу, с которого началось воспроизведение. «Задать ключи» и «Удалить ключи» добавляют или удаляют ключи выбранных объектов на текущем шаге, как ромбики панели «Ключевые кадры». «Добавлять ключи» определяет, создают ли изменения ключи анимации на текущем шаге, позволяя таким свойствам, как положение, меняться от шага к шагу.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="807"/>
         <source>Choose how inserted parts are colored.</source>
         <translation>Выберите, как раскрашиваются вставляемые детали.</translation>
@@ -18610,8 +18661,17 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1092"/>
+        <source>Steps</source>
+        <translation>Шаги</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1094"/>
+        <source>&lt;p&gt;&lt;b&gt;Steps&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Шаги&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите шаг, чтобы сделать его текущим, или строки деталей, чтобы выбрать эти детали в модели. Перетаскивайте детали между шагами или меняйте их порядок внутри шага. Строки «Ключи» называют объекты с ключами анимации на шаге; двойной щелчок выбирает этот объект на этом шаге и показывает панель «Ключевые кадры». Щёлкните правой кнопкой для команд вставки, удаления, перемещения шагов и видимости.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <source>Timeline</source>
-        <translation>Шкала времени</translation>
+        <translation type="vanished">Шкала времени</translation>
     </message>
     <message>
         <source>&lt;p&gt;&lt;b&gt;Timeline&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
@@ -24121,37 +24181,37 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>Сбросить категории</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="369"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="380"/>
         <source>The shortcut &apos;%1&apos; is already assigned to &apos;%2&apos;. Do you want to replace it?</source>
         <translation>Сочетание клавиш «%1» уже назначено для «%2». Заменить его?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="488"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="499"/>
         <source>Insert</source>
         <translation>Вставка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="500"/>
         <source>Edit</source>
         <translation>Правка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="490"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="501"/>
         <source>View</source>
         <translation>Вид</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="629"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="640"/>
         <source>Could not read mouse shortcuts file &apos;%1&apos;.</source>
         <translation>Не удалось прочитать файл сочетаний кнопок мыши «%1».</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="648"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="659"/>
         <source>Could not write mouse shortcuts file &apos;%1&apos;.</source>
         <translation>Не удалось записать файл сочетаний кнопок мыши «%1».</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="664"/>
         <source>Reset Mouse Shortcuts</source>
         <translation>Сбросить сочетания кнопок мыши</translation>
     </message>
@@ -24437,7 +24497,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">Ошибка сохранения файла сочетаний клавиш.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="460"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="471"/>
         <source>Are you sure you want to load the default keyboard shortcuts?</source>
         <translation>Загрузить сочетания клавиш клавиатуры по умолчанию?</translation>
     </message>
@@ -24457,9 +24517,9 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>Правая кнопка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="371"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="566"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="575"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="382"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="577"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="586"/>
         <source>Override Shortcut</source>
         <translation>Перезапись сочетания клавиш</translation>
     </message>
@@ -24489,26 +24549,26 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="obsolete">Импортировать сочетания клавиш</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="453"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="464"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Экспортировать сочетания клавиш</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="460"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="471"/>
         <source>Reset Keyboard Shortcuts</source>
         <translation>Сбросить сочетания клавиш</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="566"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="575"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="577"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="586"/>
         <source>This shortcut is already assigned to &apos;%1&apos;. Do you want to replace it?</source>
         <oldsource>This shortcut is already assigned to &apos;%1&apos;, do you want to replace it?</oldsource>
         <translation>Это сочетание клавиш уже назначено для «%1». Заменить его?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="425"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="433"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="621"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="436"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="444"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="632"/>
         <source>Import Shortcuts</source>
         <translation>Импорт сочетаний клавиш</translation>
     </message>
@@ -24517,8 +24577,8 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">Ошибка загрузки файла сочетаний клавиш мыши.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="446"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="642"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="457"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
         <source>Export Shortcuts</source>
         <translation>Экспорт сочетаний клавиш</translation>
     </message>
@@ -24543,12 +24603,12 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>Железнодорожный путь</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="207"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
         <source>Help for the panel under the pointer</source>
         <translation>Справка по панели под указателем</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="207"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
         <source>F1</source>
         <translation>F1</translation>
     </message>
@@ -24557,99 +24617,115 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">Очистить сочленение на панели «Сочленения»</translation>
     </message>
     <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
         <source>Del</source>
-        <translation type="vanished">Del</translation>
+        <translation>Del</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <source>Delete what is selected where you work</source>
+        <translation>Удалить выбранное там, где вы работаете</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
         <source>Add to the selection</source>
         <translation>Добавить к выделению</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
         <source>Ctrl+Click</source>
         <translation>Ctrl+щелчок</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
         <source>Remove from the selection</source>
         <translation>Убрать из выделения</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
         <source>Shift+Click</source>
         <translation>Shift+щелчок</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
         <source>Zoom faster or slower</source>
         <translation>Масштабировать быстрее или медленнее</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
         <source>Ctrl or Shift+Wheel</source>
         <translation>Ctrl или Shift+колесо</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="214"/>
         <source>Snap rotation, keep the insert tool, free a locked joint</source>
         <translation>Шаг вращения, оставить инструмент вставки, освободить заблокированное сочленение</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="214"/>
         <source>Hold Ctrl</source>
         <translation>Удерживать Ctrl</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="215"/>
         <source>Jump to a part in the parts list</source>
         <translation>Перейти к детали в списке деталей</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="215"/>
         <source>A to Z</source>
         <translation>A–Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="216"/>
         <source>Move through the parts list</source>
         <translation>Перемещение по списку деталей</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="216"/>
         <source>Arrows, Home, End, Page Up, Page Down</source>
         <translation>Стрелки, Home, End, Page Up, Page Down</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="216"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="219"/>
         <source>Built-in Keys</source>
         <translation>Встроенные клавиши</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="272"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="275"/>
         <source>The shortcut &apos;%1&apos; is shared by %2.</source>
         <translation>Сочетание «%1» используется несколькими командами: %2.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="425"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="446"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="621"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="642"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="367"/>
+        <source>Built-in Key</source>
+        <translation>Встроенная клавиша</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="367"/>
+        <source>The shortcut &apos;%1&apos; is a built-in key that always deletes what is selected.</source>
+        <translation>Сочетание &apos;%1&apos; — встроенная клавиша, которая всегда удаляет выбранное.</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="436"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="457"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="632"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
         <source>Shortcut Files (*.txt);;All Files (*)</source>
         <translation>Файлы сочетаний (*.txt);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="433"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="444"/>
         <source>Could not read keyboard shortcuts file &apos;%1&apos;.</source>
         <translation>Не удалось прочитать файл сочетаний клавиш «%1».</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="453"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="464"/>
         <source>Could not write keyboard shortcuts file &apos;%1&apos;.</source>
         <translation>Не удалось записать файл сочетаний клавиш «%1».</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="629"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="640"/>
         <source>Import Mouse Shortcuts</source>
         <translation>Импортировать сочетания кнопок мыши</translation>
     </message>
@@ -24658,12 +24734,12 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">Ошибка сохранения файла сочетаний клавиш мыши.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="648"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="659"/>
         <source>Export Mouse Shortcuts</source>
         <translation>Экспортировать сочетания кнопок мыши</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="664"/>
         <source>Are you sure you want to load the default mouse shortcuts?</source>
         <translation>Загрузить сочетания клавиш мыши по умолчанию?</translation>
     </message>
@@ -29574,6 +29650,64 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
     </message>
 </context>
 <context>
+    <name>swStepsWidget</name>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="13"/>
+        <source>Building Steps and Parts</source>
+        <translation>Шаги и детали сборки</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="14"/>
+        <source>Select steps or parts; drag parts to reorder them or change their building step.</source>
+        <translation>Выберите шаги или детали; перетаскивайте детали, чтобы изменить их порядок или шаг сборки.</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="189"/>
+        <source>Step %1</source>
+        <translation>Шаг %1</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="333"/>
+        <source>Keys: %1 (%2)</source>
+        <translation>Ключи: %1 (%2)</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="337"/>
+        <source>Animation keys of this object at this step. Double-click to select it and show the Keyframes panel.</source>
+        <translation>Ключи анимации этого объекта на этом шаге. Дважды щёлкните, чтобы выбрать его и показать панель ключевых кадров.</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="352"/>
+        <source>relative</source>
+        <translation>относительно</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="352"/>
+        <source>absolute</source>
+        <translation>абсолютно</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="352"/>
+        <source>added</source>
+        <translation>добавлено</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="357"/>
+        <source>View: back to default</source>
+        <translation>Вид: возврат к умолчанию</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="359"/>
+        <source>View: %1, %2, %3 %4</source>
+        <translation>Вид: %1, %2, %3 %4</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="364"/>
+        <source>Step view saved as an MLCAD ROTSTEP line. Double-click to edit it.</source>
+        <translation>Вид шага сохранён как строка MLCAD ROTSTEP. Дважды щёлкните, чтобы изменить.</translation>
+    </message>
+</context>
+<context>
     <name>swTerminalWidget</name>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_terminal.cpp" line="28"/>
@@ -29633,59 +29767,48 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
 <context>
     <name>swTimelineWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="13"/>
         <source>Building Steps and Parts</source>
-        <translation>Шаги и детали сборки</translation>
+        <translation type="vanished">Шаги и детали сборки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="14"/>
         <source>Select steps or parts; drag parts to reorder them or change their building step.</source>
-        <translation>Выберите шаги или детали; перетаскивайте детали, чтобы изменить их порядок или шаг сборки.</translation>
+        <translation type="vanished">Выберите шаги или детали; перетаскивайте детали, чтобы изменить их порядок или шаг сборки.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="189"/>
         <source>Step %1</source>
-        <translation>Шаг %1</translation>
+        <translation type="vanished">Шаг %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="333"/>
         <source>Keys: %1 (%2)</source>
-        <translation>Ключи: %1 (%2)</translation>
+        <translation type="vanished">Ключи: %1 (%2)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="337"/>
         <source>Animation keys of this object at this step. Double-click to select it and show the Keyframes panel.</source>
-        <translation>Ключи анимации этого объекта на этом шаге. Дважды щёлкните, чтобы выбрать его и показать панель ключевых кадров.</translation>
+        <translation type="vanished">Ключи анимации этого объекта на этом шаге. Дважды щёлкните, чтобы выбрать его и показать панель ключевых кадров.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="352"/>
         <source>relative</source>
-        <translation>относительно</translation>
+        <translation type="vanished">относительно</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="352"/>
         <source>absolute</source>
-        <translation>абсолютно</translation>
+        <translation type="vanished">абсолютно</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="352"/>
         <source>added</source>
-        <translation>добавлено</translation>
+        <translation type="vanished">добавлено</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="357"/>
         <source>View: back to default</source>
-        <translation>Вид: возврат к умолчанию</translation>
+        <translation type="vanished">Вид: возврат к умолчанию</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="359"/>
         <source>View: %1, %2, %3 %4</source>
-        <translation>Вид: %1, %2, %3 %4</translation>
+        <translation type="vanished">Вид: %1, %2, %3 %4</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="364"/>
         <source>Step view saved as an MLCAD ROTSTEP line. Double-click to edit it.</source>
-        <translation>Вид шага сохранён как строка MLCAD ROTSTEP. Дважды щёлкните, чтобы изменить.</translation>
+        <translation type="vanished">Вид шага сохранён как строка MLCAD ROTSTEP. Дважды щёлкните, чтобы изменить.</translation>
     </message>
 </context>
 <context>

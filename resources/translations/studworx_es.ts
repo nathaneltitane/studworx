@@ -873,9 +873,8 @@
         <translation>Vista.BarrasDeHerramientas.Propiedades</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1592"/>
         <source>View.Toolbars.Timeline</source>
-        <translation>Vista.BarrasDeHerramientas.LineaDeTiempo</translation>
+        <translation type="vanished">Vista.BarrasDeHerramientas.LineaDeTiempo</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1601"/>
@@ -936,6 +935,11 @@
         <location filename="../../source/application/sw_commands.cpp" line="1493"/>
         <source>View.Time.Stop</source>
         <translation>Vista.LineaDeTiempo.Detener</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1592"/>
+        <source>View.Toolbars.Steps</source>
+        <translation>Vista.BarrasDeHerramientas.Pasos</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1637"/>
@@ -3491,6 +3495,11 @@
         <translation>Articulaciones</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1593"/>
+        <source>Steps Panel</source>
+        <translation>Panel de pasos</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="2078"/>
         <source>Open Most Recent File on Startup</source>
         <translation>Abrir archivo más reciente al inicio</translation>
@@ -3831,9 +3840,8 @@
         <translation>Panel de propiedades</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1593"/>
         <source>Timeline Panel</source>
-        <translation>Panel de línea de tiempo</translation>
+        <translation type="vanished">Panel de línea de tiempo</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1602"/>
@@ -7322,9 +7330,8 @@ El formato de archivo no se reconoce.</translation>
         <translation>Mover las piezas seleccionadas a un nuevo paso después de este</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3482"/>
         <source>View the model at this point in the timeline</source>
-        <translation>Ver el modelo en este punto de la línea de tiempo</translation>
+        <translation type="vanished">Ver el modelo en este punto de la línea de tiempo</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1459"/>
@@ -7551,9 +7558,8 @@ El formato de archivo no se reconoce.</translation>
         <translation>Alternar el panel Propiedades</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1594"/>
         <source>Toggle the Timeline panel</source>
-        <translation>Alternar el panel Línea de tiempo</translation>
+        <translation type="vanished">Alternar el panel Línea de tiempo</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1603"/>
@@ -7911,6 +7917,11 @@ El formato de archivo no se reconoce.</translation>
         <translation>Termina el modo más interno, una capa por pulsación</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3482"/>
+        <source>View the model at this step</source>
+        <translation>Ver el modelo en este paso</translation>
+    </message>
+    <message>
         <source>Go into joint mode on the selected submodel, or leave it</source>
         <translation type="vanished">Entrar en el modo articulación del submodelo seleccionado, o salir de él</translation>
     </message>
@@ -7982,6 +7993,11 @@ El formato de archivo no se reconoce.</translation>
         <location filename="../../source/application/sw_commands.cpp" line="1495"/>
         <source>Stop playing and go back to the step playing started from</source>
         <translation>Detener la reproducción y volver al paso donde empezó</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1594"/>
+        <source>Toggle the Steps panel</source>
+        <translation>Alternar el panel Pasos</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2258"/>
@@ -8839,9 +8855,23 @@ El formato de archivo no se reconoce.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Herramienta de rotación&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seleccione objetos y luego arrastre un controlador de rotación en la vista del modelo. El ajuste de rotación establece los incrementos del ángulo. Las opciones de transformación eligen ejes relativos o del modelo y si las piezas giran juntas o por separado.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2547"/>
+        <location filename="../../source/application/sw_commands.cpp" line="1657"/>
+        <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Keyframes panel, a chart of the animation keys of the objects per step.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Fotogramas clave&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Muestra u oculta el panel Fotogramas clave, un gráfico de las claves de animación de los objetos por paso.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3429"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert Step Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step before this step in the Steps panel.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Insertar paso antes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Añade un paso vacío antes de este paso en el panel Pasos.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3438"/>
+        <source>&lt;p&gt;&lt;b&gt;Insert Step After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step after this step in the Steps panel.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Insertar paso después&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Añade un paso vacío después de este paso en el panel Pasos.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Removes only what is selected, picked by where you work: the joint in the Joints panel, the step in the Timeline panel, the picked keys in the Keyframes panel, or the selected keys at the current step when none are picked, and the selected pointers, notices or blank page in the instructions. In the view it removes a focused control point alone, otherwise the selected objects. With nothing selected it does nothing.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Eliminar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Quita solo lo seleccionado, según donde trabajas: la articulación en el panel Articulaciones, el paso en el panel Línea de tiempo, las claves elegidas en el panel Fotogramas clave o, si no hay ninguna elegida, las claves de los objetos seleccionados en el paso actual, y los punteros, avisos o la página en blanco seleccionados en las instrucciones. En la vista quita solo un punto de control enfocado; si no, los objetos seleccionados. Sin nada seleccionado no hace nada.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Eliminar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Quita solo lo seleccionado, según donde trabajas: la articulación en el panel Articulaciones, el paso en el panel Línea de tiempo, las claves elegidas en el panel Fotogramas clave o, si no hay ninguna elegida, las claves de los objetos seleccionados en el paso actual, y los punteros, avisos o la página en blanco seleccionados en las instrucciones. En la vista quita solo un punto de control enfocado; si no, los objetos seleccionados. Sin nada seleccionado no hace nada.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2601"/>
@@ -8931,6 +8961,11 @@ El formato de archivo no se reconoce.</translation>
         <location filename="../../source/application/sw_commands.cpp" line="1388"/>
         <source>&lt;p&gt;&lt;b&gt;Camera&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Look through this camera of the model. The menu lists the first sixteen cameras.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Cámara&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mira a través de esta cámara del modelo. El menú lista las primeras dieciséis cámaras.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="1415"/>
+        <source>&lt;p&gt;&lt;b&gt;Next Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the next building step to reveal the next stage of the model. Use the Steps panel to change which step introduces a part.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Siguiente paso&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Muestra el siguiente paso de construcción para revelar la siguiente etapa del modelo. Utilice el panel Pasos para cambiar qué paso presenta una pieza.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1433"/>
@@ -9534,14 +9569,12 @@ El formato de archivo no se reconoce.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Acerca de&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Muestra la versión de StudWorx, un enlace a su página web e información del sistema para copiar en un informe de error.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3429"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Step Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step before this step in the Timeline.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Insertar paso antes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Añade un paso vacío antes de este paso en la Línea de tiempo.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Insertar paso antes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Añade un paso vacío antes de este paso en la Línea de tiempo.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3438"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Step After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step after this step in the Timeline.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Insertar paso después&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Añade un paso vacío después de este paso en la Línea de tiempo.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Insertar paso después&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Añade un paso vacío después de este paso en la Línea de tiempo.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="3447"/>
@@ -9624,9 +9657,8 @@ El formato de archivo no se reconoce.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Paso anterior&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Muestra el modelo un paso de construcción antes. Las piezas introducidas en pasos posteriores están ocultas para que pueda inspeccionar la etapa anterior de construcción.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1415"/>
         <source>&lt;p&gt;&lt;b&gt;Next Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Display the next building step to reveal the next stage of the model. Use the Timeline to change which step introduces a part.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Siguiente paso&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Muestra el siguiente paso de construcción para revelar la siguiente etapa del modelo. Utilice la línea de tiempo para cambiar qué paso presenta una pieza.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Siguiente paso&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Muestra el siguiente paso de construcción para revelar la siguiente etapa del modelo. Utilice la línea de tiempo para cambiar qué paso presenta una pieza.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1424"/>
@@ -9700,6 +9732,11 @@ El formato de archivo no se reconoce.</translation>
         <location filename="../../source/application/sw_commands.cpp" line="2160"/>
         <source>&lt;p&gt;&lt;b&gt;Connection Points&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Mark the studs, tubes, axle holes, clips and other connection points of the hovered part within a 2x2 stud area of the pointer, when Part Connections is on in the preferences. Filled marks are male points, hollow marks are female points, and only the points facing the camera show.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Puntos de conexión&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Marca los tetones, tubos, agujeros de eje, clips y otros puntos de conexión de la pieza bajo el puntero, dentro de un área de 2x2 tetones, cuando Conexiones de piezas está activado en Preferencias. Las marcas rellenas son puntos macho, las marcas huecas son puntos hembra, y solo se muestran los puntos que miran a la cámara.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2547"/>
+        <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Removes only what is selected, picked by where you work: the joint in the Joints panel, the step in the Steps panel, the picked keys in the Keyframes panel, or the selected keys at the current step when none are picked, and the selected pointers, notices or blank page in the instructions. In the view it removes a focused control point alone, otherwise the selected objects. With nothing selected it does nothing.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Eliminar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Quita solo lo seleccionado, según donde trabajas: la articulación en el panel Articulaciones, el paso en el panel Pasos, las claves elegidas en el panel Fotogramas clave o, si no hay ninguna elegida, las claves de los objetos seleccionados en el paso actual, y los punteros, avisos o la página en blanco seleccionados en las instrucciones. En la vista quita solo un punto de control enfocado; si no, los objetos seleccionados. Sin nada seleccionado no hace nada.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2583"/>
@@ -9860,9 +9897,8 @@ El formato de archivo no se reconoce.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Muestra u oculta el panel Poses, que guarda y recupera conjuntos con nombre de ángulos de articulación.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="1657"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Keyframes panel, a timeline of the animation keys of the objects per step.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Fotogramas clave&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Muestra u oculta el panel Fotogramas clave, una línea de tiempo de las claves de animación de los objetos por paso.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Fotogramas clave&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Muestra u oculta el panel Fotogramas clave, una línea de tiempo de las claves de animación de los objetos por paso.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1729"/>
@@ -15314,9 +15350,13 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>%1 - En blanco</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="394"/>
         <source>&lt;p&gt;&lt;b&gt;Page Bar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The timeline First, Previous, Next and Last shortcuts turn the pages too while the page or the Pages panel has focus.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Barra de páginas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ve a la primera página, la anterior, la siguiente o la última, o directamente a la portada o a la lista de materiales, desactivadas mientras esas páginas estén desactivadas. Página de paso inserta un paso vacío antes de la página actual, Página en blanco inserta una página en blanco antes de ella y Quitar página quita una página en blanco o una página de pasos vacíos. El cuadro de la derecha muestra la página actual; escribe un número para ir a ella. Los atajos Primero, Anterior, Siguiente y Último de la línea de tiempo también cambian de página mientras la página o el panel Páginas tienen el foco.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Barra de páginas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ve a la primera página, la anterior, la siguiente o la última, o directamente a la portada o a la lista de materiales, desactivadas mientras esas páginas estén desactivadas. Página de paso inserta un paso vacío antes de la página actual, Página en blanco inserta una página en blanco antes de ella y Quitar página quita una página en blanco o una página de pasos vacíos. El cuadro de la derecha muestra la página actual; escribe un número para ir a ella. Los atajos Primero, Anterior, Siguiente y Último de la línea de tiempo también cambian de página mientras la página o el panel Páginas tienen el foco.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="394"/>
+        <source>&lt;p&gt;&lt;b&gt;Page Bar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The First, Previous, Next and Last step shortcuts turn the pages too while the page or the Pages panel has focus.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Barra de páginas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Ve a la primera página, la anterior, la siguiente o la última, o directamente a la portada o a la lista de materiales, desactivadas mientras esas páginas estén desactivadas. Página de paso inserta un paso vacío antes de la página actual, Página en blanco inserta una página en blanco antes de ella y Quitar página quita una página en blanco o una página de pasos vacíos. El cuadro de la derecha muestra la página actual; escribe un número para ir a ella. Los atajos Primero, Anterior, Siguiente y Último de los pasos también cambian de página mientras la página o el panel Páginas tienen el foco.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions.cpp" line="404"/>
@@ -18168,9 +18208,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Fotogramas clave&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Una línea de tiempo de las claves de animación con una columna por paso y una fila por objeto, expandible a sus propiedades. Un rombo marca una clave y una línea une las claves de una propiedad. Haga clic en un nombre para seleccionar el objeto, Ctrl+clic para añadirlo a la selección o quitarlo de ella y haga clic en su flecha para mostrar sus propiedades. Haga clic en un paso para ir a él, doble clic en una celda para añadir o quitar una clave, arrastra un rombo para mover la clave a otro paso y haga clic derecho para más opciones. Los valores se editan en el panel Propiedades.&lt;/p&gt;&lt;p&gt;Seleccionados lista los objetos seleccionados y Todos todos los objetos con claves. Los rombos lleno y hueco añaden o quitan las claves de los objetos seleccionados en el paso actual, Añadir claves hace que las ediciones creen claves y los botones de reproducción recorren los pasos para mostrar el movimiento con claves.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="15"/>
         <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A timeline of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, click a diamond to pick it, Ctrl+click to add or remove it from the picked keys and Shift+click to take it out. Delete removes the picked keys. Double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;&lt;p&gt;Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Fotogramas clave&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Una línea de tiempo de las claves de animación con una columna por paso y una fila por objeto, desplegable hasta sus propiedades. Un rombo marca una clave y una línea une las claves de una propiedad. Haz clic en un nombre para seleccionar el objeto, Ctrl+clic para añadirlo o quitarlo de la selección y clic en su flecha para ver sus propiedades. Haz clic en un paso para ir a él, clic en un rombo para elegirlo, Ctrl+clic para añadirlo o quitarlo de las claves elegidas y Mayús+clic para sacarlo. Supr quita las claves elegidas. Doble clic en una celda para añadir o quitar una clave, arrastra un rombo para mover la clave a otro paso y clic derecho para más. Los valores se editan en el panel Propiedades.&lt;/p&gt;&lt;p&gt;Seleccionados muestra los objetos seleccionados, Todos cada objeto con claves. Los rombos lleno y hueco añaden o quitan las claves de los objetos seleccionados en el paso actual, Añadir claves hace que las ediciones creen claves y los botones de reproducción recorren los pasos para mostrar el movimiento.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Fotogramas clave&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Una línea de tiempo de las claves de animación con una columna por paso y una fila por objeto, desplegable hasta sus propiedades. Un rombo marca una clave y una línea une las claves de una propiedad. Haz clic en un nombre para seleccionar el objeto, Ctrl+clic para añadirlo o quitarlo de la selección y clic en su flecha para ver sus propiedades. Haz clic en un paso para ir a él, clic en un rombo para elegirlo, Ctrl+clic para añadirlo o quitarlo de las claves elegidas y Mayús+clic para sacarlo. Supr quita las claves elegidas. Doble clic en una celda para añadir o quitar una clave, arrastra un rombo para mover la clave a otro paso y clic derecho para más. Los valores se editan en el panel Propiedades.&lt;/p&gt;&lt;p&gt;Seleccionados muestra los objetos seleccionados, Todos cada objeto con claves. Los rombos lleno y hueco añaden o quitan las claves de los objetos seleccionados en el paso actual, Añadir claves hace que las ediciones creen claves y los botones de reproducción recorren los pasos para mostrar el movimiento.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="53"/>
@@ -18193,9 +18232,18 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Mostrar las claves de los objetos seleccionados</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="77"/>
         <source>&lt;p&gt;&lt;b&gt;Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;List only the selected objects in the timeline, with or without keys.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Seleccionados&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Lista solo los objetos seleccionados en la línea de tiempo, con o sin claves.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Seleccionados&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Lista solo los objetos seleccionados en la línea de tiempo, con o sin claves.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="15"/>
+        <source>&lt;p&gt;&lt;b&gt;Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;A chart of the animation keys with one column per step and one row per object, expandable to its properties. A diamond marks a key and a line joins the keys of one property. Click a name to select the object, Ctrl+click to add or remove it from the selection and click its arrow to show its properties. Click a step to go to it, click a diamond to pick it, Ctrl+click to add or remove it from the picked keys and Shift+click to take it out. Delete removes the picked keys. Double-click a cell to add or remove a key, drag a diamond to move the key to another step and right-click for more. Values are edited in the Properties panel.&lt;/p&gt;&lt;p&gt;Selected lists the selected objects, All every object with keys. The full and hollow diamonds add or remove the keys of the selected objects at the current step, Add Keys makes edits create keys, and the playback buttons play through the steps to show the keyed motion.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Fotogramas clave&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Un gráfico de las claves de animación con una columna por paso y una fila por objeto, desplegable hasta sus propiedades. Un rombo marca una clave y una línea une las claves de una propiedad. Haz clic en un nombre para seleccionar el objeto, Ctrl+clic para añadirlo o quitarlo de la selección y clic en su flecha para ver sus propiedades. Haz clic en un paso para ir a él, clic en un rombo para elegirlo, Ctrl+clic para añadirlo o quitarlo de las claves elegidas y Mayús+clic para sacarlo. Supr quita las claves elegidas. Doble clic en una celda para añadir o quitar una clave, arrastra un rombo para mover la clave a otro paso y clic derecho para más. Los valores se editan en el panel Propiedades.&lt;/p&gt;&lt;p&gt;Seleccionados muestra los objetos seleccionados, Todos cada objeto con claves. Los rombos lleno y hueco añaden o quitan las claves de los objetos seleccionados en el paso actual, Añadir claves hace que las ediciones creen claves y los botones de reproducción recorren los pasos para mostrar el movimiento.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="77"/>
+        <source>&lt;p&gt;&lt;b&gt;Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;List only the selected objects in the chart, with or without keys.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Seleccionados&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Lista solo los objetos seleccionados en el gráfico, con o sin claves.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_keyframes.cpp" line="81"/>
@@ -18358,6 +18406,16 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Rejilla Z</translation>
     </message>
     <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1092"/>
+        <source>Steps</source>
+        <translation>Pasos</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1094"/>
+        <source>&lt;p&gt;&lt;b&gt;Steps&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Pasos&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seleccione un paso para convertirlo en el actual, o selecciona filas de piezas para seleccionar esas piezas en el modelo. Arrastre piezas entre pasos o reordénelas dentro de un paso. Las filas de claves indican los objetos con claves de animación en un paso, y al hacer doble clic se selecciona ese objeto allí y se muestra el panel Fotogramas clave. Haga clic derecho para ver los comandos de inserción, eliminación, movimiento y visibilidad de pasos.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <source>Snap Menu</source>
         <translation type="vanished">Menu de ajuste</translation>
     </message>
@@ -18401,6 +18459,11 @@ Choose where to save it and download the latest %3 now?</source>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="687"/>
         <source>Standard</source>
         <translation>Estándar</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="709"/>
+        <source>&lt;p&gt;&lt;b&gt;Time Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Steps panel for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Barra de herramientas de tiempo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Los botones de flecha recorren los pasos de construcción para que pueda ver cómo se ensambla el modelo. No cambian el paso asignado a una pieza; para eso usa el panel Pasos. Reproducir recorre los pasos del modelo mostrando el movimiento con claves y las pausas, y al usarlo de nuevo se detiene; Detener vuelve al paso desde el que empezó la reproducción. Fijar claves y Quitar claves añaden o quitan las claves de los objetos seleccionados en el paso actual, como los rombos del panel Fotogramas clave. Añadir claves controla si las ediciones crean claves de animación en el paso actual, lo que permite que propiedades como la posición varíen entre pasos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="722"/>
@@ -18473,9 +18536,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>&lt;p&gt;&lt;b&gt;Aplicar transformación&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Elija el modo de traslación o rotación, ingrese los valores X/Y/Z y presione Entrar para aplicarlos. Los valores de traslación utilizan unidades LDraw; los valores de rotación utilizan grados.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1094"/>
         <source>&lt;p&gt;&lt;b&gt;Timeline&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Línea de tiempo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seleccione un paso para convertirlo en el actual, o selecciona filas de piezas para seleccionar esas piezas en el modelo. Arrastre piezas entre pasos o reordénelas dentro de un paso. Las filas de claves indican los objetos con claves de animación en un paso, y al hacer doble clic se selecciona ese objeto allí y se muestra el panel Fotogramas clave. Haga clic derecho para ver los comandos de inserción, eliminación, movimiento y visibilidad de pasos.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Línea de tiempo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seleccione un paso para convertirlo en el actual, o selecciona filas de piezas para seleccionar esas piezas en el modelo. Arrastre piezas entre pasos o reordénelas dentro de un paso. Las filas de claves indican los objetos con claves de animación en un paso, y al hacer doble clic se selecciona ese objeto allí y se muestra el panel Fotogramas clave. Haga clic derecho para ver los comandos de inserción, eliminación, movimiento y visibilidad de pasos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1131"/>
@@ -18548,9 +18610,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>&lt;p&gt;&lt;b&gt;Barra de herramientas estándar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use los controles de archivo para crear, abrir y guardar modelos, y Deshacer o Rehacer para moverte por el historial de edición. Antes de mover o rotar objetos, elija la regla de selección, la referencia de coordenadas y los incrementos de ajuste en los cuatro controles desplegables. Ayuda &gt; &quot;¿Qué es esto?&quot; explica cada control.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="709"/>
         <source>&lt;p&gt;&lt;b&gt;Time Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Timeline for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Barra de herramientas de tiempo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Los botones de flecha recorren los pasos de construcción para que pueda ver cómo se ensambla el modelo. No cambian el paso asignado a una pieza; para eso usa la Línea de tiempo. Reproducir recorre los pasos del modelo mostrando el movimiento con claves y las pausas, y al usarlo de nuevo se detiene; Detener vuelve al paso desde el que empezó la reproducción. Fijar claves y Quitar claves añaden o quitan las claves de los objetos seleccionados en el paso actual, como los rombos del panel Fotogramas clave. Añadir claves controla si las ediciones crean claves de animación en el paso actual, lo que permite que propiedades como la posición varíen entre pasos.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Barra de herramientas de tiempo&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Los botones de flecha recorren los pasos de construcción para que pueda ver cómo se ensambla el modelo. No cambian el paso asignado a una pieza; para eso usa la Línea de tiempo. Reproducir recorre los pasos del modelo mostrando el movimiento con claves y las pausas, y al usarlo de nuevo se detiene; Detener vuelve al paso desde el que empezó la reproducción. Fijar claves y Quitar claves añaden o quitan las claves de los objetos seleccionados en el paso actual, como los rombos del panel Fotogramas clave. Añadir claves controla si las ediciones crean claves de animación en el paso actual, lo que permite que propiedades como la posición varíen entre pasos.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1013"/>
@@ -19277,9 +19338,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Propiedades</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1092"/>
         <source>Timeline</source>
-        <translation>Línea de tiempo</translation>
+        <translation type="vanished">Línea de tiempo</translation>
     </message>
     <message>
         <source>Part preview for &apos;%1&apos; failed.</source>
@@ -24243,37 +24303,37 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation>Reiniciar categorías</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="369"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="380"/>
         <source>The shortcut &apos;%1&apos; is already assigned to &apos;%2&apos;. Do you want to replace it?</source>
         <translation>El atajo &apos;%1&apos; ya está asignado a &apos;%2&apos;. ¿Quiere reemplazarlo?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="488"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="499"/>
         <source>Insert</source>
         <translation>Insertar</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="500"/>
         <source>Edit</source>
         <translation>Editar</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="490"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="501"/>
         <source>View</source>
         <translation>Vista</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="629"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="640"/>
         <source>Could not read mouse shortcuts file &apos;%1&apos;.</source>
         <translation>No se pudo leer el archivo de atajos de ratón &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="648"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="659"/>
         <source>Could not write mouse shortcuts file &apos;%1&apos;.</source>
         <translation>No se pudo escribir el archivo de atajos de ratón &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="664"/>
         <source>Reset Mouse Shortcuts</source>
         <translation>Reiniciar atajos de ratón</translation>
     </message>
@@ -24559,7 +24619,7 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation type="vanished">Error guardando el archivo de atajos de teclado.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="460"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="471"/>
         <source>Are you sure you want to load the default keyboard shortcuts?</source>
         <translation>¿Seguro que quiere cargar los atajos de teclado predeterminados?</translation>
     </message>
@@ -24579,9 +24639,9 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation>Botón derecho</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="371"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="566"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="575"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="382"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="577"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="586"/>
         <source>Override Shortcut</source>
         <translation>Sobrescribir atajo</translation>
     </message>
@@ -24611,26 +24671,26 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation type="obsolete">Importar atajos de teclado</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="453"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="464"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Exportar atajos de teclado</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="460"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="471"/>
         <source>Reset Keyboard Shortcuts</source>
         <translation>Reiniciar atajos de teclado</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="566"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="575"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="577"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="586"/>
         <source>This shortcut is already assigned to &apos;%1&apos;. Do you want to replace it?</source>
         <oldsource>This shortcut is already assigned to &apos;%1&apos;, do you want to replace it?</oldsource>
         <translation>Este atajo ya está asignado a &apos;%1&apos;. ¿Quiere reemplazarlo?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="425"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="433"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="621"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="436"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="444"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="632"/>
         <source>Import Shortcuts</source>
         <translation>Importar atajos</translation>
     </message>
@@ -24639,8 +24699,8 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation type="vanished">Error cargando el archivo de atajos de ratón.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="446"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="642"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="457"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
         <source>Export Shortcuts</source>
         <translation>Exportar atajos</translation>
     </message>
@@ -24665,12 +24725,12 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation>Vía de tren</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="207"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
         <source>Help for the panel under the pointer</source>
         <translation>Ayuda del panel bajo el puntero</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="207"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
         <source>F1</source>
         <translation>F1</translation>
     </message>
@@ -24679,99 +24739,115 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation type="vanished">Borrar la articulación en el panel Articulaciones</translation>
     </message>
     <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
         <source>Del</source>
-        <translation type="vanished">Supr</translation>
+        <translation>Supr</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <source>Delete what is selected where you work</source>
+        <translation>Eliminar lo seleccionado donde trabajas</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
         <source>Add to the selection</source>
         <translation>Añadir a la selección</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
         <source>Ctrl+Click</source>
         <translation>Ctrl+Clic</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
         <source>Remove from the selection</source>
         <translation>Quitar de la selección</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
         <source>Shift+Click</source>
         <translation>Mayús+Clic</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
         <source>Zoom faster or slower</source>
         <translation>Hacer zoom más rápido o más lento</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
         <source>Ctrl or Shift+Wheel</source>
         <translation>Ctrl o Mayús+Rueda</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="214"/>
         <source>Snap rotation, keep the insert tool, free a locked joint</source>
         <translation>Ajustar el giro, mantener la herramienta de inserción, liberar una articulación bloqueada</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="214"/>
         <source>Hold Ctrl</source>
         <translation>Mantener Ctrl</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="215"/>
         <source>Jump to a part in the parts list</source>
         <translation>Saltar a una pieza en la lista de piezas</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="215"/>
         <source>A to Z</source>
         <translation>A a Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="216"/>
         <source>Move through the parts list</source>
         <translation>Moverse por la lista de piezas</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="216"/>
         <source>Arrows, Home, End, Page Up, Page Down</source>
         <translation>Flechas, Inicio, Fin, Re Pág, Av Pág</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="216"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="219"/>
         <source>Built-in Keys</source>
         <translation>Teclas fijas</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="272"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="275"/>
         <source>The shortcut &apos;%1&apos; is shared by %2.</source>
         <translation>El atajo &apos;%1&apos; lo comparten %2.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="425"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="446"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="621"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="642"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="367"/>
+        <source>Built-in Key</source>
+        <translation>Tecla integrada</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="367"/>
+        <source>The shortcut &apos;%1&apos; is a built-in key that always deletes what is selected.</source>
+        <translation>El atajo &apos;%1&apos; es una tecla integrada que siempre elimina lo seleccionado.</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="436"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="457"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="632"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
         <source>Shortcut Files (*.txt);;All Files (*)</source>
         <translation>Archivos de atajos (*.txt);;Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="433"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="444"/>
         <source>Could not read keyboard shortcuts file &apos;%1&apos;.</source>
         <translation>No se pudo leer el archivo de atajos de teclado &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="453"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="464"/>
         <source>Could not write keyboard shortcuts file &apos;%1&apos;.</source>
         <translation>No se pudo escribir el archivo de atajos de teclado &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="629"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="640"/>
         <source>Import Mouse Shortcuts</source>
         <translation>Importar atajos de ratón</translation>
     </message>
@@ -24780,12 +24856,12 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation type="vanished">Error guardando el archivo de atajos del ratón.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="648"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="659"/>
         <source>Export Mouse Shortcuts</source>
         <translation>Exportar atajos de ratón</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="653"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="664"/>
         <source>Are you sure you want to load the default mouse shortcuts?</source>
         <translation>¿Seguro que quiere cargar los atajos de ratón predeterminados?</translation>
     </message>
@@ -29712,6 +29788,64 @@ Instale POV-Ray 3.7 o posterior desde %1 e indíquelo en Preferencias › Genera
     </message>
 </context>
 <context>
+    <name>swStepsWidget</name>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="13"/>
+        <source>Building Steps and Parts</source>
+        <translation>Pasos de construcción y piezas</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="14"/>
+        <source>Select steps or parts; drag parts to reorder them or change their building step.</source>
+        <translation>Seleccione pasos o piezas; arrastre las piezas para reordenarlas o cambiar su paso de construcción.</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="189"/>
+        <source>Step %1</source>
+        <translation>Paso %1</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="333"/>
+        <source>Keys: %1 (%2)</source>
+        <translation>Claves: %1 (%2)</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="337"/>
+        <source>Animation keys of this object at this step. Double-click to select it and show the Keyframes panel.</source>
+        <translation>Claves de animación de este objeto en este paso. Haga doble clic para seleccionarlo y mostrar el panel Fotogramas clave.</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="352"/>
+        <source>relative</source>
+        <translation>relativa</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="352"/>
+        <source>absolute</source>
+        <translation>absoluta</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="352"/>
+        <source>added</source>
+        <translation>añadida</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="357"/>
+        <source>View: back to default</source>
+        <translation>Vista: de vuelta a la predeterminada</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="359"/>
+        <source>View: %1, %2, %3 %4</source>
+        <translation>Vista: %1, %2, %3 %4</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/widgets/sw_widget_steps.cpp" line="364"/>
+        <source>Step view saved as an MLCAD ROTSTEP line. Double-click to edit it.</source>
+        <translation>Vista del paso guardada como línea ROTSTEP de MLCAD. Haga doble clic para editarla.</translation>
+    </message>
+</context>
+<context>
     <name>swTerminalWidget</name>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_terminal.cpp" line="28"/>
@@ -29771,59 +29905,48 @@ Instale POV-Ray 3.7 o posterior desde %1 e indíquelo en Preferencias › Genera
 <context>
     <name>swTimelineWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="13"/>
         <source>Building Steps and Parts</source>
-        <translation>Pasos de construcción y piezas</translation>
+        <translation type="vanished">Pasos de construcción y piezas</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="14"/>
         <source>Select steps or parts; drag parts to reorder them or change their building step.</source>
-        <translation>Seleccione pasos o piezas; arrastre las piezas para reordenarlas o cambiar su paso de construcción.</translation>
+        <translation type="vanished">Seleccione pasos o piezas; arrastre las piezas para reordenarlas o cambiar su paso de construcción.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="189"/>
         <source>Step %1</source>
-        <translation>Paso %1</translation>
+        <translation type="vanished">Paso %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="333"/>
         <source>Keys: %1 (%2)</source>
-        <translation>Claves: %1 (%2)</translation>
+        <translation type="vanished">Claves: %1 (%2)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="337"/>
         <source>Animation keys of this object at this step. Double-click to select it and show the Keyframes panel.</source>
-        <translation>Claves de animación de este objeto en este paso. Haga doble clic para seleccionarlo y mostrar el panel Fotogramas clave.</translation>
+        <translation type="vanished">Claves de animación de este objeto en este paso. Haga doble clic para seleccionarlo y mostrar el panel Fotogramas clave.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="352"/>
         <source>relative</source>
-        <translation>relativa</translation>
+        <translation type="vanished">relativa</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="352"/>
         <source>absolute</source>
-        <translation>absoluta</translation>
+        <translation type="vanished">absoluta</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="352"/>
         <source>added</source>
-        <translation>añadida</translation>
+        <translation type="vanished">añadida</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="357"/>
         <source>View: back to default</source>
-        <translation>Vista: de vuelta a la predeterminada</translation>
+        <translation type="vanished">Vista: de vuelta a la predeterminada</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="359"/>
         <source>View: %1, %2, %3 %4</source>
-        <translation>Vista: %1, %2, %3 %4</translation>
+        <translation type="vanished">Vista: %1, %2, %3 %4</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_timeline.cpp" line="364"/>
         <source>Step view saved as an MLCAD ROTSTEP line. Double-click to edit it.</source>
-        <translation>Vista del paso guardada como línea ROTSTEP de MLCAD. Haga doble clic para editarla.</translation>
+        <translation type="vanished">Vista del paso guardada como línea ROTSTEP de MLCAD. Haga doble clic para editarla.</translation>
     </message>
 </context>
 <context>

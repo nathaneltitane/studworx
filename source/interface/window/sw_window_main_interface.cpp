@@ -10,7 +10,7 @@
 #include "sw_widget_terminal.h"
 #endif
 #include "sw_widget_properties.h"
-#include "sw_widget_timeline.h"
+#include "sw_widget_steps.h"
 #include "sw_view_widget.h"
 #include "sw_widget_list_color.h"
 #include "sw_widget_label_elided.h"
@@ -487,7 +487,7 @@ void swMainWindow::CreateMenus()
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_PARTS]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_COLORS]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_PROPERTIES]);
-	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_TIMELINE]);
+	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_STEPS]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_PREVIEW]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_MINIFIGURE_BUILDER]);
 	ToolBarsMenu->addAction(mActions[SW_VIEW_TOOLBAR_EXPLODE]);
@@ -706,7 +706,7 @@ void swMainWindow::CreateToolBars()
 
 	mTimeToolBar = addToolBar(tr("Time"));
 	mTimeToolBar->setObjectName("TimeToolbar");
-	mTimeToolBar->setWhatsThis(tr("<p><b>Time Toolbar</b></p><p>The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Timeline for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.</p>"));
+	mTimeToolBar->setWhatsThis(tr("<p><b>Time Toolbar</b></p><p>The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Steps panel for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.</p>"));
 	mTimeToolBar->addAction(mActions[SW_VIEW_TIME_SET_KEYS]);
 	mTimeToolBar->addAction(mActions[SW_VIEW_TIME_REMOVE_KEYS]);
 	mTimeToolBar->addAction(mActions[SW_VIEW_TIME_ADD_KEYS]);
@@ -1089,22 +1089,22 @@ void swMainWindow::CreateToolBars()
 	mPropertiesToolBar->setWidget(PropertiesWidget);
 	addDockWidget(Qt::RightDockWidgetArea, mPropertiesToolBar);
 
-	mTimelineToolBar = new QDockWidget(tr("Timeline"), this);
-	mTimelineToolBar->setObjectName("TimelineToolbar");
-	mTimelineToolBar->setWhatsThis(tr("<p><b>Timeline</b></p><p>Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.</p>"));
-	swSetupWidgetHelp(mTimelineToolBar);
-	mTimelineToolBar->setAcceptDrops(true);
+	mStepsToolBar = new QDockWidget(tr("Steps"), this);
+	mStepsToolBar->setObjectName("StepsToolbar");
+	mStepsToolBar->setWhatsThis(tr("<p><b>Steps</b></p><p>Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.</p>"));
+	swSetupWidgetHelp(mStepsToolBar);
+	mStepsToolBar->setAcceptDrops(true);
 
-	mTimelineWidget = new swTimelineWidget(mTimelineToolBar);
+	mStepsWidget = new swStepsWidget(mStepsToolBar);
 
-	// part steps below the timeline
-	QWidget* TimelinePanel = new QWidget(mTimelineToolBar);
-	QVBoxLayout* TimelineLayout = new QVBoxLayout(TimelinePanel);
-	TimelineLayout->addWidget(mTimelineWidget);
-	TimelineLayout->addWidget(mPropertiesWidget->GetStepRowsWidget());
+	// part steps below the step list
+	QWidget* StepsPanel = new QWidget(mStepsToolBar);
+	QVBoxLayout* StepsLayout = new QVBoxLayout(StepsPanel);
+	StepsLayout->addWidget(mStepsWidget);
+	StepsLayout->addWidget(mPropertiesWidget->GetStepRowsWidget());
 
-	mTimelineToolBar->setWidget(TimelinePanel);
-	addDockWidget(Qt::RightDockWidgetArea, mTimelineToolBar);
+	mStepsToolBar->setWidget(StepsPanel);
+	addDockWidget(Qt::RightDockWidgetArea, mStepsToolBar);
 
 	CreatePreviewWidget();
 	CreateTerminalWidget();
@@ -1139,8 +1139,8 @@ void swMainWindow::CreateToolBars()
 	mExplodeToolBar->hide();
 
 	tabifyDockWidget(mPartsToolBar, mPropertiesToolBar);
-	tabifyDockWidget(mPropertiesToolBar, mTimelineToolBar);
-	tabifyDockWidget(mTimelineToolBar, mPreviewToolBar);
+	tabifyDockWidget(mPropertiesToolBar, mStepsToolBar);
+	tabifyDockWidget(mStepsToolBar, mPreviewToolBar);
 	mJointsToolBar = new QDockWidget(tr("Joints"), this);
 	mJointsToolBar->setObjectName("JointsToolbar");
 	swSetupWidgetHelp(mJointsToolBar);

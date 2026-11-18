@@ -146,6 +146,16 @@ bool swKeyboardShortcuts::Load(QTextStream& Stream)
 			mShortcuts[CommandIdx] = DefaultShortcut;
 	}
 
+	// del always deletes, never rebound
+
+	const QString DeleteShortcut = gCommands[SW_PART_DELETE].DefaultShortcut;
+
+	for (int CommandIdx = 0; CommandIdx < SW_COMMAND_COUNT; CommandIdx++)
+		if (mShortcuts[CommandIdx] == DeleteShortcut)
+			mShortcuts[CommandIdx].clear();
+
+	mShortcuts[SW_PART_DELETE] = DeleteShortcut;
+
 	return true;
 }
 

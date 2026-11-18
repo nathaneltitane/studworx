@@ -1,5 +1,5 @@
 #include "sw_global.h"
-#include "sw_widget_timeline.h"
+#include "sw_widget_steps.h"
 #include "sw_model.h"
 #include "sw_object_part.h"
 #include "sw_data_part.h"
@@ -7,7 +7,7 @@
 #include "sw_window_utilities.h"
 #include "sw_widget_keyframes.h"
 
-swTimelineWidget::swTimelineWidget(QWidget* Parent)
+swStepsWidget::swStepsWidget(QWidget* Parent)
 	: QTreeWidget(Parent)
 {
 	setAccessibleName(tr("Building Steps and Parts"));
@@ -25,9 +25,9 @@ swTimelineWidget::swTimelineWidget(QWidget* Parent)
 
 	invisibleRootItem()->setFlags(invisibleRootItem()->flags() & ~Qt::ItemIsDropEnabled);
 
-	connect(this, &QTreeWidget::currentItemChanged, this, &swTimelineWidget::CurrentItemChanged);
-	connect(this, &QTreeWidget::itemSelectionChanged, this, &swTimelineWidget::ItemSelectionChanged);
-	connect(this, &QWidget::customContextMenuRequested, this, &swTimelineWidget::CustomMenuRequested);
+	connect(this, &QTreeWidget::currentItemChanged, this, &swStepsWidget::CurrentItemChanged);
+	connect(this, &QTreeWidget::itemSelectionChanged, this, &swStepsWidget::ItemSelectionChanged);
+	connect(this, &QWidget::customContextMenuRequested, this, &swStepsWidget::CustomMenuRequested);
 	connect(this, &QTreeWidget::itemDoubleClicked, this, [](QTreeWidgetItem* Item)
 	{
 		swModel* KeysModel = gMainWindow->GetActiveModel();
@@ -68,11 +68,11 @@ swTimelineWidget::swTimelineWidget(QWidget* Parent)
 	});
 }
 
-swTimelineWidget::~swTimelineWidget()
+swStepsWidget::~swStepsWidget()
 {
 }
 
-void swTimelineWidget::CustomMenuRequested(QPoint Pos)
+void swStepsWidget::CustomMenuRequested(QPoint Pos)
 {
 	// right click makes the step current
 	QTreeWidgetItem* ClickedItem = itemAt(Pos);
@@ -98,10 +98,10 @@ void swTimelineWidget::CustomMenuRequested(QPoint Pos)
 		}
 	}
 
-	Menu->addAction(gMainWindow->mActions[SW_TIMELINE_SET_CURRENT]);
-	Menu->addAction(gMainWindow->mActions[SW_TIMELINE_INSERT_BEFORE]);
-	Menu->addAction(gMainWindow->mActions[SW_TIMELINE_INSERT_AFTER]);
-	Menu->addAction(gMainWindow->mActions[SW_TIMELINE_DELETE]);
+	Menu->addAction(gMainWindow->mActions[SW_STEPS_SET_CURRENT]);
+	Menu->addAction(gMainWindow->mActions[SW_STEPS_INSERT_BEFORE]);
+	Menu->addAction(gMainWindow->mActions[SW_STEPS_INSERT_AFTER]);
+	Menu->addAction(gMainWindow->mActions[SW_STEPS_DELETE]);
 	Menu->addAction(gMainWindow->mActions[SW_VIEW_STEP_VIEW_EDIT]);
 
 	// remove only on step view rows
@@ -110,9 +110,9 @@ void swTimelineWidget::CustomMenuRequested(QPoint Pos)
 
 	Menu->addSeparator();
 
-	Menu->addAction(gMainWindow->mActions[SW_TIMELINE_MOVE_SELECTION]);
-	Menu->addAction(gMainWindow->mActions[SW_TIMELINE_MOVE_SELECTION_BEFORE]);
-	Menu->addAction(gMainWindow->mActions[SW_TIMELINE_MOVE_SELECTION_AFTER]);
+	Menu->addAction(gMainWindow->mActions[SW_STEPS_MOVE_SELECTION]);
+	Menu->addAction(gMainWindow->mActions[SW_STEPS_MOVE_SELECTION_BEFORE]);
+	Menu->addAction(gMainWindow->mActions[SW_STEPS_MOVE_SELECTION_AFTER]);
 
 	Menu->addSeparator();
 
@@ -125,7 +125,7 @@ void swTimelineWidget::CustomMenuRequested(QPoint Pos)
 	delete Menu;
 }
 
-void swTimelineWidget::Update(bool Clear, bool UpdateItems)
+void swStepsWidget::Update(bool Clear, bool UpdateItems)
 {
 	if (mIgnoreUpdates)
 		return;
@@ -371,7 +371,7 @@ void swTimelineWidget::Update(bool Clear, bool UpdateItems)
 	blockSignals(Blocked);
 }
 
-void swTimelineWidget::UpdateCurrentStepItem()
+void swStepsWidget::UpdateCurrentStepItem()
 {
 	swModel* Model = gMainWindow->GetActiveModel();
 	swStep CurrentStep = Model->GetCurrentStep();
@@ -398,7 +398,7 @@ void swTimelineWidget::UpdateCurrentStepItem()
 	}
 }
 
-void swTimelineWidget::UpdateSelection()
+void swStepsWidget::UpdateSelection()
 {
 	if (mIgnoreUpdates)
 		return;
@@ -429,7 +429,7 @@ void swTimelineWidget::UpdateSelection()
 	blockSignals(Blocked);
 }
 
-void swTimelineWidget::InsertStepBefore()
+void swStepsWidget::InsertStepBefore()
 {
 	QTreeWidgetItem* CurrentItem = currentItem();
 
@@ -447,7 +447,7 @@ void swTimelineWidget::InsertStepBefore()
 	gMainWindow->GetActiveModel()->InsertStepAction(Step + 1);
 }
 
-void swTimelineWidget::InsertStepAfter()
+void swStepsWidget::InsertStepAfter()
 {
 	QTreeWidgetItem* CurrentItem = currentItem();
 
@@ -465,7 +465,7 @@ void swTimelineWidget::InsertStepAfter()
 	gMainWindow->GetActiveModel()->InsertStepAction(Step + 2);
 }
 
-void swTimelineWidget::RemoveStep()
+void swStepsWidget::RemoveStep()
 {
 	QTreeWidgetItem* CurrentItem = currentItem();
 
@@ -483,7 +483,7 @@ void swTimelineWidget::RemoveStep()
 	gMainWindow->GetActiveModel()->RemoveStepAction(Step + 1);
 }
 
-void swTimelineWidget::MoveSelection()
+void swStepsWidget::MoveSelection()
 {
 	QTreeWidgetItem* CurrentItem = currentItem();
 
@@ -520,7 +520,7 @@ void swTimelineWidget::MoveSelection()
 		Model->SetCurrentStep(Step);
 }
 
-void swTimelineWidget::MoveSelectionBefore()
+void swStepsWidget::MoveSelectionBefore()
 {
 	QTreeWidgetItem* CurrentItem = currentItem();
 
@@ -545,7 +545,7 @@ void swTimelineWidget::MoveSelectionBefore()
 		Model->SetCurrentStep(Step);
 }
 
-void swTimelineWidget::MoveSelectionAfter()
+void swStepsWidget::MoveSelectionAfter()
 {
 	QTreeWidgetItem* CurrentItem = currentItem();
 
@@ -570,7 +570,7 @@ void swTimelineWidget::MoveSelectionAfter()
 		Model->SetCurrentStep(Step);
 }
 
-void swTimelineWidget::SetCurrentStep()
+void swStepsWidget::SetCurrentStep()
 {
 	QTreeWidgetItem* CurrentItem = currentItem();
 
@@ -588,7 +588,7 @@ void swTimelineWidget::SetCurrentStep()
 	gMainWindow->GetActiveModel()->SetCurrentStep(Step + 1);
 }
 
-void swTimelineWidget::CurrentItemChanged(QTreeWidgetItem* Current, QTreeWidgetItem* Previous)
+void swStepsWidget::CurrentItemChanged(QTreeWidgetItem* Current, QTreeWidgetItem* Previous)
 {
 	Q_UNUSED(Previous);
 
@@ -596,7 +596,7 @@ void swTimelineWidget::CurrentItemChanged(QTreeWidgetItem* Current, QTreeWidgetI
 		SetCurrentStep();
 }
 
-void swTimelineWidget::ItemSelectionChanged()
+void swStepsWidget::ItemSelectionChanged()
 {
 	std::vector<swObject*> Selection;
 	swStep LastStep = 1;
@@ -636,7 +636,7 @@ void swTimelineWidget::ItemSelectionChanged()
 	UpdateSelection();
 }
 
-void swTimelineWidget::dropEvent(QDropEvent* Event)
+void swStepsWidget::dropEvent(QDropEvent* Event)
 {
 	QTreeWidgetItem* DropItem = itemAt(Event->pos());
 
@@ -675,7 +675,7 @@ void swTimelineWidget::dropEvent(QDropEvent* Event)
 	Update(false, false);
 }
 
-void swTimelineWidget::mousePressEvent(QMouseEvent* Event)
+void swStepsWidget::mousePressEvent(QMouseEvent* Event)
 {
 	if (Event->button() == Qt::RightButton)
 	{
@@ -691,7 +691,7 @@ void swTimelineWidget::mousePressEvent(QMouseEvent* Event)
 		QTreeWidget::mousePressEvent(Event);
 }
 
-void swTimelineWidget::mouseDoubleClickEvent(QMouseEvent* MouseEvent)
+void swStepsWidget::mouseDoubleClickEvent(QMouseEvent* MouseEvent)
 {
 	if (MouseEvent->button() == Qt::LeftButton)
 	{
@@ -702,7 +702,7 @@ void swTimelineWidget::mouseDoubleClickEvent(QMouseEvent* MouseEvent)
 	QTreeWidget::mouseDoubleClickEvent(MouseEvent);
 }
 
-void swTimelineWidget::PreviewSelection(QTreeWidgetItem* CurrentItem)
+void swStepsWidget::PreviewSelection(QTreeWidgetItem* CurrentItem)
 {
 	if (!CurrentItem)
 		return;
@@ -720,7 +720,7 @@ void swTimelineWidget::PreviewSelection(QTreeWidgetItem* CurrentItem)
 	gMainWindow->PreviewPart(PartData, Part->GetColorCode(), false);
 }
 
-void swTimelineWidget::UpdateModel()
+void swStepsWidget::UpdateModel()
 {
 	std::vector<std::pair<swPart*, swStep>> PartSteps;
 

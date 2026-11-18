@@ -276,7 +276,7 @@ bool swModel::InsertPartToolClicked()
 
 	EndHistorySequence(tr("Add Part"));
 
-	gMainWindow->UpdateTimeline(false, false);
+	gMainWindow->UpdateSteps(false, false);
 	gMainWindow->UpdateInUseCategory();
 
 	UpdateTrainTrackConnections(Part, false);
@@ -580,7 +580,7 @@ void swModel::EraseToolClicked(swObject* Object)
 	EndEditHistory();
 	EndHistorySequence(tr("Erase"));
 
-	gMainWindow->UpdateTimeline(false, false);
+	gMainWindow->UpdateSteps(false, false);
 	gMainWindow->UpdateSelectedObjects(true);
 }
 
@@ -602,7 +602,7 @@ void swModel::PaintToolClicked(swObject* Object)
 		EndHistorySequence(tr("Paint"));
 
 		gMainWindow->UpdateSelectedObjects(false);
-		gMainWindow->UpdateTimeline(false, true);
+		gMainWindow->UpdateSteps(false, true);
 	}
 }
 

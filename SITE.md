@@ -20,7 +20,7 @@ StudWorx is built from standard Qt widgets: panels, dialogs and windows follow y
 
 [//]: # (gallery scroll)
 
-![The main window with the model view, Parts, Preview, Minifigure Builder, Timeline, Colors, Properties, Joints and Terminal panels](resources/images/interface-window-main.png)
+![The main window with the model view, Parts, Preview, Minifigure Builder, Steps, Colors, Properties, Joints and Terminal panels](resources/images/interface-window-main.png)
 ![Split views](resources/images/interface-feature-split-views.png)
 ![Status bar with the selected part](resources/images/interface-widget-status-bar.png)
 ![Lock Interface hides the panel title bars](resources/images/interface-feature-lock-interface.png)
@@ -60,7 +60,7 @@ Models are plain LDraw text files in LeoCAD's format, so they open in either pro
 - **COLLADA.** Translucent colors can be marked as transparent materials for programs that read them.
 - **HTML.** Export HTML turns the instructions into web pages, either one long page, saved at twice its size so it stays sharp on high density screens, or one page per step, in light or dark colors. You can restyle them without changing the model.
 - **Print.** File > Print prints the current model view through the system print dialog, with a Preview button where the dialog allows it.
-- **Missing and moved parts.** When a model uses parts the library can't find or has renumbered, StudWorx lists them and offers a replacement for each, swapped everywhere in one click and saved right away, unless you turn that off. Until then a missing part shows as a plain brick with a red outline, and the timeline paints it and its submodel red. Closed the list too soon? The File menu brings it back.
+- **Missing and moved parts.** When a model uses parts the library can't find or has renumbered, StudWorx lists them and offers a replacement for each, swapped everywhere in one click and saved right away, unless you turn that off. Until then a missing part shows as a plain brick with a red outline, and the Steps panel paints it and its submodel red. Closed the list too soon? The File menu brings it back.
 - **Thumbnails.** Model thumbnails in file managers, from a KDE thumbnail plugin or the desktop thumbnailer.
 - **Parts library.** Downloaded on the first start as the official LDraw complete.zip, or chosen from an archive you already have, and reloaded with File > Reload Library. An unofficial parts folder can be added beside it.
 - **Command line.** Render images, transparent images with --transparent and POV-Ray renders, and import or export settings, shortcuts and categories without opening a window. See man studworx. [L²CU](https://l2cu.app), the LDraw command line utility for Linux based systems, drives these renders and exports for whole folders of models.
@@ -330,7 +330,7 @@ Look at a model from any side, see inside it without changing it, and measure it
 
 ## Steps
 
-[//]: # (steps | STEPS // BUILD ORDER AND TIMELINE)
+[//]: # (steps | STEPS // BUILD ORDER AND STEPS PANEL)
 
 Every part belongs to a building step. Steps drive the model view, the instructions and the animated GIFs.
 
@@ -340,18 +340,18 @@ Every part belongs to a building step. Steps drive the model view, the instructi
 ![Submodel hover outline over a selection](resources/images/steps-feature-hover-outline.png)
 
 - **Steps menu.** Move through the building steps, add or delete steps, and play them back like an animation.
-- **Timeline.** Shows the step each part is added in and removed in. An empty removal step reads Never. Drag parts between steps or reorder them, and Set Current Step from a step's right-click menu.
-- **Move and paste.** Move the selected parts to an earlier or later step, add steps from the Timeline, and paste parts together with their steps.
-- **Step views.** Steps can turn the model to their own view angle, like the ROTSTEP command of MLCad, and the Timeline shows and edits them.
-- **Keys in the Timeline.** Each step with animation keys lists a Keys row per keyed object naming its keyed properties, and a double click on it selects that object at that step and shows the Keyframes panel.
+- **Steps panel.** Shows the step each part is added in and removed in. An empty removal step reads Never. Drag parts between steps or reorder them, and Set Current Step from a step's right-click menu.
+- **Move and paste.** Move the selected parts to an earlier or later step, add steps from the Steps panel, and paste parts together with their steps.
+- **Step views.** Steps can turn the model to their own view angle, like the ROTSTEP command of MLCad, and the Steps panel shows and edits them.
+- **Keys in the Steps panel.** Each step with animation keys lists a Keys row per keyed object naming its keyed properties, and a double click on it selects that object at that step and shows the Keyframes panel.
 - **Step view commands.** Give each step its own view angle, so the model turns to show that step best as you go through them.
 - **Emphasis.** Make the build easier to follow: highlight the new parts of each step, fade the earlier ones, fade the rest of the model while you edit a submodel or set a joint, outline the submodel under the pointer, and mark the connection points of the part you point at, in a see-through color if you like, or not at all.
 - **Animation keys.** Animation keys remember where parts, lights and cameras are at each step. Add Keys records them as you work, and a round button in the Properties panel adds or removes one.
-- **Keyframes panel.** A full-width timeline of the animation, one column per step and one row per object, with a diamond for each key. Click a diamond to pick it, Ctrl+click to pick more, and Delete removes them. Add, remove and drag keys, and play the animation from the panel or the Time toolbar.
+- **Keyframes panel.** A full-width chart of the animation, one column per step and one row per object, with a diamond for each key. Click a diamond to pick it, Ctrl+click to pick more, and Delete removes them. Add, remove and drag keys, and play the animation from the panel or the Time toolbar.
 
 [//]: # (gallery scroll)
 
-![Timeline panel](resources/images/steps-widget-timeline.png)
+![Steps panel](resources/images/steps-widget-steps.png)
 ![Keyframes panel](resources/images/steps-widget-keyframes.png)
 ![Step view](resources/images/steps-window-step-view.png)
 
@@ -371,7 +371,7 @@ Panels dock side by side in any area of the main window, with uniform headers, b
 - **Explode.** The controls of the explode feature, described under Modeling.
 - **Joints.** The joints of the selected submodel and their axis, a tree of every model with joints, and right-click menus to move, rotate or delete them.
 - **Poses.** The poses of the model picked in the Joints panel with Save, Recall, Rename and Delete.
-- **Keyframes.** A full-width timeline of the keys of the selected or all objects per step, with buttons to add or remove keys, Add Keys and playback.
+- **Keyframes.** A full-width chart of the keys of the selected or all objects per step, with buttons to add or remove keys, Add Keys and playback.
 - **Terminal.** An embedded terminal sized to whole rows and columns, with Open Model Folder.
 - **Terminal folders.** Follow Model Folder moves the terminal to the folder of each model you open, and Go to Model Folder moves it there once.
 
@@ -464,7 +464,7 @@ Nine pages with lined up label and control columns, checkboxes included, each la
 - **Context Menu.** Arrange the right-click menu of the model view the way you work: add, reorder, rename or group its commands, or reset it. Right clicking an unselected part selects it first.
 - **Keyboard and Mouse.** Shortcuts recorded by clicking, importable and exportable. Commands that share a shortcut show in red, and assigning a taken shortcut asks before moving it.
 - **Shortcut filters.** Filter commands and tools by name or shortcut, give each two shortcuts, and reset them to the defaults.
-- **Delete.** Delete removes only what is selected where you work: a joint, a step, picked keys, a pointer or notice on a page, or parts in the view.
+- **Delete.** Delete removes only what is selected where you work: a joint, a step, picked keys, a pointer or notice on a page, or parts in the view. Del always deletes and can't be changed, so it sits in Built-in Keys.
 - **Built-in Keys.** The end of the Keyboard list shows the keys that can't be changed, greyed out, like F1 for help and Ctrl+click to add to the selection.
 - **From LeoCAD.** Settings, part palettes and minifigure templates are copied from LeoCAD on the first start.
 

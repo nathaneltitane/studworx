@@ -207,7 +207,7 @@ swPart* swModel::AddPart(swPartData* PartData, quint32 Section)
 
 	EndHistorySequence(tr("Add Part"));
 
-	gMainWindow->UpdateTimeline(false, false);
+	gMainWindow->UpdateSteps(false, false);
 
 	return Part;
 }
@@ -474,7 +474,7 @@ void swModel::DeleteSelectedObjects()
 	EndEditHistory();
 	EndHistorySequence(tr("Delete"));
 
-	gMainWindow->UpdateTimeline(false, false);
+	gMainWindow->UpdateSteps(false, false);
 	gMainWindow->UpdateSelectedObjects(true);
 	gMainWindow->UpdateInUseCategory();
 }
@@ -687,7 +687,7 @@ void swModel::ShowSelectedPartsEarlier()
 	EndEditHistory();
 	EndHistorySequence(tr("Show Earlier"));
 
-	gMainWindow->UpdateTimeline(false, false);
+	gMainWindow->UpdateSteps(false, false);
 	gMainWindow->UpdateSelectedObjects(true);
 }
 
@@ -737,7 +737,7 @@ void swModel::ShowSelectedPartsLater()
 	EndEditHistory();
 	EndHistorySequence(tr("Show Later"));
 
-	gMainWindow->UpdateTimeline(false, false);
+	gMainWindow->UpdateSteps(false, false);
 	gMainWindow->UpdateSelectedObjects(false);
 }
 
@@ -776,7 +776,7 @@ void swModel::InsertStepAndMoveSelectedParts(swStep Step)
 	EndEditHistory();
 	EndHistorySequence(tr("Show Parts"));
 
-	gMainWindow->UpdateTimeline(false, false);
+	gMainWindow->UpdateSteps(false, false);
 	gMainWindow->UpdateSelectedObjects(false);
 }
 
@@ -813,7 +813,7 @@ void swModel::SetPartSteps(const std::vector<std::pair<swPart*, swStep>>& PartSt
 		EndEditHistory();
 		EndHistorySequence(tr("Change Step"));
 
-		gMainWindow->UpdateTimeline(false, false);
+		gMainWindow->UpdateSteps(false, false);
 		gMainWindow->UpdateSelectedObjects(false);
 	}
 	else
@@ -922,7 +922,7 @@ void swModel::MoveSelectionToModel(swModel* Model)
 
 	EndEditHistory();
 
-	gMainWindow->UpdateTimeline(false, false);
+	gMainWindow->UpdateSteps(false, false);
 
 	SetSelectionAndFocus(std::vector<swObject*>(), ModelPart, SW_PART_SECTION_POSITION, swSelectionMode::Single);
 
@@ -993,7 +993,7 @@ void swModel::InlineSelectedModels()
 
 	EndHistorySequence(tr("Inline Model"));
 
-	gMainWindow->UpdateTimeline(false, false);
+	gMainWindow->UpdateSteps(false, false);
 	gMainWindow->UpdateInUseCategory();
 }
 
@@ -1025,7 +1025,7 @@ void swModel::FlattenModel()
 	if (!gMainWindow)
 		return;
 
-	gMainWindow->UpdateTimeline(false, false);
+	gMainWindow->UpdateSteps(false, false);
 	gMainWindow->UpdateInUseCategory();
 }
 
@@ -1637,7 +1637,7 @@ void swModel::SetSelectedPartsColorIndex(int ColorIndex)
 		EndHistorySequence(tr("Paint"));
 
 		gMainWindow->UpdateSelectedObjects(false);
-		gMainWindow->UpdateTimeline(false, true);
+		gMainWindow->UpdateSteps(false, true);
 	}
 	else
 	{
@@ -1684,7 +1684,7 @@ void swModel::SetSelectedPartsStepShow(swStep Step)
 	EndEditHistory();
 	EndHistorySequence(tr("Set Show Step"));
 
-	gMainWindow->UpdateTimeline(false, false);
+	gMainWindow->UpdateSteps(false, false);
 	gMainWindow->UpdateSelectedObjects(false);
 }
 
@@ -1715,7 +1715,7 @@ void swModel::SetSelectedPartsStepHide(swStep Step)
 	EndEditHistory();
 	EndHistorySequence(tr("Set Hide Step"));
 
-	gMainWindow->UpdateTimeline(false, false);
+	gMainWindow->UpdateSteps(false, false);
 	gMainWindow->UpdateSelectedObjects(false);
 }
 
@@ -1784,10 +1784,10 @@ void swModel::SetObjectsProperty(const std::vector<swObject*>& Objects, swObject
 
 	gMainWindow->UpdateSelectedObjects(false);
 
-	// todo: fix hacky timeline update
+	// todo: fix hacky steps update
 	if (PropertyId == swObjectPropertyId::PartId || PropertyId == swObjectPropertyId::PartColor)
 	{
-		gMainWindow->UpdateTimeline(false, true);
+		gMainWindow->UpdateSteps(false, true);
 	}
 
 	// todo: fix hacky category update

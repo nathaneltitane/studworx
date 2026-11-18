@@ -502,10 +502,10 @@ void swModel::LoadModelPropertiesState(const swModelProperties& ModelProperties)
 	const bool StepViewsChanged = mProperties.mStepViews != ModelProperties.mStepViews;
 	mProperties = ModelProperties;
 
-	// update the timeline and view
+	// update the steps and view
 	if (StepViewsChanged && gMainWindow && !mIsPreview)
 	{
-		gMainWindow->UpdateTimeline(false, false);
+		gMainWindow->UpdateSteps(false, false);
 
 		if (swGetPreferences().mFollowStepViews)
 			for (swView* View : swView::GetModelViews(this))
@@ -578,7 +578,7 @@ void swModel::RunHistorySequence(const std::vector<std::unique_ptr<swModelHistor
 			gMainWindow->UpdateSelectedObjects(true);
 
 		gMainWindow->UpdateCurrentStep();
-		gMainWindow->UpdateTimeline(true, false);
+		gMainWindow->UpdateSteps(true, false);
 	}
 
 	UpdateAllViews();
@@ -646,7 +646,7 @@ void swModel::EndHistorySequence(const QString& Description)
 	{
 		gMainWindow->UpdateModified(mProject ? mProject->IsModified() : IsModified());
 		gMainWindow->UpdateUndoRedo(!mUndoHistory.empty() ? mUndoHistory.front()->Description : nullptr, !mRedoHistory.empty() ? mRedoHistory.front()->Description : nullptr);
-		gMainWindow->UpdateTimeline(true, false);
+		gMainWindow->UpdateSteps(true, false);
 
 		for (const std::unique_ptr<swModelHistory>& ModelHistory : mUndoHistory.front()->HistorySequence)
 		{

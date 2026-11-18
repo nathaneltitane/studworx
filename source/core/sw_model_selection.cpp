@@ -1288,7 +1288,7 @@ void swModel::HideSelectedParts()
 
 	EndHistorySequence(tr("Hide Parts"));
 
-	gMainWindow->UpdateTimeline(false, true);
+	gMainWindow->UpdateSteps(false, true);
 	gMainWindow->UpdateSelectedObjects(true);
 }
 
@@ -1319,7 +1319,7 @@ void swModel::HideUnselectedParts()
 	EndEditHistory();
 	EndHistorySequence(tr("Hide Parts"));
 
-	gMainWindow->UpdateTimeline(false, true);
+	gMainWindow->UpdateSteps(false, true);
 	gMainWindow->UpdateSelectedObjects(true);
 }
 
@@ -1350,7 +1350,7 @@ void swModel::UnhideSelectedParts()
 	EndEditHistory();
 	EndHistorySequence(tr("Unhide Parts"));
 
-	gMainWindow->UpdateTimeline(false, true);
+	gMainWindow->UpdateSteps(false, true);
 	gMainWindow->UpdateSelectedObjects(true);
 }
 
@@ -1381,7 +1381,7 @@ void swModel::UnhideAllParts()
 	EndEditHistory();
 	EndHistorySequence(tr("Unhide Parts"));
 
-	gMainWindow->UpdateTimeline(false, true);
+	gMainWindow->UpdateSteps(false, true);
 	gMainWindow->UpdateSelectedObjects(true);
 }
 
@@ -1560,7 +1560,7 @@ void swModel::FindReplacePart(bool SearchForward, bool FindAll, bool Replace)
 		EndHistorySequence(tr("Replace Parts", nullptr, ReplacedCount));
 
 		gMainWindow->UpdateSelectedObjects(false);
-		gMainWindow->UpdateTimeline(false, true);
+		gMainWindow->UpdateSteps(false, true);
 	}
 	else
 		EndHistorySequence(tr("Selection"));
@@ -1642,7 +1642,7 @@ int swModel::ReplacePartData(const std::map<swPartData*, swPartData*>& Replaceme
 	EndHistorySequence(tr("Replace Parts", nullptr, ReplacedCount));
 
 	gMainWindow->UpdateSelectedObjects(false);
-	gMainWindow->UpdateTimeline(false, true);
+	gMainWindow->UpdateSteps(false, true);
 
 	return ReplacedCount;
 }
