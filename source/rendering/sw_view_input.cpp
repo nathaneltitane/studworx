@@ -446,13 +446,152 @@ float swView::GetOverlayScale() const
 	if (ActiveModel != mModel)
 		WorldMatrix = swMultiply(WorldMatrix, mActiveSubmodelTransform);
 
-	swVector3 ScreenPos = ProjectPoint(WorldMatrix.GetTranslation());
+	return GetOverlayScaleAt(WorldMatrix.GetTranslation());
+}
+
+float swView::GetOverlayScaleAt(const swVector3& Center) const
+{
+	swVector3 ScreenPos = ProjectPoint(Center);
 	ScreenPos[0] += 10.0f;
 	swVector3 Point = UnprojectPoint(ScreenPos);
 
-	swVector3 Dist(Point - WorldMatrix.GetTranslation());
+	swVector3 Dist(Point - Center);
 
 	return Dist.Length() * 5.0f * GetUIScale();
+}
+
+// use to list the joint rings in world terms
+std::vector<swJointRing> swView::GetJointRings() const
+{
+	swModel* ActiveModel = GetActiveModel();
+	std::vector<swJointRing> Rings;
+
+	if (mViewType != swViewType::View || !ActiveModel)
+		return Rings;
+
+	Rings = ActiveModel->GetJointRings();
+
+	if (ActiveModel != mModel)
+	{
+		for (swJointRing& Ring : Rings)
+		{
+			Ring.Pivot = swMultiply31(Ring.Pivot, mActiveSubmodelTransform);
+			Ring.Axis = swNormalize(swMultiply30(Ring.Axis, mActiveSubmodelTransform));
+		}
+	}
+
+	return Rings;
+}
+
+// use to outline a joint ring, a third of the rotate ring
+std::vector<swVector3> swView::GetJointRingPoints(const swJointRing& Ring) const
+{
+	constexpr int SegmentCount = 32;
+	const float Radius = GetOverlayScaleAt(Ring.Pivot);
+
+	// ball joints face the camera
+	const swVector3 Axis = Ring.Ball ? swNormalize(mCamera->mTargetPosition - mCamera->mPosition) : Ring.Axis;
+	const swVector3 Side = swNormalize(swCross(Axis, fabsf(Axis.z) < 0.9f ? swVector3(0.0f, 0.0f, 1.0f) : swVector3(1.0f, 0.0f, 0.0f)));
+	const swVector3 Front = swCross(Axis, Side);
+	std::vector<swVector3> Points;
+
+	for (int Segment = 0; Segment < SegmentCount; Segment++)
+	{
+		const float Angle = SW_TWO_PI * Segment / SegmentCount;
+		Points.push_back(Ring.Pivot + (Side * cosf(Angle) + Front * sinf(Angle)) * Radius);
+	}
+
+	return Points;
+}
+
+// use to find the open ring nearest the pointer
+int swView::FindJointRing() const
+{
+	const std::vector<swJointRing> Rings = GetJointRings();
+	const float Reach = 5.0f * GetUIScale();
+	const swVector3 Mouse(static_cast<float>(mMouseX), static_cast<float>(mMouseY), 0.0f);
+	int Found = -1;
+	float FoundScore = FLT_MAX;
+
+	for (size_t Index = 0; Index < Rings.size(); Index++)
+	{
+		if (Rings[Index].Locked)
+			continue;
+
+		std::vector<swVector3> Screen;
+
+		for (const swVector3& Point : GetJointRingPoints(Rings[Index]))
+		{
+			swVector3 Projected = ProjectPoint(Point);
+			Projected.z = 0.0f;
+			Screen.push_back(Projected);
+		}
+
+		// inside the circle or near its line
+		bool Inside = false;
+		float Near = FLT_MAX;
+
+		for (size_t Point = 0; Point < Screen.size(); Point++)
+		{
+			const swVector3 From = Screen[Point];
+			const swVector3 To = Screen[(Point + 1) % Screen.size()];
+			const swVector3 Edge = To - From;
+			const float Along = std::clamp(swDot(Mouse - From, Edge) / std::max(swDot(Edge, Edge), 0.0001f), 0.0f, 1.0f);
+
+			Near = std::min(Near, swLength(Mouse - (From + Edge * Along)));
+
+			if ((From.y > Mouse.y) != (To.y > Mouse.y) && Mouse.x < From.x + Edge.x * (Mouse.y - From.y) / Edge.y)
+				Inside = !Inside;
+		}
+
+		if (!Inside && Near > Reach)
+			continue;
+
+		// the closest line wins, then the closest center
+		swVector3 Center = ProjectPoint(Rings[Index].Pivot);
+		Center.z = 0.0f;
+		const float Score = (Inside ? 0.0f : Near) + 0.001f * swLength(Mouse - Center);
+
+		if (Score < FoundScore)
+		{
+			Found = static_cast<int>(Index);
+			FoundScore = Score;
+		}
+	}
+
+	return Found;
+}
+
+// use to follow the ring under the pointer
+void swView::UpdateJointRingHover()
+{
+	const int Hover = mTrackButton == swTrackButton::None && !mTrackToolFromOverlay ? FindJointRing() : -1;
+
+	if (Hover == mJointRingHover)
+		return;
+
+	mJointRingHover = Hover;
+	Redraw();
+}
+
+// use to open the joint of a ring
+void swView::OpenJointRing(int Index)
+{
+	const std::vector<swJointRing> Rings = GetJointRings();
+	mJointRingHover = -1;
+
+	if (Index < 0 || Index >= static_cast<int>(Rings.size()))
+		return;
+
+	const swJointRing& Ring = Rings[Index];
+	gMainWindow->OpenJoint(Ring.Owner->GetFileName(), static_cast<int>(Ring.PartIndex), static_cast<int>(Ring.Joint));
+
+	// keys stay on the view
+	if (mWidget)
+		mWidget->setFocus();
+
+	UpdateTrackTool();
+	UpdateJointRingHover();
 }
 
 void swView::BeginDrag(swDragState DragState)
@@ -858,6 +997,12 @@ void swView::UpdateTrackTool()
 
 	case swTool::Select:
 	case swTool::Move:
+		if (ActiveModel->IsJointOverview())
+		{
+			mTrackToolFromOverlay = false;
+			break;
+		}
+
 		{
 			std::tie(NewTrackTool, NewTrackSection) = mViewManipulator->UpdateSelectMove(mTrackButton);
 			mTrackToolFromOverlay = NewTrackTool != swTrackTool::MoveXYZ && NewTrackTool != swTrackTool::Select;
@@ -898,6 +1043,12 @@ void swView::UpdateTrackTool()
 		break;
 
 	case swTool::Rotate:
+		if (ActiveModel->IsJointOverview())
+		{
+			mTrackToolFromOverlay = false;
+			break;
+		}
+
 		{
 			NewTrackTool = mViewManipulator->UpdateRotate();
 			mTrackToolFromOverlay = NewTrackTool != swTrackTool::None && NewTrackTool != swTrackTool::RotateTrackBall;
@@ -1328,6 +1479,13 @@ void swView::OnButtonDown(swTrackButton TrackButton)
 		mToolClicked = true;
 		UpdateTrackTool();
 	};
+
+	// a joint ring opens its joint
+	if (ActiveModel && ActiveModel->IsJointFocused() && TrackButton == swTrackButton::Left && !mTrackToolFromOverlay && mJointRingHover >= 0)
+	{
+		OpenJointRing(FindJointRing());
+		return;
+	}
 
 	// the joint bar ends the joint mode, not an empty click
 	if (ActiveModel && ActiveModel->IsJointFocused() && TrackButton == swTrackButton::Left && (mTrackTool == swTrackTool::None || mTrackTool == swTrackTool::Select) && !FindObjectUnderPointer(false, false).Object)
@@ -1947,6 +2105,7 @@ void swView::OnMouseMove()
 
 		UpdateTrackTool();
 		UpdateHoverOutline();
+		UpdateJointRingHover();
 		UpdateConnectionMarkers();
 
 		if (mTrackTool == swTrackTool::Joints)
@@ -2396,9 +2555,10 @@ void swView::OnMouseMove()
 
 void swView::OnMouseLeave()
 {
-	if (!mHoverChain.empty() || !mConnectionMarkers.empty())
+	if (!mHoverChain.empty() || !mConnectionMarkers.empty() || mJointRingHover >= 0)
 	{
 		mHoverChain.clear();
+		mJointRingHover = -1;
 		mConnectionMarkers.clear();
 		Redraw();
 	}

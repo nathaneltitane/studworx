@@ -263,6 +263,8 @@ public:
 	bool mRestoreTabLayout;
 	bool mFirstPartAtOrigin;
 	bool mJointRotation;
+	int mJointModeStart;
+	bool mJointSelectInView;
 	QStringList mContextMenu;
 	bool mShadowLibraryEnabled;
 	bool mPartsSnapToTiles;

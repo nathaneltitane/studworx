@@ -5,6 +5,7 @@
 #include "sw_object_part.h"
 #include "sw_data_part.h"
 #include "sw_view.h"
+#include "sw_application.h"
 
 swJointsWidget::swJointsWidget(QWidget* Parent)
 	: QWidget(Parent)
@@ -17,8 +18,10 @@ swJointsWidget::swJointsWidget(QWidget* Parent)
 
 	// joints of every model
 	mTree = new QTreeWidget(this);
-	mTree->setColumnCount(3);
-	mTree->setHeaderLabels({ tr("Joint"), tr("Type"), tr("Angle") });
+	mTree->setColumnCount(5);
+	mTree->setHeaderLabels({ tr("Joint"), tr("Piece"), tr("Type"), tr("Angle"), tr("Lock") });
+	mTree->headerItem()->setToolTip(1, tr("Where the submodel sits in its parent file, counting pieces from the top"));
+	connect(mTree, &QTreeWidget::itemChanged, this, &swJointsWidget::TreeItemChanged);
 	mTree->setRootIsDecorated(true);
 	mTree->setToolTip(tr("Joints of the model and its submodels"));
 	connect(mTree, &QTreeWidget::itemClicked, this, &swJointsWidget::TreeItemClicked);
@@ -77,6 +80,8 @@ void swJointsWidget::UpdateTree()
 	const int JointIndex = static_cast<int>(ActiveModel ? ActiveModel->GetJointIndex() : 0);
 	QTreeWidgetItem* Current = nullptr;
 
+	// no lock toggles while rebuilding
+	const QSignalBlocker Blocker(mTree);
 	mTree->clear();
 
 	if (CurrentProject)
@@ -105,7 +110,7 @@ void swJointsWidget::UpdateTree()
 						Current = ModelItem;
 				}
 
-				QTreeWidgetItem* PartItem = new QTreeWidgetItem(ModelItem, { QString("%1 %2").arg(Part->mPartData->GetModel()->GetFileName()).arg(Index + 1, 3, 10, QLatin1Char('0')) });
+				QTreeWidgetItem* PartItem = new QTreeWidgetItem(ModelItem, { Part->mPartData->GetModel()->GetFileName(), QString("%1").arg(Index + 1, 3, 10, QLatin1Char('0')) });
 				PartItem->setData(0, Qt::UserRole, Model->GetFileName());
 				PartItem->setData(0, Qt::UserRole + 1, static_cast<int>(Index));
 				PartItem->setData(0, Qt::UserRole + 2, -1);
@@ -118,7 +123,14 @@ void swJointsWidget::UpdateTree()
 				{
 					const swPartJoint& PartJoint = Part->mJoints[Joint];
 					const QString Type = PartJoint.Type == swJointType::Hinge ? tr("Hinge") : tr("Ball");
-					QTreeWidgetItem* JointItem = new QTreeWidgetItem(PartItem, QStringList({ tr("Joint %1").arg(Joint + 1, 3, 10, QLatin1Char('0')), Type, QString("%1°").arg(swLength(PartJoint.Rotation), 0, 'f', 1) }));
+					QTreeWidgetItem* JointItem = new QTreeWidgetItem(PartItem, QStringList({ tr("Joint %1").arg(Joint + 1, 3, 10, QLatin1Char('0')), QString(), Type, QString("%1°").arg(swLength(PartJoint.Rotation), 0, 'f', 1) }));
+					JointItem->setCheckState(4, PartJoint.Locked ? Qt::Checked : Qt::Unchecked);
+
+					// locked rows show deactivated
+					if (PartJoint.Locked)
+						for (int Column = 0; Column < 5; Column++)
+							JointItem->setForeground(Column, QBrush(swQColorFromRGBA(swGetPreferences().mObjectDeactivatedColor)));
+
 					JointItem->setData(0, Qt::UserRole, Model->GetFileName());
 					JointItem->setData(0, Qt::UserRole + 1, static_cast<int>(Index));
 					JointItem->setData(0, Qt::UserRole + 2, static_cast<int>(Joint));
@@ -138,7 +150,8 @@ void swJointsWidget::UpdateTree()
 		Empty->setFirstColumnSpanned(true);
 	}
 
-	mTree->resizeColumnToContents(0);
+	for (int Column = 0; Column < 5; Column++)
+		mTree->resizeColumnToContents(Column);
 
 	if (Current)
 		mTree->setCurrentItem(Current);
@@ -159,6 +172,34 @@ void swJointsWidget::TreeItemClicked(QTreeWidgetItem* Item)
 	QTimer::singleShot(0, this, [this, ModelName, Index, Joint]()
 	{
 		SelectJoint(ModelName, Index, Joint);
+	});
+}
+
+// use to lock or unlock the joint of a row
+void swJointsWidget::TreeItemChanged(QTreeWidgetItem* Item, int Column)
+{
+	const int Index = Item->data(0, Qt::UserRole + 1).toInt();
+	const int Joint = Item->data(0, Qt::UserRole + 2).toInt();
+
+	if (Column != 4 || Index < 0 || Joint < 0)
+		return;
+
+	const QString ModelName = Item->data(0, Qt::UserRole).toString();
+	const bool Locked = Item->checkState(4) == Qt::Checked;
+
+	// change later, the tree rebuilds
+	QTimer::singleShot(0, this, [this, ModelName, Index, Joint, Locked]()
+	{
+		swModel* ActiveModel = gMainWindow ? gMainWindow->GetActiveModel() : nullptr;
+		Project* CurrentProject = ActiveModel ? ActiveModel->GetProject() : nullptr;
+		swModel* Model = CurrentProject ? CurrentProject->GetModel(ModelName) : nullptr;
+
+		if (!Model || Index >= static_cast<int>(Model->GetParts().size()))
+			return;
+
+		Model->SetJointLockAction(Model->GetParts()[Index].get(), static_cast<size_t>(Joint), Locked);
+		UpdateJoint();
+		swView::UpdateAllViews();
 	});
 }
 
@@ -271,11 +312,12 @@ void swJointsWidget::UpdateJoint()
 
 	swModel* Model = gMainWindow ? gMainWindow->GetActiveModel() : nullptr;
 	swPart* Part = Model ? Model->GetJointPart() : nullptr;
-	const swPartJoint* Joint = Part && Part->HasJoints() ? &Part->mJoints[Model->GetJointIndex()] : nullptr;
+	const bool Overview = Model && Model->IsJointOverview();
+	const swPartJoint* Joint = Part && Part->HasJoints() && !Overview ? &Part->mJoints[Model->GetJointIndex()] : nullptr;
 	const bool HasJoint = Joint != nullptr;
 
-	mJointLabel->setText(!Part ? tr("None: select a jointed submodel") : !HasJoint ? tr("No joint") : tr("Joint %1, %2, angle %3").arg(Model->GetJointIndex() + 1, 3, 10, QLatin1Char('0')).arg(Joint->Type == swJointType::Hinge ? tr("Hinge") : tr("Ball")).arg(swLength(Joint->Rotation), 0, 'f', 1));
-	mAxisCombo->setEnabled(HasJoint && Joint->Type == swJointType::Hinge);
+	mJointLabel->setText(!Part ? tr("None: select a jointed submodel") : Overview ? tr("Pick a joint") : !HasJoint ? tr("No joint") : tr("Joint %1, %2, angle %3").arg(Model->GetJointIndex() + 1, 3, 10, QLatin1Char('0')).arg(Joint->Type == swJointType::Hinge ? tr("Hinge") : tr("Ball")).arg(swLength(Joint->Rotation), 0, 'f', 1));
+	mAxisCombo->setEnabled(HasJoint && Joint->Type == swJointType::Hinge && !Joint->Locked);
 	UpdateClearButton();
 
 	if (HasJoint)
@@ -328,7 +370,9 @@ void swJointsWidget::UpdateClearButton()
 	swModel* Model;
 	size_t Joint;
 
-	mClearButton->setEnabled(GetTreeJoint(&Model, &Joint) != nullptr);
+	const swPart* Part = GetTreeJoint(&Model, &Joint);
+
+	mClearButton->setEnabled(Part && Joint < Part->mJoints.size() && !Part->mJoints[Joint].Locked);
 }
 
 void swJointsWidget::ClearClicked()

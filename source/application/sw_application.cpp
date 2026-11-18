@@ -116,6 +116,8 @@ void swPreferences::LoadDefaults()
 	mRestoreTabLayout = swGetProfileInteger(SW_PROFILE_RESTORE_TAB_LAYOUT);
 	mFirstPartAtOrigin = swGetProfileInteger(SW_PROFILE_FIRST_PART_AT_ORIGIN);
 	mJointRotation = swGetProfileInteger(SW_PROFILE_JOINT_ROTATION);
+	mJointModeStart = std::clamp(swGetProfileInteger(SW_PROFILE_JOINT_MODE_START), 0, 2);
+	mJointSelectInView = swGetProfileInteger(SW_PROFILE_JOINT_SELECT_IN_VIEW);
 	mContextMenu = swGetProfileStringList(SW_PROFILE_CONTEXT_MENU);
 	mShadowLibraryEnabled = swGetProfileInteger(SW_PROFILE_SHADOW_LIBRARY_ENABLED);
 	mPartsSnapToTiles = swGetProfileInteger(SW_PROFILE_PARTS_SNAP_TO_TILES);
@@ -249,6 +251,8 @@ void swPreferences::SaveDefaults()
 	swSetProfileInteger(SW_PROFILE_RESTORE_TAB_LAYOUT, mRestoreTabLayout);
 	swSetProfileInteger(SW_PROFILE_FIRST_PART_AT_ORIGIN, mFirstPartAtOrigin);
 	swSetProfileInteger(SW_PROFILE_JOINT_ROTATION, mJointRotation);
+	swSetProfileInteger(SW_PROFILE_JOINT_MODE_START, mJointModeStart);
+	swSetProfileInteger(SW_PROFILE_JOINT_SELECT_IN_VIEW, mJointSelectInView);
 	swSetProfileStringList(SW_PROFILE_CONTEXT_MENU, mContextMenu);
 	swSetProfileInteger(SW_PROFILE_SHADOW_LIBRARY_ENABLED, mShadowLibraryEnabled);
 	swSetProfileInteger(SW_PROFILE_PARTS_SNAP_TO_TILES, mPartsSnapToTiles);

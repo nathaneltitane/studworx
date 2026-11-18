@@ -59,7 +59,7 @@
 <context>
     <name>swMainWindow</name>
     <message numerus="yes">
-        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="173"/>
+        <location filename="../../source/interface/window/sw_window_main_update.cpp" line="174"/>
         <source>%n objects selected</source>
         <translation>
             <numerusform>%n object selected</numerusform>
@@ -101,7 +101,7 @@
 <context>
     <name>swPreferencesDialog</name>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="608"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="610"/>
         <source>%n plate(s)</source>
         <translation>
             <numerusform>%n plate</numerusform>
@@ -109,7 +109,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1664"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1668"/>
         <source>%n stud(s)</source>
         <translation>
             <numerusform>%n stud</numerusform>

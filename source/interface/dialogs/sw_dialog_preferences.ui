@@ -1058,7 +1058,7 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="0">
+          <item row="7" column="0">
            <widget class="QLabel" name="InsertColorModeLabel">
             <property name="toolTip">
              <string>Choose the color given to newly inserted parts: the current color, the color of the selected part, or the color of the last inserted part.</string>
@@ -1071,7 +1071,7 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="1">
+          <item row="7" column="1">
            <widget class="QComboBox" name="InsertColorMode">
             <property name="accessibleName">
              <string>Insert Color</string>
@@ -1096,7 +1096,7 @@
             </item>
            </widget>
           </item>
-          <item row="4" column="0">
+          <item row="6" column="0">
            <widget class="QLabel" name="FirstPartAtOriginLabel">
             <property name="toolTip">
              <string>Place the first part of an empty model at 0, 0, 0 instead of where it is dropped.</string>
@@ -1109,7 +1109,7 @@
             </property>
            </widget>
           </item>
-          <item row="4" column="1">
+          <item row="6" column="1">
            <widget class="QCheckBox" name="FirstPartAtOrigin">
             <property name="accessibleName">
              <string>Insert First Part at Origin</string>
@@ -1162,6 +1162,67 @@
             </property>
             <property name="toolTip">
              <string>When the selected submodel has a joint, rotating it turns the joint around its own pivot and axis instead of the pivot point. Part &gt; Joint &gt; Rotate Joint does the same for the current selection.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="JointModeStartLabel">
+            <property name="toolTip">
+             <string>Which joint opens when joint mode starts: the first one, the one used last in that submodel, or none, with every joint shown as a ring to pick from.</string>
+            </property>
+            <property name="text">
+             <string>Joint Mode Start</string>
+            </property>
+            <property name="buddy">
+             <cstring>JointModeStart</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="1">
+           <widget class="QComboBox" name="JointModeStart">
+            <property name="accessibleName">
+             <string>Joint Mode Start</string>
+            </property>
+            <property name="toolTip">
+             <string>Which joint opens when joint mode starts: the first one, the one used last in that submodel, or none, with every joint shown as a ring to pick from.</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>First Joint</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Last Used Joint</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Overview</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="5" column="0">
+           <widget class="QLabel" name="JointSelectInViewLabel">
+            <property name="toolTip">
+             <string>While a joint is open, show the other joints as faded rings and click one to open it.</string>
+            </property>
+            <property name="text">
+             <string>Select Joints in View</string>
+            </property>
+            <property name="buddy">
+             <cstring>JointSelectInView</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QCheckBox" name="JointSelectInView">
+            <property name="accessibleName">
+             <string>Select Joints in View</string>
+            </property>
+            <property name="toolTip">
+             <string>While a joint is open, show the other joints as faded rings and click one to open it.</string>
             </property>
            </widget>
           </item>
@@ -5666,6 +5727,8 @@
   <tabstop>ShadowLibraryEnabled</tabstop>
   <tabstop>ConnectionPoints</tabstop>
   <tabstop>JointRotation</tabstop>
+  <tabstop>JointModeStart</tabstop>
+  <tabstop>JointSelectInView</tabstop>
   <tabstop>FirstPartAtOrigin</tabstop>
   <tabstop>InsertColorMode</tabstop>
   <tabstop>FlexMiddleControlPoint</tabstop>

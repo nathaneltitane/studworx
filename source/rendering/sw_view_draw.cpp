@@ -83,8 +83,10 @@ void swView::OnDraw()
 	// new parts keep their highlight until a joint shows
 	const bool DrawJointHighlight = DrawJoint && (JointsModel->IsJointPick() || JointsModel->GetJointPart());
 
+	// a locked joint shows deactivated
+
 	if (DrawJointHighlight)
-		mScene->SetHighlightColor(swClampStepColorAlpha(SW_RGBA(255, 0, 0, 255)));
+		mScene->SetHighlightColor(!JointsModel->IsJointPick() && !JointsModel->IsJointOverview() && JointsModel->IsJointLocked() ? swGetPreferences().mObjectDeactivatedColor : swClampStepColorAlpha(SW_RGBA(255, 0, 0, 255)));
 
 	mScene->SetActiveSubmodelInstance(mActiveSubmodelInstance, mActiveSubmodelTransform, GetModelEditingPath());
 
@@ -116,6 +118,10 @@ void swView::OnDraw()
 
 	if (DrawJoint)
 		JointsModel->AddJointHighlight(mScene.get(), JointsModel != mModel ? mActiveSubmodelTransform : swMatrix44Identity());
+
+	if (DrawJoint && mJointRingHover >= 0)
+		if (const std::vector<swJointRing> Rings = JointsModel->GetJointRings(); mJointRingHover < static_cast<int>(Rings.size()))
+			JointsModel->AddJointRingHighlight(mScene.get(), JointsModel != mModel ? mActiveSubmodelTransform : swMatrix44Identity(), Rings[mJointRingHover]);
 
 	if (DrawInterface && mViewType == swViewType::View && JointsModel && Preferences.mHoverOutline && mTrackButton == swTrackButton::None)
 		JointsModel->AddHoverOutline(mScene.get(), JointsModel != mModel ? mActiveSubmodelTransform : swMatrix44Identity(), mHoverChain);
@@ -238,12 +244,13 @@ void swView::OnDraw()
 	{
 		DrawExplodeLines();
 		DrawConnectionMarkers();
+		DrawJointRings();
 	}
 
 	if (DrawOverlays)
 		DrawAxes();
 
-	if (DrawInterface && mTrackTool != swTrackTool::Insert)
+	if (DrawInterface && mTrackTool != swTrackTool::Insert && !GetActiveModel()->IsJointOverview())
 	{
 		swTool Tool = gMainWindow->GetTool();
 		swModel* ActiveModel = GetActiveModel();
@@ -840,6 +847,53 @@ void swView::DrawExplodeLines() const
 	mContext->SetVertexBufferPointer(Lines.data());
 	mContext->SetVertexFormatPosition(3);
 	mContext->DrawPrimitives(GL_LINES, 0, static_cast<GLsizei>(Lines.size()));
+	mContext->EnableColorBlend(false);
+}
+
+// use to show the joints to pick as rings
+void swView::DrawJointRings() const
+{
+	const std::vector<swJointRing> Rings = GetJointRings();
+
+	if (Rings.empty())
+		return;
+
+	const swPreferences& Preferences = swGetPreferences();
+
+	mContext->SetMaterial(swMaterialType::UnlitColor);
+	mContext->SetWorldMatrix(swMatrix44Identity());
+	mContext->SetViewMatrix(mCamera->mWorldView);
+	mContext->SetProjectionMatrix(GetProjectionMatrix());
+	mContext->EnableColorBlend(true);
+	mContext->SetDepthWrite(false);
+	mContext->EnableDepthTest(false);
+
+	for (size_t Index = 0; Index < Rings.size(); Index++)
+	{
+		const std::vector<swVector3> Points = GetJointRingPoints(Rings[Index]);
+		std::vector<swVector3> Band;
+		swVector4 Color = swVector4FromColor(Rings[Index].Locked ? Preferences.mObjectDeactivatedColor : Preferences.mObjectFocusedColor);
+
+		// faded until hovered
+		Color.w *= static_cast<int>(Index) == mJointRingHover ? 1.0f : 0.6f;
+
+		// a band, wide lines are unsupported
+
+		for (size_t Point = 0; Point <= Points.size(); Point++)
+		{
+			const swVector3 Offset = Points[Point % Points.size()] - Rings[Index].Pivot;
+			Band.push_back(Rings[Index].Pivot + Offset * 0.88f);
+			Band.push_back(Rings[Index].Pivot + Offset * 1.12f);
+		}
+
+		mContext->SetColor(Color);
+		mContext->SetVertexBufferPointer(Band.data());
+		mContext->SetVertexFormatPosition(3);
+		mContext->DrawPrimitives(GL_TRIANGLE_STRIP, 0, static_cast<GLsizei>(Band.size()));
+	}
+
+	mContext->SetDepthWrite(true);
+	mContext->EnableDepthTest(true);
 	mContext->EnableColorBlend(false);
 }
 

@@ -97,6 +97,7 @@ public:
 		return mTool;
 	}
 
+	void OpenJoint(const QString& ModelName, int Index, int Joint);
 	bool IsJointsPanelVisible() const
 	{
 		return mJointsToolBar && mJointsToolBar->isVisible();

@@ -276,6 +276,19 @@ struct swModelHistoryEntry
 	quint64 Revision = 0;
 };
 
+// a joint shown as a ring in the view
+struct swJointRing
+{
+	std::vector<const swPart*> Chain;
+	const swModel* Owner = nullptr;
+	size_t PartIndex = 0;
+	size_t Joint = 0;
+	swVector3 Pivot;
+	swVector3 Axis;
+	bool Ball = false;
+	bool Locked = false;
+};
+
 class swModel
 {
 public:
@@ -412,8 +425,17 @@ public:
 	void EndJointFocus();
 	bool IsJointFocused() const
 	{
-		return mJointFocus || mJointRotate;
+		return mJointFocus || mJointRotate || mJointOverview;
 	}
+	bool IsJointOverview() const
+	{
+		return mJointOverview != nullptr;
+	}
+	void SetJointOverview();
+	size_t GetJointLastUsed(const swPart* Part) const;
+	void StartJointMode(swPart* Part);
+	std::vector<swJointRing> GetJointRings() const;
+	void AddJointRingHighlight(swScene* Scene, const swMatrix44& Transform, const swJointRing& Ring) const;
 	swPart* GetRotateJoint() const;
 	bool RotateJoint(swPart* Part, const swMatrix33& WorldRotation);
 	void TurnJointGroup(swPart* Joint, const swMatrix44& Before);
@@ -436,11 +458,16 @@ public:
 	{
 		mJointIndexPart = Part;
 		mJointIndex = Index;
+
+		// last used joint of each part
+		mJointMemory[Part] = Index;
 	}
 	bool UpdateJointHover(const swVector3& Start, const swVector3& End);
 	void AddJointHighlight(swScene* Scene, const swMatrix44& Transform) const;
 	void AddHoverOutline(swScene* Scene, const swMatrix44& Transform, std::vector<const swPart*> Chain) const;
 	void SetJointAxisAction(swPart* Part, int Axis);
+	void SetJointLockAction(swPart* Part, size_t Index, bool Locked);
+	bool IsJointLocked() const;
 	void AddJointAction(swPart* Part, const swPartJoint& Joint);
 	void ClearJointAction(swPart* Part, size_t Index);
 	void ClearJointsAction(swPart* Part);
@@ -805,6 +832,8 @@ protected:
 	bool mJointPick = false;
 	const swPart* mJointRotate = nullptr;
 	const swPart* mJointFocus = nullptr;
+	const swPart* mJointOverview = nullptr;
+	std::map<const swPart*, size_t> mJointMemory;
 	std::vector<const swPart*> mJointHover;
 	std::vector<swPart*> mJointSetPath;
 	swPart* mJointsJoint = nullptr;

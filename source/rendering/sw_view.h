@@ -7,6 +7,7 @@
 #include "sw_commands.h"
 #include "sw_result.h"
 
+struct swJointRing;
 struct swInsertPartInformation;
 enum class swCameraProjection;
 enum class swImageBackground;
@@ -371,6 +372,12 @@ public:
 
 	float GetUIScale() const;
 	float GetOverlayScale() const;
+	float GetOverlayScaleAt(const swVector3& Center) const;
+	std::vector<swJointRing> GetJointRings() const;
+	std::vector<swVector3> GetJointRingPoints(const swJointRing& Ring) const;
+	int FindJointRing() const;
+	void UpdateJointRingHover();
+	void OpenJointRing(int Index);
 	swVector3 GetMoveDirection(const swVector3& Direction) const;
 	void UpdatePartPreview();
 	std::pair<std::vector<swInsertPartInformation>, bool> GetMouseInsertPartInfo(bool IgnoreSelected, bool AllowNewParts, const swPartDataReference& PartData, swPart* MovingPart) const;
@@ -415,6 +422,7 @@ protected:
 	void DrawCutaway() const;
 	void DrawExplodeLines() const;
 	void DrawConnectionMarkers() const;
+	void DrawJointRings() const;
 	void DrawCutawayGizmo() const;
 
 	void DrawSelectZoomRegionOverlay();
@@ -540,6 +548,7 @@ protected:
 	bool mJointSeen = false;
 	std::vector<swPart*> mContextPath;
 	std::vector<const swPart*> mHoverChain;
+	int mJointRingHover = -1;
 	std::vector<swConnectionMarker> mConnectionMarkers;
 
 	swCamera* mCamera = nullptr;

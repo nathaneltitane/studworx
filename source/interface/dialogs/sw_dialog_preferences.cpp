@@ -514,6 +514,8 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->RestoreTabLayout->setChecked(mOptions->Preferences.mRestoreTabLayout);
 	ui->FirstPartAtOrigin->setChecked(mOptions->Preferences.mFirstPartAtOrigin);
 	ui->JointRotation->setChecked(mOptions->Preferences.mJointRotation);
+	ui->JointModeStart->setCurrentIndex(mOptions->Preferences.mJointModeStart);
+	ui->JointSelectInView->setChecked(mOptions->Preferences.mJointSelectInView);
 	ui->PartsSnapToTiles->setChecked(mOptions->Preferences.mPartsSnapToTiles);
 	ui->InsertColorMode->setCurrentIndex(static_cast<int>(mOptions->Preferences.mInsertColorMode));
 	ui->FlexSpreadMode->setCurrentIndex(static_cast<int>(mOptions->Preferences.mFlexSpreadMode));
@@ -937,6 +939,8 @@ void swPreferencesDialog::accept()
 	mOptions->Preferences.mRestoreTabLayout = ui->RestoreTabLayout->isChecked();
 	mOptions->Preferences.mFirstPartAtOrigin = ui->FirstPartAtOrigin->isChecked();
 	mOptions->Preferences.mJointRotation = ui->JointRotation->isChecked();
+	mOptions->Preferences.mJointModeStart = ui->JointModeStart->currentIndex();
+	mOptions->Preferences.mJointSelectInView = ui->JointSelectInView->isChecked();
 	mOptions->Preferences.mContextMenu = GetContextMenuLayout();
 	mOptions->Preferences.mPartsSnapToTiles = ui->PartsSnapToTiles->isChecked();
 	mOptions->Preferences.mInsertColorMode = static_cast<swInsertColorMode>(ui->InsertColorMode->currentIndex());

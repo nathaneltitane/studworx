@@ -2,6 +2,7 @@
 #include "sw_tests.h"
 #include "sw_math.h"
 #include "sw_parser_shadow.h"
+#include "sw_profile.h"
 
 static swConnectionCylinder ParseCylinder(const char* Line, swConnectionKind Kind)
 {
@@ -119,4 +120,70 @@ void swTests::PoseSavesAndLoads()
 	const int SubStart = Lines.indexOf("0 FILE sub.ldr");
 	QVERIFY(SubStart > Lines.indexOf(QString::fromUtf8(Pose)));
 	QVERIFY(Lines.indexOf(QString::fromUtf8(OldPose)) > SubStart);
+}
+
+// Saves a model with a locked joint, the lock word comes back, an unlocked joint stays plain.
+void swTests::LockedJointSavesAndLoads()
+{
+	const QProcessEnvironment Environment = QProcessEnvironment::systemEnvironment();
+	const QString Binary = Environment.value("SW_TEST_BINARY");
+
+	if (Binary.isEmpty())
+		QSKIP("SW_TEST_BINARY is not set");
+
+	QTemporaryDir Folder;
+	QVERIFY(Folder.isValid());
+	QVERIFY(QDir(Folder.path()).mkpath("library/parts"));
+
+	QFile Part(Folder.filePath("library/parts/3001.dat"));
+	QVERIFY(Part.open(QIODevice::WriteOnly));
+	Part.write("0 Brick  2 x  4\r\n0 Name: 3001.dat\r\n4 16 -40 0 -20 40 0 -20 40 0 20 -40 0 20\r\n");
+	Part.close();
+
+	const QByteArray Locked = "0 !SW JOINT PART HINGE 1 2 3 0 0 1 0 0 30 LOCK";
+	const QByteArray Plain = "0 !SW JOINT PART HINGE 5 6 7 1 0 0 15 0 0";
+
+	QFile Model(Folder.filePath("model.mpd"));
+	QVERIFY(Model.open(QIODevice::WriteOnly));
+	Model.write("0 FILE main.ldr\r\n0 main\r\n" + Locked + "\r\n" + Plain + "\r\n1 4 0 0 0 1 0 0 0 1 0 0 0 1 sub.ldr\r\n0 NOFILE\r\n0 FILE sub.ldr\r\n1 1 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n0 NOFILE\r\n");
+	Model.close();
+
+	QProcessEnvironment SaveEnvironment = Environment;
+	SaveEnvironment.insert("XDG_CONFIG_HOME", Folder.filePath("config"));
+	SaveEnvironment.insert("XDG_DATA_HOME", Folder.filePath("data"));
+	SaveEnvironment.insert("XDG_CACHE_HOME", Folder.filePath("cache"));
+	SaveEnvironment.insert("QT_QPA_PLATFORM", "offscreen");
+
+	QProcess Save;
+	Save.setProcessEnvironment(SaveEnvironment);
+	Save.setProcessChannelMode(QProcess::MergedChannels);
+	Save.start(Binary, { "--library", Folder.filePath("library"), Model.fileName(), "--undo", Folder.filePath("saved.mpd") });
+	QVERIFY(Save.waitForFinished(120000));
+	QVERIFY2(Save.exitCode() == 0, Save.readAll().constData());
+
+	QFile Saved(Folder.filePath("saved.mpd"));
+	QVERIFY(Saved.open(QIODevice::ReadOnly));
+	const QStringList Lines = QString::fromUtf8(Saved.readAll()).split("\r\n");
+
+	QVERIFY(Lines.contains(QString::fromUtf8(Locked)));
+	QVERIFY(Lines.contains(QString::fromUtf8(Plain)));
+}
+
+// Joint mode starts on the last used joint and offers joints in the view until the settings say otherwise.
+void swTests::JointModePreferencesDefault()
+{
+	QTemporaryDir Directory;
+	QVERIFY(Directory.isValid());
+
+	const QSettings::Format Format = QSettings::defaultFormat();
+	QSettings::setDefaultFormat(QSettings::IniFormat);
+	QSettings::setPath(QSettings::IniFormat, QSettings::UserScope, Directory.path());
+
+	QCOMPARE(swGetProfileInteger(SW_PROFILE_JOINT_MODE_START), 1);
+	QVERIFY(swGetProfileInteger(SW_PROFILE_JOINT_SELECT_IN_VIEW));
+
+	swSetProfileInteger(SW_PROFILE_JOINT_MODE_START, 2);
+	QCOMPARE(swGetProfileInteger(SW_PROFILE_JOINT_MODE_START), 2);
+
+	QSettings::setDefaultFormat(Format);
 }

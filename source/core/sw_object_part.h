@@ -50,10 +50,11 @@ struct swPartJoint
 	swVector3 Pivot = swVector3(0.0f, 0.0f, 0.0f);
 	swVector3 Axis = swVector3(0.0f, 0.0f, 1.0f);
 	swVector3 Rotation = swVector3(0.0f, 0.0f, 0.0f);
+	bool Locked = false;
 
 	bool operator==(const swPartJoint& Other) const
 	{
-		return Type == Other.Type && Pivot == Other.Pivot && Axis == Other.Axis && Rotation == Other.Rotation;
+		return Type == Other.Type && Pivot == Other.Pivot && Axis == Other.Axis && Rotation == Other.Rotation && Locked == Other.Locked;
 	}
 };
 

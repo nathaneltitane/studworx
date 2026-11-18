@@ -475,12 +475,12 @@ bool swView::ToggleJointMode()
 	}
 
 	// the selected submodel first
-	if (const swPart* Part = ActiveModel->GetJointPart(); Part && Part->HasJoints())
+	if (swPart* Part = ActiveModel->GetJointPart(); Part && Part->HasJoints())
 	{
 		mJointReturnPath = mSubmodelEditingPath;
 		mJointReturn = true;
 		mJointSeen = true;
-		ActiveModel->SetJointFocus();
+		ActiveModel->StartJointMode(Part);
 		ActiveModel->UpdateInterface();
 		UpdateAllViews();
 		return true;
@@ -528,8 +528,7 @@ void swView::SetJointPathDepth(size_t Index)
 		return gMainWindow->SetTool(swTool::Select);
 
 	// keep the joint mode on its joint
-	ActiveModel->SetJointIndex(Part, 0);
-	ActiveModel->SetJointFocus();
+	ActiveModel->StartJointMode(Part);
 	mJointReturn = Return;
 	mJointSeen = true;
 	ActiveModel->UpdateInterface();

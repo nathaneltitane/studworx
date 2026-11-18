@@ -1167,6 +1167,11 @@ bool swModel::RemoveSelectedObjects()
 
 void swModel::MoveSelectedObjects(const swVector3& PartDistance, const swVector3& ObjectDistance, swModelTransformFlags Flags, swModelHistoryEditMerge ModelHistoryEditMerge)
 {
+	// a locked joint stays put
+
+	if (IsJointFocused() && IsJointLocked())
+		return;
+
 	CollapseExplode();
 
 	if (Flags.testFlag(swModelTransformFlag::Checkpoint))
@@ -1282,6 +1287,11 @@ void swModel::RotateSelectedObjects(const swVector3& Angles, swModelTransformFla
 
 void swModel::RotateSelectedObjects(const swMatrix33& InputRotationMatrix, swModelTransformFlags Flags, swModelHistoryEditMerge ModelHistoryEditMerge)
 {
+	// a locked joint stays put
+
+	if (IsJointFocused() && IsJointLocked())
+		return;
+
 	CollapseExplode();
 
 	if (Flags.testFlag(swModelTransformFlag::Checkpoint))

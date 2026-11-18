@@ -401,13 +401,34 @@ void swModel::AddHoverOutline(swScene* Scene, const swMatrix44& Transform, std::
 	Scene->SetAddHover(false);
 }
 
+// use to outline what a joint moves
+static void swAddJointChainHighlight(swScene* Scene, const swMatrix44& Transform, std::vector<const swPart*> Chain, size_t JointIndex)
+{
+	const swPart* Holder = Chain.back();
+
+	if (JointIndex >= Holder->mJoints.size() || !Holder->mPartData->IsModel())
+		return;
+
+	const swVector3 Pivot = swMultiply31(Holder->mJoints[JointIndex].Pivot, swMatrix44AffineInverse(Holder->GetJointsMatrix(JointIndex)));
+
+	if (swFindJointLeaf(Holder->mPartData->GetModel(), swMatrix44Identity(), Pivot, Chain))
+		swAddChainMeshes(Scene, Chain, Transform, swRenderMeshState::Highlighted);
+}
+
+// use to outline the hovered ring joint
+void swModel::AddJointRingHighlight(swScene* Scene, const swMatrix44& Transform, const swJointRing& Ring) const
+{
+	swAddJointChainHighlight(Scene, Transform, Ring.Chain, Ring.Joint);
+}
+
 // use to outline the hovered or joint part
 void swModel::AddJointHighlight(swScene* Scene, const swMatrix44& Transform) const
 {
 	const swPart* Target = GetJointPart();
 	std::vector<const swPart*> Chain;
 
-	if (!Target)
+	// the overview has no open joint
+	if (!Target || mJointOverview)
 		return;
 
 	if (mJointPick)
@@ -422,13 +443,8 @@ void swModel::AddJointHighlight(swScene* Scene, const swMatrix44& Transform) con
 		if (!Target->HasJoints() || !Target->mPartData->IsModel())
 			return;
 
-		const size_t JointIndex = GetJointIndex();
-		const swVector3 Pivot = swMultiply31(Target->mJoints[JointIndex].Pivot, swMatrix44AffineInverse(Target->GetJointsMatrix(JointIndex)));
-
-		Chain.push_back(Target);
-
-		if (!swFindJointLeaf(Target->mPartData->GetModel(), swMatrix44Identity(), Pivot, Chain))
-			return;
+		swAddJointChainHighlight(Scene, Transform, { Target }, GetJointIndex());
+		return;
 	}
 
 	swAddChainMeshes(Scene, Chain, Transform, swRenderMeshState::Highlighted);
@@ -620,6 +636,13 @@ void swModel::SetJointAxisAction(swPart* Part, int Axis)
 
 	const size_t JointIndex = Part == GetJointPart() ? GetJointIndex() : 0;
 
+	if (JointIndex < Part->mJoints.size() && Part->mJoints[JointIndex].Locked)
+	{
+		EndEditHistory();
+		EndHistorySequence(tr("Joint Axis"));
+		return;
+	}
+
 	// rest angles before the new axis
 	Part->SetJointRotation(JointIndex, swVector3(0.0f, 0.0f, 0.0f), mCurrentStep);
 
@@ -628,6 +651,29 @@ void swModel::SetJointAxisAction(swPart* Part, int Axis)
 
 	EndEditHistory();
 	EndHistorySequence(tr("Joint Axis"));
+}
+
+// use to lock or unlock a joint
+void swModel::SetJointLockAction(swPart* Part, size_t Index, bool Locked)
+{
+	if (Index >= Part->mJoints.size() || Part->mJoints[Index].Locked == Locked)
+		return;
+
+	BeginHistorySequence();
+	BeginEditHistory();
+
+	Part->mJoints[Index].Locked = Locked;
+
+	EndEditHistory();
+	EndHistorySequence(Locked ? tr("Lock Joint") : tr("Unlock Joint"));
+}
+
+bool swModel::IsJointLocked() const
+{
+	const swPart* Part = GetJointPart();
+
+	// the overview has no joint to move
+	return mJointOverview || (Part && Part->HasJoints() && Part->mJoints[GetJointIndex()].Locked);
 }
 
 void swModel::AddJointAction(swPart* Part, const swPartJoint& Joint)
@@ -642,6 +688,9 @@ void swModel::AddJointAction(swPart* Part, const swPartJoint& Joint)
 
 void swModel::ClearJointAction(swPart* Part, size_t Index)
 {
+	if (Index >= Part->mJoints.size() || Part->mJoints[Index].Locked)
+		return;
+
 	BeginHistorySequence();
 	BeginEditHistory();
 
@@ -653,6 +702,11 @@ void swModel::ClearJointAction(swPart* Part, size_t Index)
 
 void swModel::ClearJointsAction(swPart* Part)
 {
+	// locked joints keep the chain
+
+	if (std::any_of(Part->mJoints.begin(), Part->mJoints.end(), [](const swPartJoint& Joint) { return Joint.Locked; }))
+		return;
+
 	BeginHistorySequence();
 	BeginEditHistory();
 
@@ -667,7 +721,7 @@ void swModel::ClearJointsAction(swPart* Part)
 // rotate commands turn this joint
 void swModel::SetJointRotate(bool Rotate)
 {
-	swPart* Part = Rotate ? GetJointPart() : nullptr;
+	swPart* Part = Rotate && !mJointOverview ? GetJointPart() : nullptr;
 
 	mJointRotate = Part && Part->HasJoints() ? Part : nullptr;
 }
@@ -682,6 +736,9 @@ void swModel::UpdateJointRotate()
 
 	if (mJointFocus && mJointFocus != Part)
 		mJointFocus = nullptr;
+
+	if (mJointOverview && mJointOverview != Part)
+		mJointOverview = nullptr;
 }
 
 // joints picked in the list
@@ -689,7 +746,99 @@ void swModel::SetJointFocus(bool Focus)
 {
 	swPart* Part = Focus ? GetJointPart() : nullptr;
 
+	mJointOverview = nullptr;
 	mJointFocus = Part && Part->HasJoints() ? Part : nullptr;
+}
+
+// joint mode with no joint open
+void swModel::SetJointOverview()
+{
+	swPart* Part = GetJointPart();
+
+	mJointFocus = nullptr;
+	mJointRotate = nullptr;
+	mJointOverview = Part && Part->HasJoints() ? Part : nullptr;
+}
+
+// use to find the joint last open in a part
+size_t swModel::GetJointLastUsed(const swPart* Part) const
+{
+	const auto Found = mJointMemory.find(Part);
+	const auto IsPart = [Part](const std::unique_ptr<swPart>& Other) { return Other.get() == Part; };
+
+	// parts removed since are forgotten
+	if (Found == mJointMemory.end() || !Part->HasJoints() || std::none_of(mParts.begin(), mParts.end(), IsPart))
+		return 0;
+
+	return std::min(Found->second, Part->mJoints.size() - 1);
+}
+
+// joint mode on a part the way the preference starts it
+void swModel::StartJointMode(swPart* Part)
+{
+	const int Start = swGetPreferences().mJointModeStart;
+
+	if (Start == 2)
+		return SetJointOverview();
+
+	SetJointIndex(Part, Start == 1 ? GetJointLastUsed(Part) : 0);
+	SetJointFocus();
+}
+
+// use to list the joints to pick in the view
+std::vector<swJointRing> swModel::GetJointRings() const
+{
+	std::vector<swJointRing> Rings;
+	const swPart* Target = GetJointPart();
+
+	if (!Target || !Target->HasJoints() || !(mJointOverview || ((mJointFocus || mJointRotate) && swGetPreferences().mJointSelectInView)))
+		return Rings;
+
+	// the open joint shows the gizmo instead
+	const size_t OpenJoint = mJointOverview ? Target->mJoints.size() : GetJointIndex();
+
+	std::function<void(const swPart*, std::vector<const swPart*>&, const swModel*, const swMatrix44&)> Collect = [&](const swPart* Holder, std::vector<const swPart*>& Chain, const swModel* Owner, const swMatrix44& ToActive)
+	{
+		for (size_t Index = 0; Index < Holder->mJoints.size(); Index++)
+		{
+			if (Holder == Target && Index == OpenJoint)
+				continue;
+
+			const swPartJoint& Joint = Holder->mJoints[Index];
+			const swMatrix44 Frame = swMultiply(Holder->GetJointFrame(Index), ToActive);
+			swJointRing Ring;
+			Ring.Chain = Chain;
+			Ring.Owner = Owner;
+			Ring.PartIndex = static_cast<size_t>(std::find_if(Owner->GetParts().begin(), Owner->GetParts().end(), [Holder](const std::unique_ptr<swPart>& Part) { return Part.get() == Holder; }) - Owner->GetParts().begin());
+			Ring.Joint = Index;
+			Ring.Pivot = swMultiply31(Joint.Pivot, Frame);
+			Ring.Axis = swNormalize(swMultiply30(Joint.Axis, Frame));
+			Ring.Ball = Joint.Type != swJointType::Hinge;
+			Ring.Locked = Joint.Locked;
+			Rings.push_back(std::move(Ring));
+		}
+
+		if (!Holder->mPartData->IsModel())
+			return;
+
+		const swModel* Inner = Holder->mPartData->GetModel();
+		const swMatrix44 InnerToActive = swMultiply(Holder->mModelWorld, ToActive);
+
+		for (const std::unique_ptr<swPart>& Part : Inner->GetParts())
+		{
+			if (!Part->mPartData->IsModel())
+				continue;
+
+			Chain.push_back(Part.get());
+			Collect(Part.get(), Chain, Inner, InnerToActive);
+			Chain.pop_back();
+		}
+	};
+
+	std::vector<const swPart*> Chain = { Target };
+	Collect(Target, Chain, this, swMatrix44Identity());
+
+	return Rings;
 }
 
 // back to plain selection
@@ -697,6 +846,7 @@ void swModel::EndJointFocus()
 {
 	mJointFocus = nullptr;
 	mJointRotate = nullptr;
+	mJointOverview = nullptr;
 	ClearSelectionAction();
 }
 
@@ -704,7 +854,7 @@ swPart* swModel::GetRotateJoint() const
 {
 	swPart* Part = GetJointPart();
 
-	if (!Part || !Part->HasJoints())
+	if (!Part || !Part->HasJoints() || mJointOverview)
 		return nullptr;
 
 	return Part == mJointRotate || swGetPreferences().mJointRotation ? Part : nullptr;
@@ -714,6 +864,9 @@ swPart* swModel::GetRotateJoint() const
 bool swModel::TurnJointFree(swPart* Joint, const swMatrix33& WorldRotation)
 {
 	const size_t JointIndex = Joint == GetJointPart() ? GetJointIndex() : 0;
+
+	if (Joint->mJoints[JointIndex].Locked)
+		return false;
 
 	if (Joint->mJoints[JointIndex].Type != swJointType::Hinge)
 		return RotateJoint(Joint, WorldRotation);
@@ -758,6 +911,10 @@ bool swModel::RotateJoint(swPart* Part, const swMatrix33& WorldRotation)
 {
 	const size_t JointIndex = Part == GetJointPart() ? GetJointIndex() : 0;
 	const swPartJoint& Joint = Part->mJoints[JointIndex];
+
+	if (Joint.Locked)
+		return false;
+
 	const swMatrix33 PartRotation(Part->GetJointFrame(JointIndex));
 	const swMatrix33 Turn = swMultiply(PartRotation, swMultiply(WorldRotation, swMatrix33AffineInverse(PartRotation)));
 	swVector3 Rotation;

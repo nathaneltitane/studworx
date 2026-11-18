@@ -42,6 +42,8 @@ private slots:
 	void AxisAlignedRotations_data();
 	void AxisAlignedRotations();
 	void GreyscaleColorKeepsAlpha();
+	void LockedJointSavesAndLoads();
+	void JointModePreferencesDefault();
 	void AxisAlignedRotationTolerance();
 	void GridExtentGrowsWithMargins();
 	void ProfileBatchSavesOnce();

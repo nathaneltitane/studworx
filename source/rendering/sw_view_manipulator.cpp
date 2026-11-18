@@ -355,6 +355,11 @@ void swViewManipulator::DrawSelectMove(swTrackButton TrackButton, swTrackTool Tr
 
 	quint32 AllowedTransforms = Focus ? Focus->GetAllowedTransforms() : SW_OBJECT_TRANSFORM_MOVE_X | SW_OBJECT_TRANSFORM_MOVE_Y | SW_OBJECT_TRANSFORM_MOVE_Z | SW_OBJECT_TRANSFORM_ROTATE_X | SW_OBJECT_TRANSFORM_ROTATE_Y | SW_OBJECT_TRANSFORM_ROTATE_Z;
 
+	// a locked joint drops the arrows
+
+	if (ActiveModel->IsJointFocused() && ActiveModel->IsJointLocked())
+		AllowedTransforms &= ~SW_OBJECT_TRANSFORM_MOVE_XYZ;
+
 	if (TrackButton == swTrackButton::None)
 	{
 		if (AllowedTransforms & SW_OBJECT_TRANSFORM_MOVE_X)
@@ -885,13 +890,19 @@ void swViewManipulator::DrawCameraRotationRing(swTrackButton TrackButton, swTrac
 	// joint rotation uses the joint highlight color
 
 	if (TrackTool != swTrackTool::RotateCamera && mView->GetActiveModel()->GetRotateJoint())
-		Context->SetColor(swVector4(1.0f, 0.0f, 0.0f, 1.0f));
+	{
+		const bool JointLocked = mView->GetActiveModel()->IsJointLocked();
+
+		Context->SetColor(JointLocked ? swVector4FromColor(swGetPreferences().mObjectDeactivatedColor) : swVector4(1.0f, 0.0f, 0.0f, 1.0f));
+		Context->EnableColorBlend(JointLocked);
+	}
 	else
 		Context->SetColor(TrackTool == swTrackTool::RotateCamera ? mColorCameraSelected : mColorCamera);
 	Context->SetWorldMatrix(swMatrix44Identity());
 	Context->SetVertexBufferPointer(Verts);
 	Context->SetVertexFormatPosition(3);
 	Context->DrawPrimitives(GL_TRIANGLE_STRIP, 0, NumVerts);
+	Context->EnableColorBlend(false);
 }
 
 void swViewManipulator::DrawAxisRotationRings(swTrackButton TrackButton, swTrackTool TrackTool, bool HasAngle, const swMatrix44& WorldMatrix, float OverlayScale) const
@@ -922,7 +933,7 @@ void swViewManipulator::DrawAxisRotationRings(swTrackButton TrackButton, swTrack
 			continue;
 
 		// locked rings show deactivated
-		const bool Locked = HingeAxis.LengthSquared() > 0.0f && fabsf(HingeAxis[PlaneIndex]) < 0.1f;
+		const bool Locked = (HingeAxis.LengthSquared() > 0.0f && fabsf(HingeAxis[PlaneIndex]) < 0.1f) || ActiveModel->IsJointLocked();
 		Context->SetColor(Locked ? swVector4FromColor(swGetPreferences().mObjectDeactivatedColor) : GetAxisColor(PlaneIndex, Selected));
 		Context->EnableColorBlend(Locked);
 
@@ -1306,6 +1317,11 @@ std::pair<swTrackTool, quint32> swViewManipulator::UpdateSelectMove(swTrackButto
 	}
 
 	quint32 AllowedTransforms = Focus ? Focus->GetAllowedTransforms() : SW_OBJECT_TRANSFORM_MOVE_XYZ | SW_OBJECT_TRANSFORM_ROTATE_XYZ;
+
+	// a locked joint drops the arrows
+
+	if (ActiveModel->IsJointFocused() && ActiveModel->IsJointLocked())
+		AllowedTransforms &= ~SW_OBJECT_TRANSFORM_MOVE_XYZ;
 
 	for (int AxisIndex = 0; AxisIndex < 3; AxisIndex++)
 	{

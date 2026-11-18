@@ -179,6 +179,8 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "StatusBarSegments", 31),                                       // SW_PROFILE_STATUS_BAR_SEGMENTS
 	swProfileEntry("Settings", "FirstPartAtOrigin", false),                                   // SW_PROFILE_FIRST_PART_AT_ORIGIN
 	swProfileEntry("Settings", "JointRotation", false),                                       // SW_PROFILE_JOINT_ROTATION
+	swProfileEntry("Settings", "JointModeStart", 1),                                           // SW_PROFILE_JOINT_MODE_START
+	swProfileEntry("Settings", "JointSelectInView", true),                                    // SW_PROFILE_JOINT_SELECT_IN_VIEW
 	swProfileEntry("Settings", "ContextMenu", QStringList()),                                 // SW_PROFILE_CONTEXT_MENU
 	swProfileEntry("Settings", "TerminalFollowModel", true),                                   // SW_PROFILE_TERMINAL_FOLLOW_MODEL
 	swProfileEntry("Settings", "InsertColorMode", 0),                                          // SW_PROFILE_INSERT_COLOR_MODE

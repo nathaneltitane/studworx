@@ -89,7 +89,7 @@ void swMainWindow::UpdateSelectedObjects(bool SelectionChanged)
 		mActions[SW_PART_DELETE]->setEnabled(Flags & SW_SELECTION_SELECTED);
 		mActions[SW_PART_DUPLICATE]->setEnabled(Flags & SW_SELECTION_SELECTED);
 		mActions[SW_PART_PAINT_SELECTED]->setEnabled(Flags & SW_SELECTION_PART);
-		mActions[SW_PART_SET_JOINT]->setEnabled(Flags & SW_SELECTION_PART);
+		mActions[SW_PART_SET_JOINT]->setEnabled((Flags & SW_SELECTION_PART) && !(ActiveModel && ActiveModel->IsJointLocked()));
 		mActions[SW_PART_RESET_PIVOT_POINT]->setEnabled(Flags & SW_SELECTION_SELECTED);
 		mActions[SW_PART_REMOVE_KEY_FRAMES]->setEnabled(Flags & SW_SELECTION_SELECTED);
 		mActions[SW_PART_ARRAY]->setEnabled(Flags & SW_SELECTION_PART);
@@ -142,8 +142,9 @@ void swMainWindow::UpdateSelectedObjects(bool SelectionChanged)
 
 	swPart* JointPart = ActiveModel ? ActiveModel->GetJointPart() : nullptr;
 	const bool HasJoint = JointPart && JointPart->HasJoints();
-	mActions[SW_PART_JOINT_MOVE]->setEnabled(HasJoint);
-	mActions[SW_PART_JOINT_ROTATE]->setEnabled(HasJoint);
+	const bool JointLocked = HasJoint && ActiveModel->IsJointLocked();
+	mActions[SW_PART_JOINT_MOVE]->setEnabled(HasJoint && !JointLocked);
+	mActions[SW_PART_JOINT_ROTATE]->setEnabled(HasJoint && !JointLocked);
 
 	if (Focus && Focus->IsPart())
 	{
@@ -601,4 +602,11 @@ void swMainWindow::UpdateShortcuts()
 {
 	for (int ActionIdx = 0; ActionIdx < SW_COMMAND_COUNT; ActionIdx++)
 		mActions[ActionIdx]->setShortcut(QKeySequence(gKeyboardShortcuts.mShortcuts[ActionIdx]));
+}
+
+// open a joint the way the joints panel does
+void swMainWindow::OpenJoint(const QString& ModelName, int Index, int Joint)
+{
+	if (mJointsWidget)
+		mJointsWidget->SelectJoint(ModelName, Index, Joint);
 }

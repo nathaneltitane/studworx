@@ -172,6 +172,9 @@ void swPart::SaveLDraw(QTextStream& Stream) const
 		for (const swVector3& Value : Values)
 			Stream << ' ' << swFormatValue(Value[0], 4) << ' ' << swFormatValue(-Value[2], 4) << ' ' << swFormatValue(Value[1], 4);
 
+		if (Joint.Locked)
+			Stream << QLatin1String(" LOCK");
+
 		Stream << LineEnding;
 	}
 
@@ -218,6 +221,7 @@ bool swPart::ParseLDrawLine(QTextStream& Stream)
 		else if (Token == QLatin1String("JOINT"))
 		{
 			QString Type;
+			QString Lock;
 			float Numbers[9];
 
 			Stream >> Type;
@@ -225,12 +229,16 @@ bool swPart::ParseLDrawLine(QTextStream& Stream)
 			for (float& Number : Numbers)
 				Stream >> Number;
 
+			// optional lock word
+			Stream >> Lock;
+
 			// ldraw to internal axes
 			swPartJoint& Joint = mJoints.emplace_back();
 			Joint.Type = Type == QLatin1String("BALL") ? swJointType::Ball : swJointType::Hinge;
 			Joint.Pivot = swVector3(Numbers[0], Numbers[2], -Numbers[1]);
 			Joint.Axis = swVector3(Numbers[3], Numbers[5], -Numbers[4]);
 			Joint.Rotation = swVector3(Numbers[6], Numbers[8], -Numbers[7]);
+			Joint.Locked = Lock == QLatin1String("LOCK");
 		}
 		else if (mPosition.Load(Stream, Token, "POSITION"))
 			continue;
@@ -2015,7 +2023,7 @@ swMatrix44 swPart::GetJointFrame(size_t Index) const
 // use to turn the part at a joint
 void swPart::SetJointRotation(size_t Index, const swVector3& Rotation, swStep Step)
 {
-	if (Index >= mJoints.size())
+	if (Index >= mJoints.size() || mJoints[Index].Locked)
 		return;
 
 	swMatrix44 Turned = mModelWorld;
@@ -2040,6 +2048,10 @@ size_t swPart::SetJoint(const swPartJoint& Joint, swStep Step)
 		if (swLength(swMultiply31(Joint.Pivot, Inner) - mJoints[Index].Pivot) >= 0.5f)
 			continue;
 
+		// a locked joint stays as it is
+		if (mJoints[Index].Locked)
+			return Index;
+
 		SetJointRotation(Index, swVector3(0.0f, 0.0f, 0.0f), Step);
 		mJoints[Index].Type = Joint.Type;
 		mJoints[Index].Axis = swNormalize(swMultiply30(Joint.Axis, Inner));
@@ -2058,7 +2070,7 @@ size_t swPart::SetJoint(const swPartJoint& Joint, swStep Step)
 
 void swPart::RemoveJoint(size_t Index, swStep Step)
 {
-	if (Index >= mJoints.size())
+	if (Index >= mJoints.size() || mJoints[Index].Locked)
 		return;
 
 	SetJointRotation(Index, swVector3(0.0f, 0.0f, 0.0f), Step);
