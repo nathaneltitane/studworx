@@ -24060,37 +24060,37 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>Скинути категорії</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="340"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="370"/>
         <source>The shortcut &apos;%1&apos; is already assigned to &apos;%2&apos;. Do you want to replace it?</source>
         <translation>Комбінація клавіш &apos;%1&apos; уже призначена для &apos;%2&apos;. Замінити її?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="459"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="489"/>
         <source>Insert</source>
         <translation>Вставка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="460"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="490"/>
         <source>Edit</source>
         <translation>Редагувати</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="461"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="491"/>
         <source>View</source>
         <translation>Вигляд</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="600"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="630"/>
         <source>Could not read mouse shortcuts file &apos;%1&apos;.</source>
         <translation>Не вдалося прочитати файл комбінацій клавіш миші &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="619"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="649"/>
         <source>Could not write mouse shortcuts file &apos;%1&apos;.</source>
         <translation>Не вдалося записати файл комбінацій клавіш миші &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="624"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="654"/>
         <source>Reset Mouse Shortcuts</source>
         <translation>Скинути комбінації клавіш миші</translation>
     </message>
@@ -24376,7 +24376,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">Помилка збереження файла комбінацій клавіш.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="431"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="461"/>
         <source>Are you sure you want to load the default keyboard shortcuts?</source>
         <translation>Ви впевнені, що хочете завантажити типові комбінації клавіш клавіатури?</translation>
     </message>
@@ -24396,9 +24396,9 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>Права кнопка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="342"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="537"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="546"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="372"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="567"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="576"/>
         <source>Override Shortcut</source>
         <translation>Перевизначити комбінацію клавіш</translation>
     </message>
@@ -24428,26 +24428,26 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="obsolete">Імпортувати сполучення клавіш</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="424"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="454"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Експортувати комбінації клавіш</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="431"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="461"/>
         <source>Reset Keyboard Shortcuts</source>
         <translation>Скинути комбінації клавіш</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="537"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="546"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="567"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="576"/>
         <source>This shortcut is already assigned to &apos;%1&apos;. Do you want to replace it?</source>
         <oldsource>This shortcut is already assigned to &apos;%1&apos;, do you want to replace it?</oldsource>
         <translation>Ця комбінація клавіш уже призначена для &apos;%1&apos;. Замінити її?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="396"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="404"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="592"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="426"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="434"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="622"/>
         <source>Import Shortcuts</source>
         <translation>Імпорт комбінацій клавіш</translation>
     </message>
@@ -24457,8 +24457,8 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="obsolete">Помилка завантаження файлу ярликів миші.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="417"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="613"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="447"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="643"/>
         <source>Export Shortcuts</source>
         <translation>Експорт комбінацій клавіш</translation>
     </message>
@@ -24483,30 +24483,115 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>Залізнична колія</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="243"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="207"/>
+        <source>Help for the panel under the pointer</source>
+        <translation>Довідка щодо панелі під вказівником</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="207"/>
+        <source>F1</source>
+        <translation>F1</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
+        <source>Clear the joint in the Joints panel</source>
+        <translation>Очистити шарнір на панелі «Шарніри»</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
+        <source>Del</source>
+        <translation>Del</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
+        <source>Add to the selection</source>
+        <translation>Додати до виділення</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
+        <source>Ctrl+Click</source>
+        <translation>Ctrl+клацання</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <source>Remove from the selection</source>
+        <translation>Прибрати з виділення</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <source>Shift+Click</source>
+        <translation>Shift+клацання</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
+        <source>Zoom faster or slower</source>
+        <translation>Масштабувати швидше або повільніше</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
+        <source>Ctrl or Shift+Wheel</source>
+        <translation>Ctrl або Shift+коліщатко</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
+        <source>Snap rotation, keep the insert tool, free a locked joint</source>
+        <translation>Крок обертання, лишити інструмент вставлення, звільнити заблокований шарнір</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
+        <source>Hold Ctrl</source>
+        <translation>Утримувати Ctrl</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
+        <source>Jump to a part in the parts list</source>
+        <translation>Перейти до деталі у списку деталей</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
+        <source>A to Z</source>
+        <translation>A–Z</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="214"/>
+        <source>Move through the parts list</source>
+        <translation>Переміщення списком деталей</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="214"/>
+        <source>Arrows, Home, End, Page Up, Page Down</source>
+        <translation>Стрілки, Home, End, Page Up, Page Down</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="217"/>
+        <source>Built-in Keys</source>
+        <translation>Вбудовані клавіші</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="273"/>
         <source>The shortcut &apos;%1&apos; is shared by %2.</source>
         <translation>Комбінація клавіш &apos;%1&apos; спільна для: %2.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="396"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="417"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="592"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="613"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="426"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="447"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="622"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="643"/>
         <source>Shortcut Files (*.txt);;All Files (*)</source>
         <translation>Файли комбінацій (*.txt);;Усі файли (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="404"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="434"/>
         <source>Could not read keyboard shortcuts file &apos;%1&apos;.</source>
         <translation>Не вдалося прочитати файл комбінацій клавіш &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="424"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="454"/>
         <source>Could not write keyboard shortcuts file &apos;%1&apos;.</source>
         <translation>Не вдалося записати файл комбінацій клавіш &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="600"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="630"/>
         <source>Import Mouse Shortcuts</source>
         <translation>Імпортувати комбінації клавіш миші</translation>
     </message>
@@ -24516,12 +24601,12 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="obsolete">Помилка збереження файлу ярликів миші.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="619"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="649"/>
         <source>Export Mouse Shortcuts</source>
         <translation>Експортувати комбінації клавіш миші</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="624"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="654"/>
         <source>Are you sure you want to load the default mouse shortcuts?</source>
         <translation>Ви впевнені, що хочете завантажити типові комбінації клавіш миші?</translation>
     </message>

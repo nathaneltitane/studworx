@@ -464,6 +464,7 @@ Nine pages with lined up label and control columns, checkboxes included, each la
 - **Context Menu.** Arrange the right-click menu of the model view the way you work: add, reorder, rename or group its commands, or reset it. Right clicking an unselected part selects it first.
 - **Keyboard and Mouse.** Shortcuts recorded by clicking, importable and exportable. Commands that share a shortcut show in red, and assigning a taken shortcut asks before moving it.
 - **Shortcut filters.** Filter commands and tools by name or shortcut, give each two shortcuts, and reset them to the defaults.
+- **Built-in Keys.** The end of the Keyboard list shows the keys that can't be changed, greyed out, like F1 for help and Ctrl+click to add to the selection.
 - **From LeoCAD.** Settings, part palettes and minifigure templates are copied from LeoCAD on the first start.
 
 [//]: # (gallery scroll)

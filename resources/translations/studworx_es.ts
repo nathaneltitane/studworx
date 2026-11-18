@@ -24226,37 +24226,37 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation>Reiniciar categorías</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="340"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="370"/>
         <source>The shortcut &apos;%1&apos; is already assigned to &apos;%2&apos;. Do you want to replace it?</source>
         <translation>El atajo &apos;%1&apos; ya está asignado a &apos;%2&apos;. ¿Quiere reemplazarlo?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="459"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="489"/>
         <source>Insert</source>
         <translation>Insertar</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="460"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="490"/>
         <source>Edit</source>
         <translation>Editar</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="461"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="491"/>
         <source>View</source>
         <translation>Vista</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="600"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="630"/>
         <source>Could not read mouse shortcuts file &apos;%1&apos;.</source>
         <translation>No se pudo leer el archivo de atajos de ratón &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="619"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="649"/>
         <source>Could not write mouse shortcuts file &apos;%1&apos;.</source>
         <translation>No se pudo escribir el archivo de atajos de ratón &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="624"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="654"/>
         <source>Reset Mouse Shortcuts</source>
         <translation>Reiniciar atajos de ratón</translation>
     </message>
@@ -24542,7 +24542,7 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation type="vanished">Error guardando el archivo de atajos de teclado.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="431"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="461"/>
         <source>Are you sure you want to load the default keyboard shortcuts?</source>
         <translation>¿Seguro que quiere cargar los atajos de teclado predeterminados?</translation>
     </message>
@@ -24562,9 +24562,9 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation>Botón derecho</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="342"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="537"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="546"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="372"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="567"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="576"/>
         <source>Override Shortcut</source>
         <translation>Sobrescribir atajo</translation>
     </message>
@@ -24594,26 +24594,26 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation type="obsolete">Importar atajos de teclado</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="424"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="454"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>Exportar atajos de teclado</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="431"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="461"/>
         <source>Reset Keyboard Shortcuts</source>
         <translation>Reiniciar atajos de teclado</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="537"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="546"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="567"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="576"/>
         <source>This shortcut is already assigned to &apos;%1&apos;. Do you want to replace it?</source>
         <oldsource>This shortcut is already assigned to &apos;%1&apos;, do you want to replace it?</oldsource>
         <translation>Este atajo ya está asignado a &apos;%1&apos;. ¿Quiere reemplazarlo?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="396"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="404"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="592"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="426"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="434"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="622"/>
         <source>Import Shortcuts</source>
         <translation>Importar atajos</translation>
     </message>
@@ -24622,8 +24622,8 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation type="vanished">Error cargando el archivo de atajos de ratón.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="417"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="613"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="447"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="643"/>
         <source>Export Shortcuts</source>
         <translation>Exportar atajos</translation>
     </message>
@@ -24648,30 +24648,115 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation>Vía de tren</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="243"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="207"/>
+        <source>Help for the panel under the pointer</source>
+        <translation>Ayuda del panel bajo el puntero</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="207"/>
+        <source>F1</source>
+        <translation>F1</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
+        <source>Clear the joint in the Joints panel</source>
+        <translation>Borrar la articulación en el panel Articulaciones</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
+        <source>Del</source>
+        <translation>Supr</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
+        <source>Add to the selection</source>
+        <translation>Añadir a la selección</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
+        <source>Ctrl+Click</source>
+        <translation>Ctrl+Clic</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <source>Remove from the selection</source>
+        <translation>Quitar de la selección</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <source>Shift+Click</source>
+        <translation>Mayús+Clic</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
+        <source>Zoom faster or slower</source>
+        <translation>Hacer zoom más rápido o más lento</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
+        <source>Ctrl or Shift+Wheel</source>
+        <translation>Ctrl o Mayús+Rueda</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
+        <source>Snap rotation, keep the insert tool, free a locked joint</source>
+        <translation>Ajustar el giro, mantener la herramienta de inserción, liberar una articulación bloqueada</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
+        <source>Hold Ctrl</source>
+        <translation>Mantener Ctrl</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
+        <source>Jump to a part in the parts list</source>
+        <translation>Saltar a una pieza en la lista de piezas</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
+        <source>A to Z</source>
+        <translation>A a Z</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="214"/>
+        <source>Move through the parts list</source>
+        <translation>Moverse por la lista de piezas</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="214"/>
+        <source>Arrows, Home, End, Page Up, Page Down</source>
+        <translation>Flechas, Inicio, Fin, Re Pág, Av Pág</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="217"/>
+        <source>Built-in Keys</source>
+        <translation>Teclas fijas</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="273"/>
         <source>The shortcut &apos;%1&apos; is shared by %2.</source>
         <translation>El atajo &apos;%1&apos; lo comparten %2.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="396"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="417"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="592"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="613"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="426"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="447"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="622"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="643"/>
         <source>Shortcut Files (*.txt);;All Files (*)</source>
         <translation>Archivos de atajos (*.txt);;Todos los archivos (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="404"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="434"/>
         <source>Could not read keyboard shortcuts file &apos;%1&apos;.</source>
         <translation>No se pudo leer el archivo de atajos de teclado &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="424"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="454"/>
         <source>Could not write keyboard shortcuts file &apos;%1&apos;.</source>
         <translation>No se pudo escribir el archivo de atajos de teclado &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="600"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="630"/>
         <source>Import Mouse Shortcuts</source>
         <translation>Importar atajos de ratón</translation>
     </message>
@@ -24680,12 +24765,12 @@ Las tarjetas de video no compatibles usan tinte frontal y bordes coloreados.</tr
         <translation type="vanished">Error guardando el archivo de atajos del ratón.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="619"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="649"/>
         <source>Export Mouse Shortcuts</source>
         <translation>Exportar atajos de ratón</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="624"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="654"/>
         <source>Are you sure you want to load the default mouse shortcuts?</source>
         <translation>¿Seguro que quiere cargar los atajos de ratón predeterminados?</translation>
     </message>

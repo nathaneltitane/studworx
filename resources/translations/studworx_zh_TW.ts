@@ -24331,37 +24331,37 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>重設類別</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="340"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="370"/>
         <source>The shortcut &apos;%1&apos; is already assigned to &apos;%2&apos;. Do you want to replace it?</source>
         <translation>快速鍵 &apos;%1&apos; 已指定給 &apos;%2&apos;。是否取代？</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="459"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="489"/>
         <source>Insert</source>
         <translation>插入</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="460"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="490"/>
         <source>Edit</source>
         <translation>編輯</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="461"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="491"/>
         <source>View</source>
         <translation>視圖</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="600"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="630"/>
         <source>Could not read mouse shortcuts file &apos;%1&apos;.</source>
         <translation>無法讀取滑鼠快速鍵檔案 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="619"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="649"/>
         <source>Could not write mouse shortcuts file &apos;%1&apos;.</source>
         <translation>無法寫入滑鼠快速鍵檔案 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="624"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="654"/>
         <source>Reset Mouse Shortcuts</source>
         <translation>重設滑鼠快速鍵</translation>
     </message>
@@ -24647,7 +24647,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">儲存鍵盤快速鍵檔案時出錯。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="431"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="461"/>
         <source>Are you sure you want to load the default keyboard shortcuts?</source>
         <translation>確定要載入預設鍵盤快速鍵嗎？</translation>
     </message>
@@ -24667,9 +24667,9 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>右鍵</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="342"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="537"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="546"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="372"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="567"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="576"/>
         <source>Override Shortcut</source>
         <translation>取代快速鍵</translation>
     </message>
@@ -24699,26 +24699,26 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="obsolete">導入鍵盤快速鍵</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="424"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="454"/>
         <source>Export Keyboard Shortcuts</source>
         <translation>匯出鍵盤快速鍵</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="431"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="461"/>
         <source>Reset Keyboard Shortcuts</source>
         <translation>重設鍵盤快速鍵</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="537"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="546"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="567"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="576"/>
         <source>This shortcut is already assigned to &apos;%1&apos;. Do you want to replace it?</source>
         <oldsource>This shortcut is already assigned to &apos;%1&apos;, do you want to replace it?</oldsource>
         <translation>此快速鍵已指定給 &apos;%1&apos;，是否取代？</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="396"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="404"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="592"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="426"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="434"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="622"/>
         <source>Import Shortcuts</source>
         <translation>匯入快速鍵</translation>
     </message>
@@ -24727,8 +24727,8 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">載入游標快速鍵檔案時出錯。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="417"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="613"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="447"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="643"/>
         <source>Export Shortcuts</source>
         <translation>匯出快速鍵</translation>
     </message>
@@ -24753,30 +24753,115 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>火車軌道</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="243"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="207"/>
+        <source>Help for the panel under the pointer</source>
+        <translation>指標下面板的說明</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="207"/>
+        <source>F1</source>
+        <translation>F1</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
+        <source>Clear the joint in the Joints panel</source>
+        <translation>清除關節面板中的關節</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="208"/>
+        <source>Del</source>
+        <translation>Del</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
+        <source>Add to the selection</source>
+        <translation>加入選取</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="209"/>
+        <source>Ctrl+Click</source>
+        <translation>Ctrl+按一下</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <source>Remove from the selection</source>
+        <translation>從選取中移除</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="210"/>
+        <source>Shift+Click</source>
+        <translation>Shift+按一下</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
+        <source>Zoom faster or slower</source>
+        <translation>更快或更慢地縮放</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="211"/>
+        <source>Ctrl or Shift+Wheel</source>
+        <translation>Ctrl 或 Shift+滾輪</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
+        <source>Snap rotation, keep the insert tool, free a locked joint</source>
+        <translation>對齊旋轉、保留插入工具、釋放鎖定的關節</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="212"/>
+        <source>Hold Ctrl</source>
+        <translation>按住 Ctrl</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
+        <source>Jump to a part in the parts list</source>
+        <translation>跳到零件清單中的零件</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="213"/>
+        <source>A to Z</source>
+        <translation>A 到 Z</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="214"/>
+        <source>Move through the parts list</source>
+        <translation>在零件清單中移動</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="214"/>
+        <source>Arrows, Home, End, Page Up, Page Down</source>
+        <translation>方向鍵、Home、End、Page Up、Page Down</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="217"/>
+        <source>Built-in Keys</source>
+        <translation>內建按鍵</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="273"/>
         <source>The shortcut &apos;%1&apos; is shared by %2.</source>
         <translation>快速鍵 &apos;%1&apos; 由 %2 共用。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="396"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="417"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="592"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="613"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="426"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="447"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="622"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="643"/>
         <source>Shortcut Files (*.txt);;All Files (*)</source>
         <translation>快速鍵檔案 (*.txt);;所有檔案 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="404"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="434"/>
         <source>Could not read keyboard shortcuts file &apos;%1&apos;.</source>
         <translation>無法讀取鍵盤快速鍵檔案 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="424"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="454"/>
         <source>Could not write keyboard shortcuts file &apos;%1&apos;.</source>
         <translation>無法寫入鍵盤快速鍵檔案 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="600"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="630"/>
         <source>Import Mouse Shortcuts</source>
         <translation>匯入滑鼠快速鍵</translation>
     </message>
@@ -24785,12 +24870,12 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">儲存游標快速鍵檔案時出錯。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="619"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="649"/>
         <source>Export Mouse Shortcuts</source>
         <translation>匯出滑鼠快速鍵</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="624"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences_shortcuts.cpp" line="654"/>
         <source>Are you sure you want to load the default mouse shortcuts?</source>
         <translation>確定要載入預設滑鼠快速鍵嗎？</translation>
     </message>

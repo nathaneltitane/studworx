@@ -200,6 +200,36 @@ void swPreferencesDialog::UpdateCommandList()
 		Sections[Section]->addChild(Item);
 	}
 
+	// keys that cannot be changed
+
+	const std::pair<const char*, const char*> BuiltInKeys[] =
+	{
+		{ QT_TR_NOOP("Help for the panel under the pointer"), QT_TR_NOOP("F1") },
+		{ QT_TR_NOOP("Clear the joint in the Joints panel"), QT_TR_NOOP("Del") },
+		{ QT_TR_NOOP("Add to the selection"), QT_TR_NOOP("Ctrl+Click") },
+		{ QT_TR_NOOP("Remove from the selection"), QT_TR_NOOP("Shift+Click") },
+		{ QT_TR_NOOP("Zoom faster or slower"), QT_TR_NOOP("Ctrl or Shift+Wheel") },
+		{ QT_TR_NOOP("Snap rotation, keep the insert tool, free a locked joint"), QT_TR_NOOP("Hold Ctrl") },
+		{ QT_TR_NOOP("Jump to a part in the parts list"), QT_TR_NOOP("A to Z") },
+		{ QT_TR_NOOP("Move through the parts list"), QT_TR_NOOP("Arrows, Home, End, Page Up, Page Down") }
+	};
+
+	QTreeWidgetItem* BuiltInItem = new QTreeWidgetItem(ui->commandList, QStringList(tr("Built-in Keys")));
+	QFont BuiltInFont = BuiltInItem->font(0);
+	BuiltInFont.setBold(true);
+	BuiltInItem->setFont(0, BuiltInFont);
+	const QBrush DeactivatedBrush(swQColorFromRGBA(mOptions->Preferences.mObjectDeactivatedColor));
+
+	for (const auto& [Action, Key] : BuiltInKeys)
+	{
+		QTreeWidgetItem* Item = new QTreeWidgetItem(BuiltInItem, QStringList({ tr(Action), tr(Key) }));
+		Item->setFlags(Qt::ItemIsEnabled);
+
+		for (int Column = 0; Column < Item->columnCount(); Column++)
+			Item->setForeground(Column, DeactivatedBrush);
+	}
+
+	ui->commandList->expandItem(BuiltInItem);
 	UpdateShortcutConflicts();
 }
 
