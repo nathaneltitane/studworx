@@ -2593,6 +2593,24 @@ const swCommand gCommands[] =
 		""
 	},
 
+	// SW_PART_JOINT_MODE
+	{
+		QT_TRANSLATE_NOOP("Action", "Part.JointMode"),
+		QT_TRANSLATE_NOOP("Menu", "Joint &Mode"),
+		QT_TRANSLATE_NOOP("Status", "Go into joint mode on the selected submodel, or leave it"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joint Mode</b></p><p>Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel. Press it again to leave joint mode.</p>"),
+		"J"
+	},
+
+	// SW_PART_JOINT_MODE_END
+	{
+		QT_TRANSLATE_NOOP("Action", "Part.JointModeEnd"),
+		QT_TRANSLATE_NOOP("Menu", "&End Joint Mode"),
+		QT_TRANSLATE_NOOP("Status", "Leave joint mode and go back to where it started"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>End Joint Mode</b></p><p>Leaves joint mode and goes back to the model you were in before, the same as the way back on the bar over the view.</p>"),
+		""
+	},
+
 	// SW_PART_RESET_PIVOT_POINT
 	{
 		QT_TRANSLATE_NOOP("Action", "Part.ResetPivotPoint"),

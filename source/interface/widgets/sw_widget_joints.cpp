@@ -250,6 +250,19 @@ void swJointsWidget::TreeMenuRequested(const QPoint& Position)
 		gMainWindow->mActions[Chosen == MoveAction ? SW_PART_JOINT_MOVE : SW_PART_JOINT_ROTATE]->trigger();
 }
 
+// the joint picked in the list
+bool swJointsWidget::OpenCurrentJoint()
+{
+	const QTreeWidgetItem* Item = mTree->currentItem();
+	const int Index = Item ? Item->data(0, Qt::UserRole + 1).toInt() : -1;
+
+	if (Index < 0)
+		return false;
+
+	SelectJoint(Item->data(0, Qt::UserRole).toString(), Index, std::max(Item->data(0, Qt::UserRole + 2).toInt(), 0));
+	return true;
+}
+
 // use to refresh the tree, poses and joint
 void swJointsWidget::UpdateJoint()
 {

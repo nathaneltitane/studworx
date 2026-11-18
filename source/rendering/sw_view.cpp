@@ -463,6 +463,44 @@ void swView::EndJointFocus()
 	gMainWindow->SetTool(swTool::Select);
 }
 
+// joint mode from its key
+bool swView::ToggleJointMode()
+{
+	swModel* ActiveModel = GetActiveModel();
+
+	if (ActiveModel->IsJointFocused())
+	{
+		EndJointFocus();
+		return true;
+	}
+
+	// the selected submodel first
+	if (const swPart* Part = ActiveModel->GetJointPart(); Part && Part->HasJoints())
+	{
+		mJointReturnPath = mSubmodelEditingPath;
+		mJointReturn = true;
+		mJointSeen = true;
+		ActiveModel->SetJointFocus();
+		ActiveModel->UpdateInterface();
+		UpdateAllViews();
+		return true;
+	}
+
+	// else the closest jointed submodel around
+	for (size_t Depth = mSubmodelEditingPath.size(); Depth > 0; Depth--)
+	{
+		if (!mSubmodelEditingPath[Depth - 1]->HasJoints())
+			continue;
+
+		mJointReturnPath = mSubmodelEditingPath;
+		mJointReturn = true;
+		SetJointPathDepth(Depth);
+		return true;
+	}
+
+	return false;
+}
+
 // select the entry of a model on the joint path
 void swView::SetJointPathDepth(size_t Index)
 {

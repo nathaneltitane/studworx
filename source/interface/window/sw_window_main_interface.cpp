@@ -529,7 +529,17 @@ void swMainWindow::CreateMenus()
 	PartMenu->addSeparator();
 	QMenu* JointMenu = PartMenu->addMenu(tr("&Joint"));
 	JointMenu->setObjectName("Joint");
+	JointMenu->addAction(mActions[SW_PART_JOINT_MODE]);
+	JointMenu->addAction(mActions[SW_PART_JOINT_MODE_END]);
+	JointMenu->addSeparator();
 	JointMenu->addAction(mActions[SW_PART_SET_JOINT]);
+
+	// joint mode starts after the selection
+	connect(JointMenu, &QMenu::aboutToShow, this, [this]()
+	{
+		const swModel* ActiveModel = GetActiveModel();
+		mActions[SW_PART_JOINT_MODE_END]->setEnabled(ActiveModel && ActiveModel->IsJointFocused());
+	});
 	JointMenu->addAction(mActions[SW_PART_JOINT_MOVE]);
 	JointMenu->addAction(mActions[SW_PART_JOINT_ROTATE]);
 	QMenu* GroupMenu = PartMenu->addMenu(tr("&Group"));

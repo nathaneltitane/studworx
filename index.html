@@ -780,6 +780,7 @@
 				<li><b>Joint Move and Rotate.</b> Move and rotate a joint with the usual gizmos and keys instead of the Joints tool. Parts grouped with the jointed submodel turn along with it, like an arm grouped with its shoulder. A hinge only turns one way, so the other rings show grey; hold Ctrl to light them up and turn the whole piece around the joint. A bar over the view shows <a href="#where">where</a> the joint sits in the model and takes you back out when you&#x27;re done.</li>
 				<li><b>Set Joint.</b> Turn a submodel into something that moves, like a minifigure arm or a hinged door: pick the connection it turns on, and StudWorx makes a hinge on a round shape or a ball on a sphere, or a hinge on the part&#x27;s center when the part has no connection data. A submodel can have several joints, each listed in the Joints panel and saved in the model file.</li>
 				<li><b>Joints from the shadow library.</b> Joints and connections come from the shape data of the LDCad shadow library: round shapes become hinges and spheres become balls, and clips and hinge fingers connect too. Square and round box shapes don&#x27;t connect yet.</li>
+				<li><b>Joint Mode.</b> Press J to work on the joint of the selected submodel, or of the submodel around the selected part, and press J again to leave. It&#x27;s also in the right-click menu under Joint, next to End Joint Mode.</li>
 				<li><b>Joints tool.</b> Grab a jointed submodel and drag to turn it: a hinge turns about its axis, a ball any way. The parts holding joints are outlined in red, and each drag is one undo step.</li>
 				<li><b>Poses panel.</b> Save the joint angles of a model as a named pose, like sitting or waving, and bring them back in one step. Poses are saved in the model&#x27;s own file.</li>
 				<li><b>Joints panel.</b> Every model with joints in a tree, down to each joint with its type and angle. Click a joint to work on it, or a model to see its poses.</li>
@@ -1935,7 +1936,7 @@
 				<h2>WHERE IS IT? // EVERY COMMAND AND ITS MENU</h2>
 			</header>
 
-			<p class="lead">Where to find each of the 394 commands: the menu bar, the <a href="#toolbars">toolbars</a>, the panel gear buttons and every right click menu, with its shortcut. Type part of a command name to find it.</p>
+			<p class="lead">Where to find each of the 396 commands: the menu bar, the <a href="#toolbars">toolbars</a>, the panel gear buttons and every right click menu, with its shortcut. Type part of a command name to find it.</p>
 
 			<div class="search-tools">
 				<input id="menus-search" class="search" type="search" placeholder="Search commands" aria-label="Search commands">
@@ -1950,7 +1951,7 @@
 				<h2>HELP // EVERY &quot;WHAT&#x27;S THIS?&quot; ENTRY</h2>
 			</header>
 
-			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 465 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
+			<p class="lead">The same help the app shows from Help &gt; &quot;What&#x27;s This?&quot;, the title bar question mark or F1: 467 entries for every menu command, panel and dialog. Search them, or pick an area.</p>
 
 			<div class="search-tools">
 				<input id="search" type="search" placeholder="Search help" aria-label="Search help">
@@ -2032,10 +2033,20 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p class="lead">The latest release notices from the StudWorx repository.</p>
 
 			<details open>
+				<summary>2026-11-18</summary>
+
+				<ul>
+					<li>Joints: J goes into joint mode on the selected submodel, or the jointed submodel around the selected part, and J again leaves it; Joint Mode and End Joint Mode are in Part &gt; Joint and the right-click menu</li>
+					<li>Joints: right-clicking in joint mode keeps the joint, so End Joint Mode works from the right-click menu</li>
+				</ul>
+			</details>
+
+			<details>
 				<summary>2026-11-17</summary>
 
 				<ul>
-					<li>Joints: in joint mode, the hinge&#x27;s locked rotate rings show grey, and holding Ctrl lights them and lets them turn the whole submodel around the joint</li>
+					<li><a href="#preferences">Preferences</a>: a Deactivated color with alpha under <a href="#interface">Interface</a> &gt; Objects, always a grey shade, for locked or unavailable items</li>
+					<li>Joints: in joint mode, the hinge&#x27;s locked rotate rings show in the Deactivated color, and holding Ctrl lights them and lets them turn the whole submodel around the joint</li>
 					<li>Joints: parts grouped with a jointed submodel turn along with its joint, from the gizmo, the keys and the Joints tool</li>
 					<li>Shortcuts: Shift+I switches to Default Lights shading by default</li>
 					<li>Joints: in joint mode the Move and Rotate tools and their shortcuts act on the joint, like Move Joint and Rotate Joint</li>
@@ -2061,7 +2072,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Site: the Properties <a href="#image">image</a> is retaken to show the new group order, folded</li>
 					<li>Site: the bill of materials image is retaken to show the part IDs</li>
 					<li>Translations: the new highlight and final model settings read right in all nine languages</li>
-					<li>Site: the Instructions, <a href="#rendering">Rendering</a>, Views and <a href="#interface">Interface</a> images are retaken to show the panel fold arrows and the new instructions settings, and the Instructions features name Step Flow, the final model, dividers, Model Size, Highlight Width, text <a href="#files">files</a> and Undo and Redo</li>
+					<li>Site: the Instructions, <a href="#rendering">Rendering</a>, Views and Interface images are retaken to show the panel fold arrows and the new instructions settings, and the Instructions features name Step Flow, the final model, dividers, Model Size, Highlight Width, text <a href="#files">files</a> and Undo and Redo</li>
 					<li>Site: the POV-Ray and Blender Render images show the full output path the windows fill in</li>
 					<li>Site: the page notes in SITE.md use plain Markdown comments, and the README says TL:DR</li>
 				</ul>
@@ -2084,7 +2095,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Instructions: new part outlines follow only what can be seen, no more lines from parts hidden inside or behind others</li>
 					<li>Instructions: Page Background shows its own color on submodel pages instead of the Submodel Background</li>
 					<li>Instructions: Parts List and Notice backgrounds start transparent, like the other boxes and images</li>
-					<li><a href="#preferences">Preferences</a>: the Get Key button widens to show its whole label in longer languages</li>
+					<li>Preferences: the Get Key button widens to show its whole label in longer languages</li>
 					<li>Translations: every machine-translated line in all nine languages was checked, and about 2,900 wrong ones now read right, like Close that read as near, Light as pale and Stud as earring</li>
 					<li>Translations: Traditional Chinese uses Taiwan words, like 匯入 and 匯出 for import and export</li>
 					<li>Instructions: Step Flow in Steps per Page fills pages row by row or column by column, picked by you instead of by the page shape</li>
@@ -2165,41 +2176,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Samples: every sample has a title, and its name line matches its file name, so instructions cover pages show the title instead of New Model.ldr</li>
 					<li>File: Missing and Moved Parts reopens the list of missing and renumbered parts after its warning was closed, without reopening the model</li>
 					<li>Site: feature descriptions rewritten in plain words, saying what each feature does instead of listing its commands, now that the command index names them</li>
-				</ul>
-			</details>
-
-			<details>
-				<summary>2026-11-12</summary>
-
-				<ul>
-					<li>Views: the X, Y and Z axis lines draw on their own, the Grid Origin Lines setting is gone, and the negative Z line shows only once parts go below the base grid</li>
-					<li>Views: the base grid starts at 2 × 2 studs and the height grids one brick high, and they grow past the parts by a Grid Margin in studs and a Height Margin in plates</li>
-					<li>Views: Split Horizontal, Split Vertical and Remove View no longer crash when the model view doesn&#x27;t have keyboard focus</li>
-					<li>Preferences: Rendering, Views and Interface sort their settings into clearer groups, the colors move to Interface, and color alpha is set in the color picker</li>
-					<li>Explode: the X, Y and Z spreads are multiples from 1.0 to 10.0 instead of percentages, and Explode is greyed out while every spread is 1.0</li>
-					<li>Keyframes: panel buttons are painted in the color theme and run the same commands as the Time toolbar, which gains Set Keys, Remove Keys, Play and Stop</li>
-					<li>Timeline: steps with animation keys list a Keys row per keyed object, and clicking an object in Keyframes or Timeline selects it in the model view</li>
-					<li>Samples: sample-train-tracks.ldr, an S-curve of 9V curved track joined at its train track connections</li>
-					<li>POV-Ray: the POV-Ray path shows in Preferences on Windows and macOS too, so any POV-Ray 3.7 console can replace the bundled one, which stays the fallback, and starts at the bundled console there in place of the Linux path</li>
-					<li>POV-Ray: Windows builds bundle a 64 bit POV-Ray console in place of the 32 bit one</li>
-					<li>POV-Ray: Focal Blur in the Image panel turns the depth of field on or off at any quality, off by default, where High quality always used it, and render presets keep it</li>
-					<li>POV-Ray: Region shows a faded view of the model from the render camera and step until the first render, so the region can be drawn on the model</li>
-					<li>POV-Ray: a Region render keeps only the region, over the faded view of the model, where it was placed into an older image of the same file</li>
-					<li>POV-Ray: Region draws a square with Ctrl held, resizes from its edges and corners, moves when dragged from inside, and is drawn anew when dragged from outside</li>
-					<li>POV-Ray: Editor beside Log shows the scene file with syntax colors, renders your edits when Render using this configuration instead of the model configuration is ticked, greys out the settings it ignores, writes the scene again with Reset, opens a scene file with Open and saves a copy with Save As</li>
-					<li>POV-Ray: the render window is a normal window with minimize and maximize like the Instructions window, and its buttons read Editor, Render, Log</li>
-					<li>Render and Instructions windows: panels use the main window title bar with Float and Close, follow Lock Interface and reopen from the right-click panel list, where the Render panel stays greyed out as the one that never closes</li>
-					<li>Preferences: Download beside Part Connections and LGEO Library fetches the LDCad shadow library and the LGEO library from GitHub into the folder named there or the StudWorx data folder, with a download icon that turns into Update with the refresh icon once the library is there, and Use Part Connections moves to the second row of the Editing group of General, greying out the Part Connections path while off, and the window is a normal window with the window manager buttons like Instructions</li>
-					<li>Connection Points: with Part Connections on, the part under the pointer shows its connection points within a 2x2 stud area, as stud sized cylinders standing out of each opening, filled for male and hollow for female, only where they face the camera, and clips, hinge fingers and balls filled at their own size, all drawn over the parts, toggled under Steps and Highlighting in the view gear menu, with its color in Preferences</li>
-					<li>Connection Points: no longer crash the program with NVIDIA graphics on Windows</li>
-					<li>Snap to Connections: with Part Connections on, a part dragged or inserted over another part seats on the matching stud, anti stud, hole, axle, bar, clip, ball socket or hinge finger nearest the pointer, turning onto side studs and other sideways connections, turned in quarter turns to fit, balls keeping the part&#x27;s turn and hinge fingers meshing with the gaps of the other side, exactly on the seat even when the part keeps its turn, Alt moves freely, and Joint on Snap sets a hinge joint where a dragged submodel snaps on a single round axis, both in the Movement Snap menu of the toolbar and the Edit menu</li>
-					<li>Flex Path: dragged hose and cable ends seat on the connection nearest the pointer like loose parts, without waiting for the grid, and end connectors show their connection points and take parts snapped onto them</li>
-					<li>Flex Path: the control point cube at a free end rests on the base of its end connector like a seated one, only its color telling free from seated</li>
-					<li>Blender Render: opens as a normal window like POV-Ray Render and Instructions, maximized, with the window manager buttons, and stays open beside the model</li>
-					<li>Edit menu: Movement Snap and Rotation Snap follow Transform, the same menus as the toolbar buttons, so snapping is set without the Standard toolbar shown</li>
-					<li>Train track: the end gizmo is half again as big, and the add marker past an open end is a solid ghost track piece sized on the connection cube, a cube&#x27;s width away from it</li>
-					<li>Views: inserting parts into a new model no longer zooms the camera onto them, while views still fit an opened model as its parts load</li>
-					<li>Render: the Log panel shows renderer progress on one line updated in place, as in a terminal, instead of running every update together</li>
 				</ul>
 			</details>
 
@@ -2677,6 +2653,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Part Menu","title":"Set Joint","paragraphs":["Select one submodel, choose Part > Joint > Set Joint, also in the right-click menu of the model view, then click one of its connections with the Set Joint pointer, which outlines the part under it in red. The click sets the joint and goes back to the Select tool in joint mode on the new joint. Set Joint again at another connection adds a joint, and Set Joint at a joint already there resets it. A round connection makes a hinge on its axis and a sphere makes a ball. A part without shadow data gets a hinge on its origin. The joint shows in the Joints panel and setting it can be undone."]},
 				{"group":"Part Menu","title":"Joint Move","paragraphs":["With one submodel with a joint selected, switches to the Move tool with the gizmo on the pivot of the picked joint, outlined by a red hexagon. Selecting something else goes back to the pivot point."]},
 				{"group":"Part Menu","title":"Joint Rotate","paragraphs":["With one submodel with a joint selected, switches to the Rotate tool with the gizmo on the pivot of the picked joint, outlined in red, and the rotate keys and the Rotate tool turn the joint around its own pivot and axis. A hinge only turns about its axis. Selecting something else goes back to the pivot point. Use Joint Rotation in the preferences does this whenever a selected submodel has a joint."]},
+				{"group":"Part Menu","title":"Joint Mode","paragraphs":["Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel. Press it again to leave joint mode."]},
+				{"group":"Part Menu","title":"End Joint Mode","paragraphs":["Leaves joint mode and goes back to the model you were in before, the same as the way back on the bar over the view."]},
 				{"group":"Part Menu","title":"Reset Pivot Point","paragraphs":["Put the pivot point of each selected part back at its origin."]},
 				{"group":"Part Menu","title":"Remove Keyframes","paragraphs":["Remove every animation key from the selected parts, lights and cameras."]},
 				{"group":"Part Menu","title":"Insert Control Point","paragraphs":["Add a control point to the selected flexible part, where it bends."]},
@@ -2920,6 +2898,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"command":"Array","shortcut":"","paths":["Part"]},
 				{"command":"Reset Pivot Point","shortcut":"Ctrl+#","paths":["Part"]},
 				{"command":"Remove Keyframes","shortcut":"","paths":["Part"]},
+				{"command":"Joint Mode","shortcut":"J","paths":["Part > Joint","Right click the model view > Joint"]},
+				{"command":"End Joint Mode","shortcut":"","paths":["Part > Joint","Right click the model view > Joint"]},
 				{"command":"Set Joint","shortcut":"","paths":["Part > Joint","Right click the model view > Joint"]},
 				{"command":"Move Joint","shortcut":"","paths":["Part > Joint","Right click the model view > Joint","Right click Joints panel"]},
 				{"command":"Rotate Joint","shortcut":"","paths":["Part > Joint","Right click the model view > Joint","Right click Joints panel"]},

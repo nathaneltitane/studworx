@@ -1,6 +1,14 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-18</summary>
+
+  - Joints: J goes into joint mode on the selected submodel, or the jointed submodel around the selected part, and J again leaves it; Joint Mode and End Joint Mode are in Part > Joint and the right-click menu
+  - Joints: right-clicking in joint mode keeps the joint, so End Joint Mode works from the right-click menu
+
+  </details>
+
+  <details>
   <summary>2026-11-17</summary>
 
   - Preferences: a Deactivated color with alpha under Interface > Objects, always a grey shade, for locked or unavailable items

@@ -32,6 +32,7 @@
 #include "sw_model_history.h"
 #include "sw_widget_spinner.h"
 #include "sw_widget_keyframes.h"
+#include "sw_widget_joints.h"
 
 #if SW_ENABLE_GAMEPAD
 #include <QtGamepad/QGamepad>
@@ -1005,6 +1006,16 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 	case SW_PART_FLATTEN_MODEL:
 		if (ActiveModel)
 			ActiveModel->FlattenModel();
+		break;
+
+	case SW_PART_JOINT_MODE:
+		if (ActiveView && !ActiveView->ToggleJointMode() && !(mJointsWidget && mJointsWidget->OpenCurrentJoint()))
+			statusBar()->showMessage(tr("No joint here"), 3000);
+		break;
+
+	case SW_PART_JOINT_MODE_END:
+		if (ActiveView && ActiveModel && ActiveModel->IsJointFocused())
+			ActiveView->EndJointFocus();
 		break;
 
 	case SW_PART_EDIT_END_SUBMODEL:

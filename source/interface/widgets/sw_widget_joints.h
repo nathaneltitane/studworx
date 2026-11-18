@@ -10,6 +10,7 @@ public:
 	swJointsWidget(QWidget* Parent);
 
 	void UpdateJoint();
+	bool OpenCurrentJoint();
 	swModel* GetPoseModel() const;
 
 signals:

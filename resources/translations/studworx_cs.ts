@@ -1493,126 +1493,136 @@
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2598"/>
+        <source>Part.JointMode</source>
+        <translation>Díl.Režim kloubu</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2607"/>
+        <source>Part.JointModeEnd</source>
+        <translation>Díl.Ukončit režim kloubu</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2616"/>
         <source>Part.ResetPivotPoint</source>
         <translation>Díl.Vynulovat bod otáčení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2607"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2625"/>
         <source>Part.RemoveKeyFrames</source>
         <translation>Díl.Odebrat klíčové snímky</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2616"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2634"/>
         <source>Part.ControlPoint.Insert</source>
         <translation>Díl.Kontrolní bod.Vložit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2625"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2643"/>
         <source>Part.ControlPoint.Remove</source>
         <translation>Díl.Kontrolní bod.Odebrat</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2634"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2652"/>
         <source>Part.ControlPoint.Tangent</source>
         <translation>Díl.Kontrolní bod.Zamknout tečnu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2643"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2661"/>
         <source>Part.ControlPoint.AlignTangent</source>
         <translation>Díl.Kontrolní bod.Zarovnat k tečně</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2652"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2670"/>
         <source>Part.ControlPoint.AlignX</source>
         <translation>Díl.Kontrolní bod.Zarovnat k ose X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2661"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2679"/>
         <source>Part.ControlPoint.AlignY</source>
         <translation>Díl.Kontrolní bod.Zarovnat k ose Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2670"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2688"/>
         <source>Part.ControlPoint.AlignZ</source>
         <translation>Díl.Kontrolní bod.Zarovnat k ose Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2679"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2697"/>
         <source>Part.TrainTrack.FocusNext</source>
         <translation>Díl.Vlaková kolej.Zaměřit další</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2688"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2706"/>
         <source>Part.TrainTrack.FocusPrevious</source>
         <translation>Díl.Vlaková kolej.Zaměřit předchozí</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2697"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2715"/>
         <source>Part.TrainTrack.Rotate</source>
         <translation>Díl.Vlaková kolej.Otočit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2706"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2724"/>
         <source>Part.Move.PlusX</source>
         <translation>Díl.Posuny.PlusX</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2715"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2733"/>
         <source>Part.Move.MinusX</source>
         <translation>Díl.Posuny.MinusX</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2724"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2742"/>
         <source>Part.Move.PlusY</source>
         <translation>Díl.Posuny.PlusY</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2733"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2751"/>
         <source>Part.Move.MinusY</source>
         <translation>Díl.Posuny.MinusY</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2742"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2760"/>
         <source>Part.Move.PlusZ</source>
         <translation>Díl.Posuny.PlusZ</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2751"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2769"/>
         <source>Part.Move.MinusZ</source>
         <translation>Díl.Posuny.MinusZ</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2760"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2778"/>
         <source>Part.Rotate.PlusX</source>
         <translation>Díl.Otočení.PlusX</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2769"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2787"/>
         <source>Part.Rotate.MinusX</source>
         <translation>Díl.Otočení.MinusX</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2778"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2796"/>
         <source>Part.Rotate.PlusY</source>
         <translation>Díl.Otočení.PlusY</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2787"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2805"/>
         <source>Part.Rotate.MinusY</source>
         <translation>Díl.Otočení.MinusY</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2796"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2814"/>
         <source>Part.Rotate.PlusZ</source>
         <translation>Díl.Otočení.PlusZ</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2805"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2823"/>
         <source>Part.Rotate.MinusZ</source>
         <translation>Díl.Otočení.MinusZ</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2814"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2832"/>
         <source>Part.MinifigureBuilder</source>
         <translation>Díl.Tvůrce minifigurek</translation>
     </message>
@@ -1621,322 +1631,322 @@
         <translation type="vanished">Dílek.Průvodce Minifig</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2823"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2841"/>
         <source>Part.Array</source>
         <translation>Díl.Pole</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2832"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2850"/>
         <source>Part.ViewSelectedModel</source>
         <translation>Díl.Zobrazit vybraný model</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2841"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2859"/>
         <source>Part.MoveSelectionToModel</source>
         <translation>Díl.Přesunout výběr do modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2850"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2868"/>
         <source>Part.InlineSelectedModels</source>
         <translation>Díl.Rozbalit vybrané modely</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2859"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2877"/>
         <source>Part.FlattenModel</source>
         <translation>Díl.Zploštit model</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2868"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2886"/>
         <source>Part.EditSelectedSubmodel</source>
         <translation>Díl.Upravit vybraný podmodel</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2877"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2895"/>
         <source>Part.EditEndSubmodel</source>
         <translation>Díl.Upravit koncový podmodel</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2886"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2904"/>
         <source>Part.Group</source>
         <translation>Díl.Seskupit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2895"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2913"/>
         <source>Part.Ungroup</source>
         <translation>Díl.Zrušit seskupení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2904"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2922"/>
         <source>Part.GroupAdd</source>
         <translation>Díl.Přidat skupinu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2913"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2931"/>
         <source>Part.GroupRemove</source>
         <translation>Díl.Odebrat ze skupiny</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2922"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2940"/>
         <source>Part.GroupEdit</source>
         <translation>Díl.Upravit skupinu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2931"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2949"/>
         <source>Part.HideSelected</source>
         <translation>Díl.Skrýt vybrané</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2940"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2958"/>
         <source>Part.HideUnselected</source>
         <translation>Díl.Skrýt nevybrané</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2949"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2967"/>
         <source>Part.UnhideSelected</source>
         <translation>Díl.Zobrazit vybrané</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2958"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2976"/>
         <source>Part.UnhideAll</source>
         <translation>Díl.Zobrazit vše</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2967"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2985"/>
         <source>Part.ShowEarlier</source>
         <translation>Díl.Zobrazit dříve</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2976"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2994"/>
         <source>Part.ShowLater</source>
         <translation>Díl.Zobrazit později</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2985"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3003"/>
         <source>Model.New</source>
         <translation>Model.Nový</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2994"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3012"/>
         <source>Model.Properties</source>
         <translation>Model.Vlastnosti</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3003"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3021"/>
         <source>Model.List</source>
         <translation>Model.Seznam</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3012"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3030"/>
         <source>Model.Model01</source>
         <translation>Model.Model01</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3021"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3039"/>
         <source>Model.Model02</source>
         <translation>Model.Model02</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3030"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3048"/>
         <source>Model.Model03</source>
         <translation>Model.Model03</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3039"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3057"/>
         <source>Model.Model04</source>
         <translation>Model.Model04</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3048"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3066"/>
         <source>Model.Model05</source>
         <translation>Model.Model05</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3057"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3075"/>
         <source>Model.Model06</source>
         <translation>Model.Model06</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3066"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3084"/>
         <source>Model.Model07</source>
         <translation>Model.Model07</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3075"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3093"/>
         <source>Model.Model08</source>
         <translation>Model.Model08</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3084"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3102"/>
         <source>Model.Model09</source>
         <translation>Model.Model09</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3093"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3111"/>
         <source>Model.Model10</source>
         <translation>Model.Model10</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3102"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3120"/>
         <source>Model.Model11</source>
         <translation>Model.Model11</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3111"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3129"/>
         <source>Model.Model12</source>
         <translation>Model.Model12</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3120"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3138"/>
         <source>Model.Model13</source>
         <translation>Model.Model13</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3129"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3147"/>
         <source>Model.Model14</source>
         <translation>Model.Model14</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3138"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3156"/>
         <source>Model.Model15</source>
         <translation>Model.Model15</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3147"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3165"/>
         <source>Model.Model16</source>
         <translation>Model.Model16</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3156"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3174"/>
         <source>Model.Model17</source>
         <translation>Model.Model17</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3165"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3183"/>
         <source>Model.Model18</source>
         <translation>Model.Model18</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3174"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3192"/>
         <source>Model.Model19</source>
         <translation>Model.Model19</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3183"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3201"/>
         <source>Model.Model20</source>
         <translation>Model.Model20</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3192"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3210"/>
         <source>Model.Model21</source>
         <translation>Model.Model21</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3201"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3219"/>
         <source>Model.Model22</source>
         <translation>Model.Model22</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3210"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3228"/>
         <source>Model.Model23</source>
         <translation>Model.Model23</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3219"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3237"/>
         <source>Model.Model24</source>
         <translation>Model.Model24</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3228"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3246"/>
         <source>Model.Model25</source>
         <translation>Model.Model25</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3237"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3255"/>
         <source>Model.Model26</source>
         <translation>Model.Model26</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3246"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3264"/>
         <source>Model.Model27</source>
         <translation>Model.Model27</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3255"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3273"/>
         <source>Model.Model28</source>
         <translation>Model.Model28</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3264"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3282"/>
         <source>Model.Model29</source>
         <translation>Model.Model29</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3273"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3291"/>
         <source>Model.Model30</source>
         <translation>Model.Model30</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3282"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3300"/>
         <source>Model.Model31</source>
         <translation>Model.Model31</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3291"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3309"/>
         <source>Model.Model32</source>
         <translation>Model.Model32</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3300"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3318"/>
         <source>Model.Model33</source>
         <translation>Model.Model33</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3309"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3327"/>
         <source>Model.Model34</source>
         <translation>Model.Model34</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3318"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3336"/>
         <source>Model.Model35</source>
         <translation>Model.Model35</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3327"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3345"/>
         <source>Model.Model36</source>
         <translation>Model.Model36</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3336"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3354"/>
         <source>Model.Model37</source>
         <translation>Model.Model37</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3345"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3363"/>
         <source>Model.Model38</source>
         <translation>Model.Model38</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3354"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3372"/>
         <source>Model.Model39</source>
         <translation>Model.Model39</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3363"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3381"/>
         <source>Model.Model40</source>
         <translation>Model.Model40</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3372"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3390"/>
         <source>Help.WhatsThis</source>
         <translation>Nápověda.Co je toto</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3381"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3399"/>
         <source>Help.HomePage</source>
         <translation>Nápověda.Domovská stránka</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3390"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3408"/>
         <source>Help.BugReport</source>
         <translation>Nápověda.Nahlásit chyby</translation>
     </message>
@@ -1945,7 +1955,7 @@
         <translation type="vanished">Nápověda.Aktualizace</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3399"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3417"/>
         <source>Help.About</source>
         <translation>Nápověda.O aplikaci</translation>
     </message>
@@ -2104,97 +2114,97 @@
 <context>
     <name>ContextMenu</name>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3501"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3519"/>
         <source>Submodel</source>
         <translation>Podmodel</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3502"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3520"/>
         <source>Control Points</source>
         <translation>Kontrolní body</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3503"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3521"/>
         <source>Align to Axis</source>
         <translation>Zarovnat k ose</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3504"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3522"/>
         <source>View</source>
         <translation>Zobrazit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3536"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3554"/>
         <source>Import</source>
         <translation>Importovat</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3537"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3555"/>
         <source>Export</source>
         <translation>Exportovat</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3538"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3556"/>
         <source>Render</source>
         <translation>Vykreslit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3539"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3557"/>
         <source>Selection Mode</source>
         <translation>Režim výběru</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3540"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3558"/>
         <source>Transform</source>
         <translation>Transformace</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3541"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3559"/>
         <source>Tools</source>
         <translation>Nástroje</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3542"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3560"/>
         <source>Toolbars</source>
         <translation>Panely nástrojů</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3543"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3561"/>
         <source>Viewpoint</source>
         <translation>Pohled</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3544"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3562"/>
         <source>Cutaway</source>
         <translation>Řez</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3545"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3563"/>
         <source>Camera</source>
         <translation>Kamera</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3546"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3564"/>
         <source>Projection</source>
         <translation>Projekce</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3547"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3565"/>
         <source>Shading</source>
         <translation>Stínování</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3548"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3566"/>
         <source>Joint</source>
         <translation>Kloub</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3549"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3567"/>
         <source>Group</source>
         <translation>Skupina</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3550"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3568"/>
         <source>Visibility</source>
         <translation>Viditelnost</translation>
     </message>
@@ -3376,22 +3386,22 @@
         <translation>Zeslabit při pohybu a otáčení kloubu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2833"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2851"/>
         <source>Open Selected Submodel</source>
         <translation>Otevřít vybraný podmodel</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2842"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2860"/>
         <source>Move to New Submodel...</source>
         <translation>Přesunout do nového podmodelu...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2851"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2869"/>
         <source>Inline Selected Submodels</source>
         <translation>Rozbalit vybrané podmodely</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2860"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2878"/>
         <source>Flatten Submodels</source>
         <translation>Zploštit podmodely</translation>
     </message>
@@ -3700,247 +3710,257 @@
         <translation>&amp;Otočit kloub</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2635"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2599"/>
+        <source>Joint &amp;Mode</source>
+        <translation>Režim &amp;kloubu</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2608"/>
+        <source>&amp;End Joint Mode</source>
+        <translation>&amp;Ukončit režim kloubu</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2653"/>
         <source>Clamp Tangent</source>
         <translation>Zamknout tečnu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2644"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2662"/>
         <source>Align to Tangent</source>
         <translation>Zarovnat k tečně</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2653"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2671"/>
         <source>X Axis</source>
         <translation>Osa X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2662"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2680"/>
         <source>Y Axis</source>
         <translation>Osa Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2671"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2689"/>
         <source>Z Axis</source>
         <translation>Osa Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2995"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3013"/>
         <source>Proper&amp;ties...</source>
         <translation>Vlast&amp;nosti...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3013"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3031"/>
         <source>Submodel 1</source>
         <translation>Podmodel 1</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3022"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3040"/>
         <source>Submodel 2</source>
         <translation>Podmodel 2</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3031"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3049"/>
         <source>Submodel 3</source>
         <translation>Podmodel 3</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3040"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3058"/>
         <source>Submodel 4</source>
         <translation>Podmodel 4</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3049"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3067"/>
         <source>Submodel 5</source>
         <translation>Podmodel 5</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3058"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3076"/>
         <source>Submodel 6</source>
         <translation>Podmodel 6</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3067"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3085"/>
         <source>Submodel 7</source>
         <translation>Podmodel 7</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3076"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3094"/>
         <source>Submodel 8</source>
         <translation>Podmodel 8</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3085"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3103"/>
         <source>Submodel 9</source>
         <translation>Podmodel 9</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3094"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3112"/>
         <source>Submodel 10</source>
         <translation>Podmodel 10</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3103"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3121"/>
         <source>Submodel 11</source>
         <translation>Podmodel 11</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3112"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3130"/>
         <source>Submodel 12</source>
         <translation>Podmodel 12</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3121"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3139"/>
         <source>Submodel 13</source>
         <translation>Podmodel 13</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3130"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3148"/>
         <source>Submodel 14</source>
         <translation>Podmodel 14</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3139"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3157"/>
         <source>Submodel 15</source>
         <translation>Podmodel 15</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3148"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3166"/>
         <source>Submodel 16</source>
         <translation>Podmodel 16</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3157"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3175"/>
         <source>Submodel 17</source>
         <translation>Podmodel 17</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3166"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3184"/>
         <source>Submodel 18</source>
         <translation>Podmodel 18</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3175"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3193"/>
         <source>Submodel 19</source>
         <translation>Podmodel 19</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3184"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3202"/>
         <source>Submodel 20</source>
         <translation>Podmodel 20</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3193"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3211"/>
         <source>Submodel 21</source>
         <translation>Podmodel 21</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3202"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3220"/>
         <source>Submodel 22</source>
         <translation>Podmodel 22</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3211"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3229"/>
         <source>Submodel 23</source>
         <translation>Podmodel 23</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3220"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3238"/>
         <source>Submodel 24</source>
         <translation>Podmodel 24</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3229"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3247"/>
         <source>Submodel 25</source>
         <translation>Podmodel 25</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3238"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3256"/>
         <source>Submodel 26</source>
         <translation>Podmodel 26</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3247"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3265"/>
         <source>Submodel 27</source>
         <translation>Podmodel 27</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3256"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3274"/>
         <source>Submodel 28</source>
         <translation>Podmodel 28</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3265"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3283"/>
         <source>Submodel 29</source>
         <translation>Podmodel 29</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3274"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3292"/>
         <source>Submodel 30</source>
         <translation>Podmodel 30</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3283"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3301"/>
         <source>Submodel 31</source>
         <translation>Podmodel 31</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3292"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3310"/>
         <source>Submodel 32</source>
         <translation>Podmodel 32</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3301"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3319"/>
         <source>Submodel 33</source>
         <translation>Podmodel 33</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3310"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3328"/>
         <source>Submodel 34</source>
         <translation>Podmodel 34</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3319"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3337"/>
         <source>Submodel 35</source>
         <translation>Podmodel 35</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3328"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3346"/>
         <source>Submodel 36</source>
         <translation>Podmodel 36</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3337"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3355"/>
         <source>Submodel 37</source>
         <translation>Podmodel 37</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3346"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3364"/>
         <source>Submodel 38</source>
         <translation>Podmodel 38</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3355"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3373"/>
         <source>Submodel 39</source>
         <translation>Podmodel 39</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3364"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3382"/>
         <source>Submodel 40</source>
         <translation>Podmodel 40</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3373"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3391"/>
         <source>&amp;What&apos;s This?</source>
         <translation>&amp;Co je toto?</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3382"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3400"/>
         <source>&amp;Home Page</source>
         <translation>&amp;Domovská stránka</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3391"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3409"/>
         <source>Report a &amp;Bug</source>
         <translation>Nahlásit &amp;chybu</translation>
     </message>
@@ -3961,7 +3981,7 @@
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1449"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3427"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3445"/>
         <source>Delete Step</source>
         <translation>Odstranit krok</translation>
     </message>
@@ -4175,17 +4195,17 @@
         <translation>&amp;Obarvit vybrané</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2599"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2617"/>
         <source>Reset &amp;Pivot Point</source>
         <translation>Vynulovat &amp;bod otáčení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2608"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2626"/>
         <source>Remove &amp;Keyframes</source>
         <translation>Odebrat &amp;klíčové snímky</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2815"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2833"/>
         <source>&amp;Minifigure Builder</source>
         <translation>&amp;Tvůrce minifigurek</translation>
     </message>
@@ -4194,87 +4214,87 @@
         <translation type="vanished">Odstranit &amp;klíčové snímky</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2617"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2635"/>
         <source>Insert Control Point</source>
         <translation>Vložit kontrolní bod</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2626"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2644"/>
         <source>Remove Control Point</source>
         <translation>Odebrat kontrolní bod</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2680"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2698"/>
         <source>Focus Next Connection</source>
         <translation>Zaostřit další spojení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2689"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2707"/>
         <source>Focus Previous Connection</source>
         <translation>Zaostřit předchozí spojení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2698"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2716"/>
         <source>Rotate Train Track</source>
         <translation>Otočit vlakovou trať</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2707"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2725"/>
         <source>Move +X</source>
         <translation>Přesunout +X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2716"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2734"/>
         <source>Move -X</source>
         <translation>Přesunout -X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2725"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2743"/>
         <source>Move +Y</source>
         <translation>Přesunout +Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2734"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2752"/>
         <source>Move -Y</source>
         <translation>Přesunout -Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2743"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2761"/>
         <source>Move +Z</source>
         <translation>Přesunout +Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2752"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2770"/>
         <source>Move -Z</source>
         <translation>Přesunout -Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2761"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2779"/>
         <source>Rotate +X</source>
         <translation>Otočit +X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2770"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2788"/>
         <source>Rotate -X</source>
         <translation>Otočit -X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2779"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2797"/>
         <source>Rotate +Y</source>
         <translation>Otočit +Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2788"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2806"/>
         <source>Rotate -Y</source>
         <translation>Otočit -Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2797"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2815"/>
         <source>Rotate +Z</source>
         <translation>Otočit +Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2806"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2824"/>
         <source>Rotate -Z</source>
         <translation>Otočit -Z</translation>
     </message>
@@ -4283,7 +4303,7 @@
         <translation type="vanished">Průvodce &amp;Minifig...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2824"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2842"/>
         <source>A&amp;rray...</source>
         <translation>Po&amp;le...</translation>
     </message>
@@ -4300,73 +4320,73 @@
         <translation type="vanished">Vložit vybrané modely</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2869"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2887"/>
         <source>Edit Selected Submodel</source>
         <translation>Upravit vybraný podmodel</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2878"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2896"/>
         <source>End Submodel Editing</source>
         <translation>Ukončit úpravy podmodelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2887"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2905"/>
         <source>&amp;Group...</source>
         <translatorcomment>TODO - možná seskupit</translatorcomment>
         <translation>&amp;Seskupit...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2896"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2914"/>
         <source>&amp;Ungroup</source>
         <translation>&amp;Zrušit seskupení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2905"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2923"/>
         <source>&amp;Add to Group</source>
         <translation>&amp;Přidat do skupiny</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2914"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2932"/>
         <source>Re&amp;move from Group</source>
         <translation>&amp;Odebrat ze skupiny</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2923"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2941"/>
         <source>&amp;Edit Groups...</source>
         <translation>&amp;Upravit skupiny...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2932"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2950"/>
         <source>&amp;Hide Selected</source>
         <translation>&amp;Skrýt vybrané</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2941"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2959"/>
         <source>Hide &amp;Unselected</source>
         <translation>Skrýt &amp;nevybrané</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2950"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2968"/>
         <source>&amp;Unhide Selected</source>
         <translation>&amp;Zobrazit vybrané</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2959"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2977"/>
         <source>U&amp;nhide All</source>
         <translation>Zobrazit &amp;vše</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2968"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2986"/>
         <source>Show Earlier</source>
         <translation>Zobrazit dříve</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2977"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2995"/>
         <source>Show Later</source>
         <translation>Zobrazit později</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2986"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3004"/>
         <source>New Submodel...</source>
         <translation>Nový podmodel...</translation>
     </message>
@@ -4375,7 +4395,7 @@
         <translation type="vanished">Vlastno&amp;sti...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3004"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3022"/>
         <source>Submodels...</source>
         <translation>Podmodely...</translation>
     </message>
@@ -4558,37 +4578,37 @@
         <translation type="vanished">Zkontrolovat akt&amp;ualizace...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3400"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3418"/>
         <source>&amp;About...</source>
         <translation>&amp;O aplikaci...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3409"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3427"/>
         <source>Insert Step Before</source>
         <translation>Vložit krok před</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3418"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3436"/>
         <source>Insert Step After</source>
         <translation>Vložit krok za</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3436"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3454"/>
         <source>Move Selection Here</source>
         <translation>Přesunout výběr sem</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3445"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3463"/>
         <source>Move Selection Before</source>
         <translation>Přesunout výběr před</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3454"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3472"/>
         <source>Move Selection After</source>
         <translation>Přesunout výběr za</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3463"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3481"/>
         <source>Set Current Step</source>
         <translation>Nastavit aktuální krok</translation>
     </message>
@@ -4596,61 +4616,61 @@
 <context>
     <name>Mouse</name>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3474"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3492"/>
         <source>NewPart</source>
         <translatorcomment>TODO</translatorcomment>
         <translation>Nový díl</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3475"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3493"/>
         <source>NewPointLight</source>
         <translatorcomment>TODO</translatorcomment>
         <translation>Nové bodové světlo</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3476"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3494"/>
         <source>NewSpotLight</source>
         <translatorcomment>TODO</translatorcomment>
         <translation>Nový zdroj osvětlení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3477"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3495"/>
         <source>NewDirectionalLight</source>
         <translation>Nové směrové světlo</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3478"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3496"/>
         <source>NewAreaLight</source>
         <translation>Nové plošné světlo</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3479"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3497"/>
         <source>NewCamera</source>
         <translatorcomment>TODO</translatorcomment>
         <translation>Nová kamera</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3480"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3498"/>
         <source>Select</source>
         <translation>Vybrat</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3481"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3499"/>
         <source>Move</source>
         <translation>Přesunout</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3482"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3500"/>
         <source>Rotate</source>
         <translation>Otočit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3483"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3501"/>
         <source>Erase</source>
         <translation>Mazání</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3485"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3503"/>
         <source>Joints</source>
         <translation>Klouby</translation>
     </message>
@@ -4659,38 +4679,38 @@
         <translation type="vanished">Odstranit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3484"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3502"/>
         <source>Paint</source>
         <translation>Malování</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3486"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3504"/>
         <source>ColorPicker</source>
         <translation>Výběr barvy</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3487"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3505"/>
         <source>Zoom</source>
         <translatorcomment>Lupa</translatorcomment>
         <translation>Zvětšit</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3488"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3506"/>
         <source>Pan</source>
         <translation>Posouvat</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3489"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3507"/>
         <source>Orbit</source>
         <translation>Otáčení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3490"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3508"/>
         <source>Roll</source>
         <translation>Přetočení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3491"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3509"/>
         <source>ZoomRegion</source>
         <translatorcomment>TODO</translatorcomment>
         <translation>Oblast zvětšení</translation>
@@ -7191,13 +7211,13 @@ Formát souboru není rozpoznán.</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1432"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3410"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3428"/>
         <source>Insert a new step before the current step</source>
         <translation>Vložit nový krok před aktuální krok</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1441"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3419"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3437"/>
         <source>Insert a new step after the current step</source>
         <translation>Vložit nový krok za aktuální krok</translation>
     </message>
@@ -7648,12 +7668,22 @@ Formát souboru není rozpoznán.</translation>
         <translation>Kliknutím na spojení vybraného podmodelu z něj vytvoříte kloub</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3383"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2600"/>
+        <source>Go into joint mode on the selected submodel, or leave it</source>
+        <translation>Přejít do režimu kloubu vybraného podmodelu, nebo ho opustit</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2609"/>
+        <source>Leave joint mode and go back to where it started</source>
+        <translation>Opustit režim kloubu a vrátit se tam, kde začal</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3401"/>
         <source>Open the StudWorx home page in your default web browser</source>
         <translation>Otevřít domovskou stránku StudWorxu ve výchozím webovém prohlížeči</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3392"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3410"/>
         <source>Open the StudWorx bug report form in your default web browser</source>
         <translation>Otevřít formulář pro nahlášení chyby StudWorxu ve výchozím webovém prohlížeči</translation>
     </message>
@@ -7794,7 +7824,7 @@ Formát souboru není rozpoznán.</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1450"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3428"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3446"/>
         <source>Delete the current step</source>
         <translation>Odstranit aktuální krok</translation>
     </message>
@@ -7999,63 +8029,63 @@ Formát souboru není rozpoznán.</translation>
         <translation>Otáčet vybraný podmodel kolem vybraného kloubu místo kolem bodu otáčení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2600"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2618"/>
         <source>Reset the pivot point of the selected parts to their origin</source>
         <translatorcomment>TODO - původ, zdroj, počátek, vznik</translatorcomment>
         <translation>Vynulovat bod otáčení vybraných dílů na jejich počátek</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2609"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2627"/>
         <source>Remove all keyframes from the selected parts</source>
         <translation>Odstranit všechny klíčové snímky vybraných dílů</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2636"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2654"/>
         <source>Turn the selected control point along the path, or release it to rotate it freely</source>
         <translation>Otáčet vybraný kontrolní bod podél dráhy, nebo ho uvolnit pro volné otáčení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2645"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2663"/>
         <source>Turn the selected control point along the path once and keep it released</source>
         <translation>Jednou otočit vybraný kontrolní bod podél dráhy a ponechat ho uvolněný</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2654"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2672"/>
         <source>Turn the selected control point along the X axis</source>
         <translation>Otáčet vybraný kontrolní bod podél osy X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2663"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2681"/>
         <source>Turn the selected control point along the Y axis</source>
         <translation>Otáčet vybraný kontrolní bod podél osy Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2672"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2690"/>
         <source>Turn the selected control point along the Z axis</source>
         <translation>Otáčet vybraný kontrolní bod podél osy Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2816"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2834"/>
         <source>Show the Minifigure Builder panel to build a minifigure and add it to the model</source>
         <translation>Zobrazit panel Tvůrce minifigurek pro sestavení minifigurky a její přidání do modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2834"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2852"/>
         <source>Open the submodel referenced by the selected part in a new tab</source>
         <translation>Otevřít podmodel, na který odkazuje vybraný díl, v nové záložce</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2843"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2861"/>
         <source>Move the selected parts to a new submodel and replace them with a reference to it</source>
         <translation>Přesunout vybrané díly do nového podmodelu a nahradit je odkazem na něj</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2852"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2870"/>
         <source>Insert the contents of the selected submodels into the current model</source>
         <translation>Vložit obsah vybraných podmodelů do aktuálního modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2861"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2879"/>
         <source>Replace every submodel, and the submodels inside it, with its parts in one step</source>
         <translation>Nahradit každý podmodel a podmodely v něm jeho díly na jeden krok</translation>
     </message>
@@ -8064,63 +8094,63 @@ Formát souboru není rozpoznán.</translation>
         <translation type="vanished">Odstraňte všechny klíčové snímky z vybraných dílků</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2618"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2636"/>
         <source>Insert a new control point</source>
         <translation>Vložit nový kontrolní bod</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2627"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2645"/>
         <source>Remove the selected control point</source>
         <translation>Odstranit vybraný kontrolní bod</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2681"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2699"/>
         <source>Focus the next connection of the currently selected track</source>
         <translation>Zaostřit další spojení aktuálně vybrané kolejnice</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2690"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2708"/>
         <source>Focus the previous connection of the currently selected track</source>
         <translation>Zaostřit předchozí spojení aktuálně vybrané kolejnice</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2699"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2717"/>
         <source>Rotate the focused train track around its last connection</source>
         <translation>Otočit zaostřenou vlakovou kolejnici kolem jejího posledního spojení</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2708"/>
-        <location filename="../../source/application/sw_commands.cpp" line="2717"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2726"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2735"/>
         <source>Move selected objects along the X axis</source>
         <translation>Přesunout vybrané objekty podél osy X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2726"/>
-        <location filename="../../source/application/sw_commands.cpp" line="2735"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2744"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2753"/>
         <source>Move selected objects along the Y axis</source>
         <translation>Přesunout vybrané objekty podél osy Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2744"/>
-        <location filename="../../source/application/sw_commands.cpp" line="2753"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2762"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2771"/>
         <source>Move selected objects along the Z axis</source>
         <translation>Přesunout vybrané objekty podél osy Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2762"/>
-        <location filename="../../source/application/sw_commands.cpp" line="2771"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2780"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2789"/>
         <source>Rotate selected objects around the X axis</source>
         <translation>Otočit vybrané objekty kolem osy X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2780"/>
-        <location filename="../../source/application/sw_commands.cpp" line="2789"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2798"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2807"/>
         <source>Rotate selected objects around the Y axis</source>
         <translation>Otočit vybrané objekty kolem osy Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2798"/>
-        <location filename="../../source/application/sw_commands.cpp" line="2807"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2816"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2825"/>
         <source>Rotate selected objects around the Z axis</source>
         <translation>Otočit vybrané objekty kolem osy Z</translation>
     </message>
@@ -8141,7 +8171,7 @@ Formát souboru není rozpoznán.</translation>
         <translation type="vanished">Přidat k modelu nový minifig</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2825"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2843"/>
         <source>Make copies of the selected parts</source>
         <translation>Vytvořit kopie vybraných dílů</translation>
     </message>
@@ -8159,89 +8189,87 @@ Formát souboru není rozpoznán.</translation>
         <translation type="vanished">Vložte obsah vybraných referencí modelu do aktuálního modelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2870"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2888"/>
         <source>Edit the currently selected submodel in-place</source>
         <translatorcomment>TODO - in-place -&gt; vložený, na místě, v místě</translatorcomment>
         <translation>Upravit aktuálně vybraný podmodel na místě</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2879"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2897"/>
         <source>End in-place submodel editing</source>
         <translation>Ukončit úpravu podmodelu na místě</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2888"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2906"/>
         <source>Group selected parts together</source>
         <translation>Seskupit vybrané díly dohromady</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2897"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2915"/>
         <source>Ungroup selected group</source>
         <translation>Zrušit seskupení vybrané skupiny</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2906"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2924"/>
         <source>Add focused part to selected group</source>
         <translation>Přidat aktivní díl do vybrané skupiny</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2915"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2933"/>
         <source>Remove focused part from group</source>
         <translation>Odebrat aktivní díl ze skupiny</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2924"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2942"/>
         <source>Edit groups</source>
         <translation>Upravit skupiny</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2933"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2951"/>
         <source>Hide selected objects</source>
         <translation>Skrýt vybrané objekty</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2942"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2960"/>
         <source>Hide objects that are not selected</source>
         <translation>Skrýt objekty, které nejsou vybrány</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2951"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2969"/>
         <source>Show hidden objects that are selected</source>
         <translation>Zobrazit skryté vybrané objekty</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2960"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2978"/>
         <source>Show all hidden objects</source>
         <translation>Zobrazit všechny skryté objekty</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2969"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2987"/>
         <source>Show selected parts one step earlier</source>
         <translation>Zobrazit vybrané díly o krok dříve</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2978"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2996"/>
         <source>Show selected parts one step later</source>
         <translation>Zobrazit vybrané díly o krok později</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2987"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3005"/>
         <source>Create a new submodel</source>
         <translation>Vytvořit nový podmodel</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2996"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3014"/>
         <source>Display the properties of the current submodel</source>
         <translation>Zobrazit vlastnosti aktuálního podmodelu</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3005"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3023"/>
         <source>Show a list of all submodels</source>
         <translation>Zobrazit seznam všech podmodelů</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3014"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3023"/>
         <location filename="../../source/application/sw_commands.cpp" line="3032"/>
         <location filename="../../source/application/sw_commands.cpp" line="3041"/>
         <location filename="../../source/application/sw_commands.cpp" line="3050"/>
@@ -8280,11 +8308,13 @@ Formát souboru není rozpoznán.</translation>
         <location filename="../../source/application/sw_commands.cpp" line="3347"/>
         <location filename="../../source/application/sw_commands.cpp" line="3356"/>
         <location filename="../../source/application/sw_commands.cpp" line="3365"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3374"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3383"/>
         <source>Switch to this submodel</source>
         <translation>Přepnout na tento podmodel</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3374"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3392"/>
         <source>Click a control to read its contextual help</source>
         <translation>Kliknutím na ovládací prvek si můžete přečíst jeho kontextovou nápovědu</translation>
     </message>
@@ -8301,27 +8331,27 @@ Formát souboru není rozpoznán.</translation>
         <translation type="vanished">Zkontrolovat, zda nebyla vydána novější verze StudWorxu nebo knihovny součástí</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3401"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3419"/>
         <source>Display program version number and system information</source>
         <translation>Zobrazit verzi programu a systémové informace</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3437"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3455"/>
         <source>Move the selected parts into this step</source>
         <translation>Přesunout vybrané díly do tohoto kroku</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3446"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3464"/>
         <source>Move the selected parts into a new step before this</source>
         <translation>Přesunout vybrané díly do nového kroku před tímto</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3455"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3473"/>
         <source>Move the selected parts into a new step after this</source>
         <translation>Přesunout vybrané díly do nového kroku za tímto</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3464"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3482"/>
         <source>View the model at this point in the timeline</source>
         <translation>Zobrazit model v tomto okamžiku na časové ose</translation>
     </message>
@@ -9363,88 +9393,96 @@ Formát souboru není rozpoznán.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Nastavit kloub&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte jeden podmodel, zvolte Díl &amp;gt; Kloub &amp;gt; Nastavit kloub, také v místní nabídce pohledu na model, a pak ukazatelem Nastavit kloub klikněte na jedno z jeho spojení; díl pod ukazatelem se obtáhne červeně. Kliknutí nastaví kloub a v režimu kloubů se vrátí k nástroji Výběr na novém kloubu. Další Nastavit kloub na jiném spojení přidá kloub a Nastavit kloub na existujícím kloubu jej obnoví. Kruhové spojení vytvoří závěs na své ose a koule vytvoří kulový kloub. Díl bez stínových dat dostane závěs na svém počátku. Kloub se zobrazí v panelu Klouby a jeho nastavení lze vrátit zpět.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2871"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
+        <source>&lt;p&gt;&lt;b&gt;Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel. Press it again to leave joint mode.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Režim kloubu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pracuje s kloubem vybraného podmodelu, stejně jako kliknutí na něj v panelu Klouby. Je-li vybrán díl uvnitř podmodelu s kloubem, přejde nahoru k tomuto podmodelu. Není-li nic vybráno, otevře kloub zvolený v panelu Klouby. Dalším stiskem režim kloubu opustíte.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2610"/>
+        <source>&lt;p&gt;&lt;b&gt;End Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Leaves joint mode and goes back to the model you were in before, the same as the way back on the bar over the view.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Ukončit režim kloubu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Opustí režim kloubu a vrátí se k modelu, ve kterém jste byli předtím, stejně jako cesta zpět na liště nad pohledem.&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2889"/>
         <source>&lt;p&gt;&lt;b&gt;Edit Selected Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit the selected submodel in place, inside its parent. A path bar shows where you are.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Upravit vybraný podmodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Upraví vybraný podmodel přímo na místě, uvnitř jeho nadřazeného modelu. Lišta cesty ukazuje, kde se nacházíte.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2880"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2898"/>
         <source>&lt;p&gt;&lt;b&gt;End Submodel Editing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Leave in-place editing and go back to the parent model.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Ukončit úpravu podmodelu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Opustí úpravy na místě a vrátí se k nadřazenému modelu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2889"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2907"/>
         <source>&lt;p&gt;&lt;b&gt;Group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Group the selected parts under a unique name, so they select and move as one.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Seskupit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Seskupí vybrané díly pod jedinečným názvem, takže se vybírají a posouvají jako jeden.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2898"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2916"/>
         <source>&lt;p&gt;&lt;b&gt;Ungroup&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected group, keeping its parts.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zrušit seskupení&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odebere vybranou skupinu, díly zachová.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2907"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2925"/>
         <source>&lt;p&gt;&lt;b&gt;Add to Group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add the part that has focus to the selected group.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přidat do skupiny&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá díl, který má fokus, do vybrané skupiny.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2916"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2934"/>
         <source>&lt;p&gt;&lt;b&gt;Remove from Group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Take the part that has focus out of its group.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Odebrat ze skupiny&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyjme díl, který má fokus, z jeho skupiny.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2925"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2943"/>
         <source>&lt;p&gt;&lt;b&gt;Edit Groups&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create, rename and nest groups and drag parts between them in a tree of parts and groups.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Upravit skupiny&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vytváří, přejmenovává a vnořuje skupiny a přetahuje díly mezi nimi ve stromu dílů a skupin.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2934"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2952"/>
         <source>&lt;p&gt;&lt;b&gt;Hide Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Hide the selected objects.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Skrýt vybrané&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Skryje vybrané objekty.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2943"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2961"/>
         <source>&lt;p&gt;&lt;b&gt;Hide Unselected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Hide every object that is not selected.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Skrýt nevybrané&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Skryje každý objekt, který není vybraný.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2952"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2970"/>
         <source>&lt;p&gt;&lt;b&gt;Unhide Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the selected hidden objects again.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zobrazit vybrané&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Znovu zobrazí vybrané skryté objekty.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2961"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2979"/>
         <source>&lt;p&gt;&lt;b&gt;Unhide All&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show every hidden object again.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zobrazit vše&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Znovu zobrazí každý skrytý objekt.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2970"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2988"/>
         <source>&lt;p&gt;&lt;b&gt;Show Earlier&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts one step earlier.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zobrazit dříve&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Posune vybrané díly o jeden krok dříve.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2979"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2997"/>
         <source>&lt;p&gt;&lt;b&gt;Show Later&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts one step later.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zobrazit později&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Posune vybrané díly o jeden krok později.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2988"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3006"/>
         <source>&lt;p&gt;&lt;b&gt;New Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add a new, empty submodel to the file and switch to it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Nový podmodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá do souboru nový prázdný podmodel a přepne na něj.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2997"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3015"/>
         <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit the name, author, description and comments of the current submodel, and see its parts, counts, size and weight, with BrickLink and CSV export.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vlastnosti&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Upravuje název, autora, popis a komentáře aktuálního podmodelu a ukazuje jeho díly, počty, velikost a hmotnost, s exportem do BrickLink a CSV.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3006"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3024"/>
         <source>&lt;p&gt;&lt;b&gt;Submodels&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create, rename, duplicate, delete, reorder and export the submodels of the file, and set the active one.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Podmodely&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vytváří, přejmenovává, duplikuje, odstraňuje, řadí a exportuje podmodely souboru a nastavuje aktivní.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3015"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3024"/>
         <location filename="../../source/application/sw_commands.cpp" line="3033"/>
         <location filename="../../source/application/sw_commands.cpp" line="3042"/>
         <location filename="../../source/application/sw_commands.cpp" line="3051"/>
@@ -9483,61 +9521,63 @@ Formát souboru není rozpoznán.</translation>
         <location filename="../../source/application/sw_commands.cpp" line="3348"/>
         <location filename="../../source/application/sw_commands.cpp" line="3357"/>
         <location filename="../../source/application/sw_commands.cpp" line="3366"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3375"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3384"/>
         <source>&lt;p&gt;&lt;b&gt;Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Switch to this submodel. The Models menu lists up to forty submodels of the file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Podmodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přepne na tento podmodel. Nabídka Modely uvádí až čtyřicet podmodelů souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3375"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3393"/>
         <source>&lt;p&gt;&lt;b&gt;What&apos;s This?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Click any control after this to read what it does. F1 explains the focused control.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Co je to?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Klikněte na libovolný ovládací prvek a přečtěte si, co dělá. F1 vysvětlí ovládací prvek s fokusem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3384"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3402"/>
         <source>&lt;p&gt;&lt;b&gt;Home Page&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the StudWorx repository on GitHub in your web browser.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Domovská stránka&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Otevře repozitář StudWorx na GitHubu ve webovém prohlížeči.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3393"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3411"/>
         <source>&lt;p&gt;&lt;b&gt;Report a Bug&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the StudWorx issues on GitHub in your web browser to report a problem.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Nahlásit chybu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Otevře problémy StudWorx na GitHubu ve webovém prohlížeči, abyste mohli nahlásit potíž.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3402"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3420"/>
         <source>&lt;p&gt;&lt;b&gt;About&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the StudWorx version, a link to its home page, and system information to copy into a bug report.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;O programu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí verzi StudWorx, odkaz na domovskou stránku a informace o systému ke zkopírování do hlášení chyby.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3411"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3429"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Step Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step before this step in the Timeline.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vložit krok před&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá prázdný krok před tento krok na časové ose.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3420"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3438"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Step After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step after this step in the Timeline.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vložit krok za&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá prázdný krok za tento krok na časové ose.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3429"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3447"/>
         <source>&lt;p&gt;&lt;b&gt;Delete Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove this step. Its parts join the step before it and later steps move one step earlier.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Odstranit krok&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odebere tento krok. Jeho díly se připojí k předchozímu kroku a pozdější kroky se posunou o jeden krok dříve.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3438"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3456"/>
         <source>&lt;p&gt;&lt;b&gt;Move Selection Here&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into this step.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přesunout výběr sem&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přesune vybrané díly do tohoto kroku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3447"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3465"/>
         <source>&lt;p&gt;&lt;b&gt;Move Selection Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into a new step before this one.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přesunout výběr před&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přesune vybrané díly do nového kroku před tímto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3456"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3474"/>
         <source>&lt;p&gt;&lt;b&gt;Move Selection After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into a new step after this one.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přesunout výběr za&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přesune vybrané díly do nového kroku za tímto.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3465"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3483"/>
         <source>&lt;p&gt;&lt;b&gt;Set Current Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the model at this step.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Nastavit aktuální krok&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí model v tomto kroku.&lt;/p&gt;</translation>
     </message>
@@ -9680,112 +9720,112 @@ Formát souboru není rozpoznán.</translation>
         <translation>&lt;p&gt;&lt;b&gt;Otáčení kloubu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Když je vybrán jeden podmodel s kloubem, přepne na nástroj Otáčení s manipulátorem na bodu otáčení zvoleného kloubu, obtaženým červeně, a klávesy otáčení a nástroj Otáčení otáčejí kloub kolem jeho vlastního bodu otáčení a osy. Závěs se otáčí jen kolem své osy. Výběr něčeho jiného vrátí zpět na bod otáčení. Volba Použít otáčení kloubu v předvolbách to dělá vždy, když vybraný podmodel má kloub.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2619"/>
         <source>&lt;p&gt;&lt;b&gt;Reset Pivot Point&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Put the pivot point of each selected part back at its origin.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Obnovit bod otáčení&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vrátí bod otáčení každého vybraného dílu do jeho počátku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2610"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2628"/>
         <source>&lt;p&gt;&lt;b&gt;Remove Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove every animation key from the selected parts, lights and cameras.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Odebrat klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odebere každý animační klíč vybraným dílům, světlům a kamerám.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2619"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2637"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Control Point&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add a control point to the selected flexible part, where it bends.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vložit řídicí bod&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přidá vybranému ohebnému dílu řídicí bod v místě, kde se ohýbá.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2628"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2646"/>
         <source>&lt;p&gt;&lt;b&gt;Remove Control Point&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected control point of a flexible part.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Odebrat řídicí bod&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odebere vybraný řídicí bod ohebného dílu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2637"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2655"/>
         <source>&lt;p&gt;&lt;b&gt;Clamp Tangent&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Hold the selected control point along the path, or release it to rotate freely.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zafixovat tečnu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Drží vybraný řídicí bod podél dráhy, nebo jej uvolní k volné rotaci.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2646"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2664"/>
         <source>&lt;p&gt;&lt;b&gt;Align to Tangent&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the path once and keep it released.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zarovnat k tečně&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Jednou otočí vybraný řídicí bod podél dráhy a ponechá jej uvolněný.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2655"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2673"/>
         <source>&lt;p&gt;&lt;b&gt;X Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the X axis.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Osa X&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Otočí vybraný řídicí bod podél osy X.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2664"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2682"/>
         <source>&lt;p&gt;&lt;b&gt;Y Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the Y axis.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Osa Y&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Otočí vybraný řídicí bod podél osy Y.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2673"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2691"/>
         <source>&lt;p&gt;&lt;b&gt;Z Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the Z axis.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Osa Z&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Otočí vybraný řídicí bod podél osy Z.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2682"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2700"/>
         <source>&lt;p&gt;&lt;b&gt;Focus Next Connection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the focus to the next connection of the selected track, where the next part joins.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Fokus na další spojení&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přesune fokus na další spojení vybrané koleje, kde se připojuje další díl.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2691"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2709"/>
         <source>&lt;p&gt;&lt;b&gt;Focus Previous Connection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the focus to the previous connection of the selected track, where the next part joins.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Fokus na předchozí spojení&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přesune fokus na předchozí spojení vybrané koleje, kde se připojuje další díl.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2700"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2718"/>
         <source>&lt;p&gt;&lt;b&gt;Rotate Train Track&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the focused track part to its next connection.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Otočit kolej vlaku&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Otočí kolejový díl s fokusem na jeho další spojení.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2709"/>
-        <location filename="../../source/application/sw_commands.cpp" line="2718"/>
         <location filename="../../source/application/sw_commands.cpp" line="2727"/>
         <location filename="../../source/application/sw_commands.cpp" line="2736"/>
         <location filename="../../source/application/sw_commands.cpp" line="2745"/>
         <location filename="../../source/application/sw_commands.cpp" line="2754"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2763"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2772"/>
         <source>&lt;p&gt;&lt;b&gt;Move Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected objects one move snap step along this axis.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Posunout výběr&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Posune vybrané objekty o jeden krok přichytávání pohybu podél této osy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2763"/>
-        <location filename="../../source/application/sw_commands.cpp" line="2772"/>
         <location filename="../../source/application/sw_commands.cpp" line="2781"/>
         <location filename="../../source/application/sw_commands.cpp" line="2790"/>
         <location filename="../../source/application/sw_commands.cpp" line="2799"/>
         <location filename="../../source/application/sw_commands.cpp" line="2808"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2817"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2826"/>
         <source>&lt;p&gt;&lt;b&gt;Rotate Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Rotate the selected objects one rotation snap step around this axis.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Otočit výběr&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Otočí vybrané objekty o jeden krok přichytávání otáčení kolem této osy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2817"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2835"/>
         <source>&lt;p&gt;&lt;b&gt;Minifigure Builder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the Minifigure Builder panel to build a minifigure from templates and add it to the model.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Tvůrce minifigurek&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zobrazí panel Tvůrce minifigurek pro sestavení minifigurky ze šablon a její přidání do modelu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2826"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2844"/>
         <source>&lt;p&gt;&lt;b&gt;Array&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Repeat the selection along one, two or three axes, with a count, offset and rotation for each.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Pole&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zopakuje výběr podél jedné, dvou nebo tří os, s počtem, posunem a rotací pro každou.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2835"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2853"/>
         <source>&lt;p&gt;&lt;b&gt;Open Selected Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the submodel used by the selected part in its own tab, to edit it on its own.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Otevřít vybraný podmodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Otevře podmodel používaný vybraným dílem na vlastní záložce, aby jej bylo možné upravit samostatně.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2844"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2862"/>
         <source>&lt;p&gt;&lt;b&gt;Move to New Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into a new submodel and put one reference to it in their place.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přesunout do nového podmodelu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Přesune vybrané díly do nového podmodelu a na jejich místo vloží jeden odkaz na něj.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2853"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2871"/>
         <source>&lt;p&gt;&lt;b&gt;Inline Selected Submodels&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace each selected submodel with its parts, in place.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Rozbalit vybrané podmodely&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Nahradí každý vybraný podmodel jeho díly, na místě.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2862"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2880"/>
         <source>&lt;p&gt;&lt;b&gt;Flatten Submodels&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace every submodel in the current model, and every submodel inside those, with its parts in one undo step. Each part keeps its place and color, and the groups inside the submodels are not kept.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Zploštit podmodely&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Nahradí každý podmodel v aktuálním modelu i každý podmodel uvnitř nich jejich díly jedním krokem zpět. Každý díl si ponechá své místo a barvu a skupiny uvnitř podmodelů se nezachovají.&lt;/p&gt;</translation>
     </message>
@@ -17749,18 +17789,18 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Žádný: Díl &gt; Kloub &gt; Nastavit kloub</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="277"/>
         <source>Joint %1, %2, angle %3</source>
         <translation>Kloub %1, %2, úhel %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="277"/>
         <source>No joint</source>
         <translation>Žádný kloub</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="120"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="277"/>
         <source>Hinge</source>
         <translation>Závěs</translation>
     </message>
@@ -17806,7 +17846,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="120"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="277"/>
         <source>Ball</source>
         <translation>Kulový</translation>
     </message>
@@ -17831,7 +17871,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Otočit kloub</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="277"/>
         <source>None: select a jointed submodel</source>
         <translation>Žádný: vyberte podmodel s klouby</translation>
     </message>
@@ -18113,10 +18153,10 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="326"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="623"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="631"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="992"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="993"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="633"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="641"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1002"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1003"/>
         <source>Transform</source>
         <translation>Transformace</translation>
     </message>
@@ -18141,7 +18181,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="388"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="710"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="720"/>
         <source>Tools</source>
         <translation>Nástroje</translation>
     </message>
@@ -18196,44 +18236,44 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Pod&amp;model</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="582"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="592"/>
         <source>&amp;Help</source>
         <translation>&amp;Nápověda</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="611"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="616"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="621"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="626"/>
         <source>Selection Mode</source>
         <translation>Režim výběru</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="617"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="627"/>
         <source>Change selection mode</source>
         <translation>Změna režimu výběru</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="618"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="628"/>
         <source>Choose which related parts are included when selecting a part.</source>
         <translation>Při výběru dílu zvolte, které související díly jsou zahrnuty.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="632"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="642"/>
         <source>Transform Options</source>
         <translation>Možnosti transformace</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="633"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="643"/>
         <source>Choose coordinate axes and whether selected parts rotate together.</source>
         <translation>Vyberte souřadnicové osy a zda se vybrané díly otáčejí společně.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="638"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="648"/>
         <source>Snap XY</source>
         <translatorcomment>TODO - Přichytit, Lusknutí, Přichycení</translatorcomment>
         <translation>Přichycení XY</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="642"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="652"/>
         <source>Snap Z</source>
         <translation>Přichycení Z</translation>
     </message>
@@ -18242,19 +18282,19 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Nabídka přichycení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="646"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="655"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="656"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="665"/>
         <source>Movement Snap</source>
         <translatorcomment>TODO - pohyb, přesun</translatorcomment>
         <translation>Přichycení přesunu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="656"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="666"/>
         <source>Snap translations to fixed intervals</source>
         <translation>Přichytit přesuny po pevných intervalech</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="657"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="667"/>
         <source>Choose movement snapping intervals for XY and Z.</source>
         <translation>Vyberte intervaly přichycení pohybu pro XY a Z.</translation>
     </message>
@@ -18263,23 +18303,23 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="vanished">Nabídka úhlů přichycení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="662"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="670"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="672"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="680"/>
         <source>Rotation Snap</source>
         <translation>Přichycení otáčení</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="671"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="681"/>
         <source>Snap rotations to fixed intervals</source>
         <translation>Přichytit otáčení po pevných intervalech</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="672"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="682"/>
         <source>Choose the rotation snapping interval.</source>
         <translation>Vyberte interval přichycení otáčení.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="677"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="687"/>
         <source>Standard</source>
         <translation>Standard</translation>
     </message>
@@ -18294,7 +18334,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Panel nástrojů Čas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Tlačítka se šipkami se pohybují po krocích stavby, takže můžete zkontrolovat, jak je model sestaven. Nemění krok přiřazený dílu; použijte k tomu časovou osu. Přidat klávesy řídí, zda úpravy vytvoří animační klávesy v aktuálním kroku, což umožňuje, aby se vlastnosti, jako je poloha, mezi jednotlivými kroky měnily.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="697"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="707"/>
         <source>Time</source>
         <translation>Čas</translation>
     </message>
@@ -18328,67 +18368,67 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>&amp;Kloub</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="535"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="545"/>
         <source>&amp;Group</source>
         <translation>&amp;Skupina</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="542"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="552"/>
         <source>&amp;Visibility</source>
         <translation>&amp;Viditelnost</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="549"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="559"/>
         <source>&amp;Steps</source>
         <translation>&amp;Kroky</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="619"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="629"/>
         <source>&lt;p&gt;&lt;b&gt;Selection Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the rule applied when you pick a part in the model view. Single selects that part; the other modes include matching part types, matching colors, or both. For example, color selection lets you pick matching red parts without selecting each one separately.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Režim výběru&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte pravidlo, které se použije při výběru dílu v zobrazení modelu. Jeden výběr vybere pouze ten díl; ostatní režimy zahrnují shodné typy dílů, shodné barvy nebo obojí. Například výběr barev vám umožňuje vybrat odpovídající červené díly, aniž byste museli vybírat každý zvlášť.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="634"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="644"/>
         <source>&lt;p&gt;&lt;b&gt;Transform Options&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the axes and pivot used for interactive transforms. Relative Transforms uses the focused object&apos;s orientation, so movement along X follows that object&apos;s local X axis. Absolute Transforms uses the model axes. Rotate Together rotates the selection around a shared pivot; Rotate Separately rotates each part around its own origin.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Možnosti transformace&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte osy a bod otáčení použité pro interaktivní transformace. Relativní transformace používá orientaci zaostřeného objektu, takže pohyb podél X sleduje lokální osu X tohoto objektu. Absolutní transformace používá osy modelu. Otočit společně otočí výběr kolem sdíleného bodu otáčení; Otočit samostatně otočí každý díl kolem jeho vlastního počátku.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="658"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="668"/>
         <source>&lt;p&gt;&lt;b&gt;Movement Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose how far objects move in each snapped increment. XY controls movement across the base plane; Z controls vertical movement, so they can use different intervals. Turn snapping off for free placement, then enable it again when you need consistent spacing.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přichycení pohybu&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zvolte, jak daleko se objekty posunou v jednotlivých krocích přichycení. XY řídí pohyb po základní rovině; Z řídí svislý pohyb, takže mohou používat různé intervaly. Vypněte přichycení pro volné umístění a znovu je zapněte, až budete potřebovat stejné rozestupy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="673"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="683"/>
         <source>&lt;p&gt;&lt;b&gt;Rotation Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose an angle increment for interactive rotation. For example, a 90-degree increment is useful for quarter turns, while smaller increments allow finer alignment. Turn snapping off for free rotation without fixed angle increments.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přichycení otáčení&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zvolte přírůstek úhlu pro interaktivní otáčení. Například 90stupňový přírůstek je užitečný pro čtvrtotáčky, zatímco menší přírůstky umožňují jemnější zarovnání. Vypněte přichycení pro volné otáčení bez pevných přírůstků úhlu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="679"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="689"/>
         <source>&lt;p&gt;&lt;b&gt;Standard Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use file controls to create, open, and save models, and Undo or Redo to navigate edit history. Before moving or rotating objects, choose the selection rule, coordinate reference, and snapping increments from the four drop-down controls. Help &gt; &quot;What&apos;s This?&quot; explains individual controls.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Standardní panel nástrojů&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pomocí ovládacích prvků souboru vytvářejte, otevírejte a ukládejte modely a pomocí Zpět nebo Znovu procházejte historii úprav. Před přesouváním nebo otáčením objektů zvolte pravidlo výběru, souřadnicový základ a přichytávací kroky ze čtyř rozbalovacích ovládacích prvků. Nápověda &gt; &quot;Co je toto?&quot; vysvětluje jednotlivé ovládací prvky.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="712"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="722"/>
         <source>&lt;p&gt;&lt;b&gt;Tools Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a tool, then use it in the model view. Insertion tools create parts, lights, or cameras. Editing tools select, transform, remove, or recolor objects. Navigation tools change the viewpoint without changing model geometry. Mouse assignments can be customized in Preferences.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Panel nástrojů Nástroje&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte nástroj a poté jej použijte v zobrazení modelu. Nástroje pro vkládání vytvářejí díly, světla nebo kamery. Nástroje pro úpravy vybírají, transformují, odebírají nebo přebarvují objekty. Navigační nástroje mění pohled bez změny geometrie modelu. Přiřazení myši lze upravit v Předvolbách.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="754"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="764"/>
         <source>Parts</source>
         <translation>Díly</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="757"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="767"/>
         <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a category or palette and filter its parts. Selecting a part prepares it for insertion; drag it into the model view to place it. Double-click a part to open its preview. Options controls filtering, thumbnails, and list display.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Díly&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte kategorii nebo paletu a filtrujte její díly. Výběr dílu jej připraví na vložení; přetažením do pohledu modelu jej umístěte. Poklepáním na díl otevřete jeho náhled. Možnosti řídí filtrování, miniatury a zobrazení seznamu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="767"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="777"/>
         <source>Colors</source>
         <translation>Barvy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="769"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="779"/>
         <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.&lt;/p&gt;&lt;p&gt;Docked at the top or bottom, the swatches line up in one row; scroll the wheel or use the arrows at its ends to move along it, or double-click an arrow to jump to that end.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Barvy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Z vzorků vyberte aktuální barvu LDraw. Tato barva se použije při vkládání nebo malování dílů. Chcete-li přebarvit vybrané díly, použijte tlačítko barvy nad vzorky. Najetím na vzorek zobrazíte jeho název a kód barvy.&lt;/p&gt;&lt;p&gt;Při ukotvení nahoře nebo dole se vzorky řadí do jedné řady; kolečkem myši nebo šipkami na jejích koncích se po ní posouváte, nebo dvojitým kliknutím na šipku skočíte na její konec.&lt;/p&gt;</translation>
     </message>
@@ -18398,62 +18438,62 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Barvy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zvolte aktuální barvu LDraw ze vzorníku. Tato barva se používá při vkládání nebo malování dílů. Chcete-li vybrané díly přebarvit, použijte barevné tlačítko nad vzorníkem. Umístěním ukazatele myši na vzorek zobrazíte jeho název a kód barvy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="785"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="795"/>
         <source>Apply the current color to selected parts.</source>
         <translation>Aplikujte aktuální barvu na vybrané díly.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="786"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="796"/>
         <source>Change Selection Color</source>
         <translation>Změnit barvu výběru</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="787"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="797"/>
         <source>&lt;p&gt;&lt;b&gt;Change Selection Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Apply the current color to selected parts. Choosing a swatch sets the current color; this button applies that color to the selection.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Změnit barvu výběru&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Použít aktuální barvu na vybrané díly. Výběrem políčka nastavíte aktuální barvu; toto tlačítko použije tuto barvu na výběr.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="809"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="819"/>
         <source>Scroll the swatches left. Double-click to jump to the first one.</source>
         <translation>Posunout vzorky doleva. Dvojitým kliknutím skočíte na první.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="809"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="819"/>
         <source>Scroll the swatches right. Double-click to jump to the last one.</source>
         <translation>Posunout vzorky doprava. Dvojitým kliknutím skočíte na poslední.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="839"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="849"/>
         <source>LDraw Colors</source>
         <translation>Barvy LDraw</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="968"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="978"/>
         <source>Properties</source>
         <translation>Vlastnosti</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="970"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="980"/>
         <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit properties of the focused object or selection. Available fields depend on whether you select parts, a camera, or a light. Expand a section to see its fields. Keyframe controls mark properties at the current building step.&lt;/p&gt;&lt;p&gt;The transform fields at the bottom apply an X/Y/Z translation or rotation using the chosen transform mode. Press Enter to apply the values.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vlastnosti&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Upravte vlastnosti zaostřeného objektu nebo výběru. Dostupná pole závisí na tom, zda vyberete díly, kameru nebo světlo. Rozbalením sekce zobrazíte její pole. Ovládací prvky klíčového snímku označují vlastnosti v aktuálním kroku sestavení.&lt;/p&gt;&lt;p&gt;Pole transformace ve spodní části použijí posun nebo otočení X/Y/Z pomocí zvoleného režimu transformace. Hodnoty použijete stisknutím klávesy Enter.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1023"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1033"/>
         <source>Choose absolute or relative translation or rotation.</source>
         <translation>Vyberte absolutní nebo relativní posunutí nebo otočení.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1024"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1034"/>
         <source>&lt;p&gt;&lt;b&gt;Apply Transform&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the translation or rotation mode, enter X/Y/Z values, and press Enter to apply them. Translation values use LDraw units; rotation values use degrees.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Použít transformaci&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte režim posunu nebo otočení, zadejte hodnoty X/Y/Z a stisknutím klávesy Enter je použijte. Hodnoty posunu používají jednotky LDraw; hodnoty otočení používají stupně.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1084"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1094"/>
         <source>&lt;p&gt;&lt;b&gt;Timeline&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Časová osa&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte krok, aby se stal aktuálním, nebo vyberte řádky dílů, abyste tyto díly vybrali v modelu. Přetahujte díly mezi kroky nebo je měňte v pořadí v rámci kroku. Řádky Klíče uvádějí objekty s animačními klíči v kroku a dvojité kliknutí vybere tento objekt tam a zobrazí panel Klíčové snímky. Kliknutím pravým tlačítkem zobrazíte příkazy pro vložení, odebrání, přesun a viditelnost kroků.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1121"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1131"/>
         <source>Explode</source>
         <translation>Rozložit</translation>
     </message>
@@ -18462,7 +18502,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Rozložit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odsune každý další viditelný díl, nebo jen vybrané, od kotvy o procento vzdálenosti v X, Y a Z. Každý díl vyjede podél spojení, které jej drží. Sbalit nebo Zpět vrátí díly na místo a Uložit kopii uloží rozložený model do samostatného souboru.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1134"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1144"/>
         <source>Joints</source>
         <translation>Klouby</translation>
     </message>
@@ -18471,7 +18511,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Klouby&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Kloub vybraný na vybraném podmodelu s jeho osou a strom každého modelu s klouby, jeho podmodelů s klouby a jejich kloubů. Vyberte kloub pro posun nebo otočení a smažte jej pro návrat do klidové polohy.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1143"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1153"/>
         <source>Poses</source>
         <translation>Pózy</translation>
     </message>
@@ -18480,7 +18520,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Pózy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pózy modelu vybraného v panelu Klouby. Uložte úhly kloubů jako pojmenovanou pózu, pak ji vyvolejte, přejmenujte nebo smažte. Pózy se ukládají s modelem.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1152"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1162"/>
         <source>Keyframes</source>
         <translation>Klíčové snímky</translation>
     </message>
@@ -18489,7 +18529,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Klíčové snímky&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Časová osa v plné šířce s animačními klíči vybraných nebo všech objektů, jeden sloupec na krok. Přidávejte nebo odebírejte klíče v aktuálním kroku a přehráváním kroků sledujte klíčovaný pohyb.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1002"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1012"/>
         <source>Transform X</source>
         <translation>Transformace X</translation>
     </message>
@@ -18509,67 +18549,67 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Otevřít složku modelu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="566"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="576"/>
         <source>&amp;Models</source>
         <translation>&amp;Modely</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="699"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="709"/>
         <source>&lt;p&gt;&lt;b&gt;Time Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Timeline for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Panel nástrojů Čas&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Tlačítka se šipkami procházejí kroky stavby, abyste mohli zkontrolovat, jak se model sestavuje. Nemění krok přiřazený dílu, k tomu slouží Časová osa. Přehrát projde kroky modelu a ukáže pohyb podle klíčů a při dalším použití pozastaví, Zastavit se vrátí na krok, ze kterého přehrávání začalo. Nastavit klíče a Odebrat klíče přidávají nebo odebírají klíče vybraných objektů v aktuálním kroku, jako kosočtverce panelu Klíčové snímky. Přidat klíče určuje, zda úpravy vytvářejí animační klíče v aktuálním kroku, což umožňuje, aby se vlastnosti, například poloha, mezi kroky lišily.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="797"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="807"/>
         <source>Choose how inserted parts are colored.</source>
         <translation>Zvolte, jak se barví vkládané díly.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="797"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="807"/>
         <source>Color Options</source>
         <translation>Volby barev</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="810"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="820"/>
         <source>Scroll Colors Left</source>
         <translation>Posunout barvy doleva</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="810"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="820"/>
         <source>Scroll Colors Right</source>
         <translation>Posunout barvy doprava</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="991"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1001"/>
         <source>T</source>
         <translation>T</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1003"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1013"/>
         <source>Enter the X translation in LDraw units or rotation in degrees.</source>
         <translation>Zadejte posunutí X v jednotkách LDraw nebo otočení ve stupních.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1008"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1018"/>
         <source>Transform Y</source>
         <translation>Transformace Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1009"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1019"/>
         <source>Enter the Y translation in LDraw units or rotation in degrees.</source>
         <translation>Zadejte posun Y v jednotkách LDraw nebo otočení ve stupních.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1014"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1024"/>
         <source>Transform Z</source>
         <translation>Transformace Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1015"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1025"/>
         <source>Enter the Z translation in LDraw units or rotation in degrees.</source>
         <translation>Zadejte posun Z v jednotkách LDraw nebo otočení ve stupních.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1082"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1092"/>
         <source>Timeline</source>
         <translation>Časová osa</translation>
     </message>
@@ -18579,7 +18619,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Časová osa&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Vyberte krok, aby byl aktuální, nebo vyberte řádky dílů a vyberte tyto díly v modelu. Přetahujte kousky mezi kroky nebo v rámci kroku změňte jejich pořadí. Kliknutím pravým tlačítkem myši zobrazíte příkazy pro vkládání, odebírání, pohyb a viditelnost.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1103"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1113"/>
         <source>Minifigure Builder</source>
         <translation>Tvůrce minifigurek</translation>
     </message>
@@ -18605,7 +18645,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Náhled&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Zkontrolujte díl, aniž byste jej umístili do modelu. Dvojitým kliknutím na díl v doku Parts zobrazíte jeho náhled. Uzamknout náhled zachová aktuální náhled, když se změní výběr zdroje; odemkněte jej a povolte aktualizace.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1204"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1214"/>
         <source>Asset loading failed</source>
         <translation>Načtení zdroje se nezdařilo</translation>
     </message>
@@ -19085,50 +19125,55 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Přichytávání posunu, přichytávání otáčení, osy transformace a střed otáčení. Změníte je posledními tlačítky standardního panelu nástrojů.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="108"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="109"/>
         <source>Export 3DS</source>
         <translation>Export 3DS</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="112"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="113"/>
         <source>Export COLLADA</source>
         <translation>Exportovat COLLADA</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="120"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="121"/>
         <source>Export KMZ</source>
         <translation>Exportovat KMZ</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="131"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="132"/>
         <source>Export BrickLink</source>
         <translation>Exportovat BrickLink</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="136"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="137"/>
         <source>Export CSV</source>
         <translation>Exportovat CSV</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="144"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="145"/>
         <source>Export Wavefront</source>
         <translation>Exportovat Wavefront</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="186"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="187"/>
         <source>Cannot Cut Selection</source>
         <translation>Výběr nelze vyjmout</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="191"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="192"/>
         <source>Cannot Copy Selection</source>
         <translation>Výběr nelze kopírovat</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="196"/>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="201"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="197"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="202"/>
         <source>Cannot Paste Selection</source>
         <translation>Výběr nelze vložit</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="1013"/>
+        <source>No joint here</source>
+        <translation>Zde není žádný kloub</translation>
     </message>
     <message>
         <source>Cannot Cut Model</source>
@@ -19146,7 +19191,7 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation type="obsolete">Model nelze vložit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="501"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="502"/>
         <source>Select Cutaway Shade Color</source>
         <translation>Vybrat barvu stínu řezu</translation>
     </message>
@@ -19528,27 +19573,27 @@ Vybrat, kam jej uložit, a stáhnout nejnovější %3 nyní?</translation>
         <translation>Pravoúhlá</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1228"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1238"/>
         <source>Selection</source>
         <translation>Výběr</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1229"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1239"/>
         <source>View Orientation</source>
         <translation>Orientace pohledu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1230"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1240"/>
         <source>Position</source>
         <translation>Pozice</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1231"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1241"/>
         <source>Snap and Transform</source>
         <translation>Přichycení a transformace</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1232"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1242"/>
         <source>Step</source>
         <translation>Krok</translation>
     </message>
@@ -21984,12 +22029,12 @@ Hmotnost: %1</translation>
 <context>
     <name>swPosesWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="361"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="374"/>
         <source>Pose</source>
         <translation>Póza</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="363"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="376"/>
         <source>Saved poses of this model, played in this order by the Joints motion</source>
         <translation>Uložené pózy tohoto modelu, přehrávané v tomto pořadí pohybem Klouby</translation>
     </message>
@@ -21998,88 +22043,88 @@ Hmotnost: %1</translation>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Pózy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pózy uložené v modelu vybraném v panelu Klouby, každá obsahuje jen úhly kloubů tohoto modelu. Pohyb Klouby v dialogu obrázku přehrává pózy hlavního modelu v tomto pořadí. Vyberte jednu pro vyvolání, přejmenování nebo smazání.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="355"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="368"/>
         <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The poses saved in the model picked in the Joints panel, or in the current model, each holding the angles of that model&apos;s joints only. Save stores the joint angles as a named pose, Recall puts them back in one undo step, and Rename and Delete change the picked pose. Poses are saved with the model, and the Joints motion of the image dialog plays the poses of the main model in this order.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Pózy&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pózy uložené v modelu vybraném v panelu Klouby nebo v aktuálním modelu, každá obsahuje pouze úhly kloubů tohoto modelu. Uložit uloží úhly kloubů jako pojmenovanou pózu, Vyvolat je vrátí jedním krokem zpět a Přejmenovat a Odstranit mění vybranou pózu. Pózy se ukládají s modelem a pohyb Klouby v dialogu obrázku přehrává pózy hlavního modelu v tomto pořadí.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="377"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="390"/>
         <source>Save</source>
         <translation>Uložit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="377"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="390"/>
         <source>Save the joint angles of this model as a pose</source>
         <translation>Uloží úhly kloubů tohoto modelu jako pózu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="377"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="390"/>
         <source>&lt;p&gt;&lt;b&gt;Save&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Store the angles of the joints in this model under a name. Saving a name that already exists replaces that pose.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Uložit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Uloží úhly kloubů v tomto modelu pod názvem. Uložení existujícího názvu nahradí danou pózu.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="378"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="391"/>
         <source>Recall</source>
         <translation>Vyvolat</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="378"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="391"/>
         <source>Put the joints of this model back in the picked pose</source>
         <translation>Vrátí klouby tohoto modelu do vybrané pózy</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="378"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="391"/>
         <source>&lt;p&gt;&lt;b&gt;Recall&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the joints of this model back to the angles of the picked pose, in one undo step.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Vyvolat&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Natočí klouby tohoto modelu zpět na úhly vybrané pózy, v jednom kroku zpět.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="379"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="392"/>
         <source>Rename</source>
         <translation>Přejmenovat</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="379"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="392"/>
         <source>Rename the picked pose</source>
         <translation>Přejmenuje vybranou pózu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="379"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="392"/>
         <source>&lt;p&gt;&lt;b&gt;Rename&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Give the picked pose a new name.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Přejmenovat&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Dá vybrané póze nový název.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="380"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="393"/>
         <source>Delete</source>
         <translation>Odstranit</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="380"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="393"/>
         <source>Delete the picked pose</source>
         <translation>Odstraní vybranou pózu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="380"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="393"/>
         <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the picked pose from the model. The joints keep their angles.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Odstranit&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Odebere vybranou pózu z modelu. Klouby si ponechají své úhly.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="422"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="459"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="435"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="472"/>
         <source>Name</source>
         <translation>Název</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="422"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="435"/>
         <source>Save Pose</source>
         <translation>Uložit pózu</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="422"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="435"/>
         <source>Pose %1</source>
         <translation>Póza %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="459"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="472"/>
         <source>Rename Pose</source>
         <translation>Přejmenovat pózu</translation>
     </message>

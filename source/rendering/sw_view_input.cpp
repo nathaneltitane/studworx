@@ -1729,11 +1729,11 @@ void swView::OnRightButtonUp()
 	}
 	else if (ShowMenu)
 	{
-		// the menu acts on what is under the pointer
+		// the menu acts on what is under the pointer, joint mode keeps its joint
 
 		swModel* ActiveModel = GetActiveModel();
 
-		if (const swObjectSection ObjectSection = FindObjectUnderPointer(false, false); ActiveModel && ObjectSection.Object && !ObjectSection.Object->IsSelected())
+		if (const swObjectSection ObjectSection = FindObjectUnderPointer(false, false); ActiveModel && !ActiveModel->IsJointFocused() && ObjectSection.Object && !ObjectSection.Object->IsSelected())
 			ActiveModel->SetSelectionAndFocusAction(std::vector<swObject*>(), ObjectSection.Object, ObjectSection.Section, gMainWindow->GetSelectionMode());
 
 		// set joint opens the submodel under the pointer

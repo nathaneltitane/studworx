@@ -1470,126 +1470,136 @@
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2598"/>
+        <source>Part.JointMode</source>
+        <translation>零件.關節模式</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2607"/>
+        <source>Part.JointModeEnd</source>
+        <translation>零件.結束關節模式</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2616"/>
         <source>Part.ResetPivotPoint</source>
         <translation>零件.重設樞軸點</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2607"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2625"/>
         <source>Part.RemoveKeyFrames</source>
         <translation>零件.移除關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2616"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2634"/>
         <source>Part.ControlPoint.Insert</source>
         <translation>零件.控制點.插入</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2625"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2643"/>
         <source>Part.ControlPoint.Remove</source>
         <translation>零件.控制點.移除</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2634"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2652"/>
         <source>Part.ControlPoint.Tangent</source>
         <translation>零件.控制點.切線</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2643"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2661"/>
         <source>Part.ControlPoint.AlignTangent</source>
         <translation>零件.控制點.對齊切線</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2652"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2670"/>
         <source>Part.ControlPoint.AlignX</source>
         <translation>零件.控制點.對齊X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2661"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2679"/>
         <source>Part.ControlPoint.AlignY</source>
         <translation>零件.控制點.對齊Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2670"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2688"/>
         <source>Part.ControlPoint.AlignZ</source>
         <translation>零件.控制點.對齊Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2679"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2697"/>
         <source>Part.TrainTrack.FocusNext</source>
         <translation>零件.火車軌道.聚焦下一個</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2688"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2706"/>
         <source>Part.TrainTrack.FocusPrevious</source>
         <translation>零件.火車軌道.聚焦上一個</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2697"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2715"/>
         <source>Part.TrainTrack.Rotate</source>
         <translation>零件.火車軌道.旋轉</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2706"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2724"/>
         <source>Part.Move.PlusX</source>
         <translation>零件.移動.+X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2715"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2733"/>
         <source>Part.Move.MinusX</source>
         <translation>零件.移動.-X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2724"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2742"/>
         <source>Part.Move.PlusY</source>
         <translation>零件.移動.+Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2733"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2751"/>
         <source>Part.Move.MinusY</source>
         <translation>零件.移動.-Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2742"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2760"/>
         <source>Part.Move.PlusZ</source>
         <translation>零件.移動.+Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2751"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2769"/>
         <source>Part.Move.MinusZ</source>
         <translation>零件.移動.-Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2760"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2778"/>
         <source>Part.Rotate.PlusX</source>
         <translation>零件.旋轉.+X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2769"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2787"/>
         <source>Part.Rotate.MinusX</source>
         <translation>零件.旋轉.-X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2778"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2796"/>
         <source>Part.Rotate.PlusY</source>
         <translation>零件.旋轉.+Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2787"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2805"/>
         <source>Part.Rotate.MinusY</source>
         <translation>零件.旋轉.-Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2796"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2814"/>
         <source>Part.Rotate.PlusZ</source>
         <translation>零件.旋轉.+Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2805"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2823"/>
         <source>Part.Rotate.MinusZ</source>
         <translation>零件.旋轉.-Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2814"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2832"/>
         <source>Part.MinifigureBuilder</source>
         <translation>零件.迷你人偶製作器</translation>
     </message>
@@ -1598,322 +1608,322 @@
         <translation type="vanished">零件.人偶嚮導</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2823"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2841"/>
         <source>Part.Array</source>
         <translation>零件.陣列</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2832"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2850"/>
         <source>Part.ViewSelectedModel</source>
         <translation>零件.開啟選取子模型</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2841"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2859"/>
         <source>Part.MoveSelectionToModel</source>
         <translation>零件.移至新子模型</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2850"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2868"/>
         <source>Part.InlineSelectedModels</source>
         <translation>零件.內嵌選取子模型</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2859"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2877"/>
         <source>Part.FlattenModel</source>
         <translation>零件.攤平子模型</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2868"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2886"/>
         <source>Part.EditSelectedSubmodel</source>
         <translation>零件.編輯選取子模型</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2877"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2895"/>
         <source>Part.EditEndSubmodel</source>
         <translation>零件.結束子模型編輯</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2886"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2904"/>
         <source>Part.Group</source>
         <translation>零件.群組</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2895"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2913"/>
         <source>Part.Ungroup</source>
         <translation>零件.取消群組</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2904"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2922"/>
         <source>Part.GroupAdd</source>
         <translation>零件.加入群組</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2913"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2931"/>
         <source>Part.GroupRemove</source>
         <translation>零件.從群組移除</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2922"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2940"/>
         <source>Part.GroupEdit</source>
         <translation>零件.編輯群組</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2931"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2949"/>
         <source>Part.HideSelected</source>
         <translation>零件.隱藏選取項目</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2940"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2958"/>
         <source>Part.HideUnselected</source>
         <translation>零件.隱藏未選取項目</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2949"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2967"/>
         <source>Part.UnhideSelected</source>
         <translation>零件.顯示選取項目</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2958"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2976"/>
         <source>Part.UnhideAll</source>
         <translation>零件.全部顯示</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2967"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2985"/>
         <source>Part.ShowEarlier</source>
         <translation>零件.提前顯示</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2976"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2994"/>
         <source>Part.ShowLater</source>
         <translation>零件.延後顯示</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2985"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3003"/>
         <source>Model.New</source>
         <translation>模型.新增子模型</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2994"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3012"/>
         <source>Model.Properties</source>
         <translation>模型.屬性</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3003"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3021"/>
         <source>Model.List</source>
         <translation>模型.清單</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3012"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3030"/>
         <source>Model.Model01</source>
         <translation>模型.Model01</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3021"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3039"/>
         <source>Model.Model02</source>
         <translation>模型.Model02</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3030"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3048"/>
         <source>Model.Model03</source>
         <translation>模型.Model03</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3039"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3057"/>
         <source>Model.Model04</source>
         <translation>模型.Model04</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3048"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3066"/>
         <source>Model.Model05</source>
         <translation>模型.Model05</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3057"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3075"/>
         <source>Model.Model06</source>
         <translation>模型.Model06</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3066"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3084"/>
         <source>Model.Model07</source>
         <translation>模型.Model07</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3075"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3093"/>
         <source>Model.Model08</source>
         <translation>模型.Model08</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3084"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3102"/>
         <source>Model.Model09</source>
         <translation>模型.Model09</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3093"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3111"/>
         <source>Model.Model10</source>
         <translation>模型.Model10</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3102"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3120"/>
         <source>Model.Model11</source>
         <translation>模型.Model11</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3111"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3129"/>
         <source>Model.Model12</source>
         <translation>模型.Model12</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3120"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3138"/>
         <source>Model.Model13</source>
         <translation>模型.Model13</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3129"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3147"/>
         <source>Model.Model14</source>
         <translation>模型.Model14</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3138"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3156"/>
         <source>Model.Model15</source>
         <translation>模型.Model15</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3147"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3165"/>
         <source>Model.Model16</source>
         <translation>模型.Model16</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3156"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3174"/>
         <source>Model.Model17</source>
         <translation>模型.Model17</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3165"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3183"/>
         <source>Model.Model18</source>
         <translation>模型.Model18</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3174"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3192"/>
         <source>Model.Model19</source>
         <translation>模型.Model19</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3183"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3201"/>
         <source>Model.Model20</source>
         <translation>模型.Model20</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3192"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3210"/>
         <source>Model.Model21</source>
         <translation>模型.Model21</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3201"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3219"/>
         <source>Model.Model22</source>
         <translation>模型.Model22</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3210"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3228"/>
         <source>Model.Model23</source>
         <translation>模型.Model23</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3219"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3237"/>
         <source>Model.Model24</source>
         <translation>模型.Model24</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3228"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3246"/>
         <source>Model.Model25</source>
         <translation>模型.Model25</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3237"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3255"/>
         <source>Model.Model26</source>
         <translation>模型.Model26</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3246"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3264"/>
         <source>Model.Model27</source>
         <translation>模型.Model27</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3255"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3273"/>
         <source>Model.Model28</source>
         <translation>模型.Model28</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3264"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3282"/>
         <source>Model.Model29</source>
         <translation>模型.Model29</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3273"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3291"/>
         <source>Model.Model30</source>
         <translation>模型.Model30</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3282"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3300"/>
         <source>Model.Model31</source>
         <translation>模型.Model31</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3291"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3309"/>
         <source>Model.Model32</source>
         <translation>模型.Model32</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3300"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3318"/>
         <source>Model.Model33</source>
         <translation>模型.Model33</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3309"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3327"/>
         <source>Model.Model34</source>
         <translation>模型.Model34</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3318"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3336"/>
         <source>Model.Model35</source>
         <translation>模型.Model35</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3327"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3345"/>
         <source>Model.Model36</source>
         <translation>模型.Model36</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3336"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3354"/>
         <source>Model.Model37</source>
         <translation>模型.Model37</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3345"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3363"/>
         <source>Model.Model38</source>
         <translation>模型.Model38</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3354"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3372"/>
         <source>Model.Model39</source>
         <translation>模型.Model39</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3363"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3381"/>
         <source>Model.Model40</source>
         <translation>模型.Model40</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3372"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3390"/>
         <source>Help.WhatsThis</source>
         <translation>說明.這是什麼</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3381"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3399"/>
         <source>Help.HomePage</source>
         <translation>說明.首頁</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3390"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3408"/>
         <source>Help.BugReport</source>
         <translation>說明.回報錯誤</translation>
     </message>
@@ -1922,7 +1932,7 @@
         <translation type="vanished">說明.檢查更新</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3399"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3417"/>
         <source>Help.About</source>
         <translation>說明.關於</translation>
     </message>
@@ -2081,97 +2091,97 @@
 <context>
     <name>ContextMenu</name>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3501"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3519"/>
         <source>Submodel</source>
         <translation>子模型</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3502"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3520"/>
         <source>Control Points</source>
         <translation>控制點</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3503"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3521"/>
         <source>Align to Axis</source>
         <translation>與軸線對齊</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3504"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3522"/>
         <source>View</source>
         <translation>視圖</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3536"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3554"/>
         <source>Import</source>
         <translation>匯入</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3537"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3555"/>
         <source>Export</source>
         <translation>匯出</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3538"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3556"/>
         <source>Render</source>
         <translation>算圖</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3539"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3557"/>
         <source>Selection Mode</source>
         <translation>選擇模式</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3540"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3558"/>
         <source>Transform</source>
         <translation>變換</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3541"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3559"/>
         <source>Tools</source>
         <translation>工具</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3542"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3560"/>
         <source>Toolbars</source>
         <translation>工具列</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3543"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3561"/>
         <source>Viewpoint</source>
         <translation>視點</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3544"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3562"/>
         <source>Cutaway</source>
         <translation>剖面圖</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3545"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3563"/>
         <source>Camera</source>
         <translation>相機</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3546"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3564"/>
         <source>Projection</source>
         <translation>投影</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3547"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3565"/>
         <source>Shading</source>
         <translation>著色</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3548"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3566"/>
         <source>Joint</source>
         <translation>關節</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3549"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3567"/>
         <source>Group</source>
         <translation>群組</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3550"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3568"/>
         <source>Visibility</source>
         <translation>可見性</translation>
     </message>
@@ -2378,12 +2388,12 @@
         <translation>在後面插入</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2608"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2626"/>
         <source>Remove &amp;Keyframes</source>
         <translation>移除關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2815"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2833"/>
         <source>&amp;Minifigure Builder</source>
         <translation>迷你人偶製作器</translation>
     </message>
@@ -2392,17 +2402,17 @@
         <translation type="vanished">開啟選定模型</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2869"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2887"/>
         <source>Edit Selected Submodel</source>
         <translation>編輯選取子模型</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2878"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2896"/>
         <source>End Submodel Editing</source>
         <translation>結束子模型編輯</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2986"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3004"/>
         <source>New Submodel...</source>
         <translation>新增子模型...</translation>
     </message>
@@ -3267,222 +3277,232 @@
         <translation>旋轉關節</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2833"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2599"/>
+        <source>Joint &amp;Mode</source>
+        <translation>關節模式</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2608"/>
+        <source>&amp;End Joint Mode</source>
+        <translation>結束關節模式</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2851"/>
         <source>Open Selected Submodel</source>
         <translation>開啟選取子模型</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2842"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2860"/>
         <source>Move to New Submodel...</source>
         <translation>移至新子模型...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2851"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2869"/>
         <source>Inline Selected Submodels</source>
         <translation>內嵌選取子模型</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2860"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2878"/>
         <source>Flatten Submodels</source>
         <translation>攤平子模型</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3013"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3031"/>
         <source>Submodel 1</source>
         <translation>子模型 1</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3022"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3040"/>
         <source>Submodel 2</source>
         <translation>子模型 2</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3031"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3049"/>
         <source>Submodel 3</source>
         <translation>子模型 3</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3040"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3058"/>
         <source>Submodel 4</source>
         <translation>子模型 4</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3049"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3067"/>
         <source>Submodel 5</source>
         <translation>子模型 5</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3058"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3076"/>
         <source>Submodel 6</source>
         <translation>子模型 6</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3067"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3085"/>
         <source>Submodel 7</source>
         <translation>子模型 7</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3076"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3094"/>
         <source>Submodel 8</source>
         <translation>子模型 8</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3085"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3103"/>
         <source>Submodel 9</source>
         <translation>子模型 9</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3094"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3112"/>
         <source>Submodel 10</source>
         <translation>子模型 10</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3103"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3121"/>
         <source>Submodel 11</source>
         <translation>子模型 11</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3112"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3130"/>
         <source>Submodel 12</source>
         <translation>子模型 12</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3121"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3139"/>
         <source>Submodel 13</source>
         <translation>子模型 13</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3130"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3148"/>
         <source>Submodel 14</source>
         <translation>子模型 14</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3139"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3157"/>
         <source>Submodel 15</source>
         <translation>子模型 15</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3148"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3166"/>
         <source>Submodel 16</source>
         <translation>子模型 16</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3157"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3175"/>
         <source>Submodel 17</source>
         <translation>子模型 17</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3166"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3184"/>
         <source>Submodel 18</source>
         <translation>子模型 18</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3175"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3193"/>
         <source>Submodel 19</source>
         <translation>子模型 19</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3184"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3202"/>
         <source>Submodel 20</source>
         <translation>子模型 20</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3193"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3211"/>
         <source>Submodel 21</source>
         <translation>子模型 21</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3202"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3220"/>
         <source>Submodel 22</source>
         <translation>子模型 22</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3211"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3229"/>
         <source>Submodel 23</source>
         <translation>子模型 23</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3220"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3238"/>
         <source>Submodel 24</source>
         <translation>子模型 24</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3229"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3247"/>
         <source>Submodel 25</source>
         <translation>子模型 25</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3238"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3256"/>
         <source>Submodel 26</source>
         <translation>子模型 26</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3247"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3265"/>
         <source>Submodel 27</source>
         <translation>子模型 27</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3256"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3274"/>
         <source>Submodel 28</source>
         <translation>子模型 28</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3265"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3283"/>
         <source>Submodel 29</source>
         <translation>子模型 29</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3274"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3292"/>
         <source>Submodel 30</source>
         <translation>子模型 30</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3283"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3301"/>
         <source>Submodel 31</source>
         <translation>子模型 31</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3292"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3310"/>
         <source>Submodel 32</source>
         <translation>子模型 32</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3301"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3319"/>
         <source>Submodel 33</source>
         <translation>子模型 33</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3310"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3328"/>
         <source>Submodel 34</source>
         <translation>子模型 34</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3319"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3337"/>
         <source>Submodel 35</source>
         <translation>子模型 35</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3328"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3346"/>
         <source>Submodel 36</source>
         <translation>子模型 36</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3337"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3355"/>
         <source>Submodel 37</source>
         <translation>子模型 37</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3346"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3364"/>
         <source>Submodel 38</source>
         <translation>子模型 38</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3355"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3373"/>
         <source>Submodel 39</source>
         <translation>子模型 39</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3364"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3382"/>
         <source>Submodel 40</source>
         <translation>子模型 40</translation>
     </message>
@@ -3546,42 +3566,42 @@
         <translation>保留上次選取</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2635"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2653"/>
         <source>Clamp Tangent</source>
         <translation>鎖定切線</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2644"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2662"/>
         <source>Align to Tangent</source>
         <translation>對齊切線</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2653"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2671"/>
         <source>X Axis</source>
         <translation>X 軸</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2662"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2680"/>
         <source>Y Axis</source>
         <translation>Y 軸</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2671"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2689"/>
         <source>Z Axis</source>
         <translation>Z 軸</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3373"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3391"/>
         <source>&amp;What&apos;s This?</source>
         <translation>這是什麼？</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3382"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3400"/>
         <source>&amp;Home Page</source>
         <translation>首頁</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3391"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3409"/>
         <source>Report a &amp;Bug</source>
         <translation>回報錯誤</translation>
     </message>
@@ -3777,7 +3797,7 @@
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1449"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3427"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3445"/>
         <source>Delete Step</source>
         <translation>刪除步驟</translation>
     </message>
@@ -4121,7 +4141,7 @@
         <translation>上色選取項目</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2599"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2617"/>
         <source>Reset &amp;Pivot Point</source>
         <translation>重設樞軸點</translation>
     </message>
@@ -4130,87 +4150,87 @@
         <translation type="vanished">移除關鍵格</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2617"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2635"/>
         <source>Insert Control Point</source>
         <translation>插入控制點</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2626"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2644"/>
         <source>Remove Control Point</source>
         <translation>移除控制點</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2680"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2698"/>
         <source>Focus Next Connection</source>
         <translation>焦點移至下一個連接</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2689"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2707"/>
         <source>Focus Previous Connection</source>
         <translation>焦點移至上一個連接</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2698"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2716"/>
         <source>Rotate Train Track</source>
         <translation>旋轉火車軌道</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2707"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2725"/>
         <source>Move +X</source>
         <translation>移動 +X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2716"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2734"/>
         <source>Move -X</source>
         <translation>移動 -X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2725"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2743"/>
         <source>Move +Y</source>
         <translation>移動 +Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2734"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2752"/>
         <source>Move -Y</source>
         <translation>移動 -Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2743"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2761"/>
         <source>Move +Z</source>
         <translation>移動 +Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2752"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2770"/>
         <source>Move -Z</source>
         <translation>移動 -Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2761"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2779"/>
         <source>Rotate +X</source>
         <translation>旋轉 +X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2770"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2788"/>
         <source>Rotate -X</source>
         <translation>旋轉 -X</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2779"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2797"/>
         <source>Rotate +Y</source>
         <translation>旋轉 +Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2788"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2806"/>
         <source>Rotate -Y</source>
         <translation>旋轉 -Y</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2797"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2815"/>
         <source>Rotate +Z</source>
         <translation>旋轉 +Z</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2806"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2824"/>
         <source>Rotate -Z</source>
         <translation>旋轉 -Z</translation>
     </message>
@@ -4219,7 +4239,7 @@
         <translation type="vanished">人偶嚮導...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2824"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2842"/>
         <source>A&amp;rray...</source>
         <translation>陣列...</translation>
     </message>
@@ -4232,67 +4252,67 @@
         <translation type="vanished">展開選定子模型</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2887"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2905"/>
         <source>&amp;Group...</source>
         <translation>群組...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2896"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2914"/>
         <source>&amp;Ungroup</source>
         <translation>取消群組</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2905"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2923"/>
         <source>&amp;Add to Group</source>
         <translation>加入群組</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2914"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2932"/>
         <source>Re&amp;move from Group</source>
         <translation>從群組移除</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2923"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2941"/>
         <source>&amp;Edit Groups...</source>
         <translation>編輯群組...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2932"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2950"/>
         <source>&amp;Hide Selected</source>
         <translation>隱藏選取項目</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2941"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2959"/>
         <source>Hide &amp;Unselected</source>
         <translation>隱藏未選取項目</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2950"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2968"/>
         <source>&amp;Unhide Selected</source>
         <translation>顯示選取項目</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2959"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2977"/>
         <source>U&amp;nhide All</source>
         <translation>全部顯示</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2968"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2986"/>
         <source>Show Earlier</source>
         <translation>提前顯示</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2977"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2995"/>
         <source>Show Later</source>
         <translation>延後顯示</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2995"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3013"/>
         <source>Proper&amp;ties...</source>
         <translation>屬性...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3004"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3022"/>
         <source>Submodels...</source>
         <translation>子模型...</translation>
     </message>
@@ -4466,32 +4486,32 @@
         <translation type="vanished">報告錯誤</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3409"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3427"/>
         <source>Insert Step Before</source>
         <translation>在前面插入步驟</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3418"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3436"/>
         <source>Insert Step After</source>
         <translation>在後面插入步驟</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3436"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3454"/>
         <source>Move Selection Here</source>
         <translation>將選取項目移到此處</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3445"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3463"/>
         <source>Move Selection Before</source>
         <translation>將選取項目移到前面</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3454"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3472"/>
         <source>Move Selection After</source>
         <translation>將選取項目移到後面</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3463"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3481"/>
         <source>Set Current Step</source>
         <translation>設為目前步驟</translation>
     </message>
@@ -4534,7 +4554,7 @@
         <translation type="vanished">檢查更新...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3400"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3418"/>
         <source>&amp;About...</source>
         <translation>關於...</translation>
     </message>
@@ -4542,57 +4562,57 @@
 <context>
     <name>Mouse</name>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3474"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3492"/>
         <source>NewPart</source>
         <translation>新增零件</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3475"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3493"/>
         <source>NewPointLight</source>
         <translation>新增點光源</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3476"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3494"/>
         <source>NewSpotLight</source>
         <translation>新增聚光燈</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3477"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3495"/>
         <source>NewDirectionalLight</source>
         <translation>新定向光</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3478"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3496"/>
         <source>NewAreaLight</source>
         <translation>新區域光</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3479"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3497"/>
         <source>NewCamera</source>
         <translation>新增相機</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3480"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3498"/>
         <source>Select</source>
         <translation>選擇</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3481"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3499"/>
         <source>Move</source>
         <translation>移動</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3482"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3500"/>
         <source>Rotate</source>
         <translation>旋轉</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3483"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3501"/>
         <source>Erase</source>
         <translation>橡皮擦</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3485"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3503"/>
         <source>Joints</source>
         <translation>關節</translation>
     </message>
@@ -4601,37 +4621,37 @@
         <translation type="vanished">刪除</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3484"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3502"/>
         <source>Paint</source>
         <translation>上色</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3486"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3504"/>
         <source>ColorPicker</source>
         <translation>取色器</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3487"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3505"/>
         <source>Zoom</source>
         <translation>縮放</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3488"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3506"/>
         <source>Pan</source>
         <translation>平移視圖</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3489"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3507"/>
         <source>Orbit</source>
         <translation>軌道旋轉</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3490"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3508"/>
         <source>Roll</source>
         <translation>側滾</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3491"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3509"/>
         <source>ZoomRegion</source>
         <translation>區域縮放</translation>
     </message>
@@ -7176,30 +7196,30 @@ File format is not recognized.</source>
         <translation>切換預覽中的座標軸圖示</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2609"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2627"/>
         <source>Remove all keyframes from the selected parts</source>
         <translation>移除選取零件的所有關鍵影格</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2762"/>
-        <location filename="../../source/application/sw_commands.cpp" line="2771"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2780"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2789"/>
         <source>Rotate selected objects around the X axis</source>
         <translation>繞 X 軸旋轉選取物件</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2780"/>
-        <location filename="../../source/application/sw_commands.cpp" line="2789"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2798"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2807"/>
         <source>Rotate selected objects around the Y axis</source>
         <translation>繞 Y 軸旋轉選取物件</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2798"/>
-        <location filename="../../source/application/sw_commands.cpp" line="2807"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2816"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2825"/>
         <source>Rotate selected objects around the Z axis</source>
         <translation>繞 Z 軸旋轉選取物件</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2816"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2834"/>
         <source>Show the Minifigure Builder panel to build a minifigure and add it to the model</source>
         <translation>顯示迷你人偶製作器面板，以組裝人偶並將其加入模型</translation>
     </message>
@@ -7208,33 +7228,31 @@ File format is not recognized.</source>
         <translation type="vanished">在新標籤頁中開啟選定零件引用的模型</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2870"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2888"/>
         <source>Edit the currently selected submodel in-place</source>
         <translation>就地編輯目前選取的子模型</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2879"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2897"/>
         <source>End in-place submodel editing</source>
         <translation>結束就地子模型編輯</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2987"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3005"/>
         <source>Create a new submodel</source>
         <translation>建立新子模型</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2996"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3014"/>
         <source>Display the properties of the current submodel</source>
         <translation>顯示目前子模型的屬性</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3005"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3023"/>
         <source>Show a list of all submodels</source>
         <translation>顯示所有子模型的清單</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3014"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3023"/>
         <location filename="../../source/application/sw_commands.cpp" line="3032"/>
         <location filename="../../source/application/sw_commands.cpp" line="3041"/>
         <location filename="../../source/application/sw_commands.cpp" line="3050"/>
@@ -7273,6 +7291,8 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="3347"/>
         <location filename="../../source/application/sw_commands.cpp" line="3356"/>
         <location filename="../../source/application/sw_commands.cpp" line="3365"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3374"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3383"/>
         <source>Switch to this submodel</source>
         <translation>切換到此子模型</translation>
     </message>
@@ -7281,22 +7301,22 @@ File format is not recognized.</source>
         <translation type="vanished">在預設瀏覽器中開啟 StudWorx 的錯誤報告表單</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3437"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3455"/>
         <source>Move the selected parts into this step</source>
         <translation>將選取零件移至此步驟</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3446"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3464"/>
         <source>Move the selected parts into a new step before this</source>
         <translation>將選取零件移至此步驟之前的新步驟</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3455"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3473"/>
         <source>Move the selected parts into a new step after this</source>
         <translation>將選取零件移至此步驟之後的新步驟</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3464"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3482"/>
         <source>View the model at this point in the timeline</source>
         <translation>在時間軸的這一點檢視模型</translation>
     </message>
@@ -7402,19 +7422,19 @@ File format is not recognized.</source>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1432"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3410"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3428"/>
         <source>Insert a new step before the current step</source>
         <translation>在目前步驟之前插入新步驟</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1441"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3419"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3437"/>
         <source>Insert a new step after the current step</source>
         <translation>在目前步驟之後插入新步驟</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="1450"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3428"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3446"/>
         <source>Delete the current step</source>
         <translation>刪除目前步驟</translation>
     </message>
@@ -7865,12 +7885,22 @@ File format is not recognized.</source>
         <translation>點選所選子模型的連接點，將其設為關節</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3383"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2600"/>
+        <source>Go into joint mode on the selected submodel, or leave it</source>
+        <translation>進入所選子模型的關節模式，或退出</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2609"/>
+        <source>Leave joint mode and go back to where it started</source>
+        <translation>退出關節模式並回到開始的位置</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="3401"/>
         <source>Open the StudWorx home page in your default web browser</source>
         <translation>在預設瀏覽器中開啟 StudWorx 首頁</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3392"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3410"/>
         <source>Open the StudWorx bug report form in your default web browser</source>
         <translation>在預設瀏覽器中開啟 StudWorx 錯誤回報表單</translation>
     </message>
@@ -8060,52 +8090,52 @@ File format is not recognized.</source>
         <translation>讓選取的子模型繞所選關節而非樞軸點旋轉</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2600"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2618"/>
         <source>Reset the pivot point of the selected parts to their origin</source>
         <translation>將選取零件的樞軸點重設到其原點</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2636"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2654"/>
         <source>Turn the selected control point along the path, or release it to rotate it freely</source>
         <translation>沿路徑轉動選取的控制點，或放開它讓其自由旋轉</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2645"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2663"/>
         <source>Turn the selected control point along the path once and keep it released</source>
         <translation>沿路徑將選取的控制點轉動一次，並保持放開狀態</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2654"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2672"/>
         <source>Turn the selected control point along the X axis</source>
         <translation>沿 X 軸轉動選取的控制點</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2663"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2681"/>
         <source>Turn the selected control point along the Y axis</source>
         <translation>沿 Y 軸轉動選取的控制點</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2672"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2690"/>
         <source>Turn the selected control point along the Z axis</source>
         <translation>沿 Z 軸轉動選取的控制點</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2834"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2852"/>
         <source>Open the submodel referenced by the selected part in a new tab</source>
         <translation>在新標籤頁中開啟選取零件所參照的子模型</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2843"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2861"/>
         <source>Move the selected parts to a new submodel and replace them with a reference to it</source>
         <translation>將選取零件移至新的子模型，並以對該子模型的參照取代</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2852"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2870"/>
         <source>Insert the contents of the selected submodels into the current model</source>
         <translation>將所選子模型的內容插入目前模型中</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2861"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2879"/>
         <source>Replace every submodel, and the submodels inside it, with its parts in one step</source>
         <translation>一次將所有子模型（包含其內部的子模型）展開為零件</translation>
     </message>
@@ -8114,45 +8144,45 @@ File format is not recognized.</source>
         <translation type="vanished">移除選定零件的所有關鍵格</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2618"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2636"/>
         <source>Insert a new control point</source>
         <translation>插入新控制點</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2627"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2645"/>
         <source>Remove the selected control point</source>
         <translation>移除選取的控制點</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2681"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2699"/>
         <source>Focus the next connection of the currently selected track</source>
         <translation>聚焦目前所選軌道的下一個連接</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2690"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2708"/>
         <source>Focus the previous connection of the currently selected track</source>
         <translation>聚焦目前所選軌道的上一個連接</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2699"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2717"/>
         <source>Rotate the focused train track around its last connection</source>
         <translation>以最後一個連接點為軸，旋轉聚焦的火車軌道</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2708"/>
-        <location filename="../../source/application/sw_commands.cpp" line="2717"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2726"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2735"/>
         <source>Move selected objects along the X axis</source>
         <translation>沿 X 軸移動選取物件</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2726"/>
-        <location filename="../../source/application/sw_commands.cpp" line="2735"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2744"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2753"/>
         <source>Move selected objects along the Y axis</source>
         <translation>沿 Y 軸移動選取物件</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2744"/>
-        <location filename="../../source/application/sw_commands.cpp" line="2753"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2762"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2771"/>
         <source>Move selected objects along the Z axis</source>
         <translation>沿 Z 軸移動選取物件</translation>
     </message>
@@ -8173,7 +8203,7 @@ File format is not recognized.</source>
         <translation type="vanished">向模型添加新人偶</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2825"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2843"/>
         <source>Make copies of the selected parts</source>
         <translation>製作選取零件的副本</translation>
     </message>
@@ -8186,62 +8216,62 @@ File format is not recognized.</source>
         <translation type="vanished">將選定模型引用的內容插入到目前模型中</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2888"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2906"/>
         <source>Group selected parts together</source>
         <translation>將選取零件組成群組</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2897"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2915"/>
         <source>Ungroup selected group</source>
         <translation>解除選取群組</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2906"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2924"/>
         <source>Add focused part to selected group</source>
         <translation>將焦點零件新增至選取群組</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2915"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2933"/>
         <source>Remove focused part from group</source>
         <translation>從群組中移除焦點零件</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2924"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2942"/>
         <source>Edit groups</source>
         <translation>編輯群組</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2933"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2951"/>
         <source>Hide selected objects</source>
         <translation>隱藏選取物件</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2942"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2960"/>
         <source>Hide objects that are not selected</source>
         <translation>隱藏未選取物件</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2951"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2969"/>
         <source>Show hidden objects that are selected</source>
         <translation>顯示選取但被隱藏的物件</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2960"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2978"/>
         <source>Show all hidden objects</source>
         <translation>顯示所有隱藏物件</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2969"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2987"/>
         <source>Show selected parts one step earlier</source>
         <translation>將選取零件提前一個步驟顯示</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2978"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2996"/>
         <source>Show selected parts one step later</source>
         <translation>將選取零件推遲一個步驟顯示</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3374"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3392"/>
         <source>Click a control to read its contextual help</source>
         <translation>按一下控制項即可閱讀其情境說明</translation>
     </message>
@@ -8254,7 +8284,7 @@ File format is not recognized.</source>
         <translation type="vanished">檢查是否有更新的 StudWorx 版本或零件庫發佈</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3401"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3419"/>
         <source>Display program version number and system information</source>
         <translation>顯示程式版本號碼和系統資訊</translation>
     </message>
@@ -9296,88 +9326,96 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;設定關節&lt;/b&gt;&lt;/p&gt;&lt;p&gt;選取一個子模型，選擇「零件 &amp;gt; 關節 &amp;gt; 設定關節」（也可在模型視圖的右鍵選單中選擇），再用設定關節指標按一下它的其中一個連接，該指標會以紅色勾勒其下的零件。按一下後即設定關節，並以關節模式回到選取工具，停在新的關節上。在另一個連接再次設定關節會新增關節，在已有關節處設定關節則會重設它。圓形連接會在其軸上形成鉸鏈，球形連接則形成球窩關節。沒有陰影資料的零件會在其原點形成鉸鏈。關節會顯示在關節面板中，設定動作可復原。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2871"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
+        <source>&lt;p&gt;&lt;b&gt;Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel. Press it again to leave joint mode.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;關節模式&lt;/b&gt;&lt;/p&gt;&lt;p&gt;編輯所選子模型的關節，與在關節面板中點擊它相同。若選中的是帶關節子模型中的零件，則向上轉到該子模型。若未選中任何內容，則開啟關節面板中選定的關節。再按一次退出關節模式。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2610"/>
+        <source>&lt;p&gt;&lt;b&gt;End Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Leaves joint mode and goes back to the model you were in before, the same as the way back on the bar over the view.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;結束關節模式&lt;/b&gt;&lt;/p&gt;&lt;p&gt;退出關節模式並回到之前所在的模型，與視圖上方列中的返回路徑相同。&lt;/p&gt;</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2889"/>
         <source>&lt;p&gt;&lt;b&gt;Edit Selected Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit the selected submodel in place, inside its parent. A path bar shows where you are.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;編輯所選子模型&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在其父模型內就地編輯所選子模型。路徑列會顯示您所在的位置。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2880"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2898"/>
         <source>&lt;p&gt;&lt;b&gt;End Submodel Editing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Leave in-place editing and go back to the parent model.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;結束子模型編輯&lt;/b&gt;&lt;/p&gt;&lt;p&gt;離開就地編輯並回到父模型。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2889"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2907"/>
         <source>&lt;p&gt;&lt;b&gt;Group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Group the selected parts under a unique name, so they select and move as one.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;群組&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將所選零件以唯一名稱群組，使其作為一體選取和移動。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2898"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2916"/>
         <source>&lt;p&gt;&lt;b&gt;Ungroup&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected group, keeping its parts.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;取消群組&lt;/b&gt;&lt;/p&gt;&lt;p&gt;移除所選群組，保留其零件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2907"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2925"/>
         <source>&lt;p&gt;&lt;b&gt;Add to Group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add the part that has focus to the selected group.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;加入群組&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將取得焦點的零件加入所選群組。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2916"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2934"/>
         <source>&lt;p&gt;&lt;b&gt;Remove from Group&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Take the part that has focus out of its group.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;從群組移除&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將取得焦點的零件移出其群組。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2925"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2943"/>
         <source>&lt;p&gt;&lt;b&gt;Edit Groups&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create, rename and nest groups and drag parts between them in a tree of parts and groups.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;編輯群組&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在零件與群組的樹狀結構中建立、重新命名和巢狀排列群組，並在其間拖曳零件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2934"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2952"/>
         <source>&lt;p&gt;&lt;b&gt;Hide Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Hide the selected objects.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;隱藏所選項目&lt;/b&gt;&lt;/p&gt;&lt;p&gt;隱藏所選物件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2943"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2961"/>
         <source>&lt;p&gt;&lt;b&gt;Hide Unselected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Hide every object that is not selected.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;隱藏未選取項目&lt;/b&gt;&lt;/p&gt;&lt;p&gt;隱藏每個未被選取的物件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2952"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2970"/>
         <source>&lt;p&gt;&lt;b&gt;Unhide Selected&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the selected hidden objects again.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;顯示所選項目&lt;/b&gt;&lt;/p&gt;&lt;p&gt;再次顯示所選的已隱藏物件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2961"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2979"/>
         <source>&lt;p&gt;&lt;b&gt;Unhide All&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show every hidden object again.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;全部顯示&lt;/b&gt;&lt;/p&gt;&lt;p&gt;再次顯示每個已隱藏的物件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2970"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2988"/>
         <source>&lt;p&gt;&lt;b&gt;Show Earlier&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts one step earlier.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;提前顯示&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將所選零件提前一步。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2979"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2997"/>
         <source>&lt;p&gt;&lt;b&gt;Show Later&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts one step later.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;延後顯示&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將所選零件延後一步。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2988"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3006"/>
         <source>&lt;p&gt;&lt;b&gt;New Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add a new, empty submodel to the file and switch to it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;新增子模型&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在檔案中加入新的空白子模型並切換到該子模型。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2997"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3015"/>
         <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit the name, author, description and comments of the current submodel, and see its parts, counts, size and weight, with BrickLink and CSV export.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;屬性&lt;/b&gt;&lt;/p&gt;&lt;p&gt;編輯目前子模型的名稱、作者、說明和註解，並檢視其零件、數量、大小和重量，可匯出 BrickLink 和 CSV。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3006"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3024"/>
         <source>&lt;p&gt;&lt;b&gt;Submodels&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Create, rename, duplicate, delete, reorder and export the submodels of the file, and set the active one.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;子模型&lt;/b&gt;&lt;/p&gt;&lt;p&gt;建立、重新命名、複製、刪除、重新排序和匯出檔案的子模型，並設定作用中的子模型。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3015"/>
-        <location filename="../../source/application/sw_commands.cpp" line="3024"/>
         <location filename="../../source/application/sw_commands.cpp" line="3033"/>
         <location filename="../../source/application/sw_commands.cpp" line="3042"/>
         <location filename="../../source/application/sw_commands.cpp" line="3051"/>
@@ -9416,61 +9454,63 @@ File format is not recognized.</source>
         <location filename="../../source/application/sw_commands.cpp" line="3348"/>
         <location filename="../../source/application/sw_commands.cpp" line="3357"/>
         <location filename="../../source/application/sw_commands.cpp" line="3366"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3375"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3384"/>
         <source>&lt;p&gt;&lt;b&gt;Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Switch to this submodel. The Models menu lists up to forty submodels of the file.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;子模型&lt;/b&gt;&lt;/p&gt;&lt;p&gt;切換到此子模型。模型選單最多列出檔案的四十個子模型。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3375"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3393"/>
         <source>&lt;p&gt;&lt;b&gt;What&apos;s This?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Click any control after this to read what it does. F1 explains the focused control.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;這是什麼？&lt;/b&gt;&lt;/p&gt;&lt;p&gt;按一下此後的任何控制項即可閱讀其功能。按 F1 可說明取得焦點的控制項。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3384"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3402"/>
         <source>&lt;p&gt;&lt;b&gt;Home Page&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the StudWorx repository on GitHub in your web browser.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;首頁&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在網頁瀏覽器中開啟 GitHub 上的 StudWorx 儲存庫。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3393"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3411"/>
         <source>&lt;p&gt;&lt;b&gt;Report a Bug&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the StudWorx issues on GitHub in your web browser to report a problem.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;回報錯誤&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在網頁瀏覽器中開啟 GitHub 上的 StudWorx 問題頁面以回報問題。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3402"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3420"/>
         <source>&lt;p&gt;&lt;b&gt;About&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the StudWorx version, a link to its home page, and system information to copy into a bug report.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;關於&lt;/b&gt;&lt;/p&gt;&lt;p&gt;顯示 StudWorx 版本、首頁連結，以及可複製到錯誤回報中的系統資訊。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3411"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3429"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Step Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step before this step in the Timeline.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;在前面插入步驟&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在時間軸中此步驟之前加入空白步驟。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3420"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3438"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Step After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step after this step in the Timeline.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;在後面插入步驟&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在時間軸中此步驟之後加入空白步驟。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3429"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3447"/>
         <source>&lt;p&gt;&lt;b&gt;Delete Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove this step. Its parts join the step before it and later steps move one step earlier.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;刪除步驟&lt;/b&gt;&lt;/p&gt;&lt;p&gt;移除此步驟。其零件併入前一個步驟，後面的步驟各提前一步。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3438"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3456"/>
         <source>&lt;p&gt;&lt;b&gt;Move Selection Here&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into this step.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;將選取項目移到此處&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將所選零件移到此步驟。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3447"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3465"/>
         <source>&lt;p&gt;&lt;b&gt;Move Selection Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into a new step before this one.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;將選取項目移到前面&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將所選零件移到此步驟之前的新步驟。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3456"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3474"/>
         <source>&lt;p&gt;&lt;b&gt;Move Selection After&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into a new step after this one.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;將選取項目移到後面&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將所選零件移到此步驟之後的新步驟。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="3465"/>
+        <location filename="../../source/application/sw_commands.cpp" line="3483"/>
         <source>&lt;p&gt;&lt;b&gt;Set Current Step&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the model at this step.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;設為目前步驟&lt;/b&gt;&lt;/p&gt;&lt;p&gt;顯示模型在此步驟的狀態。&lt;/p&gt;</translation>
     </message>
@@ -9613,112 +9653,112 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;關節旋轉&lt;/b&gt;&lt;/p&gt;&lt;p&gt;選取一個帶有關節的子模型時，切換到旋轉工具，並將操作軸放在所選關節的樞軸上，以紅色勾勒，旋轉鍵和旋轉工具會讓關節繞自己的樞軸和軸轉動。鉸鏈只會繞其軸轉動。選取其他項目則會回到樞軸點。偏好設定中的「使用關節旋轉」會在所選子模型帶有關節時一律這樣做。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2619"/>
         <source>&lt;p&gt;&lt;b&gt;Reset Pivot Point&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Put the pivot point of each selected part back at its origin.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;重設樞軸點&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將每個所選零件的樞軸點放回其原點。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2610"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2628"/>
         <source>&lt;p&gt;&lt;b&gt;Remove Keyframes&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove every animation key from the selected parts, lights and cameras.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;移除關鍵影格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;移除所選零件、燈光和相機的每個動畫關鍵影格。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2619"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2637"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Control Point&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add a control point to the selected flexible part, where it bends.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;插入控制點&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在所選軟性零件彎曲處加入控制點。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2628"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2646"/>
         <source>&lt;p&gt;&lt;b&gt;Remove Control Point&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the selected control point of a flexible part.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;移除控制點&lt;/b&gt;&lt;/p&gt;&lt;p&gt;移除軟性零件所選的控制點。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2637"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2655"/>
         <source>&lt;p&gt;&lt;b&gt;Clamp Tangent&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Hold the selected control point along the path, or release it to rotate freely.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;鎖定切線&lt;/b&gt;&lt;/p&gt;&lt;p&gt;讓所選控制點固定於路徑上，或放開使其自由旋轉。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2646"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2664"/>
         <source>&lt;p&gt;&lt;b&gt;Align to Tangent&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the path once and keep it released.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;對齊切線&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將所選控制點沿路徑轉動一次並保持放開。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2655"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2673"/>
         <source>&lt;p&gt;&lt;b&gt;X Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the X axis.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;X 軸&lt;/b&gt;&lt;/p&gt;&lt;p&gt;沿 X 軸轉動所選控制點。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2664"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2682"/>
         <source>&lt;p&gt;&lt;b&gt;Y Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the Y axis.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Y 軸&lt;/b&gt;&lt;/p&gt;&lt;p&gt;沿 Y 軸轉動所選控制點。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2673"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2691"/>
         <source>&lt;p&gt;&lt;b&gt;Z Axis&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the selected control point along the Z axis.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Z 軸&lt;/b&gt;&lt;/p&gt;&lt;p&gt;沿 Z 軸轉動所選控制點。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2682"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2700"/>
         <source>&lt;p&gt;&lt;b&gt;Focus Next Connection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the focus to the next connection of the selected track, where the next part joins.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;焦點移至下一個連接&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將焦點移到所選軌道的下一個連接，即下一個零件連接之處。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2691"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2709"/>
         <source>&lt;p&gt;&lt;b&gt;Focus Previous Connection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the focus to the previous connection of the selected track, where the next part joins.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;焦點移至上一個連接&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將焦點移到所選軌道的上一個連接，即下一個零件連接之處。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2700"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2718"/>
         <source>&lt;p&gt;&lt;b&gt;Rotate Train Track&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the focused track part to its next connection.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;旋轉火車軌道&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將取得焦點的軌道零件轉到其下一個連接。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2709"/>
-        <location filename="../../source/application/sw_commands.cpp" line="2718"/>
         <location filename="../../source/application/sw_commands.cpp" line="2727"/>
         <location filename="../../source/application/sw_commands.cpp" line="2736"/>
         <location filename="../../source/application/sw_commands.cpp" line="2745"/>
         <location filename="../../source/application/sw_commands.cpp" line="2754"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2763"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2772"/>
         <source>&lt;p&gt;&lt;b&gt;Move Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected objects one move snap step along this axis.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;移動選取項目&lt;/b&gt;&lt;/p&gt;&lt;p&gt;沿此軸將所選物件移動一個移動吸附步進。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2763"/>
-        <location filename="../../source/application/sw_commands.cpp" line="2772"/>
         <location filename="../../source/application/sw_commands.cpp" line="2781"/>
         <location filename="../../source/application/sw_commands.cpp" line="2790"/>
         <location filename="../../source/application/sw_commands.cpp" line="2799"/>
         <location filename="../../source/application/sw_commands.cpp" line="2808"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2817"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2826"/>
         <source>&lt;p&gt;&lt;b&gt;Rotate Selection&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Rotate the selected objects one rotation snap step around this axis.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;旋轉選取項目&lt;/b&gt;&lt;/p&gt;&lt;p&gt;繞此軸將所選物件旋轉一個旋轉吸附步進。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2817"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2835"/>
         <source>&lt;p&gt;&lt;b&gt;Minifigure Builder&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the Minifigure Builder panel to build a minifigure from templates and add it to the model.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;迷你人偶製作器&lt;/b&gt;&lt;/p&gt;&lt;p&gt;顯示迷你人偶製作器面板，用範本組出人偶並加入模型。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2826"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2844"/>
         <source>&lt;p&gt;&lt;b&gt;Array&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Repeat the selection along one, two or three axes, with a count, offset and rotation for each.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;陣列&lt;/b&gt;&lt;/p&gt;&lt;p&gt;沿一、二或三個軸重複選取項目，每個軸可設定數量、偏移和旋轉。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2835"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2853"/>
         <source>&lt;p&gt;&lt;b&gt;Open Selected Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Open the submodel used by the selected part in its own tab, to edit it on its own.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;開啟所選子模型&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在自己的分頁中開啟所選零件使用的子模型，以便單獨編輯。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2844"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2862"/>
         <source>&lt;p&gt;&lt;b&gt;Move to New Submodel&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Move the selected parts into a new submodel and put one reference to it in their place.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;移至新子模型&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將所選零件移到新子模型，並在原處放入一個對它的參照。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2853"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2871"/>
         <source>&lt;p&gt;&lt;b&gt;Inline Selected Submodels&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace each selected submodel with its parts, in place.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;內嵌所選子模型&lt;/b&gt;&lt;/p&gt;&lt;p&gt;就地以其零件取代每個所選子模型。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2862"/>
+        <location filename="../../source/application/sw_commands.cpp" line="2880"/>
         <source>&lt;p&gt;&lt;b&gt;Flatten Submodels&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace every submodel in the current model, and every submodel inside those, with its parts in one undo step. Each part keeps its place and color, and the groups inside the submodels are not kept.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;攤平子模型&lt;/b&gt;&lt;/p&gt;&lt;p&gt;以一次復原步驟，用其零件取代目前模型中的每個子模型，以及這些子模型內的每個子模型。每個零件都會保留位置和顏色，子模型內的群組則不會保留。&lt;/p&gt;</translation>
     </message>
@@ -17955,18 +17995,18 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>無：零件 &gt; 關節 &gt; 設定關節</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="277"/>
         <source>Joint %1, %2, angle %3</source>
         <translation>關節 %1、%2，角度 %3</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="277"/>
         <source>No joint</source>
         <translation>無關節</translation>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="120"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="277"/>
         <source>Hinge</source>
         <translation>鉸鏈</translation>
     </message>
@@ -18012,7 +18052,7 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="120"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="277"/>
         <source>Ball</source>
         <translation>球形</translation>
     </message>
@@ -18037,7 +18077,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>旋轉關節</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="264"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="277"/>
         <source>None: select a jointed submodel</source>
         <translation>無：請選取含關節的子模型</translation>
     </message>
@@ -18298,10 +18338,10 @@ Choose where to save it and download the latest %3 now?</source>
     <name>swMainWindow</name>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="326"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="623"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="631"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="992"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="993"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="633"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="641"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1002"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1003"/>
         <source>Transform</source>
         <translation>變換</translation>
     </message>
@@ -18354,32 +18394,32 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="582"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="592"/>
         <source>&amp;Help</source>
         <translation>說明</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="619"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="629"/>
         <source>&lt;p&gt;&lt;b&gt;Selection Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the rule applied when you pick a part in the model view. Single selects that part; the other modes include matching part types, matching colors, or both. For example, color selection lets you pick matching red parts without selecting each one separately.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;選擇模式&lt;/b&gt;&lt;/p&gt;&lt;p&gt;選擇在模型視圖中點選零件時套用的規則。「單選」只選取該零件；其他模式會一併選取相同類型的零件、相同顏色的零件，或兩者皆相同的零件。例如，選擇相同顏色，就能一次選取所有相同的紅色零件，而不必逐一選取。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="632"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="642"/>
         <source>Transform Options</source>
         <translation>變換選項</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="634"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="644"/>
         <source>&lt;p&gt;&lt;b&gt;Transform Options&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the axes and pivot used for interactive transforms. Relative Transforms uses the focused object&apos;s orientation, so movement along X follows that object&apos;s local X axis. Absolute Transforms uses the model axes. Rotate Together rotates the selection around a shared pivot; Rotate Separately rotates each part around its own origin.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;變換選項&lt;/b&gt;&lt;/p&gt;&lt;p&gt;選擇用於互動式變換的軸和樞軸。相對變換使用聚焦物件的方向，因此沿 X 方向的移動遵循該物件的局部 X 軸。絕對變換使用模型軸。一起旋轉圍繞共用軸旋轉選擇；單獨旋轉將每個零件圍繞其自己的原點旋轉。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="638"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="648"/>
         <source>Snap XY</source>
         <translation>XY 平面吸附</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="642"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="652"/>
         <source>Snap Z</source>
         <translation>Z 軸吸附</translation>
     </message>
@@ -18388,18 +18428,18 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">吸附選單</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="646"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="655"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="656"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="665"/>
         <source>Movement Snap</source>
         <translation>移動吸附</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="656"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="666"/>
         <source>Snap translations to fixed intervals</source>
         <translation>將平移吸附到固定間隔</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="658"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="668"/>
         <source>&lt;p&gt;&lt;b&gt;Movement Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose how far objects move in each snapped increment. XY controls movement across the base plane; Z controls vertical movement, so they can use different intervals. Turn snapping off for free placement, then enable it again when you need consistent spacing.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;移動吸附&lt;/b&gt;&lt;/p&gt;&lt;p&gt;選擇物件在每個吸附增量中移動的距離。XY 控制在基準平面上的移動；Z 控制垂直運動，因此它們可以使用不同的間隔。關閉吸附功能以實現自由放置，然後在需要一致間距時再次啟用它。&lt;/p&gt;</translation>
     </message>
@@ -18408,44 +18448,44 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">角度吸附選單</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="662"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="670"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="672"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="680"/>
         <source>Rotation Snap</source>
         <translation>旋轉吸附</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="671"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="681"/>
         <source>Snap rotations to fixed intervals</source>
         <translation>將旋轉吸附到固定間隔</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="673"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="683"/>
         <source>&lt;p&gt;&lt;b&gt;Rotation Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose an angle increment for interactive rotation. For example, a 90-degree increment is useful for quarter turns, while smaller increments allow finer alignment. Turn snapping off for free rotation without fixed angle increments.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;旋轉吸附&lt;/b&gt;&lt;/p&gt;&lt;p&gt;選擇互動式旋轉的角度增量。例如，90 度增量適合四分之一圈的旋轉，較小的增量則可進行更精細的對齊。關閉吸附即可自由旋轉，不受固定角度限制。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="677"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="687"/>
         <source>Standard</source>
         <translation>標準</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="699"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="709"/>
         <source>&lt;p&gt;&lt;b&gt;Time Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Timeline for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;時間工具列&lt;/b&gt;&lt;/p&gt;&lt;p&gt;箭頭按鈕可在各建構步驟之間移動，以便檢查模型的組裝方式。它們不會變更零件所屬的步驟，要變更請使用「時間軸」。「播放」會依序播放各步驟以顯示關鍵影格的動作，再次按下時會暫停，「停止」則回到開始播放時的步驟。「設定關鍵影格」和「移除關鍵影格」會在目前步驟新增或移除所選物件的關鍵影格，就像「關鍵影格」面板的菱形一樣。「新增關鍵影格」決定編輯時是否在目前步驟建立動畫關鍵影格，讓位置等屬性能在各步驟之間變化。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="769"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="779"/>
         <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.&lt;/p&gt;&lt;p&gt;Docked at the top or bottom, the swatches line up in one row; scroll the wheel or use the arrows at its ends to move along it, or double-click an arrow to jump to that end.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;顏色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;從色票中選擇目前的 LDraw 顏色。插入或上色零件時會使用這個顏色。若要重新為選取的零件上色，請使用色票上方的顏色按鈕。將滑鼠移到色票上可看到其名稱和顏色代碼。&lt;/p&gt;&lt;p&gt;停駐在上方或下方時，色票會排成一列；捲動滾輪或使用兩端的箭頭即可沿著它移動，按兩下箭頭則跳到該端。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1084"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1094"/>
         <source>&lt;p&gt;&lt;b&gt;Timeline&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;時間軸&lt;/b&gt;&lt;/p&gt;&lt;p&gt;選取步驟可將它設為目前步驟，選取零件列則會在模型中選取那些零件。可在步驟之間拖曳零件，或在步驟內重新排序。「關鍵影格」列會列出某個步驟中有動畫關鍵影格的物件，按兩下可在該處選取該物件並顯示「關鍵影格」面板。按一下滑鼠右鍵可使用插入、移除、移動步驟和可見性的指令。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="388"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="710"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="720"/>
         <source>Tools</source>
         <translation>工具</translation>
     </message>
@@ -18489,43 +18529,43 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">子模型</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="611"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="616"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="621"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="626"/>
         <source>Selection Mode</source>
         <translation>選擇模式</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="617"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="627"/>
         <source>Change selection mode</source>
         <translation>更改選擇模式</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="618"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="628"/>
         <source>Choose which related parts are included when selecting a part.</source>
         <translation>選擇零件時選擇包含哪些相關零件。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="633"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="643"/>
         <source>Choose coordinate axes and whether selected parts rotate together.</source>
         <translation>選擇座標軸以及所選零件是否一起旋轉。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="657"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="667"/>
         <source>Choose movement snapping intervals for XY and Z.</source>
         <translation>選擇 XY 和 Z 的移動吸附間隔。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="672"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="682"/>
         <source>Choose the rotation snapping interval.</source>
         <translation>選擇旋轉吸附間隔。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="679"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="689"/>
         <source>&lt;p&gt;&lt;b&gt;Standard Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use file controls to create, open, and save models, and Undo or Redo to navigate edit history. Before moving or rotating objects, choose the selection rule, coordinate reference, and snapping increments from the four drop-down controls. Help &gt; &quot;What&apos;s This?&quot; explains individual controls.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;標準工具列&lt;/b&gt;&lt;/p&gt;&lt;p&gt;使用檔案控制項建立、開啟和儲存模型，並以「復原」或「重做」瀏覽編輯記錄。移動或旋轉物件之前，可從四個下拉式控制項選擇選取規則、座標參考和吸附增量。「說明」&gt;「這是什麼？」會說明個別控制項。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="697"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="707"/>
         <source>Time</source>
         <translation>時間</translation>
     </message>
@@ -18540,22 +18580,22 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;時間工具列&lt;/b&gt;&lt;/p&gt;&lt;p&gt;使用箭頭按鈕切換搭建步驟，檢視模型的組裝過程。這不會改變零件所屬的步驟；如需更改，請使用“時間軸”。“添加關鍵影格”控制編輯操作是否在目前步驟創建動畫關鍵格，使位置等屬性可隨步驟變化。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="712"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="722"/>
         <source>&lt;p&gt;&lt;b&gt;Tools Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a tool, then use it in the model view. Insertion tools create parts, lights, or cameras. Editing tools select, transform, remove, or recolor objects. Navigation tools change the viewpoint without changing model geometry. Mouse assignments can be customized in Preferences.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;工具列&lt;/b&gt;&lt;/p&gt;&lt;p&gt;選擇一個工具，然後在模型視圖中使用。插入工具可建立零件、燈光或相機。編輯工具可選取、變換、刪除物件或為其重新上色。導覽工具可變更視點，而不改變模型幾何形狀。滑鼠指派可在「偏好設定」中自訂。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="754"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="764"/>
         <source>Parts</source>
         <translation>零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="757"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="767"/>
         <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a category or palette and filter its parts. Selecting a part prepares it for insertion; drag it into the model view to place it. Double-click a part to open its preview. Options controls filtering, thumbnails, and list display.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;零件&lt;/b&gt;&lt;/p&gt;&lt;p&gt;選擇一個類別或調色板並篩選其零件。選擇一個零件，準備插入；將其拖到模型視圖中進行放置。按兩下一個零件以開啟其預覽。選項控制篩選、縮圖和清單顯示。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="767"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="777"/>
         <source>Colors</source>
         <translation>顏色</translation>
     </message>
@@ -18565,57 +18605,57 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;顏色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;從樣本中選擇目前的 LDraw 顏色。這種顏色在插入或繪畫零件時使用。要對選定的零件重新著色，請使用樣本上方的顏色按鈕。將游標懸停在樣本上即可檢視其名稱和顏色代碼。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="785"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="795"/>
         <source>Apply the current color to selected parts.</source>
         <translation>將目前顏色套用到選取的零件。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="786"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="796"/>
         <source>Change Selection Color</source>
         <translation>變更選擇顏色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="787"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="797"/>
         <source>&lt;p&gt;&lt;b&gt;Change Selection Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Apply the current color to selected parts. Choosing a swatch sets the current color; this button applies that color to the selection.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;變更選擇顏色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將目前顏色套用於選取的零件。選擇色票會設定目前顏色；此按鈕將該顏色套用於所選內容。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="809"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="819"/>
         <source>Scroll the swatches left. Double-click to jump to the first one.</source>
         <translation>向左捲動色票。按兩下可跳到第一個。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="809"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="819"/>
         <source>Scroll the swatches right. Double-click to jump to the last one.</source>
         <translation>向右捲動色票。按兩下可跳到最後一個。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="839"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="849"/>
         <source>LDraw Colors</source>
         <translation>LDraw 顏色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="968"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="978"/>
         <source>Properties</source>
         <translation>屬性</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="970"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="980"/>
         <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit properties of the focused object or selection. Available fields depend on whether you select parts, a camera, or a light. Expand a section to see its fields. Keyframe controls mark properties at the current building step.&lt;/p&gt;&lt;p&gt;The transform fields at the bottom apply an X/Y/Z translation or rotation using the chosen transform mode. Press Enter to apply the values.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;屬性&lt;/b&gt;&lt;/p&gt;&lt;p&gt;編輯聚焦物件或選擇的屬性。可用欄位取決於您選擇的是零件、相機還是燈光。展開某個部分以檢視其欄位。關鍵影格控制項標記目前搭建步驟的屬性。&lt;/p&gt;&lt;p&gt;底部的變換欄位使用所選變換模式套用 X/Y/Z 平移或旋轉。按 Enter 鍵套用這些值。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1023"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1033"/>
         <source>Choose absolute or relative translation or rotation.</source>
         <translation>選擇絕對或相對平移或旋轉。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1024"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1034"/>
         <source>&lt;p&gt;&lt;b&gt;Apply Transform&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the translation or rotation mode, enter X/Y/Z values, and press Enter to apply them. Translation values use LDraw units; rotation values use degrees.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;套用變換&lt;/b&gt;&lt;/p&gt;&lt;p&gt;選擇平移或旋轉模式，輸入 X/Y/Z 值，然後按 Enter 鍵套用它們。平移值使用 LDraw 單位；旋轉值使用度數。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1002"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1012"/>
         <source>Transform X</source>
         <translation>變換 X</translation>
     </message>
@@ -18664,77 +18704,77 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>關節</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="535"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="545"/>
         <source>&amp;Group</source>
         <translation>群組</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="542"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="552"/>
         <source>&amp;Visibility</source>
         <translation>可見性</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="549"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="559"/>
         <source>&amp;Steps</source>
         <translation>步驟</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="566"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="576"/>
         <source>&amp;Models</source>
         <translation>模型</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="797"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="807"/>
         <source>Choose how inserted parts are colored.</source>
         <translation>選擇插入零件的上色方式</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="797"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="807"/>
         <source>Color Options</source>
         <translation>顏色選項</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="810"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="820"/>
         <source>Scroll Colors Left</source>
         <translation>向左捲動顏色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="810"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="820"/>
         <source>Scroll Colors Right</source>
         <translation>向右捲動顏色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="991"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1001"/>
         <source>T</source>
         <translation>T</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1003"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1013"/>
         <source>Enter the X translation in LDraw units or rotation in degrees.</source>
         <translation>輸入以 LDraw 為單位的 X 平移或以度為單位的旋轉。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1008"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1018"/>
         <source>Transform Y</source>
         <translation>變換 Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1009"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1019"/>
         <source>Enter the Y translation in LDraw units or rotation in degrees.</source>
         <translation>輸入 LDraw 單位的 Y 平移或以度為單位的旋轉。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1014"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1024"/>
         <source>Transform Z</source>
         <translation>變換 Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1015"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1025"/>
         <source>Enter the Z translation in LDraw units or rotation in degrees.</source>
         <translation>輸入以 LDraw 單位表示的 Z 平移或以度數表示的旋轉。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1082"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1092"/>
         <source>Timeline</source>
         <translation>時間軸</translation>
     </message>
@@ -18744,12 +18784,12 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;時間軸&lt;/b&gt;&lt;/p&gt;&lt;p&gt;選擇一個步驟以使其成為目前步驟，或選擇零件行以選擇模型中的這些零件。在步驟之間拖動零件或在步驟內對它們重新排序。右鍵單擊可執行步驟插入、刪除、移動和可見性命令。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1103"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1113"/>
         <source>Minifigure Builder</source>
         <translation>迷你人偶製作器</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1121"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1131"/>
         <source>Explode</source>
         <translation>分解</translation>
     </message>
@@ -18758,7 +18798,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;分解&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將其他每個可見零件，或僅所選零件，依其與錨點距離的 X、Y、Z 百分比向外展開。每個零件會沿著固定它的連接滑出。「收合」或復原會將零件放回，「儲存副本」會將分解後的模型存成另一個檔案。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1134"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1144"/>
         <source>Joints</source>
         <translation>關節</translation>
     </message>
@@ -18767,7 +18807,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;關節&lt;/b&gt;&lt;/p&gt;&lt;p&gt;顯示所選子模型上已選取的關節及其軸，以及一個樹狀結構，列出每個含關節的模型、其含關節的子模型和關節。選取關節即可移動或旋轉，刪除關節則使其回到靜止狀態。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1143"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1153"/>
         <source>Poses</source>
         <translation>姿勢</translation>
     </message>
@@ -18776,7 +18816,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;姿勢&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在關節面板中選取之模型的姿勢。將關節角度儲存為具名姿勢，然後可還原、重新命名或刪除。姿勢會隨模型一起儲存。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1152"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1162"/>
         <source>Keyframes</source>
         <translation>關鍵影格</translation>
     </message>
@@ -18806,7 +18846,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;預覽&lt;/b&gt;&lt;/p&gt;&lt;p&gt;檢查零件而不將其放入模型中。雙擊零件停靠區中的零件進行預覽。當源選擇發生變化時，鎖定預覽保持目前預覽；解鎖它以認可更新。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1204"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1214"/>
         <source>Asset loading failed</source>
         <translation>資源載入失敗</translation>
     </message>
@@ -19362,50 +19402,55 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>移動吸附、旋轉吸附、變換座標軸和旋轉樞軸。可用標準工具列的最後幾個按鈕變更。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="108"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="109"/>
         <source>Export 3DS</source>
         <translation>匯出 3DS</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="112"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="113"/>
         <source>Export COLLADA</source>
         <translation>匯出 COLLADA</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="120"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="121"/>
         <source>Export KMZ</source>
         <translation>匯出 KMZ</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="131"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="132"/>
         <source>Export BrickLink</source>
         <translation>匯出 BrickLink</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="136"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="137"/>
         <source>Export CSV</source>
         <translation>匯出 CSV</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="144"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="145"/>
         <source>Export Wavefront</source>
         <translation>匯出 Wavefront</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="186"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="187"/>
         <source>Cannot Cut Selection</source>
         <translation>無法剪下選取內容</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="191"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="192"/>
         <source>Cannot Copy Selection</source>
         <translation>無法複製選取內容</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="196"/>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="201"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="197"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="202"/>
         <source>Cannot Paste Selection</source>
         <translation>無法貼上選取內容</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="1013"/>
+        <source>No joint here</source>
+        <translation>此處沒有關節</translation>
     </message>
     <message>
         <source>Cannot Cut Model</source>
@@ -19423,7 +19468,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">無法貼上模型</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="501"/>
+        <location filename="../../source/interface/window/sw_window_main_command.cpp" line="502"/>
         <source>Select Cutaway Shade Color</source>
         <translation>選擇剖面陰影顏色</translation>
     </message>
@@ -19723,27 +19768,27 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>正交</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1228"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1238"/>
         <source>Selection</source>
         <translation>選取</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1229"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1239"/>
         <source>View Orientation</source>
         <translation>視圖方向</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1230"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1240"/>
         <source>Position</source>
         <translation>位置</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1231"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1241"/>
         <source>Snap and Transform</source>
         <translation>吸附與變換</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1232"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1242"/>
         <source>Step</source>
         <translation>步驟</translation>
     </message>
@@ -22165,12 +22210,12 @@ Weight: %1</source>
 <context>
     <name>swPosesWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="361"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="374"/>
         <source>Pose</source>
         <translation>姿勢</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="363"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="376"/>
         <source>Saved poses of this model, played in this order by the Joints motion</source>
         <translation>此模型的已儲存姿勢，依此順序由關節動作播放</translation>
     </message>
@@ -22179,88 +22224,88 @@ Weight: %1</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;姿勢&lt;/b&gt;&lt;/p&gt;&lt;p&gt;儲存在關節面板中選取之模型內的姿勢，每個姿勢只記錄該模型關節的角度。影像對話框的關節動作會依此順序播放主模型的姿勢。選取一個姿勢即可還原、重新命名或刪除。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="355"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="368"/>
         <source>&lt;p&gt;&lt;b&gt;Poses&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The poses saved in the model picked in the Joints panel, or in the current model, each holding the angles of that model&apos;s joints only. Save stores the joint angles as a named pose, Recall puts them back in one undo step, and Rename and Delete change the picked pose. Poses are saved with the model, and the Joints motion of the image dialog plays the poses of the main model in this order.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;姿勢&lt;/b&gt;&lt;/p&gt;&lt;p&gt;儲存在關節面板中選取之模型（或目前模型）中的姿勢，每個姿勢僅包含該模型關節的角度。「儲存」會將關節角度存為具名姿勢，「還原」會在一個復原步驟中還原它們，「重新命名」和「刪除」會變更選取的姿勢。姿勢會隨模型一起儲存，影像對話方塊的關節動作會依此順序播放主模型的姿勢。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="377"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="390"/>
         <source>Save</source>
         <translation>儲存</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="377"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="390"/>
         <source>Save the joint angles of this model as a pose</source>
         <translation>將此模型的關節角度儲存為姿勢</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="377"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="390"/>
         <source>&lt;p&gt;&lt;b&gt;Save&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Store the angles of the joints in this model under a name. Saving a name that already exists replaces that pose.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;儲存&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將此模型的關節角度以名稱儲存。儲存已存在的名稱會取代該姿勢。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="378"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="391"/>
         <source>Recall</source>
         <translation>還原</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="378"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="391"/>
         <source>Put the joints of this model back in the picked pose</source>
         <translation>將此模型的關節放回所選姿勢</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="378"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="391"/>
         <source>&lt;p&gt;&lt;b&gt;Recall&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Turn the joints of this model back to the angles of the picked pose, in one undo step.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;還原&lt;/b&gt;&lt;/p&gt;&lt;p&gt;將此模型的關節轉回所選姿勢的角度，只需一次復原步驟。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="379"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="392"/>
         <source>Rename</source>
         <translation>重新命名</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="379"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="392"/>
         <source>Rename the picked pose</source>
         <translation>重新命名所選姿勢</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="379"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="392"/>
         <source>&lt;p&gt;&lt;b&gt;Rename&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Give the picked pose a new name.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;重新命名&lt;/b&gt;&lt;/p&gt;&lt;p&gt;為所選姿勢指定新名稱。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="380"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="393"/>
         <source>Delete</source>
         <translation>刪除</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="380"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="393"/>
         <source>Delete the picked pose</source>
         <translation>刪除選取的姿勢</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="380"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="393"/>
         <source>&lt;p&gt;&lt;b&gt;Delete&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Remove the picked pose from the model. The joints keep their angles.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;刪除&lt;/b&gt;&lt;/p&gt;&lt;p&gt;從模型中移除所選姿勢。關節保持其角度。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="422"/>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="459"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="435"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="472"/>
         <source>Name</source>
         <translation>名稱</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="422"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="435"/>
         <source>Save Pose</source>
         <translation>儲存姿勢</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="422"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="435"/>
         <source>Pose %1</source>
         <translation>姿勢 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="459"/>
+        <location filename="../../source/interface/widgets/sw_widget_joints.cpp" line="472"/>
         <source>Rename Pose</source>
         <translation>重新命名姿勢</translation>
     </message>

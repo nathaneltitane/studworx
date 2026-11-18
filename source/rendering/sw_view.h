@@ -296,6 +296,7 @@ public:
 	void SetSubmodelEditingPath(const std::vector<swPart*>& Path);
 	bool SetJointModelActive(swModel* Target);
 	void EndJointFocus();
+	bool ToggleJointMode();
 	void FocusSetJoint(const std::vector<swPart*>& Parts);
 	bool OpenSetJoint();
 	void SetJointPathDepth(size_t Index);
