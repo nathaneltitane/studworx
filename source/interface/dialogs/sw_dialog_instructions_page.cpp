@@ -1404,7 +1404,19 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 		{
 			const int DividerWidth = Instructions->GetIntProperty(swInstructionsPropertyType::StepDividerWidth, FirstStep.Model, FirstStep.Step);
 			const bool Rounded = Instructions->GetBoolProperty(swInstructionsPropertyType::StepDividerRounded, FirstStep.Model, FirstStep.Step);
-			const QPen DividerPen(Instructions->GetColorProperty(swInstructionsPropertyType::StepDividerColor, FirstStep.Model, FirstStep.Step), DividerWidth, Qt::SolidLine, Rounded ? Qt::RoundCap : Qt::FlatCap);
+			const QBrush DividerBrush(Instructions->GetColorProperty(swInstructionsPropertyType::StepDividerColor, FirstStep.Model, FirstStep.Step));
+
+			// filled shapes keep thin round ends smooth
+			auto AddDivider = [&](qreal X1, qreal Y1, qreal X2, qreal Y2)
+			{
+				const qreal HalfWidth = DividerWidth / 2.0;
+				const qreal Extend = Rounded ? HalfWidth : 0.0;
+				const QRectF Rect = X1 == X2 ? QRectF(QPointF(X1 - HalfWidth, Y1 - Extend), QPointF(X2 + HalfWidth, Y2 + Extend)) : QRectF(QPointF(X1 - Extend, Y1 - HalfWidth), QPointF(X2 + Extend, Y2 + HalfWidth));
+
+				QPainterPath Path;
+				Path.addRoundedRect(Rect, Rounded ? HalfWidth : 0.0, Rounded ? HalfWidth : 0.0);
+				Scene->addPath(Path, Qt::NoPen, DividerBrush)->setParentItem(PageItem);
+			};
 
 			// round ends stay inside the margins
 
@@ -1437,13 +1449,13 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 					if (Vertical && IsNear(OtherRect.left(), Rect.right()) && Bottom - Top > 0.0001)
 					{
 						const qreal X = MarginsRect.left() + MarginsRect.width() * Rect.right();
-						Scene->addLine(X, MarginsRect.top() + MarginsRect.height() * Top + Inset, X, MarginsRect.top() + MarginsRect.height() * Bottom - Inset, DividerPen)->setParentItem(PageItem);
+						AddDivider(X, MarginsRect.top() + MarginsRect.height() * Top + Inset, X, MarginsRect.top() + MarginsRect.height() * Bottom - Inset);
 					}
 
 					if (Horizontal && IsNear(OtherRect.top(), Rect.bottom()) && Right - Left > 0.0001)
 					{
 						const qreal Y = MarginsRect.top() + MarginsRect.height() * Rect.bottom();
-						Scene->addLine(MarginsRect.left() + MarginsRect.width() * Left + Inset, Y, MarginsRect.left() + MarginsRect.width() * Right - Inset, Y, DividerPen)->setParentItem(PageItem);
+						AddDivider(MarginsRect.left() + MarginsRect.width() * Left + Inset, Y, MarginsRect.left() + MarginsRect.width() * Right - Inset, Y);
 					}
 				}
 			}

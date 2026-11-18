@@ -3,6 +3,7 @@
   <details open>
   <summary>2026-11-17</summary>
 
+  - Instructions: rounded divider ends are full half circles at every width, thin dividers no longer look pointy
   - Instructions: Highlight Width sets how thick the new part outline is, from 1 to 72, and wide outlines stay solid
   - Instructions: the highlight color keeps the opacity you pick, no longer held between 85 and 95 percent
   - Instructions: Final Border, Final Border Color and Final Margin in Steps per Page frame the final model area and keep it away from the steps and page margins, none by default
