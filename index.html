@@ -569,9 +569,9 @@
 				<li><b>Edge colors.</b> Edge lines can take their color from each part&#x27;s color automatically, or you can pick the edge colors yourself.</li>
 				<li><b>Lighting styles.</b> Four looks for the model: Standard, Studio with three lights, Matte with no shine, and Toon like a cartoon.</li>
 				<li><b>Mesh level of detail.</b> Distant parts draw with simpler meshes, from a distance set in Preferences, so large <a href="#models">models</a> stay smooth.</li>
+				<li><b>Shading.</b> Show parts as wireframes (Shift+W), flat (Shift+F) or fully lit (Shift+I), with or without edge lines.</li>
 				<li><b>Selection highlight.</b> Selected parts get an outline or a tint, and you choose how thick and how see-through it is.</li>
 				<li><b>Studs.</b> Draw studs plain, with the LEGO® logo in one of several styles, or in high contrast.</li>
-				<li><b>Shading.</b> Show parts as wireframes, flat or fully lit, with or without edge lines.</li>
 				<li><b>Anti-aliasing.</b> 2x, 4x or 8x samples, and an adjustable line width.</li>
 			</ul>
 
@@ -2035,18 +2035,31 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				<summary>2026-11-17</summary>
 
 				<ul>
-					<li><a href="#instructions">Instructions</a>: Highlight Width sets how thick the new part outline is, from 1 to 72, and wide outlines stay solid</li>
+					<li>Shortcuts: Shift+I switches to Default Lights shading by default</li>
+					<li>Joints: in joint mode the Move and Rotate tools and their shortcuts act on the joint, like Move Joint and Rotate Joint</li>
+					<li><a href="#views">Views</a>: the rotate gizmo draws its axis circles all the way around, no longer cut in half</li>
+					<li>Joints: editing a submodel in place no longer starts joint mode or joint move and rotate, joint mode only starts from a joint</li>
+					<li>Joints: a jointed submodel inside a group keeps its joint editing, moving and turning</li>
+					<li>Joints: Escape or a click away from the joints leaves joint mode and goes back to selecting parts</li>
+					<li><a href="#instructions">Instructions</a>: the page view smooths lines, borders and round ends</li>
+					<li>Instructions: rounded divider ends are full half circles at every width, thin dividers no longer look pointy</li>
+					<li>Instructions: Highlight Width sets how thick the new part outline is, from 1 to 72, and wide outlines stay solid</li>
 					<li>Instructions: the highlight color keeps the opacity you pick, no longer held between 85 and 95 percent</li>
 					<li>Instructions: Final Border, Final Border Color and Final Margin in <a href="#steps">Steps</a> per Page frame the final model area and keep it away from the steps and page margins, none by default</li>
 					<li>Instructions: the Properties groups follow the page from largest to smallest, Page before Bill of Materials and Step Number, Parts List then Divider after Steps per Page</li>
 					<li>Instructions: Page Number is part of the Page group</li>
 					<li>Instructions: every Properties group shows on every page and starts folded, selecting an element opens its group and folds the others</li>
 					<li>Instructions: Show Part IDs in the Bill of Materials group prints the part number under each part of the bill of materials, on by default</li>
-					<li>Translations: the merged Page and Properties <a href="#help">help</a> and Show Part IDs read right in all nine languages</li>
+					<li>Instructions: selecting the bill of materials list opens the Parts List group too</li>
+					<li>Instructions: Thumbnail Size goes up to 2048 pixels for large pages</li>
+					<li>Instructions: a full parts list column no longer spills past its area</li>
+					<li>Instructions: a lock beside each page in the Pages panel keeps its elements <a href="#where">where</a> they are, and a locked page can&#x27;t be removed</li>
+					<li>Instructions: a snowflake beside each page freezes it, so it keeps its own settings while changes for all pages skip it; unfreezing follows the other pages again</li>
+					<li>Translations: the merged Page and Properties <a href="#help">help</a>, Show Part IDs and the page lock and freeze read right in all nine languages</li>
 					<li>Site: the Properties <a href="#image">image</a> is retaken to show the new group order, folded</li>
 					<li>Site: the bill of materials image is retaken to show the part IDs</li>
 					<li>Translations: the new highlight and final model settings read right in all nine languages</li>
-					<li>Site: the Instructions, <a href="#rendering">Rendering</a>, <a href="#views">Views</a> and <a href="#interface">Interface</a> images are retaken to show the panel fold arrows and the new instructions settings, and the Instructions features name Step Flow, the final model, dividers, Model Size, Highlight Width, text <a href="#files">files</a> and Undo and Redo</li>
+					<li>Site: the Instructions, <a href="#rendering">Rendering</a>, Views and <a href="#interface">Interface</a> images are retaken to show the panel fold arrows and the new instructions settings, and the Instructions features name Step Flow, the final model, dividers, Model Size, Highlight Width, text <a href="#files">files</a> and Undo and Redo</li>
 					<li>Site: the POV-Ray and Blender Render images show the full output path the windows fill in</li>
 					<li>Site: the page notes in SITE.md use plain Markdown comments, and the README says TL:DR</li>
 				</ul>
@@ -2079,7 +2092,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Instructions: Apply to All Pages on a submodel page keeps the main Page Background instead of resetting it</li>
 					<li>Instructions: Cover Title, Cover Author and BOM Title take your own text, or a text file that wins over it, and notices take a text file too</li>
 					<li>Instructions: the Editor panel stays folded when collapsed or dragged down, instead of growing back by a line</li>
-					<li>Instructions: dividers get their own Divider group with margin, padding, rounded ends and Horizontal or Vertical to hide lines <a href="#where">where</a> page colors already split the page, and reach the page margins by default without poking past them</li>
+					<li>Instructions: dividers get their own Divider group with margin, padding, rounded ends and Horizontal or Vertical to hide lines where page colors already split the page, and reach the page margins by default without poking past them</li>
 					<li>Instructions: the Steps per Page buttons show only their divider lines, the button is the page, one step per page shows a circle</li>
 					<li>Instructions: new part outlines on large step images no longer show seam lines</li>
 					<li>Instructions: Show Author sits on its own row</li>
@@ -2349,7 +2362,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Instructions","title":"Page Bar","paragraphs":["Go to the first, previous, next or last page, or straight to the cover or the bill of materials, greyed out while those pages are turned off. Step Page inserts an empty step before the current page, Blank Page inserts a blank page before it and Remove Page removes a blank page or a page of empty steps. The box on the right shows the current page, type a number to go there. The timeline First, Previous, Next and Last shortcuts turn the pages too while the page or the Pages panel has focus."]},
 				{"group":"Instructions","title":"Undo and Redo","paragraphs":["Undo takes back your last change to the instructions, Redo puts it back. Quick changes to the same setting count as one change. The main window Undo and Redo shortcuts work here too."]},
 				{"group":"Instructions","title":"Editor","paragraphs":["The text of the model file as it is saved, its parts, steps and instructions. Edit it and apply to load the model from the text, the change is unsaved until the model is saved."]},
-				{"group":"Instructions","title":"Pages","paragraphs":["Select a page to show it. Right-click a page to insert or remove blank pages around it."]},
+				{"group":"Instructions","title":"Pages","paragraphs":["Select a page to show it. Right-click a page to insert or remove blank pages around it.","Click the lock beside a page to keep its elements where they are. A locked page can't be removed.","Click the snowflake to freeze a page. It keeps its own copy of the settings, so changes for all pages skip it. Unfreeze it to follow the other pages again."]},
 				{"group":"Instructions","title":"Placement","paragraphs":["Select an element on the page to place, move or lock it. Place the selected page element on a predefined area: the step model, step number, parts list, cover model, cover title, cover author or bill of materials. Step elements are placed in the part of the page their step gets from the split, or outside the other step element. Placements apply to all pages.","Every element can also be dragged on the page, it keeps its distance from its placement. A locked element keeps its position whatever its placement and is not dragged."]},
 				{"group":"Instructions","title":"Grid","paragraphs":["The page grid helps aligning dragged elements, it is never printed. Show it on screen, snap dragged elements to it or to the anchors of the other elements, choose its area, the size of its main unit and the fractions it is split into, and the colors of its lines and of the margins."]},
 				{"group":"Instructions","title":"Snap to Anchors","paragraphs":["While an element is dragged, its corners, edge centers and center snap to those of the page area and of the other elements when they come within a few pixels, on each axis separately. Snap to Anchors and Snap to Grid exclude each other, turning one on turns the other off. Show Element Anchors in the Properties options shows the anchors."]},
@@ -2534,7 +2547,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Tools","title":"Orbit Tool","paragraphs":["Drag to orbit the view around its center and inspect the model from another direction. This rotates the viewpoint rather than the selected parts; use Rotate for object edits."]},
 				{"group":"Tools","title":"Roll Tool","paragraphs":["Drag to turn the view around its viewing axis, tilting what appears upright on screen. Model parts keep their positions and orientations."]},
 				{"group":"Tools","title":"Zoom Region Tool","paragraphs":["Drag a rectangle around the area you want to inspect. The view zooms to frame that region without changing model geometry."]},
-				{"group":"Edit Menu","title":"Cancel Action","paragraphs":["Cancel the current mouse action, a face or cutaway pick or a cutaway resize, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway."]},
+				{"group":"Edit Menu","title":"Cancel Action","paragraphs":["Cancel the current mouse action, a face or cutaway pick or a cutaway resize, leave joint mode, close the Find and Replace bar, or clear the selection. With nothing selected it removes the cutaway."]},
 				{"group":"View Menu","title":"Preferences","paragraphs":["Open the program settings: General, Rendering, Views, Interface, Instructions, Categories, Context Menu, Keyboard and Mouse."]},
 				{"group":"View Menu","title":"Zoom In","paragraphs":["Move the camera closer to the model."]},
 				{"group":"View Menu","title":"Zoom Out","paragraphs":["Move the camera away from the model."]},
@@ -2888,7 +2901,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"command":"Orthographic","shortcut":"F2","paths":["View > Projection","Right click the model view > Projection"]},
 				{"command":"Wireframe","shortcut":"Shift+W","paths":["View > Shading","Right click the model view > Shading","Preview panel > Preview Options > Shading","Minifigure Builder panel > Minifigure Builder Preview Options > Shading","Parts panel > Part List Options > Rendering > Shading","the find bar > Part List Options > Rendering > Shading","Model View Options > Shading"]},
 				{"command":"Flat Shading","shortcut":"Shift+F","paths":["View > Shading","Right click the model view > Shading","Preview panel > Preview Options > Shading","Minifigure Builder panel > Minifigure Builder Preview Options > Shading","Parts panel > Part List Options > Rendering > Shading","the find bar > Part List Options > Rendering > Shading","Model View Options > Shading"]},
-				{"command":"Default Lights","shortcut":"","paths":["View > Shading","Right click the model view > Shading","Preview panel > Preview Options > Shading","Minifigure Builder panel > Minifigure Builder Preview Options > Shading","Parts panel > Part List Options > Rendering > Shading","the find bar > Part List Options > Rendering > Shading","Model View Options > Shading"]},
+				{"command":"Default Lights","shortcut":"Shift+I","paths":["View > Shading","Right click the model view > Shading","Preview panel > Preview Options > Shading","Minifigure Builder panel > Minifigure Builder Preview Options > Shading","Parts panel > Part List Options > Rendering > Shading","the find bar > Part List Options > Rendering > Shading","Model View Options > Shading"]},
 				{"command":"Standard Lighting","shortcut":"","paths":["View > Shading","Right click the model view > Shading","Preview panel > Preview Options > Shading","Minifigure Builder panel > Minifigure Builder Preview Options > Shading","Parts panel > Part List Options > Rendering > Shading","the find bar > Part List Options > Rendering > Shading","Model View Options > Shading"]},
 				{"command":"Studio Lighting","shortcut":"","paths":["View > Shading","Right click the model view > Shading","Preview panel > Preview Options > Shading","Minifigure Builder panel > Minifigure Builder Preview Options > Shading","Parts panel > Part List Options > Rendering > Shading","the find bar > Part List Options > Rendering > Shading","Model View Options > Shading"]},
 				{"command":"Matte Lighting","shortcut":"","paths":["View > Shading","Right click the model view > Shading","Preview panel > Preview Options > Shading","Minifigure Builder panel > Minifigure Builder Preview Options > Shading","Parts panel > Part List Options > Rendering > Shading","the find bar > Part List Options > Rendering > Shading","Model View Options > Shading"]},

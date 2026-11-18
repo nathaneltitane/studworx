@@ -1709,7 +1709,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Menu", "&Default Lights"),
 		QT_TRANSLATE_NOOP("Status", "Display the scene with the default lights"),
 		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Default Lights</b></p><p>Light the model view with the built-in lights instead of the lights placed in the model.</p>"),
-		""
+		"Shift+I"
 	},
 
 	// SW_VIEW_LIGHTING_STANDARD

@@ -3,6 +3,7 @@
   <details open>
   <summary>2026-11-17</summary>
 
+  - Shortcuts: Shift+I switches to Default Lights shading by default
   - Joints: in joint mode the Move and Rotate tools and their shortcuts act on the joint, like Move Joint and Rotate Joint
   - Views: the rotate gizmo draws its axis circles all the way around, no longer cut in half
   - Joints: editing a submodel in place no longer starts joint mode or joint move and rotate, joint mode only starts from a joint

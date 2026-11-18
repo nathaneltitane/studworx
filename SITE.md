@@ -186,7 +186,7 @@ The model view draws fast with OpenGL in four lighting styles, and File > Render
 - **Render window.** Renders run in their own window beside the model, so you can keep working while the image appears. For POV-Ray, Focal Blur keeps the camera target sharp, a Region renders only the part you draw, and the Editor lets you tweak the scene file by hand before rendering.
 - **Blender.** Render with the bundled Blender LDraw add-ons, with the output, image, scene, parts and editing settings in panels of the render window, or Open in Blender to keep working on the scene there. The Blender executable is set in Preferences.
 - **Lighting styles.** Four looks for the model: Standard, Studio with three lights, Matte with no shine, and Toon like a cartoon.
-- **Shading.** Show parts as wireframes, flat or fully lit, with or without edge lines.
+- **Shading.** Show parts as wireframes (Shift+W), flat (Shift+F) or fully lit (Shift+I), with or without edge lines.
 - **Mesh level of detail.** Distant parts draw with simpler meshes, from a distance set in Preferences, so large models stay smooth.
 - **Studs.** Draw studs plain, with the LEGO® logo in one of several styles, or in high contrast.
 - **Color configurations.** Colors come from the parts library, the LDraw color configuration or the alternate configuration with more realistic edge line colors for rendering, chosen under Rendering > Colors.
