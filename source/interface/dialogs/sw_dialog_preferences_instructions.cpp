@@ -210,22 +210,22 @@ void swPreferencesDialog::CreateInstructionsTab()
 
 	connect(mInstructionsPageButton, &QPushButton::clicked, this, [this]()
 	{
-		swInstructionsPreferences& Instructions = mOptions->Instructions;
+		swInstructionsPreferences& PageInstructions = mOptions->Instructions;
 
 		// store units right away
 		const int PageUnits = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_UNITS);
 		const int MarginUnits = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_MARGIN_UNITS);
-		swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_UNITS, Instructions.PageUnits);
-		swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_MARGIN_UNITS, Instructions.MarginUnits);
+		swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_UNITS, PageInstructions.PageUnits);
+		swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_MARGIN_UNITS, PageInstructions.MarginUnits);
 
-		Instructions.GridSize = static_cast<float>(mInstructionsGridSize->value()) * swGetPageUnitScale(static_cast<swInstructionsPageUnits>(Instructions.MarginUnits));
+		PageInstructions.GridSize = static_cast<float>(mInstructionsGridSize->value()) * swGetPageUnitScale(static_cast<swInstructionsPageUnits>(PageInstructions.MarginUnits));
 
-		swPageSetupDialog Dialog(this, &Instructions.PageSetup, true);
+		swPageSetupDialog Dialog(this, &PageInstructions.PageSetup, true);
 
 		if (Dialog.exec() == QDialog::Accepted)
 		{
-			Instructions.PageUnits = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_UNITS);
-			Instructions.MarginUnits = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_MARGIN_UNITS);
+			PageInstructions.PageUnits = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_UNITS);
+			PageInstructions.MarginUnits = swGetProfileInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_MARGIN_UNITS);
 		}
 
 		swSetProfileInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_UNITS, PageUnits);
@@ -236,24 +236,24 @@ void swPreferencesDialog::CreateInstructionsTab()
 
 	connect(PageResetButton, &QPushButton::clicked, this, [this]()
 	{
-		swInstructionsPreferences& Instructions = mOptions->Instructions;
+		swInstructionsPreferences& PageInstructions = mOptions->Instructions;
 
-		Instructions.PageSetup = { swGetProfileDefaultFloat(SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_WIDTH), swGetProfileDefaultFloat(SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_HEIGHT), swGetProfileDefaultFloat(SW_PROFILE_INSTRUCTIONS_DEFAULT_MARGIN_LEFT), swGetProfileDefaultFloat(SW_PROFILE_INSTRUCTIONS_DEFAULT_MARGIN_RIGHT), swGetProfileDefaultFloat(SW_PROFILE_INSTRUCTIONS_DEFAULT_MARGIN_TOP), swGetProfileDefaultFloat(SW_PROFILE_INSTRUCTIONS_DEFAULT_MARGIN_BOTTOM) };
-		Instructions.PageUnits = swGetProfileDefaultInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_UNITS);
-		Instructions.MarginUnits = swGetProfileDefaultInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_MARGIN_UNITS);
-		Instructions.GridSize = swGetProfileDefaultFloat(SW_PROFILE_INSTRUCTIONS_DEFAULT_GRID_SIZE);
+		PageInstructions.PageSetup = { swGetProfileDefaultFloat(SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_WIDTH), swGetProfileDefaultFloat(SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_HEIGHT), swGetProfileDefaultFloat(SW_PROFILE_INSTRUCTIONS_DEFAULT_MARGIN_LEFT), swGetProfileDefaultFloat(SW_PROFILE_INSTRUCTIONS_DEFAULT_MARGIN_RIGHT), swGetProfileDefaultFloat(SW_PROFILE_INSTRUCTIONS_DEFAULT_MARGIN_TOP), swGetProfileDefaultFloat(SW_PROFILE_INSTRUCTIONS_DEFAULT_MARGIN_BOTTOM) };
+		PageInstructions.PageUnits = swGetProfileDefaultInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_PAGE_UNITS);
+		PageInstructions.MarginUnits = swGetProfileDefaultInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_MARGIN_UNITS);
+		PageInstructions.GridSize = swGetProfileDefaultFloat(SW_PROFILE_INSTRUCTIONS_DEFAULT_GRID_SIZE);
 
 		mInstructionsShowGrid->setChecked(swGetProfileDefaultInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_SHOW_GRID) != 0);
 		mInstructionsSnapToGrid->setChecked(swGetProfileDefaultInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_SNAP_TO_GRID) != 0);
 		mInstructionsGridScope->setCurrentIndex(swGetProfileDefaultInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_GRID_WITHIN_MARGINS) ? 0 : 1);
 		mInstructionsGridDivisions->setValue(swGetProfileDefaultInteger(SW_PROFILE_INSTRUCTIONS_DEFAULT_GRID_DIVISIONS));
 
-		Instructions.GridPrimaryColor = swQColorFromRGBA(swGetProfileDefaultUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_PRIMARY_COLOR));
-		Instructions.GridSecondaryColor = swQColorFromRGBA(swGetProfileDefaultUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_SECONDARY_COLOR));
-		Instructions.MarginColor = swQColorFromRGBA(swGetProfileDefaultUnsignedInteger(SW_PROFILE_INSTRUCTIONS_MARGIN_COLOR));
-		swUpdateColorButton(mInstructionsGridPrimaryColor, Instructions.GridPrimaryColor);
-		swUpdateColorButton(mInstructionsGridSecondaryColor, Instructions.GridSecondaryColor);
-		swUpdateColorButton(mInstructionsMarginColor, Instructions.MarginColor);
+		PageInstructions.GridPrimaryColor = swQColorFromRGBA(swGetProfileDefaultUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_PRIMARY_COLOR));
+		PageInstructions.GridSecondaryColor = swQColorFromRGBA(swGetProfileDefaultUnsignedInteger(SW_PROFILE_INSTRUCTIONS_GRID_SECONDARY_COLOR));
+		PageInstructions.MarginColor = swQColorFromRGBA(swGetProfileDefaultUnsignedInteger(SW_PROFILE_INSTRUCTIONS_MARGIN_COLOR));
+		swUpdateColorButton(mInstructionsGridPrimaryColor, PageInstructions.GridPrimaryColor);
+		swUpdateColorButton(mInstructionsGridSecondaryColor, PageInstructions.GridSecondaryColor);
+		swUpdateColorButton(mInstructionsMarginColor, PageInstructions.MarginColor);
 
 		UpdateInstructionsPage();
 	});

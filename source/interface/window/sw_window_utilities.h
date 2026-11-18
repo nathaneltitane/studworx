@@ -146,6 +146,7 @@ QWidget* swCreatePanelRow(QWidget* Parent);
 void swAddPanelRowWidget(QWidget* Row, QWidget* Widget);
 void swAddPanelRowStretch(QWidget* Row);
 QToolButton* swAddPanelActionButton(QWidget* Row, QAction* Action);
+QToolButton* swAddPanelTextButton(QWidget* Row, const QString& Name, const QString& ToolTip);
 QToolButton* swAddPanelOptionsButton(QWidget* Row, QMenu* Menu, const QString& ToolTip, const QString& AccessibleName);
 
 // Icons are painted on a 24 unit grid.
@@ -428,7 +429,6 @@ public:
 	swPartIdStringModel(swModel* Model, QObject* Parent);
 
 	QModelIndex Index(swPartData* PartData) const;
-	std::vector<bool> GetFilteredRows(const QString& FilterText) const;
 
 	int rowCount(const QModelIndex& Parent = QModelIndex()) const override;
 	QVariant data(const QModelIndex& Index, int Role = Qt::DisplayRole) const override;

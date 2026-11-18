@@ -743,7 +743,7 @@ void swSynthesisInformationCurved::GetPath(const std::vector<swPartControlPoint>
 	HandleLengths = Scales;
 	float PathLength = 0.0f;
 	bool Reached = true;
-	swVector3 PreviousPosition;
+	swVector3 PreviousPosition(0.0f, 0.0f, 0.0f);
 
 	auto AddPoint = [&Points](const swVector3& Position)
 	{

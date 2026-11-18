@@ -334,6 +334,7 @@ private:
 	static QString NormalizeEmbeddedDataName(const QString& FileName);
 	void LoadLDrawDocument(const QByteArray& FileData, const Project* ReferenceProject, bool ReuseExistingModels);
 	bool LoadDocument(const QByteArray& FileData, const QString& FileName, bool ShowErrors);
+	void ReplaceModels(std::unique_ptr<swModel> NewModel);
 	std::vector<QString> GetMergedAssetDirectories(const swModel* Model) const;
 	swResult<void> ValidateMergedTextureBindings(const Project& Source, const std::map<QString, std::shared_ptr<const swEmbeddedData>>& MergedData, const swModel* ClipboardRoot) const;
 	swResult<void> MergeInternal(const std::vector<Project*>& Sources, const swModel* ClipboardRoot);

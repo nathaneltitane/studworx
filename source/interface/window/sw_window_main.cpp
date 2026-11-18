@@ -490,21 +490,6 @@ bool swMainWindow::eventFilter(QObject* Object, QEvent* Event)
 	return QMainWindow::eventFilter(Object, Event);
 }
 
-void swMainWindow::TogglePreviewWidget(bool Visible)
-{
-	if (mPreviewToolBar)
-	{
-		if (Visible)
-			mPreviewToolBar->show();
-		else
-			mPreviewToolBar->hide();
-	}
-	else if (Visible)
-	{
-		CreatePreviewWidget();
-	}
-}
-
 void swMainWindow::ScheduleAssetUpdate()
 {
 	if (mAssetUpdateScheduled)
@@ -1346,11 +1331,6 @@ void swMainWindow::SetAngleSnapEnabled(bool Enabled)
 {
 	mAngleSnapEnabled = Enabled;
 	UpdateSnap();
-}
-
-QString swMainWindow::GetAngleSnapText() const
-{
-	return mAngleSnapEnabled ? swFormatDoubleLocalized(GetAngleSnap(), locale(), 'g', 6) : tr("None");
 }
 
 void swMainWindow::SetMoveXYSnapIndex(int Index)

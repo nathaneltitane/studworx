@@ -126,29 +126,29 @@ void swEditGroupsDialog::NewGroupClicked()
 
 swEditGroupsDialog::GroupInfo swEditGroupsDialog::GetGroupInfo(QTreeWidgetItem* ParentItem) const
 {
-	swEditGroupsDialog::GroupInfo GroupInfo;
+	swEditGroupsDialog::GroupInfo Info;
 
-	GroupInfo.Name = ParentItem->text(0);
+	Info.Name = ParentItem->text(0);
 
 	uintptr_t GroupPointer = ParentItem->data(0, GroupRole).value<uintptr_t>();
-	GroupInfo.Group = (GroupPointer == SW_GROUP_DIALOG_NEW_GROUP) ? nullptr : reinterpret_cast<swGroup*>(GroupPointer);
+	Info.Group = (GroupPointer == SW_GROUP_DIALOG_NEW_GROUP) ? nullptr : reinterpret_cast<swGroup*>(GroupPointer);
 
 	for (int ChildIndex = 0; ChildIndex < ParentItem->childCount(); ChildIndex++)
 	{
 		QTreeWidgetItem* ChildItem = ParentItem->child(ChildIndex);
 
 		if (ChildItem->data(0, GroupRole).value<uintptr_t>())
-			GroupInfo.ChildGroups.emplace_back(GetGroupInfo(ChildItem));
+			Info.ChildGroups.emplace_back(GetGroupInfo(ChildItem));
 		else
 		{
 			swPart* Part = reinterpret_cast<swPart*>(ChildItem->data(0, PartRole).value<uintptr_t>());
 
 			if (Part)
-				GroupInfo.ChildParts.push_back(Part);
+				Info.ChildParts.push_back(Part);
 		}
 	}
 
-	return GroupInfo;
+	return Info;
 }
 
 swEditGroupsDialog::GroupInfo swEditGroupsDialog::GetGroups() const

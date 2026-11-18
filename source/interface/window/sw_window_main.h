@@ -153,8 +153,6 @@ public:
 		return mMoveSnapEnabled ? SnapZText[mMoveZSnapIndex] : tr("None");
 	}
 
-	QString GetAngleSnapText() const;
-
 	bool GetRelativeTransform() const
 	{
 		return mRelativeTransform;
@@ -352,7 +350,6 @@ public slots:
 	void ProjectFileChanged(const QString& Path);
 	void ModelViewOptionsMenuAboutToShow();
 	void PreviewPart(swPartData* PartData, int ColorCode, bool ShowPreview);
-	void TogglePreviewWidget(bool Visible);
 	void SetInsertPartData(swPartData* PartData);
 
 protected slots:

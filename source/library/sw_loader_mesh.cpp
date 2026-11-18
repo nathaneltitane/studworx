@@ -319,6 +319,41 @@ void swMeshLoaderTypeData::ProcessLine(int LineType, swMeshLoaderMaterial* Mater
 	}
 }
 
+// use to add a section for a transformed source section
+swMeshLoaderSection* swMeshLoaderTypeData::AddTransformedSection(const swMeshLoaderSection* SrcSection, const swMatrix44& Transform, quint32 CurrentColorCode, const swMeshLoaderTextureMap* TextureMap)
+{
+	const quint32 ColorCode = SrcSection->mMaterial->Color == 16 ? CurrentColorCode : SrcSection->mMaterial->Color;
+	swMeshPrimitiveType PrimitiveType = SrcSection->mPrimitiveType;
+	swMeshLoaderSection* DstSection;
+
+	if (SrcSection->mMaterial->Type != swMeshLoaderMaterialType::Solid)
+	{
+		swMeshLoaderTextureParameters DstTextureMap;
+
+		if (TextureMap)
+			DstTextureMap = *TextureMap;
+		else
+			DstTextureMap = *SrcSection->mMaterial;
+
+		for (swVector3& Point : DstTextureMap.Points)
+			Point = swMultiply31(Point, Transform);
+
+		DstSection = AddSection(PrimitiveType, mMeshData->GetTexturedMaterial(ColorCode, DstTextureMap));
+	}
+	else if (TextureMap && SrcSection->mPrimitiveType == SW_MESH_TRIANGLES)
+	{
+		PrimitiveType = SW_MESH_TEXTURED_TRIANGLES;
+
+		DstSection = AddSection(PrimitiveType, mMeshData->GetTexturedMaterial(ColorCode, *TextureMap));
+	}
+	else
+	{
+		DstSection = AddSection(PrimitiveType, mMeshData->GetMaterial(ColorCode));
+	}
+
+	return DstSection;
+}
+
 void swMeshLoaderTypeData::AddMeshData(const swMeshLoaderTypeData& Data, const swMatrix44& Transform, quint32 CurrentColorCode, bool InvertWinding, bool InvertNormals, swMeshLoaderTextureMap* TextureMap)
 {
 	const std::vector<swMeshLoaderVertex>& DataVertices = Data.mVertices;
@@ -365,34 +400,8 @@ void swMeshLoaderTypeData::AddMeshData(const swMeshLoaderTypeData& Data, const s
 
 	for (const std::unique_ptr<swMeshLoaderSection>& SrcSection : Data.mSections)
 	{
-		const quint32 ColorCode = SrcSection->mMaterial->Color == 16 ? CurrentColorCode : SrcSection->mMaterial->Color;
-		swMeshPrimitiveType PrimitiveType = SrcSection->mPrimitiveType;
-		swMeshLoaderSection* DstSection;
-
-		if (SrcSection->mMaterial->Type != swMeshLoaderMaterialType::Solid)
-		{
-			swMeshLoaderTextureParameters DstTextureMap;
-
-			if (TextureMap)
-				DstTextureMap = *TextureMap;
-			else
-				DstTextureMap = *SrcSection->mMaterial;
-
-			for (swVector3& Point : DstTextureMap.Points)
-				Point = swMultiply31(Point, Transform);
-
-			DstSection = AddSection(PrimitiveType, mMeshData->GetTexturedMaterial(ColorCode, DstTextureMap));
-		}
-		else if (TextureMap && SrcSection->mPrimitiveType == SW_MESH_TRIANGLES)
-		{
-			PrimitiveType = SW_MESH_TEXTURED_TRIANGLES;
-
-			DstSection = AddSection(PrimitiveType, mMeshData->GetTexturedMaterial(ColorCode, *TextureMap));
-		}
-		else
-		{
-			DstSection = AddSection(PrimitiveType, mMeshData->GetMaterial(ColorCode));
-		}
+		swMeshLoaderSection* DstSection = AddTransformedSection(SrcSection.get(), Transform, CurrentColorCode, TextureMap);
+		const swMeshPrimitiveType PrimitiveType = DstSection->mPrimitiveType;
 
 		DstSection->mIndices.reserve(DstSection->mIndices.size() + SrcSection->mIndices.size());
 
@@ -453,34 +462,8 @@ void swMeshLoaderTypeData::AddMeshDataNoDuplicateCheck(const swMeshLoaderTypeDat
 
 	for (const std::unique_ptr<swMeshLoaderSection>& SrcSection : Data.mSections)
 	{
-		const quint32 ColorCode = SrcSection->mMaterial->Color == 16 ? CurrentColorCode : SrcSection->mMaterial->Color;
-		swMeshPrimitiveType PrimitiveType = SrcSection->mPrimitiveType;
-		swMeshLoaderSection* DstSection;
-
-		if (SrcSection->mMaterial->Type != swMeshLoaderMaterialType::Solid)
-		{
-			swMeshLoaderTextureParameters DstTextureMap;
-
-			if (TextureMap)
-				DstTextureMap = *TextureMap;
-			else
-				DstTextureMap = *SrcSection->mMaterial;
-
-			for (swVector3& Point : DstTextureMap.Points)
-				Point = swMultiply31(Point, Transform);
-
-			DstSection = AddSection(PrimitiveType, mMeshData->GetTexturedMaterial(ColorCode, DstTextureMap));
-		}
-		else if (TextureMap && SrcSection->mPrimitiveType == SW_MESH_TRIANGLES)
-		{
-			PrimitiveType = SW_MESH_TEXTURED_TRIANGLES;
-
-			DstSection = AddSection(PrimitiveType, mMeshData->GetTexturedMaterial(ColorCode, *TextureMap));
-		}
-		else
-		{
-			DstSection = AddSection(PrimitiveType, mMeshData->GetMaterial(ColorCode));
-		}
+		swMeshLoaderSection* DstSection = AddTransformedSection(SrcSection.get(), Transform, CurrentColorCode, TextureMap);
+		const swMeshPrimitiveType PrimitiveType = DstSection->mPrimitiveType;
 
 		DstSection->mIndices.reserve(DstSection->mIndices.size() + SrcSection->mIndices.size());
 
@@ -802,13 +785,13 @@ swMesh* swLibraryMeshData::CreateMesh(const std::atomic_bool* Cancelled)
 
 	for (int LodIdx = 0; LodIdx < SW_MESH_LOD_COUNT; LodIdx++)
 	{
-		auto AddFinalSection = [](swMeshLoaderSection* Section, std::vector<swMeshLoaderFinalSection>& FinalSections)
+		auto AddFinalSection = [](swMeshLoaderSection* Section, std::vector<swMeshLoaderFinalSection>& LodSections)
 		{
-			for (const swMeshLoaderFinalSection& FinalSection : FinalSections)
+			for (const swMeshLoaderFinalSection& FinalSection : LodSections)
 				if (FinalSection.PrimitiveType == Section->mPrimitiveType && FinalSection.Color == Section->mMaterial->Color && !strcmp(FinalSection.Name, Section->mMaterial->Name))
 					return;
 
-			swMeshLoaderFinalSection& FinalSection = FinalSections.emplace_back();
+			swMeshLoaderFinalSection& FinalSection = LodSections.emplace_back();
 
 			FinalSection.PrimitiveType = Section->mPrimitiveType;
 			FinalSection.Color = Section->mMaterial->Color;

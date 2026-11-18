@@ -534,12 +534,12 @@ void swModel::RunHistorySequence(const std::vector<std::unique_ptr<swModelHistor
 	bool SelectionChanged = false;
 	bool EditChanged = false;
 
-	auto RunAction=[this, &SelectionChanged, &EditChanged](const swModelHistory* ModelHistory, bool Apply)
+	auto RunAction=[this, &SelectionChanged, &EditChanged](const swModelHistory* ModelHistory, bool ApplyAction)
 	{
 		if (!ModelHistory)
 			return;
 
-		if (Apply)
+		if (ApplyAction)
 			ModelHistory->LoadEndState(this);
 		else
 			ModelHistory->LoadStartState(this);

@@ -19,7 +19,6 @@ public:
 	void Reset();
 
 	void PrintText(swContext* Context, float Left, float Top, float Z, const char* Text) const;
-	void GetTriangles(const swMatrix44& Transform, const char* Text, float* Buffer) const;
 	void GetGlyphTriangles(float Left, float Top, float Z, int Glyph, float* Buffer) const;
 	void GetStringDimensions(int* cx, int* cy, const char* Text) const;
 

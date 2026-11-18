@@ -40,10 +40,7 @@ public:
 	swColorPicker(QWidget* Parent = nullptr, bool AllowNoColor = false);
 	virtual ~swColorPicker();
 
-	int GetCurrentColor() const;
-	int GetCurrentColorCode() const;
 	void SetCurrentColor(int ColorIndex);
-	void SetCurrentColorCode(int ColorCode);
 
 public slots:
 	void Changed(int ColorIndex);

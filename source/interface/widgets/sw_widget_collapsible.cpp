@@ -96,8 +96,3 @@ void swCollapsibleWidget::Collapse()
 	mTitleButton->Collapse();
 }
 
-void swCollapsibleWidget::SetChildLayout(QLayout* Layout)
-{
-	Layout->setContentsMargins(12, 0, 0, 0);
-	mChildWidget->setLayout(Layout);
-}

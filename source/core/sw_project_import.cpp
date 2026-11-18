@@ -347,6 +347,14 @@ bool Project::ImportLDD(const QString& FileName)
 
 	NewModel->SetSaved();
 
+	ReplaceModels(std::move(NewModel));
+
+	return true;
+}
+
+// use to make an imported model the only one
+void Project::ReplaceModels(std::unique_ptr<swModel> NewModel)
+{
 	mModels.clear();
 	mDocumentBlocks.clear();
 	mEmbeddedData.clear();
@@ -363,8 +371,6 @@ bool Project::ImportLDD(const QString& FileName)
 		Model->UpdatePartData(UpdatedModels);
 
 	mModified = false;
-
-	return true;
 }
 
 bool Project::ImportInventory(const std::vector<swSetInventoryItem>& SetInventory, const QString& Name, const QString& Description)
@@ -380,22 +386,7 @@ bool Project::ImportInventory(const std::vector<swSetInventoryItem>& SetInventor
 	NewModel->SetSaved();
 	NewModel->SetDescription(Description);
 
-	mModels.clear();
-	mDocumentBlocks.clear();
-	mEmbeddedData.clear();
-	mEmbeddedDataIndex.clear();
-	mModels.emplace_back(std::move(NewModel));
-
-	for (const std::unique_ptr<swModel>& Model : mModels)
-		Model->CreatePartData(this);
-
-	std::vector<swModel*> UpdatedModels;
-	UpdatedModels.reserve(mModels.size());
-
-	for (const std::unique_ptr<swModel>& Model : mModels)
-		Model->UpdatePartData(UpdatedModels);
-
-	mModified = false;
+	ReplaceModels(std::move(NewModel));
 
 	return true;
 }

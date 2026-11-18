@@ -352,7 +352,6 @@ public:
 	void ApplyStepView(swStep Step);
 	swVector3 GetStepViewAngles() const;
 	void SetCameraAngles(float Latitude, float Longitude);
-	void SetDefaultCamera();
 	void SetCamera(swCamera* Camera, bool ForceCopy);
 	void SetCamera(const QString& CameraName);
 	void SetCameraIndex(size_t CameraIndex);

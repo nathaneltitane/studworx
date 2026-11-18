@@ -561,9 +561,9 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 		for (size_t ImageIndex = 0; ImageIndex < Images.size(); ImageIndex++)
 		{
 			swPartsListImage& Image = Images[ImageIndex];
-			const int ColumnWidth = ColumnWidths[Columns[ImageIndex]];
+			const int AlignedColumnWidth = ColumnWidths[Columns[ImageIndex]];
 
-			Image.Position.rx() += GetAlignmentOffset(ColumnWidth - Image.CellWidth);
+			Image.Position.rx() += GetAlignmentOffset(AlignedColumnWidth - Image.CellWidth);
 			Image.TextPosition = QPoint(Image.Position.x(), Image.Position.y() + Image.Bounds.height() + Ascent);
 		}
 	}

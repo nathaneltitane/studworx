@@ -281,23 +281,8 @@ swInstructionsEditorWidget::swInstructionsEditorWidget(QWidget* Parent, Project*
 
 	QWidget* ButtonRow = swCreatePanelRow(CentralWidget);
 
-	auto CreateButton = [](QWidget* Row, const QString& Name, const QString& ToolTip)
-	{
-		QToolButton* Button = new QToolButton(Row);
-		Button->setText(Name);
-		Button->setToolButtonStyle(Qt::ToolButtonTextOnly);
-		Button->setToolTip(ToolTip);
-		Button->setWhatsThis(ToolTip);
-		Button->setAccessibleName(Name);
-		swSetupPanelButton(Button);
-		Button->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
-		static_cast<QHBoxLayout*>(Row->layout())->addWidget(Button, 1);
-
-		return Button;
-	};
-
-	mApplyButton = CreateButton(ButtonRow, tr("Apply"), tr("Check the syntax of the edited text and load the model from it, the change is unsaved until the model is saved."));
-	mRevertButton = CreateButton(ButtonRow, tr("Revert"), tr("Discard the edits and show the text of the model again."));
+	mApplyButton = swAddPanelTextButton(ButtonRow, tr("Apply"), tr("Check the syntax of the edited text and load the model from it, the change is unsaved until the model is saved."));
+	mRevertButton = swAddPanelTextButton(ButtonRow, tr("Revert"), tr("Discard the edits and show the text of the model again."));
 
 	// shared editor with options, find and replace
 	mHighlighter = new swLDrawHighlighter(this);

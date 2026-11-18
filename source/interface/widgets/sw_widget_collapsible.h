@@ -37,7 +37,6 @@ public:
 	swCollapsibleWidget(const QString& RootTitle, QWidget* Parent = nullptr);
 
 	void Collapse();
-	void SetChildLayout(QLayout* Layout);
 
 protected slots:
 	void ButtonStateChanged(bool Expanded);

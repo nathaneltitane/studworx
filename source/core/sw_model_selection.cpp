@@ -1011,8 +1011,8 @@ bool swModel::FindControlPointSeat(const swPart* Part, quint32 ControlPointIndex
 					for (const std::pair<float, float>& Range : InsertRanges)
 					{
 						const float MaleOffset = swClamp(0.0f, Range.first, Range.second);
-						const swVector3 Position = Frame.GetTranslation() + Axis * (IsMale ? MaleOffset : -MaleOffset);
-						const swMatrix44 Seat = GetSeatedControlPoint(FittingFrame, swMatrix44(swMatrix33(Frame), Position));
+						const swVector3 SeatPosition = Frame.GetTranslation() + Axis * (IsMale ? MaleOffset : -MaleOffset);
+						const swMatrix44 Seat = GetSeatedControlPoint(FittingFrame, swMatrix44(swMatrix33(Frame), SeatPosition));
 						const float Distance = swLength(Seat.GetTranslation() - ControlPointWorld.GetTranslation());
 
 						// the surface faces away from its part
@@ -1021,10 +1021,10 @@ bool swModel::FindControlPointSeat(const swPart* Part, quint32 ControlPointIndex
 
 						// the connection under the pointer first
 
-						const float Reach = Point ? swLength(Position - *Point) : Distance;
+						const float Reach = Point ? swLength(SeatPosition - *Point) : Distance;
 
 						if (Reach < SnapDistance)
-							Seats.push_back({ Point ? roundf(Reach) * 1000.0f + Distance / 2.0f : Distance, Seat, Surface, Normal, FittingIndex, Position });
+							Seats.push_back({ Point ? roundf(Reach) * 1000.0f + Distance / 2.0f : Distance, Seat, Surface, Normal, FittingIndex, SeatPosition });
 					}
 				}
 			}

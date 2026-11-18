@@ -15,8 +15,6 @@
 #define SW_LIGHT_DIRECTIONAL_RADIUS 5.0f
 #define SW_LIGHT_DIRECTIONAL_HEIGHT 7.5f
 
-#define SW_LIGHT_POSITION_EDGE 7.5f
-
 static const std::array<QLatin1String, static_cast<int>(swLightType::Count)> gLightTypes = { QLatin1String("POINT"), QLatin1String("SPOT"), QLatin1String("DIRECTIONAL"), QLatin1String("AREA") };
 static const std::array<QLatin1String, static_cast<int>(swLightAreaShape::Count)> gLightAreaShapes = { QLatin1String("RECTANGLE"), QLatin1String("SQUARE"), QLatin1String("DISK"), QLatin1String("ELLIPSE") };
 

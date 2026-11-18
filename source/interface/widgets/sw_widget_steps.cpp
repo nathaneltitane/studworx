@@ -45,8 +45,8 @@ swStepsWidget::swStepsWidget(QWidget* Parent)
 			swKeyframesWidget* Keyframes = gMainWindow->findChild<swKeyframesWidget*>();
 			QDockWidget* KeyframesDock = nullptr;
 
-			for (QWidget* Parent = Keyframes; Parent && !KeyframesDock; Parent = Parent->parentWidget())
-				KeyframesDock = qobject_cast<QDockWidget*>(Parent);
+			for (QWidget* Ancestor = Keyframes; Ancestor && !KeyframesDock; Ancestor = Ancestor->parentWidget())
+				KeyframesDock = qobject_cast<QDockWidget*>(Ancestor);
 
 			if (KeyframesDock)
 			{
@@ -325,8 +325,8 @@ void swStepsWidget::Update(bool Clear, bool UpdateItems)
 		std::map<swStep, QStringList> StepTracks;
 
 		for (const swKeyframesTrack& Track : Object.Tracks)
-			for (swStep Step : Track.Steps)
-				StepTracks[Step].append(Track.Name.toLower());
+			for (swStep KeyStep : Track.Steps)
+				StepTracks[KeyStep].append(Track.Name.toLower());
 
 		for (const std::pair<const swStep, QStringList>& Keys : StepTracks)
 		{

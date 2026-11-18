@@ -28,7 +28,6 @@ public:
 	~swViewWidget();
 
 	swView* GetView() const;
-	void SetView(swView* View);
 
 	void UpdateMousePosition();
 	void UpdateModelEditingPath();

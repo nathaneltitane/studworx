@@ -54,18 +54,6 @@ swGroup* swModel::GetGroup(const QString& Name, bool CreateIfMissing)
 	return nullptr;
 }
 
-void swModel::RemoveGroup(swGroup* Group)
-{
-	for (std::vector<std::unique_ptr<swGroup>>::iterator GroupIt = mGroups.begin(); GroupIt != mGroups.end(); GroupIt++)
-	{
-		if (GroupIt->get() == Group)
-		{
-			mGroups.erase(GroupIt);
-			break;
-		}
-	}
-}
-
 void swModel::GroupSelection()
 {
 	if (!AnyPartsSelected())

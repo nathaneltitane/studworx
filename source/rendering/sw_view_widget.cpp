@@ -160,31 +160,6 @@ swView* swViewWidget::GetView() const
 	return mView.get();
 }
 
-void swViewWidget::SetView(swView* View)
-{
-	if (context())
-		makeCurrent();
-
-	if (View)
-	{
-		if (context())
-		{
-			View->mContext->SetGLContext(context(), this);
-		}
-
-		View->SetWidget(this);
-		const float Scale = GetDeviceScale();
-		View->SetSize(width() * Scale, height() * Scale);
-
-		if (hasFocus())
-			View->SetFocus(true);
-	}
-
-	mView = std::unique_ptr<swView>(View);
-	UpdateCameraName();
-	UpdateModelEditingPath();
-}
-
 // use to show the camera name
 void swViewWidget::UpdateCameraName()
 {

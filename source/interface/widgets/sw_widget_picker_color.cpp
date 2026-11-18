@@ -125,21 +125,6 @@ void swColorPicker::SetCurrentColor(int ColorIndex)
 	Selected(ColorIndex);
 }
 
-void swColorPicker::SetCurrentColorCode(int ColorCode)
-{
-	SetCurrentColor(swGetColorIndex(ColorCode));
-}
-
-int swColorPicker::GetCurrentColor() const
-{
-	return mCurrentColorIndex;
-}
-
-int swColorPicker::GetCurrentColorCode() const
-{
-	return gColorList[mCurrentColorIndex].Code;
-}
-
 void swColorPicker::ButtonPressed(bool Toggled)
 {
 	if (!Toggled)

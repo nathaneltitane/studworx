@@ -440,8 +440,6 @@ void swView::DrawAxes() const
 			return;
 	}
 
-//	mContext->ClearDepth();
-
 	struct swAxisVertex
 	{
 		float x, y, z;

@@ -4,6 +4,9 @@ INCLUDEPATH += $$PWD
 
 SOURCES += \
 	$$PWD/sw_application.cpp \
+	$$PWD/sw_application_command_line.cpp \
+	$$PWD/sw_application_library.cpp \
+	$$PWD/sw_application_preferences.cpp \
 	$$PWD/sw_commands.cpp \
 	$$PWD/sw_main.cpp \
 	$$PWD/sw_migration.cpp \

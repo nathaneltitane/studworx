@@ -122,6 +122,8 @@ public:
 	std::vector<swMeshLoaderConditionalVertex> mConditionalVertices;
 
 protected:
+	swMeshLoaderSection* AddTransformedSection(const swMeshLoaderSection* SrcSection, const swMatrix44& Transform, quint32 CurrentColorCode, const swMeshLoaderTextureMap* TextureMap);
+
 	swLibraryMeshData* mMeshData = nullptr;
 };
 

@@ -130,7 +130,7 @@ public:
 	};
 
 	// Caches the description and classification.
-	bool InitializeFromCache(const CacheData& CacheData);
+	bool InitializeFromCache(const CacheData& Cache);
 	CacheData GetCacheData() const;
 
 	// Inherits the target decoration and parent.

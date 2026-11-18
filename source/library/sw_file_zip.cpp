@@ -179,7 +179,8 @@ bool swZipFile::CloseWrite()
 	return Written == 2;
 }
 
-quint64 swZipFile::SearchCentralDir()
+// use to find a signature near the end of the file
+quint64 swZipFile::SearchEndSignature(quint8 ThirdByte, quint8 FourthByte)
 {
 	quint64 SizeFile, MaxBack, BackRead, PosFound;
 	constexpr int CommentBufferSize = 1024;
@@ -208,7 +209,7 @@ quint64 swZipFile::SearchCentralDir()
 
 		for (int i = (int)ReadSize - 3; (i--) > 0;)
 		{
-			if (((*(buf+i)) == 0x50) && ((*(buf+i+1)) == 0x4b) && ((*(buf+i+2)) == 0x05) && ((*(buf+i+3)) == 0x06))
+			if (((*(buf+i)) == 0x50) && ((*(buf+i+1)) == 0x4b) && ((*(buf+i+2)) == ThirdByte) && ((*(buf+i+3)) == FourthByte))
 			{
 				PosFound = ReadPos + i;
 				break;
@@ -222,45 +223,14 @@ quint64 swZipFile::SearchCentralDir()
 	return PosFound;
 }
 
+quint64 swZipFile::SearchCentralDir()
+{
+	return SearchEndSignature(0x05, 0x06);
+}
+
 quint64 swZipFile::SearchCentralDir64()
 {
-	quint64 SizeFile, MaxBack, BackRead, PosFound;
-	const int CommentBufferSize = 1024;
-	quint8 buf[CommentBufferSize + 4];
-
-	SizeFile = mFile->GetLength();
-	MaxBack = swMinimum(SizeFile, 0xffffULL);
-	BackRead = 4;
-	PosFound = 0;
-
-	while (BackRead < MaxBack)
-	{
-		quint64 ReadPos, ReadSize;
-
-		if (BackRead + CommentBufferSize > MaxBack)
-			BackRead = MaxBack;
-		else
-			BackRead += CommentBufferSize;
-		ReadPos = SizeFile - BackRead;
-
-		ReadSize = ((CommentBufferSize + 4) < (SizeFile - ReadPos)) ? (CommentBufferSize + 4) : (SizeFile - ReadPos);
-		mFile->Seek(ReadPos, SEEK_SET);
-
-		if (mFile->ReadBuffer(buf, (long)ReadSize) != ReadSize)
-			break;
-
-		for (int i=(int)ReadSize - 3; (i--) > 0; )
-		{
-			if (((*(buf+i)) == 0x50) && ((*(buf+i+1)) == 0x4b) && ((*(buf+i+2)) == 0x06) && ((*(buf+i+3)) == 0x07))
-			{
-				PosFound = ReadPos + i;
-				break;
-			}
-		}
-
-		if (PosFound != 0)
-			break;
-	}
+	const quint64 PosFound = SearchEndSignature(0x06, 0x07);
 
 	if (PosFound == 0)
 		return 0;

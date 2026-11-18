@@ -176,7 +176,6 @@ public:
 	}
 
 	void ClearColorAndDepth(const swVector4& ClearColor);
-	void ClearDepth();
 
 	static bool SupportsMaterial(swMaterialType MaterialType)
 	{

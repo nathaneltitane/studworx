@@ -141,9 +141,9 @@ swPart* swModel::AddPart(swPartData* PartData, quint32 Section)
 	const swBoundingBox& PartDataBoundingBox = PartData->GetBoundingBox();
 	swPart* Part = nullptr;
 
-	auto CreatePart=[this, &Part](swPartData* PartData, const swMatrix44& WorldMatrix, int ColorIndex)
+	auto CreatePart=[this, &Part](swPartData* NewPartData, const swMatrix44& WorldMatrix, int ColorIndex)
 	{
-		Part = new swPart(PartData);
+		Part = new swPart(NewPartData);
 		Part->Initialize(WorldMatrix, mCurrentStep);
 		Part->SetColorIndex(ColorIndex);
 		Part->AddInsertedControlPoints();

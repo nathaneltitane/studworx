@@ -86,9 +86,6 @@ protected:
 
 #ifndef SW_DISABLE_RENDER_DIALOG
 
-#define SW_POVRAY_PREVIEW_WIDTH 768
-#define SW_POVRAY_PREVIEW_HEIGHT 432
-
 // raise to drop old panel layouts
 #define SW_RENDER_WINDOW_STATE_VERSION 3
 #define SW_RENDER_PANEL_WIDTH 380
@@ -1100,15 +1097,8 @@ void swRenderDialog::CreatePanels()
 
 		auto CreateEditorButton = [EditorButtonRow](const QString& Text, const QString& ToolTip, const QString& WhatsThis)
 		{
-			QToolButton* Button = new QToolButton(EditorButtonRow);
-			Button->setText(Text);
-			Button->setToolTip(ToolTip);
+			QToolButton* Button = swAddPanelTextButton(EditorButtonRow, Text, ToolTip);
 			Button->setWhatsThis(WhatsThis);
-			Button->setAccessibleName(Text);
-			Button->setToolButtonStyle(Qt::ToolButtonTextOnly);
-			swSetupPanelButton(Button);
-			Button->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
-			static_cast<QHBoxLayout*>(EditorButtonRow->layout())->addWidget(Button, 1);
 
 			return Button;
 		};

@@ -106,7 +106,7 @@ static QStringList swGetPOVRayCandidates()
 	Candidates.append(swGetPOVRayBundledPath());
 #else
 
-	for (const QString& Name : { QLatin1String("povray"), QLatin1String("povray3.7"), QLatin1String("povray37") })
+	for (const QString& Name : { QStringLiteral("povray"), QStringLiteral("povray3.7"), QStringLiteral("povray37") })
 		Candidates.append(QStandardPaths::findExecutable(Name));
 
 	Candidates.append(QLatin1String("/usr/local/bin/povray"));
@@ -252,7 +252,7 @@ QString swFindLGEOPath()
 
 	for (const QString& Folder : Folders)
 	{
-		for (const QString& Name : { QLatin1String("lgeo"), QLatin1String("LGEO") })
+		for (const QString& Name : { QStringLiteral("lgeo"), QStringLiteral("LGEO") })
 		{
 			const QString Candidate = QDir::cleanPath(Folder + QLatin1Char('/') + Name);
 
@@ -410,7 +410,7 @@ QStringList swGetPOVRayArguments(const swPOVRayProgram& Program, swPOVRayRenderQ
 	{
 		const QString LGEOPath = swFindLGEOPath();
 
-		for (const QString& Folder : { QLatin1String("lg"), QLatin1String("ar"), QLatin1String("stl") })
+		for (const QString& Folder : { QStringLiteral("lg"), QStringLiteral("ar"), QStringLiteral("stl") })
 		{
 			const QString FolderPath = QDir::cleanPath(LGEOPath + QLatin1Char('/') + Folder);
 

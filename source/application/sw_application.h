@@ -33,6 +33,8 @@ enum class swColorTheme
 #define SW_SELECTION_OUTLINE_WIDTH_MINIMUM 1
 #define SW_SELECTION_OUTLINE_WIDTH_MAXIMUM 8
 
+#define SW_LIBRARY_DOWNLOAD_URL "https://library.ldraw.org/library/updates/complete.zip"
+
 // Sizes from extra small to extra large.
 constexpr std::array<int, 5> SW_VIEW_CUBE_SIZES = { 48, 64, 96, 128, 192 };
 constexpr std::array<int, 5> SW_AXIS_ICON_SIZES = SW_VIEW_CUBE_SIZES;

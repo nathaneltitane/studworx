@@ -10,7 +10,11 @@ SOURCES += \
 	$$PWD/sw_window_main_project.cpp \
 	$$PWD/sw_window_main_update.cpp \
 	$$PWD/sw_window_main_view.cpp \
-	$$PWD/sw_window_utilities.cpp
+	$$PWD/sw_window_utilities.cpp \
+	$$PWD/sw_window_utilities_docks.cpp \
+	$$PWD/sw_window_utilities_icons.cpp \
+	$$PWD/sw_window_utilities_panels.cpp \
+	$$PWD/sw_window_utilities_style.cpp
 
 HEADERS += \
 	$$PWD/sw_window_main.h \

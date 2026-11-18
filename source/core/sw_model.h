@@ -531,7 +531,6 @@ public:
 
 	swGroup* AddGroup(const QString& Prefix, swGroup* Parent);
 	swGroup* GetGroup(const QString& Name, bool CreateIfMissing);
-	void RemoveGroup(swGroup* Group);
 	void GroupSelection();
 	void UngroupSelection();
 	void AddSelectedPartsToGroup();

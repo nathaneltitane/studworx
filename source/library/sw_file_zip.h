@@ -112,6 +112,7 @@ public:
 protected:
 	bool Open();
 	bool ReadCentralDir();
+	quint64 SearchEndSignature(quint8 ThirdByte, quint8 FourthByte);
 	quint64 SearchCentralDir();
 	quint64 SearchCentralDir64();
 	bool CheckFileCoherencyHeader(int FileIndex, quint32* SizeVar, quint64* OffsetLocalExtraField, quint32* SizeLocalExtraField);

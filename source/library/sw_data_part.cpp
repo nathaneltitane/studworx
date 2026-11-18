@@ -109,16 +109,16 @@ std::vector<std::string> swPartData::Classify(std::string_view Name)
 	return ParentIds;
 }
 
-bool swPartData::InitializeFromCache(const CacheData& CacheData)
+bool swPartData::InitializeFromCache(const CacheData& Cache)
 {
 	const int KnownFlags = static_cast<int>(Flag::Decorated) | static_cast<int>(Flag::Alias) | static_cast<int>(Flag::SubPart);
 
-	if (CacheData.Description.size() >= sizeof(m_strDescription) || CacheData.PatternParentId.size() >= SW_PART_NAME_LENGTH || (CacheData.Flags & ~KnownFlags) != 0)
+	if (Cache.Description.size() >= sizeof(m_strDescription) || Cache.PatternParentId.size() >= SW_PART_NAME_LENGTH || (Cache.Flags & ~KnownFlags) != 0)
 		return false;
 
-	swstrcpy(m_strDescription, CacheData.Description.c_str());
-	mPatternParentId = CacheData.PatternParentId;
-	mFlags = Flags(static_cast<Flag>(CacheData.Flags));
+	swstrcpy(m_strDescription, Cache.Description.c_str());
+	mPatternParentId = Cache.PatternParentId;
+	mFlags = Flags(static_cast<Flag>(Cache.Flags));
 
 	return true;
 }

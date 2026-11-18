@@ -505,21 +505,12 @@ swInstructionsGridWidget::swInstructionsGridWidget(QWidget* Parent, swInstructio
 
 	// grid settings need no selection
 	QWidget* GridRow = swCreatePanelRow(CentralWidget);
-	QHBoxLayout* GridRowLayout = static_cast<QHBoxLayout*>(GridRow->layout());
 	Layout->addWidget(GridRow);
 
-	auto CreateGridButton = [GridRow, GridRowLayout](const QString& Name, const QString& ToolTip)
+	auto CreateGridButton = [GridRow](const QString& Name, const QString& ToolTip)
 	{
-		QToolButton* Button = new QToolButton(GridRow);
-		Button->setText(Name);
+		QToolButton* Button = swAddPanelTextButton(GridRow, Name, ToolTip);
 		Button->setCheckable(true);
-		Button->setToolButtonStyle(Qt::ToolButtonTextOnly);
-		Button->setToolTip(ToolTip);
-		Button->setWhatsThis(ToolTip);
-		Button->setAccessibleName(Name);
-		swSetupPanelButton(Button);
-		Button->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
-		GridRowLayout->addWidget(Button, 1);
 
 		return Button;
 	};

@@ -10,21 +10,6 @@ swEditorWidget::swEditorWidget(QWidget* Parent, QSyntaxHighlighter* Highlighter)
 	QVBoxLayout* Layout = new QVBoxLayout(this);
 	Layout->setContentsMargins(0, 0, 0, 0);
 
-	auto CreateButton = [](QWidget* Row, const QString& Name, const QString& ToolTip)
-	{
-		QToolButton* Button = new QToolButton(Row);
-		Button->setText(Name);
-		Button->setToolButtonStyle(Qt::ToolButtonTextOnly);
-		Button->setToolTip(ToolTip);
-		Button->setWhatsThis(ToolTip);
-		Button->setAccessibleName(Name);
-		swSetupPanelButton(Button);
-		Button->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
-		static_cast<QHBoxLayout*>(Row->layout())->addWidget(Button, 1);
-
-		return Button;
-	};
-
 	// options button at the top right
 	QWidget* OptionsRow = swCreatePanelRow(this);
 	swAddPanelRowStretch(OptionsRow);
@@ -95,8 +80,8 @@ swEditorWidget::swEditorWidget(QWidget* Parent, QSyntaxHighlighter* Highlighter)
 	swSetupPanelEdit(mFindEdit);
 	static_cast<QHBoxLayout*>(FindRow->layout())->addWidget(mFindEdit, 2);
 
-	QToolButton* PreviousButton = CreateButton(FindRow, tr("Previous"), tr("Select the previous match."));
-	QToolButton* NextButton = CreateButton(FindRow, tr("Next"), tr("Select the next match."));
+	QToolButton* PreviousButton = swAddPanelTextButton(FindRow, tr("Previous"), tr("Select the previous match."));
+	QToolButton* NextButton = swAddPanelTextButton(FindRow, tr("Next"), tr("Select the next match."));
 
 	QWidget* ReplaceRow = swCreatePanelRow(mFindWidget);
 	FindLayout->addWidget(ReplaceRow);
@@ -108,8 +93,8 @@ swEditorWidget::swEditorWidget(QWidget* Parent, QSyntaxHighlighter* Highlighter)
 	swSetupPanelEdit(mReplaceEdit);
 	static_cast<QHBoxLayout*>(ReplaceRow->layout())->addWidget(mReplaceEdit, 2);
 
-	QToolButton* ReplaceButton = CreateButton(ReplaceRow, tr("Replace"), tr("Replace the selected match and select the next one."));
-	QToolButton* ReplaceAllButton = CreateButton(ReplaceRow, tr("Replace All"), tr("Replace every match in the text."));
+	QToolButton* ReplaceButton = swAddPanelTextButton(ReplaceRow, tr("Replace"), tr("Replace the selected match and select the next one."));
+	QToolButton* ReplaceAllButton = swAddPanelTextButton(ReplaceRow, tr("Replace All"), tr("Replace every match in the text."));
 
 	mMatchLabel = new QLabel(FindRow);
 	mMatchLabel->setMinimumWidth(mMatchLabel->fontMetrics().horizontalAdvance(tr("No Matches")));

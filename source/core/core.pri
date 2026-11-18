@@ -24,6 +24,9 @@ SOURCES += \
 	$$PWD/sw_object_property.cpp \
 	$$PWD/sw_project.cpp \
 	$$PWD/sw_project_export.cpp \
+	$$PWD/sw_project_export_collada.cpp \
+	$$PWD/sw_project_export_html.cpp \
+	$$PWD/sw_project_export_povray.cpp \
 	$$PWD/sw_project_file.cpp \
 	$$PWD/sw_project_import.cpp \
 	$$PWD/sw_renderer_blender.cpp \

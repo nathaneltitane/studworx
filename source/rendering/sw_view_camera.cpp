@@ -245,16 +245,6 @@ void swView::SetCameraAngles(float Latitude, float Longitude)
 	Redraw();
 }
 
-void swView::SetDefaultCamera()
-{
-	if (!mCamera || !mCamera->IsSimple())
-		mCamera = new swCamera(true);
-
-	mCamera->SetViewpoint(swViewpoint::Home);
-	ZoomExtents(swGeometryBoundsMode::IncludeFallback, false);
-	Redraw();
-}
-
 void swView::SetCamera(swCamera* Camera, bool ForceCopy)
 {
 	if (Camera->IsSimple() || ForceCopy)
