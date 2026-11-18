@@ -898,9 +898,7 @@ void swViewManipulator::DrawAxisRotationRings(swTrackButton TrackButton, swTrack
 {
 	const swCamera* Camera = mView->GetCamera();
 	swContext* Context = mView->mContext;
-	swVector3 ViewDir = swNormalize(Camera->mTargetPosition - Camera->mPosition);
 	const swMatrix33 WorldToLocalMatrix = swMatrix33AffineInverse(swMatrix33(WorldMatrix));
-	ViewDir = swMultiply(ViewDir, WorldToLocalMatrix);
 	const swVector3 FrontVector = swNormalize(swMultiply(swNormalize(Camera->mTargetPosition - Camera->mPosition), WorldToLocalMatrix));
 
 	Context->SetWorldMatrix(WorldMatrix);
@@ -958,9 +956,6 @@ void swViewManipulator::DrawAxisRotationRings(swTrackButton TrackButton, swTrack
 				t2 = swVector3(-Sin2, Cos2, 0.0f);
 				break;
 			}
-
-			if (gMainWindow->GetTool() == swTool::Rotate && !HasAngle && TrackButton == swTrackButton::None && swDot(ViewDir, v1 + v2) > 0.0f)
-				continue;
 
 			const swVector3 NodeCenter1 = v1 * (mOverlayRotateRadius * OverlayScale);
 			const swVector3 NodeCenter2 = v2 * (mOverlayRotateRadius * OverlayScale);
