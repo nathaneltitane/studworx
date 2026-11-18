@@ -710,6 +710,26 @@ swPart* swModel::GetRotateJoint() const
 	return Part == mJointRotate || swGetPreferences().mJointRotation ? Part : nullptr;
 }
 
+// use to turn a hinge across its axis
+bool swModel::TurnJointFree(swPart* Joint, const swMatrix33& WorldRotation)
+{
+	const size_t JointIndex = Joint == GetJointPart() ? GetJointIndex() : 0;
+
+	if (Joint->mJoints[JointIndex].Type != swJointType::Hinge)
+		return RotateJoint(Joint, WorldRotation);
+
+	const swVector3 Pivot = swMultiply31(Joint->mJoints[JointIndex].Pivot, Joint->GetJointFrame(JointIndex));
+	const swMatrix44 Turn(WorldRotation, Pivot - swMultiply(Pivot, WorldRotation));
+	const swMatrix44 Turned = swMultiply(Joint->mModelWorld, Turn);
+	const bool AddKey = gMainWindow->GetAddKeys();
+
+	Joint->SetPosition(Turned.GetTranslation(), mCurrentStep, AddKey);
+	Joint->SetRotation(swMatrix33Clean(swMatrix33(Turned)), mCurrentStep, AddKey);
+	Joint->UpdatePosition(mCurrentStep);
+
+	return true;
+}
+
 // use to carry a joint's group along
 void swModel::TurnJointGroup(swPart* Joint, const swMatrix44& Before)
 {

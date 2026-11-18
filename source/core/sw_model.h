@@ -129,7 +129,8 @@ enum class swModelTransformFlag
 	Relative = 1 << 0,
 	RotatePivotPoint = 1 << 1,
 	Checkpoint = 1 << 2,
-	FirstMove = 1 << 3
+	FirstMove = 1 << 3,
+	JointFree = 1 << 4
 };
 
 Q_DECLARE_FLAGS(swModelTransformFlags, swModelTransformFlag)
@@ -416,6 +417,7 @@ public:
 	swPart* GetRotateJoint() const;
 	bool RotateJoint(swPart* Part, const swMatrix33& WorldRotation);
 	void TurnJointGroup(swPart* Joint, const swMatrix44& Before);
+	bool TurnJointFree(swPart* Joint, const swMatrix33& WorldRotation);
 	bool IsJointPick() const
 	{
 		return mJointPick;
@@ -627,8 +629,8 @@ public:
 
 	// Moves the focused control point.
 	void UpdateControlPointDragTool(swPart* Part, const swVector3& Position, const swVector3* Point = nullptr);
-	void UpdateRotateTool(const swVector3& Axis, float Angle, bool AlternateButtonDrag, bool Relative);
-	void UpdateRotateTool(const swMatrix33& RotationMatrix, bool AlternateButtonDrag, bool Relative);
+	void UpdateRotateTool(const swVector3& Axis, float Angle, bool AlternateButtonDrag, bool Relative, bool JointFree);
+	void UpdateRotateTool(const swMatrix33& RotationMatrix, bool AlternateButtonDrag, bool Relative, bool JointFree);
 	void UpdateScaleTool(const float Scale);
 	void EraseToolClicked(swObject* Object);
 	void PaintToolClicked(swObject* Object);

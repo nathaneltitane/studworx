@@ -448,6 +448,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	connect(ui->AxisZNegativeColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->ObjectSelectedColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->ObjectFocusedColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
+	connect(ui->ObjectDeactivatedColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->CameraColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->LightColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
 	connect(ui->ControlPointColorButton, &QToolButton::clicked, this, &swPreferencesDialog::ColorButtonClicked);
@@ -765,6 +766,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	SetButtonPixmap(mOptions->Preferences.mAxisZNegativeColor, ui->AxisZNegativeColorButton);
 	SetButtonPixmap(mOptions->Preferences.mObjectSelectedColor, ui->ObjectSelectedColorButton);
 	SetButtonPixmap(mOptions->Preferences.mObjectFocusedColor, ui->ObjectFocusedColorButton);
+	SetButtonPixmap(mOptions->Preferences.mObjectDeactivatedColor, ui->ObjectDeactivatedColorButton);
 	SetButtonPixmap(mOptions->Preferences.mCameraColor, ui->CameraColorButton);
 	SetButtonPixmap(mOptions->Preferences.mLightColor, ui->LightColorButton);
 	SetButtonPixmap(mOptions->Preferences.mControlPointColor, ui->ControlPointColorButton);
@@ -1555,6 +1557,12 @@ void swPreferencesDialog::ColorButtonClicked()
 		Color = &mOptions->Preferences.mObjectFocusedColor;
 		Title = tr("Select Object Focused Color");
 	}
+	else if (Button == ui->ObjectDeactivatedColorButton)
+	{
+		Color = &mOptions->Preferences.mObjectDeactivatedColor;
+		Title = tr("Select Object Deactivated Color");
+		DialogOptions = QColorDialog::ShowAlphaChannel;
+	}
 	else if (Button == ui->CameraColorButton)
 	{
 		Color = &mOptions->Preferences.mCameraColor;
@@ -1617,6 +1625,13 @@ void swPreferencesDialog::ColorButtonClicked()
 	{
 		*Color = Button == ui->FadeStepsColor ? swClampFadeColorAlpha(*Color) : swClampStepColorAlpha(*Color);
 		NewColor.setAlpha(SW_RGBA_ALPHA(*Color));
+	}
+
+	// deactivated shows grey only
+	if (Button == ui->ObjectDeactivatedColorButton)
+	{
+		*Color = swGreyscaleColor(*Color);
+		NewColor = QColor(SW_RGBA_RED(*Color), SW_RGBA_GREEN(*Color), SW_RGBA_BLUE(*Color), SW_RGBA_ALPHA(*Color));
 	}
 
 	swUpdateColorButton((QToolButton*)Button, NewColor);

@@ -790,6 +790,14 @@ inline quint32 swClampFadeColorAlpha(quint32 Color)
 	return SW_RGBA(SW_RGBA_RED(Color), SW_RGBA_GREEN(Color), SW_RGBA_BLUE(Color), Alpha);
 }
 
+inline quint32 swGreyscaleColor(quint32 Color)
+{
+	// deactivated colors stay grey
+
+	const int Grey = qBound(0, qRound(SW_RGBA_RED(Color) * 0.299f + SW_RGBA_GREEN(Color) * 0.587f + SW_RGBA_BLUE(Color) * 0.114f), 255);
+	return SW_RGBA(Grey, Grey, Grey, SW_RGBA_ALPHA(Color));
+}
+
 inline quint32 swColorFromVector3(const swVector3& Color)
 {
 	return SW_RGB(roundf(Color[0] * 255), roundf(Color[1] * 255), roundf(Color[2] * 255));

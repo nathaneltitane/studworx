@@ -141,6 +141,7 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "AxisZNegativeColor", SW_RGBA(62, 74, 168, 255)),                          // SW_PROFILE_AXIS_Z_NEGATIVE_COLOR #3e4aa8ff
 	swProfileEntry("Settings", "ObjectSelectedColor", static_cast<uint>(SW_RGBA(255, 255, 127, 255))),     // SW_PROFILE_OBJECT_SELECTED_COLOR #ffff7fff
 	swProfileEntry("Settings", "ObjectFocusedColor", static_cast<uint>(SW_RGBA(102, 76, 229, 255))),       // SW_PROFILE_OBJECT_FOCUSED_COLOR #664ce5ff
+	swProfileEntry("Settings", "ObjectDeactivatedColor", static_cast<uint>(SW_RGBA(128, 128, 128, 153))),  // SW_PROFILE_OBJECT_DEACTIVATED_COLOR #80808099
 	swProfileEntry("Settings", "CameraColor", static_cast<uint>(SW_RGBA(128, 204, 128, 255))),             // SW_PROFILE_CAMERA_COLOR #80cc80ff
 	swProfileEntry("Settings", "LightColor", static_cast<uint>(SW_RGBA(255, 170, 0, 255))),                // SW_PROFILE_LIGHT_COLOR #ffaa00ff
 	swProfileEntry("Settings", "ControlPointColor", static_cast<uint>(SW_RGBA(181, 0, 255, 128))),         // SW_PROFILE_CONTROL_POINT_COLOR #b500ff80

@@ -37,6 +37,9 @@ swViewWidget::swViewWidget(QWidget* Parent, swView* View)
 		mOverlayLayout->setSizeConstraint(QLayout::SetNoConstraint);
 		mOverlay->installEventFilter(this);
 
+		// ctrl anywhere lights the locked joint rings
+		qApp->installEventFilter(this);
+
 		// camera name floats over the view
 		const int ButtonHeight = swGetPanelButtonSize().height();
 		mCameraBar = new QWidget(mOverlay);
@@ -477,6 +480,13 @@ bool swViewWidget::eventFilter(QObject* Object, QEvent* Event)
 {
 	if (Object == mOverlay && Event->type() == QEvent::LayoutRequest)
 		UpdateOverlayGeometry();
+	else if ((Event->type() == QEvent::KeyPress || Event->type() == QEvent::KeyRelease) && static_cast<QKeyEvent*>(Event)->key() == Qt::Key_Control && mView->GetActiveModel()->GetRotateJoint())
+	{
+		// the key event knows ctrl first
+		const Qt::KeyboardModifiers Modifiers = mView->GetMouseModifiers();
+		mView->SetMouseModifiers(Event->type() == QEvent::KeyPress ? Modifiers | Qt::ControlModifier : Modifiers & ~Qt::ControlModifier);
+		mView->Redraw();
+	}
 
 	return QOpenGLWidget::eventFilter(Object, Event);
 }

@@ -496,21 +496,21 @@ void swModel::UpdateFreeMoveTool(swPart* MousePart, const swMatrix44& StartTrans
 	}
 }
 
-void swModel::UpdateRotateTool(const swVector3& Axis, float Angle, bool AlternateButtonDrag, bool Relative)
+void swModel::UpdateRotateTool(const swVector3& Axis, float Angle, bool AlternateButtonDrag, bool Relative, bool JointFree)
 {
 	const swVector3 Angles(Angle, Angle, Angle);
 	const float Delta = SnapRotation(Angles)[0] - SnapRotation(mMouseToolDistance)[0];
 
 	if (Delta != 0.0f)
-		RotateSelectedObjects(swMatrix33FromAxisAngle(Axis, Delta * SW_DEGREES_TO_RADIANS), (Relative ? swModelTransformFlag::Relative : swModelTransformFlag::None) | (AlternateButtonDrag ? swModelTransformFlag::RotatePivotPoint : swModelTransformFlag::None), swModelHistoryEditMerge::None);
+		RotateSelectedObjects(swMatrix33FromAxisAngle(Axis, Delta * SW_DEGREES_TO_RADIANS), (Relative ? swModelTransformFlag::Relative : swModelTransformFlag::None) | (AlternateButtonDrag ? swModelTransformFlag::RotatePivotPoint : swModelTransformFlag::None) | (JointFree ? swModelTransformFlag::JointFree : swModelTransformFlag::None), swModelHistoryEditMerge::None);
 
 	mMouseToolDistance = Angles;
 	mMouseToolFirstMove = false;
 }
 
-void swModel::UpdateRotateTool(const swMatrix33& RotationMatrix, bool AlternateButtonDrag, bool Relative)
+void swModel::UpdateRotateTool(const swMatrix33& RotationMatrix, bool AlternateButtonDrag, bool Relative, bool JointFree)
 {
-	RotateSelectedObjects(RotationMatrix, (Relative ? swModelTransformFlag::Relative : swModelTransformFlag::None) | (AlternateButtonDrag ? swModelTransformFlag::RotatePivotPoint : swModelTransformFlag::None), swModelHistoryEditMerge::None);
+	RotateSelectedObjects(RotationMatrix, (Relative ? swModelTransformFlag::Relative : swModelTransformFlag::None) | (AlternateButtonDrag ? swModelTransformFlag::RotatePivotPoint : swModelTransformFlag::None) | (JointFree ? swModelTransformFlag::JointFree : swModelTransformFlag::None), swModelHistoryEditMerge::None);
 	mMouseToolFirstMove = false;
 }
 

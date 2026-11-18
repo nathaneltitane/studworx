@@ -1318,7 +1318,12 @@ void swModel::RotateSelectedObjects(const swMatrix33& InputRotationMatrix, swMod
 		}
 
 		const swMatrix44 Before = Joint->mModelWorld;
-		Rotated = RotateJoint(Joint, WorldRotation);
+
+		// ctrl turns past the hinge
+		if (Flags.testFlag(swModelTransformFlag::JointFree))
+			Rotated = TurnJointFree(Joint, WorldRotation);
+		else
+			Rotated = RotateJoint(Joint, WorldRotation);
 
 		if (Rotated)
 			TurnJointGroup(Joint, Before);

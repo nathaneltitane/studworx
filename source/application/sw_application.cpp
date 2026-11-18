@@ -151,6 +151,7 @@ void swPreferences::LoadDefaults()
 	mAutomateEdgeColor = swGetProfileInteger(SW_PROFILE_AUTOMATE_EDGE_COLOR);
 	mObjectSelectedColor = swGetProfileUnsignedInteger(SW_PROFILE_OBJECT_SELECTED_COLOR);
 	mObjectFocusedColor = swGetProfileUnsignedInteger(SW_PROFILE_OBJECT_FOCUSED_COLOR);
+	mObjectDeactivatedColor = swGreyscaleColor(swGetProfileUnsignedInteger(SW_PROFILE_OBJECT_DEACTIVATED_COLOR));
 	mCameraColor = swGetProfileUnsignedInteger(SW_PROFILE_CAMERA_COLOR);
 	mLightColor = swGetProfileUnsignedInteger(SW_PROFILE_LIGHT_COLOR);
 	mControlPointColor = swGetProfileUnsignedInteger(SW_PROFILE_CONTROL_POINT_COLOR);
@@ -283,6 +284,7 @@ void swPreferences::SaveDefaults()
 	swSetProfileInteger(SW_PROFILE_AUTOMATE_EDGE_COLOR, mAutomateEdgeColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_OBJECT_SELECTED_COLOR, mObjectSelectedColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_OBJECT_FOCUSED_COLOR, mObjectFocusedColor);
+	swSetProfileUnsignedInteger(SW_PROFILE_OBJECT_DEACTIVATED_COLOR, mObjectDeactivatedColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_CAMERA_COLOR, mCameraColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_LIGHT_COLOR, mLightColor);
 	swSetProfileUnsignedInteger(SW_PROFILE_CONTROL_POINT_COLOR, mControlPointColor);

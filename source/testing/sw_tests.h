@@ -41,6 +41,7 @@ private slots:
 	void FlattenReplacesNestedSubModels();
 	void AxisAlignedRotations_data();
 	void AxisAlignedRotations();
+	void GreyscaleColorKeepsAlpha();
 	void AxisAlignedRotationTolerance();
 	void GridExtentGrowsWithMargins();
 	void ProfileBatchSavesOnce();

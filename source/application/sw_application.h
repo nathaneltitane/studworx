@@ -281,6 +281,7 @@ public:
 	swColorTheme mColorTheme;
 	quint32 mObjectSelectedColor;
 	quint32 mObjectFocusedColor;
+	quint32 mObjectDeactivatedColor;
 	quint32 mCameraColor;
 	quint32 mLightColor;
 	quint32 mControlPointColor;

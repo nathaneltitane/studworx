@@ -396,6 +396,11 @@ public:
 
 	swContext* mContext = nullptr;
 
+	Qt::KeyboardModifiers GetMouseModifiers() const
+	{
+		return mMouseModifiers;
+	}
+
 signals:
 	void FocusReceived();
 

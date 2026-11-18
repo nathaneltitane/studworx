@@ -196,3 +196,11 @@ void swTests::GridExtentGrowsWithMargins()
 	QCOMPARE(Low, -2);
 	QCOMPARE(High, 3);
 }
+
+// deactivated colors stay grey
+void swTests::GreyscaleColorKeepsAlpha()
+{
+	QCOMPARE(swGreyscaleColor(SW_RGBA(255, 0, 0, 153)), static_cast<quint32>(SW_RGBA(76, 76, 76, 153)));
+	QCOMPARE(swGreyscaleColor(SW_RGBA(255, 255, 255, 10)), static_cast<quint32>(SW_RGBA(255, 255, 255, 10)));
+	QCOMPARE(swGreyscaleColor(SW_RGBA(0, 0, 0, 255)), static_cast<quint32>(SW_RGBA(0, 0, 0, 255)));
+}

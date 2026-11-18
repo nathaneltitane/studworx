@@ -903,24 +903,28 @@ void swViewManipulator::DrawAxisRotationRings(swTrackButton TrackButton, swTrack
 
 	Context->SetWorldMatrix(WorldMatrix);
 
+	// a hinge locks the rings across it
+	swVector3 HingeAxis(0.0f, 0.0f, 0.0f);
+	const swModel* ActiveModel = mView->GetActiveModel();
+
+	if (const swPart* Joint = ActiveModel->GetRotateJoint(); Joint && !(mView->GetMouseModifiers() & Qt::ControlModifier))
+	{
+		const size_t JointIndex = Joint == ActiveModel->GetJointPart() ? ActiveModel->GetJointIndex() : 0;
+
+		if (Joint->mJoints[JointIndex].Type == swJointType::Hinge)
+			HingeAxis = swNormalize(swMultiply(swMultiply(Joint->mJoints[JointIndex].Axis, swMatrix33(Joint->GetJointFrame(JointIndex))), WorldToLocalMatrix));
+	}
+
 	for (int PlaneIndex = 0; PlaneIndex < 3; PlaneIndex++)
 	{
 		const bool Selected = static_cast<int>(TrackTool) == static_cast<int>(swTrackTool::RotateX) + PlaneIndex;
 		if (!Selected && (gMainWindow->GetTool() != swTool::Rotate || HasAngle || TrackButton != swTrackButton::None))
 			continue;
 
-		switch (PlaneIndex)
-		{
-		case 0:
-			Context->SetColor(Selected ? GetAxisColor(0, true) : GetAxisColor(0, false));
-			break;
-		case 1:
-			Context->SetColor(Selected ? GetAxisColor(1, true) : GetAxisColor(1, false));
-			break;
-		case 2:
-			Context->SetColor(Selected ? GetAxisColor(2, true) : GetAxisColor(2, false));
-			break;
-		}
+		// locked rings show deactivated
+		const bool Locked = HingeAxis.LengthSquared() > 0.0f && fabsf(HingeAxis[PlaneIndex]) < 0.1f;
+		Context->SetColor(Locked ? swVector4FromColor(swGetPreferences().mObjectDeactivatedColor) : GetAxisColor(PlaneIndex, Selected));
+		Context->EnableColorBlend(Locked);
 
 		const float HalfWidth = OverlayScale * 0.035f;
 		constexpr int SegmentCount = 32;
@@ -991,6 +995,7 @@ void swViewManipulator::DrawAxisRotationRings(swTrackButton TrackButton, swTrack
 		Context->SetVertexBufferPointer(Verts);
 		Context->SetVertexFormatPosition(3);
 		Context->DrawPrimitives(GL_TRIANGLES, 0, NumVerts);
+		Context->EnableColorBlend(false);
 	}
 }
 

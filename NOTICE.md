@@ -3,6 +3,8 @@
   <details open>
   <summary>2026-11-17</summary>
 
+  - Preferences: a Deactivated color with alpha under Interface > Objects, always a grey shade, for locked or unavailable items
+  - Joints: in joint mode, the hinge's locked rotate rings show in the Deactivated color, and holding Ctrl lights them and lets them turn the whole submodel around the joint
   - Joints: parts grouped with a jointed submodel turn along with its joint, from the gizmo, the keys and the Joints tool
   - Shortcuts: Shift+I switches to Default Lights shading by default
   - Joints: in joint mode the Move and Rotate tools and their shortcuts act on the joint, like Move Joint and Rotate Joint

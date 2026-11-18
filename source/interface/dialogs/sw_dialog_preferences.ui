@@ -4102,6 +4102,32 @@
            </widget>
           </item>
           <item row="2" column="0">
+           <widget class="QLabel" name="ObjectDeactivatedColorLabel">
+            <property name="toolTip">
+             <string>Choose the display color for locked or unavailable items, as a shade of grey from black to white with its alpha. Any color picked turns into its grey shade.</string>
+            </property>
+            <property name="buddy">
+             <cstring>ObjectDeactivatedColorButton</cstring>
+            </property>
+            <property name="text">
+             <string>Deactivated</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QToolButton" name="ObjectDeactivatedColorButton">
+            <property name="accessibleName">
+             <string>Deactivated Object Color</string>
+            </property>
+            <property name="toolTip">
+             <string>Choose the display color for locked or unavailable items, as a shade of grey from black to white with its alpha. Any color picked turns into its grey shade.</string>
+            </property>
+            <property name="text">
+             <string />
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
            <widget class="QLabel" name="label_34">
             <property name="toolTip">
              <string>Choose the display color for camera-object outlines.</string>
@@ -4114,7 +4140,7 @@
             </property>
            </widget>
           </item>
-          <item row="2" column="1">
+          <item row="3" column="1">
            <widget class="QToolButton" name="CameraColorButton">
             <property name="accessibleName">
              <string>Camera Color</string>
@@ -4127,7 +4153,7 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="0">
+          <item row="4" column="0">
            <widget class="QLabel" name="label_37">
             <property name="toolTip">
              <string>Choose the display color for light-object outlines.</string>
@@ -4140,7 +4166,7 @@
             </property>
            </widget>
           </item>
-          <item row="3" column="1">
+          <item row="4" column="1">
            <widget class="QToolButton" name="LightColorButton">
             <property name="accessibleName">
              <string>Light Color</string>
@@ -5723,6 +5749,7 @@
   <tabstop>gridStudColor</tabstop>
   <tabstop>ObjectSelectedColorButton</tabstop>
   <tabstop>ObjectFocusedColorButton</tabstop>
+  <tabstop>ObjectDeactivatedColorButton</tabstop>
   <tabstop>CameraColorButton</tabstop>
   <tabstop>LightColorButton</tabstop>
   <tabstop>HighlightNewPartsColor</tabstop>

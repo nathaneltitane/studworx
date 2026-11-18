@@ -2237,7 +2237,7 @@ void swView::OnMouseMove()
 
 			const swVector3 CameraAxis = swNormalize(mCamera->mTargetPosition - mCamera->mPosition);
 			const float AxisDirection = swDot(DisplayAxis, CameraAxis) < 0.0f ? -1.0f : 1.0f;
-			ActiveModel->UpdateRotateTool(Axis, AxisDirection * mCameraRotationAngle * SW_RADIANS_TO_DEGREES, mTrackButton != swTrackButton::Left, true);
+			ActiveModel->UpdateRotateTool(Axis, AxisDirection * mCameraRotationAngle * SW_RADIANS_TO_DEGREES, mTrackButton != swTrackButton::Left, true, mMouseModifiers & Qt::ControlModifier);
 		}
 		break;
 
@@ -2267,7 +2267,7 @@ void swView::OnMouseMove()
 				if (Snapping != mTrackballSnapping)
 				{
 					if (!Snapping && mTrackballHasPendingRotation)
-						ActiveModel->UpdateRotateTool(mTrackballPendingRotation, mTrackButton != swTrackButton::Left, false);
+						ActiveModel->UpdateRotateTool(mTrackballPendingRotation, mTrackButton != swTrackButton::Left, false, mMouseModifiers & Qt::ControlModifier);
 
 					mTrackballPendingRotation = swMatrix33Identity();
 					mTrackballSnapping = Snapping;
@@ -2276,7 +2276,7 @@ void swView::OnMouseMove()
 
 				if (!Snapping)
 				{
-					ActiveModel->UpdateRotateTool(IncrementalRotation, mTrackButton != swTrackButton::Left, false);
+					ActiveModel->UpdateRotateTool(IncrementalRotation, mTrackButton != swTrackButton::Left, false, mMouseModifiers & Qt::ControlModifier);
 				}
 				else
 				{
@@ -2288,7 +2288,7 @@ void swView::OnMouseMove()
 					if (SnappedAngle != 0.0f)
 					{
 						const swMatrix33 SnappedRotation = swMatrix33FromAxisAngle(swVector3(AxisAngle), SnappedAngle * SW_DEGREES_TO_RADIANS);
-						ActiveModel->UpdateRotateTool(SnappedRotation, mTrackButton != swTrackButton::Left, false);
+						ActiveModel->UpdateRotateTool(SnappedRotation, mTrackButton != swTrackButton::Left, false, mMouseModifiers & Qt::ControlModifier);
 						mTrackballPendingRotation = swMultiply(swMatrix33AffineInverse(SnappedRotation), mTrackballPendingRotation);
 						mTrackballHasPendingRotation = swMatrix44ToAxisAngle(swMatrix44(mTrackballPendingRotation, swVector3(0.0f, 0.0f, 0.0f)))[3] > 0.000001f;
 					}
@@ -2333,7 +2333,7 @@ void swView::OnMouseMove()
 					CameraAxis = -CameraAxis;
 			}
 
-			ActiveModel->UpdateRotateTool(CameraAxis, mCameraRotationAngle * SW_RADIANS_TO_DEGREES, mTrackButton != swTrackButton::Left, false);
+			ActiveModel->UpdateRotateTool(CameraAxis, mCameraRotationAngle * SW_RADIANS_TO_DEGREES, mTrackButton != swTrackButton::Left, false, mMouseModifiers & Qt::ControlModifier);
 		}
 		break;
 
