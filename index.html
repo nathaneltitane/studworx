@@ -50,7 +50,7 @@
 					"description": "StudWorx is a free LDraw / LEGO® model builder, a CAD program for creating virtual LEGO® models with the LDraw parts library.",
 					"applicationCategory": "DesignApplication",
 					"operatingSystem": "Linux, Windows, macOS",
-					"softwareVersion": "2026-11-18",
+					"softwareVersion": "2026-11-19",
 					"license": "https://www.gnu.org/licenses/gpl-3.0.html",
 					"downloadUrl": "https://github.com/nathaneltitane/studworx/releases/latest",
 					"image": "https://studworx.app/resources/social/social.png",
@@ -2017,11 +2017,11 @@
 					</thead>
 
 					<tbody>
-						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-18_amd64.deb / arm64.deb</td></tr>
-						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-18-x86_64.rpm / aarch64.rpm</td></tr>
-						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-18-x86_64.appimage / aarch64.appimage</td></tr>
-						<tr><td>Windows</td><td>studworx-windows-2026-11-18-x64.exe</td></tr>
-						<tr><td>macOS</td><td>studworx-macos-2026-11-18-universal.dmg</td></tr>
+						<tr><td>Debian, Ubuntu</td><td>studworx_2026-11-19_amd64.deb / arm64.deb</td></tr>
+						<tr><td>Fedora, Rocky Linux, RHEL, openSUSE</td><td>studworx-2026-11-19-x86_64.rpm / aarch64.rpm</td></tr>
+						<tr><td>Any Linux based system</td><td>studworx-linux-2026-11-19-x86_64.appimage / aarch64.appimage</td></tr>
+						<tr><td>Windows</td><td>studworx-windows-2026-11-19-x64.exe</td></tr>
+						<tr><td>macOS</td><td>studworx-macos-2026-11-19-universal.dmg</td></tr>
 					</tbody>
 				</table>
 			</div>
@@ -2074,10 +2074,25 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p class="lead">The latest release notices from the StudWorx repository.</p>
 
 			<details open>
+				<summary>2026-11-19</summary>
+
+				<ul>
+					<li>Joints: Joint Mode with nothing selected, or from a right click on empty space, opens an overview of every joint, outlined and ringed; click an outlined part to open its joint</li>
+					<li><a href="#preferences">Preferences</a>: the joint options have their own Joints group, with Joint Mode Start last</li>
+					<li>Preferences: Select Joints by Submodel, off by default, opens the nearest joint when you click anywhere on a jointed submodel in the joint overview</li>
+					<li>Mouse: the right button orbits only once the mouse moves, so a plain right click opens the right-click menu</li>
+					<li>Shading: menus list Default Lights, Flat and Wireframe, then Studio, Standard, Matte and Toon; Studio is the new default lighting style</li>
+					<li>Save Model <a href="#image">Image</a>: the preview plays the Joints motion from pose to pose, framed once so the model holds still</li>
+					<li>Train tracks: no crash when a track part is picked before the view draws it</li>
+					<li>Site: every image retaken from the installed build, with the joint overview, the Joints group in Preferences and Studio lighting</li>
+				</ul>
+			</details>
+
+			<details>
 				<summary>2026-11-18</summary>
 
 				<ul>
-					<li>Keyboard <a href="#preferences">preferences</a>: a Built-in Keys group at the end lists the keys that can&#x27;t be changed, greyed out</li>
+					<li>Keyboard preferences: a Built-in Keys group at the end lists the keys that can&#x27;t be changed, greyed out</li>
 					<li>Shortcuts: Delete removes only what is selected <a href="#where">where</a> you work: the joint in the Joints panel, the step in the <a href="#steps">Steps</a> panel, the picked keys in the Keyframes panel, the pointers, notices or blank page in the <a href="#instructions">instructions</a>, or the selected objects in the view; Del always deletes, listed under Built-in Keys in Keyboard preferences and can&#x27;t be given to another command</li>
 					<li>Steps panel: the Timeline panel is now the Steps panel, saved shortcuts and panel places carry over</li>
 					<li><a href="#panels">Panels</a>: the Poses panel keeps its place on every start, and a panel layout filled with Joints copies resets to the default once</li>
@@ -2098,7 +2113,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 					<li>Joints: Joint Mode with nothing selected, or from a right click on empty space, opens the overview with every joint outlined and ringed; clicking an outlined part opens its joint</li>
 					<li>Mouse: the right button orbits only once the mouse moves, so a plain right click opens the right-click menu</li>
 					<li>Shading: menus list Default Lights, Flat and Wireframe, then Studio, Standard, Matte and Toon; Studio is the new default lighting style</li>
-					<li>Save Model <a href="#image">Image</a>: the preview plays the Joints motion from pose to pose, framed once so the model holds still</li>
+					<li>Save Model Image: the preview plays the Joints motion from pose to pose, framed once so the model holds still</li>
 					<li>Train tracks: no crash when a track part is picked before the view draws it</li>
 					<li>Site: every image retaken from the installed build, with the joint overview, the Joints group in Preferences and Studio lighting</li>
 				</ul>
@@ -2209,39 +2224,6 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				</ul>
 			</details>
 
-			<details>
-				<summary>2026-11-13</summary>
-
-				<ul>
-					<li>Joints: an open Joints panel no longer turns off Highlight New Parts in the model view until a joint is picked</li>
-					<li>Site: every image retaken from the current build, with a new Connection Points image in <a href="#modeling">Modeling</a></li>
-					<li>Translations: about a hundred strings per language that only changed their mnemonic, punctuation or wording get their old translation back, marked unfinished for review</li>
-					<li>Translations: the Array dialog counts and a status line no longer show broken guesses like 8x {1?} in every language</li>
-					<li>Tests: catalogs are checked to compile with every translation, keep their placeholders and carry no merge guesses</li>
-					<li>Site: screenshots never show larger than their real size, so menus and panels stay sharp</li>
-					<li>Site: every gallery follows the order of the program, window first, then its menus and dialogs, with no image shown twice</li>
-					<li>Site: a Toolbars section explains the Standard, <a href="#tools">Tools</a>, Time and Transform toolbars</li>
-					<li>Site: a Where Is It section lists the menu, toolbar or right click menu of every command, with its shortcut and a search, read from the program itself</li>
-					<li>Site: Help entries name where to find their command, and the menu screenshots give way to the command list</li>
-					<li>Site: the frame around a screenshot ends where the image ends</li>
-					<li>Minifigure Builder: the preview no longer outlines every part in the highlight color when edge lines show, Highlight New Parts now only marks the model view</li>
-					<li>Tests: the site&#x27;s feature descriptions are kept short, and the command list is checked to name every command; Linux builds now run the tests that start the program</li>
-					<li>Command line: a hidden --menus option prints every menu path, used to build the site</li>
-					<li>Connections: a part grabbed by one of its studs or holes seats by that one, so a brick with studs on every side can go into a side hole by its top stud</li>
-					<li>Connections: the green connection marks follow the parts as they move, and hide while a part is dragged</li>
-					<li>Insert: a part dropped into empty space lands under the pointer, level with the model, instead of far away toward the horizon</li>
-					<li>Preferences: Show Connection Points, under Use Part Connections, turns the connection marks on or off, and the Connection Points color moved to Steps and Highlighting and takes transparency</li>
-					<li>Model view gear menu: Connection Points moved from Steps and Highlighting to sit under Part Connections, next to Insert First Part at Origin, matching the Editing preferences</li>
-					<li>Windows: dialogs taller than the screen now open with their title bar and buttons on screen, and their pages scroll</li>
-					<li>Missing parts: the placeholder brick for a part the library can<code>t find gets a bold red outline, in the timeline</code>s red, in every step and inside submodels, and the timeline shows the submodel holding it in the same red; selecting it shows the selection outline instead</li>
-					<li>Missing and Moved Parts: Replace Checked saves the file right after swapping the parts, unless Save After Replacing is unchecked in the list or under Preferences, General, Files</li>
-					<li>Preferences: Flexible Parts lists Add Middle Control Point first and Handle Spread last</li>
-					<li>Samples: every sample has a title, and its name line matches its file name, so instructions cover pages show the title instead of New Model.ldr</li>
-					<li>File: Missing and Moved Parts reopens the list of missing and renumbered parts after its warning was closed, without reopening the model</li>
-					<li>Site: feature descriptions rewritten in plain words, saying what each feature does instead of listing its commands, now that the command index names them</li>
-				</ul>
-			</details>
-
 			<p class="more"><a href="https://github.com/nathaneltitane/studworx/blob/main/NOTICE.md">Read every notice ›</a></p>
 		</section>
 
@@ -2252,7 +2234,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 			<p>LEGO® is a trademark of the LEGO® Group, which does not sponsor, authorize or endorse this project.</p>
 			<div class="authorship">
 				<a class="avatar" href="https://nathaneltitane.com" aria-label="N Λ T H Λ N E L"><img src="resources/avatar/avatar-bird.png" alt="" width="64" height="64"></a>
-				<p>Version // 2026-11-18<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
+				<p>Version // 2026-11-19<br>2026 - <a href="https://github.com/nathaneltitane">N Λ T H Λ N E L</a> - <a href="https://github.com/nathaneltitane/studworx/issues">Submit bug reports or feature requests</a></p>
 			</div>
 		</div>
 

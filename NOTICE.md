@@ -1,6 +1,20 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-19</summary>
+
+  - Joints: Joint Mode with nothing selected, or from a right click on empty space, opens an overview of every joint, outlined and ringed; click an outlined part to open its joint
+  - Preferences: the joint options have their own Joints group, with Joint Mode Start last
+  - Preferences: Select Joints by Submodel, off by default, opens the nearest joint when you click anywhere on a jointed submodel in the joint overview
+  - Mouse: the right button orbits only once the mouse moves, so a plain right click opens the right-click menu
+  - Shading: menus list Default Lights, Flat and Wireframe, then Studio, Standard, Matte and Toon; Studio is the new default lighting style
+  - Save Model Image: the preview plays the Joints motion from pose to pose, framed once so the model holds still
+  - Train tracks: no crash when a track part is picked before the view draws it
+  - Site: every image retaken from the installed build, with the joint overview, the Joints group in Preferences and Studio lighting
+
+  </details>
+
+  <details>
   <summary>2026-11-18</summary>
 
   - Keyboard preferences: a Built-in Keys group at the end lists the keys that can't be changed, greyed out
