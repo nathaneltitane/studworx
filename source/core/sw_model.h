@@ -429,13 +429,14 @@ public:
 	}
 	bool IsJointOverview() const
 	{
-		return mJointOverview != nullptr;
+		return mJointOverview;
 	}
 	void SetJointOverview();
 	size_t GetJointLastUsed(const swPart* Part) const;
 	void StartJointMode(swPart* Part);
 	std::vector<swJointRing> GetJointRings() const;
 	void AddJointRingHighlight(swScene* Scene, const swMatrix44& Transform, const swJointRing& Ring) const;
+	int FindJointRingPart(const swVector3& Start, const swVector3& End);
 	swPart* GetRotateJoint() const;
 	bool RotateJoint(swPart* Part, const swMatrix33& WorldRotation);
 	void TurnJointGroup(swPart* Joint, const swMatrix44& Before);
@@ -727,6 +728,8 @@ public:
 protected:
 	swResult<QImage> RenderStepImageWithReadyAssets(bool Zoom, int Width, int Height, swStep Step, swCamera* OutputCamera, swImageBackground Background);
 	void CollectImagePoints(swStep FitStep, std::vector<swVector3>& Points) const;
+	void ApplyImagePose(const std::vector<swPose>& Poses, const swImageTurntable& Turntable, int Frame);
+	void CollectPoseImagePoints(swModel* Main, const std::vector<swPose>& Poses, const swImageTurntable& Turntable, swStep FitStep, std::vector<swVector3>& Points) const;
 	void SetImageCamera(swCamera* Camera, const swCamera* BaseCamera, const swImageFraming& Framing, const swImageTurntable& Turntable, int Frame, swStep Step, swStep LastStep, float Aspect, const std::vector<swVector3>* FitPoints = nullptr) const;
 
 	void DeleteModel();
@@ -831,7 +834,8 @@ protected:
 	bool mJointPick = false;
 	const swPart* mJointRotate = nullptr;
 	const swPart* mJointFocus = nullptr;
-	const swPart* mJointOverview = nullptr;
+	bool mJointOverview = false;
+	const swPart* mJointOverviewPart = nullptr;
 	std::map<const swPart*, size_t> mJointMemory;
 	std::vector<const swPart*> mJointHover;
 	std::vector<swPart*> mJointSetPath;

@@ -185,8 +185,8 @@ The model view draws fast with OpenGL in four lighting styles, and File > Render
 - **POV-Ray.** StudWorx finds POV-Ray 3.7 on its own, bundled on Windows and macOS, or uses the one you pick in Preferences. It can also render with LGEO's high detail parts, downloaded for you when you ask.
 - **Render window.** Renders run in their own window beside the model, so you can keep working while the image appears. For POV-Ray, Focal Blur keeps the camera target sharp, a Region renders only the part you draw, and the Editor lets you tweak the scene file by hand before rendering.
 - **Blender.** Render with the bundled Blender LDraw add-ons, with the output, image, scene, parts and editing settings in panels of the render window, or Open in Blender to keep working on the scene there. The Blender executable is set in Preferences.
-- **Lighting styles.** Four looks for the model: Standard, Studio with three lights, Matte with no shine, and Toon like a cartoon.
-- **Shading.** Show parts as wireframes (Shift+W), flat (Shift+F) or fully lit (Shift+I), with or without edge lines.
+- **Lighting styles.** Four looks for the model: Studio with three lights, the default, Standard, Matte with no shine, and Toon like a cartoon.
+- **Shading.** Show parts fully lit (Shift+I), flat (Shift+F) or as wireframes (Shift+W), with or without edge lines.
 - **Mesh level of detail.** Distant parts draw with simpler meshes, from a distance set in Preferences, so large models stay smooth.
 - **Studs.** Draw studs plain, with the LEGO® logo in one of several styles, or in high contrast.
 - **Color configurations.** Colors come from the parts library, the LDraw color configuration or the alternate configuration with more realistic edge line colors for rendering, chosen under Rendering > Colors.
@@ -256,7 +256,7 @@ Pick a part in the Parts panel, drop it in the model view, then move, rotate, pa
 
 [//]: # (tools | TOOLS // MOUSE, LIGHTS AND CAMERAS)
 
-The Tools toolbar sets what the mouse does in the model view. Every tool has a keyboard shortcut, and mouse buttons with modifier keys can start any tool for one drag.
+The Tools toolbar sets what the mouse does in the model view. Every tool has a keyboard shortcut, and mouse buttons with modifier keys can start any tool for one drag. The right button orbits only once the mouse moves, so a plain right click opens the right-click menu.
 
 [//]: # (gallery two)
 
@@ -279,8 +279,8 @@ Give a placed submodel a joint, turn it with the mouse and save the angles as po
 - **Joints from the shadow library.** Joints and connections come from the shape data of the LDCad shadow library: round shapes become hinges and spheres become balls, and clips and hinge fingers connect too. Square and round box shapes don't connect yet.
 - **Set Joint.** Turn a submodel into something that moves, like a minifigure arm or a hinged door: pick the connection it turns on, and StudWorx makes a hinge on a round shape or a ball on a sphere, or a hinge on the part's center when the part has no connection data. A submodel can have several joints, each listed in the Joints panel and saved in the model file.
 - **Joints tool.** Grab a jointed submodel and drag to turn it: a hinge turns about its axis, a ball any way. The parts holding joints are outlined in red, and each drag is one undo step.
-- **Joint Mode.** Press Ctrl+Shift+J to work on the joint of the selected submodel, or of the submodel around the selected part, and press Ctrl+Shift+W or Esc to leave. It's also in the right-click menu under Joint, next to End Joint Mode.
-- **Joint Mode Start.** In Preferences, pick which joint opens first: the first one, the one you used last, or none, with every joint shown as a ring you click to open. With Select Joints in View on, the other joints stay as faded rings, so you can hop from one to the next.
+- **Joint Mode.** Press Ctrl+Shift+J to work on the joint of the selected submodel, or of the submodel around the selected part, and press Ctrl+Shift+W or Esc to leave. It's also in the right-click menu under Joint, next to End Joint Mode. With nothing selected, or from a right click on empty space, it opens an overview of every joint in the model: click a ring or an outlined part to open its joint.
+- **Joint Mode Start.** In the Joints group of Preferences, pick which joint opens first: the first one, the one you used last, or none, with every joint shown as a ring you click to open. With Select Joints in View on, the other joints stay as faded rings, so you can hop from one to the next. With Select Joints by Submodel on, a click anywhere on a jointed submodel in the overview opens its nearest joint.
 - **Joint Move and Rotate.** Move and rotate a joint with the usual gizmos and keys instead of the Joints tool. Parts grouped with the jointed submodel turn along with it, like an arm grouped with its shoulder. A hinge only turns one way, so the other rings show grey; hold Ctrl to light them up and turn the whole piece around the joint. A bar over the view shows where the joint sits in the model and takes you back out when you're done.
 - **Joints panel.** Every model with joints in a tree, down to each joint with its type and angle. Click a joint to work on it, or a model to see its poses. The Piece column tells copies of the same submodel apart by where each sits in its file, and ticking Lock freezes a joint: it turns grey and can't be moved, turned or changed until you untick it.
 - **Poses panel.** Save the joint angles of a model as a named pose, like sitting or waving, and bring them back in one step. Poses are saved in the model's own file.

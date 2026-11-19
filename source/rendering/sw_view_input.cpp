@@ -1490,6 +1490,21 @@ void swView::OnButtonDown(swTrackButton TrackButton)
 		return;
 	}
 
+	// an outlined part opens its joint in the overview
+
+	if (ActiveModel && ActiveModel->IsJointOverview() && TrackButton == swTrackButton::Left && !mTrackToolFromOverlay)
+	{
+		swVector3 StartEnd[2], Right, Up;
+		GetJointsRay(StartEnd, Right, Up);
+		const int Ring = ActiveModel->FindJointRingPart(StartEnd[0], StartEnd[1]);
+
+		if (Ring >= 0)
+		{
+			OpenJointRing(Ring);
+			return;
+		}
+	}
+
 	// the joint bar ends the joint mode, not an empty click
 	if (ActiveModel && ActiveModel->IsJointFocused() && TrackButton == swTrackButton::Left && (mTrackTool == swTrackTool::None || mTrackTool == swTrackTool::Select) && !FindObjectUnderPointer(false, false).Object)
 	{
@@ -1856,12 +1871,15 @@ void swView::OnRightButtonDown()
 		return;
 	}
 
-	swTrackTool OverrideTool = GetOverrideTrackTool(Qt::RightButton);
+	// a bound tool waits for the pointer to move
 
-	if (OverrideTool != swTrackTool::None)
+	if (GetOverrideTrackTool(Qt::RightButton) != swTrackTool::None)
 	{
-		mTrackTool = OverrideTool;
-		UpdateCursor();
+		mRightButtonPending = true;
+		mToolClicked = false;
+		mMouseDownX = mMouseX;
+		mMouseDownY = mMouseY;
+		return;
 	}
 
 	OnButtonDown(swTrackButton::Right);
@@ -1869,6 +1887,8 @@ void swView::OnRightButtonDown()
 
 void swView::OnRightButtonUp()
 {
+	mRightButtonPending = false;
+
 	bool ShowMenu = !mToolClicked && (mTrackButton == swTrackButton::None || !mTrackUpdated);
 
 	if (mTrackButton != swTrackButton::None)
@@ -2072,6 +2092,16 @@ void swView::OnMouseMove()
 
 	if (!ActiveModel)
 		return;
+
+	// right drag starts the bound tool
+
+	if (mRightButtonPending && (mMouseX != mMouseDownX || mMouseY != mMouseDownY))
+	{
+		mRightButtonPending = false;
+		mTrackTool = GetOverrideTrackTool(Qt::RightButton);
+		UpdateCursor();
+		OnButtonDown(swTrackButton::Right);
+	}
 
 	if (mCutawayDragHandle != -1)
 	{

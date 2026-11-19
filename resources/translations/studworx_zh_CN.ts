@@ -2193,22 +2193,22 @@
 <context>
     <name>Light Shapes</name>
     <message>
-        <location filename="../../source/core/sw_object_light.cpp" line="77"/>
+        <location filename="../../source/core/sw_object_light.cpp" line="75"/>
         <source>Rectangle</source>
         <translation>矩形</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_object_light.cpp" line="80"/>
+        <location filename="../../source/core/sw_object_light.cpp" line="78"/>
         <source>Square</source>
         <translation>正方形</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_object_light.cpp" line="83"/>
+        <location filename="../../source/core/sw_object_light.cpp" line="81"/>
         <source>Disk</source>
         <translation>圆盘</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_object_light.cpp" line="86"/>
+        <location filename="../../source/core/sw_object_light.cpp" line="84"/>
         <source>Ellipse</source>
         <translation>椭圆</translation>
     </message>
@@ -2216,7 +2216,7 @@
 <context>
     <name>Light Types</name>
     <message>
-        <location filename="../../source/core/sw_object_light.cpp" line="44"/>
+        <location filename="../../source/core/sw_object_light.cpp" line="42"/>
         <source>Point Light</source>
         <translation>点光源</translation>
     </message>
@@ -2226,17 +2226,17 @@
         <translation type="obsolete">聚光灯</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_object_light.cpp" line="47"/>
+        <location filename="../../source/core/sw_object_light.cpp" line="45"/>
         <source>Spotlight</source>
         <translation>聚光灯</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_object_light.cpp" line="50"/>
+        <location filename="../../source/core/sw_object_light.cpp" line="48"/>
         <source>Directional Light</source>
         <translation>平行光</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_object_light.cpp" line="53"/>
+        <location filename="../../source/core/sw_object_light.cpp" line="51"/>
         <source>Area Light</source>
         <translation>面光源</translation>
     </message>
@@ -4700,14 +4700,14 @@
         <translation type="vanished">StudWorx</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="895"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="934"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1438"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="516"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="539"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="32"/>
         <source>Nothing to export.</source>
         <translation>没有可导出的内容。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="505"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="126"/>
         <source>Export 3D Studio</source>
         <translation>导出 3D Studio</translation>
     </message>
@@ -4872,7 +4872,7 @@ File format is not recognized.</source>
         <translation>无法导出名为 &apos;%1&apos; 的不同嵌入数据。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_import.cpp" line="416"/>
+        <location filename="../../source/core/sw_project_import.cpp" line="407"/>
         <source>Clipboard contains no model.</source>
         <translation>剪贴板不包含模型。</translation>
     </message>
@@ -4881,18 +4881,18 @@ File format is not recognized.</source>
         <translation type="vanished">3DS 文件 (*.3ds);;所有文件 (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="513"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="922"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="962"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1454"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1897"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="2743"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="2756"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="134"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="555"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="592"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="605"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="20"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="60"/>
+        <location filename="../../source/core/sw_project_export_povray.cpp" line="28"/>
         <source>Could not open file &apos;%1&apos; for writing.</source>
         <translation>无法打开文件 &apos;%1&apos; 进行写入。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="897"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="518"/>
         <source>Export BrickLink</source>
         <translation>导出 BrickLink</translation>
     </message>
@@ -4901,7 +4901,7 @@ File format is not recognized.</source>
         <translation type="vanished">XML 文件 (*.xml);;所有文件 (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="914"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="12"/>
         <source>Export COLLADA</source>
         <translation>导出 COLLADA</translation>
     </message>
@@ -4910,22 +4910,22 @@ File format is not recognized.</source>
         <translation type="vanished">COLLADA 文件 (*.dae);;所有文件 (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="936"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="34"/>
         <source>Export KMZ</source>
         <translation>导出 KMZ</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1304"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="402"/>
         <source>Could not create the OpenGL context.</source>
         <translation>无法创建 OpenGL 上下文。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1309"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="407"/>
         <source>Could not find the visible surfaces.</source>
         <translation>无法找到可见表面。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1440"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="541"/>
         <source>Export CSV</source>
         <translation>导出 CSV</translation>
     </message>
@@ -4934,15 +4934,15 @@ File format is not recognized.</source>
         <translation type="vanished">CSV 文件 (*.csv);;所有文件 (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="403"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="419"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1588"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1673"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1722"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1759"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1781"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1817"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1850"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="24"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="40"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="478"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="563"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="612"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="649"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="671"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="707"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="740"/>
         <location filename="../../source/core/sw_project_file.cpp" line="558"/>
         <location filename="../../source/core/sw_project_file.cpp" line="574"/>
         <location filename="../../source/core/sw_project_file.cpp" line="585"/>
@@ -4955,125 +4955,125 @@ File format is not recognized.</source>
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="505"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="126"/>
         <source>3DS Files (*.3ds);;All Files (*)</source>
         <translation>3DS 文件 (*.3ds);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="897"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="518"/>
         <source>XML Files (*.xml);;All Files (*)</source>
         <translation>XML 文件 (*.xml);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="914"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="12"/>
         <source>COLLADA Files (*.dae);;All Files (*)</source>
         <translation>COLLADA 文件 (*.dae);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="936"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="34"/>
         <source>KMZ Files (*.kmz);;All Files (*)</source>
         <translation>KMZ 文件 (*.kmz);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="965"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="63"/>
         <source>Could not write file &apos;%1&apos;.</source>
         <translation>无法写入文件 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1440"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="541"/>
         <source>CSV Files (*.csv);;All Files (*)</source>
         <translation>CSV 文件 (*.csv);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1541"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="431"/>
         <source>Could not create folder &apos;%1&apos;.</source>
         <translation>无法创建文件夹 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1613"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="503"/>
         <source>Created by %1</source>
         <translation>由 %1 创建</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1677"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1763"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1854"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="567"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="653"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="744"/>
         <source>Instructions for %1</source>
         <translation>%1 的说明书</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1724"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="614"/>
         <source>Page %1</source>
         <translation>第 %1 页</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1732"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="622"/>
         <source>First Page</source>
         <translation>首页</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1732"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="622"/>
         <source>Previous Page</source>
         <translation>上一页</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1732"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="622"/>
         <source>Next Page</source>
         <translation>下一页</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1732"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="622"/>
         <source>Last Page</source>
         <translation>末页</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1766"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1786"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1872"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="656"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="676"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="762"/>
         <source>Step %1</source>
         <translation>步骤 %1</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1769"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1806"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1875"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="659"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="696"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="765"/>
         <source>Parts Used</source>
         <translation>所用零件</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1785"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="675"/>
         <source>%1 - Step %2</source>
         <translation>%1 - 步骤 %2</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1798"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1829"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="688"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="719"/>
         <source>Previous</source>
         <translation>上一页</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1801"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1832"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="691"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="722"/>
         <source>Index</source>
         <translation>索引</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1804"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="694"/>
         <source>Next</source>
         <translation>下一页</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1821"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="711"/>
         <source>Parts used by %1</source>
         <translation>%1 所用零件</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1889"/>
+        <location filename="../../source/core/sw_project_export_povray.cpp" line="20"/>
         <source>POV-Ray Files (*.pov);;All Files (*)</source>
         <translation>POV-Ray 文件 (*.pov);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="2734"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="583"/>
         <source>Wavefront Files (*.obj);;All Files (*)</source>
         <translation>Wavefront 文件 (*.obj);;所有文件 (*)</translation>
     </message>
@@ -5082,7 +5082,7 @@ File format is not recognized.</source>
         <translation type="vanished">创建图片错误.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1889"/>
+        <location filename="../../source/core/sw_project_export_povray.cpp" line="20"/>
         <source>Export POV-Ray</source>
         <translation>导出 POV-Ray</translation>
     </message>
@@ -5091,12 +5091,12 @@ File format is not recognized.</source>
         <translation type="vanished">POV-Ray 文件 (*.pov);;所有文件 (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="2366"/>
+        <location filename="../../source/core/sw_project_export_povray.cpp" line="497"/>
         <source>Could not find LGEO files in folder &apos;%1&apos;.</source>
         <translation>在文件夹 &apos;%1&apos; 中找不到 LGEO 文件。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="2734"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="583"/>
         <source>Export Wavefront</source>
         <translation>导出 Wavefront</translation>
     </message>
@@ -5196,22 +5196,22 @@ File format is not recognized.</source>
 <context>
     <name>QDockWidget</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1367"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="669"/>
         <source>Float</source>
         <translation>浮动</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1371"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="673"/>
         <source>Close</source>
         <translation>关闭</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1411"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="713"/>
         <source>Expand</source>
         <translation>展开</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1411"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="713"/>
         <source>Collapse</source>
         <translation>折叠</translation>
     </message>
@@ -6383,16 +6383,16 @@ File format is not recognized.</source>
         <translation type="obsolete">错误</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1743"/>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1749"/>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1767"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="369"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="375"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="393"/>
         <source>Stop Blender Process</source>
         <translation>停止 Blender 进程</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1743"/>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1749"/>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1767"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="369"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="375"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="393"/>
         <source>%1 failed: %2</source>
         <translation>%1 失败：%2</translation>
     </message>
@@ -8850,6 +8850,11 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;关键帧&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示或隐藏关键帧面板，这是按步骤显示物体动画关键帧的图表。&lt;/p&gt;</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
+        <source>&lt;p&gt;&lt;b&gt;Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel, or, with none picked, an overview of every joint in the model: click a ring or an outlined part to open its joint. The Joint Mode Start preference picks which joint opens: the first joint, the last used joint, or the overview. With Select Joints by Submodel on, clicking anywhere on a jointed submodel in the overview opens its nearest joint. Ctrl+Shift+W or Esc leaves it.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;关节模式&lt;/b&gt;&lt;/p&gt;&lt;p&gt;编辑所选子模型的关节，与在关节面板中点击它相同。若选中的是带关节子模型中的零件，则向上转到该子模型。若未选中任何内容，则打开关节面板中选定的关节；若也未选定关节，则打开模型中所有关节的概览：点击圆环或描边的零件即可打开其关节。“关节模式起始”偏好设置决定打开哪个关节：第一个、上次使用的，或概览。开启“按子模型选择关节”后，在概览中点击带关节子模型的任意位置即可打开其最近的关节。按 Ctrl+Shift+W 或 Esc 退出。&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="3429"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Step Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step before this step in the Steps panel.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;在前面插入步骤&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在步骤面板中此步骤之前添加一个空步骤。&lt;/p&gt;</translation>
@@ -8864,9 +8869,8 @@ File format is not recognized.</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;删除&lt;/b&gt;&lt;/p&gt;&lt;p&gt;只移除所选内容，取决于你在哪里操作：关节面板中的关节、时间线面板中的步骤、关键帧面板中选中的关键帧（若未选中任何关键帧，则为所选对象在当前步骤的关键帧），以及说明书中所选的指针、注释或空白页。在视图中，它只移除获得焦点的控制点，否则移除所选对象。未选择任何内容时不执行任何操作。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
         <source>&lt;p&gt;&lt;b&gt;Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel. The Joint Mode Start preference picks which joint opens: the first joint, the last used joint, or an overview of rings to pick from. Ctrl+Shift+W or Esc leaves it.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;关节模式&lt;/b&gt;&lt;/p&gt;&lt;p&gt;编辑所选子模型的关节，与在关节面板中点击它相同。若选中的是带关节子模型中的零件，则向上转到该子模型。若未选中任何内容，则打开关节面板中选定的关节。“关节模式起始”偏好设置决定打开哪个关节：第一个、上次使用的，或显示可供选择的圆环概览。按 Ctrl+Shift+W 或 Esc 退出。&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;关节模式&lt;/b&gt;&lt;/p&gt;&lt;p&gt;编辑所选子模型的关节，与在关节面板中点击它相同。若选中的是带关节子模型中的零件，则向上转到该子模型。若未选中任何内容，则打开关节面板中选定的关节。“关节模式起始”偏好设置决定打开哪个关节：第一个、上次使用的，或显示可供选择的圆环概览。按 Ctrl+Shift+W 或 Esc 退出。&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2898"/>
@@ -10150,46 +10154,46 @@ POV-Ray 渲染可使用 Lutz Uhlmann 的 LGEO 零件库。</translation>
 <context>
     <name>swApplication</name>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="785"/>
-        <location filename="../../source/application/sw_application.cpp" line="810"/>
-        <location filename="../../source/application/sw_application.cpp" line="833"/>
-        <location filename="../../source/application/sw_application.cpp" line="856"/>
-        <location filename="../../source/application/sw_application.cpp" line="866"/>
-        <location filename="../../source/application/sw_application.cpp" line="889"/>
-        <location filename="../../source/application/sw_application.cpp" line="914"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="71"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="96"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="119"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="142"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="152"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="175"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="200"/>
         <source>Not enough parameters for the &apos;%1&apos; option.
 </source>
         <translation>&apos;%1&apos; 选项参数不足。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="807"/>
-        <location filename="../../source/application/sw_application.cpp" line="830"/>
-        <location filename="../../source/application/sw_application.cpp" line="853"/>
-        <location filename="../../source/application/sw_application.cpp" line="886"/>
-        <location filename="../../source/application/sw_application.cpp" line="911"/>
-        <location filename="../../source/application/sw_application.cpp" line="968"/>
-        <location filename="../../source/application/sw_application.cpp" line="1027"/>
-        <location filename="../../source/application/sw_application.cpp" line="1106"/>
-        <location filename="../../source/application/sw_application.cpp" line="1127"/>
-        <location filename="../../source/application/sw_application.cpp" line="1138"/>
-        <location filename="../../source/application/sw_application.cpp" line="1195"/>
-        <location filename="../../source/application/sw_application.cpp" line="1226"/>
-        <location filename="../../source/application/sw_application.cpp" line="1242"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="93"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="116"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="139"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="172"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="197"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="254"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="313"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="392"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="413"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="424"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="481"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="512"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="528"/>
         <source>Invalid parameter value specified for the &apos;%1&apos; option: &apos;%2&apos;.
 </source>
         <translation>为 &apos;%1&apos; 选项指定的参数值无效：&apos;%2&apos;。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="925"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="211"/>
         <source>The file &apos;%1&apos; is not readable.
 </source>
         <translation>文件 &apos;%1&apos; 不可读。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1293"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="579"/>
         <source>
 Library:
 </source>
@@ -10198,14 +10202,14 @@ Library:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1294"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="580"/>
         <source>  -l, --library &lt;path&gt;: Set the Parts Library location to path.
 </source>
         <translation>  -l, --library &lt;path&gt;: 将零件库位置设为 path。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1297"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="583"/>
         <source>
 Pictures:
 </source>
@@ -10214,182 +10218,196 @@ Pictures:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1298"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="584"/>
         <source>  -i, --image [outfile.ext]: Save a picture in the format specified by ext and exit.
 </source>
         <translation>  -i, --image [outfile.ext]: 以 ext 指定的格式保存图片并退出。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1300"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="586"/>
         <source>  --height &lt;height&gt;: Set the picture height.
 </source>
         <translation>  --height &lt;height&gt;: 设置图片高度。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1304"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="590"/>
         <source>  --transparent: Render images with a transparent background (PNG and GIF only).
 </source>
         <translation>  --transparent: 使用透明背景渲染图像（仅限 PNG 和 GIF）。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1326"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="601"/>
+        <source>  --shading &lt;mode&gt;: Select shading mode for rendering (default, flat, wireframe, full).
+</source>
+        <translation>  --shading &lt;mode&gt;：选择渲染的着色模式（默认、平面、线框、完整）。
+</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="602"/>
+        <source>  --lighting &lt;style&gt;: Select the lighting style of the default shading (studio, standard, matte, toon).
+</source>
+        <translation>  --lighting &lt;style&gt;: 选择默认着色的光照样式 (studio, standard, matte, toon)。
+</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="612"/>
         <source>  --stud-style &lt;id&gt;: Set the stud style (0=Plain, 1=Thin-Line Logo, 2=Outline Logo, 3=Sharp Top Logo, 4=Rounded Top Logo, 5=Flattened Logo, 6=High Contrast, 7=High Contrast Logo).
 </source>
         <translation>  --stud-style &lt;id&gt;: 设置凸点样式 (0=普通, 1=细线标志, 2=轮廓标志, 3=尖顶标志, 4=圆顶标志, 5=扁平标志, 6=高对比度, 7=高对比度标志)。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1341"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="627"/>
         <source>  --export-wavefront [outfile.obj]: Export the model to Wavefront OBJ format.
 </source>
         <translation>  --export-wavefront [outfile.obj]: 将模型导出为 Wavefront OBJ 格式。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1342"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="628"/>
         <source>  --export-3ds [outfile.3ds]: Export the model to 3D Studio 3DS format.
 </source>
         <translation>  --export-3ds [outfile.3ds]: 将模型导出为 3D Studio 3DS 格式。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1343"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="629"/>
         <source>  --export-collada [outfile.dae]: Export the model to COLLADA DAE format.
 </source>
         <translation>  --export-collada [outfile.dae]: 将模型导出为 COLLADA DAE 格式。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1344"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="630"/>
         <source>  --export-kmz [outfile.kmz]: Export the model to KMZ format.
 </source>
         <translation>  --export-kmz [outfile.kmz]: 将模型导出为 KMZ 格式。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1345"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="631"/>
         <source>  --kmz-geometry &lt;all|visible&gt;: Keep every part, or flatten to the visible surfaces with one mesh per color, in KMZ exports.
 </source>
         <translation>  --kmz-geometry &lt;all|visible&gt;: 在 KMZ 导出中，保留每个零件，或展平为每种颜色一个网格的可见表面。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1346"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="632"/>
         <source>  --export-csv [outfile.csv]: Export the list of parts used in CSV format.
 </source>
         <translation>  --export-csv [outfile.csv]: 以 CSV 格式导出所用零件的列表。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1347"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="633"/>
         <source>  --export-bricklink [outfile.xml]: Export the list of parts used as a BrickLink XML wanted list, translated through the BrickLink mapping file set in the preferences.
 </source>
         <translation>  --export-bricklink [outfile.xml]: 将所用零件的列表导出为 BrickLink XML 需求清单，并通过偏好设置中指定的 BrickLink 映射文件转换。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1352"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="638"/>
         <source>  --export-html [folder]: Create HTML instructions in a folder named after the model inside the folder.
 </source>
         <translation>  --export-html [folder]: 在该文件夹内以模型命名的文件夹中创建 HTML 说明书。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1353"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="639"/>
         <source>  --export-povray [outfile.pov]: Export the model to POV-Ray format.
 </source>
         <translation>  --export-povray [outfile.pov]: 将模型导出为 POV-Ray 格式。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1354"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="640"/>
         <source>  --render-povray [outfile.png]: Render the model with POV-Ray using the POV-Ray window settings, the picture width and height, and the transparent background.
 </source>
         <translation>  --render-povray [outfile.png]: 使用 POV-Ray 窗口设置、图片宽度和高度以及透明背景，通过 POV-Ray 渲染模型。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1963"/>
+        <location filename="../../source/application/sw_application.cpp" line="700"/>
         <source>Could not create a temporary folder for the POV-Ray scene.
 </source>
         <translation>无法为 POV-Ray 场景创建临时文件夹。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2015"/>
+        <location filename="../../source/application/sw_application.cpp" line="752"/>
         <source>Could not render &apos;%1&apos; with POV-Ray:
 </source>
         <translation>无法使用 POV-Ray 渲染“%1”:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2483"/>
+        <location filename="../../source/application/sw_application.cpp" line="1220"/>
         <source>Could not find a default parts library. &apos;%1&apos; stays in use until StudWorx starts again and offers to download one.</source>
         <translation>找不到默认零件库。在 StudWorx 再次启动并提示下载之前，将继续使用“%1”。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1366"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="652"/>
         <source>  -h, --help: Display this help message and exit.
 </source>
         <translation>  -h, --help: 显示此帮助信息并退出。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1671"/>
-        <location filename="../../source/application/sw_application.cpp" line="2495"/>
+        <location filename="../../source/application/sw_application.cpp" line="408"/>
+        <location filename="../../source/application/sw_application.cpp" line="1232"/>
         <source>Could not open the unofficial library archive &apos;%1&apos;.</source>
         <translation>无法打开非官方零件库压缩包“%1”。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1682"/>
+        <location filename="../../source/application/sw_application.cpp" line="419"/>
         <source>The %1 file &apos;%2&apos; was not found, using the bundled copy.</source>
         <translation>未找到 %1 文件“%2”，将使用内置副本。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1690"/>
-        <location filename="../../source/application/sw_application.cpp" line="2502"/>
+        <location filename="../../source/application/sw_application.cpp" line="427"/>
+        <location filename="../../source/application/sw_application.cpp" line="1239"/>
         <source>Could not find a shadow library in &apos;%1&apos;.</source>
         <translation>在“%1”中找不到阴影库。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1875"/>
+        <location filename="../../source/application/sw_application.cpp" line="612"/>
         <source>The file &apos;%1&apos; has no parts to render.</source>
         <translation>文件“%1”中没有可渲染的零件。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="977"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="263"/>
         <source>Invalid parameter values specified for the &apos;%1&apos; option: limits are +/- 360.
 </source>
         <translation>为 &apos;%1&apos; 选项指定的参数值无效：限制为 +/- 360。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="615"/>
-        <location filename="../../source/application/sw_application.cpp" line="622"/>
-        <location filename="../../source/application/sw_application.cpp" line="632"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="67"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="74"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="84"/>
         <source>Download Parts Library</source>
         <translation>下载零件库</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="615"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="67"/>
         <source>Downloading the LDraw parts library...</source>
         <translation>正在下载 LDraw 零件库...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="622"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="74"/>
         <source>Could not download the parts library from %1.</source>
         <translation>无法从 %1 下载零件库。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="632"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="84"/>
         <source>Could not save the parts library to &apos;%1&apos;.</source>
         <translation>无法将零件库保存到“%1”。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="643"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="95"/>
         <source>StudWorx could not find an LDraw parts library.
 
 Download the official library (about 140 MB) from library.ldraw.org into &apos;%1&apos;?</source>
@@ -10398,19 +10416,19 @@ Download the official library (about 140 MB) from library.ldraw.org into &apos;%
 是否从 library.ldraw.org 将官方零件库（约 140 MB）下载到“%1”？</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="650"/>
-        <location filename="../../source/application/sw_application.cpp" line="666"/>
-        <location filename="../../source/application/sw_application.cpp" line="2491"/>
+        <location filename="../../source/application/sw_application.cpp" line="1228"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="102"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="118"/>
         <source>Could not open the parts library &apos;%1&apos;.</source>
         <translation>无法打开零件库“%1”。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="655"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="107"/>
         <source>Open Parts Library Archive</source>
         <translation>打开零件库压缩包</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="669"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="121"/>
         <source>No parts library was downloaded or set.
 
 Download one from %1 and set it under Preferences › Parts Library the next time StudWorx is started.</source>
@@ -10419,28 +10437,28 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
 请从 %1 下载一个，并在 StudWorx 下次启动时在偏好设置 › 零件库中设置。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="996"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="282"/>
         <source>The camera position is too close to the camera target of the &apos;%1&apos; option.
 </source>
         <translation>相机位置距离 &apos;%1&apos; 选项的相机目标太近。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1001"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="287"/>
         <source>Invalid up vector length specified for the &apos;%1&apos; option.
 </source>
         <translation>为 &apos;%1&apos; 选项指定的向上向量长度无效。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1006"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="292"/>
         <source>The up vector is parallel to the front vector specified for the &apos;%1&apos; option.
 </source>
         <translation>向上向量与为 &apos;%1&apos; 选项指定的前向向量平行。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1040"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="326"/>
         <source>Invalid parameter values specified for the &apos;%1&apos; option: requirements are: 1 &lt;= &lt;near&gt; &lt; &lt;far&gt;.
 </source>
         <translation>为 &apos;%1&apos; 选项指定的参数值无效：要求为：1 &lt;= &lt;near&gt; &lt; &lt;far&gt;。
@@ -10453,21 +10471,21 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <translation type="obsolete">StudWorx 连续构建 %1</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1286"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="572"/>
         <source>StudWorx Version %1
 </source>
         <translation>StudWorx 版本 %1
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1287"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="573"/>
         <source>Compiled %1
 </source>
         <translation>已编译 %1
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1292"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="578"/>
         <source>Usage: studworx [options] [file]
 </source>
         <translation>用法：studworx [选项] [文件]
@@ -10486,14 +10504,14 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <translation type="obsolete">  -l, --libpath &lt;path&gt;：将片段库位置设置为路径.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1295"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="581"/>
         <source>  --unofficial-library &lt;path&gt;: Set the Unofficial Parts Library archive to path.
 </source>
         <translation>  --unofficial-library &lt;path&gt;: 将非官方零件库压缩包设为 path。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1296"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="582"/>
         <source>  --shadow-library &lt;path&gt;: Set the LDCad Shadow Library location to path.
 </source>
         <translation>  --shadow-library &lt;path&gt;: 将 LDCad 阴影库位置设为 path。
@@ -10506,7 +10524,7 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <translation type="obsolete">  -i, --image &lt;outfile.ext&gt;：以ext指定的格式保存一张图片并退出。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1299"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="585"/>
         <source>  -w, --width &lt;width&gt;: Set the picture width.
 </source>
         <translation>  -w, --width &lt;width&gt;：设置图片宽度。
@@ -10519,28 +10537,28 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
         <translation type="obsolete">  -h, --height &lt;height&gt;: 设置图片高度.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1301"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="587"/>
         <source>  -f, --from &lt;step&gt;: Set the first step to save pictures.
 </source>
         <translation>  -f, --from &lt;step&gt;：设置第一步保存图片。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1302"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="588"/>
         <source>  -t, --to &lt;step&gt;: Set the last step to save pictures.
 </source>
         <translation>  -t, --to &lt;step&gt;：设置最后一步保存图片。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1303"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="589"/>
         <source>  -s, --submodel &lt;submodel&gt;: Set the active submodel.
 </source>
         <translation>  -s, --submodel &lt;submodel&gt;：设置活动子模型。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1305"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="591"/>
         <source>
 Camera:
 </source>
@@ -10549,35 +10567,35 @@ Camera:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1306"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="592"/>
         <source>  -c, --camera &lt;camera name&gt;: Set the active camera.
 </source>
         <translation>  -c, --camera &lt;camera name&gt;：设置活动相机。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1307"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="593"/>
         <source>  --viewpoint &lt;viewpoint&gt;: Set the view to one of the preset viewpoints (front, back, left, right, top, bottom, home).
 </source>
         <translation>  --viewpoint &lt;viewpoint&gt;：将视图设置为预设视点之一（前、后、左、右、上、下、主）。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1308"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="594"/>
         <source>  --camera-angles &lt;latitude&gt; &lt;longitude&gt;: Set the camera angles in degrees around the model.
 </source>
         <translation>  --camera-angles &lt;latitude&gt; &lt;longitude&gt;：设置模型周围的相机角度（以度为单位）。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1309"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="595"/>
         <source>  --camera-position &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: Set the camera position, target and up vector.
 </source>
         <translation>  --camera-position &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;：设置相机位置、目标和向上向量。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1310"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="596"/>
         <source>  --camera-position-ldraw &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: Set the camera position, target and up vector using LDraw coordinates.
 </source>
         <translation>  --camera-position-ldraw &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;：使用 LDraw 坐标设置相机位置、目标和向上向量。
@@ -10609,14 +10627,14 @@ Camera:
         <translation type="obsolete">  --zplanes &lt;near&gt; &lt;far&gt;：设置用于渲染图像的近剪裁平面和远剪裁平面（1 &lt;= &lt;near&gt; &lt; &lt;far&gt;）.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1319"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="605"/>
         <source>  --fade-steps: Render parts from prior steps faded.
 </source>
         <translation>  --fade-steps：以淡化方式渲染前序步骤中的零件。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1320"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="606"/>
         <source>  --no-fade-steps: Do not render parts from prior steps faded.
 </source>
         <translation>  --no-fade-steps：不以淡化方式渲染前序步骤中的零件。
@@ -10629,61 +10647,60 @@ Camera:
         <translation type="obsolete">  --fade-steps-color &lt;#AARRGGBB&gt;：先前步骤片段的渲染颜色.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1322"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="608"/>
         <source>  --highlight: Highlight parts in the steps they appear.
 </source>
         <translation>  --highlight：在零件出现的步骤中高亮显示它们。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1323"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="609"/>
         <source>  --no-highlight: Do not highlight parts in the steps they appear.
 </source>
         <translation>  --no-highlight：不在零件出现的步骤中高亮显示它们。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1324"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="610"/>
         <source>  --highlight-color &lt;#AARRGGBB&gt;: Rendering color for highlighted parts.
 </source>
         <translation>  --highlight-color &lt;#AARRGGBB&gt;：高亮零件的渲染颜色。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1315"/>
         <source>  --shading &lt;mode&gt;: Select shading mode for rendering (wireframe, flat, default, full).
 </source>
-        <translation>  --shading &lt;mode&gt;：选择渲染的着色模式（线框、平面、默认、完整）。
+        <translation type="vanished">  --shading &lt;mode&gt;：选择渲染的着色模式（线框、平面、默认、完整）。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="655"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="107"/>
         <source>Parts Library Archives (*.zip);;All Files (*)</source>
         <translation>零件库压缩包 (*.zip);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1311"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="597"/>
         <source>  --projection &lt;perspective|orthographic&gt;: Render images with a perspective or an orthographic projection.
 </source>
         <translation>  --projection &lt;perspective|orthographic&gt;: 使用透视或正交投影渲染图像。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1312"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="598"/>
         <source>  --field-of-view &lt;degrees&gt;: Set the vertical field of view used to render images (&lt; 180).
 </source>
         <translation>  --field-of-view &lt;degrees&gt;: 设置渲染图像所用的垂直视野 (&lt; 180)。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1313"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="599"/>
         <source>  --clip-planes &lt;near&gt; &lt;far&gt;: Set the near and far clipping planes used to render images (1 &lt;= &lt;near&gt; &lt; &lt;far&gt;).
 </source>
         <translation>  --clip-planes &lt;near&gt; &lt;far&gt;: 设置渲染图像所用的近裁剪面和远裁剪面 (1 &lt;= &lt;near&gt; &lt; &lt;far&gt;)。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1314"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="600"/>
         <source>
 Rendering:
 </source>
@@ -10692,14 +10709,13 @@ Rendering:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1316"/>
         <source>  --lighting &lt;style&gt;: Select the lighting style of the default shading (standard, studio, matte, toon).
 </source>
-        <translation>  --lighting &lt;style&gt;: 选择默认着色的光照样式 (standard, studio, matte, toon)。
+        <translation type="vanished">  --lighting &lt;style&gt;: 选择默认着色的光照样式 (standard, studio, matte, toon)。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1317"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="603"/>
         <source>  --line-width &lt;width&gt;: Set the width of the edge lines.
 </source>
         <translation>  --line-width &lt;width&gt;：设置边缘线的宽度。
@@ -10816,63 +10832,63 @@ Rendering:
         <translation type="obsolete">  -html, --export-html &lt;folder&gt;：为模型创建 HTML 页面.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1356"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="642"/>
         <source>  --import-settings &lt;infile.ini&gt;: Import the application settings and exit.
 </source>
         <translation>  --import-settings &lt;infile.ini&gt;: 导入应用程序设置并退出。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1357"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="643"/>
         <source>  --export-settings &lt;outfile.ini&gt;: Export the application settings and exit.
 </source>
         <translation>  --export-settings &lt;outfile.ini&gt;: 导出应用程序设置并退出。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1358"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="644"/>
         <source>  --import-keyboard-shortcuts &lt;infile.txt&gt;: Import the keyboard shortcuts and exit.
 </source>
         <translation>  --import-keyboard-shortcuts &lt;infile.txt&gt;: 导入键盘快捷键并退出。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1359"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="645"/>
         <source>  --export-keyboard-shortcuts &lt;outfile.txt&gt;: Export the keyboard shortcuts and exit.
 </source>
         <translation>  --export-keyboard-shortcuts &lt;outfile.txt&gt;: 导出键盘快捷键并退出。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1360"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="646"/>
         <source>  --import-mouse-shortcuts &lt;infile.txt&gt;: Import the mouse shortcuts and exit.
 </source>
         <translation>  --import-mouse-shortcuts &lt;infile.txt&gt;: 导入鼠标快捷键并退出。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1361"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="647"/>
         <source>  --export-mouse-shortcuts &lt;outfile.txt&gt;: Export the mouse shortcuts and exit.
 </source>
         <translation>  --export-mouse-shortcuts &lt;outfile.txt&gt;: 导出鼠标快捷键并退出。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1362"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="648"/>
         <source>  --import-categories &lt;infile.txt&gt;: Import the part categories and exit.
 </source>
         <translation>  --import-categories &lt;infile.txt&gt;: 导入零件类别并退出。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1363"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="649"/>
         <source>  --export-categories &lt;outfile.txt&gt;: Export the part categories and exit.
 </source>
         <translation>  --export-categories &lt;outfile.txt&gt;: 导出零件类别并退出。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1365"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="651"/>
         <source>  -v, --version: Output version information and exit.
 </source>
         <translation>  -v, --version：输出版本信息并退出。
@@ -10885,7 +10901,7 @@ Rendering:
         <translation type="obsolete">  -?, --help: 显示此帮助消息并退出.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1372"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="658"/>
         <source>Unknown option: &apos;%1&apos;.
 </source>
         <translation>未知选项：&apos;%1&apos;。
@@ -10898,21 +10914,21 @@ Rendering:
         <translation type="obsolete">当设置 -aec 或 --automate-edge-color 时，高对比度螺柱和边缘颜色设置将被忽略。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1384"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="670"/>
         <source>Automate edge color is required for the &apos;%1&apos; option but is not enabled.
 </source>
         <translation>&apos;%1&apos; 选项需要自动边缘颜色，但未启用。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1395"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="681"/>
         <source>High contrast stud style is required for the &apos;%1&apos; option but is not enabled.
 </source>
         <translation>&apos;%1&apos; 选项需要高对比度凸点样式，但未启用。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1425"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="711"/>
         <source>--viewpoint is ignored when --camera is set.
 </source>
         <translation>当 --camera 设置时，--viewpoint 被忽略。
@@ -10925,117 +10941,117 @@ Rendering:
         <translation type="obsolete">当 --camera 设置时，--orthographic 被忽略。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1431"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="717"/>
         <source>--camera-angles is ignored when --camera is set.
 </source>
         <translation>当 --camera 设置时，--camera-angles 被忽略。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1434"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="720"/>
         <source>--camera-position is ignored when --camera is set.
 </source>
         <translation>当 --camera 设置时，--camera-position 被忽略。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1439"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="725"/>
         <source>--camera-angles is ignored when --viewpoint is set.
 </source>
         <translation>当 --viewpoint 设置时，--camera-angles 被忽略。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1442"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="728"/>
         <source>--camera-position is ignored when --viewpoint is set.
 </source>
         <translation>当 --viewpoint 设置时，--camera-position 被忽略。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1447"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="733"/>
         <source>--camera-position is ignored when --camera-angles is set.
 </source>
         <translation>当 --camera-angles 设置时，--camera-position 被忽略。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1454"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="740"/>
         <source>No file name specified.
 </source>
         <translation>未指定文件名。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1599"/>
+        <location filename="../../source/application/sw_application.cpp" line="336"/>
         <source>Command line image export is not supported on iOS.
 </source>
         <translation>iOS 不支持命令行图像导出。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1613"/>
-        <location filename="../../source/application/sw_application.cpp" line="2281"/>
+        <location filename="../../source/application/sw_application.cpp" line="350"/>
+        <location filename="../../source/application/sw_application.cpp" line="1018"/>
         <source>Initialize Renderer</source>
         <translation>初始化渲染器</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1829"/>
+        <location filename="../../source/application/sw_application.cpp" line="566"/>
         <source>--transparent is ignored for &apos;%1&apos; files: only PNG and GIF files keep transparency.
 </source>
         <translation>--transparent 对“%1”文件无效：只有 PNG 和 GIF 文件会保留透明度。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1958"/>
+        <location filename="../../source/application/sw_application.cpp" line="695"/>
         <source>LGEO parts need the standard POV-Ray include files such as colors.inc, which POV-Ray %1 could not find.
 </source>
         <translation>LGEO 零件需要标准的 POV-Ray 包含文件，例如 colors.inc，但 POV-Ray %1 找不到它们。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2229"/>
+        <location filename="../../source/application/sw_application.cpp" line="966"/>
         <source>Saved 1 lot to &apos;%1&apos;.
 </source>
         <translation>已将 1 个条目保存到“%1”。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2229"/>
+        <location filename="../../source/application/sw_application.cpp" line="966"/>
         <source>Saved %1 lots to &apos;%2&apos;.
 </source>
         <translation>已将 %1 个条目保存到“%2”。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2466"/>
+        <location filename="../../source/application/sw_application.cpp" line="1203"/>
         <source>Could not reload the parts library &apos;%1&apos;.</source>
         <translation>无法重新加载零件库“%1”。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2502"/>
+        <location filename="../../source/application/sw_application.cpp" line="1239"/>
         <source>Load Part Connections</source>
         <translation>加载零件连接</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2510"/>
-        <location filename="../../source/application/sw_application.cpp" line="2512"/>
-        <location filename="../../source/application/sw_application.cpp" line="2514"/>
+        <location filename="../../source/application/sw_application.cpp" line="1247"/>
+        <location filename="../../source/application/sw_application.cpp" line="1249"/>
+        <location filename="../../source/application/sw_application.cpp" line="1251"/>
         <source>Preferences</source>
         <translation>偏好设置</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2510"/>
+        <location filename="../../source/application/sw_application.cpp" line="1247"/>
         <source>The new language and antialiasing settings apply the next time you start StudWorx.</source>
         <translation>新的语言和抗锯齿设置将在您下次启动 StudWorx 时生效。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2512"/>
+        <location filename="../../source/application/sw_application.cpp" line="1249"/>
         <source>The new language applies the next time you start StudWorx.</source>
         <translation>新的语言设置将在您下次启动 StudWorx 时生效。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2514"/>
+        <location filename="../../source/application/sw_application.cpp" line="1251"/>
         <source>The new antialiasing setting applies the next time you start StudWorx.</source>
         <translation>新的抗锯齿设置将在您下次启动 StudWorx 时生效。</translation>
     </message>
@@ -11062,33 +11078,33 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
 请访问 https://github.com/nathaneltitane/studworx 了解有关如何下载和安装库的信息。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="645"/>
-        <location filename="../../source/application/sw_application.cpp" line="650"/>
-        <location filename="../../source/application/sw_application.cpp" line="666"/>
-        <location filename="../../source/application/sw_application.cpp" line="669"/>
-        <location filename="../../source/application/sw_application.cpp" line="2466"/>
-        <location filename="../../source/application/sw_application.cpp" line="2483"/>
-        <location filename="../../source/application/sw_application.cpp" line="2491"/>
-        <location filename="../../source/application/sw_application.cpp" line="2495"/>
+        <location filename="../../source/application/sw_application.cpp" line="1203"/>
+        <location filename="../../source/application/sw_application.cpp" line="1220"/>
+        <location filename="../../source/application/sw_application.cpp" line="1228"/>
+        <location filename="../../source/application/sw_application.cpp" line="1232"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="97"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="102"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="118"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="121"/>
         <source>Load Parts Library</source>
         <translation>加载零件库</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1318"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="604"/>
         <source>  --antialiasing-samples &lt;samples&gt;: Anti-aliasing sample size (1, 2, 4, or 8).
 </source>
         <translation>  --antialiasing-samples &lt;samples&gt;: 抗锯齿采样数 (1、2、4 或 8)。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1321"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="607"/>
         <source>  --fade-color &lt;#AARRGGBB&gt;: Rendering color for prior step parts.
 </source>
         <translation>  --fade-color &lt;#AARRGGBB&gt;: 之前步骤零件的渲染颜色。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1325"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="611"/>
         <source>
 Studs and Edges:
 </source>
@@ -11097,84 +11113,84 @@ Studs and Edges:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1327"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="613"/>
         <source>  --stud-cylinder-color &lt;#AARRGGBB&gt;: High contrast stud cylinder color.
 </source>
         <translation>  --stud-cylinder-color &lt;#AARRGGBB&gt;: 高对比度凸点柱体颜色。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1328"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="614"/>
         <source>  --no-stud-cylinder-color: Disable high contrast stud cylinder color.
 </source>
         <translation>  --no-stud-cylinder-color: 禁用高对比度凸点柱体颜色。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1329"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="615"/>
         <source>  --edge-color &lt;#AARRGGBB&gt;: High contrast edge color.
 </source>
         <translation>  --edge-color &lt;#AARRGGBB&gt;: 高对比度边缘颜色。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1330"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="616"/>
         <source>  --no-edge-color: Disable high contrast edge color.
 </source>
         <translation>  --no-edge-color: 禁用高对比度边缘颜色。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1331"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="617"/>
         <source>  --edge-color-black &lt;#AARRGGBB&gt;: High contrast edge color for black parts.
 </source>
         <translation>  --edge-color-black &lt;#AARRGGBB&gt;: 黑色零件的高对比度边缘颜色。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1332"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="618"/>
         <source>  --no-edge-color-black: Disable high contrast edge color for black parts.
 </source>
         <translation>  --no-edge-color-black: 禁用黑色零件的高对比度边缘颜色。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1333"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="619"/>
         <source>  --edge-color-dark &lt;#AARRGGBB&gt;: High contrast edge color for dark color parts.
 </source>
         <translation>  --edge-color-dark &lt;#AARRGGBB&gt;: 深色零件的高对比度边缘颜色。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1334"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="620"/>
         <source>  --no-edge-color-dark: Disable high contrast edge color for dark color parts.
 </source>
         <translation>  --no-edge-color-dark: 禁用深色零件的高对比度边缘颜色。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1335"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="621"/>
         <source>  --edge-color-automatic: Enable automatically adjusted edge colors.
 </source>
         <translation>  --edge-color-automatic: 启用自动调整的边缘颜色。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1336"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="622"/>
         <source>  --edge-contrast &lt;contrast&gt;: Edge color contrast of automatic edge colors, between 0.0 and 1.0.
 </source>
         <translation>  --edge-contrast &lt;contrast&gt;: 自动边缘颜色的边缘颜色对比度，介于 0.0 和 1.0 之间。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1337"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="623"/>
         <source>  --edge-light-dark &lt;value&gt;: Light/Dark color value of automatic edge colors, between 0.0 and 1.0.
 </source>
         <translation>  --edge-light-dark &lt;value&gt;: 自动边缘颜色的明暗值，介于 0.0 和 1.0 之间。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1338"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="624"/>
         <source>
 Export:
 </source>
@@ -11183,49 +11199,49 @@ Export:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1339"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="625"/>
         <source>  --flatten &lt;outfile.ldr&gt;: Replace every submodel at all depths with its parts and save the model, before any other export.
 </source>
         <translation>  --flatten &lt;outfile.ldr&gt;: 在任何其他导出之前，用零件替换所有层级的每个子模型并保存模型。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1340"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="626"/>
         <source>  --undo &lt;outfile.ldr&gt;: Undo every command line edit and save the model, to check that undo restores it.
 </source>
         <translation>  --undo &lt;outfile.ldr&gt;: 撤销每个命令行编辑并保存模型，以检查撤销是否能将其还原。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1348"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="634"/>
         <source>  --bricklink-condition &lt;any|new|used&gt;: Condition wanted in BrickLink exports.
 </source>
         <translation>  --bricklink-condition &lt;any|new|used&gt;: BrickLink 导出中所需的成色。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1349"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="635"/>
         <source>  --bricklink-wanted-list &lt;id|url&gt;: BrickLink wanted list the exported parts are added to, by number or by the address of its page.
 </source>
         <translation>  --bricklink-wanted-list &lt;id|url&gt;: 导出的零件所添加到的 BrickLink 需求清单，可用编号或其页面地址指定。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1350"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="636"/>
         <source>  --bricklink-notify: Ask BrickLink to notify new listings of the exported parts.
 </source>
         <translation>  --bricklink-notify: 请求 BrickLink 通知所导出零件的新上架信息。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1351"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="637"/>
         <source>  --bricklink-exceptions &lt;file&gt;: Comma or tab separated file of parts and the BrickLink numbers that replace their mapping in BrickLink exports.
 </source>
         <translation>  --bricklink-exceptions &lt;file&gt;: 以逗号或制表符分隔的文件，列出零件及在 BrickLink 导出中替换其映射的 BrickLink 编号。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1355"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="641"/>
         <source>
 Settings:
 </source>
@@ -11234,7 +11250,7 @@ Settings:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1364"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="650"/>
         <source>
 Information:
 </source>
@@ -11243,77 +11259,77 @@ Information:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1379"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="665"/>
         <source>High contrast stud and edge color settings are ignored when --edge-color-automatic is set.
 </source>
         <translation>设置了 --edge-color-automatic 时，高对比度凸点和边缘颜色设置将被忽略。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1428"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="714"/>
         <source>--projection is ignored when --camera is set.
 </source>
         <translation>设置了 --camera 时，--projection 将被忽略。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1479"/>
+        <location filename="../../source/application/sw_application.cpp" line="216"/>
         <source>Could not load settings file &apos;%1&apos;.
 </source>
         <translation>无法加载设置文件“%1”。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1495"/>
+        <location filename="../../source/application/sw_application.cpp" line="232"/>
         <source>Could not load keyboard shortcuts file &apos;%1&apos;.
 </source>
         <translation>无法加载键盘快捷键文件“%1”。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1503"/>
+        <location filename="../../source/application/sw_application.cpp" line="240"/>
         <source>Could not load mouse shortcuts file &apos;%1&apos;.
 </source>
         <translation>无法加载鼠标快捷键文件“%1”。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1513"/>
+        <location filename="../../source/application/sw_application.cpp" line="250"/>
         <source>Could not load categories file &apos;%1&apos;.
 </source>
         <translation>无法加载类别文件“%1”。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1535"/>
+        <location filename="../../source/application/sw_application.cpp" line="272"/>
         <source>Could not save settings file &apos;%1&apos;.
 </source>
         <translation>无法保存设置文件“%1”。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1543"/>
+        <location filename="../../source/application/sw_application.cpp" line="280"/>
         <source>Could not save keyboard shortcuts file &apos;%1&apos;.
 </source>
         <translation>无法保存键盘快捷键文件“%1”。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1551"/>
+        <location filename="../../source/application/sw_application.cpp" line="288"/>
         <source>Could not save mouse shortcuts file &apos;%1&apos;.
 </source>
         <translation>无法保存鼠标快捷键文件“%1”。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1559"/>
+        <location filename="../../source/application/sw_application.cpp" line="296"/>
         <source>Could not save categories file &apos;%1&apos;.
 </source>
         <translation>无法保存类别文件“%1”。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1661"/>
+        <location filename="../../source/application/sw_application.cpp" line="398"/>
         <source>StudWorx could not find an LDraw parts library.
 
 Download one from %1 and pass it with --library.</source>
@@ -11322,24 +11338,24 @@ Download one from %1 and pass it with --library.</source>
 请从 %1 下载一个，并通过 --library 指定。</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1742"/>
+        <location filename="../../source/application/sw_application.cpp" line="479"/>
         <source>Error: model &apos;%1&apos; does not exist.
 </source>
         <translation>错误：模型 &apos;%1&apos; 不存在。
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1793"/>
-        <location filename="../../source/application/sw_application.cpp" line="1808"/>
-        <location filename="../../source/application/sw_application.cpp" line="1891"/>
-        <location filename="../../source/application/sw_application.cpp" line="1925"/>
-        <location filename="../../source/application/sw_application.cpp" line="2022"/>
-        <location filename="../../source/application/sw_application.cpp" line="2051"/>
-        <location filename="../../source/application/sw_application.cpp" line="2085"/>
-        <location filename="../../source/application/sw_application.cpp" line="2119"/>
-        <location filename="../../source/application/sw_application.cpp" line="2156"/>
-        <location filename="../../source/application/sw_application.cpp" line="2190"/>
-        <location filename="../../source/application/sw_application.cpp" line="2250"/>
+        <location filename="../../source/application/sw_application.cpp" line="530"/>
+        <location filename="../../source/application/sw_application.cpp" line="545"/>
+        <location filename="../../source/application/sw_application.cpp" line="628"/>
+        <location filename="../../source/application/sw_application.cpp" line="662"/>
+        <location filename="../../source/application/sw_application.cpp" line="759"/>
+        <location filename="../../source/application/sw_application.cpp" line="788"/>
+        <location filename="../../source/application/sw_application.cpp" line="822"/>
+        <location filename="../../source/application/sw_application.cpp" line="856"/>
+        <location filename="../../source/application/sw_application.cpp" line="893"/>
+        <location filename="../../source/application/sw_application.cpp" line="927"/>
+        <location filename="../../source/application/sw_application.cpp" line="987"/>
         <source>Saved &apos;%1&apos;.
 </source>
         <translation>已保存 &apos;%1&apos;。
@@ -13157,7 +13173,7 @@ Download one from %1 and pass it with --library.</source>
 <context>
     <name>swBlockingProgress</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="968"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="256"/>
         <source>%v of %m</source>
         <translation>%v / %m</translation>
     </message>
@@ -13445,32 +13461,32 @@ Choose where to save it and build it now?</source>
 <context>
     <name>swColorConfiguration</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="52"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="50"/>
         <source>Choose %1</source>
         <translation>选择 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="52"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="50"/>
         <source>Save %1</source>
         <translation>保存 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="53"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="51"/>
         <source>LDraw Files (*.ldr);;All Files (*)</source>
         <translation>LDraw 文件 (*.ldr);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="62"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="60"/>
         <source>Update %1</source>
         <translation>更新 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="72"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="70"/>
         <source>Saved the latest %1 to &apos;%2&apos;.</source>
         <translation>已将最新的 %1 保存到“%2”。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="85"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="83"/>
         <source>No %1 file is set. It defines the LDraw colors and their edge lines.
 
 Choose where to save it and download the latest %2 now?</source>
@@ -13479,7 +13495,7 @@ Choose where to save it and download the latest %2 now?</source>
 是否选择保存位置并立即下载最新的 %2？</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="86"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="84"/>
         <source>The %1 file &apos;%2&apos; was not found. It defines the LDraw colors and their edge lines.
 
 Choose where to save it and download the latest %3 now?</source>
@@ -13506,22 +13522,22 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swColorDialogPopup</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1943"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="554"/>
         <source>Choose Color</source>
         <translation>选择颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1944"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="555"/>
         <source>&lt;p&gt;&lt;b&gt;Choose Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pick a color using the swatches or enter its component values. Choose OK to use the selected color, or Cancel to keep the original color. Editing the controls alone does not apply the color.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;选择颜色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;使用色板选择颜色或输入其分量值。选择“确定”以使用所选颜色，或选择“取消”以保留原始颜色。单独编辑控件不会应用颜色。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1970"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="581"/>
         <source>Custom Color</source>
         <translation>自定义颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1971"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="582"/>
         <source>Choose a color or enter its component values.</source>
         <translation>选择一种颜色或输入其分量值。</translation>
     </message>
@@ -13642,128 +13658,128 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swEditorWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="34"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="19"/>
         <source>Configure the editor.</source>
         <translation>配置编辑器。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="34"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="19"/>
         <source>Editor Options</source>
         <translation>编辑器选项</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="36"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="21"/>
         <source>&amp;Syntax Highlighting</source>
         <translation>语法高亮</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="41"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="26"/>
         <source>Line &amp;Numbers</source>
         <translation>行号</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="46"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="31"/>
         <source>&amp;Wrap Lines</source>
         <translation>自动换行</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="51"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="36"/>
         <source>Whitespace &amp;Markers</source>
         <translation>空白字符标记</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="58"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="43"/>
         <source>&amp;Find and Replace</source>
         <translation>查找和替换</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="65"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="50"/>
         <source>Match &amp;Case</source>
         <translation>区分大小写</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="73"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="58"/>
         <source>Wh&amp;ole Words</source>
         <translation>全字匹配</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="91"/>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="92"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="76"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="77"/>
         <source>Find</source>
         <translation>查找</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="93"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="78"/>
         <source>Text to find, enter finds the next match and shift enter the previous one.</source>
         <translation>要查找的文本，按回车查找下一个匹配项，按 Shift+回车查找上一个。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="98"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="83"/>
         <source>Previous</source>
         <translation>上一个</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="98"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="83"/>
         <source>Select the previous match.</source>
         <translation>选择上一个匹配项。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="99"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="84"/>
         <source>Next</source>
         <translation>下一个</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="99"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="84"/>
         <source>Select the next match.</source>
         <translation>选择下一个匹配项。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="105"/>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="106"/>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="111"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="90"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="91"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="96"/>
         <source>Replace</source>
         <translation>替换</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="107"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="92"/>
         <source>Text that replaces the matches, enter replaces the selected match.</source>
         <translation>用于替换匹配项的文本，按回车替换所选匹配项。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="111"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="96"/>
         <source>Replace the selected match and select the next one.</source>
         <translation>替换所选匹配项并选择下一个。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="112"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="97"/>
         <source>Replace All</source>
         <translation>全部替换</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="112"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="97"/>
         <source>Replace every match in the text.</source>
         <translation>替换文本中的所有匹配项。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="115"/>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="364"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="100"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="349"/>
         <source>No Matches</source>
         <translation>无匹配项</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="325"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="310"/>
         <source>%n Replaced</source>
         <translation>
             <numerusform>已替换 %n 处</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="366"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="351"/>
         <source>%1 of %2</source>
         <translation>第 %1 项，共 %2 项</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="368"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="353"/>
         <source>%n Matches</source>
         <translation>
             <numerusform>%n 个匹配项</numerusform>
@@ -15753,8 +15769,8 @@ Choose where to save it and download the latest %3 now?</source>
     <name>swInstructionsEditorWidget</name>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="273"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="307"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="292"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="474"/>
         <source>Editor</source>
         <translation>编辑器</translation>
     </message>
@@ -15764,27 +15780,27 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>&lt;p&gt;&lt;b&gt;编辑器&lt;/b&gt;&lt;/p&gt;&lt;p&gt;模型文件按保存时的样子显示的文本，包含其零件、步骤和说明书。编辑后点击应用即可从文本加载模型，在保存模型之前，该更改处于未保存状态。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="299"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="284"/>
         <source>Apply</source>
         <translation>应用</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="299"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="284"/>
         <source>Check the syntax of the edited text and load the model from it, the change is unsaved until the model is saved.</source>
         <translation>检查已编辑文本的语法并据此加载模型，在保存模型之前，该更改处于未保存状态。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="300"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="285"/>
         <source>Revert</source>
         <translation>还原</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="300"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="285"/>
         <source>Discard the edits and show the text of the model again.</source>
         <translation>放弃编辑并重新显示模型的文本。</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="474"/>
         <source>The text was not applied. %n line(s) are not valid LDraw syntax:</source>
         <translation>
             <numerusform>文本未应用。有 %n 行不是有效的 LDraw 语法：</numerusform>
@@ -15807,22 +15823,22 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">全部替换</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="306"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="291"/>
         <source>Text of the model file.</source>
         <translation>模型文件的文本。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="317"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="302"/>
         <source>Save</source>
         <translation>保存</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="469"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="454"/>
         <source>Line %1: %2</source>
         <translation>第 %1 行：%2</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="486"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="471"/>
         <source>And %n more.</source>
         <translation>
             <numerusform>还有 %n 行。</numerusform>
@@ -15842,112 +15858,112 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>&lt;p&gt;&lt;b&gt;网格&lt;/b&gt;&lt;/p&gt;&lt;p&gt;页面网格有助于对齐拖动的元素，它不会被打印。可以在屏幕上显示它，让拖动的元素吸附到它或其他元素的锚点，并可选择网格区域、主单位的大小及其细分的份数，以及网格线和边距的颜色。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="527"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="518"/>
         <source>Show Grid</source>
         <translation>显示网格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="527"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="518"/>
         <source>Draw the page grid on screen, it is never printed.</source>
         <translation>在屏幕上绘制页面网格，它不会被打印。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="528"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="519"/>
         <source>Snap to Grid</source>
         <translation>吸附到网格</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="536"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="541"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="527"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="532"/>
         <source>Snap to Anchors</source>
         <translation>吸附到锚点</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="528"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="519"/>
         <source>Snap dragged elements to the page grid, this turns Snap to Anchors off.</source>
         <translation>让拖动的元素吸附到页面网格，这会关闭吸附到锚点。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="539"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="530"/>
         <source>Snap dragged elements to the anchors of the page area and the other elements, this turns Snap to Grid off.</source>
         <translation>让拖动的元素吸附到页面区域和其他元素的锚点，这会关闭吸附到网格。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="540"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="531"/>
         <source>&lt;p&gt;&lt;b&gt;Snap to Anchors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;While an element is dragged, its corners, edge centers and center snap to those of the page area and of the other elements when they come within a few pixels, on each axis separately. Snap to Anchors and Snap to Grid exclude each other, turning one on turns the other off. Show Element Anchors in the Properties options shows the anchors.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;吸附到锚点&lt;/b&gt;&lt;/p&gt;&lt;p&gt;拖动元素时，其角点、边缘中点和中心点会在距离页面区域及其他元素的对应点只有几个像素时吸附到这些点，且每个轴单独吸附。吸附到锚点和吸附到网格互相排斥，开启其中一个会关闭另一个。属性选项中的显示元素锚点可以显示这些锚点。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="551"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="559"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="542"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="550"/>
         <source>Grid Area</source>
         <translation>网格区域</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="555"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="546"/>
         <source>Within Margins</source>
         <translation>边距之内</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="556"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="547"/>
         <source>Full Page</source>
         <translation>整页</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="557"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="548"/>
         <source>Choose whether the grid covers the area inside the margins or the full page.</source>
         <translation>选择网格覆盖边距之内的区域还是整页。</translation>
     </message>
     <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="560"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="563"/>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="569"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="572"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="578"/>
         <source>Grid Size</source>
         <translation>网格大小</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="576"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="567"/>
         <source>Main unit of the grid drawn with the primary color, in the margin units of the page setup.</source>
         <translation>以主颜色绘制的网格主单位，使用页面设置中的边距单位。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="588"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="596"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="579"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="587"/>
         <source>Divisions</source>
         <translation>细分</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="594"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="585"/>
         <source>Split each grid unit into fractions drawn with the secondary color, dragged elements snap to the fractions.</source>
         <translation>将每个网格单位拆分为以次要颜色绘制的若干份，拖动的元素会吸附到这些细分线。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="628"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="619"/>
         <source>Primary Color</source>
         <translation>主颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="628"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="619"/>
         <source>Color of the grid lines at every grid unit.</source>
         <translation>每个网格单位处网格线的颜色。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="629"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="620"/>
         <source>Secondary Color</source>
         <translation>次要颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="629"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="620"/>
         <source>Color of the grid lines at the fractions of a grid unit.</source>
         <translation>网格单位细分处网格线的颜色。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="630"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="621"/>
         <source>Margin Color</source>
         <translation>边距颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="630"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="621"/>
         <source>Color of the dashed outline of the page margins.</source>
         <translation>页面边距虚线轮廓的颜色。</translation>
     </message>
@@ -17916,7 +17932,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>%1 大小</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="2045"/>
+        <location filename="../../source/interface/window/sw_window_utilities_icons.cpp" line="46"/>
         <source>Transparent</source>
         <translation>透明</translation>
     </message>
@@ -18466,10 +18482,10 @@ Choose where to save it and download the latest %3 now?</source>
     <name>swMainWindow</name>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="326"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="633"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="641"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1002"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="634"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="642"/>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1003"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1004"/>
         <source>Transform</source>
         <translation>变换</translation>
     </message>
@@ -18479,22 +18495,22 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>相机</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="411"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="412"/>
         <source>&amp;File</source>
         <translation>文件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="425"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="426"/>
         <source>&amp;Export</source>
         <translation>导出</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="457"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="458"/>
         <source>&amp;Edit</source>
         <translation>编辑</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="483"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="484"/>
         <source>&amp;View</source>
         <translation>视图</translation>
     </message>
@@ -18512,42 +18528,42 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">步骤</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="484"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="485"/>
         <source>T&amp;oolbars</source>
         <translation>工具栏</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="520"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="521"/>
         <source>&amp;Part</source>
         <translation>零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="592"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="593"/>
         <source>&amp;Help</source>
         <translation>帮助</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="629"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="630"/>
         <source>&lt;p&gt;&lt;b&gt;Selection Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the rule applied when you pick a part in the model view. Single selects that part; the other modes include matching part types, matching colors, or both. For example, color selection lets you pick matching red parts without selecting each one separately.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;选择模式&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择在模型视图中选取一个零件时应用的规则。单个模式选择该零件；其他模式包括匹配零件类型、匹配颜色或两者兼而有之。例如，颜色选择可让您挑选匹配的红色零件，而无需单独选择每一个。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="642"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="643"/>
         <source>Transform Options</source>
         <translation>变换选项</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="644"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="645"/>
         <source>&lt;p&gt;&lt;b&gt;Transform Options&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the axes and pivot used for interactive transforms. Relative Transforms uses the focused object&apos;s orientation, so movement along X follows that object&apos;s local X axis. Absolute Transforms uses the model axes. Rotate Together rotates the selection around a shared pivot; Rotate Separately rotates each part around its own origin.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;变换选项&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择用于交互式变换的轴和枢轴。相对变换使用聚焦物体的方向，因此沿 X 方向的移动遵循该物体的局部 X 轴。绝对变换使用模型轴。“一起旋转”围绕共享枢轴旋转所选内容；“单独旋转”围绕每个零件自己的原点旋转。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="648"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="649"/>
         <source>Snap XY</source>
         <translation>XY 平面吸附</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="652"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="653"/>
         <source>Snap Z</source>
         <translation>Z 轴吸附</translation>
     </message>
@@ -18556,18 +18572,18 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">吸附菜单</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="656"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="665"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="657"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="666"/>
         <source>Movement Snap</source>
         <translation>移动吸附</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="666"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="667"/>
         <source>Snap translations to fixed intervals</source>
         <translation>将平移吸附到固定间隔</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="668"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="669"/>
         <source>&lt;p&gt;&lt;b&gt;Movement Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose how far objects move in each snapped increment. XY controls movement across the base plane; Z controls vertical movement, so they can use different intervals. Turn snapping off for free placement, then enable it again when you need consistent spacing.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;移动吸附&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择物体在每个吸附增量中移动的距离。XY 控制在基准平面上的移动；Z 控制垂直移动，因此它们可以使用不同的间隔。关闭吸附功能以实现自由放置，然后在需要一致间距时再次启用它。&lt;/p&gt;</translation>
     </message>
@@ -18576,23 +18592,23 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">角度吸附菜单</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="672"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="680"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="673"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="681"/>
         <source>Rotation Snap</source>
         <translation>旋转吸附</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="681"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="682"/>
         <source>Snap rotations to fixed intervals</source>
         <translation>将旋转吸附到固定间隔</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="683"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="684"/>
         <source>&lt;p&gt;&lt;b&gt;Rotation Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose an angle increment for interactive rotation. For example, a 90-degree increment is useful for quarter turns, while smaller increments allow finer alignment. Turn snapping off for free rotation without fixed angle increments.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;旋转吸附&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择交互式旋转的角度增量。例如，90 度增量对于四分之一圈很有用，而较小的增量则允许更精细的对齐。关闭吸附功能即可自由旋转，无需固定角度增量。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="687"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="688"/>
         <source>Standard</source>
         <translation>标准</translation>
     </message>
@@ -18601,7 +18617,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;时间工具栏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;箭头按钮在搭建步骤中前后移动，以便查看模型是如何组装的。它们不会更改分配给零件的步骤，更改请使用时间线。播放依次播放模型的各步骤以显示关键帧动作，再次使用时暂停，停止则回到开始播放时所在的步骤。设置关键帧和移除关键帧会在当前步骤添加或移除所选对象的关键帧，与关键帧面板中的菱形作用相同。添加关键帧控制编辑操作是否在当前步骤创建动画关键帧，从而让位置等属性在各步骤之间变化。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="779"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="780"/>
         <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.&lt;/p&gt;&lt;p&gt;Docked at the top or bottom, the swatches line up in one row; scroll the wheel or use the arrows at its ends to move along it, or double-click an arrow to jump to that end.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;颜色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;从色板中选择当前的 LDraw 颜色。插入或上色零件时使用此颜色。要为所选零件重新上色，请使用色板上方的颜色按钮。将鼠标悬停在色板上可查看其名称和颜色代码。&lt;/p&gt;&lt;p&gt;停靠在顶部或底部时，色板排成一行；滚动滚轮或使用两端的箭头可沿其移动，双击箭头可跳到该端。&lt;/p&gt;</translation>
     </message>
@@ -18610,8 +18626,8 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;时间线&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择一个步骤使其成为当前步骤，或选择零件行以在模型中选中这些零件。可以在步骤之间拖动零件，或在步骤内重新排序。关键帧行标明某一步骤中带动画关键帧的对象，双击会在该处选中该对象并显示关键帧面板。右键点击可使用插入、移除、移动步骤和可见性命令。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="388"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="720"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="389"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="721"/>
         <source>Tools</source>
         <translation>工具</translation>
     </message>
@@ -18641,7 +18657,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">着色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="421"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="422"/>
         <source>&amp;Import</source>
         <translation>导入</translation>
     </message>
@@ -18655,43 +18671,43 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">子模型</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="621"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="626"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="622"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="627"/>
         <source>Selection Mode</source>
         <translation>选择模式</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="627"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="628"/>
         <source>Change selection mode</source>
         <translation>更改选择模式</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="628"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="629"/>
         <source>Choose which related parts are included when selecting a part.</source>
         <translation>选择零件时，选择要一并包含的相关零件。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="643"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="644"/>
         <source>Choose coordinate axes and whether selected parts rotate together.</source>
         <translation>选择坐标轴以及所选零件是否一起旋转。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="667"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="668"/>
         <source>Choose movement snapping intervals for XY and Z.</source>
         <translation>选择 XY 和 Z 的移动吸附间隔。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="682"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="683"/>
         <source>Choose the rotation snapping interval.</source>
         <translation>选择旋转吸附间隔。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="689"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="690"/>
         <source>&lt;p&gt;&lt;b&gt;Standard Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use file controls to create, open, and save models, and Undo or Redo to navigate edit history. Before moving or rotating objects, choose the selection rule, coordinate reference, and snapping increments from the four drop-down controls. Help &gt; &quot;What&apos;s This?&quot; explains individual controls.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;标准工具栏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;使用文件控件创建、打开和保存模型，使用撤销或重做浏览编辑历史。在移动或旋转对象之前，可从四个下拉控件中选择选择规则、坐标参照和吸附增量。帮助 &gt; “这是什么？”会说明各个控件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="707"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="708"/>
         <source>Time</source>
         <translation>时间</translation>
     </message>
@@ -18706,22 +18722,22 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;时间工具栏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;使用箭头按钮切换搭建步骤，查看模型的组装过程。这不会改变零件所属的步骤；如需更改，请使用“时间轴”。“添加关键帧”控制编辑操作是否在当前步骤创建动画关键帧，使位置等属性可随步骤变化。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="722"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="723"/>
         <source>&lt;p&gt;&lt;b&gt;Tools Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a tool, then use it in the model view. Insertion tools create parts, lights, or cameras. Editing tools select, transform, remove, or recolor objects. Navigation tools change the viewpoint without changing model geometry. Mouse assignments can be customized in Preferences.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;工具栏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择一个工具，然后在模型视图中使用它。插入工具可以创建零件、光源或相机。编辑工具选择、变换、删除物体或重新着色物体。导航工具可以在不改变模型几何形状的情况下改变视点。可以在“偏好设置”中自定义鼠标分配。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="764"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="765"/>
         <source>Parts</source>
         <translation>零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="767"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="768"/>
         <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a category or palette and filter its parts. Selecting a part prepares it for insertion; drag it into the model view to place it. Double-click a part to open its preview. Options controls filtering, thumbnails, and list display.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;零件&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择一个类别或零件库并筛选其零件。选择一个零件，准备插入；将其拖到模型视图中进行放置。双击一个零件以打开其预览。选项控制筛选、缩略图和列表显示。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="777"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="778"/>
         <source>Colors</source>
         <translation>颜色</translation>
     </message>
@@ -18731,57 +18747,57 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;颜色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;从样本中选择当前的 LDraw 颜色。这种颜色在插入或绘画零件时使用。要对选定的零件重新着色，请使用样本上方的颜色按钮。将鼠标悬停在样本上即可查看其名称和颜色代码。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="795"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="796"/>
         <source>Apply the current color to selected parts.</source>
         <translation>将当前颜色应用到选定的零件。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="796"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="797"/>
         <source>Change Selection Color</source>
         <translation>更改选择颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="797"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="798"/>
         <source>&lt;p&gt;&lt;b&gt;Change Selection Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Apply the current color to selected parts. Choosing a swatch sets the current color; this button applies that color to the selection.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;更改选择颜色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将当前颜色应用于选定的零件。选择色板会设置当前颜色；此按钮将该颜色应用于所选内容。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="819"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="820"/>
         <source>Scroll the swatches left. Double-click to jump to the first one.</source>
         <translation>向左滚动色板。双击可跳到第一个。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="819"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="820"/>
         <source>Scroll the swatches right. Double-click to jump to the last one.</source>
         <translation>向右滚动色板。双击可跳到最后一个。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="849"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="850"/>
         <source>LDraw Colors</source>
         <translation>LDraw 颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="978"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="979"/>
         <source>Properties</source>
         <translation>属性</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="980"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="981"/>
         <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit properties of the focused object or selection. Available fields depend on whether you select parts, a camera, or a light. Expand a section to see its fields. Keyframe controls mark properties at the current building step.&lt;/p&gt;&lt;p&gt;The transform fields at the bottom apply an X/Y/Z translation or rotation using the chosen transform mode. Press Enter to apply the values.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;属性&lt;/b&gt;&lt;/p&gt;&lt;p&gt;编辑聚焦物体或所选内容的属性。可用字段取决于您选择的是零件、相机还是光源。展开某个部分以查看其字段。关键帧控件标记当前构建步骤的属性。&lt;/p&gt;&lt;p&gt;底部的变换字段使用所选变换模式应用 X/Y/Z 平移或旋转。按 Enter 键应用这些值。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1033"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1034"/>
         <source>Choose absolute or relative translation or rotation.</source>
         <translation>选择绝对或相对平移或旋转。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1034"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1035"/>
         <source>&lt;p&gt;&lt;b&gt;Apply Transform&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the translation or rotation mode, enter X/Y/Z values, and press Enter to apply them. Translation values use LDraw units; rotation values use degrees.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;应用变换&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择平移或旋转模式，输入 X/Y/Z 值，然后按 Enter 键应用它们。平移值使用 LDraw 单位；旋转值以度为单位。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1012"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1013"/>
         <source>Transform X</source>
         <translation>变换 X</translation>
     </message>
@@ -18816,7 +18832,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>着色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="444"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="445"/>
         <source>Ren&amp;der</source>
         <translation>渲染</translation>
     </message>
@@ -18825,92 +18841,92 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">查找</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="530"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="531"/>
         <source>&amp;Joint</source>
         <translation>关节</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="545"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="546"/>
         <source>&amp;Group</source>
         <translation>组</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="552"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="553"/>
         <source>&amp;Visibility</source>
         <translation>可见性</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="559"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="560"/>
         <source>&amp;Steps</source>
         <translation>步骤</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="576"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="577"/>
         <source>&amp;Models</source>
         <translation>模型</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="709"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="710"/>
         <source>&lt;p&gt;&lt;b&gt;Time Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Steps panel for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;时间工具栏&lt;/b&gt;&lt;/p&gt;&lt;p&gt;箭头按钮在搭建步骤中前后移动，以便查看模型是如何组装的。它们不会更改分配给零件的步骤，更改请使用步骤面板。播放依次播放模型的各步骤以显示关键帧动作，再次使用时暂停，停止则回到开始播放时所在的步骤。设置关键帧和移除关键帧会在当前步骤添加或移除所选对象的关键帧，与关键帧面板中的菱形作用相同。添加关键帧控制编辑操作是否在当前步骤创建动画关键帧，从而让位置等属性在各步骤之间变化。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="807"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="808"/>
         <source>Choose how inserted parts are colored.</source>
         <translation>选择插入的零件如何着色。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="807"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="808"/>
         <source>Color Options</source>
         <translation>颜色选项</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="820"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="821"/>
         <source>Scroll Colors Left</source>
         <translation>向左滚动颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="820"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="821"/>
         <source>Scroll Colors Right</source>
         <translation>向右滚动颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1001"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1002"/>
         <source>T</source>
         <translation>T</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1013"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1014"/>
         <source>Enter the X translation in LDraw units or rotation in degrees.</source>
         <translation>输入以 LDraw 单位表示的 X 平移，或以度为单位的旋转。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1018"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1019"/>
         <source>Transform Y</source>
         <translation>变换 Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1019"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1020"/>
         <source>Enter the Y translation in LDraw units or rotation in degrees.</source>
         <translation>输入以 LDraw 单位表示的 Y 平移，或以度为单位的旋转。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1024"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1025"/>
         <source>Transform Z</source>
         <translation>变换 Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1025"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1026"/>
         <source>Enter the Z translation in LDraw units or rotation in degrees.</source>
         <translation>输入以 LDraw 单位表示的 Z 平移，或以度为单位的旋转。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1092"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1093"/>
         <source>Steps</source>
         <translation>步骤</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1094"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1095"/>
         <source>&lt;p&gt;&lt;b&gt;Steps&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;步骤&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择一个步骤使其成为当前步骤，或选择零件行以在模型中选中这些零件。可以在步骤之间拖动零件，或在步骤内重新排序。关键帧行标明某一步骤中带动画关键帧的对象，双击会在该处选中该对象并显示关键帧面板。右键点击可使用插入、移除、移动步骤和可见性命令。&lt;/p&gt;</translation>
     </message>
@@ -18924,12 +18940,12 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;时间轴&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择一个步骤以使其成为当前步骤，或选择零件行以选择模型中的这些零件。在步骤之间拖动零件或在步骤内对它们重新排序。右键单击可执行步骤插入、删除、移动和可见性命令。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1113"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1114"/>
         <source>Minifigure Builder</source>
         <translation>人仔构建器</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1131"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1132"/>
         <source>Explode</source>
         <translation>分解</translation>
     </message>
@@ -18938,7 +18954,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;分解&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将其他每个可见零件（或仅所选零件）按其到锚点距离的 X、Y、Z 百分比远离锚点散开。每个零件沿固定它的连接滑出。收拢或撤销可将零件放回，保存副本会将分解后的模型保存到单独的文件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1144"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1145"/>
         <source>Joints</source>
         <translation>关节</translation>
     </message>
@@ -18947,7 +18963,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;关节&lt;/b&gt;&lt;/p&gt;&lt;p&gt;所选子模型上选取的关节及其轴，以及一棵树，列出每个带关节的模型、其带关节的子模型和它们的关节。选取关节可移动或旋转它，删除关节可使其恢复静止。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1153"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1154"/>
         <source>Poses</source>
         <translation>姿势</translation>
     </message>
@@ -18956,7 +18972,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;姿势&lt;/b&gt;&lt;/p&gt;&lt;p&gt;在关节面板中选取的模型的姿势。将关节角度保存为命名姿势，然后可调用、重命名或删除。姿势随模型一起保存。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1162"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1163"/>
         <source>Keyframes</source>
         <translation>关键帧</translation>
     </message>
@@ -18986,33 +19002,33 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;预览&lt;/b&gt;&lt;/p&gt;&lt;p&gt;检查零件而不将其放入模型中。双击零件停靠区中的零件进行预览。当源选择发生变化时，锁定预览保持当前预览；解锁它以允许更新。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1214"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1215"/>
         <source>Asset loading failed</source>
         <translation>资源加载失败</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="583"/>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="679"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="568"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="664"/>
         <source>Could not load part.</source>
         <translation>无法加载零件。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="605"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="590"/>
         <source>Could not generate geometry.</source>
         <translation>无法生成几何图形。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="619"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="604"/>
         <source>Regenerating synthesized part geometry.</source>
         <translation>正在重新生成合成零件几何体。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="621"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="606"/>
         <source>Loading model parts (%1 / %2).</source>
         <translation>正在加载模型零件（%1 / %2）。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="628"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="613"/>
         <source>The model could not be fully loaded. Some parts may be missing.
 
 %1</source>
@@ -19024,7 +19040,7 @@ Choose where to save it and download the latest %3 now?</source>
 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="863"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="848"/>
         <source>Close Other Tabs</source>
         <translation>关闭其他标签页</translation>
     </message>
@@ -19081,7 +19097,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>迁移后的模型会连同 StudWorx 元命令一起保存，LeoCAD 随后会忽略其中的相机、灯光、组和零件设置。保持原样的模型在 LeoCAD 中仍可读取。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="967"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="952"/>
         <source>Export HTML</source>
         <translation>导出 HTML</translation>
     </message>
@@ -19091,17 +19107,17 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">POV-Ray 导出</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1174"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1159"/>
         <source>Save Image</source>
         <translation>保存图像</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1186"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1171"/>
         <source>Nothing to select.</source>
         <translation>没有可选择的内容。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1186"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1171"/>
         <source>Select Objects</source>
         <translation>选择物体</translation>
     </message>
@@ -19161,7 +19177,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>着色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="465"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="467"/>
         <source>Wireframe</source>
         <translation>线框</translation>
     </message>
@@ -19171,7 +19187,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>平坦着色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="467"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="465"/>
         <source>Default Lights</source>
         <translation>默认光照</translation>
     </message>
@@ -19361,87 +19377,87 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>&lt;p&gt;&lt;b&gt;预览&lt;/b&gt;&lt;/p&gt;&lt;p&gt;查看零件或模型而不将其放入模型中。双击零件停靠栏中的零件即可预览。锁定预览会在源选择更改时保持当前预览；解锁后允许更新。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="676"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="661"/>
         <source>Found through BrickLink number %1</source>
         <translation>通过 BrickLink 编号 %1 找到</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="684"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="669"/>
         <source>Marked as an alias in the parts library.</source>
         <translation>在零件库中被标记为别名。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="685"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="670"/>
         <source>The part the alias stands for</source>
         <translation>该别名所代表的零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="690"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="675"/>
         <source>Marked as moved in the parts library.</source>
         <translation>在零件库中被标记为已移动。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="691"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="676"/>
         <source>The part it moved to</source>
         <translation>它所移至的零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="975"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="960"/>
         <source>Export POV-Ray</source>
         <translation>导出 POV-Ray</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1060"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1045"/>
         <source>Print</source>
         <translation>打印</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1060"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1045"/>
         <source>Could not start the print job.</source>
         <translation>无法启动打印任务。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1093"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1078"/>
         <source>Preview...</source>
         <translation>预览...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1323"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1308"/>
         <source>Insert Color</source>
         <translation>插入颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1325"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1310"/>
         <source>Current Color</source>
         <translation>当前颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1326"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1311"/>
         <source>Selected Part Color</source>
         <translation>选定零件颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1327"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1312"/>
         <source>Last Inserted Part Color</source>
         <translation>上次插入的零件颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1329"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1314"/>
         <source>Lock Parts Color</source>
         <translation>锁定零件颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1377"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1357"/>
         <source>Custom Rotation Snap</source>
         <translation>自定义旋转吸附</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1377"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1357"/>
         <source>Snap angle in degrees</source>
         <translation>吸附角度，单位为度</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1389"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1369"/>
         <source>Custom (%1 Degrees)...</source>
         <translation>自定义 (%1 度)...</translation>
     </message>
@@ -19832,7 +19848,6 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>8凸</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1353"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="147"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="153"/>
         <source>None</source>
@@ -19908,57 +19923,57 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>正交</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1238"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1239"/>
         <source>Selection</source>
         <translation>选择</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1239"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1240"/>
         <source>View Orientation</source>
         <translation>视图方向</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1240"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1241"/>
         <source>Position</source>
         <translation>位置</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1241"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1242"/>
         <source>Snap and Transform</source>
         <translation>吸附与变换</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1242"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1243"/>
         <source>Step</source>
         <translation>步骤</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1131"/>
+        <location filename="../../source/interface/window/sw_window_utilities_panels.cpp" line="124"/>
         <source>Scroll the model tabs left.</source>
         <translation>向左滚动模型标签页。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1131"/>
+        <location filename="../../source/interface/window/sw_window_utilities_panels.cpp" line="124"/>
         <source>Scroll the model tabs right.</source>
         <translation>向右滚动模型标签页。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1132"/>
+        <location filename="../../source/interface/window/sw_window_utilities_panels.cpp" line="125"/>
         <source>Scroll Tabs Left</source>
         <translation>向左滚动标签页</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1132"/>
+        <location filename="../../source/interface/window/sw_window_utilities_panels.cpp" line="125"/>
         <source>Scroll Tabs Right</source>
         <translation>向右滚动标签页</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1133"/>
+        <location filename="../../source/interface/window/sw_window_utilities_panels.cpp" line="126"/>
         <source>&lt;p&gt;&lt;b&gt;Scroll Tabs Left&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the model tabs hidden on the left when they do not all fit.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;向左滚动标签页&lt;/b&gt;&lt;/p&gt;&lt;p&gt;当模型标签页无法全部容纳时，显示左侧隐藏的标签页。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1133"/>
+        <location filename="../../source/interface/window/sw_window_utilities_panels.cpp" line="126"/>
         <source>&lt;p&gt;&lt;b&gt;Scroll Tabs Right&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the model tabs hidden on the right when they do not all fit.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;向右滚动标签页&lt;/b&gt;&lt;/p&gt;&lt;p&gt;当模型标签页无法全部容纳时，显示右侧隐藏的标签页。&lt;/p&gt;</translation>
     </message>
@@ -19966,7 +19981,7 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swMeshLoader</name>
     <message>
-        <location filename="../../source/library/sw_loader_mesh.cpp" line="1681"/>
+        <location filename="../../source/library/sw_loader_mesh.cpp" line="1664"/>
         <source>Could not load included file &apos;%1&apos;.</source>
         <translation>无法加载包含的文件 &apos;%1&apos;。</translation>
     </message>
@@ -20597,8 +20612,8 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="761"/>
         <location filename="../../source/core/sw_model_clipboard.cpp" line="175"/>
-        <location filename="../../source/core/sw_model_group.cpp" line="73"/>
-        <location filename="../../source/core/sw_model_group.cpp" line="110"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="61"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="98"/>
         <source>No parts selected.</source>
         <translation>未选择任何零件。</translation>
     </message>
@@ -20717,7 +20732,7 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/core/sw_model_file.cpp" line="1067"/>
-        <location filename="../../source/core/sw_model_group.cpp" line="77"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="65"/>
         <source>Group </source>
         <translation>组 </translation>
     </message>
@@ -20808,35 +20823,35 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">移除步骤</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_group.cpp" line="73"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="61"/>
         <source>Group Selection</source>
         <translation>编组所选</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_group.cpp" line="101"/>
-        <location filename="../../source/core/sw_model_group.cpp" line="204"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="89"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="192"/>
         <source>Group</source>
         <translation>组</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_group.cpp" line="110"/>
-        <location filename="../../source/core/sw_model_group.cpp" line="144"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="98"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="132"/>
         <source>Ungroup Selection</source>
         <translation>解组所选</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_group.cpp" line="144"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="132"/>
         <source>No groups selected.</source>
         <translation>未选择组。</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_group.cpp" line="167"/>
-        <location filename="../../source/core/sw_model_group.cpp" line="238"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="155"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="226"/>
         <source>Ungroup</source>
         <translation>解组</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_group.cpp" line="291"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="279"/>
         <source>Edit Groups</source>
         <translation>编辑组</translation>
     </message>
@@ -21249,8 +21264,8 @@ Choose where to save it and download the latest %3 now?</source>
         </translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="536"/>
-        <location filename="../../source/core/sw_model_joints.cpp" line="686"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="603"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="753"/>
         <source>Set Joint</source>
         <translation>设置关节</translation>
     </message>
@@ -21260,33 +21275,33 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>调用姿势</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="629"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="696"/>
         <source>Turn Joint</source>
         <translation>转动关节</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="642"/>
-        <location filename="../../source/core/sw_model_joints.cpp" line="653"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="709"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="720"/>
         <source>Joint Axis</source>
         <translation>关节轴</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="668"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="735"/>
         <source>Lock Joint</source>
         <translation>锁定关节</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="668"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="735"/>
         <source>Unlock Joint</source>
         <translation>解锁关节</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="700"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="767"/>
         <source>Delete Joint</source>
         <translation>删除关节</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="718"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="785"/>
         <source>Delete All Joints</source>
         <translation>删除所有关节</translation>
     </message>
@@ -24009,17 +24024,17 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">打开 LGEO 文件夹</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1368"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1396"/>
         <source>Reset Colors</source>
         <translation>重置颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1368"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1396"/>
         <source>Would you like to also reset the interface colors to match the color theme?</source>
         <translation>是否同时重置界面颜色以匹配颜色主题？</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1382"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1410"/>
         <source>Select Background Color</source>
         <translation>选择背景颜色</translation>
     </message>
@@ -24036,7 +24051,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">选择坐标轴颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="904"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="931"/>
         <source>&apos;%1&apos; did not run as Blender, so Blender rendering stays unavailable.
 
 %2</source>
@@ -24045,297 +24060,297 @@ Unsupported video cards use face tint and colored edges.</source>
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1069"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1097"/>
         <source>Select Parts Library</source>
         <translation>选择零件库</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1085"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1113"/>
         <source>Select Unofficial Library Archive</source>
         <translation>选择非官方库压缩包</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1093"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1121"/>
         <source>Select Part Connections Folder</source>
         <translation>选择零件连接文件夹</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1255"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1283"/>
         <source>Choose Minifigure Builder Settings</source>
         <translation>选择人仔拼装器设置</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1268"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1296"/>
         <source>Save Minifigure Builder Settings</source>
         <translation>保存人仔拼装器设置</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1285"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1313"/>
         <source>Saved the latest minifigure builder settings to &apos;%1&apos;.</source>
         <translation>已将最新的人仔拼装器设置保存到 &apos;%1&apos;。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1290"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1318"/>
         <source>Select BrickLink Mapping File</source>
         <translation>选择 BrickLink 映射文件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1069"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1097"/>
         <source>Parts Library Files (*.zip *.bin LDConfig.ldr ldconfig.ldr);;All Files (*)</source>
         <translation>零件库文件 (*.zip *.bin LDConfig.ldr ldconfig.ldr);;所有文件 (*)</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="610"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="637"/>
         <source>%n plate(s)</source>
         <translation>
             <numerusform>%n 板</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1085"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1113"/>
         <source>Supported Archives (*.zip);;All Files (*)</source>
         <translation>支持的压缩包 (*.zip);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1105"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1133"/>
         <source>Downloading the LDCad shadow library...</source>
         <translation>正在下载 LDCad 阴影库...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1112"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1140"/>
         <source>Could not download the LDCad shadow library from %1.</source>
         <translation>无法从 %1 下载 LDCad 阴影库。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1255"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1268"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1283"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1296"/>
         <source>Settings Files (*.ini);;All Files (*)</source>
         <translation>设置文件 (*.ini);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1290"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1318"/>
         <source>Mapping Files (*.txt *.json);;All Files (*)</source>
         <translation>映射文件 (*.txt *.json);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1326"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1340"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1354"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1368"/>
         <source>Executable Files (*.exe);;All Files (*)</source>
         <translation>可执行文件 (*.exe);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1328"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1342"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1356"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1370"/>
         <source>All Files (*)</source>
         <translation>所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1345"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1373"/>
         <source>Select Blender Executable</source>
         <translation>选择 Blender 可执行文件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1353"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1381"/>
         <source>Select LGEO Folder</source>
         <translation>选择 LGEO 文件夹</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1387"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1415"/>
         <source>Select Text Color</source>
         <translation>选择文本颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1392"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1420"/>
         <source>Select Connection Points Color</source>
         <translation>选择连接点颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1398"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1426"/>
         <source>Select Text Halo Color</source>
         <translation>选择文本光晕颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1404"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1432"/>
         <source>Select Marquee Border Color</source>
         <translation>选择选框边框颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1409"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1437"/>
         <source>Select Marquee Fill Color</source>
         <translation>选择选框填充颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1415"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1443"/>
         <source>Select Overlay Color</source>
         <translation>选择叠加色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1420"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1448"/>
         <source>Select Explode Lines Color</source>
         <translation>选择分解线颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1426"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1454"/>
         <source>Select Axis Icon Outline Color</source>
         <translation>选择坐标轴图标轮廓颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1432"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1460"/>
         <source>Select Cutaway Shade Color</source>
         <translation>选择剖切着色颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1438"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1466"/>
         <source>Select Element Margin Color</source>
         <translation>选择元素外边距颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1444"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1472"/>
         <source>Select Element Padding Color</source>
         <translation>选择元素内边距颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1450"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1478"/>
         <source>Select Element Anchor Color</source>
         <translation>选择元素锚点颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1456"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1484"/>
         <source>Select Ruler Pointer Color</source>
         <translation>选择标尺指针颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1462"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1490"/>
         <source>Select Active View Color</source>
         <translation>选择活动视图颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1467"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1495"/>
         <source>Select Inactive View Color</source>
         <translation>选择非活动视图颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1472"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1500"/>
         <source>Select Fade Color</source>
         <translation>选择淡化颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1478"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1506"/>
         <source>Select Edit Fade Color</source>
         <translation>选择编辑淡化颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1484"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1512"/>
         <source>Select Joint Fade Color</source>
         <translation>选择关节淡化颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1490"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1518"/>
         <source>Select Hover Outline Color</source>
         <translation>选择悬停轮廓颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1495"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1523"/>
         <source>Select Highlight Color</source>
         <translation>选择高亮颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1501"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1529"/>
         <source>Select Grid Stud Color</source>
         <translation>选择网格凸点颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1507"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1535"/>
         <source>Select Grid Line Color</source>
         <translation>选择网格线颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1512"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1540"/>
         <source>Select View Cube Color</source>
         <translation>选择视图立方体颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1517"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1545"/>
         <source>Select View Cube Text Color</source>
         <translation>选择视图立方体文本颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1522"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1550"/>
         <source>Select View Cube Highlight Color</source>
         <translation>选择视图立方体高亮颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1527"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1555"/>
         <source>Select X Axis Color</source>
         <translation>选择 X 轴颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1532"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1560"/>
         <source>Select Y Axis Color</source>
         <translation>选择 Y 轴颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1537"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1565"/>
         <source>Select Z Axis Color</source>
         <translation>选择 Z 轴颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1557"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1585"/>
         <source>Select Object Selected Color</source>
         <translation>选择选定物体颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1562"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1590"/>
         <source>Select Object Focused Color</source>
         <translation>选择焦点物体颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1567"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1595"/>
         <source>Select Object Deactivated Color</source>
         <translation>选择停用对象颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1573"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1601"/>
         <source>Select Camera Color</source>
         <translation>选择相机颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1578"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1606"/>
         <source>Select Light Color</source>
         <translation>选择光源颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1583"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1611"/>
         <source>Select Control Point Color</source>
         <translation>选择控制点颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1589"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1617"/>
         <source>Select Control Point Focused Color</source>
         <translation>选择焦点控制点颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1595"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1623"/>
         <source>Select Control Point Seated Color</source>
         <translation>选择控制点就位颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1601"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1629"/>
         <source>Select Flex Path Spread Handle Color</source>
         <translation>选择柔性路径扩展手柄颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1607"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1635"/>
         <source>Select Flex Path Color</source>
         <translation>选择柔性路径颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1613"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1641"/>
         <source>Select Flex Path Out of Reach Color</source>
         <translation>选择柔性路径超出范围颜色</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1668"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1696"/>
         <source>%n stud(s)</source>
         <translation>
             <numerusform>%n 凸点</numerusform>
@@ -24750,12 +24765,12 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>覆盖快捷键</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="657"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="684"/>
         <source>Default Lights is unavailable. Flat shading is used instead.</source>
         <translation>默认光照不可用，已改用平坦着色。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="684"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="711"/>
         <source>View cube rendering is unavailable.</source>
         <translation>视图立方体渲染不可用。</translation>
     </message>
@@ -24765,7 +24780,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="obsolete">轮廓渲染不可用。将使用面部色彩和彩色边缘。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1331"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1359"/>
         <source>Select POV-Ray Executable</source>
         <translation>选择 POV-Ray 可执行文件</translation>
     </message>
@@ -24986,7 +25001,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>高亮样式</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="706"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="733"/>
         <source>Outline rendering is unavailable; the Tint and Edges style will be used.</source>
         <translation>轮廓渲染不可用，将使用“着色与边线”样式。</translation>
     </message>
@@ -25077,9 +25092,8 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>在原点插入首个零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose how the Default Lights shading mode lights parts in every view: Standard uses one light with a soft highlight, Studio adds fill and rim lights, Matte drops the highlights and Toon uses flat cel shading bands.</source>
-        <translation>选择“默认灯光”着色模式在每个视图中如何为零件打光：“标准”使用一盏带柔和高光的灯，“影棚”增加补光和轮廓光，“哑光”去掉高光，“卡通”使用平涂的赛璐珞色带。</translation>
+        <translation type="vanished">选择“默认灯光”着色模式在每个视图中如何为零件打光：“标准”使用一盏带柔和高光的灯，“影棚”增加补光和轮廓光，“哑光”去掉高光，“卡通”使用平涂的赛璐珞色带。</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25618,7 +25632,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>负 X 轴颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1542"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1570"/>
         <source>Select Negative X Axis Color</source>
         <translation>选择负 X 轴颜色</translation>
     </message>
@@ -25633,7 +25647,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>负 Y 轴颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1547"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1575"/>
         <source>Select Negative Y Axis Color</source>
         <translation>选择负 Y 轴颜色</translation>
     </message>
@@ -25648,7 +25662,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>负 Z 轴颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1552"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1580"/>
         <source>Select Negative Z Axis Color</source>
         <translation>选择负 Z 轴颜色</translation>
     </message>
@@ -25693,8 +25707,8 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>以负轴颜色绘制轴线的负半部分，Z 轴线延伸到基础网格下方。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="592"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1713"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="619"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1741"/>
         <source>%1 ldu</source>
         <translation>%1 ldu</translation>
     </message>
@@ -26105,7 +26119,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1134"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1162"/>
         <source>Update</source>
         <translation>更新</translation>
     </message>
@@ -26176,7 +26190,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1263"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1291"/>
         <source>Update Minifigure Builder Settings</source>
         <translation>更新人仔构建器设置</translation>
     </message>
@@ -26257,7 +26271,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="904"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="931"/>
         <source>Blender Executable</source>
         <translation>Blender 可执行文件</translation>
     </message>
@@ -26724,7 +26738,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1102"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1130"/>
         <source>Download Part Connections</source>
         <translation>下载零件连接</translation>
     </message>
@@ -26735,7 +26749,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1134"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1162"/>
         <source>Download</source>
         <translation>下载</translation>
     </message>
@@ -26843,6 +26857,26 @@ Unsupported video cards use face tint and colored edges.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Select Joints in View</source>
         <translation>在视图中选择关节</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Joints</source>
+        <translation>关节</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>In the joint overview, click anywhere on a jointed submodel to open its nearest joint, not only the outlined part at its pivot.</source>
+        <translation>在关节概览中，点击带关节子模型的任意位置即可打开其最近的关节，而不只是其枢轴处描边的零件。</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Select Joints by Submodel</source>
+        <translation>按子模型选择关节</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Choose how the Default Lights shading mode lights parts in every view: Studio adds fill and rim lights to the soft highlight, Standard uses one light with a soft highlight, Matte drops the highlights and Toon uses flat cel shading bands.</source>
+        <translation>选择“默认灯光”着色模式在每个视图中如何为零件打光：“影棚”在柔和高光上增加补光和轮廓光，“标准”使用一盏带柔和高光的灯，“哑光”去掉高光，“卡通”使用平涂的赛璐珞色带。</translation>
     </message>
 </context>
 <context>
@@ -28120,12 +28154,12 @@ N/A：%1 个零件</translation>
 <context>
     <name>swRebrickable</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="27"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="25"/>
         <source>Rebrickable API Key</source>
         <translation>Rebrickable API 密钥</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="27"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="25"/>
         <source>%1
 Enter your Rebrickable API key, free from your account settings at rebrickable.com.
 It can be modified under Preferences &gt; General &gt; Online Services.</source>
@@ -28138,10 +28172,10 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <name>swRenderDialog</name>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="423"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="799"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="860"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1631"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="420"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="796"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="857"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1621"/>
         <source>Render</source>
         <translation>渲染</translation>
     </message>
@@ -28170,7 +28204,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;查看日志&lt;/b&gt;&lt;/p&gt;&lt;p&gt;打开渲染器输出以调查失败的渲染或警告。捕获日志后，此按钮将变为可用。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="433"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="430"/>
         <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Start the render using the current settings. While rendering, this button becomes Cancel so you can stop the operation.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;渲染&lt;/b&gt;&lt;/p&gt;&lt;p&gt;使用当前设置开始渲染。渲染时，此按钮变为“取消”，以便您可以停止操作。&lt;/p&gt;</translation>
     </message>
@@ -28210,8 +28244,8 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="obsolete">Blender 导入设置</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="985"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1973"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="982"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1963"/>
         <source>Open in Blender</source>
         <translation>在 Blender 中打开</translation>
     </message>
@@ -28221,7 +28255,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="obsolete">在 Blender 中导入并打开 LDraw 模型</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1784"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1774"/>
         <source>Exporting Model</source>
         <translation>正在导出模型</translation>
     </message>
@@ -28236,7 +28270,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;POV-Ray 图像渲染&lt;/b&gt;&lt;/p&gt;&lt;p&gt;使用 POV-Ray 渲染当前模型步骤。选择输出图像，然后使用“设置”来设置其尺寸和质量。选择“渲染”开始。&lt;/p&gt;&lt;p&gt;预览将缩放以适合对话框。查看日志显示可用的诊断输出。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="449"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="446"/>
         <source>Render the current model step with POV-Ray.</source>
         <translation>使用 POV-Ray 渲染当前模型步骤。</translation>
     </message>
@@ -28261,7 +28295,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Blender 设置&lt;/b&gt;&lt;/p&gt;&lt;p&gt;配置 Blender 可执行文件、LDraw 导入模块、库路径和渲染设置。在渲染或打开模型之前，必须配置 Blender 和导入模块。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1020"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1017"/>
         <source>Render the current model step with Blender.</source>
         <translation>使用 Blender 渲染当前模型步骤。</translation>
     </message>
@@ -28286,875 +28320,875 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;在 Blender 中打开&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将当前模型步骤导入 Blender 中进行编辑。如果此操作不可用，请通过“设置”配置 Blender 及其 LDraw 导入插件。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1019"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1016"/>
         <source>Import the current model step and open it in Blender.</source>
         <translation>导入当前模型步骤并在 Blender 中打开它。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="574"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="571"/>
         <source> px</source>
         <translation> 像素</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="447"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="444"/>
         <source>POV-Ray Render</source>
         <translation>POV-Ray 渲染</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="448"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="445"/>
         <source>&lt;p&gt;&lt;b&gt;POV-Ray Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the current model step using POV-Ray. Choose the output image, its size and quality and the scene in the panels beside the preview, then select Render to start.&lt;/p&gt;&lt;p&gt;The preview is scaled to fit the window. Log shows the renderer output below the preview.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;POV-Ray 渲染&lt;/b&gt;&lt;/p&gt;&lt;p&gt;使用 POV-Ray 渲染当前模型步骤。在预览旁边的面板中选择输出图像、尺寸、质量和场景，然后选择“渲染”开始。&lt;/p&gt;&lt;p&gt;预览会缩放以适应窗口。“日志”会在预览下方显示渲染器的输出。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="453"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="450"/>
         <source>Blender Render</source>
         <translation>Blender 渲染</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="454"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="451"/>
         <source>&lt;p&gt;&lt;b&gt;Blender Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the current model step with Blender and the bundled LDraw add-ons. Choose the output image, its size and the scene, parts and editing settings in the panels beside the preview, then select Render to start, or Open in Blender to edit the model there.&lt;/p&gt;&lt;p&gt;Set the Blender executable in Preferences, General first. Log shows the Blender output below the preview.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Blender 渲染&lt;/b&gt;&lt;/p&gt;&lt;p&gt;使用 Blender 和内置的 LDraw 附加组件渲染当前模型步骤。在预览旁边的面板中选择输出图像、尺寸，以及场景、零件和编辑设置，然后选择“渲染”开始，或选择“在 Blender 中打开”在其中编辑模型。&lt;/p&gt;&lt;p&gt;请先在 偏好设置 的“常规”中设置 Blender 可执行文件。“日志”会在预览下方显示 Blender 的输出。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="585"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="582"/>
         <source>Presets</source>
         <translation>预设</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="585"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="582"/>
         <source>&lt;p&gt;&lt;b&gt;Presets&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep the image size, quality and scene settings under a name and bring them back with one choice. Save stores the current settings as a preset and Delete removes the chosen one.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;预设&lt;/b&gt;&lt;/p&gt;&lt;p&gt;以名称保存图像尺寸、质量和场景设置，一次选择即可恢复。“保存”会将当前设置存为预设，“删除”会移除所选预设。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="589"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="586"/>
         <source>Preset</source>
         <translation>预设</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="589"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="586"/>
         <source>Choose a preset to apply its image size, quality and scene settings.</source>
         <translation>选择一个预设以应用其图像尺寸、质量和场景设置。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="614"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="611"/>
         <source>Save...</source>
         <translation>保存...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="614"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="611"/>
         <source>Save the current image size, quality and scene settings as a preset.</source>
         <translation>将当前的图像尺寸、质量和场景设置保存为预设。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="615"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="612"/>
         <source>Delete...</source>
         <translation>删除...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="615"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="612"/>
         <source>Delete the chosen preset.</source>
         <translation>删除所选预设。</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="618"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="615"/>
         <source>Output</source>
         <translation>输出</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="618"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="615"/>
         <source>&lt;p&gt;&lt;b&gt;Output&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose where the rendered image is saved and its format, such as PNG, JPEG, or BMP.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;输出&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择渲染图像的保存位置及其格式，例如 PNG、JPEG 或 BMP。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="621"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="618"/>
         <source>File</source>
         <translation>文件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="626"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="623"/>
         <source>Image</source>
         <translation>图像</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="626"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="623"/>
         <source>&lt;p&gt;&lt;b&gt;Image&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the size of the rendered image in pixels and the rendering quality. Larger images and higher quality take longer to render.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;图像&lt;/b&gt;&lt;/p&gt;&lt;p&gt;设置渲染图像的像素尺寸和渲染质量。图像越大、质量越高，渲染所需时间越长。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="631"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="628"/>
         <source>Width</source>
         <translation>宽度</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="635"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="632"/>
         <source>Height</source>
         <translation>高度</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="759"/>
         <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set how much detail Blender gives the parts. More detail looks better and takes longer to import and render.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;零件&lt;/b&gt;&lt;/p&gt;&lt;p&gt;设置 Blender 赋予零件的细节程度。细节越多外观越好，但导入和渲染所需时间越长。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="799"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="796"/>
         <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the image or open the model in Blender, then follow the progress here. Log shows the Blender output below the preview.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;渲染&lt;/b&gt;&lt;/p&gt;&lt;p&gt;渲染图像或在 Blender 中打开模型，然后在此跟踪进度。日志会在预览下方显示 Blender 的输出。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="805"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="802"/>
         <source>Quality</source>
         <translation>质量</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="805"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="802"/>
         <source>&lt;p&gt;&lt;b&gt;Quality&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Low uses POV-Ray&apos;s default quality without additional antialiasing options. Medium uses quality level 5 with antialiasing and fast radiosity. High uses quality level 11 with additional antialiasing settings and full radiosity.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;质量&lt;/b&gt;&lt;/p&gt;&lt;p&gt;“低”使用 POV-Ray 的默认质量，不带额外的抗锯齿选项。“中”使用质量等级 5，带抗锯齿和快速辐射度。“高”使用质量等级 11，带额外的抗锯齿设置和完整辐射度。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="811"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="808"/>
         <source>Full Image</source>
         <translation>完整图像</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="811"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="808"/>
         <source>Region</source>
         <translation>局部</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="812"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="809"/>
         <source>Area</source>
         <translation>区域</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="812"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="809"/>
         <source>Choose whether the whole image is rendered or only a region drawn on the preview.</source>
         <translation>选择渲染整个图像，还是仅渲染在预览上框选的局部区域。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="812"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="809"/>
         <source>&lt;p&gt;&lt;b&gt;Area&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Full Image renders the whole image. Region renders only the part outlined on the preview and leaves the rest of the image transparent. Drag on the preview to draw the region, hold Ctrl to draw a square, drag its edges or corners to resize it, drag inside it to move it, and drag outside it to draw a new one.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;区域&lt;/b&gt;&lt;/p&gt;&lt;p&gt;“完整图像”渲染整个图像。“局部”只渲染预览上框出的部分，图像的其余部分保持透明。在预览上拖动可框选局部，按住 Ctrl 可绘制正方形，拖动其边缘或角可调整大小，在其内部拖动可移动，在其外部拖动可重新框选。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="814"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="811"/>
         <source>Batch</source>
         <translation>批量</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="814"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="811"/>
         <source>&lt;p&gt;&lt;b&gt;Batch&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render several images in one go, one for each building step or each camera of the model. Each image is saved next to the output file with the step number or camera name added to its name.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;批量&lt;/b&gt;&lt;/p&gt;&lt;p&gt;一次渲染多张图像，模型的每个步骤或每个相机各一张。每张图像都保存在输出文件旁，并在名称中加上步骤编号或相机名称。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="817"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="814"/>
         <source>Model</source>
         <translation>模型</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="817"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="814"/>
         <source>Current Step</source>
         <translation>当前步骤</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="817"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="814"/>
         <source>All Steps</source>
         <translation>所有步骤</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="818"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="815"/>
         <source>Steps</source>
         <translation>步骤</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="818"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="815"/>
         <source>Choose whether the finished model, the current step or every step is rendered.</source>
         <translation>选择渲染完成的模型、当前步骤还是所有步骤。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="818"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="815"/>
         <source>&lt;p&gt;&lt;b&gt;Steps&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Model renders the finished model. Current Step renders the model as built up to the step shown in the main window. All Steps renders one image for every step, numbered after the step.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;步骤&lt;/b&gt;&lt;/p&gt;&lt;p&gt;“模型”渲染完成的模型。“当前步骤”渲染到主窗口所显示步骤为止的模型。“所有步骤”为每个步骤渲染一张图像，并按步骤编号命名。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="821"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="818"/>
         <source>Cameras</source>
         <translation>相机</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="821"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="818"/>
         <source>Choose the view or a camera of the model to render from, or every camera.</source>
         <translation>选择渲染所用的视图或某个相机，或所有相机。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="821"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="818"/>
         <source>&lt;p&gt;&lt;b&gt;Cameras&lt;/b&gt;&lt;/p&gt;&lt;p&gt;View renders from the view of the main window. A camera renders from that camera of the model. All Cameras renders one image for every camera, named after the camera.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;相机&lt;/b&gt;&lt;/p&gt;&lt;p&gt;“视图”从主窗口的视图渲染。选择某个相机则从模型的该相机渲染。“所有相机”为每个相机渲染一张图像，并以相机名称命名。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="824"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1081"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="739"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="821"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1078"/>
         <source>Scene</source>
         <translation>场景</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="827"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="824"/>
         <source>LDraw</source>
         <translation>LDraw</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="827"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="824"/>
         <source>LGEO</source>
         <translation>LGEO</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="762"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="828"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="759"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="825"/>
         <source>Parts</source>
         <translation>零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="828"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="825"/>
         <source>Choose whether the model is rendered with LDraw parts or the modeled LGEO parts.</source>
         <translation>选择使用 LDraw 零件还是建模的 LGEO 零件来渲染模型。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="828"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="825"/>
         <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;LDraw renders the parts of the parts library. LGEO replaces the parts it has with the smooth modeled parts of the LGEO library by Lutz Uhlmann, StudWorx offers to download it the first time. Models that ask for LGEO in their file always use it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;零件&lt;/b&gt;&lt;/p&gt;&lt;p&gt;“LDraw”渲染零件库中的零件。“LGEO”会将其已有的零件替换为 Lutz Uhlmann 的 LGEO 库中平滑的建模零件，StudWorx 会在首次使用时提示下载。文件中要求使用 LGEO 的模型始终会使用它。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="830"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="827"/>
         <source>Standard</source>
         <translation>标准</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="430"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1069"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="427"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1066"/>
         <source>Editor</source>
         <translation>编辑器</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="706"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="767"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="807"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="703"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="804"/>
         <source>Off</source>
         <translation>关</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="718"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="715"/>
         <source>Overwrite Image</source>
         <translation>覆盖图像</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="718"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="715"/>
         <source>Replace an existing image file of the same name.</source>
         <translation>替换同名的现有图像文件。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="719"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="716"/>
         <source>Transparent Background</source>
         <translation>透明背景</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="719"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="716"/>
         <source>Leave the background as transparent pixels for compositing.</source>
         <translation>将背景保留为透明像素，便于合成。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="719"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="716"/>
         <source>&lt;p&gt;&lt;b&gt;Transparent Background&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Renders the background as transparent pixels for compositing. The ground plane added by Add Environment stays visible.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;透明背景&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将背景渲染为透明像素，便于合成。“添加环境”所添加的地面仍然可见。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="721"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="718"/>
         <source>Crop Image</source>
         <translation>裁剪图像</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="721"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="718"/>
         <source>Crop the image to the visible model, needs Transparent Background.</source>
         <translation>将图像裁剪到可见的模型，需要启用“透明背景”。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="721"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="718"/>
         <source>&lt;p&gt;&lt;b&gt;Crop Image&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cuts the transparent border off the rendered image so it ends at the visible model. Needs Transparent Background.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;裁剪图像&lt;/b&gt;&lt;/p&gt;&lt;p&gt;裁掉渲染图像的透明边框，使其刚好到可见模型为止。需要启用“透明背景”。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="733"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="749"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="730"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="746"/>
         <source> %</source>
         <translation> %</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="735"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="732"/>
         <source>Scale</source>
         <translation>缩放比例</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="735"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="732"/>
         <source>Render at a percentage of the image size for quick test renders.</source>
         <translation>按图像尺寸的百分比渲染，用于快速试渲染。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="739"/>
         <source>&lt;p&gt;&lt;b&gt;Scene&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the look, colors, camera and lights of the scene Blender renders.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;场景&lt;/b&gt;&lt;/p&gt;&lt;p&gt;设置 Blender 所渲染场景的外观、颜色、相机和灯光。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="744"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="741"/>
         <source>Look</source>
         <translation>外观</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="744"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="741"/>
         <source>Photorealistic</source>
         <translation>照片级真实</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="744"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="741"/>
         <source>LEGO® Instructions</source>
         <translation>LEGO® 说明书</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="744"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="741"/>
         <source>Choose a photorealistic render or the flat look of LEGO® building instructions.</source>
         <translation>选择照片级真实的渲染，或 LEGO® 搭建说明书的平面外观。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="745"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
         <source>Colors</source>
         <translation>颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="745"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
         <source>Realistic</source>
         <translation>真实</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="745"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
         <source>Original LDraw</source>
         <translation>原始 LDraw</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="745"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
         <source>Alternate LDraw</source>
         <translation>备用 LDraw</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="745"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
         <source>Choose the color scheme of the parts.</source>
         <translation>选择零件的配色方案。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="745"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
         <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Realistic uses the colors of the real parts. Original LDraw uses the colors of the parts library. Alternate LDraw uses its alternate colors with lighter edges.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;颜色&lt;/b&gt;&lt;/p&gt;&lt;p&gt;“真实”使用真实零件的颜色。“原始 LDraw”使用零件库的颜色。“备用 LDraw”使用其备用颜色，边缘更浅。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="746"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="743"/>
         <source>Add Environment</source>
         <translation>添加环境</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="746"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="743"/>
         <source>Add a ground plane and a lighting environment, photorealistic look only.</source>
         <translation>添加地面和照明环境，仅限照片级真实外观。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="747"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="744"/>
         <source>Position Camera</source>
         <translation>定位相机</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="747"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="744"/>
         <source>Place the camera so the whole model is in view.</source>
         <translation>放置相机，使整个模型都在视野内。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="750"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="747"/>
         <source>Camera Border</source>
         <translation>相机边距</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="750"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="747"/>
         <source>Leave this border around the model when the camera is placed.</source>
         <translation>放置相机时，在模型周围保留此边距。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="759"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="756"/>
         <source>Import Cameras</source>
         <translation>导入相机</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="759"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="756"/>
         <source>Use the cameras of the model.</source>
         <translation>使用模型中的相机。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="760"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="757"/>
         <source>Import Lights</source>
         <translation>导入灯光</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="760"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="757"/>
         <source>Use the lights of the model.</source>
         <translation>使用模型中的灯光。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="761"/>
         <source>Primitives</source>
         <translation>基元</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="761"/>
         <source>Choose the resolution of the part primitives, how round curved surfaces are.</source>
         <translation>选择零件基元的分辨率，即曲面的圆润程度。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="767"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
         <source>Rounded</source>
         <translation>圆润</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="767"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
         <source>Flattened</source>
         <translation>扁平</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="767"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
         <source>Subtle Rounded</source>
         <translation>微圆润</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="768"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="765"/>
         <source>Logo Studs</source>
         <translation>标志凸点</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="768"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="765"/>
         <source>Show the LEGO® logo on the studs, at the cost of extra geometry and import time.</source>
         <translation>在凸点上显示 LEGO® 标志，代价是额外的几何体和导入时间。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="778"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="775"/>
         <source>Bevel Edges</source>
         <translation>倒角边缘</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="778"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="775"/>
         <source>Round off sharp edges by this width, Off keeps them sharp.</source>
         <translation>按此宽度将锐利的边缘倒圆，“关”则保持锐利。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="779"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="776"/>
         <source>Part Gaps</source>
         <translation>零件间隙</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="779"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="776"/>
         <source> mm</source>
         <translation> mm</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="779"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="776"/>
         <source>Leave this gap between the parts, Off places them touching.</source>
         <translation>在零件之间保留此间隙，“关”则让零件紧贴。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="780"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="777"/>
         <source>Flex Parts</source>
         <translation>柔性零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="780"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="777"/>
         <source>LSynth</source>
         <translation>LSynth</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="780"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="777"/>
         <source>LDCad</source>
         <translation>LDCad</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="780"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="777"/>
         <source>Choose the source that shapes flexible parts such as hoses and string.</source>
         <translation>选择为软管和绳线等柔性零件塑形的来源。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="781"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="778"/>
         <source>Curved Walls</source>
         <translation>弧面</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="781"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="778"/>
         <source>Make surfaces slightly concave for livelier reflections.</source>
         <translation>让表面略微凹陷，使反射更生动。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="782"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="779"/>
         <source>Smooth Shading</source>
         <translation>平滑着色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="782"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="779"/>
         <source>Smooth curved faces and keep sharp edges.</source>
         <translation>平滑曲面并保留锐利边缘。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="784"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="781"/>
         <source>Editing</source>
         <translation>编辑</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="784"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="781"/>
         <source>&lt;p&gt;&lt;b&gt;Editing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set how the model is built up in Blender, which matters most when you edit it after Open in Blender.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;编辑&lt;/b&gt;&lt;/p&gt;&lt;p&gt;设置模型在 Blender 中的构建方式，对在“在 Blender 中打开”之后编辑模型最为重要。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="786"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="783"/>
         <source>Link Like Parts</source>
         <translation>链接相同零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="786"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="783"/>
         <source>Let parts of the same shape and color share one mesh.</source>
         <translation>让形状和颜色相同的零件共用一个网格。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="787"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="784"/>
         <source>Instance Studs</source>
         <translation>实例化凸点</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="787"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="784"/>
         <source>Make every stud its own object, slow for models with many studs.</source>
         <translation>让每个凸点成为独立物体，凸点很多的模型会变慢。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="788"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="785"/>
         <source>Flatten Hierarchy</source>
         <translation>扁平化层次结构</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="788"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="785"/>
         <source>Place all parts directly under the root instead of a tree of submodels.</source>
         <translation>将所有零件直接放在根级下，而不是子模型树中。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="789"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="786"/>
         <source>Parent Minifigures</source>
         <translation>关联人仔零件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="789"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="786"/>
         <source>Parent the parts of each minifigure to each other.</source>
         <translation>将每个人仔的零件互相设为父子关系。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="807"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="804"/>
         <source>On</source>
         <translation>开</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="809"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="806"/>
         <source>Focal Blur</source>
         <translation>焦外模糊</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="809"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="806"/>
         <source>Blur parts nearer or farther than the camera target, like a real camera lens. Takes several times longer to render.</source>
         <translation>模糊比相机目标更近或更远的零件，如同真实的相机镜头。渲染时间会延长数倍。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="809"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="806"/>
         <source>&lt;p&gt;&lt;b&gt;Focal Blur&lt;/b&gt;&lt;/p&gt;&lt;p&gt;On keeps the camera target sharp and blurs the parts in front of it and behind it, like the depth of field of a real camera lens, at any quality. It takes several times longer to render. Orthographic cameras are never blurred.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;焦外模糊&lt;/b&gt;&lt;/p&gt;&lt;p&gt;“开”会保持相机目标清晰，并模糊其前后的零件，如同真实相机镜头的景深，在任何质量下均可使用。渲染时间会延长数倍。正交相机不会被模糊。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="830"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="827"/>
         <source>Studio</source>
         <translation>影棚</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="830"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="827"/>
         <source>Matte</source>
         <translation>哑光</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="832"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="829"/>
         <source>Lights</source>
         <translation>灯光</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="832"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="829"/>
         <source>Choose the lights placed around models that have no lights of their own.</source>
         <translation>选择放置在没有自带灯光的模型周围的灯光。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="832"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="829"/>
         <source>&lt;p&gt;&lt;b&gt;Lights&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Standard uses four point lights with crisp shadows. Studio uses a large soft key light, a fill light and a rim light behind the model. Matte uses a wide overhead light and a shadowless light from the camera for even, soft lighting. Lights placed in the model replace these.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;灯光&lt;/b&gt;&lt;/p&gt;&lt;p&gt;“标准”使用四个点光源，阴影清晰。“影棚”使用一个大而柔和的主光、一个补光和一个位于模型后方的轮廓光。“哑光”使用一个宽阔的顶光和一个来自相机的无阴影光，营造均匀柔和的照明。模型中放置的灯光会取代这些灯光。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="834"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="831"/>
         <source>Plain</source>
         <translation>普通</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="834"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="831"/>
         <source>Shadow Catcher</source>
         <translation>阴影捕捉器</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="834"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="831"/>
         <source>Reflective</source>
         <translation>反光</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="834"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="831"/>
         <source>Cyclorama</source>
         <translation>环形幕</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="836"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="833"/>
         <source>Floor</source>
         <translation>地面</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="836"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="833"/>
         <source>Choose how the floor under the model looks.</source>
         <translation>选择模型下方地面的外观。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="836"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="833"/>
         <source>&lt;p&gt;&lt;b&gt;Floor&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Plain uses the floor color of the model. Shadow Catcher takes the background color so only the shadows show. Reflective adds a glossy mirror finish. Cyclorama fades the floor into the background with distance for a seamless backdrop.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;地面&lt;/b&gt;&lt;/p&gt;&lt;p&gt;“普通”使用模型的地面颜色。“阴影捕捉器”采用背景颜色，因此只显示阴影。“反光”添加光滑的镜面效果。“环形幕”让地面随距离渐隐到背景中，形成无缝的背景幕。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="841"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="838"/>
         <source>Background Color</source>
         <translation>背景颜色</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="843"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="840"/>
         <source>Environment</source>
         <translation>环境</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="843"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="840"/>
         <source>Choose a panoramic image that surrounds and lights the scene, or leave empty to use the background color.</source>
         <translation>选择一张环绕并照亮场景的全景图像，或留空以使用背景颜色。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="843"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="840"/>
         <source>&lt;p&gt;&lt;b&gt;Environment&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose an equirectangular panorama, ideally an HDR or EXR image, that wraps around the scene as its sky and lights it through radiosity at Medium and High quality. Leave empty to use the background color.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;环境&lt;/b&gt;&lt;/p&gt;&lt;p&gt;选择一张等距柱状全景图，最好是 HDR 或 EXR 图像，它会作为天空环绕场景，并在“中”和“高”质量下通过辐射度为场景照明。留空则使用背景颜色。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="847"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="844"/>
         <source>Choose an environment image.</source>
         <translation>选择环境图像。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="849"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="846"/>
         <source>Browse</source>
         <translation>浏览</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="853"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="850"/>
         <source>Visible</source>
         <translation>可见</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="853"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="850"/>
         <source>Transparent</source>
         <translation>透明</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="855"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="852"/>
         <source>Background</source>
         <translation>背景</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="855"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="852"/>
         <source>Choose whether the background and floor are rendered or left as transparent pixels for compositing.</source>
         <translation>选择渲染背景和地面，还是将其保留为透明像素以便合成。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="860"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="857"/>
         <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Start the POV-Ray render, then follow its progress here. Editor shows the POV-Ray scene and Log the POV-Ray output below the preview.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;渲染&lt;/b&gt;&lt;/p&gt;&lt;p&gt;开始 POV-Ray 渲染，然后在此跟踪进度。“编辑器”显示 POV-Ray 场景，“日志”在预览下方显示 POV-Ray 的输出。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="961"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="958"/>
         <source>Select Environment Image</source>
         <translation>选择环境图像</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1072"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1069"/>
         <source>&lt;p&gt;&lt;b&gt;Editor&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The POV-Ray scene written from the model and the current settings, with every part, color and position, the camera and the lights. Edit it and tick Render using this configuration instead of the model configuration to render your edits.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;编辑器&lt;/b&gt;&lt;/p&gt;&lt;p&gt;根据模型和当前设置生成的 POV-Ray 场景，包含每个零件、颜色和位置，以及相机和灯光。编辑后勾选“使用此配置而非模型配置进行渲染”即可渲染您的修改。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1080"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1077"/>
         <source>Text of the POV-Ray scene.</source>
         <translation>POV-Ray 场景的文本。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1084"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1081"/>
         <source>Rendering the edited scene. Reset to pick up model changes.</source>
         <translation>正在渲染已编辑的场景。点击“重置”以获取模型的更改。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1092"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1089"/>
         <source>Render using this configuration instead of the model configuration</source>
         <translation>使用此配置而非模型配置进行渲染</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1093"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1090"/>
         <source>Render the text of the editor instead of the scene written from the model and the settings.</source>
         <translation>渲染编辑器中的文本，而不是根据模型和设置生成的场景。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1094"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1091"/>
         <source>&lt;p&gt;&lt;b&gt;Render using this configuration instead of the model configuration&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render renders the text of the editor as it is, so your edits show in the image. The size, quality, scene, preset and batch settings have no effect and are greyed out. Output and Area still apply.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;使用此配置而非模型配置进行渲染&lt;/b&gt;&lt;/p&gt;&lt;p&gt;“渲染”会原样渲染编辑器中的文本，因此您的修改会体现在图像中。尺寸、质量、场景、预设和批量设置不再起作用，并显示为灰色。“输出”和“区域”仍然有效。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1116"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1106"/>
         <source>Reset</source>
         <translation>重置</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1116"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1106"/>
         <source>Write the scene again from the model and the current settings.</source>
         <translation>根据模型和当前设置重新生成场景。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1116"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1106"/>
         <source>&lt;p&gt;&lt;b&gt;Reset&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace the text with the scene written again from the model and the current settings, from the camera and step of the first image. Your edits are lost.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;重置&lt;/b&gt;&lt;/p&gt;&lt;p&gt;用根据模型和当前设置重新生成的场景替换文本，使用第一张图像的相机和步骤。您的修改将丢失。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1117"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1107"/>
         <source>Open...</source>
         <translation>打开...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1117"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1107"/>
         <source>Open a POV-Ray scene file in the editor.</source>
         <translation>在编辑器中打开 POV-Ray 场景文件。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1117"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1107"/>
         <source>&lt;p&gt;&lt;b&gt;Open...&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace the text with a POV-Ray scene file, such as one saved with Save As, and tick Render using this configuration instead of the model configuration so Render uses it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;打开...&lt;/b&gt;&lt;/p&gt;&lt;p&gt;用 POV-Ray 场景文件替换文本，例如用“另存为”保存的文件，并勾选“使用此配置而非模型配置进行渲染”，以便“渲染”使用它。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1118"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1108"/>
         <source>Save As...</source>
         <translation>另存为...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1118"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1108"/>
         <source>Save the scene as a POV-Ray file.</source>
         <translation>将场景保存为 POV-Ray 文件。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1118"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1108"/>
         <source>&lt;p&gt;&lt;b&gt;Save As...&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Save the text of the editor as a POV-Ray scene file to render or edit outside StudWorx.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;另存为...&lt;/b&gt;&lt;/p&gt;&lt;p&gt;将编辑器中的文本保存为 POV-Ray 场景文件，以便在 StudWorx 之外渲染或编辑。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1139"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1129"/>
         <source>Open Scene</source>
         <translation>打开场景</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1148"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1138"/>
         <source>Could not open the scene %1.</source>
         <translation>无法打开场景 %1。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1160"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1150"/>
         <source>Save Scene As</source>
         <translation>场景另存为</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1139"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1160"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1129"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1150"/>
         <source>POV-Ray Scenes (*.pov);;All Files (*)</source>
         <translation>POV-Ray 场景 (*.pov);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1168"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1158"/>
         <source>Could not save the scene to %1.</source>
         <translation>无法将场景保存到 %1。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1173"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1163"/>
         <source>Show or hide the Editor panel with the POV-Ray scene.</source>
         <translation>显示或隐藏含 POV-Ray 场景的编辑器面板。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1174"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1164"/>
         <source>&lt;p&gt;&lt;b&gt;Editor&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Editor panel below the preview to read and edit the POV-Ray scene, render your edits or save a copy.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;编辑器&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示或隐藏预览下方的编辑器面板，以查看和编辑 POV-Ray 场景、渲染您的修改或保存副本。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1391"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1381"/>
         <source>A preset named &apos;%1&apos; already exists. Do you want to overwrite it?</source>
         <translation>名为“%1”的预设已存在。要覆盖它吗？</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1804"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1794"/>
         <source>Could not write the edited scene to %1.</source>
         <translation>无法将已编辑的场景写入 %1。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1951"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1941"/>
         <source>Could not start Blender.</source>
         <translation>无法启动 Blender。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2001"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1991"/>
         <source>Could not start the Blender render process.</source>
         <translation>无法启动 Blender 渲染进程。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2262"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2285"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2252"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2275"/>
         <source>Could not write file &apos;%1&apos;:
 %2</source>
         <translation>无法写入文件 &apos;%1&apos;：
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2302"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2292"/>
         <source>Could not render the image.</source>
         <translation>无法渲染图像。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2310"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2300"/>
         <source>Save Image File</source>
         <translation>保存图像文件</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2310"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2300"/>
         <source>Supported Image Files (*.bmp *.png *.jpg);;BMP Files (*.bmp);;PNG Files (*.png);;JPEG Files (*.jpg);;All Files (*)</source>
         <translation>支持的图像文件 (*.bmp *.png *.jpg);;BMP 文件 (*.bmp);;PNG 文件 (*.png);;JPEG 文件 (*.jpg);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="986"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="983"/>
         <source>&lt;p&gt;&lt;b&gt;Open in Blender&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Import the current model step into Blender with the Scene, Parts and Editing settings and open it there for editing. No image is saved.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;在 Blender 中打开&lt;/b&gt;&lt;/p&gt;&lt;p&gt;按“场景”“零件”和“编辑”设置将当前模型步骤导入 Blender，并在其中打开以供编辑。不会保存图像。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="824"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="821"/>
         <source>&lt;p&gt;&lt;b&gt;Scene&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the lights, floor and surroundings POV-Ray renders the model in.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;场景&lt;/b&gt;&lt;/p&gt;&lt;p&gt;设置 POV-Ray 渲染模型时使用的灯光、地面和周围环境。&lt;/p&gt;</translation>
     </message>
@@ -29163,74 +29197,74 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;渲染&lt;/b&gt;&lt;/p&gt;&lt;p&gt;开始 POV-Ray 渲染，然后在此跟踪进度。日志会在预览下方显示 POV-Ray 的输出。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1019"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1016"/>
         <source>Set the Blender executable in Preferences, General to use Blender.</source>
         <translation>请先在 偏好设置 的“常规”中设置 Blender 可执行文件，才能使用 Blender。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1041"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1038"/>
         <source>&lt;p&gt;&lt;b&gt;Log&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The output of the renderer, updated while it renders. Read it to investigate warnings or a failed render, select text and copy it with the standard keyboard shortcut when reporting a problem.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;日志&lt;/b&gt;&lt;/p&gt;&lt;p&gt;渲染器的输出，渲染时会持续更新。可用它排查警告或渲染失败；报告问题时，请选中文本并用标准键盘快捷键复制。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1047"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1044"/>
         <source>The renderer output shows here once a render starts.</source>
         <translation>开始渲染后，渲染器输出会显示在此处。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1193"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1183"/>
         <source>Show or hide the Log panel with the renderer output.</source>
         <translation>显示或隐藏含渲染器输出的日志面板。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1194"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1184"/>
         <source>&lt;p&gt;&lt;b&gt;Log&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Log panel below the preview with the renderer output and diagnostic messages.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;日志&lt;/b&gt;&lt;/p&gt;&lt;p&gt;显示或隐藏预览下方的日志面板，其中包含渲染器输出和诊断信息。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1357"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1347"/>
         <source>Custom</source>
         <translation>自定义</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1370"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1377"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1391"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1360"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1367"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1381"/>
         <source>Save Preset</source>
         <translation>保存预设</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1370"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1360"/>
         <source>Preset Name</source>
         <translation>预设名称</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1377"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1367"/>
         <source>Preset name cannot be empty.</source>
         <translation>预设名称不能为空。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1412"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1402"/>
         <source>Delete Preset</source>
         <translation>删除预设</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1412"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1402"/>
         <source>Are you sure you want to delete the preset &apos;%1&apos;?</source>
         <translation>确定要删除预设“%1”吗？</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1501"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1491"/>
         <source>View</source>
         <translation>视图</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1508"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1498"/>
         <source>All Cameras</source>
         <translation>所有相机</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1703"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1693"/>
         <source>LGEO parts need the standard POV-Ray include files such as colors.inc, which POV-Ray %1 could not find.
 
 Install the povray-includes package or the include files of your POV-Ray version, or choose LDraw parts in the Scene panel.</source>
@@ -29239,27 +29273,27 @@ Install the povray-includes package or the include files of your POV-Ray version
 请安装 povray-includes 软件包或您所用 POV-Ray 版本的包含文件，或在“场景”面板中选择 LDraw 零件。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1783"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1773"/>
         <source>Image %1 of %2</source>
         <translation>第 %1 张，共 %2 张图像</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1784"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1774"/>
         <source>%1, Exporting Model</source>
         <translation>%1，正在导出模型</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1811"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1801"/>
         <source>%1, %p%</source>
         <translation>%1，%p%</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1875"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1865"/>
         <source>Could not start POV-Ray.</source>
         <translation>无法启动 POV-Ray。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1890"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1880"/>
         <source>Saving Blender Model</source>
         <translation>正在保存 Blender 模型</translation>
     </message>
@@ -29271,17 +29305,17 @@ Install the povray-includes package or the include files of your POV-Ray version
 %2。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1971"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1961"/>
         <source>errors%1</source>
         <translation>错误%1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1971"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1961"/>
         <source> and warnings</source>
         <translation> 和警告</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1971"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1961"/>
         <source>warnings</source>
         <translation>警告</translation>
     </message>
@@ -29292,7 +29326,7 @@ Install the povray-includes package or the include files of your POV-Ray version
         <translation type="obsolete">在 Blender 输出中打开</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1972"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1962"/>
         <source>Open in Blender encountered %1. See Show Details...</source>
         <translation>在 Blender 中打开时遇到%1。请参阅显示详细信息...</translation>
     </message>
@@ -29303,14 +29337,14 @@ Install the povray-includes package or the include files of your POV-Ray version
         <translation type="obsolete">启动 Blender 渲染进程时出错</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2060"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2050"/>
         <source>Failed to open log file: &apos;%1&apos;:
 %2</source>
         <translation>无法打开日志文件 &apos;%1&apos;：
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2221"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2211"/>
         <source>An error occurred while rendering.</source>
         <translation>渲染时发生错误。</translation>
     </message>
@@ -29325,12 +29359,12 @@ Install the povray-includes package or the include files of your POV-Ray version
         <translation type="obsolete">POV-Ray 设置</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="631"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="628"/>
         <source>Set the rendered image width in pixels (1 to 32768).</source>
         <translation>设置渲染图像的宽度，单位为像素（1 至 32768）。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="635"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="632"/>
         <source>Set the rendered image height in pixels (1 to 32768).</source>
         <translation>设置渲染图像的高度，单位为像素（1 至 32768）。</translation>
     </message>
@@ -29358,24 +29392,24 @@ Install the povray-includes package or the include files of your POV-Ray version
         <translation type="obsolete">设置渲染图像的高度（以像素为单位）（最小 16）。</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="803"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="800"/>
         <source>High</source>
         <translation>高</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="803"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="800"/>
         <source>Medium</source>
         <translation>中</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="803"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="800"/>
         <source>Low</source>
         <translation>低</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="805"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="802"/>
         <source>Choose the rendering quality; higher quality can take longer.</source>
         <translation>选择渲染质量；更高的质量可能需要更长的时间。</translation>
     </message>
@@ -29412,23 +29446,23 @@ Install the povray-includes package or the include files of your POV-Ray version
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;渲染日志&lt;/b&gt;&lt;/p&gt;&lt;p&gt;读取渲染器输出以调查警告或渲染失败。选择文本并在报告问题时使用标准键盘快捷键进行复制。关闭返回“渲染”对话框。&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1048"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1045"/>
         <source>Renderer Output</source>
         <translation>渲染器输出</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="425"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1038"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="422"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1035"/>
         <source>Log</source>
         <translation>日志</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="961"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="958"/>
         <source>Environment Images (*.hdr *.exr *.png *.jpg *.jpeg *.tif *.tiff);;All Files (*)</source>
         <translation>环境图像 (*.hdr *.exr *.png *.jpg *.jpeg *.tif *.tiff);;所有文件 (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1049"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1046"/>
         <source>Read and copy renderer output and diagnostic messages.</source>
         <translation>读取并复制渲染器输出和诊断消息。</translation>
     </message>
@@ -29462,7 +29496,7 @@ Install the povray-includes package or the include files of your POV-Ray version
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="846"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="843"/>
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -29492,18 +29526,18 @@ Install the povray-includes package or the include files of your POV-Ray version
         <translation>渲染进度</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1639"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1629"/>
         <source>Cancel Render</source>
         <translation>取消渲染</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1639"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1629"/>
         <source>Are you sure you want to cancel the current render?</source>
         <translation>确定要取消当前渲染吗？</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1868"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1995"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1858"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1985"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
@@ -30187,7 +30221,7 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
         <translation>自由相机</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_view_widget.cpp" line="201"/>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="176"/>
         <source>Camera: %1</source>
         <translation>相机：%1</translation>
     </message>
@@ -30222,17 +30256,17 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
         <translation>清除选择并返回选择工具。</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_view_widget.cpp" line="220"/>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="195"/>
         <source>Editing model: %1</source>
         <translation>正在编辑模型：%1</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_view_widget.cpp" line="248"/>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="223"/>
         <source>Joint %1</source>
         <translation>关节 %1</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_view_widget.cpp" line="255"/>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="230"/>
         <source>Joint: %1</source>
         <translation>关节：%1</translation>
     </message>

@@ -1022,7 +1022,7 @@ void swMainWindow::HandleCommand(swCommandId CommandId)
 		break;
 
 	case SW_PART_JOINT_MODE:
-		if (ActiveView && !ActiveView->EnterJointMode() && !(mJointsWidget && mJointsWidget->OpenCurrentJoint()))
+		if (ActiveView && !ActiveView->EnterJointMode() && !(mJointsWidget && mJointsWidget->OpenCurrentJoint()) && !ActiveView->EnterJointOverview())
 			statusBar()->showMessage(tr("No joint here"), 3000);
 		break;
 

@@ -81,7 +81,7 @@ void swView::OnDraw()
 	const bool DrawJoint = DrawInterface && mViewType == swViewType::View && JointsModel && gMainWindow && (gMainWindow->GetTool() == swTool::Joints || gMainWindow->IsJointsPanelVisible() || JointsModel->IsJointFocused());
 
 	// new parts keep their highlight until a joint shows
-	const bool DrawJointHighlight = DrawJoint && (JointsModel->IsJointPick() || JointsModel->GetJointPart());
+	const bool DrawJointHighlight = DrawJoint && (JointsModel->IsJointPick() || JointsModel->IsJointOverview() || JointsModel->GetJointPart());
 
 	// a locked joint shows deactivated
 
@@ -98,7 +98,7 @@ void swView::OnDraw()
 		// dragging with the joints tool turns the joint
 		if (Tool == swTool::Joints && (JointsModel->IsJointPick() || Preferences.mFadeJointMoving))
 			mScene->SetJointFadePart(JointsModel->GetJointPart());
-		else if (JointsModel->IsJointFocused() && (Preferences.mFadeJointMoving || (Tool != swTool::Move && Tool != swTool::Rotate)))
+		else if (JointsModel->IsJointFocused() && !JointsModel->IsJointOverview() && (Preferences.mFadeJointMoving || (Tool != swTool::Move && Tool != swTool::Rotate)))
 			mScene->SetJointFadePart(JointsModel->GetJointPart());
 	}
 

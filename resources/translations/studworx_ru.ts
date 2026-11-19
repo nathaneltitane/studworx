@@ -2193,22 +2193,22 @@
 <context>
     <name>Light Shapes</name>
     <message>
-        <location filename="../../source/core/sw_object_light.cpp" line="77"/>
+        <location filename="../../source/core/sw_object_light.cpp" line="75"/>
         <source>Rectangle</source>
         <translation>Прямоугольник</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_object_light.cpp" line="80"/>
+        <location filename="../../source/core/sw_object_light.cpp" line="78"/>
         <source>Square</source>
         <translation>Квадрат</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_object_light.cpp" line="83"/>
+        <location filename="../../source/core/sw_object_light.cpp" line="81"/>
         <source>Disk</source>
         <translation>Диск</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_object_light.cpp" line="86"/>
+        <location filename="../../source/core/sw_object_light.cpp" line="84"/>
         <source>Ellipse</source>
         <translation>Эллипс</translation>
     </message>
@@ -2216,7 +2216,7 @@
 <context>
     <name>Light Types</name>
     <message>
-        <location filename="../../source/core/sw_object_light.cpp" line="44"/>
+        <location filename="../../source/core/sw_object_light.cpp" line="42"/>
         <source>Point Light</source>
         <translation>Точечный источник света</translation>
     </message>
@@ -2226,17 +2226,17 @@
         <translation type="obsolete">Точечный свет</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_object_light.cpp" line="47"/>
+        <location filename="../../source/core/sw_object_light.cpp" line="45"/>
         <source>Spotlight</source>
         <translation>Прожектор</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_object_light.cpp" line="50"/>
+        <location filename="../../source/core/sw_object_light.cpp" line="48"/>
         <source>Directional Light</source>
         <translation>Направленный источник света</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_object_light.cpp" line="53"/>
+        <location filename="../../source/core/sw_object_light.cpp" line="51"/>
         <source>Area Light</source>
         <translation>Площадный источник света</translation>
     </message>
@@ -4787,14 +4787,14 @@ File format is not recognized.</source>
         <translation type="vanished">StudWorx</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="895"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="934"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1438"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="516"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="539"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="32"/>
         <source>Nothing to export.</source>
         <translation>Нечего экспортировать.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="505"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="126"/>
         <source>Export 3D Studio</source>
         <translation>Экспортировать 3D Studio</translation>
     </message>
@@ -4877,7 +4877,7 @@ File format is not recognized.</source>
         <translation>Невозможно экспортировать различные встроенные данные с именем &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_import.cpp" line="416"/>
+        <location filename="../../source/core/sw_project_import.cpp" line="407"/>
         <source>Clipboard contains no model.</source>
         <translation>В буфере обмена нет модели.</translation>
     </message>
@@ -4886,18 +4886,18 @@ File format is not recognized.</source>
         <translation type="vanished">Файлы 3DS (*.3ds);;Все файлы (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="513"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="922"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="962"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1454"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1897"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="2743"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="2756"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="134"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="555"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="592"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="605"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="20"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="60"/>
+        <location filename="../../source/core/sw_project_export_povray.cpp" line="28"/>
         <source>Could not open file &apos;%1&apos; for writing.</source>
         <translation>Не удалось открыть файл «%1» для записи.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="897"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="518"/>
         <source>Export BrickLink</source>
         <translation>Экспортировать BrickLink</translation>
     </message>
@@ -4906,7 +4906,7 @@ File format is not recognized.</source>
         <translation type="vanished">Файлы XML (*.xml);;Все файлы (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="914"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="12"/>
         <source>Export COLLADA</source>
         <translation>Экспортировать COLLADA</translation>
     </message>
@@ -4915,22 +4915,22 @@ File format is not recognized.</source>
         <translation type="vanished">Файлы COLLADA (*.dae);;Все файлы (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="936"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="34"/>
         <source>Export KMZ</source>
         <translation>Экспортировать KMZ</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1304"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="402"/>
         <source>Could not create the OpenGL context.</source>
         <translation>Не удалось создать контекст OpenGL.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1309"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="407"/>
         <source>Could not find the visible surfaces.</source>
         <translation>Не удалось найти видимые поверхности.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1440"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="541"/>
         <source>Export CSV</source>
         <translation>Экспортировать CSV</translation>
     </message>
@@ -4939,15 +4939,15 @@ File format is not recognized.</source>
         <translation type="vanished">Файлы CSV (*.csv);;Все файлы (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="403"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="419"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1588"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1673"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1722"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1759"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1781"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1817"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1850"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="24"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="40"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="478"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="563"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="612"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="649"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="671"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="707"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="740"/>
         <location filename="../../source/core/sw_project_file.cpp" line="558"/>
         <location filename="../../source/core/sw_project_file.cpp" line="574"/>
         <location filename="../../source/core/sw_project_file.cpp" line="585"/>
@@ -4960,125 +4960,125 @@ File format is not recognized.</source>
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="505"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="126"/>
         <source>3DS Files (*.3ds);;All Files (*)</source>
         <translation>Файлы 3DS (*.3ds);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="897"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="518"/>
         <source>XML Files (*.xml);;All Files (*)</source>
         <translation>Файлы XML (*.xml);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="914"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="12"/>
         <source>COLLADA Files (*.dae);;All Files (*)</source>
         <translation>Файлы COLLADA (*.dae);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="936"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="34"/>
         <source>KMZ Files (*.kmz);;All Files (*)</source>
         <translation>Файлы KMZ (*.kmz);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="965"/>
+        <location filename="../../source/core/sw_project_export_collada.cpp" line="63"/>
         <source>Could not write file &apos;%1&apos;.</source>
         <translation>Не удалось записать файл «%1».</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1440"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="541"/>
         <source>CSV Files (*.csv);;All Files (*)</source>
         <translation>Файлы CSV (*.csv);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1541"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="431"/>
         <source>Could not create folder &apos;%1&apos;.</source>
         <translation>Не удалось создать папку «%1».</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1613"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="503"/>
         <source>Created by %1</source>
         <translation>Создано в %1</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1677"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1763"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1854"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="567"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="653"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="744"/>
         <source>Instructions for %1</source>
         <translation>Инструкции для %1</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1724"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="614"/>
         <source>Page %1</source>
         <translation>Страница %1</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1732"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="622"/>
         <source>First Page</source>
         <translation>Первая страница</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1732"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="622"/>
         <source>Previous Page</source>
         <translation>Предыдущая страница</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1732"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="622"/>
         <source>Next Page</source>
         <translation>Следующая страница</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1732"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="622"/>
         <source>Last Page</source>
         <translation>Последняя страница</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1766"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1786"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1872"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="656"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="676"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="762"/>
         <source>Step %1</source>
         <translation>Шаг %1</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1769"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1806"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1875"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="659"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="696"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="765"/>
         <source>Parts Used</source>
         <translation>Использованные детали</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1785"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="675"/>
         <source>%1 - Step %2</source>
         <translation>%1 - Шаг %2</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1798"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1829"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="688"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="719"/>
         <source>Previous</source>
         <translation>Предыдущая</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1801"/>
-        <location filename="../../source/core/sw_project_export.cpp" line="1832"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="691"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="722"/>
         <source>Index</source>
         <translation>Содержание</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1804"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="694"/>
         <source>Next</source>
         <translation>Следующая</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1821"/>
+        <location filename="../../source/core/sw_project_export_html.cpp" line="711"/>
         <source>Parts used by %1</source>
         <translation>Детали, использованные в %1</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1889"/>
+        <location filename="../../source/core/sw_project_export_povray.cpp" line="20"/>
         <source>POV-Ray Files (*.pov);;All Files (*)</source>
         <translation>Файлы POV-Ray (*.pov);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="2734"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="583"/>
         <source>Wavefront Files (*.obj);;All Files (*)</source>
         <translation>Файлы Wavefront (*.obj);;Все файлы (*)</translation>
     </message>
@@ -5087,7 +5087,7 @@ File format is not recognized.</source>
         <translation type="vanished">Помилка створення зображення.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="1889"/>
+        <location filename="../../source/core/sw_project_export_povray.cpp" line="20"/>
         <source>Export POV-Ray</source>
         <translation>Экспортировать POV-Ray</translation>
     </message>
@@ -5096,12 +5096,12 @@ File format is not recognized.</source>
         <translation type="vanished">Файлы POV-Ray (*.pov);;Все файлы (*.*)</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="2366"/>
+        <location filename="../../source/core/sw_project_export_povray.cpp" line="497"/>
         <source>Could not find LGEO files in folder &apos;%1&apos;.</source>
         <translation>Не удалось найти файлы LGEO в папке «%1».</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_project_export.cpp" line="2734"/>
+        <location filename="../../source/core/sw_project_export.cpp" line="583"/>
         <source>Export Wavefront</source>
         <translation>Экспортировать Wavefront</translation>
     </message>
@@ -5161,22 +5161,22 @@ File format is not recognized.</source>
 <context>
     <name>QDockWidget</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1367"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="669"/>
         <source>Float</source>
         <translation>Открепить</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1371"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="673"/>
         <source>Close</source>
         <translation>Закрыть</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1411"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="713"/>
         <source>Expand</source>
         <translation>Развернуть</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1411"/>
+        <location filename="../../source/interface/window/sw_window_utilities_docks.cpp" line="713"/>
         <source>Collapse</source>
         <translation>Свернуть</translation>
     </message>
@@ -6349,16 +6349,16 @@ File format is not recognized.</source>
         <translation type="obsolete">Ошибка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1743"/>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1749"/>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1767"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="369"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="375"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="393"/>
         <source>Stop Blender Process</source>
         <translation>Остановить процесс Blender</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1743"/>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1749"/>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1767"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="369"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="375"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="393"/>
         <source>%1 failed: %2</source>
         <translation>%1 не удалось: %2</translation>
     </message>
@@ -8792,6 +8792,11 @@ File format is not recognized.</source>
         <translation>&lt;p&gt;&lt;b&gt;Ключевые кадры&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показывает или скрывает панель «Ключевые кадры» — диаграмму ключей анимации объектов по шагам.&lt;/p&gt;</translation>
     </message>
     <message>
+        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
+        <source>&lt;p&gt;&lt;b&gt;Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel, or, with none picked, an overview of every joint in the model: click a ring or an outlined part to open its joint. The Joint Mode Start preference picks which joint opens: the first joint, the last used joint, or the overview. With Select Joints by Submodel on, clicking anywhere on a jointed submodel in the overview opens its nearest joint. Ctrl+Shift+W or Esc leaves it.&lt;/p&gt;</source>
+        <translation>&lt;p&gt;&lt;b&gt;Режим сочленения&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Работает с сочленением выбранной подмодели, так же как щелчок по нему на панели «Сочленения». Если выбрана деталь внутри подмодели с сочленением, поднимается к этой подмодели. Если ничего не выбрано, открывает сочленение, выбранное на панели «Сочленения», а если не выбрано и оно — обзор всех сочленений модели: щелчок по кольцу или обведённой детали открывает её сочленение. Параметр «Начало режима сочленения» определяет, какое сочленение откроется: первое, последнее использованное или обзор. Когда включён «Выбор сочленений по подмодели», щелчок в любом месте подмодели с сочленением в обзоре открывает ближайшее сочленение. Ctrl+Shift+W или Esc выходит из него.&lt;/p&gt;</translation>
+    </message>
+    <message>
         <location filename="../../source/application/sw_commands.cpp" line="3429"/>
         <source>&lt;p&gt;&lt;b&gt;Insert Step Before&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Add an empty step before this step in the Steps panel.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Вставить шаг перед&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Добавить пустой шаг перед этим шагом на панели «Шаги».&lt;/p&gt;</translation>
@@ -8806,9 +8811,8 @@ File format is not recognized.</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Удалить&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Удаляет только выбранное, в зависимости от того, где вы работаете: сочленение на панели «Сочленения», шаг на панели «Хронология», выбранные ключи на панели «Ключевые кадры» или, если ни один не выбран, ключи выделенных объектов на текущем шаге, а также выделенные указатели, примечания или пустую страницу в инструкции. В виде удаляет только точку управления в фокусе, иначе выделенные объекты. Если ничего не выбрано, ничего не делает.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_commands.cpp" line="2601"/>
         <source>&lt;p&gt;&lt;b&gt;Joint Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel. The Joint Mode Start preference picks which joint opens: the first joint, the last used joint, or an overview of rings to pick from. Ctrl+Shift+W or Esc leaves it.&lt;/p&gt;</source>
-        <translation>&lt;p&gt;&lt;b&gt;Режим сочленения&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Работает с сочленением выбранной подмодели, так же как щелчок по нему на панели «Сочленения». Если выбрана деталь внутри подмодели с сочленением, поднимается к этой подмодели. Если ничего не выбрано, открывает сочленение, выбранное на панели «Сочленения». Параметр «Начало режима сочленения» определяет, какое сочленение откроется: первое, последнее использованное или обзор колец для выбора. Ctrl+Shift+W или Esc выходит из него.&lt;/p&gt;</translation>
+        <translation type="vanished">&lt;p&gt;&lt;b&gt;Режим сочленения&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Работает с сочленением выбранной подмодели, так же как щелчок по нему на панели «Сочленения». Если выбрана деталь внутри подмодели с сочленением, поднимается к этой подмодели. Если ничего не выбрано, открывает сочленение, выбранное на панели «Сочленения». Параметр «Начало режима сочленения» определяет, какое сочленение откроется: первое, последнее использованное или обзор колец для выбора. Ctrl+Shift+W или Esc выходит из него.&lt;/p&gt;</translation>
     </message>
     <message>
         <location filename="../../source/application/sw_commands.cpp" line="2898"/>
@@ -10106,46 +10110,46 @@ POV-Ray renders can use the LGEO part library by Lutz Uhlmann.</source>
 <context>
     <name>swApplication</name>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="785"/>
-        <location filename="../../source/application/sw_application.cpp" line="810"/>
-        <location filename="../../source/application/sw_application.cpp" line="833"/>
-        <location filename="../../source/application/sw_application.cpp" line="856"/>
-        <location filename="../../source/application/sw_application.cpp" line="866"/>
-        <location filename="../../source/application/sw_application.cpp" line="889"/>
-        <location filename="../../source/application/sw_application.cpp" line="914"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="71"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="96"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="119"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="142"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="152"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="175"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="200"/>
         <source>Not enough parameters for the &apos;%1&apos; option.
 </source>
         <translation>Недостаточно значений для параметра «%1».
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="807"/>
-        <location filename="../../source/application/sw_application.cpp" line="830"/>
-        <location filename="../../source/application/sw_application.cpp" line="853"/>
-        <location filename="../../source/application/sw_application.cpp" line="886"/>
-        <location filename="../../source/application/sw_application.cpp" line="911"/>
-        <location filename="../../source/application/sw_application.cpp" line="968"/>
-        <location filename="../../source/application/sw_application.cpp" line="1027"/>
-        <location filename="../../source/application/sw_application.cpp" line="1106"/>
-        <location filename="../../source/application/sw_application.cpp" line="1127"/>
-        <location filename="../../source/application/sw_application.cpp" line="1138"/>
-        <location filename="../../source/application/sw_application.cpp" line="1195"/>
-        <location filename="../../source/application/sw_application.cpp" line="1226"/>
-        <location filename="../../source/application/sw_application.cpp" line="1242"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="93"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="116"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="139"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="172"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="197"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="254"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="313"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="392"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="413"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="424"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="481"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="512"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="528"/>
         <source>Invalid parameter value specified for the &apos;%1&apos; option: &apos;%2&apos;.
 </source>
         <translation>Задано недопустимое значение для параметра «%1»: «%2».
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="925"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="211"/>
         <source>The file &apos;%1&apos; is not readable.
 </source>
         <translation>Не удалось прочитать файл «%1».
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1293"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="579"/>
         <source>
 Library:
 </source>
@@ -10154,14 +10158,14 @@ Library:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1294"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="580"/>
         <source>  -l, --library &lt;path&gt;: Set the Parts Library location to path.
 </source>
         <translation>  -l, --library &lt;path&gt;: Указать расположение библиотеки деталей в path.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1297"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="583"/>
         <source>
 Pictures:
 </source>
@@ -10170,14 +10174,14 @@ Pictures:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1298"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="584"/>
         <source>  -i, --image [outfile.ext]: Save a picture in the format specified by ext and exit.
 </source>
         <translation>  -i, --image [outfile.ext]: Сохранить изображение в формате, заданном ext, и выйти.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1305"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="591"/>
         <source>
 Camera:
 </source>
@@ -10186,28 +10190,28 @@ Camera:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1311"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="597"/>
         <source>  --projection &lt;perspective|orthographic&gt;: Render images with a perspective or an orthographic projection.
 </source>
         <translation>  --projection &lt;perspective|orthographic&gt;: Отображать изображения с перспективной или ортогональной проекцией.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1312"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="598"/>
         <source>  --field-of-view &lt;degrees&gt;: Set the vertical field of view used to render images (&lt; 180).
 </source>
         <translation>  --field-of-view &lt;degrees&gt;: Указать вертикальный угол обзора для изображений (&lt; 180).
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1313"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="599"/>
         <source>  --clip-planes &lt;near&gt; &lt;far&gt;: Set the near and far clipping planes used to render images (1 &lt;= &lt;near&gt; &lt; &lt;far&gt;).
 </source>
         <translation>  --clip-planes &lt;near&gt; &lt;far&gt;: Указать ближнюю и дальнюю плоскости отсечения для изображений (1 &lt;= &lt;near&gt; &lt; &lt;far&gt;).
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1314"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="600"/>
         <source>
 Rendering:
 </source>
@@ -10216,21 +10220,35 @@ Rendering:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1318"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="601"/>
+        <source>  --shading &lt;mode&gt;: Select shading mode for rendering (default, flat, wireframe, full).
+</source>
+        <translation>  --shading &lt;mode&gt;: выбрать режим затенения для рендеринга (default, flat, wireframe, full).
+</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="602"/>
+        <source>  --lighting &lt;style&gt;: Select the lighting style of the default shading (studio, standard, matte, toon).
+</source>
+        <translation>  --lighting &lt;style&gt;: Выбрать стиль освещения затенения по умолчанию (studio, standard, matte, toon).
+</translation>
+    </message>
+    <message>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="604"/>
         <source>  --antialiasing-samples &lt;samples&gt;: Anti-aliasing sample size (1, 2, 4, or 8).
 </source>
         <translation>  --antialiasing-samples &lt;samples&gt;: Размер выборки сглаживания (1, 2, 4 или 8).
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1321"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="607"/>
         <source>  --fade-color &lt;#AARRGGBB&gt;: Rendering color for prior step parts.
 </source>
         <translation>  --fade-color &lt;#AARRGGBB&gt;: Цвет отображения деталей предыдущих шагов.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1325"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="611"/>
         <source>
 Studs and Edges:
 </source>
@@ -10239,84 +10257,84 @@ Studs and Edges:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1327"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="613"/>
         <source>  --stud-cylinder-color &lt;#AARRGGBB&gt;: High contrast stud cylinder color.
 </source>
         <translation>  --stud-cylinder-color &lt;#AARRGGBB&gt;: Цвет цилиндра шипа при высоком контрасте.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1328"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="614"/>
         <source>  --no-stud-cylinder-color: Disable high contrast stud cylinder color.
 </source>
         <translation>  --no-stud-cylinder-color: Отключить цвет цилиндра шипа при высоком контрасте.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1329"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="615"/>
         <source>  --edge-color &lt;#AARRGGBB&gt;: High contrast edge color.
 </source>
         <translation>  --edge-color &lt;#AARRGGBB&gt;: Цвет кромки при высоком контрасте.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1330"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="616"/>
         <source>  --no-edge-color: Disable high contrast edge color.
 </source>
         <translation>  --no-edge-color: Отключить цвет кромки при высоком контрасте.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1331"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="617"/>
         <source>  --edge-color-black &lt;#AARRGGBB&gt;: High contrast edge color for black parts.
 </source>
         <translation>  --edge-color-black &lt;#AARRGGBB&gt;: Цвет кромки чёрных деталей при высоком контрасте.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1332"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="618"/>
         <source>  --no-edge-color-black: Disable high contrast edge color for black parts.
 </source>
         <translation>  --no-edge-color-black: Отключить цвет кромки чёрных деталей при высоком контрасте.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1333"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="619"/>
         <source>  --edge-color-dark &lt;#AARRGGBB&gt;: High contrast edge color for dark color parts.
 </source>
         <translation>  --edge-color-dark &lt;#AARRGGBB&gt;: Цвет кромки тёмных деталей при высоком контрасте.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1334"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="620"/>
         <source>  --no-edge-color-dark: Disable high contrast edge color for dark color parts.
 </source>
         <translation>  --no-edge-color-dark: Отключить цвет кромки тёмных деталей при высоком контрасте.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1335"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="621"/>
         <source>  --edge-color-automatic: Enable automatically adjusted edge colors.
 </source>
         <translation>  --edge-color-automatic: Включить автоматически подбираемые цвета кромки.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1336"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="622"/>
         <source>  --edge-contrast &lt;contrast&gt;: Edge color contrast of automatic edge colors, between 0.0 and 1.0.
 </source>
         <translation>  --edge-contrast &lt;contrast&gt;: Контраст цвета кромки при автоматическом подборе, от 0.0 до 1.0.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1337"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="623"/>
         <source>  --edge-light-dark &lt;value&gt;: Light/Dark color value of automatic edge colors, between 0.0 and 1.0.
 </source>
         <translation>  --edge-light-dark &lt;value&gt;: Значение «светлый/тёмный» цвета кромки при автоматическом подборе, от 0.0 до 1.0.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1338"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="624"/>
         <source>
 Export:
 </source>
@@ -10325,49 +10343,49 @@ Export:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1339"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="625"/>
         <source>  --flatten &lt;outfile.ldr&gt;: Replace every submodel at all depths with its parts and save the model, before any other export.
 </source>
         <translation>  --flatten &lt;outfile.ldr&gt;: Заменить все подмодели на всех уровнях их деталями и сохранить модель перед любым другим экспортом.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1340"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="626"/>
         <source>  --undo &lt;outfile.ldr&gt;: Undo every command line edit and save the model, to check that undo restores it.
 </source>
         <translation>  --undo &lt;outfile.ldr&gt;: Отменить все правки из командной строки и сохранить модель, чтобы проверить, что отмена её восстанавливает.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1348"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="634"/>
         <source>  --bricklink-condition &lt;any|new|used&gt;: Condition wanted in BrickLink exports.
 </source>
         <translation>  --bricklink-condition &lt;any|new|used&gt;: Требуемое состояние в экспортах BrickLink.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1349"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="635"/>
         <source>  --bricklink-wanted-list &lt;id|url&gt;: BrickLink wanted list the exported parts are added to, by number or by the address of its page.
 </source>
         <translation>  --bricklink-wanted-list &lt;id|url&gt;: Список желаний BrickLink, в который добавляются экспортируемые детали, по номеру или по адресу его страницы.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1350"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="636"/>
         <source>  --bricklink-notify: Ask BrickLink to notify new listings of the exported parts.
 </source>
         <translation>  --bricklink-notify: Попросить BrickLink уведомлять о новых предложениях экспортируемых деталей.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1351"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="637"/>
         <source>  --bricklink-exceptions &lt;file&gt;: Comma or tab separated file of parts and the BrickLink numbers that replace their mapping in BrickLink exports.
 </source>
         <translation>  --bricklink-exceptions &lt;file&gt;: Файл с разделителями-запятыми или табуляцией: детали и номера BrickLink, заменяющие их соответствие в экспортах BrickLink.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1355"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="641"/>
         <source>
 Settings:
 </source>
@@ -10376,7 +10394,7 @@ Settings:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1364"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="650"/>
         <source>
 Information:
 </source>
@@ -10385,38 +10403,38 @@ Information:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1379"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="665"/>
         <source>High contrast stud and edge color settings are ignored when --edge-color-automatic is set.
 </source>
         <translation>Параметры цвета шипов и кромки при высоком контрасте игнорируются, если задан --edge-color-automatic.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1428"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="714"/>
         <source>--projection is ignored when --camera is set.
 </source>
         <translation>--projection игнорируется при использовании параметра --camera.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1671"/>
-        <location filename="../../source/application/sw_application.cpp" line="2495"/>
+        <location filename="../../source/application/sw_application.cpp" line="408"/>
+        <location filename="../../source/application/sw_application.cpp" line="1232"/>
         <source>Could not open the unofficial library archive &apos;%1&apos;.</source>
         <translation>Не удалось открыть архив неофициальной библиотеки «%1».</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1690"/>
-        <location filename="../../source/application/sw_application.cpp" line="2502"/>
+        <location filename="../../source/application/sw_application.cpp" line="427"/>
+        <location filename="../../source/application/sw_application.cpp" line="1239"/>
         <source>Could not find a shadow library in &apos;%1&apos;.</source>
         <translation>Не удалось найти теневую библиотеку в «%1».</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1875"/>
+        <location filename="../../source/application/sw_application.cpp" line="612"/>
         <source>The file &apos;%1&apos; has no parts to render.</source>
         <translation>В файле &apos;%1&apos; нет деталей для рендеринга.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="977"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="263"/>
         <source>Invalid parameter values specified for the &apos;%1&apos; option: limits are +/- 360.
 </source>
         <translation>Для параметра «%1» указаны недопустимые значения: пределы +/- 360.
@@ -10429,50 +10447,50 @@ Information:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1040"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="326"/>
         <source>Invalid parameter values specified for the &apos;%1&apos; option: requirements are: 1 &lt;= &lt;near&gt; &lt; &lt;far&gt;.
 </source>
         <translation>Для параметра «%1» указаны недопустимые значения: требуется 1 &lt;= &lt;near&gt; &lt; &lt;far&gt;.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1395"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="681"/>
         <source>High contrast stud style is required for the &apos;%1&apos; option but is not enabled.
 </source>
         <translation>Для параметра «%1» необходимо включить стиль шипов с высоким контрастом, но он не включён.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1384"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="670"/>
         <source>Automate edge color is required for the &apos;%1&apos; option but is not enabled.
 </source>
         <translation>Для параметра «%1» необходимо включить параметр «Автонастройка цвета кромки» (не включён).
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="615"/>
-        <location filename="../../source/application/sw_application.cpp" line="622"/>
-        <location filename="../../source/application/sw_application.cpp" line="632"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="67"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="74"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="84"/>
         <source>Download Parts Library</source>
         <translation>Загрузка библиотеки деталей</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="615"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="67"/>
         <source>Downloading the LDraw parts library...</source>
         <translation>Загрузка библиотеки деталей LDraw...</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="622"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="74"/>
         <source>Could not download the parts library from %1.</source>
         <translation>Не удалось загрузить библиотеку деталей с %1.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="632"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="84"/>
         <source>Could not save the parts library to &apos;%1&apos;.</source>
         <translation>Не удалось сохранить библиотеку деталей в «%1».</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="643"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="95"/>
         <source>StudWorx could not find an LDraw parts library.
 
 Download the official library (about 140 MB) from library.ldraw.org into &apos;%1&apos;?</source>
@@ -10481,19 +10499,19 @@ Download the official library (about 140 MB) from library.ldraw.org into &apos;%
 Загрузить официальную библиотеку (около 140 МБ) с library.ldraw.org в «%1»?</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="650"/>
-        <location filename="../../source/application/sw_application.cpp" line="666"/>
-        <location filename="../../source/application/sw_application.cpp" line="2491"/>
+        <location filename="../../source/application/sw_application.cpp" line="1228"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="102"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="118"/>
         <source>Could not open the parts library &apos;%1&apos;.</source>
         <translation>Не удалось открыть библиотеку деталей «%1».</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="655"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="107"/>
         <source>Open Parts Library Archive</source>
         <translation>Открыть архив библиотеки деталей</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="669"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="121"/>
         <source>No parts library was downloaded or set.
 
 Download one from %1 and set it under Preferences › Parts Library the next time StudWorx is started.</source>
@@ -10502,20 +10520,20 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
 Загрузите её с %1 и задайте в разделе «Параметры» › «Библиотека деталей» при следующем запуске StudWorx.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="996"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="282"/>
         <source>The camera position is too close to the camera target of the &apos;%1&apos; option.
 </source>
         <translation>Положение камеры слишком близко к цели камеры, указанной в опции &apos;%1&apos;.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1001"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="287"/>
         <source>Invalid up vector length specified for the &apos;%1&apos; option.
 </source>
         <translation>Для опции &apos;%1&apos; указана неверная длина вектора вверх.
 .</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1006"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="292"/>
         <source>The up vector is parallel to the front vector specified for the &apos;%1&apos; option.
 </source>
         <translation>Вектор вверх параллелен переднему вектору, указанному для опции &apos;%1&apos;.
@@ -10528,21 +10546,21 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1286"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="572"/>
         <source>StudWorx Version %1
 </source>
         <translation>StudWorx, версия %1
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1287"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="573"/>
         <source>Compiled %1
 </source>
         <translation>Скомпилировано %1
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1292"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="578"/>
         <source>Usage: studworx [options] [file]
 </source>
         <translation>Использование: studworx [параметры] [файл]
@@ -10561,14 +10579,14 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1295"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="581"/>
         <source>  --unofficial-library &lt;path&gt;: Set the Unofficial Parts Library archive to path.
 </source>
         <translation>  --unofficial-library &lt;path&gt;: Указать архив неофициальной библиотеки деталей в path.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1296"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="582"/>
         <source>  --shadow-library &lt;path&gt;: Set the LDCad Shadow Library location to path.
 </source>
         <translation>  --shadow-library &lt;path&gt;: Указать расположение теневой библиотеки LDCad в path.
@@ -10581,7 +10599,7 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1299"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="585"/>
         <source>  -w, --width &lt;width&gt;: Set the picture width.
 </source>
         <translation>  -w, --width &lt;width&gt;: Указать ширину изображения.
@@ -10594,21 +10612,21 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1301"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="587"/>
         <source>  -f, --from &lt;step&gt;: Set the first step to save pictures.
 </source>
         <translation>  -f, --from &lt;step&gt;: Указать первый шаг сохранения изображения.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1302"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="588"/>
         <source>  -t, --to &lt;step&gt;: Set the last step to save pictures.
 </source>
         <translation>  -t, --to &lt;step&gt;: Указать последний шаг сохранения изображения.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1303"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="589"/>
         <source>  -s, --submodel &lt;submodel&gt;: Set the active submodel.
 </source>
         <translation>  -s, --submodel &lt;submodel&gt;: Указать активную подмодель.
@@ -10633,21 +10651,21 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1308"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="594"/>
         <source>  --camera-angles &lt;latitude&gt; &lt;longitude&gt;: Set the camera angles in degrees around the model.
 </source>
         <translation>  --camera-angles &lt;latitude&gt; &lt;longitude&gt;: Указать углы камеры в градусах вокруг модели.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1309"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="595"/>
         <source>  --camera-position &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: Set the camera position, target and up vector.
 </source>
         <translation>  --camera-position &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: Указать расположение камеры, цель и вектор вверх.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1310"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="596"/>
         <source>  --camera-position-ldraw &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: Set the camera position, target and up vector using LDraw coordinates.
 </source>
         <translation>  --camera-position-ldraw &lt;x&gt; &lt;y&gt; &lt;z&gt; &lt;tx&gt; &lt;ty&gt; &lt;tz&gt; &lt;ux&gt; &lt;uy&gt; &lt;uz&gt;: Указать расположение камеры, цель и вектор вверх в координатах LDraw.
@@ -10679,14 +10697,14 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1319"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="605"/>
         <source>  --fade-steps: Render parts from prior steps faded.
 </source>
         <translation>  --fade-steps: Отображать детали из предыдущих шагов с затуханием.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1320"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="606"/>
         <source>  --no-fade-steps: Do not render parts from prior steps faded.
 </source>
         <translation>  --no-fade-steps: Не отображать детали из предыдущих шагов с затуханием.
@@ -10699,14 +10717,14 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1322"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="608"/>
         <source>  --highlight: Highlight parts in the steps they appear.
 </source>
         <translation>  --highlight: Подсвечивать детали в тех шагах, в которых они появляются.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1323"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="609"/>
         <source>  --no-highlight: Do not highlight parts in the steps they appear.
 </source>
         <translation>  --no-highlight: Не подсвечивать детали в тех шагах, в которых они появляются.
@@ -10725,7 +10743,7 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1317"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="603"/>
         <source>  --line-width &lt;width&gt;: Set the width of the edge lines.
 </source>
         <translation>  --line-width &lt;width&gt;: Указать толщину линий кромки.
@@ -10836,63 +10854,63 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1356"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="642"/>
         <source>  --import-settings &lt;infile.ini&gt;: Import the application settings and exit.
 </source>
         <translation>  --import-settings &lt;infile.ini&gt;: Импортировать параметры приложения и выйти.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1357"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="643"/>
         <source>  --export-settings &lt;outfile.ini&gt;: Export the application settings and exit.
 </source>
         <translation>  --export-settings &lt;outfile.ini&gt;: Экспортировать параметры приложения и выйти.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1358"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="644"/>
         <source>  --import-keyboard-shortcuts &lt;infile.txt&gt;: Import the keyboard shortcuts and exit.
 </source>
         <translation>  --import-keyboard-shortcuts &lt;infile.txt&gt;: Импортировать сочетания клавиш и выйти.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1359"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="645"/>
         <source>  --export-keyboard-shortcuts &lt;outfile.txt&gt;: Export the keyboard shortcuts and exit.
 </source>
         <translation>  --export-keyboard-shortcuts &lt;outfile.txt&gt;: Экспортировать сочетания клавиш и выйти.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1360"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="646"/>
         <source>  --import-mouse-shortcuts &lt;infile.txt&gt;: Import the mouse shortcuts and exit.
 </source>
         <translation>  --import-mouse-shortcuts &lt;infile.txt&gt;: Импортировать сочетания действий мыши и выйти.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1361"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="647"/>
         <source>  --export-mouse-shortcuts &lt;outfile.txt&gt;: Export the mouse shortcuts and exit.
 </source>
         <translation>  --export-mouse-shortcuts &lt;outfile.txt&gt;: Экспортировать сочетания действий мыши и выйти.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1362"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="648"/>
         <source>  --import-categories &lt;infile.txt&gt;: Import the part categories and exit.
 </source>
         <translation>  --import-categories &lt;infile.txt&gt;: Импортировать категории деталей и выйти.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1363"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="649"/>
         <source>  --export-categories &lt;outfile.txt&gt;: Export the part categories and exit.
 </source>
         <translation>  --export-categories &lt;outfile.txt&gt;: Экспортировать категории деталей и выйти.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1365"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="651"/>
         <source>  -v, --version: Output version information and exit.
 </source>
         <translation>  -v, --version: Вывести информацию о версии и выйти.
@@ -10905,7 +10923,7 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1372"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="658"/>
         <source>Unknown option: &apos;%1&apos;.
 </source>
         <translation>Неизвестный параметр: «%1».
@@ -10918,7 +10936,7 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1425"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="711"/>
         <source>--viewpoint is ignored when --camera is set.
 </source>
         <translation>--viewpoint игнорируется при использовании параметра --camera.
@@ -10931,49 +10949,49 @@ Download one from %1 and set it under Preferences › Parts Library the next tim
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1431"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="717"/>
         <source>--camera-angles is ignored when --camera is set.
 </source>
         <translation>--camera-angles игнорируется при использовании параметра --camera.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1434"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="720"/>
         <source>--camera-position is ignored when --camera is set.
 </source>
         <translation>--camera-position игнорируется при использовании параметра --camera.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1439"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="725"/>
         <source>--camera-angles is ignored when --viewpoint is set.
 </source>
         <translation>--camera-angles игнорируется при использовании параметра --viewpoint.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1442"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="728"/>
         <source>--camera-position is ignored when --viewpoint is set.
 </source>
         <translation>--camera-position игнорируется при использовании параметра --viewpoint.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1447"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="733"/>
         <source>--camera-position is ignored when --camera-angles is set.
 </source>
         <translation>--camera-position игнорируется при использовании параметра --camera-angles.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1454"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="740"/>
         <source>No file name specified.
 </source>
         <translation>Не указано имя файла.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1661"/>
+        <location filename="../../source/application/sw_application.cpp" line="398"/>
         <source>StudWorx could not find an LDraw parts library.
 
 Download one from %1 and pass it with --library.</source>
@@ -10982,64 +11000,64 @@ Download one from %1 and pass it with --library.</source>
 Загрузите её с %1 и передайте через --library.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1829"/>
+        <location filename="../../source/application/sw_application.cpp" line="566"/>
         <source>--transparent is ignored for &apos;%1&apos; files: only PNG and GIF files keep transparency.
 </source>
         <translation>--transparent игнорируется для файлов «%1»: прозрачность сохраняют только файлы PNG и GIF.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1963"/>
+        <location filename="../../source/application/sw_application.cpp" line="700"/>
         <source>Could not create a temporary folder for the POV-Ray scene.
 </source>
         <translation>Не удалось создать временную папку для сцены POV-Ray.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2015"/>
+        <location filename="../../source/application/sw_application.cpp" line="752"/>
         <source>Could not render &apos;%1&apos; with POV-Ray:
 </source>
         <translation>Не удалось отрисовать «%1» с помощью POV-Ray:
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2229"/>
+        <location filename="../../source/application/sw_application.cpp" line="966"/>
         <source>Saved 1 lot to &apos;%1&apos;.
 </source>
         <translation>Сохранён 1 лот в «%1».
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2229"/>
+        <location filename="../../source/application/sw_application.cpp" line="966"/>
         <source>Saved %1 lots to &apos;%2&apos;.
 </source>
         <translation>Сохранено лотов в «%2»: %1.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2483"/>
+        <location filename="../../source/application/sw_application.cpp" line="1220"/>
         <source>Could not find a default parts library. &apos;%1&apos; stays in use until StudWorx starts again and offers to download one.</source>
         <translation>Не удалось найти библиотеку деталей по умолчанию. «%1» остаётся в использовании, пока StudWorx не будет запущен снова и не предложит загрузить библиотеку.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2510"/>
-        <location filename="../../source/application/sw_application.cpp" line="2512"/>
-        <location filename="../../source/application/sw_application.cpp" line="2514"/>
+        <location filename="../../source/application/sw_application.cpp" line="1247"/>
+        <location filename="../../source/application/sw_application.cpp" line="1249"/>
+        <location filename="../../source/application/sw_application.cpp" line="1251"/>
         <source>Preferences</source>
         <translation>Параметры</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2510"/>
+        <location filename="../../source/application/sw_application.cpp" line="1247"/>
         <source>The new language and antialiasing settings apply the next time you start StudWorx.</source>
         <translation>Новые параметры языка и сглаживания применятся при следующем запуске StudWorx.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2512"/>
+        <location filename="../../source/application/sw_application.cpp" line="1249"/>
         <source>The new language applies the next time you start StudWorx.</source>
         <translation>Новый язык применится при следующем запуске StudWorx.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2514"/>
+        <location filename="../../source/application/sw_application.cpp" line="1251"/>
         <source>The new antialiasing setting applies the next time you start StudWorx.</source>
         <translation>Новый параметр сглаживания применится при следующем запуске StudWorx.</translation>
     </message>
@@ -11070,13 +11088,13 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
         <translation type="vanished">StudWorx</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1306"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="592"/>
         <source>  -c, --camera &lt;camera name&gt;: Set the active camera.
 </source>
         <translation>  -c, --camera &lt;camera name&gt;: установить активную камеру.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1307"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="593"/>
         <source>  --viewpoint &lt;viewpoint&gt;: Set the view to one of the preset viewpoints (front, back, left, right, top, bottom, home).
 </source>
         <translation>  --viewpoint &lt;viewpoint&gt;: установить вид на одну из предустановленных точек обзора (front, back, left, right, top, bottom, home).</translation>
@@ -11088,22 +11106,20 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
         <translation type="obsolete">  --fade-steps-color &lt;#AARRGGBB&gt;: Отрисовка цвета для частей предыдущего шага.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1324"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="610"/>
         <source>  --highlight-color &lt;#AARRGGBB&gt;: Rendering color for highlighted parts.
 </source>
         <translation>  --highlight-color &lt;#AARRGGBB&gt;: цвет рендеринга выделенных деталей.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1315"/>
         <source>  --shading &lt;mode&gt;: Select shading mode for rendering (wireframe, flat, default, full).
 </source>
-        <translation>  --shading &lt;mode&gt;: выбрать режим затенения для рендеринга (wireframe, flat, default, full).</translation>
+        <translation type="vanished">  --shading &lt;mode&gt;: выбрать режим затенения для рендеринга (wireframe, flat, default, full).</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1316"/>
         <source>  --lighting &lt;style&gt;: Select the lighting style of the default shading (standard, studio, matte, toon).
 </source>
-        <translation>  --lighting &lt;style&gt;: Выбрать стиль освещения затенения по умолчанию (standard, studio, matte, toon).
+        <translation type="vanished">  --lighting &lt;style&gt;: Выбрать стиль освещения затенения по умолчанию (standard, studio, matte, toon).
 </translation>
     </message>
     <message>
@@ -11131,231 +11147,231 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
         <translation type="obsolete">  -ldv, --light-dark-value &lt;value&gt;: значение светлого/темного цвета от 0,0 до 1,0.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1345"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="631"/>
         <source>  --kmz-geometry &lt;all|visible&gt;: Keep every part, or flatten to the visible surfaces with one mesh per color, in KMZ exports.
 </source>
         <translation>  --kmz-geometry &lt;all|visible&gt;: Сохранять каждую деталь или упрощать до видимых поверхностей с одной сеткой на цвет в экспортах KMZ.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1366"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="652"/>
         <source>  -h, --help: Display this help message and exit.
 </source>
         <translation>  -h, --help: Показать эту справку и выйти.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1599"/>
+        <location filename="../../source/application/sw_application.cpp" line="336"/>
         <source>Command line image export is not supported on iOS.
 </source>
         <translation>Экспорт изображений из командной строки не поддерживается в iOS.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1613"/>
-        <location filename="../../source/application/sw_application.cpp" line="2281"/>
+        <location filename="../../source/application/sw_application.cpp" line="350"/>
+        <location filename="../../source/application/sw_application.cpp" line="1018"/>
         <source>Initialize Renderer</source>
         <translation>Инициализировать модуль рендеринга</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="645"/>
-        <location filename="../../source/application/sw_application.cpp" line="650"/>
-        <location filename="../../source/application/sw_application.cpp" line="666"/>
-        <location filename="../../source/application/sw_application.cpp" line="669"/>
-        <location filename="../../source/application/sw_application.cpp" line="2466"/>
-        <location filename="../../source/application/sw_application.cpp" line="2483"/>
-        <location filename="../../source/application/sw_application.cpp" line="2491"/>
-        <location filename="../../source/application/sw_application.cpp" line="2495"/>
+        <location filename="../../source/application/sw_application.cpp" line="1203"/>
+        <location filename="../../source/application/sw_application.cpp" line="1220"/>
+        <location filename="../../source/application/sw_application.cpp" line="1228"/>
+        <location filename="../../source/application/sw_application.cpp" line="1232"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="97"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="102"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="118"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="121"/>
         <source>Load Parts Library</source>
         <translation>Загрузить библиотеку деталей</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="655"/>
+        <location filename="../../source/application/sw_application_library.cpp" line="107"/>
         <source>Parts Library Archives (*.zip);;All Files (*)</source>
         <translation>Архивы библиотеки деталей (*.zip);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1300"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="586"/>
         <source>  --height &lt;height&gt;: Set the picture height.
 </source>
         <translation>  --height &lt;height&gt;: Указать высоту изображения.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1304"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="590"/>
         <source>  --transparent: Render images with a transparent background (PNG and GIF only).
 </source>
         <translation>  --transparent: Отображать изображения с прозрачным фоном (только PNG и GIF).
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1326"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="612"/>
         <source>  --stud-style &lt;id&gt;: Set the stud style (0=Plain, 1=Thin-Line Logo, 2=Outline Logo, 3=Sharp Top Logo, 4=Rounded Top Logo, 5=Flattened Logo, 6=High Contrast, 7=High Contrast Logo).
 </source>
         <translation>  --stud-style &lt;id&gt;: Указать стиль шипов (0=Простой, 1=Логотип из тонких линий, 2=Логотип с контуром, 3=Логотип с острым верхом, 4=Логотип со скруглённым верхом, 5=Плоский логотип, 6=Высокий контраст, 7=Логотип с высоким контрастом).
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1341"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="627"/>
         <source>  --export-wavefront [outfile.obj]: Export the model to Wavefront OBJ format.
 </source>
         <translation>  --export-wavefront [outfile.obj]: Экспортировать модель в формат Wavefront OBJ.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1342"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="628"/>
         <source>  --export-3ds [outfile.3ds]: Export the model to 3D Studio 3DS format.
 </source>
         <translation>  --export-3ds [outfile.3ds]: Экспортировать модель в формат 3D Studio 3DS.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1343"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="629"/>
         <source>  --export-collada [outfile.dae]: Export the model to COLLADA DAE format.
 </source>
         <translation>  --export-collada [outfile.dae]: Экспортировать модель в формат COLLADA DAE.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1344"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="630"/>
         <source>  --export-kmz [outfile.kmz]: Export the model to KMZ format.
 </source>
         <translation>  --export-kmz [outfile.kmz]: Экспортировать модель в формат KMZ.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1346"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="632"/>
         <source>  --export-csv [outfile.csv]: Export the list of parts used in CSV format.
 </source>
         <translation>  --export-csv [outfile.csv]: Экспортировать список используемых деталей в формате CSV.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1347"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="633"/>
         <source>  --export-bricklink [outfile.xml]: Export the list of parts used as a BrickLink XML wanted list, translated through the BrickLink mapping file set in the preferences.
 </source>
         <translation>  --export-bricklink [outfile.xml]: Экспортировать список используемых деталей как список желаний BrickLink в XML, с преобразованием через файл соответствия BrickLink, заданный в параметрах.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1352"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="638"/>
         <source>  --export-html [folder]: Create HTML instructions in a folder named after the model inside the folder.
 </source>
         <translation>  --export-html [folder]: Создать инструкции в формате HTML в папке с именем модели внутри указанной папки.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1353"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="639"/>
         <source>  --export-povray [outfile.pov]: Export the model to POV-Ray format.
 </source>
         <translation>  --export-povray [outfile.pov]: Экспортировать модель в формат POV-Ray.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1354"/>
+        <location filename="../../source/application/sw_application_command_line.cpp" line="640"/>
         <source>  --render-povray [outfile.png]: Render the model with POV-Ray using the POV-Ray window settings, the picture width and height, and the transparent background.
 </source>
         <translation>  --render-povray [outfile.png]: Отрисовать модель с помощью POV-Ray с параметрами окна POV-Ray, шириной и высотой изображения и прозрачным фоном.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1479"/>
+        <location filename="../../source/application/sw_application.cpp" line="216"/>
         <source>Could not load settings file &apos;%1&apos;.
 </source>
         <translation>Не удалось загрузить файл параметров «%1».
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1495"/>
+        <location filename="../../source/application/sw_application.cpp" line="232"/>
         <source>Could not load keyboard shortcuts file &apos;%1&apos;.
 </source>
         <translation>Не удалось загрузить файл сочетаний клавиш «%1».
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1503"/>
+        <location filename="../../source/application/sw_application.cpp" line="240"/>
         <source>Could not load mouse shortcuts file &apos;%1&apos;.
 </source>
         <translation>Не удалось загрузить файл сочетаний действий мыши «%1».
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1513"/>
+        <location filename="../../source/application/sw_application.cpp" line="250"/>
         <source>Could not load categories file &apos;%1&apos;.
 </source>
         <translation>Не удалось загрузить файл категорий «%1».
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1535"/>
+        <location filename="../../source/application/sw_application.cpp" line="272"/>
         <source>Could not save settings file &apos;%1&apos;.
 </source>
         <translation>Не удалось сохранить файл параметров «%1».
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1543"/>
+        <location filename="../../source/application/sw_application.cpp" line="280"/>
         <source>Could not save keyboard shortcuts file &apos;%1&apos;.
 </source>
         <translation>Не удалось сохранить файл сочетаний клавиш «%1».
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1551"/>
+        <location filename="../../source/application/sw_application.cpp" line="288"/>
         <source>Could not save mouse shortcuts file &apos;%1&apos;.
 </source>
         <translation>Не удалось сохранить файл сочетаний действий мыши «%1».
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1559"/>
+        <location filename="../../source/application/sw_application.cpp" line="296"/>
         <source>Could not save categories file &apos;%1&apos;.
 </source>
         <translation>Не удалось сохранить файл категорий «%1».
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1682"/>
+        <location filename="../../source/application/sw_application.cpp" line="419"/>
         <source>The %1 file &apos;%2&apos; was not found, using the bundled copy.</source>
         <translation>Файл %1 «%2» не найден, используется встроенная копия.</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1742"/>
+        <location filename="../../source/application/sw_application.cpp" line="479"/>
         <source>Error: model &apos;%1&apos; does not exist.
 </source>
         <translation>Ошибка: модель «%1» не существует.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1793"/>
-        <location filename="../../source/application/sw_application.cpp" line="1808"/>
-        <location filename="../../source/application/sw_application.cpp" line="1891"/>
-        <location filename="../../source/application/sw_application.cpp" line="1925"/>
-        <location filename="../../source/application/sw_application.cpp" line="2022"/>
-        <location filename="../../source/application/sw_application.cpp" line="2051"/>
-        <location filename="../../source/application/sw_application.cpp" line="2085"/>
-        <location filename="../../source/application/sw_application.cpp" line="2119"/>
-        <location filename="../../source/application/sw_application.cpp" line="2156"/>
-        <location filename="../../source/application/sw_application.cpp" line="2190"/>
-        <location filename="../../source/application/sw_application.cpp" line="2250"/>
+        <location filename="../../source/application/sw_application.cpp" line="530"/>
+        <location filename="../../source/application/sw_application.cpp" line="545"/>
+        <location filename="../../source/application/sw_application.cpp" line="628"/>
+        <location filename="../../source/application/sw_application.cpp" line="662"/>
+        <location filename="../../source/application/sw_application.cpp" line="759"/>
+        <location filename="../../source/application/sw_application.cpp" line="788"/>
+        <location filename="../../source/application/sw_application.cpp" line="822"/>
+        <location filename="../../source/application/sw_application.cpp" line="856"/>
+        <location filename="../../source/application/sw_application.cpp" line="893"/>
+        <location filename="../../source/application/sw_application.cpp" line="927"/>
+        <location filename="../../source/application/sw_application.cpp" line="987"/>
         <source>Saved &apos;%1&apos;.
 </source>
         <translation>Сохранено: «%1».
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="1958"/>
+        <location filename="../../source/application/sw_application.cpp" line="695"/>
         <source>LGEO parts need the standard POV-Ray include files such as colors.inc, which POV-Ray %1 could not find.
 </source>
         <translation>Для деталей LGEO нужны стандартные включаемые файлы POV-Ray, такие как colors.inc, которые POV-Ray %1 не нашёл.
 </translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2466"/>
+        <location filename="../../source/application/sw_application.cpp" line="1203"/>
         <source>Could not reload the parts library &apos;%1&apos;.</source>
         <translation>Не удалось перезагрузить библиотеку деталей «%1».</translation>
     </message>
     <message>
-        <location filename="../../source/application/sw_application.cpp" line="2502"/>
+        <location filename="../../source/application/sw_application.cpp" line="1239"/>
         <source>Load Part Connections</source>
         <translation>Загрузка соединений деталей</translation>
     </message>
@@ -12891,7 +12907,7 @@ Please visit https://github.com/nathaneltitane/studworx for information on how t
 <context>
     <name>swBlockingProgress</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="968"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="256"/>
         <source>%v of %m</source>
         <translation>%v из %m</translation>
     </message>
@@ -13179,32 +13195,32 @@ Choose where to save it and build it now?</source>
 <context>
     <name>swColorConfiguration</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="52"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="50"/>
         <source>Choose %1</source>
         <translation>Выбрать %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="52"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="50"/>
         <source>Save %1</source>
         <translation>Сохранить %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="53"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="51"/>
         <source>LDraw Files (*.ldr);;All Files (*)</source>
         <translation>Файлы LDraw (*.ldr);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="62"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="60"/>
         <source>Update %1</source>
         <translation>Обновить %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="72"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="70"/>
         <source>Saved the latest %1 to &apos;%2&apos;.</source>
         <translation>Последний файл %1 сохранён в «%2».</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="85"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="83"/>
         <source>No %1 file is set. It defines the LDraw colors and their edge lines.
 
 Choose where to save it and download the latest %2 now?</source>
@@ -13213,7 +13229,7 @@ Choose where to save it and download the latest %2 now?</source>
 Выбрать место сохранения и загрузить последнюю версию %2 сейчас?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="86"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="84"/>
         <source>The %1 file &apos;%2&apos; was not found. It defines the LDraw colors and their edge lines.
 
 Choose where to save it and download the latest %3 now?</source>
@@ -13240,22 +13256,22 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swColorDialogPopup</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1943"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="554"/>
         <source>Choose Color</source>
         <translation>Выберите цвет</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1944"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="555"/>
         <source>&lt;p&gt;&lt;b&gt;Choose Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Pick a color using the swatches or enter its component values. Choose OK to use the selected color, or Cancel to keep the original color. Editing the controls alone does not apply the color.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Выберите цвет&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите цвет, используя образцы, или введите значения его компонентов. Выберите «ОК», чтобы использовать выбранный цвет, или «Отмена», чтобы сохранить исходный цвет. Редактирование элементов управления само по себе не приводит к изменению цвета.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1970"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="581"/>
         <source>Custom Color</source>
         <translation>Пользовательский цвет</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1971"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="582"/>
         <source>Choose a color or enter its component values.</source>
         <translation>Выберите цвет или введите значения его компонентов.</translation>
     </message>
@@ -13379,116 +13395,116 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swEditorWidget</name>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="34"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="19"/>
         <source>Configure the editor.</source>
         <translation>Настроить редактор.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="34"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="19"/>
         <source>Editor Options</source>
         <translation>Параметры редактора</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="36"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="21"/>
         <source>&amp;Syntax Highlighting</source>
         <translation>&amp;Подсветка синтаксиса</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="41"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="26"/>
         <source>Line &amp;Numbers</source>
         <translation>&amp;Номера строк</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="46"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="31"/>
         <source>&amp;Wrap Lines</source>
         <translation>&amp;Перенос строк</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="51"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="36"/>
         <source>Whitespace &amp;Markers</source>
         <translation>М&amp;аркеры пробелов</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="58"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="43"/>
         <source>&amp;Find and Replace</source>
         <translation>&amp;Поиск и замена</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="65"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="50"/>
         <source>Match &amp;Case</source>
         <translation>&amp;Учитывать регистр</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="73"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="58"/>
         <source>Wh&amp;ole Words</source>
         <translation>Слова &amp;целиком</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="91"/>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="92"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="76"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="77"/>
         <source>Find</source>
         <translation>Найти</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="93"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="78"/>
         <source>Text to find, enter finds the next match and shift enter the previous one.</source>
         <translation>Искомый текст; Enter находит следующее совпадение, Shift+Enter — предыдущее.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="98"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="83"/>
         <source>Previous</source>
         <translation>Предыдущее</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="98"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="83"/>
         <source>Select the previous match.</source>
         <translation>Выбрать предыдущее совпадение.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="99"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="84"/>
         <source>Next</source>
         <translation>Следующее</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="99"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="84"/>
         <source>Select the next match.</source>
         <translation>Выбрать следующее совпадение.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="105"/>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="106"/>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="111"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="90"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="91"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="96"/>
         <source>Replace</source>
         <translation>Заменить</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="107"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="92"/>
         <source>Text that replaces the matches, enter replaces the selected match.</source>
         <translation>Текст, которым заменяются совпадения; Enter заменяет выбранное совпадение.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="111"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="96"/>
         <source>Replace the selected match and select the next one.</source>
         <translation>Заменить выбранное совпадение и выбрать следующее.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="112"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="97"/>
         <source>Replace All</source>
         <translation>Заменить все</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="112"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="97"/>
         <source>Replace every match in the text.</source>
         <translation>Заменить каждое совпадение в тексте.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="115"/>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="364"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="100"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="349"/>
         <source>No Matches</source>
         <translation>Нет совпадений</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="325"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="310"/>
         <source>%n Replaced</source>
         <translation>
             <numerusform>Заменено: %n</numerusform>
@@ -13497,12 +13513,12 @@ Choose where to save it and download the latest %3 now?</source>
         </translation>
     </message>
     <message>
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="366"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="351"/>
         <source>%1 of %2</source>
         <translation>%1 из %2</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="368"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="353"/>
         <source>%n Matches</source>
         <translation>
             <numerusform>%n совпадение</numerusform>
@@ -15490,8 +15506,8 @@ Choose where to save it and download the latest %3 now?</source>
     <name>swInstructionsEditorWidget</name>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="273"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="307"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="292"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="474"/>
         <source>Editor</source>
         <translation>Редактор</translation>
     </message>
@@ -15501,27 +15517,27 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>&lt;p&gt;&lt;b&gt;Редактор&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Текст файла модели в том виде, в каком он сохраняется: детали, шаги и инструкции. Измените его и примените, чтобы загрузить модель из текста; изменение не сохранено, пока не сохранена модель.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="299"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="284"/>
         <source>Apply</source>
         <translation>Применить</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="299"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="284"/>
         <source>Check the syntax of the edited text and load the model from it, the change is unsaved until the model is saved.</source>
         <translation>Проверить синтаксис изменённого текста и загрузить из него модель; изменение не сохранено, пока не сохранена модель.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="300"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="285"/>
         <source>Revert</source>
         <translation>Вернуть</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="300"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="285"/>
         <source>Discard the edits and show the text of the model again.</source>
         <translation>Отменить правки и снова показать текст модели.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="474"/>
         <source>The text was not applied. %n line(s) are not valid LDraw syntax:</source>
         <translation>
             <numerusform>Текст не применён. Строк с недопустимым синтаксисом LDraw: %n:</numerusform>
@@ -15546,22 +15562,22 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">Заменить все</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="306"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="291"/>
         <source>Text of the model file.</source>
         <translation>Текст файла модели.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="317"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="302"/>
         <source>Save</source>
         <translation>Сохранить</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="469"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="454"/>
         <source>Line %1: %2</source>
         <translation>Строка %1: %2</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="486"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="471"/>
         <source>And %n more.</source>
         <translation>
             <numerusform>И ещё %n.</numerusform>
@@ -15583,112 +15599,112 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>&lt;p&gt;&lt;b&gt;Сетка&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Сетка страницы помогает выравнивать перетаскиваемые элементы; она никогда не печатается. Показывайте её на экране, привязывайте к ней перетаскиваемые элементы или к опорным точкам других элементов, выбирайте её область, размер основной единицы и доли, на которые она делится, а также цвета её линий и полей.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="527"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="518"/>
         <source>Show Grid</source>
         <translation>Показать сетку</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="527"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="518"/>
         <source>Draw the page grid on screen, it is never printed.</source>
         <translation>Рисовать сетку страницы на экране; она никогда не печатается.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="528"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="519"/>
         <source>Snap to Grid</source>
         <translation>Привязка к сетке</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="536"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="541"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="527"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="532"/>
         <source>Snap to Anchors</source>
         <translation>Привязка к опорным точкам</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="528"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="519"/>
         <source>Snap dragged elements to the page grid, this turns Snap to Anchors off.</source>
         <translation>Привязывать перетаскиваемые элементы к сетке страницы; это выключает привязку к опорным точкам.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="539"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="530"/>
         <source>Snap dragged elements to the anchors of the page area and the other elements, this turns Snap to Grid off.</source>
         <translation>Привязывать перетаскиваемые элементы к опорным точкам области страницы и других элементов; это выключает привязку к сетке.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="540"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="531"/>
         <source>&lt;p&gt;&lt;b&gt;Snap to Anchors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;While an element is dragged, its corners, edge centers and center snap to those of the page area and of the other elements when they come within a few pixels, on each axis separately. Snap to Anchors and Snap to Grid exclude each other, turning one on turns the other off. Show Element Anchors in the Properties options shows the anchors.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Привязка к опорным точкам&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Пока элемент перетаскивается, его углы, середины краёв и центр привязываются к соответствующим точкам области страницы и других элементов, когда оказываются в пределах нескольких пикселей, отдельно по каждой оси. «Привязка к опорным точкам» и «Привязка к сетке» исключают друг друга: включение одной выключает другую. «Показывать опорные точки элементов» в параметрах свойств показывает опорные точки.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="551"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="559"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="542"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="550"/>
         <source>Grid Area</source>
         <translation>Область сетки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="555"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="546"/>
         <source>Within Margins</source>
         <translation>В пределах полей</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="556"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="547"/>
         <source>Full Page</source>
         <translation>Вся страница</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="557"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="548"/>
         <source>Choose whether the grid covers the area inside the margins or the full page.</source>
         <translation>Выберите, покрывает ли сетка область внутри полей или всю страницу.</translation>
     </message>
     <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="560"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="563"/>
         <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="569"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="572"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="578"/>
         <source>Grid Size</source>
         <translation>Размер сетки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="576"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="567"/>
         <source>Main unit of the grid drawn with the primary color, in the margin units of the page setup.</source>
         <translation>Основная единица сетки, рисуемая основным цветом, в единицах полей из параметров страницы.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="588"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="596"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="579"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="587"/>
         <source>Divisions</source>
         <translation>Деления</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="594"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="585"/>
         <source>Split each grid unit into fractions drawn with the secondary color, dragged elements snap to the fractions.</source>
         <translation>Разбить каждую единицу сетки на доли, рисуемые вторичным цветом; перетаскиваемые элементы привязываются к долям.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="628"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="619"/>
         <source>Primary Color</source>
         <translation>Основной цвет</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="628"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="619"/>
         <source>Color of the grid lines at every grid unit.</source>
         <translation>Цвет линий сетки на каждой единице сетки.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="629"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="620"/>
         <source>Secondary Color</source>
         <translation>Вторичный цвет</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="629"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="620"/>
         <source>Color of the grid lines at the fractions of a grid unit.</source>
         <translation>Цвет линий сетки на долях единицы сетки.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="630"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="621"/>
         <source>Margin Color</source>
         <translation>Цвет полей</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="630"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_placement.cpp" line="621"/>
         <source>Color of the dashed outline of the page margins.</source>
         <translation>Цвет пунктирного контура полей страницы.</translation>
     </message>
@@ -17649,7 +17665,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Размер: %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="2045"/>
+        <location filename="../../source/interface/window/sw_window_utilities_icons.cpp" line="46"/>
         <source>Transparent</source>
         <translation>Прозрачный</translation>
     </message>
@@ -18216,10 +18232,10 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="326"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="633"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="641"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1002"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="634"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="642"/>
         <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1003"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1004"/>
         <source>Transform</source>
         <translation>Преобразование</translation>
     </message>
@@ -18242,23 +18258,23 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">За&amp;тенение</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="388"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="720"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="389"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="721"/>
         <source>Tools</source>
         <translation>Инструменты</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="411"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="412"/>
         <source>&amp;File</source>
         <translation>&amp;Файл</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="421"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="422"/>
         <source>&amp;Import</source>
         <translation>&amp;Импорт</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="425"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="426"/>
         <source>&amp;Export</source>
         <translation>&amp;Экспорт</translation>
     </message>
@@ -18268,12 +18284,12 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&amp;Оказывать</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="457"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="458"/>
         <source>&amp;Edit</source>
         <translation>&amp;Изменить</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="483"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="484"/>
         <source>&amp;View</source>
         <translation>&amp;Вид</translation>
     </message>
@@ -18282,12 +18298,12 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&amp;Шаг</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="484"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="485"/>
         <source>T&amp;oolbars</source>
         <translation>&amp;Панели инструментов</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="520"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="521"/>
         <source>&amp;Part</source>
         <translation>&amp;Деталь</translation>
     </message>
@@ -18296,43 +18312,43 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">Под&amp;модель</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="592"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="593"/>
         <source>&amp;Help</source>
         <translation>&amp;Справка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="621"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="626"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="622"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="627"/>
         <source>Selection Mode</source>
         <translation>Режим выделения</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="627"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="628"/>
         <source>Change selection mode</source>
         <translation>Изменить режим выделения</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="628"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="629"/>
         <source>Choose which related parts are included when selecting a part.</source>
         <translation>Выберите, какие связанные детали включаются при выборе детали.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="642"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="643"/>
         <source>Transform Options</source>
         <translation>Параметры преобразования</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="643"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="644"/>
         <source>Choose coordinate axes and whether selected parts rotate together.</source>
         <translation>Выберите оси координат и то, вращаются ли выбранные детали вместе.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="648"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="649"/>
         <source>Snap XY</source>
         <translation>Привязка по оси XY</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="652"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="653"/>
         <source>Snap Z</source>
         <translation>Привязка по оси Z</translation>
     </message>
@@ -18341,18 +18357,18 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">Меню привязки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="656"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="665"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="657"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="666"/>
         <source>Movement Snap</source>
         <translation>Привязка перемещения</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="666"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="667"/>
         <source>Snap translations to fixed intervals</source>
         <translation>Привязка смещения к фиксированным интервалам</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="667"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="668"/>
         <source>Choose movement snapping intervals for XY and Z.</source>
         <translation>Выберите интервалы привязки движения для XY и Z.</translation>
     </message>
@@ -18361,33 +18377,33 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">Меню угла привязки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="672"/>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="680"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="673"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="681"/>
         <source>Rotation Snap</source>
         <translation>Привязка вращения</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="681"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="682"/>
         <source>Snap rotations to fixed intervals</source>
         <translation>Привязка вращений к фиксированным интервалам</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="682"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="683"/>
         <source>Choose the rotation snapping interval.</source>
         <translation>Выберите интервал привязки вращения.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="687"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="688"/>
         <source>Standard</source>
         <translation>Стандартный</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="689"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="690"/>
         <source>&lt;p&gt;&lt;b&gt;Standard Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Use file controls to create, open, and save models, and Undo or Redo to navigate edit history. Before moving or rotating objects, choose the selection rule, coordinate reference, and snapping increments from the four drop-down controls. Help &gt; &quot;What&apos;s This?&quot; explains individual controls.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Стандартная панель инструментов&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Кнопки файла создают, открывают и сохраняют модели, а «Отменить» и «Повторить» перемещают по истории изменений. Перед перемещением или вращением объектов выберите правило выделения, систему координат и шаги привязки в четырёх раскрывающихся списках. Справка &gt; «Что это?» объясняет отдельные элементы.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="707"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="708"/>
         <source>Time</source>
         <translation>Время</translation>
     </message>
@@ -18396,17 +18412,17 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="vanished">&lt;p&gt;&lt;b&gt;Панель времени&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Кнопки со стрелками перемещают по шагам сборки, чтобы можно было посмотреть, как собирается модель. Они не меняют шаг, назначенный детали; для этого используйте шкалу времени. «Воспроизвести» проходит по шагам модели, показывая заданное движение и паузы при повторном использовании, а «Стоп» возвращает к шагу, с которого началось воспроизведение. «Задать ключи» и «Удалить ключи» добавляют или удаляют ключи выбранных объектов на текущем шаге, как ромбики панели «Ключевые кадры». «Добавлять ключи» определяет, создают ли изменения ключи анимации на текущем шаге, позволяя таким свойствам, как положение, меняться от шага к шагу.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="779"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="780"/>
         <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the current LDraw color from the swatches. This color is used when inserting or painting parts. To recolor selected parts, use the color button above the swatches. Hover over a swatch for its name and color code.&lt;/p&gt;&lt;p&gt;Docked at the top or bottom, the swatches line up in one row; scroll the wheel or use the arrows at its ends to move along it, or double-click an arrow to jump to that end.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Цвета&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите текущий цвет LDraw из образцов. Этот цвет используется при вставке или закрашивании деталей. Чтобы перекрасить выбранные детали, используйте кнопку цвета над образцами. Наведите курсор на образец, чтобы увидеть его название и код цвета.&lt;/p&gt;&lt;p&gt;Когда панель закреплена сверху или снизу, образцы выстраиваются в один ряд; прокручивайте колесо или используйте стрелки на его концах, чтобы двигаться вдоль него, либо дважды щёлкните стрелку, чтобы перейти к его краю.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="819"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="820"/>
         <source>Scroll the swatches left. Double-click to jump to the first one.</source>
         <translation>Прокрутить образцы влево. Двойной щелчок переходит к первому.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="819"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="820"/>
         <source>Scroll the swatches right. Double-click to jump to the last one.</source>
         <translation>Прокрутить образцы вправо. Двойной щелчок переходит к последнему.</translation>
     </message>
@@ -18423,7 +18439,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Сочленения&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Сочленение, выбранное в выбранной подмодели, с его осью и дерево всех моделей с сочленениями, их подмоделей с сочленениями и самих сочленений. Выберите сочленение, чтобы переместить или повернуть его, и удалите его, чтобы вернуть в состояние покоя.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1153"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1154"/>
         <source>Poses</source>
         <translation>Позы</translation>
     </message>
@@ -18432,7 +18448,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Позы&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Позы модели, выбранной на панели сочленений. Сохраните углы сочленений как именованную позу, затем применяйте, переименовывайте или удаляйте её. Позы сохраняются вместе с моделью.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1162"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1163"/>
         <source>Keyframes</source>
         <translation>Ключевые кадры</translation>
     </message>
@@ -18446,22 +18462,22 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Стандартная панель инструментов&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Используйте элементы управления файлами для создания, открытия и сохранения проектов, а также функции «Отменить» или «Повторить» для навигации по истории изменений. Прежде чем перемещать или вращать объекты, выберите правило выбора, привязку координат и шаг привязки из четырех раскрывающихся элементов управления. Помощь &gt; Что это? объясняет отдельные элементы управления.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="629"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="630"/>
         <source>&lt;p&gt;&lt;b&gt;Selection Mode&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the rule applied when you pick a part in the model view. Single selects that part; the other modes include matching part types, matching colors, or both. For example, color selection lets you pick matching red parts without selecting each one separately.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Режим выбора&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите правило, которое применяется при выборе детали на виде модели. «Единичный выбор» выбирает только эту деталь; другие режимы включают детали того же типа, того же цвета или и то и другое. Например, выбор по цвету позволяет выбрать все красные детали, не выбирая каждую отдельно.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="644"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="645"/>
         <source>&lt;p&gt;&lt;b&gt;Transform Options&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the axes and pivot used for interactive transforms. Relative Transforms uses the focused object&apos;s orientation, so movement along X follows that object&apos;s local X axis. Absolute Transforms uses the model axes. Rotate Together rotates the selection around a shared pivot; Rotate Separately rotates each part around its own origin.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Параметры преобразования&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите оси и точку поворота для интерактивных преобразований. «Относительное преобразование» использует ориентацию объекта в фокусе, поэтому движение вдоль X следует локальной оси X этого объекта. «Абсолютное преобразование» использует оси модели. «Вращать вместе» вращает выделение вокруг общей точки поворота; «Вращать отдельно» вращает каждую деталь вокруг её собственного начала координат.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="668"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="669"/>
         <source>&lt;p&gt;&lt;b&gt;Movement Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose how far objects move in each snapped increment. XY controls movement across the base plane; Z controls vertical movement, so they can use different intervals. Turn snapping off for free placement, then enable it again when you need consistent spacing.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Привязка движения&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите, насколько далеко объекты перемещаются с каждым шагом привязки. XY управляет движением по базовой плоскости; Z управляет вертикальным движением, поэтому они могут использовать разные интервалы. Отключите привязку для свободного размещения, а затем включите ее снова, когда вам нужно одинаковое расстояние.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="683"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="684"/>
         <source>&lt;p&gt;&lt;b&gt;Rotation Snap&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose an angle increment for interactive rotation. For example, a 90-degree increment is useful for quarter turns, while smaller increments allow finer alignment. Turn snapping off for free rotation without fixed angle increments.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Привязка вращения&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите шаг угла для интерактивного вращения. Например, приращение на 90 градусов полезно для четверти оборота, тогда как меньшие приращения обеспечивают более точное выравнивание. Отключите привязку для свободного вращения без фиксированного приращения угла.&lt;/p&gt;</translation>
     </message>
@@ -18471,22 +18487,22 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Панель инструментов «Время»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Кнопки со стрелками позволяют перемещаться по этапам сборки, чтобы вы могли проверить, как собирается модель. Они не меняют шаг, назначенный пьесе; используйте для этого временную шкалу. «Добавить ключи» определяет, будут ли изменения создавать ключи анимации на текущем этапе, позволяя таким свойствам, как положение, меняться между шагами.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="722"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="723"/>
         <source>&lt;p&gt;&lt;b&gt;Tools Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a tool, then use it in the model view. Insertion tools create parts, lights, or cameras. Editing tools select, transform, remove, or recolor objects. Navigation tools change the viewpoint without changing model geometry. Mouse assignments can be customized in Preferences.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Панель инструментов «Инструменты»&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите инструмент и используйте его в представлении модели. Инструменты вставки создают детали, источники света или камеры. Инструменты редактирования позволяют выбирать, трансформировать, удалять или перекрашивать объекты. Инструменты навигации изменяют точку обзора без изменения геометрии модели. Назначения мыши можно настроить в параметрах.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="764"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="765"/>
         <source>Parts</source>
         <translation>Детали</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="767"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="768"/>
         <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose a category or palette and filter its parts. Selecting a part prepares it for insertion; drag it into the model view to place it. Double-click a part to open its preview. Options controls filtering, thumbnails, and list display.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Детали&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите категорию или палитру и отфильтруйте её детали. Выбор детали подготавливает её к вставке; перетащите её на вид модели, чтобы разместить. Дважды щёлкните деталь, чтобы открыть её предварительный просмотр. Параметры управляют фильтрацией, миниатюрами и отображением списка.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="777"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="778"/>
         <source>Colors</source>
         <translation>Цвета</translation>
     </message>
@@ -18496,47 +18512,47 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Цвета&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите текущий цвет LDraw из образцов. Этот цвет используется при вставке или покраске деталей. Чтобы перекрасить выбранные детали, используйте кнопку цвета над образцами. Наведите указатель мыши на образец, чтобы узнать его название и цветовой код.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="795"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="796"/>
         <source>Apply the current color to selected parts.</source>
         <translation>Примените текущий цвет к выбранным деталям.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="796"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="797"/>
         <source>Change Selection Color</source>
         <translation>Изменить цвет выделения</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="797"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="798"/>
         <source>&lt;p&gt;&lt;b&gt;Change Selection Color&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Apply the current color to selected parts. Choosing a swatch sets the current color; this button applies that color to the selection.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Изменить цвет выделения&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Применить текущий цвет к выделенным деталям. Выбор образца устанавливает текущий цвет; эта кнопка применяет этот цвет к выделению.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="849"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="850"/>
         <source>LDraw Colors</source>
         <translation>Цвета LDraw</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="978"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="979"/>
         <source>Properties</source>
         <translation>Свойства</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="980"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="981"/>
         <source>&lt;p&gt;&lt;b&gt;Properties&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Edit properties of the focused object or selection. Available fields depend on whether you select parts, a camera, or a light. Expand a section to see its fields. Keyframe controls mark properties at the current building step.&lt;/p&gt;&lt;p&gt;The transform fields at the bottom apply an X/Y/Z translation or rotation using the chosen transform mode. Press Enter to apply the values.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Свойства&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Отредактируйте свойства объекта в фокусе или выделения. Доступные поля зависят от того, выбраны ли детали, камера или источник света. Разверните раздел, чтобы увидеть его поля. Элементы управления ключевыми кадрами отмечают свойства на текущем шаге сборки.&lt;/p&gt;&lt;p&gt;Поля преобразования внизу применяют сдвиг или вращение по осям X/Y/Z в выбранном режиме преобразования. Нажмите Enter, чтобы применить значения.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1033"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1034"/>
         <source>Choose absolute or relative translation or rotation.</source>
         <translation>Выберите абсолютный или относительный сдвиг или вращение.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1034"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1035"/>
         <source>&lt;p&gt;&lt;b&gt;Apply Transform&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose the translation or rotation mode, enter X/Y/Z values, and press Enter to apply them. Translation values use LDraw units; rotation values use degrees.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Применить преобразование&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите режим сдвига или вращения, введите значения X/Y/Z и нажмите Enter, чтобы применить их. Значения сдвига задаются в единицах LDraw; значения вращения — в градусах.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1012"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1013"/>
         <source>Transform X</source>
         <translation>Преобразование X</translation>
     </message>
@@ -18571,7 +18587,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>За&amp;тенение</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="444"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="445"/>
         <source>Ren&amp;der</source>
         <translation>Рен&amp;деринг</translation>
     </message>
@@ -18580,92 +18596,92 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&amp;Найти</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="530"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="531"/>
         <source>&amp;Joint</source>
         <translation>&amp;Сочленение</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="545"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="546"/>
         <source>&amp;Group</source>
         <translation>&amp;Группа</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="552"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="553"/>
         <source>&amp;Visibility</source>
         <translation>&amp;Видимость</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="559"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="560"/>
         <source>&amp;Steps</source>
         <translation>&amp;Шаги</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="576"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="577"/>
         <source>&amp;Models</source>
         <translation>&amp;Модели</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="709"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="710"/>
         <source>&lt;p&gt;&lt;b&gt;Time Toolbar&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The arrow buttons move through building steps so you can inspect how the model is assembled. They do not change the step assigned to a part; use the Steps panel for that. Play steps through the model to show the keyed motion and pauses when used again, and Stop goes back to the step playing started from. Set Keys and Remove Keys add or remove the keys of the selected objects at the current step, like the diamonds of the Keyframes panel. Add Keys controls whether edits create animation keys at the current step, allowing properties such as position to vary between steps.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Панель времени&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Кнопки со стрелками перемещают по шагам сборки, чтобы можно было посмотреть, как собирается модель. Они не меняют шаг, назначенный детали; для этого используйте панель «Шаги». «Воспроизвести» проходит по шагам модели, показывая заданное движение и паузы при повторном использовании, а «Стоп» возвращает к шагу, с которого началось воспроизведение. «Задать ключи» и «Удалить ключи» добавляют или удаляют ключи выбранных объектов на текущем шаге, как ромбики панели «Ключевые кадры». «Добавлять ключи» определяет, создают ли изменения ключи анимации на текущем шаге, позволяя таким свойствам, как положение, меняться от шага к шагу.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="807"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="808"/>
         <source>Choose how inserted parts are colored.</source>
         <translation>Выберите, как раскрашиваются вставляемые детали.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="807"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="808"/>
         <source>Color Options</source>
         <translation>Параметры цвета</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="820"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="821"/>
         <source>Scroll Colors Left</source>
         <translation>Прокрутить цвета влево</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="820"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="821"/>
         <source>Scroll Colors Right</source>
         <translation>Прокрутить цвета вправо</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1001"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1002"/>
         <source>T</source>
         <translation>С</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1013"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1014"/>
         <source>Enter the X translation in LDraw units or rotation in degrees.</source>
         <translation>Введите сдвиг X в единицах LDraw или поворот в градусах.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1018"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1019"/>
         <source>Transform Y</source>
         <translation>Преобразование Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1019"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1020"/>
         <source>Enter the Y translation in LDraw units or rotation in degrees.</source>
         <translation>Введите сдвиг Y в единицах LDraw или поворот в градусах.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1024"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1025"/>
         <source>Transform Z</source>
         <translation>Преобразование Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1025"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1026"/>
         <source>Enter the Z translation in LDraw units or rotation in degrees.</source>
         <translation>Введите сдвиг Z в единицах LDraw или поворот в градусах.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1092"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1093"/>
         <source>Steps</source>
         <translation>Шаги</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1094"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1095"/>
         <source>&lt;p&gt;&lt;b&gt;Steps&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Select a step to make it current, or select part rows to select those parts in the model. Drag parts between steps or reorder them within a step. Keys rows name the objects with animation keys at a step, and a double-click selects that object there and shows the Keyframes panel. Right-click for step insertion, removal, movement, and visibility commands.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Шаги&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите шаг, чтобы сделать его текущим, или строки деталей, чтобы выбрать эти детали в модели. Перетаскивайте детали между шагами или меняйте их порядок внутри шага. Строки «Ключи» называют объекты с ключами анимации на шаге; двойной щелчок выбирает этот объект на этом шаге и показывает панель «Ключевые кадры». Щёлкните правой кнопкой для команд вставки, удаления, перемещения шагов и видимости.&lt;/p&gt;</translation>
     </message>
@@ -18679,17 +18695,17 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Временная шкала&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите шаг, чтобы сделать его текущим, или выберите строки деталей, чтобы выбрать эти детали в модели. Перетаскивайте детали между шагами или меняйте их порядок внутри шага. Щелкните правой кнопкой мыши для команд вставки, удаления, перемещения и видимости шага.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1113"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1114"/>
         <source>Minifigure Builder</source>
         <translation>Конструктор минифигурок</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1131"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1132"/>
         <source>Explode</source>
         <translation>Разнести</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1144"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1145"/>
         <source>Joints</source>
         <translation>Сочленения</translation>
     </message>
@@ -18715,33 +18731,33 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Предварительный просмотр&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Осмотрите деталь, не помещая ее в модель. Дважды щелкните деталь в панели «Детали», чтобы просмотреть его. Блокировка предварительного просмотра сохраняет текущий предварительный просмотр при изменении выбора источника; разблокируйте его, чтобы разрешить обновления.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1214"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1215"/>
         <source>Asset loading failed</source>
         <translation>Не удалось загрузить ресурс</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="583"/>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="679"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="568"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="664"/>
         <source>Could not load part.</source>
         <translation>Не удалось загрузить деталь.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="605"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="590"/>
         <source>Could not generate geometry.</source>
         <translation>Не удалось создать геометрию.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="619"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="604"/>
         <source>Regenerating synthesized part geometry.</source>
         <translation>Повторное создание геометрии синтезированных деталей.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="621"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="606"/>
         <source>Loading model parts (%1 / %2).</source>
         <translation>Загрузка деталей модели (%1 / %2).</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="628"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="613"/>
         <source>The model could not be fully loaded. Some parts may be missing.
 
 %1</source>
@@ -18753,7 +18769,7 @@ Choose where to save it and download the latest %3 now?</source>
 %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="863"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="848"/>
         <source>Close Other Tabs</source>
         <translation>Закрыть другие вкладки</translation>
     </message>
@@ -18810,7 +18826,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Перенесённая модель сохраняется с метакомандами StudWorx. LeoCAD тогда игнорирует её камеры, источники света, группы и параметры деталей. Модель, оставленная как есть, остаётся читаемой в LeoCAD.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="967"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="952"/>
         <source>Export HTML</source>
         <translation>Экспорт HTML</translation>
     </message>
@@ -18820,17 +18836,17 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">POV-Ray Экспорт</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1174"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1159"/>
         <source>Save Image</source>
         <translation>Сохранить изображение</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1186"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1171"/>
         <source>Nothing to select.</source>
         <translation>Нечего выбирать.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1186"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1171"/>
         <source>Select Objects</source>
         <translation>Выделение объектов</translation>
     </message>
@@ -18890,7 +18906,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Затенение</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="465"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="467"/>
         <source>Wireframe</source>
         <translation>Каркас</translation>
     </message>
@@ -18900,7 +18916,7 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Плоское затенение</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="467"/>
+        <location filename="../../source/interface/window/sw_window_main_view.cpp" line="465"/>
         <source>Default Lights</source>
         <translation>Подсветка по умолчанию</translation>
     </message>
@@ -19090,87 +19106,87 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>&lt;p&gt;&lt;b&gt;Предпросмотр&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Просмотрите деталь или модель, не помещая её в модель. Дважды щёлкните деталь на панели «Детали», чтобы увидеть её предпросмотр. «Заблокировать предпросмотр» сохраняет текущий предпросмотр при смене выбранного источника; разблокируйте его, чтобы разрешить обновления.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="676"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="661"/>
         <source>Found through BrickLink number %1</source>
         <translation>Найдено по номеру BrickLink %1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="684"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="669"/>
         <source>Marked as an alias in the parts library.</source>
         <translation>Помечено как псевдоним в библиотеке деталей.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="685"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="670"/>
         <source>The part the alias stands for</source>
         <translation>Деталь, на которую указывает псевдоним</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="690"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="675"/>
         <source>Marked as moved in the parts library.</source>
         <translation>Помечено как перемещённая в библиотеке деталей.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="691"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="676"/>
         <source>The part it moved to</source>
         <translation>Деталь, в которую она перенесена</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="975"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="960"/>
         <source>Export POV-Ray</source>
         <translation>Экспортировать POV-Ray</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1060"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1045"/>
         <source>Print</source>
         <translation>Печать</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1060"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1045"/>
         <source>Could not start the print job.</source>
         <translation>Не удалось запустить задание печати.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1093"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1078"/>
         <source>Preview...</source>
         <translation>Предпросмотр...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1323"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1308"/>
         <source>Insert Color</source>
         <translation>Цвет вставки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1325"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1310"/>
         <source>Current Color</source>
         <translation>Текущий цвет</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1326"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1311"/>
         <source>Selected Part Color</source>
         <translation>Цвет выбранной детали</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1327"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1312"/>
         <source>Last Inserted Part Color</source>
         <translation>Цвет последней вставленной детали</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1329"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1314"/>
         <source>Lock Parts Color</source>
         <translation>Заблокировать цвет деталей</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1377"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1357"/>
         <source>Custom Rotation Snap</source>
         <translation>Пользовательская привязка вращения</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1377"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1357"/>
         <source>Snap angle in degrees</source>
         <translation>Угол привязки в градусах</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1389"/>
+        <location filename="../../source/interface/window/sw_window_main.cpp" line="1369"/>
         <source>Custom (%1 Degrees)...</source>
         <translation>Пользовательский (%1 град.)...</translation>
     </message>
@@ -19555,7 +19571,6 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>8Ш</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main.cpp" line="1353"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="147"/>
         <location filename="../../source/interface/window/sw_window_main.h" line="153"/>
         <source>None</source>
@@ -19633,57 +19648,57 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Ортогональная</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1238"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1239"/>
         <source>Selection</source>
         <translation>Выделение</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1239"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1240"/>
         <source>View Orientation</source>
         <translation>Ориентация вида</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1240"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1241"/>
         <source>Position</source>
         <translation>Позиция</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1241"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1242"/>
         <source>Snap and Transform</source>
         <translation>Привязка и преобразование</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1242"/>
+        <location filename="../../source/interface/window/sw_window_main_interface.cpp" line="1243"/>
         <source>Step</source>
         <translation>Шаг</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1131"/>
+        <location filename="../../source/interface/window/sw_window_utilities_panels.cpp" line="124"/>
         <source>Scroll the model tabs left.</source>
         <translation>Прокрутить вкладки моделей влево.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1131"/>
+        <location filename="../../source/interface/window/sw_window_utilities_panels.cpp" line="124"/>
         <source>Scroll the model tabs right.</source>
         <translation>Прокрутить вкладки моделей вправо.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1132"/>
+        <location filename="../../source/interface/window/sw_window_utilities_panels.cpp" line="125"/>
         <source>Scroll Tabs Left</source>
         <translation>Прокрутить вкладки влево</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1132"/>
+        <location filename="../../source/interface/window/sw_window_utilities_panels.cpp" line="125"/>
         <source>Scroll Tabs Right</source>
         <translation>Прокрутить вкладки вправо</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1133"/>
+        <location filename="../../source/interface/window/sw_window_utilities_panels.cpp" line="126"/>
         <source>&lt;p&gt;&lt;b&gt;Scroll Tabs Left&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the model tabs hidden on the left when they do not all fit.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Прокрутить вкладки влево&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показать вкладки моделей, скрытые слева, когда все вкладки не помещаются.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="1133"/>
+        <location filename="../../source/interface/window/sw_window_utilities_panels.cpp" line="126"/>
         <source>&lt;p&gt;&lt;b&gt;Scroll Tabs Right&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show the model tabs hidden on the right when they do not all fit.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Прокрутить вкладки вправо&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показать вкладки моделей, скрытые справа, когда все вкладки не помещаются.&lt;/p&gt;</translation>
     </message>
@@ -19691,7 +19706,7 @@ Choose where to save it and download the latest %3 now?</source>
 <context>
     <name>swMeshLoader</name>
     <message>
-        <location filename="../../source/library/sw_loader_mesh.cpp" line="1681"/>
+        <location filename="../../source/library/sw_loader_mesh.cpp" line="1664"/>
         <source>Could not load included file &apos;%1&apos;.</source>
         <translation>Не удалось загрузить включенный файл &apos;%1&apos;.</translation>
     </message>
@@ -20333,8 +20348,8 @@ Choose where to save it and download the latest %3 now?</source>
     <message>
         <location filename="../../source/core/sw_model.cpp" line="761"/>
         <location filename="../../source/core/sw_model_clipboard.cpp" line="175"/>
-        <location filename="../../source/core/sw_model_group.cpp" line="73"/>
-        <location filename="../../source/core/sw_model_group.cpp" line="110"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="61"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="98"/>
         <source>No parts selected.</source>
         <translation>Детали не выбраны.</translation>
     </message>
@@ -20517,7 +20532,7 @@ Choose where to save it and download the latest %3 now?</source>
     </message>
     <message>
         <location filename="../../source/core/sw_model_file.cpp" line="1067"/>
-        <location filename="../../source/core/sw_model_group.cpp" line="77"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="65"/>
         <source>Group </source>
         <translation>Группа </translation>
     </message>
@@ -20608,35 +20623,35 @@ Choose where to save it and download the latest %3 now?</source>
         <translation type="obsolete">Удалить шаг</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_group.cpp" line="73"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="61"/>
         <source>Group Selection</source>
         <translation>Сгруппировать выделение</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_group.cpp" line="101"/>
-        <location filename="../../source/core/sw_model_group.cpp" line="204"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="89"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="192"/>
         <source>Group</source>
         <translation>Группа</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_group.cpp" line="110"/>
-        <location filename="../../source/core/sw_model_group.cpp" line="144"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="98"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="132"/>
         <source>Ungroup Selection</source>
         <translation>Разгруппировать выделение</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_group.cpp" line="144"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="132"/>
         <source>No groups selected.</source>
         <translation>Группы не выбраны.</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_group.cpp" line="167"/>
-        <location filename="../../source/core/sw_model_group.cpp" line="238"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="155"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="226"/>
         <source>Ungroup</source>
         <translation>Разгруппировать</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_group.cpp" line="291"/>
+        <location filename="../../source/core/sw_model_group.cpp" line="279"/>
         <source>Edit Groups</source>
         <translation>Изменить группы</translation>
     </message>
@@ -20965,8 +20980,8 @@ Choose where to save it and download the latest %3 now?</source>
         </translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="536"/>
-        <location filename="../../source/core/sw_model_joints.cpp" line="686"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="603"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="753"/>
         <source>Set Joint</source>
         <translation>Задать сочленение</translation>
     </message>
@@ -20976,33 +20991,33 @@ Choose where to save it and download the latest %3 now?</source>
         <translation>Вызвать позу</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="629"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="696"/>
         <source>Turn Joint</source>
         <translation>Повернуть сочленение</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="642"/>
-        <location filename="../../source/core/sw_model_joints.cpp" line="653"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="709"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="720"/>
         <source>Joint Axis</source>
         <translation>Ось сочленения</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="668"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="735"/>
         <source>Lock Joint</source>
         <translation>Заблокировать сочленение</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="668"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="735"/>
         <source>Unlock Joint</source>
         <translation>Разблокировать сочленение</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="700"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="767"/>
         <source>Delete Joint</source>
         <translation>Удалить сочленение</translation>
     </message>
     <message>
-        <location filename="../../source/core/sw_model_joints.cpp" line="718"/>
+        <location filename="../../source/core/sw_model_joints.cpp" line="785"/>
         <source>Delete All Joints</source>
         <translation>Удалить все сочленения</translation>
     </message>
@@ -23779,17 +23794,17 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">Открытие папки LGEO</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1368"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1396"/>
         <source>Reset Colors</source>
         <translation>Сброс цветов</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1368"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1396"/>
         <source>Would you like to also reset the interface colors to match the color theme?</source>
         <translation>Сбросить также цвета интерфейса, чтобы они соответствовали цветовой теме?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1382"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1410"/>
         <source>Select Background Color</source>
         <translation>Выберите цвет фона</translation>
     </message>
@@ -23806,7 +23821,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="vanished">Выберите цвет осей</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="904"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="931"/>
         <source>&apos;%1&apos; did not run as Blender, so Blender rendering stays unavailable.
 
 %2</source>
@@ -23815,47 +23830,47 @@ Unsupported video cards use face tint and colored edges.</source>
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1069"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1097"/>
         <source>Select Parts Library</source>
         <translation>Выбор библиотеки деталей</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1085"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1113"/>
         <source>Select Unofficial Library Archive</source>
         <translation>Выбор архива неофициальной библиотеки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1093"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1121"/>
         <source>Select Part Connections Folder</source>
         <translation>Выбор папки соединений деталей</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1255"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1283"/>
         <source>Choose Minifigure Builder Settings</source>
         <translation>Выбор параметров конструктора минифигурок</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1268"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1296"/>
         <source>Save Minifigure Builder Settings</source>
         <translation>Сохранение параметров конструктора минифигурок</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1285"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1313"/>
         <source>Saved the latest minifigure builder settings to &apos;%1&apos;.</source>
         <translation>Последние параметры конструктора минифигурок сохранены в «%1».</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1290"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1318"/>
         <source>Select BrickLink Mapping File</source>
         <translation>Выбор файла соответствий BrickLink</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1069"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1097"/>
         <source>Parts Library Files (*.zip *.bin LDConfig.ldr ldconfig.ldr);;All Files (*)</source>
         <translation>Файлы библиотеки деталей (*.zip *.bin LDConfig.ldr ldconfig.ldr);;Все файлы (*)</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="610"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="637"/>
         <source>%n plate(s)</source>
         <translation>
             <numerusform>%n пластина</numerusform>
@@ -23864,250 +23879,250 @@ Unsupported video cards use face tint and colored edges.</source>
         </translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1085"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1113"/>
         <source>Supported Archives (*.zip);;All Files (*)</source>
         <translation>Поддерживаемые архивы (*.zip);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1105"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1133"/>
         <source>Downloading the LDCad shadow library...</source>
         <translation>Загрузка теневой библиотеки LDCad...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1112"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1140"/>
         <source>Could not download the LDCad shadow library from %1.</source>
         <translation>Не удалось загрузить теневую библиотеку LDCad с %1.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1255"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1268"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1283"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1296"/>
         <source>Settings Files (*.ini);;All Files (*)</source>
         <translation>Файлы параметров (*.ini);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1290"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1318"/>
         <source>Mapping Files (*.txt *.json);;All Files (*)</source>
         <translation>Файлы соответствий (*.txt *.json);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1326"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1340"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1354"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1368"/>
         <source>Executable Files (*.exe);;All Files (*)</source>
         <translation>Исполняемые файлы (*.exe);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1328"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1342"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1356"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1370"/>
         <source>All Files (*)</source>
         <translation>Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1345"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1373"/>
         <source>Select Blender Executable</source>
         <translation>Выбор исполняемого файла Blender</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1353"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1381"/>
         <source>Select LGEO Folder</source>
         <translation>Выбор папки LGEO</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1387"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1415"/>
         <source>Select Text Color</source>
         <translation>Выберите цвет текста</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1392"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1420"/>
         <source>Select Connection Points Color</source>
         <translation>Выберите цвет точек соединения</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1398"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1426"/>
         <source>Select Text Halo Color</source>
         <translation>Выберите цвет ореола текста</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1404"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1432"/>
         <source>Select Marquee Border Color</source>
         <translation>Выберите цвет границы области выделения</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1409"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1437"/>
         <source>Select Marquee Fill Color</source>
         <translation>Выберите цвет заполнения области выделения</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1415"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1443"/>
         <source>Select Overlay Color</source>
         <translation>Выберите цвет наложения</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1420"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1448"/>
         <source>Select Explode Lines Color</source>
         <translation>Выберите цвет линий разнесения</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1426"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1454"/>
         <source>Select Axis Icon Outline Color</source>
         <translation>Выберите цвет контура значка оси</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1432"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1460"/>
         <source>Select Cutaway Shade Color</source>
         <translation>Выберите цвет затенения разреза</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1438"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1466"/>
         <source>Select Element Margin Color</source>
         <translation>Выберите цвет полей элемента</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1444"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1472"/>
         <source>Select Element Padding Color</source>
         <translation>Выберите цвет отступов элемента</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1450"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1478"/>
         <source>Select Element Anchor Color</source>
         <translation>Выберите цвет якорей элемента</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1456"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1484"/>
         <source>Select Ruler Pointer Color</source>
         <translation>Выберите цвет указателя линейки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1462"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1490"/>
         <source>Select Active View Color</source>
         <translation>Выберите цвет активного вида</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1467"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1495"/>
         <source>Select Inactive View Color</source>
         <translation>Выберите цвет неактивного вида</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1472"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1500"/>
         <source>Select Fade Color</source>
         <translation>Выберите цвет затухания</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1478"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1506"/>
         <source>Select Edit Fade Color</source>
         <translation>Выберите цвет затухания при изменении</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1484"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1512"/>
         <source>Select Joint Fade Color</source>
         <translation>Выберите цвет затухания сочленения</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1490"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1518"/>
         <source>Select Hover Outline Color</source>
         <translation>Выберите цвет контура при наведении</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1495"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1523"/>
         <source>Select Highlight Color</source>
         <translation>Выберите цвет подсветки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1501"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1529"/>
         <source>Select Grid Stud Color</source>
         <translation>Выберите цвет шипов сетки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1507"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1535"/>
         <source>Select Grid Line Color</source>
         <translation>Выберите цвет линий сетки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1512"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1540"/>
         <source>Select View Cube Color</source>
         <translation>Выберите цвет куба просмотра</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1517"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1545"/>
         <source>Select View Cube Text Color</source>
         <translation>Выберите цвет текста куба просмотра</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1522"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1550"/>
         <source>Select View Cube Highlight Color</source>
         <translation>Выберите цвет подсветки куба просмотра</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1527"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1555"/>
         <source>Select X Axis Color</source>
         <translation>Выберите цвет оси X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1532"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1560"/>
         <source>Select Y Axis Color</source>
         <translation>Выберите цвет оси Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1537"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1565"/>
         <source>Select Z Axis Color</source>
         <translation>Выберите цвет оси Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1557"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1585"/>
         <source>Select Object Selected Color</source>
         <translation>Выберите цвет выделенного объекта</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1562"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1590"/>
         <source>Select Object Focused Color</source>
         <translation>Выберите цвет активного объекта</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1567"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1595"/>
         <source>Select Object Deactivated Color</source>
         <translation>Выбрать цвет неактивного объекта</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1573"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1601"/>
         <source>Select Camera Color</source>
         <translation>Выберите цвет камеры</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1578"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1606"/>
         <source>Select Light Color</source>
         <translation>Выберите цвет источника света</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1583"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1611"/>
         <source>Select Control Point Color</source>
         <translation>Выберите цвет контрольной точки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1589"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1617"/>
         <source>Select Control Point Focused Color</source>
         <translation>Выберите цвет активной контрольной точки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1595"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1623"/>
         <source>Select Control Point Seated Color</source>
         <translation>Выберите цвет установленной контрольной точки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1601"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1629"/>
         <source>Select Flex Path Spread Handle Color</source>
         <translation>Выберите цвет рукоятки разброса гибкого пути</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1607"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1635"/>
         <source>Select Flex Path Color</source>
         <translation>Выберите цвет гибкого пути</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1613"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1641"/>
         <source>Select Flex Path Out of Reach Color</source>
         <translation>Выберите цвет гибкого пути вне досягаемости</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1668"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1696"/>
         <source>%n stud(s)</source>
         <translation>
             <numerusform>%n шип</numerusform>
@@ -24524,12 +24539,12 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>Перезапись сочетания клавиш</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="657"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="684"/>
         <source>Default Lights is unavailable. Flat shading is used instead.</source>
         <translation>Подсветка по умолчанию недоступна. Вместо неё используется плоское затенение.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="684"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="711"/>
         <source>View cube rendering is unavailable.</source>
         <translation>Рендеринг куба просмотра недоступен.</translation>
     </message>
@@ -24539,7 +24554,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation type="obsolete">Контурный рендеринг недоступен. Будут использоваться оттенок лица и цветные края.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1331"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1359"/>
         <source>Select POV-Ray Executable</source>
         <translation>Выбор исполняемого файла POV-Ray</translation>
     </message>
@@ -24760,7 +24775,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>Стиль подсветки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="706"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="733"/>
         <source>Outline rendering is unavailable; the Tint and Edges style will be used.</source>
         <translation>Отображение контуров недоступно; будет использован стиль «Оттенок и кромки».</translation>
     </message>
@@ -24851,9 +24866,8 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>Вставлять первую деталь в начале координат</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Choose how the Default Lights shading mode lights parts in every view: Standard uses one light with a soft highlight, Studio adds fill and rim lights, Matte drops the highlights and Toon uses flat cel shading bands.</source>
-        <translation>Выберите, как режим затенения «Подсветка по умолчанию» освещает детали во всех видах: «Стандартный» использует один источник света с мягким бликом, «Студийный» добавляет заполняющий и контровой свет, «Матовый» убирает блики, а «Мультяшный» использует плоские полосы клеточного затенения.</translation>
+        <translation type="vanished">Выберите, как режим затенения «Подсветка по умолчанию» освещает детали во всех видах: «Стандартный» использует один источник света с мягким бликом, «Студийный» добавляет заполняющий и контровой свет, «Матовый» убирает блики, а «Мультяшный» использует плоские полосы клеточного затенения.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
@@ -25392,7 +25406,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>Цвет отрицательной оси X</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1542"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1570"/>
         <source>Select Negative X Axis Color</source>
         <translation>Выбрать цвет отрицательной оси X</translation>
     </message>
@@ -25407,7 +25421,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>Цвет отрицательной оси Y</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1547"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1575"/>
         <source>Select Negative Y Axis Color</source>
         <translation>Выбрать цвет отрицательной оси Y</translation>
     </message>
@@ -25422,7 +25436,7 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>Цвет отрицательной оси Z</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1552"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1580"/>
         <source>Select Negative Z Axis Color</source>
         <translation>Выбрать цвет отрицательной оси Z</translation>
     </message>
@@ -25467,8 +25481,8 @@ Unsupported video cards use face tint and colored edges.</source>
         <translation>Рисует отрицательные половины линий осей цветами отрицательных осей, а линия Z уходит ниже базовой сетки.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="592"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1713"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="619"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1741"/>
         <source>%1 ldu</source>
         <translation>%1 ldu</translation>
     </message>
@@ -25879,7 +25893,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1134"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1162"/>
         <source>Update</source>
         <translation>Обновить</translation>
     </message>
@@ -25950,7 +25964,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1263"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1291"/>
         <source>Update Minifigure Builder Settings</source>
         <translation>Обновить параметры конструктора минифигурок</translation>
     </message>
@@ -26031,7 +26045,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="904"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="931"/>
         <source>Blender Executable</source>
         <translation>Исполняемый файл Blender</translation>
     </message>
@@ -26498,7 +26512,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1102"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1130"/>
         <source>Download Part Connections</source>
         <translation>Загрузить соединения деталей</translation>
     </message>
@@ -26509,7 +26523,7 @@ Unsupported video cards use face tint and colored edges.</source>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1134"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1162"/>
         <source>Download</source>
         <translation>Загрузить</translation>
     </message>
@@ -26617,6 +26631,26 @@ Unsupported video cards use face tint and colored edges.</source>
         <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
         <source>Select Joints in View</source>
         <translation>Выбор сочленений в виде</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Joints</source>
+        <translation>Сочленения</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>In the joint overview, click anywhere on a jointed submodel to open its nearest joint, not only the outlined part at its pivot.</source>
+        <translation>В обзоре сочленений щелчок в любом месте подмодели с сочленением открывает ближайшее сочленение, а не только по обведённой детали у его оси.</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Select Joints by Submodel</source>
+        <translation>Выбор сочленений по подмодели</translation>
+    </message>
+    <message>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.ui"/>
+        <source>Choose how the Default Lights shading mode lights parts in every view: Studio adds fill and rim lights to the soft highlight, Standard uses one light with a soft highlight, Matte drops the highlights and Toon uses flat cel shading bands.</source>
+        <translation>Выберите, как режим затенения «Подсветка по умолчанию» освещает детали во всех видах: «Студийный» добавляет к мягкому блику заполняющий и контровой свет, «Стандартный» использует один источник света с мягким бликом, «Матовый» убирает блики, а «Мультяшный» использует плоские полосы клеточного затенения.</translation>
     </message>
 </context>
 <context>
@@ -27888,12 +27922,12 @@ N/A: %1 parts</source>
 <context>
     <name>swRebrickable</name>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="27"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="25"/>
         <source>Rebrickable API Key</source>
         <translation>Ключ API Rebrickable</translation>
     </message>
     <message>
-        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="27"/>
+        <location filename="../../source/interface/window/sw_window_utilities.cpp" line="25"/>
         <source>%1
 Enter your Rebrickable API key, free from your account settings at rebrickable.com.
 It can be modified under Preferences &gt; General &gt; Online Services.</source>
@@ -27906,10 +27940,10 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
     <name>swRenderDialog</name>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="423"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="799"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="860"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1631"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="420"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="796"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="857"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1621"/>
         <source>Render</source>
         <translation>Рендеринг</translation>
     </message>
@@ -27938,7 +27972,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Просмотр журнала&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Откройте выходные данные средства рендеринга, чтобы изучить сбой рендеринга или предупреждения. Эта кнопка становится доступной после создания журнала.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="433"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="430"/>
         <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Start the render using the current settings. While rendering, this button becomes Cancel so you can stop the operation.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Рендеринг&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Запустите рендеринг с текущими параметрами. Во время рендеринга эта кнопка меняется на «Отмена», поэтому вы можете остановить операцию.&lt;/p&gt;</translation>
     </message>
@@ -27978,8 +28012,8 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="obsolete">Blender настройки импорта</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="985"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1973"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="982"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1963"/>
         <source>Open in Blender</source>
         <translation>Открыть в Blender</translation>
     </message>
@@ -27989,7 +28023,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="obsolete">Импортируйте и откройте модель LDraw в Blender.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1784"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1774"/>
         <source>Exporting Model</source>
         <translation>Экспорт модели</translation>
     </message>
@@ -28004,7 +28038,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Визуализация изображения POV-Ray&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Визуализация текущего шага модели с помощью POV-Ray. Выберите выходное изображение, затем используйте «Настройки», чтобы установить его размеры и качество. Чтобы начать, выберите «Рендеринг».&lt;/p&gt;&lt;p&gt;Предварительный просмотр масштабируется в соответствии с размером диалогового окна. Просмотр журнала отображает диагностические данные, если они доступны.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="449"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="446"/>
         <source>Render the current model step with POV-Ray.</source>
         <translation>Выполните рендеринг текущего шага модели с помощью POV-Ray.</translation>
     </message>
@@ -28029,7 +28063,7 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Настройки Blender&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Настройте исполняемый файл Blender, модули импорта LDraw, пути к библиотекам и настройки рендеринга. Перед рендерингом или открытием модели необходимо настроить Blender и модуль импорта.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1020"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1017"/>
         <source>Render the current model step with Blender.</source>
         <translation>Выполните рендеринг текущего шага модели с помощью Blender.</translation>
     </message>
@@ -28054,875 +28088,875 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Открыть в Blender&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Импортируйте текущий шаг модели в Blender для редактирования. Настройте Blender и его надстройку импорта LDraw через настройки, если это действие недоступно.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1019"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1016"/>
         <source>Import the current model step and open it in Blender.</source>
         <translation>Импортируйте текущий шаг модели и откройте его в Blender.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="574"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="571"/>
         <source> px</source>
         <translation> пикс.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="447"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="444"/>
         <source>POV-Ray Render</source>
         <translation>Рендеринг POV-Ray</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="448"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="445"/>
         <source>&lt;p&gt;&lt;b&gt;POV-Ray Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the current model step using POV-Ray. Choose the output image, its size and quality and the scene in the panels beside the preview, then select Render to start.&lt;/p&gt;&lt;p&gt;The preview is scaled to fit the window. Log shows the renderer output below the preview.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Рендеринг POV-Ray&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выполните рендеринг текущего шага модели с помощью POV-Ray. Выберите выходное изображение, его размер и качество, а также сцену на панелях рядом с предпросмотром, затем нажмите «Рендеринг», чтобы начать.&lt;/p&gt;&lt;p&gt;Предпросмотр масштабируется по размеру окна. «Журнал» показывает вывод средства рендеринга под предпросмотром.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="453"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="450"/>
         <source>Blender Render</source>
         <translation>Рендеринг Blender</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="454"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="451"/>
         <source>&lt;p&gt;&lt;b&gt;Blender Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the current model step with Blender and the bundled LDraw add-ons. Choose the output image, its size and the scene, parts and editing settings in the panels beside the preview, then select Render to start, or Open in Blender to edit the model there.&lt;/p&gt;&lt;p&gt;Set the Blender executable in Preferences, General first. Log shows the Blender output below the preview.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Рендеринг Blender&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выполните рендеринг текущего шага модели в Blender со встроенными дополнениями LDraw. Выберите выходное изображение, его размер, а также параметры сцены, деталей и редактирования на панелях рядом с предпросмотром, затем нажмите «Рендеринг», чтобы начать, или «Открыть в Blender», чтобы изменить модель там.&lt;/p&gt;&lt;p&gt;Сначала укажите исполняемый файл Blender в разделе «Параметры», «Общие». «Журнал» показывает вывод Blender под предпросмотром.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="585"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="582"/>
         <source>Presets</source>
         <translation>Предустановки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="585"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="582"/>
         <source>&lt;p&gt;&lt;b&gt;Presets&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Keep the image size, quality and scene settings under a name and bring them back with one choice. Save stores the current settings as a preset and Delete removes the chosen one.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Предустановки&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Сохраняйте размер изображения, качество и параметры сцены под именем и возвращайте их одним выбором. «Сохранить» сохраняет текущие параметры как предустановку, а «Удалить» удаляет выбранную.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="589"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="586"/>
         <source>Preset</source>
         <translation>Предустановка</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="589"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="586"/>
         <source>Choose a preset to apply its image size, quality and scene settings.</source>
         <translation>Выберите предустановку, чтобы применить её размер изображения, качество и параметры сцены.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="614"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="611"/>
         <source>Save...</source>
         <translation>Сохранить...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="614"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="611"/>
         <source>Save the current image size, quality and scene settings as a preset.</source>
         <translation>Сохранить текущие размер изображения, качество и параметры сцены как предустановку.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="615"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="612"/>
         <source>Delete...</source>
         <translation>Удалить...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="615"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="612"/>
         <source>Delete the chosen preset.</source>
         <translation>Удалить выбранную предустановку.</translation>
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="618"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="615"/>
         <source>Output</source>
         <translation>Вывод</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="618"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="615"/>
         <source>&lt;p&gt;&lt;b&gt;Output&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose where the rendered image is saved and its format, such as PNG, JPEG, or BMP.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Вывод&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите, куда сохраняется отрендеренное изображение и в каком формате, например PNG, JPEG или BMP.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="621"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="618"/>
         <source>File</source>
         <translation>Файл</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="626"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="623"/>
         <source>Image</source>
         <translation>Изображение</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="626"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="623"/>
         <source>&lt;p&gt;&lt;b&gt;Image&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the size of the rendered image in pixels and the rendering quality. Larger images and higher quality take longer to render.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Изображение&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Задайте размер отрендеренного изображения в пикселях и качество рендеринга. Большие изображения и более высокое качество рендерятся дольше.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="631"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="628"/>
         <source>Width</source>
         <translation>Ширина</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="635"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="632"/>
         <source>Height</source>
         <translation>Высота</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="762"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="759"/>
         <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set how much detail Blender gives the parts. More detail looks better and takes longer to import and render.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Детали&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Задайте, сколько подробностей Blender придаёт деталям. Больше подробностей выглядит лучше, но импорт и рендеринг занимают дольше.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="799"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="796"/>
         <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render the image or open the model in Blender, then follow the progress here. Log shows the Blender output below the preview.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Рендеринг&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выполните рендеринг изображения или откройте модель в Blender и следите за ходом здесь. «Журнал» показывает вывод Blender под предпросмотром.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="805"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="802"/>
         <source>Quality</source>
         <translation>Качество</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="805"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="802"/>
         <source>&lt;p&gt;&lt;b&gt;Quality&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Low uses POV-Ray&apos;s default quality without additional antialiasing options. Medium uses quality level 5 with antialiasing and fast radiosity. High uses quality level 11 with additional antialiasing settings and full radiosity.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Качество&lt;/b&gt;&lt;/p&gt;&lt;p&gt;«Низкое» использует качество POV-Ray по умолчанию без дополнительных параметров сглаживания. «Среднее» использует уровень качества 5 со сглаживанием и быстрым глобальным освещением (radiosity). «Высокое» использует уровень качества 11 с дополнительными параметрами сглаживания и полным глобальным освещением.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="811"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="808"/>
         <source>Full Image</source>
         <translation>Всё изображение</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="811"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="808"/>
         <source>Region</source>
         <translation>Фрагмент</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="812"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="809"/>
         <source>Area</source>
         <translation>Область</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="812"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="809"/>
         <source>Choose whether the whole image is rendered or only a region drawn on the preview.</source>
         <translation>Выберите, рендерить ли всё изображение или только фрагмент, нарисованный на предпросмотре.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="812"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="809"/>
         <source>&lt;p&gt;&lt;b&gt;Area&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Full Image renders the whole image. Region renders only the part outlined on the preview and leaves the rest of the image transparent. Drag on the preview to draw the region, hold Ctrl to draw a square, drag its edges or corners to resize it, drag inside it to move it, and drag outside it to draw a new one.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Область&lt;/b&gt;&lt;/p&gt;&lt;p&gt;«Всё изображение» рендерит всё изображение. «Фрагмент» рендерит только деталь, обведённую на предпросмотре, а остальную деталь изображения оставляет прозрачной. Перетащите указатель по предпросмотру, чтобы нарисовать деталь, удерживайте Ctrl, чтобы нарисовать квадрат, перетаскивайте его края или углы, чтобы изменить размер, перетаскивайте внутри него, чтобы переместить, и перетаскивайте снаружи, чтобы нарисовать новый.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="814"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="811"/>
         <source>Batch</source>
         <translation>Пакет</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="814"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="811"/>
         <source>&lt;p&gt;&lt;b&gt;Batch&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render several images in one go, one for each building step or each camera of the model. Each image is saved next to the output file with the step number or camera name added to its name.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Пакет&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Рендеринг нескольких изображений за один раз, по одному на каждый шаг сборки или каждую камеру модели. Каждое изображение сохраняется рядом с выходным файлом, а к его имени добавляются номер шага или имя камеры.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="817"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="814"/>
         <source>Model</source>
         <translation>Модель</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="817"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="814"/>
         <source>Current Step</source>
         <translation>Текущий шаг</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="817"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="814"/>
         <source>All Steps</source>
         <translation>Все шаги</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="818"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="815"/>
         <source>Steps</source>
         <translation>Шаги</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="818"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="815"/>
         <source>Choose whether the finished model, the current step or every step is rendered.</source>
         <translation>Выберите, что рендерить: готовую модель, текущий шаг или каждый шаг.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="818"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="815"/>
         <source>&lt;p&gt;&lt;b&gt;Steps&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Model renders the finished model. Current Step renders the model as built up to the step shown in the main window. All Steps renders one image for every step, numbered after the step.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Шаги&lt;/b&gt;&lt;/p&gt;&lt;p&gt;«Модель» рендерит готовую модель. «Текущий шаг» рендерит модель в том виде, в каком она собрана до шага, показанного в главном окне. «Все шаги» рендерит по одному изображению для каждого шага с номером шага в имени.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="821"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="818"/>
         <source>Cameras</source>
         <translation>Камеры</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="821"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="818"/>
         <source>Choose the view or a camera of the model to render from, or every camera.</source>
         <translation>Выберите вид или камеру модели, с которой выполнять рендеринг, либо все камеры.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="821"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="818"/>
         <source>&lt;p&gt;&lt;b&gt;Cameras&lt;/b&gt;&lt;/p&gt;&lt;p&gt;View renders from the view of the main window. A camera renders from that camera of the model. All Cameras renders one image for every camera, named after the camera.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Камеры&lt;/b&gt;&lt;/p&gt;&lt;p&gt;«Вид» рендерит с вида главного окна. Камера рендерит с этой камеры модели. «Все камеры» рендерит по одному изображению для каждой камеры с именем камеры в названии.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="824"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1081"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="739"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="821"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1078"/>
         <source>Scene</source>
         <translation>Сцена</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="827"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="824"/>
         <source>LDraw</source>
         <translation>LDraw</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="827"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="824"/>
         <source>LGEO</source>
         <translation>LGEO</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="762"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="828"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="759"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="825"/>
         <source>Parts</source>
         <translation>Детали</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="828"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="825"/>
         <source>Choose whether the model is rendered with LDraw parts or the modeled LGEO parts.</source>
         <translation>Выберите, рендерить ли модель деталями LDraw или смоделированными деталями LGEO.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="828"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="825"/>
         <source>&lt;p&gt;&lt;b&gt;Parts&lt;/b&gt;&lt;/p&gt;&lt;p&gt;LDraw renders the parts of the parts library. LGEO replaces the parts it has with the smooth modeled parts of the LGEO library by Lutz Uhlmann, StudWorx offers to download it the first time. Models that ask for LGEO in their file always use it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Детали&lt;/b&gt;&lt;/p&gt;&lt;p&gt;LDraw рендерит детали из библиотеки деталей. LGEO заменяет имеющиеся в нём детали гладкими смоделированными деталями библиотеки LGEO автора Lutz Uhlmann, StudWorx предлагает загрузить её в первый раз. Модели, которые запрашивают LGEO в своём файле, всегда её используют.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="830"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="827"/>
         <source>Standard</source>
         <translation>Стандартная</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="430"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1069"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="427"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1066"/>
         <source>Editor</source>
         <translation>Редактор</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="706"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="767"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="807"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="703"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="804"/>
         <source>Off</source>
         <translation>Выкл.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="718"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="715"/>
         <source>Overwrite Image</source>
         <translation>Перезаписать изображение</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="718"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="715"/>
         <source>Replace an existing image file of the same name.</source>
         <translation>Заменять существующий файл изображения с тем же именем.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="719"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="716"/>
         <source>Transparent Background</source>
         <translation>Прозрачный фон</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="719"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="716"/>
         <source>Leave the background as transparent pixels for compositing.</source>
         <translation>Оставить фон прозрачными пикселями для композитинга.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="719"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="716"/>
         <source>&lt;p&gt;&lt;b&gt;Transparent Background&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Renders the background as transparent pixels for compositing. The ground plane added by Add Environment stays visible.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Прозрачный фон&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Рендерит фон прозрачными пикселями для композитинга. Плоскость земли, добавленная командой «Добавить среду», остаётся видимой.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="721"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="718"/>
         <source>Crop Image</source>
         <translation>Обрезать изображение</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="721"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="718"/>
         <source>Crop the image to the visible model, needs Transparent Background.</source>
         <translation>Обрезать изображение по видимой модели, требуется «Прозрачный фон».</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="721"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="718"/>
         <source>&lt;p&gt;&lt;b&gt;Crop Image&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Cuts the transparent border off the rendered image so it ends at the visible model. Needs Transparent Background.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Обрезать изображение&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Отрезает прозрачную рамку отрендеренного изображения, так что оно заканчивается на видимой модели. Требуется «Прозрачный фон».&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="733"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="749"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="730"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="746"/>
         <source> %</source>
         <translation> %</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="735"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="732"/>
         <source>Scale</source>
         <translation>Масштаб</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="735"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="732"/>
         <source>Render at a percentage of the image size for quick test renders.</source>
         <translation>Рендерить с долей размера изображения для быстрых тестовых рендеров.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="739"/>
         <source>&lt;p&gt;&lt;b&gt;Scene&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the look, colors, camera and lights of the scene Blender renders.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Сцена&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Задайте стиль, цвета, камеру и освещение сцены, которую рендерит Blender.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="744"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="741"/>
         <source>Look</source>
         <translation>Стиль</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="744"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="741"/>
         <source>Photorealistic</source>
         <translation>Фотореалистичный</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="744"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="741"/>
         <source>LEGO® Instructions</source>
         <translation>Инструкции LEGO®</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="744"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="741"/>
         <source>Choose a photorealistic render or the flat look of LEGO® building instructions.</source>
         <translation>Выберите фотореалистичный рендер или плоский стиль инструкций по сборке LEGO®.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="745"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
         <source>Colors</source>
         <translation>Цвета</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="745"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
         <source>Realistic</source>
         <translation>Реалистичные</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="745"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
         <source>Original LDraw</source>
         <translation>Оригинальные LDraw</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="745"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
         <source>Alternate LDraw</source>
         <translation>Альтернативные LDraw</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="745"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
         <source>Choose the color scheme of the parts.</source>
         <translation>Выберите цветовую схему деталей.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="745"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="742"/>
         <source>&lt;p&gt;&lt;b&gt;Colors&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Realistic uses the colors of the real parts. Original LDraw uses the colors of the parts library. Alternate LDraw uses its alternate colors with lighter edges.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Цвета&lt;/b&gt;&lt;/p&gt;&lt;p&gt;«Реалистичные» используют цвета настоящих деталей. «Оригинальные LDraw» используют цвета библиотеки деталей. «Альтернативные LDraw» используют свои альтернативные цвета с более светлыми кромками.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="746"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="743"/>
         <source>Add Environment</source>
         <translation>Добавить среду</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="746"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="743"/>
         <source>Add a ground plane and a lighting environment, photorealistic look only.</source>
         <translation>Добавить плоскость земли и среду освещения, только для фотореалистичного стиля.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="747"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="744"/>
         <source>Position Camera</source>
         <translation>Расположить камеру</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="747"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="744"/>
         <source>Place the camera so the whole model is in view.</source>
         <translation>Расположить камеру так, чтобы вся модель была в кадре.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="750"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="747"/>
         <source>Camera Border</source>
         <translation>Поле камеры</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="750"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="747"/>
         <source>Leave this border around the model when the camera is placed.</source>
         <translation>Оставлять это поле вокруг модели при расположении камеры.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="759"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="756"/>
         <source>Import Cameras</source>
         <translation>Импортировать камеры</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="759"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="756"/>
         <source>Use the cameras of the model.</source>
         <translation>Использовать камеры модели.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="760"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="757"/>
         <source>Import Lights</source>
         <translation>Импортировать источники света</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="760"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="757"/>
         <source>Use the lights of the model.</source>
         <translation>Использовать источники света модели.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="761"/>
         <source>Primitives</source>
         <translation>Примитивы</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="761"/>
         <source>Choose the resolution of the part primitives, how round curved surfaces are.</source>
         <translation>Выберите разрешение примитивов деталей, то есть степень скругления изогнутых поверхностей.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="767"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
         <source>Rounded</source>
         <translation>Скруглённые</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="767"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
         <source>Flattened</source>
         <translation>Плоские</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="767"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
         <source>Subtle Rounded</source>
         <translation>Слегка скруглённые</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="768"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="765"/>
         <source>Logo Studs</source>
         <translation>Логотипы на шипах</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="768"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="765"/>
         <source>Show the LEGO® logo on the studs, at the cost of extra geometry and import time.</source>
         <translation>Показывать логотип LEGO® на шипах за счёт дополнительной геометрии и времени импорта.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="778"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="775"/>
         <source>Bevel Edges</source>
         <translation>Скошенные кромки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="778"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="775"/>
         <source>Round off sharp edges by this width, Off keeps them sharp.</source>
         <translation>Скруглять острые кромки на эту ширину, «Выкл.» оставляет их острыми.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="779"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="776"/>
         <source>Part Gaps</source>
         <translation>Зазоры между деталями</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="779"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="776"/>
         <source> mm</source>
         <translation> мм</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="779"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="776"/>
         <source>Leave this gap between the parts, Off places them touching.</source>
         <translation>Оставлять этот зазор между деталями, «Выкл.» ставит их вплотную.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="780"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="777"/>
         <source>Flex Parts</source>
         <translation>Гибкие детали</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="780"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="777"/>
         <source>LSynth</source>
         <translation>LSynth</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="780"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="777"/>
         <source>LDCad</source>
         <translation>LDCad</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="780"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="777"/>
         <source>Choose the source that shapes flexible parts such as hoses and string.</source>
         <translation>Выберите источник, формирующий гибкие детали, такие как шланги и шнуры.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="781"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="778"/>
         <source>Curved Walls</source>
         <translation>Изогнутые стены</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="781"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="778"/>
         <source>Make surfaces slightly concave for livelier reflections.</source>
         <translation>Делать поверхности слегка вогнутыми для более живых отражений.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="782"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="779"/>
         <source>Smooth Shading</source>
         <translation>Плавное затенение</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="782"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="779"/>
         <source>Smooth curved faces and keep sharp edges.</source>
         <translation>Сглаживать изогнутые грани и сохранять острые кромки.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="784"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="781"/>
         <source>Editing</source>
         <translation>Редактирование</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="784"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="781"/>
         <source>&lt;p&gt;&lt;b&gt;Editing&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set how the model is built up in Blender, which matters most when you edit it after Open in Blender.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Редактирование&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Задайте, как модель строится в Blender, что особенно важно, если вы редактируете её после команды «Открыть в Blender».&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="786"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="783"/>
         <source>Link Like Parts</source>
         <translation>Связывать одинаковые детали</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="786"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="783"/>
         <source>Let parts of the same shape and color share one mesh.</source>
         <translation>Позволить деталям одной формы и цвета использовать одну общую сетку.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="787"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="784"/>
         <source>Instance Studs</source>
         <translation>Шипы как экземпляры</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="787"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="784"/>
         <source>Make every stud its own object, slow for models with many studs.</source>
         <translation>Делать каждый шип отдельным объектом, медленно для моделей с множеством шипов.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="788"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="785"/>
         <source>Flatten Hierarchy</source>
         <translation>Выровнять иерархию</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="788"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="785"/>
         <source>Place all parts directly under the root instead of a tree of submodels.</source>
         <translation>Размещать все детали прямо под корнем вместо дерева подмоделей.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="789"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="786"/>
         <source>Parent Minifigures</source>
         <translation>Иерархия минифигурок</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="789"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="786"/>
         <source>Parent the parts of each minifigure to each other.</source>
         <translation>Сделать детали каждой минифигурки родителями друг друга.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="807"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="804"/>
         <source>On</source>
         <translation>Вкл.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="809"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="806"/>
         <source>Focal Blur</source>
         <translation>Размытие фокуса</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="809"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="806"/>
         <source>Blur parts nearer or farther than the camera target, like a real camera lens. Takes several times longer to render.</source>
         <translation>Размывать детали ближе или дальше цели камеры, как объектив настоящей камеры. Рендеринг занимает в несколько раз больше времени.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="809"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="806"/>
         <source>&lt;p&gt;&lt;b&gt;Focal Blur&lt;/b&gt;&lt;/p&gt;&lt;p&gt;On keeps the camera target sharp and blurs the parts in front of it and behind it, like the depth of field of a real camera lens, at any quality. It takes several times longer to render. Orthographic cameras are never blurred.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Размытие фокуса&lt;/b&gt;&lt;/p&gt;&lt;p&gt;«Вкл.» оставляет цель камеры резкой и размывает детали перед ней и за ней, как глубина резкости объектива настоящей камеры, при любом качестве. Рендеринг занимает в несколько раз больше времени. Ортогональные камеры никогда не размываются.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="830"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="827"/>
         <source>Studio</source>
         <translation>Студийная</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="830"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="827"/>
         <source>Matte</source>
         <translation>Матовая</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="832"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="829"/>
         <source>Lights</source>
         <translation>Источники света</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="832"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="829"/>
         <source>Choose the lights placed around models that have no lights of their own.</source>
         <translation>Выберите освещение вокруг моделей, у которых нет собственных источников света.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="832"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="829"/>
         <source>&lt;p&gt;&lt;b&gt;Lights&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Standard uses four point lights with crisp shadows. Studio uses a large soft key light, a fill light and a rim light behind the model. Matte uses a wide overhead light and a shadowless light from the camera for even, soft lighting. Lights placed in the model replace these.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Источники света&lt;/b&gt;&lt;/p&gt;&lt;p&gt;«Стандартная» использует четыре точечных источника света с чёткими тенями. «Студийная» использует большой мягкий основной свет, заполняющий свет и контровой свет позади модели. «Матовая» использует широкий верхний свет и свет от камеры без теней для ровного мягкого освещения. Источники света, размещённые в модели, заменяют эти.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="834"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="831"/>
         <source>Plain</source>
         <translation>Простой</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="834"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="831"/>
         <source>Shadow Catcher</source>
         <translation>Ловушка теней</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="834"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="831"/>
         <source>Reflective</source>
         <translation>Зеркальный</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="834"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="831"/>
         <source>Cyclorama</source>
         <translation>Циклорама</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="836"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="833"/>
         <source>Floor</source>
         <translation>Пол</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="836"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="833"/>
         <source>Choose how the floor under the model looks.</source>
         <translation>Выберите, как выглядит пол под моделью.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="836"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="833"/>
         <source>&lt;p&gt;&lt;b&gt;Floor&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Plain uses the floor color of the model. Shadow Catcher takes the background color so only the shadows show. Reflective adds a glossy mirror finish. Cyclorama fades the floor into the background with distance for a seamless backdrop.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Пол&lt;/b&gt;&lt;/p&gt;&lt;p&gt;«Простой» использует цвет пола модели. «Ловушка теней» берёт цвет фона, так что видны только тени. «Зеркальный» добавляет глянцевое зеркальное покрытие. «Циклорама» с расстоянием переводит пол в фон для бесшовного заднего плана.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="841"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="838"/>
         <source>Background Color</source>
         <translation>Цвет фона</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="843"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="840"/>
         <source>Environment</source>
         <translation>Среда</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="843"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="840"/>
         <source>Choose a panoramic image that surrounds and lights the scene, or leave empty to use the background color.</source>
         <translation>Выберите панорамное изображение, окружающее и освещающее сцену, или оставьте пустым, чтобы использовать цвет фона.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="843"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="840"/>
         <source>&lt;p&gt;&lt;b&gt;Environment&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Choose an equirectangular panorama, ideally an HDR or EXR image, that wraps around the scene as its sky and lights it through radiosity at Medium and High quality. Leave empty to use the background color.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Среда&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Выберите равнопромежуточную панораму, лучше всего изображение HDR или EXR, которая охватывает сцену как небо и освещает её через radiosity при среднем и высоком качестве. Оставьте пустым, чтобы использовать цвет фона.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="847"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="844"/>
         <source>Choose an environment image.</source>
         <translation>Выберите изображение среды.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="849"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="846"/>
         <source>Browse</source>
         <translation>Обзор</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="853"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="850"/>
         <source>Visible</source>
         <translation>Видимые</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="853"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="850"/>
         <source>Transparent</source>
         <translation>Прозрачные</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="855"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="852"/>
         <source>Background</source>
         <translation>Фон</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="855"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="852"/>
         <source>Choose whether the background and floor are rendered or left as transparent pixels for compositing.</source>
         <translation>Выберите, рендерить ли фон и пол или оставить их прозрачными пикселями для композитинга.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="860"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="857"/>
         <source>&lt;p&gt;&lt;b&gt;Render&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Start the POV-Ray render, then follow its progress here. Editor shows the POV-Ray scene and Log the POV-Ray output below the preview.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Рендеринг&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Запустите рендеринг POV-Ray и следите за ходом здесь. «Редактор» показывает сцену POV-Ray, а «Журнал» вывод POV-Ray под предпросмотром.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="961"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="958"/>
         <source>Select Environment Image</source>
         <translation>Выбор изображения среды</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1072"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1069"/>
         <source>&lt;p&gt;&lt;b&gt;Editor&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The POV-Ray scene written from the model and the current settings, with every part, color and position, the camera and the lights. Edit it and tick Render using this configuration instead of the model configuration to render your edits.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Редактор&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Сцена POV-Ray, записанная по модели и текущим параметрам, со всеми деталями, цветами и положениями, камерой и источниками света. Измените её и отметьте «Рендерить по этой конфигурации вместо конфигурации модели», чтобы отрендерить свои правки.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1080"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1077"/>
         <source>Text of the POV-Ray scene.</source>
         <translation>Текст сцены POV-Ray.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1084"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1081"/>
         <source>Rendering the edited scene. Reset to pick up model changes.</source>
         <translation>Рендерится изменённая сцена. Сбросьте, чтобы учесть изменения модели.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1092"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1089"/>
         <source>Render using this configuration instead of the model configuration</source>
         <translation>Рендерить по этой конфигурации вместо конфигурации модели</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1093"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1090"/>
         <source>Render the text of the editor instead of the scene written from the model and the settings.</source>
         <translation>Рендерить текст редактора вместо сцены, записанной по модели и параметрам.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1094"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1091"/>
         <source>&lt;p&gt;&lt;b&gt;Render using this configuration instead of the model configuration&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Render renders the text of the editor as it is, so your edits show in the image. The size, quality, scene, preset and batch settings have no effect and are greyed out. Output and Area still apply.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Рендерить по этой конфигурации вместо конфигурации модели&lt;/b&gt;&lt;/p&gt;&lt;p&gt;«Рендеринг» рендерит текст редактора как есть, так что ваши правки видны на изображении. Размер, качество, сцена, предустановка и параметры пакета не действуют и недоступны. «Вывод» и «Область» по-прежнему применяются.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1116"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1106"/>
         <source>Reset</source>
         <translation>Сброс</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1116"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1106"/>
         <source>Write the scene again from the model and the current settings.</source>
         <translation>Записать сцену заново по модели и текущим параметрам.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1116"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1106"/>
         <source>&lt;p&gt;&lt;b&gt;Reset&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace the text with the scene written again from the model and the current settings, from the camera and step of the first image. Your edits are lost.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Сброс&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Заменить текст сценой, записанной заново по модели и текущим параметрам, с камерой и шагом первого изображения. Ваши правки будут потеряны.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1117"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1107"/>
         <source>Open...</source>
         <translation>Открыть...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1117"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1107"/>
         <source>Open a POV-Ray scene file in the editor.</source>
         <translation>Открыть файл сцены POV-Ray в редакторе.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1117"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1107"/>
         <source>&lt;p&gt;&lt;b&gt;Open...&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Replace the text with a POV-Ray scene file, such as one saved with Save As, and tick Render using this configuration instead of the model configuration so Render uses it.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Открыть...&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Заменить текст файлом сцены POV-Ray, например сохранённым командой «Сохранить как», и отметьте «Рендерить по этой конфигурации вместо конфигурации модели», чтобы «Рендеринг» использовал его.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1118"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1108"/>
         <source>Save As...</source>
         <translation>Сохранить как...</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1118"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1108"/>
         <source>Save the scene as a POV-Ray file.</source>
         <translation>Сохранить сцену как файл POV-Ray.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1118"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1108"/>
         <source>&lt;p&gt;&lt;b&gt;Save As...&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Save the text of the editor as a POV-Ray scene file to render or edit outside StudWorx.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Сохранить как...&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Сохранить текст редактора как файл сцены POV-Ray для рендеринга или правки вне StudWorx.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1139"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1129"/>
         <source>Open Scene</source>
         <translation>Открытие сцены</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1148"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1138"/>
         <source>Could not open the scene %1.</source>
         <translation>Не удалось открыть сцену %1.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1160"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1150"/>
         <source>Save Scene As</source>
         <translation>Сохранение сцены как</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1139"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1160"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1129"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1150"/>
         <source>POV-Ray Scenes (*.pov);;All Files (*)</source>
         <translation>Сцены POV-Ray (*.pov);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1168"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1158"/>
         <source>Could not save the scene to %1.</source>
         <translation>Не удалось сохранить сцену в %1.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1173"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1163"/>
         <source>Show or hide the Editor panel with the POV-Ray scene.</source>
         <translation>Показать или скрыть панель «Редактор» со сценой POV-Ray.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1174"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1164"/>
         <source>&lt;p&gt;&lt;b&gt;Editor&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Editor panel below the preview to read and edit the POV-Ray scene, render your edits or save a copy.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Редактор&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показать или скрыть панель «Редактор» под предпросмотром, чтобы читать и править сцену POV-Ray, рендерить свои правки или сохранять копию.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1391"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1381"/>
         <source>A preset named &apos;%1&apos; already exists. Do you want to overwrite it?</source>
         <translation>Предустановка с именем «%1» уже существует. Перезаписать её?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1804"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1794"/>
         <source>Could not write the edited scene to %1.</source>
         <translation>Не удалось записать изменённую сцену в %1.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1951"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1941"/>
         <source>Could not start Blender.</source>
         <translation>Не удалось запустить Blender.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2001"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1991"/>
         <source>Could not start the Blender render process.</source>
         <translation>Не удалось запустить процесс рендеринга Blender.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2262"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2285"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2252"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2275"/>
         <source>Could not write file &apos;%1&apos;:
 %2</source>
         <translation>Не удалось записать файл «%1»:
 %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2302"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2292"/>
         <source>Could not render the image.</source>
         <translation>Не удалось выполнить рендеринг изображения.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2310"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2300"/>
         <source>Save Image File</source>
         <translation>Сохранение файла изображения</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2310"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2300"/>
         <source>Supported Image Files (*.bmp *.png *.jpg);;BMP Files (*.bmp);;PNG Files (*.png);;JPEG Files (*.jpg);;All Files (*)</source>
         <translation>Поддерживаемые файлы изображений (*.bmp *.png *.jpg);;Файлы BMP (*.bmp);;Файлы PNG (*.png);;Файлы JPEG (*.jpg);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="986"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="983"/>
         <source>&lt;p&gt;&lt;b&gt;Open in Blender&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Import the current model step into Blender with the Scene, Parts and Editing settings and open it there for editing. No image is saved.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Открыть в Blender&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Импортировать текущий шаг модели в Blender с параметрами сцены, деталей и редактирования и открыть его там для правки. Изображение не сохраняется.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="824"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="821"/>
         <source>&lt;p&gt;&lt;b&gt;Scene&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Set the lights, floor and surroundings POV-Ray renders the model in.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Сцена&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Задайте освещение, пол и окружение, в которых POV-Ray выполняет рендеринг модели.&lt;/p&gt;</translation>
     </message>
@@ -28931,74 +28965,74 @@ It can be modified under Preferences &gt; General &gt; Online Services.</source>
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Отображение&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Запустите отображение в POV-Ray и следите за ходом здесь. «Журнал» показывает вывод POV-Ray под предпросмотром.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1019"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1016"/>
         <source>Set the Blender executable in Preferences, General to use Blender.</source>
         <translation>Чтобы использовать Blender, укажите его исполняемый файл в разделе «Параметры», «Общие».</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1041"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1038"/>
         <source>&lt;p&gt;&lt;b&gt;Log&lt;/b&gt;&lt;/p&gt;&lt;p&gt;The output of the renderer, updated while it renders. Read it to investigate warnings or a failed render, select text and copy it with the standard keyboard shortcut when reporting a problem.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Журнал&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Вывод средства рендеринга, обновляемый во время рендеринга. Читайте его, чтобы разобраться с предупреждениями или неудачным рендерингом, выделяйте текст и копируйте его стандартным сочетанием клавиш, когда сообщаете о проблеме.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1047"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1044"/>
         <source>The renderer output shows here once a render starts.</source>
         <translation>Вывод средства рендеринга появится здесь после начала рендеринга.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1193"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1183"/>
         <source>Show or hide the Log panel with the renderer output.</source>
         <translation>Показать или скрыть панель «Журнал» с выводом средства рендеринга.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1194"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1184"/>
         <source>&lt;p&gt;&lt;b&gt;Log&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Show or hide the Log panel below the preview with the renderer output and diagnostic messages.&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Журнал&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Показать или скрыть панель «Журнал» под предпросмотром с выводом средства рендеринга и диагностическими сообщениями.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1357"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1347"/>
         <source>Custom</source>
         <translation>Другой</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1370"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1377"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1391"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1360"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1367"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1381"/>
         <source>Save Preset</source>
         <translation>Сохранение предустановки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1370"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1360"/>
         <source>Preset Name</source>
         <translation>Имя предустановки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1377"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1367"/>
         <source>Preset name cannot be empty.</source>
         <translation>Имя предустановки не может быть пустым.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1412"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1402"/>
         <source>Delete Preset</source>
         <translation>Удаление предустановки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1412"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1402"/>
         <source>Are you sure you want to delete the preset &apos;%1&apos;?</source>
         <translation>Удалить предустановку «%1»?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1501"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1491"/>
         <source>View</source>
         <translation>Вид</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1508"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1498"/>
         <source>All Cameras</source>
         <translation>Все камеры</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1703"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1693"/>
         <source>LGEO parts need the standard POV-Ray include files such as colors.inc, which POV-Ray %1 could not find.
 
 Install the povray-includes package or the include files of your POV-Ray version, or choose LDraw parts in the Scene panel.</source>
@@ -29007,27 +29041,27 @@ Install the povray-includes package or the include files of your POV-Ray version
 Установите пакет povray-includes или включаемые файлы вашей версии POV-Ray либо выберите детали LDraw на панели «Сцена».</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1783"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1773"/>
         <source>Image %1 of %2</source>
         <translation>Изображение %1 из %2</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1784"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1774"/>
         <source>%1, Exporting Model</source>
         <translation>%1, экспорт модели</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1811"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1801"/>
         <source>%1, %p%</source>
         <translation>%1, %p%</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1875"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1865"/>
         <source>Could not start POV-Ray.</source>
         <translation>Не удалось запустить POV-Ray.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1890"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1880"/>
         <source>Saving Blender Model</source>
         <translation>Сохранение модели Blender</translation>
     </message>
@@ -29039,17 +29073,17 @@ Install the povray-includes package or the include files of your POV-Ray version
 %2.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1971"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1961"/>
         <source>errors%1</source>
         <translation>ошибки%1</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1971"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1961"/>
         <source> and warnings</source>
         <translation> и предупреждения</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1971"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1961"/>
         <source>warnings</source>
         <translation>предупреждения</translation>
     </message>
@@ -29060,7 +29094,7 @@ Install the povray-includes package or the include files of your POV-Ray version
         <translation type="obsolete">Открыть в выводе Blender</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1972"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1962"/>
         <source>Open in Blender encountered %1. See Show Details...</source>
         <translation>При открытии в Blender обнаружены %1. См. «Показать детали...»</translation>
     </message>
@@ -29071,14 +29105,14 @@ Install the povray-includes package or the include files of your POV-Ray version
         <translation type="obsolete">Ошибка запуска процесса рендеринга Blender.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2060"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2050"/>
         <source>Failed to open log file: &apos;%1&apos;:
 %2</source>
         <translation>Не удалось открыть файл журнала: &apos;%1&apos;:
 %2.</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2221"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="2211"/>
         <source>An error occurred while rendering.</source>
         <translation>При рендеринге произошла ошибка.</translation>
     </message>
@@ -29093,12 +29127,12 @@ Install the povray-includes package or the include files of your POV-Ray version
         <translation type="obsolete">POV-Ray Настройки</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="631"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="628"/>
         <source>Set the rendered image width in pixels (1 to 32768).</source>
         <translation>Задайте ширину отрендеренного изображения в пикселях (от 1 до 32768).</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="635"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="632"/>
         <source>Set the rendered image height in pixels (1 to 32768).</source>
         <translation>Задайте высоту отрендеренного изображения в пикселях (от 1 до 32768).</translation>
     </message>
@@ -29130,24 +29164,24 @@ Install the povray-includes package or the include files of your POV-Ray version
         <translation type="vanished">Качество:</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="803"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="800"/>
         <source>High</source>
         <translation>Высокое</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="803"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="800"/>
         <source>Medium</source>
         <translation>Среднее</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="764"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="803"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="761"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="800"/>
         <source>Low</source>
         <translation>Низкое</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="805"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="802"/>
         <source>Choose the rendering quality; higher quality can take longer.</source>
         <translation>Выберите качество рендеринга; более высокое качество может занять больше времени.</translation>
     </message>
@@ -29184,23 +29218,23 @@ Install the povray-includes package or the include files of your POV-Ray version
         <translation type="obsolete">&lt;p&gt;&lt;b&gt;Журнал рендеринга&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Прочитайте выходные данные средства рендеринга, чтобы изучить предупреждения или неудачный рендеринг. Выделите текст и скопируйте его с помощью стандартного сочетания клавиш при сообщении о проблеме. Закрытие возвращает в диалоговое окно «Рендеринг».&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1048"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1045"/>
         <source>Renderer Output</source>
         <translation>Вывод рендерера</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="425"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1038"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="422"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1035"/>
         <source>Log</source>
         <translation>Журнал</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="961"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="958"/>
         <source>Environment Images (*.hdr *.exr *.png *.jpg *.jpeg *.tif *.tiff);;All Files (*)</source>
         <translation>Изображения среды (*.hdr *.exr *.png *.jpg *.jpeg *.tif *.tiff);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1049"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1046"/>
         <source>Read and copy renderer output and diagnostic messages.</source>
         <translation>Чтение и копирование выходных данных и диагностических сообщений средства рендеринга.</translation>
     </message>
@@ -29230,7 +29264,7 @@ Install the povray-includes package or the include files of your POV-Ray version
     </message>
     <message>
         <location filename="../../source/interface/dialogs/sw_dialog_render.ui"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="846"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="843"/>
         <source>...</source>
         <translation>…</translation>
     </message>
@@ -29260,18 +29294,18 @@ Install the povray-includes package or the include files of your POV-Ray version
         <translation>Прогресс рендеринга</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1639"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1629"/>
         <source>Cancel Render</source>
         <translation>Отменить рендеринг</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1639"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1629"/>
         <source>Are you sure you want to cancel the current render?</source>
         <translation>Отменить текущий рендеринг?</translation>
     </message>
     <message>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1868"/>
-        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1995"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1858"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_render.cpp" line="1985"/>
         <source>Cancel</source>
         <translation>Отмена</translation>
     </message>
@@ -29946,7 +29980,7 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
         <translation>Свободная камера</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_view_widget.cpp" line="201"/>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="176"/>
         <source>Camera: %1</source>
         <translation>Камера: %1</translation>
     </message>
@@ -29981,17 +30015,17 @@ Install POV-Ray 3.7 or newer from %1 and set it under Preferences › General �
         <translation>Очистить выбор и вернуться к инструменту выбора.</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_view_widget.cpp" line="220"/>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="195"/>
         <source>Editing model: %1</source>
         <translation>Редактируемая модель: %1</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_view_widget.cpp" line="248"/>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="223"/>
         <source>Joint %1</source>
         <translation>Сочленение %1</translation>
     </message>
     <message>
-        <location filename="../../source/rendering/sw_view_widget.cpp" line="255"/>
+        <location filename="../../source/rendering/sw_view_widget.cpp" line="230"/>
         <source>Joint: %1</source>
         <translation>Сочленение: %1</translation>
     </message>

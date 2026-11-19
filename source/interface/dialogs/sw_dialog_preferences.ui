@@ -1058,7 +1058,7 @@
             </property>
            </widget>
           </item>
-          <item row="7" column="0">
+          <item row="4" column="0">
            <widget class="QLabel" name="InsertColorModeLabel">
             <property name="toolTip">
              <string>Choose the color given to newly inserted parts: the current color, the color of the selected part, or the color of the last inserted part.</string>
@@ -1071,7 +1071,7 @@
             </property>
            </widget>
           </item>
-          <item row="7" column="1">
+          <item row="4" column="1">
            <widget class="QComboBox" name="InsertColorMode">
             <property name="accessibleName">
              <string>Insert Color</string>
@@ -1096,7 +1096,7 @@
             </item>
            </widget>
           </item>
-          <item row="6" column="0">
+          <item row="3" column="0">
            <widget class="QLabel" name="FirstPartAtOriginLabel">
             <property name="toolTip">
              <string>Place the first part of an empty model at 0, 0, 0 instead of where it is dropped.</string>
@@ -1109,7 +1109,7 @@
             </property>
            </widget>
           </item>
-          <item row="6" column="1">
+          <item row="3" column="1">
            <widget class="QCheckBox" name="FirstPartAtOrigin">
             <property name="accessibleName">
              <string>Insert First Part at Origin</string>
@@ -1139,90 +1139,6 @@
             </property>
             <property name="toolTip">
              <string>Show the studs and holes of the part under the pointer as small marks, in the Connection Points color.</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="JointRotationLabel">
-            <property name="toolTip">
-             <string>When the selected submodel has a joint, rotating it turns the joint around its own pivot and axis instead of the pivot point. Part &gt; Joint &gt; Rotate Joint does the same for the current selection.</string>
-            </property>
-            <property name="text">
-             <string>Use Joint Rotation</string>
-            </property>
-            <property name="buddy">
-             <cstring>JointRotation</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="QCheckBox" name="JointRotation">
-            <property name="accessibleName">
-             <string>Use Joint Rotation</string>
-            </property>
-            <property name="toolTip">
-             <string>When the selected submodel has a joint, rotating it turns the joint around its own pivot and axis instead of the pivot point. Part &gt; Joint &gt; Rotate Joint does the same for the current selection.</string>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="JointModeStartLabel">
-            <property name="toolTip">
-             <string>Which joint opens when joint mode starts: the first one, the one used last in that submodel, or none, with every joint shown as a ring to pick from.</string>
-            </property>
-            <property name="text">
-             <string>Joint Mode Start</string>
-            </property>
-            <property name="buddy">
-             <cstring>JointModeStart</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <widget class="QComboBox" name="JointModeStart">
-            <property name="accessibleName">
-             <string>Joint Mode Start</string>
-            </property>
-            <property name="toolTip">
-             <string>Which joint opens when joint mode starts: the first one, the one used last in that submodel, or none, with every joint shown as a ring to pick from.</string>
-            </property>
-            <item>
-             <property name="text">
-              <string>First Joint</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Last Used Joint</string>
-             </property>
-            </item>
-            <item>
-             <property name="text">
-              <string>Overview</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="5" column="0">
-           <widget class="QLabel" name="JointSelectInViewLabel">
-            <property name="toolTip">
-             <string>While a joint is open, show the other joints as faded rings and click one to open it.</string>
-            </property>
-            <property name="text">
-             <string>Select Joints in View</string>
-            </property>
-            <property name="buddy">
-             <cstring>JointSelectInView</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="5" column="1">
-           <widget class="QCheckBox" name="JointSelectInView">
-            <property name="accessibleName">
-             <string>Select Joints in View</string>
-            </property>
-            <property name="toolTip">
-             <string>While a joint is open, show the other joints as faded rings and click one to open it.</string>
             </property>
            </widget>
           </item>
@@ -1266,6 +1182,135 @@
         </widget>
        </item>
        <item row="8" column="0" colspan="2">
+        <widget class="QGroupBox" name="JointsGroup">
+         <property name="title">
+          <string>Joints</string>
+         </property>
+         <layout class="QGridLayout" name="JointsLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="JointRotationLabel">
+            <property name="toolTip">
+             <string>When the selected submodel has a joint, rotating it turns the joint around its own pivot and axis instead of the pivot point. Part &gt; Joint &gt; Rotate Joint does the same for the current selection.</string>
+            </property>
+            <property name="text">
+             <string>Use Joint Rotation</string>
+            </property>
+            <property name="buddy">
+             <cstring>JointRotation</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QCheckBox" name="JointRotation">
+            <property name="accessibleName">
+             <string>Use Joint Rotation</string>
+            </property>
+            <property name="toolTip">
+             <string>When the selected submodel has a joint, rotating it turns the joint around its own pivot and axis instead of the pivot point. Part &gt; Joint &gt; Rotate Joint does the same for the current selection.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="JointSelectInViewLabel">
+            <property name="toolTip">
+             <string>While a joint is open, show the other joints as faded rings and click one to open it.</string>
+            </property>
+            <property name="text">
+             <string>Select Joints in View</string>
+            </property>
+            <property name="buddy">
+             <cstring>JointSelectInView</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QCheckBox" name="JointSelectInView">
+            <property name="accessibleName">
+             <string>Select Joints in View</string>
+            </property>
+            <property name="toolTip">
+             <string>While a joint is open, show the other joints as faded rings and click one to open it.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="JointSelectSubmodelLabel">
+            <property name="toolTip">
+             <string>In the joint overview, click anywhere on a jointed submodel to open its nearest joint, not only the outlined part at its pivot.</string>
+            </property>
+            <property name="text">
+             <string>Select Joints by Submodel</string>
+            </property>
+            <property name="buddy">
+             <cstring>JointSelectSubmodel</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QCheckBox" name="JointSelectSubmodel">
+            <property name="accessibleName">
+             <string>Select Joints by Submodel</string>
+            </property>
+            <property name="toolTip">
+             <string>In the joint overview, click anywhere on a jointed submodel to open its nearest joint, not only the outlined part at its pivot.</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="JointModeStartLabel">
+            <property name="toolTip">
+             <string>Which joint opens when joint mode starts: the first one, the one used last in that submodel, or none, with every joint shown as a ring to pick from.</string>
+            </property>
+            <property name="text">
+             <string>Joint Mode Start</string>
+            </property>
+            <property name="buddy">
+             <cstring>JointModeStart</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="QComboBox" name="JointModeStart">
+            <property name="accessibleName">
+             <string>Joint Mode Start</string>
+            </property>
+            <property name="toolTip">
+             <string>Which joint opens when joint mode starts: the first one, the one used last in that submodel, or none, with every joint shown as a ring to pick from.</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>First Joint</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Last Used Joint</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Overview</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <spacer name="JointsSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="9" column="0" colspan="2">
         <widget class="QGroupBox" name="FlexiblePartsGroup">
          <property name="title">
           <string>Flexible Parts</string>
@@ -1626,7 +1671,7 @@
             </property>
             <item>
              <property name="text">
-              <string>Wireframe</string>
+              <string>Default Lights</string>
              </property>
             </item>
             <item>
@@ -1636,7 +1681,7 @@
             </item>
             <item>
              <property name="text">
-              <string>Default Lights</string>
+              <string>Wireframe</string>
              </property>
             </item>
            </widget>
@@ -1657,7 +1702,7 @@
           <item row="1" column="0">
            <widget class="QLabel" name="LightingStyleLabel">
             <property name="toolTip">
-             <string>Choose how the Default Lights shading mode lights parts in every view: Standard uses one light with a soft highlight, Studio adds fill and rim lights, Matte drops the highlights and Toon uses flat cel shading bands.</string>
+             <string>Choose how the Default Lights shading mode lights parts in every view: Studio adds fill and rim lights to the soft highlight, Standard uses one light with a soft highlight, Matte drops the highlights and Toon uses flat cel shading bands.</string>
             </property>
             <property name="buddy">
              <cstring>LightingStyle</cstring>
@@ -1673,16 +1718,16 @@
              <string>Lighting Style</string>
             </property>
             <property name="toolTip">
-             <string>Choose how the Default Lights shading mode lights parts in every view: Standard uses one light with a soft highlight, Studio adds fill and rim lights, Matte drops the highlights and Toon uses flat cel shading bands.</string>
+             <string>Choose how the Default Lights shading mode lights parts in every view: Studio adds fill and rim lights to the soft highlight, Standard uses one light with a soft highlight, Matte drops the highlights and Toon uses flat cel shading bands.</string>
             </property>
             <item>
              <property name="text">
-              <string>Standard</string>
+              <string>Studio</string>
              </property>
             </item>
             <item>
              <property name="text">
-              <string>Studio</string>
+              <string>Standard</string>
              </property>
             </item>
             <item>
@@ -3119,7 +3164,7 @@
             </property>
             <item>
              <property name="text">
-              <string>Wireframe</string>
+              <string>Default Lights</string>
              </property>
             </item>
             <item>
@@ -3129,7 +3174,7 @@
             </item>
             <item>
              <property name="text">
-              <string>Default Lights</string>
+              <string>Wireframe</string>
              </property>
             </item>
            </widget>
@@ -3453,7 +3498,7 @@
             </property>
             <item>
              <property name="text">
-              <string>Wireframe</string>
+              <string>Default Lights</string>
              </property>
             </item>
             <item>
@@ -3463,7 +3508,7 @@
             </item>
             <item>
              <property name="text">
-              <string>Default Lights</string>
+              <string>Wireframe</string>
              </property>
             </item>
            </widget>
@@ -3615,7 +3660,7 @@
             </property>
             <item>
              <property name="text">
-              <string>Wireframe</string>
+              <string>Default Lights</string>
              </property>
             </item>
             <item>
@@ -3625,7 +3670,7 @@
             </item>
             <item>
              <property name="text">
-              <string>Default Lights</string>
+              <string>Wireframe</string>
              </property>
             </item>
            </widget>
@@ -5726,11 +5771,12 @@
   <tabstop>fixedDirectionKeys</tabstop>
   <tabstop>ShadowLibraryEnabled</tabstop>
   <tabstop>ConnectionPoints</tabstop>
-  <tabstop>JointRotation</tabstop>
-  <tabstop>JointModeStart</tabstop>
-  <tabstop>JointSelectInView</tabstop>
   <tabstop>FirstPartAtOrigin</tabstop>
   <tabstop>InsertColorMode</tabstop>
+  <tabstop>JointRotation</tabstop>
+  <tabstop>JointSelectInView</tabstop>
+  <tabstop>JointSelectSubmodel</tabstop>
+  <tabstop>JointModeStart</tabstop>
   <tabstop>FlexMiddleControlPoint</tabstop>
   <tabstop>FlexClampNewControlPoints</tabstop>
   <tabstop>FlexSpreadMode</tabstop>

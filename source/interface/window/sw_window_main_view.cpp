@@ -462,19 +462,19 @@ void swMainWindow::AddRenderTargetActions(QMenu* Menu, swRenderTarget Target)
 
 	QMenu* ShadingMenu = Menu->addMenu(tr("Shading"));
 	QActionGroup* ShadingGroup = new QActionGroup(ShadingMenu);
-	ShadingGroup->addAction(AddMenuCommand(ShadingMenu, tr("Wireframe"), Commands.Wireframe, RenderSettings.ShadingMode == swShadingMode::Wireframe));
-	ShadingGroup->addAction(AddMenuCommand(ShadingMenu, tr("Flat Shading"), Commands.Flat, RenderSettings.ShadingMode == swShadingMode::Flat));
 	ShadingGroup->addAction(AddMenuCommand(ShadingMenu, tr("Default Lights"), Commands.DefaultLights, RenderSettings.ShadingMode == swShadingMode::DefaultLights));
+	ShadingGroup->addAction(AddMenuCommand(ShadingMenu, tr("Flat Shading"), Commands.Flat, RenderSettings.ShadingMode == swShadingMode::Flat));
+	ShadingGroup->addAction(AddMenuCommand(ShadingMenu, tr("Wireframe"), Commands.Wireframe, RenderSettings.ShadingMode == swShadingMode::Wireframe));
 	ShadingMenu->addSeparator();
 
 	// lighting style is shared
 	const char* const LightingNames[] = { QT_TR_NOOP("Standard Lighting"), QT_TR_NOOP("Studio Lighting"), QT_TR_NOOP("Matte Lighting"), QT_TR_NOOP("Toon Lighting") };
 	QActionGroup* LightingGroup = new QActionGroup(ShadingMenu);
 
-	for (int ActionIdx = SW_VIEW_LIGHTING_FIRST; ActionIdx <= SW_VIEW_LIGHTING_LAST; ActionIdx++)
+	for (swLightingStyle LightingStyle : LightingStyleMenuOrder)
 	{
-		const int StyleIndex = ActionIdx - SW_VIEW_LIGHTING_FIRST;
-		LightingGroup->addAction(AddMenuCommand(ShadingMenu, tr(LightingNames[StyleIndex]), static_cast<swCommandId>(ActionIdx), static_cast<int>(Preferences.mLightingStyle) == StyleIndex));
+		const int StyleIndex = static_cast<int>(LightingStyle);
+		LightingGroup->addAction(AddMenuCommand(ShadingMenu, tr(LightingNames[StyleIndex]), static_cast<swCommandId>(SW_VIEW_LIGHTING_FIRST + StyleIndex), Preferences.mLightingStyle == LightingStyle));
 	}
 
 	AddMenuCommand(Menu, tr("Edge Lines"), Commands.EdgeLines, RenderSettings.DrawEdgeLines);

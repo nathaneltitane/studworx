@@ -598,8 +598,8 @@ swCommandLineOptions swApplication::ParseCommandLineOptions()
 			Options.StdOut += tr("  --field-of-view <degrees>: Set the vertical field of view used to render images (< 180).\n");
 			Options.StdOut += tr("  --clip-planes <near> <far>: Set the near and far clipping planes used to render images (1 <= <near> < <far>).\n");
 			Options.StdOut += tr("\nRendering:\n");
-			Options.StdOut += tr("  --shading <mode>: Select shading mode for rendering (wireframe, flat, default, full).\n");
-			Options.StdOut += tr("  --lighting <style>: Select the lighting style of the default shading (standard, studio, matte, toon).\n");
+			Options.StdOut += tr("  --shading <mode>: Select shading mode for rendering (default, flat, wireframe, full).\n");
+			Options.StdOut += tr("  --lighting <style>: Select the lighting style of the default shading (studio, standard, matte, toon).\n");
 			Options.StdOut += tr("  --line-width <width>: Set the width of the edge lines.\n");
 			Options.StdOut += tr("  --antialiasing-samples <samples>: Anti-aliasing sample size (1, 2, 4, or 8).\n");
 			Options.StdOut += tr("  --fade-steps: Render parts from prior steps faded.\n");

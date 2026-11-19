@@ -21,6 +21,32 @@ static const char* gLanguageLocales[] =
 };
 
 // use to tell control column widgets
+// use to place shading modes in the menu order
+static int swShadingModeIndex(swShadingMode ShadingMode)
+{
+	const auto Found = std::find(std::begin(ShadingModeMenuOrder), std::end(ShadingModeMenuOrder), ShadingMode);
+
+	return Found == std::end(ShadingModeMenuOrder) ? -1 : static_cast<int>(Found - std::begin(ShadingModeMenuOrder));
+}
+
+static swShadingMode swShadingModeFromIndex(int Index)
+{
+	return Index >= 0 && Index < static_cast<int>(std::size(ShadingModeMenuOrder)) ? ShadingModeMenuOrder[Index] : swShadingMode::DefaultLights;
+}
+
+// use to place lighting styles in the menu order
+static int swLightingStyleIndex(swLightingStyle LightingStyle)
+{
+	const auto Found = std::find(std::begin(LightingStyleMenuOrder), std::end(LightingStyleMenuOrder), LightingStyle);
+
+	return Found == std::end(LightingStyleMenuOrder) ? -1 : static_cast<int>(Found - std::begin(LightingStyleMenuOrder));
+}
+
+static swLightingStyle swLightingStyleFromIndex(int Index)
+{
+	return Index >= 0 && Index < static_cast<int>(std::size(LightingStyleMenuOrder)) ? LightingStyleMenuOrder[Index] : swLightingStyle::Studio;
+}
+
 static bool swIsColumnControl(QWidget* Widget)
 {
 	if (QToolButton* Button = qobject_cast<QToolButton*>(Widget))
@@ -516,6 +542,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->JointRotation->setChecked(mOptions->Preferences.mJointRotation);
 	ui->JointModeStart->setCurrentIndex(mOptions->Preferences.mJointModeStart);
 	ui->JointSelectInView->setChecked(mOptions->Preferences.mJointSelectInView);
+	ui->JointSelectSubmodel->setChecked(mOptions->Preferences.mJointSelectSubmodel);
 	ui->PartsSnapToTiles->setChecked(mOptions->Preferences.mPartsSnapToTiles);
 	ui->InsertColorMode->setCurrentIndex(static_cast<int>(mOptions->Preferences.mInsertColorMode));
 	ui->FlexSpreadMode->setCurrentIndex(static_cast<int>(mOptions->Preferences.mFlexSpreadMode));
@@ -573,7 +600,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 		const swTargetRenderSettings& TargetSettings = mOptions->Preferences.GetTargetRenderSettings(Target);
 
 		Widgets.SyncRendering->setChecked(TargetSettings.SyncRendering);
-		Widgets.ShadingMode->setCurrentIndex(static_cast<int>(TargetSettings.Settings.ShadingMode));
+		Widgets.ShadingMode->setCurrentIndex(swShadingModeIndex(TargetSettings.Settings.ShadingMode));
 		Widgets.EdgeLines->setChecked(TargetSettings.Settings.DrawEdgeLines);
 		Widgets.ConditionalLines->setChecked(TargetSettings.Settings.DrawConditionalLines);
 		Widgets.LineWidthSlider->setRange(0, (mLineWidthRange[1] - mLineWidthRange[0]) / mLineWidthGranularity);
@@ -645,13 +672,13 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 
 	ui->studStyleCombo->setCurrentIndex(static_cast<int>(mOptions->StudStyle));
 
-	ui->ShadingMode->setCurrentIndex(static_cast<int>(mOptions->Preferences.mShadingMode));
-	ui->LightingStyle->setCurrentIndex(static_cast<int>(mOptions->Preferences.mLightingStyle));
+	ui->ShadingMode->setCurrentIndex(swShadingModeIndex(mOptions->Preferences.mShadingMode));
+	ui->LightingStyle->setCurrentIndex(swLightingStyleIndex(mOptions->Preferences.mLightingStyle));
 
 	if (!swContext::SupportsDefaultLights())
 	{
 		QStandardItemModel* ShadingModel = qobject_cast<QStandardItemModel*>(ui->ShadingMode->model());
-		QStandardItem* DefaultLightsItem = ShadingModel->item(static_cast<int>(swShadingMode::DefaultLights));
+		QStandardItem* DefaultLightsItem = ShadingModel->item(swShadingModeIndex(swShadingMode::DefaultLights));
 		DefaultLightsItem->setEnabled(false);
 
 		const QString Message = tr("Default Lights is unavailable. Flat shading is used instead.");
@@ -666,7 +693,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 		{
 			QComboBox* TargetShadingMode = GetRenderTargetWidgets(Target).ShadingMode;
 			QStandardItemModel* TargetShadingModel = qobject_cast<QStandardItemModel*>(TargetShadingMode->model());
-			QStandardItem* TargetDefaultLightsItem = TargetShadingModel->item(static_cast<int>(swShadingMode::DefaultLights));
+			QStandardItem* TargetDefaultLightsItem = TargetShadingModel->item(swShadingModeIndex(swShadingMode::DefaultLights));
 			TargetDefaultLightsItem->setEnabled(false);
 			TargetDefaultLightsItem->setToolTip(Message);
 			TargetShadingMode->setToolTip(Message);
@@ -941,6 +968,7 @@ void swPreferencesDialog::accept()
 	mOptions->Preferences.mJointRotation = ui->JointRotation->isChecked();
 	mOptions->Preferences.mJointModeStart = ui->JointModeStart->currentIndex();
 	mOptions->Preferences.mJointSelectInView = ui->JointSelectInView->isChecked();
+	mOptions->Preferences.mJointSelectSubmodel = ui->JointSelectSubmodel->isChecked();
 	mOptions->Preferences.mContextMenu = GetContextMenuLayout();
 	mOptions->Preferences.mPartsSnapToTiles = ui->PartsSnapToTiles->isChecked();
 	mOptions->Preferences.mInsertColorMode = static_cast<swInsertColorMode>(ui->InsertColorMode->currentIndex());
@@ -974,7 +1002,7 @@ void swPreferencesDialog::accept()
 		swTargetRenderSettings& TargetSettings = mOptions->Preferences.GetTargetRenderSettings(Target);
 
 		TargetSettings.SyncRendering = Widgets.SyncRendering->isChecked();
-		TargetSettings.Settings.ShadingMode = static_cast<swShadingMode>(Widgets.ShadingMode->currentIndex());
+		TargetSettings.Settings.ShadingMode = swShadingModeFromIndex(Widgets.ShadingMode->currentIndex());
 		TargetSettings.Settings.DrawEdgeLines = Widgets.EdgeLines->isChecked();
 		TargetSettings.Settings.DrawConditionalLines = Widgets.ConditionalLines->isChecked();
 		TargetSettings.Settings.LineWidth = mLineWidthRange[0] + static_cast<float>(Widgets.LineWidthSlider->value()) * mLineWidthGranularity;
@@ -1025,8 +1053,8 @@ void swPreferencesDialog::accept()
 	if (ui->ViewCubeSizeCombo->currentIndex() > 0)
 		mOptions->Preferences.mViewCubeSize = SW_VIEW_CUBE_SIZES[ui->ViewCubeSizeCombo->currentIndex() - 1];
 
-	mOptions->Preferences.mShadingMode = (swShadingMode)ui->ShadingMode->currentIndex();
-	mOptions->Preferences.mLightingStyle = static_cast<swLightingStyle>(ui->LightingStyle->currentIndex());
+	mOptions->Preferences.mShadingMode = swShadingModeFromIndex(ui->ShadingMode->currentIndex());
+	mOptions->Preferences.mLightingStyle = swLightingStyleFromIndex(ui->LightingStyle->currentIndex());
 	mOptions->Preferences.mHighlightRenderMode = static_cast<swHighlightRenderMode>(ui->HighlightRenderMode->currentIndex());
 	mOptions->Preferences.mSelectionOutlineWidth = ui->SelectionOutlineWidth->value();
 

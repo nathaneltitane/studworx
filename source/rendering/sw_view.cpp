@@ -498,6 +498,28 @@ bool swView::EnterJointMode()
 	return false;
 }
 
+// joint mode with nothing selected
+bool swView::EnterJointOverview()
+{
+	swModel* ActiveModel = GetActiveModel();
+
+	if (ActiveModel->GetJointPart())
+		return false;
+
+	ActiveModel->SetJointOverview();
+
+	if (!ActiveModel->IsJointOverview())
+		return false;
+
+	mJointReturnPath = mSubmodelEditingPath;
+	mJointReturn = true;
+	mJointSeen = true;
+	ActiveModel->UpdateInterface();
+	UpdateAllViews();
+
+	return true;
+}
+
 // select the entry of a model on the joint path
 void swView::SetJointPathDepth(size_t Index)
 {

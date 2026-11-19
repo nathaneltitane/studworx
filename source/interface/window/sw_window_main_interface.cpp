@@ -377,13 +377,14 @@ void swMainWindow::CreateMenus()
 
 	mShadingMenu = new QMenu(tr("&Shading"), this);
 	mShadingMenu->setObjectName("Shading");
-	mShadingMenu->addAction(mActions[SW_VIEW_SHADING_WIREFRAME]);
-	mShadingMenu->addAction(mActions[SW_VIEW_SHADING_FLAT]);
-	mShadingMenu->addAction(mActions[SW_VIEW_SHADING_DEFAULT_LIGHTS]);
+
+	for (swShadingMode ShadingMode : ShadingModeMenuOrder)
+		mShadingMenu->addAction(mActions[SW_VIEW_SHADING_FIRST + static_cast<int>(ShadingMode)]);
+
 	mShadingMenu->addSeparator();
 
-	for (int ActionIdx = SW_VIEW_LIGHTING_FIRST; ActionIdx <= SW_VIEW_LIGHTING_LAST; ActionIdx++)
-		mShadingMenu->addAction(mActions[ActionIdx]);
+	for (swLightingStyle LightingStyle : LightingStyleMenuOrder)
+		mShadingMenu->addAction(mActions[SW_VIEW_LIGHTING_FIRST + static_cast<int>(LightingStyle)]);
 
 	mToolsMenu = new QMenu(tr("Tools"), this);
 	mToolsMenu->setObjectName("Tools");

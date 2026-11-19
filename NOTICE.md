@@ -19,6 +19,14 @@
   - Joints panel: a Lock column freezes a joint, saved in the file; a locked joint shows in the Deactivated grey and can't be moved, turned, edited or deleted
   - Preferences: Joint Mode Start opens the first joint, the last used joint of that submodel, or an overview with every joint shown as a ring to click
   - Preferences: Select Joints in View shows the other joints as faded rings while a joint is open, and clicking one opens it
+  - Preferences: joint options have their own Joints group, with Joint Mode Start last
+  - Preferences: Select Joints by Submodel, off by default, opens the nearest joint from a click anywhere on a jointed submodel in the joint overview
+  - Joints: Joint Mode with nothing selected, or from a right click on empty space, opens the overview with every joint outlined and ringed; clicking an outlined part opens its joint
+  - Mouse: the right button orbits only once the mouse moves, so a plain right click opens the right-click menu
+  - Shading: menus list Default Lights, Flat and Wireframe, then Studio, Standard, Matte and Toon; Studio is the new default lighting style
+  - Save Model Image: the preview plays the Joints motion from pose to pose, framed once so the model holds still
+  - Train tracks: no crash when a track part is picked before the view draws it
+  - Site: every image retaken from the installed build, with the joint overview, the Joints group in Preferences and Studio lighting
 
   </details>
 

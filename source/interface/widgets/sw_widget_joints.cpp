@@ -315,7 +315,7 @@ void swJointsWidget::UpdateJoint()
 	const swPartJoint* Joint = Part && Part->HasJoints() && !Overview ? &Part->mJoints[Model->GetJointIndex()] : nullptr;
 	const bool HasJoint = Joint != nullptr;
 
-	mJointLabel->setText(!Part ? tr("None: select a jointed submodel") : Overview ? tr("Pick a joint") : !HasJoint ? tr("No joint") : tr("Joint %1, %2, angle %3").arg(Model->GetJointIndex() + 1, 3, 10, QLatin1Char('0')).arg(Joint->Type == swJointType::Hinge ? tr("Hinge") : tr("Ball")).arg(swLength(Joint->Rotation), 0, 'f', 1));
+	mJointLabel->setText(Overview ? tr("Pick a joint") : !Part ? tr("None: select a jointed submodel") : !HasJoint ? tr("No joint") : tr("Joint %1, %2, angle %3").arg(Model->GetJointIndex() + 1, 3, 10, QLatin1Char('0')).arg(Joint->Type == swJointType::Hinge ? tr("Hinge") : tr("Ball")).arg(swLength(Joint->Rotation), 0, 'f', 1));
 	mAxisCombo->setEnabled(HasJoint && Joint->Type == swJointType::Hinge && !Joint->Locked);
 	UpdateClearButton();
 

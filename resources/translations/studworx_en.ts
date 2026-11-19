@@ -21,7 +21,7 @@
 <context>
     <name>swEditorWidget</name>
     <message numerus="yes">
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="325"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="310"/>
         <source>%n Replaced</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -29,7 +29,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="368"/>
+        <location filename="../../source/interface/widgets/sw_widget_editor.cpp" line="353"/>
         <source>%n Matches</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -40,7 +40,7 @@
 <context>
     <name>swInstructionsEditorWidget</name>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="486"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="471"/>
         <source>And %n more.</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -48,7 +48,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="489"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_instructions_editor.cpp" line="474"/>
         <source>The text was not applied. %n line(s) are not valid LDraw syntax:</source>
         <translation type="unfinished">
             <numerusform></numerusform>
@@ -101,7 +101,7 @@
 <context>
     <name>swPreferencesDialog</name>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="610"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="637"/>
         <source>%n plate(s)</source>
         <translation>
             <numerusform>%n plate</numerusform>
@@ -109,7 +109,7 @@
         </translation>
     </message>
     <message numerus="yes">
-        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1668"/>
+        <location filename="../../source/interface/dialogs/sw_dialog_preferences.cpp" line="1696"/>
         <source>%n stud(s)</source>
         <translation>
             <numerusform>%n stud</numerusform>

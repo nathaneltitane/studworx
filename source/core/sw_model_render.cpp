@@ -757,6 +757,27 @@ void swModel::CollectImagePoints(swStep FitStep, std::vector<swVector3>& Points)
 	}
 }
 
+// use to blend the poses of one joints frame
+void swModel::ApplyImagePose(const std::vector<swPose>& Poses, const swImageTurntable& Turntable, int Frame)
+{
+	const int Per = qMax(Turntable.Frames, 1);
+	const size_t From = (Frame / Per) % Poses.size();
+
+	ApplyPoseBlend(Poses[From], Poses[(From + 1) % Poses.size()], static_cast<float>(Frame % Per) / Per);
+}
+
+// use to fit every pose once so the model holds still
+void swModel::CollectPoseImagePoints(swModel* Main, const std::vector<swPose>& Poses, const swImageTurntable& Turntable, swStep FitStep, std::vector<swVector3>& Points) const
+{
+	const int FrameCount = Turntable.GetFrameCount(static_cast<int>(Poses.size()));
+
+	for (int Frame = 0; Frame < FrameCount; Frame++)
+	{
+		Main->ApplyImagePose(Poses, Turntable, Frame);
+		CollectImagePoints(FitStep, Points);
+	}
+}
+
 // use to place the image camera
 void swModel::SetImageCamera(swCamera* Camera, const swCamera* BaseCamera, const swImageFraming& Framing, const swImageTurntable& Turntable, int Frame, swStep Step, swStep LastStep, float Aspect, const std::vector<swVector3>* FitPoints) const
 {
@@ -959,9 +980,27 @@ QImage swModel::GetFramedImage(int Width, int Height, swStep Step, swStep LastSt
 	WaitForAssets();
 
 	swCamera Camera(true);
-	SetImageCamera(&Camera, ActiveView->GetCamera(), Framing, Turntable, Frame, Step, LastStep, static_cast<float>(Width) / Height);
+	swModel* Main = mProject->GetMainModel();
+	const std::vector<swPose> Poses = Main->GetPoses();
+	const bool Posing = Turntable.Enabled && Turntable.Motion == swImageMotion::Joints && Poses.size() >= 2;
+	const swPose Original = Main->GetCurrentPose(QString());
+
+	// joints frames pose the main model like the export
+	if (Posing)
+	{
+		std::vector<swVector3> FitPoints;
+
+		CollectPoseImagePoints(Main, Poses, Turntable, Framing.Fit == swImageFit::FitEachStep || Framing.Scope == swImageFitScope::ShownSteps ? LastStep : SW_STEP_MAXIMUM, FitPoints);
+		SetImageCamera(&Camera, ActiveView->GetCamera(), Framing, Turntable, 0, Step, LastStep, static_cast<float>(Width) / Height, &FitPoints);
+		Main->ApplyImagePose(Poses, Turntable, Frame);
+	}
+	else
+		SetImageCamera(&Camera, ActiveView->GetCamera(), Framing, Turntable, Frame, Step, LastStep, static_cast<float>(Width) / Height);
 
 	const swResult<QImage> Image = RenderStepImageWithReadyAssets(false, Width, Height, Step, &Camera, Background);
+
+	if (Posing)
+		Main->ApplyPoseBlend(Original, Original, 0.0f);
 
 	if (!Image)
 		return QImage();
@@ -1016,27 +1055,17 @@ swResult<void> swModel::SaveFramedImages(const QString& BaseName, bool AddStepSu
 			return swUnexpected(tr("Could not write file '%1':\n%2").arg(FileName, Writer.GetErrorString()));
 
 		const swPose Original = Main->GetCurrentPose(QString());
-		const int Per = qMax(Turntable.Frames, 1);
 		const int FrameCount = Turntable.GetFrameCount(static_cast<int>(Poses.size()));
 		swResult<void> Result;
 		std::vector<swVector3> FitPoints;
 
-		// fit every pose once so the model holds still
-		for (int Frame = 0; Frame < FrameCount; Frame++)
-		{
-			const size_t From = Frame / Per;
-
-			Main->ApplyPoseBlend(Poses[From], Poses[(From + 1) % Poses.size()], static_cast<float>(Frame % Per) / Per);
-			CollectImagePoints(Framing.Fit == swImageFit::FitEachStep || Framing.Scope == swImageFitScope::ShownSteps ? End : SW_STEP_MAXIMUM, FitPoints);
-		}
+		CollectPoseImagePoints(Main, Poses, Turntable, Framing.Fit == swImageFit::FitEachStep || Framing.Scope == swImageFitScope::ShownSteps ? End : SW_STEP_MAXIMUM, FitPoints);
 
 		SetImageCamera(&Camera, BaseCamera, Framing, Turntable, 0, End, End, Aspect, &FitPoints);
 
 		for (int Frame = 0; Frame < FrameCount && Result; Frame++)
 		{
-			const size_t From = Frame / Per;
-
-			Main->ApplyPoseBlend(Poses[From], Poses[(From + 1) % Poses.size()], static_cast<float>(Frame % Per) / Per);
+			Main->ApplyImagePose(Poses, Turntable, Frame);
 
 			const swResult<QImage> Image = RenderStepImageWithReadyAssets(false, Width, Height, End, &Camera, Background);
 

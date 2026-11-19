@@ -298,6 +298,7 @@ public:
 	bool SetJointModelActive(swModel* Target);
 	void EndJointFocus();
 	bool EnterJointMode();
+	bool EnterJointOverview();
 	void FocusSetJoint(const std::vector<swPart*>& Parts);
 	bool OpenSetJoint();
 	void SetJointPathDepth(size_t Index);
@@ -469,6 +470,7 @@ protected:
 
 	bool mTrackUpdated = false;
 	bool mToolClicked = false;
+	bool mRightButtonPending = false;
 	swTrackTool mTrackTool = swTrackTool::None;
 	swTrackButton mTrackButton = swTrackButton::None;
 	swCursor mCursor = swCursor::Default;

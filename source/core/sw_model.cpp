@@ -481,7 +481,7 @@ void swModel::SetActive(bool Active)
 	{
 		mJointFocus = nullptr;
 		mJointRotate = nullptr;
-		mJointOverview = nullptr;
+		mJointOverview = false;
 	}
 }
 

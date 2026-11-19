@@ -72,7 +72,7 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "HighlightNewParts", 0),                                                   // SW_PROFILE_HIGHLIGHT_NEW_PARTS
 	swProfileEntry("Settings", "HighlightNewPartsColor", SW_RGBA(255, 85, 0, 217)),                       // SW_PROFILE_HIGHLIGHT_NEW_PARTS_COLOR #ff5500d9
 	swProfileEntry("Settings", "ShadingMode", static_cast<int>(swShadingMode::DefaultLights)),             // SW_PROFILE_SHADING_MODE
-	swProfileEntry("Settings", "LightingStyle", static_cast<int>(swLightingStyle::Standard)),               // SW_PROFILE_LIGHTING_STYLE
+	swProfileEntry("Settings", "LightingStyle", static_cast<int>(swLightingStyle::Studio)),                 // SW_PROFILE_LIGHTING_STYLE
 	swProfileEntry("Settings", "HighlightRenderMode", static_cast<int>(swHighlightRenderMode::Outline)),      // SW_PROFILE_HIGHLIGHT_RENDER_MODE
 	swProfileEntry("Settings", "SelectionOutlineWidth", 4),                                                // SW_PROFILE_SELECTION_OUTLINE_WIDTH
 	swProfileEntry("Settings", "BackgroundColor", SW_RGBA(27, 30, 32, 255)),                               // SW_PROFILE_BACKGROUND_COLOR #1b1e20ff
@@ -181,6 +181,7 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Settings", "JointRotation", false),                                       // SW_PROFILE_JOINT_ROTATION
 	swProfileEntry("Settings", "JointModeStart", 1),                                           // SW_PROFILE_JOINT_MODE_START
 	swProfileEntry("Settings", "JointSelectInView", true),                                    // SW_PROFILE_JOINT_SELECT_IN_VIEW
+	swProfileEntry("Settings", "JointSelectSubmodel", false),                                 // SW_PROFILE_JOINT_SELECT_SUBMODEL
 	swProfileEntry("Settings", "ContextMenu", QStringList()),                                 // SW_PROFILE_CONTEXT_MENU
 	swProfileEntry("Settings", "TerminalFollowModel", true),                                   // SW_PROFILE_TERMINAL_FOLLOW_MODEL
 	swProfileEntry("Settings", "InsertColorMode", 0),                                          // SW_PROFILE_INSERT_COLOR_MODE

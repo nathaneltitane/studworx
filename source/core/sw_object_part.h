@@ -164,7 +164,9 @@ public:
 
 	bool IsTrainTrackConnected(int ConnectionIndex) const
 	{
-		return mTrainTrackConnections[ConnectionIndex];
+		// filled on render, may lag focus
+
+		return ConnectionIndex >= 0 && ConnectionIndex < (int)mTrainTrackConnections.size() && mTrainTrackConnections[ConnectionIndex];
 	}
 
 	void SetTrainTrackConnections(std::vector<bool>&& Connections)

@@ -181,6 +181,7 @@ void swTests::JointModePreferencesDefault()
 
 	QCOMPARE(swGetProfileInteger(SW_PROFILE_JOINT_MODE_START), 1);
 	QVERIFY(swGetProfileInteger(SW_PROFILE_JOINT_SELECT_IN_VIEW));
+	QVERIFY(!swGetProfileInteger(SW_PROFILE_JOINT_SELECT_SUBMODEL));
 
 	swSetProfileInteger(SW_PROFILE_JOINT_MODE_START, 2);
 	QCOMPARE(swGetProfileInteger(SW_PROFILE_JOINT_MODE_START), 2);

@@ -2598,7 +2598,7 @@ const swCommand gCommands[] =
 		QT_TRANSLATE_NOOP("Action", "Part.JointMode"),
 		QT_TRANSLATE_NOOP("Menu", "Joint &Mode"),
 		QT_TRANSLATE_NOOP("Status", "Go into joint mode on the selected submodel"),
-		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joint Mode</b></p><p>Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel. The Joint Mode Start preference picks which joint opens: the first joint, the last used joint, or an overview of rings to pick from. Ctrl+Shift+W or Esc leaves it.</p>"),
+		QT_TRANSLATE_NOOP("WhatsThis", "<p><b>Joint Mode</b></p><p>Works on the joint of the selected submodel, the same as clicking it in the Joints panel. With a part selected inside a submodel that has a joint, it goes up to that submodel. With nothing selected, it opens the joint picked in the Joints panel, or, with none picked, an overview of every joint in the model: click a ring or an outlined part to open its joint. The Joint Mode Start preference picks which joint opens: the first joint, the last used joint, or the overview. With Select Joints by Submodel on, clicking anywhere on a jointed submodel in the overview opens its nearest joint. Ctrl+Shift+W or Esc leaves it.</p>"),
 		"Ctrl+Shift+J"
 	},
 

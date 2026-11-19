@@ -23,6 +23,11 @@ enum class swLightingStyle
 	Toon
 };
 
+// menu order, the enums feed the shaders
+
+constexpr swShadingMode ShadingModeMenuOrder[] = { swShadingMode::DefaultLights, swShadingMode::Flat, swShadingMode::Wireframe };
+constexpr swLightingStyle LightingStyleMenuOrder[] = { swLightingStyle::Studio, swLightingStyle::Standard, swLightingStyle::Matte, swLightingStyle::Toon };
+
 enum class swColorTheme
 {
 	Dark,
@@ -267,6 +272,7 @@ public:
 	bool mJointRotation;
 	int mJointModeStart;
 	bool mJointSelectInView;
+	bool mJointSelectSubmodel;
 	QStringList mContextMenu;
 	bool mShadowLibraryEnabled;
 	bool mPartsSnapToTiles;

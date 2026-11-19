@@ -401,18 +401,77 @@ void swModel::AddHoverOutline(swScene* Scene, const swMatrix44& Transform, std::
 	Scene->SetAddHover(false);
 }
 
-// use to outline what a joint moves
-static void swAddJointChainHighlight(swScene* Scene, const swMatrix44& Transform, std::vector<const swPart*> Chain, size_t JointIndex)
+// use to extend a joint chain to what the joint moves
+static bool swFindJointChainLeaf(std::vector<const swPart*>& Chain, size_t JointIndex)
 {
 	const swPart* Holder = Chain.back();
 
 	if (JointIndex >= Holder->mJoints.size() || !Holder->mPartData->IsModel())
-		return;
+		return false;
 
 	const swVector3 Pivot = swMultiply31(Holder->mJoints[JointIndex].Pivot, swMatrix44AffineInverse(Holder->GetJointsMatrix(JointIndex)));
 
-	if (swFindJointLeaf(Holder->mPartData->GetModel(), swMatrix44Identity(), Pivot, Chain))
+	return swFindJointLeaf(Holder->mPartData->GetModel(), swMatrix44Identity(), Pivot, Chain);
+}
+
+// use to outline what a joint moves
+static void swAddJointChainHighlight(swScene* Scene, const swMatrix44& Transform, std::vector<const swPart*> Chain, size_t JointIndex)
+{
+	if (swFindJointChainLeaf(Chain, JointIndex))
 		swAddChainMeshes(Scene, Chain, Transform, swRenderMeshState::Highlighted);
+}
+
+// use to find the overview ring of the outlined part under the pointer
+int swModel::FindJointRingPart(const swVector3& Start, const swVector3& End)
+{
+	float Distance = FLT_MAX;
+	std::vector<std::pair<swModel*, swPart*>> Chain, Hit;
+
+	if (!mJointOverview || !JointsRayTest(Start, End, Distance, Chain, Hit))
+		return -1;
+
+	std::vector<const swPart*> Path;
+
+	for (const std::pair<swModel*, swPart*>& Link : Hit)
+		Path.push_back(Link.second);
+
+	const std::vector<swJointRing> Rings = GetJointRings();
+
+	for (size_t Index = 0; Index < Rings.size(); Index++)
+	{
+		std::vector<const swPart*> Leaf = Rings[Index].Chain;
+
+		if (!Rings[Index].Locked && swFindJointChainLeaf(Leaf, Rings[Index].Joint) && Leaf == Path)
+			return static_cast<int>(Index);
+	}
+
+	if (!swGetPreferences().mJointSelectSubmodel)
+		return -1;
+
+	// the innermost jointed submodel, then the nearest pivot
+
+	const swVector3 Point = Start + swNormalize(End - Start) * Distance;
+	int Found = -1;
+	size_t FoundDepth = 0;
+	float FoundDistance = FLT_MAX;
+
+	for (size_t Index = 0; Index < Rings.size(); Index++)
+	{
+		const std::vector<const swPart*>& Holder = Rings[Index].Chain;
+		const float PivotDistance = swLength(Rings[Index].Pivot - Point);
+
+		if (Rings[Index].Locked || Holder.size() > Path.size() || !std::equal(Holder.begin(), Holder.end(), Path.begin()))
+			continue;
+
+		if (Holder.size() > FoundDepth || (Holder.size() == FoundDepth && PivotDistance < FoundDistance))
+		{
+			Found = static_cast<int>(Index);
+			FoundDepth = Holder.size();
+			FoundDistance = PivotDistance;
+		}
+	}
+
+	return Found;
 }
 
 // use to outline the hovered ring joint
@@ -427,8 +486,16 @@ void swModel::AddJointHighlight(swScene* Scene, const swMatrix44& Transform) con
 	const swPart* Target = GetJointPart();
 	std::vector<const swPart*> Chain;
 
-	// the overview has no open joint
-	if (!Target || mJointOverview)
+	// the overview outlines every joint
+	if (mJointOverview)
+	{
+		for (const swJointRing& Ring : GetJointRings())
+			swAddJointChainHighlight(Scene, Transform, Ring.Chain, Ring.Joint);
+
+		return;
+	}
+
+	if (!Target)
 		return;
 
 	if (mJointPick)
@@ -737,8 +804,8 @@ void swModel::UpdateJointRotate()
 	if (mJointFocus && mJointFocus != Part)
 		mJointFocus = nullptr;
 
-	if (mJointOverview && mJointOverview != Part)
-		mJointOverview = nullptr;
+	if (mJointOverview && mJointOverviewPart != Part)
+		mJointOverview = false;
 }
 
 // joints picked in the list
@@ -746,7 +813,7 @@ void swModel::SetJointFocus(bool Focus)
 {
 	swPart* Part = Focus ? GetJointPart() : nullptr;
 
-	mJointOverview = nullptr;
+	mJointOverview = false;
 	mJointFocus = Part && Part->HasJoints() ? Part : nullptr;
 }
 
@@ -757,7 +824,13 @@ void swModel::SetJointOverview()
 
 	mJointFocus = nullptr;
 	mJointRotate = nullptr;
-	mJointOverview = Part && Part->HasJoints() ? Part : nullptr;
+
+	// nothing selected shows the whole model
+	mJointOverviewPart = Part;
+	mJointOverview = Part ? Part->HasJoints() : true;
+
+	if (!Part && GetJointRings().empty())
+		mJointOverview = false;
 }
 
 // use to find the joint last open in a part
@@ -791,11 +864,11 @@ std::vector<swJointRing> swModel::GetJointRings() const
 	std::vector<swJointRing> Rings;
 	const swPart* Target = GetJointPart();
 
-	if (!Target || !Target->HasJoints() || !(mJointOverview || ((mJointFocus || mJointRotate) && swGetPreferences().mJointSelectInView)))
+	if (mJointOverview ? Target && !Target->HasJoints() : !Target || !Target->HasJoints() || !((mJointFocus || mJointRotate) && swGetPreferences().mJointSelectInView))
 		return Rings;
 
 	// the open joint shows the gizmo instead
-	const size_t OpenJoint = mJointOverview ? Target->mJoints.size() : GetJointIndex();
+	const size_t OpenJoint = mJointOverview ? SIZE_MAX : GetJointIndex();
 
 	std::function<void(const swPart*, std::vector<const swPart*>&, const swModel*, const swMatrix44&)> Collect = [&](const swPart* Holder, std::vector<const swPart*>& Chain, const swModel* Owner, const swMatrix44& ToActive)
 	{
@@ -835,8 +908,16 @@ std::vector<swJointRing> swModel::GetJointRings() const
 		}
 	};
 
-	std::vector<const swPart*> Chain = { Target };
-	Collect(Target, Chain, this, swMatrix44Identity());
+	// the overview shows every joint in the model
+
+	for (const std::unique_ptr<swPart>& Part : mParts)
+	{
+		if (Part.get() != Target && (!mJointOverview || !Part->IsVisible(mCurrentStep) || !(Part->HasJoints() || Part->mPartData->IsModel())))
+			continue;
+
+		std::vector<const swPart*> Chain = { Part.get() };
+		Collect(Part.get(), Chain, this, swMatrix44Identity());
+	}
 
 	return Rings;
 }
@@ -846,7 +927,7 @@ void swModel::EndJointFocus()
 {
 	mJointFocus = nullptr;
 	mJointRotate = nullptr;
-	mJointOverview = nullptr;
+	mJointOverview = false;
 	ClearSelectionAction();
 }
 
