@@ -87,10 +87,10 @@ swPageSetupDialog::swPageSetupDialog(QWidget* Parent, swInstructionsPageSetup* P
 		connect(SpinBox, qOverload<double>(&QDoubleSpinBox::valueChanged), this, &swPageSetupDialog::SizeEdited);
 	}
 
-	// the orientation follows the size while typed
+	// orientation follows the typed size
 
 	for (QDoubleSpinBox* SpinBox : { ui->WidthSpinBox, ui->HeightSpinBox })
-		connect(SpinBox, &QDoubleSpinBox::textChanged, this, [this]()
+		connect(SpinBox->findChild<QLineEdit*>(), &QLineEdit::textChanged, this, [this]()
 		{
 			SetOrientation(ui->WidthSpinBox->valueFromText(ui->WidthSpinBox->cleanText()) > ui->HeightSpinBox->valueFromText(ui->HeightSpinBox->cleanText()));
 		});

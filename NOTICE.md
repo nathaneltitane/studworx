@@ -8,6 +8,7 @@
   - Instructions: right click a cover to add a linked image, like a logo, on the front cover, the back cover or both, with its own placement, size and lock
   - Instructions: Save Template and Apply Template in the Properties options carry the look, the steps per page and the cover images to any model, and Preferences > General > Default Instructions Template applies one under every model
   - Instructions: Use Document Font and Use Document Font Size work on their own, one gives all text the document typeface, the other its size, and older files keep both
+  - Page Setup: Portrait or Landscape follows the width and height while they are typed
   - Instructions: the cover, the bill of materials and the step pages can show how many parts they take, as "119 PIECES" or your own text
   - Instructions: the cover title, author and part count start at the same size as the Parts List title, and the parts list count sits at its top right
   - Instructions: Show Submodel Preview puts the finished submodel and its part count on the first page of each submodel
