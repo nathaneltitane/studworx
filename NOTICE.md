@@ -1,6 +1,13 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-21</summary>
+
+  - Site: the search fields have a ✕ button that clears the text and shows every group again
+
+  </details>
+
+  <details>
   <summary>2026-11-19</summary>
 
   - Joints: Joint Mode with nothing selected, or from a right click on empty space, opens an overview of every joint, outlined and ringed; click an outlined part to open its joint

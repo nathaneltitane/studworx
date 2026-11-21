@@ -81,9 +81,9 @@
 	<key>CFBundleSignature</key>
 	<string>LCAD</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2026-11-19</string>
+	<string>2026-11-21</string>
 	<key>CFBundleVersion</key>
-	<string>20261119</string>
+	<string>20261121</string>
 	<key>CFBundleDisplayName</key>
 	<string>StudWorx</string>
 	<key>CFBundleName</key>
