@@ -46,7 +46,17 @@ static const QLatin1String gInstructionsPropertyNames[] =
 	QLatin1String("STEP_IMAGE_SIZE"), QLatin1String("COVER_IMAGE_SIZE"),
 	QLatin1String("COVER_TITLE_TEXT"), QLatin1String("COVER_TITLE_FILE"), QLatin1String("COVER_AUTHOR_TEXT"),
 	QLatin1String("COVER_AUTHOR_FILE"), QLatin1String("BILL_OF_MATERIALS_TITLE_TEXT"), QLatin1String("BILL_OF_MATERIALS_TITLE_FILE"),
-	QLatin1String("STEP_DIVIDER_MARGIN"), QLatin1String("STEP_DIVIDER_PADDING"), QLatin1String("STEP_DIVIDER_ROUNDED"), QLatin1String("STEP_DIVIDER_HORIZONTAL"), QLatin1String("STEP_DIVIDER_VERTICAL"), QLatin1String("HIGHLIGHT_WIDTH"), QLatin1String("FINAL_MODEL_BORDER_WIDTH"), QLatin1String("FINAL_MODEL_BORDER_COLOR"), QLatin1String("FINAL_MODEL_MARGIN"), QLatin1String("BILL_OF_MATERIALS_SHOW_PART_IDS")
+	QLatin1String("STEP_DIVIDER_MARGIN"), QLatin1String("STEP_DIVIDER_PADDING"), QLatin1String("STEP_DIVIDER_ROUNDED"), QLatin1String("STEP_DIVIDER_HORIZONTAL"), QLatin1String("STEP_DIVIDER_VERTICAL"), QLatin1String("HIGHLIGHT_WIDTH"), QLatin1String("FINAL_MODEL_BORDER_WIDTH"), QLatin1String("FINAL_MODEL_BORDER_COLOR"), QLatin1String("FINAL_MODEL_MARGIN"), QLatin1String("BILL_OF_MATERIALS_SHOW_PART_IDS"),
+	QLatin1String("SHOW_COVER_PART_COUNT"), QLatin1String("SHOW_BILL_OF_MATERIALS_PART_COUNT"), QLatin1String("SHOW_PAGE_PART_COUNT"),
+	QLatin1String("PART_COUNT_TEXT"), QLatin1String("PART_COUNT_FILE"), QLatin1String("PART_COUNT_FONT"),
+	QLatin1String("PART_COUNT_COLOR"), QLatin1String("PAGE_PART_COUNT_FONT"), QLatin1String("PAGE_PART_COUNT_COLOR"),
+	QLatin1String("PART_COUNT_PLACEMENT"), QLatin1String("BILL_OF_MATERIALS_PART_COUNT_PLACEMENT"), QLatin1String("PAGE_PART_COUNT_PLACEMENT"),
+	QLatin1String("PART_COUNT_MARGIN"), QLatin1String("PART_COUNT_PADDING"), QLatin1String("PART_COUNT_BORDER_WIDTH"),
+	QLatin1String("PART_COUNT_BORDER_COLOR"), QLatin1String("PART_COUNT_BACKGROUND_COLOR"), QLatin1String("PART_COUNT_CORNER_RADIUS"),
+	QLatin1String("SHOW_SUBMODEL_PREVIEW"), QLatin1String("SUBMODEL_PREVIEW_SIZE"), QLatin1String("SUBMODEL_PREVIEW_PLACEMENT"),
+	QLatin1String("SUBMODEL_PREVIEW_MARGIN"), QLatin1String("SUBMODEL_PREVIEW_PADDING"), QLatin1String("SUBMODEL_PREVIEW_BORDER_WIDTH"),
+	QLatin1String("SUBMODEL_PREVIEW_BORDER_COLOR"), QLatin1String("SUBMODEL_PREVIEW_BACKGROUND_COLOR"), QLatin1String("SUBMODEL_PREVIEW_CORNER_RADIUS"),
+	QLatin1String("SUBMODEL_PREVIEW_PART_COUNT_PLACEMENT"), QLatin1String("PARTS_LIST_QUANTITY_PLACEMENT")
 };
 
 static_assert(std::size(gInstructionsPropertyNames) == static_cast<size_t>(swInstructionsPropertyType::Count), "Missing property name");
@@ -54,8 +64,12 @@ static_assert(std::size(gInstructionsPropertyNames) == static_cast<size_t>(swIns
 static const QLatin1String gInstructionsElementNames[] =
 {
 	QLatin1String("NONE"), QLatin1String("STEP_NUMBER"), QLatin1String("PARTS_LIST"), QLatin1String("COVER_TITLE"), QLatin1String("COVER_AUTHOR"), QLatin1String("BILL_OF_MATERIALS"),
-	QLatin1String("STEP_IMAGE"), QLatin1String("COVER_IMAGE"), QLatin1String("PAGE_NUMBER"), QLatin1String("NOTICE"), QLatin1String("POINTER")
+	QLatin1String("STEP_IMAGE"), QLatin1String("COVER_IMAGE"), QLatin1String("PAGE_NUMBER"), QLatin1String("NOTICE"), QLatin1String("POINTER"),
+	QLatin1String("COVER_PART_COUNT"), QLatin1String("BILL_OF_MATERIALS_PART_COUNT"), QLatin1String("PAGE_PART_COUNT"), QLatin1String("SUBMODEL_PREVIEW"),
+	QLatin1String("SUBMODEL_PREVIEW_PART_COUNT"), QLatin1String("PARTS_LIST_QUANTITY")
 };
+
+static_assert(std::size(gInstructionsElementNames) == static_cast<size_t>(swInstructionsPlacementElement::PartsListCount) + 1, "Missing element name");
 
 static const QLatin1String gInstructionsPageTypeNames[] =
 {

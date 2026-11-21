@@ -4,6 +4,12 @@
   <summary>2026-11-21</summary>
 
   - Site: the search fields have a ✕ button that clears the text and shows every group again
+  - Instructions: the cover, the bill of materials and the step pages can show how many parts they take, as "119 PIECES" or your own text
+  - Instructions: the cover title, author and part count start at the same size as the Parts List title, and the parts list count sits at its top right
+  - Instructions: Show Submodel Preview puts the finished submodel and its part count on the first page of each submodel
+  - Instructions: the outer Placement buttons put cover texts, part counts, the submodel preview and page numbers against the paper edge
+  - Instructions: the page grid and margin colors start dark red, lilac and navy
+  - Instructions: the submodel preview count and the parts list quantities are their own elements, placed anywhere around their picture
 
   </details>
 

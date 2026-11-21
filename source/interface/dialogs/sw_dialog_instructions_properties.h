@@ -101,6 +101,10 @@ protected:
 		CoverTitle,
 		CoverAuthor,
 		CoverImage,
+		CoverPartCount,
+		BillOfMaterialsPartCount,
+		PagePartCount,
+		SubmodelPreview,
 		BillOfMaterials,
 		Notice,
 		Pointer

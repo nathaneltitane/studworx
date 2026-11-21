@@ -54,6 +54,9 @@ private slots:
 	void DocumentationHelpsEveryCommand();
 	void DocumentationLinksEveryImage();
 	void DocumentationKeepsFeaturesShort();
+	void InstructionsPartCountsAreNamed();
+	void InstructionsPartCountsDefaultOff();
+	void InstructionsPartCountsRoundTrip();
 	void MenusNameEveryCommand();
 	void InterfaceUsesPaintedIcons();
 	void TranslationsMatchCompiledCatalogs();

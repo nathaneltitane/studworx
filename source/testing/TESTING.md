@@ -53,6 +53,13 @@ A profile test writes settings inside a batch, in a temporary settings folder,
 and checks that they read back at once, that a nested batch and a removed key
 behave, and that the file is written only when the batch ends. A first start
 must give every setting a line in the settings file and keep a value already set.
+Instructions part count tests read the source tree: the part count and submodel preview
+properties and elements must be named in the instructions file reader and in
+`commands-meta.md`, every part count toggle and the submodel preview must default
+off, and the default text must be the translatable `%1 PIECES`. With `SW_TEST_BINARY`
+set, a model with those properties set must save them back unchanged. The counting
+itself (a submodel counted by its parts times its uses, hidden parts left out, a step
+page summing the new parts of its steps) is not covered, it needs the application model.
 Documentation tests read the source tree: `index.html` must name every command
 by its menu name (numbered families such as Viewpoint 1 to 9 are left out), every
 command with a menu name must have `WhatsThis` help, and every image in

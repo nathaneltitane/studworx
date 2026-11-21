@@ -451,7 +451,8 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	CreateColorEditor(swInstructionsPropertyType::CoverTitleColor, tr("Cover Title Color"), tr("Color of the model title."));
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverTitleColor);
 	AddRow(CategoryIndex::Cover, {
-		CreateToggleEditor(swInstructionsPropertyType::ShowCoverAuthor, tr("Show Author"), tr("Show the model author on the cover."))
+		CreateToggleEditor(swInstructionsPropertyType::ShowCoverAuthor, tr("Show Author"), tr("Show the model author on the cover.")),
+		CreateToggleEditor(swInstructionsPropertyType::ShowCoverPartCount, tr("Show Part Count"), tr("Show the number of parts of the whole model on the cover."))
 	});
 
 	CreateTextEditor(swInstructionsPropertyType::CoverAuthorText, tr("Cover Author"), tr("Author on the cover, empty for the model author."), false);
@@ -462,6 +463,15 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverAuthorFont);
 	CreateColorEditor(swInstructionsPropertyType::CoverAuthorColor, tr("Cover Author Color"), tr("Color of the model author."));
 	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::CoverAuthorColor);
+
+	CreateTextEditor(swInstructionsPropertyType::PartCountText, tr("Part Count Text"), tr("Text of the part counts, %1 stands for the number of parts, empty for the default text."), false);
+	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::PartCountText);
+	CreateTextEditor(swInstructionsPropertyType::PartCountFile, tr("Part Count File"), tr("Text file holding the part count text, used instead of the typed text, relative to the model file."), true);
+	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::PartCountFile);
+	CreateFontEditor(swInstructionsPropertyType::PartCountFont, tr("Part Count Font"), tr("Font of the part count on the cover and the bill of materials, where it takes the size of the Parts List title."));
+	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::PartCountFont);
+	CreateColorEditor(swInstructionsPropertyType::PartCountColor, tr("Part Count Color"), tr("Color of the part count on the cover and the bill of materials."));
+	AddEditorRow(CategoryIndex::Cover, swInstructionsPropertyType::PartCountColor);
 
 	AddCategory(CategoryIndex::Page, tr("Page"), tr("<p><b>Page</b></p><p>The background and the number of the step and blank pages. The background applies to all these pages, or only to the current page when it has its own, the cover and the bill of materials have their own backgrounds. The cover and blank pages are not numbered unless all pages are. Drag the number or use the Placement panel to move it on all pages.</p>"));
 
@@ -509,6 +519,19 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	CreateColorEditor(swInstructionsPropertyType::PageNumberColor, tr("Page Number Color"), tr("Color of the page numbers."));
 	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::PageNumberColor);
 
+	AddRow(CategoryIndex::Page, {
+		CreateToggleEditor(swInstructionsPropertyType::ShowPagePartCount, tr("Show Part Count"), tr("Show the number of new parts of the steps on each step page."))
+	});
+
+	CreateFontEditor(swInstructionsPropertyType::PagePartCountFont, tr("Page Part Count Font"), tr("Font of the part counts of the step pages and submodel previews."));
+	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::PagePartCountFont);
+	CreateColorEditor(swInstructionsPropertyType::PagePartCountColor, tr("Page Part Count Color"), tr("Color of the part counts of the step pages and submodel previews."));
+	AddEditorRow(CategoryIndex::Page, swInstructionsPropertyType::PagePartCountColor);
+
+	AddRow(CategoryIndex::Page, {
+		CreateToggleEditor(swInstructionsPropertyType::ShowSubmodelPreview, tr("Show Submodel Preview"), tr("Show the finished submodel with its part count on the first page of each submodel."))
+	});
+
 	AddCategory(CategoryIndex::BillOfMaterials, tr("Bill of Materials"), tr("<p><b>Bill of Materials</b></p><p>The last page, listing every part of the model. It uses the Parts List settings, under a Parts List title in its own font and color, with the box of the step numbers.</p>"));
 
 	AddRow(CategoryIndex::BillOfMaterials, {
@@ -517,6 +540,10 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 
 	AddRow(CategoryIndex::BillOfMaterials, {
 		CreateToggleEditor(swInstructionsPropertyType::BillOfMaterialsShowPartIds, tr("Show Part IDs"), tr("Print the part number under each part of the bill of materials, for easy reference."))
+	});
+
+	AddRow(CategoryIndex::BillOfMaterials, {
+		CreateToggleEditor(swInstructionsPropertyType::ShowBillOfMaterialsPartCount, tr("Show Part Count"), tr("Show the number of parts of the whole model under the title."))
 	});
 
 	AddRow(CategoryIndex::BillOfMaterials, {
@@ -757,7 +784,7 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 
 	// choices follow the box elements
 	mBoxElementComboBox = new QComboBox(this);
-	mBoxElementComboBox->addItems({ tr("Step Model"), tr("Step Number"), tr("Parts List"), tr("Page Number"), tr("Cover Title"), tr("Cover Author"), tr("Cover Model"), tr("Notice") });
+	mBoxElementComboBox->addItems({ tr("Step Model"), tr("Step Number"), tr("Parts List"), tr("Page Number"), tr("Cover Title"), tr("Cover Author"), tr("Cover Model"), tr("Notice"), tr("Part Count"), tr("Submodel Preview") });
 	mBoxElementComboBox->setToolTip(tr("Choose the element whose box is edited, the parts list box is also the bill of materials box."));
 	mBoxElementComboBox->setWhatsThis(mBoxElementComboBox->toolTip());
 	mBoxElementComboBox->setAccessibleName(tr("Element"));
@@ -806,6 +833,11 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 			});
 
 			Rows.push_back(AddRow(CategoryIndex::Box, { mModelSizeApplyAllButton }));
+		}
+		else if (ElementIndex == static_cast<int>(swInstructionsBoxElement::SubmodelPreview))
+		{
+			CreatePercentEditor(swInstructionsPropertyType::SubmodelPreviewSize, tr("Model Size"), tr("Size of the submodel preview, 100 percent fills a quarter of the page, larger sizes are trimmed to it."), 10, 200);
+			Rows.push_back(AddEditorRow(CategoryIndex::Box, swInstructionsPropertyType::SubmodelPreviewSize)->parentWidget());
 		}
 		else if (ElementIndex == static_cast<int>(swInstructionsBoxElement::CoverImage))
 		{
@@ -1200,6 +1232,10 @@ void swInstructionsPropertiesWidget::AddOptionsAction(QAction* Action)
 
 void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 {
+	// quantities edit their parts list
+	if (FocusItem && dynamic_cast<swInstructionsPartsListCountItem*>(FocusItem))
+		FocusItem = FocusItem->parentItem();
+
 	// keep item kind and step only
 	FocusType Focus = FocusType::None;
 	swModel* Model = nullptr;
@@ -1225,6 +1261,20 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 	}
 	else if (dynamic_cast<swInstructionsPageNumberItem*>(FocusItem))
 		Focus = FocusType::PageNumber;
+	else if (swInstructionsPartCountItem* CountItem = dynamic_cast<swInstructionsPartCountItem*>(FocusItem))
+	{
+		const swInstructionsPlacementElement CountElement = CountItem->GetElement();
+
+		if (CountElement == swInstructionsPlacementElement::BillOfMaterialsPartCount)
+			Focus = FocusType::BillOfMaterialsPartCount;
+		else if (CountElement == swInstructionsPlacementElement::PagePartCount || CountElement == swInstructionsPlacementElement::SubmodelPreviewPartCount)
+			Focus = FocusType::PagePartCount;
+		else
+			Focus = FocusType::CoverPartCount;
+
+		Model = CountItem->GetModel();
+		Step = 0;
+	}
 	else if (swInstructionsCoverTextItem* TextItem = dynamic_cast<swInstructionsCoverTextItem*>(FocusItem))
 	{
 		Focus = TextItem->IsAuthor() ? FocusType::CoverAuthor : FocusType::CoverTitle;
@@ -1239,6 +1289,8 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 	// cover and materials own settings
 	if (Focus == FocusType::StepImage && dynamic_cast<swInstructionsStepImageItem*>(FocusItem)->IsCoverImage())
 		Focus = FocusType::CoverImage;
+	else if (Focus == FocusType::StepImage && dynamic_cast<swInstructionsStepImageItem*>(FocusItem)->IsSubmodelPreview())
+		Focus = FocusType::SubmodelPreview;
 	else if (Focus == FocusType::PartsList && dynamic_cast<swInstructionsPartsListItem*>(FocusItem)->IsBillOfMaterials())
 		Focus = FocusType::BillOfMaterials;
 
@@ -1274,6 +1326,16 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 		SetBoxElement(swInstructionsBoxElement::CoverImage);
 		break;
 
+	case FocusType::CoverPartCount:
+	case FocusType::BillOfMaterialsPartCount:
+	case FocusType::PagePartCount:
+		SetBoxElement(swInstructionsBoxElement::PartCount);
+		break;
+
+	case FocusType::SubmodelPreview:
+		SetBoxElement(swInstructionsBoxElement::SubmodelPreview);
+		break;
+
 	case FocusType::Notice:
 		SetBoxElement(swInstructionsBoxElement::Notice);
 		break;
@@ -1307,13 +1369,20 @@ void swInstructionsPropertiesWidget::SelectionChanged(QGraphicsItem* FocusItem)
 			OpenAlso = CategoryIndex::PartsList;
 			break;
 
+		case FocusType::BillOfMaterialsPartCount:
+			Open = CategoryIndex::BillOfMaterials;
+			break;
+
 		case FocusType::PageNumber:
+		case FocusType::PagePartCount:
+		case FocusType::SubmodelPreview:
 			Open = CategoryIndex::Page;
 			break;
 
 		case FocusType::CoverTitle:
 		case FocusType::CoverAuthor:
 		case FocusType::CoverImage:
+		case FocusType::CoverPartCount:
 			Open = CategoryIndex::Cover;
 			break;
 
@@ -1495,8 +1564,21 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 	SetEnabled(swInstructionsPropertyType::ShowCoverAuthor, ShowCoverPage);
 	SetEnabled(swInstructionsPropertyType::ShowCoverBlankPage, ShowCoverPage);
 	SetEnabled(swInstructionsPropertyType::CoverBackgroundColor, ShowCoverPage);
+	SetEnabled(swInstructionsPropertyType::ShowCoverPartCount, ShowCoverPage);
 
 	const bool ShowBillOfMaterials = GetBool(swInstructionsPropertyType::ShowBillOfMaterials);
+
+	// cover and materials share the count text
+	const bool ShowPartCount = (ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverPartCount)) || (ShowBillOfMaterials && GetBool(swInstructionsPropertyType::ShowBillOfMaterialsPartCount));
+	const bool ShowPageCount = GetBool(swInstructionsPropertyType::ShowPagePartCount);
+
+	SetEnabled(swInstructionsPropertyType::ShowBillOfMaterialsPartCount, ShowBillOfMaterials);
+	SetEnabled(swInstructionsPropertyType::PartCountText, ShowPartCount || ShowPageCount || GetBool(swInstructionsPropertyType::ShowSubmodelPreview));
+	SetEnabled(swInstructionsPropertyType::PartCountFile, ShowPartCount || ShowPageCount || GetBool(swInstructionsPropertyType::ShowSubmodelPreview));
+	SetEnabled(swInstructionsPropertyType::PartCountFont, !UseDocumentFont && ShowPartCount);
+	SetEnabled(swInstructionsPropertyType::PartCountColor, ShowPartCount);
+	SetEnabled(swInstructionsPropertyType::PagePartCountFont, !UseDocumentFont && (ShowPageCount || GetBool(swInstructionsPropertyType::ShowSubmodelPreview)));
+	SetEnabled(swInstructionsPropertyType::PagePartCountColor, ShowPageCount || GetBool(swInstructionsPropertyType::ShowSubmodelPreview));
 
 	SetEnabled(swInstructionsPropertyType::ShowBillOfMaterialsBlankPage, ShowBillOfMaterials);
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsShowPartIds, ShowBillOfMaterials);

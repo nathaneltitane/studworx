@@ -78,6 +78,12 @@ swInstructionsBoxTypes swGetBoxTypes(swInstructionsBoxElement Element)
 	case swInstructionsBoxElement::CoverImage:
 		return { swInstructionsPropertyType::CoverImageMargin, swInstructionsPropertyType::CoverImagePadding, swInstructionsPropertyType::CoverImageBorderWidth, swInstructionsPropertyType::CoverImageCornerRadius, swInstructionsPropertyType::CoverImageBorderColor, swInstructionsPropertyType::CoverImageBackgroundColor };
 
+	case swInstructionsBoxElement::PartCount:
+		return { swInstructionsPropertyType::PartCountMargin, swInstructionsPropertyType::PartCountPadding, swInstructionsPropertyType::PartCountBorderWidth, swInstructionsPropertyType::PartCountCornerRadius, swInstructionsPropertyType::PartCountBorderColor, swInstructionsPropertyType::PartCountBackgroundColor };
+
+	case swInstructionsBoxElement::SubmodelPreview:
+		return { swInstructionsPropertyType::SubmodelPreviewMargin, swInstructionsPropertyType::SubmodelPreviewPadding, swInstructionsPropertyType::SubmodelPreviewBorderWidth, swInstructionsPropertyType::SubmodelPreviewCornerRadius, swInstructionsPropertyType::SubmodelPreviewBorderColor, swInstructionsPropertyType::SubmodelPreviewBackgroundColor };
+
 	case swInstructionsBoxElement::Notice:
 	case swInstructionsBoxElement::Count:
 		break;
@@ -219,7 +225,7 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::UseDocumentFont)].Value = false;
 	Properties[static_cast<int>(swInstructionsPropertyType::DocumentFont)].Value = QFont("Arial", 16).toString();
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowCoverPage)].Value = true;
-	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitleFont)].Value = QFont("Arial", 48).toString();
+	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitleFont)].Value = QFont("Arial", 24).toString();
 	Properties[static_cast<int>(swInstructionsPropertyType::CoverAuthorFont)].Value = QFont("Arial", 24).toString();
 	Properties[static_cast<int>(swInstructionsPropertyType::CoverAuthorColor)].Value = SW_RGBA(0, 0, 0, 255);
 	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitleColor)].Value = SW_RGBA(0, 0, 0, 255);
@@ -280,6 +286,24 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::PageNumberPlacement)].Value = SW_PLACEMENT_COUNT - SW_PLACEMENT_GRID_SIZE - 2;
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowPageNumberAllPages)].Value = false;
 
+	// part counts are off and read like the titles
+	Properties[static_cast<int>(swInstructionsPropertyType::ShowCoverPartCount)].Value = false;
+	Properties[static_cast<int>(swInstructionsPropertyType::ShowBillOfMaterialsPartCount)].Value = false;
+	Properties[static_cast<int>(swInstructionsPropertyType::ShowPagePartCount)].Value = false;
+	Properties[static_cast<int>(swInstructionsPropertyType::PartCountText)].Value = QString();
+	Properties[static_cast<int>(swInstructionsPropertyType::PartCountFile)].Value = QString();
+	Properties[static_cast<int>(swInstructionsPropertyType::PartCountFont)].Value = QFont("Arial", 24).toString();
+	Properties[static_cast<int>(swInstructionsPropertyType::PartCountColor)].Value = SW_RGBA(0, 0, 0, 255);
+	Properties[static_cast<int>(swInstructionsPropertyType::PagePartCountFont)].Value = QFont("Arial", 16).toString();
+	Properties[static_cast<int>(swInstructionsPropertyType::PagePartCountColor)].Value = SW_RGBA(0, 0, 0, 255);
+	Properties[static_cast<int>(swInstructionsPropertyType::PartCountPlacement)].Value = SW_PLACEMENT_COUNT - SW_PLACEMENT_GRID_SIZE - 4;
+	Properties[static_cast<int>(swInstructionsPropertyType::BillOfMaterialsPartCountPlacement)].Value = SW_PLACEMENT_GRID_SIZE + 3;
+	Properties[static_cast<int>(swInstructionsPropertyType::PagePartCountPlacement)].Value = SW_PLACEMENT_COUNT - SW_PLACEMENT_GRID_SIZE - 4;
+	Properties[static_cast<int>(swInstructionsPropertyType::ShowSubmodelPreview)].Value = false;
+	Properties[static_cast<int>(swInstructionsPropertyType::SubmodelPreviewSize)].Value = 100;
+	Properties[static_cast<int>(swInstructionsPropertyType::SubmodelPreviewPlacement)].Value = SW_PLACEMENT_GRID_SIZE * 2 + 1;
+	Properties[static_cast<int>(swInstructionsPropertyType::SubmodelPreviewPartCountPlacement)].Value = SW_PLACEMENT_COUNT - 3;
+
 	// boxes keep the former spacing
 	for (int Element = 0; Element < static_cast<int>(swInstructionsBoxElement::Count); Element++)
 	{
@@ -296,6 +320,9 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 		Properties[static_cast<int>(BoxTypes.BorderColor)].Value = SW_RGBA(0, 0, 0, 255);
 		Properties[static_cast<int>(BoxTypes.BackgroundColor)].Value = SW_RGBA(255, 255, 255, 0);
 	}
+
+	// submodel previews sit on light grey
+	Properties[static_cast<int>(swInstructionsPropertyType::SubmodelPreviewBackgroundColor)].Value = SW_RGBA(221, 221, 221, 255);
 
 	// frame notices
 	Properties[static_cast<int>(swInstructionsPropertyType::NoticeFont)].Value = QFont("Arial", 16).toString();
@@ -315,6 +342,7 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	// parts stand in rows on their bottom
 	Properties[static_cast<int>(swInstructionsPropertyType::PLILayout)].Value = static_cast<int>(swPartsListLayout::Rows);
 	Properties[static_cast<int>(swInstructionsPropertyType::PLIAlignment)].Value = static_cast<int>(swPartsListAlignment::End);
+	Properties[static_cast<int>(swInstructionsPropertyType::PLICountPlacement)].Value = SW_PLACEMENT_COUNT - SW_PLACEMENT_GRID_SIZE + 1;
 
 	// step models render in perspective
 	Properties[static_cast<int>(swInstructionsPropertyType::ModelProjection)].Value = static_cast<int>(swCameraProjection::Perspective);
@@ -325,7 +353,7 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::HighlightNewParts)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::HighlightColor)].Value = SW_RGBA(255, 242, 0, 230);
 
-	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 128, "Missing default property");
+	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 157, "Missing default property");
 
 	return Properties;
 }
@@ -1329,6 +1357,48 @@ QString swInstructions::GetSourcedText(swInstructionsPropertyType TextType, swIn
 	return Text.isEmpty() ? Automatic : Text;
 }
 
+swModel* swInstructions::GetMainModel() const
+{
+	return mProject ? mProject->GetMainModel() : nullptr;
+}
+
+static int swGetPartsListTotal(const swPartsList& PartsList)
+{
+	int Total = 0;
+
+	for (const auto& PartEntry : PartsList)
+		for (const auto& ColorEntry : PartEntry.second)
+			Total += ColorEntry.second;
+
+	return Total;
+}
+
+int swInstructions::GetModelPartCount(const swModel* Model)
+{
+	swPartsList PartsList;
+	Model->GetPartsList(gDefaultColor, true, false, PartsList);
+
+	return swGetPartsListTotal(PartsList);
+}
+
+int swInstructions::GetPageStepPartCount(const swInstructionsPage& Page)
+{
+	swPartsList PartsList;
+
+	for (const swInstructionsStep& Step : Page.Steps)
+		if (!Step.FinalModel)
+			Step.Model->GetPartsListForStep(Step.Step, gDefaultColor, PartsList, false);
+
+	return swGetPartsListTotal(PartsList);
+}
+
+QString swInstructions::GetPartCountText(int Count) const
+{
+	const QString Text = GetSourcedText(swInstructionsPropertyType::PartCountText, swInstructionsPropertyType::PartCountFile, QCoreApplication::translate("swInstructionsDialog", "%1 PIECES"));
+
+	return Text.arg(swFormatIntegerLocalized(static_cast<qlonglong>(Count), QLocale()));
+}
+
 void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const QVariant& Value)
 {
 	swInstructionsProperty& Property = mStepProperties[static_cast<int>(Type)];
@@ -1455,6 +1525,34 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::CoverAuthorFile:
 	case swInstructionsPropertyType::BillOfMaterialsTitleText:
 	case swInstructionsPropertyType::BillOfMaterialsTitleFile:
+	case swInstructionsPropertyType::ShowCoverPartCount:
+	case swInstructionsPropertyType::ShowBillOfMaterialsPartCount:
+	case swInstructionsPropertyType::ShowPagePartCount:
+	case swInstructionsPropertyType::PartCountText:
+	case swInstructionsPropertyType::PartCountFile:
+	case swInstructionsPropertyType::PartCountFont:
+	case swInstructionsPropertyType::PartCountColor:
+	case swInstructionsPropertyType::PagePartCountFont:
+	case swInstructionsPropertyType::PagePartCountColor:
+	case swInstructionsPropertyType::PartCountPlacement:
+	case swInstructionsPropertyType::BillOfMaterialsPartCountPlacement:
+	case swInstructionsPropertyType::PagePartCountPlacement:
+	case swInstructionsPropertyType::PartCountMargin:
+	case swInstructionsPropertyType::PartCountPadding:
+	case swInstructionsPropertyType::PartCountBorderWidth:
+	case swInstructionsPropertyType::PartCountBorderColor:
+	case swInstructionsPropertyType::PartCountBackgroundColor:
+	case swInstructionsPropertyType::PartCountCornerRadius:
+	case swInstructionsPropertyType::ShowSubmodelPreview:
+	case swInstructionsPropertyType::SubmodelPreviewSize:
+	case swInstructionsPropertyType::SubmodelPreviewPlacement:
+	case swInstructionsPropertyType::SubmodelPreviewMargin:
+	case swInstructionsPropertyType::SubmodelPreviewPadding:
+	case swInstructionsPropertyType::SubmodelPreviewBorderWidth:
+	case swInstructionsPropertyType::SubmodelPreviewBorderColor:
+	case swInstructionsPropertyType::SubmodelPreviewBackgroundColor:
+	case swInstructionsPropertyType::SubmodelPreviewCornerRadius:
+	case swInstructionsPropertyType::SubmodelPreviewPartCountPlacement:
 		emit PageLayoutChanged();
 		break;
 

@@ -192,7 +192,7 @@ swResult<QImage> swModel::RenderStepImageWithReadyAssets(bool Zoom, int Width, i
 	return Image;
 }
 
-swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnailSize, swStep Step, quint32 BackgroundColor, quint32 ThumbnailBackgroundColor, QFont Font, QColor TextColor, bool KeepMissingParts, bool ShowCounts, swPartsListSort Sort, swPartsListLayout Layout, swPartsListAlignment Alignment, int MaxHeight, float Scale, bool ShowPartIds) const
+swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnailSize, swStep Step, quint32 BackgroundColor, quint32 ThumbnailBackgroundColor, QFont Font, QColor TextColor, bool KeepMissingParts, bool ShowCounts, swPartsListSort Sort, swPartsListLayout Layout, swPartsListAlignment Alignment, int MaxHeight, float Scale, bool ShowPartIds, int CountPlacement, std::vector<QRect>* CountRects) const
 {
 	// scale every pixel size
 	auto Scaled = [Scale](int Size)
@@ -232,7 +232,11 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 		QRect Bounds;
 		QPoint Position;
 		QPoint TextPosition;
+		QPoint ThumbnailOffset;
+		QPoint TextOffset;
 		int CellWidth;
+		int CellHeight;
+		int TextWidth;
 		QString PartId;
 	};
 
@@ -456,12 +460,38 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 
 	const int Spacing = Scaled(20);
 
-	// take the widest of thumbnail and text
+	// count placement around the thumbnail, the 5x5 placement grid
+	const int CountRow = qBound(0, CountPlacement / 5, 4);
+	const int CountColumn = qBound(0, CountPlacement % 5, 4);
+	const int TextHeight = Ascent;
+	const int TextGap = Scaled(6);
+
+	// cell holds the thumbnail and its text
 	for (swPartsListImage& Image : Images)
 	{
 		Image.PartId = QFileInfo(QString::fromLatin1(Image.PartData->mFileName)).completeBaseName();
-		Image.CellWidth = qMax(Image.Bounds.width(), ShowCounts ? FontMetrics.horizontalAdvance(QString::number(Image.Count) + 'x') : 0);
-		Image.CellWidth = qMax(Image.CellWidth, ShowPartIds ? FontMetrics.horizontalAdvance(Image.PartId) : 0);
+		Image.TextWidth = qMax(ShowCounts ? FontMetrics.horizontalAdvance(QString::number(Image.Count) + 'x') : 0, ShowPartIds ? FontMetrics.horizontalAdvance(Image.PartId) : 0);
+
+		const int Width = Image.Bounds.width();
+		const int Height = Image.Bounds.height();
+
+		if (!LineCount)
+		{
+			Image.ThumbnailOffset = QPoint();
+			Image.TextOffset = QPoint();
+			Image.CellWidth = Width;
+			Image.CellHeight = Height;
+			continue;
+		}
+
+		const int TextX[5] = { -TextGap - Image.TextWidth, 0, (Width - Image.TextWidth) / 2, Width - Image.TextWidth, Width + TextGap };
+		const int TextY[5] = { -TextHeight, 0, (Height - TextHeight) / 2, Height - TextHeight, Height };
+		const QRect CellRect = QRect(0, 0, Width, Height).united(QRect(TextX[CountColumn], TextY[CountRow], Image.TextWidth, TextHeight));
+
+		Image.ThumbnailOffset = -CellRect.topLeft();
+		Image.TextOffset = QPoint(TextX[CountColumn], TextY[CountRow]) - CellRect.topLeft();
+		Image.CellWidth = CellRect.width();
+		Image.CellHeight = CellRect.height();
 	}
 
 	// use to place a part beside the edge
@@ -504,7 +534,7 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 					break;
 
 				RowWidth = Width;
-				RowHeight = qMax(RowHeight, Images[RowEnd].Bounds.height());
+				RowHeight = qMax(RowHeight, Images[RowEnd].CellHeight);
 				RowEnd++;
 			}
 
@@ -513,14 +543,31 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 			for (size_t ImageIndex = RowStart; ImageIndex < RowEnd; ImageIndex++)
 			{
 				swPartsListImage& Image = Images[ImageIndex];
+				const int ThumbnailHeight = Image.Bounds.height();
 
-				Image.Position = QPoint(CurrentX, CurrentHeight + GetAlignmentOffset(RowHeight - Image.Bounds.height()));
-				Image.TextPosition = QPoint(CurrentX, CurrentHeight + RowHeight + Ascent);
+				// text above or below lines up across the row
+				if (LineCount && CountRow == 4)
+				{
+					Image.Position = QPoint(CurrentX + Image.ThumbnailOffset.x(), CurrentHeight + GetAlignmentOffset(RowHeight - TextHeight - ThumbnailHeight));
+					Image.TextPosition = QPoint(CurrentX + Image.TextOffset.x(), CurrentHeight + RowHeight - TextHeight);
+				}
+				else if (LineCount && CountRow == 0)
+				{
+					Image.Position = QPoint(CurrentX + Image.ThumbnailOffset.x(), CurrentHeight + TextHeight + GetAlignmentOffset(RowHeight - TextHeight - ThumbnailHeight));
+					Image.TextPosition = QPoint(CurrentX + Image.TextOffset.x(), CurrentHeight);
+				}
+				else
+				{
+					const QPoint CellPosition(CurrentX, CurrentHeight + GetAlignmentOffset(RowHeight - Image.CellHeight));
+					Image.Position = CellPosition + Image.ThumbnailOffset;
+					Image.TextPosition = CellPosition + Image.TextOffset;
+				}
+
 				CurrentX += Image.CellWidth + Spacing;
 			}
 
 			ImageWidth = qMax(ImageWidth, RowWidth);
-			CurrentHeight += RowHeight + Ascent + Spacing;
+			CurrentHeight += RowHeight + Spacing;
 			RowStart = RowEnd;
 		}
 
@@ -531,6 +578,7 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 		// fill columns down the height
 		std::vector<int> Columns(Images.size());
 		std::vector<int> ColumnWidths;
+		std::vector<int> ColumnStarts;
 		int CurrentX = 0;
 		int CurrentY = 0;
 		int ColumnWidth = 0;
@@ -538,9 +586,8 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 		for (size_t ImageIndex = 0; ImageIndex < Images.size(); ImageIndex++)
 		{
 			swPartsListImage& Image = Images[ImageIndex];
-			const int Height = Image.Bounds.height() + Ascent;
 
-			if (CurrentY && CurrentY + Height > MaxHeight)
+			if (CurrentY && CurrentY + Image.CellHeight > MaxHeight)
 			{
 				ColumnWidths.push_back(ColumnWidth);
 				CurrentX += ColumnWidth + Spacing;
@@ -550,21 +597,22 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 
 			Image.Position = QPoint(CurrentX, CurrentY);
 			Columns[ImageIndex] = static_cast<int>(ColumnWidths.size());
-			CurrentHeight = qMax(CurrentHeight, CurrentY + Height);
-			CurrentY += Height + Spacing;
+			CurrentHeight = qMax(CurrentHeight, CurrentY + Image.CellHeight);
+			CurrentY += Image.CellHeight + Spacing;
 			ColumnWidth = qMax(ColumnWidth, Image.CellWidth);
 		}
 
 		ColumnWidths.push_back(ColumnWidth);
 		ImageWidth = CurrentX + ColumnWidth;
 
+		// the whole cell lines up in its column
 		for (size_t ImageIndex = 0; ImageIndex < Images.size(); ImageIndex++)
 		{
 			swPartsListImage& Image = Images[ImageIndex];
-			const int AlignedColumnWidth = ColumnWidths[Columns[ImageIndex]];
+			const QPoint CellPosition = Image.Position + QPoint(GetAlignmentOffset(ColumnWidths[Columns[ImageIndex]] - Image.CellWidth), 0);
 
-			Image.Position.rx() += GetAlignmentOffset(AlignedColumnWidth - Image.CellWidth);
-			Image.TextPosition = QPoint(Image.Position.x(), Image.Position.y() + Image.Bounds.height() + Ascent);
+			Image.Position = CellPosition + Image.ThumbnailOffset;
+			Image.TextPosition = CellPosition + Image.TextOffset;
 		}
 	}
 
@@ -581,30 +629,50 @@ swResult<QImage> swModel::GetPartsListImage(int MaxWidth, int RequestedThumbnail
 
 	const QPoint Padding(Scaled(20), Scaled(20));
 
+	if (CountRects)
+		CountRects->clear();
+
 	for (const swPartsListImage& Image : Images)
 	{
 		const QPoint Position = Image.Position + Padding;
 		const QPoint TextPosition = Image.TextPosition + Padding;
 		const QString Text = QString::number(Image.Count) + 'x';
-		const int TextWidth = ShowCounts ? FontMetrics.horizontalAdvance(Text) : 0;
 
-		// line up thumbnail and count
-		const int ThumbnailX = Position.x() + GetAlignmentOffset(Image.CellWidth - Image.Bounds.width()) * (Layout == swPartsListLayout::Columns);
-		const int TextX = Position.x() + GetAlignmentOffset(Image.CellWidth - TextWidth) * (Layout == swPartsListLayout::Columns);
-		const int PartIdX = Position.x() + GetAlignmentOffset(Image.CellWidth - FontMetrics.horizontalAdvance(Image.PartId)) * (Layout == swPartsListLayout::Columns);
+		// lines line up on the thumbnail side
+		auto GetTextX = [&](int Width)
+		{
+			if (CountColumn == 0 || CountColumn == 3)
+				return TextPosition.x() + Image.TextWidth - Width;
+
+			if (CountColumn == 2)
+				return TextPosition.x() + (Image.TextWidth - Width) / 2;
+
+			return TextPosition.x();
+		};
 
 		// keep the background inside the spacing
 		if (qAlpha(ThumbnailBackgroundColor))
-			Painter.fillRect(QRect(Position.x(), Position.y(), Image.CellWidth, TextPosition.y() - Position.y()).adjusted(-Scaled(6), -Scaled(6), Scaled(6), Scaled(6)), swQColorFromRGBA(ThumbnailBackgroundColor));
+		{
+			const QRect ThumbnailRect(Position, Image.Bounds.size());
+			const QRect CellRect = LineCount ? ThumbnailRect.united(QRect(TextPosition, QSize(Image.TextWidth, TextHeight))) : ThumbnailRect;
+			Painter.fillRect(CellRect.adjusted(-Scaled(6), -Scaled(6), Scaled(6), Scaled(6)), swQColorFromRGBA(ThumbnailBackgroundColor));
+		}
 
-		Painter.drawImage(QPoint(ThumbnailX, Position.y()), Image.Thumbnail, Image.Bounds);
+		Painter.drawImage(Position, Image.Thumbnail, Image.Bounds);
 
-		// id on the last line
+		// count first, id on the last line
 		if (ShowCounts)
-			Painter.drawText(QPoint(TextX, TextPosition.y() - ShowPartIds * FontMetrics.lineSpacing()), Text);
+		{
+			const int CountWidth = FontMetrics.horizontalAdvance(Text);
+			const int CountX = GetTextX(CountWidth);
+			Painter.drawText(QPoint(CountX, TextPosition.y() + FontMetrics.ascent()), Text);
+
+			if (CountRects)
+				CountRects->push_back(QRect(CountX, TextPosition.y(), CountWidth, FontMetrics.height()));
+		}
 
 		if (ShowPartIds)
-			Painter.drawText(QPoint(PartIdX, TextPosition.y()), Image.PartId);
+			Painter.drawText(QPoint(GetTextX(FontMetrics.horizontalAdvance(Image.PartId)), TextPosition.y() + FontMetrics.ascent() + ShowCounts * FontMetrics.lineSpacing()), Image.PartId);
 	}
 
 	Painter.end();

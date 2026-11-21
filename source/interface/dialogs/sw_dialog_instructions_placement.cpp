@@ -39,7 +39,7 @@ swInstructionsPlacementWidget::swInstructionsPlacementWidget(QWidget* Parent, sw
 	: QDockWidget(Parent), mInstructions(Instructions)
 {
 	setWindowTitle(tr("Placement"));
-	setWhatsThis(tr("<p><b>Placement</b></p><p>Select an element on the page to place, move or lock it. Place the selected page element on a predefined area: the step model, step number, parts list, cover model, cover title, cover author or bill of materials. Step elements are placed in the part of the page their step gets from the split, or outside the other step element. Placements apply to all pages.</p><p>Every element can also be dragged on the page, it keeps its distance from its placement. A locked element keeps its position whatever its placement and is not dragged.</p>"));
+	setWhatsThis(tr("<p><b>Placement</b></p><p>Select an element on the page to place, move or lock it. Place the selected page element on a predefined area: the step model, step number, parts list, cover model, cover title, cover author, part counts, submodel preview or bill of materials. Step elements are placed in the part of the page their step gets from the split, or outside the other step element. Placements apply to all pages.</p><p>The submodel preview count and the parts list quantities go around their picture: inner buttons put them on it, outer buttons beside it.</p><p>Every element can also be dragged on the page, it keeps its distance from its placement. A locked element keeps its position whatever its placement and is not dragged.</p>"));
 	swSetupWidgetHelp(this);
 
 	QWidget* CentralWidget = new QWidget(this);
@@ -133,6 +133,11 @@ swInstructionsPlacementWidget::swInstructionsPlacementWidget(QWidget* Parent, sw
 		Button->setIcon(CreatePlacementIcon(Placement, palette()));
 		Button->setCheckable(true);
 		Button->setToolTip(tr("Place the element: %1.").arg(Name));
+
+		// page elements reach the paper edge
+		if (!swIsInsidePlacement(Placement))
+			Button->setToolTip(Button->toolTip() + QLatin1Char(' ') + tr("Cover texts, part counts, the submodel preview and page numbers go against the paper edge, past the margins, where many printers cannot print."));
+
 		Button->setWhatsThis(Button->toolTip());
 		Button->setAccessibleName(Name);
 		swSetupPanelButton(Button);
@@ -239,6 +244,24 @@ swInstructionsPropertyType swInstructionsPlacementWidget::GetPlacementType() con
 	case swInstructionsPlacementElement::PageNumber:
 		return swInstructionsPropertyType::PageNumberPlacement;
 
+	case swInstructionsPlacementElement::CoverPartCount:
+		return swInstructionsPropertyType::PartCountPlacement;
+
+	case swInstructionsPlacementElement::BillOfMaterialsPartCount:
+		return swInstructionsPropertyType::BillOfMaterialsPartCountPlacement;
+
+	case swInstructionsPlacementElement::PagePartCount:
+		return swInstructionsPropertyType::PagePartCountPlacement;
+
+	case swInstructionsPlacementElement::SubmodelPreview:
+		return swInstructionsPropertyType::SubmodelPreviewPlacement;
+
+	case swInstructionsPlacementElement::SubmodelPreviewPartCount:
+		return swInstructionsPropertyType::SubmodelPreviewPartCountPlacement;
+
+	case swInstructionsPlacementElement::PartsListCount:
+		return swInstructionsPropertyType::PLICountPlacement;
+
 	case swInstructionsPlacementElement::Notice:
 	case swInstructionsPlacementElement::Pointer:
 	case swInstructionsPlacementElement::None:
@@ -264,6 +287,12 @@ swInstructionsPropertyType swInstructionsPlacementWidget::GetAnchorType() const
 	case swInstructionsPlacementElement::StepImage:
 	case swInstructionsPlacementElement::CoverImage:
 	case swInstructionsPlacementElement::PageNumber:
+	case swInstructionsPlacementElement::CoverPartCount:
+	case swInstructionsPlacementElement::BillOfMaterialsPartCount:
+	case swInstructionsPlacementElement::PagePartCount:
+	case swInstructionsPlacementElement::SubmodelPreview:
+	case swInstructionsPlacementElement::SubmodelPreviewPartCount:
+	case swInstructionsPlacementElement::PartsListCount:
 	case swInstructionsPlacementElement::Notice:
 	case swInstructionsPlacementElement::Pointer:
 	case swInstructionsPlacementElement::None:
@@ -396,13 +425,13 @@ void swInstructionsPlacementWidget::UpdateControls()
 	const bool Active = GetPlacementType() != swInstructionsPropertyType::Count && !Locked;
 
 	// notices return to where added
-	const bool Movable = Active || (mElement == swInstructionsPlacementElement::Notice && !Locked);
+	const bool Movable = (Active && mElement != swInstructionsPlacementElement::PartsListCount) || (mElement == swInstructionsPlacementElement::Notice && !Locked);
 
 	mResetPositionButton->setEnabled(Movable && mInstructions->HasElementOffset(mElementKey));
 
 	{
 		QSignalBlocker Blocker(mLockButton);
-		mLockButton->setEnabled(mElement != swInstructionsPlacementElement::None && mElement != swInstructionsPlacementElement::Pointer);
+		mLockButton->setEnabled(mElement != swInstructionsPlacementElement::None && mElement != swInstructionsPlacementElement::Pointer && mElement != swInstructionsPlacementElement::PartsListCount);
 		mLockButton->setChecked(Locked);
 	}
 
@@ -438,6 +467,21 @@ void swInstructionsPlacementWidget::UpdateControls()
 
 	case swInstructionsPlacementElement::PageNumber:
 		mElementLabel->setText(tr("Page Number"));
+		break;
+
+	case swInstructionsPlacementElement::CoverPartCount:
+	case swInstructionsPlacementElement::BillOfMaterialsPartCount:
+	case swInstructionsPlacementElement::PagePartCount:
+	case swInstructionsPlacementElement::SubmodelPreviewPartCount:
+		mElementLabel->setText(tr("Part Count"));
+		break;
+
+	case swInstructionsPlacementElement::SubmodelPreview:
+		mElementLabel->setText(tr("Submodel Preview"));
+		break;
+
+	case swInstructionsPlacementElement::PartsListCount:
+		mElementLabel->setText(tr("Quantity"));
 		break;
 
 	case swInstructionsPlacementElement::Notice:
@@ -478,15 +522,22 @@ void swInstructionsPlacementWidget::UpdateControls()
 	const swInstructionsPropertyType PlacementType = GetPlacementType();
 	int CurrentPlacement = -1;
 
+	// page elements take the paper edge, child labels go all around
+	const bool ChildLabel = mElement == swInstructionsPlacementElement::SubmodelPreviewPartCount || mElement == swInstructionsPlacementElement::PartsListCount;
+	const bool PageEdge = ChildLabel || Inside && (mElement == swInstructionsPlacementElement::CoverTitle || mElement == swInstructionsPlacementElement::CoverAuthor || mElement == swInstructionsPlacementElement::CoverPartCount || mElement == swInstructionsPlacementElement::BillOfMaterialsPartCount || mElement == swInstructionsPlacementElement::PagePartCount || mElement == swInstructionsPlacementElement::SubmodelPreview || mElement == swInstructionsPlacementElement::PageNumber);
+
 	if (Active)
-		CurrentPlacement = swGetValidPlacement(mInstructions->GetIntProperty(PlacementType, nullptr, 0), Inside);
+	{
+		const int Placement = mInstructions->GetIntProperty(PlacementType, nullptr, 0);
+		CurrentPlacement = PageEdge ? qBound(0, Placement, SW_PLACEMENT_COUNT - 1) : swGetValidPlacement(Placement, Inside);
+	}
 
 	// inner placements for areas
 	for (int Placement = 0; Placement < SW_PLACEMENT_COUNT; Placement++)
 	{
 		QToolButton* Button = mPlacementButtons[Placement];
 
-		Button->setEnabled(Active && swIsInsidePlacement(Placement) == Inside);
+		Button->setEnabled(Active && (PageEdge || swIsInsidePlacement(Placement) == Inside));
 		Button->setChecked(Active && Placement == CurrentPlacement);
 	}
 }

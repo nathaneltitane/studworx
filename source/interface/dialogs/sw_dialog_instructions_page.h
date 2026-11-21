@@ -209,6 +209,14 @@ public:
 		return mCoverImage;
 	}
 
+	// Draws the finished submodel with its part count below.
+	void SetSubmodelPreview();
+
+	bool IsSubmodelPreview() const
+	{
+		return mSubmodelPreview;
+	}
+
 	void SetFinalModel();
 
 	bool IsFinalModel() const
@@ -239,6 +247,7 @@ protected:
 	int mHeight = 1;
 	bool mCoverImage = false;
 	bool mFinalModel = false;
+	bool mSubmodelPreview = false;
 	std::vector<swPartRegion> mPartRegions;
 };
 
@@ -277,6 +286,56 @@ protected:
 	QVariant itemChange(GraphicsItemChange Change, const QVariant& Value) override;
 
 	swInstructions* mInstructions = nullptr;
+};
+
+// The part count of a model or of the steps of a page.
+class swInstructionsPartCountItem : public swInstructionsBoxItem<QGraphicsSimpleTextItem>
+{
+public:
+	swInstructionsPartCountItem(QGraphicsItem* Parent, swInstructions* Instructions, swInstructionsPlacementElement Element, swModel* Model, int Count);
+
+	swInstructionsPlacementElement GetElement() const
+	{
+		return mElement;
+	}
+
+	swModel* GetModel() const
+	{
+		return mModel;
+	}
+
+protected:
+	QVariant itemChange(GraphicsItemChange Change, const QVariant& Value) override;
+
+	swInstructions* mInstructions = nullptr;
+	swInstructionsPlacementElement mElement = swInstructionsPlacementElement::CoverPartCount;
+	swModel* mModel = nullptr;
+};
+
+// a parts list quantity, selectable to reach its placement
+class swInstructionsPartsListCountItem : public QGraphicsRectItem
+{
+public:
+	swInstructionsPartsListCountItem(QGraphicsItem* Parent, const QRectF& Rect, swModel* Model, swStep Step)
+		: QGraphicsRectItem(Rect, Parent), mModel(Model), mStep(Step)
+	{
+		setPen(Qt::NoPen);
+		setFlags(QGraphicsItem::ItemIsSelectable);
+	}
+
+	swModel* GetModel() const
+	{
+		return mModel;
+	}
+
+	swStep GetStep() const
+	{
+		return mStep;
+	}
+
+protected:
+	swModel* mModel = nullptr;
+	swStep mStep = 1;
 };
 
 class swInstructionsPartsListItem : public swInstructionsBoxItem<QGraphicsPixmapItem>

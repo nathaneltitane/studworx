@@ -186,6 +186,35 @@ enum class swInstructionsPropertyType
 	FinalModelBorderColor,
 	FinalModelMargin,
 	BillOfMaterialsShowPartIds,
+	ShowCoverPartCount,
+	ShowBillOfMaterialsPartCount,
+	ShowPagePartCount,
+	PartCountText,
+	PartCountFile,
+	PartCountFont,
+	PartCountColor,
+	PagePartCountFont,
+	PagePartCountColor,
+	PartCountPlacement,
+	BillOfMaterialsPartCountPlacement,
+	PagePartCountPlacement,
+	PartCountMargin,
+	PartCountPadding,
+	PartCountBorderWidth,
+	PartCountBorderColor,
+	PartCountBackgroundColor,
+	PartCountCornerRadius,
+	ShowSubmodelPreview,
+	SubmodelPreviewSize,
+	SubmodelPreviewPlacement,
+	SubmodelPreviewMargin,
+	SubmodelPreviewPadding,
+	SubmodelPreviewBorderWidth,
+	SubmodelPreviewBorderColor,
+	SubmodelPreviewBackgroundColor,
+	SubmodelPreviewCornerRadius,
+	SubmodelPreviewPartCountPlacement,
+	PLICountPlacement,
 	Count
 };
 
@@ -207,6 +236,8 @@ enum class swInstructionsBoxElement
 	CoverAuthor,
 	CoverImage,
 	Notice,
+	PartCount,
+	SubmodelPreview,
 	Count
 };
 
@@ -324,7 +355,13 @@ enum class swInstructionsPlacementElement
 	CoverImage,
 	PageNumber,
 	Notice,
-	Pointer
+	Pointer,
+	CoverPartCount,
+	BillOfMaterialsPartCount,
+	PagePartCount,
+	SubmodelPreview,
+	SubmodelPreviewPartCount,
+	PartsListCount
 };
 
 // Moved elements keep their offset.
@@ -463,6 +500,18 @@ public:
 	void SetDefaultText(swInstructionsPropertyType Type, const QString& Text);
 	QString GetTextProperty(swInstructionsPropertyType Type) const;
 	QString GetSourcedText(swInstructionsPropertyType TextType, swInstructionsPropertyType FileType, const QString& Automatic) const;
+
+	// The model the instructions are made for.
+	swModel* GetMainModel() const;
+
+	// Counts the visible parts of a model with its submodels.
+	static int GetModelPartCount(const swModel* Model);
+
+	// Counts the new parts of every step on a page like the parts list.
+	static int GetPageStepPartCount(const swInstructionsPage& Page);
+
+	// Fills the part count text, from the file, the typed text or the default.
+	QString GetPartCountText(int Count) const;
 	QString GetFileText(const QString& FileName) const;
 	void ResetProperties();
 

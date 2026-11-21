@@ -23,11 +23,17 @@ bool swGetElementKey(const QGraphicsItem* Item, swInstructionsElementKey& Key)
 		}
 
 
-		const swInstructionsPlacementElement Element = ImageItem->IsCoverImage() ? swInstructionsPlacementElement::CoverImage : swInstructionsPlacementElement::StepImage;
+		swInstructionsPlacementElement Element = ImageItem->IsCoverImage() ? swInstructionsPlacementElement::CoverImage : swInstructionsPlacementElement::StepImage;
+
+		if (ImageItem->IsSubmodelPreview())
+			Element = swInstructionsPlacementElement::SubmodelPreview;
+
 		Key = { Element, ImageItem->GetModel(), ImageItem->GetStep() };
 	}
 	else if (const swInstructionsStepNumberItem* NumberItem = dynamic_cast<const swInstructionsStepNumberItem*>(Item))
 		Key = { swInstructionsPlacementElement::StepNumber, NumberItem->GetModel(), NumberItem->GetStep() };
+	else if (const swInstructionsPartsListCountItem* QuantityItem = dynamic_cast<const swInstructionsPartsListCountItem*>(Item))
+		Key = { swInstructionsPlacementElement::PartsListCount, QuantityItem->GetModel(), QuantityItem->GetStep() };
 	else if (const swInstructionsPartsListItem* PartsItem = dynamic_cast<const swInstructionsPartsListItem*>(Item))
 	{
 		const swInstructionsPlacementElement Element = PartsItem->IsBillOfMaterials() ? swInstructionsPlacementElement::BillOfMaterials : swInstructionsPlacementElement::PartsList;
@@ -40,6 +46,8 @@ bool swGetElementKey(const QGraphicsItem* Item, swInstructionsElementKey& Key)
 	}
 	else if (dynamic_cast<const swInstructionsPageNumberItem*>(Item))
 		Key = { swInstructionsPlacementElement::PageNumber, nullptr, 0 };
+	else if (const swInstructionsPartCountItem* CountItem = dynamic_cast<const swInstructionsPartCountItem*>(Item))
+		Key = { CountItem->GetElement(), CountItem->GetModel(), 0 };
 	else if (const swInstructionsNoticeItem* NoticeItem = dynamic_cast<const swInstructionsNoticeItem*>(Item))
 		Key = { swInstructionsPlacementElement::Notice, nullptr, static_cast<swStep>(NoticeItem->GetId()) };
 	else if (const swInstructionsPointerItem* PointerItem = dynamic_cast<const swInstructionsPointerItem*>(Item))
@@ -158,8 +166,16 @@ static QVariant swSnapItemPosition(const QGraphicsItem* Item, const swInstructio
 	// keep large elements at the top left margin
 	const swInstructionsPageSetup& PageSetup = Instructions->mPageSetup;
 	const QRectF ItemRect = Item->boundingRect();
-	const QPointF MarginsMin = QPointF(PageSetup.MarginLeft, PageSetup.MarginTop) - ItemRect.topLeft();
-	const QPointF MarginsMax = QPointF(PageSetup.Width - PageSetup.MarginRight, PageSetup.Height - PageSetup.MarginBottom) - ItemRect.bottomRight();
+	QRectF BoundsRect(QPointF(PageSetup.MarginLeft, PageSetup.MarginTop), QPointF(PageSetup.Width - PageSetup.MarginRight, PageSetup.Height - PageSetup.MarginBottom));
+
+	// page edge placements reach past the margins
+	const QVariant PlacedPosition = Item->data(SW_PLACEMENT_POSITION_DATA);
+
+	if (PlacedPosition.isValid())
+		BoundsRect = BoundsRect.united(ItemRect.translated(Parent ? Parent->mapToScene(PlacedPosition.toPointF()) : PlacedPosition.toPointF()));
+
+	const QPointF MarginsMin = BoundsRect.topLeft() - ItemRect.topLeft();
+	const QPointF MarginsMax = BoundsRect.bottomRight() - ItemRect.bottomRight();
 
 	ScenePosition.setX(qMax(MarginsMin.x(), qMin(ScenePosition.x(), MarginsMax.x())));
 	ScenePosition.setY(qMax(MarginsMin.y(), qMin(ScenePosition.y(), MarginsMax.y())));
@@ -257,6 +273,28 @@ static QPointF swGetPlacementPosition(const QRectF& Anchor, const QSizeF& Size, 
 	return QPointF(GetOffset(Anchor.left(), Anchor.width(), Size.width(), Column), GetOffset(Anchor.top(), Anchor.height(), Size.height(), Row));
 }
 
+// use to place a page element, outer cells on the paper edge
+static QPointF swGetPagePlacementPosition(const swInstructions* Instructions, const QRectF& MarginsRect, const QSizeF& Size, int Placement)
+{
+	const swInstructionsPageSetup& PageSetup = Instructions->mPageSetup;
+	const int Last = SW_PLACEMENT_GRID_SIZE - 1;
+	const int Row = qBound(0, Placement / SW_PLACEMENT_GRID_SIZE, Last);
+	const int Column = qBound(0, Placement % SW_PLACEMENT_GRID_SIZE, Last);
+	QPointF Position = swGetPlacementPosition(MarginsRect, Size, swGetValidPlacement(Placement, true));
+
+	if (Column == 0)
+		Position.setX(0.0);
+	else if (Column == Last)
+		Position.setX(PageSetup.Width - Size.width());
+
+	if (Row == 0)
+		Position.setY(0.0);
+	else if (Row == Last)
+		Position.setY(PageSetup.Height - Size.height());
+
+	return Position;
+}
+
 swInstructionsStepImageItem::swInstructionsStepImageItem(QGraphicsItem* Parent, swInstructions* Instructions, swModel* Model, swStep Step)
 	: swInstructionsBoxItem(Parent), mInstructions(Instructions), mModel(Model), mStep(Step)
 {
@@ -268,6 +306,12 @@ void swInstructionsStepImageItem::SetCoverImage()
 {
 	mCoverImage = true;
 	SetBoxStyle(mInstructions->GetBoxStyle(swInstructionsBoxElement::CoverImage, mModel, mStep));
+}
+
+void swInstructionsStepImageItem::SetSubmodelPreview()
+{
+	mSubmodelPreview = true;
+	SetBoxStyle(mInstructions->GetBoxStyle(swInstructionsBoxElement::SubmodelPreview, mModel, mStep));
 }
 
 void swInstructionsStepImageItem::SetFinalModel()
@@ -302,18 +346,26 @@ void swInstructionsStepImageItem::Update()
 
 	// model size scales the fitted model
 
-	const qreal ModelSize = mInstructions->GetIntProperty(mCoverImage ? swInstructionsPropertyType::CoverImageSize : swInstructionsPropertyType::StepImageSize, mModel, mStep) / 100.0;
+	swInstructionsPropertyType SizeType = swInstructionsPropertyType::StepImageSize;
+
+	if (mCoverImage)
+		SizeType = swInstructionsPropertyType::CoverImageSize;
+	else if (mSubmodelPreview)
+		SizeType = swInstructionsPropertyType::SubmodelPreviewSize;
+
+	const qreal ModelSize = mInstructions->GetIntProperty(SizeType, mModel, mStep) / 100.0;
 	const int Width = qMax(qRound(CellWidth * ModelSize), 1);
 	const int Height = qMax(qRound(CellHeight * ModelSize), 1);
 	View.SetSize(Width, Height);
 	View.SetLineWidthScale(Scale);
 
-	// cover shows the finished model
-	const bool FadeSteps = !mCoverImage && !mFinalModel && mInstructions->GetBoolProperty(swInstructionsPropertyType::FadePreviousSteps, mModel, mStep);
+	// cover and previews show the finished model
+	const bool Finished = mCoverImage || mSubmodelPreview || mFinalModel;
+	const bool FadeSteps = !Finished && mInstructions->GetBoolProperty(swInstructionsPropertyType::FadePreviousSteps, mModel, mStep);
 	const QColor FadeColor = mInstructions->GetColorProperty(swInstructionsPropertyType::FadeColor, mModel, mStep);
 	View.SetFadeStepsOverride(FadeSteps, swRGBAFromQColor(FadeColor));
 
-	const bool HighlightNewParts = !mCoverImage && !mFinalModel && mInstructions->GetBoolProperty(swInstructionsPropertyType::HighlightNewParts, mModel, mStep);
+	const bool HighlightNewParts = !Finished && mInstructions->GetBoolProperty(swInstructionsPropertyType::HighlightNewParts, mModel, mStep);
 	const QColor HighlightColor = mInstructions->GetColorProperty(swInstructionsPropertyType::HighlightColor, mModel, mStep);
 	View.SetHighlightNewPartsOverride(HighlightNewParts, swRGBAFromQColor(HighlightColor), mInstructions->GetIntProperty(swInstructionsPropertyType::HighlightWidth, mModel, mStep));
 
@@ -511,6 +563,35 @@ QVariant swInstructionsPageNumberItem::itemChange(GraphicsItemChange Change, con
 	return QGraphicsSimpleTextItem::itemChange(Change, Value);
 }
 
+swInstructionsPartCountItem::swInstructionsPartCountItem(QGraphicsItem* Parent, swInstructions* Instructions, swInstructionsPlacementElement Element, swModel* Model, int Count)
+	: swInstructionsBoxItem(Parent), mInstructions(Instructions), mElement(Element), mModel(Model)
+{
+	setFlags(SW_MOVABLE_ITEM_FLAGS);
+	setZValue(1.0);
+	SetBoxStyle(mInstructions->GetBoxStyle(swInstructionsBoxElement::PartCount, mModel, 0));
+
+	// steps use the page number look
+	const bool PageCount = mElement == swInstructionsPlacementElement::PagePartCount || mElement == swInstructionsPlacementElement::SubmodelPreviewPartCount;
+
+	QFont CountFont = mInstructions->GetFontProperty(PageCount ? swInstructionsPropertyType::PagePartCountFont : swInstructionsPropertyType::PartCountFont, mModel, 0);
+
+	// bill of materials count matches the title size
+	if (mElement == swInstructionsPlacementElement::BillOfMaterialsPartCount)
+		CountFont.setPointSizeF(mInstructions->GetFontProperty(swInstructionsPropertyType::BillOfMaterialsTitleFont, mModel, 0).pointSizeF());
+
+	setFont(CountFont);
+	setBrush(QBrush(mInstructions->GetColorProperty(PageCount ? swInstructionsPropertyType::PagePartCountColor : swInstructionsPropertyType::PartCountColor, mModel, 0)));
+	setText(mInstructions->GetPartCountText(Count));
+}
+
+QVariant swInstructionsPartCountItem::itemChange(GraphicsItemChange Change, const QVariant& Value)
+{
+	if (Change == QGraphicsItem::ItemPositionChange)
+		return swSnapItemPosition(this, mInstructions, Value);
+
+	return QGraphicsSimpleTextItem::itemChange(Change, Value);
+}
+
 swInstructionsPartsListItem::swInstructionsPartsListItem(QGraphicsItem* Parent, swInstructions* Instructions, swModel* Model, swStep Step)
 	: swInstructionsBoxItem(Parent), mInstructions(Instructions), mModel(Model), mStep(Step)
 {
@@ -548,8 +629,16 @@ void swInstructionsPartsListItem::Update()
 	const swPartsListAlignment Alignment = static_cast<swPartsListAlignment>(mInstructions->GetIntProperty(swInstructionsPropertyType::PLIAlignment, mModel, mStep));
 	const int ThumbnailSize = mInstructions->GetIntProperty(swInstructionsPropertyType::PLIThumbnailSize, mModel, mStep);
 	const QColor ThumbnailBackgroundColor = mInstructions->GetColorProperty(swInstructionsPropertyType::PLIThumbnailBackgroundColor, mModel, mStep);
+	const int CountPlacement = mInstructions->GetIntProperty(swInstructionsPropertyType::PLICountPlacement, mModel, mStep);
+	const float Scale = swGetRenderScale(mInstructions);
+	std::vector<QRect> CountRects;
 
-	const swResult<QImage> PartsImage = mModel->GetPartsListImage(mMaxWidth, ThumbnailSize, mBillOfMaterials ? 0 : mStep, swRGBAFromQColor(BackgroundColor), swRGBAFromQColor(ThumbnailBackgroundColor), Font, TextColor, false, ShowCounts, Sort, Layout, Alignment, mMaxHeight, swGetRenderScale(mInstructions), ShowPartIds);
+	const swResult<QImage> PartsImage = mModel->GetPartsListImage(mMaxWidth, ThumbnailSize, mBillOfMaterials ? 0 : mStep, swRGBAFromQColor(BackgroundColor), swRGBAFromQColor(ThumbnailBackgroundColor), Font, TextColor, false, ShowCounts, Sort, Layout, Alignment, mMaxHeight, Scale, ShowPartIds, CountPlacement, &CountRects);
+
+	// quantities rebuild with the image
+	for (QGraphicsItem* Child : childItems())
+		if (dynamic_cast<swInstructionsPartsListCountItem*>(Child))
+			delete Child;
 
 	if (!PartsImage)
 	{
@@ -562,6 +651,12 @@ void swInstructionsPartsListItem::Update()
 	}
 
 	setPixmap(QPixmap::fromImage(PartsImage.value()));
+
+	// quantities sit over their drawn text
+	const qreal Inset = GetBoxStyle().GetInset();
+
+	for (const QRect& CountRect : CountRects)
+		new swInstructionsPartsListCountItem(this, QRectF(CountRect.x() / Scale + Inset, CountRect.y() / Scale + Inset, CountRect.width() / Scale, CountRect.height() / Scale), mModel, mBillOfMaterials ? 0 : mStep);
 }
 
 swInstructionsCoverTextItem::swInstructionsCoverTextItem(QGraphicsItem* Parent, swInstructions* Instructions, swModel* Model, bool Author)
@@ -1275,15 +1370,15 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 
 		auto AddCoverText = [&](const QString& Text, const QFont& Font, bool Author, swInstructionsPropertyType PlacementType)
 		{
-			const int Placement = swGetValidPlacement(Instructions->GetIntProperty(PlacementType, Model, 0), true);
+			const int Placement = qBound(0, Instructions->GetIntProperty(PlacementType, Model, 0), SW_PLACEMENT_COUNT - 1);
 			const int Column = Placement % SW_PLACEMENT_GRID_SIZE;
 
 			// align wrapped text lines
 			QTextOption TextOption;
 
-			if (Column == 1)
+			if (Column <= 1)
 				TextOption.setAlignment(Qt::AlignLeft);
-			else if (Column == 3)
+			else if (Column >= 3)
 				TextOption.setAlignment(Qt::AlignRight);
 			else
 				TextOption.setAlignment(Qt::AlignHCenter);
@@ -1315,7 +1410,7 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 		qreal TopHeight = 0.0;
 		qreal BottomHeight = 0.0;
 
-		for (int Row = 1; Row < SW_PLACEMENT_GRID_SIZE - 1; Row++)
+		for (int Row = 0; Row < SW_PLACEMENT_GRID_SIZE; Row++)
 		{
 			qreal RowHeight = 0.0;
 
@@ -1323,7 +1418,7 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 				if (CoverText.Placement / SW_PLACEMENT_GRID_SIZE == Row)
 					RowHeight += CoverText.Size.height();
 
-			const qreal RowTop = swGetPlacementPosition(MarginsRect, QSizeF(MarginsRect.width(), RowHeight), Row * SW_PLACEMENT_GRID_SIZE + 2).y();
+			const qreal RowTop = swGetPagePlacementPosition(Instructions, MarginsRect, QSizeF(MarginsRect.width(), RowHeight), Row * SW_PLACEMENT_GRID_SIZE + 2).y();
 			qreal TextTop = RowTop;
 
 			for (const swCoverText& CoverText : CoverTexts)
@@ -1331,7 +1426,7 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 				if (CoverText.Placement / SW_PLACEMENT_GRID_SIZE != Row)
 					continue;
 
-				const QPointF Position = swGetPlacementPosition(MarginsRect, CoverText.Size, CoverText.Placement);
+				const QPointF Position = swGetPagePlacementPosition(Instructions, MarginsRect, CoverText.Size, CoverText.Placement);
 				swPlaceElement(CoverText.Item, Instructions, QPointF(Position.x(), TextTop));
 				TextTop += CoverText.Size.height();
 			}
@@ -1361,6 +1456,14 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 			swPlaceElement(ModelImageItem, Instructions, swGetPlacementPosition(ImageRect, ModelImageItem->boundingRect().size(), Placement));
 		}
 
+		if (Instructions->GetBoolProperty(swInstructionsPropertyType::ShowCoverPartCount, Model, 0))
+		{
+			swInstructionsPartCountItem* CountItem = new swInstructionsPartCountItem(PageItem, Instructions, swInstructionsPlacementElement::CoverPartCount, Model, swInstructions::GetModelPartCount(Model));
+
+			const int CountPlacement = Instructions->GetIntProperty(swInstructionsPropertyType::PartCountPlacement, Model, 0);
+			swPlaceElement(CountItem, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, CountItem->boundingRect().size(), CountPlacement));
+		}
+
 		return;
 	}
 
@@ -1371,6 +1474,7 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 
 		// the list fills the page above or below the title
 		QRectF PartsRect = MarginsRect;
+		QRectF TitleRect;
 
 		if (TitleItem->isVisible())
 		{
@@ -1378,11 +1482,33 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 			const int TitlePlacement = swGetValidPlacement(Instructions->GetIntProperty(swInstructionsPropertyType::StepNumberPlacement, Page->Model, 0), true);
 			const QPointF TitlePosition = swGetPlacementPosition(MarginsRect, TitleSize, TitlePlacement);
 			swPlaceElement(TitleItem, Instructions, TitlePosition);
+			TitleRect = QRectF(TitlePosition, TitleSize);
 
 			if (TitlePosition.y() + TitleSize.height() / 2.0 < MarginsRect.center().y())
 				PartsRect.setTop(TitlePosition.y() + TitleSize.height());
 			else
 				PartsRect.setBottom(TitlePosition.y());
+		}
+
+		// the part count goes beside or past the title
+		if (Instructions->GetBoolProperty(swInstructionsPropertyType::ShowBillOfMaterialsPartCount, Page->Model, 0))
+		{
+			swInstructionsPartCountItem* CountItem = new swInstructionsPartCountItem(PageItem, Instructions, swInstructionsPlacementElement::BillOfMaterialsPartCount, Page->Model, swInstructions::GetModelPartCount(Page->Model));
+			const QSizeF CountSize = CountItem->boundingRect().size();
+
+			const int CountPlacement = Instructions->GetIntProperty(swInstructionsPropertyType::BillOfMaterialsPartCountPlacement, Page->Model, 0);
+			QPointF CountPosition = swGetPagePlacementPosition(Instructions, MarginsRect, CountSize, CountPlacement);
+
+			// beside the title when it fits, else past it
+			if (QRectF(CountPosition, CountSize).intersects(TitleRect))
+				CountPosition = swGetPlacementPosition(PartsRect, CountSize, swGetValidPlacement(CountPlacement, true));
+
+			swPlaceElement(CountItem, Instructions, CountPosition);
+
+			if (CountPosition.y() + CountSize.height() / 2.0 < PartsRect.center().y())
+				PartsRect.setTop(qMax(PartsRect.top(), CountPosition.y() + CountSize.height()));
+			else
+				PartsRect.setBottom(qMin(PartsRect.bottom(), CountPosition.y()));
 		}
 
 		swInstructionsPartsListItem* PartsImageItem = new swInstructionsPartsListItem(PageItem, Instructions, Page->Model, 0);
@@ -1627,6 +1753,58 @@ static void swAddPageAnnotations(swInstructions* Instructions, size_t PageIndex,
 	}
 }
 
+// use to add the step part count and the submodel preview
+static void swAddPageCounts(swInstructions* Instructions, const swInstructionsPage* Page, QGraphicsRectItem* PageItem, const QRectF& MarginsRect)
+{
+	if (Page->Steps.empty())
+		return;
+
+	if (Instructions->GetBoolProperty(swInstructionsPropertyType::ShowPagePartCount, nullptr, 0))
+	{
+		const int Count = swInstructions::GetPageStepPartCount(*Page);
+
+		if (Count > 0)
+		{
+			swInstructionsPartCountItem* CountItem = new swInstructionsPartCountItem(PageItem, Instructions, swInstructionsPlacementElement::PagePartCount, nullptr, Count);
+
+			const int Placement = Instructions->GetIntProperty(swInstructionsPropertyType::PagePartCountPlacement, nullptr, 0);
+			swPlaceElement(CountItem, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, CountItem->boundingRect().size(), Placement));
+		}
+	}
+
+	// submodels show their finished model on their first page
+	const swInstructionsStep& FirstStep = Page->Steps.front();
+	const swModel* MainModel = Instructions->GetMainModel();
+
+	if (FirstStep.FinalModel || FirstStep.Step != 1 || FirstStep.Model == MainModel || !Instructions->GetBoolProperty(swInstructionsPropertyType::ShowSubmodelPreview, nullptr, 0))
+		return;
+
+	swModel* Model = FirstStep.Model;
+	const swStep LastStep = Model->GetLastStep();
+
+	swInstructionsStepImageItem* PreviewItem = new swInstructionsStepImageItem(PageItem, Instructions, Model, LastStep);
+	PreviewItem->SetSubmodelPreview();
+	PreviewItem->setZValue(1.0);
+
+	// a preview takes a quarter of the page
+	const qreal PreviewInset = PreviewItem->GetBoxStyle().GetInset();
+	PreviewItem->SetImageSize(qMax(static_cast<int>(MarginsRect.width() / 4.0 - 2.0 * PreviewInset), 1), qMax(static_cast<int>(MarginsRect.height() / 4.0 - 2.0 * PreviewInset), 1));
+	PreviewItem->Update();
+
+	// the part count sits around the preview
+	swInstructionsPartCountItem* CountItem = new swInstructionsPartCountItem(PreviewItem, Instructions, swInstructionsPlacementElement::SubmodelPreviewPartCount, Model, swInstructions::GetModelPartCount(Model));
+	const QRectF PreviewRect = PreviewItem->boundingRect();
+	const QSizeF CountSize = CountItem->boundingRect().size();
+	const int CountPlacement = Instructions->GetIntProperty(swInstructionsPropertyType::SubmodelPreviewPartCountPlacement, Model, LastStep);
+	const QPointF CountPosition = swGetPlacementPosition(PreviewRect, CountSize, CountPlacement);
+
+	// both together stay on the page
+	const QRectF GroupRect = PreviewRect.united(QRectF(CountPosition, CountSize));
+	const int PreviewPlacement = Instructions->GetIntProperty(swInstructionsPropertyType::SubmodelPreviewPlacement, Model, LastStep);
+	swPlaceElement(PreviewItem, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, GroupRect.size(), PreviewPlacement) - GroupRect.topLeft());
+	swPlaceElement(CountItem, Instructions, CountPosition);
+}
+
 void swUpdateInstructionsPageScene(swInstructions* Instructions, const swInstructionsPage* Page, QGraphicsScene* Scene)
 {
 	Scene->clear();
@@ -1653,12 +1831,15 @@ void swUpdateInstructionsPageScene(swInstructions* Instructions, const swInstruc
 	{
 		swInstructionsPageNumberItem* PageNumberItem = new swInstructionsPageNumberItem(PageItem, Instructions, PageIndex);
 
-		const int Placement = swGetValidPlacement(Instructions->GetIntProperty(swInstructionsPropertyType::PageNumberPlacement, nullptr, 0), true);
-		swPlaceElement(PageNumberItem, Instructions, swGetPlacementPosition(MarginsRect, PageNumberItem->boundingRect().size(), Placement));
+		const int Placement = Instructions->GetIntProperty(swInstructionsPropertyType::PageNumberPlacement, nullptr, 0);
+		swPlaceElement(PageNumberItem, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, PageNumberItem->boundingRect().size(), Placement));
 	}
 
 	if (Page->Type != swInstructionsPageType::Blank)
 		swAddPageContent(Instructions, Page, Scene, PageItem, MarginsRect);
+
+	if (Page->Type == swInstructionsPageType::Steps)
+		swAddPageCounts(Instructions, Page, PageItem, MarginsRect);
 
 	swAddPageAnnotations(Instructions, PageIndex, Scene, PageItem, MarginsRect);
 }

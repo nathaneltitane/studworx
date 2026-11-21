@@ -313,9 +313,9 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Instructions", "EditorMarkers", 1),                                        // SW_PROFILE_INSTRUCTIONS_EDITOR_MARKERS
 	swProfileEntry("Instructions", "NewModelDefaults", 1),                                     // SW_PROFILE_INSTRUCTIONS_NEW_MODEL_DEFAULTS
 	swProfileEntry("Instructions", "GridDivisions", 8),                                        // SW_PROFILE_INSTRUCTIONS_GRID_DIVISIONS
-	swProfileEntry("Instructions", "GridPrimaryColor", SW_RGBA(61, 174, 233, 110)),            // SW_PROFILE_INSTRUCTIONS_GRID_PRIMARY_COLOR #3daee96e
-	swProfileEntry("Instructions", "GridSecondaryColor", SW_RGBA(61, 174, 233, 40)),           // SW_PROFILE_INSTRUCTIONS_GRID_SECONDARY_COLOR #3daee928
-	swProfileEntry("Instructions", "MarginColor", SW_RGBA(61, 174, 233, 160)),                 // SW_PROFILE_INSTRUCTIONS_MARGIN_COLOR #3daee9a0
+	swProfileEntry("Instructions", "GridPrimaryColor", SW_RGBA(170, 0, 0, 120)),               // SW_PROFILE_INSTRUCTIONS_GRID_PRIMARY_COLOR #aa000078
+	swProfileEntry("Instructions", "GridSecondaryColor", SW_RGBA(170, 85, 255, 120)),          // SW_PROFILE_INSTRUCTIONS_GRID_SECONDARY_COLOR #aa55ff78
+	swProfileEntry("Instructions", "MarginColor", SW_RGBA(0, 0, 127, 120)),                    // SW_PROFILE_INSTRUCTIONS_MARGIN_COLOR #00007f78
 	swProfileEntry("Instructions", "ShowElementMargins", 0),                                   // SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_MARGINS
 	swProfileEntry("Instructions", "ShowElementPadding", 0),                                   // SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_PADDING
 	swProfileEntry("Instructions", "ShowElementAnchors", 0),                                   // SW_PROFILE_INSTRUCTIONS_SHOW_ELEMENT_ANCHORS

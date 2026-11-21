@@ -265,7 +265,10 @@ static std::vector<swInstructionsPropertyType> swGetHTMLOverrideColorTypes(int R
 		return { RowTypes[Row], swInstructionsPropertyType::SubmodelBackgroundColor };
 
 	if (Row < static_cast<int>(std::size(RowTypes)) && RowTypes[Row] == swInstructionsPropertyType::CoverTitleColor)
-		return { RowTypes[Row], swInstructionsPropertyType::CoverAuthorColor };
+		return { RowTypes[Row], swInstructionsPropertyType::CoverAuthorColor, swInstructionsPropertyType::PartCountColor };
+
+	if (Row < static_cast<int>(std::size(RowTypes)) && RowTypes[Row] == swInstructionsPropertyType::PageNumberColor)
+		return { RowTypes[Row], swInstructionsPropertyType::PagePartCountColor };
 
 	if (Row < static_cast<int>(std::size(RowTypes)) && RowTypes[Row] == swInstructionsPropertyType::StepNumberColor)
 		return { RowTypes[Row], swInstructionsPropertyType::BillOfMaterialsTitleColor };
