@@ -164,6 +164,7 @@ bool swMainWindow::LoadProjectText(const QByteArray& FileData)
 	Project* ActiveProject = swGetActiveProject();
 	mInstructionsDialog = Dialog;
 	Dialog->SetProject(ActiveProject);
+	Dialog->setWindowModified(ActiveProject->IsModified());
 	ActiveProject->SetInstructions(std::move(Instructions));
 
 	Dialog->raise();

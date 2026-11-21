@@ -16,7 +16,8 @@
 swInstructionsDialog::swInstructionsDialog(QWidget* Parent, Project* Project)
 	: QMainWindow(Parent), mProject(Project)
 {
-	setWindowTitle(tr("Instructions"));
+	setWindowTitle(tr("Instructions") + QLatin1String("[*]"));
+	setWindowModified(mProject->IsModified());
 
 	mInstructions = mProject->GetInstructions();
 
@@ -122,6 +123,19 @@ swInstructionsDialog::swInstructionsDialog(QWidget* Parent, Project* Project)
 	mEditorWidget->setObjectName("InstructionsEditor");
 	addDockWidget(Qt::BottomDockWidgetArea, mEditorWidget);
 	mEditorWidget->hide();
+
+	// save key saves the model, the editor applies first
+
+	QAction* SaveAction = gMainWindow->mActions[SW_FILE_SAVE];
+	QShortcut* SaveShortcut = new QShortcut(SaveAction->shortcut(), this, nullptr, nullptr, Qt::WindowShortcut);
+	connect(SaveShortcut, &QShortcut::activated, this, [this, SaveAction]()
+	{
+		if (mEditorWidget->isAncestorOf(QApplication::focusWidget()))
+			mEditorWidget->ApplyText(true);
+		else
+			SaveAction->trigger();
+	});
+	connect(SaveAction, &QAction::changed, SaveShortcut, [SaveShortcut, SaveAction]() { SaveShortcut->setKey(SaveAction->shortcut()); });
 
 	QAction* EditorAction = mEditorWidget->toggleViewAction();
 	EditorAction->setShortcut(QKeySequence(tr("Ctrl+Shift+E")));

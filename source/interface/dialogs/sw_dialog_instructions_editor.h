@@ -22,6 +22,7 @@ public:
 	int GetTextScroll() const;
 	void SetTextPosition(int Position, int Scroll);
 	int GetSnapDelta() const;
+	void ApplyText(bool Save);
 
 signals:
 	void SnapRequested();
@@ -30,7 +31,6 @@ protected:
 	void UpdateText();
 	void UpdateButtons();
 	void ApplyClicked();
-	void ApplyText(bool Save);
 	bool ValidateText();
 	void RevertClicked();
 

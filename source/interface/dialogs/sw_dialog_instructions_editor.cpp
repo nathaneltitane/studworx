@@ -298,12 +298,6 @@ swInstructionsEditorWidget::swInstructionsEditorWidget(QWidget* Parent, Project*
 
 	connect(mApplyButton, &QToolButton::clicked, this, &swInstructionsEditorWidget::ApplyClicked);
 
-	// save shortcut applies and saves
-	QAction* SaveAction = new QAction(tr("Save"), this);
-	SaveAction->setShortcuts(gMainWindow->mActions[SW_FILE_SAVE]->shortcuts());
-	SaveAction->setShortcutContext(Qt::WidgetWithChildrenShortcut);
-	addAction(SaveAction);
-	connect(SaveAction, &QAction::triggered, this, [this]() { ApplyText(true); });
 	connect(mRevertButton, &QToolButton::clicked, this, &swInstructionsEditorWidget::RevertClicked);
 	connect(mTextEdit->document(), &QTextDocument::modificationChanged, this, &swInstructionsEditorWidget::UpdateButtons);
 

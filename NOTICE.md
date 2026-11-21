@@ -11,6 +11,7 @@
   - Page Setup: Portrait or Landscape follows the width and height while they are typed
   - Instructions: the Placement buttons and Page Area now work on notices too, outer cells put a notice on the paper edge
   - Instructions: the font window opens at a quarter of the screen, centered
+  - Instructions: the save key saves the model from the Instructions window too, and its title shows * while there are unsaved changes
   - Instructions: the cover, the bill of materials and the step pages can show how many parts they take, as "119 PIECES" or your own text
   - Instructions: the cover title, author and part count start at the same size as the Parts List title, and the parts list count sits at its top right
   - Instructions: Show Submodel Preview puts the finished submodel and its part count on the first page of each submodel

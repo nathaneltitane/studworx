@@ -1,5 +1,6 @@
 #include "sw_global.h"
 #include "sw_window_main.h"
+#include "sw_dialog_instructions.h"
 #include "sw_widget_keyframes.h"
 #include "sw_widget_explode.h"
 #include "sw_widget_joints.h"
@@ -582,6 +583,10 @@ void swMainWindow::UpdateCategories()
 void swMainWindow::UpdateTitle()
 {
 	setWindowModified(swGetActiveProject()->IsModified());
+
+	if (mInstructionsDialog)
+		mInstructionsDialog->setWindowModified(isWindowModified());
+
 	setWindowFilePath(swGetActiveProject()->GetTitle());
 
 	// unsaved model has no folder
@@ -594,6 +599,9 @@ void swMainWindow::UpdateTitle()
 void swMainWindow::UpdateModified(bool Modified)
 {
 	setWindowModified(Modified);
+
+	if (mInstructionsDialog)
+		mInstructionsDialog->setWindowModified(Modified);
 }
 
 void swMainWindow::UpdateShortcuts()
