@@ -55,7 +55,7 @@
 /* text clear marker inside the field - circle kept 5px inside the pill */
 
 .search-clear {
-	color: #37c8ab;
+	color: #222222;
 	border-radius: 50% 50% 50% 50%;
 
 	font-size: 15px;
