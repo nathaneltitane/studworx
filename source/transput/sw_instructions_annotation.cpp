@@ -42,6 +42,29 @@ void swInstructions::SetNoticeText(int Id, const QString& Text, const QString& F
 	}
 }
 
+void swInstructions::SetNoticePosition(int Id, const QPointF& Position)
+{
+	const swInstructionsElementKey Key = { swInstructionsPlacementElement::Notice, nullptr, static_cast<swStep>(Id) };
+
+	for (swInstructionsNotice& Notice : mNotices)
+	{
+		if (Notice.Id != Id)
+			continue;
+
+		// the placed spot replaces the moved one
+
+		const bool OffsetRemoved = mElementOffsets.erase(Key) > 0;
+
+		if (Notice.Position == Position && !OffsetRemoved)
+			return;
+
+		Notice.Position = Position;
+
+		emit PageLayoutChanged();
+		return;
+	}
+}
+
 void swInstructions::RemoveNotice(int Id)
 {
 	const swInstructionsElementKey Key = { swInstructionsPlacementElement::Notice, nullptr, static_cast<swStep>(Id) };

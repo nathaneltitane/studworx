@@ -1189,6 +1189,7 @@ swInstructionsPageWidget::swInstructionsPageWidget(QWidget* Parent, swInstructio
 	connect(mInstructions, &swInstructions::StepSettingsChanged, this, &swInstructionsPageWidget::StepSettingsChanged);
 	connect(Scene, &QGraphicsScene::selectionChanged, this, &swInstructionsPageWidget::SelectionChanged);
 	connect(mPlacementWidget, &swInstructionsPlacementWidget::AlignSelection, this, &swInstructionsPageWidget::AlignSelection);
+	connect(mPlacementWidget, &swInstructionsPlacementWidget::PlaceElement, this, &swInstructionsPageWidget::PlaceElement);
 
 	// the page always fits, scroll bars would toggle while it refits
 	setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -1338,6 +1339,26 @@ void swInstructionsPageWidget::AlignSelection(int Placement, bool LastSelection)
 	}
 
 	mInstructions->SetElementOffsets(Offsets);
+}
+
+void swInstructionsPageWidget::PlaceElement(int Placement)
+{
+	const QList<QGraphicsItem*> SelectedItems = scene()->selectedItems();
+	swInstructionsElementKey Key;
+
+	if (SelectedItems.size() != 1 || !mPage || !swGetElementKey(SelectedItems.front(), Key) || std::get<0>(Key) != swInstructionsPlacementElement::Notice || mInstructions->IsElementLocked(Key))
+		return;
+
+	// page cells, outer ones on the paper edge
+
+	const swInstructionsPageScope PageScope(mInstructions, static_cast<size_t>(mPage - mInstructions->mPages.data()));
+	const swInstructionsPageSetup& PageSetup = mInstructions->mPageSetup;
+	const QRectF MarginsRect(PageSetup.MarginLeft, PageSetup.MarginTop, PageSetup.Width - PageSetup.MarginLeft - PageSetup.MarginRight, PageSetup.Height - PageSetup.MarginTop - PageSetup.MarginBottom);
+	QGraphicsItem* Item = SelectedItems.front();
+	const QRectF ItemRect = Item->mapRectToParent(Item->boundingRect());
+	const QPointF Distance = swGetPagePlacementPosition(mInstructions, MarginsRect, ItemRect.size(), Placement) - ItemRect.topLeft();
+
+	mInstructions->SetNoticePosition(static_cast<int>(std::get<2>(Key)), Item->pos() + Distance);
 }
 
 // use to add the page elements

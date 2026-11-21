@@ -354,6 +354,11 @@ void swInstructionsPlacementWidget::PlacementClicked(int Placement)
 		mInstructions->SetImage(Changed);
 	}
 
+	// notices move to the cell
+
+	if (mElement == swInstructionsPlacementElement::Notice)
+		emit PlaceElement(Placement);
+
 	// drop the dragged position
 	if (PlacementType != swInstructionsPropertyType::Count)
 		mInstructions->SetElementPlacement(PlacementType, Placement, mElementKey);
@@ -433,10 +438,11 @@ void swInstructionsPlacementWidget::UpdateControls()
 	// locked elements stay put
 	const bool Locked = mInstructions->IsElementLocked(mElementKey);
 	const swInstructionsImage* Image = mElement == swInstructionsPlacementElement::Image ? mInstructions->FindImage(static_cast<int>(std::get<2>(mElementKey))) : nullptr;
-	const bool Active = (GetPlacementType() != swInstructionsPropertyType::Count || Image) && !Locked;
+	const bool Notice = mElement == swInstructionsPlacementElement::Notice;
+	const bool Active = (GetPlacementType() != swInstructionsPropertyType::Count || Image || Notice) && !Locked;
 
 	// notices return to where added
-	const bool Movable = (Active && mElement != swInstructionsPlacementElement::PartsListCount) || (mElement == swInstructionsPlacementElement::Notice && !Locked);
+	const bool Movable = Active && mElement != swInstructionsPlacementElement::PartsListCount;
 
 	mResetPositionButton->setEnabled(Movable && mInstructions->HasElementOffset(mElementKey));
 
@@ -526,7 +532,7 @@ void swInstructionsPlacementWidget::UpdateControls()
 		for (QAbstractButton* Button : mAnchorGroup->buttons())
 		{
 			const int ButtonAnchor = mAnchorGroup->id(Button);
-			Button->setEnabled(Active && StepElement && (ButtonAnchor == static_cast<int>(swInstructionsPlacementAnchor::Area) || ButtonAnchor == OtherAnchor));
+			Button->setEnabled(Active && (ButtonAnchor == static_cast<int>(swInstructionsPlacementAnchor::Area) || (StepElement && ButtonAnchor == OtherAnchor)));
 		}
 
 		if (QAbstractButton* Button = mAnchorGroup->button(Anchor))
@@ -539,9 +545,11 @@ void swInstructionsPlacementWidget::UpdateControls()
 
 	// page elements take the paper edge, child labels go all around
 	const bool ChildLabel = mElement == swInstructionsPlacementElement::SubmodelPreviewPartCount || mElement == swInstructionsPlacementElement::PartsListCount;
-	const bool PageEdge = ChildLabel || Image || (Inside && (mElement == swInstructionsPlacementElement::CoverTitle || mElement == swInstructionsPlacementElement::CoverAuthor || mElement == swInstructionsPlacementElement::CoverPartCount || mElement == swInstructionsPlacementElement::BillOfMaterialsPartCount || mElement == swInstructionsPlacementElement::PagePartCount || mElement == swInstructionsPlacementElement::SubmodelPreview || mElement == swInstructionsPlacementElement::PageNumber));
+	const bool PageEdge = ChildLabel || Image || Notice || (Inside && (mElement == swInstructionsPlacementElement::CoverTitle || mElement == swInstructionsPlacementElement::CoverAuthor || mElement == swInstructionsPlacementElement::CoverPartCount || mElement == swInstructionsPlacementElement::BillOfMaterialsPartCount || mElement == swInstructionsPlacementElement::PagePartCount || mElement == swInstructionsPlacementElement::SubmodelPreview || mElement == swInstructionsPlacementElement::PageNumber));
 
-	if (Active)
+	// notices keep a free position
+
+	if (Active && !Notice)
 	{
 		const int Placement = Image ? Image->Placement : mInstructions->GetIntProperty(PlacementType, nullptr, 0);
 		CurrentPlacement = PageEdge ? qBound(0, Placement, SW_PLACEMENT_COUNT - 1) : swGetValidPlacement(Placement, Inside);

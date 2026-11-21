@@ -20,6 +20,7 @@ public:
 
 signals:
 	void AlignSelection(int Placement, bool LastSelection);
+	void PlaceElement(int Placement);
 
 protected:
 	void AnchorClicked(int Anchor);

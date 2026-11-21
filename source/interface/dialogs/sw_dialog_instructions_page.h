@@ -531,6 +531,7 @@ public:
 protected:
 	void SelectElement(const swInstructionsElementKey& Key);
 	void AlignSelection(int Placement, bool LastSelection);
+	void PlaceElement(int Placement);
 	void resizeEvent(QResizeEvent* Event) override;
 	void mousePressEvent(QMouseEvent* Event) override;
 	void mouseReleaseEvent(QMouseEvent* Event) override;

@@ -1218,13 +1218,20 @@ void swInstructionsPropertiesWidget::ColorButtonClicked(swInstructionsPropertyTy
 
 void swInstructionsPropertiesWidget::FontButtonClicked(swInstructionsPropertyType Type)
 {
-	bool Ok = false;
-	QFont Font = mInstructions->GetFontProperty(Type, mModel, mStep, false);
+	QFontDialog Dialog(mInstructions->GetFontProperty(Type, mModel, mStep, false), this);
+	Dialog.setWindowTitle(mEditors[static_cast<int>(Type)].Name);
 
-	Font = QFontDialog::getFont(&Ok, Font, this, mEditors[static_cast<int>(Type)].Name);
+	// a quarter of the screen, centered
 
-	if (Ok)
-		mInstructions->SetDefaultFont(Type, Font);
+	if (const QScreen* Screen = screen())
+	{
+		const QRect ScreenRect = Screen->availableGeometry();
+		Dialog.resize(ScreenRect.size() / 2);
+		Dialog.move(ScreenRect.center() - QPoint(ScreenRect.width() / 4, ScreenRect.height() / 4));
+	}
+
+	if (Dialog.exec() == QDialog::Accepted)
+		mInstructions->SetDefaultFont(Type, Dialog.selectedFont());
 }
 
 void swInstructionsPropertiesWidget::SetCategoriesExpanded(bool Expanded)

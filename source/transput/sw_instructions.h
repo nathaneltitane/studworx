@@ -574,6 +574,7 @@ public:
 	const swInstructionsNotice* FindNotice(int Id) const;
 	int AddNotice(size_t PageIndex, const QPointF& Position, const QString& Text, const QString& File = QString());
 	void SetNoticeText(int Id, const QString& Text, const QString& File);
+	void SetNoticePosition(int Id, const QPointF& Position);
 	void RemoveNotice(int Id);
 
 	const std::vector<swInstructionsPointer>& GetPointers() const
