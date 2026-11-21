@@ -405,7 +405,7 @@ File > Instructions lays the steps out on pages with a cover, parts lists and a 
 - **Page setup.** Paper and screen presets, metric or imperial units, margins and orientation.
 - **Page bar.** Undo and redo changes, turn the instruction pages, jump to the front cover, the bill of materials or the back cover, type a page number, and insert or remove blank pages and empty steps.
 - **Pages.** Instructions get a front cover with the title and author, a list of every part, a back cover, and as many steps per page as you want, filled row by row or column by column, each page with its own background. Titles, notices and part counts take your own text or a text file. The finished model can fill the room left after the last step, with its own border and margin.
-- **Images and templates.** Put your own pictures, like a logo, on the front or back cover. Save the look of your instructions as a template and apply it to any model, or pick a default template that every model starts from.
+- **Images and templates.** Put your own pictures, like a logo, on the front or back cover. Save the look of your instructions as a template and apply it to any model, or pick a default template that every model starts from. One typeface, one text size, or both can cover the whole document.
 - **Part counts.** The cover, the bill of materials and every step page can show how many parts they take, and each submodel can start with a picture of it finished and its part count.
 - **Style.** Choose the font, how steps are divided, with dividers that get their own margins and rounded ends, how big and how the model is drawn, and how the parts list looks and is sorted.
 - **Step images.** Parts new to each step are outlined, in the width and color you pick, and the earlier ones fade.

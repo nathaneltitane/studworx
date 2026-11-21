@@ -87,6 +87,14 @@ swPageSetupDialog::swPageSetupDialog(QWidget* Parent, swInstructionsPageSetup* P
 		connect(SpinBox, qOverload<double>(&QDoubleSpinBox::valueChanged), this, &swPageSetupDialog::SizeEdited);
 	}
 
+	// the orientation follows the size while typed
+
+	for (QDoubleSpinBox* SpinBox : { ui->WidthSpinBox, ui->HeightSpinBox })
+		connect(SpinBox, &QDoubleSpinBox::textChanged, this, [this]()
+		{
+			SetOrientation(ui->WidthSpinBox->valueFromText(ui->WidthSpinBox->cleanText()) > ui->HeightSpinBox->valueFromText(ui->HeightSpinBox->cleanText()));
+		});
+
 	auto GetProfileUnits = [](SW_PROFILE_KEY Key)
 	{
 		const int Units = swGetProfileInteger(Key);
@@ -228,10 +236,15 @@ void swPageSetupDialog::UpdatePreset()
 
 void swPageSetupDialog::UpdateOrientation()
 {
+	SetOrientation(mPoints.Width > mPoints.Height);
+}
+
+void swPageSetupDialog::SetOrientation(bool Landscape)
+{
 	QSignalBlocker PortraitBlocker(ui->PortraitButton);
 	QSignalBlocker LandscapeBlocker(ui->LandscapeButton);
 
-	if (mPoints.Width > mPoints.Height)
+	if (Landscape)
 		ui->LandscapeButton->setChecked(true);
 	else
 		ui->PortraitButton->setChecked(true);

@@ -12,7 +12,7 @@ static const QLatin1String gInstructionsPropertyNames[] =
 	QLatin1String("PARTS_LIST_FONT"), QLatin1String("PARTS_LIST_TEXT_COLOR"), QLatin1String("PARTS_LIST_BORDER_COLOR"),
 	QLatin1String("PARTS_LIST_BORDER_WIDTH"), QLatin1String("PARTS_LIST_SHOW_COUNTS"), QLatin1String("PARTS_LIST_SORT_ORDER"),
 	QLatin1String("SHOW_STEP_DIVIDERS"), QLatin1String("STEP_DIVIDER_COLOR"), QLatin1String("STEP_DIVIDER_WIDTH"),
-	QLatin1String("SHOW_BILL_OF_MATERIALS"), QLatin1String("USE_DOCUMENT_FONT"), QLatin1String("DOCUMENT_FONT"),
+	QLatin1String("SHOW_BILL_OF_MATERIALS"), QLatin1String("USE_DOCUMENT_FONT"), QLatin1String("USE_DOCUMENT_FONT_SIZE"), QLatin1String("DOCUMENT_FONT"),
 	QLatin1String("SHOW_COVER_PAGE"), QLatin1String("COVER_TITLE_FONT"), QLatin1String("COVER_TITLE_COLOR"),
 	QLatin1String("SHOW_COVER_AUTHOR"), QLatin1String("PAGE_BACKGROUND_COLOR"), QLatin1String("STEP_NUMBER_PLACEMENT"),
 	QLatin1String("STEP_NUMBER_ANCHOR"), QLatin1String("PARTS_LIST_PLACEMENT"), QLatin1String("PARTS_LIST_ANCHOR"),
@@ -433,6 +433,31 @@ void swRenameInstructionsModels(QStringList& CommandLines, const std::map<QStrin
 	}
 }
 
+// older files used the document font with its size
+
+static void swSetInstructionsProperty(swInstructionsProperties& Properties, int Type, const QVariant& Value)
+{
+	Properties[Type].Value = Value;
+
+	if (Type == static_cast<int>(swInstructionsPropertyType::UseDocumentFont) && Value.toBool())
+		Properties[static_cast<int>(swInstructionsPropertyType::UseDocumentFontSize)].Value = true;
+}
+
+// the size choice follows a used document font
+
+static bool swIsInstructionsPropertyWritten(const swInstructionsProperties& Properties, int Type, const QVariant& DefaultValue)
+{
+	const QVariant& Value = Properties[Type].Value;
+
+	if (!Value.isValid())
+		return false;
+
+	if (Type == static_cast<int>(swInstructionsPropertyType::UseDocumentFontSize) && Properties[static_cast<int>(swInstructionsPropertyType::UseDocumentFont)].Value.toBool())
+		return true;
+
+	return Value != DefaultValue;
+}
+
 void swInstructions::LoadCommandLines(const QStringList& CommandLines)
 {
 	// skip commands with missing models
@@ -463,7 +488,7 @@ void swInstructions::LoadCommandLines(const QStringList& CommandLines)
 				continue;
 
 			if (!PageProperty)
-				mStepProperties[Type].Value = Value;
+				swSetInstructionsProperty(mStepProperties, Type, Value);
 			else
 			{
 				swInstructionsProperty& Property = mPagePropertyOverrides[Key][Type];
@@ -567,7 +592,7 @@ void swInstructions::LoadCommandLines(const QStringList& CommandLines)
 			const QVariant Value = Reader.ReadValue(mDefaultProperties[Type].Value);
 
 			if (Reader.IsValid())
-				FrozenIt->second[Type].Value = Value;
+				swSetInstructionsProperty(FrozenIt->second, Type, Value);
 		}
 		else if (Command == QLatin1String("NOTICE"))
 		{
@@ -735,7 +760,7 @@ bool swInstructions::SaveTemplate(const QString& FileName) const
 		const QVariant& DefaultValue = BuiltInProperties[Type].Value;
 		const QVariant& Value = mStepProperties[Type].Value;
 
-		if (Value.isValid() && Value != DefaultValue)
+		if (swIsInstructionsPropertyWritten(mStepProperties, Type, DefaultValue))
 			CommandLines.append(QLatin1String("PROPERTY ") + gInstructionsPropertyNames[Type] + QLatin1Char(' ') + swWriteInstructionsValue(Value, DefaultValue));
 	}
 
@@ -789,7 +814,7 @@ QStringList swInstructions::GetCommandLines() const
 		const QVariant& DefaultValue = mDefaultProperties[Type].Value;
 		const QVariant& Value = mStepProperties[Type].Value;
 
-		if (Value.isValid() && Value != DefaultValue)
+		if (swIsInstructionsPropertyWritten(mStepProperties, Type, DefaultValue))
 			CommandLines.append(QLatin1String("PROPERTY ") + gInstructionsPropertyNames[Type] + QLatin1Char(' ') + swWriteInstructionsValue(Value, DefaultValue));
 	}
 
@@ -839,7 +864,7 @@ QStringList swInstructions::GetCommandLines() const
 			const QVariant& DefaultValue = mDefaultProperties[Type].Value;
 			const QVariant& Value = Properties[Type].Value;
 
-			if (Value.isValid() && Value != DefaultValue)
+			if (swIsInstructionsPropertyWritten(Properties, Type, DefaultValue))
 				CommandLines.append(QLatin1String("FREEZE_PAGE_PROPERTY PAGE ") + PageKeyText + QLatin1Char(' ') + gInstructionsPropertyNames[Type] + QLatin1Char(' ') + swWriteInstructionsValue(Value, DefaultValue));
 		}
 	}

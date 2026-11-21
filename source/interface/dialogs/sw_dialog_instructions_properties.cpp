@@ -422,13 +422,14 @@ static const swDividerPreset swDividerPresets[] =
 
 void swInstructionsPropertiesWidget::CreateWidgets()
 {
-	AddCategory(CategoryIndex::Document, tr("Document"), tr("<p><b>Document</b></p><p>One font for all text of the instructions and the projection of the step and cover models. The instructions settings, notices and pointers are saved in the model file, the page setup and grid in the preferences.</p>"));
+	AddCategory(CategoryIndex::Document, tr("Document"), tr("<p><b>Document</b></p><p>One typeface and one font size for all text of the instructions, each usable on its own, and the projection of the step and cover models. The instructions settings, notices and pointers are saved in the model file, the page setup and grid in the preferences.</p>"));
 
 	AddRow(CategoryIndex::Document, {
-		CreateToggleEditor(swInstructionsPropertyType::UseDocumentFont, tr("Use Document Font"), tr("Use one font for all text in the instructions."))
+		CreateToggleEditor(swInstructionsPropertyType::UseDocumentFont, tr("Use Document Font"), tr("Use the document typeface for all text in the instructions, each text keeps its size.")),
+		CreateToggleEditor(swInstructionsPropertyType::UseDocumentFontSize, tr("Use Document Font Size"), tr("Use the document font size for all text in the instructions, each text keeps its typeface."))
 	});
 
-	CreateFontEditor(swInstructionsPropertyType::DocumentFont, tr("Document Font"), tr("Font of all text while the document font is used."));
+	CreateFontEditor(swInstructionsPropertyType::DocumentFont, tr("Document Font"), tr("Typeface and size of all text while the document font or its size is used."));
 	AddEditorRow(CategoryIndex::Document, swInstructionsPropertyType::DocumentFont);
 
 	CreateChoiceEditor(swInstructionsPropertyType::ModelProjection, tr("Model Projection"), tr("Show the step and cover models in perspective or orthographic, whatever the model view shows."), { tr("Perspective"), tr("Orthographic") });
@@ -1190,7 +1191,7 @@ QToolButton* swInstructionsPropertiesWidget::CreateFontEditor(swInstructionsProp
 
 	connect(Editors.SizeSpinBox, qOverload<double>(&QDoubleSpinBox::valueChanged), this, [this, Type](double Size)
 	{
-		QFont Font = mInstructions->GetFontProperty(Type, mModel, mStep);
+		QFont Font = mInstructions->GetFontProperty(Type, mModel, mStep, false);
 		Font.setPointSizeF(Size * swGetPageUnitScale(GetEditorUnits(Type)));
 		mInstructions->SetDefaultFont(Type, Font);
 	});
@@ -1218,7 +1219,7 @@ void swInstructionsPropertiesWidget::ColorButtonClicked(swInstructionsPropertyTy
 void swInstructionsPropertiesWidget::FontButtonClicked(swInstructionsPropertyType Type)
 {
 	bool Ok = false;
-	QFont Font = mInstructions->GetFontProperty(Type, mModel, mStep);
+	QFont Font = mInstructions->GetFontProperty(Type, mModel, mStep, false);
 
 	Font = QFontDialog::getFont(&Ok, Font, this, mEditors[static_cast<int>(Type)].Name);
 
@@ -1549,35 +1550,48 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 		return mInstructions->GetBoolProperty(Type, mModel, mStep);
 	};
 
-	auto SetEnabled = [this](swInstructionsPropertyType Type, bool Enabled)
+	const bool UseDocumentFont = GetBool(swInstructionsPropertyType::UseDocumentFont);
+	const bool UseDocumentFontSize = GetBool(swInstructionsPropertyType::UseDocumentFontSize);
+
+	auto SetEnabled = [this, UseDocumentFont, UseDocumentFontSize](swInstructionsPropertyType Type, bool Enabled)
 	{
 		const EditorWidgets& Editors = mEditors[static_cast<int>(Type)];
-		Editors.Widget->setEnabled(Enabled);
+		bool WidgetEnabled = Enabled;
+		bool SizeEnabled = Enabled;
+
+		// the document font greys out what it replaces
+		if (Editors.Type == EditorType::Font)
+		{
+			const bool DocumentFont = Type == swInstructionsPropertyType::DocumentFont;
+			WidgetEnabled = Enabled && UseDocumentFont == DocumentFont;
+			SizeEnabled = Enabled && UseDocumentFontSize == DocumentFont;
+		}
+
+		Editors.Widget->setEnabled(WidgetEnabled);
 
 		if (Editors.Label)
-			Editors.Label->setEnabled(Enabled);
+			Editors.Label->setEnabled(WidgetEnabled || SizeEnabled);
 
 		if (Editors.UnitButton)
-			Editors.UnitButton->setEnabled(Enabled && !mInstructions->GetDocumentUnits());
+			Editors.UnitButton->setEnabled(SizeEnabled && !mInstructions->GetDocumentUnits());
 
 		if (Editors.SizeSpinBox)
-			Editors.SizeSpinBox->setEnabled(Enabled);
+			Editors.SizeSpinBox->setEnabled(SizeEnabled);
 
 		if (Editors.BrowseButton)
 			Editors.BrowseButton->setEnabled(Enabled);
 	};
 
-	const bool UseDocumentFont = GetBool(swInstructionsPropertyType::UseDocumentFont);
 	const bool ShowStepNumber = GetBool(swInstructionsPropertyType::ShowStepNumber);
 	const bool ShowStepDividers = GetBool(swInstructionsPropertyType::ShowStepDividers);
 
-	SetEnabled(swInstructionsPropertyType::DocumentFont, UseDocumentFont);
+	SetEnabled(swInstructionsPropertyType::DocumentFont, true);
 	SetEnabled(swInstructionsPropertyType::PointerTip, mInstructions->GetIntProperty(swInstructionsPropertyType::PointerStyle, mModel, mStep) != static_cast<int>(swInstructionsPointerStyle::Wedge));
 	const bool ShowCoverPage = GetBool(swInstructionsPropertyType::ShowCoverPage);
 
-	SetEnabled(swInstructionsPropertyType::CoverTitleFont, !UseDocumentFont && ShowCoverPage);
+	SetEnabled(swInstructionsPropertyType::CoverTitleFont, ShowCoverPage);
 	SetEnabled(swInstructionsPropertyType::CoverTitleColor, ShowCoverPage);
-	SetEnabled(swInstructionsPropertyType::CoverAuthorFont, !UseDocumentFont && ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
+	SetEnabled(swInstructionsPropertyType::CoverAuthorFont, ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
 	SetEnabled(swInstructionsPropertyType::CoverAuthorColor, ShowCoverPage && GetBool(swInstructionsPropertyType::ShowCoverAuthor));
 	SetEnabled(swInstructionsPropertyType::CoverTitleText, ShowCoverPage);
 	SetEnabled(swInstructionsPropertyType::CoverTitleFile, ShowCoverPage);
@@ -1597,21 +1611,21 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 	SetEnabled(swInstructionsPropertyType::ShowBillOfMaterialsPartCount, ShowBillOfMaterials);
 	SetEnabled(swInstructionsPropertyType::PartCountText, ShowPartCount || ShowPageCount || GetBool(swInstructionsPropertyType::ShowSubmodelPreview));
 	SetEnabled(swInstructionsPropertyType::PartCountFile, ShowPartCount || ShowPageCount || GetBool(swInstructionsPropertyType::ShowSubmodelPreview));
-	SetEnabled(swInstructionsPropertyType::PartCountFont, !UseDocumentFont && ShowPartCount);
+	SetEnabled(swInstructionsPropertyType::PartCountFont, ShowPartCount);
 	SetEnabled(swInstructionsPropertyType::PartCountColor, ShowPartCount);
-	SetEnabled(swInstructionsPropertyType::PagePartCountFont, !UseDocumentFont && (ShowPageCount || GetBool(swInstructionsPropertyType::ShowSubmodelPreview)));
+	SetEnabled(swInstructionsPropertyType::PagePartCountFont, ShowPageCount || GetBool(swInstructionsPropertyType::ShowSubmodelPreview));
 	SetEnabled(swInstructionsPropertyType::PagePartCountColor, ShowPageCount || GetBool(swInstructionsPropertyType::ShowSubmodelPreview));
 
 	SetEnabled(swInstructionsPropertyType::ShowBillOfMaterialsBlankPage, ShowBillOfMaterials);
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsShowPartIds, ShowBillOfMaterials);
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsBackgroundColor, ShowBillOfMaterials);
-	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleFont, !UseDocumentFont && ShowBillOfMaterials && ShowStepNumber);
+	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleFont, ShowBillOfMaterials && ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleColor, ShowBillOfMaterials && ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleText, ShowBillOfMaterials && ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::BillOfMaterialsTitleFile, ShowBillOfMaterials && ShowStepNumber);
-	SetEnabled(swInstructionsPropertyType::StepNumberFont, !UseDocumentFont && ShowStepNumber);
+	SetEnabled(swInstructionsPropertyType::StepNumberFont, ShowStepNumber);
 	SetEnabled(swInstructionsPropertyType::StepNumberColor, ShowStepNumber);
-	SetEnabled(swInstructionsPropertyType::PLIFont, !UseDocumentFont);
+	SetEnabled(swInstructionsPropertyType::PLIFont, true);
 
 	// rows on horizontal edges, columns vertical
 	QComboBox* AlignmentComboBox = qobject_cast<QComboBox*>(mEditors[static_cast<int>(swInstructionsPropertyType::PLIAlignment)].Widget);
@@ -1620,14 +1634,14 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 
 	for (int Index = 0; Index < AlignmentNames.size(); Index++)
 		AlignmentComboBox->setItemText(Index, AlignmentNames[Index]);
-	SetEnabled(swInstructionsPropertyType::NoticeFont, !UseDocumentFont);
+	SetEnabled(swInstructionsPropertyType::NoticeFont, true);
 	SetEnabled(swInstructionsPropertyType::StepDividerColor, ShowStepDividers);
 
 	const bool ShowPageNumber = GetBool(swInstructionsPropertyType::ShowPageNumber);
 
 	SetEnabled(swInstructionsPropertyType::ShowPageNumberAllPages, ShowPageNumber);
 	SetEnabled(swInstructionsPropertyType::PageNumberFormat, ShowPageNumber);
-	SetEnabled(swInstructionsPropertyType::PageNumberFont, !UseDocumentFont && ShowPageNumber);
+	SetEnabled(swInstructionsPropertyType::PageNumberFont, ShowPageNumber);
 	SetEnabled(swInstructionsPropertyType::PageNumberColor, ShowPageNumber);
 	SetEnabled(swInstructionsPropertyType::StepDividerWidth, ShowStepDividers);
 	SetEnabled(swInstructionsPropertyType::StepDividerMargin, ShowStepDividers);

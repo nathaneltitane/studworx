@@ -502,7 +502,7 @@
              <string>Choose an instructions template, a model file with instruction settings saved by Save Template, applied to every model you open. Settings saved in a model win over the template.</string>
             </property>
             <property name="text">
-             <string>Default Template</string>
+             <string>Default Instructions Template</string>
             </property>
             <property name="buddy">
              <cstring>DefaultTemplateEdit</cstring>
@@ -514,7 +514,7 @@
             <item>
              <widget class="QLineEdit" name="DefaultTemplateEdit">
               <property name="accessibleName">
-               <string>Default Template</string>
+               <string>Default Instructions Template</string>
               </property>
               <property name="toolTip">
                <string>Choose an instructions template, a model file with instruction settings saved by Save Template, applied to every model you open. Settings saved in a model win over the template.</string>

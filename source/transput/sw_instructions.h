@@ -75,6 +75,7 @@ enum class swInstructionsPropertyType
 	StepDividerWidth,
 	ShowBillOfMaterials,
 	UseDocumentFont,
+	UseDocumentFontSize,
 	DocumentFont,
 	ShowCoverPage,
 	CoverTitleFont,
@@ -516,7 +517,7 @@ public:
 	bool GetBoolProperty(swInstructionsPropertyType Type, swModel* Model, swStep Step) const;
 	int GetIntProperty(swInstructionsPropertyType Type, swModel* Model, swStep Step) const;
 	QColor GetColorProperty(swInstructionsPropertyType Type, swModel* Model, swStep Step) const;
-	QFont GetFontProperty(swInstructionsPropertyType Type, swModel* Model, swStep Step) const;
+	QFont GetFontProperty(swInstructionsPropertyType Type, swModel* Model, swStep Step, bool ApplyDocumentFont = true) const;
 
 	void SetDefaultBool(swInstructionsPropertyType Type, bool Enabled);
 	void SetDefaultInt(swInstructionsPropertyType Type, int Value);

@@ -219,6 +219,7 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::StepDividerWidth)].Value = 2;
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowBillOfMaterials)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::UseDocumentFont)].Value = false;
+	Properties[static_cast<int>(swInstructionsPropertyType::UseDocumentFontSize)].Value = false;
 	Properties[static_cast<int>(swInstructionsPropertyType::DocumentFont)].Value = QFont("Arial", 16).toString();
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowCoverPage)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::CoverTitleFont)].Value = QFont("Arial", 24).toString();
@@ -352,7 +353,7 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	// the back cover starts blank
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowBackCover)].Value = true;
 
-	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 158, "Missing default property");
+	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 159, "Missing default property");
 
 	return Properties;
 }
@@ -593,16 +594,29 @@ QColor swInstructions::GetColorProperty(swInstructionsPropertyType Type, swModel
 	return swQColorFromRGBA(Value.toUInt());
 }
 
-QFont swInstructions::GetFontProperty(swInstructionsPropertyType Type, swModel* Model, swStep Step) const
+QFont swInstructions::GetFontProperty(swInstructionsPropertyType Type, swModel* Model, swStep Step, bool ApplyDocumentFont) const
 {
-	// the document font replaces element fonts
-	if (Type != swInstructionsPropertyType::DocumentFont && GetBoolProperty(swInstructionsPropertyType::UseDocumentFont, Model, Step))
-		Type = swInstructionsPropertyType::DocumentFont;
-
-	QVariant Value = GetProperty(Type, Model, Step);
 	QFont Font;
-	Font.fromString(Value.toString());
-	return Font;
+	Font.fromString(GetProperty(Type, Model, Step).toString());
+
+	if (!ApplyDocumentFont || Type == swInstructionsPropertyType::DocumentFont)
+		return Font;
+
+	// the document font replaces the typeface, its size the size
+
+	const bool UseFont = GetBoolProperty(swInstructionsPropertyType::UseDocumentFont, Model, Step);
+	const bool UseSize = GetBoolProperty(swInstructionsPropertyType::UseDocumentFontSize, Model, Step);
+
+	if (!UseFont && !UseSize)
+		return Font;
+
+	QFont DocumentFont;
+	DocumentFont.fromString(GetProperty(swInstructionsPropertyType::DocumentFont, Model, Step).toString());
+
+	QFont Result = UseFont ? DocumentFont : Font;
+	Result.setPointSizeF(UseSize ? DocumentFont.pointSizeF() : Font.pointSizeF());
+
+	return Result;
 }
 
 bool swInstructions::IsPageProperty(swInstructionsPropertyType Type)
@@ -1449,6 +1463,7 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 		break;
 
 	case swInstructionsPropertyType::UseDocumentFont:
+	case swInstructionsPropertyType::UseDocumentFontSize:
 	case swInstructionsPropertyType::DocumentFont:
 	case swInstructionsPropertyType::CoverTitleFont:
 	case swInstructionsPropertyType::CoverAuthorFont:

@@ -31,6 +31,7 @@ private:
 	void UpdateMargins();
 	void UpdatePreset();
 	void UpdateOrientation();
+	void SetOrientation(bool Landscape);
 
 	Ui::swPageSetupDialog* ui;
 	swInstructionsPageSetup* mPageSetup;
