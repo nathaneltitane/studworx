@@ -358,6 +358,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->BrickLinkMappingUpdateButton->setIcon(swCreatePaintedIcon(swPaintedIcon::Refresh));
 	connect(ui->povrayExecutableBrowse, &QPushButton::clicked, this, &swPreferencesDialog::PovrayExecutableBrowseClicked);
 	connect(ui->lgeoPathBrowse, &QPushButton::clicked, this, &swPreferencesDialog::LgeoPathBrowseClicked);
+	connect(ui->DefaultTemplateBrowseButton, &QToolButton::clicked, this, &swPreferencesDialog::DefaultTemplateBrowseClicked);
 	connect(ui->RebrickableApiKeyButton, &QToolButton::clicked, this, &swPreferencesDialog::RebrickableApiKeyButtonClicked);
 
 	// path fields end where the update buttons begin
@@ -371,7 +372,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 		UpdateButton->setFixedWidth(UpdateButtonWidth);
 
 	const int ButtonSpacing = ui->ColorConfigLayout->spacing() >= 0 ? ui->ColorConfigLayout->spacing() : swGetLayoutSpacing(this, Qt::Horizontal);
-	QList<QHBoxLayout*> BrowseLayouts = { ui->horizontalLayout_3, ui->UnofficialLibraryLayout, ui->BlenderExecutableLayout, ui->povrayLayout };
+	QList<QHBoxLayout*> BrowseLayouts = { ui->horizontalLayout_3, ui->UnofficialLibraryLayout, ui->BlenderExecutableLayout, ui->povrayLayout, ui->DefaultTemplateLayout };
 
 	for (QHBoxLayout* BrowseLayout : BrowseLayouts)
 	{
@@ -510,6 +511,7 @@ swPreferencesDialog::swPreferencesDialog(QWidget* Parent, swPreferencesDialogOpt
 	ui->povrayExecutable->setText(mOptions->POVRayPath);
 	ui->BlenderExecutable->setText(mOptions->BlenderPath);
 	ui->lgeoPath->setText(mOptions->LGEOPath);
+	ui->DefaultTemplateEdit->setText(mOptions->DefaultTemplate);
 	ui->RebrickableApiKeyEdit->setText(mOptions->RebrickableApiKey);
 	ui->AuthorName->setText(mOptions->DefaultAuthorName);
 	ui->AuthorEmail->setText(mOptions->DefaultAuthorEmail);
@@ -947,6 +949,7 @@ void swPreferencesDialog::accept()
 	mOptions->ColorSource = static_cast<swColorSource>(ui->ColorSourceCombo->currentIndex());
 	mOptions->POVRayPath = ui->povrayExecutable->text();
 	mOptions->LGEOPath = ui->lgeoPath->text();
+	mOptions->DefaultTemplate = ui->DefaultTemplateEdit->text();
 	mOptions->RebrickableApiKey = ui->RebrickableApiKeyEdit->text().trimmed();
 	mOptions->DefaultAuthorName = ui->AuthorName->text();
 	mOptions->DefaultAuthorEmail = ui->AuthorEmail->text();
@@ -1382,6 +1385,14 @@ void swPreferencesDialog::LgeoPathBrowseClicked()
 
 	if (!Result.isEmpty())
 		ui->lgeoPath->setText(QDir::toNativeSeparators(Result));
+}
+
+void swPreferencesDialog::DefaultTemplateBrowseClicked()
+{
+	const QString Result = QFileDialog::getOpenFileName(this, tr("Select Instructions Template"), ui->DefaultTemplateEdit->text(), tr("LDraw Files (*.ldr *.dat *.mpd);;All Files (*)"));
+
+	if (!Result.isEmpty())
+		ui->DefaultTemplateEdit->setText(QDir::toNativeSeparators(Result));
 }
 
 void swPreferencesDialog::AuthorChanged()

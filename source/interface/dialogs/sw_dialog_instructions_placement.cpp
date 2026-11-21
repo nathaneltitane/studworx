@@ -263,6 +263,7 @@ swInstructionsPropertyType swInstructionsPlacementWidget::GetPlacementType() con
 		return swInstructionsPropertyType::PLICountPlacement;
 
 	case swInstructionsPlacementElement::Notice:
+	case swInstructionsPlacementElement::Image:
 	case swInstructionsPlacementElement::Pointer:
 	case swInstructionsPlacementElement::None:
 		break;
@@ -294,6 +295,7 @@ swInstructionsPropertyType swInstructionsPlacementWidget::GetAnchorType() const
 	case swInstructionsPlacementElement::SubmodelPreviewPartCount:
 	case swInstructionsPlacementElement::PartsListCount:
 	case swInstructionsPlacementElement::Notice:
+	case swInstructionsPlacementElement::Image:
 	case swInstructionsPlacementElement::Pointer:
 	case swInstructionsPlacementElement::None:
 		break;
@@ -343,6 +345,14 @@ void swInstructionsPlacementWidget::PlacementClicked(int Placement)
 	}
 
 	const swInstructionsPropertyType PlacementType = GetPlacementType();
+
+	// images keep their own placement
+	if (const swInstructionsImage* Image = mElement == swInstructionsPlacementElement::Image ? mInstructions->FindImage(static_cast<int>(std::get<2>(mElementKey))) : nullptr)
+	{
+		swInstructionsImage Changed = *Image;
+		Changed.Placement = Placement;
+		mInstructions->SetImage(Changed);
+	}
 
 	// drop the dragged position
 	if (PlacementType != swInstructionsPropertyType::Count)
@@ -422,7 +432,8 @@ void swInstructionsPlacementWidget::UpdateControls()
 
 	// locked elements stay put
 	const bool Locked = mInstructions->IsElementLocked(mElementKey);
-	const bool Active = GetPlacementType() != swInstructionsPropertyType::Count && !Locked;
+	const swInstructionsImage* Image = mElement == swInstructionsPlacementElement::Image ? mInstructions->FindImage(static_cast<int>(std::get<2>(mElementKey))) : nullptr;
+	const bool Active = (GetPlacementType() != swInstructionsPropertyType::Count || Image) && !Locked;
 
 	// notices return to where added
 	const bool Movable = (Active && mElement != swInstructionsPlacementElement::PartsListCount) || (mElement == swInstructionsPlacementElement::Notice && !Locked);
@@ -488,6 +499,10 @@ void swInstructionsPlacementWidget::UpdateControls()
 		mElementLabel->setText(tr("Notice"));
 		break;
 
+	case swInstructionsPlacementElement::Image:
+		mElementLabel->setText(tr("Image"));
+		break;
+
 	case swInstructionsPlacementElement::Pointer:
 		mElementLabel->setText(tr("Pointer"));
 		break;
@@ -524,11 +539,11 @@ void swInstructionsPlacementWidget::UpdateControls()
 
 	// page elements take the paper edge, child labels go all around
 	const bool ChildLabel = mElement == swInstructionsPlacementElement::SubmodelPreviewPartCount || mElement == swInstructionsPlacementElement::PartsListCount;
-	const bool PageEdge = ChildLabel || Inside && (mElement == swInstructionsPlacementElement::CoverTitle || mElement == swInstructionsPlacementElement::CoverAuthor || mElement == swInstructionsPlacementElement::CoverPartCount || mElement == swInstructionsPlacementElement::BillOfMaterialsPartCount || mElement == swInstructionsPlacementElement::PagePartCount || mElement == swInstructionsPlacementElement::SubmodelPreview || mElement == swInstructionsPlacementElement::PageNumber);
+	const bool PageEdge = ChildLabel || Image || (Inside && (mElement == swInstructionsPlacementElement::CoverTitle || mElement == swInstructionsPlacementElement::CoverAuthor || mElement == swInstructionsPlacementElement::CoverPartCount || mElement == swInstructionsPlacementElement::BillOfMaterialsPartCount || mElement == swInstructionsPlacementElement::PagePartCount || mElement == swInstructionsPlacementElement::SubmodelPreview || mElement == swInstructionsPlacementElement::PageNumber));
 
 	if (Active)
 	{
-		const int Placement = mInstructions->GetIntProperty(PlacementType, nullptr, 0);
+		const int Placement = Image ? Image->Placement : mInstructions->GetIntProperty(PlacementType, nullptr, 0);
 		CurrentPlacement = PageEdge ? qBound(0, Placement, SW_PLACEMENT_COUNT - 1) : swGetValidPlacement(Placement, Inside);
 	}
 

@@ -1182,13 +1182,14 @@
 			</div>
 
 			<ul class="points">
-				<li><b>Pages.</b> Instructions get a cover with the title and author, a list of every part, and as many steps per page as you want, filled row by row or column by column, each page with its own background. Titles, notices and part counts take your own text or a text file. The finished model can fill the room left after the last step, with its own border and margin.</li>
+				<li><b>Pages.</b> Instructions get a front cover with the title and author, a list of every part, a back cover, and as many steps per page as you want, filled row by row or column by column, each page with its own background. Titles, notices and part counts take your own text or a text file. The finished model can fill the room left after the last step, with its own border and margin.</li>
 				<li><b>Placement.</b> Drag every page element <a href="#where">where</a> you want it, or lock it in place. Elements snap to a page grid, or to the edges and centers of the page and the other elements. Cover texts, part counts and page numbers can also sit right against the paper edge. Click a parts list quantity or the preview count to place it around its picture.</li>
+				<li><b>Images and templates.</b> Put your own pictures, like a logo, on the front or back cover. Save the look of your instructions as a template and apply it to any model, or pick a default template that every model starts from.</li>
+				<li><b>Page bar.</b> Undo and redo changes, turn the instruction pages, jump to the front cover, the bill of materials or the back cover, type a page number, and insert or remove blank pages and empty steps.</li>
 				<li><b>Elements.</b> Every page element, like page numbers or the parts list, can have its own colors, fonts, border, rounded corners and background. Notices and pointers draw attention to parts and steps.</li>
 				<li><b>Editor, Export HTML and Print.</b> An Editor panel to read and edit the model file text, whose height snaps to whole lines so no line is ever cut off, Export HTML for the instruction pages, and a built-in Print panel.</li>
 				<li><b>Style.</b> Choose the font, how steps are divided, with dividers that get their own margins and rounded ends, how big and how the model is drawn, and how the parts list looks and is sorted.</li>
 				<li><b>Part counts.</b> The cover, the bill of materials and every step page can show how many parts they take, and each submodel can start with a picture of it finished and its part count.</li>
-				<li><b>Page bar.</b> Undo and redo changes, turn the instruction pages, jump to the cover or the bill of materials, type a page number, and insert or remove blank pages and empty steps.</li>
 				<li><b>Element inspector.</b> Like a web browser&#x27;s inspector, it shows the space around and inside every page element, so you can line things up. It never prints.</li>
 				<li><b>Rulers.</b> Rulers along the page measure it in your units, show the margins, and follow the pointer with a small arrow.</li>
 				<li><b>Step images.</b> Parts new to each step are outlined, in the width and color you pick, and the earlier ones fade.</li>
@@ -1750,7 +1751,7 @@
 				</div>
 
 				<h3 id="meta-instruction">Instruction</h3>
-				<p><a href="#instructions">Instructions</a> settings, written in the main model header. Models are quoted file names, <code>-</code> for none. <a href="#steps">Steps</a> are <code>STEP &lt;model&gt; &lt;step&gt;</code>, pages <code>&lt;STEPS|COVER|BILL_OF_MATERIALS|BLANK&gt; &lt;model&gt; &lt;step&gt; &lt;rank&gt;</code> and page elements <code>&lt;element&gt; &lt;model&gt; &lt;step&gt;</code>, with the element <code>NONE</code>, <code>STEP_NUMBER</code>, <code>PARTS_LIST</code>, <code>COVER_TITLE</code>, <code>COVER_AUTHOR</code>, <code>BILL_OF_MATERIALS</code>, <code>STEP_IMAGE</code>, <code>COVER_IMAGE</code>, <code>PAGE_NUMBER</code>, <code>NOTICE</code>, <code>POINTER</code>, <code>COVER_PART_COUNT</code>, <code>BILL_OF_MATERIALS_PART_COUNT</code>, <code>PAGE_PART_COUNT</code>, <code>SUBMODEL_PREVIEW</code>, <code>SUBMODEL_PREVIEW_PART_COUNT</code> or <code>PARTS_LIST_QUANTITY</code>. Values are <code>TRUE</code>/<code>FALSE</code>, numbers, <code>#RRGGBBAA</code> colors or text to the end of the line, with <code>\\</code>, <code>\&quot;</code> and <code>\n</code> escaped.</p>
+				<p><a href="#instructions">Instructions</a> settings, written in the main model header. Models are quoted file names, <code>-</code> for none. <a href="#steps">Steps</a> are <code>STEP &lt;model&gt; &lt;step&gt;</code>, pages <code>&lt;STEPS|COVER|BILL_OF_MATERIALS|BLANK|BACK_COVER&gt; &lt;model&gt; &lt;step&gt; &lt;rank&gt;</code> and page elements <code>&lt;element&gt; &lt;model&gt; &lt;step&gt;</code>, with the element <code>NONE</code>, <code>STEP_NUMBER</code>, <code>PARTS_LIST</code>, <code>COVER_TITLE</code>, <code>COVER_AUTHOR</code>, <code>BILL_OF_MATERIALS</code>, <code>STEP_IMAGE</code>, <code>COVER_IMAGE</code>, <code>PAGE_NUMBER</code>, <code>NOTICE</code>, <code>POINTER</code>, <code>COVER_PART_COUNT</code>, <code>BILL_OF_MATERIALS_PART_COUNT</code>, <code>PAGE_PART_COUNT</code>, <code>SUBMODEL_PREVIEW</code>, <code>SUBMODEL_PREVIEW_PART_COUNT</code>, <code>PARTS_LIST_QUANTITY</code> or <code>IMAGE</code>. Values are <code>TRUE</code>/<code>FALSE</code>, numbers, <code>#RRGGBBAA</code> colors or text to the end of the line, with <code>\\</code>, <code>\&quot;</code> and <code>\n</code> escaped.</p>
 
 				<div class="table">
 					<table>
@@ -1759,6 +1760,7 @@
 						</thead>
 
 						<tbody>
+							<tr><td>Template</td><td>Read</td><td>a model file holding <code>PROPERTY</code>, <code>STEPS_PER_PAGE</code> and <code>IMAGE</code> lines, written by Save Template; Apply Template copies them into the model, and the Default Template of the <a href="#preferences">preferences</a> applies them under every model, whose own lines win</td></tr>
 							<tr><td><code>0 !SW PROPERTY INSTRUCTION &lt;name&gt; &lt;value&gt;</code></td><td>Read, Write</td><td>document property, such as <code>STEP_NUMBER_BORDER_WIDTH 3</code> or <code>COVER_TITLE_FILE title.txt</code>; <code>COVER_TITLE</code>, <code>COVER_AUTHOR</code> and <code>BILL_OF_MATERIALS_TITLE</code> take <code>_TEXT</code> and <code>_FILE</code>, the file wins over the text, and <a href="#files">files</a> are relative to the model file</td></tr>
 							<tr><td><code>0 !SW PROPERTY INSTRUCTION SHOW_COVER_PART_COUNT &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>show the part count of the whole model on the cover, default <code>FALSE</code>; <code>SHOW_BILL_OF_MATERIALS_PART_COUNT</code> does the same under the bill of materials title and <code>SHOW_PAGE_PART_COUNT</code> shows the new parts of the steps on each step page</td></tr>
 							<tr><td><code>0 !SW PROPERTY INSTRUCTION PART_COUNT_TEXT &lt;text&gt;</code></td><td>Read, Write</td><td>text of all part counts and submodel previews with <code>%1</code> for the number, default <code>%1 PIECES</code>; <code>PART_COUNT_FILE</code> takes a text file relative to the model file that wins over the text</td></tr>
@@ -1766,6 +1768,7 @@
 							<tr><td><code>0 !SW PROPERTY INSTRUCTION PART_COUNT_PLACEMENT &lt;0-24&gt;</code></td><td>Read, Write</td><td>placement of the cover part count, <code>BILL_OF_MATERIALS_PART_COUNT_PLACEMENT</code> (top right, beside the title, or past the title when they meet) and <code>PAGE_PART_COUNT_PLACEMENT</code> place the others, and <code>SUBMODEL_PREVIEW_PLACEMENT</code> the preview; on the page, the outer cells 0-4, 5, 9, 10, 14, 15, 19 and 20-24 put these, the cover texts and the page number against the paper edge; <code>SUBMODEL_PREVIEW_PART_COUNT_PLACEMENT</code> places the preview count around the preview, default <code>22</code>, and <code>PARTS_LIST_QUANTITY_PLACEMENT</code> each parts list quantity around its part, default <code>21</code>, inner cells inside, outer cells outside</td></tr>
 							<tr><td><code>0 !SW PROPERTY INSTRUCTION PART_COUNT_&lt;MARGIN|PADDING|BORDER_WIDTH|BORDER_COLOR|BACKGROUND_COLOR|CORNER_RADIUS&gt; &lt;value&gt;</code></td><td>Read, Write</td><td>box of the part counts, <code>SUBMODEL_PREVIEW_</code> takes the same suffixes for the box of the submodel preview</td></tr>
 							<tr><td><code>0 !SW PROPERTY INSTRUCTION SHOW_SUBMODEL_PREVIEW &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>show the finished submodel with its part count on the first page of each submodel, default <code>FALSE</code>; <code>SUBMODEL_PREVIEW_SIZE</code> is its model size in percent, default <code>100</code></td></tr>
+							<tr><td><code>0 !SW PROPERTY INSTRUCTION SHOW_BACK_COVER &lt;TRUE|FALSE&gt;</code></td><td>Read, Write</td><td>end the instructions with a back cover after the bill of materials, default <code>TRUE</code>, blank until it gets images</td></tr>
 							<tr><td><code>0 !SW PAGE_PROPERTY INSTRUCTION STEP &lt;model&gt; &lt;step&gt; &lt;name&gt; &lt;value&gt;</code></td><td>Read, Write</td><td>property of the page starting at the step</td></tr>
 							<tr><td><code>0 !SW STEPS_PER_PAGE INSTRUCTION &lt;rows&gt; &lt;columns&gt; [VERTICAL] [FINAL_MODEL] [FINAL_MODEL_COLOR]</code></td><td>Read, Write</td><td>steps per page, filled down instead of across, with the finished model in the room left, on the main page color</td></tr>
 							<tr><td><code>0 !SW PAGE_STEPS_PER_PAGE INSTRUCTION STEP &lt;model&gt; &lt;step&gt; &lt;rows&gt; &lt;columns&gt; [VERTICAL] [FINAL_MODEL] [FINAL_MODEL_COLOR]</code></td><td>Read, Write</td><td>steps per page from the step on, same words as above</td></tr>
@@ -1773,6 +1776,7 @@
 							<tr><td><code>0 !SW OFFSET INSTRUCTION &lt;element&gt; &lt;model&gt; &lt;step&gt; &lt;x&gt; &lt;y&gt;</code></td><td>Read, Write</td><td>element moved from its place</td></tr>
 							<tr><td><code>0 !SW LOCK INSTRUCTION &lt;element&gt; &lt;model&gt; &lt;step&gt; &lt;x&gt; &lt;y&gt;</code></td><td>Read, Write</td><td>element locked at a position</td></tr>
 							<tr><td><code>0 !SW NOTICE INSTRUCTION &lt;id&gt; PAGE &lt;page&gt; POSITION &lt;x&gt; &lt;y&gt; [FILE &quot;&lt;file&gt;&quot;] TEXT &lt;text&gt;</code></td><td>Read, Write</td><td>notice on a page, the text file wins over the text</td></tr>
+							<tr><td><code>0 !SW IMAGE INSTRUCTION &lt;id&gt; &lt;NONE|FRONT|BACK|BOTH&gt; PLACEMENT &lt;0-24&gt; SIZE &lt;1-100&gt; FILE &quot;&lt;file&gt;&quot;</code></td><td>Read, Write</td><td>linked image on the front cover, the back cover or both, like a logo, placed on the page grid with the outer cells against the paper edge, its width in percent of the page width, the file relative to the model file; <code>NONE</code> hides an image of the default template</td></tr>
 							<tr><td><code>0 !SW POINTER INSTRUCTION &lt;id&gt; PAGE &lt;page&gt; SOURCE &lt;element&gt; ANCHOR &lt;AUTO|0-7&gt; STYLE &lt;DEFAULT|LINE|WEDGE&gt; TIP &lt;DEFAULT|ARROW|DOT&gt; TARGET &lt;POINT|ELEMENT|PART&gt; &lt;element&gt; PART &lt;index&gt; POSITION &lt;x&gt; &lt;y&gt;</code></td><td>Read, Write</td><td>pointer from an element border to a point, element or part</td></tr>
 						</tbody>
 					</table>
@@ -1985,7 +1989,7 @@
 				<h2>WHERE IS IT? // EVERY COMMAND AND ITS MENU</h2>
 			</header>
 
-			<p class="lead">Where to find each of the 396 commands: the menu bar, the <a href="#toolbars">toolbars</a>, the panel gear buttons and every right click menu, with its shortcut. Type part of a command name to find it.</p>
+			<p class="lead">Where to find each of the 399 commands: the menu bar, the <a href="#toolbars">toolbars</a>, the panel gear buttons and every right click menu, with its shortcut. Type part of a command name to find it.</p>
 
 			<div class="search-tools">
 				<input id="menus-search" class="search" type="search" placeholder="Search commands" aria-label="Search commands">
@@ -2086,7 +2090,10 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 				<ul>
 					<li>Site: the search fields have a ✕ button that clears the text and shows every group again</li>
-					<li><a href="#instructions">Instructions</a>: the cover, the bill of materials and the step pages can show how many parts they take, as &quot;119 PIECES&quot; or your own text</li>
+					<li><a href="#instructions">Instructions</a>: a back cover closes the instructions, shown and blank by default, and the cover is now the Front Cover</li>
+					<li>Instructions: right click a cover to add a linked <a href="#image">image</a>, like a logo, on the front cover, the back cover or both, with its own placement, size and lock</li>
+					<li>Instructions: Save Template and Apply Template in the Properties options carry the look, the <a href="#steps">steps</a> per page and the cover images to any model, and <a href="#preferences">Preferences</a> &gt; General &gt; Default Template applies one under every model</li>
+					<li>Instructions: the cover, the bill of materials and the step pages can show how many parts they take, as &quot;119 PIECES&quot; or your own text</li>
 					<li>Instructions: the cover title, author and part count start at the same size as the Parts List title, and the parts list count sits at its top right</li>
 					<li>Instructions: Show Submodel Preview puts the finished submodel and its part count on the first page of each submodel</li>
 					<li>Instructions: the outer Placement buttons put cover texts, part counts, the submodel preview and page numbers against the paper edge</li>
@@ -2100,11 +2107,11 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 				<ul>
 					<li>Joints: Joint Mode with nothing selected, or from a right click on empty space, opens an overview of every joint, outlined and ringed; click an outlined part to open its joint</li>
-					<li><a href="#preferences">Preferences</a>: the joint options have their own Joints group, with Joint Mode Start last</li>
+					<li>Preferences: the joint options have their own Joints group, with Joint Mode Start last</li>
 					<li>Preferences: Select Joints by Submodel, off by default, opens the nearest joint when you click anywhere on a jointed submodel in the joint overview</li>
 					<li>Mouse: the right button orbits only once the mouse moves, so a plain right click opens the right-click menu</li>
 					<li>Shading: menus list Default Lights, Flat and Wireframe, then Studio, Standard, Matte and Toon; Studio is the new default lighting style</li>
-					<li>Save Model <a href="#image">Image</a>: the preview plays the Joints motion from pose to pose, framed once so the model holds still</li>
+					<li>Save Model Image: the preview plays the Joints motion from pose to pose, framed once so the model holds still</li>
 					<li>Train tracks: no crash when a track part is picked before the view draws it</li>
 					<li>Site: every image retaken from the installed build, with the joint overview, the Joints group in Preferences and Studio lighting</li>
 				</ul>
@@ -2115,7 +2122,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 
 				<ul>
 					<li>Keyboard preferences: a Built-in Keys group at the end lists the keys that can&#x27;t be changed, greyed out</li>
-					<li>Shortcuts: Delete removes only what is selected <a href="#where">where</a> you work: the joint in the Joints panel, the step in the <a href="#steps">Steps</a> panel, the picked keys in the Keyframes panel, the pointers, notices or blank page in the instructions, or the selected objects in the view; Del always deletes, listed under Built-in Keys in Keyboard preferences and can&#x27;t be given to another command</li>
+					<li>Shortcuts: Delete removes only what is selected <a href="#where">where</a> you work: the joint in the Joints panel, the step in the Steps panel, the picked keys in the Keyframes panel, the pointers, notices or blank page in the instructions, or the selected objects in the view; Del always deletes, listed under Built-in Keys in Keyboard preferences and can&#x27;t be given to another command</li>
 					<li>Steps panel: the Timeline panel is now the Steps panel, saved shortcuts and panel places carry over</li>
 					<li><a href="#panels">Panels</a>: the Poses panel keeps its place on every start, and a panel layout filled with Joints copies resets to the default once</li>
 					<li>Site: Preferences lists every built-in key and what it does</li>
@@ -2389,7 +2396,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"group":"Instructions","title":"Print","paragraphs":["Print the instruction pages on a printer or to a PDF file. The pages are printed on paper matching the page setup, the pages panel shows how they look."]},
 				{"group":"Instructions","title":"Properties","paragraphs":["Edit how the instruction pages look. Every section starts folded, select an element on the page to open its section and fold the others. Right-click the page to add notices and pointers. Changes apply to all pages."]},
 				{"group":"Instructions","title":"Document","paragraphs":["One font for all text of the instructions and the projection of the step and cover models. The instructions settings, notices and pointers are saved in the model file, the page setup and grid in the preferences."]},
-				{"group":"Instructions","title":"Cover Page","paragraphs":["The first page, showing the model title, its author and the finished model. The title comes from the model description, or its name when there is none, the author from the model properties."]},
+				{"group":"Instructions","title":"Cover Pages","paragraphs":["The front cover shows the model title, its author and the finished model. The title comes from the model description, or its name when there is none, the author from the model properties. The back cover closes the instructions and starts blank. Right click a cover to add an image, like a logo."]},
 				{"group":"Instructions","title":"Page","paragraphs":["The background and the number of the step and blank pages. The background applies to all these pages, or only to the current page when it has its own, the cover and the bill of materials have their own backgrounds. The cover and blank pages are not numbered unless all pages are. Drag the number or use the Placement panel to move it on all pages."]},
 				{"group":"Instructions","title":"Bill of Materials","paragraphs":["The last page, listing every part of the model. It uses the Parts List settings, under a Parts List title in its own font and color, with the box of the step numbers."]},
 				{"group":"Instructions","title":"Steps per Page","paragraphs":["The rows and columns of steps on the current page, the following pages flow on from it. The presets split the page in halves, thirds or quarters and show the step dividers. Step Flow fills the page row by row or column by column, and the last step stretches into any empty cells. Show Final Model puts the finished model in the room left after the last step of a model, and Main Page Color gives a submodel's finished model the main page color. The final model border frames that area and its margin keeps it away from the steps and page margins."]},
@@ -3065,6 +3072,8 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"command":"Inches","shortcut":"","paths":["Instructions window > Properties panel > Properties Options > Document Units","Instructions window > Unit button beside a value"]},
 				{"command":"Expand All Sections","shortcut":"","paths":["Instructions window > Properties panel > Properties Options"]},
 				{"command":"Collapse All Sections","shortcut":"","paths":["Instructions window > Properties panel > Properties Options"]},
+				{"command":"Save Template","shortcut":"","paths":["Instructions window > Properties panel > Properties Options"]},
+				{"command":"Apply Template","shortcut":"","paths":["Instructions window > Properties panel > Properties Options"]},
 				{"command":"Reset Properties","shortcut":"","paths":["Instructions window > Properties panel > Properties Options"]},
 				{"command":"Syntax Highlighting","shortcut":"","paths":["Instructions window > Editor panel > Editor Options"]},
 				{"command":"Line Numbers","shortcut":"","paths":["Instructions window > Editor panel > Editor Options"]},
@@ -3090,6 +3099,7 @@ studworx/tools/studworx-install [prefix] [build directory]</code></pre>
 				{"command":"Add Pointer","shortcut":"","paths":["Instructions window > Right click a notice","Instructions window > Right click a page element"]},
 				{"command":"Edit Notice","shortcut":"","paths":["Instructions window > Right click a notice"]},
 				{"command":"Remove Notice","shortcut":"","paths":["Instructions window > Right click a notice"]},
+				{"command":"Add Image","shortcut":"","paths":["Instructions window > Right click a notice","Instructions window > Right click a page element"]},
 				{"command":"Page Units","shortcut":"","paths":["Instructions window > Unit button beside a value"]},
 				{"command":"Watch for File Changes","shortcut":"","paths":["Preferences > Keyboard"]},
 				{"command":"HTML","shortcut":"","paths":["Preferences > Keyboard"]},

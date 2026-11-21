@@ -215,6 +215,7 @@ enum class swInstructionsPropertyType
 	SubmodelPreviewCornerRadius,
 	SubmodelPreviewPartCountPlacement,
 	PLICountPlacement,
+	ShowBackCover,
 	Count
 };
 
@@ -259,8 +260,8 @@ struct swInstructionsBoxStyle
 	qreal Margin = 0.0;
 	qreal Padding = 0.0;
 	qreal BorderWidth = 0.0;
-	QColor BorderColor;
-	QColor BackgroundColor;
+	QColor BorderColor = Qt::transparent;
+	QColor BackgroundColor = Qt::transparent;
 	qreal CornerRadius = 0.0;
 
 	// The box padding.
@@ -361,7 +362,8 @@ enum class swInstructionsPlacementElement
 	PagePartCount,
 	SubmodelPreview,
 	SubmodelPreviewPartCount,
-	PartsListCount
+	PartsListCount,
+	Image
 };
 
 // Moved elements keep their offset.
@@ -398,7 +400,8 @@ enum class swInstructionsPageType
 	Steps,
 	Cover,
 	BillOfMaterials,
-	Blank
+	Blank,
+	BackCover
 };
 
 using swInstructionsStepKey = std::pair<swModel*, swStep>;
@@ -414,6 +417,28 @@ struct swInstructionsNotice
 	QPointF Position;
 	QString Text;
 	QString File;
+};
+
+// The cover pages an image shows on.
+enum class swInstructionsImagePages
+{
+	None,
+	Front,
+	Back,
+	Both
+};
+
+// A picture linked by path, such as a logo.
+struct swInstructionsImage
+{
+	int Id = 0;
+	swInstructionsImagePages Pages = swInstructionsImagePages::Front;
+	int Placement = 12;
+	int Size = 25;
+	QString File;
+
+	// default template images are not written to the model
+	bool Template = false;
 };
 
 // A pointer from an element anchor.
@@ -554,6 +579,23 @@ public:
 	{
 		return mPointers;
 	}
+
+	// Images show on the front and back covers.
+	const std::vector<swInstructionsImage>& GetImages() const
+	{
+		return mImages;
+	}
+
+	const swInstructionsImage* FindImage(int Id) const;
+	int AddImage(swInstructionsPageType PageType, const QString& File);
+	void SetImage(const swInstructionsImage& Image);
+	void RemoveImage(int Id);
+	QString GetFilePath(const QString& FileName) const;
+
+	// Templates hold the document settings and images.
+	bool SaveTemplate(const QString& FileName) const;
+	bool ApplyTemplate(const QString& FileName);
+	static QStringList ReadTemplateLines(const QString& FileName);
 
 	const swInstructionsPointer* FindPointer(int Id) const;
 	int AddPointer(size_t PageIndex, const swInstructionsElementKey& Source, const QPointF& TipPosition);
@@ -725,6 +767,8 @@ public:
 	std::multiset<swInstructionsStepKey> mBlankPages;
 	std::vector<swInstructionsNotice> mNotices;
 	std::vector<swInstructionsPointer> mPointers;
+	std::vector<swInstructionsImage> mImages;
+	swInstructionsPageSettings mDefaultPageSettings;
 	swInstructionsPageSetup mPageSetup;
 	swInstructionsProperties mStepProperties;
 	swInstructionsProperties mDefaultProperties;
@@ -743,7 +787,9 @@ signals:
 
 protected:
 	void SetDefaultProperties();
-	void LoadCommandLines();
+	void RemoveElementReferences(const swInstructionsElementKey& Key);
+	void LoadDefaultTemplate();
+	void LoadCommandLines(const QStringList& CommandLines);
 	QStringList GetCommandLines() const;
 	void StoreCommandLines();
 	void ReloadCommandLines();
@@ -785,6 +831,7 @@ protected:
 	QColor mRulerPointerColor;
 	int mNextNoticeId = 1;
 	int mNextPointerId = 1;
+	int mNextImageId = 1;
 	std::vector<QStringList> mUndoLines;
 	std::vector<QStringList> mRedoLines;
 	std::vector<int> mChangedLines;

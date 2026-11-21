@@ -50,6 +50,8 @@ bool swGetElementKey(const QGraphicsItem* Item, swInstructionsElementKey& Key)
 		Key = { CountItem->GetElement(), CountItem->GetModel(), 0 };
 	else if (const swInstructionsNoticeItem* NoticeItem = dynamic_cast<const swInstructionsNoticeItem*>(Item))
 		Key = { swInstructionsPlacementElement::Notice, nullptr, static_cast<swStep>(NoticeItem->GetId()) };
+	else if (const swInstructionsImageItem* LogoItem = dynamic_cast<const swInstructionsImageItem*>(Item))
+		Key = { swInstructionsPlacementElement::Image, nullptr, static_cast<swStep>(LogoItem->GetId()) };
 	else if (const swInstructionsPointerItem* PointerItem = dynamic_cast<const swInstructionsPointerItem*>(Item))
 		Key = { swInstructionsPlacementElement::Pointer, nullptr, static_cast<swStep>(PointerItem->GetId()) };
 	else
@@ -1753,6 +1755,66 @@ static void swAddPageAnnotations(swInstructions* Instructions, size_t PageIndex,
 	}
 }
 
+swInstructionsImageItem::swInstructionsImageItem(QGraphicsItem* Parent, swInstructions* Instructions, const swInstructionsImage& Image)
+	: swInstructionsBoxItem(Parent), mInstructions(Instructions), mId(Image.Id)
+{
+	setFlags(SW_MOVABLE_ITEM_FLAGS);
+	setZValue(1.0);
+	setTransformationMode(Qt::SmoothTransformation);
+
+	// a missing file shows a framed gap to find it
+	const qreal Scale = swGetRenderScale(mInstructions);
+	const qreal Width = mInstructions->mPageSetup.Width * Image.Size / 100.0;
+	QImageReader Reader(mInstructions->GetFilePath(Image.File));
+	const QSize FileSize = Reader.size();
+
+
+	if (FileSize.isValid() && FileSize.width() > 0)
+		Reader.setScaledSize(QSize(qRound(Width * Scale), qMax(qRound(Width * Scale * FileSize.height() / FileSize.width()), 1)));
+
+	QImage Picture = Reader.read();
+
+	if (Picture.isNull())
+	{
+		swInstructionsBoxStyle BoxStyle;
+		BoxStyle.BorderWidth = 1.0;
+		BoxStyle.BorderColor = Qt::gray;
+		SetBoxStyle(BoxStyle);
+
+		Picture = QImage(qRound(Width * Scale), qRound(Width * Scale / 2.0), QImage::Format_ARGB32_Premultiplied);
+		Picture.fill(Qt::transparent);
+	}
+
+	Picture.setDevicePixelRatio(Scale);
+	setPixmap(QPixmap::fromImage(Picture));
+}
+
+QVariant swInstructionsImageItem::itemChange(GraphicsItemChange Change, const QVariant& Value)
+{
+	if (Change == QGraphicsItem::ItemPositionChange)
+		return swSnapItemPosition(this, mInstructions, Value);
+
+	return QGraphicsPixmapItem::itemChange(Change, Value);
+}
+
+// use to add the images of a cover
+static void swAddPageImages(swInstructions* Instructions, const swInstructionsPage* Page, QGraphicsRectItem* PageItem, const QRectF& MarginsRect)
+{
+	const swInstructionsImagePages Shown = Page->Type == swInstructionsPageType::Cover ? swInstructionsImagePages::Front : swInstructionsImagePages::Back;
+
+	if (Page->Type != swInstructionsPageType::Cover && Page->Type != swInstructionsPageType::BackCover)
+		return;
+
+	for (const swInstructionsImage& Image : Instructions->GetImages())
+	{
+		if (Image.Pages != Shown && Image.Pages != swInstructionsImagePages::Both)
+			continue;
+
+		swInstructionsImageItem* ImageItem = new swInstructionsImageItem(PageItem, Instructions, Image);
+		swPlaceElement(ImageItem, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, ImageItem->boundingRect().size(), Image.Placement));
+	}
+}
+
 // use to add the step part count and the submodel preview
 static void swAddPageCounts(swInstructions* Instructions, const swInstructionsPage* Page, QGraphicsRectItem* PageItem, const QRectF& MarginsRect)
 {
@@ -1835,11 +1897,13 @@ void swUpdateInstructionsPageScene(swInstructions* Instructions, const swInstruc
 		swPlaceElement(PageNumberItem, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, PageNumberItem->boundingRect().size(), Placement));
 	}
 
-	if (Page->Type != swInstructionsPageType::Blank)
+	if (Page->Type != swInstructionsPageType::Blank && Page->Type != swInstructionsPageType::BackCover)
 		swAddPageContent(Instructions, Page, Scene, PageItem, MarginsRect);
 
 	if (Page->Type == swInstructionsPageType::Steps)
 		swAddPageCounts(Instructions, Page, PageItem, MarginsRect);
+
+	swAddPageImages(Instructions, Page, PageItem, MarginsRect);
 
 	swAddPageAnnotations(Instructions, PageIndex, Scene, PageItem, MarginsRect);
 }
@@ -1971,6 +2035,8 @@ void swInstructionsPageWidget::RemoveSelectedElements()
 			mInstructions->RemovePointer(static_cast<int>(std::get<2>(Key)));
 		else if (std::get<0>(Key) == swInstructionsPlacementElement::Notice)
 			mInstructions->RemoveNotice(static_cast<int>(std::get<2>(Key)));
+		else if (std::get<0>(Key) == swInstructionsPlacementElement::Image)
+			mInstructions->RemoveImage(static_cast<int>(std::get<2>(Key)));
 	}
 }
 
@@ -2125,6 +2191,82 @@ void swInstructionsPageWidget::contextMenuEvent(QContextMenuEvent* Event)
 			connect(Menu.addAction(tr("Remove Notice")), &QAction::triggered, this, [this, Id]()
 			{
 				mInstructions->RemoveNotice(Id);
+			});
+		}
+
+		// covers carry linked images, like a logo
+		const swInstructionsPageType PageType = mPage->Type;
+		const QString ImageFilter = tr("Images (*.png *.jpg *.jpeg *.svg *.bmp *.gif *.webp);;All Files (*)");
+
+		if (PageType == swInstructionsPageType::Cover || PageType == swInstructionsPageType::BackCover)
+		{
+			Menu.addSeparator();
+
+			connect(Menu.addAction(tr("Add Image...")), &QAction::triggered, this, [this, PageType, ImageFilter]()
+			{
+				const QString FileName = QFileDialog::getOpenFileName(this, tr("Add Image"), QString(), ImageFilter);
+
+				if (!FileName.isEmpty())
+					SelectElement({ swInstructionsPlacementElement::Image, nullptr, static_cast<swStep>(mInstructions->AddImage(PageType, FileName)) });
+			});
+		}
+
+		const swInstructionsImage* Image = Element == swInstructionsPlacementElement::Image ? mInstructions->FindImage(Id) : nullptr;
+
+		if (Image)
+		{
+			const swInstructionsImage Current = *Image;
+
+			connect(Menu.addAction(tr("Change Image...")), &QAction::triggered, this, [this, Current, ImageFilter]()
+			{
+				const QString FileName = QFileDialog::getOpenFileName(this, tr("Change Image"), mInstructions->GetFilePath(Current.File), ImageFilter);
+				swInstructionsImage Changed = Current;
+				Changed.File = FileName;
+
+				if (!FileName.isEmpty())
+					mInstructions->SetImage(Changed);
+			});
+
+			QMenu* PagesMenu = Menu.addMenu(tr("Show On"));
+			QActionGroup* PagesGroup = new QActionGroup(PagesMenu);
+			const std::pair<swInstructionsImagePages, QString> PagesNames[] =
+			{
+				{ swInstructionsImagePages::Front, tr("Front Cover") },
+				{ swInstructionsImagePages::Back, tr("Back Cover") },
+				{ swInstructionsImagePages::Both, tr("Both Covers") }
+			};
+
+			for (const std::pair<swInstructionsImagePages, QString>& PagesName : PagesNames)
+			{
+				QAction* Action = PagesMenu->addAction(PagesName.second);
+				Action->setCheckable(true);
+				Action->setChecked(Current.Pages == PagesName.first);
+				PagesGroup->addAction(Action);
+
+				const swInstructionsImagePages Pages = PagesName.first;
+
+				connect(Action, &QAction::triggered, this, [this, Current, Pages]()
+				{
+					swInstructionsImage Changed = Current;
+					Changed.Pages = Pages;
+					mInstructions->SetImage(Changed);
+				});
+			}
+
+			connect(Menu.addAction(tr("Size...")), &QAction::triggered, this, [this, Current]()
+			{
+				bool Accepted = false;
+				const int Size = QInputDialog::getInt(this, tr("Image Size"), tr("Width in percent of the page width:"), Current.Size, 1, 100, 1, &Accepted);
+				swInstructionsImage Changed = Current;
+				Changed.Size = Size;
+
+				if (Accepted)
+					mInstructions->SetImage(Changed);
+			});
+
+			connect(Menu.addAction(tr("Remove Image")), &QAction::triggered, this, [this, Id]()
+			{
+				mInstructions->RemoveImage(Id);
 			});
 		}
 	}

@@ -56,7 +56,7 @@ static const QLatin1String gInstructionsPropertyNames[] =
 	QLatin1String("SHOW_SUBMODEL_PREVIEW"), QLatin1String("SUBMODEL_PREVIEW_SIZE"), QLatin1String("SUBMODEL_PREVIEW_PLACEMENT"),
 	QLatin1String("SUBMODEL_PREVIEW_MARGIN"), QLatin1String("SUBMODEL_PREVIEW_PADDING"), QLatin1String("SUBMODEL_PREVIEW_BORDER_WIDTH"),
 	QLatin1String("SUBMODEL_PREVIEW_BORDER_COLOR"), QLatin1String("SUBMODEL_PREVIEW_BACKGROUND_COLOR"), QLatin1String("SUBMODEL_PREVIEW_CORNER_RADIUS"),
-	QLatin1String("SUBMODEL_PREVIEW_PART_COUNT_PLACEMENT"), QLatin1String("PARTS_LIST_QUANTITY_PLACEMENT")
+	QLatin1String("SUBMODEL_PREVIEW_PART_COUNT_PLACEMENT"), QLatin1String("PARTS_LIST_QUANTITY_PLACEMENT"), QLatin1String("SHOW_BACK_COVER")
 };
 
 static_assert(std::size(gInstructionsPropertyNames) == static_cast<size_t>(swInstructionsPropertyType::Count), "Missing property name");
@@ -66,14 +66,19 @@ static const QLatin1String gInstructionsElementNames[] =
 	QLatin1String("NONE"), QLatin1String("STEP_NUMBER"), QLatin1String("PARTS_LIST"), QLatin1String("COVER_TITLE"), QLatin1String("COVER_AUTHOR"), QLatin1String("BILL_OF_MATERIALS"),
 	QLatin1String("STEP_IMAGE"), QLatin1String("COVER_IMAGE"), QLatin1String("PAGE_NUMBER"), QLatin1String("NOTICE"), QLatin1String("POINTER"),
 	QLatin1String("COVER_PART_COUNT"), QLatin1String("BILL_OF_MATERIALS_PART_COUNT"), QLatin1String("PAGE_PART_COUNT"), QLatin1String("SUBMODEL_PREVIEW"),
-	QLatin1String("SUBMODEL_PREVIEW_PART_COUNT"), QLatin1String("PARTS_LIST_QUANTITY")
+	QLatin1String("SUBMODEL_PREVIEW_PART_COUNT"), QLatin1String("PARTS_LIST_QUANTITY"), QLatin1String("IMAGE")
 };
 
-static_assert(std::size(gInstructionsElementNames) == static_cast<size_t>(swInstructionsPlacementElement::PartsListCount) + 1, "Missing element name");
+static_assert(std::size(gInstructionsElementNames) == static_cast<size_t>(swInstructionsPlacementElement::Image) + 1, "Missing element name");
 
 static const QLatin1String gInstructionsPageTypeNames[] =
 {
-	QLatin1String("STEPS"), QLatin1String("COVER"), QLatin1String("BILL_OF_MATERIALS"), QLatin1String("BLANK")
+	QLatin1String("STEPS"), QLatin1String("COVER"), QLatin1String("BILL_OF_MATERIALS"), QLatin1String("BLANK"), QLatin1String("BACK_COVER")
+};
+
+static const QLatin1String gInstructionsImagePagesNames[] =
+{
+	QLatin1String("NONE"), QLatin1String("FRONT"), QLatin1String("BACK"), QLatin1String("BOTH")
 };
 
 static const QLatin1String gInstructionsTargetNames[] =
@@ -428,15 +433,10 @@ void swRenameInstructionsModels(QStringList& CommandLines, const std::map<QStrin
 	}
 }
 
-void swInstructions::LoadCommandLines()
+void swInstructions::LoadCommandLines(const QStringList& CommandLines)
 {
-	swModel* MainModel = mProject ? mProject->GetMainModel() : nullptr;
-
-	if (!MainModel)
-		return;
-
 	// skip commands with missing models
-	for (const QString& CommandLine : MainModel->GetInstructionLines())
+	for (const QString& CommandLine : CommandLines)
 	{
 		swInstructionsCommandReader Reader(CommandLine, mProject);
 		const QString Command = Reader.ReadToken();
@@ -631,7 +631,152 @@ void swInstructions::LoadCommandLines()
 			mPointers.push_back(Pointer);
 			mNextPointerId = qMax(mNextPointerId, Pointer.Id + 1);
 		}
+		else if (Command == QLatin1String("IMAGE"))
+		{
+			swInstructionsImage Image;
+
+			Image.Id = Reader.ReadInt();
+			const int Pages = Reader.ReadName(gInstructionsImagePagesNames);
+			Reader.ReadKeyword("PLACEMENT");
+			Image.Placement = Reader.ReadInt();
+			Reader.ReadKeyword("SIZE");
+			Image.Size = Reader.ReadInt();
+			Reader.ReadKeyword("FILE");
+			Image.File = Reader.ReadToken();
+
+			if (!Reader.IsValid() || Image.Id < 1 || Image.Placement < 0 || Image.Placement >= SW_PLACEMENT_COUNT || Image.Size < 1 || Image.Size > 100)
+				continue;
+
+			Image.Pages = static_cast<swInstructionsImagePages>(Pages);
+
+			// a model image replaces the template image of its id
+			std::vector<swInstructionsImage>::iterator ImageIt = std::find_if(mImages.begin(), mImages.end(), [&Image](const swInstructionsImage& Other)
+			{
+				return Other.Id == Image.Id;
+			});
+
+			if (ImageIt != mImages.end())
+				*ImageIt = Image;
+			else
+				mImages.push_back(Image);
+
+			mNextImageId = qMax(mNextImageId, Image.Id + 1);
+		}
 	}
+}
+
+// use to write an image line
+static QString swWriteInstructionsImage(const swInstructionsImage& Image, const QString& File)
+{
+	return QStringLiteral("IMAGE %1 ").arg(Image.Id) + gInstructionsImagePagesNames[static_cast<int>(Image.Pages)] + QStringLiteral(" PLACEMENT %1 SIZE %2 FILE \"").arg(Image.Placement).arg(Image.Size) + QString(File).remove(QLatin1Char('"')) + QLatin1Char('"');
+}
+
+// use to write the steps per page words
+static QString swWriteInstructionsPageSettings(const swInstructionsPageSettings& Settings)
+{
+	QString Line = QStringLiteral(" %1 %2").arg(Settings.Rows).arg(Settings.Columns);
+
+	if (Settings.Direction == swInstructionsDirection::Vertical)
+		Line += QLatin1String(" VERTICAL");
+
+	if (Settings.FinalModel)
+		Line += QLatin1String(" FINAL_MODEL");
+
+	if (Settings.FinalModelColor)
+		Line += QLatin1String(" FINAL_MODEL_COLOR");
+
+	return Line;
+}
+
+// use to read the document settings of a template, or of any model file
+QStringList swInstructions::ReadTemplateLines(const QString& FileName)
+{
+	QStringList CommandLines;
+	QFile File(FileName);
+
+	if (FileName.isEmpty() || !File.open(QIODevice::ReadOnly | QIODevice::Text))
+		return CommandLines;
+
+	static const QRegularExpression MetaExpression(QStringLiteral("^0\\s+!SW\\s+(PROPERTY|STEPS_PER_PAGE|IMAGE)\\s+INSTRUCTION(\\s.*)?$"));
+	static const QRegularExpression FileExpression(QStringLiteral("^0\\s+FILE\\s"));
+	QTextStream Stream(&File);
+	int FileCount = 0;
+
+	// the first model of a multi part file
+	while (!Stream.atEnd())
+	{
+		const QString Line = Stream.readLine().trimmed();
+
+		if (FileExpression.match(Line).hasMatch() && ++FileCount > 1)
+			break;
+
+		const QRegularExpressionMatch Match = MetaExpression.match(Line);
+
+		if (Match.hasMatch())
+			CommandLines.append(Match.captured(1) + Match.captured(2));
+	}
+
+	return CommandLines;
+}
+
+bool swInstructions::SaveTemplate(const QString& FileName) const
+{
+	QFile File(FileName);
+
+	if (!File.open(QIODevice::WriteOnly | QIODevice::Text | QIODevice::Truncate))
+		return false;
+
+	// the built-in defaults stay unwritten
+	const swInstructionsProperties BuiltInProperties = CreateDefaultProperties();
+	QStringList CommandLines;
+
+	for (int Type = 0; Type < static_cast<int>(swInstructionsPropertyType::Count); Type++)
+	{
+		const QVariant& DefaultValue = BuiltInProperties[Type].Value;
+		const QVariant& Value = mStepProperties[Type].Value;
+
+		if (Value.isValid() && Value != DefaultValue)
+			CommandLines.append(QLatin1String("PROPERTY ") + gInstructionsPropertyNames[Type] + QLatin1Char(' ') + swWriteInstructionsValue(Value, DefaultValue));
+	}
+
+	if (!(mPageSettings == swInstructionsPageSettings()))
+		CommandLines.append(QLatin1String("STEPS_PER_PAGE") + swWriteInstructionsPageSettings(mPageSettings));
+
+	// images keep a full path to work from any model
+	for (const swInstructionsImage& Image : mImages)
+		if (Image.Pages != swInstructionsImagePages::None)
+			CommandLines.append(swWriteInstructionsImage(Image, GetFilePath(Image.File)));
+
+	QTextStream Stream(&File);
+	Stream << "0 Instructions Template\n0 Name: " << QFileInfo(FileName).fileName() << "\n";
+
+	for (const QString& CommandLine : CommandLines)
+	{
+		const int CommandEnd = CommandLine.indexOf(QLatin1Char(' '));
+		Stream << "0 !SW " << CommandLine.left(CommandEnd) << " INSTRUCTION" << CommandLine.mid(CommandEnd) << "\n";
+	}
+
+	Stream.flush();
+
+	return File.error() == QFileDevice::NoError;
+}
+
+bool swInstructions::ApplyTemplate(const QString& FileName)
+{
+	const QStringList CommandLines = ReadTemplateLines(FileName);
+
+	if (CommandLines.isEmpty())
+		return false;
+
+	LoadCommandLines(CommandLines);
+	CreatePages();
+
+	// one undo step for the whole template
+	emit UnitsChanged();
+	emit PageLayoutChanged();
+	emit StepSettingsChanged(nullptr, 0);
+
+	return true;
 }
 
 QStringList swInstructions::GetCommandLines() const
@@ -659,27 +804,11 @@ QStringList swInstructions::GetCommandLines() const
 		}
 	}
 
-	auto WritePageSettings = [](const swInstructionsPageSettings& Settings)
-	{
-		QString Line = QStringLiteral(" %1 %2").arg(Settings.Rows).arg(Settings.Columns);
-
-		if (Settings.Direction == swInstructionsDirection::Vertical)
-			Line += QLatin1String(" VERTICAL");
-
-		if (Settings.FinalModel)
-			Line += QLatin1String(" FINAL_MODEL");
-
-		if (Settings.FinalModelColor)
-			Line += QLatin1String(" FINAL_MODEL_COLOR");
-
-		return Line;
-	};
-
-	if (!(mPageSettings == swInstructionsPageSettings()))
-		CommandLines.append(QLatin1String("STEPS_PER_PAGE") + WritePageSettings(mPageSettings));
+	if (!(mPageSettings == mDefaultPageSettings))
+		CommandLines.append(QLatin1String("STEPS_PER_PAGE") + swWriteInstructionsPageSettings(mPageSettings));
 
 	for (const std::pair<const swInstructionsStepKey, swInstructionsPageSettings>& PageSettings : mPageSettingsOverrides)
-		CommandLines.append(QLatin1String("PAGE_STEPS_PER_PAGE STEP ") + swWriteInstructionsStepKey(PageSettings.first) + WritePageSettings(PageSettings.second));
+		CommandLines.append(QLatin1String("PAGE_STEPS_PER_PAGE STEP ") + swWriteInstructionsStepKey(PageSettings.first) + swWriteInstructionsPageSettings(PageSettings.second));
 
 	for (const swInstructionsStepKey& BlankPage : mBlankPages)
 		CommandLines.append(QLatin1String("BLANK_PAGE STEP ") + swWriteInstructionsStepKey(BlankPage));
@@ -729,6 +858,10 @@ QStringList swInstructions::GetCommandLines() const
 		                    QLatin1String(" TARGET ") + gInstructionsTargetNames[static_cast<int>(Pointer.TargetType)] + QLatin1Char(' ') + swWriteInstructionsElementKey(Pointer.TargetElement) +
 		                    QStringLiteral(" PART %1 POSITION ").arg(Pointer.TargetPart) + swWriteInstructionsPoint(Pointer.TipPosition));
 	}
+
+	for (const swInstructionsImage& Image : mImages)
+		if (!Image.Template)
+			CommandLines.append(swWriteInstructionsImage(Image, Image.File));
 
 	return CommandLines;
 }

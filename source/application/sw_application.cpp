@@ -1092,6 +1092,7 @@ void swApplication::ShowPreferencesDialog()
 	Options.DefaultAuthorEmail = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_EMAIL);
 	Options.DefaultAuthorComment = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_COMMENT);
 	Options.DefaultAuthorSplitter = swGetProfileString(SW_PROFILE_DEFAULT_AUTHOR_SPLITTER);
+	Options.DefaultTemplate = swGetProfileString(SW_PROFILE_DEFAULT_TEMPLATE);
 	Options.Language = swGetProfileString(SW_PROFILE_LANGUAGE);
 	Options.Instructions.Load();
 
@@ -1171,6 +1172,7 @@ void swApplication::ShowPreferencesDialog()
 	swSetProfileString(SW_PROFILE_DEFAULT_AUTHOR_EMAIL, Options.DefaultAuthorEmail);
 	swSetProfileString(SW_PROFILE_DEFAULT_AUTHOR_COMMENT, Options.DefaultAuthorComment);
 	swSetProfileString(SW_PROFILE_DEFAULT_AUTHOR_SPLITTER, Options.DefaultAuthorSplitter);
+	swSetProfileString(SW_PROFILE_DEFAULT_TEMPLATE, Options.DefaultTemplate);
 	swSetProfileString(SW_PROFILE_PARTS_LIBRARY, Options.LibraryPath);
 	swSetProfileString(SW_PROFILE_UNOFFICIAL_LIBRARY, Options.UnofficialLibraryPath);
 	swSetProfileString(SW_PROFILE_SHADOW_LIBRARY, Options.ShadowLibraryPath);

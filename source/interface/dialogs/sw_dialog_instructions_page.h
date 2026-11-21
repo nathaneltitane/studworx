@@ -425,6 +425,24 @@ protected:
 	int mId = 0;
 };
 
+// A linked image on a cover, like a logo.
+class swInstructionsImageItem : public swInstructionsBoxItem<QGraphicsPixmapItem>
+{
+public:
+	swInstructionsImageItem(QGraphicsItem* Parent, swInstructions* Instructions, const swInstructionsImage& Image);
+
+	int GetId() const
+	{
+		return mId;
+	}
+
+protected:
+	QVariant itemChange(GraphicsItemChange Change, const QVariant& Value) override;
+
+	swInstructions* mInstructions = nullptr;
+	int mId = 0;
+};
+
 // A pointer from an element anchor.
 class swInstructionsPointerItem : public QGraphicsItem
 {

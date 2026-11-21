@@ -134,9 +134,8 @@ swInstructions::swInstructions(Project* Project)
 	mElementAnchorColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_ELEMENT_ANCHOR_COLOR));
 	mRulerPointerColor = swQColorFromRGBA(swGetProfileUnsignedInteger(SW_PROFILE_INSTRUCTIONS_RULER_POINTER_COLOR));
 
-	SetDefaultProperties();
-	mDefaultProperties = mStepProperties;
-	LoadCommandLines();
+	LoadDefaultTemplate();
+	LoadCommandLines(mProject && mProject->GetMainModel() ? mProject->GetMainModel()->GetInstructionLines() : QStringList());
 
 	CreatePages();
 
@@ -184,11 +183,8 @@ void swInstructions::ReloadCommandLines()
 	mNextNoticeId = 1;
 	mNextPointerId = 1;
 
-	mPageSettings = swInstructionsPageSettings();
-
-	SetDefaultProperties();
-	mDefaultProperties = mStepProperties;
-	LoadCommandLines();
+	LoadDefaultTemplate();
+	LoadCommandLines(mProject && mProject->GetMainModel() ? mProject->GetMainModel()->GetInstructionLines() : QStringList());
 
 	CreatePages();
 
@@ -353,7 +349,10 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::HighlightNewParts)].Value = true;
 	Properties[static_cast<int>(swInstructionsPropertyType::HighlightColor)].Value = SW_RGBA(255, 242, 0, 230);
 
-	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 157, "Missing default property");
+	// the back cover starts blank
+	Properties[static_cast<int>(swInstructionsPropertyType::ShowBackCover)].Value = true;
+
+	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 158, "Missing default property");
 
 	return Properties;
 }
@@ -363,10 +362,28 @@ void swInstructions::SetDefaultProperties()
 	mStepProperties = CreateDefaultProperties();
 }
 
+// use to start from the default template, the model settings win
+void swInstructions::LoadDefaultTemplate()
+{
+	SetDefaultProperties();
+	mDefaultProperties = mStepProperties;
+	mPageSettings = swInstructionsPageSettings();
+	mImages.clear();
+	mNextImageId = 1;
+
+	LoadCommandLines(ReadTemplateLines(swGetProfileString(SW_PROFILE_DEFAULT_TEMPLATE)));
+
+	for (swInstructionsImage& Image : mImages)
+		Image.Template = true;
+
+	mDefaultProperties = mStepProperties;
+	mDefaultPageSettings = mPageSettings;
+}
+
 void swInstructions::ResetProperties()
 {
 	// restore defaults and moved elements
-	SetDefaultProperties();
+	mStepProperties = mDefaultProperties;
 	mPagePropertyOverrides.clear();
 	mElementOffsets.clear();
 	mLockedPositions.clear();
@@ -416,6 +433,7 @@ bool swInstructions::GetPageKey(size_t PageIndex, swInstructionsStepKey& Key) co
 		return true;
 
 	case swInstructionsPageType::Cover:
+	case swInstructionsPageType::BackCover:
 		break;
 	}
 
@@ -673,6 +691,7 @@ QColor swInstructions::GetPageBackgroundColor(size_t PageIndex) const
 		switch (mPages[PageIndex].Type)
 		{
 		case swInstructionsPageType::Cover:
+		case swInstructionsPageType::BackCover:
 			return GetColor(swInstructionsPropertyType::CoverBackgroundColor);
 
 		case swInstructionsPageType::BillOfMaterials:
@@ -1325,18 +1344,22 @@ QString swInstructions::GetTextProperty(swInstructionsPropertyType Type) const
 	return mStepProperties[static_cast<int>(Type)].Value.toString();
 }
 
+// use to find a linked file, relative to the model file
+QString swInstructions::GetFilePath(const QString& FileName) const
+{
+	if (FileName.isEmpty() || !QFileInfo(FileName).isRelative() || !mProject || mProject->GetFileName().isEmpty())
+		return FileName;
+
+	return QFileInfo(mProject->GetFileName()).dir().filePath(FileName);
+}
+
 // use to read a text file, relative to the model file
 QString swInstructions::GetFileText(const QString& FileName) const
 {
 	if (FileName.isEmpty())
 		return QString();
 
-	QString FilePath = FileName;
-
-	if (QFileInfo(FilePath).isRelative() && mProject && !mProject->GetFileName().isEmpty())
-		FilePath = QFileInfo(mProject->GetFileName()).dir().filePath(FilePath);
-
-	QFile File(FilePath);
+	QFile File(GetFilePath(FileName));
 
 	if (!File.open(QIODevice::ReadOnly | QIODevice::Text))
 		return QString();
@@ -1413,6 +1436,7 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	{
 	case swInstructionsPropertyType::ShowBillOfMaterials:
 	case swInstructionsPropertyType::ShowCoverPage:
+	case swInstructionsPropertyType::ShowBackCover:
 	case swInstructionsPropertyType::ShowCoverBlankPage:
 	case swInstructionsPropertyType::ShowBillOfMaterialsBlankPage:
 		CreatePages();
@@ -1594,6 +1618,14 @@ void swInstructions::CreatePages()
 
 				swInstructionsPage Page;
 				Page.Type = swInstructionsPageType::BillOfMaterials;
+				Page.Model = Model;
+				mPages.emplace_back(std::move(Page));
+			}
+
+			if (GetBoolProperty(swInstructionsPropertyType::ShowBackCover, nullptr, 0))
+			{
+				swInstructionsPage Page;
+				Page.Type = swInstructionsPageType::BackCover;
 				Page.Model = Model;
 				mPages.emplace_back(std::move(Page));
 			}

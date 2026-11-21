@@ -215,7 +215,7 @@ void swInstructionsDialog::UpdatePageList()
 		switch (mInstructions->mPages[PageNumber].Type)
 		{
 		case swInstructionsPageType::Cover:
-			Label = tr("%1 - Cover").arg(Label);
+			Label = tr("%1 - Front Cover").arg(Label);
 			break;
 
 		case swInstructionsPageType::BillOfMaterials:
@@ -224,6 +224,10 @@ void swInstructionsDialog::UpdatePageList()
 
 		case swInstructionsPageType::Blank:
 			Label = tr("%1 - Blank").arg(Label);
+			break;
+
+		case swInstructionsPageType::BackCover:
+			Label = tr("%1 - Back Cover").arg(Label);
 			break;
 
 		case swInstructionsPageType::Steps:
@@ -419,11 +423,12 @@ QWidget* swInstructionsDialog::CreatePageBar()
 
 	mFirstButton = CreateButton(tr("&First"), tr("Go to the first page"), swCreatePaintedIcon(swPaintedIcon::TimeFirst), false, [this]() { ShowPage(0); });
 	mPreviousButton = CreateButton(tr("&Previous"), tr("Go to the previous page"), swCreatePaintedIcon(swPaintedIcon::TimePrevious), false, [this, ThumbnailsWidget]() { ShowPage(ThumbnailsWidget->currentRow() - 1); });
-	mCoverButton = CreateButton(tr("&Cover"), tr("Go to the cover page"), QIcon(), false, [this]() { ShowPage(FindPage(swInstructionsPageType::Cover)); });
+	mCoverButton = CreateButton(tr("Fr&ont Cover"), tr("Go to the front cover"), QIcon(), false, [this]() { ShowPage(FindPage(swInstructionsPageType::Cover)); });
 	mStepPageButton = CreateButton(tr("&Step Page"), tr("Insert an empty step before the current page"), QIcon(), false, [this]() { InsertStepPage(); });
 	mBlankPageButton = CreateButton(tr("Bl&ank Page"), tr("Insert a blank page before the current page"), QIcon(), false, [this, ThumbnailsWidget]() { mInstructions->InsertBlankPage(ThumbnailsWidget->currentRow()); });
 	mRemovePageButton = CreateButton(tr("&Remove Page"), tr("Remove the current page when it is blank or holds only empty steps"), QIcon(), false, [this]() { RemovePage(); });
 	mBillOfMaterialsButton = CreateButton(tr("&Bill of Materials"), tr("Go to the bill of materials page"), QIcon(), false, [this]() { ShowPage(FindPage(swInstructionsPageType::BillOfMaterials)); });
+	mBackCoverButton = CreateButton(tr("Bac&k Cover"), tr("Go to the back cover"), QIcon(), false, [this]() { ShowPage(FindPage(swInstructionsPageType::BackCover)); });
 	mNextButton = CreateButton(tr("&Next"), tr("Go to the next page"), swCreatePaintedIcon(swPaintedIcon::TimeNext), true, [this, ThumbnailsWidget]() { ShowPage(ThumbnailsWidget->currentRow() + 1); });
 	mLastButton = CreateButton(tr("&Last"), tr("Go to the last page"), swCreatePaintedIcon(swPaintedIcon::TimeLast), true, [this, ThumbnailsWidget]() { ShowPage(ThumbnailsWidget->count() - 1); });
 
@@ -553,4 +558,5 @@ void swInstructionsDialog::UpdatePageBar()
 	mPageSpinBox->SetReference();
 	mPageSpinBox->setValue(Row + 1);
 	mBillOfMaterialsButton->setEnabled(FindPage(swInstructionsPageType::BillOfMaterials) >= 0);
+	mBackCoverButton->setEnabled(FindPage(swInstructionsPageType::BackCover) >= 0);
 }

@@ -60,6 +60,7 @@ struct swPreferencesDialogOptions
 	QString DefaultAuthorEmail;
 	QString DefaultAuthorComment;
 	QString DefaultAuthorSplitter;
+	QString DefaultTemplate;
 	QString Language;
 
 	swInstructionsPreferences Instructions;
@@ -128,6 +129,7 @@ private slots:
 	void PovrayExecutableBrowseClicked();
 	void LgeoPathBrowseClicked();
 	void LgeoPathDownloadButtonClicked();
+	void DefaultTemplateBrowseClicked();
 	void AuthorChanged();
 	void ColorThemeCurrentIndexChanged(int Index);
 	void ColorButtonClicked();

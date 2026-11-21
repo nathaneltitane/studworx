@@ -282,6 +282,27 @@ swInstructionsPropertiesWidget::swInstructionsPropertiesWidget(QWidget* Parent, 
 
 	OptionsMenu->addSeparator();
 
+	// templates carry the look to other models
+	QAction* SaveTemplateAction = OptionsMenu->addAction(tr("Save Template..."));
+	SaveTemplateAction->setToolTip(tr("Save the look, the steps per page and the cover images of these instructions to a model file that any model can apply"));
+	connect(SaveTemplateAction, &QAction::triggered, this, [this]()
+	{
+		const QString FileName = QFileDialog::getSaveFileName(this, tr("Save Template"), QString(), tr("LDraw Files (*.ldr);;All Files (*)"));
+
+		if (!FileName.isEmpty() && !mInstructions->SaveTemplate(FileName))
+			QMessageBox::warning(this, tr("Save Template"), tr("Could not save the template '%1'.").arg(QDir::toNativeSeparators(FileName)));
+	});
+
+	QAction* ApplyTemplateAction = OptionsMenu->addAction(tr("Apply Template..."));
+	ApplyTemplateAction->setToolTip(tr("Apply the look, the steps per page and the cover images of a template or of another model to these instructions"));
+	connect(ApplyTemplateAction, &QAction::triggered, this, [this]()
+	{
+		const QString FileName = QFileDialog::getOpenFileName(this, tr("Apply Template"), QString(), tr("LDraw Files (*.ldr *.dat *.mpd);;All Files (*)"));
+
+		if (!FileName.isEmpty() && !mInstructions->ApplyTemplate(FileName))
+			QMessageBox::warning(this, tr("Apply Template"), tr("The file '%1' holds no instruction settings.").arg(QDir::toNativeSeparators(FileName)));
+	});
+
 	QAction* ResetAction = OptionsMenu->addAction(tr("Reset Properties"));
 	ResetAction->setToolTip(tr("Restore the default look of the instructions"));
 	connect(ResetAction, &QAction::triggered, mInstructions, &swInstructions::ResetProperties);
@@ -429,10 +450,11 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 	CreateLengthEditor(swInstructionsPropertyType::HighlightWidth, tr("Highlight Width"), tr("Thickness of the outline around the parts added in each step."), 1, 72, 0.05);
 	AddEditorRow(CategoryIndex::Document, swInstructionsPropertyType::HighlightWidth);
 
-	AddCategory(CategoryIndex::Cover, tr("Cover Page"), tr("<p><b>Cover Page</b></p><p>The first page, showing the model title, its author and the finished model. The title comes from the model description, or its name when there is none, the author from the model properties.</p>"));
+	AddCategory(CategoryIndex::Cover, tr("Cover Pages"), tr("<p><b>Cover Pages</b></p><p>The front cover shows the model title, its author and the finished model. The title comes from the model description, or its name when there is none, the author from the model properties. The back cover closes the instructions and starts blank. Right click a cover to add an image, like a logo.</p>"));
 
 	AddRow(CategoryIndex::Cover, {
-		CreateToggleEditor(swInstructionsPropertyType::ShowCoverPage, tr("Show Cover Page"), tr("Start the instructions with a page showing the model title and the finished model."))
+		CreateToggleEditor(swInstructionsPropertyType::ShowCoverPage, tr("Show Front Cover"), tr("Start the instructions with a page showing the model title and the finished model.")),
+		CreateToggleEditor(swInstructionsPropertyType::ShowBackCover, tr("Show Back Cover"), tr("End the instructions with a back cover, blank until you add images."))
 	});
 
 	AddRow(CategoryIndex::Cover, {

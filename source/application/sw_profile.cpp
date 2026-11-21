@@ -241,6 +241,7 @@ static swProfileEntry gProfileEntries[SW_PROFILE_KEY_COUNT] =
 	swProfileEntry("Defaults", "AuthorEmail", ""),                                             // SW_PROFILE_DEFAULT_AUTHOR_EMAIL
 	swProfileEntry("Defaults", "AuthorComment", ""),                                           // SW_PROFILE_DEFAULT_AUTHOR_COMMENT
 	swProfileEntry("Defaults", "AuthorSplitter", " | "),                                       // SW_PROFILE_DEFAULT_AUTHOR_SPLITTER
+	swProfileEntry("Defaults", "Template", ""),                                                // SW_PROFILE_DEFAULT_TEMPLATE
 	swProfileEntry("Defaults", "AmbientColor", SW_RGBA(75, 75, 75, 255)),                           // SW_PROFILE_DEFAULT_AMBIENT_COLOR #4b4b4bff
 
 	swProfileEntry("HTML", "Options", SW_HTML_SINGLE_PAGE),                                     // SW_PROFILE_HTML_OPTIONS

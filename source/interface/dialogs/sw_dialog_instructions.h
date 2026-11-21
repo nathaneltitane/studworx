@@ -72,6 +72,7 @@ protected:
 	QToolButton* mBlankPageButton = nullptr;
 	QToolButton* mRemovePageButton = nullptr;
 	QToolButton* mBillOfMaterialsButton = nullptr;
+	QToolButton* mBackCoverButton = nullptr;
 	QToolButton* mNextButton = nullptr;
 	QToolButton* mLastButton = nullptr;
 	swRangeSpinBox* mPageSpinBox = nullptr;

@@ -55,7 +55,14 @@ void swInstructions::RemoveNotice(int Id)
 	if (mNotices.size() == NoticeCount)
 		return;
 
-	// notice pointers move with it
+	RemoveElementReferences(Key);
+
+	emit PageLayoutChanged();
+}
+
+// use to drop the pointers, offset and lock of a removed element
+void swInstructions::RemoveElementReferences(const swInstructionsElementKey& Key)
+{
 	mPointers.erase(std::remove_if(mPointers.begin(), mPointers.end(), [&Key](const swInstructionsPointer& Pointer)
 	{
 		return Pointer.Source == Key;
@@ -67,6 +74,77 @@ void swInstructions::RemoveNotice(int Id)
 
 	mElementOffsets.erase(Key);
 	mLockedPositions.erase(Key);
+}
+
+const swInstructionsImage* swInstructions::FindImage(int Id) const
+{
+	for (const swInstructionsImage& Image : mImages)
+		if (Image.Id == Id)
+			return &Image;
+
+	return nullptr;
+}
+
+int swInstructions::AddImage(swInstructionsPageType PageType, const QString& File)
+{
+	swInstructionsImage Image;
+
+	Image.Id = mNextImageId++;
+	Image.Pages = PageType == swInstructionsPageType::BackCover ? swInstructionsImagePages::Back : swInstructionsImagePages::Front;
+	Image.File = File;
+
+	mImages.push_back(Image);
+
+	emit PageLayoutChanged();
+
+	return Image.Id;
+}
+
+void swInstructions::SetImage(const swInstructionsImage& Image)
+{
+	for (swInstructionsImage& Current : mImages)
+	{
+		if (Current.Id != Image.Id)
+			continue;
+
+		// a changed template image is written to the model
+		swInstructionsImage Changed = Image;
+		Changed.Template = false;
+
+		if (Current.Pages == Changed.Pages && Current.Placement == Changed.Placement && Current.Size == Changed.Size && Current.File == Changed.File && !Current.Template)
+			return;
+
+		// a placed image drops its moved position
+		if (Current.Placement != Changed.Placement)
+			mElementOffsets.erase({ swInstructionsPlacementElement::Image, nullptr, static_cast<swStep>(Image.Id) });
+
+		Current = Changed;
+
+		emit PageLayoutChanged();
+		return;
+	}
+}
+
+void swInstructions::RemoveImage(int Id)
+{
+	std::vector<swInstructionsImage>::iterator ImageIt = std::find_if(mImages.begin(), mImages.end(), [Id](const swInstructionsImage& Image)
+	{
+		return Image.Id == Id;
+	});
+
+	if (ImageIt == mImages.end())
+		return;
+
+	// template images stay hidden in the model
+	if (ImageIt->Template)
+	{
+		ImageIt->Pages = swInstructionsImagePages::None;
+		ImageIt->Template = false;
+	}
+	else
+		mImages.erase(ImageIt);
+
+	RemoveElementReferences({ swInstructionsPlacementElement::Image, nullptr, static_cast<swStep>(Id) });
 
 	emit PageLayoutChanged();
 }
