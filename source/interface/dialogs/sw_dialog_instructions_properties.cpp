@@ -555,6 +555,100 @@ void swInstructionsPropertiesWidget::CreateWidgets()
 		CreateToggleEditor(swInstructionsPropertyType::ShowSubmodelPreview, tr("Show Submodel Preview"), tr("Show the finished submodel with its part count on the first page of each submodel."))
 	});
 
+	AddCategory(CategoryIndex::Bands, tr("Bands"), tr("<p><b>Bands</b></p><p>Strips along the edges of the step and blank pages. Right click a band on the page to add text or images, they repeat on every page. Use %page and %title in a text for the page number and title. A band can reserve its space so the page content stays clear of it.</p>"));
+
+	const QString BandNames[4] = { tr("Header"), tr("Footer"), tr("Left"), tr("Right") };
+	const swInstructionsPropertyType BandTypes[4][4] = {
+		{ swInstructionsPropertyType::ShowHeaderBand, swInstructionsPropertyType::HeaderBandSize, swInstructionsPropertyType::HeaderBandColor, swInstructionsPropertyType::HeaderBandReserve },
+		{ swInstructionsPropertyType::ShowFooterBand, swInstructionsPropertyType::FooterBandSize, swInstructionsPropertyType::FooterBandColor, swInstructionsPropertyType::FooterBandReserve },
+		{ swInstructionsPropertyType::ShowLeftBand, swInstructionsPropertyType::LeftBandSize, swInstructionsPropertyType::LeftBandColor, swInstructionsPropertyType::LeftBandReserve },
+		{ swInstructionsPropertyType::ShowRightBand, swInstructionsPropertyType::RightBandSize, swInstructionsPropertyType::RightBandColor, swInstructionsPropertyType::RightBandReserve }
+	};
+
+	for (int BandIndex = 0; BandIndex < 4; BandIndex++)
+	{
+		const QString& BandName = BandNames[BandIndex];
+
+		AddRow(CategoryIndex::Bands, {
+			CreateToggleEditor(BandTypes[BandIndex][0], tr("Show %1 Band").arg(BandName), tr("Show the %1 band on the step and blank pages.").arg(BandName.toLower()))
+		});
+
+		CreateLengthEditor(BandTypes[BandIndex][1], tr("%1 Size").arg(BandName), tr("Thickness of the %1 band.").arg(BandName.toLower()), 1, 576, 0.5);
+		AddEditorRow(CategoryIndex::Bands, BandTypes[BandIndex][1]);
+		CreateColorEditor(BandTypes[BandIndex][2], tr("%1 Color").arg(BandName), tr("Color filling the %1 band, transparent shows the page.").arg(BandName.toLower()));
+		AddEditorRow(CategoryIndex::Bands, BandTypes[BandIndex][2]);
+
+		AddRow(CategoryIndex::Bands, {
+			CreateToggleEditor(BandTypes[BandIndex][3], tr("Reserve %1 Space").arg(BandName), tr("Keep the page content clear of the %1 band, unchecked lets the content run under it.").arg(BandName.toLower()))
+		});
+	}
+
+	// bands for all or current page
+	mBandsPageButton = new QToolButton(this);
+	mBandsPageButton->setText(tr("Bands on This Page Only"));
+	mBandsPageButton->setCheckable(true);
+	mBandsPageButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
+	mBandsPageButton->setToolTip(tr("Give this page its own bands, unchecked it follows all pages."));
+	mBandsPageButton->setWhatsThis(mBandsPageButton->toolTip());
+	mBandsPageButton->setAccessibleName(mBandsPageButton->text());
+	swSetupPanelButton(mBandsPageButton);
+
+	connect(mBandsPageButton, &QToolButton::toggled, this, [this](bool PageOnly)
+	{
+		// one redraw for all band properties
+		{
+			const QSignalBlocker Blocker(mInstructions);
+
+			for (int Type = static_cast<int>(swInstructionsPropertyType::ShowHeaderBand); Type <= static_cast<int>(swInstructionsPropertyType::RightBandReserve); Type++)
+				mInstructions->SetPageScope(mPageIndex, static_cast<swInstructionsPropertyType>(Type), PageOnly);
+		}
+
+		emit mInstructions->PageLayoutChanged();
+	});
+
+	AddRow(CategoryIndex::Bands, { mBandsPageButton });
+
+	mBandsApplyAllButton = CreateApplyAllButton(tr("Use the bands of this page on every page."));
+
+	connect(mBandsApplyAllButton, &QToolButton::clicked, this, [this]()
+	{
+		// one redraw for all band properties
+		{
+			const QSignalBlocker Blocker(mInstructions);
+
+			for (int Type = static_cast<int>(swInstructionsPropertyType::ShowHeaderBand); Type <= static_cast<int>(swInstructionsPropertyType::RightBandReserve); Type++)
+				mInstructions->ApplyPageToAllPages(mPageIndex, static_cast<swInstructionsPropertyType>(Type));
+		}
+
+		emit mInstructions->PageLayoutChanged();
+	});
+
+	AddRow(CategoryIndex::Bands, { mBandsApplyAllButton });
+
+	AddCategory(CategoryIndex::Watermark, tr("Watermark"), tr("<p><b>Watermark</b></p><p>Text or an image behind the page content, right click the page to add one. The opacity sets how strongly it shows.</p>"));
+
+	CreatePercentEditor(swInstructionsPropertyType::WatermarkOpacity, tr("Watermark Opacity"), tr("How strongly the watermark shows, 100 percent is solid."), 1, 100);
+	AddEditorRow(CategoryIndex::Watermark, swInstructionsPropertyType::WatermarkOpacity);
+
+	mWatermarkPageButton = new QToolButton(this);
+	mWatermarkPageButton->setText(tr("Hide Watermark on This Page"));
+	mWatermarkPageButton->setCheckable(true);
+	mWatermarkPageButton->setToolButtonStyle(Qt::ToolButtonTextOnly);
+	mWatermarkPageButton->setToolTip(tr("Hide the watermark on this page only."));
+	mWatermarkPageButton->setWhatsThis(mWatermarkPageButton->toolTip());
+	mWatermarkPageButton->setAccessibleName(mWatermarkPageButton->text());
+	swSetupPanelButton(mWatermarkPageButton);
+
+	connect(mWatermarkPageButton, &QToolButton::toggled, this, [this](bool Hide)
+	{
+		mInstructions->SetPageScope(mPageIndex, swInstructionsPropertyType::ShowWatermark, Hide);
+
+		if (Hide)
+			mInstructions->SetPageInt(mPageIndex, swInstructionsPropertyType::ShowWatermark, 0);
+	});
+
+	AddRow(CategoryIndex::Watermark, { mWatermarkPageButton });
+
 	AddCategory(CategoryIndex::BillOfMaterials, tr("Bill of Materials"), tr("<p><b>Bill of Materials</b></p><p>The last page, listing every part of the model. It uses the Parts List settings, under a Parts List title in its own font and color, with the box of the step numbers.</p>"));
 
 	AddRow(CategoryIndex::BillOfMaterials, {
@@ -999,7 +1093,10 @@ QToolButton* swInstructionsPropertiesWidget::CreateToggleEditor(swInstructionsPr
 
 	connect(Button, &QToolButton::toggled, this, [this, Type](bool Checked)
 	{
-		mInstructions->SetDefaultBool(Type, Checked);
+		if (mInstructions->HasPageProperty(mPageIndex, Type))
+			mInstructions->SetPageInt(mPageIndex, Type, Checked);
+		else
+			mInstructions->SetDefaultBool(Type, Checked);
 	});
 
 	return Button;
@@ -1487,7 +1584,7 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 		switch (Editor.Type)
 		{
 		case EditorType::Bool:
-			qobject_cast<QToolButton*>(Editor.Widget)->setChecked(mInstructions->GetBoolProperty(Type, mModel, mStep));
+			qobject_cast<QToolButton*>(Editor.Widget)->setChecked(swInstructions::IsPageProperty(Type) ? mInstructions->GetPageBoolProperty(mPageIndex, Type) : mInstructions->GetBoolProperty(Type, mModel, mStep));
 			break;
 
 		case EditorType::Length:
@@ -1673,6 +1770,17 @@ void swInstructionsPropertiesWidget::UpdateEditors()
 	QSignalBlocker BackgroundBlocker(mBackgroundPageButton);
 
 	mBackgroundPageButton->setChecked(mInstructions->HasPageProperty(mPageIndex, swInstructionsPropertyType::PageBackgroundColor));
+
+	const bool BandsPage = PageType == swInstructionsPageType::Steps || PageType == swInstructionsPageType::Blank;
+	QSignalBlocker BandsBlocker(mBandsPageButton);
+
+	mBandsPageButton->setEnabled(BandsPage);
+	mBandsApplyAllButton->setEnabled(BandsPage);
+	mBandsPageButton->setChecked(mInstructions->HasPageProperty(mPageIndex, swInstructionsPropertyType::ShowHeaderBand));
+
+	QSignalBlocker WatermarkBlocker(mWatermarkPageButton);
+
+	mWatermarkPageButton->setChecked(mInstructions->HasPageProperty(mPageIndex, swInstructionsPropertyType::ShowWatermark));
 }
 
 swInstructionsPageUnits swInstructionsPropertiesWidget::GetEditorUnits(swInstructionsPropertyType Type) const

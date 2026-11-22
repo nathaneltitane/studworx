@@ -57,6 +57,7 @@ private slots:
 	void InstructionsPartCountsAreNamed();
 	void InstructionsPartCountsDefaultOff();
 	void InstructionsPartCountsRoundTrip();
+	void InstructionsBandsAreNamed();
 	void MenusNameEveryCommand();
 	void InterfaceUsesPaintedIcons();
 	void TranslationsMatchCompiledCatalogs();

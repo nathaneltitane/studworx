@@ -217,6 +217,24 @@ enum class swInstructionsPropertyType
 	SubmodelPreviewPartCountPlacement,
 	PLICountPlacement,
 	ShowBackCover,
+	ShowHeaderBand,
+	ShowFooterBand,
+	ShowLeftBand,
+	ShowRightBand,
+	HeaderBandSize,
+	FooterBandSize,
+	LeftBandSize,
+	RightBandSize,
+	HeaderBandColor,
+	FooterBandColor,
+	LeftBandColor,
+	RightBandColor,
+	HeaderBandReserve,
+	FooterBandReserve,
+	LeftBandReserve,
+	RightBandReserve,
+	ShowWatermark,
+	WatermarkOpacity,
 	Count
 };
 
@@ -410,23 +428,31 @@ using swInstructionsStepKey = std::pair<swModel*, swStep>;
 // The page notices and pointers belong to.
 using swInstructionsPageKey = std::tuple<swInstructionsPageType, swModel*, swStep, int>;
 
-// A free text box on a page.
-struct swInstructionsNotice
-{
-	int Id = 0;
-	swInstructionsPageKey PageKey;
-	QPointF Position;
-	QString Text;
-	QString File;
-};
-
-// The cover pages an image shows on.
+// Where an image or notice shows: covers, bands or the watermark.
 enum class swInstructionsImagePages
 {
 	None,
 	Front,
 	Back,
-	Both
+	Both,
+	Header,
+	Footer,
+	Left,
+	Right,
+	Watermark
+};
+
+// A free text box on a page.
+struct swInstructionsNotice
+{
+	int Id = 0;
+	swInstructionsPageKey PageKey;
+
+	// none is its own page, a band is relative to the band
+	swInstructionsImagePages Pages = swInstructionsImagePages::None;
+	QPointF Position;
+	QString Text;
+	QString File;
 };
 
 // A picture linked by path, such as a logo.
@@ -547,6 +573,7 @@ public:
 	void SetPageScope(size_t PageIndex, swInstructionsPropertyType Type, bool PageOnly);
 	void ApplyPageToAllPages(size_t PageIndex, swInstructionsPropertyType Type);
 	int GetPageIntProperty(size_t PageIndex, swInstructionsPropertyType Type) const;
+	bool GetPageBoolProperty(size_t PageIndex, swInstructionsPropertyType Type) const;
 	QColor GetPageColorProperty(size_t PageIndex, swInstructionsPropertyType Type) const;
 	void SetPageInt(size_t PageIndex, swInstructionsPropertyType Type, int Value);
 	void SetPageColor(size_t PageIndex, swInstructionsPropertyType Type, const QColor& Color);
@@ -572,9 +599,10 @@ public:
 	}
 
 	const swInstructionsNotice* FindNotice(int Id) const;
-	int AddNotice(size_t PageIndex, const QPointF& Position, const QString& Text, const QString& File = QString());
+	int AddNotice(size_t PageIndex, const QPointF& Position, const QString& Text, const QString& File = QString(), swInstructionsImagePages Pages = swInstructionsImagePages::None);
 	void SetNoticeText(int Id, const QString& Text, const QString& File);
 	void SetNoticePosition(int Id, const QPointF& Position);
+	void SetNoticePages(int Id, swInstructionsImagePages Pages, size_t PageIndex, const QPointF& Position);
 	void RemoveNotice(int Id);
 
 	const std::vector<swInstructionsPointer>& GetPointers() const

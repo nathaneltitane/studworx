@@ -582,6 +582,9 @@ protected:
 // The position from the placement.
 constexpr int SW_PLACEMENT_POSITION_DATA = 0;
 
+// the band a background item draws
+constexpr int SW_BAND_DATA = 1;
+
 // Identifies a page element.
 bool swGetElementKey(const QGraphicsItem* Item, swInstructionsElementKey& Key);
 

@@ -301,6 +301,18 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	Properties[static_cast<int>(swInstructionsPropertyType::SubmodelPreviewPlacement)].Value = SW_PLACEMENT_GRID_SIZE * 2 + 1;
 	Properties[static_cast<int>(swInstructionsPropertyType::SubmodelPreviewPartCountPlacement)].Value = SW_PLACEMENT_COUNT - 3;
 
+	// bands are off and clear
+	for (int Band = 0; Band < 4; Band++)
+	{
+		Properties[static_cast<int>(swInstructionsPropertyType::ShowHeaderBand) + Band].Value = false;
+		Properties[static_cast<int>(swInstructionsPropertyType::HeaderBandSize) + Band].Value = 72;
+		Properties[static_cast<int>(swInstructionsPropertyType::HeaderBandColor) + Band].Value = SW_RGBA(0, 0, 0, 0);
+		Properties[static_cast<int>(swInstructionsPropertyType::HeaderBandReserve) + Band].Value = true;
+	}
+
+	Properties[static_cast<int>(swInstructionsPropertyType::ShowWatermark)].Value = true;
+	Properties[static_cast<int>(swInstructionsPropertyType::WatermarkOpacity)].Value = 25;
+
 	// boxes keep the former spacing
 	for (int Element = 0; Element < static_cast<int>(swInstructionsBoxElement::Count); Element++)
 	{
@@ -353,7 +365,7 @@ swInstructionsProperties swInstructions::CreateDefaultProperties()
 	// the back cover starts blank
 	Properties[static_cast<int>(swInstructionsPropertyType::ShowBackCover)].Value = true;
 
-	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 159, "Missing default property");
+	static_assert(static_cast<int>(swInstructionsPropertyType::Count) == 177, "Missing default property");
 
 	return Properties;
 }
@@ -621,7 +633,7 @@ QFont swInstructions::GetFontProperty(swInstructionsPropertyType Type, swModel* 
 
 bool swInstructions::IsPageProperty(swInstructionsPropertyType Type)
 {
-	return Type == swInstructionsPropertyType::PLIThumbnailSize || Type == swInstructionsPropertyType::PLIThumbnailBackgroundColor || Type == swInstructionsPropertyType::PageBackgroundColor || Type == swInstructionsPropertyType::StepImageSize;
+	return Type == swInstructionsPropertyType::PLIThumbnailSize || Type == swInstructionsPropertyType::PLIThumbnailBackgroundColor || Type == swInstructionsPropertyType::PageBackgroundColor || Type == swInstructionsPropertyType::StepImageSize || Type == swInstructionsPropertyType::ShowWatermark || (Type >= swInstructionsPropertyType::ShowHeaderBand && Type <= swInstructionsPropertyType::RightBandReserve);
 }
 
 bool swInstructions::GetStepPageIndex(swModel* Model, swStep Step, size_t& PageIndex) const
@@ -686,6 +698,11 @@ int swInstructions::GetPageIntProperty(size_t PageIndex, swInstructionsPropertyT
 	return GetPageProperty(PageIndex, Type).toInt();
 }
 
+bool swInstructions::GetPageBoolProperty(size_t PageIndex, swInstructionsPropertyType Type) const
+{
+	return GetPageProperty(PageIndex, Type).toBool();
+}
+
 QColor swInstructions::GetPageColorProperty(size_t PageIndex, swInstructionsPropertyType Type) const
 {
 	return swQColorFromRGBA(GetPageProperty(PageIndex, Type).toUInt());
@@ -722,8 +739,8 @@ QColor swInstructions::GetPageBackgroundColor(size_t PageIndex) const
 
 void swInstructions::EmitPagePropertyChanged(swInstructionsPropertyType Type)
 {
-	// draw the background with the page
-	if (Type == swInstructionsPropertyType::PageBackgroundColor)
+	// draw the background, bands and watermark with the page
+	if (Type == swInstructionsPropertyType::PageBackgroundColor || Type == swInstructionsPropertyType::ShowWatermark || (Type >= swInstructionsPropertyType::ShowHeaderBand && Type <= swInstructionsPropertyType::RightBandReserve))
 		emit PageLayoutChanged();
 	else
 		emit StepSettingsChanged(nullptr, 0);
@@ -1592,6 +1609,24 @@ void swInstructions::SetDefaultProperty(swInstructionsPropertyType Type, const Q
 	case swInstructionsPropertyType::SubmodelPreviewBackgroundColor:
 	case swInstructionsPropertyType::SubmodelPreviewCornerRadius:
 	case swInstructionsPropertyType::SubmodelPreviewPartCountPlacement:
+	case swInstructionsPropertyType::ShowHeaderBand:
+	case swInstructionsPropertyType::ShowFooterBand:
+	case swInstructionsPropertyType::ShowLeftBand:
+	case swInstructionsPropertyType::ShowRightBand:
+	case swInstructionsPropertyType::HeaderBandSize:
+	case swInstructionsPropertyType::FooterBandSize:
+	case swInstructionsPropertyType::LeftBandSize:
+	case swInstructionsPropertyType::RightBandSize:
+	case swInstructionsPropertyType::HeaderBandColor:
+	case swInstructionsPropertyType::FooterBandColor:
+	case swInstructionsPropertyType::LeftBandColor:
+	case swInstructionsPropertyType::RightBandColor:
+	case swInstructionsPropertyType::HeaderBandReserve:
+	case swInstructionsPropertyType::FooterBandReserve:
+	case swInstructionsPropertyType::LeftBandReserve:
+	case swInstructionsPropertyType::RightBandReserve:
+	case swInstructionsPropertyType::ShowWatermark:
+	case swInstructionsPropertyType::WatermarkOpacity:
 		emit PageLayoutChanged();
 		break;
 

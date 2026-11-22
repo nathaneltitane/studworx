@@ -13,6 +13,7 @@
   - Instructions: the font window opens at a quarter of the screen, centered
   - Instructions: the save key saves the model from the Instructions window too, and its title shows * while there are unsaved changes
   - Instructions: Apply to All Pages on a submodel page keeps the submodel background instead of going back to the default
+  - Instructions: header, footer and side bands repeat their text and images on every step page, a watermark sits behind the page content, %page and %title fill in the page number and title
   - Instructions: the cover, the bill of materials and the step pages can show how many parts they take, as "119 PIECES" or your own text
   - Instructions: the cover title, author and part count start at the same size as the Parts List title, and the parts list count sits at its top right
   - Instructions: Show Submodel Preview puts the finished submodel and its part count on the first page of each submodel

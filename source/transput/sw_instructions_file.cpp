@@ -56,7 +56,12 @@ static const QLatin1String gInstructionsPropertyNames[] =
 	QLatin1String("SHOW_SUBMODEL_PREVIEW"), QLatin1String("SUBMODEL_PREVIEW_SIZE"), QLatin1String("SUBMODEL_PREVIEW_PLACEMENT"),
 	QLatin1String("SUBMODEL_PREVIEW_MARGIN"), QLatin1String("SUBMODEL_PREVIEW_PADDING"), QLatin1String("SUBMODEL_PREVIEW_BORDER_WIDTH"),
 	QLatin1String("SUBMODEL_PREVIEW_BORDER_COLOR"), QLatin1String("SUBMODEL_PREVIEW_BACKGROUND_COLOR"), QLatin1String("SUBMODEL_PREVIEW_CORNER_RADIUS"),
-	QLatin1String("SUBMODEL_PREVIEW_PART_COUNT_PLACEMENT"), QLatin1String("PARTS_LIST_QUANTITY_PLACEMENT"), QLatin1String("SHOW_BACK_COVER")
+	QLatin1String("SUBMODEL_PREVIEW_PART_COUNT_PLACEMENT"), QLatin1String("PARTS_LIST_QUANTITY_PLACEMENT"), QLatin1String("SHOW_BACK_COVER"),
+	QLatin1String("SHOW_HEADER_BAND"), QLatin1String("SHOW_FOOTER_BAND"), QLatin1String("SHOW_LEFT_BAND"), QLatin1String("SHOW_RIGHT_BAND"),
+	QLatin1String("HEADER_BAND_SIZE"), QLatin1String("FOOTER_BAND_SIZE"), QLatin1String("LEFT_BAND_SIZE"), QLatin1String("RIGHT_BAND_SIZE"),
+	QLatin1String("HEADER_BAND_COLOR"), QLatin1String("FOOTER_BAND_COLOR"), QLatin1String("LEFT_BAND_COLOR"), QLatin1String("RIGHT_BAND_COLOR"),
+	QLatin1String("HEADER_BAND_RESERVE"), QLatin1String("FOOTER_BAND_RESERVE"), QLatin1String("LEFT_BAND_RESERVE"), QLatin1String("RIGHT_BAND_RESERVE"),
+	QLatin1String("SHOW_WATERMARK"), QLatin1String("WATERMARK_OPACITY")
 };
 
 static_assert(std::size(gInstructionsPropertyNames) == static_cast<size_t>(swInstructionsPropertyType::Count), "Missing property name");
@@ -78,7 +83,8 @@ static const QLatin1String gInstructionsPageTypeNames[] =
 
 static const QLatin1String gInstructionsImagePagesNames[] =
 {
-	QLatin1String("NONE"), QLatin1String("FRONT"), QLatin1String("BACK"), QLatin1String("BOTH")
+	QLatin1String("NONE"), QLatin1String("FRONT"), QLatin1String("BACK"), QLatin1String("BOTH"),
+	QLatin1String("HEADER"), QLatin1String("FOOTER"), QLatin1String("LEFT"), QLatin1String("RIGHT"), QLatin1String("WATERMARK")
 };
 
 static const QLatin1String gInstructionsTargetNames[] =
@@ -599,8 +605,22 @@ void swInstructions::LoadCommandLines(const QStringList& CommandLines)
 			swInstructionsNotice Notice;
 
 			Notice.Id = Reader.ReadInt();
-			Reader.ReadKeyword("PAGE");
-			Notice.PageKey = Reader.ReadPageKey();
+
+			// a band or watermark replaces the page
+			const QString Where = Reader.ReadToken();
+
+			if (Where == QLatin1String("SHOW"))
+			{
+				Notice.Pages = static_cast<swInstructionsImagePages>(Reader.ReadName(gInstructionsImagePagesNames));
+
+				if (Notice.Pages < swInstructionsImagePages::Header)
+					continue;
+			}
+			else if (Where == QLatin1String("PAGE"))
+				Notice.PageKey = Reader.ReadPageKey();
+			else
+				continue;
+
 			Reader.ReadKeyword("POSITION");
 			Notice.Position = Reader.ReadPoint();
 			// the text file comes before the text
@@ -870,7 +890,7 @@ QStringList swInstructions::GetCommandLines() const
 	}
 
 	for (const swInstructionsNotice& Notice : mNotices)
-		CommandLines.append(QStringLiteral("NOTICE %1 PAGE ").arg(Notice.Id) + swWriteInstructionsPageKey(Notice.PageKey) + QLatin1String(" POSITION ") + swWriteInstructionsPoint(Notice.Position) + (Notice.File.isEmpty() ? QString() : QLatin1String(" FILE \"") + QString(Notice.File).remove(QLatin1Char('"')) + QLatin1Char('"')) + QLatin1String(" TEXT ") + swEscapeInstructionsText(Notice.Text));
+		CommandLines.append(QStringLiteral("NOTICE %1 ").arg(Notice.Id) + (Notice.Pages == swInstructionsImagePages::None ? QLatin1String("PAGE ") + swWriteInstructionsPageKey(Notice.PageKey) : QLatin1String("SHOW ") + gInstructionsImagePagesNames[static_cast<int>(Notice.Pages)]) + QLatin1String(" POSITION ") + swWriteInstructionsPoint(Notice.Position) + (Notice.File.isEmpty() ? QString() : QLatin1String(" FILE \"") + QString(Notice.File).remove(QLatin1Char('"')) + QLatin1Char('"')) + QLatin1String(" TEXT ") + swEscapeInstructionsText(Notice.Text));
 
 	for (const swInstructionsPointer& Pointer : mPointers)
 	{

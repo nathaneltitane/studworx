@@ -69,6 +69,8 @@ protected:
 		Document,
 		Cover,
 		Page,
+		Bands,
+		Watermark,
 		BillOfMaterials,
 		PageLayout,
 		Step,
@@ -181,6 +183,9 @@ protected:
 	QToolButton* mFinalModelColorButton = nullptr;
 	QToolButton* mThumbnailPageButton = nullptr;
 	QToolButton* mBackgroundPageButton = nullptr;
+	QToolButton* mBandsPageButton = nullptr;
+	QToolButton* mBandsApplyAllButton = nullptr;
+	QToolButton* mWatermarkPageButton = nullptr;
 	QToolButton* mThumbnailApplyAllButton = nullptr;
 	QToolButton* mModelSizePageButton = nullptr;
 	QToolButton* mModelSizeApplyAllButton = nullptr;

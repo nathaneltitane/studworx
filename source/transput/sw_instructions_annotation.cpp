@@ -10,12 +10,13 @@ const swInstructionsNotice* swInstructions::FindNotice(int Id) const
 	return nullptr;
 }
 
-int swInstructions::AddNotice(size_t PageIndex, const QPointF& Position, const QString& Text, const QString& File)
+int swInstructions::AddNotice(size_t PageIndex, const QPointF& Position, const QString& Text, const QString& File, swInstructionsImagePages Pages)
 {
 	swInstructionsNotice Notice;
 
 	Notice.Id = mNextNoticeId++;
 	Notice.PageKey = GetPageElementsKey(PageIndex);
+	Notice.Pages = Pages;
 	Notice.Position = Position;
 	Notice.Text = Text;
 	Notice.File = File;
@@ -59,6 +60,24 @@ void swInstructions::SetNoticePosition(int Id, const QPointF& Position)
 			return;
 
 		Notice.Position = Position;
+
+		emit PageLayoutChanged();
+		return;
+	}
+}
+
+void swInstructions::SetNoticePages(int Id, swInstructionsImagePages Pages, size_t PageIndex, const QPointF& Position)
+{
+	for (swInstructionsNotice& Notice : mNotices)
+	{
+		if (Notice.Id != Id)
+			continue;
+
+		Notice.Pages = Pages;
+		Notice.PageKey = Pages == swInstructionsImagePages::None ? GetPageElementsKey(PageIndex) : swInstructionsPageKey();
+		Notice.Position = Position;
+
+		mElementOffsets.erase({ swInstructionsPlacementElement::Notice, nullptr, static_cast<swStep>(Id) });
 
 		emit PageLayoutChanged();
 		return;

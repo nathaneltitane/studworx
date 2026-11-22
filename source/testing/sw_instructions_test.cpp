@@ -72,6 +72,8 @@ void swTests::InstructionsPartCountsRoundTrip()
 		"0 !SW PROPERTY INSTRUCTION SUBMODEL_PREVIEW_PLACEMENT 6\r\n"
 		"0 !SW PROPERTY INSTRUCTION SHOW_BACK_COVER FALSE\r\n"
 		"0 !SW PROPERTY INSTRUCTION USE_DOCUMENT_FONT TRUE\r\n"
+		"0 !SW PROPERTY INSTRUCTION SHOW_HEADER_BAND TRUE\r\n"
+		"0 !SW NOTICE INSTRUCTION 1 SHOW FOOTER POSITION 10 5 TEXT PAGE %page\r\n"
 		"0 !SW IMAGE INSTRUCTION 2 BOTH PLACEMENT 3 SIZE 40 FILE \"logo.png\"\r\n"
 		"1 16 0 0 0 1 0 0 0 1 0 0 0 1 3001.dat\r\n"
 		"1 4 0 0 0 1 0 0 0 1 0 0 0 1 sub.ldr\r\n"
@@ -106,4 +108,24 @@ void swTests::InstructionsPartCountsRoundTrip()
 	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION SHOW_BACK_COVER FALSE"));
 	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION USE_DOCUMENT_FONT TRUE"));
 	QVERIFY(Lines.contains("0 !SW IMAGE INSTRUCTION 2 BOTH PLACEMENT 3 SIZE 40 FILE \"logo.png\""));
+	QVERIFY(Lines.contains("0 !SW PROPERTY INSTRUCTION SHOW_HEADER_BAND TRUE"));
+	QVERIFY(Lines.contains("0 !SW NOTICE INSTRUCTION 1 SHOW FOOTER POSITION 10 5 TEXT PAGE %page"));
+}
+
+// The band and watermark names must be known to the file reader and listed in the meta documentation.
+void swTests::InstructionsBandsAreNamed()
+{
+	const QString FileSource = ReadInstructionsSource(QStringLiteral("source/transput/sw_instructions_file.cpp"));
+	const QString Documentation = ReadInstructionsSource(QStringLiteral("resources/documentation/commands-meta.md"));
+	QVERIFY(!FileSource.isEmpty());
+	QVERIFY(!Documentation.isEmpty());
+
+	const QStringList Names = { "SHOW_HEADER_BAND", "SHOW_FOOTER_BAND", "SHOW_LEFT_BAND", "SHOW_RIGHT_BAND", "HEADER_BAND_SIZE", "FOOTER_BAND_SIZE", "LEFT_BAND_SIZE", "RIGHT_BAND_SIZE", "HEADER_BAND_COLOR", "FOOTER_BAND_COLOR", "LEFT_BAND_COLOR", "RIGHT_BAND_COLOR", "HEADER_BAND_RESERVE", "FOOTER_BAND_RESERVE", "LEFT_BAND_RESERVE", "RIGHT_BAND_RESERVE", "SHOW_WATERMARK", "WATERMARK_OPACITY", "HEADER", "FOOTER", "WATERMARK" };
+	QStringList Missing;
+
+	for (const QString& Name : Names)
+		if (!FileSource.contains(QLatin1Char('"') + Name + QLatin1Char('"')) || !Documentation.contains(Name))
+			Missing.append(Name);
+
+	QVERIFY2(Missing.isEmpty(), qPrintable(Missing.join(QLatin1String(", "))));
 }

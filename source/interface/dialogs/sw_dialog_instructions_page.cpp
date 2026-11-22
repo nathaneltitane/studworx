@@ -537,6 +537,18 @@ void swInstructionsStepNumberItem::Update()
 	setText(mStep ? QString::number(mStep) : mInstructions->GetSourcedText(swInstructionsPropertyType::BillOfMaterialsTitleText, swInstructionsPropertyType::BillOfMaterialsTitleFile, QCoreApplication::translate("swInstructionsDialog", "Parts List")));
 }
 
+// use to get the page number text
+static QString swGetPageNumberText(const swInstructions* Instructions, size_t PageIndex)
+{
+	const QLocale Locale;
+	const QString PageNumber = swFormatIntegerLocalized(static_cast<qlonglong>(PageIndex + 1), Locale);
+
+	if (static_cast<swInstructionsPageNumberFormat>(Instructions->GetIntProperty(swInstructionsPropertyType::PageNumberFormat, nullptr, 0)) == swInstructionsPageNumberFormat::NumberOfPages)
+		return QCoreApplication::translate("swInstructionsDialog", "%1 / %2").arg(PageNumber, swFormatIntegerLocalized(static_cast<qlonglong>(Instructions->mPages.size()), Locale));
+
+	return PageNumber;
+}
+
 swInstructionsPageNumberItem::swInstructionsPageNumberItem(QGraphicsItem* Parent, swInstructions* Instructions, size_t PageIndex)
 	: swInstructionsBoxItem(Parent), mInstructions(Instructions)
 {
@@ -544,17 +556,9 @@ swInstructionsPageNumberItem::swInstructionsPageNumberItem(QGraphicsItem* Parent
 	setZValue(1.0);
 	SetBoxStyle(mInstructions->GetBoxStyle(swInstructionsBoxElement::PageNumber, nullptr, 0));
 
-	const QLocale Locale;
-	const QString PageNumber = swFormatIntegerLocalized(static_cast<qlonglong>(PageIndex + 1), Locale);
-	const swInstructionsPageNumberFormat Format = static_cast<swInstructionsPageNumberFormat>(mInstructions->GetIntProperty(swInstructionsPropertyType::PageNumberFormat, nullptr, 0));
-
 	setFont(mInstructions->GetFontProperty(swInstructionsPropertyType::PageNumberFont, nullptr, 0));
 	setBrush(QBrush(mInstructions->GetColorProperty(swInstructionsPropertyType::PageNumberColor, nullptr, 0)));
-
-	if (Format == swInstructionsPageNumberFormat::NumberOfPages)
-		setText(QCoreApplication::translate("swInstructionsDialog", "%1 / %2").arg(PageNumber, swFormatIntegerLocalized(static_cast<qlonglong>(mInstructions->mPages.size()), Locale)));
-	else
-		setText(PageNumber);
+	setText(swGetPageNumberText(mInstructions, PageIndex));
 }
 
 QVariant swInstructionsPageNumberItem::itemChange(GraphicsItemChange Change, const QVariant& Value)
@@ -1341,6 +1345,62 @@ void swInstructionsPageWidget::AlignSelection(int Placement, bool LastSelection)
 	mInstructions->SetElementOffsets(Offsets);
 }
 
+// use to get a band property of a band
+static swInstructionsPropertyType swGetBandType(swInstructionsPropertyType First, int Band)
+{
+	return static_cast<swInstructionsPropertyType>(static_cast<int>(First) + Band);
+}
+
+// use to get a band rectangle, empty when hidden
+static QRectF swGetBandRect(const swInstructions* Instructions, size_t PageIndex, const QRectF& MarginsRect, int Band)
+{
+	const swInstructionsPageType Type = Instructions->mPages[PageIndex].Type;
+
+	if ((Type != swInstructionsPageType::Steps && Type != swInstructionsPageType::Blank) || !Instructions->GetPageBoolProperty(PageIndex, swGetBandType(swInstructionsPropertyType::ShowHeaderBand, Band)))
+		return QRectF();
+
+	const qreal Size = Instructions->GetPageIntProperty(PageIndex, swGetBandType(swInstructionsPropertyType::HeaderBandSize, Band));
+
+	switch (Band)
+	{
+	case 0:
+		return QRectF(MarginsRect.left(), MarginsRect.top(), MarginsRect.width(), Size);
+
+	case 1:
+		return QRectF(MarginsRect.left(), MarginsRect.bottom() - Size, MarginsRect.width(), Size);
+
+	case 2:
+		return QRectF(MarginsRect.left(), MarginsRect.top(), Size, MarginsRect.height());
+	}
+
+	return QRectF(MarginsRect.right() - Size, MarginsRect.top(), Size, MarginsRect.height());
+}
+
+// use to get the page area bands leave free
+static QRectF swGetContentRect(const swInstructions* Instructions, size_t PageIndex, const QRectF& MarginsRect)
+{
+	QRectF Rect = MarginsRect;
+
+	for (int Band = 0; Band < 4; Band++)
+	{
+		const QRectF BandRect = swGetBandRect(Instructions, PageIndex, MarginsRect, Band);
+
+		if (BandRect.isNull() || !Instructions->GetPageBoolProperty(PageIndex, swGetBandType(swInstructionsPropertyType::HeaderBandReserve, Band)))
+			continue;
+
+		if (Band == 0)
+			Rect.setTop(Rect.top() + BandRect.height());
+		else if (Band == 1)
+			Rect.setBottom(Rect.bottom() - BandRect.height());
+		else if (Band == 2)
+			Rect.setLeft(Rect.left() + BandRect.width());
+		else
+			Rect.setRight(Rect.right() - BandRect.width());
+	}
+
+	return Rect;
+}
+
 void swInstructionsPageWidget::PlaceElement(int Placement)
 {
 	const QList<QGraphicsItem*> SelectedItems = scene()->selectedItems();
@@ -1356,9 +1416,46 @@ void swInstructionsPageWidget::PlaceElement(int Placement)
 	const QRectF MarginsRect(PageSetup.MarginLeft, PageSetup.MarginTop, PageSetup.Width - PageSetup.MarginLeft - PageSetup.MarginRight, PageSetup.Height - PageSetup.MarginTop - PageSetup.MarginBottom);
 	QGraphicsItem* Item = SelectedItems.front();
 	const QRectF ItemRect = Item->mapRectToParent(Item->boundingRect());
+	const int Id = static_cast<int>(std::get<2>(Key));
+	const swInstructionsNotice* Notice = mInstructions->FindNotice(Id);
+	const size_t PageIndex = static_cast<size_t>(mPage - mInstructions->mPages.data());
+	const int Band = Notice ? static_cast<int>(Notice->Pages) - static_cast<int>(swInstructionsImagePages::Header) : -1;
+
+	// band notices stay in their band
+	if (Band >= 0 && Band < 4)
+	{
+		const QRectF BandRect = swGetBandRect(mInstructions, PageIndex, MarginsRect, Band);
+
+		if (!BandRect.isNull())
+			mInstructions->SetNoticePosition(Id, Item->pos() + swGetPlacementPosition(BandRect, ItemRect.size(), swGetValidPlacement(Placement, true)) - ItemRect.topLeft() - BandRect.topLeft());
+
+		return;
+	}
+
 	const QPointF Distance = swGetPagePlacementPosition(mInstructions, MarginsRect, ItemRect.size(), Placement) - ItemRect.topLeft();
 
-	mInstructions->SetNoticePosition(static_cast<int>(std::get<2>(Key)), Item->pos() + Distance);
+	mInstructions->SetNoticePosition(Id, Item->pos() + Distance);
+}
+
+// use to get the title the cover shows
+static QString swGetModelTitle(const swInstructions* Instructions, const swModel* Model)
+{
+	const swModelProperties& Properties = Model->GetProperties();
+	QString Title = Properties.mDescription.trimmed();
+
+	if (Title.isEmpty())
+		Title = Properties.mModelName.trimmed();
+
+	if (Title.isEmpty())
+		Title = QFileInfo(Properties.mFileName).completeBaseName();
+
+	return Instructions->GetSourcedText(swInstructionsPropertyType::CoverTitleText, swInstructionsPropertyType::CoverTitleFile, Title);
+}
+
+// use to fill the page codes of a text
+static QString swFillPageCodes(const swInstructions* Instructions, size_t PageIndex, QString Text)
+{
+	return Text.replace(QLatin1String("%page"), swGetPageNumberText(Instructions, PageIndex)).replace(QLatin1String("%title"), swGetModelTitle(Instructions, Instructions->GetMainModel()));
 }
 
 // use to add the page elements
@@ -1368,15 +1465,7 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 	{
 		swModel* Model = Page->Model;
 		const swModelProperties& Properties = Model->GetProperties();
-		QString Title = Properties.mDescription.trimmed();
-
-		if (Title.isEmpty())
-			Title = Properties.mModelName.trimmed();
-
-		if (Title.isEmpty())
-			Title = QFileInfo(Properties.mFileName).completeBaseName();
-
-		Title = Instructions->GetSourcedText(swInstructionsPropertyType::CoverTitleText, swInstructionsPropertyType::CoverTitleFile, Title);
+		const QString Title = swGetModelTitle(Instructions, Model);
 
 		const QFont TitleFont = Instructions->GetFontProperty(swInstructionsPropertyType::CoverTitleFont, Model, 0);
 		const QColor TextColor = Instructions->GetColorProperty(swInstructionsPropertyType::CoverTitleColor, Model, 0);
@@ -1720,23 +1809,43 @@ static void swAddPageContent(swInstructions* Instructions, const swInstructionsP
 }
 
 // use to add notices and pointers
-static void swAddPageAnnotations(swInstructions* Instructions, size_t PageIndex, QGraphicsScene* Scene, QGraphicsRectItem* PageItem, const QRectF& MarginsRect)
+static void swAddPageAnnotations(swInstructions* Instructions, size_t PageIndex, QGraphicsScene* Scene, QGraphicsRectItem* PageItem, const QRectF& MarginsRect, const QRectF& ContentRect)
 {
 	const swInstructionsPageKey PageKey = Instructions->GetPageElementsKey(PageIndex);
+	const swInstructionsPageType PageType = Instructions->mPages[PageIndex].Type;
+	const bool BandPage = PageType == swInstructionsPageType::Steps || PageType == swInstructionsPageType::Blank;
 
 	for (const swInstructionsNotice& Notice : Instructions->GetNotices())
 	{
-		if (Notice.PageKey != PageKey)
+		// band notices follow their band
+		const int Band = static_cast<int>(Notice.Pages) - static_cast<int>(swInstructionsImagePages::Header);
+		const QRectF BandRect = BandPage && Band >= 0 && Band < 4 ? swGetBandRect(Instructions, PageIndex, MarginsRect, Band) : QRectF();
+		bool Shown = BandPage && !BandRect.isNull();
+
+		if (Notice.Pages == swInstructionsImagePages::None)
+			Shown = Notice.PageKey == PageKey;
+		else if (Notice.Pages == swInstructionsImagePages::Watermark)
+			Shown = BandPage && Instructions->GetPageBoolProperty(PageIndex, swInstructionsPropertyType::ShowWatermark);
+
+		if (!Shown)
 			continue;
 
 		swInstructionsNoticeItem* NoticeItem = new swInstructionsNoticeItem(PageItem, Instructions, Notice);
-		const qreal TextWidth = MarginsRect.width() / 2.0;
+		NoticeItem->setPlainText(swFillPageCodes(Instructions, PageIndex, NoticeItem->toPlainText()));
 
 		// wrap long notices at half width
+		const qreal TextWidth = BandRect.isNull() ? ContentRect.width() / 2.0 : BandRect.width();
+
 		if (NoticeItem->document()->idealWidth() > TextWidth)
 			NoticeItem->setTextWidth(TextWidth);
 
-		swPlaceElement(NoticeItem, Instructions, Notice.Position);
+		if (Notice.Pages == swInstructionsImagePages::Watermark)
+		{
+			NoticeItem->setOpacity(Instructions->GetPageIntProperty(PageIndex, swInstructionsPropertyType::WatermarkOpacity) / 100.0);
+			NoticeItem->setZValue(-1.0);
+		}
+
+		swPlaceElement(NoticeItem, Instructions, BandRect.topLeft() + Notice.Position);
 	}
 
 	std::map<swInstructionsElementKey, QGraphicsItem*> ElementItems;
@@ -1819,15 +1928,40 @@ QVariant swInstructionsImageItem::itemChange(GraphicsItemChange Change, const QV
 }
 
 // use to add the images of a cover
-static void swAddPageImages(swInstructions* Instructions, const swInstructionsPage* Page, QGraphicsRectItem* PageItem, const QRectF& MarginsRect)
+static void swAddPageImages(swInstructions* Instructions, const swInstructionsPage* Page, size_t PageIndex, QGraphicsRectItem* PageItem, const QRectF& MarginsRect)
 {
 	const swInstructionsImagePages Shown = Page->Type == swInstructionsPageType::Cover ? swInstructionsImagePages::Front : swInstructionsImagePages::Back;
+	const bool BandPage = Page->Type == swInstructionsPageType::Steps || Page->Type == swInstructionsPageType::Blank;
 
-	if (Page->Type != swInstructionsPageType::Cover && Page->Type != swInstructionsPageType::BackCover)
+	if (!BandPage && Page->Type != swInstructionsPageType::Cover && Page->Type != swInstructionsPageType::BackCover)
 		return;
 
 	for (const swInstructionsImage& Image : Instructions->GetImages())
 	{
+		// bands and the watermark show on step and blank pages
+		if (BandPage)
+		{
+			const int Band = static_cast<int>(Image.Pages) - static_cast<int>(swInstructionsImagePages::Header);
+			const bool IsWatermark = Image.Pages == swInstructionsImagePages::Watermark;
+			const QRectF BandRect = Band >= 0 && Band < 4 ? swGetBandRect(Instructions, PageIndex, MarginsRect, Band) : QRectF();
+
+			if (BandRect.isNull() && (!IsWatermark || !Instructions->GetPageBoolProperty(PageIndex, swInstructionsPropertyType::ShowWatermark)))
+				continue;
+
+			swInstructionsImageItem* ImageItem = new swInstructionsImageItem(PageItem, Instructions, Image);
+
+			if (IsWatermark)
+			{
+				ImageItem->setOpacity(Instructions->GetPageIntProperty(PageIndex, swInstructionsPropertyType::WatermarkOpacity) / 100.0);
+				ImageItem->setZValue(-1.0);
+				swPlaceElement(ImageItem, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, ImageItem->boundingRect().size(), Image.Placement));
+			}
+			else
+				swPlaceElement(ImageItem, Instructions, swGetPlacementPosition(BandRect, ImageItem->boundingRect().size(), swGetValidPlacement(Image.Placement, true)));
+
+			continue;
+		}
+
 		if (Image.Pages != Shown && Image.Pages != swInstructionsImagePages::Both)
 			continue;
 
@@ -1907,6 +2041,23 @@ void swUpdateInstructionsPageScene(swInstructions* Instructions, const swInstruc
 
 	QRectF MarginsRect(PageSetup.MarginLeft, PageSetup.MarginTop, PageSetup.Width - PageSetup.MarginLeft - PageSetup.MarginRight, PageSetup.Height - PageSetup.MarginTop - PageSetup.MarginBottom);
 
+	// bands keep the full margins, content leaves their space
+	const QRectF ContentRect = swGetContentRect(Instructions, PageIndex, MarginsRect);
+
+	for (int Band = 0; Band < 4; Band++)
+	{
+		const QRectF BandRect = swGetBandRect(Instructions, PageIndex, MarginsRect, Band);
+
+		if (BandRect.isNull())
+			continue;
+
+		QGraphicsRectItem* BandItem = new QGraphicsRectItem(BandRect, PageItem);
+		BandItem->setPen(QPen(Qt::NoPen));
+		BandItem->setBrush(QBrush(Instructions->GetPageColorProperty(PageIndex, swGetBandType(swInstructionsPropertyType::HeaderBandColor, Band))));
+		BandItem->setZValue(-2.0);
+		BandItem->setData(SW_BAND_DATA, static_cast<int>(swInstructionsImagePages::Header) + Band);
+	}
+
 	// number step and materials pages
 	const bool PageHasContent = (Page->Type == swInstructionsPageType::Steps && !Page->Steps.empty()) || Page->Type == swInstructionsPageType::BillOfMaterials || Instructions->GetBoolProperty(swInstructionsPropertyType::ShowPageNumberAllPages, nullptr, 0);
 
@@ -1915,18 +2066,18 @@ void swUpdateInstructionsPageScene(swInstructions* Instructions, const swInstruc
 		swInstructionsPageNumberItem* PageNumberItem = new swInstructionsPageNumberItem(PageItem, Instructions, PageIndex);
 
 		const int Placement = Instructions->GetIntProperty(swInstructionsPropertyType::PageNumberPlacement, nullptr, 0);
-		swPlaceElement(PageNumberItem, Instructions, swGetPagePlacementPosition(Instructions, MarginsRect, PageNumberItem->boundingRect().size(), Placement));
+		swPlaceElement(PageNumberItem, Instructions, swGetPagePlacementPosition(Instructions, ContentRect, PageNumberItem->boundingRect().size(), Placement));
 	}
 
 	if (Page->Type != swInstructionsPageType::Blank && Page->Type != swInstructionsPageType::BackCover)
-		swAddPageContent(Instructions, Page, Scene, PageItem, MarginsRect);
+		swAddPageContent(Instructions, Page, Scene, PageItem, ContentRect);
 
 	if (Page->Type == swInstructionsPageType::Steps)
-		swAddPageCounts(Instructions, Page, PageItem, MarginsRect);
+		swAddPageCounts(Instructions, Page, PageItem, ContentRect);
 
-	swAddPageImages(Instructions, Page, PageItem, MarginsRect);
+	swAddPageImages(Instructions, Page, PageIndex, PageItem, MarginsRect);
 
-	swAddPageAnnotations(Instructions, PageIndex, Scene, PageItem, MarginsRect);
+	swAddPageAnnotations(Instructions, PageIndex, Scene, PageItem, MarginsRect, ContentRect);
 }
 
 // use to lock a page where it is drawn now
@@ -2089,6 +2240,22 @@ void swInstructionsPageWidget::contextMenuEvent(QContextMenuEvent* Event)
 		ElementItem->setSelected(true);
 	}
 
+	// a band under the cursor takes new notices and images
+	const swInstructionsPageType PageType = mPage->Type;
+	const bool BandPage = PageType == swInstructionsPageType::Steps || PageType == swInstructionsPageType::Blank;
+	swInstructionsImagePages BandPages = swInstructionsImagePages::None;
+	QRectF BandRect;
+
+	for (QGraphicsItem* Item : Items)
+	{
+		if (Item->data(SW_BAND_DATA).isValid())
+		{
+			BandPages = static_cast<swInstructionsImagePages>(Item->data(SW_BAND_DATA).toInt());
+			BandRect = Item->sceneBoundingRect();
+			break;
+		}
+	}
+
 	QMenu Menu(this);
 	const swInstructionsPlacementElement Element = std::get<0>(Key);
 	const int Id = static_cast<int>(std::get<2>(Key));
@@ -2169,14 +2336,26 @@ void swInstructionsPageWidget::contextMenuEvent(QContextMenuEvent* Event)
 	}
 	else
 	{
-		connect(Menu.addAction(tr("Add Notice...")), &QAction::triggered, this, [this, PageIndex, ScenePosition]()
+		connect(Menu.addAction(tr("Add Notice...")), &QAction::triggered, this, [this, PageIndex, ScenePosition, BandPages, BandRect]()
 		{
 			QString Text;
 			QString File;
 
 			if (swEditNoticeText(this, Text, File, true))
-				mInstructions->AddNotice(PageIndex, ScenePosition, Text, File);
+				mInstructions->AddNotice(PageIndex, ScenePosition - BandRect.topLeft(), Text, File, BandPages);
 		});
+
+		if (BandPage && BandPages == swInstructionsImagePages::None)
+		{
+			connect(Menu.addAction(tr("Add Watermark Text...")), &QAction::triggered, this, [this, PageIndex, ScenePosition]()
+			{
+				QString Text;
+				QString File;
+
+				if (swEditNoticeText(this, Text, File, true))
+					mInstructions->AddNotice(PageIndex, ScenePosition, Text, File, swInstructionsImagePages::Watermark);
+			});
+		}
 
 		if (ElementItem && dynamic_cast<swInstructionsBoxBase*>(ElementItem))
 		{
@@ -2209,6 +2388,45 @@ void swInstructionsPageWidget::contextMenuEvent(QContextMenuEvent* Event)
 					mInstructions->SetNoticeText(Id, Text, File);
 			});
 
+			const swInstructionsNotice* Notice = mInstructions->FindNotice(Id);
+
+			if (Notice && BandPage)
+			{
+				QMenu* NoticePagesMenu = Menu.addMenu(tr("Show On"));
+				QActionGroup* NoticePagesGroup = new QActionGroup(NoticePagesMenu);
+				const swInstructionsImagePages CurrentPages = Notice->Pages;
+				const QPointF PagePosition = ElementItem->pos();
+				const std::pair<swInstructionsImagePages, QString> NoticePagesNames[] =
+				{
+					{ swInstructionsImagePages::None, tr("This Page") },
+					{ swInstructionsImagePages::Header, tr("Header Band") },
+					{ swInstructionsImagePages::Footer, tr("Footer Band") },
+					{ swInstructionsImagePages::Left, tr("Left Band") },
+					{ swInstructionsImagePages::Right, tr("Right Band") },
+					{ swInstructionsImagePages::Watermark, tr("Watermark") }
+				};
+
+				for (const std::pair<swInstructionsImagePages, QString>& PagesName : NoticePagesNames)
+				{
+					if (PagesName.first == swInstructionsImagePages::Header)
+						NoticePagesMenu->addSeparator();
+
+					QAction* Action = NoticePagesMenu->addAction(PagesName.second);
+					Action->setCheckable(true);
+					Action->setChecked(CurrentPages == PagesName.first);
+					NoticePagesGroup->addAction(Action);
+
+					const swInstructionsImagePages Pages = PagesName.first;
+
+					connect(Action, &QAction::triggered, this, [this, Id, Pages, PageIndex, PagePosition]()
+					{
+						// bands start at their corner
+						const bool InBand = Pages != swInstructionsImagePages::None && Pages != swInstructionsImagePages::Watermark;
+						mInstructions->SetNoticePages(Id, Pages, PageIndex, InBand ? QPointF() : PagePosition);
+					});
+				}
+			}
+
 			connect(Menu.addAction(tr("Remove Notice")), &QAction::triggered, this, [this, Id]()
 			{
 				mInstructions->RemoveNotice(Id);
@@ -2216,7 +2434,6 @@ void swInstructionsPageWidget::contextMenuEvent(QContextMenuEvent* Event)
 		}
 
 		// covers carry linked images, like a logo
-		const swInstructionsPageType PageType = mPage->Type;
 		const QString ImageFilter = tr("Images (*.png *.jpg *.jpeg *.svg *.bmp *.gif *.webp);;All Files (*)");
 
 		if (PageType == swInstructionsPageType::Cover || PageType == swInstructionsPageType::BackCover)
@@ -2229,6 +2446,27 @@ void swInstructionsPageWidget::contextMenuEvent(QContextMenuEvent* Event)
 
 				if (!FileName.isEmpty())
 					SelectElement({ swInstructionsPlacementElement::Image, nullptr, static_cast<swStep>(mInstructions->AddImage(PageType, FileName)) });
+			});
+		}
+		else if (BandPage)
+		{
+			Menu.addSeparator();
+
+			// images show in the band or as the watermark
+			const swInstructionsImagePages ImagePages = BandPages == swInstructionsImagePages::None ? swInstructionsImagePages::Watermark : BandPages;
+
+			connect(Menu.addAction(BandPages == swInstructionsImagePages::None ? tr("Add Watermark Image...") : tr("Add Image...")), &QAction::triggered, this, [this, PageType, ImageFilter, ImagePages]()
+			{
+				const QString FileName = QFileDialog::getOpenFileName(this, tr("Add Image"), QString(), ImageFilter);
+
+				if (FileName.isEmpty())
+					return;
+
+				const int ImageId = mInstructions->AddImage(PageType, FileName);
+				swInstructionsImage Changed = *mInstructions->FindImage(ImageId);
+				Changed.Pages = ImagePages;
+				mInstructions->SetImage(Changed);
+				SelectElement({ swInstructionsPlacementElement::Image, nullptr, static_cast<swStep>(ImageId) });
 			});
 		}
 
@@ -2254,11 +2492,19 @@ void swInstructionsPageWidget::contextMenuEvent(QContextMenuEvent* Event)
 			{
 				{ swInstructionsImagePages::Front, tr("Front Cover") },
 				{ swInstructionsImagePages::Back, tr("Back Cover") },
-				{ swInstructionsImagePages::Both, tr("Both Covers") }
+				{ swInstructionsImagePages::Both, tr("Both Covers") },
+				{ swInstructionsImagePages::Header, tr("Header Band") },
+				{ swInstructionsImagePages::Footer, tr("Footer Band") },
+				{ swInstructionsImagePages::Left, tr("Left Band") },
+				{ swInstructionsImagePages::Right, tr("Right Band") },
+				{ swInstructionsImagePages::Watermark, tr("Watermark") }
 			};
 
 			for (const std::pair<swInstructionsImagePages, QString>& PagesName : PagesNames)
 			{
+				if (PagesName.first == swInstructionsImagePages::Header)
+					PagesMenu->addSeparator();
+
 				QAction* Action = PagesMenu->addAction(PagesName.second);
 				Action->setCheckable(true);
 				Action->setChecked(Current.Pages == PagesName.first);
