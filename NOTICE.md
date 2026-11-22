@@ -1,6 +1,17 @@
 ### NOTICE
 
   <details open>
+  <summary>2026-11-22</summary>
+
+  - Instructions: header, footer, left and right bands repeat their text and images on every step page, and %page and %title fill in the page number and the model title
+  - Instructions: the Bands properties set each band's size and color, and Reserve Space keeps the page content clear of a band
+  - Instructions: right click the page to add watermark text or a watermark image behind the page content, with its own opacity
+  - Instructions: Show On in a notice's right click menu moves it between its page, a band and the watermark
+  - Instructions: a page can have its own bands or hide the watermark, and Apply to All Pages copies its bands to every page
+
+  </details>
+
+  <details>
   <summary>2026-11-21</summary>
 
   - Site: the search fields have a ✕ button that clears the text and shows every group again
