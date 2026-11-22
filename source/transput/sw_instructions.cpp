@@ -759,9 +759,9 @@ void swInstructions::ApplyPageToAllPages(size_t PageIndex, swInstructionsPropert
 	if (!IsPageProperty(Type) || !GetPageKey(PageIndex, Key))
 		return;
 
-	// submodel pages show the main background in the panel
-	const bool MainBackground = Type == swInstructionsPropertyType::PageBackgroundColor && !HasPageProperty(PageIndex, Type);
-	const QVariant Value = MainBackground ? mStepProperties[static_cast<int>(Type)].Value : GetPageProperty(PageIndex, Type);
+	// the color the page shows, submodel pages included
+
+	const QVariant Value = GetPageProperty(PageIndex, Type);
 
 	for (auto& [PageKey, Properties] : mPagePropertyOverrides)
 		Properties[static_cast<int>(Type)] = swInstructionsProperty();
